@@ -54,6 +54,8 @@ async def chat(websocket: WebSocket):
             #         ai_response += chunk.choices[0].delta.content
             #         await websocket.send_text(chunk.choices[0].delta.content)
             # chat_responses.append(ai_response)
+            await  websocket.send_text("This is going to be really cool and encourage talmud tprah bezrat Hashem!! "
+                                       "But it will take a few months until it's ready. ")
 
         except Exception as e:
             await websocket.send_text(f'Error: {str(e)}')
