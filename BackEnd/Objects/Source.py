@@ -12,14 +12,18 @@ class SourceType(Enum):
     TN = (3, "Tanach")
     MS = (4, "Mishna")
 
-    def __new__(cls, value, name):
+    def __new__(cls, value, description):
+        # Create the new enum instance
         obj = object.__new__(cls)
+        # Assign the integer value
         obj._value_ = value
-        obj.name = name
+        # Assign the description as a custom attribute
+        obj.description = description
         return obj
 
     def __str__(self):
-        return self.name
+        return self.description
+
 
 
 
