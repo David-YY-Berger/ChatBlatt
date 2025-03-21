@@ -3,9 +3,12 @@ import logging
 from datetime import datetime
 import inspect
 
+from BackEnd.General import Paths
+
 
 class Logger:
     _instance = None
+    muted = False
 
     def __new__(cls, print_to_console=True):
         if cls._instance is None:
@@ -17,12 +20,16 @@ class Logger:
         if not hasattr(self, 'initialized'):  # Ensuring the initialization happens only once
             self.print_to_console = print_to_console
 
-            log_dir = 'logs'  # Paths.LOGS_DIR can be substituted here
+            log_dir = Paths.LOGS_DIR  # Paths.LOGS_DIR can be substituted here
             if not os.path.exists(log_dir):
                 os.makedirs(log_dir)
 
             # Generate log file name with current date
             log_file = os.path.join(log_dir, f"{datetime.now().strftime('%Y-%m-%d')}_log.log")
+            print(f"writing logs to {log_file}")
+            # Clear the content of the log file (overwrite the file with an empty string)
+            with open(log_file, 'w', encoding='utf-8') as file:
+                pass  # This clears the content of the file
 
             # Configure logging
             logging.basicConfig(
@@ -36,15 +43,20 @@ class Logger:
 
             self.initialized = True  # Mark initialization as complete
 
+    def mute(self):
+        self.muted = True
+
     def _get_caller_info(self):
         stack = inspect.stack()
-        caller_frame = stack[2]
+        caller_frame = stack[3]
         module = inspect.getmodule(caller_frame[0])
         module_name = module.__name__ if module else "Unknown"
         function_name = caller_frame.function
         return f"{module_name}.{function_name}"
 
     def _log_message(self, level, message):
+        if self.muted:
+            return
         caller_info = self._get_caller_info()
         formatted_message = f"[{caller_info}] {message}"
 

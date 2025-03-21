@@ -3,7 +3,7 @@ import unittest
 import os
 from BackEnd.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.FileUtils.JsonWriter import JsonWriter
-from BackEnd.General import Paths, Enums, Logger
+from BackEnd.General import Paths, Enums, Logger, SystemFunctions
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 import inspect
 
@@ -13,7 +13,8 @@ class PopuplatorScripts(unittest.TestCase):
     def setUp(self):
         """Runs before every test to set up necessary directories."""
         OsFunctions.clear_create_directory(Paths.TESTS_DIR)
-        self.logger = Logger.Logger()
+        # self.logger = Logger.Logger()
+        # self.logger.mute()
 
 
     def test_convert_index_from_BSON_to_JSON(self):
@@ -36,14 +37,30 @@ class PopuplatorScripts(unittest.TestCase):
             json_data = json.load(f)
 
         # Limit entries
-        json_data = json_data[:5]
+        start_index = 569
+        json_data = json_data[start_index:]
+        tractate_set = set()
 
         # Iterate through the JSON data and fetch texts
-        results = {}
+        # results = {}
         for entry in json_data:
-            full_ref = entry["full_ref"]
-            print(f"\n\nFetching: {full_ref}\n") #todo change to logger
-            results[full_ref] = sefaria_fetcher.fetch_sefaria_passage_as_Source_from_reference(full_ref)
 
-        print(results)
+            try:
+                full_ref = entry["full_ref"]
+                result = sefaria_fetcher.fetch_sefaria_passage_as_Source_from_reference(full_ref)
+                errors = result.is_valid_else_get_error_list()
+                if len(errors) > 0:
+                    print (f"empty source! {full_ref} {start_index}")
+
+                start_index = start_index + 1
+                if result.book not in tractate_set:
+                    tractate_set.add(result.book)
+                    print (f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
+
+                # JsonWriter.write_to_file(result.to_json(), os.path.join(Paths.TESTS_DIR, "source test.json"), append=True, write_log=False)
+            except Exception as e:
+                print(f"Error fetching reference {full_ref} index {start_index}: {e}")
+                break
+
+        print(f"finished - {SystemFunctions.get_ts()}")
 

@@ -5,21 +5,41 @@ from bson import ObjectId
 
 class JsonWriter:
     """
-    A static class for writing Python dictionaries to JSON files.
-    """
-    @staticmethod
-    def write_to_file(data, file_path, indent=4):
+        A static class for writing Python dictionaries to JSON files.
         """
-        Writes a dictionary to a JSON file.
+
+    @staticmethod
+    def write_to_file(data, file_path, indent=4, append=False, write_log=True):
+        """
+        Writes a dictionary to a JSON file. Optionally appends the data instead of overwriting.
 
         :param data: Dictionary to be written to the JSON file.
         :param file_path: Path to the JSON file.
         :param indent: Indentation level for pretty printing (default is 4).
+        :param append: Whether to append the data to the file (default is False).
         """
         try:
-            with open(file_path, 'w', encoding='utf-8') as json_file:
-                json.dump(data, json_file, indent=indent, ensure_ascii=False)
-            print(f"Successfully wrote JSON data to {file_path}")
+            if append:
+                # Read the existing data from the file, if present
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as json_file:
+                        existing_data = json.load(json_file)
+                except (FileNotFoundError, json.JSONDecodeError):
+                    existing_data = []
+
+                # Append the new data
+                existing_data.append(data)
+
+                # Write back the updated data
+                with open(file_path, 'w', encoding='utf-8') as json_file:
+                    json.dump(existing_data, json_file, indent=indent, ensure_ascii=False)
+            else:
+                # Overwrite the file with the new data
+                with open(file_path, 'w', encoding='utf-8') as json_file:
+                    json.dump(data, json_file, indent=indent, ensure_ascii=False)
+
+            if write_log:
+                print(f"Successfully wrote JSON data to {file_path}")
         except Exception as e:
             print(f"Error writing JSON to file: {e}")
 
