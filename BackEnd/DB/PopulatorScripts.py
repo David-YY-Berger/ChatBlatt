@@ -1,3 +1,4 @@
+import concurrent.futures
 import json
 import unittest
 import os
@@ -37,30 +38,34 @@ class PopuplatorScripts(unittest.TestCase):
             json_data = json.load(f)
 
         # Limit entries
-        start_index = 569
+        start_index = 0
         json_data = json_data[start_index:]
         tractate_set = set()
 
-        # Iterate through the JSON data and fetch texts
-        # results = {}
-        for entry in json_data:
+        # Prepare the list of references to fetch
+        references = [entry["full_ref"] for entry in json_data]
 
-            try:
-                full_ref = entry["full_ref"]
-                result = sefaria_fetcher.fetch_sefaria_passage_as_Source_from_reference(full_ref)
-                errors = result.is_valid_else_get_error_list()
-                if len(errors) > 0:
-                    print (f"empty source! {full_ref} {start_index}")
+        # Use ThreadPoolExecutor to parallelize the fetching of passages
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            futures = {executor.submit(sefaria_fetcher.fetch_sefaria_passage_as_Source_from_reference, ref): ref for ref
+                       in references}
 
-                start_index = start_index + 1
-                if result.book not in tractate_set:
-                    tractate_set.add(result.book)
-                    print (f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
+            for future in concurrent.futures.as_completed(futures):
+                ref = futures[future]
+                try:
+                    result = future.result()
+                    errors = result.is_valid_else_get_error_list()
+                    if len(errors) > 0:
+                        print(f"empty source! {ref} {start_index}")
 
-                # JsonWriter.write_to_file(result.to_json(), os.path.join(Paths.TESTS_DIR, "source test.json"), append=True, write_log=False)
-            except Exception as e:
-                print(f"Error fetching reference {full_ref} index {start_index}: {e}")
-                break
+                    start_index += 1
+                    if result.book not in tractate_set:
+                        tractate_set.add(result.book)
+                        print(f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
+
+                except Exception as e:
+                    print(f"Error fetching reference {ref} index {start_index}: {e}")
+                    break
 
         print(f"finished - {SystemFunctions.get_ts()}")
 
