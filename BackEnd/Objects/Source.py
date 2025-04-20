@@ -67,5 +67,7 @@ class Source:
 
         if not isinstance(self.content, list) or not all(isinstance(item, str) for item in self.content):
             errors.append("Content must be a list of strings!")
+        elif not any(item.strip() for item in self.content):
+            errors.append("Content must contain at least one non-empty string!")
 
         return errors

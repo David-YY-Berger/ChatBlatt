@@ -2,6 +2,10 @@ import concurrent.futures
 import json
 import unittest
 import os
+
+from dotenv import load_dotenv
+
+from BackEnd.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.FileUtils.JsonWriter import JsonWriter
 from BackEnd.General import Paths, Enums, Logger, SystemFunctions
@@ -14,6 +18,7 @@ class PopuplatorScripts(unittest.TestCase):
     def setUp(self):
         """Runs before every test to set up necessary directories."""
         OsFunctions.clear_create_directory(Paths.TESTS_DIR)
+        load_dotenv()
         # self.logger = Logger.Logger()
         # self.logger.mute()
 
@@ -63,9 +68,43 @@ class PopuplatorScripts(unittest.TestCase):
                         tractate_set.add(result.book)
                         print(f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
 
+                #     this is where function should go
+
                 except Exception as e:
                     print(f"Error fetching reference {ref} index {start_index}: {e}")
                     break
 
         print(f"finished - {SystemFunctions.get_ts()}")
 
+
+    def test_connect_to_db(self):
+        # Retrieve the database username and password from environment variables
+        username = os.getenv('DB_BT_USERNAME')
+        password = os.getenv('DB_BT_PASSWORD')
+
+        # MongoDB URI with password inserted
+        uri = f"mongodb+srv://{username}:{password}@babylonian-talmud.qoltj.mongodb.net/?appName=Babylonian-Talmud"
+
+        # Initialize the MongoDB database interface with the connection string
+        db = DBapiMongoDB(uri)
+
+        # Insert some data into the 'en-sources' collection
+        data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
+        doc_id = db.insert('en-sources', data)  # Specify collection name
+        print(f"Inserted document ID: {doc_id}")
+
+        # Query data
+        query_results = db.execute_query({'collection': 'en-sources', 'filter': {'key': 'example_key'}})
+        print(f"Query results: {query_results}")
+
+        # Update data
+        updated_rows = db.update('en-sources', {'key': 'example_key'},
+                                 {'content': 'Updated content of the Talmud passage.'})
+        print(f"Updated {updated_rows} rows.")
+
+        # Delete data
+        deleted_rows = db.delete('en-sources', {'key': 'example_key'})
+        print(f"Deleted {deleted_rows} rows.")
+
+        # Disconnect from the database
+        db.disconnect()
