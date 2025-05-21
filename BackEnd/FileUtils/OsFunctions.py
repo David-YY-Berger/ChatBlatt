@@ -1,3 +1,4 @@
+import json
 import os, shutil
 
 
@@ -15,7 +16,21 @@ def clear_create_directory(dir_path):
             except Exception as e:
                 print(f"Error deleting {item_path}: {e}")
     else:
-        print(f"Directory does not exist: {dir_path}")
-
-    if not os.path.exists(dir_path):
+        print(f"Directory does not exist: {dir_path} \nCreating directory at {dir_path}")
         os.makedirs(dir_path)
+
+def open_json_file(filepath):
+    """
+    Opens a JSON file and returns the parsed data.
+    Handles FileNotFoundError and JSONDecodeError.
+    """
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError as e:
+        print(f"Error: File not found - {e}")
+        raise FileNotFoundError(e)
+    except json.JSONDecodeError as e:
+        print(f"Error: Failed to parse JSON - {e}")
+        raise json.JSONDecodeError
+    return None

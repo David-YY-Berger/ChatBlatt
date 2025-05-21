@@ -51,9 +51,9 @@ class PopuplatorScripts(unittest.TestCase):
         # todo refactor to include tanach..
         sefaria_fetcher = SefariaFetcher()
 
-        # Load JSON data from file
-        with open(Paths.SEFARIA_INDEX_BT_PASSAGES, "r", encoding="utf-8") as f:
-            json_data = json.load(f)
+        json_data = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
+        if json_data is None:
+            return
 
         # Limit entries
         start_index = 0
