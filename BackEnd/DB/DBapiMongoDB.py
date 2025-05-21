@@ -4,6 +4,7 @@ from typing import Any, Dict, List
 
 from BackEnd.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Logger import Logger
+from BackEnd.Objects.SourceClasses import Source
 
 
 class DBapiMongoDB(DBapiInterface):
@@ -70,6 +71,7 @@ class DBapiMongoDB(DBapiInterface):
         result = self.collection.insert_one(data)
         return str(result.inserted_id)
 
+
     def update(self, collection: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
         Update data in the 'en-sources' collection based on a query.
@@ -86,4 +88,16 @@ class DBapiMongoDB(DBapiInterface):
         if self.db is None:
             raise Exception("Database connection is not established.")
         result = self.collection.delete_many(query)
+        return result.deleted_count
+
+    def delete_all(self, collection: str) -> int:
+        """
+        Delete all documents from the specified collection.
+        Returns the number of documents deleted.
+        """
+        if self.db is None:
+            raise Exception("Database connection is not established.")
+
+        # Using an empty query {} to match all documents in the collection
+        result = self.db[collection].delete_many({})
         return result.deleted_count

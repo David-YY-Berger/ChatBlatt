@@ -1,10 +1,11 @@
 import json
 from enum import Enum
+from dataclasses import dataclass, asdict, field
 
 
 class SourceContentType(Enum):
-    EN_CONTENT = 0
-    HEB_CONTENT = 1
+    EN = 0
+    HEB = 1
 
 class SourceType(Enum):
     BT = (0, "Babylonian Talmud")
@@ -26,34 +27,33 @@ class SourceType(Enum):
         return self.description
 
 
-
-
+@dataclass
 class Source:
-    def __init__(self, src_type : SourceType, book: str, chapter: int, section: str, content: list[str]):
-        self.srcType = src_type
-        self.book = book
-        self.chapter = chapter or 0 #not always populated
-        self.section = section
-        self.content = content
+    src_type: SourceType
+    book: str
+    chapter: int = 0
+    section: str = ""
+    content: list[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        # Ensure chapter is an int (handle `None` or falsy)
+        if not self.chapter:
+            self.chapter = 0
 
     def get_key(self) -> str:
-        return f"{self.type.name}_{self.book}_{self.chapter}_{self.section}"
+        return f"{self.src_type.name}_{self.book}_{self.chapter}_{self.section}"
 
     def to_dict(self):
         """Convert the Source object to a dictionary"""
-        return {
-            "srcType": str(self.srcType),  # Assuming you want to convert SourceType to a string
-            "book": self.book,
-            "chapter": self.chapter,
-            "section": self.section,
-            "content": self.content
-        }
+        data = asdict(self) # is there an issue here? <
+        data["src_type"] = str(self.src_type)
+        return data
 
     def to_json(self):
         """Convert the Source object to a JSON string"""
         return json.dumps(self.to_dict())
 
-    def is_valid_else_get_error_list(self):
+    def is_valid_else_get_error_list(self) -> list[str]:
         errors = []
 
         if not self.book:

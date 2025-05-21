@@ -3,7 +3,7 @@ from typing import Any
 
 import requests
 from BackEnd.General import Logger
-from BackEnd.Objects.Source import Source, SourceType, SourceContentType
+from BackEnd.Objects.SourceClasses import Source, SourceType, SourceContentType
 
 
 class SefariaFetcher:
@@ -46,7 +46,7 @@ class SefariaFetcher:
                 if i < len(self.temp_daf_data[2]['text']):
                     data_from_section = self.temp_daf_data[2]['text'][i]
                     # FOR DEBUGGING print(f"printing {tractate} {daf} {start_index} - {end_index} {data_from_section}")
-                    content[SourceContentType.EN_CONTENT.value] +=data_from_section
+                    content[SourceContentType.EN.value] +=data_from_section
 
         #     todo get hebrew content
 

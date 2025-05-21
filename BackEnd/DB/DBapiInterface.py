@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List
 
+from BackEnd.Objects import SourceClasses
+from BackEnd.Objects.SourceClasses import Source
+
 
 class DBapiInterface(ABC):
     """
@@ -35,6 +38,20 @@ class DBapiInterface(ABC):
         """
         pass
 
+    def insert_source(self, result : Source, ref, start_index):
+        if result.src_type == SourceClasses.SourceType.BT:
+            data = {'key': result.get_key(), 'content': result.content[SourceClasses.SourceContentType.EN.value] }
+            self.insert("en-sources", data)
+            pass
+
+        elif result.src_type == SourceClasses.SourceType.TN:
+            # handle type2
+            pass
+
+        else:
+            # optional fallbacka
+            print(f"Unknown src_type '{result.src_type}' at index {start_index}")
+
     @abstractmethod
     def update(self, collection: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
@@ -46,5 +63,13 @@ class DBapiInterface(ABC):
     def delete(self, collection: str, query: Dict[str, Any]) -> int:
         """
         Delete data from a collection based on a query.
+        """
+        pass
+
+    @abstractmethod
+    def delete_all(self, collection: str) -> int:
+        """
+        Delete all documents from the given collection.
+        Returns the number of documents deleted.
         """
         pass
