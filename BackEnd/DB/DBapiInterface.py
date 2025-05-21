@@ -45,7 +45,7 @@ class DBapiInterface(ABC):
             pass
 
         elif result.src_type == SourceClasses.SourceType.TN:
-            # handle type2
+            # todo must add to DB
             pass
 
         else:

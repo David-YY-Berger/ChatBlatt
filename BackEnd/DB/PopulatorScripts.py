@@ -41,14 +41,14 @@ class PopuplatorScripts(unittest.TestCase):
         # Disconnect from the database
         self.db.disconnect()
 
-    def test_populate_BT_to_db(self):
-        self.fetch_and_process_sefaria_BT_passages(self.db.insert_source)
+    def test_populate_BT_and_TN_to_db(self):
+        self.fetch_and_process_sefaria_passages(self.db.insert_source)
 
     def test_delete_collection(self):
         self.db.delete_all('en-sources')
 
-    def fetch_and_process_sefaria_BT_passages(self, process_function):
-        # todo refactor to include tanach..
+    def fetch_and_process_sefaria_passages(self, process_function):
+        ''' includes BT and TN'''
         sefaria_fetcher = SefariaFetcher()
 
         json_data = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
@@ -56,18 +56,14 @@ class PopuplatorScripts(unittest.TestCase):
             return
 
         # Limit entries
-        start_index = 0
+        start_index = 12487
         json_data = json_data[start_index:]
-        tractate_set = set()
-
-        # Prepare the list of references to fetch
-        references = [entry["full_ref"] for entry in json_data if entry["type"] in ("Mishnah", "Sugya")]
-        # (there is also 'Biblical-story')
+        book_name_set = set()
 
         # Use ThreadPoolExecutor to parallelize the fetching of passages
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = {executor.submit(sefaria_fetcher.fetch_sefaria_passage_as_Source_from_reference, ref): ref for ref
-                       in references}
+            futures = {executor.submit(sefaria_fetcher.fetch_sefaria_passage_as_Source_from_data, ref): ref for ref
+                       in json_data}
 
             for future in concurrent.futures.as_completed(futures):
 
@@ -80,8 +76,8 @@ class PopuplatorScripts(unittest.TestCase):
                         raise InvalidDataError(ref, start_index, errors)
 
                     start_index += 1
-                    if result.book not in tractate_set:
-                        tractate_set.add(result.book)
+                    if result.book not in book_name_set:
+                        book_name_set.add(result.book)
                         print(f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
 
                     process_function(result, ref, start_index)

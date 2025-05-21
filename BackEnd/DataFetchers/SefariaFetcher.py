@@ -1,5 +1,6 @@
 import re
 from typing import Any
+from collections import defaultdict
 
 import requests
 from BackEnd.General import Logger
@@ -24,11 +25,32 @@ class SefariaFetcher:
             self.logger.error(f"Error fetching {tractate} {daf}: {response.status_code}")
             return None
 
+    def fetch_tanach_chapter_as_RAW(self, book: str, chapter: str) -> Any | None:
+        url = f"{self.TEXTS_BASE_URL}/{book}.{chapter}?context=0"
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            self.logger.error(f"Error fetching {book} {chapter}: {response.status_code}")
+            return None
 
-    def fetch_sefaria_passage_as_Source_from_reference(self, reference) -> Source:
 
+    def fetch_sefaria_passage_as_Source_from_data(self, json_data) -> Source:
+        """
+            This function assumes `reference` is function assumes this order: REF_PLACE = 0  TYPE_PLACE = 1
+        """
+        if json_data['type'] == "Mishnah" or json_data['type'] == "Sugya":
+            return self.fetch_BT_as_Source_from_ref(json_data['full_ref'])
+        elif json_data['type'] == "biblical-story":
+            return self.fetch_TN_as_Source_from_ref_list(full_ref=json_data['full_ref'], ref_list=json_data['ref_list'])
+        else:
+            self.logger.error(f"Unknown type {json_data['type']}")
+            raise Exception(f"Unknown type {json_data['type']}")
+
+
+    def fetch_BT_as_Source_from_ref(self, reference) -> Source:
+        ''' function poorly done... should be refactored to use list from sefaria's .json file'''
         [tractate, sections] = self.parse_talmud_reference(reference)
-
         for daf in sections:
             if not self.temp_daf_data or self.temp_daf_data[0] != tractate or self.temp_daf_data[1] != daf:
                 self.temp_daf_data = [tractate, daf, self.fetch_talmud_daf_as_RAW(tractate=tractate, daf=daf)]
@@ -46,12 +68,77 @@ class SefariaFetcher:
                 if i < len(self.temp_daf_data[2]['text']):
                     data_from_section = self.temp_daf_data[2]['text'][i]
                     # FOR DEBUGGING print(f"printing {tractate} {daf} {start_index} - {end_index} {data_from_section}")
-                    content[SourceContentType.EN.value] +=data_from_section
-
+                    content[SourceContentType.EN.value] += data_from_section
         #     todo get hebrew content
-
         return Source(src_type=SourceType.BT, book=tractate, chapter=0,
                       section=reference.split(tractate, 1)[1].strip(), content=content)
+
+
+    def fetch_TN_as_Source_from_ref_list(self, full_ref: str, ref_list : list) -> Source:
+
+        match = re.match(r'^(.*?)(?=\d)', full_ref)
+        if match:
+            book = match.group(1).strip()
+            section = full_ref[len(book) + 1:].strip()
+        else:
+            raise Exception(f"Invalid reference {full_ref}")
+
+        dic = self.extract_chapter_verse_ranges(ref_list)
+        en_content = ""
+        heb_content = ""
+        for (chapter, verse_range) in dic.items():
+            json_data = self.fetch_tanach_chapter_as_RAW(book=book, chapter=chapter)
+            en_json = json_data['text']
+            heb_json = json_data['he']
+
+            en_content += self.extract_verses_from_chapter(en_json, verse_range)
+            heb_content += self.extract_verses_from_chapter(heb_json, verse_range)
+
+        content = ["", ""]
+        content[SourceContentType.EN.value] += en_content
+        content[SourceContentType.HEB.value] += heb_content
+
+
+        return Source(src_type=SourceType.TN, book=book, chapter=0, #keep as 0
+                      section=section, content=content)
+
+    def extract_chapter_verse_ranges(self, ref_list):
+        """
+        Extracts chapter-to-verse ranges from a list of references like 'BookName Chapter:Verse'.
+
+        Parameters:
+            ref_list (List[str]): List of reference strings (e.g., "Joshua 3:1").
+
+        Returns:
+            Dict[int, Tuple[int, int]]: Dictionary where keys are chapter numbers,
+                                        and values are (min_verse, max_verse) tuples.
+        """
+        chapter_verses = defaultdict(list)
+
+        for ref in ref_list:
+            match = re.search(r'(\d+):(\d+)$', ref)
+            if match:
+                chapter = int(match.group(1))
+                verse = int(match.group(2))
+                chapter_verses[chapter].append(verse)
+
+        # Convert to dictionary with (min, max) verse tuples
+        return {chapter: (min(verses), max(verses)) for chapter, verses in chapter_verses.items()}
+
+    def extract_verses_from_chapter(self, data: dict, verse_range: tuple) -> str:
+        """
+        Extracts a range of verses from the provided JSON structure.
+
+        Parameters:
+        - data (dict): Dictionary with a "text" key pointing to a list of verses.
+        - verse_range (tuple): A tuple (start, end) indicating the range of verses to extract, inclusive of start and end.
+
+        Returns:
+        - list: A list of extracted verses.
+        """
+        start, end = verse_range
+        res = data[start:end + 1]
+        return " ".join(res)
 
 
     def parse_talmud_reference(self, reference: str):
