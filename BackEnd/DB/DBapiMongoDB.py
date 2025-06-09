@@ -13,11 +13,20 @@ class DBapiMongoDB(DBapiInterface):
     """
 
     def __init__(self, connection_string: str = None):
-        self.collection = None
+        # self.collections = {
+        #     self.BT: None,
+        #     self.JT: None,
+        #     self.RM: None,
+        #     self.TN: None,
+        #     self.MS: None,
+        # }
+
         self.client = None
         self.db = None
         self.connection_string = connection_string
         self.logger = Logger()
+
+        self.database_name = 'Sources'
 
         if connection_string:
             self.connect(connection_string)
@@ -36,11 +45,7 @@ class DBapiMongoDB(DBapiInterface):
             raise ConnectionError(f"Failed to connect: {e}")
 
 
-        self.db = self.client.get_database('test_db')
-
-        # Create the collection 'en-sources' if not exists
-        self.collection = self.db.get_collection('en-sources')
-
+        self.db = self.client.get_database(self.database_name)
 
     def disconnect(self) -> None:
         """
@@ -62,35 +67,35 @@ class DBapiMongoDB(DBapiInterface):
             return list(collection.find(query_filter))
         return []
 
-    def insert(self, collection: str, data: Dict[str, Any]) -> str:
+    def insert(self, collection_name: str, data: Dict[str, Any]) -> str:
         """
-        Insert data into the 'en-sources' collection.
+        Insert data into the collection_name collection.
         """
         if self.db is None:
             raise Exception("Database connection is not established.")
-        result = self.collection.insert_one(data)
+        result = self.db.get_collection(collection_name).insert_one(data)
         return str(result.inserted_id)
 
 
-    def update(self, collection: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
+    def update(self, collection_name: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
-        Update data in the 'en-sources' collection based on a query.
+        Update data in the collection_name collection based on a query.
         """
         if self.db is None:
             raise Exception("Database connection is not established.")
-        result = self.collection.update_many(query, {'$set': update})
+        result = self.db.get_collection(collection_name).update_many(query, {'$set': update})
         return result.modified_count
 
-    def delete(self, collection: str, query: Dict[str, Any]) -> int:
+    def delete_instance(self, collection_name: str, query: Dict[str, Any]) -> int:
         """
-        Delete data from the 'en-sources' collection based on a query.
+        Delete data from the collection_name collection based on a query.
         """
         if self.db is None:
             raise Exception("Database connection is not established.")
-        result = self.collection.delete_many(query)
+        result = self.db.get_collection(collection_name).delete_many(query)
         return result.deleted_count
 
-    def delete_all(self, collection: str) -> int:
+    def delete_collection(self, collection_name: str) -> int:
         """
         Delete all documents from the specified collection.
         Returns the number of documents deleted.
@@ -99,5 +104,5 @@ class DBapiMongoDB(DBapiInterface):
             raise Exception("Database connection is not established.")
 
         # Using an empty query {} to match all documents in the collection
-        result = self.db[collection].delete_many({})
+        result = self.db[collection_name].delete_many({})
         return result.deleted_count

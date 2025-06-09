@@ -28,7 +28,7 @@ class PopuplatorScripts(unittest.TestCase):
         password = os.getenv('DB_BT_PASSWORD')
 
         # MongoDB URI with password inserted
-        uri = f"mongodb+srv://{username}:{password}@babylonian-talmud.qoltj.mongodb.net/?appName=Babylonian-Talmud"
+        uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
 
         # Initialize the MongoDB database interface with the connection string
         self.db = DBapiMongoDB(uri)
@@ -45,7 +45,7 @@ class PopuplatorScripts(unittest.TestCase):
         self.fetch_and_process_sefaria_passages(self.db.insert_source)
 
     def test_delete_collection(self):
-        self.db.delete_all('en-sources')
+        self.db.delete_collection(self.db.BT)
 
     def fetch_and_process_sefaria_passages(self, process_function):
         ''' includes BT and TN'''
@@ -88,25 +88,26 @@ class PopuplatorScripts(unittest.TestCase):
 
         print(f"finished - {SystemFunctions.get_ts()}")
 
-    def connect_to_db(self):
+    def test_connect_to_db(self):
 
+        test_collection_name = self.db.BT
 
-        # Insert some data into the 'en-sources' collection
+        # Insert example data into collection
         data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
-        doc_id = self.db.insert('en-sources', data)  # Specify collection name
+        doc_id = self.db.insert(test_collection_name, data)  # Specify collection name
         print(f"Inserted document ID: {doc_id}")
 
         # Query data
-        query_results = self.db.execute_query({'collection': 'en-sources', 'filter': {'key': 'example_key'}})
+        query_results = self.db.execute_query({'collection': test_collection_name, 'filter': {'key': 'example_key'}})
         print(f"Query results: {query_results}")
 
         # Update data
-        updated_rows = self.db.update('en-sources', {'key': 'example_key'},
+        updated_rows = self.db.update(test_collection_name, {'key': 'example_key'},
                                  {'content': 'Updated content of the Talmud passage.'})
         print(f"Updated {updated_rows} rows.")
 
         # Delete data
-        deleted_rows = self.db.delete('en-sources', {'key': 'example_key'})
+        deleted_rows = self.db.delete_instance(test_collection_name, {'key': 'example_key'})
         print(f"Deleted {deleted_rows} rows.")
 
 

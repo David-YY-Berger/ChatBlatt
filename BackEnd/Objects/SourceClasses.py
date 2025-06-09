@@ -8,6 +8,7 @@ class SourceContentType(Enum):
     HEB = 1
 
 class SourceType(Enum):
+    # DONT CHANGE THESE ABBREVIATTIONS! hardcoded in MondoDB impl
     BT = (0, "Babylonian Talmud")
     JT = (1, "Jerusalem Talmud")
     RM = (2, "Rambam Mishne Torah")
