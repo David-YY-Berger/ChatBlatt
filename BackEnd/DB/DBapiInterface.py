@@ -45,14 +45,21 @@ class DBapiInterface(ABC):
         """
         pass
 
-    def insert_source(self, result : Source, start_index):
+    def insert_source(self, result : Source, ref, start_index):
+        en = result.content[(SourceClasses.SourceContentType.EN.value)]
+        heb = result.content[(SourceClasses.SourceContentType.HEB.value)]
+
+        data = {
+            'key': result.get_key(),
+            'content': [en, heb]
+        }
+
         if result.src_type == SourceClasses.SourceType.BT:
-            data = {'key': result.get_key(), 'content': result.content[SourceClasses.SourceContentType.EN.value] }
             self.insert(self.BT, data)
             pass
 
         elif result.src_type == SourceClasses.SourceType.TN:
-            # todo must add to DB
+            self.insert(self.TN, data)
             pass
 
         else:

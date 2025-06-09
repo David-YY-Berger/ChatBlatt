@@ -44,43 +44,46 @@ class PopuplatorScripts(unittest.TestCase):
     def test_populate_BT_and_TN_to_db(self):
         self.fetch_and_process_sefaria_passages(self.db.insert_source)
 
-    def test_delete_collection(self):
+    def test_delete_all_collections(self):
         self.db.delete_collection(self.db.BT)
+        self.db.delete_collection(self.db.TN)
 
     def fetch_and_process_sefaria_passages(self, process_function):
         ''' includes BT and TN'''
-        sefaria_fetcher = SefariaFetcher()
 
-        json_data = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
-        if json_data is None:
-            return
+        # 12487 last gemara entry before tanach entry
 
-        # Limit entries
-        start_index = 12487
-        json_data = json_data[start_index:]
+        start_index = 0
+        references = self.load_references(start_index)
         book_name_set = set()
+        sefaria_fetcher = SefariaFetcher()
 
         # Use ThreadPoolExecutor to parallelize the fetching of passages
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = {executor.submit(sefaria_fetcher.fetch_sefaria_passage_as_Source_from_data, ref): ref for ref
-                       in json_data}
+            # Submit all fetch tasks to the executor
+            futures = {
+                executor.submit(
+                    sefaria_fetcher.fetch_sefaria_passage_as_Source_from_data, ref
+                ): ref
+                for ref in references
+            }
 
-            for future in concurrent.futures.as_completed(futures):
+            for completed_fetch in concurrent.futures.as_completed(futures):
 
-                ref = futures[future]
+                ref = futures[completed_fetch]
                 try:
-                    result = future.result()
-                    errors = result.is_valid_else_get_error_list()
+                    source = completed_fetch.result()
+                    errors = source.is_valid_else_get_error_list()
                     if len(errors) > 0:
                         print(f"empty source! {ref} {start_index}")
                         raise InvalidDataError(ref, start_index, errors)
 
                     start_index += 1
-                    if result.book not in book_name_set:
-                        book_name_set.add(result.book)
-                        print(f"{result.book} -- {SystemFunctions.get_ts()} -- {start_index}")
+                    if source.book not in book_name_set:
+                        book_name_set.add(source.book)
+                        print(f"{source.book} -- {SystemFunctions.get_ts()} -- {start_index}")
 
-                    process_function(result, ref, start_index)
+                    process_function(source, ref, start_index)
 
                 except Exception as e:
                     print(f"Error fetching reference {ref} index {start_index}: {e}")
@@ -90,7 +93,8 @@ class PopuplatorScripts(unittest.TestCase):
 
     def test_connect_to_db(self):
 
-        test_collection_name = self.db.BT
+        # test_collection_name = self.db.BT
+        test_collection_name = self.db.TN
 
         # Insert example data into collection
         data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
@@ -110,6 +114,14 @@ class PopuplatorScripts(unittest.TestCase):
         deleted_rows = self.db.delete_instance(test_collection_name, {'key': 'example_key'})
         print(f"Deleted {deleted_rows} rows.")
 
+    ############################################ Helper Functions ######################################################
+    @staticmethod
+    def load_references(start_index = 0):
+        references = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
+        if references is None:
+            return None
+
+        return references[start_index:]
 
     ############################################# rarely used ############################################################
 
