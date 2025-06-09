@@ -123,19 +123,10 @@ class SefariaFetcher:
                 chapter_verses[chapter].append(verse)
 
         # Convert to dictionary with (min, max) verse tuples
-        return {chapter: (min(verses), max(verses)) for chapter, verses in chapter_verses.items()}
+        return {chapter: (min(verses) -1 , max(verses) - 1) for chapter, verses in chapter_verses.items()}
 
     def extract_verses_from_chapter(self, data: dict, verse_range: tuple) -> str:
-        """
-        Extracts a range of verses from the provided JSON structure.
 
-        Parameters:
-        - data (dict): Dictionary with a "text" key pointing to a list of verses.
-        - verse_range (tuple): A tuple (start, end) indicating the range of verses to extract, inclusive of start and end.
-
-        Returns:
-        - list: A list of extracted verses.
-        """
         start, end = verse_range
         res = data[start:end + 1]
         return " ".join(res)
