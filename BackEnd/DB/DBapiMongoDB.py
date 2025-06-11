@@ -13,13 +13,6 @@ class DBapiMongoDB(DBapiInterface):
     """
 
     def __init__(self, connection_string: str = None):
-        # self.collections = {
-        #     self.BT: None,
-        #     self.JT: None,
-        #     self.RM: None,
-        #     self.TN: None,
-        #     self.MS: None,
-        # }
 
         self.client = None
         self.db = None
@@ -38,7 +31,7 @@ class DBapiMongoDB(DBapiInterface):
         self.connection_string = connection_string
         self.client = MongoClient(connection_string, server_api=ServerApi('1'))
         try:
-            self.client.admin.command('ping') #fails here <
+            self.client.admin.command('ping')
             self.logger.debug("Connected to the database")
         except Exception as e:
             print(f"Failed to connect: {e}")

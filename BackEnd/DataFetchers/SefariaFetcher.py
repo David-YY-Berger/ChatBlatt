@@ -22,7 +22,7 @@ class SefariaFetcher:
         if response.status_code == 200:
             return response.json()
         else:
-            self.logger.error(f"Error fetching {tractate} {daf}: {response.status_code}")
+            self.logger.error(f"Error fetching {tractate} {daf}\n\tURL: {url}\n\tResponse code: {response.status_code}")
             return None
 
     def fetch_tanach_chapter_as_RAW(self, book: str, chapter: str) -> Any | None:
@@ -31,7 +31,7 @@ class SefariaFetcher:
         if response.status_code == 200:
             return response.json()
         else:
-            self.logger.error(f"Error fetching {book} {chapter}: {response.status_code}")
+            self.logger.error(f"Error fetching {book} {chapter}\n\tURL: {url}\n\tResponse code: {response.status_code}")
             return None
 
 
