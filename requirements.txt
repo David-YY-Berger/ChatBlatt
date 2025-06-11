@@ -5,7 +5,8 @@ python-dotenv==1.0.1
 python-multipart==0.0.9
 uvicorn==0.27.1
 websockets==12.0
-pymongo
+pymongo~=4.13.0
 
 bson~=0.5.10
 requests~=2.32.3
+beautifulsoup4~=4.13.4

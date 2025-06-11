@@ -1,5 +1,7 @@
 import concurrent.futures
+import csv
 import json
+import re
 import unittest
 import os
 
@@ -11,11 +13,13 @@ from BackEnd.FileUtils.JsonWriter import JsonWriter
 from BackEnd.General import Paths, Enums, Logger, SystemFunctions
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 import inspect
+from bs4 import BeautifulSoup
 
 from BackEnd.General.exceptions import InvalidDataError
+from BackEnd.Objects.SourceClasses import SourceContentType
 
 
-class PopuplatorScripts(unittest.TestCase):
+class DBScripts(unittest.TestCase):
 
 
     def setUp(self):
@@ -33,6 +37,11 @@ class PopuplatorScripts(unittest.TestCase):
         # Initialize the MongoDB database interface with the connection string
         self.db = DBapiMongoDB(uri)
 
+        # sets for processing over data.
+        self.tags_seen = set()
+        self.terms_used = set()
+
+
         # self.logger = Logger.Logger()
         # self.logger.mute()
 
@@ -40,6 +49,8 @@ class PopuplatorScripts(unittest.TestCase):
         """Runs after every test to clean up resources."""
         # Disconnect from the database
         self.db.disconnect()
+
+    ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
         self.fetch_and_process_sefaria_passages(self.db.insert_source)
@@ -114,6 +125,62 @@ class PopuplatorScripts(unittest.TestCase):
         deleted_rows = self.db.delete_instance(test_collection_name, {'key': 'example_key'})
         print(f"Deleted {deleted_rows} rows.")
 
+    ############################################ Processing Scripts ####################################################
+
+    def test_process(self):
+        functions = [
+            # self.extract_tag_types,
+            self.extract_content_italics
+        ]
+        collection_names = [
+            self.db.TN,
+            self.db.BT
+        ]
+        self.process_all_documents(collection_names=collection_names, functions =functions)
+
+        # print(", ".join(sorted(self.tags_seen)))
+        # print(", ".join(sorted(self.terms_used)))
+        self.write_glossary_csv(self.terms_used)
+
+
+    def process_all_documents(self, collection_names, functions):
+
+        for collection_name in collection_names:
+            print(f"Processing collection: {collection_name}")
+            documents = self.db.execute_query({'collection': collection_name, 'filter': {}})
+
+            for doc in documents:
+                for func in functions:
+                    try:
+                        func(doc, collection_name)  # Pass both doc and collection if needed
+                    except Exception as e:
+                        print(f"Error processing doc {doc.get('_id')}: {e}")
+
+    def extract_tag_types(self, doc, collection):
+        enriched = doc.copy()
+        english_content = enriched['content'][SourceContentType.EN.value]  # this is your HTML string
+
+        # Use regex to find all tag types
+        tags = re.findall(r'</?([a-zA-Z0-9]+)', english_content)
+
+        # Add only unique tag names to the set
+        for tag in tags:
+            self.tags_seen.add(tag.lower())
+
+    def extract_content_italics(self, doc, collection):
+        enriched = doc.copy()
+        english_content = enriched['content'][SourceContentType.EN.value]  # HTML string
+
+        soup = BeautifulSoup(english_content, 'html.parser')
+        italic_elements = soup.find_all('i')
+
+        for elem in italic_elements:
+            text = elem.get_text(strip=True)
+            if text:
+                self.terms_used.add(text)
+
+
+
     ############################################ Helper Functions ######################################################
     @staticmethod
     def load_references(start_index = 0):
@@ -136,3 +203,14 @@ class PopuplatorScripts(unittest.TestCase):
 
         # Convert BSON to JSON
         JsonWriter.bson_to_json(input_bson_path, output_json_path)
+
+    @staticmethod
+    def write_glossary_csv(english_terms):
+        with open(Paths.GLOSSARY_TEMP, mode="w", newline='', encoding="utf-8") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(["term_en", "term_heb", "is_a_term", "def"])
+
+            for term in sorted(english_terms):
+                writer.writerow([term, "", "", ""])
+
+        print('printed to ' + Paths.GLOSSARY_TEMP)
