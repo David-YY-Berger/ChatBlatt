@@ -151,7 +151,7 @@ class DBapiMongoDB(DBapiInterface):
             return None
 
         # Extract the 'faiss_index' field and convert from BSON Binary to bytes
-        index_bytes = bytes(record.get(self.CollectionName.FS.value)) if record.get(self.CollectionName.FS.value) else None
+        index_bytes = bytes(record.get('faiss_index')) if record.get('faiss_index') else None
         # Extract the 'metadata' field similarly
         metadata_bytes = bytes(record.get("metadata")) if record.get("metadata") else None
 

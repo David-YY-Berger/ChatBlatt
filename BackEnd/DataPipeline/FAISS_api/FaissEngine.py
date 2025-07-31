@@ -72,14 +72,29 @@ class FaissEngine:
         self.dbapi.save_faiss_index(index_bytes, metadata_bytes)
 
     def add_documents(self, docs: List[Dict[str, str]]):
-        texts = [doc["content"] for doc in docs]
+
+        new_docs = self.get_new_docs(docs)
+        if not new_docs:
+            return  # Nothing new to add
+
+        texts = [doc["content"] for doc in new_docs]
         embeddings = self.model.encode(texts, convert_to_numpy=True)
         self.index.add(embeddings)
 
         # Store only the keys (references)
-        self.metadata.extend([doc["key"] for doc in docs])
+        self.metadata.extend([doc["key"] for doc in new_docs])
 
         self._save_to_mongo()
+
+    def get_new_docs(self, docs):
+        existing_keys = set(self.metadata)
+
+        duplicate_keys = [doc["key"] for doc in docs if doc["key"] in existing_keys]
+        # if duplicate_keys:
+        #     print(f"[FaissEngine] Skipped duplicate keys: {duplicate_keys}")
+
+        new_docs = [doc for doc in docs if doc["key"] not in existing_keys]
+        return new_docs
 
     def search(self, query: str, top_k: int = 5) -> List[str]:
         query_vec = self.model.encode([query], convert_to_numpy=True)
