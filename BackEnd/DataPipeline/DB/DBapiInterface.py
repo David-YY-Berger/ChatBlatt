@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from enum import Enum
 from typing import Any, Dict, List
 
 from BackEnd.Objects import SourceClasses
@@ -10,12 +11,13 @@ class DBapiInterface(ABC):
     An abstract base class defining the essential operations for a database API.
     """
 
-    # Collection name constants
-    BT = 'BT'  # Babylonian Talmud
-    JT = 'JT'  # Jerusalem Talmud
-    RM = 'RM'  # Rambam Mishne Torah
-    TN = 'TN'  # Tanach
-    MS = 'MS'  # Mishna
+    class CollectionName(str, Enum):
+        BT = 'BT'  # Babylonian Talmud
+        JT = 'JT'  # Jerusalem Talmud
+        RM = 'RM'  # Rambam Mishne Torah
+        TN = 'TN'  # Tanach
+        MS = 'MS'  # Mishna
+        FS = 'faiss_index'  # FAISS index
 
     @abstractmethod
     def connect(self, connection_string: str) -> None:

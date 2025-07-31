@@ -1,17 +1,17 @@
 import concurrent.futures
 import csv
-import json
 import re
 import unittest
 import os
 
 from dotenv import load_dotenv
 
-from BackEnd.DB.DBapiMongoDB import DBapiMongoDB
-from BackEnd.DataFetchers.SefariaFetcher import SefariaFetcher
+from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
+from BackEnd.DataPipeline.FAISS_api import FaissEngine
 from BackEnd.FileUtils.JsonWriter import JsonWriter
-from BackEnd.General import Paths, Enums, Logger, SystemFunctions
-from BackEnd.FileUtils import OsFunctions, LocalPrinter
+from BackEnd.General import Paths, Enums, SystemFunctions
+from BackEnd.FileUtils import OsFunctions
 import inspect
 from bs4 import BeautifulSoup
 
@@ -56,8 +56,8 @@ class DBScripts(unittest.TestCase):
         self.fetch_and_process_sefaria_passages(self.db.insert_source)
 
     def test_delete_all_collections(self):
-        self.db.delete_collection(self.db.BT)
-        self.db.delete_collection(self.db.TN)
+        self.db.delete_collection(self.db.CollectionName.BT.value)
+        self.db.delete_collection(self.db.CollectionName.TN.value)
 
     def fetch_and_process_sefaria_passages(self, process_function):
         ''' includes BT and TN'''
@@ -105,7 +105,7 @@ class DBScripts(unittest.TestCase):
     def test_connect_to_db(self):
 
         # test_collection_name = self.db.BT
-        test_collection_name = self.db.TN
+        test_collection_name = self.db.CollectionName.TN.value
 
         # Insert example data into collection
         data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
@@ -133,8 +133,8 @@ class DBScripts(unittest.TestCase):
             self.extract_content_italics
         ]
         collection_names = [
-            self.db.TN,
-            self.db.BT
+            self.db.CollectionName.TN.value,
+            self.db.CollectionName.BT.value
         ]
         self.process_all_documents(collection_names=collection_names, functions =functions)
 
