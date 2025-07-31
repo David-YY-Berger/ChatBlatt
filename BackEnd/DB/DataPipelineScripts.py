@@ -142,7 +142,6 @@ class DBScripts(unittest.TestCase):
         # print(", ".join(sorted(self.terms_used)))
         self.write_glossary_csv(self.terms_used)
 
-
     def process_all_documents(self, collection_names, functions):
 
         for collection_name in collection_names:
@@ -190,7 +189,7 @@ class DBScripts(unittest.TestCase):
 
         return references[start_index:]
 
-    ############################################# rarely used ############################################################
+    ############################################# One time use (upon DB reset) ############################################################
 
     def test_convert_index_from_BSON_to_JSON(self):
         # pre
