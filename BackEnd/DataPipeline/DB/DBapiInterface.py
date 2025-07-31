@@ -48,8 +48,8 @@ class DBapiInterface(ABC):
         pass
 
     def insert_source(self, result : Source, ref, start_index):
-        en = result.content[(SourceClasses.SourceContentType.EN.value)]
-        heb = result.content[(SourceClasses.SourceContentType.HEB.value)]
+        en = result.content[SourceClasses.SourceContentType.EN.value]
+        heb = result.content[SourceClasses.SourceContentType.HEB.value]
 
         data = {
             'key': result.get_key(),
@@ -57,11 +57,11 @@ class DBapiInterface(ABC):
         }
 
         if result.src_type == SourceClasses.SourceType.BT:
-            self.insert(self.BT, data)
+            self.insert(self.CollectionName.BT.value, data)
             pass
 
         elif result.src_type == SourceClasses.SourceType.TN:
-            self.insert(self.TN, data)
+            self.insert(self.CollectionName.TN.value, data)
             pass
 
         else:
