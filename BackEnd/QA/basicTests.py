@@ -1,7 +1,8 @@
 import unittest
-import os
-from BackEnd.DataFetchers.SefariaFetcher import SefariaFetcher
-from BackEnd.FileUtils.JsonWriter import JsonWriter
+
+from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
+from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.General import Paths, Enums, Logger
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 import inspect
@@ -27,6 +28,9 @@ class TestExample(unittest.TestCase):
         LocalPrinter.print_to_file(json_res, Enums.FileType.JSON, self.test_path)
         self.logger.log(f"printed to {self.test_path}")
 
+    def test_foo(self):
+        # reserved for any small test
+        print(DBapiInterface.CollectionName.FS.value)
 
 ###################################################################
 
