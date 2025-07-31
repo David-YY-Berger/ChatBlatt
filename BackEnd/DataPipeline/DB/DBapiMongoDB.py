@@ -1,6 +1,7 @@
+from bson import Binary
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Logger import Logger
@@ -105,3 +106,58 @@ class DBapiMongoDB(DBapiInterface):
         # Using an empty query {} to match all documents in the collection
         result = self.db[collection_name].delete_many({})
         return result.deleted_count
+
+    @override
+    def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:
+        """
+        Save the serialized FAISS index and metadata to MongoDB.
+
+        Args:
+            index_bytes (bytes): Serialized FAISS index.
+            metadata_bytes (bytes): Serialized metadata (pickled).
+        """
+        # Use MongoDB's Binary wrapper to store raw bytes safely
+        faiss_index_binary = Binary(index_bytes)
+        metadata_binary = Binary(metadata_bytes)
+
+        # Upsert the FAISS index document in the 'faiss_index' collection
+        # An empty filter {} means we update the single (or first) document.
+        # If no document exists, 'upsert=True' inserts a new one.
+        self.db[self.CollectionName.FS.value].update_one(
+            {},
+            {"$set": {
+                "faiss_index": faiss_index_binary,
+                "metadata": metadata_binary
+            }},
+            upsert=True
+        )
+
+    @override
+    def load_faiss_index(self) -> Optional[Tuple[bytes, bytes]]:
+        """
+        Load the FAISS index and metadata from MongoDB.
+
+        Returns:
+            Optional[Tuple[bytes, bytes]]: Tuple containing
+                - index_bytes: Serialized FAISS index bytes
+                - metadata_bytes: Serialized metadata bytes
+            or None if no record is found.
+        """
+        # Fetch the single document from the 'faiss_index' collection
+        record = self.db[self.CollectionName.FS.value].find_one({})
+
+        # If no document found, return None
+        if not record:
+            return None
+
+        # Extract the 'faiss_index' field and convert from BSON Binary to bytes
+        index_bytes = bytes(record.get(self.CollectionName.FS.value)) if record.get(self.CollectionName.FS.value) else None
+        # Extract the 'metadata' field similarly
+        metadata_bytes = bytes(record.get("metadata")) if record.get("metadata") else None
+
+        # If either part is missing, treat as no valid index stored
+        if index_bytes is None or metadata_bytes is None:
+            return None
+
+        # Return both bytes objects as a tuple
+        return index_bytes, metadata_bytes

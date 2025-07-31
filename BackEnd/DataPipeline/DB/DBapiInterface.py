@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from enum import Enum
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.Objects import SourceClasses
 from BackEnd.Objects.SourceClasses import Source
@@ -17,7 +17,7 @@ class DBapiInterface(ABC):
         RM = 'RM'  # Rambam Mishne Torah
         TN = 'TN'  # Tanach
         MS = 'MS'  # Mishna
-        FS = 'faiss_index'  # FAISS index
+        FS = 'faiss_data'
 
     @abstractmethod
     def connect(self, connection_string: str) -> None:
@@ -87,5 +87,20 @@ class DBapiInterface(ABC):
         """
         Delete all documents from the given collection.
         Returns the number of documents deleted.
+        """
+        pass
+
+    @abstractmethod
+    def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:
+        """
+        Save the FAISS index and metadata bytes to the database.
+        """
+        pass
+
+    @abstractmethod
+    def load_faiss_index(self) -> Optional[Tuple[bytes, bytes]]:
+        """
+        Load the FAISS index and metadata bytes from the database.
+        Returns None if not found.
         """
         pass
