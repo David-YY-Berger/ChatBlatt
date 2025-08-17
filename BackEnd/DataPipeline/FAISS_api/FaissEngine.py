@@ -25,15 +25,28 @@ class FaissEngine:
         if not hasattr(dbapi, "db") or dbapi.db is None:
             raise ValueError("The dbapi object must have a connected .db attribute")
 
-        self.model = SentenceTransformer(model_name)
+        self.model_name = model_name
         self.dim = dim
-        self.dbapi = dbapi
+        self._model = None
+        self._index = None
+        self.metadata = None
 
-        if self._load_from_mongo():
-            pass
-        else:
-            self.index = faiss.IndexFlatL2(dim)
-            self.metadata = []
+
+    @property
+    def model(self):
+        if self._model is None:
+            self._model = SentenceTransformer(self.model_name)
+        return self._model
+
+    @property
+    def index(self):
+        if self._index is None:
+            if self._load_from_mongo():
+                pass
+            else:
+                self._index = faiss.IndexFlatL2(self.dim)
+                self.metadata = []
+        return self._index
 
     def _load_from_mongo(self) -> bool:
         """

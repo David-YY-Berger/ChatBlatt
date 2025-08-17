@@ -4,6 +4,7 @@ import re
 import unittest
 import os
 
+import unicodedata
 from dotenv import load_dotenv
 
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
@@ -35,7 +36,7 @@ class DBScripts(unittest.TestCase):
         uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
 
         self.db = DBapiMongoDB(uri)
-        self.faiss = FaissEngine.FaissEngine(dbapi=self.db)
+        self.faiss = FaissEngine.FaissEngine(dbapi=self.db) #<- make this lazy inst
 
         # sets for processing over data.
         self.tags_seen = set()
@@ -53,18 +54,23 @@ class DBScripts(unittest.TestCase):
     ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
-        self.fetch_and_process_sefaria_passages(self.db.insert_source)
+        self.fetch_and_init_process_sefaria_passages(self.db.insert_source, 9710)
 
     def test_delete_all_collections(self):
-        self.db.delete_collection(self.db.CollectionName.BT.value)
-        self.db.delete_collection(self.db.CollectionName.TN.value)
+        # dangerous! be careful
+        print(self.db.CollectionName)
+        # self.db.delete_collection(self.db.CollectionName.BT.value)
+        # self.db.delete_collection(self.db.CollectionName.TN.value)
+        # self.db.delete_collection(self.db.CollectionName.FS)
 
-    def fetch_and_process_sefaria_passages(self, process_function):
+    def test_clear_en_clean_content(self):
+        print(self.db.CollectionName)
+    #     todo complete..
+
+    def fetch_and_init_process_sefaria_passages(self, process_function, start_index):
         ''' includes BT and TN'''
 
         # 12487 last gemara entry before tanach entry
-
-        start_index = 0
         references = self.load_references(start_index)
         book_name_set = set()
         sefaria_fetcher = SefariaFetcher()
@@ -130,7 +136,8 @@ class DBScripts(unittest.TestCase):
     def test_process(self):
         functions = [
             # self.extract_tag_types,
-            self.extract_content_italics
+            # self.extract_content_italics
+            self.populate_clean_english_content
         ]
         collection_names = [
             self.db.CollectionName.TN.value,
@@ -140,10 +147,11 @@ class DBScripts(unittest.TestCase):
 
         # print(", ".join(sorted(self.tags_seen)))
         # print(", ".join(sorted(self.terms_used)))
-        self.write_glossary_csv(self.terms_used)
+        # self.write_glossary_csv(self.terms_used)
 
     def process_all_documents(self, collection_names, functions):
 
+        # does NOT run multithreaded (safer for serial processing)
         for collection_name in collection_names:
             print(f"Processing collection: {collection_name}")
             documents = self.db.execute_query({'collection': collection_name, 'filter': {}})
@@ -155,7 +163,7 @@ class DBScripts(unittest.TestCase):
                     except Exception as e:
                         print(f"Error processing doc {doc.get('_id')}: {e}")
 
-    def extract_tag_types(self, doc, collection):
+    def extract_tag_types(self, doc, collection_name):
         enriched = doc.copy()
         english_content = enriched['content'][SourceContentType.EN.value]  # this is your HTML string
 
@@ -166,7 +174,7 @@ class DBScripts(unittest.TestCase):
         for tag in tags:
             self.tags_seen.add(tag.lower())
 
-    def extract_content_italics(self, doc, collection):
+    def extract_content_italics(self, doc, collection_name):
         enriched = doc.copy()
         english_content = enriched['content'][SourceContentType.EN.value]  # HTML string
 
@@ -178,7 +186,61 @@ class DBScripts(unittest.TestCase):
             if text:
                 self.terms_used.add(text)
 
+    def populate_clean_english_content(self, doc, collection_name):
+        try:
+            enriched = doc.copy()
 
+            # Check that EN content exists
+            en_index = SourceContentType.EN.value
+            content_list = enriched.get('content', [])
+            en_html_content = content_list[en_index] if len(content_list) > en_index else None
+
+            if en_html_content is None:
+                print(f"[Warning] Document missing EN content: {enriched.get('key', 'unknown key')}")
+                return 0
+
+            # Check that key exists
+            doc_key = enriched.get('key')
+            if not doc_key:
+                print(f"[Error] Document missing 'key' field: {enriched}")
+                return 0
+
+            # Clean the English text
+            clean_en_content = self.clean_text_for_search(self, en_html_content)
+
+            # Prepare the update dict
+            update_dict = {f"content.{SourceContentType.EN_CLEAN.value}": clean_en_content}
+
+            # Update by key
+            modified_count = self.db.update_by_key(collection_name, doc_key, update_dict)
+
+            if modified_count == 0:
+                print(f"[Info] No document updated for key '{doc_key}' in collection '{collection_name}'")
+            return modified_count
+
+        except Exception as e:
+            print(f"[Error] Failed to populate clean English content for key '{enriched.get('key', 'unknown')}': {e}")
+            return 0
+
+    @staticmethod
+    def clean_text_for_search(self, html_content):
+
+        # 1. Remove all HTML tags
+        text = re.sub(r'<[^>]+>', ' ', html_content)
+
+        # 2. Normalize unicode (remove accents etc.)
+        text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("utf-8")
+
+        # 3. Lowercase
+        text = text.lower()
+
+        # 4. Remove unwanted characters (keep letters, numbers, and useful punctuation)
+        text = re.sub(r"[^a-z0-9\s\.,!?;:'\"()\-\[\]{}]", " ", text)
+
+        # 5. Collapse multiple spaces
+        text = re.sub(r'\s+', ' ', text).strip()
+
+        return text
 
     ############################################ Helper Functions ######################################################
     @staticmethod
@@ -218,7 +280,7 @@ class DBScripts(unittest.TestCase):
     ############################################## Basic Testing with FAISS ###############################################
 
     def test_basic_faiss_index(self):
-        #simple test.. should be replaced..
+        # simple test.. should be replaced..todo
         doc1 = {
             "key": "BT_Bava Batra_0_4a:10-11",
             "content": "The mishna teaches: In a place where it is customary to build a wall of non-chiseled stone, or chiseled stone, or small bricks, or large bricks, they must build the partition with that material. Everything is in accordance with the regional custom. The Gemara asks: What does the word everything serve to add? The Gemara answers: It serves to add a place where it is customary to build a partition out of palm and laurel branches. In such a place, the partition is built from those materials.The mishna teaches: Therefore, if the wall later falls, the assumption is that the space where the wall stood and the stones belong to both of them, to be divided equally. The Gemara questions the need for this ruling: Isn’t it obvious that this is the case, since both neighbors participated in the construction of the wall? The Gemara answers: No, it is necessary to teach this halakha for a case where the entire wall fell into the domain of one of them. Alternatively, it is necessary in a case where one of them already cleared all the stones into his own domain. Lest you say that the other party should be governed by the principle that the burden of proof rests upon the claimant, that is, if the other party should have to prove that he had been a partner in the construction of the wall, the mishna teaches us that they are presumed to have been partners in the building of the wall, and neither requires further proof."

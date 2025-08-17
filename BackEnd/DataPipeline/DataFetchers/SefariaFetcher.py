@@ -36,9 +36,7 @@ class SefariaFetcher:
 
 
     def fetch_sefaria_passage_as_Source_from_data(self, json_data) -> Source:
-        """
-            This function assumes `reference` is function assumes this order: REF_PLACE = 0  TYPE_PLACE = 1
-        """
+
         if json_data['type'] == "Mishnah" or json_data['type'] == "Sugya":
             return self.fetch_BT_as_Source_from_ref(json_data['full_ref'])
         elif json_data['type'] == "biblical-story":
@@ -66,10 +64,12 @@ class SefariaFetcher:
 
             for i in range(start_index, end_index + 1):
                 if i < len(self.temp_daf_data[2]['text']):
-                    data_from_section = self.temp_daf_data[2]['text'][i]
+                    en_content_from_section = self.temp_daf_data[2]['text'][i]
+                    heb_content_from_section = self.temp_daf_data[2]['he'][i]
                     # FOR DEBUGGING print(f"printing {tractate} {daf} {start_index} - {end_index} {data_from_section}")
-                    content[SourceContentType.EN.value] += data_from_section
-        #     todo get hebrew content
+                    content[SourceContentType.EN.value] += en_content_from_section
+                    content[SourceContentType.HEB.value] += heb_content_from_section
+
         return Source(src_type=SourceType.BT, book=tractate, chapter=0,
                       section=reference.split(tractate, 1)[1].strip(), content=content)
 

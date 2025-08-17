@@ -107,6 +107,14 @@ class DBapiMongoDB(DBapiInterface):
         result = self.db[collection_name].delete_many({})
         return result.deleted_count
 
+    # ----------------------------- Sources ----------------------------------
+    @override
+    def find_one(self, collection_name: str, key: str) -> bool:
+        if self.db is None:
+            raise Exception("Database connection is not established.")
+        return self.db.get_collection(collection_name).find_one({'key': key})
+
+    # ----------------------------- FAISS ------------------------------------
     @override
     def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:
         """

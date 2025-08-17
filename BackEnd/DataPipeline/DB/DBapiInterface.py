@@ -47,26 +47,7 @@ class DBapiInterface(ABC):
         """
         pass
 
-    def insert_source(self, result : Source, ref, start_index):
-        en = result.content[SourceClasses.SourceContentType.EN.value]
-        heb = result.content[SourceClasses.SourceContentType.HEB.value]
 
-        data = {
-            'key': result.get_key(),
-            'content': [en, heb]
-        }
-
-        if result.src_type == SourceClasses.SourceType.BT:
-            self.insert(self.CollectionName.BT.value, data)
-            pass
-
-        elif result.src_type == SourceClasses.SourceType.TN:
-            self.insert(self.CollectionName.TN.value, data)
-            pass
-
-        else:
-            # optional fallback
-            print(f"Unknown src_type '{result.src_type}' at index {start_index}")
 
     @abstractmethod
     def update(self, collection_name: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
@@ -91,6 +72,61 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
+    def find_one(self, collection_name: str, key: str) -> bool:
+        pass
+
+    # ----------------------------- Sources ----------------------------------
+
+    def insert_source(self, result : Source, ref, start_index):
+        en = result.content[SourceClasses.SourceContentType.EN.value]
+        heb = result.content[SourceClasses.SourceContentType.HEB.value]
+
+        data = {
+            'key': result.get_key(),
+            'content': [en, heb, ""],
+            'summary': "",
+            'filters': []
+        }
+
+        # Decide target collection based on source type
+        if result.src_type == SourceClasses.SourceType.BT:
+            collection = self.CollectionName.BT.value
+        elif result.src_type == SourceClasses.SourceType.TN:
+            collection = self.CollectionName.TN.value
+        else:
+            print(f"Unknown src_type '{result.src_type}' at index {start_index}")
+            return
+
+        # Check for existing document with same key
+        existing = self.find_one(collection, data["key"])
+        if existing:
+            # Skip insert if key already exists
+            print(f"Skipped insert: key '{data['key']}' already in {collection}")
+            return
+
+        # Perform insert
+        self.insert(collection, data)
+
+    def update_by_key(self, collection_name: str, key: str, update: Dict[str, Any]) -> int:
+        """
+        Update a document in the collection using its unique key.
+
+        Args:
+            collection_name: Name of the collection.
+            key: The unique key identifying the document.
+            update: Dict of fields to update.
+
+        Returns:
+            Number of documents modified.
+        """
+        # Build query using the key
+        query = {"key": key}
+
+        # Call the existing update method
+        return self.update(collection_name, query, update)
+
+    # ----------------------------- FAISS ------------------------------------
+    @abstractmethod
     def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:
         """
         Save the FAISS index and metadata bytes to the database.
@@ -104,3 +140,5 @@ class DBapiInterface(ABC):
         Returns None if not found.
         """
         pass
+
+
