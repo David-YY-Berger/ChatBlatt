@@ -32,13 +32,13 @@ class SourceType(Enum):
 ''' can be init with either the key, or src_type&book&chapter&section'''
 @dataclass
 class Source:
-    src_type: SourceType
+    src_type: SourceType | None = None
     key: str = ""
     #example key: BT_Bava Batra_0_13b:9-14a:4 , or
     book: str = ""
     chapter: int = 0
     section: str = ""
-    summary_str: str = ""
+    summary: str = ""
     content: list[str] = field(default_factory=list)
     filters: list[list[int]] = field(default_factory=list)
 
@@ -96,7 +96,7 @@ class Source:
         """Convert the Source object to a dictionary"""
         return {
             "src_type": str(self.src_type),  # stringify enum
-            "summary_str": self.summary_str,
+            "summary": self.summary,
             "book": self.book,
             "chapter": self.chapter,
             "section": self.section,
@@ -149,10 +149,24 @@ class Source:
 
     @staticmethod
     def get_book_from_key(key) -> str:
-        # todo
-        return ""
+        parts = key.split("_")
+        if len(parts) < 2:
+            return ""
+        else:
+            return parts[1]
+
+    @staticmethod
+    def get_chapter_from_key(key) -> str:
+        parts = key.split("_")
+        if len(parts) < 3:
+            return ""
+        else:
+            return parts[2]
 
     @staticmethod
     def get_section_from_key(key) -> str:
-        # todo
-        return ""
+        parts = key.split("_")
+        if len(parts) < 4:
+            return ""
+        else:
+            return parts[3]
