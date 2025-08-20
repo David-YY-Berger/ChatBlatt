@@ -3,8 +3,6 @@ from enum import Enum
 from dataclasses import dataclass, asdict, field
 from typing import Any, Optional
 
-from BackEnd.Sources import SourceHelper
-
 
 class SourceContentType(Enum):
     EN = 0
@@ -36,6 +34,7 @@ class SourceType(Enum):
 class Source:
     src_type: SourceType
     key: str = ""
+    #example key: BT_Bava Batra_0_13b:9-14a:4 , or
     book: str = ""
     chapter: int = 0
     section: str = ""
@@ -72,7 +71,7 @@ class Source:
         if self.src_type:
             return self.src_type
         elif self.key:
-            return SourceHelper.get_source_type_from_key(self.key)
+            return Source.get_source_type_from_key(self.key)
         else:
             return None
 
@@ -80,7 +79,7 @@ class Source:
         if self.book:
             return self.book
         elif self.key:
-            return SourceHelper.get_book_from_key(self.key)
+            return Source.get_book_from_key(self.key)
         else:
             return ""
 
@@ -88,7 +87,7 @@ class Source:
         if self.section:
             return self.section
         elif self.key:
-            return SourceHelper.get_section_from_key(self.key)
+            return Source.get_section_from_key(self.key)
         else:
             return ""
 
@@ -134,3 +133,26 @@ class Source:
             errors.append("Filters must be a list of lists of integers!")
 
         return errors
+
+    @staticmethod
+    def get_collection_name_from_key(key: str) -> str:
+        src_type = Source.get_source_type_from_key(key)
+        if src_type:
+            return src_type.name
+        else:
+            return ""
+
+    @staticmethod
+    def get_source_type_from_key(key: str) -> SourceType | None:
+        prefix = key[:2]
+        return SourceType[prefix] if prefix in SourceType.__members__ else None
+
+    @staticmethod
+    def get_book_from_key(key) -> str:
+        # todo
+        return ""
+
+    @staticmethod
+    def get_section_from_key(key) -> str:
+        # todo
+        return ""
