@@ -17,7 +17,7 @@ import inspect
 from bs4 import BeautifulSoup
 
 from BackEnd.General.exceptions import InvalidDataError
-from BackEnd.Objects.SourceClasses import SourceContentType
+from BackEnd.Sources.SourceClasses import SourceContentType
 
 
 class DBScripts(unittest.TestCase):
@@ -54,7 +54,7 @@ class DBScripts(unittest.TestCase):
     ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
-        self.fetch_and_init_process_sefaria_passages(self.db.insert_source, 9710)
+        self.fetch_and_init_process_sefaria_passages(self.db.insert_source, 10203)
 
     def test_delete_all_collections(self):
         # dangerous! be careful

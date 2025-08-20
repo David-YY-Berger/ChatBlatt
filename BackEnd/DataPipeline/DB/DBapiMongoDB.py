@@ -7,6 +7,8 @@ from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Logger import Logger
 from typing_extensions import override
 
+from BackEnd.Sources.SourceClasses import Source
+
 
 class DBapiMongoDB(DBapiInterface):
     """
@@ -109,10 +111,22 @@ class DBapiMongoDB(DBapiInterface):
 
     # ----------------------------- Sources ----------------------------------
     @override
-    def find_one(self, collection_name: str, key: str) -> bool:
+    def find_one(self, collection_name: str, key: str):
         if self.db is None:
             raise Exception("Database connection is not established.")
         return self.db.get_collection(collection_name).find_one({'key': key})
+
+    @override
+    def find_one_source(self, collection_name: str, key: str) -> Source:
+        db_object = self.find_one(collection_name, key)
+        if db_object is None:
+            raise Exception(f"Collection {collection_name} and {key} does not exist.")
+        return Source(
+            key=db_object["key"],
+            content=db_object["content"],
+            filters=db_object["filters"],
+            summary=db_object["summary"],
+        )
 
     # ----------------------------- FAISS ------------------------------------
     @override

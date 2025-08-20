@@ -4,7 +4,7 @@ from collections import defaultdict
 
 import requests
 from BackEnd.General import Logger
-from BackEnd.Objects.SourceClasses import Source, SourceType, SourceContentType
+from BackEnd.Sources.SourceClasses import Source, SourceContentType, SourceType
 
 
 class SefariaFetcher:
@@ -49,6 +49,8 @@ class SefariaFetcher:
     def fetch_BT_as_Source_from_ref(self, reference) -> Source:
         ''' function poorly done... should be refactored to use list from sefaria's .json file'''
         [tractate, sections] = self.parse_talmud_reference(reference)
+        content = ["", ""]
+
         for daf in sections:
             if not self.temp_daf_data or self.temp_daf_data[0] != tractate or self.temp_daf_data[1] != daf:
                 self.temp_daf_data = [tractate, daf, self.fetch_talmud_daf_as_RAW(tractate=tractate, daf=daf)]
@@ -59,8 +61,6 @@ class SefariaFetcher:
             start_section, end_section = sections[daf]
             start_index = int(start_section) - 1
             end_index = int(end_section) - 1 if end_section else len(self.temp_daf_data[2]["text"])
-
-            content = ["", ""]
 
             for i in range(start_index, end_index + 1):
                 if i < len(self.temp_daf_data[2]['text']):

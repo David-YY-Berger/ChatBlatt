@@ -2,8 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
-from BackEnd.Objects import SourceClasses
-from BackEnd.Objects.SourceClasses import Source
+from BackEnd.Sources.SourceClasses import Source, SourceType, SourceContentType
 
 
 class DBapiInterface(ABC):
@@ -18,6 +17,10 @@ class DBapiInterface(ABC):
         TN = 'TN'  # Tanach
         MS = 'MS'  # Mishna
         FS = 'faiss_data'
+
+    @staticmethod
+    def is_valid_collection(name: str) -> bool:
+        return name in DBapiInterface.CollectionName.__members__
 
     @abstractmethod
     def connect(self, connection_string: str) -> None:
@@ -72,14 +75,18 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def find_one(self, collection_name: str, key: str) -> bool:
+    def find_one(self, collection_name: str, key: str):
+        pass
+
+    @abstractmethod
+    def find_one_source(self, collection_name: str, key: str) -> Source:
         pass
 
     # ----------------------------- Sources ----------------------------------
 
     def insert_source(self, result : Source, ref, start_index):
-        en = result.content[SourceClasses.SourceContentType.EN.value]
-        heb = result.content[SourceClasses.SourceContentType.HEB.value]
+        en = result.content[SourceContentType.EN.value]
+        heb = result.content[SourceContentType.HEB.value]
 
         data = {
             'key': result.get_key(),
@@ -89,9 +96,9 @@ class DBapiInterface(ABC):
         }
 
         # Decide target collection based on source type
-        if result.src_type == SourceClasses.SourceType.BT:
+        if result.src_type == SourceType.BT:
             collection = self.CollectionName.BT.value
-        elif result.src_type == SourceClasses.SourceType.TN:
+        elif result.src_type == SourceType.TN:
             collection = self.CollectionName.TN.value
         else:
             print(f"Unknown src_type '{result.src_type}' at index {start_index}")
