@@ -1,5 +1,24 @@
-from BackEnd.Objects import SourceClasses
-from BackEnd.Objects.SourceClasses import Source, SourceContentType
+from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
+from BackEnd.Sources.SourceClasses import SourceType
+
+
+def get_collection_name_from_key(key: str) -> str:
+    prefix = key[:2]  # get first 2 characters
+    if DBapiInterface.is_valid_collection(prefix):
+        return prefix
+    raise ValueError(f"Unknown collection prefix: {prefix}")
+
+def get_source_type_from_key(key: str) -> SourceType | None:
+    prefix = key[:2]
+    return SourceType[prefix] if prefix in SourceType.__members__ else None
+
+def get_book_from_key(key):
+    # todo
+    return None
+
+def get_section_from_key(key):
+    # todo
+    return None
 
 
 # def get_BT_list_from_raw_json(raw_json) -> list[Source]:

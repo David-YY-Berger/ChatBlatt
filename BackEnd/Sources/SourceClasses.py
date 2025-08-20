@@ -1,7 +1,9 @@
 import json
 from enum import Enum
 from dataclasses import dataclass, asdict, field
-from typing import Any
+from typing import Any, Optional
+
+from BackEnd.Sources import SourceHelper
 
 
 class SourceContentType(Enum):
@@ -29,11 +31,12 @@ class SourceType(Enum):
     def __str__(self):
         return self.description
 
-
+''' can be init with either the key, or src_type&book&chapter&section'''
 @dataclass
 class Source:
     src_type: SourceType
-    book: str
+    key: str = ""
+    book: str = ""
     chapter: int = 0
     section: str = ""
     summary_str: str = ""
@@ -46,7 +49,49 @@ class Source:
             self.chapter = 0
 
     def get_key(self) -> str:
-        return f"{self.src_type.name}_{self.book}_{self.chapter}_{self.section}"
+        if self.key:
+            return self.key
+        elif self.src_type and self.book and self.section:
+            return f"{self.src_type.name}_{self.book}_{self.chapter}_{self.section}"
+        else:
+            # Collect non-empty parts
+            parts = []
+            if self.book:
+                parts.append(str(self.book))
+            if self.chapter:  # chapter is int, skip if 0
+                parts.append(str(self.chapter))
+            if self.section:
+                parts.append(str(self.section))
+
+            if parts:
+                return f"no key found for {' '.join(parts)}"
+            else:
+                return "no key found"
+
+    def get_src_type(self) -> SourceType | str | None:
+        if self.src_type:
+            return self.src_type
+        elif self.key:
+            return SourceHelper.get_source_type_from_key(self.key)
+        else:
+            return None
+
+    def get_book(self) -> str:
+        if self.book:
+            return self.book
+        elif self.key:
+            return SourceHelper.get_book_from_key(self.key)
+        else:
+            return ""
+
+    def get_section(self) -> str:
+        if self.section:
+            return self.section
+        elif self.key:
+            return SourceHelper.get_section_from_key(self.key)
+        else:
+            return ""
+
 
     def to_dict(self) -> dict[str, Any]:
         """Convert the Source object to a dictionary"""
