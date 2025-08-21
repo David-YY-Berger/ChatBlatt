@@ -91,6 +91,9 @@ class Source:
         else:
             return ""
 
+    def get_content(self) -> list[str]:
+        return self.content
+
 
     def to_dict(self) -> dict[str, Any]:
         """Convert the Source object to a dictionary"""
