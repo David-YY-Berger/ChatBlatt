@@ -8,9 +8,11 @@ from BackEnd.FileUtils.HtmlWriter import HtmlWriter
 from BackEnd.General import Paths
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 from BackEnd.General.Enums import FileType
+from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
-from BackEnd.Main.Question import Question
+from BackEnd.QA.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
+from BackEnd.Sources.SourceClasses import SourceType
 
 
 class TestExample(unittest.TestCase):
@@ -30,9 +32,10 @@ class TestExample(unittest.TestCase):
 
 ############################################# 1. Basic Tests ####################################################
     def test_run_all_tests(self):
-        questions = get_BT_live_questions()
-        for q in questions:
-            ans = self.qaHandler.get_full_answer(q)
+        question_rows = get_BT_live_questions_from_csv()
+        for q in question_rows:
+            real_q = q.to_question_from_user(SourceType.BT.name)
+            ans = self.qaHandler.get_full_answer(real_q)
             html_ans = self.htmlWriter.get_full_html(ans)
             path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.Question_name)
             LocalPrinter.print_to_file(html_ans, FileType.HTML, path)
@@ -40,8 +43,8 @@ class TestExample(unittest.TestCase):
 
 ############################################# Helper Functions ####################################################
 
-def read_csv_to_objects(file_path: str) -> List[Question]:
-    rows: List[Question] = []
+def read_csv_to_objects(file_path: str) -> List[QuestionRow]:
+    rows: List[QuestionRow] = []
     with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
@@ -54,10 +57,10 @@ def read_csv_to_objects(file_path: str) -> List[Question]:
                     clean_row[key] = int(v)  # convert numeric fields
                 else:
                     clean_row[key] = v
-            rows.append(Question(**clean_row))
+            rows.append(QuestionRow(**clean_row))
     return rows
 
-def get_BT_live_questions() -> List[Question]:
+def get_BT_live_questions_from_csv() -> List[QuestionRow]:
     all_q_from_CSV = read_csv_to_objects(Paths.QA1_PATH)
     return [
         q for q in all_q_from_CSV

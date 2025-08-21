@@ -108,8 +108,10 @@ class DBapiInterface(ABC):
         existing = self.find_one(collection, data["key"])
         if existing:
             # Skip insert if key already exists
-            print(f"Skipped insert: key '{data['key']}' already in {collection}")
+            # print(f" insert: key '{data['key']}' ")
             return
+        else:
+            print(f"inserting key '{data['key']}'")
 
         # Perform insert
         self.insert(collection, data)

@@ -1,7 +1,8 @@
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.FAISS_api.FaissEngine import FaissEngine
 from BackEnd.Main.Answer import Answer
-from BackEnd.Main.Question import Question
+from BackEnd.Main.QuestionFromUser import QuestionFromUser
+from BackEnd.QA.QuestionRow import QuestionRow
 
 
 import os
@@ -39,7 +40,7 @@ class QuestionAnswerHandler:
         self.db = DBapiMongoDB(uri)
         self.faiss = FaissEngine(dbapi=self.db)
 
-    def get_answer_refs_only(self, question: Question)->Answer :
+    def get_answer_refs_only(self, question: QuestionFromUser)->Answer :
         # Example ref list
         ref_list = [
             "BT_Bava Batra_0_3b:4-7",
@@ -49,11 +50,12 @@ class QuestionAnswerHandler:
 
         # Create Answer object
         return Answer(
-            question=question.Question_content,
+            question=question.question_content,
+            filters=question.filters,
             refs=ref_list
         )
 
-    def get_full_answer(self, question: Question)->Answer:
+    def get_full_answer(self, question: QuestionFromUser)->Answer:
         ans = self.get_answer_refs_only(question)
 
         for ref in ans.refs:

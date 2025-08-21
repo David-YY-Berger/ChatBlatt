@@ -34,7 +34,7 @@ class SourceType(Enum):
 class Source:
     src_type: SourceType | None = None
     key: str = ""
-    #example key: BT_Bava Batra_0_13b:9-14a:4 , or
+    #example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
     book: str = ""
     chapter: int = 0
     section: str = ""
