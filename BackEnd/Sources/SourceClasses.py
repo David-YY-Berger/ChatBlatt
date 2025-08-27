@@ -94,6 +94,8 @@ class Source:
     def get_content(self) -> list[str]:
         return self.content
 
+    def get_summary(self) -> str | None:
+        return self.summary or "Summary PlaceHolder; no summary found for this source"
 
     def to_dict(self) -> dict[str, Any]:
         """Convert the Source object to a dictionary"""
@@ -110,6 +112,9 @@ class Source:
     def to_json(self) -> str:
         """Convert the Source object to a JSON string"""
         return json.dumps(self.to_dict(), ensure_ascii=False)
+
+    def __str__(self) -> str:
+        return f"{self.get_book()} {self.get_section()} - {self.get_summary()}"
 
     def is_valid_else_get_error_list(self) -> list[str]:
         """Validate the Source object and return a list of error messages if invalid"""

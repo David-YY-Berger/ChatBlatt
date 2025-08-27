@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List
 
+from BackEnd.General import SystemFunctions
 from BackEnd.Sources.SourceClasses import Source
 
 
@@ -11,7 +12,7 @@ class Answer:
     filters: List[List[int]] # must be set by input
     refs: List[str] # must be set by input
     key: str = field(default="0")  # TODO: assign proper unique db key later
-    ts: str = field(default_factory=lambda: datetime.now().isoformat())
+    ts: str = field(default_factory=lambda: SystemFunctions.get_ts())
     srcs: List[Source] = field(default_factory=list) #optional..
 
 
