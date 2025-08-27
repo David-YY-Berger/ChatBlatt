@@ -134,6 +134,27 @@ class DBapiInterface(ABC):
         # Call the existing update method
         return self.update(collection_name, query, update)
 
+    def update_doc_field(
+            self,
+            doc: Dict[str, Any],
+            collection_name: str,
+            update_dict: Dict[str, Any],
+            action_desc: str = "update"
+    ) -> int:
+        try:
+            doc_key = doc.get('key')
+            if not doc_key:
+                print(f"[Error] Document missing 'key' field: {doc}")
+                return 0
+
+            modified_count: int = self.update_by_key(collection_name, doc_key, update_dict)
+            # if modified_count == 0:
+                # print(f"[Info] No document {action_desc} for key '{doc_key}' in collection '{collection_name}'")
+            return modified_count
+        except Exception as e:
+            print(f"[Error] Failed to {action_desc} for key '{doc.get('key', 'unknown')}': {e}")
+            return 0
+
     # ----------------------------- FAISS ------------------------------------
     @abstractmethod
     def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:

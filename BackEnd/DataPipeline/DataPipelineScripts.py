@@ -63,15 +63,11 @@ class DBScripts(unittest.TestCase):
         # self.db.delete_collection(self.db.CollectionName.TN.value)
         # self.db.delete_collection(self.db.CollectionName.FS)
 
-    def test_clear_en_clean_content(self):
-        print(self.db.CollectionName)
-    #     todo complete..
-
     def fetch_and_init_process_sefaria_passages(self, process_function, start_index):
         ''' includes BT and TN'''
 
         # 12487 last gemara entry before tanach entry
-        references = self.load_references(start_index)
+        references = self.load_references_from_local_json(start_index)
         book_name_set = set()
         sefaria_fetcher = SefariaFetcher()
 
@@ -137,10 +133,11 @@ class DBScripts(unittest.TestCase):
         functions = [
             # self.extract_tag_types,
             # self.extract_content_italics
+            self.remove_all_clean_english_content,
             self.populate_clean_english_content
         ]
         collection_names = [
-            self.db.CollectionName.TN.value,
+            # self.db.CollectionName.TN.value,
             self.db.CollectionName.BT.value
         ]
         self.process_all_documents(collection_names=collection_names, functions =functions)
@@ -162,6 +159,8 @@ class DBScripts(unittest.TestCase):
                         func(doc, collection_name)  # Pass both doc and collection if needed
                     except Exception as e:
                         print(f"Error processing doc {doc.get('_id')}: {e}")
+
+    # -------------------------------------------
 
     def extract_tag_types(self, doc, collection_name):
         enriched = doc.copy()
@@ -186,7 +185,15 @@ class DBScripts(unittest.TestCase):
             if text:
                 self.terms_used.add(text)
 
-    def populate_clean_english_content(self, doc, collection_name):
+    def remove_all_clean_english_content(self, doc, collection_name) -> int:
+        return self.db.update_doc_field(
+            doc,
+            collection_name,
+            {f"content.{SourceContentType.EN_CLEAN.value}": None},
+            action_desc="clean EN removal"
+        )
+
+    def populate_clean_english_content(self, doc, collection_name) -> int:
         try:
             enriched = doc.copy()
 
@@ -199,28 +206,30 @@ class DBScripts(unittest.TestCase):
                 print(f"[Warning] Document missing EN content: {enriched.get('key', 'unknown key')}")
                 return 0
 
-            # Check that key exists
-            doc_key = enriched.get('key')
-            if not doc_key:
-                print(f"[Error] Document missing 'key' field: {enriched}")
-                return 0
-
             # Clean the English text
             clean_en_content = self.clean_text_for_search(self, en_html_content)
 
-            # Prepare the update dict
-            update_dict = {f"content.{SourceContentType.EN_CLEAN.value}": clean_en_content}
-
-            # Update by key
-            modified_count = self.db.update_by_key(collection_name, doc_key, update_dict)
-
-            if modified_count == 0:
-                print(f"[Info] No document updated for key '{doc_key}' in collection '{collection_name}'")
-            return modified_count
+            # Update with cleaned content
+            return self.db.update_doc_field(
+                enriched,
+                collection_name,
+                {f"content.{SourceContentType.EN_CLEAN.value}": clean_en_content},
+                action_desc="clean EN populate"
+            )
 
         except Exception as e:
-            print(f"[Error] Failed to populate clean English content for key '{enriched.get('key', 'unknown')}': {e}")
+            print(f"[Error] Failed to populate clean English content for key '{doc.get('key', 'unknown')}': {e}")
             return 0
+
+
+    ############################################ Helper Functions ######################################################
+    @staticmethod
+    def load_references_from_local_json(start_index = 0):
+        references = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
+        if references is None:
+            return None
+
+        return references[start_index:]
 
     @staticmethod
     def clean_text_for_search(self, html_content):
@@ -241,16 +250,6 @@ class DBScripts(unittest.TestCase):
         text = re.sub(r'\s+', ' ', text).strip()
 
         return text
-
-    ############################################ Helper Functions ######################################################
-    @staticmethod
-    def load_references(start_index = 0):
-        references = OsFunctions.open_json_file(Paths.SEFARIA_INDEX_BT_PASSAGES)
-        if references is None:
-            return None
-
-        return references[start_index:]
-
     ############################################# One time use (upon DB reset) ############################################################
 
     def test_convert_index_from_BSON_to_JSON(self):
