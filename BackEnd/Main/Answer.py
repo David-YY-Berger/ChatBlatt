@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List
 
 from BackEnd.General import SystemFunctions
-from BackEnd.Sources.SourceClasses import Source
+from BackEnd.DataObjects.SourceClasses import Source
 
 
 @dataclass

@@ -1,7 +1,10 @@
 import json
 from enum import Enum
-from dataclasses import dataclass, asdict, field
-from typing import Any, Optional
+from dataclasses import dataclass, field
+from typing import Any
+
+from BackEnd.DataObjects.Filters import Filters
+from BackEnd.DataObjects.SourceType import SourceType
 
 
 class SourceContentType(Enum):
@@ -9,84 +12,47 @@ class SourceContentType(Enum):
     HEB = 1
     EN_CLEAN = 2
 
-class SourceType(Enum):
-    # DONT CHANGE THESE ABBREVIATTIONS! hardcoded in MondoDB impl
-    BT = (0, "Babylonian Talmud")
-    JT = (1, "Jerusalem Talmud")
-    RM = (2, "Rambam Mishne Torah")
-    TN = (3, "Tanach")
-    MS = (4, "Mishna")
 
-    def __new__(cls, value, description):
-        # Create the new enum instance
-        obj = object.__new__(cls)
-        # Assign the integer value
-        obj._value_ = value
-        # Assign the description as a custom attribute
-        obj.description = description
-        return obj
-
-    def __str__(self):
-        return self.description
-
-''' can be init with either the key, or src_type&book&chapter&section'''
+''' must be init w key (can generate key from src_type & book & chapter & section)'''
 @dataclass
 class Source:
-    src_type: SourceType | None = None
-    key: str = ""
-    #example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
-    book: str = ""
-    chapter: int = 0
-    section: str = ""
+    # example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
+    key: str # (src_type:SourceType _ book:str _ chapter:int _ section:str)
+    filters: Filters | None = None
     summary: str = ""
     content: list[str] = field(default_factory=list)
-    filters: list[list[int]] = field(default_factory=list)
 
     def __post_init__(self):
-        # Ensure chapter is an int (handle `None` or falsy)
-        if not self.chapter:
-            self.chapter = 0
+        self.filters = Filters(self.get_src_type())
+
+    ################################################## Getters ############################################
 
     def get_key(self) -> str:
-        if self.key:
-            return self.key
-        elif self.src_type and self.book and self.section:
-            return f"{self.src_type.name}_{self.book}_{self.chapter}_{self.section}"
-        else:
-            # Collect non-empty parts
-            parts = []
-            if self.book:
-                parts.append(str(self.book))
-            if self.chapter:  # chapter is int, skip if 0
-                parts.append(str(self.chapter))
-            if self.section:
-                parts.append(str(self.section))
-
-            if parts:
-                return f"no key found for {' '.join(parts)}"
-            else:
-                return "no key found"
+        return self.key
 
     def get_src_type(self) -> SourceType | str | None:
-        if self.src_type:
-            return self.src_type
-        elif self.key:
+        if self.key:
             return Source.get_source_type_from_key(self.key)
         else:
             return None
 
     def get_book(self) -> str:
-        if self.book:
-            return self.book
-        elif self.key:
+        if self.key:
             return Source.get_book_from_key(self.key)
         else:
             return ""
 
+    def get_chapter(self) -> int:
+        if self.key:
+            return Source.get_chapter_from_key(self.key)
+        else:
+            return 0
+
+    def get_chapter_str(self) -> str:
+        return "" if self.get_chapter() == 0 else str(self.get_chapter())
+
     def get_section(self) -> str:
-        if self.section:
-            return self.section
-        elif self.key:
+        if self.key:
             return Source.get_section_from_key(self.key)
         else:
             return ""
@@ -97,14 +63,16 @@ class Source:
     def get_summary(self) -> str | None:
         return self.summary or "Summary PlaceHolder; no summary found for this source"
 
+    ################################################## to_ methods ############################################
+
     def to_dict(self) -> dict[str, Any]:
         """Convert the Source object to a dictionary"""
         return {
-            "src_type": str(self.src_type),  # stringify enum
+            "src_type": str(self.get_src_type()),  # stringify enum
             "summary": self.summary,
-            "book": self.book,
-            "chapter": self.chapter,
-            "section": self.section,
+            "book": self.get_book(),
+            "chapter": self.get_book(),
+            "section": self.get_section(),
             "content": self.content,
             "filters": self.filters,
         }
@@ -114,19 +82,21 @@ class Source:
         return json.dumps(self.to_dict(), ensure_ascii=False)
 
     def __str__(self) -> str:
-        return f"{self.get_book()} {self.get_section()} - {self.get_summary()}"
+        return f"{self.get_book()} {self.get_section()} {self.get_chapter_str()} - {self.get_summary()}"
+
+    ################################################## misc ############################################
 
     def is_valid_else_get_error_list(self) -> list[str]:
         """Validate the Source object and return a list of error messages if invalid"""
         errors = []
 
-        if not self.book.strip():
+        if not self.get_book().strip():
             errors.append("Book is null or empty!")
 
-        if not isinstance(self.chapter, int) or self.chapter < 0:
+        if not isinstance(self.get_chapter(), int) or self.get_chapter() < 0:
             errors.append("Chapter must be a non-negative integer!")
 
-        if not self.section.strip():
+        if not self.get_section().strip():
             errors.append("Section is null or empty!")
 
         if not isinstance(self.content, list) or not all(isinstance(item, str) for item in self.content):
@@ -164,12 +134,12 @@ class Source:
             return parts[1]
 
     @staticmethod
-    def get_chapter_from_key(key) -> str:
+    def get_chapter_from_key(key) -> int:
         parts = key.split("_")
         if len(parts) < 3:
-            return ""
+            return 0
         else:
-            return parts[2]
+            return int(parts[2])
 
     @staticmethod
     def get_section_from_key(key) -> str:
@@ -178,3 +148,15 @@ class Source:
             return ""
         else:
             return parts[3]
+
+    @staticmethod
+    def get_key_from_details(src_type: SourceType, book: str, chapter: int, section: str) -> str:
+        if not src_type:
+            raise ValueError("src_type must be specified")
+
+        book = book or "no book"
+        chapter = chapter or "0"
+        section = section or "no section"
+
+        return f"{src_type.name}_{book}_{chapter}_{section}"
+

@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 from typing import Optional
 
-from BackEnd.Sources.SourceClasses import Source
+from BackEnd.DataObjects.SourceClasses import Source
 
 
 # from your_module import DBapiMongoDB, FaissEngine, Question

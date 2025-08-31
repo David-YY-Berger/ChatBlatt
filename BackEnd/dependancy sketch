@@ -1,9 +1,25 @@
-Source -> (General, File Utils)
 
-DB -> (General, File Utils), Source
-LMM -> (General, File Utils), Source [maybe db?]
+OUTDATED!!!
+
+XXXXXXXXXXX
+
+XXXXXXX
+
+Filters -> SourceType
+Source -> Filters, SourceType (General, File Utils)
+
+DB ->  Source, (General, File Utils)
+
+FilterManager -> DB, (Source, (General, File Utils))
+LMM -> DB, (Source, (General, File Utils))
+FAISS -> DB, (Source, (General, File Utils))
+
 
 Main -> everything, but QA
-API Handler -> Main (everything)
 
-QA -> everything
+FrontendAPIHandler -> Main (everything)
+
+QA -> everything, but Main
+
+
+

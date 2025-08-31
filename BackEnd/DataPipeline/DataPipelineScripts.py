@@ -17,7 +17,7 @@ import inspect
 from bs4 import BeautifulSoup
 
 from BackEnd.General.exceptions import InvalidDataError
-from BackEnd.Sources.SourceClasses import SourceContentType
+from BackEnd.DataObjects.SourceClasses import SourceContentType
 
 
 class DBScripts(unittest.TestCase):

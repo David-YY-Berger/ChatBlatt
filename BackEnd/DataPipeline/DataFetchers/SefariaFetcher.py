@@ -4,7 +4,8 @@ from collections import defaultdict
 
 import requests
 from BackEnd.General import Logger
-from BackEnd.Sources.SourceClasses import Source, SourceContentType, SourceType
+from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
+from BackEnd.DataObjects.SourceType import SourceType
 
 
 class SefariaFetcher:
@@ -70,8 +71,9 @@ class SefariaFetcher:
                     content[SourceContentType.EN.value] += en_content_from_section
                     content[SourceContentType.HEB.value] += heb_content_from_section
 
-        return Source(src_type=SourceType.BT, book=tractate, chapter=0,
-                      section=reference.split(tractate, 1)[1].strip(), content=content)
+        key = Source.get_key_from_details(src_type=SourceType.BT, book=tractate, chapter=0,
+                        section=reference.split(tractate, 1)[1].strip())
+        return Source(key = key, content=content)
 
 
     def fetch_TN_as_Source_from_ref_list(self, full_ref: str, ref_list : list) -> Source:
@@ -98,9 +100,8 @@ class SefariaFetcher:
         content[SourceContentType.EN.value] += en_content
         content[SourceContentType.HEB.value] += heb_content
 
-
-        return Source(src_type=SourceType.TN, book=book, chapter=0, #keep as 0
-                      section=section, content=content)
+        key = Source.get_key_from_details(src_type=SourceType.TN, book=book, chapter=0, section=section)
+        return Source(key=key, content=content)
 
     def extract_chapter_verse_ranges(self, ref_list):
         """

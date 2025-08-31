@@ -12,7 +12,7 @@ from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 from BackEnd.QA.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
-from BackEnd.Sources.SourceClasses import SourceType
+from BackEnd.DataObjects.SourceType import SourceType
 
 
 class TestExample(unittest.TestCase):

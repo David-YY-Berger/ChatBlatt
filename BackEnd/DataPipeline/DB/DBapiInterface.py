@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
-from BackEnd.Sources.SourceClasses import Source, SourceType, SourceContentType
+from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
+from BackEnd.DataObjects.SourceType import SourceType
 
 
 class DBapiInterface(ABC):

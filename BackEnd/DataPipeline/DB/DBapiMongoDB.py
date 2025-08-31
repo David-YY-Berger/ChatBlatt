@@ -7,7 +7,7 @@ from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Logger import Logger
 from typing_extensions import override
 
-from BackEnd.Sources.SourceClasses import Source
+from BackEnd.DataObjects.SourceClasses import Source
 
 
 class DBapiMongoDB(DBapiInterface):
