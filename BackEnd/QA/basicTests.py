@@ -30,7 +30,7 @@ class TestExample(unittest.TestCase):
 
     def test_foo(self):
         # reserved for any small test
-        print(DBapiInterface.CollectionName.FS.value)
+        pass
 
 ###################################################################
 

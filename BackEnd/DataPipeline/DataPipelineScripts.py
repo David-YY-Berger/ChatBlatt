@@ -7,6 +7,7 @@ import os
 import unicodedata
 from dotenv import load_dotenv
 
+from BackEnd.DataPipeline.DB.CollectionName import CollectionName
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
@@ -58,10 +59,10 @@ class DBScripts(unittest.TestCase):
 
     def test_delete_all_collections(self):
         # dangerous! be careful
-        print(self.db.CollectionName)
-        # self.db.delete_collection(self.db.CollectionName.BT.value)
-        # self.db.delete_collection(self.db.CollectionName.TN.value)
-        # self.db.delete_collection(self.db.CollectionName.FS)
+        pass
+        # self.db.delete_collection(CollectionName.BT.value)
+        # self.db.delete_collection(CollectionName.TN.value)
+        # self.db.delete_collection(CollectionName.FS)
 
     def fetch_and_init_process_sefaria_passages(self, process_function, start_index):
         ''' includes BT and TN'''
@@ -92,9 +93,9 @@ class DBScripts(unittest.TestCase):
                         raise InvalidDataError(ref, start_index, errors)
 
                     start_index += 1
-                    if source.book not in book_name_set:
-                        book_name_set.add(source.book)
-                        print(f"{source.book} -- {SystemFunctions.get_ts()} -- {start_index}")
+                    if source.get_book() not in book_name_set:
+                        book_name_set.add(source.get_book())
+                        print(f"{source.get_book()} -- {SystemFunctions.get_ts()} -- {start_index}")
 
                     process_function(source, ref, start_index)
 
@@ -107,7 +108,7 @@ class DBScripts(unittest.TestCase):
     def test_connect_to_db(self):
 
         # test_collection_name = self.db.BT
-        test_collection_name = self.db.CollectionName.TN.value
+        test_collection_name = CollectionName.TN.value
 
         # Insert example data into collection
         data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
@@ -137,8 +138,8 @@ class DBScripts(unittest.TestCase):
             self.populate_clean_english_content
         ]
         collection_names = [
-            # self.db.CollectionName.TN.value,
-            self.db.CollectionName.BT.value
+            # CollectionName.TN.value,
+            CollectionName.BT.value
         ]
         self.process_all_documents(collection_names=collection_names, functions =functions)
 

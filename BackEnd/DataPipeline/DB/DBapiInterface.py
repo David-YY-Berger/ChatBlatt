@@ -4,24 +4,13 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
 from BackEnd.DataObjects.SourceType import SourceType
+from BackEnd.DataPipeline.DB.CollectionName import CollectionName
 
 
 class DBapiInterface(ABC):
     """
     An abstract base class defining the essential operations for a database API.
     """
-
-    class CollectionName(str, Enum):
-        BT = 'BT'  # Babylonian Talmud
-        JT = 'JT'  # Jerusalem Talmud
-        RM = 'RM'  # Rambam Mishne Torah
-        TN = 'TN'  # Tanach
-        MS = 'MS'  # Mishna
-        FS = 'faiss_data'
-
-    @staticmethod
-    def is_valid_collection(name: str) -> bool:
-        return name in DBapiInterface.CollectionName.__members__
 
     @abstractmethod
     def connect(self, connection_string: str) -> None:
@@ -97,12 +86,12 @@ class DBapiInterface(ABC):
         }
 
         # Decide target collection based on source type
-        if result.src_type == SourceType.BT:
-            collection = self.CollectionName.BT.value
-        elif result.src_type == SourceType.TN:
-            collection = self.CollectionName.TN.value
+        if result.get_src_type() == SourceType.BT:
+            collection = CollectionName.BT.value
+        elif result.get_src_type() == SourceType.TN:
+            collection = CollectionName.TN.value
         else:
-            print(f"Unknown src_type '{result.src_type}' at index {start_index}")
+            print(f"Unknown src_type '{result.get_src_type()}' at index {start_index}")
             return
 
         # Check for existing document with same key

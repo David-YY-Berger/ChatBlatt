@@ -3,6 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
+from BackEnd.DataPipeline.DB.CollectionName import CollectionName
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 from BackEnd.General.Logger import Logger
@@ -146,7 +147,7 @@ class DBapiMongoDB(DBapiInterface):
         # Upsert the FAISS index document in the 'faiss_index' collection
         # An empty filter {} means we update the single (or first) document.
         # If no document exists, 'upsert=True' inserts a new one.
-        self.db[self.CollectionName.FS.value].update_one(
+        self.db[CollectionName.FS.value].update_one(
             {},
             {"$set": {
                 "faiss_index": faiss_index_binary,
@@ -167,7 +168,7 @@ class DBapiMongoDB(DBapiInterface):
             or None if no record is found.
         """
         # Fetch the single document from the 'faiss_index' collection
-        record = self.db[self.CollectionName.FS.value].find_one({})
+        record = self.db[CollectionName.FS.value].find_one({})
 
         # If no document found, return None
         if not record:
