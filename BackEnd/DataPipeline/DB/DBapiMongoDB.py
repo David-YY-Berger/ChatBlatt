@@ -4,12 +4,13 @@ from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
+from BackEnd.General.Decorators import singleton
 from BackEnd.General.Logger import Logger
 from typing_extensions import override
 
 from BackEnd.DataObjects.SourceClasses import Source
 
-
+@singleton
 class DBapiMongoDB(DBapiInterface):
     """
     A concrete implementation of DBapiInterface for MongoDB.
