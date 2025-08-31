@@ -36,8 +36,8 @@ class DBScripts(unittest.TestCase):
         # MongoDB URI with password inserted
         uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
 
-        self.db = DBapiMongoDB(uri)
-        self.faiss = FaissEngine.FaissEngine(dbapi=self.db) #<- make this lazy inst
+        self.db_api = DBapiMongoDB(uri)
+        self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
 
         # sets for processing over data.
         self.tags_seen = set()
@@ -50,12 +50,12 @@ class DBScripts(unittest.TestCase):
     def tearDown(self):
         """Runs after every test to clean up resources."""
         # Disconnect from the database
-        self.db.disconnect()
+        self.db_api.disconnect()
 
     ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
-        self.fetch_and_init_process_sefaria_passages(self.db.insert_source, 8927)
+        self.fetch_and_init_process_sefaria_passages(self.db_api.insert_source, 8927)
 
     def test_delete_all_collections(self):
         # dangerous! be careful
@@ -107,25 +107,25 @@ class DBScripts(unittest.TestCase):
 
     def test_connect_to_db(self):
 
-        # test_collection_name = self.db.BT
+        # test_collection_name = CollectionName.BT.value
         test_collection_name = CollectionName.TN.value
 
         # Insert example data into collection
         data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
-        doc_id = self.db.insert(test_collection_name, data)  # Specify collection name
+        doc_id = self.db_api.insert(test_collection_name, data)  # Specify collection name
         print(f"Inserted document ID: {doc_id}")
 
         # Query data
-        query_results = self.db.execute_query({'collection': test_collection_name, 'filter': {'key': 'example_key'}})
+        query_results = self.db_api.execute_raw_query({'collection': test_collection_name, 'filter': {'key': 'example_key'}})
         print(f"Query results: {query_results}")
 
         # Update data
-        updated_rows = self.db.update(test_collection_name, {'key': 'example_key'},
-                                 {'content': 'Updated content of the Talmud passage.'})
+        updated_rows = self.db_api.update(test_collection_name, {'key': 'example_key'},
+                                          {'content': 'Updated content of the Talmud passage.'})
         print(f"Updated {updated_rows} rows.")
 
         # Delete data
-        deleted_rows = self.db.delete_instance(test_collection_name, {'key': 'example_key'})
+        deleted_rows = self.db_api.delete_instance(test_collection_name, {'key': 'example_key'})
         print(f"Deleted {deleted_rows} rows.")
 
     ############################################ Processing Scripts ####################################################
@@ -152,7 +152,7 @@ class DBScripts(unittest.TestCase):
         # does NOT run multithreaded (safer for serial processing)
         for collection_name in collection_names:
             print(f"Processing collection: {collection_name}")
-            documents = self.db.execute_query({'collection': collection_name, 'filter': {}})
+            documents = self.db_api.execute_raw_query({'collection': collection_name, 'filter': {}})
 
             for doc in documents:
                 for func in functions:
@@ -187,7 +187,7 @@ class DBScripts(unittest.TestCase):
                 self.terms_used.add(text)
 
     def remove_all_clean_english_content(self, doc, collection_name) -> int:
-        return self.db.update_doc_field(
+        return self.db_api.update_doc_field(
             doc,
             collection_name,
             {f"content.{SourceContentType.EN_CLEAN.value}": None},
@@ -211,7 +211,7 @@ class DBScripts(unittest.TestCase):
             clean_en_content = self.clean_text_for_search(self, en_html_content)
 
             # Update with cleaned content
-            return self.db.update_doc_field(
+            return self.db_api.update_doc_field(
                 enriched,
                 collection_name,
                 {f"content.{SourceContentType.EN_CLEAN.value}": clean_en_content},

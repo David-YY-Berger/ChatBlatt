@@ -1,0 +1,29 @@
+{
+  "check_en_content_empty": {
+    "$or": [
+      {"content.0": {"$in": ["", null]}}
+    ]
+  },
+  "check_heb_content_empty": {
+    "$or": [
+      {"content.1": {"$in": ["", null]}}
+    ]
+  },"check_clean_en_content_empty": {
+    "$or": [
+      {"content.2": {"$in": ["", null]}}
+    ]
+  },
+  "check_key_empty": {
+    "$or": [
+      {"key": {"$in": ["", null]}},
+      {"key": {"$exists": false}}
+    ]
+  },
+
+  "check_summary_empty": {
+    "$or": [
+      {"summary": {"$in": ["", null]}}
+    ]
+  }
+
+}

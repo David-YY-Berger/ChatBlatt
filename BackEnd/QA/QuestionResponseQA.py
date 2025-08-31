@@ -3,19 +3,17 @@ import os
 import unittest
 from typing import List
 
-from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.FileUtils.HtmlWriter import HtmlWriter
 from BackEnd.General import Paths
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 from BackEnd.General.Enums import FileType
-from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 from BackEnd.QA.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
 from BackEnd.DataObjects.SourceType import SourceType
 
 
-class TestExample(unittest.TestCase):
+class QuestionsFromCSVTests(unittest.TestCase):
 
     def setUp(self):
         """Runs before every test to set up necessary directories."""
@@ -31,7 +29,7 @@ class TestExample(unittest.TestCase):
 
 
 ############################################# 1. Basic Tests ####################################################
-    def test_run_all_tests(self):
+    def test_questions_from_csv(self):
         question_rows = get_BT_live_questions_from_csv()
         for q in question_rows:
             real_q = q.to_question_from_user(SourceType.BT.name)
@@ -66,6 +64,7 @@ def get_BT_live_questions_from_csv() -> List[QuestionRow]:
         q for q in all_q_from_CSV
         if q.BT == 1 and q.Question_content is not None and q.Question_content.strip() != ""
     ]
+
 #######################################################################################################################
 
 if __name__ == "__main__":

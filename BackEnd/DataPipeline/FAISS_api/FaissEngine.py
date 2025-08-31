@@ -22,7 +22,7 @@ class FaissEngine:
         :param dim: Dimensionality of the embedding vectors.
         :param mongo_collection_name: MongoDB collection to store the index.
         """
-        if not hasattr(dbapi, "db") or dbapi.db is None:
+        if not hasattr(dbapi, "db_faiss") or dbapi.db_faiss is None:
             raise ValueError("The dbapi object must have a connected .db attribute")
 
         self.model_name = model_name
