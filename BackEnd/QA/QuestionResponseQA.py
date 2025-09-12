@@ -6,7 +6,7 @@ from typing import List
 from BackEnd.FileUtils.HtmlWriter import HtmlWriter
 from BackEnd.General import Paths
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
-from BackEnd.General.Enums import FileType
+from BackEnd.FileUtils.FileTypeEnum import FileType
 
 from BackEnd.QA.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler

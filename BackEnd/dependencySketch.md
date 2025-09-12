@@ -4,45 +4,69 @@
 graph TD
     %% Shared utilities
     subgraph Utils
-        General
         FileUtils["File Utils"]
+    end
+
+    %% DataObjects
+    subgraph DataObjects
+        Answer
+        Source
+    end
+    
+    %% General
+    subgraph General
+        Paths
+        System_Functions
     end
 
     %% Core modules
     Filters --> SourceType
     Source --> Filters
     Source --> SourceType
-    DB --> Source
+    Source --> General
+    Answer --> Filters
+    Answer --> SourceType
+    Answer --> General
+
+    DB --> DataObjects
     DB --> Utils
 
     %% Higher-level modules
     FilterManager --> DB
-    FilterManager --> Source
+    FilterManager --> DataObjects
     FilterManager --> Utils
 
     LMM --> DB
-    LMM --> Source
+    LMM --> DataObjects
     LMM --> Utils
 
     FAISS --> DB
-    FAISS --> Source
+    FAISS --> DataObjects
     FAISS --> Utils
 
     %% Main application
     Main --> Filters
-    Main --> Source
+    Main --> DataObjects
     Main --> DB
     Main --> FilterManager
     Main --> LMM
     Main --> FAISS
     Main --> Utils
 
+    DB_Populator --> Filters
+    DB_Populator --> DataObjects
+    DB_Populator --> DB
+    DB_Populator --> FilterManager
+    DB_Populator --> LMM
+    DB_Populator --> FAISS
+    DB_Populator --> Utils
+
     %% External interfaces
     FrontendAPIHandler --> Main
-    QA --> Filters
-    QA --> Source
-    QA --> DB
-    QA --> FilterManager
-    QA --> LMM
-    QA --> FAISS
-    QA --> Utils
+    QA --> Main
+
+    %% Explicit dependency: Utils depends on DataObjects
+    Utils --> DataObjects
+
+    
+

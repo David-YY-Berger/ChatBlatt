@@ -12,8 +12,8 @@ from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
 from BackEnd.FileUtils.JsonWriter import JsonWriter
-from BackEnd.General import Paths, Enums, SystemFunctions
-from BackEnd.FileUtils import OsFunctions
+from BackEnd.General import Paths, SystemFunctions
+from BackEnd.FileUtils import OsFunctions, FileTypeEnum
 import inspect
 from bs4 import BeautifulSoup
 

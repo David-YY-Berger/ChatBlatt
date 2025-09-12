@@ -1,13 +1,9 @@
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.FAISS_api.FaissEngine import FaissEngine
-from BackEnd.Main.Answer import Answer
+from BackEnd.DataObjects.Answer import Answer
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
-from BackEnd.QA.QuestionRow import QuestionRow
 
-
-import os
-from dotenv import load_dotenv
 from typing import Optional
 
 from BackEnd.DataObjects.SourceClasses import Source
@@ -38,7 +34,7 @@ class QuestionAnswerHandler:
 
         # Create Answer object
         return Answer(
-            question=question.question_content,
+            question_content=question.question_content,
             filters=question.filters,
             refs=ref_list
         )

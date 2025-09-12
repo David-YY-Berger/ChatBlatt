@@ -8,7 +8,7 @@ from BackEnd.DataObjects.SourceClasses import Source
 
 @dataclass
 class Answer:
-    question: str
+    question_content: str
     filters: List[List[int]] # must be set by input
     refs: List[str] # must be set by input
     key: str = field(default="0")  # TODO: assign proper unique db key later

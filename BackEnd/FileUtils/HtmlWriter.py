@@ -1,5 +1,5 @@
 from BackEnd.General import SystemFunctions
-from BackEnd.Main.Answer import Answer
+from BackEnd.DataObjects.Answer import Answer
 from typing import List
 
 
@@ -185,7 +185,7 @@ class HtmlWriter:
         return f"""
         <div class="header">
             <div class="question-label">Question:</div>
-            <div class="question-content">{ans.question}</div>
+            <div class="question-content">{ans.question_content}</div>
             <div class="timestamp">{readable_timestamp}</div>
             <div class="header-info">
                 <div class="info-item">
