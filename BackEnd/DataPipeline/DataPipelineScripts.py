@@ -7,7 +7,7 @@ import os
 import unicodedata
 from dotenv import load_dotenv
 
-from BackEnd.DataPipeline.DB.CollectionName import CollectionName
+from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
@@ -37,7 +37,7 @@ class DBScripts(unittest.TestCase):
         uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
 
         self.db_api = DBapiMongoDB(uri)
-        self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
+        # self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
 
         # sets for processing over data.
         self.tags_seen = set()
@@ -55,13 +55,13 @@ class DBScripts(unittest.TestCase):
     ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
-        self.fetch_and_init_process_sefaria_passages(self.db_api.insert_source, 8927)
+        self.fetch_and_init_process_sefaria_passages(self.db_api.insert_source, 0)
 
     def test_delete_all_collections(self):
         # dangerous! be careful
         pass
-        # self.db.delete_collection(CollectionName.BT.value)
-        # self.db.delete_collection(CollectionName.TN.value)
+        # self.db.delete_collection(CollectionName.BT.name)
+        # self.db.delete_collection(CollectionName.TN.name)
         # self.db.delete_collection(CollectionName.FS)
 
     def fetch_and_init_process_sefaria_passages(self, process_function, start_index):
@@ -107,25 +107,36 @@ class DBScripts(unittest.TestCase):
 
     def test_connect_to_db(self):
 
-        # test_collection_name = CollectionName.BT.value
-        test_collection_name = CollectionName.TN.value
+        test_collection = CollectionName.TN
 
         # Insert example data into collection
-        data = {'key': 'example_key', 'content': 'This is the content of the Talmud passage.'}
-        doc_id = self.db_api.insert(test_collection_name, data)  # Specify collection name
+        data = {
+            "key": "example_key",
+            "content": "This is the content of the Talmud passage."
+        }
+        doc_id = self.db_api.insert(test_collection, data)
         print(f"Inserted document ID: {doc_id}")
 
         # Query data
-        query_results = self.db_api.execute_raw_query({'collection': test_collection_name, 'filter': {'key': 'example_key'}})
+        query_results = self.db_api.execute_raw_query({
+            "collection": test_collection,
+            "filter": {"key": "example_key"}
+        })
         print(f"Query results: {query_results}")
 
         # Update data
-        updated_rows = self.db_api.update(test_collection_name, {'key': 'example_key'},
-                                          {'content': 'Updated content of the Talmud passage.'})
+        updated_rows = self.db_api.update(
+            test_collection,
+            {"key": "example_key"},
+            {"content": "Updated content of the Talmud passage."}
+        )
         print(f"Updated {updated_rows} rows.")
 
         # Delete data
-        deleted_rows = self.db_api.delete_instance(test_collection_name, {'key': 'example_key'})
+        deleted_rows = self.db_api.delete_instance(
+            test_collection,
+            {"key": "example_key"}
+        )
         print(f"Deleted {deleted_rows} rows.")
 
     ############################################ Processing Scripts ####################################################
@@ -133,31 +144,40 @@ class DBScripts(unittest.TestCase):
     def test_process(self):
         functions = [
             # self.extract_tag_types,
-            # self.extract_content_italics
+            # self.extract_content_italics,
             self.remove_all_clean_english_content,
-            self.populate_clean_english_content
+            self.populate_clean_english_content,
         ]
-        collection_names = [
-            # CollectionName.TN.value,
-            CollectionName.BT.value
+
+        collections = [
+            # CollectionName.TN,
+            CollectionName.BT,
         ]
-        self.process_all_documents(collection_names=collection_names, functions =functions)
+
+        self.process_all_documents(collections=collections, functions=functions)
 
         # print(", ".join(sorted(self.tags_seen)))
         # print(", ".join(sorted(self.terms_used)))
         # self.write_glossary_csv(self.terms_used)
 
-    def process_all_documents(self, collection_names, functions):
+    def process_all_documents(self, collections, functions):
+        """
+        Iterate over documents in given collections and apply functions sequentially.
+        collections: list of Collection objects (e.g., [CollectionName.BT, CollectionName.FS])
+        functions: list of callables that take (doc, collection)
+        """
+        for collection in collections:
+            print(f"Processing collection: {collection.name}")
 
-        # does NOT run multithreaded (safer for serial processing)
-        for collection_name in collection_names:
-            print(f"Processing collection: {collection_name}")
-            documents = self.db_api.execute_raw_query({'collection': collection_name, 'filter': {}})
+            documents = self.db_api.execute_raw_query({
+                "collection": collection,
+                "filter": {}
+            })
 
             for doc in documents:
                 for func in functions:
                     try:
-                        func(doc, collection_name)  # Pass both doc and collection if needed
+                        func(doc, collection)
                     except Exception as e:
                         print(f"Error processing doc {doc.get('_id')}: {e}")
 
@@ -214,7 +234,7 @@ class DBScripts(unittest.TestCase):
             return self.db_api.update_doc_field(
                 enriched,
                 collection_name,
-                {f"content.{SourceContentType.EN_CLEAN.value}": clean_en_content},
+                {f"content.{SourceContentType.EN_CLEAN.name}": clean_en_content},
                 action_desc="clean EN populate"
             )
 

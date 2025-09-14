@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
 from BackEnd.DataObjects.SourceType import SourceType
-from BackEnd.DataPipeline.DB.CollectionName import CollectionName
+from BackEnd.DataPipeline.DB.Collection import CollectionName
 
 
 class DBapiInterface(ABC):
@@ -34,30 +34,28 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def insert(self, collection_name: str, data: Dict[str, Any]) -> str:
+    def insert(self, collection: CollectionName, data: Dict[str, Any]) -> str:
         """
         Insert data into a collection and return the inserted document ID.
         """
         pass
 
-
-
     @abstractmethod
-    def update(self, collection_name: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
+    def update(self, collection: CollectionName, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
         Update data in a collection based on a query.
         """
         pass
 
     @abstractmethod
-    def delete_instance(self, collection_name: str, query: Dict[str, Any]) -> int:
+    def delete_instance(self, collection: CollectionName, query: Dict[str, Any]) -> int:
         """
         Delete data from a collection based on a query.
         """
         pass
 
     @abstractmethod
-    def delete_collection(self, collection_name: str) -> int:
+    def delete_collection(self, collection: CollectionName) -> int:
         """
         Delete all documents from the given collection.
         Returns the number of documents deleted.
@@ -65,11 +63,14 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def find_one(self, collection_name: str, key: str):
+    def find_one(self, collection: CollectionName, key: str):
         pass
 
+    def exists(self, collection: CollectionName, key: str) -> bool:
+        return self.find_one(collection, key) is not None
+
     @abstractmethod
-    def find_one_source(self, collection_name: str, key: str) -> Source:
+    def find_one_source(self, collection: CollectionName, key: str) -> Source:
         pass
 
     # ----------------------------- Sources ----------------------------------
@@ -82,21 +83,20 @@ class DBapiInterface(ABC):
             'key': result.get_key(),
             'content': [en, heb, ""],
             'summary': "",
-            'filters': []
+            'filters': [[]]
         }
 
         # Decide target collection based on source type
         if result.get_src_type() == SourceType.BT:
-            collection = CollectionName.BT.value
+            collection = CollectionName.BT.name
         elif result.get_src_type() == SourceType.TN:
-            collection = CollectionName.TN.value
+            collection = CollectionName.TN.name
         else:
             print(f"Unknown src_type '{result.get_src_type()}' at index {start_index}")
             return
 
         # Check for existing document with same key
-        existing = self.find_one(collection, data["key"])
-        if existing:
+        if self.exists(collection, data["key"]):
             # Skip insert if key already exists
             # print(f" insert: key '{data['key']}' ")
             return
@@ -106,12 +106,12 @@ class DBapiInterface(ABC):
         # Perform insert
         self.insert(collection, data)
 
-    def update_by_key(self, collection_name: str, key: str, update: Dict[str, Any]) -> int:
+    def update_by_key(self, collection: CollectionName, key: str, update: Dict[str, Any]) -> int:
         """
         Update a document in the collection using its unique key.
 
         Args:
-            collection_name: Name of the collection.
+            collection: Name of the collection.
             key: The unique key identifying the document.
             update: Dict of fields to update.
 
@@ -122,12 +122,12 @@ class DBapiInterface(ABC):
         query = {"key": key}
 
         # Call the existing update method
-        return self.update(collection_name, query, update)
+        return self.update(collection, query, update)
 
     def update_doc_field(
             self,
             doc: Dict[str, Any],
-            collection_name: str,
+            collection: CollectionName,
             update_dict: Dict[str, Any],
             action_desc: str = "update"
     ) -> int:
@@ -137,9 +137,9 @@ class DBapiInterface(ABC):
                 print(f"[Error] Document missing 'key' field: {doc}")
                 return 0
 
-            modified_count: int = self.update_by_key(collection_name, doc_key, update_dict)
+            modified_count: int = self.update_by_key(collection, doc_key, update_dict)
             # if modified_count == 0:
-                # print(f"[Info] No document {action_desc} for key '{doc_key}' in collection '{collection_name}'")
+                # print(f"[Info] No document {action_desc} for key '{doc_key}' in collection '{collection}'")
             return modified_count
         except Exception as e:
             print(f"[Error] Failed to {action_desc} for key '{doc.get('key', 'unknown')}': {e}")

@@ -22,8 +22,8 @@ class Source:
     summary: str = ""
     content: list[str] = field(default_factory=list)
 
-    def __post_init__(self):
-        self.filters = Filters(self.get_src_type())
+    # def __post_init__(self):
+        # self.filters = Filters(self.get_src_type())
 
     ################################################## Getters ############################################
 
@@ -104,11 +104,11 @@ class Source:
         elif not any(item.strip() for item in self.content):
             errors.append("Content must contain at least one non-empty string!")
 
-        if not isinstance(self.filters, list) or not all(
-                isinstance(sublist, list) and all(isinstance(i, int) for i in sublist)
-                for sublist in self.filters
-        ):
-            errors.append("Filters must be a list of lists of integers!")
+        # if not isinstance(self.filters, list) or not all(
+        #         isinstance(sublist, list) and all(isinstance(i, int) for i in sublist)
+        #         for sublist in self.filters
+        # ):
+        #     errors.append("Filters must be a list of lists of integers!")
 
         return errors
 

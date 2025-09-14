@@ -1,3 +1,4 @@
+from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.FAISS_api.FaissEngine import FaissEngine
@@ -39,12 +40,23 @@ class QuestionAnswerHandler:
             refs=ref_list
         )
 
-    def get_full_answer(self, question: QuestionFromUser)->Answer:
+    def get_full_answer(self, question: QuestionFromUser) -> Answer:
         ans = self.get_answer_refs_only(question)
 
         for ref in ans.refs:
-            collection_name = Source.get_collection_name_from_key(ref)
-            src = self.db_api.find_one_source(collection_name, ref)
+            # This still returns a string like "BT", "TN", "FS", etc.
+            collection_str = Source.get_collection_name_from_key(ref)
+
+            # Convert the string to the corresponding Collection object
+            try:
+                collection_obj = next(
+                    c for c in CollectionName.all() if c.name == collection_str
+                )
+            except StopIteration:
+                raise ValueError(f"Unknown collection name '{collection_str}' for key '{ref}'")
+
+            # Fetch the Source object using the Collection object
+            src = self.db_api.find_one_source(collection_obj, ref)
             ans.srcs.append(src)
 
         return ans

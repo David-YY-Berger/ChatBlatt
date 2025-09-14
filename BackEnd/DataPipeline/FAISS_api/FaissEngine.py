@@ -7,23 +7,29 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 from BackEnd.DataPipeline.DB import DBapiInterface
+from BackEnd.DataPipeline.DB.Collection import CollectionName
 
 
 class FaissEngine:
     def __init__(
         self,
-        dbapi : DBapiInterface,
+        dbapi: DBapiInterface,
         model_name: str = "all-MiniLM-L6-v2",
         dim: int = 384,
     ):
         """
-        :param dbapi: An instance of DBapiMongoDB (must have .db property).
+        :param dbapi: An instance of DBapiMongoDB (must have dbs dict with FAISS DB).
         :param model_name: SentenceTransformer model to use.
         :param dim: Dimensionality of the embedding vectors.
-        :param mongo_collection_name: MongoDB collection to store the index.
         """
-        if not hasattr(dbapi, "db_faiss") or dbapi.db_faiss is None:
-            raise ValueError("The dbapi object must have a connected .db attribute")
+        self.dbapi = dbapi
+
+        # Check that the FAISS DB exists
+        if CollectionName.FS.db_name not in self.dbapi.dbs:
+            raise ValueError(f"The dbapi object must have a connected '{CollectionName.FS.db_name}' database")
+        if self.dbapi.dbs[CollectionName.FS.db_name] is None:
+            raise ValueError(f" the database is missing the collection '{CollectionName.FS.name}'")
+
 
         self.model_name = model_name
         self.dim = dim

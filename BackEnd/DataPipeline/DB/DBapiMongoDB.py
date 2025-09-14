@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
-from BackEnd.DataPipeline.DB.CollectionName import CollectionName
+from BackEnd.DataPipeline.DB.Collection import CollectionName, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 from BackEnd.General.Logger import Logger
@@ -18,33 +18,42 @@ class DBapiMongoDB(DBapiInterface):
     """
 
     def __init__(self, connection_string: str = None):
-
-        self.client = None
-        self.db_sources = None
-        self.db_faiss = None
+        self.client: MongoClient | None = None
+        self.dbs: Dict[str, any] = {}   # holds db_name -> MongoDatabase
         self.connection_string = connection_string
         self.logger = Logger()
 
         if connection_string:
             self.connect(connection_string)
 
+    def get_collection(self, collection: Collection):
+        """
+        Given a Collection object, return the Mongo collection object.
+        """
+        db = self.dbs.get(collection.db_name)
+        if db is None:
+            raise ValueError(f"Database {collection.db_name} not found")
+        return db[collection.name]
+
     @override
     def connect(self, connection_string: str) -> None:
         """
-        Connect to the MongoDB database.
+        Connect to the MongoDB server and set up databases.
         """
         self.connection_string = connection_string
         self.client = MongoClient(connection_string, server_api=ServerApi('1'))
+
         try:
             self.client.admin.command('ping')
-            self.logger.debug("Connected to the database")
+            self.logger.debug("Connected to MongoDB")
         except Exception as e:
-            print(f"Failed to connect: {e}")
+            self.logger.error(f"Failed to connect: {e}")
             raise ConnectionError(f"Failed to connect: {e}")
 
-
-        self.db_sources = self.client.get_database('Sources')
-        self.db_faiss = self.client.get_database('Faiss')
+        # Initialize all DBs that exist in CollectionName
+        for collection in CollectionName.all():
+            if collection.db_name not in self.dbs:
+                self.dbs[collection.db_name] = self.client.get_database(collection.db_name)
 
     @override
     def disconnect(self) -> None:
@@ -54,80 +63,98 @@ class DBapiMongoDB(DBapiInterface):
         if self.client:
             self.client.close()
             self.client = None
-            self.db_sources = None
+            self.dbs.clear()  # reset all cached DB references
+            self.logger.debug("Disconnected from MongoDB")
 
     @override
     def execute_raw_query(self, query: Dict[str, Any]) -> List[Dict[str, Any]]:
         """
         Execute a query on a MongoDB collection and return results.
+        Expected query format:
+          {
+            "collection": Collection,   # a Collection object from CollectionName
+            "filter": {...}             # optional filter dict
+          }
         """
-        collection_name = query.get('collection')
-        query_filter = query.get('filter', {})
-        if collection_name:
-            collection = self.db_sources[collection_name]
-            return list(collection.find(query_filter))
-        return []
+        collection_obj = query.get("collection")
+        query_filter = query.get("filter", {})
+
+        if not collection_obj:
+            raise ValueError("Query must include 'collection'")
+
+        collection = self.get_collection(collection_obj)
+        return list(collection.find(query_filter))
 
     @override
-    def insert(self, collection_name: str, data: Dict[str, Any]) -> str:
+    def insert(self, collection: Collection, data: Dict[str, Any]) -> str:
         """
-        Insert data into the collection_name collection.
+        Insert data into the specified collection.
         """
-        if self.db_sources is None:
+        if not self.client:
             raise Exception("Database connection is not established.")
-        result = self.db_sources.get_collection(collection_name).insert_one(data)
+
+        get_collection = self.get_collection(collection)
+        result = get_collection.insert_one(data)
         return str(result.inserted_id)
 
     @override
-    def update(self, collection_name: str, query: Dict[str, Any], update: Dict[str, Any]) -> int:
+    def update(self, collection: Collection, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
-        Update data in the collection_name collection based on a query.
+        Update documents in the specified collection based on a query.
         """
-        if self.db_sources is None:
+        if not self.client:
             raise Exception("Database connection is not established.")
-        result = self.db_sources.get_collection(collection_name).update_many(query, {'$set': update})
+
+        result = self.get_collection(collection).update_many(query, {"$set": update})
         return result.modified_count
 
     @override
-    def delete_instance(self, collection_name: str, query: Dict[str, Any]) -> int:
+    def delete_instance(self, collection: Collection, query: Dict[str, Any]) -> int:
         """
-        Delete data from the collection_name collection based on a query.
+        Delete documents from the specified collection based on a query.
         """
-        if self.db_sources is None:
+        if not self.client:
             raise Exception("Database connection is not established.")
-        result = self.db_sources.get_collection(collection_name).delete_many(query)
+
+        result = self.get_collection(collection).delete_many(query)
         return result.deleted_count
 
     @override
-    def delete_collection(self, collection_name: str) -> int:
+    def delete_collection(self, collection: Collection) -> int:
         """
         Delete all documents from the specified collection.
         Returns the number of documents deleted.
         """
-        if self.db_sources is None:
+        if not self.client:
             raise Exception("Database connection is not established.")
 
-        # Using an empty query {} to match all documents in the collection
-        result = self.db_sources[collection_name].delete_many({})
+        result = self.get_collection(collection).delete_many({})
         return result.deleted_count
 
     # ----------------------------- Sources ----------------------------------
     @override
-    def find_one(self, collection_name: str, key: str):
-        if self.db_sources is None:
+    def find_one(self, collection: Collection, key: str) -> Dict[str, Any] | None:
+        """
+        Find a single document in the given collection by key.
+        """
+        if not self.client:
             raise Exception("Database connection is not established.")
-        return self.db_sources.get_collection(collection_name).find_one({'key': key})
+        return self.get_collection(collection).find_one({"key": key})
 
     @override
-    def find_one_source(self, collection_name: str, key: str) -> Source:
-        db_object = self.find_one(collection_name, key)
+    def find_one_source(self, collection: Collection, key: str) -> Source:
+        """
+        Find a single document and return it as a Source object.
+        """
+        db_object = self.find_one(collection, key)
         if db_object is None:
-            raise Exception(f"Collection {collection_name} and {key} does not exist.")
+            raise Exception(f"Document with key '{key}' not found in collection {collection.name}.")
+
         return Source(
             key=db_object["key"],
             content=db_object["content"],
-            filters=db_object["filters"],
-            summary=db_object["summary"],
+            filters=db_object.get("filters", None),
+            summary=db_object.get("summary", ""),
         )
 
     # ----------------------------- FAISS ------------------------------------
@@ -147,7 +174,7 @@ class DBapiMongoDB(DBapiInterface):
         # Upsert the FAISS index document in the 'faiss_index' collection
         # An empty filter {} means we update the single (or first) document.
         # If no document exists, 'upsert=True' inserts a new one.
-        self.db_faiss[CollectionName.FS.value].update_one(
+        self.db_faiss[CollectionName.FS.name].update_one(
             {},
             {"$set": {
                 "faiss_index": faiss_index_binary,
@@ -167,21 +194,18 @@ class DBapiMongoDB(DBapiInterface):
                 - metadata_bytes: Serialized metadata bytes
             or None if no record is found.
         """
-        # Fetch the single document from the 'faiss_index' collection
-        record = self.db_faiss[CollectionName.FS.value].find_one({})
+        # Use the Collection object for FAISS
+        faiss_collection = CollectionName.FS
+        record = self.get_collection(faiss_collection).find_one({})
 
-        # If no document found, return None
         if not record:
             return None
 
-        # Extract the 'faiss_index' field and convert from BSON Binary to bytes
-        index_bytes = bytes(record.get('faiss_index')) if record.get('faiss_index') else None
-        # Extract the 'metadata' field similarly
+        # Convert fields from BSON Binary to bytes
+        index_bytes = bytes(record.get("faiss_index")) if record.get("faiss_index") else None
         metadata_bytes = bytes(record.get("metadata")) if record.get("metadata") else None
 
-        # If either part is missing, treat as no valid index stored
         if index_bytes is None or metadata_bytes is None:
             return None
 
-        # Return both bytes objects as a tuple
         return index_bytes, metadata_bytes

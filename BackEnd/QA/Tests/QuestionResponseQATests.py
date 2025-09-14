@@ -8,7 +8,7 @@ from BackEnd.General import Paths
 from BackEnd.FileUtils import OsFunctions, LocalPrinter
 from BackEnd.FileUtils.FileTypeEnum import FileType
 
-from BackEnd.QA.QuestionRow import QuestionRow
+from BackEnd.QA.Objects.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
 from BackEnd.DataObjects.SourceType import SourceType
 
