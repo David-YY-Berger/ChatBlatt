@@ -3,7 +3,6 @@ from enum import Enum
 from dataclasses import dataclass, field
 from typing import Any
 
-from BackEnd.DataObjects.Filters import Filters
 from BackEnd.DataObjects.SourceType import SourceType
 
 
@@ -18,12 +17,8 @@ class SourceContentType(Enum):
 class Source:
     # example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
     key: str # (src_type:SourceType _ book:str _ chapter:int _ section:str)
-    filters: Filters | None = None
     summary: str = ""
     content: list[str] = field(default_factory=list)
-
-    # def __post_init__(self):
-        # self.filters = Filters(self.get_src_type())
 
     ################################################## Getters ############################################
 
@@ -74,7 +69,6 @@ class Source:
             "chapter": self.get_book(),
             "section": self.get_section(),
             "content": self.content,
-            "filters": self.filters,
         }
 
     def to_json(self) -> str:
@@ -103,12 +97,6 @@ class Source:
             errors.append("Content must be a list of strings!")
         elif not any(item.strip() for item in self.content):
             errors.append("Content must contain at least one non-empty string!")
-
-        # if not isinstance(self.filters, list) or not all(
-        #         isinstance(sublist, list) and all(isinstance(i, int) for i in sublist)
-        #         for sublist in self.filters
-        # ):
-        #     errors.append("Filters must be a list of lists of integers!")
 
         return errors
 

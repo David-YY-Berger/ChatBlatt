@@ -20,6 +20,9 @@ class DatabaseHealthTests(unittest.TestCase):
         # self.db_api.execute_raw_query()
         pass
 
+    def test_valid_num_sources(self):
+        pass
+
 ###################################################################
 
 if __name__ == "__main__":

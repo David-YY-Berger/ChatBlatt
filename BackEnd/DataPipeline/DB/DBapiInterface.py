@@ -83,7 +83,6 @@ class DBapiInterface(ABC):
             'key': result.get_key(),
             'content': [en, heb, ""],
             'summary': "",
-            'filters': [[]]
         }
 
         # Decide target collection based on source type

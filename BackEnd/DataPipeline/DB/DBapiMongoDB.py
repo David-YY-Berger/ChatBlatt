@@ -153,7 +153,6 @@ class DBapiMongoDB(DBapiInterface):
         return Source(
             key=db_object["key"],
             content=db_object["content"],
-            filters=db_object.get("filters", None),
             summary=db_object.get("summary", ""),
         )
 

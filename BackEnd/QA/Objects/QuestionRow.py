@@ -2,6 +2,8 @@ import csv
 from dataclasses import dataclass, field
 from typing import List, Optional
 
+from BackEnd.DataObjects.Entity import Entity
+from BackEnd.DataObjects.NER import NER
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 
@@ -14,8 +16,9 @@ class QuestionRow:
     MS: Optional[int]
     Question_name: Optional[str]
     Question_content: Optional[str]
-    Filter_People: field(default_factory=list)
-    Filter_Places: field(default_factory=list)
+    max_sources: int
+    entities: List[Entity] = field(default_factory=list)
+    ners: List[NER] = field(default_factory=list)
 
     def to_question_from_user(self, src_type:str) -> QuestionFromUser:
-        return QuestionFromUser(src_type=src_type, question_content=self.Question_content, filters=[self.Filter_People, self.Filter_Places])
+        return QuestionFromUser(src_type=src_type, question_content=self.Question_content, entities=self.entities, ners=self.ners, max_sources=self.max_sources)
