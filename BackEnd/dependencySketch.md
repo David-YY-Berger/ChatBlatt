@@ -11,6 +11,8 @@ graph TD
     subgraph DataObjects
         Answer
         Source
+        Entity
+        NER
     end
     
     %% General
@@ -19,22 +21,29 @@ graph TD
         System_Functions
     end
 
+    %% Enums
+    subgraph Enums
+        TimePeriod
+        EntityOrNERType
+    end
+
     %% Core modules
-    Filters --> SourceType
-    Source --> Filters
-    Source --> SourceType
+    Source --> Enums
     Source --> General
-    Answer --> Filters
-    Answer --> SourceType
+    Answer --> Enums
     Answer --> General
+    Entity --> Enums
+    NER --> Enums
 
     DB --> DataObjects
     DB --> Utils
+    
+    Utils --> DataObjects
 
     %% Higher-level modules
-    FilterManager --> DB
-    FilterManager --> DataObjects
-    FilterManager --> Utils
+    EntityNerManager --> DB
+    EntityNerManager --> DataObjects
+    EntityNerManager --> Utils
 
     LMM --> DB
     LMM --> DataObjects
@@ -45,18 +54,16 @@ graph TD
     FAISS --> Utils
 
     %% Main application
-    Main --> Filters
     Main --> DataObjects
     Main --> DB
-    Main --> FilterManager
+    Main --> EntityNerManager
     Main --> LMM
     Main --> FAISS
     Main --> Utils
 
-    DB_Populator --> Filters
     DB_Populator --> DataObjects
     DB_Populator --> DB
-    DB_Populator --> FilterManager
+    DB_Populator --> EntityNerManager
     DB_Populator --> LMM
     DB_Populator --> FAISS
     DB_Populator --> Utils
@@ -65,8 +72,4 @@ graph TD
     FrontendAPIHandler --> Main
     QA --> Main
 
-    %% Explicit dependency: Utils depends on DataObjects
-    Utils --> DataObjects
-
-    
-
+  
