@@ -7,6 +7,7 @@ import os
 import unicodedata
 from dotenv import load_dotenv
 
+from BackEnd.DataObjects import Enums
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
@@ -104,40 +105,6 @@ class DBScripts(unittest.TestCase):
                     break
 
         print(f"finished - {SystemFunctions.get_ts()}")
-
-    def test_connect_to_db(self):
-
-        test_collection = CollectionName.TN
-
-        # Insert example data into collection
-        data = {
-            "key": "example_key",
-            "content": "This is the content of the Talmud passage."
-        }
-        doc_id = self.db_api.insert(test_collection, data)
-        print(f"Inserted document ID: {doc_id}")
-
-        # Query data
-        query_results = self.db_api.execute_raw_query({
-            "collection": test_collection,
-            "filter": {"key": "example_key"}
-        })
-        print(f"Query results: {query_results}")
-
-        # Update data
-        updated_rows = self.db_api.update(
-            test_collection,
-            {"key": "example_key"},
-            {"content": "Updated content of the Talmud passage."}
-        )
-        print(f"Updated {updated_rows} rows.")
-
-        # Delete data
-        deleted_rows = self.db_api.delete_instance(
-            test_collection,
-            {"key": "example_key"}
-        )
-        print(f"Deleted {deleted_rows} rows.")
 
     ############################################ Processing Scripts ####################################################
 

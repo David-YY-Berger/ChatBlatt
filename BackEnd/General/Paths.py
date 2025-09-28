@@ -12,6 +12,7 @@ QUESTIONS_OUTPUT_DIR = os.path.join(TESTS_DIR, "Questions")
 current_file = os.path.abspath(__file__)
 current_dir = os.path.dirname(current_file)
 QA1_PATH = os.path.join(current_dir, "../", "QA", "QA_Question_Sheet.csv")
+QA_MONGO_QUERIES = os.path.join(current_dir, "../", "QA", "qa_mongo_queries.json")
 
 ############################################## local paths - for 1 time scripts #######################################
 SEFARIA_INDEX_BT_PASSAGES = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\dataIndexFiles\BT_passages_index.json"

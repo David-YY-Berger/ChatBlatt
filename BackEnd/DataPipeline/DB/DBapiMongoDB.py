@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from BackEnd.DataPipeline.DB.Collection import CollectionName, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
-from BackEnd.General.Logger import Logger
+# from BackEnd.General.Logger import Logger
 from typing_extensions import override
 
 from BackEnd.DataObjects.SourceClasses import Source
@@ -21,7 +21,7 @@ class DBapiMongoDB(DBapiInterface):
         self.client: MongoClient | None = None
         self.dbs: Dict[str, any] = {}   # holds db_name -> MongoDatabase
         self.connection_string = connection_string
-        self.logger = Logger()
+        # self.logger = Logger()
 
         if connection_string:
             self.connect(connection_string)
@@ -45,9 +45,9 @@ class DBapiMongoDB(DBapiInterface):
 
         try:
             self.client.admin.command('ping')
-            self.logger.debug("Connected to MongoDB")
+            # self.logger.debug("Connected to MongoDB")
         except Exception as e:
-            self.logger.error(f"Failed to connect: {e}")
+            # self.logger.error(f"Failed to connect: {e}")
             raise ConnectionError(f"Failed to connect: {e}")
 
         # Initialize all DBs that exist in CollectionName
@@ -64,26 +64,65 @@ class DBapiMongoDB(DBapiInterface):
             self.client.close()
             self.client = None
             self.dbs.clear()  # reset all cached DB references
-            self.logger.debug("Disconnected from MongoDB")
+            # self.logger.debug("Disconnected from MongoDB")
 
     @override
-    def execute_raw_query(self, query: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def execute_raw_query(self, query: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
         """
-        Execute a query on a MongoDB collection and return results.
+        Execute a MongoDB operation safely.
         Expected query format:
           {
-            "collection": Collection,   # a Collection object from CollectionName
-            "filter": {...}             # optional filter dict
+            "collection": Collection,
+            "operation": "find" | "update_one" | "update_many" | "delete_one" | "delete_many" | "insert_one",
+            "filter": {...},      # for find/update/delete
+            "update": {...},      # for update operations
+            "document": {...}     # for insert operations
           }
+        Returns:
+          - For 'find': list of dicts
+          - For update/delete/insert: operation result dict
         """
         collection_obj = query.get("collection")
-        query_filter = query.get("filter", {})
-
-        if not collection_obj:
-            raise ValueError("Query must include 'collection'")
-
+        operation = query.get("operation", "find")
         collection = self.get_collection(collection_obj)
-        return list(collection.find(query_filter))
+
+        if operation == "find":
+            return list(collection.find(query.get("filter", {})))
+        elif operation == "update_one":
+            return collection.update_one(query["filter"], query["update"]).raw_result
+        elif operation == "update_many":
+            return collection.update_many(query["filter"], query["update"]).raw_result
+        elif operation == "delete_one":
+            return collection.delete_one(query["filter"]).raw_result
+        elif operation == "delete_many":
+            return collection.delete_many(query["filter"]).raw_result
+        elif operation == "insert_one":
+            return collection.insert_one(query["document"]).inserted_id
+        elif operation == "insert_many":
+            return collection.insert_many(query["documents"]).inserted_ids
+        elif operation == "count_documents":
+            return collection.count_documents(query.get("filter", {}))
+        elif operation == "replace_one":
+            return collection.replace_one(query["filter"], query["replacement"]).raw_result
+        elif operation == "aggregate":
+            return list(collection.aggregate(query["pipeline"]))
+        elif operation == "find_one":
+            return collection.find_one(query.get("filter", {}))
+        elif operation == "distinct":
+            return collection.distinct(query["field"], query.get("filter", {}))
+        else:
+            raise ValueError(f"Unsupported operation: {operation}")
+
+    @override
+    def execute_query_with_collection(self, query: Dict[str, Any], collection: Collection):
+        """
+        Wrapper for execute_raw_query that accepts a collection object.
+        It adds the collection to the query dict and calls execute_raw_query.
+        """
+        # Make a copy of the query to avoid mutating the caller's dict
+        query_with_collection = query.copy()
+        query_with_collection["collection"] = collection  # use the passed Collection object
+        return self.execute_raw_query(query_with_collection)
 
     @override
     def insert(self, collection: Collection, data: Dict[str, Any]) -> str:

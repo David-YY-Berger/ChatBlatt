@@ -28,9 +28,10 @@ class DBapiInterface(ABC):
 
     @abstractmethod
     def execute_raw_query(self, query: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """
-        Execute a query on the database and return the results.
-        """
+        pass
+
+    @abstractmethod
+    def execute_query_with_collection(self, query: Dict[str, Any], collection_name: str):
         pass
 
     @abstractmethod
