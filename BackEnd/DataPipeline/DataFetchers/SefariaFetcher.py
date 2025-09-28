@@ -100,6 +100,8 @@ class SefariaFetcher:
         content[SourceContentType.EN.value] += en_content
         content[SourceContentType.HEB.value] += heb_content
 
+        # TODO must add chapter here!
+        raise RuntimeError("Must add chapter!")
         key = Source.get_key_from_details(src_type=SourceType.TN, book=book, chapter=0, section=section)
         return Source(key=key, content=content)
 
