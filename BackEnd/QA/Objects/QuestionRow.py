@@ -1,8 +1,7 @@
-import csv
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from BackEnd.DataObjects.Entity import Entity
+from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataObjects.NER import NER
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
@@ -14,11 +13,19 @@ class QuestionRow:
     RM: Optional[int]
     TN: Optional[int]
     MS: Optional[int]
-    Question_name: Optional[str]
-    Question_content: Optional[str]
-    max_sources: int
-    entities: List[Entity] = field(default_factory=list)
-    ners: List[NER] = field(default_factory=list)
+    question_name: Optional[str]
+    question_content: Optional[str]
+    max_sources: Optional[int]
+    entities: List = field(default_factory=list)
+    ners: List = field(default_factory=list)
 
-    def to_question_from_user(self, src_type:str) -> QuestionFromUser:
-        return QuestionFromUser(src_type=src_type, question_content=self.Question_content, entities=self.entities, ners=self.ners, max_sources=self.max_sources)
+    def to_question_from_user(self, src_type: str) -> QuestionFromUser:
+        return QuestionFromUser(
+            src_type=src_type,
+            question_content=self.question_content or "",
+            entities=[str(e) for e in self.entities],  # ensure strings
+            ners=[str(n) for n in self.ners],  # ensure strings
+            max_sources=self.max_sources or 0
+        )
+
+

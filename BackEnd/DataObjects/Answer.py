@@ -1,8 +1,7 @@
 from dataclasses import dataclass, field
-from datetime import datetime
 from typing import List
 
-from BackEnd.DataObjects.Entity import Entity
+from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataObjects.NER import NER
 from BackEnd.General import SystemFunctions
 from BackEnd.DataObjects.SourceClasses import Source

@@ -10,7 +10,7 @@ from BackEnd.FileUtils.FileTypeEnum import FileType
 
 from BackEnd.QA.Objects.QuestionRow import QuestionRow
 from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
-from BackEnd.DataObjects.SourceType import SourceType
+from BackEnd.DataObjects.Enums import SourceType
 
 
 class QuestionsFromCSVTests(unittest.TestCase):
@@ -35,7 +35,7 @@ class QuestionsFromCSVTests(unittest.TestCase):
             real_q = q.to_question_from_user(SourceType.BT.name)
             ans = self.qaHandler.get_full_answer(real_q)
             html_ans = self.htmlWriter.get_full_html(ans)
-            path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.Question_name)
+            path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.question_name)
             LocalPrinter.print_to_file(html_ans, FileType.HTML, path)
 
 
@@ -48,21 +48,31 @@ def read_csv_to_objects(file_path: str) -> List[QuestionRow]:
         for row in reader:
             clean_row = {}
             for k, v in row.items():
-                key = k.replace(" ", "_")  # match dataclass field names
-                if v.strip() == "":
-                    clean_row[key] = None
-                elif key in {"BT", "JT", "RM", "TN", "MS"}:
-                    clean_row[key] = int(v)  # convert numeric fields
-                else:
-                    clean_row[key] = v
+                if k is None or k.strip() == "":
+                    continue  # skip empty headers
+
+                key = k.strip()  # keep exact case to match dataclass
+                v = (v or "").strip()
+
+                # numeric fields
+                if key in {"BT", "JT", "RM", "TN", "MS", "max_sources"}:
+                    clean_row[key] = int(v) if v else None
+                # entity/NER fields as list
+                elif key in {"entities", "ners"}:
+                    clean_row[key] = [x.strip() for x in v.split(",")] if v else []
+                # string fields
+                elif key in {"question_name", "question_content"}:
+                    clean_row[key] = v or None
+
             rows.append(QuestionRow(**clean_row))
     return rows
+
 
 def get_BT_live_questions_from_csv() -> List[QuestionRow]:
     all_q_from_CSV = read_csv_to_objects(Paths.QA1_PATH)
     return [
         q for q in all_q_from_CSV
-        if q.BT == 1 and q.Question_content is not None and q.Question_content.strip() != ""
+        if q.BT == 1 and q.question_content is not None and q.question_content.strip() != ""
     ]
 
 #######################################################################################################################

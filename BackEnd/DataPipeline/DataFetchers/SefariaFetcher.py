@@ -5,7 +5,7 @@ from collections import defaultdict
 import requests
 from BackEnd.General import Logger
 from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
-from BackEnd.DataObjects.SourceType import SourceType
+from BackEnd.DataObjects.Enums import SourceType
 
 
 class SefariaFetcher:

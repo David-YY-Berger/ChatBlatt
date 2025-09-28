@@ -3,7 +3,7 @@ from enum import Enum
 from dataclasses import dataclass, field
 from typing import Any
 
-from BackEnd.DataObjects.SourceType import SourceType
+from BackEnd.DataObjects.Enums import SourceType
 
 
 class SourceContentType(Enum):

@@ -1,6 +1,7 @@
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DataPipeline.EntityNERManager import EntityNERManager
 from BackEnd.DataPipeline.FAISS_api.FaissEngine import FaissEngine
 from BackEnd.DataObjects.Answer import Answer
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
@@ -18,14 +19,16 @@ class QuestionAnswerHandler:
         """Initialize the handler: load environment variables and set up DB + FAISS."""
         self.db_api: Optional[DBapiMongoDB] = None
         self.faiss: Optional[FaissEngine] = None
+        self.entity_ner_manager: Optional[EntityNERManager] = None
         self._set_up()
 
     def _set_up(self):
         """Private method: load env variables and set up DB and FAISS."""
         self.db_api = DBFactory.get_prod_db_mongo()
         self.faiss = FaissEngine(dbapi=self.db_api)
+        self.entity_ner_manager = EntityNERManager(self.db_api)
 
-    def get_answer_refs_only(self, question: QuestionFromUser)->Answer :
+    def get_answer_refs_only(self, question: QuestionFromUser) -> Answer:
         # Example ref list
         ref_list = [
             "BT_Bava Batra_0_3b:4-7",
@@ -33,11 +36,22 @@ class QuestionAnswerHandler:
             "BT_Bava Batra_0_13b:9-14a:4"
         ]
 
+        entities = [
+            e for ent_id in getattr(question, "entity_ids", [])
+            if (e := self.entity_ner_manager.get_entity_from_id(ent_id)) is not None
+        ]
+
+        ners = [
+            n for ner_id in getattr(question, "ner_ids", [])
+            if (n := self.entity_ner_manager.get_ner_from_id(ner_id)) is not None
+        ]
+
         # Create Answer object
         return Answer(
             question_content=question.question_content,
-            filters=question.filters,
-            refs=ref_list
+            refs=ref_list,
+            entities=entities,
+            ners=ners
         )
 
     def get_full_answer(self, question: QuestionFromUser) -> Answer:

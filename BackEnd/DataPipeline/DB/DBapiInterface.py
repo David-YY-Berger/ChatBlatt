@@ -3,7 +3,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
-from BackEnd.DataObjects.SourceType import SourceType
+from BackEnd.DataObjects.Enums import SourceType
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 
 
