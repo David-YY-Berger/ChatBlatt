@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
-from BackEnd.DataObjects.NER import NER
+from BackEnd.DataObjects.Rel import Rel
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 

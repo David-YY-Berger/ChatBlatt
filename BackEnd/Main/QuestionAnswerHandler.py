@@ -1,3 +1,4 @@
+from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
@@ -8,7 +9,7 @@ from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 from typing import Optional
 
-from BackEnd.DataObjects.SourceClasses import Source
+from BackEnd.DataObjects.SourceClasses import SourceContent
 
 
 # from your_module import DBapiMongoDB, FaissEngine, Question
@@ -59,7 +60,7 @@ class QuestionAnswerHandler:
 
         for ref in ans.refs:
             # This still returns a string like "BT", "TN", "FS", etc.
-            collection_str = Source.get_collection_name_from_key(ref)
+            collection_str = SourceClass.get_collection_name_from_key(ref)
 
             # Convert the string to the corresponding Collection object
             try:

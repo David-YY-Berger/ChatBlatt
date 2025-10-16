@@ -27,23 +27,44 @@ class TimePeriod(DescribedEnum):
     NoTimePeriod = (3, "No Time Period")
 
 
-class EntityOrNERType(DescribedEnum):
-    # Entities
+class SymbolType(DescribedEnum):
+    Animal = (0, "Animal")
+    Plant = (1, "Plant")
+    Clothing = (2, "Clothing")
+    HumanRelationship = (3, "Human Relationship")
+    Food = (4, "Food")
+
+
+class PlaceType(DescribedEnum):
+    City = (0, "City")
+    BodyOfWater = (1, "Body of Water")
+    Mountain = (2, "Mountain")
+
+
+class RoleType(DescribedEnum):
+    Prophet = (1, "Prophet")
+    King = (2, "King")
+    Judge = (3, "Judge")
+    Kohen = (4, "Kohen")
+    Tanna = (5, "Tanna")
+    Amora = (6, "Amora")
+    Geon = (7, "Geon")
+    Rishon = (8, "Rishon")
+    Acharon = (9, "Acharon")
+
+class EntityType(DescribedEnum):
+
+    # todo might change this... as of now - refer to CSV until actually build this..
+
     EPerson      = (1, "Person", "A")
-    EPlace       = (2, "Place", "B")
-    ETribe       = (3, "Tribe", "C")
-    ENation      = (4, "Nation", "D")
-    EPassageType = (5, "PassageType", "E")
-    ESymbol      = (6, "Symbol", "F")
-    EMitzvah     = (7, "Mitzvah", "G")
+    # EPlace       = (2, "Place", "B")
+    # ETribe       = (3, "Tribe", "C")
+    # ENation      = (4, "Nation", "D")
+    # EPassageType = (5, "PassageType", "E")
+    # ESymbol      = (6, "Symbol", "F")
 
     # NERs / Relations
-    studiedFrom      = (8, "StudiedFrom", "H")
-    personToPlace    = (9, "PersonToPlace", "I")
-    personToNation   = (10, "PersonToNation", "J")
-    comparedTo       = (11, "ComparedTo", "K")
-    taughtMitzvah    = (12, "TaughtMitzvah", "L")
-    performedMitzvah = (13, "PerformedMitzvah", "M")
+    # studiedFrom      = (8, "StudiedFrom", "H")
 
     def __new__(cls, value, description, key_pref):
         obj = object.__new__(cls)
@@ -52,3 +73,12 @@ class EntityOrNERType(DescribedEnum):
         obj.keyPref = key_pref
         return obj
 
+class RelType(DescribedEnum):
+    # todo might change this... as of now - refer to CSV until actually build this..
+    studiedFrom = (1, "StudiedFrom")
+
+
+class SourceContentType(Enum):
+    EN = 0
+    HEB = 1
+    EN_CLEAN = 2

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from BackEnd.DataObjects.Enums import EntityOrNERType
+from BackEnd.DataObjects.Enums import EntityType
 
 
 @dataclass
@@ -11,12 +11,11 @@ class Entity:
     heb_name: str
     alias: List[str]       # holds keys of other entities
     appearances: List[str]
-    entityType: EntityOrNERType
+    entityType: EntityType
 
     # EPerson = own class
-    # EPlace =
-    # ETribe =
+    # EPlace = own class
+    # ETribe = DEFINED [13 tribes]
     # ENation =
-    # EPassageType =
+    # EPassageType = DEFINED [Halachik, Philosophy, Story]
     # ESymbol = own class
-    # EMitzvah =

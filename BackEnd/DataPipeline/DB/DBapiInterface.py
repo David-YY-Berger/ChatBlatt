@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
-from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
-from BackEnd.DataObjects.Enums import SourceType
+from BackEnd.DataObjects.SourceClasses import SourceContent
+from BackEnd.DataObjects.Enums import SourceType, SourceContentType
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 
 
@@ -71,19 +71,18 @@ class DBapiInterface(ABC):
         return self.find_one(collection, key) is not None
 
     @abstractmethod
-    def find_one_source(self, collection: CollectionName, key: str) -> Source:
+    def find_one_source(self, collection: CollectionName, key: str) -> SourceContent:
         pass
 
     # ----------------------------- Sources ----------------------------------
 
-    def insert_source(self, result : Source, ref, start_index):
+    def insert_source(self, result : SourceContent, ref, start_index):
         en = result.content[SourceContentType.EN.value]
         heb = result.content[SourceContentType.HEB.value]
 
         data = {
             'key': result.get_key(),
             'content': [en, heb, ""],
-            'summary': "",
         }
 
         # Decide target collection based on source type

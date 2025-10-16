@@ -19,7 +19,7 @@ import inspect
 from bs4 import BeautifulSoup
 
 from BackEnd.General.exceptions import InvalidDataError
-from BackEnd.DataObjects.SourceClasses import SourceContentType
+from BackEnd.DataObjects.Enums import SourceContentType
 
 
 class DBScripts(unittest.TestCase):
@@ -87,18 +87,18 @@ class DBScripts(unittest.TestCase):
 
                 ref = futures[completed_fetch]
                 try:
-                    source = completed_fetch.result()
-                    errors = source.is_valid_else_get_error_list()
+                    source_content = completed_fetch.result()
+                    errors = source_content.is_valid_else_get_error_list()
                     if len(errors) > 0:
                         print(f"empty source! {ref} {start_index}")
                         raise InvalidDataError(ref, start_index, errors)
 
                     start_index += 1
-                    if source.get_book() not in book_name_set:
-                        book_name_set.add(source.get_book())
-                        print(f"{source.get_book()} -- {SystemFunctions.get_ts()} -- {start_index}")
+                    if source_content.get_book() not in book_name_set:
+                        book_name_set.add(source_content.get_book())
+                        print(f"{source_content.get_book()} -- {SystemFunctions.get_ts()} -- {start_index}")
 
-                    process_function(source, ref, start_index)
+                    process_function(source_content, ref, start_index)
 
                 except Exception as e:
                     print(f"Error fetching reference {ref} index {start_index}: {e}")
@@ -112,13 +112,13 @@ class DBScripts(unittest.TestCase):
         functions = [
             # self.extract_tag_types,
             # self.extract_content_italics,
-            self.remove_all_clean_english_content,
-            self.populate_clean_english_content,
+            # self.remove_all_clean_english_content,
+            # self.populate_clean_english_content,
         ]
 
         collections = [
             # CollectionName.TN,
-            CollectionName.BT,
+            # CollectionName.BT,
         ]
 
         self.process_all_documents(collections=collections, functions=functions)

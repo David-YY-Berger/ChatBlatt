@@ -9,7 +9,8 @@ from BackEnd.General.Decorators import singleton
 # from BackEnd.General.Logger import Logger
 from typing_extensions import override
 
-from BackEnd.DataObjects.SourceClasses import Source
+from BackEnd.DataObjects.SourceClasses import SourceContent
+from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
 
 @singleton
 class DBapiMongoDB(DBapiInterface):
@@ -181,7 +182,7 @@ class DBapiMongoDB(DBapiInterface):
         return self.get_collection(collection).find_one({"key": key})
 
     @override
-    def find_one_source(self, collection: Collection, key: str) -> Source:
+    def find_one_source(self, collection: Collection, key: str) -> SourceContent:
         """
         Find a single document and return it as a Source object.
         """
@@ -189,10 +190,9 @@ class DBapiMongoDB(DBapiInterface):
         if db_object is None:
             raise Exception(f"Document with key '{key}' not found in collection {collection.name}.")
 
-        return Source(
+        return SourceContent(
             key=db_object["key"],
-            content=db_object["content"],
-            summary=db_object.get("summary", ""),
+            content=db_object["content"]
         )
 
     # ----------------------------- FAISS ------------------------------------

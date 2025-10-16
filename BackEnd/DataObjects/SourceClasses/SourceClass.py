@@ -1,24 +1,15 @@
-import json
-from enum import Enum
-from dataclasses import dataclass, field
-from typing import Any
+
+from typing import Any, List
 
 from BackEnd.DataObjects.Enums import SourceType
 
-
-class SourceContentType(Enum):
-    EN = 0
-    HEB = 1
-    EN_CLEAN = 2
-
-
-''' must be init w key (can generate key from src_type & book & chapter & section)'''
-@dataclass
-class Source:
+""" must be init w key (can generate key from src_type & book & chapter & section)"""
+class SourceClass:
     # example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
     key: str # (src_type:SourceType _ book:str _ chapter:int _ section:str)
-    summary: str = ""
-    content: list[str] = field(default_factory=list)
+
+    def __init__(self, key:str):
+        self.key = key
 
     ################################################## Getters ############################################
 
@@ -27,19 +18,19 @@ class Source:
 
     def get_src_type(self) -> SourceType | str | None:
         if self.key:
-            return Source.get_source_type_from_key(self.key)
+            return self.get_source_type_from_key(self.key)
         else:
             return None
 
     def get_book(self) -> str:
         if self.key:
-            return Source.get_book_from_key(self.key)
+            return self.get_book_from_key(self.key)
         else:
             return ""
 
     def get_chapter(self) -> int:
         if self.key:
-            return Source.get_chapter_from_key(self.key)
+            return self.get_chapter_from_key(self.key)
         else:
             return 0
 
@@ -48,15 +39,10 @@ class Source:
 
     def get_section(self) -> str:
         if self.key:
-            return Source.get_section_from_key(self.key)
+            return self.get_section_from_key(self.key)
         else:
             return ""
 
-    def get_content(self) -> list[str]:
-        return self.content
-
-    def get_summary(self) -> str | None:
-        return self.summary or "Summary PlaceHolder; no summary found for this source"
 
     ################################################## to_ methods ############################################
 
@@ -64,19 +50,13 @@ class Source:
         """Convert the Source object to a dictionary"""
         return {
             "src_type": str(self.get_src_type()),  # stringify enum
-            "summary": self.summary,
             "book": self.get_book(),
             "chapter": self.get_book(),
             "section": self.get_section(),
-            "content": self.content,
         }
 
-    def to_json(self) -> str:
-        """Convert the Source object to a JSON string"""
-        return json.dumps(self.to_dict(), ensure_ascii=False)
-
     def __str__(self) -> str:
-        return f"{self.get_book()} {self.get_section()} {self.get_chapter_str()} - {self.get_summary()}"
+        return f"{self.get_book()} {self.get_section()} {self.get_chapter_str()}"
 
     ################################################## misc ############################################
 
@@ -93,16 +73,11 @@ class Source:
         if not self.get_section().strip():
             errors.append("Section is null or empty!")
 
-        if not isinstance(self.content, list) or not all(isinstance(item, str) for item in self.content):
-            errors.append("Content must be a list of strings!")
-        elif not any(item.strip() for item in self.content):
-            errors.append("Content must contain at least one non-empty string!")
-
         return errors
 
     @staticmethod
     def get_collection_name_from_key(key: str) -> str:
-        src_type = Source.get_source_type_from_key(key)
+        src_type = SourceClass.get_source_type_from_key(key)
         if src_type:
             return src_type.name
         else:
@@ -147,4 +122,3 @@ class Source:
         section = section or "no section"
 
         return f"{src_type.name}_{book}_{chapter}_{section}"
-

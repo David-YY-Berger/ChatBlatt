@@ -22,6 +22,13 @@ class CollectionName:
     @classmethod
     def all(cls):
         return [
-            cls.BT, cls.JT, cls.RM, cls.TN, cls.MS,
-            cls.FS, cls.LMM,
+            cls.BT,
+            cls.JT,
+            cls.RM,
+            cls.TN,
+            cls.MS,
+
+            cls.FS,
+
+            cls.LMM,
         ]

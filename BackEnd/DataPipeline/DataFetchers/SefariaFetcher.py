@@ -3,9 +3,13 @@ from typing import Any
 from collections import defaultdict
 
 import requests
+
+from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.General import Logger
-from BackEnd.DataObjects.SourceClasses import Source, SourceContentType
-from BackEnd.DataObjects.Enums import SourceType
+from BackEnd.DataObjects.SourceClasses import SourceContent
+from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
+
+from BackEnd.DataObjects.Enums import SourceType, SourceContentType
 
 
 class SefariaFetcher:
@@ -36,7 +40,7 @@ class SefariaFetcher:
             return None
 
 
-    def fetch_sefaria_passage_as_Source_from_data(self, json_data) -> Source:
+    def fetch_sefaria_passage_as_Source_from_data(self, json_data) -> SourceContent:
 
         if json_data['type'] == "Mishnah" or json_data['type'] == "Sugya":
             return self.fetch_BT_as_Source_from_ref(json_data['full_ref'])
@@ -47,8 +51,8 @@ class SefariaFetcher:
             raise Exception(f"Unknown type {json_data['type']}")
 
 
-    def fetch_BT_as_Source_from_ref(self, reference) -> Source:
-        ''' function poorly done... should be refactored to use list from sefaria's .json file'''
+    def fetch_BT_as_Source_from_ref(self, reference) -> SourceContent:
+        """ function poorly done... should be refactored to use list from sefaria's .json file"""
         [tractate, sections] = self.parse_talmud_reference(reference)
         content = ["", ""]
 
@@ -71,12 +75,12 @@ class SefariaFetcher:
                     content[SourceContentType.EN.value] += en_content_from_section
                     content[SourceContentType.HEB.value] += heb_content_from_section
 
-        key = Source.get_key_from_details(src_type=SourceType.BT, book=tractate, chapter=0,
-                        section=reference.split(tractate, 1)[1].strip())
-        return Source(key = key, content=content)
+        key = SourceClass.get_key_from_details(src_type=SourceType.BT, book=tractate, chapter=0,
+                                                 section=reference.split(tractate, 1)[1].strip())
+        return SourceContent(key = key, content=content)
 
 
-    def fetch_TN_as_Source_from_ref_list(self, full_ref: str, ref_list : list) -> Source:
+    def fetch_TN_as_Source_from_ref_list(self, full_ref: str, ref_list : list) -> SourceContent:
 
         match = re.match(r'^(.*?)(?=\d)', full_ref)
         if match:
@@ -101,9 +105,9 @@ class SefariaFetcher:
         content[SourceContentType.HEB.value] += heb_content
 
         # TODO must add chapter here!
-        raise RuntimeError("Must add chapter!")
-        key = Source.get_key_from_details(src_type=SourceType.TN, book=book, chapter=0, section=section)
-        return Source(key=key, content=content)
+        # raise RuntimeError("Must add chapter!")
+        key = SourceClass.get_key_from_details(src_type=SourceType.TN, book=book, chapter=0, section=section)
+        return SourceContent(key=key, content=content)
 
     def extract_chapter_verse_ranges(self, ref_list):
         """
