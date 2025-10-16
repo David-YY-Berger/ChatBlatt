@@ -9,4 +9,4 @@ class QuestionFromUser:
     src_type: str
     max_sources: int
     entities: List[str] = field(default_factory=list)
-    ners: List[str] = field(default_factory=list)
+    rels: List[str] = field(default_factory=list)
