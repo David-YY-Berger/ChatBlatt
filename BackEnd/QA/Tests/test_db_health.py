@@ -40,6 +40,14 @@ class DatabaseHealthTests(unittest.TestCase):
         elapsed = time.time() - self._start_time
         print(f"Test {self._testMethodName} finished in {elapsed:.3f} seconds")
 
+    ###########################################  Misc Tests ##################################################33
+
+    def test_foo(self):
+        # coll = self.db_api.get_collection(CollectionName.BT)
+        # result = coll.update_many({}, {"$unset": {"summary": ""}})
+        # print(result.modified_count)
+        pass
+
     ###########################################  Source Tests ##################################################33
 
     def test_valid_num_sources(self):
