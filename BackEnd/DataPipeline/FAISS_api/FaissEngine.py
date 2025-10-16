@@ -11,12 +11,18 @@ from BackEnd.DataPipeline.DB.Collection import CollectionName
 
 
 class FaissEngine:
-    def __init__(
-        self,
-        dbapi: DBapiInterface,
-        model_name: str = "all-MiniLM-L6-v2",
-        dim: int = 384,
-    ):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+    def __init__(self, dbapi, model_name="all-MiniLM-L6-v2", dim=384):
+        if hasattr(self, "_initialized") and self._initialized:
+            return
+        self._initialized = True
+        # ... rest of your __init__ code
         """
         :param dbapi: An instance of DBapiMongoDB (must have dbs dict with FAISS DB).
         :param model_name: SentenceTransformer model to use.
@@ -35,7 +41,7 @@ class FaissEngine:
         self.dim = dim
         self._model = None
         self._index = None
-        self.metadata = None
+        self.metadata = []
 
 
     @property
@@ -69,8 +75,8 @@ class FaissEngine:
 
         index_bytes, metadata_bytes = data
         index_np_array = np.frombuffer(index_bytes, dtype='uint8')
-        # Deserialize the FAISS index bytes back into a FAISS index object
-        self.index = faiss.deserialize_index(index_np_array)
+        # # Deserialize the FAISS index bytes back into a FAISS index object
+        self._index = faiss.deserialize_index(index_np_array)
 
         # Deserialize the metadata bytes back into a Python list using pickle
         self.metadata = pickle.loads(metadata_bytes)
@@ -120,5 +126,5 @@ class FaissEngine:
         distances, indices = self.index.search(query_vec, top_k)
 
         # Return only the reference keys
-        return [self.metadata[i] for i in indices[0] if i < len(self.metadata)]
+        return [self.metadata[i] for i in indices[0] if 0 <= i < len(self.metadata)]
 

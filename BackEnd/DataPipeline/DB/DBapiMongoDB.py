@@ -212,7 +212,7 @@ class DBapiMongoDB(DBapiInterface):
         # Upsert the FAISS index document in the 'faiss_index' collection
         # An empty filter {} means we update the single (or first) document.
         # If no document exists, 'upsert=True' inserts a new one.
-        self.db_faiss[CollectionName.FS.name].update_one(
+        self.get_collection(CollectionName.FS).update_one(
             {},
             {"$set": {
                 "faiss_index": faiss_index_binary,

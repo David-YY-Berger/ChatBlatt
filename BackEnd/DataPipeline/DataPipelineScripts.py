@@ -38,7 +38,7 @@ class DBScripts(unittest.TestCase):
         uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
 
         self.db_api = DBapiMongoDB(uri)
-        # self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
+        self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
 
         # sets for processing over data.
         self.tags_seen = set()
