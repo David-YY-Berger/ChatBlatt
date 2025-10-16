@@ -41,16 +41,18 @@ class SearchHandler:
 
         src_metadata_lst = src_metadata_lst[:question.max_sources]
 
-        return self.create_answer(question, src_metadata_lst)
+        return self.create_answer_obj(question, src_metadata_lst)
 
-    def create_answer(self, question, src_metadata_lst) -> Answer:
+    def create_answer_obj(self, question:QuestionFromUser, src_metadata_lst) -> Answer:
+
+        # this code is properly irrelevant.. the en
         entities_from_q = [
-            e for ent_id in getattr(question, "entities", [])
+            e for ent_id in question.entities
             if (e := self.entity_rel_manager.get_entity_from_id(ent_id)) is not None
         ]
         rels_from_q = [
-            n for ner_id in getattr(question, "rels", [])
-            if (n := self.entity_rel_manager.get_rel_from_id(ner_id)) is not None
+            n for rel_id in question.rels
+            if (n := self.entity_rel_manager.get_rel_from_id(rel_id)) is not None
         ]
         # Create Answer object
         return Answer(
