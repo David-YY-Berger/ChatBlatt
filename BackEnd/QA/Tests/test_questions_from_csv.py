@@ -9,7 +9,7 @@ from BackEnd.FileUtils import OsFunctions, LocalPrinter
 from BackEnd.FileUtils.FileTypeEnum import FileType
 
 from BackEnd.QA.Objects.QuestionRow import QuestionRow
-from BackEnd.Main.QuestionAnswerHandler import QuestionAnswerHandler
+from BackEnd.Main.SearchHandler import SearchHandler
 from BackEnd.DataObjects.Enums import SourceType
 
 
@@ -18,7 +18,7 @@ class QuestionsFromCSVTests(unittest.TestCase):
     def setUp(self):
         """Runs before every test to set up necessary directories."""
         OsFunctions.clear_create_directory(Paths.QUESTIONS_OUTPUT_DIR)
-        self.qaHandler = QuestionAnswerHandler()
+        self.qaHandler = SearchHandler()
         self.htmlWriter = HtmlWriter()
         # self.logger = Logger.Logger()
 

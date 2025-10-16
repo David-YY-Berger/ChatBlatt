@@ -1,4 +1,4 @@
-BT,JT,RM,TN,MS,question_name,question_content,entities,ners,max_sources
+BT,JT,RM,TN,MS,question_name,question_content,entities,rels,max_sources
 1,0,0,0,0,1 EN word - permutations,Greece,,,,
 1,0,0,0,0,1 En word - synonyms,fight,,,,
 1,0,0,0,0,1 english phrase,leniencies while fighting a war,,,,

@@ -1,10 +1,10 @@
-
+from abc import ABC
 from typing import Any, List
 
 from BackEnd.DataObjects.Enums import SourceType
 
 """ must be init w key (can generate key from src_type & book & chapter & section)"""
-class SourceClass:
+class SourceClass(ABC):
     # example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
     key: str # (src_type:SourceType _ book:str _ chapter:int _ section:str)
 
@@ -18,7 +18,7 @@ class SourceClass:
 
     def get_src_type(self) -> SourceType | str | None:
         if self.key:
-            return self.get_source_type_from_key(self.key)
+            return self.get_src_type_from_key(self.key)
         else:
             return None
 
@@ -77,14 +77,14 @@ class SourceClass:
 
     @staticmethod
     def get_collection_name_from_key(key: str) -> str:
-        src_type = SourceClass.get_source_type_from_key(key)
+        src_type = SourceClass.get_src_type_from_key(key)
         if src_type:
             return src_type.name
         else:
             return ""
 
     @staticmethod
-    def get_source_type_from_key(key: str) -> SourceType | None:
+    def get_src_type_from_key(key: str) -> SourceType | None:
         prefix = key[:2]
         return SourceType[prefix] if prefix in SourceType.__members__ else None
 

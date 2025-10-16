@@ -53,7 +53,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:20px;
     def _get_header(self, ans: Answer) -> str:
         """Header section with Entities and NERs instead of Filters"""
         entities_str = self._format_list(ans.entities)
-        ners_str = self._format_list(ans.ners)
+        ners_str = self._format_list(ans.rels)
         readable_timestamp = SystemFunctions.get_ts_readable_str(ans.ts)
 
         return f"""
@@ -82,9 +82,9 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:20px;
 
     def _get_references_sections(self, ans: Answer) -> str:
         html = ""
-        for i, ref in enumerate(ans.refs):
-            source = ans.srcs[i] if i < len(ans.srcs) else None
-            html += self._get_reference_section(ref, source, i)
+        for i, src_metadata in enumerate(ans.src_metadata_lst):
+            source = ans.src_contents[i] if i < len(ans.src_contents) else None
+            html += self._get_reference_section(src_metadata.key, source, i)
         html += self._get_javascript()
         return html
 

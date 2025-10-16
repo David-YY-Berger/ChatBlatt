@@ -182,7 +182,7 @@ class DBapiMongoDB(DBapiInterface):
         return self.get_collection(collection).find_one({"key": key})
 
     @override
-    def find_one_source(self, collection: Collection, key: str) -> SourceContent:
+    def find_one_source_content(self, collection: Collection, key: str) -> SourceContent:
         """
         Find a single document and return it as a Source object.
         """

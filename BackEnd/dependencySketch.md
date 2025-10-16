@@ -12,7 +12,7 @@ graph TD
         Answer
         Source
         Entity
-        NER
+        Rel
     end
     
     %% General
@@ -23,8 +23,7 @@ graph TD
 
     %% Enums
     subgraph Enums
-        TimePeriod
-        EntityOrNERType
+        
     end
 
     %% Core modules
@@ -33,7 +32,7 @@ graph TD
     Answer --> Enums
     Answer --> General
     Entity --> Enums
-    NER --> Enums
+    Rel --> Enums
 
     DB --> DataObjects
     DB --> Utils
@@ -41,9 +40,9 @@ graph TD
     Utils --> DataObjects
 
     %% Higher-level modules
-    EntityNerManager --> DB
-    EntityNerManager --> DataObjects
-    EntityNerManager --> Utils
+    EntityRelManager --> DB
+    EntityRelManager --> DataObjects
+    EntityRelManager --> Utils
 
     LMM --> DB
     LMM --> DataObjects
@@ -56,14 +55,14 @@ graph TD
     %% Main application
     Main --> DataObjects
     Main --> DB
-    Main --> EntityNerManager
+    Main --> EntityRelManager
     Main --> LMM
     Main --> FAISS
     Main --> Utils
 
     DB_Populator --> DataObjects
     DB_Populator --> DB
-    DB_Populator --> EntityNerManager
+    DB_Populator --> EntityRelManager
     DB_Populator --> LMM
     DB_Populator --> FAISS
     DB_Populator --> Utils

@@ -5,12 +5,12 @@ from BackEnd.General.Decorators import singleton
 
 
 @singleton
-class EntityNERManager:
+class EntityRelManager:
     def __init__(self, db: DBapiInterface):
         self.db_api = db
 
     def get_entity_from_id(self, entity_id) -> Entity | None:
         return None
 
-    def get_ner_from_id(self, entity_id) -> Rel | None:
+    def get_rel_from_id(self, entity_id) -> Rel | None:
         return None

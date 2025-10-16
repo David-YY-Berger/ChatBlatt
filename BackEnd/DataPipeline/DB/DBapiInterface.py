@@ -71,7 +71,7 @@ class DBapiInterface(ABC):
         return self.find_one(collection, key) is not None
 
     @abstractmethod
-    def find_one_source(self, collection: CollectionName, key: str) -> SourceContent:
+    def find_one_source_content(self, collection: CollectionName, key: str) -> SourceContent:
         pass
 
     # ----------------------------- Sources ----------------------------------

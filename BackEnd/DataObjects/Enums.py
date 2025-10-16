@@ -10,7 +10,6 @@ class DescribedEnum(Enum):
     def __str__(self):
         return self.description
 
-
 class SourceType(DescribedEnum):
     # DONT CHANGE THESE ABBREVIATIONS! hardcoded in MongoDB impl
     BT = (0, "Babylonian Talmud")
@@ -19,13 +18,11 @@ class SourceType(DescribedEnum):
     TN = (3, "Tanach")
     MS = (4, "Mishna")
 
-
 class TimePeriod(DescribedEnum):
     Tanach = (0, "Tanach Era")
     Tanaim = (1, "Tanaim")
     Amoraim = (2, "Amoraim")
     NoTimePeriod = (3, "No Time Period")
-
 
 class SymbolType(DescribedEnum):
     Animal = (0, "Animal")
@@ -34,12 +31,10 @@ class SymbolType(DescribedEnum):
     HumanRelationship = (3, "Human Relationship")
     Food = (4, "Food")
 
-
 class PlaceType(DescribedEnum):
     City = (0, "City")
     BodyOfWater = (1, "Body of Water")
     Mountain = (2, "Mountain")
-
 
 class RoleType(DescribedEnum):
     Prophet = (1, "Prophet")
