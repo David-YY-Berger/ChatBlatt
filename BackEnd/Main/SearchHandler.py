@@ -34,7 +34,12 @@ class SearchHandler:
 
         ref_list = self.ordered_ref_from_faiss(question.question_content)
 
-        src_metadata_lst = self.get_src_metadata(ref_list)
+        src_metadata_lst = self.create_src_metadata_obj(ref_list)
+        src_metadata_lst = self.filter_by_book(src_metadata_lst, question)
+        src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
+        src_metadata_lst = self.filter_by_entity_rel(question, src_metadata_lst)
+
+        src_metadata_lst = src_metadata_lst[:question.max_sources]
 
         return self.create_answer(question, src_metadata_lst)
 
@@ -86,18 +91,23 @@ class SearchHandler:
         ]
         return ref_list
 
-    def get_src_metadata(self, ref_list):
+    def create_src_metadata_obj(self, ref_list):
         src_metadata_lst = []
         for ref in ref_list:
-
             src_type = SourceClass.get_src_type_from_key(ref)
-
             src_meta = SourceMetadata(ref, SourceClass.get_book_from_key(ref), src_type,
                                       [], [], ["no summary yet", "עוד לא הוספנו סיכום"])
-            src_meta = self.get_src_info_from_db(src_meta)
             src_metadata_lst.append(src_meta)
 
         return src_metadata_lst
 
-    def get_src_info_from_db(self, src_meta):
-        return src_meta
+
+    def filter_by_book(self, src_metadata_lst, question):
+        return src_metadata_lst
+
+
+    def populate_entity_rel(self, src_metadata_lst):
+        return src_metadata_lst
+
+    def filter_by_entity_rel(self, question, src_metadata_lst):
+        return src_metadata_lst
