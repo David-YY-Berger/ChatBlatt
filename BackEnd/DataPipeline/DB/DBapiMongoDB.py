@@ -195,6 +195,21 @@ class DBapiMongoDB(DBapiInterface):
             content=db_object["content"]
         )
 
+    @override
+    def get_all_source_contents(self, collection: Collection) -> List[SourceContent]:
+        """
+        Retrieve all documents from the given collection and return them as SourceContent objects.
+        """
+        if not self.client:
+            raise Exception("Database connection is not established.")
+
+        docs = self.get_collection(collection).find({})
+        return [
+            SourceContent(key=doc["key"], content=doc["content"])
+            for doc in docs
+            if "key" in doc and "content" in doc
+        ]
+
     # ----------------------------- FAISS ------------------------------------
     @override
     def save_faiss_index(self, index_bytes: bytes, metadata_bytes: bytes) -> None:

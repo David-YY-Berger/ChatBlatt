@@ -45,7 +45,7 @@ class SearchHandler:
 
     def create_answer_obj(self, question:QuestionFromUser, src_metadata_lst) -> Answer:
 
-        # this code is properly irrelevant.. the en
+        # this code is possibly temporary.. the final front end might expect to be packaged differently..
         entities_from_q = [
             e for ent_id in question.entities
             if (e := self.entity_rel_manager.get_entity_from_id(ent_id)) is not None
@@ -85,12 +85,15 @@ class SearchHandler:
 
 
     def ordered_ref_from_faiss(self, prompt: str) -> List[str]:
+
+        ref_list = self.faiss.search(prompt, 20)
+
         # Example ref list
-        ref_list = [
-            "BT_Bava Batra_0_3b:4-7",
-            "BT_Bava Batra_0_7b:6-7",
-            "BT_Bava Batra_0_13b:9-14a:4"
-        ]
+        # ref_list = [
+        #     "BT_Bava Batra_0_3b:4-7",
+        #     "BT_Bava Batra_0_7b:6-7",
+        #     "BT_Bava Batra_0_13b:9-14a:4"
+        # ]
         return ref_list
 
     def create_src_metadata_obj(self, ref_list):
@@ -99,17 +102,21 @@ class SearchHandler:
             src_type = SourceClass.get_src_type_from_key(ref)
             src_meta = SourceMetadata(ref, SourceClass.get_book_from_key(ref), src_type,
                                       [], [], ["no summary yet", "עוד לא הוספנו סיכום"])
+            # todo: query db, get entities ids, and rels...
             src_metadata_lst.append(src_meta)
 
         return src_metadata_lst
 
 
     def filter_by_book(self, src_metadata_lst, question):
+        # todo
         return src_metadata_lst
 
 
     def populate_entity_rel(self, src_metadata_lst):
+        # todo from enetity ids, get the values (name, hebrew name, etc..)
         return src_metadata_lst
 
     def filter_by_entity_rel(self, question, src_metadata_lst):
+        # todo from rel ids, get the values (name, hebrew name, etc..)
         return src_metadata_lst

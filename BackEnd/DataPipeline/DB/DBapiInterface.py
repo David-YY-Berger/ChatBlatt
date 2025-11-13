@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
-from BackEnd.DataPipeline.DB.Collection import CollectionName
+from BackEnd.DataPipeline.DB.Collection import CollectionName, Collection
 
 
 class DBapiInterface(ABC):
@@ -64,14 +64,18 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def find_one(self, collection: CollectionName, key: str):
+    def find_one(self, collection: Collection, key: str):
         pass
 
-    def exists(self, collection: CollectionName, key: str) -> bool:
+    def exists(self, collection: Collection, key: str) -> bool:
         return self.find_one(collection, key) is not None
 
     @abstractmethod
-    def find_one_source_content(self, collection: CollectionName, key: str) -> SourceContent:
+    def find_one_source_content(self, collection: Collection, key: str) -> SourceContent:
+        pass
+
+    @abstractmethod
+    def get_all_source_contents(self, collection: Collection) -> List[SourceContent]:
         pass
 
     # ----------------------------- Sources ----------------------------------
