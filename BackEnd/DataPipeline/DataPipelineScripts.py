@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from BackEnd.DataObjects import Enums
 from BackEnd.DataPipeline.DB.Collection import CollectionName
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
 from BackEnd.FileUtils.JsonWriter import JsonWriter
@@ -22,23 +23,17 @@ from BackEnd.General.exceptions import InvalidDataError
 from BackEnd.DataObjects.Enums import SourceContentType
 
 
-class DBScripts(unittest.TestCase):
-
+class DataPipelineScripts(DBParentClass):
 
     def setUp(self):
-        """Runs before every test to set up necessary directories."""
+        """Runs before every test to set up directories and lazy init Faiss."""
+        super().setUp()  # call parent setup first
+
         OsFunctions.clear_create_directory(Paths.TESTS_DIR)
         load_dotenv()
 
-        # Retrieve the database username and password from environment variables
-        username = os.getenv('DB_BT_USERNAME')
-        password = os.getenv('DB_BT_PASSWORD')
-
-        # MongoDB URI with password inserted
-        uri = f"mongodb+srv://{username}:{password}@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
-
-        self.db_api = DBapiMongoDB(uri)
-        self.faiss = FaissEngine.FaissEngine(dbapi=self.db_api) #<- make this lazy inst
+        # Lazy init
+        self.faiss = None
 
         # sets for processing over data.
         self.tags_seen = set()

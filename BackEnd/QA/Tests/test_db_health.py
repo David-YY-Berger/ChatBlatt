@@ -6,39 +6,17 @@ from numpy.ma.testutils import assert_equal
 
 from BackEnd.DataPipeline.DB.Collection import Collection, CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
+from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.General import Paths
 
 
-class DatabaseHealthTests(unittest.TestCase):
-
-    db_api = DBFactory.get_prod_db_mongo()
-
-    @classmethod
-    def setUpClass(cls):
-        """Runs once before all tests to load queries into memory."""
-        cls.queries = cls._load_all_queries()
-
-    @staticmethod
-    def _load_all_queries() -> dict:
-        file_path = Paths.QA_MONGO_QUERIES
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    def get_query(self, name: str) -> dict:
-        """Retrieve a query by name."""
-        if name not in self.queries:
-            raise ValueError(f"Query '{name}' not found in queries.json")
-        return self.queries[name]
+class DatabaseHealthTests(DBParentClass):
 
     def setUp(self):
-        """Runs before every test."""
-        self._start_time = time.time()  # record start time
-        print(f"\nRunning test: {self._testMethodName}")
+        super().setUp()
 
     def tearDown(self):
-        """Runs after every test."""
-        elapsed = time.time() - self._start_time
-        print(f"Test {self._testMethodName} finished in {elapsed:.3f} seconds")
+       super().setUp()
 
     ###########################################  Misc Tests ##################################################33
 

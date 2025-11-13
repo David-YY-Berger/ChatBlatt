@@ -1,0 +1,17 @@
+{
+  "remove_third_content_element": {
+    "filter": { "content.2": { "$exists": true } },
+    "update": [
+      {
+        "$set": {
+          "content": {
+            "$concatArrays": [
+              { "$slice": ["$content", 2] },
+              { "$slice": ["$content", 3, { "$size": "$content" }] }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

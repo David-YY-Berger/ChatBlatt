@@ -9,10 +9,14 @@ QUESTIONS_OUTPUT_DIR = os.path.join(TESTS_DIR, "Questions")
 
 ############################################## local paths for this project #######################################
 
-current_file = os.path.abspath(__file__)
-current_dir = os.path.dirname(current_file)
-QA1_PATH = os.path.join(current_dir, "../", "QA", "QA_Question_Sheet.csv")
-QA_MONGO_QUERIES = os.path.join(current_dir, "../", "QA", "qa_mongo_queries.json")
+current_file = os.path.abspath(__file__) #paths.py
+GENERAL_DIR = os.path.dirname(current_file)
+BACKEND_DIR= os.path.dirname(GENERAL_DIR)
+MONGO_QUERIES_DIR = os.path.join(BACKEND_DIR, "DataPipeline/mongo_queries")
+QA1_PATH = os.path.join(GENERAL_DIR, "../", "QA", "QA_Question_Sheet.csv")
+
+QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")
+DATA_CLEANUP_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_cleanup_mongo_queries.json")
 
 ############################################## local paths - for 1 time scripts #######################################
 SEFARIA_INDEX_BT_PASSAGES = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\dataIndexFiles\BT_passages_index.json"
