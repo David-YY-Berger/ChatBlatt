@@ -7,6 +7,24 @@
           "content": {
             "$concatArrays": [
               { "$slice": ["$content", 2] },
+              { "$slice": ["$content", 3, { "$size": { "$slice": ["$content", 3, { "$size": "$content" }] } }] }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "remove_third_content_element_test": {
+    "filter": {
+      "_id": "YOUR_DOCUMENT_ID_HERE",
+      "content.2": { "$exists": true }
+    },
+    "update": [
+      {
+        "$set": {
+          "content": {
+            "$concatArrays": [
+              { "$slice": ["$content", 2] },
               { "$slice": ["$content", 3, { "$size": "$content" }] }
             ]
           }

@@ -5,6 +5,7 @@ import unittest
 import os
 
 import unicodedata
+from bson import ObjectId
 from dotenv import load_dotenv
 
 from BackEnd.DataObjects import Enums
@@ -280,3 +281,55 @@ class DataPipelineScripts(DBParentClass):
         results = self.faiss.search("custom of building partitions")
         for r in results:
             print(r)
+
+    ############################################## Data Clean up functions ##############################################
+    def test_remove_3rd_col_of_content(self):
+        # Retrieve the query template
+        query = self.get_query("remove_third_content_element")
+
+        try:
+            # Execute the query on the __ collection
+            # Only documents matching the filter will be updated
+            updated_count = self.db_api.execute_query_with_collection(
+                query=query,
+                collection=CollectionName.BT
+            )
+
+            print(f"Updated {len(updated_count)} documents (skipped those without a 3rd element).")
+            return updated_count
+
+        except Exception as e:
+            print(f"Failed to remove 3rd content element: {e}")
+            return 0
+
+
+    def test_remove_3rd_col_of_content_test(self):
+
+        document_id = ObjectId("68a571fce3ce6b49e57bb1be")
+
+        # Retrieve the test query template
+        query = self.get_query("remove_third_content_element_test")
+
+        if not query:
+            print("Query 'remove_third_content_element_test' not found.")
+            return 0
+
+        # Set the document _id dynamically
+        query = query.copy()
+        query["filter"]["_id"] = document_id
+
+        try:
+            # Execute the query on the TN collection
+            updated_count = self.db_api.execute_query_with_collection(
+                query=query,
+                collection=CollectionName.TN
+            )
+
+            print(f"Updated {updated_count} document(s).")
+            return updated_count
+
+        except Exception as e:
+            print(f"Failed to remove 3rd content element: {e}")
+            return 0
+
+
