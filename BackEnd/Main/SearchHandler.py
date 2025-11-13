@@ -86,8 +86,7 @@ class SearchHandler:
 
     def ordered_ref_from_faiss(self, prompt: str) -> List[str]:
 
-        ref_list = self.faiss.search(prompt, 20)
-
+        ref_list = self.faiss.search(prompt) # can be huge list...
         # Example ref list
         # ref_list = [
         #     "BT_Bava Batra_0_3b:4-7",
