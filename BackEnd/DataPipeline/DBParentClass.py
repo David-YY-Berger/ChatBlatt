@@ -4,6 +4,7 @@ import time
 from pathlib import Path
 
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
+from BackEnd.FileUtils import OsFunctions
 from BackEnd.General import Paths
 
 
@@ -22,6 +23,7 @@ class DBParentClass(unittest.TestCase):
             Paths.DATA_CLEANUP_MONGO_QUERIES,
             # Add more paths here if needed
         )
+        OsFunctions.clear_create_directory(Paths.TESTS_DIR)
 
     @staticmethod
     def _load_all_queries(*file_paths: str) -> dict:
@@ -51,3 +53,4 @@ class DBParentClass(unittest.TestCase):
         """Runs after every test."""
         elapsed = time.time() - self._start_time
         print(f"Test {self._testMethodName} finished in {elapsed:.3f} seconds")
+        self.db_api.disconnect()
