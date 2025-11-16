@@ -10,11 +10,5 @@ class Entity:
     en_name: str
     heb_name: str
     alias: List[str]       # holds keys of other entities
-    appearances: List[str]
+    appearances: List[str] # source types
     entityType: EntityType
-
-    # EPerson = own class
-    # EPlace = own class
-    # ETribe = DEFINED [13 tribes]
-    # ENation =
-    # ESymbol = own class
