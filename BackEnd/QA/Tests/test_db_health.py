@@ -4,7 +4,7 @@ import time
 
 from numpy.ma.testutils import assert_equal
 
-from BackEnd.DataPipeline.DB.Collection import Collection, CollectionName
+from BackEnd.DataPipeline.DB.Collections import Collection, CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.General import Paths

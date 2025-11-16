@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any, List
 
-from BackEnd.DataObjects.Enums import SourceType
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 
 

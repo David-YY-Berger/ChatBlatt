@@ -1,6 +1,6 @@
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collection import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
