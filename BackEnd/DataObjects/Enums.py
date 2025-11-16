@@ -47,30 +47,51 @@ class RoleType(DescribedEnum):
     Rishon = (8, "Rishon")
     Acharon = (9, "Acharon")
 
+class PassageType(DescribedEnum):
+    Halachik = (0, "Halachik")
+    Story = (1, "Story")
+    Aggadata = (2, "Aggadata")
+
 class EntityType(DescribedEnum):
-
-    # todo might change this... as of now - refer to CSV until actually build this..
-
-    EPerson      = (1, "Person", "A")
-    # EPlace       = (2, "Place", "B")
-    # ETribe       = (3, "Tribe", "C")
-    # ENation      = (4, "Nation", "D")
-    # EPassageType = (5, "PassageType", "E")
-    # ESymbol      = (6, "Symbol", "F")
-
-    # NERs / Relations
-    # studiedFrom      = (8, "StudiedFrom", "H")
-
-    def __new__(cls, value, description, key_pref):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.description = description
-        obj.keyPref = key_pref
-        return obj
+    EPerson = ("P", "Person")
+    EPlace  = ("L", "Place")
+    ETribe  = ("T", "Tribe")
+    ENation = ("N", "Nation")
+    ESymbol = ("S", "Symbol")
 
 class RelType(DescribedEnum):
-    # todo might change this... as of now - refer to CSV until actually build this..
-    studiedFrom = (1, "StudiedFrom")
+    # Person → Person
+    studiedFrom = ("PP01", "studiedFrom")
+    siblingWith = ("PP02", "siblingWith")
+    childOf = ("PP03", "childOf")
+    spouseOf = ("PP04", "spouseOf")
+    descendantOf = ("PP05", "descendantOf")
+
+    # Person → Place
+    bornIn = ("PL01", "bornIn")
+    diedIn = ("PL02", "diedIn")
+    residedIn = ("PL03", "residedIn")
+    visited = ("PL04", "visited")
+
+    # Person → Tribe
+    personToTribe = ("PT01", "personToTribe")
+
+    # Person → Nation
+    personToNation = ("PN01", "personToNation")
+
+    # Nation → Nation
+    EnemyOf = ("NN01", "EnemyOf")
+    AllyOf = ("NN02", "AllyOf")
+
+    # Place → Nation
+    placeToNation = ("LN01", "placeToNation")
+
+    # {anything} → Symbol
+    comparedTo = ("XS01", "comparedTo")
+    contrastedWith = ("XS02", "contrastedWith")
+
+    # {anything} → {anything}
+    aliasFromSages = ("XX01", "aliasFromSages")
 
 
 class SourceContentType(Enum):

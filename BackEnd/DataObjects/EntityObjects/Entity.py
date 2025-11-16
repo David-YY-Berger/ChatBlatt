@@ -17,5 +17,4 @@ class Entity:
     # EPlace = own class
     # ETribe = DEFINED [13 tribes]
     # ENation =
-    # EPassageType = DEFINED [Halachik, Philosophy, Story]
     # ESymbol = own class

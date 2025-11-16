@@ -1,10 +1,12 @@
+from dataclasses import dataclass, field
 from typing import List
 from BackEnd.DataObjects.Enums import RelType
 
 # Relationship
+@dataclass
 class Rel:
-    key:str
+    key: str
     term1: str # key of Entity
     term2: str # key of Entity
-    appearances: List[str]
-    RelType: RelType
+    rel_type: RelType
+    appearances: List[str] = field(default_factory=list)
