@@ -56,7 +56,6 @@ graph TD
     Main --> DataObjects
     Main --> DB
     Main --> EntityRelManager
-    Main --> LMM
     Main --> FAISS
     Main --> Utils
 
