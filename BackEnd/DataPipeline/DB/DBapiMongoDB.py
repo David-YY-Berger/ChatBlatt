@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
-from BackEnd.DataPipeline.DB.Collection import CollectionName, Collection
+from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 # from BackEnd.General.Logger import Logger

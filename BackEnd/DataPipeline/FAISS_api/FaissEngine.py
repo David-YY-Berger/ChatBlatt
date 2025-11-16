@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 from BackEnd.DataPipeline.DB import DBapiInterface
-from BackEnd.DataPipeline.DB.Collection import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionName
 
 
 class FaissEngine:

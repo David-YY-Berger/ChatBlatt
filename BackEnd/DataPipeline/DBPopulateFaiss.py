@@ -1,6 +1,6 @@
 # bs'd
 from BackEnd.DataObjects.Enums import SourceContentType
-from BackEnd.DataPipeline.DB.Collection import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
 from BackEnd.General import miscFuncs

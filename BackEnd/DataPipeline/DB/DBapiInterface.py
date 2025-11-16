@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
-from BackEnd.DataPipeline.DB.Collection import CollectionName, Collection
+from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
 
 
 class DBapiInterface(ABC):
