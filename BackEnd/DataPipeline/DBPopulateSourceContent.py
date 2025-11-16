@@ -9,7 +9,7 @@ from bson import ObjectId
 from dotenv import load_dotenv
 
 from BackEnd.DataObjects import Enums
-from BackEnd.DataPipeline.DB.Collection import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
