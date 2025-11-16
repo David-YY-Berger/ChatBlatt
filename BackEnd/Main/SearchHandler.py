@@ -32,7 +32,7 @@ class SearchHandler:
 
     def get_answer_w_source_metadata(self, question: QuestionFromUser) -> Answer:
 
-        ref_list = self.ordered_ref_from_faiss(question.question_content)
+        ref_list = self.ordered_ref_from_faiss(question.question_content, question.max_sources)
 
         src_metadata_lst = self.create_src_metadata_obj(ref_list)
         src_metadata_lst = self.filter_by_book(src_metadata_lst, question)
@@ -84,9 +84,9 @@ class SearchHandler:
         return ans
 
 
-    def ordered_ref_from_faiss(self, prompt: str) -> List[str]:
+    def ordered_ref_from_faiss(self, prompt: str, max_sources: int) -> List[str]:
 
-        ref_list = self.faiss.search(prompt) # can be huge list...
+        ref_list = self.faiss.search(prompt, max_sources) # can be huge list...
         # Example ref list
         # ref_list = [
         #     "BT_Bava Batra_0_3b:4-7",

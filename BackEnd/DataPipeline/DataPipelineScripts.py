@@ -244,8 +244,9 @@ class DataPipelineScripts(DBParentClass):
 
     def test_populate_faiss_index(self):
         """
-        very slow function, but works well. could be improved, but not worth it, it only needs to run once.
+        very slow function (on BT, ran for 3.5 hrs till failed), but works well. could be improved, but not worth it, it only needs to run once.
         must NOT interrupt in the middle... then you must delete faiss_data and rerun all collections all over again..
+        very possible for mongo connection to be broken.. best to somehow mark exactly which passages where added to FAISS and which were not.
         """
         # doc1 = {
         #     "key": "BT_Bava Batra_0_4a:10-11",

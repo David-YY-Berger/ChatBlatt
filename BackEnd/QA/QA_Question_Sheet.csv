@@ -1,18 +1,18 @@
 BT,JT,RM,TN,MS,question_name,question_content,entities,rels,max_sources
-1,0,0,1,0,Greece,Greece,,,10,
-1,0,0,1,0,fight,fight,,,10,
-1,0,0,1,0,1 english phrase,leniencies while fighting a war,,,10,
-1,0,0,1,0,opposites (negative),not taking spoils of war,,,10,
-1,0,0,1,0,opposites (positive),spoils of war,,,10,
-1,0,0,1,0,"english phrase, excluding something","languages with special status, other than hebrew",,,10,
-1,0,0,1,0,comparing (symbolism),the jewish people being compared to a dove,,,10,
-1,0,0,1,0,"same terms, order1","perfume, money, shabbat",,,10,
-1,0,0,1,0,"same terms, order2","shabbat, perfume, money",,,10,
-1,0,0,1,0,"same terms, order3","money, shabbat, perfume",,,10,
-1,0,0,0,0,only BT (born circumcised),born circumcised,,,10
-0,0,0,1,0,only TN (born circumcised),born circumcised,,,10
-1,0,0,1,0,punishable age,punishable age,,,10
-1,0,0,1,0,lifespan of mankind,lifespan of mankind,,,10
-1,0,0,1,0,put his head between his knees,put his head between his knees,,,10
-1,0,0,1,0,on that very day,on that very day,,,10
-1,0,0,1,0,which direction to pray,which direction to pray,,,10
+1,0,0,1,0,Greece,Greece,,,20,
+1,0,0,1,0,fight,fight,,,20,
+1,0,0,1,0,1 english phrase,leniencies while fighting a war,,,20,
+1,0,0,1,0,opposites (negative),not taking spoils of war,,,20,
+1,0,0,1,0,opposites (positive),spoils of war,,,20,
+1,0,0,1,0,"english phrase, excluding something","languages with special status, other than hebrew",,,20,
+1,0,0,1,0,comparing (symbolism),the jewish people being compared to a dove,,,20,
+1,0,0,1,0,"same terms, order1","perfume, money, shabbat",,,20,
+1,0,0,1,0,"same terms, order2","shabbat, perfume, money",,,20,
+1,0,0,1,0,"same terms, order3","money, shabbat, perfume",,,20,
+1,0,0,0,0,only BT (born circumcised),born circumcised,,,20
+0,0,0,1,0,only TN (born circumcised),born circumcised,,,20
+1,0,0,1,0,punishable age,punishable age,,,20
+1,0,0,1,0,lifespan of mankind,lifespan of mankind,,,20
+1,0,0,1,0,put his head between his knees,put his head between his knees,,,20
+1,0,0,1,0,on that very day,on that very day,,,20
+1,0,0,1,0,which direction to pray,which direction to pray,,,20
