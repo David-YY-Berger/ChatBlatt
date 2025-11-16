@@ -99,9 +99,17 @@ class SearchHandler:
         src_metadata_lst = []
         for ref in ref_list:
             src_type = SourceClass.get_src_type_from_key(ref)
-            src_meta = SourceMetadata(ref, SourceClass.get_book_from_key(ref), src_type,
-                                      [], [], ["no summary yet", "עוד לא הוספנו סיכום"])
-            # todo: query db, get entities ids, and rels...
+            # todo: query db: get summary, entities ids, and rels..
+            src_meta = SourceMetadata(
+                key = ref,
+                source_type=src_type,
+                summary_en="no summary yet",
+                summary_heb="עוד לא הוספנו סיכום",
+                passage_types=[],
+                entities=[],
+                rels=[]
+            )
+
             src_metadata_lst.append(src_meta)
 
         return src_metadata_lst

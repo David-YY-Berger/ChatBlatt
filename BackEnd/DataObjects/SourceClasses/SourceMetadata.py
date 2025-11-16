@@ -8,7 +8,7 @@ from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 
 @dataclass
 class SourceMetadata(SourceClass):
-    book_name: str
+    key: str
     source_type: SourceType
     summary_en: Optional[str] = None
     summary_heb: Optional[str] = None
@@ -25,7 +25,7 @@ class SourceMetadata(SourceClass):
             self.rels = []
 
         # Optional validation example
-        if not isinstance(self.book_name, str):
+        if not isinstance(self.key, str):
             raise ValueError("book_name must be a string")
         if not isinstance(self.source_type, SourceType):
             raise ValueError("source_type must be a SourceType instance")
