@@ -1,11 +1,10 @@
 # bs"d
 import logging
 from abc import ABC, abstractmethod
-from typing import Optional, Dict, Any
-from dataclasses import dataclass
-import requests
+from typing import Optional, Dict
 
-from BackEnd.DataPipeline.LMM_api.LmmResponse import LmmResponse
+from BackEnd.DataPipeline.LMM_api.LmmResponses.AnalyzedSourceResponse import AnalyzedSourceResponse
+from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,8 +34,15 @@ class LmmCaller(ABC):
         logger.info(f"{self.__class__.__name__} initialized")
 
     @abstractmethod
-    def call(self, prompt: str, **kwargs) -> LmmResponse:
+    def call(self, prompt: str, **kwargs) -> RawLmmResponse:
         """Make a call to the LMM API."""
+        # todo
+        pass
+
+    @abstractmethod
+    def analyze_src(self, src_en_content: str) -> AnalyzedSourceResponse:
+        # dont forget to ask for: summary_en, summary_heb, and PassageType
+        # todo
         pass
 
     @classmethod

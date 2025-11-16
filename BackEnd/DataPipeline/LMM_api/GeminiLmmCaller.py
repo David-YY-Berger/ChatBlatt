@@ -1,12 +1,10 @@
 # bs"d
 import logging
-from abc import ABC, abstractmethod
-from typing import Optional, Dict, Any
-from dataclasses import dataclass
+from typing import Optional
 import requests
 
 from BackEnd.DataPipeline.LMM_api.LmmCaller import LmmCaller
-from BackEnd.DataPipeline.LMM_api.LmmResponse import LmmResponse
+from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,7 +19,7 @@ class GeminiLmmCaller(LmmCaller):
             self.model = model
             logger.info(f"GeminiLmmCaller configured with model: {model}")
 
-    def call(self, prompt: str, **kwargs) -> LmmResponse:
+    def call(self, prompt: str, **kwargs) -> RawLmmResponse:
         """
         Call Gemini API with the given prompt.
 
@@ -34,14 +32,14 @@ class GeminiLmmCaller(LmmCaller):
         """
         if not self.api_key:
             logger.error("API key not provided")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error="API key not provided"
             )
 
         if not prompt or not prompt.strip():
             logger.error("Empty prompt provided")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error="Prompt cannot be empty"
             )
@@ -83,14 +81,14 @@ class GeminiLmmCaller(LmmCaller):
                 try:
                     content = data["candidates"][0]["content"]["parts"][0]["text"]
                     logger.info("Successfully received response from Gemini API")
-                    return LmmResponse(
+                    return RawLmmResponse(
                         success=True,
                         content=content,
                         metadata={"model": self.model, "status_code": 200}
                     )
                 except (KeyError, IndexError) as e:
                     logger.error(f"Failed to parse Gemini response: {e}")
-                    return LmmResponse(
+                    return RawLmmResponse(
                         success=False,
                         error=f"Invalid response structure: {e}",
                         metadata={"raw_response": data}
@@ -98,56 +96,56 @@ class GeminiLmmCaller(LmmCaller):
 
             elif response.status_code == 401:
                 logger.error("Authentication failed - invalid API key")
-                return LmmResponse(
+                return RawLmmResponse(
                     success=False,
                     error="Authentication failed: Invalid API key"
                 )
 
             elif response.status_code == 429:
                 logger.warning("Rate limit exceeded")
-                return LmmResponse(
+                return RawLmmResponse(
                     success=False,
                     error="Rate limit exceeded. Please try again later."
                 )
 
             elif response.status_code == 400:
                 logger.error(f"Bad request: {response.text}")
-                return LmmResponse(
+                return RawLmmResponse(
                     success=False,
                     error=f"Bad request: {response.text}"
                 )
 
             else:
                 logger.error(f"API request failed with status {response.status_code}")
-                return LmmResponse(
+                return RawLmmResponse(
                     success=False,
                     error=f"API error: {response.status_code} - {response.text}"
                 )
 
         except requests.exceptions.Timeout:
             logger.error("Request timed out")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error="Request timed out after 30 seconds"
             )
 
         except requests.exceptions.ConnectionError:
             logger.error("Connection error occurred")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error="Failed to connect to Gemini API"
             )
 
         except requests.exceptions.RequestException as e:
             logger.error(f"Request exception: {e}")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error=f"Request failed: {str(e)}"
             )
 
         except Exception as e:
             logger.exception(f"Unexpected error: {e}")
-            return LmmResponse(
+            return RawLmmResponse(
                 success=False,
                 error=f"Unexpected error: {str(e)}"
             )

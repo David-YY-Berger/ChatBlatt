@@ -3,6 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
+from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
@@ -171,7 +172,7 @@ class DBapiMongoDB(DBapiInterface):
         result = self.get_collection(collection).delete_many({})
         return result.deleted_count
 
-    # ----------------------------- Sources ----------------------------------
+    # ----------------------------- Source Content ----------------------------------
     @override
     def find_one(self, collection: Collection, key: str) -> Dict[str, Any] | None:
         """
@@ -262,3 +263,16 @@ class DBapiMongoDB(DBapiInterface):
             return None
 
         return index_bytes, metadata_bytes
+
+    # ----------------------------- Source Metadata (Lmm) ------------------------------------
+    @override
+    def is_src_metadata_exist(self, key: str) -> bool:
+        return True
+
+    @override
+    def insert_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        pass
+
+    @override
+    def update_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        pass

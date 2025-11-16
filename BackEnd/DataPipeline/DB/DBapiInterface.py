@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
+from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
 
 
@@ -78,7 +79,7 @@ class DBapiInterface(ABC):
     def get_all_source_contents(self, collection: Collection) -> List[SourceContent]:
         pass
 
-    # ----------------------------- Sources ----------------------------------
+    # ----------------------------- Source Content ----------------------------------
 
     def insert_source(self, result : SourceContent, ref, start_index):
         en = result.content[SourceContentType.EN.value]
@@ -164,4 +165,24 @@ class DBapiInterface(ABC):
         """
         pass
 
+    # ----------------------------- Source Metadata (Lmm) ------------------------------------
+    @abstractmethod
+    def is_src_metadata_exist(self, key: str) -> bool:
+        # todo
+        return True
 
+    @abstractmethod
+    def insert_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        # todo
+        pass
+
+    @abstractmethod
+    def update_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        # todo
+        pass
+
+    def insert_or_update_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        if self.is_src_metadata_exist(src_metadata.key):
+            return self.update_source_metadata(src_metadata)
+        else:
+            return self.insert_source_metadata(src_metadata)
