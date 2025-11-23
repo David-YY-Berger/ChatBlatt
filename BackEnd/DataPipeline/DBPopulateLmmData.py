@@ -21,14 +21,16 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
 
         ############################################## Populating FAISS ###############################################
 
-    def test_populate_lmm_data(self):
-        all_srcs = self.db_api.get_all_source_contents(CollectionName.BT)
-        src_already_processed = 0
-        src_processed_now = 0
+    def test_populate_source_meta_data(self):
+        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.BT)
+        src_processed = 0
+        num_srcs_to_process = 20
 
         for src in all_srcs:
+            if src_processed >= num_srcs_to_process:
+                break
+
             if self.db_api.is_src_metadata_exist(src.key):
-                src_already_processed += 1
                 continue
 
             analyzed_response = self.lmm_caller.analyze_src(src.content[SourceContentType.EN])
@@ -45,9 +47,11 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
 
             is_success = self.db_api.insert_or_update_source_metadata(src)
             if is_success:
-                src_processed_now += 1
+                src_processed += 1
 
 
+    def test_populate_entity_meta_data(self):
+        pass
 
 
 

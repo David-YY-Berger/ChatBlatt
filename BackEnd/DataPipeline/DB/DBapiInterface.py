@@ -76,7 +76,7 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def get_all_source_contents(self, collection: Collection) -> List[SourceContent]:
+    def get_all_src_contents_of_collection(self, collection: Collection) -> List[SourceContent]:
         pass
 
     # ----------------------------- Source Content ----------------------------------

@@ -197,7 +197,7 @@ class DBapiMongoDB(DBapiInterface):
         )
 
     @override
-    def get_all_source_contents(self, collection: Collection) -> List[SourceContent]:
+    def get_all_src_contents_of_collection(self, collection: Collection) -> List[SourceContent]:
         """
         Retrieve all documents from the given collection and return them as SourceContent objects.
         """

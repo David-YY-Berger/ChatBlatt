@@ -35,7 +35,7 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
         # self.faiss.add_documents([doc1, doc2])
         # all_srcs = self.db_api.get_all_source_contents(CollectionName.BT)
 
-        all_srcs = self.db_api.get_all_source_contents(CollectionName.BT)
+        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.BT)
         # must put here ^^ every collection separately...
         print(f"{len(all_srcs)} sources found")
         for src in all_srcs:
