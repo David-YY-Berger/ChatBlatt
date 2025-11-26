@@ -21,6 +21,7 @@ class DBParentClass(unittest.TestCase):
         cls.queries = cls._load_all_queries(
             Paths.QA_MONGO_QUERIES,
             Paths.DATA_CLEANUP_MONGO_QUERIES,
+            Paths.DATA_ANALYSIS_MONGO_QUERIES
             # Add more paths here if needed
         )
         OsFunctions.clear_create_directory(Paths.TESTS_DIR)

@@ -17,6 +17,7 @@ QA1_PATH = os.path.join(GENERAL_DIR, "../", "QA", "QA_Question_Sheet.csv")
 
 QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")
 DATA_CLEANUP_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_cleanup_mongo_queries.json")
+DATA_ANALYSIS_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_analysis_mongo_queries.json")
 
 ############################################## local paths - for 1 time scripts #######################################
 SEFARIA_INDEX_BT_PASSAGES = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\dataIndexFiles\BT_passages_index.json"
