@@ -39,7 +39,7 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
         # must put here ^^ every collection separately...
         print(f"{len(all_srcs)} sources found")
         for src in all_srcs:
-            cleaned_content = miscFuncs.clean_text_for_search(src.content[SourceContentType.EN.value])
+            cleaned_content = miscFuncs.clean_text_from_html_tags(src.content[SourceContentType.EN.value])
             self.faiss.add_documents([
                 {
                     "key": src.key,

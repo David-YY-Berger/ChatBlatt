@@ -3,7 +3,7 @@ import re
 import unicodedata
 
 
-def clean_text_for_search(html_content):
+def clean_text_from_html_tags(html_content) -> str:
     # 1. Remove all HTML tags
     text = re.sub(r'<[^>]+>', ' ', html_content)
 
