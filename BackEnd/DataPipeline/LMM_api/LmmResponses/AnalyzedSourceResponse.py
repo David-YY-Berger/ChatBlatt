@@ -3,7 +3,7 @@ from typing import List, Dict, Union
 
 from BackEnd.DataObjects.EntityObjects.EPerson import EPerson
 from BackEnd.DataObjects.EntityObjects.EPlace import EPlace
-from BackEnd.DataObjects.EntityObjects.ETribe import ETribe
+from BackEnd.DataObjects.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
 from BackEnd.DataObjects.EntityObjects.ENation import ENation
 from BackEnd.DataObjects.EntityObjects.ESymbol import ESymbol
 from BackEnd.DataObjects.Enums import PassageType, EntityType, RelType
@@ -17,7 +17,7 @@ class AnalyzedSourceResponse:
     e_passage_types: List[PassageType] = field(default_factory=list)
 
     # Entities stored as a map
-    entities: Dict[EntityType, List[Union[EPerson, EPlace, ETribe, ENation, ESymbol]]] = field(
+    entities: Dict[EntityType, List[Union[EPerson, EPlace, ETribeOfIsrael, ENation, ESymbol]]] = field(
         default_factory=lambda: {
             EntityType.EPerson: [],
             EntityType.EPlace: [],
@@ -41,7 +41,7 @@ class AnalyzedSourceResponse:
         """Add a place entity."""
         self.entities[EntityType.EPlace].append(place)
 
-    def add_tribe(self, tribe: ETribe) -> None:
+    def add_tribe(self, tribe: ETribeOfIsrael) -> None:
         """Add a tribe entity."""
         self.entities[EntityType.ETribe].append(tribe)
 
@@ -67,7 +67,7 @@ class AnalyzedSourceResponse:
         """Get all place entities."""
         return self.entities[EntityType.EPlace]
 
-    def get_tribes(self) -> List[ETribe]:
+    def get_tribes(self) -> List[ETribeOfIsrael]:
         """Get all tribe entities."""
         return self.entities[EntityType.ETribe]
 

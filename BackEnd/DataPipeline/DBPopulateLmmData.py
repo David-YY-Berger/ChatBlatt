@@ -8,18 +8,25 @@ from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
 
 
 
-class DBPopulateSourceContentAndFaiss(DBParentClass):
+class DBPopulateLmmData(DBParentClass):
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""
         super().setUp()  # call parent setup first
-        self.lmm_caller = GeminiLmmCaller(api_key="your-api-key-here")
-        self.entity_rel_mngr = EntityRelManager(self.db_api)
+        self.lmm_caller = GeminiLmmCaller()
+        self.entity_rel_mngr = EntityRelManager()
 
     def tearDown(self):
         super().tearDown()
 
-        ############################################## Populating FAISS ###############################################
+    ############################################## dummy testing ###############################################
+
+    def test_foo(self):
+        prompt = self.lmm_caller.get_prompt('analyze')
+        response = self.lmm_caller.call(prompt)
+        print(response)
+
+    ############################################## Populating Metadata ###############################################
 
     def test_populate_source_meta_data(self):
         all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.BT)
@@ -48,7 +55,6 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
             is_success = self.db_api.insert_or_update_source_metadata(src)
             if is_success:
                 src_processed += 1
-
 
     def test_populate_entity_meta_data(self):
         pass

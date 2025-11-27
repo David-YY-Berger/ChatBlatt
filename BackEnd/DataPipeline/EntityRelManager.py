@@ -3,14 +3,15 @@ from typing import Iterable, Dict, List
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataObjects.Enums import EntityType, SourceType
 from BackEnd.DataObjects.Rel import Rel
+from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 
 
 @singleton
 class EntityRelManager:
-    def __init__(self, db: DBapiInterface):
-        self.db_api = db
+    def __init__(self):
+        self.db_api = DBFactory.get_prod_db_mongo()
 
     def get_entity_from_key(self, entity_key:str) -> Entity | None:
         return None
