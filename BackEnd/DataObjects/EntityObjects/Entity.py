@@ -12,5 +12,5 @@ class Entity:
     appearances: List[str] # source types
     entityType: EntityType
     # optional:
-    alias: List[str] = field(default_factory=list)  # holds keys of other entities
+    alias: List[str] = field(default_factory=list)  # holds keys of other entities.. take from the Rel
     book_src: Optional[str] = None                 # to differ btw Tamar in bereishit and Tamar in Shmuel B

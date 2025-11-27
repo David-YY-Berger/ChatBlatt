@@ -91,7 +91,9 @@ class RelType(DescribedEnum):
     contrastedWith = ("XS02", "contrastedWith")
 
     # {anything} → {anything}
-    aliasFromSages = ("XX01", "aliasFromSages")
+    alias = ("XX01", 'alias')
+    aliasFromSages = ("XX02", "aliasFromSages")
+
 
 
 class SourceContentType(Enum):
