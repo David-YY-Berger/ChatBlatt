@@ -41,39 +41,39 @@ class QuestionsFromCSVTests(unittest.TestCase):
 
 ############################################# Helper Functions ####################################################
 
-def read_csv_to_objects(file_path: str) -> List[QuestionRow]:
-    rows: List[QuestionRow] = []
-    with open(file_path, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            clean_row = {}
-            for k, v in row.items():
-                if k is None or k.strip() == "":
-                    continue  # skip empty headers
+    def read_csv_to_objects(self, file_path: str) -> List[QuestionRow]:
+        rows: List[QuestionRow] = []
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                clean_row = {}
+                for k, v in row.items():
+                    if k is None or k.strip() == "":
+                        continue  # skip empty headers
 
-                key = k.strip()  # keep exact case to match dataclass
-                v = (v or "").strip()
+                    key = k.strip()  # keep exact case to match dataclass
+                    v = (v or "").strip()
 
-                # numeric fields
-                if key in {"BT", "JT", "RM", "TN", "MS", "max_sources"}:
-                    clean_row[key] = int(v) if v else None
-                # entity/NER fields as list
-                elif key in {"entities", "ners"}:
-                    clean_row[key] = [x.strip() for x in v.split(",")] if v else []
-                # string fields
-                elif key in {"question_name", "question_content"}:
-                    clean_row[key] = v or None
+                    # numeric fields
+                    if key in {"BT", "JT", "RM", "TN", "MS", "max_sources"}:
+                        clean_row[key] = int(v) if v else None
+                    # entity/NER fields as list
+                    elif key in {"entities", "ners"}:
+                        clean_row[key] = [x.strip() for x in v.split(",")] if v else []
+                    # string fields
+                    elif key in {"question_name", "question_content"}:
+                        clean_row[key] = v or None
 
-            rows.append(QuestionRow(**clean_row))
-    return rows
+                rows.append(QuestionRow(**clean_row))
+        return rows
 
 
-def get_BT_live_questions_from_csv() -> List[QuestionRow]:
-    all_q_from_CSV = read_csv_to_objects(Paths.QA1_PATH)
-    return [
-        q for q in all_q_from_CSV
-        if q.BT == 1 and q.question_content is not None and q.question_content.strip() != ""
-    ]
+    def get_BT_live_questions_from_csv(self) -> List[QuestionRow]:
+        all_q_from_csv = self.read_csv_to_objects(Paths.QA1_PATH)
+        return [
+            q for q in all_q_from_csv
+            if q.BT == 1 and q.question_content is not None and q.question_content.strip() != ""
+        ]
 
 #######################################################################################################################
 
