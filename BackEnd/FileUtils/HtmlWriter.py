@@ -1,3 +1,4 @@
+from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
 from BackEnd.General import SystemFunctions
 from BackEnd.DataObjects.Answer import Answer
 from typing import List
@@ -88,7 +89,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:20px;
         html += self._get_javascript()
         return html
 
-    def _get_reference_section(self, ref: str, source, index: int) -> str:
+    def _get_reference_section(self, ref: str, source: SourceContent, index: int) -> str:
         html = f'<div class="source-section">'
         if source:
             header = source.to_string() if hasattr(source, 'to_string') else str(source)

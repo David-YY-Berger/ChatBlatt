@@ -56,7 +56,7 @@ class SourceClass(ABC):
         }
 
     def __str__(self) -> str:
-        return f"{self.get_book()} {self.get_section()} {self.get_chapter_str()}"
+        return f"{self.get_book()} {self.get_section()} {self.get_chapter_str()} ({self.get_key()})"
 
     ################################################## misc ############################################
 

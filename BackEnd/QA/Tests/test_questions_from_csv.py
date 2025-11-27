@@ -29,8 +29,8 @@ class QuestionsFromCSVTests(unittest.TestCase):
 
 
 ############################################# 1. Basic Tests ####################################################
-    def test_questions_from_csv(self):
-        question_rows = get_BT_live_questions_from_csv()
+    def test_print_questions_from_csv(self):
+        question_rows = self.get_BT_live_questions_from_csv()
         for q in question_rows:
             real_q = q.to_question_from_user(SourceType.BT.name)
             ans = self.qaHandler.get_full_answer(real_q)
