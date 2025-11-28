@@ -133,6 +133,31 @@ class DBPopulateLmmData(DBParentClass):
 
     def test_populate_entity_meta_data(self):
         pass
+        # all_entities = self.db_api.get_all_entities()
+        # entities_processed = 0
+        # num_ents_to_process = 20
+        #
+        # for ent in all_entities:
+        #     if entities_processed >= num_ents_to_process:
+        #         break
+        #
+        #     if self.db_api.is_entity_processed(ent.key):
+        #         continue
+        #
+        #     # todo...
+        #
+        #     is_success = 0
+        #     if is_success:
+        #         entities_processed += 1
+
+
+    ############################################## helper methods ####################################################
+    def get_examples_texts(self):
+        res = [
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_17:8-13'),
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Deuteronomy_0_1:41-2:1')
+        ]
+        return res
 
 
 
