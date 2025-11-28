@@ -28,7 +28,7 @@ class SearchHandler:
         """Private method: load env variables and set up DB and FAISS."""
         self.db_api = DBFactory.get_prod_db_mongo()
         self.faiss = FaissEngine(dbapi=self.db_api)
-        self.entity_rel_manager = EntityRelManager(self.db_api)
+        self.entity_rel_manager = EntityRelManager()
 
     def get_answer_w_source_metadata(self, question: QuestionFromUser) -> Answer:
 
