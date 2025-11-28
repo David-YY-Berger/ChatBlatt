@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Any, List
 
+from BackEnd.DataObjects.Enums import SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
+from BackEnd.General import miscFuncs
 
 
 @dataclass
@@ -26,3 +28,6 @@ class SourceContent(SourceClass):
             errors.append("Content must contain at least one non-empty string!")
 
         return errors
+
+    def get_clean_en_text(self):
+        return miscFuncs.clean_text_from_html_tags(self.content[SourceContentType.EN.value])
