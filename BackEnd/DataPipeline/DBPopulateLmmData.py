@@ -57,7 +57,8 @@ class DBPopulateLmmData(DBParentClass):
     4. "en_name" must be normalized (e.g., "Edom" not "Edomite"; "Abraham" not "Abraham's")
     5. Output valid JSON only, with no extra text.
     6. 'studiedFrom' includes anyone who quotes a previous sage.
-    7. 
+    7. Person, Place, Nation must be a Proper Noun. 
+    8. TribeOfIsrael is Reuben, Simon, Levi, Judah, Issachar, Zebulun, Asher, Gad, Dan, Naphtali, Joseph, Benjamin, Manasseh, Ephraim
 
     Relationship typing rules (strict):
     - Person ↔ Person:
@@ -95,7 +96,7 @@ class DBPopulateLmmData(DBParentClass):
     def test_foo(self):
         prompt = self.prompt_get_entity_rel_from_passage
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
-        for src_content in self.get_examples_texts():
+        for src_content in self.get_examples_src_contents():
             response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
             path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
             LocalPrinter.print_to_file(src_content.get_clean_en_text() + "\n\n" + response.content, FileTypeEnum.FileType.TXT,
@@ -153,10 +154,23 @@ class DBPopulateLmmData(DBParentClass):
 
 
     ############################################## helper methods ####################################################
-    def get_examples_texts(self):
+    def get_examples_src_contents(self):
+        # took sources from file:///C:/Users/U6072661/AppData/Local/Chatblatt/Tests/Questions/fight.html
+
         res = [
+            # amalek, joshua, moshe, etc.
             self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_17:8-13'),
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Deuteronomy_0_1:41-2:1')
+            # amorites, kadesh, etc.
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Deuteronomy_0_1:41-2:1'),
+            # symbols (from az yashir)
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_15:6-10'),
+            # small, mostly empty source:
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Psalms_0_120:1–7'),
+            # tribes:
+            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Isaiah_0_11:1–12:6'),
+        #     gemara, rabbi studying for other rabbi, etc
+            self.db_api.find_one_source_content(CollectionName.BT, 'BT_Eruvin_0_45a:12-19')
+
         ]
         return res
 
