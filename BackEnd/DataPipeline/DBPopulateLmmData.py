@@ -7,7 +7,7 @@ from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
-from BackEnd.FileUtils import LocalPrinter, FileTypeEnum
+from BackEnd.FileUtils import LocalPrinter, FileTypeEnum, OsFunctions
 from BackEnd.General import Paths
 
 
@@ -94,9 +94,10 @@ class DBPopulateLmmData(DBParentClass):
 
     def test_foo(self):
         prompt = self.prompt_get_entity_rel_from_passage
+        OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
         for src_content in self.get_examples_texts():
             response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
-            path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key).__str__()
+            path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
             LocalPrinter.print_to_file(src_content.get_clean_en_text() + "\n\n" + response.content, FileTypeEnum.FileType.TXT,
                                        path)
         print(Paths.LMM_RESPONSES_OUTPUT_DIR)
