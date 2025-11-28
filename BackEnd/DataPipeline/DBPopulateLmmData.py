@@ -1,11 +1,14 @@
 # bs'd
+import os
+
 from BackEnd.DataObjects.Enums import SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
-
+from BackEnd.FileUtils import LocalPrinter, FileTypeEnum
+from BackEnd.General import Paths
 
 
 class DBPopulateLmmData(DBParentClass):
@@ -51,9 +54,10 @@ class DBPopulateLmmData(DBParentClass):
     1. All lists may contain multiple entries. If a list is empty, omit its key entirely.
     2. Include only entity types and relationship types that appear in the passage.
     3. Any term used in Rel (term1 or term2) must also appear in Entities with the same normalized name.
-    4. "en_name" must be normalized (e.g., "Edom" not "Edomite"; "Abraham" not "Abraham's").
-    5. "term1" and "term2" must exactly match normalized "en_name" values.
-    6. Output valid JSON only, with no extra text.
+    4. "en_name" must be normalized (e.g., "Edom" not "Edomite"; "Abraham" not "Abraham's")
+    5. Output valid JSON only, with no extra text.
+    6. 'studiedFrom' includes anyone who quotes a previous sage.
+    7. 
 
     Relationship typing rules (strict):
     - Person ↔ Person:
@@ -90,9 +94,12 @@ class DBPopulateLmmData(DBParentClass):
 
     def test_foo(self):
         prompt = self.prompt_get_entity_rel_from_passage
-        clean_en_text = self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_17:8-13').get_clean_en_text()
-        response = self.lmm_caller.call(prompt + "\n\n" + clean_en_text)
-        print(response)
+        for src_content in self.get_examples_texts():
+            response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
+            path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key).__str__()
+            LocalPrinter.print_to_file(src_content.get_clean_en_text() + "\n\n" + response.content, FileTypeEnum.FileType.TXT,
+                                       path)
+        print(Paths.LMM_RESPONSES_OUTPUT_DIR)
 
     ############################################## Populating Metadata ###############################################
 
