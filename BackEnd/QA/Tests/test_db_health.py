@@ -313,7 +313,7 @@ class DatabaseHealthTests(DBParentClass):
             try:
                 # Get English content and clean it
                 html_content = src.content[SourceContentType.EN.value]
-                cleaned_text = miscFuncs.clean_text_from_html_tags(html_content)
+                cleaned_text = miscFuncs.clean_en_text_from_html_tags(html_content)
 
                 # Count words (split by whitespace)
                 word_count = len(cleaned_text.split())
@@ -404,7 +404,7 @@ class DatabaseHealthTests(DBParentClass):
             try:
                 # Get English content and clean it
                 html_content = src.content[SourceContentType.EN.value]
-                cleaned_text = miscFuncs.clean_text_from_html_tags(html_content)
+                cleaned_text = miscFuncs.clean_en_text_from_html_tags(html_content)
 
                 # Count characters (excluding whitespace for meaningful count)
                 char_count = len(cleaned_text)
@@ -497,7 +497,7 @@ class DatabaseHealthTests(DBParentClass):
 
             try:
                 html_content = src.content[SourceContentType.EN.value]
-                cleaned_text = miscFuncs.clean_text_from_html_tags(html_content)
+                cleaned_text = miscFuncs.clean_en_text_from_html_tags(html_content)
 
                 # Check for HTML remnants
                 html_indicators = ['<', '>', '&nbsp;', '&lt;', '&gt;', '&amp;']

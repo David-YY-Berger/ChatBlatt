@@ -30,4 +30,7 @@ class SourceContent(SourceClass):
         return errors
 
     def get_clean_en_text(self):
-        return miscFuncs.clean_text_from_html_tags(self.content[SourceContentType.EN.value])
+        return miscFuncs.clean_en_text_from_html_tags(self.content[SourceContentType.EN.value])
+
+    def get_clean_he_text(self):
+        return miscFuncs.clean_heb_text_from_html_tags(self.content[SourceContentType.HEB.value])

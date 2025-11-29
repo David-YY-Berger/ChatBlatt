@@ -7,6 +7,8 @@ from BackEnd.DataPipeline.DB.Collections import CollectionName
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
+from BackEnd.DataPipeline.LMM_api.LmmResponses.AnalyzedEntitiesResponse import AnalyzedEntitiesResponse
+from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
 from BackEnd.FileUtils import LocalPrinter, FileTypeEnum, OsFunctions
 from BackEnd.General import Paths
 
@@ -38,7 +40,7 @@ class DBPopulateLmmData(DBParentClass):
           "residedIn": [ { "term1": "", "term2": "" }, ... ],
           "visited": [ { "term1": "", "term2": "" }, ... ],
           "personToTribeOfIsrael": [ { "term1": "", "term2": "" }, ... ],
-          "personToNation": [ { "term1": "", "term2": "" }, ... ],
+          "personBelongsToNation": [ { "term1": "", "term2": "" }, ... ],
           "EnemyOf": [ { "term1": "", "term2": "" }, ... ],
           "AllyOf": [ { "term1": "", "term2": "" }, ... ],
           "placeToNation": [ { "term1": "", "term2": "" }, ... ],
@@ -49,37 +51,63 @@ class DBPopulateLmmData(DBParentClass):
         }
       }
     }
+ENTITY RULES
 
-    Rules:
-    1. All lists may contain multiple entries. If a list is empty, omit its key entirely.
-    2. Include only entity types and relationship types that appear in the passage.
-    3. Any term used in Rel (term1 or term2) must also appear in Entities with the same normalized name.
-    4. "en_name" must be normalized (e.g., "Edom" not "Edomite"; "Abraham" not "Abraham's")
-    5. Output valid JSON only, with no extra text.
-    6. 'studiedFrom' includes anyone who quotes a previous sage.
-    7. Person, Place, Nation must be a Proper Noun. 
-    8. TribeOfIsrael is Reuben, Simon, Levi, Judah, Issachar, Zebulun, Asher, Gad, Dan, Naphtali, Joseph, Benjamin, Manasseh, Ephraim
+1. Include only entities explicitly present in the passage. No inventions or inferences.
+2. "en_name" must be normalized (examples: Edom not Edomites, Abraham not Abraham's).
+3. Person, Place, and Nation must be proper nouns.
+4. TribeOfIsrael includes only these names: Reuben, Simon, Levi, Judah, Issachar, Zebulun, Asher, Gad, Dan, Naphtali, Joseph, Benjamin, Manasseh, Ephraim.
+5. Israel cannot be a Person.
+6. Symbol is for non-proper-noun metaphors (example: wolf, lamb, rod, girdle).
+7. Every term appearing in any relationship must appear first in Entities with the same normalized name.
 
-    Relationship typing rules (strict):
-    - Person ↔ Person:
-      studiedFrom, siblingWith, childOf, spouseOf, descendantOf
-    - Person → Place:
-      bornIn, diedIn, residedIn, visited
-    - Person → TribeOfIsrael:
-      personToTribeOfIsrael
-    - Person → Nation:
-      personToNation
-    - Nation ↔ Nation:
-      EnemyOf, AllyOf
-    - Place → Nation:
-      placeToNation
-    - Any entity → Symbol:
-      comparedTo, contrastedWith
-    - Any entity ↔ Any entity (same normalized name allowed):
-      alias, aliasFromSages
-    - Enforce directional/typing consistency:
-      term1 and term2 must match the allowed entity types above, otherwise the relationship must be omitted.
-    - TribeOfIsrael entities must be one of the 13 tribes; "Israel" itself should be represented as a Nation.
+RELATIONSHIP RULES
+
+1. Include only relationships explicitly stated in the passage. No inferred or implied relationships.
+2. Relationship endpoints must match these allowed type pairings exactly:
+
+Person ↔ Person:
+studiedFrom, siblingWith, childOf, spouseOf, descendantOf
+
+Person → Place:
+bornIn, diedIn, residedIn, visited
+
+Person → TribeOfIsrael:
+personToTribeOfIsrael
+
+Person → Nation:
+personBelongsToNation
+
+Nation ↔ Nation:
+EnemyOf, AllyOf
+
+Place → Nation:
+placeToNation
+
+Any entity → Symbol:
+comparedTo, contrastedWith
+
+Any entity ↔ Any entity:
+alias, aliasFromSages
+
+3. If term1 or term2 does not match the required entity types, OMIT THAT RELATIONSHIP ENTIRELY.
+4. term1 cannot equal term2.
+5. studiedFrom is only for explicit quotations or learning from an earlier sage.
+6. Output must be valid JSON only, with no commentary.
+
+VALIDATION REQUIREMENTS (for correctness)
+Before producing JSON, apply these rules:
+
+1. Determine Entities first, only from explicit text. Do not create any relationship yet.
+2. For each relationship, term1 and term2 must:
+- exactly match an extracted entity's name,
+- match the required types for the relationship,
+- come from explicit statements in the passage.
+If any of these fails, omit the relationship.
+3. Do not assume or infer any identity or relationship beyond explicit text.
+4. Remove any keys in Entities or Rel that would be empty.
+
+Return only the final JSON.
     """
 
     def setUp(self):
@@ -98,8 +126,12 @@ class DBPopulateLmmData(DBParentClass):
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
         for src_content in self.get_examples_src_contents():
             response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
+            # response = RawLmmResponse(success=True, content='foo')
             path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
-            LocalPrinter.print_to_file(src_content.get_clean_en_text() + "\n\n" + response.content, FileTypeEnum.FileType.TXT,
+            LocalPrinter.print_to_file(src_content.__str__() + "\n\n" +
+                                       src_content.get_clean_he_text() + "\n\n" +
+                                       src_content.get_clean_en_text() + "\n\n" +
+                                       response.content, FileTypeEnum.FileType.TXT,
                                        path)
         print(Paths.LMM_RESPONSES_OUTPUT_DIR)
 

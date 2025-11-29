@@ -77,7 +77,7 @@ class RelType(DescribedEnum):
     personToTribe = ("PT01", "personToTribe")
 
     # Person → Nation
-    personToNation = ("PN01", "personToNation")
+    personBelongsToNation = ("PN01", "personBelongsToNation")
 
     # Nation → Nation
     EnemyOf = ("NN01", "EnemyOf")

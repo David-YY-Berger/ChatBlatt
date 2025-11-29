@@ -181,7 +181,7 @@ class DBPopulateSourceContent(DBParentClass):
                 return 0
 
             # Clean the English text
-            clean_en_content = miscFuncs.clean_text_from_html_tags(en_html_content)
+            clean_en_content = miscFuncs.clean_en_text_from_html_tags(en_html_content)
 
             # Update with cleaned content
             return self.db_api.update_doc_field(
