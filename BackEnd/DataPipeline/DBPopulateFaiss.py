@@ -23,6 +23,8 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
         very slow function (on BT, ran for 3.5 hrs till failed), but works well. could be improved, but not worth it, it only needs to run once.
         must NOT interrupt in the middle... then you must delete faiss_data and rerun all collections all over again..
         very possible for mongo connection to be broken.. best to somehow mark exactly which passages where added to FAISS and which were not.
+
+        TN - runs for 55 m
         """
         # doc1 = {
         #     "key": "BT_Bava Batra_0_4a:10-11",
@@ -35,11 +37,11 @@ class DBPopulateSourceContentAndFaiss(DBParentClass):
         # self.faiss.add_documents([doc1, doc2])
         # all_srcs = self.db_api.get_all_source_contents(CollectionName.BT)
 
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.BT)
+        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.TN)
         # must put here ^^ every collection separately...
         print(f"{len(all_srcs)} sources found")
         for src in all_srcs:
-            cleaned_content = miscFuncs.clean_en_text_from_html_tags(src.content[SourceContentType.EN.value])
+            cleaned_content = src.get_clean_en_text()
             self.faiss.add_documents([
                 {
                     "key": src.key,
