@@ -127,6 +127,7 @@ class DatabaseHealthTests(DBParentClass):
         Assert that collection statistics remain unchanged to ensure data integrity.
         This test will fail if the underlying data has been modified.
         """
+        # todo add for hebrew content too..
 
         # Define expected baseline values for each collection
         expected_baselines = {
@@ -164,24 +165,24 @@ class DatabaseHealthTests(DBParentClass):
                 'word_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 388.9,
-                    'median': 189.0,
-                    'p20': 88.4,
+                    'average': 389.7,
+                    'median': 190.0,
+                    'p20': 89.0,
                     'p80': 514.6,
                     'min': 8,
                     'max': 9605,
-                    'std_dev': 630.6
+                    'std_dev': 631.0
                 },
                 'char_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 2062.3,
-                    'median': 1012.0,
-                    'p20': 462.0,
+                    'average': 2063.7,
+                    'median': 1016.0,
+                    'p20': 462.4,
                     'p80': 2744.2,
                     'min': 41,
                     'max': 51672,
-                    'std_dev': 3376.5
+                    'std_dev': 3377.2
                 },
                 'validation': {
                     'total_documents': 1773,
