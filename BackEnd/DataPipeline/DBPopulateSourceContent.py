@@ -167,7 +167,10 @@ class DBPopulateSourceContent(DBParentClass):
             action_desc="clean EN removal"
         )
 
-    def populate_clean_english_content(self, doc, collection_name) -> int:
+    def DO_NOT_USE_populate_clean_english_content(self, doc, collection_name) -> int:
+
+        # we no longer save the clean content, only save the html. but keeping this func anyway
+
         try:
             enriched = doc.copy()
 
