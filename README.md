@@ -3,190 +3,87 @@
 
 <div align="center">
   
-[![Powered by Sefaria](YOUR_IMAGE_URL_HERE)](https://www.sefaria.org)
-
-*Making the vast world of Jewish texts accessible and discoverable*
+<a href="https://www.sefaria.org">
+<img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
+</a>
 
 </div>
 
 ---
 
-## 📖 About | אודות
+## 📖 About
 
 <details open>
-<summary><b>What is ChatBlatt? | מהו צ'אטבלאט?</b></summary>
+<summary><b>What is ChatBlatt?</b></summary>
 <br>
 
-**ChatBlatt is an indexed database of Jewish texts** based on Sefaria's comprehensive resource library. Each book is intelligently split into passages, with every passage tagged with relevant entities that appear within it. Through these entities, relationships are crafted between passages, creating a beautiful network of accessible information that connects the vast tapestry of Torah sources.
-
-**צ'אטבלאט הוא מסד נתונים מאונדקס של טקסטים יהודיים** המבוסס על ספריית המקורות המקיפה של ספריא. כל ספר מחולק בצורה חכמה לקטעים, כאשר כל קטע מתויג בישויות הרלוונטיות המופיעות בו. באמצעות ישויות אלו נוצרים קשרים בין קטעים, ויוצרים רשת יפה של מידע נגיש המקשרת את שטיח המקורות העשיר של התורה.
+ChatBlatt is an indexed database of jewish texts (based on Sefaria’s resource). Each book is split into passages, each passage tagged with relevant entities that appear in that passage. Additionally, relationships are crafted through these entities (based on each passage), create a beautiful network of accessible information. 
 
 </details>
 
 <details>
-<summary><b>Why Different Than Other Search Engines? | למה שונה ממנועי חיפוש אחרים?</b></summary>
+<summary><b>How is ChatBlatt different than all other Torah Search Engines?</b></summary>
 <br>
 
-### 🎯 Unbiased Discovery
+**No popularity bias**: Google and ChatGPT favor frequently cited passages. ChatBlatt treats all sources equally, revealing hidden gems. How many times do you like obscure midrashim? or Talmud Yerushalmi?
 
-**Google and ChatGPT give very strong bias toward oft-quoted passages** because they are based on articles and content that are commonly viewed on the internet. This essentially hides so many gems of our Torah underneath the more commonly seen sources.
-
-**גוגל ו-ChatGPT נותנים הטיה חזקה מאוד לקטעים המצוטטים לעתים קרובות** מכיוון שהם מבוססים על מאמרים ותוכן הנצפים באינטרנט. זה למעשה מסתיר כל כך הרבה פנינים של התורה שלנו מתחת למקורות הנפוצים יותר.
-
-### 🔍 Direct Source Access
-
-Unlike other AI products, **ChatBlatt gives the user direct access to untainted sources**. Although there is a small percentage of error in the AI-based associations, the user will never see a "made up" or tainted source. Every passage comes directly from authenticated texts.
-
-בניגוד למוצרי AI אחרים, **צ'אטבלאט נותן למשתמש גישה ישירה למקורות לא מזויפים**. למרות שיש אחוז קטן של שגיאות בקישורים המבוססים על AI, המשתמש לעולם לא יראה מקור "מומצא" או מזויף.
+**Direct sources**: Unlike AI chatbots, ChatBlatt never invents sources. Small tagging errors possible, but sources are always authentic.
 
 </details>
 
 <details>
-<summary><b>How It Works | איך זה עובד</b></summary>
+<summary><b>How It Works</b></summary>
 <br>
 
-### 🔄 The Pipeline
+ChatBlatt begins by iterating over parts of Sefaria’s database via Sefaria's API’s, combining sources together until they form evenly lengthed passages (see our DB’s metadata - ). This is based on Sefaria's API's ‘passages’.
 
-1. **📥 Data Ingestion**
-   - ChatBlatt iterates over parts of Sefaria's database via Sefaria's APIs
-   - Sources are combined to form evenly-lengthed passages
-   - See our DB's metadata for passage structure details
+Then, ChatBlatt queries Gemini (based on carefully crafted prompts) to find specified Entities and Relationships in the passage. After heavy validation of Gemini’s suggestion, ChatBlatt saves these Entities and Relationships independently of the passage, and then add labels to each passage with entities and Relationships that appear in it. 
 
-2. **🤖 Entity Extraction**
-   - ChatBlatt queries Gemini using carefully crafted prompts
-   - Specified Entities and Relationships are identified in each passage
-   - Heavy validation ensures accuracy of Gemini's suggestions
+Then, ChatBlatt queries the LLM to enrich the Entities with metadata. After validating these now rich entities, ChatBlatt can display useful filters for the User to find what he/she is looking for through tens of thousands of entities. Or build multi dimensional maps of entities and relationships linked with an associated passage.
 
-3. **💾 Data Structuring**
-   - Entities and Relationships are saved independently of passages
-   - Each passage is labeled with its entities and relationships
-   - Creates a web of interconnected knowledge
-
-4. **✨ Enrichment**
-   - LLM queries enrich entities with additional metadata
-   - Validation ensures quality of enriched data
-   - Useful filters help users navigate tens of thousands of entities
-
-### צינור העיבוד
-
-**צ'אטבלאט עובד בתהליך רב-שלבי:** קליטת נתונים מספריא, חילוץ ישויות באמצעות בינה מלאכותית, מיבנה הנתונים ברשת מקושרת, והעשרת המידע עם מטא-דאטה מאומתת.
 
 </details>
 
 <details>
-<summary><b>Challenges We Encountered | אתגרים שנתקלנו בהם</b></summary>
+<summary><b>Challenges We've Encountered</b></summary>
 <br>
 
-### 🎭 Recognizing Different Entities with Same Name
+**Recognizing Different Entities with same name**: Because the LLM is context free, it is challenging to recognize that the same name can be used by 2 (or more) different people. For Example, Tamar (wife of Yehuda) is different from Tamar (daughter of David). Solution: in progress. 
+    
+**Hebrew handling**: LLM’s do not (yet) handle biblical Hebrew, rabbinical Hebrew or Aramaic Hebrew as well as they do English. Furthermore, many texts (particularly the Talmud) have many explanations. Therefore, we have chosen to base all metadata on English translations (made public by Sefaria). To ensure the User doesn't feel the difference, each entitiy (and therefore the relationships) are translated
 
-**The Challenge:** Because the LLM is context-free, it's challenging to distinguish between entities with identical names.
-
-**Example:** Tamar (wife of Yehuda) vs. Tamar (daughter of David)
-
-**האתגר:** מכיוון שה-LLM חסר הקשר, קשה להבחין בין ישויות עם שמות זהים, כמו תמר אשת יהודה מול תמר בת דוד.
-
----
-
-### 🌐 Handling Hebrew and English
-
-**The Challenge:** LLMs do not (yet) handle Biblical Hebrew, Rabbinical Hebrew, or Aramaic as well as they do English. Furthermore, many texts (particularly the Talmud) have numerous explanations and interpretations.
-
-**Our Solution:** 
-- All metadata is based on English translations made public by Sefaria
-- Each entity is translated to ensure seamless user experience
-- Relationships maintain bilingual accessibility
-
-**הפתרון שלנו:** כל המטא-דאטה מבוסס על תרגומים לאנגלית שפורסמו על ידי ספריא, וכל ישות מתורגמת להבטחת חוויית משתמש חלקה.
 
 </details>
 
 ---
 
-## 🚀 How to Use | איך להשתמש
+## 🚀 How to Use
 
-<details>
-<summary><b>Getting Started | התחלה</b></summary>
-<br>
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/chatblatt.git
-
-# Install dependencies
-npm install
-
-# Configure your environment
-cp .env.example .env
-
-# Run the application
-npm start
-```
-
-**הוראות בעברית:** שכפל את המאגר, התקן תלויות, הגדר את הסביבה, והפעל את האפליקציה.
-
-</details>
+We are building a really cool UI! hope to release it in July 2026
 
 ---
 
-## 🤝 Contribute | תרומה לפרויקט
+## 🤝 Contribute
 
-<details>
-<summary><b>How to Contribute | איך לתרום</b></summary>
-<br>
+ChatBlatt is open source, we would love to see any code contributions you have to offer!
 
-**ChatBlatt is open source!** We welcome any code contributions you have to offer.
+**Contact**: ChatBlatt@gmail.com  
 
-### Ways to Contribute:
-- 🐛 Report bugs and issues
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📖 Improve documentation
-- 🌍 Add translations
-
-### Get in Touch:
-📧 **Email:** ChatBlatt@gmail.com  
-🔗 **Repository:** [github.com/yourusername/chatblatt](https://github.com/yourusername/chatblatt)
-
-**צ'אטבלאט הוא קוד פתוח!** אנו מזמינים כל תרומת קוד שיש לכם להציע. דרכי תרומה: דיווח על באגים, הצעת תכונות חדשות, שליחת pull requests, שיפור התיעוד והוספת תרגומים.
-
-</details>
-
-<details>
-<summary><b>Donate in Memory | תרומה לזכר</b></summary>
-<br>
-
-Support the continued development of ChatBlatt and dedicate your contribution in memory of a loved one.
-
-**[Donation Link Here]**
-
-תמכו בהמשך הפיתוח של צ'אטבלאט והקדישו את תרומתכם לזכר אהוב.
-
-</details>
+**Donate in memory**: (when i set up a server in july 2026, then there will be costs to keep it running)
 
 ---
 
-## 👥 About the Developers | אודות המפתחים
+## 👥 Developers
 
-<details>
-<summary><b>Meet the Team | הכירו את הצוות</b></summary>
-<br>
-
-[Your team information here]
-
-**Our Mission:** To make the vast ocean of Torah literature accessible, searchable, and discoverable for learners at all levels.
-
-**המשימה שלנו:** להפוך את האוקיינוס העצום של ספרות התורה לנגיש, ניתן לחיפוש וגילוי עבור לומדים בכל הרמות.
-
-</details>
+foo
 
 ---
 
 <div align="center">
 
-### 🌟 Star us on GitHub | תנו לנו כוכב ב-GitHub
+**Made with ❤️ for Hashem & Torah learning**
 
-**Made with ❤️ for the Jewish people**
-
-[![Powered by Sefaria](YOUR_IMAGE_URL_HERE)](https://www.sefaria.org)
-
+<a href="https://www.sefaria.org">
+<img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
+</a>
 </div>
