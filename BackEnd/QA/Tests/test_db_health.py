@@ -126,6 +126,7 @@ class DatabaseHealthTests(DBParentClass):
         """
         Assert that collection statistics remain unchanged to ensure data integrity.
         This test will fail if the underlying data has been modified.
+        Any html parsing changes will fail this func - FAISS indexes and LMM parsing on based on the html cleaning algo.
         """
         # todo add for hebrew content too..
 
@@ -146,7 +147,7 @@ class DatabaseHealthTests(DBParentClass):
                 'char_stats': {
                     'total_documents': 12488,
                     'valid_documents': 12488,
-                    'average': 2499.6,
+                    'average': 2499.7,
                     'median': 1975.0,
                     'p20': 888.0,
                     'p80': 3822.0,
@@ -165,24 +166,24 @@ class DatabaseHealthTests(DBParentClass):
                 'word_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 348.1,
+                    'average': 348.6,
                     'median': 174.0,
-                    'p20': 83.0,
-                    'p80': 467.0,
+                    'p20': 84.0,
+                    'p80': 467.6,
                     'min': 6,
-                    'max': 7588,
-                    'std_dev': 549.3
+                    'max': 7581,
+                    'std_dev': 549.0
                 },
                 'char_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 1859.8,
-                    'median': 915.0,
-                    'p20': 437.4,
-                    'p80': 2476.0,
+                    'average': 1868.9,
+                    'median': 923.0,
+                    'p20': 444.4,
+                    'p80': 2486.6,
                     'min': 30,
-                    'max': 41241,
-                    'std_dev': 2977.9
+                    'max': 41328,
+                    'std_dev': 2981.0
                 },
                 'validation': {
                     'total_documents': 1773,

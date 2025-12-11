@@ -144,8 +144,8 @@ Return only the final JSON.
                                        src_content.get_clean_heb_text() + "\n\n" +
                                        src_content.get_clean_en_text() + "\n\n" +
                                        response.content + "\n\n" +
-                                       "raw en html content:\n" + src_content.get_en_html_content() + "\n\n" +
-                                       "raw heb html content:\n" + src_content.get_heb_html_content() + "\n\n" +
+                                       # "raw en html content:\n" + src_content.get_en_html_content() + "\n\n" +
+                                       # "raw heb html content:\n" + src_content.get_heb_html_content() + "\n\n" +
                                         "",
                                        FileTypeEnum.FileType.TXT,
                                        path)
