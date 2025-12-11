@@ -165,29 +165,29 @@ class DatabaseHealthTests(DBParentClass):
                 'word_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 389.7,
-                    'median': 190.0,
-                    'p20': 89.0,
-                    'p80': 514.6,
-                    'min': 8,
-                    'max': 9605,
-                    'std_dev': 631.0
+                    'average': 348.1,
+                    'median': 174.0,
+                    'p20': 83.0,
+                    'p80': 467.0,
+                    'min': 6,
+                    'max': 7588,
+                    'std_dev': 549.3
                 },
                 'char_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,
-                    'average': 2063.7,
-                    'median': 1016.0,
-                    'p20': 462.4,
-                    'p80': 2744.2,
-                    'min': 41,
-                    'max': 51672,
-                    'std_dev': 3377.2
+                    'average': 1859.8,
+                    'median': 915.0,
+                    'p20': 437.4,
+                    'p80': 2476.0,
+                    'min': 30,
+                    'max': 41241,
+                    'std_dev': 2977.9
                 },
                 'validation': {
                     'total_documents': 1773,
-                    'clean_documents': 1768,
-                    'documents_with_issues': 5,
+                    'clean_documents': 1766,
+                    'documents_with_issues': 7,
                     'is_healthy': True
                 }
             }
