@@ -21,7 +21,11 @@ class DBPopulateLmmData(DBParentClass):
     Return ONLY valid JSON in this schema:
 
     {
+    
       "res": {
+        "en_summary" : "",
+        "heb_summary" : "",
+        "passage_types" : [ { "val": "" } , ... ],
         "Entities": {
           "Person": [ { "en_name": "" }, ... ],
           "Place": [ { "en_name": "" }, ... ],
@@ -51,6 +55,13 @@ class DBPopulateLmmData(DBParentClass):
         }
       }
     }
+    
+GENERAL RULES
+
+1. "en_summary" and "heb_summary" must be 4-10 words.
+2. "passage_types" must have at least 1 value
+3. "passage_types" can only be 'LAW', 'STORY', 'PHILOSOPHIC', 'GENEALOGY', 'PROPHECY'
+
 ENTITY RULES
 
 1. Include only entities explicitly present in the passage. No inventions or inferences.
@@ -124,14 +135,18 @@ Return only the final JSON.
     def test_foo(self):
         prompt = self.prompt_get_entity_rel_from_passage
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
+
         for src_content in self.get_examples_src_contents():
-            response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
-            # response = RawLmmResponse(success=True, content='foo')
+            # response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
+            response = RawLmmResponse(success=True, content='foo')
             path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
             LocalPrinter.print_to_file(src_content.__str__() + "\n\n" +
-                                       src_content.get_clean_he_text() + "\n\n" +
-                                       src_content.get_clean_en_text() + "\n\n" +
-                                       response.content, FileTypeEnum.FileType.TXT,
+                                       src_content.get_clean_heb_text() + "\n\n" +
+                                       # src_content.get_clean_en_text() + "\n\n" +
+                                       response.content + "\n\n" +
+                                       # "raw en html content:\n" + src_content.get_en_html_content(),
+                                       "raw heb html content:\n" + src_content.get_heb_html_content(),
+                                       FileTypeEnum.FileType.TXT,
                                        path)
         print(Paths.LMM_RESPONSES_OUTPUT_DIR)
 
@@ -202,6 +217,7 @@ Return only the final JSON.
             self.db_api.find_one_source_content(CollectionName.TN, 'TN_Isaiah_0_11:1–12:6'),
         #     gemara, rabbi studying for other rabbi, etc
             self.db_api.find_one_source_content(CollectionName.BT, 'BT_Eruvin_0_45a:12-19')
+
 
         ]
         return res

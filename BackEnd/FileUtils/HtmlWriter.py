@@ -102,7 +102,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:20px;
         return html
 
     def _get_source_content(self, source, index: int) -> str:
-        content = source.get_content() if hasattr(source, 'get_content') else getattr(source, 'content', [])
+        content = source._get_content() if hasattr(source, 'get_content') else getattr(source, 'content', [])
         if not content or len(content) < 2:
             return '<div class="no-content">No content available</div>'
         english_content, hebrew_content = content[0], content[1]

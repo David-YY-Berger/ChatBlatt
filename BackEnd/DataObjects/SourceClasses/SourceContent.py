@@ -14,7 +14,7 @@ class SourceContent(SourceClass):
         super().__init__(key)  # Initialize the base SourceClass
         self.content = content
 
-    def get_content(self) -> list[str]:
+    def _get_content(self) -> list[str]:
         return self.content
 
     def is_valid_else_get_error_list(self) -> List[str]:
@@ -29,8 +29,14 @@ class SourceContent(SourceClass):
 
         return errors
 
-    def get_clean_en_text(self):
-        return miscFuncs.clean_en_text_from_html_tags(self.content[SourceContentType.EN.value])
+    def get_en_html_content(self) -> str:
+        return self.content[SourceContentType.EN.value]
 
-    def get_clean_he_text(self):
-        return miscFuncs.clean_heb_text_from_html_tags(self.content[SourceContentType.HEB.value])
+    def get_heb_html_content(self) -> str:
+        return self.content[SourceContentType.HEB.value]
+
+    def get_clean_en_text(self) -> str:
+        return miscFuncs.clean_en_text_from_html_tags(self.get_en_html_content())
+
+    def get_clean_heb_text(self) -> str:
+        return miscFuncs.clean_heb_text_from_html_tags(self.get_heb_html_content())
