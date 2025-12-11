@@ -7,8 +7,10 @@ from BackEnd.DataObjects.Enums import EntityType
 @dataclass
 class Entity:
     key: str
-    en_name: str
-    heb_name: str
+    display_en_name: str
+    display_heb_name: str
+    en_names: List[str]
+    heb_names: List[str]
     appearances: List[str] # source types
     entityType: EntityType
     # optional:
