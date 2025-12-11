@@ -208,16 +208,32 @@ Return only the final JSON.
         key_strs = [
             # amalek, joshua, moshe, etc.
             'TN_Exodus_0_17:8-13',
+
             # amorites, kadesh, etc.
            'TN_Deuteronomy_0_1:41-2:1',
+
             # symbols (from az yashir)
-            'TN_Exodus_0_15:6-10',
+            # 'TN_Exodus_0_15:6-10',
+            'TN_Deuteronomy_0_32:7-12',
+
             # small, mostly empty source:
             'TN_Psalms_0_120:1–7',
+
             # tribes:
             'TN_Isaiah_0_11:1–12:6',
+
         #     gemara, rabbi studying for other rabbi, etc
             'BT_Eruvin_0_45a:12-19',
+
+        #     test just for html clean:
+        #     'TN_Deuteronomy_0_32:7-12',
+        #     'BT_Chullin_0_22a:13',
+        #     'BT_Chullin_0_22a:14-22b:6',
+        #     'BT_Bava Batra_0_23b:1',
+        #     'TN_Deuteronomy_0_4:16-22',
+        #     'TN_Exodus_0_16:4-12',
+
+
         ]
         res = [self.db_api.find_one_source_content(k) for k in key_strs]
         return res

@@ -4,9 +4,13 @@ import unicodedata
 
 
 def clean_en_text_from_html_tags(html_content) -> str:
+
+    # 0. Replace the tetragrammaton before processing
+    text = html_content.replace('יהוה', 'HASHEM')
+
     # 1. Remove footnote markers and their content (superscript + italic footnotes)
     # This removes things like: <sup class="footnote-marker">a</sup><i class="footnote">...</i>
-    text = re.sub(r'<sup class="footnote-marker">[^<]*</sup>\s*<i class="footnote">.*?</i>', ' ', html_content)
+    text = re.sub(r'<sup class="footnote-marker">[^<]*</sup>\s*<i class="footnote">.*?</i>', '', text)  # Changed ' ' to ''
 
     # 2. Handle <small> tags by removing them WITHOUT adding spaces
     # This prevents "G<small>OD</small>" from becoming "G OD"
@@ -16,7 +20,11 @@ def clean_en_text_from_html_tags(html_content) -> str:
     # 3. Remove all remaining HTML tags (with space replacement)
     text = re.sub(r'<[^>]+>', ' ', text)
 
-    # 4. Normalize unicode (remove accents etc.)
+    # 4. Normalize unicode but preserve common punctuation
+    # First, replace smart quotes and dashes with ASCII equivalents
+    text = text.replace(''', "'").replace(''', "'")
+    text = text.replace('—', '-').replace('–', '-')
+    # Then normalize remaining unicode
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("utf-8")
 
     # 5. Collapse multiple spaces
