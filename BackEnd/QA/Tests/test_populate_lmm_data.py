@@ -13,5 +13,8 @@ class TestsForPopulateLmmData(DBParentClass):
         pass
 
     def test_simple_lmm_call(self):
+        assert (False)
+        # make sure you dont call LMM for no reason...
+
         res = self.lmm_caller.call("foo")
         assert (res.content.__contains__("foo"))
