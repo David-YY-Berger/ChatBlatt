@@ -16,16 +16,16 @@ from BackEnd.DataObjects.Enums import SourceType
 class QuestionsFromCSVTests(unittest.TestCase):
 
     def setUp(self):
-        """Runs before every test to set up necessary directories."""
+        super().setUp()
         OsFunctions.clear_create_directory(Paths.QUESTIONS_OUTPUT_DIR)
         self.qaHandler = SearchHandler()
         self.htmlWriter = HtmlWriter()
         # self.logger = Logger.Logger()
 
 
-    def test_foo(self):
-        # reserved for any small test
-        pass
+    # def test_foo(self):
+    #     # reserved for any small test
+    #     pass
 
 
 ############################################# 1. Basic Tests ####################################################

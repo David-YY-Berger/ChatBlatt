@@ -19,6 +19,14 @@ def clear_create_directory(dir_path):
         print(f"Directory does not exist: {dir_path} \nCreating directory at {dir_path}")
         os.makedirs(dir_path)
 
+def create_dir_if_not_exists(dir_path):
+    """Creates the directory if it does not exist."""
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+        print(f"Directory created: {dir_path}")
+    else:
+        print(f"Directory already exists: {dir_path}")
+
 def open_json_file(filepath):
     """
     Opens a JSON file and returns the parsed data.

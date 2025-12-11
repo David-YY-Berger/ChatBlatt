@@ -24,7 +24,7 @@ class DBParentClass(unittest.TestCase):
             Paths.DATA_ANALYSIS_MONGO_QUERIES
             # Add more paths here if needed
         )
-        OsFunctions.clear_create_directory(Paths.TESTS_DIR)
+        OsFunctions.create_dir_if_not_exists(Paths.TESTS_DIR)
 
     @staticmethod
     def _load_all_queries(*file_paths: str) -> dict:
