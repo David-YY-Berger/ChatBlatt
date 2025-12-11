@@ -142,10 +142,11 @@ Return only the final JSON.
             path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
             LocalPrinter.print_to_file(src_content.__str__() + "\n\n" +
                                        src_content.get_clean_heb_text() + "\n\n" +
-                                       # src_content.get_clean_en_text() + "\n\n" +
+                                       src_content.get_clean_en_text() + "\n\n" +
                                        response.content + "\n\n" +
-                                       # "raw en html content:\n" + src_content.get_en_html_content(),
-                                       "raw heb html content:\n" + src_content.get_heb_html_content(),
+                                       "raw en html content:\n" + src_content.get_en_html_content() + "\n\n" +
+                                       "raw heb html content:\n" + src_content.get_heb_html_content() + "\n\n" +
+                                        "",
                                        FileTypeEnum.FileType.TXT,
                                        path)
         print(Paths.LMM_RESPONSES_OUTPUT_DIR)
