@@ -78,7 +78,7 @@ class SearchHandler:
                 raise ValueError(f"Unknown collection name '{collection_str}' for key '{src_metadata.key}'")
 
             # Fetch the Source object using the Collection object
-            src = self.db_api.find_one_source_content(collection_obj, src_metadata.key)
+            src = self.db_api.find_one_source_content(src_metadata.key)
             ans.src_contents.append(src)
 
         return ans

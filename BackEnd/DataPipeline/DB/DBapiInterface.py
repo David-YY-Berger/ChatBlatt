@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
+from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
 
@@ -72,8 +73,16 @@ class DBapiInterface(ABC):
         return self.find_one(collection, key) is not None
 
     @abstractmethod
-    def find_one_source_content(self, collection: Collection, key: str) -> SourceContent:
+    def _find_one_source_content_by_col(self, collection: Collection, key: str) -> SourceContent:
+        # allows for child classes to define impl
         pass
+
+    def find_one_source_content(self, key:str) -> SourceContent:
+        col_code = SourceClass.get_collection_name_from_key(key)
+        if not col_code:
+            raise KeyError
+        col = CollectionObjs.get_col_obj_from_str(col_code)
+        return self.find_one(col, key)
 
     @abstractmethod
     def get_all_src_contents_of_collection(self, collection: Collection) -> List[SourceContent]:

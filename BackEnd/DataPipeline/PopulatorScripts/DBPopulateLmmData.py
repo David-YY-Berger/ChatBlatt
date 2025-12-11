@@ -204,22 +204,21 @@ Return only the final JSON.
     def get_examples_src_contents(self):
         # took sources from file:///C:/Users/U6072661/AppData/Local/Chatblatt/Tests/Questions/fight.html
 
-        res = [
+        key_strs = [
             # amalek, joshua, moshe, etc.
-            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Exodus_0_17:8-13'),
+            'TN_Exodus_0_17:8-13',
             # amorites, kadesh, etc.
-            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Deuteronomy_0_1:41-2:1'),
+           'TN_Deuteronomy_0_1:41-2:1',
             # symbols (from az yashir)
-            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Exodus_0_15:6-10'),
+            'TN_Exodus_0_15:6-10',
             # small, mostly empty source:
-            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Psalms_0_120:1–7'),
+            'TN_Psalms_0_120:1–7',
             # tribes:
-            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Isaiah_0_11:1–12:6'),
+            'TN_Isaiah_0_11:1–12:6',
         #     gemara, rabbi studying for other rabbi, etc
-            self.db_api.find_one_source_content(CollectionObjs.BT, 'BT_Eruvin_0_45a:12-19')
-
-
+            'BT_Eruvin_0_45a:12-19',
         ]
+        res = [self.db_api.find_one_source_content(k) for k in key_strs]
         return res
 
 
