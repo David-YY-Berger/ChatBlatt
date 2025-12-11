@@ -82,7 +82,7 @@ class DBapiInterface(ABC):
         if not col_code:
             raise KeyError
         col = CollectionObjs.get_col_obj_from_str(col_code)
-        return self.find_one(col, key)
+        return self._find_one_source_content_by_col(col, key)
 
     @abstractmethod
     def get_all_src_contents_of_collection(self, collection: Collection) -> List[SourceContent]:
