@@ -21,7 +21,7 @@ class AnalyzedSourceResponse:
         default_factory=lambda: {
             EntityType.EPerson: [],
             EntityType.EPlace: [],
-            EntityType.ETribe: [],
+            EntityType.ETribeOfIsrael: [],
             EntityType.ENation: [],
             EntityType.ESymbol: [],
         }
@@ -41,9 +41,9 @@ class AnalyzedSourceResponse:
         """Add a place entity."""
         self.entities[EntityType.EPlace].append(place)
 
-    def add_tribe(self, tribe: ETribeOfIsrael) -> None:
+    def add_tribe_of_israel(self, tribe: ETribeOfIsrael) -> None:
         """Add a tribe entity."""
-        self.entities[EntityType.ETribe].append(tribe)
+        self.entities[EntityType.ETribeOfIsrael].append(tribe)
 
     def add_nation(self, nation: ENation) -> None:
         """Add a nation entity."""
@@ -67,9 +67,9 @@ class AnalyzedSourceResponse:
         """Get all place entities."""
         return self.entities[EntityType.EPlace]
 
-    def get_tribes(self) -> List[ETribeOfIsrael]:
+    def get_tribeOfIsraels(self) -> List[ETribeOfIsrael]:
         """Get all tribe entities."""
-        return self.entities[EntityType.ETribe]
+        return self.entities[EntityType.ETribeOfIsrael]
 
     def get_nations(self) -> List[ENation]:
         """Get all nation entities."""

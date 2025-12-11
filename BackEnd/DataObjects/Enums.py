@@ -55,7 +55,7 @@ class PassageType(DescribedEnum):
 class EntityType(DescribedEnum):
     EPerson = ("P", "Person")
     EPlace  = ("L", "Place")
-    ETribe  = ("T", "Tribe")
+    ETribeOfIsrael  = ("T", "TribeOfIsrael")
     ENation = ("N", "Nation")
     ESymbol = ("S", "Symbol")
 
@@ -73,8 +73,8 @@ class RelType(DescribedEnum):
     residedIn = ("PL03", "residedIn")
     visited = ("PL04", "visited")
 
-    # Person → Tribe
-    personToTribe = ("PT01", "personToTribe")
+    # Person → TribeOfIsrael
+    personToTribeOfIsrael = ("PT01", "personToTribeOfIsrael")
 
     # Person → Nation
     personBelongsToNation = ("PN01", "personBelongsToNation")

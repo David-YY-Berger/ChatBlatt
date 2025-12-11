@@ -7,4 +7,4 @@ from BackEnd.DataObjects.EntityObjects.Entity import Entity
 class ETribeOfIsrael(Entity):
     pass
 
-# DEFINED [13 tribes]
+# DEFINED [13 tribes of Israel]
