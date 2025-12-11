@@ -5,7 +5,7 @@ import time
 from numpy.ma.testutils import assert_equal
 
 from BackEnd.DataObjects.Enums import SourceContentType
-from BackEnd.DataPipeline.DB.Collections import Collection, CollectionName
+from BackEnd.DataPipeline.DB.Collections import Collection, CollectionObjs
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.General import Paths, miscFuncs
@@ -31,13 +31,13 @@ class DatabaseHealthTests(DBParentClass):
     ###########################################  Source Tests ##################################################33
 
     def test_valid_num_sources(self):
-        assert_equal(self.count_all_documents(CollectionName.BT), 12488)
-        assert_equal(self.count_all_documents(CollectionName.TN), 1773)
+        assert_equal(self.count_all_documents(CollectionObjs.BT), 12488)
+        assert_equal(self.count_all_documents(CollectionObjs.TN), 1773)
 
     def test_sources_not_empty(self):
         collections = [
-            CollectionName.TN,
-            CollectionName.BT
+            CollectionObjs.TN,
+            CollectionObjs.BT
         ]
 
         # Queries to check
@@ -75,7 +75,7 @@ class DatabaseHealthTests(DBParentClass):
             self.fail(f"Some sources failed validation:\n{fail_messages}")
 
     def test_sources_valid_key(self):
-        collections = [CollectionName.BT, CollectionName.TN]
+        collections = [CollectionObjs.BT, CollectionObjs.TN]
         all_valid = True
 
         for col in collections:
@@ -90,7 +90,7 @@ class DatabaseHealthTests(DBParentClass):
 
     def test_basic_functions_with_db(self):
 
-        test_collection = CollectionName.TN #any random collection
+        test_collection = CollectionObjs.TN #any random collection
 
         # Insert example data into collection
         data = {
@@ -131,7 +131,7 @@ class DatabaseHealthTests(DBParentClass):
 
         # Define expected baseline values for each collection
         expected_baselines = {
-            CollectionName.BT: {
+            CollectionObjs.BT: {
                 'word_stats': {
                     'total_documents': 12488,
                     'valid_documents': 12488,
@@ -161,7 +161,7 @@ class DatabaseHealthTests(DBParentClass):
                     'is_healthy': True
                 }
             },
-            CollectionName.TN: {
+            CollectionObjs.TN: {
                 'word_stats': {
                     'total_documents': 1773,
                     'valid_documents': 1773,

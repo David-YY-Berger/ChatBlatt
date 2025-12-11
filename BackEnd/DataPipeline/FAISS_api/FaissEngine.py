@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 from BackEnd.DataPipeline.DB import DBapiInterface
-from BackEnd.DataPipeline.DB.Collections import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 
 
 class FaissEngine:
@@ -31,10 +31,10 @@ class FaissEngine:
         self.dbapi = dbapi
 
         # Check that the FAISS DB exists
-        if CollectionName.FS.db_name not in self.dbapi.dbs:
-            raise ValueError(f"The dbapi object must have a connected '{CollectionName.FS.db_name}' database")
-        if self.dbapi.dbs[CollectionName.FS.db_name] is None:
-            raise ValueError(f" the database is missing the collection '{CollectionName.FS.name}'")
+        if CollectionObjs.FS.db_name not in self.dbapi.dbs:
+            raise ValueError(f"The dbapi object must have a connected '{CollectionObjs.FS.db_name}' database")
+        if self.dbapi.dbs[CollectionObjs.FS.db_name] is None:
+            raise ValueError(f" the database is missing the collection '{CollectionObjs.FS.name}'")
 
 
         self.model_name = model_name

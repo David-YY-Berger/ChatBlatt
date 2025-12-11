@@ -3,7 +3,7 @@ import os
 
 from BackEnd.DataObjects.Enums import SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
@@ -153,7 +153,7 @@ Return only the final JSON.
     ############################################## Populating Metadata ###############################################
 
     def test_populate_source_meta_data(self):
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionName.BT)
+        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
         src_processed = 0
         num_srcs_to_process = 20
 
@@ -206,17 +206,17 @@ Return only the final JSON.
 
         res = [
             # amalek, joshua, moshe, etc.
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_17:8-13'),
+            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Exodus_0_17:8-13'),
             # amorites, kadesh, etc.
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Deuteronomy_0_1:41-2:1'),
+            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Deuteronomy_0_1:41-2:1'),
             # symbols (from az yashir)
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Exodus_0_15:6-10'),
+            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Exodus_0_15:6-10'),
             # small, mostly empty source:
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Psalms_0_120:1–7'),
+            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Psalms_0_120:1–7'),
             # tribes:
-            self.db_api.find_one_source_content(CollectionName.TN, 'TN_Isaiah_0_11:1–12:6'),
+            self.db_api.find_one_source_content(CollectionObjs.TN, 'TN_Isaiah_0_11:1–12:6'),
         #     gemara, rabbi studying for other rabbi, etc
-            self.db_api.find_one_source_content(CollectionName.BT, 'BT_Eruvin_0_45a:12-19')
+            self.db_api.find_one_source_content(CollectionObjs.BT, 'BT_Eruvin_0_45a:12-19')
 
 
         ]

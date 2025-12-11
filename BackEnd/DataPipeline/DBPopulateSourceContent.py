@@ -9,7 +9,7 @@ from bson import ObjectId
 from dotenv import load_dotenv
 
 from BackEnd.DataObjects import Enums
-from BackEnd.DataPipeline.DB.Collections import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
@@ -244,7 +244,7 @@ class DBPopulateSourceContent(DBParentClass):
             # Only documents matching the filter will be updated
             updated_count = self.db_api.execute_query_with_collection(
                 query=query,
-                collection=CollectionName.BT
+                collection=CollectionObjs.BT
             )
 
             print(f"Updated {len(updated_count)} documents (skipped those without a 3rd element).")
@@ -273,7 +273,7 @@ class DBPopulateSourceContent(DBParentClass):
             # Execute the query on the TN collection
             updated_count = self.db_api.execute_query_with_collection(
                 query=query,
-                collection=CollectionName.TN
+                collection=CollectionObjs.TN
             )
 
             print(f"Updated {updated_count} document(s).")

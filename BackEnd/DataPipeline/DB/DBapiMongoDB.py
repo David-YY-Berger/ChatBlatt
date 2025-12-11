@@ -4,7 +4,7 @@ from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 # from BackEnd.General.Logger import Logger
@@ -53,7 +53,7 @@ class DBapiMongoDB(DBapiInterface):
             raise ConnectionError(f"Failed to connect: {e}")
 
         # Initialize all DBs that exist in CollectionName
-        for collection in CollectionName.all():
+        for collection in CollectionObjs.all():
             if collection.db_name not in self.dbs:
                 self.dbs[collection.db_name] = self.client.get_database(collection.db_name)
 
@@ -228,7 +228,7 @@ class DBapiMongoDB(DBapiInterface):
         # Upsert the FAISS index document in the 'faiss_index' collection
         # An empty filter {} means we update the single (or first) document.
         # If no document exists, 'upsert=True' inserts a new one.
-        self.get_collection(CollectionName.FS).update_one(
+        self.get_collection(CollectionObjs.FS).update_one(
             {},
             {"$set": {
                 "faiss_index": faiss_index_binary,
@@ -249,7 +249,7 @@ class DBapiMongoDB(DBapiInterface):
             or None if no record is found.
         """
         # Use the Collection object for FAISS
-        faiss_collection = CollectionName.FS
+        faiss_collection = CollectionObjs.FS
         record = self.get_collection(faiss_collection).find_one({})
 
         if not record:

@@ -5,7 +5,7 @@ class Collection:
     name: str
     db_name: str
 
-class CollectionName:
+class CollectionObjs:
     # Sources
     BT = Collection("BT", "Sources")
     JT = Collection("JT", "Sources")

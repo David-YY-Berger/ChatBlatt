@@ -1,6 +1,6 @@
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionName
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 from BackEnd.DataPipeline.DB.DBFactory import DBFactory
 from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
@@ -72,7 +72,7 @@ class SearchHandler:
             # Convert the string to the corresponding Collection object
             try:
                 collection_obj = next(
-                    c for c in CollectionName.all() if c.name == collection_str
+                    c for c in CollectionObjs.all() if c.name == collection_str
                 )
             except StopIteration:
                 raise ValueError(f"Unknown collection name '{collection_str}' for key '{src_metadata.key}'")

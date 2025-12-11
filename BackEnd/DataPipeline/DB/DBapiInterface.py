@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionName, Collection
+from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
 
 
 class DBapiInterface(ABC):
@@ -36,28 +36,28 @@ class DBapiInterface(ABC):
         pass
 
     @abstractmethod
-    def insert(self, collection: CollectionName, data: Dict[str, Any]) -> str:
+    def insert(self, collection: CollectionObjs, data: Dict[str, Any]) -> str:
         """
         Insert data into a collection and return the inserted document ID.
         """
         pass
 
     @abstractmethod
-    def update(self, collection: CollectionName, query: Dict[str, Any], update: Dict[str, Any]) -> int:
+    def update(self, collection: CollectionObjs, query: Dict[str, Any], update: Dict[str, Any]) -> int:
         """
         Update data in a collection based on a query.
         """
         pass
 
     @abstractmethod
-    def delete_instance(self, collection: CollectionName, query: Dict[str, Any]) -> int:
+    def delete_instance(self, collection: CollectionObjs, query: Dict[str, Any]) -> int:
         """
         Delete data from a collection based on a query.
         """
         pass
 
     @abstractmethod
-    def delete_collection(self, collection: CollectionName) -> int:
+    def delete_collection(self, collection: CollectionObjs) -> int:
         """
         Delete all documents from the given collection.
         Returns the number of documents deleted.
@@ -92,9 +92,9 @@ class DBapiInterface(ABC):
 
         # Decide target collection based on source type
         if result.get_src_type() == SourceType.BT:
-            collection = CollectionName.BT.name
+            collection = CollectionObjs.BT.name
         elif result.get_src_type() == SourceType.TN:
-            collection = CollectionName.TN.name
+            collection = CollectionObjs.TN.name
         else:
             print(f"Unknown src_type '{result.get_src_type()}' at index {start_index}")
             return
@@ -110,7 +110,7 @@ class DBapiInterface(ABC):
         # Perform insert
         self.insert(collection, data)
 
-    def update_by_key(self, collection: CollectionName, key: str, update: Dict[str, Any]) -> int:
+    def update_by_key(self, collection: CollectionObjs, key: str, update: Dict[str, Any]) -> int:
         """
         Update a document in the collection using its unique key.
 
@@ -131,7 +131,7 @@ class DBapiInterface(ABC):
     def update_doc_field(
             self,
             doc: Dict[str, Any],
-            collection: CollectionName,
+            collection: CollectionObjs,
             update_dict: Dict[str, Any],
             action_desc: str = "update"
     ) -> int:
