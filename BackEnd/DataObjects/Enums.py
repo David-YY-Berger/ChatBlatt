@@ -48,9 +48,11 @@ class RoleType(DescribedEnum):
     Acharon = (9, "Acharon")
 
 class PassageType(DescribedEnum):
-    Halachik = (0, "Halachik")
+    Law = (0, "Law")
     Story = (1, "Story")
-    Aggadata = (2, "Aggadata")
+    PHILOSOPHIC = (2, "PHILOSOPHIC")
+    GENEALOGY = (3, "GENEALOGY")
+    PROPHECY = (4, "PROPHECY")
 
 class EntityType(DescribedEnum):
     EPerson = ("P", "Person")
