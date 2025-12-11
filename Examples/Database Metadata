@@ -1,0 +1,160 @@
+================================================================================
+COLLECTION STATISTICS: BT
+================================================================================
+
+📊 WORD COUNT STATISTICS
+--------------------------------------------------------------------------------
+Metric                         Value Description
+--------------------------------------------------------------------------------
+Total Documents               12,488 Documents in collection
+Valid Documents               12,488 Successfully processed
+Average Words                  453.7 Mean word count per document
+Median Words                   358.5 Middle value (50th percentile)
+20th Percentile                163.0 80% of docs have more words
+80th Percentile                696.0 80% of docs have fewer words
+Minimum Words                      2 Shortest document
+Maximum Words                  3,565 Longest document
+Std Deviation                  358.5 Variability in word counts
+
+📏 CHARACTER COUNT STATISTICS
+--------------------------------------------------------------------------------
+Metric                         Value Description
+--------------------------------------------------------------------------------
+Total Documents               12,488 Documents in collection
+Valid Documents               12,488 Successfully processed
+Average Characters           2,499.7 Mean character count per document
+Median Characters            1,975.0 Middle value (50th percentile)
+20th Percentile                888.0 80% of docs have more characters
+80th Percentile              3,822.0 80% of docs have fewer characters
+Minimum Characters                16 Shortest document
+Maximum Characters            19,953 Longest document
+Std Deviation                1,987.1 Variability in character counts
+
+✅ CONTENT QUALITY VALIDATION
+--------------------------------------------------------------------------------
+Overall Health                     ✅ Content is clean and ready for processing
+Total Documents               12,488 Documents analyzed
+Clean Documents               12,488 No issues detected
+Problem Documents                  0 Require attention
+Issue Rate                      0.0% Percentage with problems
+
+⚠️  WORD COUNT WARNINGS
+--------------------------------------------------------------------------------
+  1. Document BT_Chullin_0_41a:9-41b:1 has very few words: 8
+  2. Document BT_Rosh Hashanah_0_23a:14-23b:1 has very few words: 6
+  3. Document BT_Pesachim_0_49a:21-49b:1 has very few words: 2
+  4. Document BT_Pesachim_0_91a:10-91b:1 has very few words: 4
+  5. Document BT_Sotah_0_32a:5-32b:1 has very few words: 8
+  6. Document BT_Arakhin_0_16b:21-17a:1 has very few words: 4
+  7. Document BT_Avodah Zarah_0_10a:9-11a:1 has very few words: 4
+  8. Document BT_Kiddushin_0_69b:8-70a:1 has very few words: 4
+  9. Document BT_Shevuot_0_25b:10-26a:1 has very few words: 9
+  10. Found 193 potential outliers with very high word counts
+
+⚠️  CHARACTER COUNT WARNINGS
+--------------------------------------------------------------------------------
+  1. Document BT_Chullin_0_41a:9-41b:1 has very few characters: 44
+  2. Document BT_Rosh Hashanah_0_23a:14-23b:1 has very few characters: 30
+  3. Document BT_Pesachim_0_11b:10-12a:1 has very few characters: 42
+  4. Document BT_Pesachim_0_49a:21-49b:1 has very few characters: 17
+  5. Document BT_Pesachim_0_91a:10-91b:1 has very few characters: 39
+  6. Document BT_Sotah_0_32a:5-32b:1 has very few characters: 43
+  7. Document BT_Arakhin_0_16b:21-17a:1 has very few characters: 22
+  8. Document BT_Avodah Zarah_0_10a:9-11a:1 has very few characters: 24
+  9. Document BT_Kiddushin_0_69b:8-70a:1 has very few characters: 16
+  10. Found 189 potential outliers with very high character counts
+
+================================================================================
+
+
+================================================================================
+ASSERTING DATA INTEGRITY FOR: BT
+================================================================================
+  ✓ BT Word Stats - all metrics match expected values
+  ✓ BT Char Stats - all metrics match expected values
+  ✓ BT Validation - validation results match expected values
+✅ BT collection data integrity verified - all values match expected baseline
+
+================================================================================
+COLLECTION STATISTICS: TN
+================================================================================
+
+📊 WORD COUNT STATISTICS
+--------------------------------------------------------------------------------
+Metric                         Value Description
+--------------------------------------------------------------------------------
+Total Documents                1,773 Documents in collection
+Valid Documents                1,773 Successfully processed
+Average Words                  348.6 Mean word count per document
+Median Words                   174.0 Middle value (50th percentile)
+20th Percentile                 84.0 80% of docs have more words
+80th Percentile                467.6 80% of docs have fewer words
+Minimum Words                      6 Shortest document
+Maximum Words                  7,581 Longest document
+Std Deviation                  549.0 Variability in word counts
+
+📏 CHARACTER COUNT STATISTICS
+--------------------------------------------------------------------------------
+Metric                         Value Description
+--------------------------------------------------------------------------------
+Total Documents                1,773 Documents in collection
+Valid Documents                1,773 Successfully processed
+Average Characters           1,868.9 Mean character count per document
+Median Characters              923.0 Middle value (50th percentile)
+20th Percentile                444.4 80% of docs have more characters
+80th Percentile              2,486.6 80% of docs have fewer characters
+Minimum Characters                30 Shortest document
+Maximum Characters            41,328 Longest document
+Std Deviation                2,981.0 Variability in character counts
+
+✅ CONTENT QUALITY VALIDATION
+--------------------------------------------------------------------------------
+Overall Health                     ✅ Content is clean and ready for processing
+Total Documents                1,773 Documents analyzed
+Clean Documents                1,766 No issues detected
+Problem Documents                  7 Require attention
+Issue Rate                      0.4% Percentage with problems
+
+⚠️  WORD COUNT WARNINGS
+--------------------------------------------------------------------------------
+  1. Document TN_Song of Songs_0_1:1 has very few words: 6
+  2. Document TN_Genesis_0_25:1 has very few words: 8
+  3. Document TN_Exodus_0_22:17 has very few words: 6
+  4. Document TN_Deuteronomy_0_25:12 has very few words: 9
+  5. Found 35 potential outliers with very high word counts
+
+⚠️  CHARACTER COUNT WARNINGS
+--------------------------------------------------------------------------------
+  1. Document TN_Song of Songs_0_1:1 has very few characters: 30
+  2. Document TN_Exodus_0_22:18 has very few characters: 48
+  3. Document TN_Exodus_0_22:17 has very few characters: 35
+  4. Document TN_Deuteronomy_0_25:4 has very few characters: 49
+  5. Document TN_Deuteronomy_0_25:12 has very few characters: 41
+  6. Found 35 potential outliers with very high character counts
+
+🔍 DOCUMENT-SPECIFIC ISSUES (First 10)
+--------------------------------------------------------------------------------
+Document Key                   Issues
+--------------------------------------------------------------------------------
+TN_Proverbs_0_25:1             No sentence-ending punctuation found
+TN_Exodus_0_20:2               No sentence-ending punctuation found
+TN_Leviticus_0_1:1             No sentence-ending punctuation found
+TN_Leviticus_0_5:1             No sentence-ending punctuation found
+TN_Leviticus_0_5:2-3           No sentence-ending punctuation found
+TN_Numbers_0_6:1-2             No sentence-ending punctuation found
+TN_Deuteronomy_0_26:1          No sentence-ending punctuation found
+
+================================================================================
+
+
+================================================================================
+ASSERTING DATA INTEGRITY FOR: TN
+================================================================================
+  ✓ TN Word Stats - all metrics match expected values
+  ✓ TN Char Stats - all metrics match expected values
+  ✓ TN Validation - validation results match expected values
+✅ TN collection data integrity verified - all values match expected baseline
+
+================================================================================
+✅ ALL COLLECTIONS PASSED DATA INTEGRITY CHECKS
+   Verified 2 collections successfully
