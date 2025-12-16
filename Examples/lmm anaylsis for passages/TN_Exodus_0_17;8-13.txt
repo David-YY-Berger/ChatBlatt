@@ -1,0 +1,88 @@
+﻿Exodus 17:8-13  (TN_Exodus_0_17:8-13)
+
+וַיָּבֹ֖א עֲמָלֵ֑ק וַיִּלָּ֥חֶם עִם־יִשְׂרָאֵ֖ל בִּרְפִידִֽם׃ וַיֹּ֨אמֶר מֹשֶׁ֤ה אֶל־יְהוֹשֻׁ֙עַ֙ בְּחַר־לָ֣נוּ אֲנָשִׁ֔ים וְצֵ֖א הִלָּחֵ֣ם בַּעֲמָלֵ֑ק מָחָ֗ר אָנֹכִ֤י נִצָּב֙ עַל־רֹ֣אשׁ הַגִּבְעָ֔ה וּמַטֵּ֥ה הָאֱלֹהִ֖ים בְּיָדִֽי׃ וַיַּ֣עַשׂ יְהוֹשֻׁ֗עַ כַּאֲשֶׁ֤ר אָֽמַר־לוֹ֙ מֹשֶׁ֔ה לְהִלָּחֵ֖ם בַּעֲמָלֵ֑ק וּמֹשֶׁה֙ אַהֲרֹ֣ן וְח֔וּר עָל֖וּ רֹ֥אשׁ הַגִּבְעָֽה׃ וְהָיָ֗ה כַּאֲשֶׁ֨ר יָרִ֥ים מֹשֶׁ֛ה יָד֖וֹ וְגָבַ֣ר יִשְׂרָאֵ֑ל וְכַאֲשֶׁ֥ר יָנִ֛יחַ יָד֖וֹ וְגָבַ֥ר עֲמָלֵֽק׃ וִידֵ֤י מֹשֶׁה֙ כְּבֵדִ֔ים וַיִּקְחוּ־אֶ֛בֶן וַיָּשִׂ֥ימוּ תַחְתָּ֖יו וַיֵּ֣שֶׁב עָלֶ֑יהָ וְאַהֲרֹ֨ן וְח֜וּר תָּֽמְכ֣וּ בְיָדָ֗יו מִזֶּ֤ה אֶחָד֙ וּמִזֶּ֣ה אֶחָ֔ד וַיְהִ֥י יָדָ֛יו אֱמוּנָ֖ה עַד־בֹּ֥א הַשָּֽׁמֶשׁ׃ וַיַּחֲלֹ֧שׁ יְהוֹשֻׁ֛עַ אֶת־עֲמָלֵ֥ק וְאֶת־עַמּ֖וֹ לְפִי־חָֽרֶב׃
+
+Amalek came and fought with Israel at Rephidim. Moses said to Joshua, Pick some troops. for us, and go out and do battle with Amalek. Tomorrow I will station myself on the top of the hill, with the rod of God in my hand. Joshua did as Moses told him and fought with Amalek, while Moses, Aaron, and Hur went up to the top of the hill. Then, whenever Moses held up his hand, Israel prevailed; but whenever he let down his hand, Amalek prevailed. But Moses hands grew heavy; so they took a stone and put it under him and he sat on it, while Aaron and Hur, one on each side, supported his hands; thus his hands remained steady until the sun set. And Joshua overwhelmed the people of Amalek with the sword.
+
+```json
+{
+  "res": {
+    "en_summary": "Israel battles Amalek with Moses' support.",
+    "heb_summary": "ישראל נלחם בעמלק בתמיכת משה.",
+    "passage_types": [
+      {
+        "val": "STORY"
+      }
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Amalek"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Joshua"
+        },
+        {
+          "en_name": "Aaron"
+        },
+        {
+          "en_name": "Hur"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Rephidim"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "rod of God"
+        }
+      ]
+    },
+    "Rel": {
+      "EnemyOf": [
+        {
+          "term1": "Amalek",
+          "term2": "Israel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Moses",
+          "term2": "Rephidim"
+        },
+        {
+          "term1": "Aaron",
+          "term2": "Rephidim"
+        },
+        {
+          "term1": "Hur",
+          "term2": "Rephidim"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "Joshua",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "rod of God",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}
+```
+

@@ -1,0 +1,120 @@
+﻿Deuteronomy 32:7-12  (TN_Deuteronomy_0_32:7-12)
+
+זְכֹר֙ יְמ֣וֹת עוֹלָ֔ם בִּ֖ינוּ שְׁנ֣וֹת דֹּר־וָדֹ֑ר שְׁאַ֤ל אָבִ֙יךָ֙ וְיַגֵּ֔דְךָ זְקֵנֶ֖יךָ וְיֹ֥אמְרוּ לָֽךְ׃ בְּהַנְחֵ֤ל עֶלְיוֹן֙ גּוֹיִ֔ם בְּהַפְרִיד֖וֹ בְּנֵ֣י אָדָ֑ם יַצֵּב֙ גְּבֻלֹ֣ת עַמִּ֔ים לְמִסְפַּ֖ר בְּנֵ֥י יִשְׂרָאֵֽל׃ כִּ֛י חֵ֥לֶק יְהֹוָ֖ה עַמּ֑וֹ יַעֲקֹ֖ב חֶ֥בֶל נַחֲלָתֽוֹ׃ יִמְצָאֵ֙הוּ֙ בְּאֶ֣רֶץ מִדְבָּ֔ר וּבְתֹ֖הוּ יְלֵ֣ל יְשִׁמֹ֑ן יְסֹבְבֶ֙נְהוּ֙ יְב֣וֹנְנֵ֔הוּ יִצְּרֶ֖נְהוּ כְּאִישׁ֥וֹן עֵינֽוֹ׃ כְּנֶ֙שֶׁר֙ יָעִ֣יר קִנּ֔וֹ עַל־גּוֹזָלָ֖יו יְרַחֵ֑ף יִפְרֹ֤שׂ כְּנָפָיו֙ יִקָּחֵ֔הוּ יִשָּׂאֵ֖הוּ עַל־אֶבְרָתֽוֹ׃ יְהֹוָ֖ה בָּדָ֣ד יַנְחֶ֑נּוּ וְאֵ֥ין עִמּ֖וֹ אֵ֥ל נֵכָֽר׃
+
+Remember the days of old, Consider the years of ages past; Ask your parent, who will inform you, Your elders, who will tell you: When the Most High gave nations their homes And set the divisions of humanity, [God] fixed the boundaries of peoples In relation to Israels numbers. For HASHEMs portion is this people; Jacob, Gods own allotment. [God] found them in a desert region, In an empty howling waste. [God] engirded them, watched over them, Guarded them as the pupil of Gods eye. Like an eagle who rouses its nestlings, Gliding down to its young, So did [God] spread wings and take them, Bear them along on pinions; HASHEM alone did guide them, No alien god alongside.
+
+```json
+{
+  "res": {
+    "en_summary": "God's guidance and protection of Israel.",
+    "heb_summary": "הדרכת ה' והגנתו על ישראל.",
+    "passage_types": [
+      {
+        "val": "STORY"
+      }
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "parent"
+        },
+        {
+          "en_name": "elders"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "desert region"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "nations"
+        },
+        {
+          "en_name": "humanity"
+        },
+        {
+          "en_name": "peoples"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "pupil of Gods eye"
+        },
+        {
+          "en_name": "eagle"
+        },
+        {
+          "en_name": "nestlings"
+        },
+        {
+          "en_name": "pinions"
+        }
+      ]
+    },
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "parent",
+          "term2": "humanity"
+        },
+        {
+          "term1": "elders",
+          "term2": "humanity"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "parent",
+          "term2": "Israel"
+        },
+        {
+          "term1": "elders",
+          "term2": "Israel"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "desert region",
+          "term2": "nations"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "HASHEM",
+          "term2": "eagle"
+        },
+        {
+          "term1": "HASHEM",
+          "term2": "nestlings"
+        },
+        {
+          "term1": "HASHEM",
+          "term2": "pinions"
+        }
+      ],
+      "alias": [
+        {
+          "term1": "HASHEM",
+          "term2": "Most High"
+        },
+        {
+          "term1": "HASHEM",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}
+```
+
