@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
+from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
@@ -195,3 +196,13 @@ class DBapiInterface(ABC):
             return self.update_source_metadata(src_metadata)
         else:
             return self.insert_source_metadata(src_metadata)
+
+# ----------------------------- Entity (Lmm) ------------------------------------
+    @abstractmethod
+    def is_entity_processed(self, key: str) -> bool:
+        # todo
+        return True
+
+    @abstractmethod
+    def get_all_entities(self) -> List[Entity]:
+        pass

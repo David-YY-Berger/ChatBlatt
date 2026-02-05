@@ -3,6 +3,8 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
+from BackEnd.DataObjects.EntityObjects.Entity import Entity
+from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
 from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
@@ -275,4 +277,14 @@ class DBapiMongoDB(DBapiInterface):
 
     @override
     def update_source_metadata(self, src_metadata:SourceMetadata) -> str:
+        pass
+
+    # ----------------------------- Entity (Lmm) ------------------------------------
+    @override
+    def is_entity_processed(self, key: str) -> bool:
+        # todo
+        return True
+
+    @override
+    def get_all_entities(self) -> List[Entity]:
         pass

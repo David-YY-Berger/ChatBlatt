@@ -6,7 +6,7 @@ from BackEnd.DataPipeline.FAISS_api import FaissEngine
 from BackEnd.General import miscFuncs
 
 
-class DBPopulateSourceContentAndFaiss(DBParentClass):
+class DBPopulateFaiss(DBParentClass):
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""
