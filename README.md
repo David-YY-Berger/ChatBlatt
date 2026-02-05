@@ -75,7 +75,7 @@ ChatBlatt is open source, we would love to see any code contributions you have t
 
 ## 👥 Developers
 
-foo
+lmk if you're interesting in joining :) 
 
 ---
 
