@@ -3,7 +3,6 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Optional, Dict, List, Any
 
-from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
 from BackEnd.DataPipeline.LMM_api.PydanticCaller import PydanticCaller
 
@@ -37,7 +36,28 @@ class LmmCaller(ABC):
         self._initialized = True
         logger.info(f"{self.__class__.__name__} initialized")
 
-    def _default_config(self) -> Dict[str, Any]:
+    ################################################ METHODS ########################################################
+
+    def get_pydantic_graph_from_passage(self, clean_en_passage: str):
+        return self.pydantic_caller.extract_graph_from_passage(clean_en_passage)
+
+    @abstractmethod
+    def call(self, prompt: str) -> RawLmmResponse:
+        """Make a call to the LMM API."""
+        pass
+
+    # def analyze_src(self, src_en_content: str) -> AnalyzedSourceResponse:
+    #     # dont forget to ask for: summary_en, summary_heb, and PassageType
+    #     # todo
+    #     pass
+    #
+    # def get_entity_metadata(self, entities: List[Entity]) -> AnalyzedEntitiesResponse:
+    #     pass
+
+
+    ############################################### CONFIG / SETTERS   ###############################################
+    @staticmethod
+    def _default_config() -> Dict[str, Any]:
         return {
             'temperature': 0.0,  # deterministic, required for strict JSON
             'max_tokens': 2500,  # todo must investigate this..
@@ -93,19 +113,6 @@ class LmmCaller(ABC):
     @abstractmethod
     def _get_api_key(self):
         return 'must initialize in child class'
-
-    @abstractmethod
-    def call(self, prompt: str) -> RawLmmResponse:
-        """Make a call to the LMM API."""
-        pass
-
-    # def analyze_src(self, src_en_content: str) -> AnalyzedSourceResponse:
-    #     # dont forget to ask for: summary_en, summary_heb, and PassageType
-    #     # todo
-    #     pass
-    #
-    # def get_entity_metadata(self, entities: List[Entity]) -> AnalyzedEntitiesResponse:
-    #     pass
 
     @classmethod
     def reset_instance(cls):

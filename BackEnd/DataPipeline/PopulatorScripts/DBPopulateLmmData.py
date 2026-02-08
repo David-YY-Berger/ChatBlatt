@@ -156,19 +156,22 @@ Return only the final JSON.
         for src_content in self.get_examples_src_contents():
             passage = src_content.get_clean_en_text()
 
-            # 1. Call the async extract method
-            final_response = asyncio.run(self.lmm_caller.pydantic_caller.extract(passage))
+            graph_json_str, usage = self.lmm_caller.get_pydantic_graph_from_passage(passage)
 
-            # 2. Convert the Pydantic model to a formatted JSON string
-            response_str = final_response.model_dump_json(indent=2)
+            # 2. Extract cost/usage data
+            cost_summary = (
+                f"Tokens: Total={usage.total_tokens} "
+                f"(Prompt={usage.request_tokens}, Completion={usage.response_tokens})"
+            )
 
             path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
 
             output_text = (
+                f"COST: {cost_summary}\n"
                 f"SOURCE:\n{src_content}\n\n"
                 f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
                 f"ENGLISH:\n{passage}\n\n"
-                f"EXTRACTED DATA:\n{response_str}"
+                f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
             )
 
             LocalPrinter.print_to_file(

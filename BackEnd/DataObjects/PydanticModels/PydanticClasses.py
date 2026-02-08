@@ -1,18 +1,16 @@
 from typing import List, Optional, Literal
 from pydantic import BaseModel, Field
 
-# todo refactor to diff files?
-
 # --- Entity Models ---
 class Entity(BaseModel):
     en_name: str
 
 class Entities(BaseModel):
-    Person: Optional[List[Entity]] = None
-    Place: Optional[List[Entity]] = None
-    TribeOfIsrael: Optional[List[Entity]] = None
-    Nation: Optional[List[Entity]] = None
-    Symbol: Optional[List[Entity]] = None
+    Person: Optional[List[Entity]] = Field(default_factory=list)
+    Place: Optional[List[Entity]] = Field(default_factory=list)
+    TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
+    Nation: Optional[List[Entity]] = Field(default_factory=list)
+    Symbol: Optional[List[Entity]] = Field(default_factory=list)
 
 # --- Relationship Models ---
 class Relation(BaseModel):
@@ -21,38 +19,38 @@ class Relation(BaseModel):
 
 class Relationships(BaseModel):
     # Person → Person
-    studiedFrom: Optional[List[Relation]] = None
-    siblingWith: Optional[List[Relation]] = None
-    childOf: Optional[List[Relation]] = None
-    spouseOf: Optional[List[Relation]] = None
-    descendantOf: Optional[List[Relation]] = None
+    studiedFrom: Optional[List[Relation]] = Field(default_factory=list)
+    siblingWith: Optional[List[Relation]] = Field(default_factory=list)
+    childOf: Optional[List[Relation]] = Field(default_factory=list)
+    spouseOf: Optional[List[Relation]] = Field(default_factory=list)
+    descendantOf: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person → Place
-    bornIn: Optional[List[Relation]] = None
-    diedIn: Optional[List[Relation]] = None
-    residedIn: Optional[List[Relation]] = None
-    visited: Optional[List[Relation]] = None
+    bornIn: Optional[List[Relation]] = Field(default_factory=list)
+    diedIn: Optional[List[Relation]] = Field(default_factory=list)
+    residedIn: Optional[List[Relation]] = Field(default_factory=list)
+    visited: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person → TribeOfIsrael
-    personToTribeOfIsrael: Optional[List[Relation]] = None
+    personToTribeOfIsrael: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person → Nation
-    personBelongsToNation: Optional[List[Relation]] = None
+    personBelongsToNation: Optional[List[Relation]] = Field(default_factory=list)
 
     # Nation → Nation
-    EnemyOf: Optional[List[Relation]] = None
-    AllyOf: Optional[List[Relation]] = None
+    EnemyOf: Optional[List[Relation]] = Field(default_factory=list)
+    AllyOf: Optional[List[Relation]] = Field(default_factory=list)
 
     # Place → Nation
-    placeToNation: Optional[List[Relation]] = None
+    placeToNation: Optional[List[Relation]] = Field(default_factory=list)
 
     # {anything} → Symbol
-    comparedTo: Optional[List[Relation]] = None
-    contrastedWith: Optional[List[Relation]] = None
+    comparedTo: Optional[List[Relation]] = Field(default_factory=list)
+    contrastedWith: Optional[List[Relation]] = Field(default_factory=list)
 
     # {anything} → {anything}
-    alias: Optional[List[Relation]] = None
-    aliasFromSages: Optional[List[Relation]] = None
+    alias: Optional[List[Relation]] = Field(default_factory=list)
+    aliasFromSages: Optional[List[Relation]] = Field(default_factory=list)
 
 # --- Root Response ---
 class ExtractionResult(BaseModel):
@@ -60,7 +58,7 @@ class ExtractionResult(BaseModel):
     heb_summary: str = Field(description="4-10 words Hebrew summary")
     passage_types: List[Literal['LAW', 'STORY', 'PHILOSOPHIC', 'GENEALOGY', 'PROPHECY']]
     Entities: Entities
-    Rel: Optional[Relationships] = None
+    Rel: Optional[Relationships] = Field(default_factory=list)
 
 class FinalResponse(BaseModel):
     res: ExtractionResult
