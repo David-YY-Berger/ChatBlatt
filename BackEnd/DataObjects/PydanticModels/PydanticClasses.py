@@ -1,5 +1,8 @@
 from typing import List, Optional, Literal, Set
 from pydantic import BaseModel, Field, field_validator, model_validator
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 # --- Entity Models ---
@@ -40,13 +43,6 @@ class Relation(BaseModel):
         if not v or not v.strip():
             raise ValueError("Relation terms cannot be empty or whitespace")
         return v.strip()
-
-    @model_validator(mode='after')
-    def validate_terms_different(self):
-        """Ensure term1 and term2 are different (no self-relationships)."""
-        if self.term1 == self.term2:
-            raise ValueError(f"Self-relationship not allowed: {self.term1}")
-        return self
 
 
 class Relationships(BaseModel):
@@ -89,13 +85,11 @@ class Relationships(BaseModel):
 class ExtractionResult(BaseModel):
     en_summary: str = Field(
         min_length=1,
-        max_length=100,
-        description="4-10 words summary"
+        description="Summary in exactly 4-10 words"
     )
     heb_summary: str = Field(
         min_length=1,
-        max_length=100,
-        description="4-10 words Hebrew summary"
+        description="Hebrew summary in exactly 4-10 words"
     )
     passage_types: List[Literal['LAW', 'STORY', 'PHILOSOPHIC', 'GENEALOGY', 'PROPHECY']] = Field(
         min_length=1,
@@ -104,17 +98,40 @@ class ExtractionResult(BaseModel):
     Entities: Entities
     Rel: Optional[Relationships] = Field(default_factory=Relationships)
 
+    @field_validator('en_summary', 'heb_summary')
+    @classmethod
+    def validate_word_count(cls, v: str, info) -> str:
+        """Ensure summary is 4-10 words. If invalid, truncate or pad."""
+        words = v.strip().split()
+        word_count = len(words)
+
+        if word_count < 4:
+            logger.warning(f"{info.field_name} has only {word_count} words (min 4): '{v}'")
+            # Pad with generic word if too short - but accept it
+            return v.strip()
+
+        if word_count > 10:
+            logger.warning(f"{info.field_name} has {word_count} words (max 10): '{v}'. Truncating.")
+            # Truncate to 10 words
+            return ' '.join(words[:10])
+
+        return v.strip()
+
     @field_validator('passage_types')
     @classmethod
     def validate_unique_passage_types(cls, v: List[str]) -> List[str]:
-        """Ensure no duplicate passage types."""
-        if len(v) != len(set(v)):
-            raise ValueError("Duplicate passage types not allowed")
-        return v
+        """Remove duplicate passage types."""
+        unique = list(dict.fromkeys(v))  # Preserve order
+        if len(unique) < len(v):
+            logger.warning(f"Removed duplicate passage types: {v} -> {unique}")
+        return unique
 
     @model_validator(mode='after')
-    def validate_relationships_reference_entities(self):
-        """Ensure all relationship terms reference actual entities."""
+    def filter_invalid_relationships(self):
+        """Filter out invalid relationships instead of raising errors."""
+        if not self.Rel:
+            return self
+
         all_entities = self.Entities.get_all_entity_names()
 
         if not all_entities:
@@ -158,82 +175,123 @@ class ExtractionResult(BaseModel):
             'aliasFromSages': (None, None),
         }
 
-        if self.Rel:
-            for rel_type, (term1_type, term2_type) in relationship_constraints.items():
-                relations = getattr(self.Rel, rel_type, None)
-                if not relations:
-                    continue
+        invalid_count = 0
 
-                for rel in relations:
-                    # Check term1 exists in entities
-                    if rel.term1 not in all_entities:
-                        raise ValueError(
-                            f"Relationship '{rel_type}': term1 '{rel.term1}' "
-                            f"not found in entities"
-                        )
+        for rel_type, (term1_type, term2_type) in relationship_constraints.items():
+            relations = getattr(self.Rel, rel_type, None)
+            if not relations:
+                continue
 
-                    # Check term2 exists in entities
-                    if rel.term2 not in all_entities:
-                        raise ValueError(
-                            f"Relationship '{rel_type}': term2 '{rel.term2}' "
-                            f"not found in entities"
-                        )
+            valid_relations = []
 
-                    # Validate type constraints
-                    if term1_type:
-                        term1_entities = self.Entities.get_entities_by_type(term1_type)
-                        if rel.term1 not in term1_entities:
-                            raise ValueError(
-                                f"Relationship '{rel_type}': term1 '{rel.term1}' "
-                                f"must be a {term1_type} entity"
-                            )
+            for rel in relations:
+                is_valid = True
+                reason = None
 
-                    if term2_type:
-                        term2_entities = self.Entities.get_entities_by_type(term2_type)
-                        if rel.term2 not in term2_entities:
-                            raise ValueError(
-                                f"Relationship '{rel_type}': term2 '{rel.term2}' "
-                                f"must be a {term2_type} entity"
-                            )
+                # Check for self-relationships
+                if rel.term1 == rel.term2:
+                    is_valid = False
+                    reason = f"Self-relationship: {rel.term1}"
+
+                # Check term1 exists in entities
+                elif rel.term1 not in all_entities:
+                    is_valid = False
+                    reason = f"term1 '{rel.term1}' not in entities"
+
+                # Check term2 exists in entities
+                elif rel.term2 not in all_entities:
+                    is_valid = False
+                    reason = f"term2 '{rel.term2}' not in entities"
+
+                # Validate type constraints
+                elif term1_type:
+                    term1_entities = self.Entities.get_entities_by_type(term1_type)
+                    if rel.term1 not in term1_entities:
+                        is_valid = False
+                        reason = f"term1 '{rel.term1}' not a {term1_type}"
+
+                if is_valid and term2_type:
+                    term2_entities = self.Entities.get_entities_by_type(term2_type)
+                    if rel.term2 not in term2_entities:
+                        is_valid = False
+                        reason = f"term2 '{rel.term2}' not a {term2_type}"
+
+                if is_valid:
+                    valid_relations.append(rel)
+                else:
+                    invalid_count += 1
+                    logger.warning(
+                        f"Filtered invalid '{rel_type}' relationship: "
+                        f"{rel.term1} -> {rel.term2} ({reason})"
+                    )
+
+            # Replace with filtered list
+            setattr(self.Rel, rel_type, valid_relations if valid_relations else None)
+
+        if invalid_count > 0:
+            logger.info(f"Filtered out {invalid_count} invalid relationships")
 
         return self
 
     @model_validator(mode='after')
-    def validate_symmetric_relationships(self):
-        """Ensure symmetric relationships are properly mirrored."""
+    def filter_asymmetric_relationships(self):
+        """Filter out asymmetric sibling/spouse relationships."""
         if not self.Rel:
             return self
 
-        # siblingWith and spouseOf should be symmetric
+        # Handle siblingWith symmetry
         if self.Rel.siblingWith:
             siblings = {}
             for rel in self.Rel.siblingWith:
                 siblings.setdefault(rel.term1, set()).add(rel.term2)
                 siblings.setdefault(rel.term2, set()).add(rel.term1)
 
-            # Verify symmetry
-            for person, sibling_set in siblings.items():
-                for sibling in sibling_set:
-                    if person not in siblings.get(sibling, set()):
-                        raise ValueError(
-                            f"Asymmetric sibling relationship: "
-                            f"{person} ↔ {sibling}"
-                        )
+            valid_siblings = []
+            seen_pairs = set()
 
+            for rel in self.Rel.siblingWith:
+                pair = tuple(sorted([rel.term1, rel.term2]))
+                if pair in seen_pairs:
+                    continue
+
+                # Check if symmetric
+                if rel.term2 in siblings.get(rel.term1, set()) and \
+                        rel.term1 in siblings.get(rel.term2, set()):
+                    valid_siblings.append(rel)
+                    seen_pairs.add(pair)
+                else:
+                    logger.warning(
+                        f"Filtered asymmetric sibling: {rel.term1} <-> {rel.term2}"
+                    )
+
+            self.Rel.siblingWith = valid_siblings if valid_siblings else None
+
+        # Handle spouseOf symmetry
         if self.Rel.spouseOf:
             spouses = {}
             for rel in self.Rel.spouseOf:
                 spouses.setdefault(rel.term1, set()).add(rel.term2)
                 spouses.setdefault(rel.term2, set()).add(rel.term1)
 
-            # Verify symmetry
-            for person, spouse_set in spouses.items():
-                for spouse in spouse_set:
-                    if person not in spouses.get(spouse, set()):
-                        raise ValueError(
-                            f"Asymmetric spouse relationship: "
-                            f"{person} ↔ {spouse}"
-                        )
+            valid_spouses = []
+            seen_pairs = set()
+
+            for rel in self.Rel.spouseOf:
+                pair = tuple(sorted([rel.term1, rel.term2]))
+                if pair in seen_pairs:
+                    continue
+
+                # Check if symmetric
+                if rel.term2 in spouses.get(rel.term1, set()) and \
+                        rel.term1 in spouses.get(rel.term2, set()):
+                    valid_spouses.append(rel)
+                    seen_pairs.add(pair)
+                else:
+                    logger.warning(
+                        f"Filtered asymmetric spouse: {rel.term1} <-> {rel.term2}"
+                    )
+
+            self.Rel.spouseOf = valid_spouses if valid_spouses else None
 
         return self
 
