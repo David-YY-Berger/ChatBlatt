@@ -3,6 +3,7 @@ import asyncio
 import os
 
 from BackEnd.DataObjects.Enums import SourceContentType
+from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
@@ -150,13 +151,16 @@ Return only the final JSON.
     #                                    path)
     #     print(Paths.LMM_RESPONSES_OUTPUT_DIR)
 
-    def test_foo2(self):
+    def test_async_run(self):
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
+        # Run the entire batch as one async task
+        asyncio.run(self.get_graphs_from_passages())
 
+    async def get_graphs_from_passages(self):
         for src_content in self.get_examples_src_contents():
             passage = src_content.get_clean_en_text()
 
-            graph_json_str, usage, cost_usd = self.lmm_caller.get_pydantic_graph_from_passage(passage)
+            graph_json_str, usage, cost_usd = await self.lmm_caller.get_pydantic_graph_from_passage(passage)
             cost_summary = (
                 f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.request_tokens}, Completion={usage.response_tokens})"
@@ -177,7 +181,6 @@ Return only the final JSON.
                 FileTypeEnum.FileType.TXT,
                 path
             )
-
         print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
 
     ############################################## Populating Metadata ###############################################
@@ -232,7 +235,7 @@ Return only the final JSON.
 
 
     ############################################## helper methods ####################################################
-    def get_examples_src_contents(self):
+    def get_examples_src_contents(self) -> list[SourceContent]:
         # took sources from file:///C:/Users/U6072661/AppData/Local/Chatblatt/Tests/Questions/fight.html
 
         key_strs = [

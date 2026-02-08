@@ -61,14 +61,15 @@ class PydanticCaller:
         output_cost = (usage.input_tokens / 1_000_000) * 0.30
         return input_cost + output_cost
 
-    def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:
+    async def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:
         """
-        Raises:
-            ValidationError: If the model output doesn't pass validation
-            Exception: For any other errors during extraction
-        """
+                Raises:
+                    ValidationError: If the model output doesn't pass validation
+                    Exception: For any other errors during extraction
+                """
         try:
-            result = asyncio.run(self._extract(passage))
+            # TODO this 'await' prevents any parrallelity... must fix
+            result = await self._extract(passage)
 
             formatted_json = result.output.model_dump_json(
                 indent=2,
