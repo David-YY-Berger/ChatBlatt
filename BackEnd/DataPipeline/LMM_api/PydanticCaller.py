@@ -25,7 +25,8 @@ class PydanticCaller:
         """Internal async call."""
         return await self.agent.run(passage)
 
-    def _calculate_cost(self, usage: RunUsage) -> float:
+    @staticmethod
+    def _calculate_cost(usage: RunUsage) -> float:
         """Estimates cost in USD for Gemini 1.5 Flash."""
         input_cost = (usage.request_tokens / 1_000_000) * 0.075
         output_cost = (usage.response_tokens / 1_000_000) * 0.30
