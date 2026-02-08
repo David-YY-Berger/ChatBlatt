@@ -3,8 +3,7 @@ import logging
 import os
 import google.generativeai as genai
 from dotenv import load_dotenv
-import requests
-from google.generativeai import client
+from typing_extensions import override
 
 from BackEnd.DataPipeline.LMM_api.LmmCaller import LmmCaller
 from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
@@ -15,21 +14,33 @@ logger = logging.getLogger(__name__)
 
 class GeminiLmmCaller(LmmCaller):
 
-    MODEL_NAME = "gemini-2.5-flash-lite"
-
     def __init__(self):
-        load_dotenv()
-        api_key = os.getenv('GEMINI_FREE_API_KEY')
-        super().__init__(api_key)
-
+        super().__init__()
         # Only configure if this is a fresh initialization
         if not hasattr(self, '_model'):
-            if self.api_key:
-                genai.configure(api_key=self.api_key)
+            if self._api_key:
+                genai.configure(api_key=self._api_key)
 
             # Initialize the model
-            self._model = genai.GenerativeModel(self.MODEL_NAME)
-            logger.info(f"Gemini model {self.MODEL_NAME} configured")
+            self._model = genai.GenerativeModel(self._model_name)
+            logger.info(f"Gemini model {self._model} configured")
+
+    @override
+    def _get_model_name(self) -> str:
+        return "gemini-2.5-flash-lite"
+
+    @override
+    def _get_api_key(self) -> str:
+        # Check if already in environment; if not, load from .env
+        api_key = os.getenv('GEMINI_FREE_API_KEY')
+        if not api_key:
+            load_dotenv()
+            api_key = os.getenv('GEMINI_FREE_API_KEY')
+        return api_key
+
+    @override
+    def _get_pydantic_model_name(self):
+        return 'google-gla:' + self._model_name
 
     def call(self, prompt: str) -> RawLmmResponse:
         """
@@ -61,7 +72,7 @@ class GeminiLmmCaller(LmmCaller):
 
             # Build metadata
             metadata = {
-                'model': self.MODEL_NAME,
+                'model': self._model_name,
                 'config': self._config.copy(),
                 'finish_reason': response.candidates[0].finish_reason.name if response.candidates else None,
                 'safety_ratings': [
@@ -86,5 +97,5 @@ class GeminiLmmCaller(LmmCaller):
             return RawLmmResponse(
                 success=False,
                 error=str(e),
-                metadata={'model': self.MODEL_NAME, 'config': self._config.copy()}
+                metadata={'model': self._model_name, 'config': self._config.copy()}
             )

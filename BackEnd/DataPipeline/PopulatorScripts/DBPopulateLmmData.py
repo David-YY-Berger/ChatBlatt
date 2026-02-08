@@ -1,4 +1,5 @@
 # bs'd
+import asyncio
 import os
 
 from BackEnd.DataObjects.Enums import SourceContentType
@@ -7,8 +8,6 @@ from BackEnd.DataPipeline.DB.Collections import CollectionObjs
 from BackEnd.DataPipeline.DBParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
-from BackEnd.DataPipeline.LMM_api.LmmResponses.AnalyzedEntitiesResponse import AnalyzedEntitiesResponse
-from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
 from BackEnd.FileUtils import LocalPrinter, FileTypeEnum, OsFunctions
 from BackEnd.General import Paths
 
@@ -132,24 +131,53 @@ Return only the final JSON.
 
     ############################################## dummy testing ###############################################
 
-    def test_foo(self):
-        prompt = self.prompt_get_entity_rel_from_passage
+    # def test_foo(self):
+    #     prompt = self.prompt_get_entity_rel_from_passage
+    #     OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
+    #
+    #     for src_content in self.get_examples_src_contents():
+    #         # response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
+    #         response = RawLmmResponse(success=True, content='foo')
+    #         path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
+    #         LocalPrinter.print_to_file(src_content.__str__() + "\n\n" +
+    #                                    src_content.get_clean_heb_text() + "\n\n" +
+    #                                    src_content.get_clean_en_text() + "\n\n" +
+    #                                    response.content + "\n\n" +
+    #                                    # "raw en html content:\n" + src_content.get_en_html_content() + "\n\n" +
+    #                                    # "raw heb html content:\n" + src_content.get_heb_html_content() + "\n\n" +
+    #                                     "",
+    #                                    FileTypeEnum.FileType.TXT,
+    #                                    path)
+    #     print(Paths.LMM_RESPONSES_OUTPUT_DIR)
+
+    def test_foo2(self):
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
 
         for src_content in self.get_examples_src_contents():
-            # response = self.lmm_caller.call(prompt + "\n\n" + src_content.get_clean_en_text())
-            response = RawLmmResponse(success=True, content='foo')
-            path = os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')).__str__()
-            LocalPrinter.print_to_file(src_content.__str__() + "\n\n" +
-                                       src_content.get_clean_heb_text() + "\n\n" +
-                                       src_content.get_clean_en_text() + "\n\n" +
-                                       response.content + "\n\n" +
-                                       # "raw en html content:\n" + src_content.get_en_html_content() + "\n\n" +
-                                       # "raw heb html content:\n" + src_content.get_heb_html_content() + "\n\n" +
-                                        "",
-                                       FileTypeEnum.FileType.TXT,
-                                       path)
-        print(Paths.LMM_RESPONSES_OUTPUT_DIR)
+            passage = src_content.get_clean_en_text()
+
+            # 1. Call the async extract method
+            final_response = asyncio.run(self.lmm_caller.pydantic_caller.extract(passage))
+
+            # 2. Convert the Pydantic model to a formatted JSON string
+            response_str = final_response.model_dump_json(indent=2)
+
+            path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
+
+            output_text = (
+                f"SOURCE:\n{src_content}\n\n"
+                f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
+                f"ENGLISH:\n{passage}\n\n"
+                f"EXTRACTED DATA:\n{response_str}"
+            )
+
+            LocalPrinter.print_to_file(
+                output_text,
+                FileTypeEnum.FileType.TXT,
+                path
+            )
+
+        print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
 
     ############################################## Populating Metadata ###############################################
 
@@ -210,20 +238,20 @@ Return only the final JSON.
             'TN_Exodus_0_17:8-13',
 
             # amorites, kadesh, etc.
-           'TN_Deuteronomy_0_1:41-2:1',
+           # 'TN_Deuteronomy_0_1:41-2:1',
 
             # symbols (from az yashir)
             # 'TN_Exodus_0_15:6-10',
-            'TN_Deuteronomy_0_32:7-12',
+            # 'TN_Deuteronomy_0_32:7-12',
 
             # small, mostly empty source:
-            'TN_Psalms_0_120:1–7',
+            # 'TN_Psalms_0_120:1–7',
 
             # tribes:
-            'TN_Isaiah_0_11:1–12:6',
-
+            # 'TN_Isaiah_0_11:1–12:6',
+        #
         #     gemara, rabbi studying for other rabbi, etc
-            'BT_Eruvin_0_45a:12-19',
+        #     'BT_Eruvin_0_45a:12-19',
 
         #     test just for html clean:
         #     'TN_Deuteronomy_0_32:7-12',

@@ -4,9 +4,8 @@ from abc import ABC, abstractmethod
 from typing import Optional, Dict, List, Any
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
-from BackEnd.DataPipeline.LMM_api.LmmResponses.AnalyzedEntitiesResponse import AnalyzedEntitiesResponse
-from BackEnd.DataPipeline.LMM_api.LmmResponses.AnalyzedSourceResponse import AnalyzedSourceResponse
 from BackEnd.DataPipeline.LMM_api.LmmResponses.RawLmmResponse import RawLmmResponse
+from BackEnd.DataPipeline.LMM_api.PydanticCaller import PydanticCaller
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -27,11 +26,13 @@ class LmmCaller(ABC):
             logger.debug(f"Reusing existing {class_name} instance")
         return cls._instances[class_name]
 
-    def __init__(self, api_key: Optional[str] = None):
+    def __init__(self):
         # Prevent re-initialization
         if hasattr(self, '_initialized'):
             return
-        self.api_key = api_key
+        self._api_key = self._get_api_key()
+        self._model_name = self._get_model_name()
+        self.pydantic_caller = PydanticCaller(api_key=self._api_key, model_name=self._get_pydantic_model_name())
         self._config = self._default_config()
         self._initialized = True
         logger.info(f"{self.__class__.__name__} initialized")
@@ -82,17 +83,29 @@ class LmmCaller(ABC):
         return self
 
     @abstractmethod
+    def _get_model_name(self):
+        return 'must initialize in child class'
+
+    @abstractmethod
+    def _get_pydantic_model_name(self):
+        return 'must initialize in child class'
+
+    @abstractmethod
+    def _get_api_key(self):
+        return 'must initialize in child class'
+
+    @abstractmethod
     def call(self, prompt: str) -> RawLmmResponse:
         """Make a call to the LMM API."""
         pass
 
-    def analyze_src(self, src_en_content: str) -> AnalyzedSourceResponse:
-        # dont forget to ask for: summary_en, summary_heb, and PassageType
-        # todo
-        pass
-
-    def get_entity_metadata(self, entities: List[Entity]) -> AnalyzedEntitiesResponse:
-        pass
+    # def analyze_src(self, src_en_content: str) -> AnalyzedSourceResponse:
+    #     # dont forget to ask for: summary_en, summary_heb, and PassageType
+    #     # todo
+    #     pass
+    #
+    # def get_entity_metadata(self, entities: List[Entity]) -> AnalyzedEntitiesResponse:
+    #     pass
 
     @classmethod
     def reset_instance(cls):
