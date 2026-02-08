@@ -156,11 +156,9 @@ Return only the final JSON.
         for src_content in self.get_examples_src_contents():
             passage = src_content.get_clean_en_text()
 
-            graph_json_str, usage = self.lmm_caller.get_pydantic_graph_from_passage(passage)
-
-            # 2. Extract cost/usage data
+            graph_json_str, usage, cost_usd = self.lmm_caller.get_pydantic_graph_from_passage(passage)
             cost_summary = (
-                f"Tokens: Total={usage.total_tokens} "
+                f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.request_tokens}, Completion={usage.response_tokens})"
             )
 
@@ -185,32 +183,33 @@ Return only the final JSON.
     ############################################## Populating Metadata ###############################################
 
     def test_populate_source_meta_data(self):
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
-        src_processed = 0
-        num_srcs_to_process = 20
-
-        for src in all_srcs:
-            if src_processed >= num_srcs_to_process:
-                break
-
-            if self.db_api.is_src_metadata_exist(src.key):
-                continue
-
-            analyzed_response = self.lmm_caller.analyze_src(src.content[SourceContentType.EN])
-            src_metadata = SourceMetadata(key = src.key, source_type=src.source_type)
-            src_metadata.passage_types = analyzed_response.e_passage_types
-            src_metadata.summary_en = analyzed_response.summary_en
-            src_metadata.summary_heb = analyzed_response.summary_heb
-
-            entity_keys = self.entity_rel_mngr.insert_entity_map(analyzed_response.get_entity_map(), src.get_src_type())
-            src_metadata.entities.update(entity_keys)
-
-            rel_keys = self.entity_rel_mngr.insert_rel_map(analyzed_response.get_all_relationships(), src.get_src_type())
-            src_metadata.entities.update(rel_keys)
-
-            is_success = self.db_api.insert_or_update_source_metadata(src)
-            if is_success:
-                src_processed += 1
+        pass
+    #     all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
+    #     src_processed = 0
+    #     num_srcs_to_process = 20
+    #
+    #     for src in all_srcs:
+    #         if src_processed >= num_srcs_to_process:
+    #             break
+    #
+    #         if self.db_api.is_src_metadata_exist(src.key):
+    #             continue
+    #
+    #         analyzed_response = self.lmm_caller.analyze_src(src.content[SourceContentType.EN])
+    #         src_metadata = SourceMetadata(key = src.key, source_type=src.source_type)
+    #         src_metadata.passage_types = analyzed_response.e_passage_types
+    #         src_metadata.summary_en = analyzed_response.summary_en
+    #         src_metadata.summary_heb = analyzed_response.summary_heb
+    #
+    #         entity_keys = self.entity_rel_mngr.insert_entity_map(analyzed_response.get_entity_map(), src.get_src_type())
+    #         src_metadata.entities.update(entity_keys)
+    #
+    #         rel_keys = self.entity_rel_mngr.insert_rel_map(analyzed_response.get_all_relationships(), src.get_src_type())
+    #         src_metadata.entities.update(rel_keys)
+    #
+    #         is_success = self.db_api.insert_or_update_source_metadata(src)
+    #         if is_success:
+    #             src_processed += 1
 
     def test_populate_entity_meta_data(self):
         pass

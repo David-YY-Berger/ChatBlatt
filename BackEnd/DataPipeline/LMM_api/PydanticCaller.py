@@ -25,7 +25,13 @@ class PydanticCaller:
         """Internal async call."""
         return await self.agent.run(passage)
 
-    def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage]:
+    def _calculate_cost(self, usage: RunUsage) -> float:
+        """Estimates cost in USD for Gemini 1.5 Flash."""
+        input_cost = (usage.request_tokens / 1_000_000) * 0.075
+        output_cost = (usage.response_tokens / 1_000_000) * 0.30
+        return input_cost + output_cost
+
+    def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:
         """
         Runs extraction and returns a tuple:
         (JSON String, Usage Object)
@@ -38,4 +44,7 @@ class PydanticCaller:
             exclude_none=True
         )
 
-        return formatted_json, result.usage()
+        usage = result.usage()
+        cost = self._calculate_cost(usage)
+
+        return formatted_json, usage, cost
