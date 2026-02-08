@@ -22,15 +22,21 @@ class PydanticCaller:
                 "- en_summary: MUST be EXACTLY 4-10 complete words. Do NOT generate partial sentences. "
                 "- heb_summary: MUST be EXACTLY 4-10 complete words in Hebrew. Do NOT generate partial sentences. "
                 "- Count your words BEFORE responding. If a summary would exceed 10 words, rephrase it to be shorter. "
-                "- Example VALID: 'Messianic prophecy from Jesse bringing justice' (6 words, complete). "
-                "- Example INVALID: 'Prophecy of a messianic shoot from Jesse, bringing justice and' (11 words, incomplete). "
-                f"TRIBE CLASSIFICATION: The 14 tribes of Israel are: {TRIBES_LIST_STR}. "
-                "These should ALWAYS be classified as TribeOfIsrael, never as Nation, Place, or Person. "
+                "ENTITY CLASSIFICATION RULES: "
+                "- Person: ONLY specific named individuals (proper nouns). "
+                "  Examples: Moses, David, Sarah. "
+                "  NOT generic terms: priest, king, prophet, man, woman. "
+                "- Nation: ONLY specific named nations/peoples (proper nouns). "
+                "  Examples: Egypt (for 'Egyptians'), Moab (for 'Moabites'), Assyria. "
+                "  Use the proper noun form (Egypt, not Egyptians; Moab, not Moabites). "
+                "  NOT generic terms: nation, people, enemy, kingdom. "
+                f"- TribeOfIsrael: The 14 tribes are: {TRIBES_LIST_STR}. "
+                "  Always classify these as TribeOfIsrael. "
                 "Optimization: Do not include keys for lists or objects that are empty. "
                 "Only return populated data to save tokens. "
                 "Ensure all relationship terms reference actual entities extracted."
             ),
-            retries=0,  # CRITICAL: Disable automatic retries to save tokens
+            retries=0,
         )
 
     async def _extract(self, passage: str):

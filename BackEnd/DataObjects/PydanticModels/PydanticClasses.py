@@ -15,6 +15,12 @@ TRIBES_OF_ISRAEL = {
 class Entity(BaseModel):
     en_name: str = Field(min_length=1, description="Entity name cannot be empty")
 
+    @field_validator('en_name')
+    @classmethod
+    def normalize_to_proper_noun(cls, v: str) -> str:
+        """Normalize entity name to proper noun format (title case)."""
+        return v.strip().title()
+
 
 class Entities(BaseModel):
     Person: Optional[List[Entity]] = Field(default_factory=list)
@@ -22,6 +28,46 @@ class Entities(BaseModel):
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
+
+    @field_validator('Person', 'Nation')
+    @classmethod
+    def validate_proper_nouns(cls, v: Optional[List[Entity]], info) -> Optional[List[Entity]]:
+        """Filter out generic common nouns from Person and Nation."""
+        if not v:
+            return v
+
+        # Common words that should NOT be entities (even if capitalized)
+        GENERIC_PERSON_WORDS = {
+            'king', 'priest', 'prophet', 'leader', 'man', 'woman',
+            'child', 'servant', 'warrior', 'elder', 'judge', 'scribe',
+            'people', 'person', 'soldier', 'messenger', 'angel'
+        }
+
+        GENERIC_NATION_WORDS = {
+            'nation', 'nations', 'people', 'peoples', 'enemy', 'enemies',
+            'army', 'armies', 'kingdom', 'kingdoms', 'tribe', 'tribes'
+        }
+
+        generic_words = GENERIC_PERSON_WORDS if info.field_name == 'Person' else GENERIC_NATION_WORDS
+
+        valid_entities = []
+        filtered_count = 0
+
+        for entity in v:
+            # Check if it's a generic word (case-insensitive)
+            if entity.en_name.lower() in generic_words:
+                filtered_count += 1
+                logger.warning(
+                    f"Filtered generic word from {info.field_name}: '{entity.en_name}' "
+                    f"(not a proper noun)"
+                )
+            else:
+                valid_entities.append(entity)
+
+        if filtered_count > 0:
+            logger.info(f"Filtered {filtered_count} generic words from {info.field_name}")
+
+        return valid_entities if valid_entities else None
 
     @model_validator(mode='after')
     def auto_classify_tribes(self):
