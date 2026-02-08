@@ -4,8 +4,9 @@ from typing import Tuple
 from pydantic_ai import Agent
 from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
-from BackEnd.DataObjects.PydanticModels.PydanticClasses import FinalResponse
+from BackEnd.DataObjects.PydanticModels.PydanticClasses import FinalResponse, TRIBES_OF_ISRAEL
 
+TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 
 class PydanticCaller:
     def __init__(self, api_key: str, model_name: str):
@@ -17,10 +18,17 @@ class PydanticCaller:
             output_type=FinalResponse,
             system_prompt=(
                 "Extract entities and relationships from the text. "
+                "CRITICAL SUMMARY REQUIREMENTS: "
+                "- en_summary: MUST be EXACTLY 4-10 complete words. Do NOT generate partial sentences. "
+                "- heb_summary: MUST be EXACTLY 4-10 complete words in Hebrew. Do NOT generate partial sentences. "
+                "- Count your words BEFORE responding. If a summary would exceed 10 words, rephrase it to be shorter. "
+                "- Example VALID: 'Messianic prophecy from Jesse bringing justice' (6 words, complete). "
+                "- Example INVALID: 'Prophecy of a messianic shoot from Jesse, bringing justice and' (11 words, incomplete). "
+                f"TRIBE CLASSIFICATION: The 14 tribes of Israel are: {TRIBES_LIST_STR}. "
+                "These should ALWAYS be classified as TribeOfIsrael, never as Nation, Place, or Person. "
                 "Optimization: Do not include keys for lists or objects that are empty. "
                 "Only return populated data to save tokens. "
-                "CRITICAL: Ensure all relationship terms reference actual entities extracted. "
-                "Validate entity types match relationship constraints before responding."
+                "Ensure all relationship terms reference actual entities extracted."
             ),
             retries=0,  # CRITICAL: Disable automatic retries to save tokens
         )

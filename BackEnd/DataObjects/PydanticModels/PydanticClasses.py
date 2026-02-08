@@ -4,6 +4,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+TRIBES_OF_ISRAEL = {
+    'reuben', 'simeon', 'levi', 'judah', 'dan', 'naphtali',
+    'gad', 'asher', 'issachar', 'zebulun', 'joseph', 'benjamin',
+    'ephraim', 'manasseh'
+}
+
 
 # --- Entity Models ---
 class Entity(BaseModel):
@@ -16,6 +22,53 @@ class Entities(BaseModel):
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
+
+    @model_validator(mode='after')
+    def auto_classify_tribes(self):
+        """Automatically move tribes from other categories to TribeOfIsrael."""
+        if not self.TribeOfIsrael:
+            self.TribeOfIsrael = []
+
+        moved_count = 0
+
+        # Check all entity categories
+        for category in ['Person', 'Place', 'Nation', 'Symbol']:
+            entity_list = getattr(self, category, None)
+            if not entity_list:
+                continue
+
+            remaining = []
+            for entity in entity_list:
+                # Check if this entity is actually a tribe
+                if entity.en_name.lower() in TRIBES_OF_ISRAEL:
+                    # Move to TribeOfIsrael
+                    if entity not in self.TribeOfIsrael:
+                        self.TribeOfIsrael.append(entity)
+                        moved_count += 1
+                        logger.info(
+                            f"Auto-corrected: Moved '{entity.en_name}' "
+                            f"from {category} to TribeOfIsrael"
+                        )
+                else:
+                    remaining.append(entity)
+
+            # Update the category with remaining entities
+            setattr(self, category, remaining if remaining else None)
+
+        # Deduplicate TribeOfIsrael (in case of duplicates)
+        if self.TribeOfIsrael:
+            seen = set()
+            unique_tribes = []
+            for tribe in self.TribeOfIsrael:
+                if tribe.en_name.lower() not in seen:
+                    unique_tribes.append(tribe)
+                    seen.add(tribe.en_name.lower())
+            self.TribeOfIsrael = unique_tribes if unique_tribes else None
+
+        if moved_count > 0:
+            logger.info(f"Auto-corrected {moved_count} tribe classifications")
+
+        return self
 
     def get_all_entity_names(self) -> Set[str]:
         """Helper to get all entity names across all categories."""
@@ -101,19 +154,21 @@ class ExtractionResult(BaseModel):
     @field_validator('en_summary', 'heb_summary')
     @classmethod
     def validate_word_count(cls, v: str, info) -> str:
-        """Ensure summary is 4-10 words. If invalid, truncate or pad."""
+        """Ensure summary is 4-10 words. Reject if out of range."""
         words = v.strip().split()
         word_count = len(words)
 
         if word_count < 4:
-            logger.warning(f"{info.field_name} has only {word_count} words (min 4): '{v}'")
-            # Pad with generic word if too short - but accept it
-            return v.strip()
+            raise ValueError(
+                f"{info.field_name} must be 4-10 words, got {word_count}: '{v}'. "
+                f"Model should generate complete summaries within word limit."
+            )
 
         if word_count > 10:
-            logger.warning(f"{info.field_name} has {word_count} words (max 10): '{v}'. Truncating.")
-            # Truncate to 10 words
-            return ' '.join(words[:10])
+            raise ValueError(
+                f"{info.field_name} must be 4-10 words, got {word_count}: '{v}'. "
+                f"Model should generate complete summaries within word limit."
+            )
 
         return v.strip()
 
