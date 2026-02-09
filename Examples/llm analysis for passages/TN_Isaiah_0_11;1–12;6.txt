@@ -1,0 +1,117 @@
+﻿COST: Tokens: Total=4830 approx cost usd = $0.001248 (Prompt=3328, Completion=1502)
+SOURCE:
+Isaiah 11:1–12:6  (TN_Isaiah_0_11:1–12:6)
+
+HEBREW:
+וְיָצָ֥א חֹ֖טֶר מִגֵּ֣זַע יִשָׁ֑י וְנֵ֖צֶר מִשׇּׁרָשָׁ֥יו יִפְרֶֽה׃ וְנָחָ֥ה עָלָ֖יו ר֣וּחַ יְהֹוָ֑ה ר֧וּחַ חׇכְמָ֣ה וּבִינָ֗ה ר֤וּחַ עֵצָה֙ וּגְבוּרָ֔ה ר֥וּחַ דַּ֖עַת וְיִרְאַ֥ת יְהֹוָֽה׃ וַהֲרִיח֖וֹ בְּיִרְאַ֣ת יְהֹוָ֑ה וְלֹֽא־לְמַרְאֵ֤ה עֵינָיו֙ יִשְׁפּ֔וֹט וְלֹא־לְמִשְׁמַ֥ע אׇזְנָ֖יו יוֹכִֽיחַ׃ וְשָׁפַ֤ט בְּצֶ֙דֶק֙ דַּלִּ֔ים וְהוֹכִ֥יחַ בְּמִישׁ֖וֹר לְעַנְוֵי־אָ֑רֶץ וְהִֽכָּה־אֶ֙רֶץ֙ בְּשֵׁ֣בֶט פִּ֔יו וּבְר֥וּחַ שְׂפָתָ֖יו יָמִ֥ית רָשָֽׁע׃ וְהָ֥יָה צֶ֖דֶק אֵז֣וֹר מׇתְנָ֑יו וְהָאֱמוּנָ֖ה אֵז֥וֹר חֲלָצָֽיו׃ וְגָ֤ר זְאֵב֙ עִם־כֶּ֔בֶשׂ וְנָמֵ֖ר עִם־גְּדִ֣י יִרְבָּ֑ץ וְעֵ֨גֶל וּכְפִ֤יר וּמְרִיא֙ יַחְדָּ֔ו וְנַ֥עַר קָטֹ֖ן נֹהֵ֥ג בָּֽם׃ וּפָרָ֤ה וָדֹב֙ תִּרְעֶ֔ינָה יַחְדָּ֖ו יִרְבְּצ֣וּ יַלְדֵיהֶ֑ן וְאַרְיֵ֖ה כַּבָּקָ֥ר יֹאכַל־תֶּֽבֶן׃ וְשִֽׁעֲשַׁ֥ע יוֹנֵ֖ק עַל־חֻ֣ר פָּ֑תֶן וְעַל֙ מְאוּרַ֣ת צִפְעוֹנִ֔י גָּמ֖וּל יָד֥וֹ הָדָֽה׃ לֹא־יָרֵ֥עוּ וְלֹֽא־יַשְׁחִ֖יתוּ בְּכׇל־הַ֣ר קׇדְשִׁ֑י כִּֽי־מָלְאָ֣ה הָאָ֗רֶץ דֵּעָה֙ אֶת־יְהֹוָ֔ה כַּמַּ֖יִם לַיָּ֥ם מְכַסִּֽים׃ וְהָיָה֙ בַּיּ֣וֹם הַה֔וּא שֹׁ֣רֶשׁ יִשַׁ֗י אֲשֶׁ֤ר עֹמֵד֙ לְנֵ֣ס עַמִּ֔ים אֵלָ֖יו גּוֹיִ֣ם יִדְרֹ֑שׁוּ וְהָיְתָ֥ה מְנֻחָת֖וֹ כָּבֽוֹד׃ וְהָיָ֣ה׀ בַּיּ֣וֹם הַה֗וּא יוֹסִ֨יף אֲדֹנָ֤י׀שֵׁנִית֙ יָד֔וֹ לִקְנ֖וֹת אֶת־שְׁאָ֣ר עַמּ֑וֹ אֲשֶׁ֣ר יִשָּׁאֵר֩ מֵאַשּׁ֨וּר וּמִמִּצְרַ֜יִם וּמִפַּתְר֣וֹס וּמִכּ֗וּשׁ וּמֵעֵילָ֤ם וּמִשִּׁנְעָר֙ וּמֵ֣חֲמָ֔ת וּמֵאִיֵּ֖י הַיָּֽם׃ וְנָשָׂ֥א נֵס֙ לַגּוֹיִ֔ם וְאָסַ֖ף נִדְחֵ֣י יִשְׂרָאֵ֑ל וּנְפֻצ֤וֹת יְהוּדָה֙ יְקַבֵּ֔ץ מֵאַרְבַּ֖ע כַּנְפ֥וֹת הָאָֽרֶץ׃ וְסָ֙רָה֙ קִנְאַ֣ת אֶפְרַ֔יִם וְצֹרְרֵ֥י יְהוּדָ֖ה יִכָּרֵ֑תוּ אֶפְרַ֙יִם֙ לֹא־יְקַנֵּ֣א אֶת־יְהוּדָ֔ה וִיהוּדָ֖ה לֹא־יָצֹ֥ר אֶת־אֶפְרָֽיִם׃ וְעָפ֨וּ בְכָתֵ֤ף פְּלִשְׁתִּים֙ יָ֔מָּה יַחְדָּ֖ו יָבֹ֣זּוּ אֶת־בְּנֵי־קֶ֑דֶם אֱד֤וֹם וּמוֹאָב֙ מִשְׁל֣וֹחַ יָדָ֔ם וּבְנֵ֥י עַמּ֖וֹן מִשְׁמַעְתָּֽם׃ וְהֶחֱרִ֣ים יְהֹוָ֗ה אֵ֚ת לְשׁ֣וֹן יָם־מִצְרַ֔יִם וְהֵנִ֥יף יָד֛וֹ עַל־הַנָּהָ֖ר בַּעְיָ֣ם רוּח֑וֹ וְהִכָּ֙הוּ֙ לְשִׁבְעָ֣ה נְחָלִ֔ים וְהִדְרִ֖יךְ בַּנְּעָלִֽים׃ וְהָיְתָ֣ה מְסִלָּ֔ה לִשְׁאָ֣ר עַמּ֔וֹ אֲשֶׁ֥ר יִשָּׁאֵ֖ר מֵאַשּׁ֑וּר כַּאֲשֶׁ֤ר הָֽיְתָה֙ לְיִשְׂרָאֵ֔ל בְּי֥וֹם עֲלֹת֖וֹ מֵאֶ֥רֶץ מִצְרָֽיִם׃וְאָֽמַרְתָּ֙ בַּיּ֣וֹם הַה֔וּא אוֹדְךָ֣ יְהֹוָ֔ה כִּ֥י אָנַ֖פְתָּ בִּ֑י יָשֹׁ֥ב אַפְּךָ֖ וּֽתְנַחֲמֵֽנִי׃ הִנֵּ֨ה אֵ֧ל יְשׁוּעָתִ֛י אֶבְטַ֖ח וְלֹ֣א אֶפְחָ֑ד כִּֽי־עׇזִּ֤י וְזִמְרָת֙ יָ֣הּ יְהֹוָ֔ה וַֽיְהִי־לִ֖י לִישׁוּעָֽה׃ וּשְׁאַבְתֶּם־מַ֖יִם בְּשָׂשׂ֑וֹן מִמַּעַיְנֵ֖י הַיְשׁוּעָֽה׃ וַאֲמַרְתֶּ֞ם בַּיּ֣וֹם הַה֗וּא הוֹד֤וּ לַֽיהֹוָה֙ קִרְא֣וּ בִשְׁמ֔וֹ הוֹדִ֥יעוּ בָעַמִּ֖ים עֲלִילֹתָ֑יו הַזְכִּ֕ירוּ כִּ֥י נִשְׂגָּ֖ב שְׁמֽוֹ׃ זַמְּר֣וּ יְהֹוָ֔ה כִּ֥י גֵא֖וּת עָשָׂ֑ה [מוּדַ֥עַת] זֹ֖את בְּכׇל־הָאָֽרֶץ׃ צַהֲלִ֥י וָרֹ֖נִּי יוֹשֶׁ֣בֶת צִיּ֑וֹן כִּי־גָד֥וֹל בְּקִרְבֵּ֖ךְ קְד֥וֹשׁ יִשְׂרָאֵֽל׃
+
+ENGLISH:
+But a shoot shall grow out of the stump of Jesse, A twig shall sprout from his stock. The spirit of GOD shall alight upon him: A spirit of wisdom and insight, A spirit of counsel and valor, A spirit of devotion and reverence for GOD. He shall sense the truth by his reverence for GOD: He shall not judge by what his eyes behold, Nor decide by what his ears perceive. Thus he shall judge the poor with equity And decide with justice for the lowly of the land. He shall strike down a land with the rod of his mouth And slay the wicked with the breath of his lips. Justice shall be the girdle of his loins, And faithfulness the girdle of his waist. The wolf shall dwell with the lamb, The leopard lie down with the kid; The calf, the beast of prey, and the fatling together, With a little child to herd them. The cow and the bear shall graze, Their young shall lie down together; And the lion, like the ox, shall eat straw. A babe shall play Over a vipers hole, And an infant pass its hand Over an adders den. In all of My sacred mount Nothing evil or vile shall be done; For the land shall be filled with devotion to GOD As water covers the sea. In that day, The stock of Jesse that has remained standing Shall become a standard to peoples- Nations shall seek his counsel And his abode shall be honored. In that day, my Sovereign will apply a divine hand again to redeeming the other part of this people from Assyria-as also from Egypt, Pathros, Cush, Elam, Shinar, Hamath, and the coastlands. [God] will hold up a signal to the nations And assemble the banished of Israel, And gather the dispersed of Judah From the four corners of the earth. Then Ephraims envy shall cease And Judahs harassment shall end; Ephraim shall not envy Judah, And Judah shall not harass Ephraim. They shall pounce on the back of Philistia to the west, And together plunder the peoples of the east; Edom and Moab shall be subject to them And the children of Ammon shall obey them. GOD will dry up the tongue of the Egyptian sea-and will raise a hand over the Euphrates with a mighty wind and break it into seven wadis, so that it can be trodden dry-shod. Thus there shall be a highway for the other part of this people out of Assyria, such as there was for Israel when it left the land of Egypt. In that day, you shall say: I give thanks to You, O GOD! Although You were wroth with me, Your wrath has turned back and You comfort me. Behold the God who gives me triumph! I am confident, unafraid; For Yah . -GOD-is my strength and might, And has been my deliverance. Joyfully shall you draw water From the fountains of triumph, And you shall say on that day: Praise GOD, proclaim the divine name. Make Gods deeds known among the peoples; Declare that the divine name is exalted. Hymn GOD, Who has done gloriously; Let this be made known In all the world! Oh, shout for joy, You who dwell in Zion! For great in your midst Is the Holy One of Israel.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Prophecy of a future ruler and restored people.",
+    "heb_summary": "נבואת מנהיג עתידי ועם ששב.",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jesse"
+        },
+        {
+          "en_name": "Yah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Zion"
+        },
+        {
+          "en_name": "Sacred Mount"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Ephraim"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Assyria"
+        },
+        {
+          "en_name": "Pathros"
+        },
+        {
+          "en_name": "Cush"
+        },
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Shinar"
+        },
+        {
+          "en_name": "Hamath"
+        },
+        {
+          "en_name": "Philistia"
+        },
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Ammon"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shoot"
+        },
+        {
+          "en_name": "Twig"
+        },
+        {
+          "en_name": "Spirit Of God"
+        },
+        {
+          "en_name": "Rod Of His Mouth"
+        },
+        {
+          "en_name": "Breath Of His Lips"
+        },
+        {
+          "en_name": "Girdle Of His Loins"
+        },
+        {
+          "en_name": "Girdle Of His Waist"
+        },
+        {
+          "en_name": "Standard To Peoples"
+        },
+        {
+          "en_name": "Signal To Nations"
+        },
+        {
+          "en_name": "Highway"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}

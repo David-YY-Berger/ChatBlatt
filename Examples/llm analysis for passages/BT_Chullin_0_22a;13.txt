@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2874 approx cost usd = $0.001044 (Prompt=2783, Completion=91)
+SOURCE:
+Chullin 22a:13  (BT_Chullin_0_22a:13)
+
+HEBREW:
+מתני׳ כשר בתורין פסול בבני יונה כשר בבני יונה פסול בתורין תחלת הציהוב בזה ובזה פסול:
+
+ENGLISH:
+MISHNA: It is written with regard to bird offerings: He shall bring his offering of doves, or of young pigeons (Leviticus 1:14). The age that is fit for sacrifice in doves, mature birds, is unfit for sacrifice in pigeons, immature birds;the age that is fit for sacrifice in pigeons is unfit for sacrifice in doves. At the intermediate stage of the beginning of the yellowing of its plumage (see 22b), a bird is unfit both as this, a pigeon, and as that, a dove, since it is no longer a fledgling but is not yet a mature bird.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Bird offerings age affects fitness for sacrifice.",
+    "heb_summary": "גיל קורבנות הציפור משפיע על התאמתו להקרבה.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "TribeOfIsrael": [],
+      "Symbol": [
+        {
+          "en_name": "Doves"
+        },
+        {
+          "en_name": "Young Pigeons"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}
