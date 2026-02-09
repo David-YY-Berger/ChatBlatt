@@ -211,13 +211,12 @@ class DBPopulateSourceContent(DBParentClass):
     ############################################# One time use (upon DB reset) ############################################################
 
     def test_convert_index_from_BSON_to_JSON(self):
-        # pre
-        self.test_path = Paths.get_test_output_path(inspect.currentframe().f_code.co_name, Enums.FileType.JSON.name)
-        # body
 
         # Define paths
-        input_bson_path = r"/mongo_bson_sefaria/passage.bson"
-        output_json_path = os.path.join(Paths.TESTS_DIR, "BT_passages_index.json")  # Ensure Paths.TESTS_DIR is defined
+        # input_bson_path = r"/mongo_bson_sefaria/passage.bson"
+        input_bson_path = r"/DB_backups/atlas_backup_20260209_110502_TN_BT_contents.bson.gz"
+        # output_json_path = os.path.join(Paths.TESTS_DIR, "BT_passages_index.json")  # Ensure Paths.TESTS_DIR is defined
+        output_json_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\DB_backups\converted_backup.json"
 
         # Convert BSON to JSON
         JsonWriter.bson_to_json(input_bson_path, output_json_path)
