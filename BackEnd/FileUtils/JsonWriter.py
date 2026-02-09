@@ -1,3 +1,5 @@
+import base64
+import gzip
 import json
 import bson
 from bson import ObjectId
@@ -61,26 +63,26 @@ class JsonWriter:
 
     @staticmethod
     def bson_to_json(input_bson_path: str, output_json_path: str):
-        """Convert a BSON file to a JSON file, handling MongoDB ObjectId."""
+        """Convert a gzipped BSON file to JSON, handling ObjectIds and Bytes."""
+        data = []
 
-        # Read BSON file
-        with open(input_bson_path, "rb") as bson_file:
-            data = bson.decode_all(bson_file.read())
+        with gzip.open(input_bson_path, "rb") as bson_file:
+            for doc in bson.decode_file_iter(bson_file):
+                data.append(doc)
 
-        # Convert ObjectId to string
         def convert_mongo_types(obj):
-            if isinstance(obj, ObjectId):  # Convert ObjectId to string
+            if isinstance(obj, ObjectId):
                 return str(obj)
-            elif isinstance(obj, dict):  # Recursively handle nested dictionaries
+            elif isinstance(obj, bytes):
+                # Convert bytes to a base64 string so JSON can save it
+                return base64.b64encode(obj).decode('utf-8')
+            elif isinstance(obj, dict):
                 return {k: convert_mongo_types(v) for k, v in obj.items()}
-            elif isinstance(obj, list):  # Recursively handle lists
+            elif isinstance(obj, list):
                 return [convert_mongo_types(i) for i in obj]
-            return obj  # Return other types as-is
+            return obj
 
-        data = convert_mongo_types(data)  # Apply conversion
+        data = convert_mongo_types(data)
 
-        # Write to JSON file
         with open(output_json_path, "w", encoding="utf-8") as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
-
-        print(f"Converted {input_bson_path} to {output_json_path}")
