@@ -91,7 +91,7 @@ class DBapiInterface(ABC):
 
     # ----------------------------- Source Content ----------------------------------
 
-    def insert_source(self, result : SourceContent, ref, start_index):
+    def insert_source_content(self, result : SourceContent, ref, start_index):
         en = result.content[SourceContentType.EN.value]
         heb = result.content[SourceContentType.HEB.value]
 

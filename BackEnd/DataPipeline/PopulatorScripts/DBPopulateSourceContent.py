@@ -42,7 +42,7 @@ class DBPopulateSourceContent(DBParentClass):
     ############################################ Populator Scripts ######################################################
 
     def test_populate_BT_and_TN_to_db(self):
-        self.fetch_and_init_process_sefaria_passages(self.db_api.insert_source, 0)
+        self.fetch_and_init_process_sefaria_passages(self.db_api.insert_source_content, 0)
 
     def test_delete_all_collections(self):
         # dangerous! be careful
