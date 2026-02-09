@@ -3,7 +3,7 @@ import json
 import time
 from pathlib import Path
 
-from BackEnd.DataPipeline.DB.DBFactory import DBFactory
+from BackEnd.DB.DBFactory import DBFactory
 from BackEnd.FileUtils import OsFunctions
 from BackEnd.General import Paths
 

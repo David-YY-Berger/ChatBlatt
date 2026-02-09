@@ -8,10 +8,9 @@ from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
-from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
-from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
+from BackEnd.DB.Collections import CollectionObjs, Collection
+from BackEnd.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 # from BackEnd.General.Logger import Logger
 from typing_extensions import override

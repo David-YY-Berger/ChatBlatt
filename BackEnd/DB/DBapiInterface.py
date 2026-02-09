@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
@@ -7,7 +6,7 @@ from BackEnd.DataObjects.SourceClasses import SourceContent
 from BackEnd.DataObjects.Enums import SourceType, SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs, Collection
+from BackEnd.DB.Collections import CollectionObjs, Collection
 
 
 class DBapiInterface(ABC):

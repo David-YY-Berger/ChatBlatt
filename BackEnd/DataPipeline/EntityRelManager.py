@@ -1,10 +1,9 @@
-from typing import Iterable, Dict, List
+from typing import Dict, List
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
 from BackEnd.DataObjects.Enums import EntityType, SourceType
 from BackEnd.DataObjects.Rel import Rel
-from BackEnd.DataPipeline.DB.DBFactory import DBFactory
-from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
+from BackEnd.DB.DBFactory import DBFactory
 from BackEnd.General.Decorators import singleton
 
 

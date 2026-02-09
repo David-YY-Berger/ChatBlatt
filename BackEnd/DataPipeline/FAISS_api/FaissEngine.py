@@ -2,12 +2,10 @@ import faiss
 import pickle
 from typing import List, Dict
 
-from bson import Binary
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
-from BackEnd.DataPipeline.DB import DBapiInterface
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs
+from BackEnd.DB.Collections import CollectionObjs
 
 
 class FaissEngine:

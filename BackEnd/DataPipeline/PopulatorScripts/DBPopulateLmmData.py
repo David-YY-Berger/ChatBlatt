@@ -2,11 +2,9 @@
 import asyncio
 import os
 
-from BackEnd.DataObjects.Enums import SourceContentType
 from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
-from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs
-from BackEnd.DataPipeline.DBParentClass import DBParentClass
+from BackEnd.DB.Collections import CollectionObjs
+from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
 from BackEnd.FileUtils import LocalPrinter, FileTypeEnum, OsFunctions

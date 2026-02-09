@@ -1,9 +1,7 @@
 # bs'd
-from BackEnd.DataObjects.Enums import SourceContentType
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs
-from BackEnd.DataPipeline.DBParentClass import DBParentClass
+from BackEnd.DB.Collections import CollectionObjs
+from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.FAISS_api import FaissEngine
-from BackEnd.General import miscFuncs
 
 
 class DBPopulateFaiss(DBParentClass):

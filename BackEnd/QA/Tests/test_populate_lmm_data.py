@@ -1,5 +1,5 @@
 # bs'd
-from BackEnd.DataPipeline.DBParentClass import DBParentClass
+from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
 
 

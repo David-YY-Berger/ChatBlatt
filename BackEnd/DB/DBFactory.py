@@ -4,8 +4,7 @@ import subprocess
 from datetime import datetime
 from dotenv import load_dotenv
 
-from BackEnd.DataPipeline.DB.DBapiInterface import DBapiInterface
-from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DB.DBapiMongoDB import DBapiMongoDB
 
 
 class DBFactory:

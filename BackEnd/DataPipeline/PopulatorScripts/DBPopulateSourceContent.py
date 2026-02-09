@@ -1,22 +1,15 @@
 import concurrent.futures
 import csv
 import re
-import unittest
-import os
 
-import unicodedata
 from bson import ObjectId
-from dotenv import load_dotenv
 
-from BackEnd.DataObjects import Enums
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs
-from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
-from BackEnd.DataPipeline.DBParentClass import DBParentClass
+from BackEnd.DB.Collections import CollectionObjs
+from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.DataFetchers.SefariaFetcher import SefariaFetcher
 from BackEnd.FileUtils.JsonWriter import JsonWriter
 from BackEnd.General import Paths, SystemFunctions, miscFuncs
-from BackEnd.FileUtils import OsFunctions, FileTypeEnum
-import inspect
+from BackEnd.FileUtils import OsFunctions
 from bs4 import BeautifulSoup
 
 from BackEnd.General.exceptions import InvalidDataError

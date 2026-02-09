@@ -1,16 +1,14 @@
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
-from BackEnd.DataPipeline.DB.Collections import CollectionObjs
-from BackEnd.DataPipeline.DB.DBFactory import DBFactory
-from BackEnd.DataPipeline.DB.DBapiMongoDB import DBapiMongoDB
+from BackEnd.DB.Collections import CollectionObjs
+from BackEnd.DB.DBFactory import DBFactory
+from BackEnd.DB.DBapiMongoDB import DBapiMongoDB
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.FAISS_api.FaissEngine import FaissEngine
 from BackEnd.DataObjects.Answer import Answer
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 from typing import Optional, List
-
-from BackEnd.DataObjects.SourceClasses import SourceContent
 
 
 # from your_module import DBapiMongoDB, FaissEngine, Question
