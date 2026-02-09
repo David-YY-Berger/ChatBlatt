@@ -138,13 +138,7 @@ class DBapiInterface(ABC):
         # Call the existing update method
         return self.update(collection, query, update)
 
-    def update_doc_field(
-            self,
-            doc: Dict[str, Any],
-            collection: CollectionObjs,
-            update_dict: Dict[str, Any],
-            action_desc: str = "update"
-    ) -> int:
+    def update_doc_field(self, doc: Dict[str, Any], collection: CollectionObjs, update_dict: Dict[str, Any], action_desc: str = "update") -> int:
         try:
             doc_key = doc.get('key')
             if not doc_key:
