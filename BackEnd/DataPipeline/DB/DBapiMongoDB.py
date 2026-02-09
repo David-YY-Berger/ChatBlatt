@@ -1,3 +1,7 @@
+import gzip
+from datetime import datetime
+
+import bson
 from bson import Binary
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -288,3 +292,34 @@ class DBapiMongoDB(DBapiInterface):
     @override
     def get_all_entities(self) -> List[Entity]:
         pass
+
+    # ----------------------------- DB Maintainance ------------------------------------
+    def get_backup_mongo_dump(self, output_filename: str = None):
+        """
+        Iterates through all initialized databases, fetches all documents,
+        and saves them into a compressed BSON archive.
+        """
+        if not self.client:
+            raise Exception("Database connection is not established.")
+
+        # Default filename with timestamp
+        if not output_filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_filename = f"atlas_backup_{timestamp}.bson.gz"
+
+        with gzip.open(output_filename, "wb") as f:
+            for db_name, db_obj in self.dbs.items():
+                for collection_name in db_obj.list_collection_names():
+                    collection = db_obj[collection_name]
+
+                    for doc in collection.find():
+                        # We store the db and coll info in a wrapper to make
+                        # restoration easier later
+                        wrapper = {
+                            "db": db_name,
+                            "coll": collection_name,
+                            "data": doc
+                        }
+                        f.write(bson.BSON.encode(wrapper))
+
+        return output_filename

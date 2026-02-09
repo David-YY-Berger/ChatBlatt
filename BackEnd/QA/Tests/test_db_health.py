@@ -23,9 +23,7 @@ class DatabaseHealthTests(DBParentClass):
     ###########################################  Misc Tests ##################################################33
 
     def test_foo(self):
-        # coll = self.db_api.get_collection(CollectionName.BT)
-        # result = coll.update_many({}, {"$unset": {"summary": ""}})
-        # print(result.modified_count)
+        # self.db_api.get_backup_mongo_dump()
         pass
 
     ###########################################  Source Tests ##################################################33
