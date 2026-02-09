@@ -106,8 +106,8 @@ class SearchHandler:
                 summary_en="no summary yet",
                 summary_heb="עוד לא הוספנו סיכום",
                 passage_types=[],
-                entities=[],
-                rels=[]
+                entity_keys=[],
+                rel_keys=[]
             )
 
             src_metadata_lst.append(src_meta)

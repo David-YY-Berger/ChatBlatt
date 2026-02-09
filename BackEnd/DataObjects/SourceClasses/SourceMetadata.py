@@ -13,16 +13,16 @@ class SourceMetadata(SourceClass):
     summary_en: Optional[str] = None
     summary_heb: Optional[str] = None
     passage_types: List[PassageType] = field(default_factory=list)
-    entities: Set[str] = field(default_factory=list)
-    rels: Set[str] = field(default_factory=list)
+    entity_keys: Set[str] = field(default_factory=list)
+    rel_keys: Set[str] = field(default_factory=list)
 
     def __post_init__(self):
         if self.passage_types is None:
             self.passage_types = []
-        if self.entities is None:
-            self.entities = set()
-        if self.rels is None:
-            self.rels = set()
+        if self.entity_keys is None:
+            self.entity_keys = set()
+        if self.rel_keys is None:
+            self.rel_keys = set()
 
         # Optional validation example
         if not isinstance(self.key, str):

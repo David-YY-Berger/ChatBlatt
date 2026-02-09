@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
+from pydantic import BaseModel
 from typing import List, Optional
 
 from BackEnd.DataObjects.Enums import EntityType
 
 
-@dataclass
-class Entity:
+
+class Entity(BaseModel):
     key: str
     display_en_name: str
     display_heb_name: str
-    en_names: List[str]
-    heb_names: List[str]
-    appearances: List[str] # source types
+    all_names: List[str]
     entityType: EntityType
     # optional:
-    alias: List[str] = field(default_factory=list)  # holds keys of other entities.. take from the Rel
+    alias_keys: List[str] = list()  # holds keys of other entities.. take from the Rel
     book_src: Optional[str] = None                 # to differ btw Tamar in bereishit and Tamar in Shmuel B
+    passage_count: Optional[int] = None

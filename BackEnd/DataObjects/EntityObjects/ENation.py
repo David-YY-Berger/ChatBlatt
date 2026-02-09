@@ -1,8 +1,8 @@
-from dataclasses import dataclass
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
+from BackEnd.DataObjects.Enums import EntityType
 
 
-@dataclass
 class ENation(Entity):
+    entityType: EntityType = EntityType.ENation
     pass
