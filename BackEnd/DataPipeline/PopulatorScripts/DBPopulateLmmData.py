@@ -237,7 +237,12 @@ Return only the final JSON.
 
         key_strs = [
             # amalek, joshua, moshe, etc.
-            'TN_Exodus_0_17:8-13',
+            # 'TN_Exodus_0_17:8-13',
+
+            # childOf (levi)
+            # 'TN_Exodus_0_6:14-25',
+            # descendantOf
+            'BT_Sanhedrin_0_96b:2-9',
 
             # amorites, kadesh, etc.
            # 'TN_Deuteronomy_0_1:41-2:1',

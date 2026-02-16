@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=3101 approx cost usd = $0.001081 (Prompt=2882, Completion=219)
+SOURCE:
+Deuteronomy 1:41-2:1  (TN_Deuteronomy_0_1:41-2:1)
+
+HEBREW:
+וַֽתַּעֲנ֣וּ׀ וַתֹּאמְר֣וּ אֵלַ֗י חָטָ֘אנוּ֮ לַיהֹוָה֒ אֲנַ֤חְנוּ נַעֲלֶה֙ וְנִלְחַ֔מְנוּ כְּכֹ֥ל אֲשֶׁר־צִוָּ֖נוּ יְהֹוָ֣ה אֱלֹהֵ֑ינוּ וַֽתַּחְגְּר֗וּ אִ֚ישׁ אֶת־כְּלֵ֣י מִלְחַמְתּ֔וֹ וַתָּהִ֖ינוּ לַעֲלֹ֥ת הָהָֽרָה׃ וַיֹּ֨אמֶר יְהֹוָ֜ה אֵלַ֗י אֱמֹ֤ר לָהֶם֙ לֹ֤א תַֽעֲלוּ֙ וְלֹא־תִלָּ֣חֲמ֔וּ כִּ֥י אֵינֶ֖נִּי בְּקִרְבְּכֶ֑ם וְלֹא֙ תִּנָּ֣גְפ֔וּ לִפְנֵ֖י אֹיְבֵיכֶֽם׃ וָאֲדַבֵּ֥ר אֲלֵיכֶ֖ם וְלֹ֣א שְׁמַעְתֶּ֑ם וַתַּמְרוּ֙ אֶת־פִּ֣י יְהֹוָ֔ה וַתָּזִ֖דוּ וַתַּעֲל֥וּ הָהָֽרָה׃ וַיֵּצֵ֨א הָאֱמֹרִ֜י הַיֹּשֵׁ֨ב בָּהָ֤ר הַהוּא֙ לִקְרַאתְכֶ֔ם וַיִּרְדְּפ֣וּ אֶתְכֶ֔ם כַּאֲשֶׁ֥ר תַּעֲשֶׂ֖ינָה הַדְּבֹרִ֑ים וַֽיַּכְּת֥וּ אֶתְכֶ֛ם בְּשֵׂעִ֖יר עַד־חׇרְמָֽה׃ וַתָּשֻׁ֥בוּ וַתִּבְכּ֖וּ לִפְנֵ֣י יְהֹוָ֑ה וְלֹֽא־שָׁמַ֤ע יְהֹוָה֙ בְּקֹ֣לְכֶ֔ם וְלֹ֥א הֶאֱזִ֖ין אֲלֵיכֶֽם׃ וַתֵּשְׁב֥וּ בְקָדֵ֖שׁ יָמִ֣ים רַבִּ֑ים כַּיָּמִ֖ים אֲשֶׁ֥ר יְשַׁבְתֶּֽם׃וַנֵּ֜פֶן וַנִּסַּ֤ע הַמִּדְבָּ֙רָה֙ דֶּ֣רֶךְ יַם־ס֔וּף כַּאֲשֶׁ֛ר דִּבֶּ֥ר יְהֹוָ֖ה אֵלָ֑י וַנָּ֥סׇב אֶת־הַר־שֵׂעִ֖יר יָמִ֥ים רַבִּֽים׃
+
+ENGLISH:
+You replied to me, saying, We stand guilty before HASHEM. We will go up now and fight, just as our God HASHEM commanded us. And [the men among] you each girded yourselves with war gear and recklessly uncertain. started for the hill country. But HASHEM said to me, Warn them: Do not go up and do not fight, since I am not in your midst; else you will be routed by your enemies. I spoke to you, but you would not listen; you flouted HASHEMs command and willfully marched into the hill country. Then the Amorites who lived in those hills came out against you like so many bees and chased you, and they crushed you at Hormah in Seir. Again you wept before HASHEM; but HASHEM would not heed your cry or give ear to you. Thus, after you had remained at Kadesh all that long time, we marched back into the wilderness by the way of the Sea of Reeds, as HASHEM had spoken to me, and skirted the hill country of Seir a long time.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Israelites fought Amorites against God's command and were routed.",
+    "heb_summary": "ישראל נלחמו באמורי בניגוד לפקודת האל ונוצחו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [],
+      "Place": [
+        {
+          "en_name": "Hill Country"
+        },
+        {
+          "en_name": "Hormah"
+        },
+        {
+          "en_name": "Seir"
+        },
+        {
+          "en_name": "Kadesh"
+        },
+        {
+          "en_name": "Wilderness"
+        },
+        {
+          "en_name": "Sea Of Reeds"
+        }
+      ],
+      "TribeOfIsrael": [],
+      "Nation": [
+        {
+          "en_name": "Amorites"
+        }
+      ],
+      "Symbol": []
+    },
+    "Rel": {
+      "personBelongsToNation": []
+    }
+  }
+}

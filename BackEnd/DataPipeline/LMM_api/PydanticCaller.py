@@ -32,9 +32,14 @@ class PydanticCaller:
                 "  NOT generic terms: nation, people, enemy, kingdom. "
                 f"- TribeOfIsrael: The 14 tribes are: {TRIBES_LIST_STR}. "
                 "  Always classify these as TribeOfIsrael. "
-                "Optimization: Do not include keys for lists or objects that are empty. "
-                "Only return populated data to save tokens. "
-                "Ensure all relationship terms reference actual entities extracted."
+                "LINEAGE RULES: "
+                "- childOf: Direct, adjacent parent-child links only. "
+                "- descendantOf: Non-adjacent 'jumps' (e.g., Jesus descendantOf David) or broken chains. "
+                "- EXCLUSIVITY: Never list a person as both childOf and descendantOf the same entity. "
+                "OPTIMIZATION RULES: "
+                "- Do not include keys for lists or objects that are empty. "
+                "- Only return populated data to save tokens. "
+                "- Ensure all relationship terms reference actual entities extracted."
             ),
             retries=0,
         )

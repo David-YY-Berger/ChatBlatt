@@ -394,6 +394,28 @@ class ExtractionResult(BaseModel):
 
         return self
 
+    @model_validator(mode='after')
+    def clean_descendant_logic(self):
+        """Removes descendantOf links that are already defined as childOf."""
+        if not self.Rel or not self.Rel.childOf or not self.Rel.descendantOf:
+            return self
+
+        # Create a set of (child, parent) tuples for fast lookup
+        direct_parents = {
+            (rel.term1, rel.term2) for rel in self.Rel.childOf
+        }
+
+        # Filter descendantOf to keep only those NOT in direct_parents
+        original_count = len(self.Rel.descendantOf)
+        self.Rel.descendantOf = [
+            rel for rel in self.Rel.descendantOf
+            if (rel.term1, rel.term2) not in direct_parents
+        ]
+
+        if len(self.Rel.descendantOf) < original_count:
+            logger.info(f"Removed redundant descendantOf links duplicated in childOf.")
+
+        return self
 
 class FinalResponse(BaseModel):
     res: ExtractionResult
