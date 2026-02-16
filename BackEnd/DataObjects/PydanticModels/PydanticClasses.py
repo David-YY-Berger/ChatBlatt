@@ -155,7 +155,6 @@ class Relationships(BaseModel):
     # Person → Place
     bornIn: Optional[List[Relation]] = Field(default_factory=list)
     diedIn: Optional[List[Relation]] = Field(default_factory=list)
-    residedIn: Optional[List[Relation]] = Field(default_factory=list)
     visited: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person → TribeOfIsrael
@@ -251,7 +250,6 @@ class ExtractionResult(BaseModel):
             # Person → Place
             'bornIn': ('Person', 'Place'),
             'diedIn': ('Person', 'Place'),
-            'residedIn': ('Person', 'Place'),
             'visited': ('Person', 'Place'),
 
             # Person → TribeOfIsrael

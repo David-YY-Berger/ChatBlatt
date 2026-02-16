@@ -72,7 +72,6 @@ class RelType(DescribedEnum):
     # Person → Place
     bornIn = ("PL01", "bornIn")
     diedIn = ("PL02", "diedIn")
-    residedIn = ("PL03", "residedIn")
     visited = ("PL04", "visited")
 
     # Person → TribeOfIsrael

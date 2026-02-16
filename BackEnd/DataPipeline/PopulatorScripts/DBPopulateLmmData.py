@@ -39,7 +39,6 @@ class DBPopulateLmmData(DBParentClass):
           "descendantOf": [ { "term1": "", "term2": "" }, ... ],
           "bornIn": [ { "term1": "", "term2": "" }, ... ],
           "diedIn": [ { "term1": "", "term2": "" }, ... ],
-          "residedIn": [ { "term1": "", "term2": "" }, ... ],
           "visited": [ { "term1": "", "term2": "" }, ... ],
           "personToTribeOfIsrael": [ { "term1": "", "term2": "" }, ... ],
           "personBelongsToNation": [ { "term1": "", "term2": "" }, ... ],
@@ -79,7 +78,7 @@ Person ↔ Person:
 studiedFrom, siblingWith, childOf, spouseOf, descendantOf
 
 Person → Place:
-bornIn, diedIn, residedIn, visited
+bornIn, diedIn, visited
 
 Person → TribeOfIsrael:
 personToTribeOfIsrael
