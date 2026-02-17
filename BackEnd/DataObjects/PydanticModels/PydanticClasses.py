@@ -133,8 +133,8 @@ class Entities(BaseModel):
 
 # --- Relationship Models ---
 class Relation(BaseModel):
-    term1: str = Field(min_length=1, description="First entity in relationship")
-    term2: str = Field(min_length=1, description="Second entity in relationship")
+    term1: str = Field(min_length=1, description="Subject (e.g., Student, Child, Sibling A)")
+    term2: str = Field(min_length=1, description="Object (e.g., Teacher, Parent, Sibling B)")
 
     @field_validator('term1', 'term2')
     @classmethod

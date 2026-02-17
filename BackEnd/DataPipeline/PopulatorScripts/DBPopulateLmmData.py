@@ -236,13 +236,23 @@ Return only the final JSON.
         # took sources from file:///C:/Users/U6072661/AppData/Local/Chatblatt/Tests/Questions/fight.html
 
         key_strs = [
-            # amalek, joshua, moshe, etc.
-            # 'TN_Exodus_0_17:8-13',
 
             # childOf (levi)
             # 'TN_Exodus_0_6:14-25',
+
             # descendantOf
-            'BT_Sanhedrin_0_96b:2-9',
+            # 'BT_Sanhedrin_0_96b:2-9',
+
+            # spouseOf
+            # 'TN_Genesis_0_30:3-8'
+
+            # studiedFrom
+            'BT_Eruvin_0_45a:12-19',
+
+            # amalek, joshua, moshe, etc.
+            # 'TN_Exodus_0_17:8-13',
+
+
 
             # amorites, kadesh, etc.
            # 'TN_Deuteronomy_0_1:41-2:1',
@@ -257,8 +267,6 @@ Return only the final JSON.
             # tribes:
             # 'TN_Isaiah_0_11:1–12:6',
         #
-        #     gemara, rabbi studying for other rabbi, etc
-        #     'BT_Eruvin_0_45a:12-19',
 
         #     test just for html clean:
         #     'TN_Deuteronomy_0_32:7-12',

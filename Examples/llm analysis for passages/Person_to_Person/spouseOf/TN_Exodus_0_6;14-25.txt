@@ -1,0 +1,300 @@
+﻿COST: Tokens: Total=4419 approx cost usd = $0.001126 (Prompt=3002, Completion=1417)
+SOURCE:
+Exodus 6:14-25  (TN_Exodus_0_6:14-25)
+
+HEBREW:
+אֵ֖לֶּה רָאשֵׁ֣י בֵית־אֲבֹתָ֑ם בְּנֵ֨י רְאוּבֵ֜ן בְּכֹ֣ר יִשְׂרָאֵ֗ל חֲנ֤וֹךְ וּפַלּוּא֙ חֶצְרֹ֣ן וְכַרְמִ֔י אֵ֖לֶּה מִשְׁפְּחֹ֥ת רְאוּבֵֽן׃ וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֨ל וְיָמִ֤ין וְאֹ֙הַד֙ וְיָכִ֣ין וְצֹ֔חַר וְשָׁא֖וּל בֶּן־הַֽכְּנַעֲנִ֑ית אֵ֖לֶּה מִשְׁפְּחֹ֥ת שִׁמְעֽוֹן׃ וְאֵ֨לֶּה שְׁמ֤וֹת בְּנֵֽי־לֵוִי֙ לְתֹ֣לְדֹתָ֔ם גֵּרְשׁ֕וֹן וּקְהָ֖ת וּמְרָרִ֑י וּשְׁנֵי֙ חַיֵּ֣י לֵוִ֔י שֶׁ֧בַע וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה׃ בְּנֵ֥י גֵרְשׁ֛וֹן לִבְנִ֥י וְשִׁמְעִ֖י לְמִשְׁפְּחֹתָֽם׃ וּבְנֵ֣י קְהָ֔ת עַמְרָ֣ם וְיִצְהָ֔ר וְחֶבְר֖וֹן וְעֻזִּיאֵ֑ל וּשְׁנֵי֙ חַיֵּ֣י קְהָ֔ת שָׁלֹ֧שׁ וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה׃ וּבְנֵ֥י מְרָרִ֖י מַחְלִ֣י וּמוּשִׁ֑י אֵ֛לֶּה מִשְׁפְּחֹ֥ת הַלֵּוִ֖י לְתֹלְדֹתָֽם׃ וַיִּקַּ֨ח עַמְרָ֜ם אֶת־יוֹכֶ֤בֶד דֹּֽדָתוֹ֙ ל֣וֹ לְאִשָּׁ֔ה וַתֵּ֣לֶד ל֔וֹ אֶֽת־אַהֲרֹ֖ן וְאֶת־מֹשֶׁ֑ה וּשְׁנֵי֙ חַיֵּ֣י עַמְרָ֔ם שֶׁ֧בַע וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה׃ וּבְנֵ֖י יִצְהָ֑ר קֹ֥רַח וָנֶ֖פֶג וְזִכְרִֽי׃ וּבְנֵ֖י עֻזִּיאֵ֑ל מִֽישָׁאֵ֥ל וְאֶלְצָפָ֖ן וְסִתְרִֽי׃ וַיִּקַּ֨ח אַהֲרֹ֜ן אֶת־אֱלִישֶׁ֧בַע בַּת־עַמִּינָדָ֛ב אֲח֥וֹת נַחְשׁ֖וֹן ל֣וֹ לְאִשָּׁ֑ה וַתֵּ֣לֶד ל֗וֹ אֶת־נָדָב֙ וְאֶת־אֲבִיה֔וּא אֶת־אֶלְעָזָ֖ר וְאֶת־אִֽיתָמָֽר׃ וּבְנֵ֣י קֹ֔רַח אַסִּ֥יר וְאֶלְקָנָ֖ה וַאֲבִיאָסָ֑ף אֵ֖לֶּה מִשְׁפְּחֹ֥ת הַקׇּרְחִֽי׃ וְאֶלְעָזָ֨ר בֶּֽן־אַהֲרֹ֜ן לָקַֽח־ל֨וֹ מִבְּנ֤וֹת פּֽוּטִיאֵל֙ ל֣וֹ לְאִשָּׁ֔ה וַתֵּ֥לֶד ל֖וֹ אֶת־פִּֽינְחָ֑ס אֵ֗לֶּה רָאשֵׁ֛י אֲב֥וֹת הַלְוִיִּ֖ם לְמִשְׁפְּחֹתָֽם׃
+
+ENGLISH:
+The following are the heads of their respective clans. The sons of Reuben, Israels first-born: Enoch and Pallu, Hezron and Carmi; those are the families of Reuben. The sons of Simeon: Jemuel, Jamin, Ohad, Jachin, Zohar, and Saul the son of a Canaanite woman; those are the families of Simeon. These are the names of Levis sons by their lineage: Gershon, Kohath, and Merari; and the span of Levis life was 137 years. The sons of Gershon: Libni and Shimei, by their families. The sons of Kohath: Amram, Izhar, Hebron, and Uzziel; and the span of Kohaths life was 133 years. The sons of Merari: Mahli and Mushi. These are the families of the Levites by their lineage. Amram took into his [household] as wife his fathers sister Jochebed, and she bore him Aaron and Moses; and the span of Amrams life was 137 years. The sons of Izhar: Korah, Nepheg, and Zichri. The sons of Uzziel: Mishael, Elzaphan, and Sithri. Aaron took into his [household] as wife Elisheba, daughter of Amminadab and sister of Nahshon, and she bore him Nadab and Abihu, Eleazar and Ithamar. The sons of Korah: Assir, Elkanah, and Abiasaph. Those are the families of the Korahites. And Aarons son Eleazar took into his [household] as wife one of Putiels daughters, and she bore him Phinehas. Those are the heads of the ancestral houses of the Levites by their families.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Genealogy of Reuben, Simeon, Levi, and their descendants.",
+    "heb_summary": "ייחוס ראובן, שמעון, לוי וצאצאיהם.",
+    "passage_types": [
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Enoch"
+        },
+        {
+          "en_name": "Pallu"
+        },
+        {
+          "en_name": "Hezron"
+        },
+        {
+          "en_name": "Carmi"
+        },
+        {
+          "en_name": "Jemuel"
+        },
+        {
+          "en_name": "Jamin"
+        },
+        {
+          "en_name": "Ohad"
+        },
+        {
+          "en_name": "Jachin"
+        },
+        {
+          "en_name": "Zohar"
+        },
+        {
+          "en_name": "Saul"
+        },
+        {
+          "en_name": "Gershon"
+        },
+        {
+          "en_name": "Kohath"
+        },
+        {
+          "en_name": "Merari"
+        },
+        {
+          "en_name": "Libni"
+        },
+        {
+          "en_name": "Shimei"
+        },
+        {
+          "en_name": "Amram"
+        },
+        {
+          "en_name": "Izhar"
+        },
+        {
+          "en_name": "Hebron"
+        },
+        {
+          "en_name": "Uzziel"
+        },
+        {
+          "en_name": "Mahli"
+        },
+        {
+          "en_name": "Mushi"
+        },
+        {
+          "en_name": "Jochebed"
+        },
+        {
+          "en_name": "Aaron"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Korah"
+        },
+        {
+          "en_name": "Nepheg"
+        },
+        {
+          "en_name": "Zichri"
+        },
+        {
+          "en_name": "Mishael"
+        },
+        {
+          "en_name": "Elzaphan"
+        },
+        {
+          "en_name": "Sithri"
+        },
+        {
+          "en_name": "Elisheba"
+        },
+        {
+          "en_name": "Amminadab"
+        },
+        {
+          "en_name": "Nahshon"
+        },
+        {
+          "en_name": "Nadab"
+        },
+        {
+          "en_name": "Abihu"
+        },
+        {
+          "en_name": "Eleazar"
+        },
+        {
+          "en_name": "Ithamar"
+        },
+        {
+          "en_name": "Assir"
+        },
+        {
+          "en_name": "Elkanah"
+        },
+        {
+          "en_name": "Abiasaph"
+        },
+        {
+          "en_name": "Putiel"
+        },
+        {
+          "en_name": "Phinehas"
+        }
+      ],
+      "Place": [],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        }
+      ],
+      "Nation": [],
+      "Symbol": []
+    },
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "Libni",
+          "term2": "Gershon"
+        },
+        {
+          "term1": "Shimei",
+          "term2": "Gershon"
+        },
+        {
+          "term1": "Amram",
+          "term2": "Kohath"
+        },
+        {
+          "term1": "Izhar",
+          "term2": "Kohath"
+        },
+        {
+          "term1": "Hebron",
+          "term2": "Kohath"
+        },
+        {
+          "term1": "Uzziel",
+          "term2": "Kohath"
+        },
+        {
+          "term1": "Mahli",
+          "term2": "Merari"
+        },
+        {
+          "term1": "Mushi",
+          "term2": "Merari"
+        },
+        {
+          "term1": "Aaron",
+          "term2": "Amram"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Amram"
+        },
+        {
+          "term1": "Korah",
+          "term2": "Izhar"
+        },
+        {
+          "term1": "Nepheg",
+          "term2": "Izhar"
+        },
+        {
+          "term1": "Zichri",
+          "term2": "Izhar"
+        },
+        {
+          "term1": "Mishael",
+          "term2": "Uzziel"
+        },
+        {
+          "term1": "Elzaphan",
+          "term2": "Uzziel"
+        },
+        {
+          "term1": "Sithri",
+          "term2": "Uzziel"
+        },
+        {
+          "term1": "Nadab",
+          "term2": "Aaron"
+        },
+        {
+          "term1": "Abihu",
+          "term2": "Aaron"
+        },
+        {
+          "term1": "Eleazar",
+          "term2": "Aaron"
+        },
+        {
+          "term1": "Ithamar",
+          "term2": "Aaron"
+        },
+        {
+          "term1": "Assir",
+          "term2": "Korah"
+        },
+        {
+          "term1": "Elkanah",
+          "term2": "Korah"
+        },
+        {
+          "term1": "Abiasaph",
+          "term2": "Korah"
+        },
+        {
+          "term1": "Phinehas",
+          "term2": "Eleazar"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jochebed",
+          "term2": "Amram"
+        },
+        {
+          "term1": "Elisheba",
+          "term2": "Aaron"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "Gershon",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Kohath",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Merari",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Amram",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Aaron",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Levi"
+        }
+      ]
+    }
+  }
+}
