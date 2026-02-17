@@ -138,10 +138,10 @@ class Relation(BaseModel):
 
     @field_validator('term1', 'term2')
     @classmethod
-    def validate_terms_not_empty(cls, v: str) -> str:
+    def normalize_terms(cls, v: str) -> str:
         if not v or not v.strip():
             raise ValueError("Relation terms cannot be empty or whitespace")
-        return v.strip()
+        return v.strip().title()  # Match Entity normalization
 
 
 class Relationships(BaseModel):
