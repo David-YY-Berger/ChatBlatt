@@ -170,13 +170,9 @@ class Relationships(BaseModel):
     # Place → Nation
     placeToNation: Optional[List[Relation]] = Field(default_factory=list)
 
-    # {anything} → Symbol
+    # {anything} → {anything}
     comparedTo: Optional[List[Relation]] = Field(default_factory=list)
     contrastedWith: Optional[List[Relation]] = Field(default_factory=list)
-
-    # {anything} → {anything}
-    alias: Optional[List[Relation]] = Field(default_factory=list)
-    aliasFromSages: Optional[List[Relation]] = Field(default_factory=list)
 
 
 # --- Root Response ---
@@ -265,13 +261,9 @@ class ExtractionResult(BaseModel):
             # Place → Nation
             'placeToNation': ('Place', 'Nation'),
 
-            # {anything} → Symbol
-            'comparedTo': (None, 'Symbol'),
-            'contrastedWith': (None, 'Symbol'),
-
-            # {anything} → {anything} (no constraints)
-            'alias': (None, None),
-            'aliasFromSages': (None, None),
+            # {anything} → {anything} (but both terms must be known entities)
+            'comparedTo': ('ANY', 'ANY'),
+            'contrastedWith': ('ANY', 'ANY'),
         }
 
         invalid_count = 0
@@ -303,11 +295,17 @@ class ExtractionResult(BaseModel):
                     reason = f"term2 '{rel.term2}' not in entities"
 
                 # Validate type constraints
-                elif term1_type:
+                elif term1_type and term1_type != 'ANY':
                     term1_entities = self.Entities.get_entities_by_type(term1_type)
                     if rel.term1 not in term1_entities:
                         is_valid = False
                         reason = f"term1 '{rel.term1}' not a {term1_type}"
+
+                    if is_valid and term2_type and term2_type != 'ANY':
+                        term2_entities = self.Entities.get_entities_by_type(term2_type)
+                        if rel.term2 not in term2_entities:
+                            is_valid = False
+                            reason = f"term2 '{rel.term2}' not a {term2_type}"
 
                 if is_valid and term2_type:
                     term2_entities = self.Entities.get_entities_by_type(term2_type)

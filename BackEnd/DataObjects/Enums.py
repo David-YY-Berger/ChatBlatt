@@ -87,13 +87,13 @@ class RelType(DescribedEnum):
     # Place → Nation
     placeToNation = ("LN01", "placeToNation")
 
-    # {anything} → Symbol
+    # {anything} → {anything}
     comparedTo = ("XS01", "comparedTo")
     contrastedWith = ("XS02", "contrastedWith")
 
     # {anything} → {anything}
-    alias = ("XX01", 'alias')
-    aliasFromSages = ("XX02", "aliasFromSages")
+    # alias = ("XX01", 'alias')
+    # aliasFromSages = ("XX02", "aliasFromSages")
 
 
 

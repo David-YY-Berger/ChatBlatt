@@ -1,0 +1,123 @@
+﻿COST: Tokens: Total=4742 approx cost usd = $0.001590 (Prompt=4240, Completion=502)
+SOURCE:
+Sanhedrin 94a:4-10  (BT_Sanhedrin_0_94a:4-10)
+
+HEBREW:
+״לְםַרְבֵּה הַמִּשְׂרָה וּלְשָׁלוֹם אֵין קֵץ וְגוֹ׳״. אָמַר רַבִּי תַּנְחוּם: דָּרַשׁ בַּר קַפָּרָא בְּצִיפּוֹרִי, מִפְּנֵי מָה כׇּל מֵם שֶׁבְּאֶמְצַע תֵּיבָה פָּתוּחַ, וְזֶה סָתוּם? בִּיקֵּשׁ הַקָּדוֹשׁ בָּרוּךְ הוּא לַעֲשׂוֹת חִזְקִיָּהוּ מָשִׁיחַ, וְסַנְחֵרִיב גּוֹג וּמָגוֹג.אָמְרָה מִדַּת הַדִּין לִפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא: רִבּוֹנוֹ שֶׁל עוֹלָם, וּמָה דָּוִד מֶלֶךְ יִשְׂרָאֵל שֶׁאָמַר כַּמָּה שִׁירוֹת וְתִשְׁבָּחוֹת לְפָנֶיךָ – לֹא עֲשִׂיתוֹ מָשִׁיחַ, חִזְקִיָּה שֶׁעָשִׂיתָ לוֹ כׇּל הַנִּסִּים הַלָּלוּ וְלֹא אָמַר שִׁירָה לְפָנֶיךָ – תַּעֲשֵׂהוּ מָשִׁיחַ? לְכָךְ נִסְתַּתֵּם.מִיָּד פָּתְחָה הָאָרֶץ וְאָמְרָה לְפָנָיו: רִבּוֹנוֹ שֶׁל עוֹלָם, אֲנִי אוֹמֶרֶת לְפָנֶיךָ שִׁירָה תַּחַת צַדִּיק זֶה, וַעֲשֵׂהוּ מָשִׁיחַ. פָּתְחָה וְאָמְרָה שִׁירָה לְפָנָיו, שֶׁנֶּאֱמַר: ״מִכְּנַף הָאָרֶץ זְמִרֹת שָׁמַעְנוּ צְבִי לַצַּדִּיק וְגוֹ׳״.אָמַר שַׂר הָעוֹלָם לְפָנָיו: רִבּוֹנוֹ שֶׁל עוֹלָם, צִבְיוֹנוֹ עֲשֵׂה לַצַּדִּיק זֶה! יָצְאָה בַּת קוֹל וְאָמְרָה: רָזִי לִי, רָזִי לִי. אָמַר נָבִיא: אוֹי לִי, אוֹי לִי, עַד מָתַי? יָצְאָה בַּת קוֹל וְאָמְרָה: ״בֹּגְדִים בָּגָדוּ וּבֶגֶד בּוֹגְדִים בָּגָדוּ״. וְאָמַר רָבָא, וְאִיתֵּימָא רַבִּי יִצְחָק: עַד דְּאָתוּ בָּזוֹזֵי וּבָזוֹזֵי דְּבָזוֹזֵי.״מַשָּׂא דּוּמָה אֵלַי קֹרֵא מִשֵּׂעִיר שֹׁמֵר מַה מִּלַּיְלָה שֹׁמֵר מַה מִּלֵּיל וְגוֹ׳״. אָמַר רַבִּי יוֹחָנָן: אוֹתוֹ מַלְאָךְ הַמְמוּנֶּה עַל הָרוּחוֹת דּוּמָה שְׁמוֹ. נִתְקַבְּצוּ כׇּל הָרוּחוֹת אֵצֶל דּוּמָה, אָמְרוּ לוֹ: ״שֹׁמֵר, מַה מִּלַּיְלָה? שֹׁמֵר, מַה מִּלֵּיל?״ ״אָמַר שֹׁמֵר אָתָא בֹקֶר וְגַם לָיְלָה אִם תִּבְעָיוּן בְּעָיוּ שֻׁבוּ אֵתָיוּ״.תָּנָא מִשּׁוּם רַבִּי פַּפְּיָיס: גְּנַאי הוּא לְחִזְקִיָּה וְסִייעָתוֹ שֶׁלֹּא אָמְרוּ שִׁירָה, עַד שֶׁפָּתְחָה הָאָרֶץ וְאָמְרָה שִׁירָה, שֶׁנֶּאֱמַר: ״מִכְּנַף הָאָרֶץ זְמִרֹת שָׁמַעְנוּ צְבִי לַצַּדִּיק וְגוֹ׳״. כַּיּוֹצֵא בַּדָּבָר אַתָּה אוֹמֵר: ״וַיֹּאמֶר יִתְרוֹ בָּרוּךְ ה׳ אֲשֶׁר הִצִּיל אֶתְכֶם״. תָּנָא מִשּׁוּם רַבִּי פַּפְּיָיס: גְּנַאי הוּא לְמֹשֶׁה וְשִׁשִּׁים רִיבּוֹא שֶׁלֹּא אָמְרוּ ״בָּרוּךְ״ עַד שֶׁבָּא יִתְרוֹ וְאָמַר ״בָּרוּךְ ה׳״.״וַיִּחַדְּ יִתְרוֹ״ – רַב וּשְׁמוּאֵל. רַב אָמַר: שֶׁהֶעֱבִיר חֶרֶב חַדָּה עַל בְּשָׂרוֹ, וּשְׁמוּאֵל אָמַר: שֶׁנַּעֲשָׂה חִדּוּדִים חִדּוּדִים כׇּל בְּשָׂרוֹ. אָמַר רַב: הַיְינוּ דְּאָמְרִי אִינָשֵׁי, גִּיּוֹרָא עַד עַשְׂרָה דָּרֵי לָא תִּבְזֵה אַרְמַאי קַמֵּיהּ.
+
+ENGLISH:
+Apropos Hezekiah, the Gemara cites that which is stated: That the government may be increased [ lemarbe ] and of peace there be no end, upon the throne of David, and upon his kingdom, to establish it and uphold it through justice and through righteousness, from now and forever; the zeal of the Lord of hosts does perform this (Isaiah 9:6). Rabbi Tanhum says that bar Kappara taught in Tzippori: Due to what reason is it that every letter mem in the middle of a word is open and this mem , of the word lemarbe , is closed? In the Masoretic text, the letter mem in the word lemarbe is written in the form of a mem that appears at the end of a word, closed on all four sides. This is because the Holy One, Blessed be He, sought to designate King Hezekiah as the Messiah and to designate Sennacherib and Assyria, respectively, as Gog and Magog, all from the prophecy of Ezekiel with regard to the end of days (Ezekiel, chapter 38), and the confrontation between them would culminate in the final redemption. The attribute of justice said before the Holy One, Blessed be He: Master of the Universe, and if with regard to David, king of Israel, who recited several songs and praises before You, You did not designate him as the Messiah, then with regard to Hezekiah, for whom You performed all these miracles, delivering him from Sennacherib and healing his illness, and he did not recite praise before You, will You designate him as the Messiah? It is for that reason that the mem was closed, because there was an opportunity for redemption that was thwarted. Immediately, the earth began and stated before Him: Master of the Universe, I will recite song before You in place of that righteous person, i.e., Hezekiah, and designate him as the Messiah. The earth began and recited a song before Him, as it is stated: From the uttermost part of the earth have we heard songs: Glory to the righteous. But I said, my secret is mine, my secret is mine, woe unto me. The treacherous deal treacherously; the treacherous deal very treacherously (Isaiah 24:16). The angel appointed to oversee the world said before Him: Master of the Universe, perform the will of this righteous person. A Divine Voice emerged and said: My secret is Mine, My secret is Mine; this matter will remain secret, as I am not yet bringing the redemption. The prophet said: Woe unto me, woe unto me; until when will the exile continue? A Divine Voice emerged and said: The treacherous deal treacherously; the treacherous deal very treacherously (Isaiah 24:16). And Rava, and some say Rabbi Yitzhak, says: Until looters and looters of looters come, the Messiah will not come.On a similar note, Isaiah said: The burden of Dumah. One calls to me out of Seir: Watchman, what of the night? Watchman, what of the night? The Watchman said: The morning comes and also the night; if you will inquire, inquire; return, come (Isaiah 21:11-12). Rabbi Yohanan says: That angel, who is appointed over the spirits [ seirim ], his name is Dumah. All the spirits assembled near Dumah and said to him: Watchman, what of the night? Watchman, what of the night? Does God, Guardian of Israel, say that the time for redemption has arrived? The angel answered: The Watchman said: The morning comes and also the night; if you will inquire, inquire; return, come. The Holy One, Blessed be He, said that the morning of redemption has come as well as the night of the exile. If you inquire and seek repentance, inquire and repent, and return to God and redemption will come. It was taught in the name of Rabbi Pappeyas: It is a disgrace for Hezekiah and his associates that they did not recite a song themselves and that a song was not recited until the earth began and recited a song, as it is stated: From the uttermost part of the earth have we heard songs: Glory to the righteous (Isaiah 24:16). On a similar note, you say: And Jethro said: Blessed be the Lord, Who has delivered you out of the hand of Egypt and out of the hand of Pharaoh (Exodus 18:10). It was taught in the name of Rabbi Pappeyas: It is a disgrace for Moses and the six hundred thousand adult men of the children of Israel whom he led out of Egypt that they did not say: Blessed, until Yitro came and said: Blessed be the Lord. It is written in the previous verse: Vayyihad Yitro for all the goodness that the Lord had done to Israel, whom He had delivered out of the hand of Egypt (Exodus 18:9). Rav and Shmuel disagreed with regard to the meaning of vayyihad . Rav says: He passed a sharp [ had ] sword over his flesh, i.e., he circumcised himself and converted. And Shmuel says: He felt as though cuts [ hiddudim ] were made over his flesh, i.e., he had an unpleasant feeling due to the downfall of Egypt. Rav says with regard to this statement of Shmuel that this is in accordance with the adage that people say: With regard to a convert, for ten generations after his conversion one should not disparage a gentile before him and his descendants, as they continue to identify somewhat with gentiles and remain sensitive to their pain.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Closed mem signifies thwarted redemption; earth sang praises for Hezekiah.",
+    "heb_summary": "מם סגור מסמל גאולה שסוכלה; הארץ שרה שבחים לחזקיהו.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hezekiah"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Sennacherib"
+        },
+        {
+          "en_name": "Ezekiel"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Rabbi Yitzhak"
+        },
+        {
+          "en_name": "Isaiah"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Pappeyas"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Jethro"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Shmuel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Tzippori"
+        },
+        {
+          "en_name": "Seir"
+        }
+      ],
+      "TribeOfIsrael": [],
+      "Nation": [
+        {
+          "en_name": "Assyria"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Gog"
+        },
+        {
+          "en_name": "Magog"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rava",
+          "term2": "Rabbi Yitzhak"
+        },
+        {
+          "term1": "Rav",
+          "term2": "Shmuel"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Hezekiah",
+          "term2": "David"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Sennacherib",
+          "term2": "Assyria"
+        }
+      ],
+      "alias": [
+        {
+          "term1": "Sennacherib",
+          "term2": "Gog"
+        },
+        {
+          "term1": "Assyria",
+          "term2": "Magog"
+        }
+      ]
+    }
+  }
+}

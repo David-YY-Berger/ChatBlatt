@@ -1,0 +1,305 @@
+﻿COST: Tokens: Total=4764 approx cost usd = $0.001369 (Prompt=3650, Completion=1114)
+SOURCE:
+Genesis 36:1-19  (TN_Genesis_0_36:1-19)
+
+HEBREW:
+וְאֵ֛לֶּה תֹּלְד֥וֹת עֵשָׂ֖ו ה֥וּא אֱדֽוֹם׃ עֵשָׂ֛ו לָקַ֥ח אֶת־נָשָׁ֖יו מִבְּנ֣וֹת כְּנָ֑עַן אֶת־עָדָ֗ה בַּת־אֵילוֹן֙ הַֽחִתִּ֔י וְאֶת־אׇהֳלִֽיבָמָה֙ בַּת־עֲנָ֔ה בַּת־צִבְע֖וֹן הַֽחִוִּֽי׃ וְאֶת־בָּשְׂמַ֥ת בַּת־יִשְׁמָעֵ֖אל אֲח֥וֹת נְבָיֽוֹת׃ וַתֵּ֧לֶד עָדָ֛ה לְעֵשָׂ֖ו אֶת־אֱלִיפָ֑ז וּבָ֣שְׂמַ֔ת יָלְדָ֖ה אֶת־רְעוּאֵֽל׃ וְאׇהֳלִֽיבָמָה֙ יָֽלְדָ֔ה אֶת־ (יעיש) וְאֶת־יַעְלָ֖ם וְאֶת־קֹ֑רַח אֵ֚לֶּה בְּנֵ֣י עֵשָׂ֔ו אֲשֶׁ֥ר יֻלְּדוּ־ל֖וֹ בְּאֶ֥רֶץ כְּנָֽעַן׃ וַיִּקַּ֣ח עֵשָׂ֡ו אֶת־נָ֠שָׁ֠יו וְאֶת־בָּנָ֣יו וְאֶת־בְּנֹתָיו֮ וְאֶת־כׇּל־נַפְשׁ֣וֹת בֵּיתוֹ֒ וְאֶת־מִקְנֵ֣הוּ וְאֶת־כׇּל־בְּהֶמְתּ֗וֹ וְאֵת֙ כׇּל־קִנְיָנ֔וֹ אֲשֶׁ֥ר רָכַ֖שׁ בְּאֶ֣רֶץ כְּנָ֑עַן וַיֵּ֣לֶךְ אֶל־אֶ֔רֶץ מִפְּנֵ֖י יַעֲקֹ֥ב אָחִֽיו׃ כִּֽי־הָיָ֧ה רְכוּשָׁ֛ם רָ֖ב מִשֶּׁ֣בֶת יַחְדָּ֑ו וְלֹ֨א יָֽכְלָ֜ה אֶ֤רֶץ מְגֽוּרֵיהֶם֙ לָשֵׂ֣את אֹתָ֔ם מִפְּנֵ֖י מִקְנֵיהֶֽם׃ וַיֵּ֤שֶׁב עֵשָׂו֙ בְּהַ֣ר שֵׂעִ֔יר עֵשָׂ֖ו ה֥וּא אֱדֽוֹם׃ וְאֵ֛לֶּה תֹּלְד֥וֹת עֵשָׂ֖ו אֲבִ֣י אֱד֑וֹם בְּהַ֖ר שֵׂעִֽיר׃ אֵ֖לֶּה שְׁמ֣וֹת בְּנֵֽי־עֵשָׂ֑ו אֱלִיפַ֗ז בֶּן־עָדָה֙ אֵ֣שֶׁת עֵשָׂ֔ו רְעוּאֵ֕ל בֶּן־בָּשְׂמַ֖ת אֵ֥שֶׁת עֵשָֽׂו׃ וַיִּהְי֖וּ בְּנֵ֣י אֱלִיפָ֑ז תֵּימָ֣ן אוֹמָ֔ר צְפ֥וֹ וְגַעְתָּ֖ם וּקְנַֽז׃ וְתִמְנַ֣ע׀ הָיְתָ֣ה פִילֶ֗גֶשׁ לֶֽאֱלִיפַז֙ בֶּן־עֵשָׂ֔ו וַתֵּ֥לֶד לֶאֱלִיפַ֖ז אֶת־עֲמָלֵ֑ק אֵ֕לֶּה בְּנֵ֥י עָדָ֖ה אֵ֥שֶׁת עֵשָֽׂו׃ וְאֵ֙לֶּה֙ בְּנֵ֣י רְעוּאֵ֔ל נַ֥חַת וָזֶ֖רַח שַׁמָּ֣ה וּמִזָּ֑ה אֵ֣לֶּה הָי֔וּ בְּנֵ֥י בָשְׂמַ֖ת אֵ֥שֶׁת עֵשָֽׂו׃ וְאֵ֣לֶּה הָי֗וּ בְּנֵ֨י אׇהֳלִיבָמָ֧ה בַת־עֲנָ֛ה בַּת־צִבְע֖וֹן אֵ֣שֶׁת עֵשָׂ֑ו וַתֵּ֣לֶד לְעֵשָׂ֔ו אֶת־ (יעיש) וְאֶת־יַעְלָ֖ם וְאֶת־קֹֽרַח׃ אֵ֖לֶּה אַלּוּפֵ֣י בְנֵֽי־עֵשָׂ֑ו בְּנֵ֤י אֱלִיפַז֙ בְּכ֣וֹר עֵשָׂ֔ו אַלּ֤וּף תֵּימָן֙ אַלּ֣וּף אוֹמָ֔ר אַלּ֥וּף צְפ֖וֹ אַלּ֥וּף קְנַֽז׃ אַלּֽוּף־קֹ֛רַח אַלּ֥וּף גַּעְתָּ֖ם אַלּ֣וּף עֲמָלֵ֑ק אֵ֣לֶּה אַלּוּפֵ֤י אֱלִיפַז֙ בְּאֶ֣רֶץ אֱד֔וֹם אֵ֖לֶּה בְּנֵ֥י עָדָֽה׃ וְאֵ֗לֶּה בְּנֵ֤י רְעוּאֵל֙ בֶּן־עֵשָׂ֔ו אַלּ֥וּף נַ֙חַת֙ אַלּ֣וּף זֶ֔רַח אַלּ֥וּף שַׁמָּ֖ה אַלּ֣וּף מִזָּ֑ה אֵ֣לֶּה אַלּוּפֵ֤י רְעוּאֵל֙ בְּאֶ֣רֶץ אֱד֔וֹם אֵ֕לֶּה בְּנֵ֥י בָשְׂמַ֖ת אֵ֥שֶׁת עֵשָֽׂו׃ וְאֵ֗לֶּה בְּנֵ֤י אׇהֳלִֽיבָמָה֙ אֵ֣שֶׁת עֵשָׂ֔ו אַלּ֥וּף יְע֛וּשׁ אַלּ֥וּף יַעְלָ֖ם אַלּ֣וּף קֹ֑רַח אֵ֣לֶּה אַלּוּפֵ֞י אׇהֳלִֽיבָמָ֛ה בַּת־עֲנָ֖ה אֵ֥שֶׁת עֵשָֽׂו׃ אֵ֧לֶּה בְנֵי־עֵשָׂ֛ו וְאֵ֥לֶּה אַלּוּפֵיהֶ֖ם ה֥וּא אֱדֽוֹם׃
+
+ENGLISH:
+This is the line of Esau-that is, Edom. Esau took his wives from among the Canaanite women-Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah daughter of Zibeon the Hivite - and also Basemath daughter of Ishmael and sister of Nebaioth. Adah bore to Esau Eliphaz; Basemath bore Reuel; and Oholibamah bore Jeush, Jalam, and Korah. Those were the sons of Esau, who were born to him in the land of Canaan. Esau took his wives, his sons and daughters, and all the members of his household, his cattle and all his livestock, and all the property that he had acquired in the land of Canaan, and went to another land because of his brother Jacob. For their possessions were too many for them to dwell together, and the land where they sojourned could not support them because of their livestock. So Esau settled in the hill country of Seir-Esau being Edom. This, then, is the line of Esau, the ancestor of the Edomites, in the hill country of Seir. These are the names of Esaus sons: Eliphaz, the son of Esaus wife Adah; Reuel, the son of Esaus wife Basemath. The sons of Eliphaz were Teman, Omar, Zepho, Gatam, and Kenaz. Timna was a concubine of Esaus son Eliphaz; she bore Amalek to Eliphaz. Those were the descendants of Esaus wife Adah. And these were the sons of Reuel: Nahath, Zerah, Shammah, and Mizzah. Those were the descendants of Esaus wife Basemath. And these were the sons of Esaus wife Oholibamah, daughter of Anah daughter of Zibeon: she bore to Esau Jeush, Jalam, and Korah. These are the clans of the sons of Esau. The descendants of Esaus first-born Eliphaz: the clans Teman, Omar, Zepho, Kenaz, Korah, Gatam, and Amalek; these are the clans of Eliphaz in the land of Edom. Those are the descendants of Adah. And these are the descendants of Esaus son Reuel: the clans Nahath, Zerah, Shammah, and Mizzah; these are the clans of Reuel in the land of Edom. Those are the descendants of Esaus wife Basemath. And these are the descendants of Esaus wife Oholibamah: the clans Jeush, Jalam, and Korah; these are the clans of Esaus wife Oholibamah, the daughter of Anah. Those were the sons of Esau-that is, Edom-and those are their clans.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Esau's descendants settled in Seir, the land of Edom.",
+    "heb_summary": "צאצאי עשיו התיישבו באדום, בהר שעיר.",
+    "passage_types": [
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Adah"
+        },
+        {
+          "en_name": "Elon"
+        },
+        {
+          "en_name": "Hittite"
+        },
+        {
+          "en_name": "Oholibamah"
+        },
+        {
+          "en_name": "Anah"
+        },
+        {
+          "en_name": "Zibeon"
+        },
+        {
+          "en_name": "Hivite"
+        },
+        {
+          "en_name": "Basemath"
+        },
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "Nebaioth"
+        },
+        {
+          "en_name": "Eliphaz"
+        },
+        {
+          "en_name": "Reuel"
+        },
+        {
+          "en_name": "Jeush"
+        },
+        {
+          "en_name": "Jalam"
+        },
+        {
+          "en_name": "Korah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Edomites"
+        },
+        {
+          "en_name": "Teman"
+        },
+        {
+          "en_name": "Omar"
+        },
+        {
+          "en_name": "Zepho"
+        },
+        {
+          "en_name": "Gatam"
+        },
+        {
+          "en_name": "Kenaz"
+        },
+        {
+          "en_name": "Timna"
+        },
+        {
+          "en_name": "Amalek"
+        },
+        {
+          "en_name": "Nahath"
+        },
+        {
+          "en_name": "Zerah"
+        },
+        {
+          "en_name": "Shammah"
+        },
+        {
+          "en_name": "Mizzah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Seir"
+        }
+      ],
+      "TribeOfIsrael": [],
+      "Nation": [
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Edomites"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [],
+      "childOf": [
+        {
+          "term1": "Eliphaz",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Reuel",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Jeush",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Jalam",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Korah",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Teman",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Omar",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Zepho",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Gatam",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Kenaz",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Amalek",
+          "term2": "Eliphaz"
+        },
+        {
+          "term1": "Nahath",
+          "term2": "Reuel"
+        },
+        {
+          "term1": "Zerah",
+          "term2": "Reuel"
+        },
+        {
+          "term1": "Shammah",
+          "term2": "Reuel"
+        },
+        {
+          "term1": "Mizzah",
+          "term2": "Reuel"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Anah"
+        },
+        {
+          "term1": "Anah",
+          "term2": "Zibeon"
+        },
+        {
+          "term1": "Basemath",
+          "term2": "Ishmael"
+        },
+        {
+          "term1": "Adah",
+          "term2": "Elon"
+        },
+        {
+          "term1": "Eliphaz",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Reuel",
+          "term2": "Basemath"
+        },
+        {
+          "term1": "Jeush",
+          "term2": "Oholibamah"
+        },
+        {
+          "term1": "Jalam",
+          "term2": "Oholibamah"
+        },
+        {
+          "term1": "Korah",
+          "term2": "Oholibamah"
+        },
+        {
+          "term1": "Amalek",
+          "term2": "Timna"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Adah",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Basemath",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Timna",
+          "term2": "Eliphaz"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Edomites",
+          "term2": "Esau"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Eliphaz",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Reuel",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jeush",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jalam",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Korah",
+          "term2": "Canaan"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Esau",
+          "term2": "Canaan"
+        }
+      ],
+      "personToTribeOfIsrael": [],
+      "personBelongsToNation": [
+        {
+          "term1": "Esau",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Edomites",
+          "term2": "Edom"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Seir",
+          "term2": "Edom"
+        }
+      ]
+    }
+  }
+}

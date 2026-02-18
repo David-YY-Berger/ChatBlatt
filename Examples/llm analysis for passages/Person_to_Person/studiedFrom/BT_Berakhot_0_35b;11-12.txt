@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=3543 approx cost usd = $0.001255 (Prompt=3346, Completion=197)
+SOURCE:
+Berakhot 35b:11-12  (BT_Berakhot_0_35b:11-12)
+
+HEBREW:
+וְאָמַר רַבָּה בַּר בַּר חָנָה אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי יְהוּדָה בְּרַבִּי אִלְעַאי: בֹּא וּרְאֵה שֶׁלֹּא כְּדוֹרוֹת הָרִאשׁוֹנִים דּוֹרוֹת הָאַחֲרוֹנִים. דּוֹרוֹת הָרִאשׁוֹנִים הָיוּ מַכְנִיסִין פֵּירוֹתֵיהֶן דֶּרֶךְ טְרַקְסְמוֹן כְּדֵי לְחַיְּיבָן בְּמַעֲשֵׂר, דּוֹרוֹת הָאַחֲרוֹנִים מַכְנִיסִין פֵּירוֹתֵיהֶן דֶּרֶךְ גַּגּוֹת, דֶּרֶךְ חֲצֵרוֹת, דֶּרֶךְ קַרְפֵּיפוֹת, כְּדֵי לְפׇטְרָן מִן הַמַּעֲשֵׂר. דְּאָמַר רַבִּי יַנַּאי: אֵין הַטֶּבֶל מִתְחַיֵּיב בְּמַעֲשֵׂר עַד שֶׁיִּרְאֶה פְּנֵי הַבַּיִת, שֶׁנֶּאֱמַר: ״בִּעַרְתִּי הַקֹּדֶשׁ מִן הַבַּיִת״.וְרַבִּי יוֹחָנָן אָמַר: אֲפִילּוּ חָצֵר קוֹבַעַת, שֶׁנֶּאֱמַר: ״וְאָכְלוּ בִשְׁעָרֶיךָ וְשָׂבֵעוּ״.
+
+ENGLISH:
+Along these lines, Rabba bar bar Hana said that Rabbi Yohanan said in the name of Rabbi Yehuda, son of Rabbi Elai: Come and see that the latter generations are not like the earlier generations. In the earlier generations, people would bring their fruits into their courtyards through the main gate in order to obligate them in tithes. However, the latter generations bring their fruits through roofs, through courtyards and through enclosed courtyards, avoiding the main gate in order to exempt them from the mitzva of tithing. As Rabbi Yannai said: Untithed produce is not obligated in the mitzva of tithing until it sees the front of the house through which people enter and exit, and it is brought into the house that way as it is stated in the formula of the confession of the tithes: I have removed the consecrated from the house (Deuteronomy 26:13), as the obligation to tithe produce whose purpose has not yet been designated takes effect only when it is brought into the house. And Rabbi Yohanan said: Even bringing it into the courtyard determines its status as having completed the production process and obligates the produce to be tithed, as it is written in the confession of the tithes: And I have given to the Levite, the stranger, the orphan and the widow, and they shall eat in your gates and be satisfied (Deuteronomy 26:12).
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss tithing laws and generational differences in observance.",
+    "heb_summary": "רבנים דנים בהלכות מעשרות ובשמירת הדורות.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabba Bar Bar Hana"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yehuda"
+        },
+        {
+          "en_name": "Rabbi Elai"
+        },
+        {
+          "en_name": "Rabbi Yannai"
+        }
+      ],
+      "TribeOfIsrael": []
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Yehuda"
+        },
+        {
+          "term1": "Rabbi Yehuda",
+          "term2": "Rabbi Elai"
+        },
+        {
+          "term1": "Rabba Bar Bar Hana",
+          "term2": "Rabbi Yohanan"
+        }
+      ]
+    }
+  }
+}
