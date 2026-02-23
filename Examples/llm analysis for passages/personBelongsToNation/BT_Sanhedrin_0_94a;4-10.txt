@@ -1,4 +1,4 @@
-﻿COST: Tokens: Total=4742 approx cost usd = $0.001590 (Prompt=4240, Completion=502)
+﻿COST: Tokens: Total=4476 approx cost usd = $0.001506 (Prompt=4017, Completion=459)
 SOURCE:
 Sanhedrin 94a:4-10  (BT_Sanhedrin_0_94a:4-10)
 
@@ -11,11 +11,10 @@ Apropos Hezekiah, the Gemara cites that which is stated: That the government may
 EXTRACTED GRAPH (JSON):
 {
   "res": {
-    "en_summary": "Closed mem signifies thwarted redemption; earth sang praises for Hezekiah.",
-    "heb_summary": "מם סגור מסמל גאולה שסוכלה; הארץ שרה שבחים לחזקיהו.",
+    "en_summary": "Hezekiah almost became Messiah, but failed to praise God.",
+    "heb_summary": "חזקיהו כמעט הפך למשיח אך נכשל בשבח אלוהים.",
     "passage_types": [
-      "STORY",
-      "PHILOSOPHIC"
+      "STORY"
     ],
     "Entities": {
       "Person": [
@@ -65,6 +64,9 @@ EXTRACTED GRAPH (JSON):
         },
         {
           "en_name": "Seir"
+        },
+        {
+          "en_name": "Earth"
         }
       ],
       "TribeOfIsrael": [],
@@ -78,18 +80,19 @@ EXTRACTED GRAPH (JSON):
       ],
       "Symbol": [
         {
-          "en_name": "Gog"
-        },
-        {
-          "en_name": "Magog"
+          "en_name": "Mem"
         }
       ]
     },
     "Rel": {
       "studiedFrom": [
         {
-          "term1": "Rava",
-          "term2": "Rabbi Yitzhak"
+          "term1": "Rabbi Pappeyas",
+          "term2": "Moses"
+        },
+        {
+          "term1": "Rabbi Pappeyas",
+          "term2": "Hezekiah"
         },
         {
           "term1": "Rav",
@@ -102,20 +105,15 @@ EXTRACTED GRAPH (JSON):
           "term2": "David"
         }
       ],
+      "personToTribeOfIsrael": [],
       "personBelongsToNation": [
+        {
+          "term1": "Hezekiah",
+          "term2": "Assyria"
+        },
         {
           "term1": "Sennacherib",
           "term2": "Assyria"
-        }
-      ],
-      "alias": [
-        {
-          "term1": "Sennacherib",
-          "term2": "Gog"
-        },
-        {
-          "term1": "Assyria",
-          "term2": "Magog"
         }
       ]
     }

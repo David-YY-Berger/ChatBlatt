@@ -234,7 +234,16 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_Genesis_0_36:1-19' # bad studied from - esav not studied from yaakov!. missed alias..
 
             # personBelongsToNation
-            'BT_Sanhedrin_0_94a:4-10' # bad alias, (should be comparison..)
+            # 'BT_Sanhedrin_0_94a:4-10' # bad alias, (should be comparison..)
+
+            # comparedTo (
+            # 'TN_Isaiah_0_1:1-31',
+
+            # contrastedWith, non literal places (world to come vs this world)
+            # 'BT_Berakhot_0_17a:7-12'
+
+            # AllyOf (person - person)
+            'TN_I Kings_0_5:15–32'
 
 
             # amalek, joshua, moshe, etc.

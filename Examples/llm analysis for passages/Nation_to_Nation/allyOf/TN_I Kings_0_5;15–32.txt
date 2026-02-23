@@ -1,0 +1,72 @@
+﻿COST: Tokens: Total=3677 approx cost usd = $0.001299 (Prompt=3465, Completion=212)
+SOURCE:
+I Kings 5:15–32  (TN_I Kings_0_5:15–32)
+
+HEBREW:
+וַ֠יִּשְׁלַ֠ח חִירָ֨ם מֶלֶךְ־צ֤וֹר אֶת־עֲבָדָיו֙ אֶל־שְׁלֹמֹ֔ה כִּ֣י שָׁמַ֔ע כִּ֥י אֹת֛וֹ מָשְׁח֥וּ לְמֶ֖לֶךְ תַּ֣חַת אָבִ֑יהוּ כִּ֣י אֹהֵ֗ב הָיָ֥ה חִירָ֛ם לְדָוִ֖ד כׇּל־הַיָּמִֽים׃ וַיִּשְׁלַ֣ח שְׁלֹמֹ֔ה אֶל־חִירָ֖ם לֵאמֹֽר׃ אַתָּ֨ה יָדַ֜עְתָּ אֶת־דָּוִ֣ד אָבִ֗י כִּ֣י לֹ֤א יָכֹל֙ לִבְנ֣וֹת בַּ֗יִת לְשֵׁם֙ יְהֹוָ֣ה אֱלֹהָ֔יו מִפְּנֵ֥י הַמִּלְחָמָ֖ה אֲשֶׁ֣ר סְבָבֻ֑הוּ עַ֤ד תֵּת־יְהֹוָה֙ אֹתָ֔ם תַּ֖חַת כַּפּ֥וֹת [רַגְלָֽי] ׃ וְעַתָּ֕ה הֵנִ֨יחַ יְהֹוָ֧ה אֱלֹהַ֛י לִ֖י מִסָּבִ֑יב אֵ֣ין שָׂטָ֔ן וְאֵ֖ין פֶּ֥גַע רָֽע׃ וְהִנְנִ֣י אֹמֵ֔ר לִבְנ֣וֹת בַּ֔יִת לְשֵׁ֖ם יְהֹוָ֣ה אֱלֹהָ֑י כַּאֲשֶׁ֣ר׀ דִּבֶּ֣ר יְהֹוָ֗ה אֶל־דָּוִ֤ד אָבִי֙ לֵאמֹ֔ר בִּנְךָ֗ אֲשֶׁ֨ר אֶתֵּ֤ן תַּחְתֶּ֙יךָ֙ עַל־כִּסְאֶ֔ךָ הוּא־יִבְנֶ֥ה הַבַּ֖יִת לִשְׁמִֽי׃ וְעַתָּ֡ה צַוֵּה֩ וְיִכְרְתוּ־לִ֨י אֲרָזִ֜ים מִן־הַלְּבָנ֗וֹן וַעֲבָדַי֙ יִהְי֣וּ עִם־עֲבָדֶ֔יךָ וּשְׂכַ֤ר עֲבָדֶ֙יךָ֙ אֶתֵּ֣ן לְךָ֔ כְּכֹ֖ל אֲשֶׁ֣ר תֹּאמֵ֑ר כִּ֣י׀ אַתָּ֣ה יָדַ֗עְתָּ כִּ֣י אֵ֥ין בָּ֛נוּ אִ֛ישׁ יֹדֵ֥עַ לִכְרׇת־עֵצִ֖ים כַּצִּדֹנִֽים׃ וַיְהִ֞י כִּשְׁמֹ֧עַ חִירָ֛ם אֶת־דִּבְרֵ֥י שְׁלֹמֹ֖ה וַיִּשְׂמַ֣ח מְאֹ֑ד וַיֹּ֗אמֶר בָּר֤וּךְ יְהֹוָה֙ הַיּ֔וֹם אֲשֶׁ֨ר נָתַ֤ן לְדָוִד֙ בֵּ֣ן חָכָ֔ם עַל־הָעָ֥ם הָרָ֖ב הַזֶּֽה׃ וַיִּשְׁלַ֤ח חִירָם֙ אֶל־שְׁלֹמֹ֣ה לֵאמֹ֔ר שָׁמַ֕עְתִּי אֵ֥ת אֲשֶׁר־שָׁלַ֖חְתָּ אֵלָ֑י אֲנִ֤י אֶֽעֱשֶׂה֙ אֶת־כׇּל־חֶפְצְךָ֔ בַּעֲצֵ֥י אֲרָזִ֖ים וּבַעֲצֵ֥י בְרוֹשִֽׁים׃ עֲ֠בָדַ֠י יֹרִ֨דוּ מִן־הַלְּבָנ֜וֹן יָ֗מָּה וַ֠אֲנִ֠י אֲשִׂימֵ֨ם דֹּבְר֤וֹת בַּיָּם֙ עַֽד־הַמָּק֞וֹם אֲשֶׁר־תִּשְׁלַ֥ח אֵלַ֛י וְנִפַּצְתִּ֥ים שָׁ֖ם וְאַתָּ֣ה תִשָּׂ֑א וְאַתָּה֙ תַּעֲשֶׂ֣ה אֶת־חֶפְצִ֔י לָתֵ֖ת לֶ֥חֶם בֵּיתִֽי׃ וַיְהִ֨י חִיר֜וֹם נֹתֵ֣ן לִשְׁלֹמֹ֗ה עֲצֵ֧י אֲרָזִ֛ים וַעֲצֵ֥י בְרוֹשִׁ֖ים כׇּל־חֶפְצֽוֹ׃ וּשְׁלֹמֹה֩ נָתַ֨ן לְחִירָ֜ם עֶשְׂרִים֩ אֶ֨לֶף כֹּ֤ר חִטִּים֙ מַכֹּ֣לֶת לְבֵית֔וֹ וְעֶשְׂרִ֥ים כֹּ֖ר שֶׁ֣מֶן כָּתִ֑ית כֹּֽה־יִתֵּ֧ן שְׁלֹמֹ֛ה לְחִירָ֖ם שָׁנָ֥ה בְשָׁנָֽה׃ וַֽיהֹוָ֗ה נָתַ֤ן חׇכְמָה֙ לִשְׁלֹמֹ֔ה כַּאֲשֶׁ֖ר דִּבֶּר־ל֑וֹ וַיְהִ֣י שָׁלֹ֗ם בֵּ֤ין חִירָם֙ וּבֵ֣ין שְׁלֹמֹ֔ה וַיִּכְרְת֥וּ בְרִ֖ית שְׁנֵיהֶֽם׃ וַיַּ֨עַל הַמֶּ֧לֶךְ שְׁלֹמֹ֛ה מַ֖ס מִכׇּל־יִשְׂרָאֵ֑ל וַיְהִ֣י הַמַּ֔ס שְׁלֹשִׁ֥ים אֶ֖לֶף אִֽישׁ׃ וַיִּשְׁלָחֵ֣ם לְבָנ֗וֹנָה עֲשֶׂ֨רֶת אֲלָפִ֤ים בַּחֹ֙דֶשׁ֙ חֲלִיפ֔וֹת חֹ֚דֶשׁ יִהְי֣וּ בַלְּבָנ֔וֹן שְׁנַ֥יִם חֳדָשִׁ֖ים בְּבֵית֑וֹ וַאֲדֹנִירָ֖ם עַל־הַמַּֽס׃ וַיְהִ֧י לִשְׁלֹמֹ֛ה שִׁבְעִ֥ים אֶ֖לֶף נֹשֵׂ֣א סַבָּ֑ל וּשְׁמֹנִ֥ים אֶ֖לֶף חֹצֵ֥ב בָּהָֽר׃ לְ֠בַ֠ד מִשָּׂרֵ֨י הַנִּצָּבִ֤ים לִשְׁלֹמֹה֙ אֲשֶׁ֣ר עַל־הַמְּלָאכָ֔ה שְׁלֹ֥שֶׁת אֲלָפִ֖ים וּשְׁלֹ֣שׁ מֵא֑וֹת הָרֹדִ֣ים בָּעָ֔ם הָעֹשִׂ֖ים בַּמְּלָאכָֽה׃ וַיְצַ֣ו הַמֶּ֡לֶךְ וַיַּסִּ֩עוּ֩ אֲבָנִ֨ים גְּדֹל֜וֹת אֲבָנִ֧ים יְקָר֛וֹת לְיַסֵּ֥ד הַבָּ֖יִת אַבְנֵ֥י גָזִֽית׃ וַֽיִּפְסְל֞וּ בֹּנֵ֧י שְׁלֹמֹ֛ה וּבֹנֵ֥י חִיר֖וֹם וְהַגִּבְלִ֑ים וַיָּכִ֛ינוּ הָעֵצִ֥ים וְהָאֲבָנִ֖ים לִבְנ֥וֹת הַבָּֽיִת׃
+
+ENGLISH:
+King Hiram of Tyre sent his officials to Solomon when he heard that he had been anointed king in place of his father; for Hiram had always been a friend of David. Solomon sent this message to Hiram: You know that my father David could not build a house for the name of the ETERNAL his God because of the enemies that encompassed him, until GOD had placed them under the soles of his feet. But now the ETERNAL my God has given me respite all around; there is no adversary and no mischance. And so I propose to build a house for the name of the ETERNAL my God, as the ETERNAL promised my father David, saying, Your son, whom I will set on your throne in your place, shall build the house for My name. Please, then, give orders for cedars to be cut for me in the Lebanon. My servants will work with yours, and I will pay you any wages you may ask for your servants; for as you know, there is none among us who knows how to cut timber like the Sidonians. When Hiram heard Solomons message, he was overjoyed. Praised be GOD this day, he said, for granting David a wise son to govern this great people. So Hiram sent word to Solomon: I have your message; I will supply all the cedar and cypress logs you require. My servants will bring them down to the sea from the Lebanon; and at the sea I will make them into floats and [deliver them] to any place that you designate to me. There I shall break them up for you to carry away. You, in turn, will supply the food I require for my household. So Hiram kept Solomon provided with all the cedar and cypress wood he required, and Solomon delivered to Hiram 20,000 kor s of wheat as provisions for his household and 20 kor ss Septuagint reads, 20,000 bath s. of beaten oil. Such was Solomons annual payment to Hiram. GOD had given Solomon wisdom, just as promised. There was friendship between Hiram and Solomon, and the two of them made a treaty. King Solomon imposed forced labor on all Israel; the levy came to 30,000 men. He sent them to the Lebanon in shifts of 10,000 a month: they would spend one month in the Lebanon and two months at home. Adoniram was in charge of the forced labor. Solomon also had 70,000 porters and 80,000 quarriers in the hills, apart from Solomons 3,300 officials who were in charge of the work and supervised the gangs doing the work. The king ordered huge blocks of choice stone to be quarried, so that the foundations of the house might be laid with hewn stones. Solomons masons, Hirams masons, and those from Gebal shaped them. Thus the timber and the stones for building the house were made ready.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Hiram sent cedars to Solomon for the house.",
+    "heb_summary": "חירם שלח ארזים לשלמה לבית.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hiram"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Adoniram"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Lebanon"
+        },
+        {
+          "en_name": "Gebal"
+        }
+      ],
+      "TribeOfIsrael": [],
+      "Nation": [
+        {
+          "en_name": "Tyre"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Solomon",
+          "term2": "David"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Hiram"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Hiram",
+          "term2": "David"
+        },
+        {
+          "term1": "Hiram",
+          "term2": "Solomon"
+        }
+      ]
+    }
+  }
+}

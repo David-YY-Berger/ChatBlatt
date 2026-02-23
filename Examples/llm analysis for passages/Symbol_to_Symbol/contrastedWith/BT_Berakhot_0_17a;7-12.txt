@@ -1,0 +1,75 @@
+﻿COST: Tokens: Total=3955 approx cost usd = $0.001335 (Prompt=3559, Completion=396)
+SOURCE:
+Berakhot 17a:7-12  (BT_Berakhot_0_17a:7-12)
+
+HEBREW:
+מַרְגְּלָא בְּפוּמֵּיהּ דְּרַבִּי מֵאִיר: ״גְּמוֹר בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ לָדַעַת אֶת דְּרָכַי, וְלִשְׁקוֹד עַל דַּלְתֵי תוֹרָתִי. נְצוֹר תּוֹרָתִי בְּלִבְּךָ, וְנֶגֶד עֵינֶיךָ תִּהְיֶה יִרְאָתִי. שְׁמוֹר פִּיךְ מִכָּל חֵטְא, וְטַהֵר וְקַדֵּשׁ עַצְמְךָ מִכָּל אַשְׁמָה וְעָוֹן. וַאֲנִי אֶהְיֶה עִמְּךָ בְּכָל מָקוֹם״.מַרְגְּלָא בְּפוּמַּיְיהוּ דְּרַבָּנַן דְּיַבְנֶה: ״אֲנִי בְּרִיָּה, וַחֲבֵרִי בְּרִיָּה. אֲנִי מְלַאכְתִּי בָּעִיר וְהוּא מְלַאכְתּוֹ בַּשָּׂדֶה. אֲנִי מַשְׁכִּים לִמְלַאכְתִּי, וְהוּא מַשְׁכִּים לִמְלַאכְתּוֹ. כְּשֵׁם שֶׁהוּא אֵינוֹ מִתְגַּדֵּר בִּמְלַאכְתִּי, כָּךְ אֲנִי אֵינִי מִתְגַּדֵּר בִּמְלַאכְתּוֹ. וְשֶׁמָּא תֹּאמַר: אֲנִי מַרְבֶּה, וְהוּא מַמְעִיט — שָׁנִינוּ: אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט וּבִלְבַד שֶׁיְּכַוֵּין לִבּוֹ לַשָּׁמַיִם״.מַרְגְּלָא בְּפוּמֵּיהּ דְּאַבָּיֵּי: לְעוֹלָם יְהֵא אָדָם עָרוּם בְּיִרְאָה. ״מַעֲנֶה רַךְ מֵשִׁיב חֵמָה״. וּמַרְבֶּה שָׁלוֹם עִם אֶחָיו וְעִם קְרוֹבָיו וְעִם כָּל אָדָם וַאֲפִילּוּ עִם גּוֹי בַּשּׁוּק, כְּדֵי שֶׁיְּהֵא אָהוּב לְמַעְלָה וְנֶחְמָד לְמַטָּה, וִיהֵא מְקוּבָּל עַל הַבְּרִיּוֹת.אָמְרוּ עָלָיו עַל רַבָּן יוֹחָנָן בֶּן זַכַּאי שֶׁלֹּא הִקְדִּימוֹ אָדָם שָׁלוֹם מֵעוֹלָם, וַאֲפִילּוּ גּוֹי בַּשּׁוּק.מַרְגְּלָא בְּפוּמֵּיהּ דְּרָבָא: תַּכְלִית חָכְמָה — תְּשׁוּבָה וּמַעֲשִׂים טוֹבִים, שֶׁלֹּא יְהֵא אָדָם קוֹרֵא וְשׁוֹנֶה וּבוֹעֵט בְּאָבִיו וּבְאִמּוֹ וּבְרַבּוֹ וּבְמִי שֶׁהוּא גָּדוֹל מִמֶּנּוּ בְּחָכְמָה וּבְמִנְיָן, שֶׁנֶּאֱמַר: ״רֵאשִׁית חָכְמָה יִרְאַת ה׳ שֵׂכֶל טוֹב לְכָל עוֹשֵׂיהֶם״. ״לָעוֹשִׂים״ לֹא נֶאֱמַר, אֶלָּא ״לְעוֹשֵׂיהֶם״ — לָעוֹשִׂים לִשְׁמָהּ וְלֹא לָעוֹשִׂים שֶׁלֹּא לִשְׁמָהּ. וְכָל הָעוֹשֶׂה שֶׁלֹּא לִשְׁמָהּ, נוֹחַ לוֹ שֶׁלֹּא נִבְרָא.מַרְגְּלָא בְּפוּמֵּיהּ דְּרַב: לֹא כָּעוֹלָם הַזֶּה הָעוֹלָם הַבָּא. הָעוֹלָם הַבָּא אֵין בּוֹ לֹא אֲכִילָה וְלֹא שְׁתִיָּהּ וְלֹא פְּרִיָּה וּרְבִיָּה וְלֹא מַשָּׂא וּמַתָּן וְלֹא קִנְאָה וְלֹא שִׂנְאָה וְלֹא תַּחֲרוּת, אֶלָּא צַדִּיקִים יוֹשְׁבִין וְעַטְרוֹתֵיהֶם בְּרָאשֵׁיהֶם וְנֶהֱנִים מִזִּיו הַשְּׁכִינָה, שֶׁנֶּאֱמַר: ״וַיֶּחֱזוּ אֶת הָאֱלֹהִים וַיֹּאכְלוּ וַיִּשְׁתּוּ״.
+
+ENGLISH:
+Rabbi Meir was wont to say the following idiom: Study with all your heart and with all your soul to know My ways and to be diligent at the doors of My Torah. Keep My Torah in your heart, and fear of Me should be before your eyes. Guard your mouth from all transgression, and purify and sanctify yourself from all fault and iniquity. And if you do so, I, God, will be with you everywhere. The Sages in Yavne were wont to say: I who learn Torah am Gods creature and my counterpart who engages in other labor is Gods creature. My work is in the city and his work is in the field. I rise early for my work and he rises early for his work. And just as he does not presume to perform my work, so I do not presume to perform his work. Lest you say: I engage in Torah study a lot, while he only engages in Torah study a little, so I am better than he, it has already been taught: One who brings a substantial sacrifice and one who brings a meager sacrifice have equal merit, as long as he directs his heart towards Heaven (Rav Hai Gaon, Arukh ). Abaye was wont to say: One must always be shrewd and utilize every strategy in order to achieve fear of Heaven and performance of mitzvot. One must fulfill the verse: A soft answer turns away wrath (Proverbs 15:1) and take steps to increase peace with ones brethren and with ones relatives, and with all people, even with a non-Jew in the marketplace, despite the fact that he is of no importance to him and does not know him at all ( Meiri ), so that he will be loved above in Gods eyes, pleasant below in the eyes of the people, and acceptable to all of Gods creatures. Tangentially, the Gemara mentions that they said about Rabban Yohanan ben Zakkai that no one ever preceded him in issuing a greeting, not even a non-Jew in the marketplace, as Rabban Yohanan would always greet him first. Rava was wont to say: The objective of Torah wisdom is to achieve repentance and good deeds; that one should not read the Torah and study mishna and become arrogant and spurn his father and his mother and his teacher and one who is greater than he in wisdom or in the number of students who study before him, as it is stated: The beginning of wisdom is fear of the Lord, a good understanding have all who fulfill them (Psalms 111:10). It is not stated simply: All who fulfill, but rather: All who fulfill them, those who perform these actions as they ought to be performed, meaning those who do such deeds for their own sake, for the sake of the deeds themselves, not those who do them not for their own sake. Rava continued: One who does them not for their own sake, it would have been preferable for him had he not been created. Rav was wont to say: The World-to-Come is not like this world. In the World-to-Come there is no eating, no drinking, no procreation, no business negotiations, no jealousy, no hatred, and no competition. Rather, the righteous sit with their crowns upon their heads, enjoying the splendor of the Divine Presence, as it is stated: And they beheld God, and they ate and drank (Exodus 24:11), meaning that beholding Gods countenance is tantamount to eating and drinking.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Meir, Sages, Abaye, Rava, Rav offer wisdom on Torah, deeds, fear.",
+    "heb_summary": "רבי מאיר, חז\"ל, אביי, רבא, רב מציעים חוכמה על תורה, מעשים, יראה.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Meir"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Rabban Yohanan Ben Zakkai"
+        },
+        {
+          "en_name": "Rav Hai Gaon"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Yavne"
+        },
+        {
+          "en_name": "Marketplace"
+        }
+      ],
+      "TribeOfIsrael": [],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Mitzvot"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Abaye",
+          "term2": "Rav"
+        },
+        {
+          "term1": "Rava",
+          "term2": "Abaye"
+        },
+        {
+          "term1": "Rav",
+          "term2": "Rava"
+        }
+      ]
+    }
+  }
+}

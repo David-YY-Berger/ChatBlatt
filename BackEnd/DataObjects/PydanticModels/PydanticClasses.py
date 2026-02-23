@@ -9,7 +9,8 @@ TRIBES_OF_ISRAEL = {
     'gad', 'asher', 'issachar', 'zebulun', 'joseph', 'benjamin',
     'ephraim', 'manasseh'
 }
-
+max_len_summary: int = 15
+min_len_summary: int = 4
 
 # --- Entity Models ---
 class Entity(BaseModel):
@@ -179,11 +180,11 @@ class Relationships(BaseModel):
 class ExtractionResult(BaseModel):
     en_summary: str = Field(
         min_length=1,
-        description="Summary in exactly 4-10 words"
+        description=f"Summary in exactly {min_len_summary}-{max_len_summary} words"
     )
     heb_summary: str = Field(
         min_length=1,
-        description="Hebrew summary in exactly 4-10 words"
+        description=f"Hebrew summary in exactly {min_len_summary}-{max_len_summary} words"
     )
     passage_types: List[Literal['LAW', 'STORY', 'PHILOSOPHIC', 'GENEALOGY', 'PROPHECY']] = Field(
         min_length=1,
@@ -195,19 +196,19 @@ class ExtractionResult(BaseModel):
     @field_validator('en_summary', 'heb_summary')
     @classmethod
     def validate_word_count(cls, v: str, info) -> str:
-        """Ensure summary is 4-10 words. Reject if out of range."""
+        """Ensure summary is mix_len_summary - max_len_summary words. Reject if out of range."""
         words = v.strip().split()
         word_count = len(words)
 
-        if word_count < 4:
+        if word_count < min_len_summary:
             raise ValueError(
-                f"{info.field_name} must be 4-10 words, got {word_count}: '{v}'. "
+                f"{info.field_name} must be {min_len_summary}-{max_len_summary} words, got {word_count}: '{v}'. "
                 f"Model should generate complete summaries within word limit."
             )
 
-        if word_count > 10:
+        if word_count > max_len_summary:
             raise ValueError(
-                f"{info.field_name} must be 4-10 words, got {word_count}: '{v}'. "
+                f"{info.field_name} must be {min_len_summary}-{max_len_summary}, got {word_count}: '{v}'. "
                 f"Model should generate complete summaries within word limit."
             )
 
@@ -235,6 +236,10 @@ class ExtractionResult(BaseModel):
             return self
 
         # Define relationship type constraints
+        # Value can be:
+        #   (str, str)        → single allowed type pair
+        #   [(str, str), ...] → multiple allowed type pairs (any match = valid)
+        #   (None, None)      → any entity types allowed
         relationship_constraints = {
             # Person → Person
             'studiedFrom': ('Person', 'Person'),
@@ -268,10 +273,16 @@ class ExtractionResult(BaseModel):
 
         invalid_count = 0
 
-        for rel_type, (term1_type, term2_type) in relationship_constraints.items():
+        for rel_type, type_constraint in relationship_constraints.items():
             relations = getattr(self.Rel, rel_type, None)
             if not relations:
                 continue
+
+            # Normalize to a list of pairs for uniform handling below
+            if isinstance(type_constraint, list):
+                allowed_pairs = type_constraint
+            else:
+                allowed_pairs = [type_constraint]  # wrap single pair
 
             valid_relations = []
 
@@ -295,23 +306,36 @@ class ExtractionResult(BaseModel):
                     reason = f"term2 '{rel.term2}' not in entities"
 
                 # Validate type constraints
-                elif term1_type and term1_type != 'ANY':
-                    term1_entities = self.Entities.get_entities_by_type(term1_type)
-                    if rel.term1 not in term1_entities:
-                        is_valid = False
-                        reason = f"term1 '{rel.term1}' not a {term1_type}"
+                else:
+                    # (None, None) → always valid
+                    if allowed_pairs == [(None, None)]:
+                        is_valid = True
 
-                    if is_valid and term2_type and term2_type != 'ANY':
-                        term2_entities = self.Entities.get_entities_by_type(term2_type)
-                        if rel.term2 not in term2_entities:
+                    else:
+                        # At least one allowed pair must match
+                        matched = False
+                        for (term1_type, term2_type) in allowed_pairs:
+                            term1_ok = (
+                                    term1_type is None or
+                                    rel.term1 in self.Entities.get_entities_by_type(term1_type)
+                            )
+                            term2_ok = (
+                                    term2_type is None or
+                                    rel.term2 in self.Entities.get_entities_by_type(term2_type)
+                            )
+                            if term1_ok and term2_ok:
+                                matched = True
+                                break
+
+                        if not matched:
                             is_valid = False
-                            reason = f"term2 '{rel.term2}' not a {term2_type}"
-
-                if is_valid and term2_type:
-                    term2_entities = self.Entities.get_entities_by_type(term2_type)
-                    if rel.term2 not in term2_entities:
-                        is_valid = False
-                        reason = f"term2 '{rel.term2}' not a {term2_type}"
+                            allowed_str = " or ".join(
+                                f"({t1} → {t2})" for t1, t2 in allowed_pairs
+                            )
+                            reason = (
+                                f"'{rel.term1}' -> '{rel.term2}' does not match "
+                                f"any allowed type pair: {allowed_str}"
+                            )
 
                 if is_valid:
                     valid_relations.append(rel)
