@@ -70,52 +70,52 @@ class Entities(BaseModel):
 
         return valid_entities if valid_entities else None
 
-    @model_validator(mode='after')
-    def auto_classify_tribes(self):
-        """Automatically move tribes from other categories to TribeOfIsrael."""
-        if not self.TribeOfIsrael:
-            self.TribeOfIsrael = []
-
-        moved_count = 0
-
-        # Check all entity categories
-        for category in ['Person', 'Place', 'Nation', 'Symbol']:
-            entity_list = getattr(self, category, None)
-            if not entity_list:
-                continue
-
-            remaining = []
-            for entity in entity_list:
-                # Check if this entity is actually a tribe
-                if entity.en_name.lower() in TRIBES_OF_ISRAEL:
-                    # Move to TribeOfIsrael
-                    if entity not in self.TribeOfIsrael:
-                        self.TribeOfIsrael.append(entity)
-                        moved_count += 1
-                        logger.info(
-                            f"Auto-corrected: Moved '{entity.en_name}' "
-                            f"from {category} to TribeOfIsrael"
-                        )
-                else:
-                    remaining.append(entity)
-
-            # Update the category with remaining entities
-            setattr(self, category, remaining if remaining else None)
-
-        # Deduplicate TribeOfIsrael (in case of duplicates)
-        if self.TribeOfIsrael:
-            seen = set()
-            unique_tribes = []
-            for tribe in self.TribeOfIsrael:
-                if tribe.en_name.lower() not in seen:
-                    unique_tribes.append(tribe)
-                    seen.add(tribe.en_name.lower())
-            self.TribeOfIsrael = unique_tribes if unique_tribes else None
-
-        if moved_count > 0:
-            logger.info(f"Auto-corrected {moved_count} tribe classifications")
-
-        return self
+    # @model_validator(mode='after')
+    # def auto_classify_tribes(self):
+    #     """Automatically move tribes from other categories to TribeOfIsrael."""
+    #     if not self.TribeOfIsrael:
+    #         self.TribeOfIsrael = []
+    #
+    #     moved_count = 0
+    #
+    #     # Check all entity categories
+    #     for category in ['Person', 'Place', 'Nation', 'Symbol']:
+    #         entity_list = getattr(self, category, None)
+    #         if not entity_list:
+    #             continue
+    #
+    #         remaining = []
+    #         for entity in entity_list:
+    #             # Check if this entity is actually a tribe
+    #             if entity.en_name.lower() in TRIBES_OF_ISRAEL:
+    #                 # Move to TribeOfIsrael
+    #                 if entity not in self.TribeOfIsrael:
+    #                     self.TribeOfIsrael.append(entity)
+    #                     moved_count += 1
+    #                     logger.info(
+    #                         f"Auto-corrected: Moved '{entity.en_name}' "
+    #                         f"from {category} to TribeOfIsrael"
+    #                     )
+    #             else:
+    #                 remaining.append(entity)
+    #
+    #         # Update the category with remaining entities
+    #         setattr(self, category, remaining if remaining else None)
+    #
+    #     # Deduplicate TribeOfIsrael (in case of duplicates)
+    #     if self.TribeOfIsrael:
+    #         seen = set()
+    #         unique_tribes = []
+    #         for tribe in self.TribeOfIsrael:
+    #             if tribe.en_name.lower() not in seen:
+    #                 unique_tribes.append(tribe)
+    #                 seen.add(tribe.en_name.lower())
+    #         self.TribeOfIsrael = unique_tribes if unique_tribes else None
+    #
+    #     if moved_count > 0:
+    #         logger.info(f"Auto-corrected {moved_count} tribe classifications")
+    #
+    #     return self
 
     def get_all_entity_names(self) -> Set[str]:
         """Helper to get all entity names across all categories."""

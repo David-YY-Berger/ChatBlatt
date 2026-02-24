@@ -243,8 +243,10 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Berakhot_0_17a:7-12'
 
             # AllyOf (person - person)
-            'TN_I Kings_0_5:15–32'
+            # 'TN_I Kings_0_5:15–32'
 
+            # bornIn
+            'TN_Genesis_0_41:47-53'
 
             # amalek, joshua, moshe, etc.
             # 'TN_Exodus_0_17:8-13',

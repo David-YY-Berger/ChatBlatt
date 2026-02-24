@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=3209 approx cost usd = $0.001153 (Prompt=3075, Completion=134)
+SOURCE:
+Genesis 41:47-53  (TN_Genesis_0_41:47-53)
+
+HEBREW:
+וַתַּ֣עַשׂ הָאָ֔רֶץ בְּשֶׁ֖בַע שְׁנֵ֣י הַשָּׂבָ֑ע לִקְמָצִֽים׃ וַיִּקְבֹּ֞ץ אֶת־כׇּל־אֹ֣כֶל׀ שֶׁ֣בַע שָׁנִ֗ים אֲשֶׁ֤ר הָיוּ֙ בְּאֶ֣רֶץ מִצְרַ֔יִם וַיִּתֶּן־אֹ֖כֶל בֶּעָרִ֑ים אֹ֧כֶל שְׂדֵה־הָעִ֛יר אֲשֶׁ֥ר סְבִיבֹתֶ֖יהָ נָתַ֥ן בְּתוֹכָֽהּ׃ וַיִּצְבֹּ֨ר יוֹסֵ֥ף בָּ֛ר כְּח֥וֹל הַיָּ֖ם הַרְבֵּ֣ה מְאֹ֑ד עַ֛ד כִּי־חָדַ֥ל לִסְפֹּ֖ר כִּי־אֵ֥ין מִסְפָּֽר׃ וּלְיוֹסֵ֤ף יֻלַּד֙ שְׁנֵ֣י בָנִ֔ים בְּטֶ֥רֶם תָּב֖וֹא שְׁנַ֣ת הָרָעָ֑ב אֲשֶׁ֤ר יָֽלְדָה־לּוֹ֙ אָֽסְנַ֔ת בַּת־פּ֥וֹטִי פֶ֖רַע * (בספרי תימן פּֽוֹטִיפֶ֖רַע בתיבה אחת) כֹּהֵ֥ן אֽוֹן׃ וַיִּקְרָ֥א יוֹסֵ֛ף אֶת־שֵׁ֥ם הַבְּכ֖וֹר מְנַשֶּׁ֑ה כִּֽי־נַשַּׁ֤נִי אֱלֹהִים֙ אֶת־כׇּל־עֲמָלִ֔י וְאֵ֖ת כׇּל־בֵּ֥ית אָבִֽי׃ וְאֵ֛ת שֵׁ֥ם הַשֵּׁנִ֖י קָרָ֣א אֶפְרָ֑יִם כִּֽי־הִפְרַ֥נִי אֱלֹהִ֖ים בְּאֶ֥רֶץ עׇנְיִֽי׃ וַתִּכְלֶ֕ינָה שֶׁ֖בַע שְׁנֵ֣י הַשָּׂבָ֑ע אֲשֶׁ֥ר הָיָ֖ה בְּאֶ֥רֶץ מִצְרָֽיִם׃
+
+ENGLISH:
+During the seven years of plenty, the land produced in abundance. And he gathered all the grain of the seven years that the land of Egypt was enjoying, and stored the grain in the cities; he put in each city the grain of the fields around it. So Joseph collected produce in very large quantity, like the sands of the sea, until he ceased to measure it, for it could not be measured. Before the years of famine came, Joseph became the father of two sons, whom Asenath daughter of Poti-phera, priest of On, bore to him. Joseph named the first-born Manasseh, meaning, God has made me forget, connected with Manasseh ( Menashsheh ). completely my hardship and my parental home. And the second he named Ephraim, meaning, God has made me fertile, connected with Ephraim. in the land of my affliction. The seven years of abundance that the land of Egypt enjoyed came to an end,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph stored Egypt's grain, had sons Manasseh and Ephraim.",
+    "heb_summary": "יוסף אגר תבואות מצרים, הוליד את מנשה ואפרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Asenath"
+        },
+        {
+          "en_name": "Poti-Phera"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}
