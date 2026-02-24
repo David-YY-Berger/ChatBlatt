@@ -259,16 +259,16 @@ class ExtractionResult(BaseModel):
             # Person → Nation
             'personBelongsToNation': ('Person', 'Nation'),
 
-            # Nation → Nation
-            'EnemyOf': ('Nation', 'Nation'),
-            'AllyOf': ('Nation', 'Nation'),
+            # Nation → Nation  OR  Person → Person
+            'EnemyOf': [('Nation', 'Nation'), ('Person', 'Person')],
+            'AllyOf': [('Nation', 'Nation'), ('Person', 'Person')],
 
             # Place → Nation
             'placeToNation': ('Place', 'Nation'),
 
-            # {anything} → {anything} (but both terms must be known entities)
-            'comparedTo': ('ANY', 'ANY'),
-            'contrastedWith': ('ANY', 'ANY'),
+            # {anything} → {anything}
+            'comparedTo': (None, None),
+            'contrastedWith': (None, None),
         }
 
         invalid_count = 0
