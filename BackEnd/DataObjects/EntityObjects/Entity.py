@@ -12,6 +12,6 @@ class Entity(BaseModel):
     all_names: List[str]
     entityType: EntityType
     # optional:
-    alias_keys: List[str] = list()  # holds keys of other entities.. take from the Rel
+    # alias_keys: List[str] = list()  # holds keys of other entities.. take from the Rel
     book_src: Optional[str] = None                 # to differ btw Tamar in bereishit and Tamar in Shmuel B
     passage_count: Optional[int] = None
