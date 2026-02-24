@@ -1,4 +1,4 @@
-﻿COST: Tokens: Total=3209 approx cost usd = $0.001153 (Prompt=3075, Completion=134)
+﻿COST: Tokens: Total=3450 approx cost usd = $0.001153 (Prompt=3075, Completion=375)
 SOURCE:
 Genesis 41:47-53  (TN_Genesis_0_41:47-53)
 
@@ -11,10 +11,11 @@ During the seven years of plenty, the land produced in abundance. And he gathere
 EXTRACTED GRAPH (JSON):
 {
   "res": {
-    "en_summary": "Joseph stored Egypt's grain, had sons Manasseh and Ephraim.",
+    "en_summary": "Joseph stored Egypt's abundant grain, had sons Manasseh and Ephraim.",
     "heb_summary": "יוסף אגר תבואות מצרים, הוליד את מנשה ואפרים.",
     "passage_types": [
-      "STORY"
+      "STORY",
+      "GENEALOGY"
     ],
     "Entities": {
       "Person": [
@@ -27,8 +28,52 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "Poti-Phera"
         }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "On"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Manasseh"
+        },
+        {
+          "en_name": "Ephraim"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
       ]
     },
-    "Rel": {}
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "Asenath",
+          "term2": "Poti-Phera"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Asenath",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "On",
+          "term2": "Egypt"
+        }
+      ]
+    }
   }
 }
