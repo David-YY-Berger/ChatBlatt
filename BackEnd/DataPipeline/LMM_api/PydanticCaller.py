@@ -42,6 +42,7 @@ class PydanticCaller:
                 "RELATIONSHIP RULES: "
                 "- studiedFrom: A Sage transmitting a ruling in the name of another sage ('X said that Y said', 'X said in the name of Y', 'Abaye said that Shmuel said'). This indicates a teacher-student transmission chain."
                 "- childOf: Explicit parent-child links only."
+                "- siblingOf: only include if not implicable from isChild relationship"
                 "- descendantOf: Non-adjacent jumps or broken chains. "
                 "- comparedTo: "
                 "- EXCLUSIVITY: Never list a person as both childOf and descendantOf the same entity. "
