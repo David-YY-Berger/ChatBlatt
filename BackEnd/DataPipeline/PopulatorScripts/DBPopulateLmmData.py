@@ -246,8 +246,17 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_I Kings_0_5:15–32'
 
             # bornIn
-            'TN_Genesis_0_41:47-53'
+            # 'TN_Genesis_0_41:47-53'
 
+            # enemyOF (nation to nation) - very long source
+            # 'TN_II Kings_0_23:31–25:7' #todo include validation in pydatic!!
+
+            # diedIn (debora)
+            "TN_Genesis_0_35:1-9"
+
+
+
+            # ------------------------------------------------------
             # amalek, joshua, moshe, etc.
             # 'TN_Exodus_0_17:8-13',
 

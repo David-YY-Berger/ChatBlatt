@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=3545 approx cost usd = $0.001188 (Prompt=3167, Completion=378)
+SOURCE:
+Genesis 35:1-9  (TN_Genesis_0_35:1-9)
+
+HEBREW:
+וַיֹּ֤אמֶר אֱלֹהִים֙ אֶֽל־יַעֲקֹ֔ב ק֛וּם עֲלֵ֥ה בֵֽית־אֵ֖ל וְשֶׁב־שָׁ֑ם וַעֲשֵׂה־שָׁ֣ם מִזְבֵּ֔חַ לָאֵל֙ הַנִּרְאֶ֣ה אֵלֶ֔יךָ בְּבׇ֨רְחֲךָ֔ מִפְּנֵ֖י עֵשָׂ֥ו אָחִֽיךָ׃ וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל־בֵּית֔וֹ וְאֶ֖ל כׇּל־אֲשֶׁ֣ר עִמּ֑וֹ הָסִ֜רוּ אֶת־אֱלֹהֵ֤י הַנֵּכָר֙ אֲשֶׁ֣ר בְּתֹכְכֶ֔ם וְהִֽטַּהֲר֔וּ וְהַחֲלִ֖יפוּ שִׂמְלֹתֵיכֶֽם׃ וְנָק֥וּמָה וְנַעֲלֶ֖ה בֵּֽית־אֵ֑ל וְאֶֽעֱשֶׂה־שָּׁ֣ם מִזְבֵּ֗חַ לָאֵ֞ל הָעֹנֶ֤ה אֹתִי֙ בְּי֣וֹם צָֽרָתִ֔י וַֽיְהִי֙ עִמָּדִ֔י בַּדֶּ֖רֶךְ אֲשֶׁ֥ר הָלָֽכְתִּי׃ וַיִּתְּנ֣וּ אֶֽל־יַעֲקֹ֗ב אֵ֣ת כׇּל־אֱלֹהֵ֤י הַנֵּכָר֙ אֲשֶׁ֣ר בְּיָדָ֔ם וְאֶת־הַנְּזָמִ֖ים אֲשֶׁ֣ר בְּאׇזְנֵיהֶ֑ם וַיִּטְמֹ֤ן אֹתָם֙ יַעֲקֹ֔ב תַּ֥חַת הָאֵלָ֖ה אֲשֶׁ֥ר עִם־שְׁכֶֽם׃ וַיִּסָּ֑עוּ וַיְהִ֣י׀ חִתַּ֣ת אֱלֹהִ֗ים עַל־הֶֽעָרִים֙ אֲשֶׁר֙ סְבִיב֣וֹתֵיהֶ֔ם וְלֹ֣א רָֽדְפ֔וּ אַחֲרֵ֖י בְּנֵ֥י יַעֲקֹֽב׃ וַיָּבֹ֨א יַעֲקֹ֜ב ל֗וּזָה אֲשֶׁר֙ בְּאֶ֣רֶץ כְּנַ֔עַן הִ֖וא בֵּֽית־אֵ֑ל ה֖וּא וְכׇל־הָעָ֥ם אֲשֶׁר־עִמּֽוֹ׃ וַיִּ֤בֶן שָׁם֙ מִזְבֵּ֔חַ וַיִּקְרָא֙ לַמָּק֔וֹם אֵ֖ל בֵּֽית־אֵ֑ל כִּ֣י שָׁ֗ם נִגְל֤וּ אֵלָיו֙ הָֽאֱלֹהִ֔ים בְּבׇרְח֖וֹ מִפְּנֵ֥י אָחִֽיו׃ וַתָּ֤מׇת דְּבֹרָה֙ מֵינֶ֣קֶת רִבְקָ֔ה וַתִּקָּבֵ֛ר מִתַּ֥חַת לְבֵֽית־אֵ֖ל תַּ֣חַת הָֽאַלּ֑וֹן וַיִּקְרָ֥א שְׁמ֖וֹ אַלּ֥וֹן בָּכֽוּת׃ וַיֵּרָ֨א אֱלֹהִ֤ים אֶֽל־יַעֲקֹב֙ ע֔וֹד בְּבֹא֖וֹ מִפַּדַּ֣ן אֲרָ֑ם וַיְבָ֖רֶךְ אֹתֽוֹ׃
+
+ENGLISH:
+God said to Jacob, Arise, go up to Bethel and remain there; and build an altar there to the God who appeared to you when you were fleeing from your brother Esau. So Jacob said to his household and to all who were with him, Rid yourselves of the alien gods in your midst, purify yourselves, and change your clothes. Come, let us go up to Bethel, and I will build an altar there to the God who answered me when I was in distress and who has been with me wherever I have gone. They gave to Jacob all the alien gods that they had, and the rings that were in their ears, and Jacob buried them under the terebinth that was near Shechem. As they set out, a terror from God fell on the cities round about, so that they did not pursue the sons of Jacob. Thus Jacob came to Luz-that is, Bethel-in the land of Canaan, he and all the people who were with him. There he built an altar and named the site El-bethel, for it was there that God had been revealed to him when he was fleeing from his brother. Deborah, Rebekahs nurse, died, and was buried under the oak below Bethel; so it was named Allon-bacuth. God appeared again to Jacob on his arrival from Paddan-aram. God blessed him,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob went to Bethel, purified his household, and built an altar.",
+    "heb_summary": "יעקב עלה לבית אל, טיהר את ביתו, ובנה מזבח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Deborah"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Bethel"
+        },
+        {
+          "en_name": "Luz"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "God"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [],
+      "siblingWith": [],
+      "childOf": [],
+      "spouseOf": [],
+      "descendantOf": [],
+      "bornIn": [],
+      "diedIn": [
+        {
+          "term1": "Deborah",
+          "term2": "Bethel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Bethel"
+        }
+      ],
+      "personToTribeOfIsrael": [],
+      "personBelongsToNation": [],
+      "EnemyOf": [],
+      "AllyOf": [],
+      "placeToNation": [
+        {
+          "term1": "Bethel",
+          "term2": "God"
+        },
+        {
+          "term1": "Luz",
+          "term2": "God"
+        },
+        {
+          "term1": "Canaan",
+          "term2": "God"
+        },
+        {
+          "term1": "Shechem",
+          "term2": "God"
+        },
+        {
+          "term1": "Paddan-Aram",
+          "term2": "God"
+        }
+      ],
+      "comparedTo": [],
+      "contrastedWith": []
+    }
+  }
+}
