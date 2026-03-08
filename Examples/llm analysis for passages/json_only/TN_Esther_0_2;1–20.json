@@ -1,0 +1,122 @@
+﻿{
+    "res": {
+        "en_summary": "Esther becomes queen, replacing Vashti, obeying Mordecai's instructions.",
+        "heb_summary": "אסתר מלכה תחת ושתי, שומעת למרדכי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Ahasuerus"
+                },
+                {
+                    "en_name": "Vashti"
+                },
+                {
+                    "en_name": "Mordecai"
+                },
+                {
+                    "en_name": "Hadassah"
+                },
+                {
+                    "en_name": "Esther"
+                },
+                {
+                    "en_name": "Jair"
+                },
+                {
+                    "en_name": "Shimei"
+                },
+                {
+                    "en_name": "Kish"
+                },
+                {
+                    "en_name": "Jeconiah"
+                },
+                {
+                    "en_name": "Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Abihail"
+                },
+                {
+                    "en_name": "Hegai"
+                },
+                {
+                    "en_name": "Shaashgaz"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shushan"
+                },
+                {
+                    "en_name": "Jerusalem"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Benjamin"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Babylon"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Esther",
+                    "term2": "Mordecai"
+                }
+            ],
+            "childOf": [
+                {
+                    "term1": "Mordecai",
+                    "term2": "Jair"
+                },
+                {
+                    "term1": "Jair",
+                    "term2": "Shimei"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Kish"
+                },
+                {
+                    "term1": "Esther",
+                    "term2": "Abihail"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Kish",
+                    "term2": "Benjamin"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jeconiah",
+                    "term2": "Judah"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Shushan",
+                    "term2": "Babylon"
+                }
+            ]
+        }
+    },
+    "key": "TN_Esther_0_2:1–20"
+}

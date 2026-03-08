@@ -1,9 +1,11 @@
 # bs'd
 import asyncio
+import json
 import os
 
 from BackEnd.DataObjects.SourceClasses.SourceContent import SourceContent
 from BackEnd.DB.Collections import CollectionObjs
+from BackEnd.DB.DBConstants import DBFields
 from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
 from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
@@ -141,22 +143,30 @@ class DBPopulateLmmData(DBParentClass):
                 f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})"
             )
-            # in this json str, add the src key somehow
+            # Add the src_key to the JSON
+            graph_dict = json.loads(graph_json_str)
+            graph_dict[DBFields.KEY] = src_content.key
+
             path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
 
-            # output_text = (
-            #     f"COST: {cost_summary}\n"
-            #     f"SOURCE:\n{src_content}\n\n"
-            #     f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
-            #     f"ENGLISH:\n{passage}\n\n"
-            #     f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
-            # )
-            output_text = graph_json_str
+            output_text = (
+                f"COST: {cost_summary}\n"
+                f"SOURCE:\n{src_content}\n\n"
+                f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
+                f"ENGLISH:\n{passage}\n\n"
+                f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
+            )
 
             LocalPrinter.print_to_file(
-                output_text,
+                graph_dict,  # Pass dict directly - LocalPrinter handles JSON formatting
                 # FileTypeEnum.FileType.TXT,
                 FileTypeEnum.FileType.JSON,
+                path
+            )
+            LocalPrinter.print_to_file(
+                output_text,
+                FileTypeEnum.FileType.TXT,
+                # FileTypeEnum.FileType.JSON,
                 path
             )
         print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
@@ -260,6 +270,7 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
             # x said in name of y said in name of z.
             # 'BT_Berakhot_0_35b:11-12', # missing childOf
+            # "TN_Esther_0_1:1–22", - ensure no studied from!
 
             # placeToNation (seir to edom)
             # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
@@ -285,6 +296,8 @@ class DBPopulateLmmData(DBParentClass):
             # diedIn (debora)
             # "TN_Genesis_0_35:1-9"
 
+            # personToTribeOfIsrael
+            "TN_Esther_0_2:1–20",
 
 
             # ------------------------------------------------------
