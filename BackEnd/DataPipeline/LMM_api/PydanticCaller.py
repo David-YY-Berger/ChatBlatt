@@ -45,6 +45,7 @@ class PydanticCaller:
                 "- siblingOf: only include if not implicable from isChild relationship"
                 "- descendantOf: Non-adjacent jumps or broken chains. "
                 "- spokeWith: Two persons having a direct conversation or dialogue in the text. "
+                "- prophesiedAbout: A prophet making a prophecy or prediction about any entity (person, place, nation, etc.). "
                 "- comparedTo: "
                 "- EXCLUSIVITY: Never list a person as both childOf and descendantOf the same entity. "
                 "OPTIMIZATION RULES: "

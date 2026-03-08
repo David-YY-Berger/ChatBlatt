@@ -172,6 +172,9 @@ class Relationships(BaseModel):
     # Place → Nation
     placeToNation: Optional[List[Relation]] = Field(default_factory=list)
 
+    # Person → {anything}
+    prophesiedAbout: Optional[List[Relation]] = Field(default_factory=list)
+
     # {anything} → {anything}
     comparedTo: Optional[List[Relation]] = Field(default_factory=list)
     contrastedWith: Optional[List[Relation]] = Field(default_factory=list)
@@ -267,6 +270,9 @@ class ExtractionResult(BaseModel):
 
             # Place → Nation
             'placeToNation': ('Place', 'Nation'),
+
+            # Person → {anything}
+            'prophesiedAbout': ('Person', None),
 
             # {anything} → {anything}
             'comparedTo': (None, None),

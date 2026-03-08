@@ -70,6 +70,9 @@ class RelType(DescribedEnum):
     descendantOf = ("PP05", "descendantOf")
     spokeWith = ("PP06", "spokeWith")
 
+    # Person → {anything}
+    prophesiedAbout = ("PX01", "prophesiedAbout")
+
     # Person → Place
     bornIn = ("PL01", "bornIn")
     diedIn = ("PL02", "diedIn")

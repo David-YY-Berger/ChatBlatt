@@ -29,3 +29,7 @@ class EPerson(Entity):
     # transient fields - Person → TribeOfIsrael / Nation
     tribeOfIsrael: List[str] = TransientField(default_factory=list)
     belongsToNation: List[str] = TransientField(default_factory=list)
+
+    # transient fields - Person → {anything}
+    prophesiedAbout: List[str] = TransientField(default_factory=list)
+
