@@ -141,7 +141,7 @@ class DBPopulateLmmData(DBParentClass):
                 f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})"
             )
-
+            # in this json str, add the src key somehow
             path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
 
             # output_text = (
@@ -160,6 +160,35 @@ class DBPopulateLmmData(DBParentClass):
                 path
             )
         print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
+
+    # SEE IN NOTES - THE PROMPT FOR THE LLM TO MAKE START THE PIPELINE!
+
+    # def test_populate_entities_and_relationships(self):
+    #     # runner func.
+    #     jsons = self.get_jsons_from_files()
+    #
+    #     for json in jsons:
+    #         self.populate_db_from_json(json)
+    #     pass
+    #
+    # def get_jsons_from_files(self):
+    #     # get from Examples/llm analysis for passages/json_only, make into proper json objs..
+    #     # if there is no src key in the json, then add it from the name of the json file.
+    #     pass
+    #
+    # def populate_db_from_json(self):
+    #     # extract list of entities and rels from this json. create these objects properly. you can look at the exsiting json files there.
+    #     #
+    #     # for entitys, instert to db. This will be a complex func - we must check if exists already. i have a disambigution algo, now, keep placeholder funcs there but i will let you implement them later
+    #     # after every insert, we should get the key of the entity. this key must be a unique key that is generated somehow. you can write smart code (even create another class), or can use built in features from Mongo do
+    #
+    #     # if the entity exists already, dont insert just get the existing key
+    #
+    #     # after entitys are correctly inserted, insert the rels. of course, we must ensure that these entitys exist, and if not, we shouldnt insert the relationship.
+    #     # connect the rels with the correct entity keys we ust got
+    #     #
+    #     # after entitys and relationships are properly inserted, then add to the src metadata the obj with teh src key and keys of entitiys and rels
+    #     pass
 
     ############################################## Populating Metadata ###############################################
 

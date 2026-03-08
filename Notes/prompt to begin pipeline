@@ -1,0 +1,20 @@
+(include in context the db impl and interface, all the entity and rel objs, enums, source metadata, etc.
+
+
+lets start part of the actual pipeline
+
+look at #file:DBPopulateLmmData.py , at these functions:
+
+
+
+implement whats in the comments
+
+feel free to create helper objcets if that will be more clear. obviously you will create helper functions.
+
+here are few guidinging things taht are important to me:
+- add return types to all funcs, and types to every param
+- dont go crazy with comments at all, make sure the code itself is clear.
+- should be pythonic style code, free feel to take opportunity to explain things to me along the way
+- does not have to be inseanely efficient in run time, but nice bonus if not complex.
+- if at any point this pipeline fails or notices bad data etc, then stop ALL the population of that source's entitys and rel. this essentially should be transactional. ensure to clear print to the console the errors encountered with key of source, or better yet even print a file
+
