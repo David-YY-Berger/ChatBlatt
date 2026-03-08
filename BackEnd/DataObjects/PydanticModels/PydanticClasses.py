@@ -152,6 +152,7 @@ class Relationships(BaseModel):
     childOf: Optional[List[Relation]] = Field(default_factory=list)
     spouseOf: Optional[List[Relation]] = Field(default_factory=list)
     descendantOf: Optional[List[Relation]] = Field(default_factory=list)
+    spokeWith: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person → Place
     bornIn: Optional[List[Relation]] = Field(default_factory=list)
@@ -247,6 +248,7 @@ class ExtractionResult(BaseModel):
             'childOf': ('Person', 'Person'),
             'spouseOf': ('Person', 'Person'),
             'descendantOf': ('Person', 'Person'),
+            'spokeWith': ('Person', 'Person'),
 
             # Person → Place
             'bornIn': ('Person', 'Place'),

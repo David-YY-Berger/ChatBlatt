@@ -19,6 +19,7 @@ class EPerson(Entity):
     descendantOf: List[str] = TransientField(default_factory=list)
     allyOf: List[str] = TransientField(default_factory=list)
     enemyOf: List[str] = TransientField(default_factory=list)
+    spokeWith: List[str] = TransientField(default_factory=list)
 
     # transient fields - Person → Place
     bornIn: List[str] = TransientField(default_factory=list)

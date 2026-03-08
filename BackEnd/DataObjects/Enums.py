@@ -68,6 +68,7 @@ class RelType(DescribedEnum):
     childOf = ("PP03", "childOf")
     spouseOf = ("PP04", "spouseOf")
     descendantOf = ("PP05", "descendantOf")
+    spokeWith = ("PP06", "spokeWith")
 
     # Person → Place
     bornIn = ("PL01", "bornIn")
