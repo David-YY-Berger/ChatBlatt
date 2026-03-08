@@ -55,14 +55,14 @@ class PassageType(DescribedEnum):
     PROPHECY = (4, "PROPHECY")
 
 class EntityType(DescribedEnum):
-    EPerson = ("P", "Person")
+    EPerson = ("P", "Person/Group")  # Includes individuals AND groups (e.g., "the 70 elders")
     EPlace  = ("L", "Place")
     ETribeOfIsrael  = ("T", "TribeOfIsrael")
     ENation = ("N", "Nation")
     ESymbol = ("S", "Symbol")
 
 class RelType(DescribedEnum):
-    # Person → Person
+    # Person/Group → Person/Group
     studiedFrom = ("PP01", "studiedFrom")
     siblingWith = ("PP02", "siblingWith")
     childOf = ("PP03", "childOf")
@@ -70,21 +70,21 @@ class RelType(DescribedEnum):
     descendantOf = ("PP05", "descendantOf")
     spokeWith = ("PP06", "spokeWith")
 
-    # Person → {anything}
+    # Person/Group → {anything}
     prophesiedAbout = ("PX01", "prophesiedAbout")
 
-    # Person → Place
+    # Person/Group → Place
     bornIn = ("PL01", "bornIn")
     diedIn = ("PL02", "diedIn")
     visited = ("PL04", "visited")
 
-    # Person → TribeOfIsrael
+    # Person/Group → TribeOfIsrael
     personToTribeOfIsrael = ("PT01", "personToTribeOfIsrael")
 
-    # Person → Nation
+    # Person/Group → Nation
     personBelongsToNation = ("PN01", "personBelongsToNation")
 
-    # Nation → Nation, or Person → Person
+    # Nation → Nation, or Person/Group → Person/Group
     enemyOf = ("NN01", "enemyOf")
     allyOf = ("NN02", "allyOf")
 

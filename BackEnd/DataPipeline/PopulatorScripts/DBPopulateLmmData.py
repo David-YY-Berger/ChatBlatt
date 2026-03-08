@@ -63,7 +63,7 @@ class DBPopulateLmmData(DBParentClass):
 #
 # 1. Include only entities explicitly present in the passage. No inventions or inferences.
 # 2. "en_name" must be normalized (examples: Edom not Edomites, Abraham not Abraham's).
-# 3. Person, Place, and Nation must be proper nouns.
+# 3. Person (includes both individuals AND named groups like "the 70 elders", "children of Israel"), Place, and Nation must be proper nouns.
 # 4. TribeOfIsrael includes only these names: Reuben, Simon, Levi, Judah, Issachar, Zebulun, Asher, Gad, Dan, Naphtali, Joseph, Benjamin, Manasseh, Ephraim.
 # 5. Israel cannot be a Person.
 # 6. Symbol is for non-proper-noun metaphors (example: wolf, lamb, rod, girdle).
@@ -74,16 +74,16 @@ class DBPopulateLmmData(DBParentClass):
 # 1. Include only relationships explicitly stated in the passage. No inferred or implied relationships.
 # 2. Relationship endpoints must match these allowed type pairings exactly:
 #
-# Person ↔ Person:
+# Person/Group ↔ Person/Group:
 # studiedFrom, siblingWith, childOf, spouseOf, descendantOf
 #
-# Person → Place:
+# Person/Group → Place:
 # bornIn, diedIn, visited
 #
-# Person → TribeOfIsrael:
+# Person/Group → TribeOfIsrael:
 # personToTribeOfIsrael
 #
-# Person → Nation:
+# Person/Group → Nation:
 # personBelongsToNation
 #
 # Nation ↔ Nation:

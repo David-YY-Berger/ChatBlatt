@@ -24,7 +24,7 @@ class Entity(BaseModel):
 
 
 class Entities(BaseModel):
-    Person: Optional[List[Entity]] = Field(default_factory=list)
+    Person: Optional[List[Entity]] = Field(default_factory=list, description="Individuals AND groups of people (e.g., Moses, The 70 Elders, Children of Israel)")
     Place: Optional[List[Entity]] = Field(default_factory=list)
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
@@ -38,11 +38,15 @@ class Entities(BaseModel):
             return v
 
         # Common words that should NOT be entities (even if capitalized)
+        # Note: Person includes both individuals AND named groups
         GENERIC_PERSON_WORDS = {
             'king', 'priest', 'prophet', 'leader', 'man', 'woman',
             'child', 'servant', 'warrior', 'elder', 'judge', 'scribe',
-            'people', 'person', 'soldier', 'messenger', 'angel'
+            'people', 'person', 'soldier', 'messenger', 'angel',
+            'group', 'elders', 'children', 'men', 'women'  # generic group terms
         }
+
+        # todo remove this poor logic? use Opus to fix up this file file...
 
         GENERIC_NATION_WORDS = {
             'nation', 'nations', 'people', 'peoples', 'enemy', 'enemies',
@@ -146,7 +150,7 @@ class Relation(BaseModel):
 
 
 class Relationships(BaseModel):
-    # Person → Person
+    # Person/Group → Person/Group
     studiedFrom: Optional[List[Relation]] = Field(default_factory=list)
     siblingWith: Optional[List[Relation]] = Field(default_factory=list)
     childOf: Optional[List[Relation]] = Field(default_factory=list)
@@ -154,15 +158,15 @@ class Relationships(BaseModel):
     descendantOf: Optional[List[Relation]] = Field(default_factory=list)
     spokeWith: Optional[List[Relation]] = Field(default_factory=list)
 
-    # Person → Place
+    # Person/Group → Place
     bornIn: Optional[List[Relation]] = Field(default_factory=list)
     diedIn: Optional[List[Relation]] = Field(default_factory=list)
     visited: Optional[List[Relation]] = Field(default_factory=list)
 
-    # Person → TribeOfIsrael
+    # Person/Group → TribeOfIsrael
     personToTribeOfIsrael: Optional[List[Relation]] = Field(default_factory=list)
 
-    # Person → Nation
+    # Person/Group → Nation
     personBelongsToNation: Optional[List[Relation]] = Field(default_factory=list)
 
     # Nation → Nation
@@ -172,7 +176,7 @@ class Relationships(BaseModel):
     # Place → Nation
     placeToNation: Optional[List[Relation]] = Field(default_factory=list)
 
-    # Person → {anything}
+    # Person/Group → {anything}
     prophesiedAbout: Optional[List[Relation]] = Field(default_factory=list)
 
     # {anything} → {anything}
@@ -244,8 +248,9 @@ class ExtractionResult(BaseModel):
         #   (str, str)        → single allowed type pair
         #   [(str, str), ...] → multiple allowed type pairs (any match = valid)
         #   (None, None)      → any entity types allowed
+        # Note: "Person" includes both individuals AND groups
         relationship_constraints = {
-            # Person → Person
+            # Person/Group → Person/Group
             'studiedFrom': ('Person', 'Person'),
             'siblingWith': ('Person', 'Person'),
             'childOf': ('Person', 'Person'),
@@ -253,25 +258,25 @@ class ExtractionResult(BaseModel):
             'descendantOf': ('Person', 'Person'),
             'spokeWith': ('Person', 'Person'),
 
-            # Person → Place
+            # Person/Group → Place
             'bornIn': ('Person', 'Place'),
             'diedIn': ('Person', 'Place'),
             'visited': ('Person', 'Place'),
 
-            # Person → TribeOfIsrael
+            # Person/Group → TribeOfIsrael
             'personToTribeOfIsrael': ('Person', 'TribeOfIsrael'),
 
-            # Person → Nation
+            # Person/Group → Nation
             'personBelongsToNation': ('Person', 'Nation'),
 
-            # Nation → Nation  OR  Person → Person
+            # Nation → Nation  OR  Person/Group → Person/Group
             'EnemyOf': [('Nation', 'Nation'), ('Person', 'Person')],
             'AllyOf': [('Nation', 'Nation'), ('Person', 'Person')],
 
             # Place → Nation
             'placeToNation': ('Place', 'Nation'),
 
-            # Person → {anything}
+            # Person/Group → {anything}
             'prophesiedAbout': ('Person', None),
 
             # {anything} → {anything}
