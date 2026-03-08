@@ -1,0 +1,41 @@
+app:
+  title: "מפה-לי"
+  subtitle: "מאגר ממופה של מקורות יהודיים"
+  dedication: "לעילוי נשמת פייגא מנוחה בת מרים"
+
+ui:
+  language_label: "שפה"
+  select_option: "בחר"
+
+nav:
+  home: "בית"
+  about: "אודות"
+  search: "חיפוש"
+  entity_search: "חיפוש ישות"
+  maps: "מפות"
+
+entity_tabs:
+  people: "אנשים"
+  places: "מקומות"
+  nations: "עמים"
+  symbols: "סמלים"
+  label: "בחר תצוגת ישות"
+
+map_tabs:
+  genology: "גנולוגיה"
+  studied_from: "מקורות לימוד"
+  label: "בחר תצוגת מפה"
+
+page_titles:
+  home: "ברוכים הבאים למפה-לי"
+  about: "אודות מפה-לי"
+  search: "חיפוש במקורות יהודיים"
+  entity_search: "חיפוש ישות"
+  people: "אנשים"
+  places: "מקומות"
+  nations: "עמים"
+  symbols: "סמלים"
+  maps: "מפות"
+  genology: "מפת גנולוגיה"
+  studied_from: "מפת מקורות לימוד"
+

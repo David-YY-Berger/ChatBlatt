@@ -1,0 +1,31 @@
+:root {
+    --primary: #0b7285;
+    --accent: #1864ab;
+    --bg: #f8f9fa;
+}
+
+body {
+    background: var(--bg);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.app-header {
+    padding: 1rem 0 1.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.app-title {
+    margin: 0.1rem 0;
+    color: #0f1b2c;
+}
+
+.app-subtitle {
+    font-size: 1.05rem;
+    color: #36454f;
+}
+
+.app-dedication {
+    font-size: 0.9rem;
+    color: #5c636a;
+}
+

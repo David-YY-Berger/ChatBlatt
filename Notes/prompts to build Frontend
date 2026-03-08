@@ -1,18 +1,8 @@
-i have a python app.
-i want to build a multi page streamlit from end. it should have multiple tabs.
-Should be hebrew and english (build translation infra for labels). Hebrew should work right to left
-get me started. invest thought into the file structure
+current issues:
+- light mode coloring is off
+- in parent tab of sub tabs - the fill coloring is black, not blue. fix it
+- the coloring is off in the sub tabs as well and the whole pane which expands downward.
+- the language radio button should also flip sides when language is changed. currently, on hebrew side it incorrectly stays on the right side.
+- the language options should be veritcally stacked, not horizontal
+- there is a strangly visible white line on the tab of the hotizontal tab panes. make sure its removed.
 
-top/title area:
-1. Title of web page called 'Mapalee' - מפה-לי
-2. subtitle: The indexed database of Jewish Sources
-3. place at top, italics, small writing that says "lilui nishmat feyga menucha bat miriam"
-
-
-tabs (horizontal row across the top, always visible): Home, About, Search, Entity Search (sub tabs - People, Places, Nations, Symbols), Maps (sub tabs - Genology, studiedFrom)
-right now, keep the content of all these pages empty.
-
--------------------------
-home tab: section 1: example searchs (put here dummy links), section 2 : example Entitys (dummy links),
-About: lorem epsum text with sub sections
-Search:

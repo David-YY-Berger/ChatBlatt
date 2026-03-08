@@ -1,0 +1,41 @@
+app:
+  title: "Mapalee"
+  subtitle: "The indexed database of Jewish Sources"
+  dedication: "lilui nishmat feyga menucha bat miriam"
+
+ui:
+  language_label: "Language"
+  select_option: "Select"
+
+nav:
+  home: "Home"
+  about: "About"
+  search: "Search"
+  entity_search: "Entity Search"
+  maps: "Maps"
+
+entity_tabs:
+  people: "People"
+  places: "Places"
+  nations: "Nations"
+  symbols: "Symbols"
+  label: "Choose an entity view"
+
+map_tabs:
+  genology: "Genology"
+  studied_from: "studiedFrom"
+  label: "Choose a map view"
+
+page_titles:
+  home: "Welcome to Mapalee"
+  about: "About Mapalee"
+  search: "Search Jewish Sources"
+  entity_search: "Entity Search"
+  people: "People"
+  places: "Places"
+  nations: "Nations"
+  symbols: "Symbols"
+  maps: "Maps"
+  genology: "Genology Map"
+  studied_from: "Studied From Map"
+
