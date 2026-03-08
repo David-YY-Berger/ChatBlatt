@@ -125,7 +125,7 @@ class DBPopulateLmmData(DBParentClass):
     def tearDown(self):
         super().tearDown()
 
-    ############################################## dummy testing ###############################################
+    ############################################## Populating Entities and Relationships ###############################################
 
     def test_async_run(self):
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
@@ -144,17 +144,19 @@ class DBPopulateLmmData(DBParentClass):
 
             path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
 
-            output_text = (
-                f"COST: {cost_summary}\n"
-                f"SOURCE:\n{src_content}\n\n"
-                f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
-                f"ENGLISH:\n{passage}\n\n"
-                f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
-            )
+            # output_text = (
+            #     f"COST: {cost_summary}\n"
+            #     f"SOURCE:\n{src_content}\n\n"
+            #     f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
+            #     f"ENGLISH:\n{passage}\n\n"
+            #     f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
+            # )
+            output_text = graph_json_str
 
             LocalPrinter.print_to_file(
                 output_text,
-                FileTypeEnum.FileType.TXT,
+                # FileTypeEnum.FileType.TXT,
+                FileTypeEnum.FileType.JSON,
                 path
             )
         print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
@@ -223,7 +225,7 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Sanhedrin_0_96b:2-9',
 
             # spouseOf
-            # 'TN_Genesis_0_30:3-8'
+            # 'TN_Genesis_0_30:3-8',
 
             # studiedFrom
             # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
@@ -231,28 +233,28 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Berakhot_0_35b:11-12', # missing childOf
 
             # placeToNation (seir to edom)
-            # 'TN_Genesis_0_36:1-19' # bad studied from - esav not studied from yaakov!. missed alias..
+            # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
 
             # personBelongsToNation
-            # 'BT_Sanhedrin_0_94a:4-10' # bad alias, (should be comparison..)
+            # 'BT_Sanhedrin_0_94a:4-10', # bad alias, (should be comparison..)
 
             # comparedTo (
             # 'TN_Isaiah_0_1:1-31',
 
             # contrastedWith, non literal places (world to come vs this world)
-            # 'BT_Berakhot_0_17a:7-12'
+            # 'BT_Berakhot_0_17a:7-12',
 
             # AllyOf (person - person)
-            # 'TN_I Kings_0_5:15–32'
+            # 'TN_I Kings_0_5:15–32',
 
             # bornIn
-            # 'TN_Genesis_0_41:47-53'
+            # 'TN_Genesis_0_41:47-53',
 
             # enemyOF (nation to nation) - very long source
-            # 'TN_II Kings_0_23:31–25:7' #todo include validation in pydatic!!
-
+            # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
+            #
             # diedIn (debora)
-            "TN_Genesis_0_35:1-9"
+            # "TN_Genesis_0_35:1-9"
 
 
 

@@ -1,0 +1,71 @@
+﻿{
+  "res": {
+    "en_summary": "Jacob went to Bethel, buried idols, and built an altar.",
+    "heb_summary": "יעקב עלה לבית אל, קבר אלילים ובנה מזבח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Deborah"
+        },
+        {
+          "en_name": "Rebekah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Bethel"
+        },
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Luz"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "God"
+        }
+      ]
+    },
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "Jacob",
+          "term2": "God"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Deborah",
+          "term2": "Bethel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Shechem"
+        }
+      ]
+    }
+  }
+}
