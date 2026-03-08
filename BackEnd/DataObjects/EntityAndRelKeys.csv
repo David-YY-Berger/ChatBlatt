@@ -1,4 +1,4 @@
-Name,term1Type,term2Type,Key_Prefix,Description,Counter
+Name,term1Type,term2Type,Key_Prefix,notes,""
 EPerson,"","",P,,
 EPlace,"","",L,,
 ETribeOfIsrael,"","",T,,
@@ -20,7 +20,9 @@ personToTribeOfIsrael,Person,TribeOfIsrael,PT01,,
 personBelongsToNation,Person,Nation,PN01,,
 ,,,,,,
 EnemyOf,Nation,Nation,NN01,,
+EnemyOf,Person,Person,NN01,,
 AllyOf,Nation,Nation,NN02,,
+AllyOf,Person,Person,NN02,,
 ,,,,,,
 placeToNation,Place,Nation,LN01,,
 ,,,,,,

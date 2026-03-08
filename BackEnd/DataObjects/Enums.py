@@ -80,9 +80,9 @@ class RelType(DescribedEnum):
     # Person → Nation
     personBelongsToNation = ("PN01", "personBelongsToNation")
 
-    # Nation → Nation
-    EnemyOf = ("NN01", "EnemyOf")
-    AllyOf = ("NN02", "AllyOf")
+    # Nation → Nation, or Person → Person
+    enemyOf = ("NN01", "enemyOf")
+    allyOf = ("NN02", "allyOf")
 
     # Place → Nation
     placeToNation = ("LN01", "placeToNation")

@@ -3,5 +3,5 @@ from BackEnd.DataObjects.Enums import SymbolType, EntityType
 
 
 class ESymbol(Entity):
-    entityType = EntityType.ESymbol
+    entityType: EntityType = EntityType.ESymbol
     symbolType: SymbolType

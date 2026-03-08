@@ -5,8 +5,11 @@ from BackEnd.DataObjects.Enums import RelType
 # Relationship
 @dataclass
 class Rel:
+    # db:
     key: str
     term1: str # key of Entity
     term2: str # key of Entity
     rel_type: RelType
+
+    # transient:
     source_keys: List[str] = field(default_factory=list)

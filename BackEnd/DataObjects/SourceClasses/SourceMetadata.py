@@ -8,13 +8,12 @@ from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 
 @dataclass
 class SourceMetadata(SourceClass):
-    key: str
     source_type: SourceType
     summary_en: Optional[str] = None
     summary_heb: Optional[str] = None
     passage_types: List[PassageType] = field(default_factory=list)
-    entity_keys: Set[str] = field(default_factory=list)
-    rel_keys: Set[str] = field(default_factory=list)
+    entity_keys: Set[str] = field(default_factory=set)
+    rel_keys: Set[str] = field(default_factory=set)
 
     def __post_init__(self):
         if self.passage_types is None:
