@@ -8,8 +8,11 @@ from pymongo.server_api import ServerApi
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
+from BackEnd.DataObjects.Rel import Rel
+from BackEnd.DataObjects.Enums import EntityType
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DB.Collections import CollectionObjs, Collection
+from BackEnd.DB.DBConstants import DBFields, DBOperators
 from BackEnd.DB.DBapiInterface import DBapiInterface
 from BackEnd.General.Decorators import singleton
 # from BackEnd.General.Logger import Logger
@@ -235,9 +238,9 @@ class DBapiMongoDB(DBapiInterface):
         # If no document exists, 'upsert=True' inserts a new one.
         self.get_collection(CollectionObjs.FS).update_one(
             {},
-            {"$set": {
-                "faiss_index": faiss_index_binary,
-                "metadata": metadata_binary
+            {DBOperators.SET: {
+                DBFields.FAISS_INDEX: faiss_index_binary,
+                DBFields.METADATA: metadata_binary
             }},
             upsert=True
         )
@@ -261,36 +264,322 @@ class DBapiMongoDB(DBapiInterface):
             return None
 
         # Convert fields from BSON Binary to bytes
-        index_bytes = bytes(record.get("faiss_index")) if record.get("faiss_index") else None
-        metadata_bytes = bytes(record.get("metadata")) if record.get("metadata") else None
+        index_bytes = bytes(record.get(DBFields.FAISS_INDEX)) if record.get(DBFields.FAISS_INDEX) else None
+        metadata_bytes = bytes(record.get(DBFields.METADATA)) if record.get(DBFields.METADATA) else None
 
         if index_bytes is None or metadata_bytes is None:
             return None
 
         return index_bytes, metadata_bytes
 
-    # ----------------------------- Source Metadata (Lmm) ------------------------------------
+    # ----------------------------- Entity ------------------------------------
     @override
-    def is_src_metadata_exist(self, key: str) -> bool:
-        return True
+    def is_entity_exists(self, key: str) -> bool:
+        """Check if an entity with the given key exists."""
+        return self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.KEY: key}) is not None
 
     @override
-    def insert_source_metadata(self, src_metadata:SourceMetadata) -> str:
-        pass
+    def insert_entity(self, entity: Entity) -> str:
+        """Insert a new entity. Returns the inserted document ID."""
+        data = entity.to_db_dict()
+        data[DBFields.ENTITY_TYPE] = entity.entityType.value
+        result = self.get_collection(CollectionObjs.ENTITIES).insert_one(data)
+        return str(result.inserted_id)
 
     @override
-    def update_source_metadata(self, src_metadata:SourceMetadata) -> str:
-        pass
+    def update_entity(self, entity: Entity) -> int:
+        """Update an existing entity by key. Returns modified count."""
+        data = entity.to_db_dict()
+        data[DBFields.ENTITY_TYPE] = entity.entityType.value
+        key = data.pop(DBFields.KEY)
+        result = self.get_collection(CollectionObjs.ENTITIES).update_one(
+            {DBFields.KEY: key},
+            {DBOperators.SET: data}
+        )
+        return result.modified_count
 
-    # ----------------------------- Entity (Lmm) ------------------------------------
     @override
-    def is_entity_processed(self, key: str) -> bool:
-        # todo
-        return True
+    def get_entity_by_key(self, key: str) -> Optional[Entity]:
+        """Retrieve an entity by its key."""
+        doc = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.KEY: key})
+        if doc is None:
+            return None
+        return self._doc_to_entity(doc)
+
+    @override
+    def get_entities_by_keys(self, keys: List[str]) -> List[Entity]:
+        """Retrieve multiple entities by their keys."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find({DBFields.KEY: {DBOperators.IN: keys}})
+        return [self._doc_to_entity(doc) for doc in docs]
+
+    @override
+    def get_entities_by_type(self, entity_type: EntityType) -> List[Entity]:
+        """Retrieve all entities of a specific type."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find({DBFields.ENTITY_TYPE: entity_type.value})
+        return [self._doc_to_entity(doc) for doc in docs]
 
     @override
     def get_all_entities(self) -> List[Entity]:
-        pass
+        """Retrieve all entities."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find({})
+        return [self._doc_to_entity(doc) for doc in docs]
+
+    @override
+    def search_entities_by_name(self, name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
+        """Search entities by name (searches all name fields)."""
+        regex_pattern = {DBOperators.REGEX: name, DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
+        name_query = {
+            DBOperators.OR: [
+                {DBFields.DISPLAY_EN_NAME: regex_pattern},
+                {DBFields.DISPLAY_HEB_NAME: regex_pattern},
+                {DBFields.ALL_EN_NAMES: regex_pattern},
+                {DBFields.ALL_HEB_NAMES: regex_pattern},
+            ]
+        }
+        if entity_type:
+            query = {DBOperators.AND: [name_query, {DBFields.ENTITY_TYPE: entity_type.value}]}
+        else:
+            query = name_query
+
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
+        return [self._doc_to_entity(doc) for doc in docs]
+
+    @override
+    def insert_entities_bulk(self, entities: List[Entity]) -> int:
+        """Bulk insert multiple entities. Returns number of inserted documents."""
+        if not entities:
+            return 0
+        docs = []
+        for entity in entities:
+            data = entity.to_db_dict()
+            data[DBFields.ENTITY_TYPE] = entity.entityType.value
+            docs.append(data)
+        result = self.get_collection(CollectionObjs.ENTITIES).insert_many(docs)
+        return len(result.inserted_ids)
+
+    @override
+    def upsert_entities_bulk(self, entities: List[Entity]) -> Tuple[int, int]:
+        """Bulk upsert multiple entities. Returns (inserted_count, updated_count)."""
+        from pymongo import UpdateOne
+
+        if not entities:
+            return (0, 0)
+
+        operations = []
+        for entity in entities:
+            data = entity.to_db_dict()
+            data[DBFields.ENTITY_TYPE] = entity.entityType.value
+            operations.append(
+                UpdateOne(
+                    {DBFields.KEY: entity.key},
+                    {DBOperators.SET: data},
+                    upsert=True
+                )
+            )
+
+        result = self.get_collection(CollectionObjs.ENTITIES).bulk_write(operations)
+        return (result.upserted_count, result.modified_count)
+
+    def _doc_to_entity(self, doc: Dict[str, Any]) -> Entity:
+        """Convert a MongoDB document to the appropriate Entity subclass."""
+        from BackEnd.DataObjects.EntityObjects.EPerson import EPerson
+        from BackEnd.DataObjects.EntityObjects.EPlace import EPlace
+        from BackEnd.DataObjects.EntityObjects.ENation import ENation
+        from BackEnd.DataObjects.EntityObjects.ESymbol import ESymbol
+        from BackEnd.DataObjects.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+
+        # Remove MongoDB _id field
+        doc = {k: v for k, v in doc.items() if k != '_id'}
+
+        # Get entity type and convert from stored value
+        entity_type_value = doc.get(DBFields.ENTITY_TYPE)
+        entity_type = EntityType(entity_type_value)
+
+        # Map EntityType to the correct subclass
+        entity_class_map = {
+            EntityType.EPerson: EPerson,
+            EntityType.EPlace: EPlace,
+            EntityType.ENation: ENation,
+            EntityType.ESymbol: ESymbol,
+            EntityType.ETribeOfIsrael: ETribeOfIsrael,
+        }
+
+        entity_class = entity_class_map.get(entity_type, Entity)
+        return entity_class.model_validate(doc)
+
+    # ----------------------------- Relationship ------------------------------------
+    @override
+    def is_rel_exists(self, key: str) -> bool:
+        """Check if a relationship with the given key exists."""
+        return self.get_collection(CollectionObjs.RELATIONS).find_one({DBFields.KEY: key}) is not None
+
+    @override
+    def insert_rel(self, rel: Rel) -> str:
+        """Insert a new relationship. Returns the inserted document ID."""
+        data = rel.to_db_dict()
+        data[DBFields.REL_TYPE] = rel.rel_type.value
+        result = self.get_collection(CollectionObjs.RELATIONS).insert_one(data)
+        return str(result.inserted_id)
+
+    @override
+    def update_rel(self, rel: Rel) -> int:
+        """Update an existing relationship by key. Returns modified count."""
+        data = rel.to_db_dict()
+        data[DBFields.REL_TYPE] = rel.rel_type.value
+        key = data.pop(DBFields.KEY)
+        result = self.get_collection(CollectionObjs.RELATIONS).update_one(
+            {DBFields.KEY: key},
+            {DBOperators.SET: data}
+        )
+        return result.modified_count
+
+    @override
+    def get_rel_by_key(self, key: str) -> Optional[Rel]:
+        """Retrieve a relationship by its key."""
+        doc = self.get_collection(CollectionObjs.RELATIONS).find_one({DBFields.KEY: key})
+        if doc is None:
+            return None
+        return self._doc_to_rel(doc)
+
+    @override
+    def get_rels_by_keys(self, keys: List[str]) -> List[Rel]:
+        """Retrieve multiple relationships by their keys."""
+        docs = self.get_collection(CollectionObjs.RELATIONS).find({DBFields.KEY: {DBOperators.IN: keys}})
+        return [self._doc_to_rel(doc) for doc in docs]
+
+    @override
+    def get_rels_for_entity(self, entity_key: str) -> List[Rel]:
+        """Retrieve all relationships where the entity is term1 or term2."""
+        docs = self.get_collection(CollectionObjs.RELATIONS).find({
+            DBOperators.OR: [
+                {DBFields.TERM1: entity_key},
+                {DBFields.TERM2: entity_key}
+            ]
+        })
+        return [self._doc_to_rel(doc) for doc in docs]
+
+    @override
+    def get_all_rels(self) -> List[Rel]:
+        """Retrieve all relationships."""
+        docs = self.get_collection(CollectionObjs.RELATIONS).find({})
+        return [self._doc_to_rel(doc) for doc in docs]
+
+    @override
+    def insert_rels_bulk(self, rels: List[Rel]) -> int:
+        """Bulk insert multiple relationships. Returns number of inserted documents."""
+        if not rels:
+            return 0
+        docs = []
+        for rel in rels:
+            data = rel.to_db_dict()
+            data[DBFields.REL_TYPE] = rel.rel_type.value
+            docs.append(data)
+        result = self.get_collection(CollectionObjs.RELATIONS).insert_many(docs)
+        return len(result.inserted_ids)
+
+    @override
+    def upsert_rels_bulk(self, rels: List[Rel]) -> Tuple[int, int]:
+        """Bulk upsert multiple relationships. Returns (inserted_count, updated_count)."""
+        from pymongo import UpdateOne
+
+        if not rels:
+            return (0, 0)
+
+        operations = []
+        for rel in rels:
+            data = rel.to_db_dict()
+            data[DBFields.REL_TYPE] = rel.rel_type.value
+            operations.append(
+                UpdateOne(
+                    {DBFields.KEY: rel.key},
+                    {DBOperators.SET: data},
+                    upsert=True
+                )
+            )
+
+        result = self.get_collection(CollectionObjs.RELATIONS).bulk_write(operations)
+        return (result.upserted_count, result.modified_count)
+
+    def _doc_to_rel(self, doc: Dict[str, Any]) -> Rel:
+        """Convert a MongoDB document to a Rel object."""
+        from BackEnd.DataObjects.Enums import RelType
+
+        # Remove MongoDB _id field
+        doc = {k: v for k, v in doc.items() if k != '_id'}
+
+        # Convert stored rel_type value back to enum
+        rel_type_value = doc.get(DBFields.REL_TYPE)
+        doc[DBFields.REL_TYPE] = RelType(rel_type_value)
+
+        return Rel.model_validate(doc)
+
+    # ----------------------------- Source Metadata ------------------------------------
+    @override
+    def is_src_metadata_exists(self, key: str) -> bool:
+        """Check if source metadata with the given key exists."""
+        return self.get_collection(CollectionObjs.SRC_METADATA).find_one({DBFields.KEY: key}) is not None
+
+    @override
+    def insert_source_metadata(self, src_metadata: SourceMetadata) -> str:
+        """Insert new source metadata. Returns the inserted document ID."""
+        data = self._src_metadata_to_doc(src_metadata)
+        result = self.get_collection(CollectionObjs.SRC_METADATA).insert_one(data)
+        return str(result.inserted_id)
+
+    @override
+    def update_source_metadata(self, src_metadata: SourceMetadata) -> int:
+        """Update existing source metadata by key. Returns modified count."""
+        data = self._src_metadata_to_doc(src_metadata)
+        key = data.pop(DBFields.KEY)
+        result = self.get_collection(CollectionObjs.SRC_METADATA).update_one(
+            {DBFields.KEY: key},
+            {DBOperators.SET: data}
+        )
+        return result.modified_count
+
+    @override
+    def get_source_metadata_by_key(self, key: str) -> Optional[SourceMetadata]:
+        """Retrieve source metadata by its key."""
+        doc = self.get_collection(CollectionObjs.SRC_METADATA).find_one({DBFields.KEY: key})
+        if doc is None:
+            return None
+        return self._doc_to_src_metadata(doc)
+
+    @override
+    def get_all_source_metadata(self) -> List[SourceMetadata]:
+        """Retrieve all source metadata."""
+        docs = self.get_collection(CollectionObjs.SRC_METADATA).find({})
+        return [self._doc_to_src_metadata(doc) for doc in docs]
+
+    def _src_metadata_to_doc(self, src_metadata: SourceMetadata) -> Dict[str, Any]:
+        """Convert SourceMetadata to a MongoDB document."""
+        return {
+            DBFields.KEY: src_metadata.key,
+            DBFields.SOURCE_TYPE: src_metadata.source_type.value,
+            DBFields.SUMMARY_EN: src_metadata.summary_en,
+            DBFields.SUMMARY_HEB: src_metadata.summary_heb,
+            DBFields.PASSAGE_TYPES: [pt.value for pt in src_metadata.passage_types],
+            DBFields.ENTITY_KEYS: list(src_metadata.entity_keys),
+            DBFields.REL_KEYS: list(src_metadata.rel_keys),
+        }
+
+    def _doc_to_src_metadata(self, doc: Dict[str, Any]) -> SourceMetadata:
+        """Convert a MongoDB document to SourceMetadata."""
+        from BackEnd.DataObjects.Enums import SourceType, PassageType
+
+        # SourceMetadata is a dataclass that inherits from SourceClass
+        # We need to construct it properly
+        sm = SourceMetadata(
+            source_type=SourceType(doc[DBFields.SOURCE_TYPE]),
+        )
+        # Set key from parent class
+        sm.key = doc[DBFields.KEY]
+        sm.summary_en = doc.get(DBFields.SUMMARY_EN)
+        sm.summary_heb = doc.get(DBFields.SUMMARY_HEB)
+        sm.passage_types = [PassageType(pt) for pt in doc.get(DBFields.PASSAGE_TYPES, [])]
+        sm.entity_keys = set(doc.get(DBFields.ENTITY_KEYS, []))
+        sm.rel_keys = set(doc.get(DBFields.REL_KEYS, []))
+        return sm
 
     # ----------------------------- DB Maintainance ------------------------------------
     def get_backup_mongo_dump(self, output_filename: str = None):

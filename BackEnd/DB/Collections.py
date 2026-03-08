@@ -19,8 +19,12 @@ class CollectionObjs:
     # FAISS
     FS = Collection("faiss_data", "Faiss")
 
-    # LMM
-    LMM = Collection("LMM", "LMM")
+    # LMM (Source Metadata)
+    SRC_METADATA = Collection("src_metadata", "LMM")
+
+    # Entities & Relations
+    ENTITIES = Collection("entities", "EntitiesRels")
+    RELATIONS = Collection("relations", "EntitiesRels")
 
     @classmethod
     def all(cls):
@@ -33,7 +37,9 @@ class CollectionObjs:
 
             cls.FS,
 
-            cls.LMM,
+            cls.SRC_METADATA,
+            cls.ENTITIES,
+            cls.RELATIONS,
         ]
 
     @classmethod

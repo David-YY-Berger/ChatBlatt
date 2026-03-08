@@ -2,11 +2,13 @@ from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Tuple
 
 from BackEnd.DataObjects.EntityObjects.Entity import Entity
+from BackEnd.DataObjects.Rel import Rel
 from BackEnd.DataObjects.SourceClasses import SourceContent
-from BackEnd.DataObjects.Enums import SourceType, SourceContentType
+from BackEnd.DataObjects.Enums import SourceType, SourceContentType, EntityType
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DB.Collections import CollectionObjs, Collection
+from BackEnd.DB.DBConstants import DBFields
 
 
 class DBapiInterface(ABC):
@@ -132,7 +134,7 @@ class DBapiInterface(ABC):
             Number of documents modified.
         """
         # Build query using the key
-        query = {"key": key}
+        query = {DBFields.KEY: key}
 
         # Call the existing update method
         return self.update(collection, query, update)
@@ -168,34 +170,149 @@ class DBapiInterface(ABC):
         """
         pass
 
-    # ----------------------------- Source Metadata (Lmm) ------------------------------------
+    # ----------------------------- Entity ------------------------------------
     @abstractmethod
-    def is_src_metadata_exist(self, key: str) -> bool:
-        # todo
-        return True
-
-    @abstractmethod
-    def insert_source_metadata(self, src_metadata:SourceMetadata) -> str:
-        # todo
+    def is_entity_exists(self, key: str) -> bool:
+        """Check if an entity with the given key exists."""
         pass
 
     @abstractmethod
-    def update_source_metadata(self, src_metadata:SourceMetadata) -> str:
-        # todo
+    def insert_entity(self, entity: Entity) -> str:
+        """Insert a new entity. Returns the inserted document ID."""
         pass
 
-    def insert_or_update_source_metadata(self, src_metadata:SourceMetadata) -> str:
-        if self.is_src_metadata_exist(src_metadata.key):
-            return self.update_source_metadata(src_metadata)
+    @abstractmethod
+    def update_entity(self, entity: Entity) -> int:
+        """Update an existing entity by key. Returns modified count."""
+        pass
+
+    def upsert_entity(self, entity: Entity) -> str:
+        """Insert or update an entity based on whether it exists."""
+        if self.is_entity_exists(entity.key):
+            self.update_entity(entity)
+            return entity.key
         else:
-            return self.insert_source_metadata(src_metadata)
+            return self.insert_entity(entity)
 
-# ----------------------------- Entity (Lmm) ------------------------------------
     @abstractmethod
-    def is_entity_processed(self, key: str) -> bool:
-        # todo
-        return True
+    def get_entity_by_key(self, key: str) -> Optional[Entity]:
+        """Retrieve an entity by its key."""
+        pass
+
+    @abstractmethod
+    def get_entities_by_keys(self, keys: List[str]) -> List[Entity]:
+        """Retrieve multiple entities by their keys."""
+        pass
+
+    @abstractmethod
+    def get_entities_by_type(self, entity_type: EntityType) -> List[Entity]:
+        """Retrieve all entities of a specific type."""
+        pass
 
     @abstractmethod
     def get_all_entities(self) -> List[Entity]:
+        """Retrieve all entities."""
+        pass
+
+    @abstractmethod
+    def search_entities_by_name(self, name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
+        """Search entities by name (searches all name fields)."""
+        pass
+
+    @abstractmethod
+    def insert_entities_bulk(self, entities: List[Entity]) -> int:
+        """Bulk insert multiple entities. Returns number of inserted documents."""
+        pass
+
+    @abstractmethod
+    def upsert_entities_bulk(self, entities: List[Entity]) -> Tuple[int, int]:
+        """Bulk upsert multiple entities. Returns (inserted_count, updated_count)."""
+        pass
+
+    # ----------------------------- Relationship ------------------------------------
+    @abstractmethod
+    def is_rel_exists(self, key: str) -> bool:
+        """Check if a relationship with the given key exists."""
+        pass
+
+    @abstractmethod
+    def insert_rel(self, rel: Rel) -> str:
+        """Insert a new relationship. Returns the inserted document ID."""
+        pass
+
+    @abstractmethod
+    def update_rel(self, rel: Rel) -> int:
+        """Update an existing relationship by key. Returns modified count."""
+        pass
+
+    def upsert_rel(self, rel: Rel) -> str:
+        """Insert or update a relationship based on whether it exists."""
+        if self.is_rel_exists(rel.key):
+            self.update_rel(rel)
+            return rel.key
+        else:
+            return self.insert_rel(rel)
+
+    @abstractmethod
+    def get_rel_by_key(self, key: str) -> Optional[Rel]:
+        """Retrieve a relationship by its key."""
+        pass
+
+    @abstractmethod
+    def get_rels_by_keys(self, keys: List[str]) -> List[Rel]:
+        """Retrieve multiple relationships by their keys."""
+        pass
+
+    @abstractmethod
+    def get_rels_for_entity(self, entity_key: str) -> List[Rel]:
+        """Retrieve all relationships where the entity is term1 or term2."""
+        pass
+
+    @abstractmethod
+    def get_all_rels(self) -> List[Rel]:
+        """Retrieve all relationships."""
+        pass
+
+    @abstractmethod
+    def insert_rels_bulk(self, rels: List[Rel]) -> int:
+        """Bulk insert multiple relationships. Returns number of inserted documents."""
+        pass
+
+    @abstractmethod
+    def upsert_rels_bulk(self, rels: List[Rel]) -> Tuple[int, int]:
+        """Bulk upsert multiple relationships. Returns (inserted_count, updated_count)."""
+        pass
+
+    # ----------------------------- Source Metadata ------------------------------------
+    @abstractmethod
+    def is_src_metadata_exists(self, key: str) -> bool:
+        """Check if source metadata with the given key exists."""
+        pass
+
+    @abstractmethod
+    def insert_source_metadata(self, src_metadata: SourceMetadata) -> str:
+        """Insert new source metadata. Returns the inserted document ID."""
+        pass
+
+    @abstractmethod
+    def update_source_metadata(self, src_metadata: SourceMetadata) -> int:
+        """Update existing source metadata by key. Returns modified count."""
+        pass
+
+    def upsert_source_metadata(self, src_metadata: SourceMetadata) -> str:
+        """Insert or update source metadata based on whether it exists."""
+        if self.is_src_metadata_exists(src_metadata.key):
+            self.update_source_metadata(src_metadata)
+            return src_metadata.key
+        else:
+            return self.insert_source_metadata(src_metadata)
+
+    @abstractmethod
+    def get_source_metadata_by_key(self, key: str) -> Optional[SourceMetadata]:
+        """Retrieve source metadata by its key."""
+        pass
+
+    @abstractmethod
+    def get_all_source_metadata(self) -> List[SourceMetadata]:
+        """Retrieve all source metadata."""
         pass
