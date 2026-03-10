@@ -8,7 +8,8 @@ from BackEnd.DB.Collections import CollectionObjs
 from BackEnd.DB.DBConstants import DBFields
 from BackEnd.DataPipeline.DBScriptParentClass import DBParentClass
 from BackEnd.DataPipeline.EntityRelManager import EntityRelManager
-from BackEnd.DataPipeline.LMM_api.GeminiLmmCaller import GeminiLmmCaller
+from BackEnd.DataPipeline.LMM_api.ModelConfig import ModelConfig, ModelProvider
+from BackEnd.DataPipeline.LMM_api.PydanticCaller import PydanticCaller
 from BackEnd.FileUtils import LocalPrinter, FileTypeEnum, OsFunctions
 from BackEnd.General import Paths
 
@@ -121,7 +122,15 @@ class DBPopulateLmmData(DBParentClass):
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""
         super().setUp()  # call parent setup first
-        self.lmm_caller = GeminiLmmCaller()
+
+        # ====== SWITCH MODEL HERE ======
+        # Uncomment ONE of these lines to choose your model:
+        ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
+        # ===============================
+
+        self.pydantic_caller = PydanticCaller()
         self.entity_rel_mngr = EntityRelManager()
 
     def tearDown(self):
@@ -138,7 +147,7 @@ class DBPopulateLmmData(DBParentClass):
         for src_content in self.get_examples_src_contents():
             passage = src_content.get_clean_en_text()
 
-            graph_json_str, usage, cost_usd = await self.lmm_caller.get_pydantic_graph_from_passage(passage)
+            graph_json_str, usage, cost_usd = await self.pydantic_caller.extract_graph_from_passage(passage)
             cost_summary = (
                 f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})"

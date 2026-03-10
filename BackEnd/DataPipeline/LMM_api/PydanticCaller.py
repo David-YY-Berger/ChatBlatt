@@ -1,26 +1,59 @@
-import os
+# bs"d
+"""
+PydanticCaller - Extracts structured data from passages using LLMs.
+
+Usage:
+    from BackEnd.DataPipeline.LMM_api.PydanticCaller import PydanticCaller
+    from BackEnd.DataPipeline.LMM_api.ModelConfig import ModelConfig, ModelProvider
+
+    # Optional: Switch to OpenAI (default is Gemini)
+    ModelConfig.set_provider(ModelProvider.OPENAI)
+
+    # Create caller (uses current ModelConfig settings)
+    caller = PydanticCaller()
+
+    # Extract graph from passage
+    json_str, usage, cost = await caller.extract_graph_from_passage(passage)
+"""
+
+import logging
 from typing import Tuple
 from pydantic_ai import Agent, ModelSettings
 from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
+
+from BackEnd.DataPipeline.LMM_api.ModelConfig import ModelConfig, ModelProvider
 from BackEnd.DataObjects.PydanticModels.PydanticClasses import (
     FinalResponse,
     TRIBES_OF_ISRAEL,
-    ENTITY_CATEGORIES,        # Re-exported for convenience
-    SYMMETRIC_RELATIONSHIPS,  # Re-exported for convenience
+    ENTITY_CATEGORIES,
+    SYMMETRIC_RELATIONSHIPS,
     min_len_summary,
     max_len_summary
 )
 
+logger = logging.getLogger(__name__)
+
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 
+
 class PydanticCaller:
-    def __init__(self, api_key: str, model_name: str):
-        if api_key:
-            os.environ['GOOGLE_API_KEY'] = api_key
+    """
+    Extracts structured entity/relationship graphs from text passages using LLMs.
+
+    Uses ModelConfig to determine which provider (Gemini/OpenAI) to use.
+    Change provider with: ModelConfig.set_provider(ModelProvider.GEMINI_FREE)
+    """
+
+    def __init__(self):
+        """Initialize with current ModelConfig settings."""
+        ModelConfig.ensure_api_key_in_env()
+
+        model_str = ModelConfig.get_pydantic_model()
+        logger.info(f"Initializing PydanticCaller with model: {model_str}")
 
         self.agent = Agent(
-            model=model_name,
+            model=model_str,
             output_type=FinalResponse,
             model_settings=ModelSettings(
                 temperature=0.5  # Lower temp for consistent structured extraction
@@ -120,11 +153,12 @@ class PydanticCaller:
             print(f"Extraction failed: {e}")
             raise
 
-    @staticmethod
-    def _calculate_cost(usage: RunUsage) -> float:
-        """Estimates cost in USD for Gemini 1.5 Flash."""
-        input_cost = (usage.input_tokens / 1_000_000) * 0.075
-        output_cost = (usage.output_tokens / 1_000_000) * 0.30  # Fixed: was using input_tokens
+    def _calculate_cost(self, usage: RunUsage) -> float:
+        """Estimates cost in USD based on current provider's pricing."""
+        pricing = ModelConfig.get_cost_per_million()
+
+        input_cost = (usage.input_tokens / 1_000_000) * pricing["input"]
+        output_cost = (usage.output_tokens / 1_000_000) * pricing["output"]
         return input_cost + output_cost
 
     async def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:
