@@ -307,10 +307,6 @@ class DBPopulateLmmData(DBParentClass):
             # amorites, kadesh, etc.
            # 'TN_Deuteronomy_0_1:41-2:1',
 
-            # symbols (from az yashir)
-            # 'TN_Exodus_0_15:6-10',
-            # 'TN_Deuteronomy_0_32:7-12',
-
             # small, mostly empty source:
             # 'TN_Psalms_0_120:1–7',
 
