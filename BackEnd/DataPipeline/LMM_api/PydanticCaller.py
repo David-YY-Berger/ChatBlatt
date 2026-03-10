@@ -1,10 +1,16 @@
 import os
-import asyncio
 from typing import Tuple
 from pydantic_ai import Agent, ModelSettings
 from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
-from BackEnd.DataObjects.PydanticModels.PydanticClasses import FinalResponse, TRIBES_OF_ISRAEL
+from BackEnd.DataObjects.PydanticModels.PydanticClasses import (
+    FinalResponse,
+    TRIBES_OF_ISRAEL,
+    ENTITY_CATEGORIES,        # Re-exported for convenience
+    SYMMETRIC_RELATIONSHIPS,  # Re-exported for convenience
+    min_len_summary,
+    max_len_summary
+)
 
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 
@@ -17,42 +23,84 @@ class PydanticCaller:
             model=model_name,
             output_type=FinalResponse,
             model_settings=ModelSettings(
-                temperature=1.2
+                temperature=0.5  # Lower temp for consistent structured extraction
             ),
             system_prompt=(
-                "Extract entities and relationships from the text. "
-                "CRITICAL SUMMARY REQUIREMENTS: "
-                "- en_summary: MUST be EXACTLY 4-10 complete words. Do NOT generate partial sentences. "
-                "- heb_summary: MUST be EXACTLY 4-10 complete words in Hebrew. Do NOT generate partial sentences. "
-                "- Count your words BEFORE responding. If a summary would exceed 10 words, rephrase it to be shorter. "
-                "ENTITY CLASSIFICATION RULES: "
-                "- Person: Extract ALL named individuals AND groups of people, even those mentioned incidentally or as possessives (proper nouns only). Not only humans - include Angels, idols or gods, talking animals, etc. "
-                "  Groups include: 'the 70 elders', 'the children of Israel', 'the Sanhedrin', 'the spies', etc. "
-                "  Examples: Moses, David, Sarah, The 70 Elders, Children Of Israel, The Spies. "
-                "  NOT generic terms: priest, king, prophet, man, woman. (proper nouns) "
-                "  Do not require a person to be the subject of a sentence to be extracted."
-                "- Nation: ONLY specific named nations/peoples (proper nouns). "
-                "  Examples: Egypt (for 'Egyptians'), Moab (for 'Moabites'), Assyria. "
-                "  Use the proper noun form (Egypt, not Egyptians; Moab, not Moabites). "
-                "  NOT generic terms: nation, people, enemy, kingdom. "
-                "- Place: Proper noun named geographic locations — cities, regions, rivers, countries used as places. include non literal (like World to Come, this world)"
-               f"- TribeOfIsrael: The 14 tribes are: {TRIBES_LIST_STR}. Always classify these as TribeOfIsrael."
-                "ENTITY PRIORITY RULES:"
-                "- if entity appears as Person or TribeOfIsrael, take as both"
-                "- if entity appears as either a Place or a Nation, take as both"
-                "RELATIONSHIP RULES: "
-                "- studiedFrom: A Sage transmitting a ruling in the name of another sage ('X said that Y said', 'X said in the name of Y', 'Abaye said that Shmuel said'). This indicates a teacher-student transmission chain."
-                "- childOf: Explicit parent-child links only."
-                "- siblingOf: only include if not implicable from isChild relationship"
-                "- descendantOf: Non-adjacent jumps or broken chains. "
-                "- spokeWith: Two persons having a direct conversation or dialogue in the text. "
-                "- prophesiedAbout: A prophet making a prophecy or prediction about any entity (person, place, nation, etc.). "
-                "- comparedTo: "
-                "- EXCLUSIVITY: Never list a person as both childOf and descendantOf the same entity. "
-                "OPTIMIZATION RULES: "
-                "- Do not include keys for lists or objects that are empty. "
-                "- Only return populated data to save tokens. "
-                "- Ensure all relationship terms reference actual entities extracted."
+                "Extract entities and relationships from the text.\n\n"
+                
+                "=== SUMMARY REQUIREMENTS ===\n"
+                f"- en_summary: EXACTLY {min_len_summary}-{max_len_summary} complete words in English. No partial sentences.\n"
+                f"- heb_summary: EXACTLY {min_len_summary}-{max_len_summary} complete words in Hebrew. No partial sentences.\n"
+                "- Count words BEFORE responding. Rephrase if needed to fit the limit.\n\n"
+                
+                "=== ENTITY TYPES ===\n"
+                "- Person: Named individuals AND groups (proper nouns only).\n"
+                "  Includes: humans, angels, idols/gods, talking animals.\n"
+                "  Groups: 'The 70 Elders', 'Children Of Israel', 'The Sanhedrin', 'The Spies'.\n"
+                "  Examples: Moses, David, Sarah, Gabriel, Balaam's Donkey.\n"
+                "  NOT generic terms: priest, king, prophet, man, woman.\n"
+                "  Extract even if mentioned incidentally or as possessives.\n\n"
+                
+                "- Place: Named geographic locations (proper nouns).\n"
+                "  Includes: cities, regions, rivers, mountains, countries as locations.\n"
+                "  Also non-literal: 'World To Come', 'Garden of Eden', 'Gehenna'.\n"
+                "  Examples: Jerusalem, Egypt, Jordan River, Mount Sinai.\n\n"
+                
+                f"- TribeOfIsrael: ONLY these 14 tribes: {TRIBES_LIST_STR}.\n"
+                "  Always classify tribe names as TribeOfIsrael.\n\n"
+                
+                "- Nation: Named nations/peoples (proper nouns only).\n"
+                "  Use singular form: Egypt (not Egyptians), Moab (not Moabites).\n"
+                "  Examples: Egypt, Moab, Assyria, Babylon, Philistia, Edom.\n"
+                "  NOT generic terms: nation, people, enemy, kingdom.\n\n"
+                
+                "- Symbol: Symbolic objects, concepts, or items with significance.\n"
+                "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush.\n\n"
+                
+                "=== ENTITY PRIORITY RULES ===\n"
+                "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"
+                "- If entity is both Place AND Nation → include in BOTH lists.\n\n"
+                
+                "=== RELATIONSHIP TYPES ===\n"
+                "Person ↔ Person:\n"
+                "- studiedFrom: Sage transmitting teaching ('X said in name of Y', 'X said that Y said').\n"
+                "- childOf: Explicit parent-child only.\n"
+                "- descendantOf: Non-adjacent ancestry (grandparent+). NOT if childOf exists.\n"
+                "- spouseOf: Married couples.\n"
+                "- spokeWith: Direct conversation or dialogue in the text.\n\n"
+                
+                "Person → Place:\n"
+                "- bornIn: Person's birthplace.\n"
+                "- diedIn: Place of death.\n"
+                "- visited: Person traveled to or was present at location.\n\n"
+                
+                "Person → TribeOfIsrael:\n"
+                "- personToTribeOfIsrael: Person belongs to or is associated with a tribe.\n\n"
+                
+                "Person → Nation:\n"
+                "- personBelongsToNation: Person is a member of a nation.\n\n"
+                
+                "Nation/Person ↔ Nation/Person:\n"
+                "- EnemyOf: Hostile relationship between nations OR between persons.\n"
+                "- AllyOf: Alliance or friendly relationship between nations OR persons.\n\n"
+                
+                "Place → Nation:\n"
+                "- placeToNation: Place belongs to or is associated with a nation.\n\n"
+                
+                "Person → Any Entity:\n"
+                "- prophesiedAbout: Prophet making prediction about any entity.\n\n"
+                
+                "Any Entity ↔ Any Entity:\n"
+                "- comparedTo: Similarity or likeness drawn between entities.\n"
+                "- contrastedWith: Difference or opposition drawn between entities.\n"
+                "- AliasOf: Two names for the SAME entity. Only if text EXPLICITLY states they are the same.\n"
+                "  Examples: 'Hadassa, who is Esther', 'Jacob, who is Israel'.\n"
+                "  NOT for similar entities or comparisons - only explicit identity.\n\n"
+                
+                "=== OPTIMIZATION ===\n"
+                "- Omit empty lists/objects entirely.\n"
+                "- All relationship terms MUST reference extracted entities.\n"
+                "- Return only populated data."
             ),
             retries=0,
         )
@@ -76,7 +124,7 @@ class PydanticCaller:
     def _calculate_cost(usage: RunUsage) -> float:
         """Estimates cost in USD for Gemini 1.5 Flash."""
         input_cost = (usage.input_tokens / 1_000_000) * 0.075
-        output_cost = (usage.input_tokens / 1_000_000) * 0.30
+        output_cost = (usage.output_tokens / 1_000_000) * 0.30  # Fixed: was using input_tokens
         return input_cost + output_cost
 
     async def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:

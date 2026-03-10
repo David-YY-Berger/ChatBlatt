@@ -1,0 +1,119 @@
+﻿{
+    "res": {
+        "en_summary": "Nebuzaradan destroyed the Temple, but God's judgment was already complete.",
+        "heb_summary": "נבוזרדן חרב את המקדש, אך משפט השם הושלם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Nebuzaradan"
+                },
+                {
+                    "en_name": "Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Sennacherib"
+                },
+                {
+                    "en_name": "Zechariah"
+                },
+                {
+                    "en_name": "Naaman"
+                },
+                {
+                    "en_name": "Sisera"
+                },
+                {
+                    "en_name": "Haman"
+                },
+                {
+                    "en_name": "Shemaya"
+                },
+                {
+                    "en_name": "Avtalyon"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Aramean"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Sanctuary"
+                },
+                {
+                    "en_name": "Divine Presence"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Shemaya",
+                    "term2": "Avtalyon"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Zechariah"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Naaman",
+                    "term2": "Aramean"
+                },
+                {
+                    "term1": "Zechariah",
+                    "term2": "Judah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Zechariah",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Naaman"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_96b:2-9"
+}

@@ -1,0 +1,327 @@
+﻿{
+    "res": {
+        "en_summary": "Genealogy of Reuben, Simeon, Levi, and their descendants.",
+        "heb_summary": "תולדות ראובן, שמעון, לוי ובניהם.",
+        "passage_types": [
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Enoch"
+                },
+                {
+                    "en_name": "Pallu"
+                },
+                {
+                    "en_name": "Hezron"
+                },
+                {
+                    "en_name": "Carmi"
+                },
+                {
+                    "en_name": "Jemuel"
+                },
+                {
+                    "en_name": "Jamin"
+                },
+                {
+                    "en_name": "Ohad"
+                },
+                {
+                    "en_name": "Jachin"
+                },
+                {
+                    "en_name": "Zohar"
+                },
+                {
+                    "en_name": "Saul"
+                },
+                {
+                    "en_name": "Gershon"
+                },
+                {
+                    "en_name": "Kohath"
+                },
+                {
+                    "en_name": "Merari"
+                },
+                {
+                    "en_name": "Libni"
+                },
+                {
+                    "en_name": "Shimei"
+                },
+                {
+                    "en_name": "Amram"
+                },
+                {
+                    "en_name": "Izhar"
+                },
+                {
+                    "en_name": "Hebron"
+                },
+                {
+                    "en_name": "Uzziel"
+                },
+                {
+                    "en_name": "Mishael"
+                },
+                {
+                    "en_name": "Elzaphan"
+                },
+                {
+                    "en_name": "Sithri"
+                },
+                {
+                    "en_name": "Aaron"
+                },
+                {
+                    "en_name": "Elisheba"
+                },
+                {
+                    "en_name": "Amminadab"
+                },
+                {
+                    "en_name": "Nahshon"
+                },
+                {
+                    "en_name": "Nadab"
+                },
+                {
+                    "en_name": "Abihu"
+                },
+                {
+                    "en_name": "Eleazar"
+                },
+                {
+                    "en_name": "Ithamar"
+                },
+                {
+                    "en_name": "Korah"
+                },
+                {
+                    "en_name": "Assir"
+                },
+                {
+                    "en_name": "Elkanah"
+                },
+                {
+                    "en_name": "Abiasaph"
+                },
+                {
+                    "en_name": "Phinehas"
+                },
+                {
+                    "en_name": "Jochebed"
+                },
+                {
+                    "en_name": "Moses"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaanite"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Libni",
+                    "term2": "Gershon"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Gershon"
+                },
+                {
+                    "term1": "Amram",
+                    "term2": "Kohath"
+                },
+                {
+                    "term1": "Izhar",
+                    "term2": "Kohath"
+                },
+                {
+                    "term1": "Hebron",
+                    "term2": "Kohath"
+                },
+                {
+                    "term1": "Uzziel",
+                    "term2": "Kohath"
+                },
+                {
+                    "term1": "Aaron",
+                    "term2": "Amram"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Amram"
+                },
+                {
+                    "term1": "Mishael",
+                    "term2": "Uzziel"
+                },
+                {
+                    "term1": "Elzaphan",
+                    "term2": "Uzziel"
+                },
+                {
+                    "term1": "Sithri",
+                    "term2": "Uzziel"
+                },
+                {
+                    "term1": "Nadab",
+                    "term2": "Aaron"
+                },
+                {
+                    "term1": "Abihu",
+                    "term2": "Aaron"
+                },
+                {
+                    "term1": "Eleazar",
+                    "term2": "Aaron"
+                },
+                {
+                    "term1": "Ithamar",
+                    "term2": "Aaron"
+                },
+                {
+                    "term1": "Assir",
+                    "term2": "Korah"
+                },
+                {
+                    "term1": "Elkanah",
+                    "term2": "Korah"
+                },
+                {
+                    "term1": "Abiasaph",
+                    "term2": "Korah"
+                },
+                {
+                    "term1": "Phinehas",
+                    "term2": "Eleazar"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Amram",
+                    "term2": "Jochebed"
+                },
+                {
+                    "term1": "Aaron",
+                    "term2": "Elisheba"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Enoch",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Pallu",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Hezron",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Carmi",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Jemuel",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jamin",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Ohad",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jachin",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Zohar",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Saul",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Gershon",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Kohath",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Merari",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Amram",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Aaron",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Izhar",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Korah",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Uzziel",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Mishael",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Elzaphan",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Sithri",
+                    "term2": "Levi"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Saul",
+                    "term2": "Canaanite"
+                }
+            ]
+        }
+    },
+    "key": "TN_Exodus_0_6:14-25"
+}

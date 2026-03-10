@@ -4,12 +4,20 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+# --- Global Constants ---
 TRIBES_OF_ISRAEL = {
     'reuben', 'simeon', 'levi', 'judah', 'dan', 'naphtali',
     'gad', 'asher', 'issachar', 'zebulun', 'joseph', 'benjamin',
     'ephraim', 'manasseh'
 }
-max_len_summary: int = 15
+
+# Entity category names - used for validation and iteration
+ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol')
+
+# Symmetric relationships where (A, B) == (B, A)
+SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'EnemyOf', 'AllyOf', 'AliasOf')
+
+max_len_summary: int = 10
 min_len_summary: int = 4
 
 # --- Entity Models ---
@@ -29,6 +37,25 @@ class Entities(BaseModel):
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
+
+    @field_validator('TribeOfIsrael')
+    @classmethod
+    def validate_tribes(cls, v: Optional[List[Entity]]) -> Optional[List[Entity]]:
+        """Validate that TribeOfIsrael entities are actual tribes."""
+        if not v:
+            return v
+
+        valid_tribes = []
+        for entity in v:
+            if entity.en_name.lower() in TRIBES_OF_ISRAEL:
+                valid_tribes.append(entity)
+            else:
+                logger.warning(
+                    f"Filtered invalid tribe: '{entity.en_name}' "
+                    f"(not in known tribes list)"
+                )
+
+        return valid_tribes if valid_tribes else None
 
     @field_validator('Person', 'Nation')
     @classmethod
@@ -73,6 +100,54 @@ class Entities(BaseModel):
             logger.info(f"Filtered {filtered_count} generic words from {info.field_name}")
 
         return valid_entities if valid_entities else None
+
+    @model_validator(mode='after')
+    def ensure_entity_overlap(self):
+        """
+        Auto-correct entity classification based on priority rules:
+        - TribeOfIsrael entities should also appear in Person (tribes are named after people)
+        - This ensures relationships like childOf, bornIn work for tribe patriarchs
+        """
+        # Ensure TribeOfIsrael entities are also in Person
+        if self.TribeOfIsrael:
+            # Initialize Person list if None or empty
+            if not self.Person:
+                self.Person = []
+
+            existing_persons = {e.en_name.lower() for e in self.Person}
+
+            for tribe_entity in self.TribeOfIsrael:
+                if tribe_entity.en_name.lower() not in existing_persons:
+                    self.Person.append(Entity(en_name=tribe_entity.en_name))
+                    existing_persons.add(tribe_entity.en_name.lower())  # Avoid duplicates in same run
+                    logger.warning(  # Changed to WARNING so it shows up
+                        f"Auto-added '{tribe_entity.en_name}' to Person "
+                        f"(was only in TribeOfIsrael)"
+                    )
+
+        return self
+
+    @model_validator(mode='after')
+    def deduplicate_entities(self):
+        """Remove duplicate entities within each category."""
+        for category in ENTITY_CATEGORIES:
+            entity_list = getattr(self, category, None)
+            if not entity_list:
+                continue
+
+            seen = set()
+            unique = []
+            for entity in entity_list:
+                name_lower = entity.en_name.lower()
+                if name_lower not in seen:
+                    unique.append(entity)
+                    seen.add(name_lower)
+                else:
+                    logger.debug(f"Deduplicated entity in {category}: '{entity.en_name}'")
+
+            setattr(self, category, unique if unique else None)
+
+        return self
 
     # @model_validator(mode='after')
     # def auto_classify_tribes(self):
@@ -124,8 +199,8 @@ class Entities(BaseModel):
     def get_all_entity_names(self) -> Set[str]:
         """Helper to get all entity names across all categories."""
         names = set()
-        for entity_list in [self.Person, self.Place, self.TribeOfIsrael,
-                            self.Nation, self.Symbol]:
+        for category in ENTITY_CATEGORIES:
+            entity_list = getattr(self, category, None)
             if entity_list:
                 names.update(e.en_name for e in entity_list)
         return names
@@ -152,7 +227,6 @@ class Relation(BaseModel):
 class Relationships(BaseModel):
     # Person/Group → Person/Group
     studiedFrom: Optional[List[Relation]] = Field(default_factory=list)
-    siblingWith: Optional[List[Relation]] = Field(default_factory=list)
     childOf: Optional[List[Relation]] = Field(default_factory=list)
     spouseOf: Optional[List[Relation]] = Field(default_factory=list)
     descendantOf: Optional[List[Relation]] = Field(default_factory=list)
@@ -182,6 +256,7 @@ class Relationships(BaseModel):
     # {anything} → {anything}
     comparedTo: Optional[List[Relation]] = Field(default_factory=list)
     contrastedWith: Optional[List[Relation]] = Field(default_factory=list)
+    AliasOf: Optional[List[Relation]] = Field(default_factory=list)
 
 
 # --- Root Response ---
@@ -252,7 +327,6 @@ class ExtractionResult(BaseModel):
         relationship_constraints = {
             # Person/Group → Person/Group
             'studiedFrom': ('Person', 'Person'),
-            'siblingWith': ('Person', 'Person'),
             'childOf': ('Person', 'Person'),
             'spouseOf': ('Person', 'Person'),
             'descendantOf': ('Person', 'Person'),
@@ -282,6 +356,7 @@ class ExtractionResult(BaseModel):
             # {anything} → {anything}
             'comparedTo': (None, None),
             'contrastedWith': (None, None),
+            'AliasOf': (None, None),
         }
 
         invalid_count = 0
@@ -320,35 +395,31 @@ class ExtractionResult(BaseModel):
 
                 # Validate type constraints
                 else:
-                    # (None, None) → always valid
-                    if allowed_pairs == [(None, None)]:
-                        is_valid = True
+                    # At least one allowed pair must match
+                    matched = False
+                    for (term1_type, term2_type) in allowed_pairs:
+                        # None means "any entity type" - but must still BE an entity
+                        term1_ok = (
+                                term1_type is None or
+                                rel.term1 in self.Entities.get_entities_by_type(term1_type)
+                        )
+                        term2_ok = (
+                                term2_type is None or
+                                rel.term2 in self.Entities.get_entities_by_type(term2_type)
+                        )
+                        if term1_ok and term2_ok:
+                            matched = True
+                            break
 
-                    else:
-                        # At least one allowed pair must match
-                        matched = False
-                        for (term1_type, term2_type) in allowed_pairs:
-                            term1_ok = (
-                                    term1_type is None or
-                                    rel.term1 in self.Entities.get_entities_by_type(term1_type)
-                            )
-                            term2_ok = (
-                                    term2_type is None or
-                                    rel.term2 in self.Entities.get_entities_by_type(term2_type)
-                            )
-                            if term1_ok and term2_ok:
-                                matched = True
-                                break
-
-                        if not matched:
-                            is_valid = False
-                            allowed_str = " or ".join(
-                                f"({t1} → {t2})" for t1, t2 in allowed_pairs
-                            )
-                            reason = (
-                                f"'{rel.term1}' -> '{rel.term2}' does not match "
-                                f"any allowed type pair: {allowed_str}"
-                            )
+                    if not matched:
+                        is_valid = False
+                        allowed_str = " or ".join(
+                            f"({t1 or 'Any'} → {t2 or 'Any'})" for t1, t2 in allowed_pairs
+                        )
+                        reason = (
+                            f"'{rel.term1}' -> '{rel.term2}' does not match "
+                            f"any allowed type pair: {allowed_str}"
+                        )
 
                 if is_valid:
                     valid_relations.append(rel)
@@ -365,67 +436,47 @@ class ExtractionResult(BaseModel):
         if invalid_count > 0:
             logger.info(f"Filtered out {invalid_count} invalid relationships")
 
+        # Deduplicate all relationships (exact duplicates)
+        for rel_type in relationship_constraints.keys():
+            relations = getattr(self.Rel, rel_type, None)
+            if not relations:
+                continue
+
+            seen = set()
+            unique = []
+            for rel in relations:
+                key = (rel.term1, rel.term2)
+                if key not in seen:
+                    unique.append(rel)
+                    seen.add(key)
+
+            setattr(self.Rel, rel_type, unique if unique else None)
+
         return self
 
     @model_validator(mode='after')
-    def filter_asymmetric_relationships(self):
-        """Filter out asymmetric sibling/spouse relationships."""
+    def deduplicate_symmetric_relationships(self):
+        """Deduplicate symmetric relationships (A↔B = B↔A), keeping only one canonical form."""
         if not self.Rel:
             return self
 
-        # Handle siblingWith symmetry
-        if self.Rel.siblingWith:
-            siblings = {}
-            for rel in self.Rel.siblingWith:
-                siblings.setdefault(rel.term1, set()).add(rel.term2)
-                siblings.setdefault(rel.term2, set()).add(rel.term1)
+        for rel_type in SYMMETRIC_RELATIONSHIPS:
+            relations = getattr(self.Rel, rel_type, None)
+            if not relations:
+                continue
 
-            valid_siblings = []
             seen_pairs = set()
+            unique_relations = []
 
-            for rel in self.Rel.siblingWith:
+            for rel in relations:
                 pair = tuple(sorted([rel.term1, rel.term2]))
-                if pair in seen_pairs:
-                    continue
-
-                # Check if symmetric
-                if rel.term2 in siblings.get(rel.term1, set()) and \
-                        rel.term1 in siblings.get(rel.term2, set()):
-                    valid_siblings.append(rel)
+                if pair not in seen_pairs:
+                    unique_relations.append(rel)
                     seen_pairs.add(pair)
                 else:
-                    logger.warning(
-                        f"Filtered asymmetric sibling: {rel.term1} <-> {rel.term2}"
-                    )
+                    logger.debug(f"Deduplicated {rel_type} pair: {rel.term1} <-> {rel.term2}")
 
-            self.Rel.siblingWith = valid_siblings if valid_siblings else None
-
-        # Handle spouseOf symmetry
-        if self.Rel.spouseOf:
-            spouses = {}
-            for rel in self.Rel.spouseOf:
-                spouses.setdefault(rel.term1, set()).add(rel.term2)
-                spouses.setdefault(rel.term2, set()).add(rel.term1)
-
-            valid_spouses = []
-            seen_pairs = set()
-
-            for rel in self.Rel.spouseOf:
-                pair = tuple(sorted([rel.term1, rel.term2]))
-                if pair in seen_pairs:
-                    continue
-
-                # Check if symmetric
-                if rel.term2 in spouses.get(rel.term1, set()) and \
-                        rel.term1 in spouses.get(rel.term2, set()):
-                    valid_spouses.append(rel)
-                    seen_pairs.add(pair)
-                else:
-                    logger.warning(
-                        f"Filtered asymmetric spouse: {rel.term1} <-> {rel.term2}"
-                    )
-
-            self.Rel.spouseOf = valid_spouses if valid_spouses else None
+            setattr(self.Rel, rel_type, unique_relations if unique_relations else None)
 
         return self
 

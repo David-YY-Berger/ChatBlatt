@@ -1,0 +1,116 @@
+﻿{
+    "res": {
+        "en_summary": "Esther becomes queen, replacing Vashti, following Mordecai's guidance.",
+        "heb_summary": "אסתר הופכת למלכה במקום ושתי בהדרכת מרדכי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "King Ahasuerus"
+                },
+                {
+                    "en_name": "Vashti"
+                },
+                {
+                    "en_name": "Mordecai"
+                },
+                {
+                    "en_name": "Hegai"
+                },
+                {
+                    "en_name": "Esther"
+                },
+                {
+                    "en_name": "Kish"
+                },
+                {
+                    "en_name": "King Jeconiah Of Judah"
+                },
+                {
+                    "en_name": "King Nebuchadnezzar Of Babylon"
+                },
+                {
+                    "en_name": "Abihail"
+                },
+                {
+                    "en_name": "Shaashgaz"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shushan"
+                },
+                {
+                    "en_name": "Jerusalem"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Babylon"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Esther",
+                    "term2": "Mordecai"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "King Ahasuerus",
+                    "term2": "Vashti"
+                },
+                {
+                    "term1": "King Ahasuerus",
+                    "term2": "Esther"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Mordecai",
+                    "term2": "Kish"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "King Ahasuerus",
+                    "term2": "Vashti"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Mordecai",
+                    "term2": "Shushan"
+                },
+                {
+                    "term1": "Esther",
+                    "term2": "Shushan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "King Jeconiah Of Judah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "King Nebuchadnezzar Of Babylon",
+                    "term2": "Babylon"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Esther_0_2:1–20"
+}

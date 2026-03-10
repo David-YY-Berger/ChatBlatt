@@ -1,0 +1,55 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's maid Bilhah bore sons Dan and Naphtali.",
+        "heb_summary": "שפחת יעקב בלהה ילדה את דן ונפתלי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Bilhah"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Bilhah",
+                    "term2": "Jacob"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Bilhah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:3-8"
+}

@@ -1,0 +1,94 @@
+﻿{
+    "res": {
+        "en_summary": "Solomon and Hiram forge alliance for temple construction.",
+        "heb_summary": "שלמה וחירם כורתים ברית לבניית המקדש.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hiram"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Adoniram"
+                },
+                {
+                    "en_name": "Solomons Masons"
+                },
+                {
+                    "en_name": "Hirams Masons"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Lebanon"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Tyre"
+                },
+                {
+                    "en_name": "Sidonians"
+                },
+                {
+                    "en_name": "Gebal"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "House For The Name Of The Eternal"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [],
+            "childOf": [],
+            "spouseOf": [],
+            "descendantOf": [],
+            "spokeWith": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Hiram"
+                }
+            ],
+            "bornIn": [],
+            "diedIn": [],
+            "personToTribeOfIsrael": [],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hiram",
+                    "term2": "Tyre"
+                },
+                {
+                    "term1": "Hirams Masons",
+                    "term2": "Tyre"
+                }
+            ],
+            "EnemyOf": [],
+            "AllyOf": [
+                {
+                    "term1": "Hiram",
+                    "term2": "David"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Hiram"
+                }
+            ],
+            "placeToNation": [],
+            "prophesiedAbout": [],
+            "comparedTo": [],
+            "contrastedWith": [],
+            "AliasOf": []
+        }
+    },
+    "key": "TN_I Kings_0_5:15–32"
+}

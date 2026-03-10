@@ -1,0 +1,149 @@
+﻿{
+    "res": {
+        "en_summary": "Isaiah prophesied concerning Judah and Jerusalem's sins.",
+        "heb_summary": "ישעיהו נבא על חטאי יהודה וירושלים.",
+        "passage_types": [
+            "PROPHECY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaiah Son Of Amoz"
+                },
+                {
+                    "en_name": "Uzziah"
+                },
+                {
+                    "en_name": "Jotham"
+                },
+                {
+                    "en_name": "Ahaz"
+                },
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Holy One Of Israel"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "God Of Hosts"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                },
+                {
+                    "en_name": "Rebels"
+                },
+                {
+                    "en_name": "Sinners"
+                },
+                {
+                    "en_name": "Those Who Forsake God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Zion"
+                },
+                {
+                    "en_name": "City Of Righteousness"
+                },
+                {
+                    "en_name": "Faithful City"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Terebinths"
+                },
+                {
+                    "en_name": "Gardens"
+                },
+                {
+                    "en_name": "Tow"
+                },
+                {
+                    "en_name": "Spark"
+                }
+            ]
+        },
+        "Rel": {
+            "personBelongsToNation": [
+                {
+                    "term1": "Isaiah Son Of Amoz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Uzziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jotham",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Ahaz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Judah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah Son Of Amoz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Isaiah Son Of Amoz",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "God",
+                    "term2": "Holy One Of Israel"
+                },
+                {
+                    "term1": "God",
+                    "term2": "God Of Hosts"
+                }
+            ]
+        }
+    },
+    "key": "TN_Isaiah_0_1:1-31"
+}

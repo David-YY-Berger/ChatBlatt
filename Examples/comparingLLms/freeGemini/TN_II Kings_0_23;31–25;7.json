@@ -1,0 +1,352 @@
+﻿{
+    "res": {
+        "en_summary": "Kings of Judah, their reigns, and Babylonian conquest.",
+        "heb_summary": "מלכי יהודה, שלטונם וכניעתם לבבל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jehoahaz"
+                },
+                {
+                    "en_name": "Hamutal"
+                },
+                {
+                    "en_name": "Jeremiah"
+                },
+                {
+                    "en_name": "Pharaoh Neco"
+                },
+                {
+                    "en_name": "Eliakim"
+                },
+                {
+                    "en_name": "Josiah"
+                },
+                {
+                    "en_name": "Jehoiakim"
+                },
+                {
+                    "en_name": "Zebudah"
+                },
+                {
+                    "en_name": "Pedaiah"
+                },
+                {
+                    "en_name": "Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Jehoiachin"
+                },
+                {
+                    "en_name": "Nehushta"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Mattaniah"
+                },
+                {
+                    "en_name": "Zedekiah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Libnah"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Babylon"
+                },
+                {
+                    "en_name": "Rumah"
+                },
+                {
+                    "en_name": "Hamath"
+                },
+                {
+                    "en_name": "Wadi Of Egypt"
+                },
+                {
+                    "en_name": "River Euphrates"
+                },
+                {
+                    "en_name": "Arabah"
+                },
+                {
+                    "en_name": "Jericho"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Chaldeans"
+                },
+                {
+                    "en_name": "Arameans"
+                },
+                {
+                    "en_name": "Moabites"
+                },
+                {
+                    "en_name": "Ammonites"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "House Of God"
+                },
+                {
+                    "en_name": "Temple Of God"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Jeremiah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Jeremiah"
+                }
+            ],
+            "childOf": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Hamutal"
+                },
+                {
+                    "term1": "Eliakim",
+                    "term2": "Josiah"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Zebudah"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Nehushta"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Hamutal"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Hamutal",
+                    "term2": "Jehoahaz"
+                },
+                {
+                    "term1": "Zebudah",
+                    "term2": "Jehoiakim"
+                },
+                {
+                    "term1": "Nehushta",
+                    "term2": "Jehoiachin"
+                },
+                {
+                    "term1": "Hamutal",
+                    "term2": "Zedekiah"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Babylon"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Arabah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Jericho"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Babylon"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Hamutal",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Eliakim",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Zebudah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Nehushta",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Mattaniah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Israel"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Pharaoh Neco"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Nebuchadnezzar"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Chaldeans"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Arameans"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Moabites"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Ammonites"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Nebuchadnezzar"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Libnah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Rumah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Arabah",
+                    "term2": "Judah"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Eliakim"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Mattaniah"
+                }
+            ]
+        }
+    },
+    "key": "TN_II Kings_0_23:31–25:7"
+}

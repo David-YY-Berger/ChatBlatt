@@ -1,0 +1,362 @@
+﻿COST: Tokens: Total=6250 approx cost usd = $0.000841 (Prompt=4597, Completion=1653)
+SOURCE:
+II Kings 23:31–25:7  (TN_II Kings_0_23:31–25:7)
+
+HEBREW:
+בֶּן־עֶשְׂרִ֨ים וְשָׁלֹ֤שׁ שָׁנָה֙ יְהוֹאָחָ֣ז בְּמׇלְכ֔וֹ וּשְׁלֹשָׁ֣ה חֳדָשִׁ֔ים מָלַ֖ךְ בִּירֽוּשָׁלָ֑͏ִם וְשֵׁ֣ם אִמּ֔וֹ חֲמוּטַ֥ל בַּֽת־יִרְמְיָ֖הוּ מִלִּבְנָֽה׃ וַיַּ֥עַשׂ הָרַ֖ע בְּעֵינֵ֣י יְהֹוָ֑ה כְּכֹ֥ל אֲשֶׁר־עָשׂ֖וּ אֲבֹתָֽיו׃ וַיַּאַסְרֵ֩הוּ֩ פַרְעֹ֨ה נְכֹ֤ה בְרִבְלָה֙ בְּאֶ֣רֶץ חֲמָ֔ת [מִמְּלֹ֖ךְ] בִּירוּשָׁלָ֑͏ִם וַיִּתֶּן־עֹ֙נֶשׁ֙ עַל־הָאָ֔רֶץ מֵאָ֥ה כִכַּר־כֶּ֖סֶף וְכִכַּ֥ר זָהָֽב׃ וַיַּמְלֵךְ֩ פַּרְעֹ֨ה נְכֹ֜ה אֶת־אֶלְיָקִ֣ים בֶּן־יֹאשִׁיָּ֗הוּ תַּ֚חַת יֹאשִׁיָּ֣הוּ אָבִ֔יו וַיַּסֵּ֥ב אֶת־שְׁמ֖וֹ יְהוֹיָקִ֑ים וְאֶת־יְהוֹאָחָ֣ז לָקַ֔ח וַיָּבֹ֥א מִצְרַ֖יִם וַיָּ֥מׇת שָֽׁם׃ וְהַכֶּ֣סֶף וְהַזָּהָ֗ב נָתַ֤ן יְהֽוֹיָקִים֙ לְפַרְעֹ֔ה אַ֚ךְ הֶעֱרִ֣יךְ אֶת־הָאָ֔רֶץ לָתֵ֥ת אֶת־הַכֶּ֖סֶף עַל־פִּ֣י פַרְעֹ֑ה אִ֣ישׁ כְּעֶרְכּ֗וֹ נָגַ֞שׂ אֶת־הַכֶּ֤סֶף וְאֶת־הַזָּהָב֙ אֶת־עַ֣ם הָאָ֔רֶץ לָתֵ֖ת לְפַרְעֹ֥ה נְכֹֽה׃ בֶּן־עֶשְׂרִ֨ים וְחָמֵ֤שׁ שָׁנָה֙ יְהוֹיָקִ֣ים בְּמׇלְכ֔וֹ וְאַחַ֤ת עֶשְׂרֵה֙ שָׁנָ֔ה מָלַ֖ךְ בִּירוּשָׁלָ֑͏ִם וְשֵׁ֣ם אִמּ֔וֹ [זְבוּדָּ֥ה] בַת־פְּדָיָ֖ה מִן־רוּמָֽה׃ וַיַּ֥עַשׂ הָרַ֖ע בְּעֵינֵ֣י יְהֹוָ֑ה כְּכֹ֥ל אֲשֶׁר־עָשׂ֖וּ אֲבֹתָֽיו׃בְּיָמָ֣יו עָלָ֔ה נְבֻכַדְנֶאצַּ֖ר מֶ֣לֶךְ בָּבֶ֑ל וַיְהִי־ל֨וֹ יְהוֹיָקִ֥ים עֶ֙בֶד֙ שָׁלֹ֣שׁ שָׁנִ֔ים וַיָּ֖שׇׁב וַיִּמְרׇד־בּֽוֹ׃ וַיְשַׁלַּ֣ח יְהֹוָ֣ה׀בּ֡וֹ אֶת־גְּדוּדֵ֣י כַשְׂדִּים֩ וְאֶת־גְּדוּדֵ֨י אֲרָ֜ם וְאֵ֣ת׀ גְּדוּדֵ֣י מוֹאָ֗ב וְאֵת֙ גְּדוּדֵ֣י בְנֵֽי־עַמּ֔וֹן וַיְשַׁלְּחֵ֥ם בִּיהוּדָ֖ה לְהַאֲבִיד֑וֹ כִּדְבַ֣ר יְהֹוָ֔ה אֲשֶׁ֣ר דִּבֶּ֔ר בְּיַ֖ד עֲבָדָ֥יו הַנְּבִיאִֽים׃ אַ֣ךְ׀ עַל־פִּ֣י יְהֹוָ֗ה הָֽיְתָה֙ בִּֽיהוּדָ֔ה לְהָסִ֖יר מֵעַ֣ל פָּנָ֑יו בְּחַטֹּ֣את מְנַשֶּׁ֔ה כְּכֹ֖ל אֲשֶׁ֥ר עָשָֽׂה׃ וְגַ֤ם דַּֽם־הַנָּקִי֙ אֲשֶׁ֣ר שָׁפָ֔ךְ וַיְמַלֵּ֥א אֶת־יְרוּשָׁלַ֖͏ִם דָּ֣ם נָקִ֑י וְלֹא־אָבָ֥ה יְהֹוָ֖ה לִסְלֹֽחַ׃ וְיֶ֛תֶר דִּבְרֵ֥י יְהוֹיָקִ֖ים וְכׇל־אֲשֶׁ֣ר עָשָׂ֑ה הֲלֹא־הֵ֣ם כְּתוּבִ֗ים עַל־סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יְהוּדָֽה׃ וַיִּשְׁכַּ֥ב יְהוֹיָקִ֖ים עִם־אֲבֹתָ֑יו וַיִּמְלֹ֛ךְ יְהוֹיָכִ֥ין בְּנ֖וֹ תַּחְתָּֽיו׃ וְלֹא־הֹסִ֥יף עוֹד֙ מֶ֣לֶךְ מִצְרַ֔יִם לָצֵ֖את מֵֽאַרְצ֑וֹ כִּֽי־לָקַ֞ח מֶ֣לֶךְ בָּבֶ֗ל מִנַּ֤חַל מִצְרַ֙יִם֙ עַד־נְהַר־פְּרָ֔ת כֹּ֛ל אֲשֶׁ֥ר הָיְתָ֖ה לְמֶ֥לֶךְ מִצְרָֽיִם׃ בֶּן־שְׁמֹנֶ֨ה עֶשְׂרֵ֤ה שָׁנָה֙ יְהוֹיָכִ֣ין בְּמׇלְכ֔וֹ וּשְׁלֹשָׁ֣ה חֳדָשִׁ֔ים מָלַ֖ךְ בִּירֽוּשָׁלָ֑͏ִם וְשֵׁ֣ם אִמּ֔וֹ נְחֻשְׁתָּ֥א בַת־אֶלְנָתָ֖ן מִירוּשָׁלָֽ͏ִם׃ וַיַּ֥עַשׂ הָרַ֖ע בְּעֵינֵ֣י יְהֹוָ֑ה כְּכֹ֥ל אֲשֶׁר־עָשָׂ֖ה אָבִֽיו׃ בָּעֵ֣ת הַהִ֔יא [עָל֗וּ] עַבְדֵ֛י נְבֻכַדְנֶאצַּ֥ר מֶלֶךְ־בָּבֶ֖ל יְרוּשָׁלָ֑͏ִם וַתָּבֹ֥א הָעִ֖יר בַּמָּצֽוֹר׃ וַיָּבֹ֛א נְבֻכַדְנֶאצַּ֥ר מֶלֶךְ־בָּבֶ֖ל עַל־הָעִ֑יר וַעֲבָדָ֖יו צָרִ֥ים עָלֶֽיהָ׃ וַיֵּצֵ֞א יְהוֹיָכִ֤ין מֶֽלֶךְ־יְהוּדָה֙ עַל־מֶ֣לֶךְ בָּבֶ֔ל ה֣וּא וְאִמּ֔וֹ וַעֲבָדָ֖יו וְשָׂרָ֣יו וְסָרִיסָ֑יו וַיִּקַּ֤ח אֹתוֹ֙ מֶ֣לֶךְ בָּבֶ֔ל בִּשְׁנַ֥ת שְׁמֹנֶ֖ה לְמׇלְכֽוֹ׃ וַיּוֹצֵ֣א מִשָּׁ֗ם אֶת־כׇּל־אֽוֹצְרוֹת֙ בֵּ֣ית יְהֹוָ֔ה וְאוֹצְר֖וֹת בֵּ֣ית הַמֶּ֑לֶךְ וַיְקַצֵּ֞ץ אֶת־כׇּל־כְּלֵ֣י הַזָּהָ֗ב אֲשֶׁ֨ר עָשָׂ֜ה שְׁלֹמֹ֤ה מֶֽלֶךְ־יִשְׂרָאֵל֙ בְּהֵיכַ֣ל יְהֹוָ֔ה כַּאֲשֶׁ֖ר דִּבֶּ֥ר יְהֹוָֽה׃ וְהִגְלָ֣ה אֶת־כׇּל־יְ֠רוּשָׁלַ֠͏ִם וְֽאֶת־כׇּל־הַשָּׂרִ֞ים וְאֵ֣ת׀ כׇּל־גִּבּוֹרֵ֣י הַחַ֗יִל [עֲשֶׂ֤רֶת] אֲלָפִים֙ גּוֹלֶ֔ה וְכׇל־הֶחָרָ֖שׁ וְהַמַּסְגֵּ֑ר לֹ֣א נִשְׁאַ֔ר זוּלַ֖ת דַּלַּ֥ת עַם־הָאָֽרֶץ׃ וַיֶּ֥גֶל אֶת־יְהוֹיָכִ֖ין בָּבֶ֑לָה וְאֶת־אֵ֣ם הַ֠מֶּ֠לֶךְ וְאֶת־נְשֵׁ֨י הַמֶּ֜לֶךְ וְאֶת־סָרִיסָ֗יו וְאֵת֙ [אֵילֵ֣י] הָאָ֔רֶץ הוֹלִ֛יךְ גּוֹלָ֥ה מִירוּשָׁלַ֖͏ִם בָּבֶֽלָה׃ וְאֵת֩ כׇּל־אַנְשֵׁ֨י הַחַ֜יִל שִׁבְעַ֣ת אֲלָפִ֗ים וְהֶחָרָ֤שׁ וְהַמַּסְגֵּר֙ אֶ֔לֶף הַכֹּ֕ל גִּבּוֹרִ֖ים עֹשֵׂ֣י מִלְחָמָ֑ה וַיְבִיאֵ֧ם מֶלֶךְ־בָּבֶ֛ל גּוֹלָ֖ה בָּבֶֽלָה׃ וַיַּמְלֵ֧ךְ מֶלֶךְ־בָּבֶ֛ל אֶת־מַתַּנְיָ֥ה דֹד֖וֹ תַּחְתָּ֑יו וַיַּסֵּ֥ב אֶת־שְׁמ֖וֹ צִדְקִיָּֽהוּ׃ בֶּן־עֶשְׂרִ֨ים וְאַחַ֤ת שָׁנָה֙ צִדְקִיָּ֣הוּ בְמׇלְכ֔וֹ וְאַחַ֤ת עֶשְׂרֵה֙ שָׁנָ֔ה מָלַ֖ךְ בִּירוּשָׁלָ֑͏ִם וְשֵׁ֣ם אִמּ֔וֹ [חֲמוּטַ֥ל] בַּֽת־יִרְמְיָ֖הוּ מִלִּבְנָֽה׃ וַיַּ֥עַשׂ הָרַ֖ע בְּעֵינֵ֣י יְהֹוָ֑ה כְּכֹ֥ל אֲשֶׁר־עָשָׂ֖ה יְהוֹיָקִֽים׃ כִּ֣י׀ עַל־אַ֣ף יְהֹוָ֗ה הָיְתָ֤ה בִירוּשָׁלַ֙͏ִם֙ וּבִ֣יהוּדָ֔ה עַד־הִשְׁלִכ֥וֹ אֹתָ֖ם מֵעַ֣ל פָּנָ֑יו וַיִּמְרֹ֥ד צִדְקִיָּ֖הוּ בְּמֶ֥לֶךְ בָּבֶֽל׃ וַיְהִי֩ בִשְׁנַ֨ת הַתְּשִׁיעִ֜ית לְמׇלְכ֗וֹ בַּחֹ֣דֶשׁ הָעֲשִׂירִי֮ בֶּעָשׂ֣וֹר לַחֹ֒דֶשׁ֒ בָּ֠א נְבֻכַדְנֶאצַּ֨ר מֶלֶךְ־בָּבֶ֜ל ה֧וּא וְכׇל־חֵיל֛וֹ עַל־יְרוּשָׁלַ֖͏ִם וַיִּ֣חַן עָלֶ֑יהָ וַיִּבְנ֥וּ עָלֶ֛יהָ דָּיֵ֖ק סָבִֽיב׃ וַתָּבֹ֥א הָעִ֖יר בַּמָּצ֑וֹר עַ֚ד עַשְׁתֵּ֣י עֶשְׂרֵ֣ה שָׁנָ֔ה לַמֶּ֖לֶךְ צִדְקִיָּֽהוּ׃ בְּתִשְׁעָ֣ה לַחֹ֔דֶשׁ וַיֶּחֱזַ֥ק הָרָעָ֖ב בָּעִ֑יר וְלֹא־הָ֥יָה לֶ֖חֶם לְעַ֥ם הָאָֽרֶץ׃ וַתִּבָּקַ֣ע הָעִ֗יר וְכׇל־אַנְשֵׁ֨י הַמִּלְחָמָ֤ה׀הַלַּ֙יְלָה֙ דֶּ֜רֶךְ שַׁ֣עַר׀ בֵּ֣ין הַחֹמֹתַ֗יִם אֲשֶׁר֙ עַל־גַּ֣ן הַמֶּ֔לֶךְ וְכַשְׂדִּ֥ים עַל־הָעִ֖יר סָבִ֑יב וַיֵּ֖לֶךְ דֶּ֥רֶךְ הָעֲרָבָֽה׃ וַיִּרְדְּפ֤וּ חֵיל־כַּשְׂדִּים֙ אַחַ֣ר הַמֶּ֔לֶךְ וַיַּשִּׂ֥גוּ אֹת֖וֹ בְּעַֽרְב֣וֹת יְרֵח֑וֹ וְכׇ֨ל־חֵיל֔וֹ נָפֹ֖צוּ מֵעָלָֽיו׃ וַֽיִּתְפְּשׂוּ֙ אֶת־הַמֶּ֔לֶךְ וַיַּעֲל֥וּ אֹת֛וֹ אֶל־מֶ֥לֶךְ בָּבֶ֖ל רִבְלָ֑תָה וַיְדַבְּר֥וּ אִתּ֖וֹ מִשְׁפָּֽט׃ וְאֶת־בְּנֵי֙ צִדְקִיָּ֔הוּ שָׁחֲט֖וּ לְעֵינָ֑יו וְאֶת־עֵינֵ֤י צִדְקִיָּ֙הוּ֙ עִוֵּ֔ר וַיַּאַסְרֵ֙הוּ֙ בַּֽנְחֻשְׁתַּ֔יִם וַיְבִאֵ֖הוּ בָּבֶֽל׃
+
+ENGLISH:
+Jehoahaz was twenty-three years old when he became king, and he reigned three months in Jerusalem; his mothers name was Hamutal daughter of Jeremiah of Libnah. He did what was displeasing to GOD, just as his predecessors had done. Pharaoh Neco imprisoned him in Riblah in the region of Hamath, to keep him from reigning in Jerusalem. And he imposed on the land an indemnity of one hundred talents of silver and a talent of gold. Then Pharaoh Neco appointed Eliakim son of Josiah king in place of his father Josiah, changing his name to Jehoiakim. He took Jehoahaz and brought him to Egypt, where he died. Jehoiakim gave Pharaoh the silver and the gold, and he made an assessment on the land to pay the money demanded by Pharaoh. He exacted from the people of the land the silver and gold to be paid Pharaoh Neco, each [holding] according to its assessment. Jehoiakim was twenty-five years old when he became king, and he reigned eleven years in Jerusalem; his mothers name was Zebudah daughter of Pedaiah of Rumah. He did what was displeasing to GOD, just as his ancestors had done.In his days, King Nebuchadnezzar of Babylon came up, and Jehoiakim became his vassal for three years. Then he turned and rebelled against him. GOD let loose against him the raiding bands of the Chaldeans, Arameans, Moabites, and Ammonites-letting them loose against Judah to destroy it, in accordance with the word that GOD had spoken through the prophets-Gods servants. All this befell Judah at the command of GOD, who banished [them] from the divine presence because of all the sins that Manasseh had committed, and also because of the blood of the innocent that he shed. For he filled Jerusalem with the blood of the innocent, and GOD would not forgive. The other events of Jehoiakims reign, and all of his actions, are recorded in the Annals of the Kings of Judah. Jehoiakim rested with his ancestors, and his son Jehoiachin succeeded him as king. The king of Egypt did not venture out of his country again, for the king of Babylon had seized all the land that had belonged to the king of Egypt, from the Wadi of Egypt to the River Euphrates. Jehoiachin was eighteen years old when he became king, and he reigned three months in Jerusalem; his mothers name was Nehushta daughter of Elnathan of Jerusalem. He did what was displeasing to GOD, just as his father had done. At that time, the troops of King Nebuchadnezzar of Babylon marched against Jerusalem, and the city came under siege. King Nebuchadnezzar of Babylon advanced against the city while his troops were besieging it. Thereupon King Jehoiachin of Judah, along with his mother, and his courtiers, commanders, and officers, surrendered to the king of Babylon. The king of Babylon took him captive in the eighth year of his reign. He carried off from Jerusalem all the treasures of the House of GOD and the treasures of the royal palace; he stripped off all the golden decorations in the Temple of GOD-which King Solomon of Israel had made-as GOD had warned. He exiled all of Jerusalem: all the commanders and all the warriors-ten thousand exiles-as well as all the artisans and smiths; only the poorest people in the land were left. He deported Jehoiachin to Babylon; and the kings mother and wives and officers and the notables of the land were brought as exiles from Jerusalem to Babylon. All the able men, to the number of seven thousand-all of them warriors, trained for battle-and a thousand artisans and smiths were brought to Babylon as exiles by the king of Babylon. And the king of Babylon appointed Mattaniah, Jehoiachins uncle, king in his place, changing his name to Zedekiah. Zedekiah was twenty-one years old when he became king, and he reigned eleven years in Jerusalem; his mothers name was Hamutal daughter of Jeremiah of Libnah. He did what was displeasing to GOD, just as Jehoiakim had done. Indeed, Jerusalem and Judah were a cause of anger for GOD, so that they were cast out of the divine presence. Zedekiah rebelled against the king of Babylon.And in the ninth year of his reign, on the tenth day of the tenth month, Nebuchadnezzar moved against Jerusalem with his whole army. He besieged it; and they built towers against it all around. The city continued in a state of siege until the eleventh year of King Zedekiah. By the ninth day [of the fourth month] the famine had become acute in the city; there was no food left for the common people. Then [the wall of] the city was breached. All the soldiers [left the city] by night through the gate between the double walls, which is near the kings garden-the Chaldeans were all around the city; and [the king] set out for the Arabah. But the Chaldean troops pursued the king, and they overtook him in the steppes of Jericho as his entire force left him and scattered. They captured the king and brought him before the king of Babylon at Riblah; and they put him on trial. They slaughtered Zedekiahs sons before his eyes; then Zedekiahs eyes were put out. He was chained in bronze fetters and he was brought to Babylon.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Kings of Judah, their reigns, and Babylonian conquest.",
+    "heb_summary": "מלכי יהודה, שלטונם וכניעתם לבבל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jehoahaz"
+        },
+        {
+          "en_name": "Hamutal"
+        },
+        {
+          "en_name": "Jeremiah"
+        },
+        {
+          "en_name": "Pharaoh Neco"
+        },
+        {
+          "en_name": "Eliakim"
+        },
+        {
+          "en_name": "Josiah"
+        },
+        {
+          "en_name": "Jehoiakim"
+        },
+        {
+          "en_name": "Zebudah"
+        },
+        {
+          "en_name": "Pedaiah"
+        },
+        {
+          "en_name": "Nebuchadnezzar"
+        },
+        {
+          "en_name": "Manasseh"
+        },
+        {
+          "en_name": "Jehoiachin"
+        },
+        {
+          "en_name": "Nehushta"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "Mattaniah"
+        },
+        {
+          "en_name": "Zedekiah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jerusalem"
+        },
+        {
+          "en_name": "Libnah"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Babylon"
+        },
+        {
+          "en_name": "Rumah"
+        },
+        {
+          "en_name": "Hamath"
+        },
+        {
+          "en_name": "Wadi Of Egypt"
+        },
+        {
+          "en_name": "River Euphrates"
+        },
+        {
+          "en_name": "Arabah"
+        },
+        {
+          "en_name": "Jericho"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Chaldeans"
+        },
+        {
+          "en_name": "Arameans"
+        },
+        {
+          "en_name": "Moabites"
+        },
+        {
+          "en_name": "Ammonites"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "House Of God"
+        },
+        {
+          "en_name": "Temple Of God"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Jeremiah"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Jeremiah"
+        }
+      ],
+      "childOf": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Hamutal"
+        },
+        {
+          "term1": "Eliakim",
+          "term2": "Josiah"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Zebudah"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Nehushta"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Hamutal"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Hamutal",
+          "term2": "Jehoahaz"
+        },
+        {
+          "term1": "Zebudah",
+          "term2": "Jehoiakim"
+        },
+        {
+          "term1": "Nehushta",
+          "term2": "Jehoiachin"
+        },
+        {
+          "term1": "Hamutal",
+          "term2": "Zedekiah"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Jerusalem"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Babylon"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Babylon"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Babylon"
+        },
+        {
+          "term1": "Nebuchadnezzar",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Arabah"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Jericho"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Babylon"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Hamutal",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Eliakim",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Zebudah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Jehoiachin",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Nehushta",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Mattaniah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Manasseh",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Israel"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jehoahaz",
+          "term2": "Pharaoh Neco"
+        },
+        {
+          "term1": "Jehoiakim",
+          "term2": "Nebuchadnezzar"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Chaldeans"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Arameans"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Moabites"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Ammonites"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Nebuchadnezzar"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Jerusalem",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Libnah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Rumah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Arabah",
+          "term2": "Judah"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jehoiakim",
+          "term2": "Eliakim"
+        },
+        {
+          "term1": "Zedekiah",
+          "term2": "Mattaniah"
+        }
+      ]
+    }
+  }
+}

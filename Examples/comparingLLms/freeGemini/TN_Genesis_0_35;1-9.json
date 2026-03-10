@@ -1,0 +1,101 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob went to Bethel, built an altar, and God appeared.",
+        "heb_summary": "יעקב עלה לבית אל, בנה מזבח, ואלוהים נגלה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Deborah"
+                },
+                {
+                    "en_name": "Rebekah'S Nurse"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Luz"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Alien Gods"
+                },
+                {
+                    "en_name": "Rings That Were In Their Ears"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [],
+            "childOf": [],
+            "spouseOf": [],
+            "descendantOf": [],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Jacob"
+                }
+            ],
+            "bornIn": [],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Luz"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                }
+            ],
+            "personToTribeOfIsrael": [],
+            "personBelongsToNation": [],
+            "placeToNation": [],
+            "prophesiedAbout": [],
+            "AliasOf": [
+                {
+                    "term1": "Luz",
+                    "term2": "Bethel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_35:1-9"
+}

@@ -1,0 +1,93 @@
+﻿{
+    "res": {
+        "en_summary": "Jews fight on Shabbat against besieging enemies, especially near borders.",
+        "heb_summary": "יהודים נלחמים בשבת נגד אויבים צרים, במיוחד ליד גבולות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Rav Yosef Bar Manyumi"
+                },
+                {
+                    "en_name": "Rav Nahman"
+                },
+                {
+                    "en_name": "Rabbi Dostai Of The Town Of Biri"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Samuel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Keila"
+                },
+                {
+                    "en_name": "Rama"
+                },
+                {
+                    "en_name": "Nehardea"
+                }
+            ],
+            "TribeOfIsrael": [],
+            "Nation": [
+                {
+                    "en_name": "Philistines"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Urim Vetummim"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Rav"
+                }
+            ],
+            "childOf": [],
+            "spouseOf": [],
+            "descendantOf": [],
+            "spokeWith": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Rav"
+                },
+                {
+                    "term1": "Rav Yosef Bar Manyumi",
+                    "term2": "Rav Nahman"
+                },
+                {
+                    "term1": "Rabbi Dostai Of The Town Of Biri",
+                    "term2": "David"
+                }
+            ],
+            "bornIn": [],
+            "diedIn": [],
+            "visited": [],
+            "personToTribeOfIsrael": [],
+            "personBelongsToNation": [],
+            "AllyOf": [],
+            "placeToNation": [],
+            "prophesiedAbout": [],
+            "comparedTo": [],
+            "contrastedWith": [],
+            "AliasOf": []
+        }
+    },
+    "key": "BT_Eruvin_0_45a:12-19"
+}

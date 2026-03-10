@@ -1,0 +1,89 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Meir, Sages, Abaye, Rava, Rav teach wisdom.",
+        "heb_summary": "רבי מאיר, חכמים, אביי, רבא, רב מלמדים חכמה.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "Sages In Yavne"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Rabban Yohanan Ben Zakkai"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Yavne"
+                },
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Marketplace"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Mitzvot"
+                },
+                {
+                    "en_name": "World-To-Come"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [],
+            "spouseOf": [],
+            "descendantOf": [],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Meir",
+                    "term2": "Sages In Yavne"
+                },
+                {
+                    "term1": "Rava",
+                    "term2": "Rav"
+                }
+            ],
+            "bornIn": [],
+            "diedIn": [],
+            "visited": [
+                {
+                    "term1": "Rabban Yohanan Ben Zakkai",
+                    "term2": "Marketplace"
+                }
+            ],
+            "personToTribeOfIsrael": [],
+            "personBelongsToNation": [],
+            "EnemyOf": [],
+            "AllyOf": [],
+            "placeToNation": [],
+            "prophesiedAbout": [],
+            "comparedTo": [],
+            "contrastedWith": [],
+            "AliasOf": []
+        }
+    },
+    "key": "BT_Berakhot_0_17a:7-12"
+}

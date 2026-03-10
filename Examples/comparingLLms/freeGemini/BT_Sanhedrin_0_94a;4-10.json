@@ -1,0 +1,150 @@
+﻿{
+    "res": {
+        "en_summary": "Hezekiah was almost the Messiah, but missed redemption.",
+        "heb_summary": "חזקיהו כמעט היה המשיח אך החמיץ גאולה.",
+        "passage_types": [
+            "PROPHECY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "Rabbi Tanhum"
+                },
+                {
+                    "en_name": "Bar Kappara"
+                },
+                {
+                    "en_name": "Sennacherib"
+                },
+                {
+                    "en_name": "Gog"
+                },
+                {
+                    "en_name": "Magog"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rabbi Yitzhak"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Jethro"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Shmuel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Tzippori"
+                },
+                {
+                    "en_name": "Seir"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Assyria"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "The Earth"
+                },
+                {
+                    "en_name": "The Treacherous"
+                },
+                {
+                    "en_name": "The Morning"
+                },
+                {
+                    "en_name": "The Night"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Bar Kappara",
+                    "term2": "Rabbi Tanhum"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Tanhum",
+                    "term2": "Bar Kappara"
+                },
+                {
+                    "term1": "Rava",
+                    "term2": "Rabbi Yitzhak"
+                },
+                {
+                    "term1": "Rav",
+                    "term2": "Shmuel"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Rabbi Tanhum",
+                    "term2": "Tzippori"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rabbi Tanhum",
+                    "term2": "Tzippori"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Assyria"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Gog",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Magog",
+                    "term2": "Hezekiah"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "The Morning",
+                    "term2": "The Night"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Rabbi Yitzhak",
+                    "term2": "Rava"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_94a:4-10"
+}

@@ -1,0 +1,65 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph stored Egypt's grain during years of plenty.",
+        "heb_summary": "יוסף אגר תבואות מצרים בשנות השפע.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Asenath"
+                },
+                {
+                    "en_name": "Poti-Phera"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "On"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Ephraim"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": []
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Asenath"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "On",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_41:47-53"
+}

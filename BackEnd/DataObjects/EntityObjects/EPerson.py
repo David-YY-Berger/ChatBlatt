@@ -19,7 +19,7 @@ class EPerson(Entity):
 
     # transient fields - Person/Group → Person/Group
     studiedFrom: List[str] = TransientField(default_factory=list)
-    siblingFrom: List[str] = TransientField(default_factory=list)
+    siblingWith: List[str] = TransientField(default_factory=list)
     childOf: List[str] = TransientField(default_factory=list)
     spouseOf: List[str] = TransientField(default_factory=list)
     descendantOf: List[str] = TransientField(default_factory=list)

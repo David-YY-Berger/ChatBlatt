@@ -270,7 +270,7 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
             # x said in name of y said in name of z.
             # 'BT_Berakhot_0_35b:11-12', # missing childOf
-            # "TN_Esther_0_1:1–22", - ensure no studied from!
+            # "TN_Esther_0_1:1–22", # ensure no studied from!
 
             # placeToNation (seir to edom)
             # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
@@ -288,16 +288,16 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_I Kings_0_5:15–32',
 
             # bornIn
-            # 'TN_Genesis_0_41:47-53',
+            'TN_Genesis_0_41:47-53',
 
             # enemyOF (nation to nation) - very long source
             # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
             #
             # diedIn (debora)
-            # "TN_Genesis_0_35:1-9"
+            # "TN_Genesis_0_35:1-9",
 
             # personToTribeOfIsrael
-            "TN_Esther_0_2:1–20",
+            # "TN_Esther_0_2:1–20",
 
 
             # ------------------------------------------------------

@@ -1,0 +1,77 @@
+﻿{
+    "res": {
+        "en_summary": "Later generations avoid tithing laws by bringing produce inside.",
+        "heb_summary": "דורות האחרונים מתחמקים מחוקי מעשרות על ידי הכנסת פירות פנימה.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabba Bar Bar Hana"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yehuda"
+                },
+                {
+                    "en_name": "Rabbi Elai"
+                },
+                {
+                    "en_name": "Rabbi Yannai"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Courtyards"
+                },
+                {
+                    "en_name": "Main Gate"
+                },
+                {
+                    "en_name": "Roofs"
+                },
+                {
+                    "en_name": "Enclosed Courtyards"
+                },
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "Gates"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Fruits"
+                },
+                {
+                    "en_name": "Produce"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabba Bar Bar Hana",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yehuda"
+                },
+                {
+                    "term1": "Rabbi Yehuda",
+                    "term2": "Rabbi Elai"
+                },
+                {
+                    "term1": "Rabbi Yannai",
+                    "term2": "Rabbi Yohanan"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_35b:11-12"
+}
