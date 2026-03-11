@@ -87,7 +87,8 @@ class PydanticCaller:
                 "  Examples: Egypt, Moab, Assyria, Babylon, Philistia, Edom.\n"
                 "  NOT generic terms: nation, people, enemy, kingdom.\n\n"
                 
-                "- Symbol: Symbolic objects, concepts, or items with significance.\n"
+                "- Symbol: Specific Symbolic objects, concepts, or items with high significance.\n"
+                "  especially if used in comparison or contrastingly. Proper nouns or clearly defined concepts.\n"
                 "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush.\n\n"
                 
                 "=== ENTITY PRIORITY RULES ===\n"

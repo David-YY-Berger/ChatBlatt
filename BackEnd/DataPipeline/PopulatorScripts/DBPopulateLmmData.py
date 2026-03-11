@@ -184,8 +184,9 @@ class DBPopulateLmmData(DBParentClass):
             # personBelongsToNation
             # 'BT_Sanhedrin_0_94a:4-10', # bad alias, (should be comparison..)
 
-            # comparedTo (
+            # comparedTo
             # 'TN_Isaiah_0_1:1-31',
+            # "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
 
             # contrastedWith, non literal places (world to come vs this world)
             # 'BT_Berakhot_0_17a:7-12',
@@ -194,7 +195,10 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_I Kings_0_5:15–32',
 
             # bornIn
-            'TN_Genesis_0_41:47-53',
+            # 'TN_Genesis_0_41:47-53',
+
+            # visited
+            # 'TN_Genesis_0_33:18-34:1', # also place to Nation
 
             # enemyOF (nation to nation) - very long source
             # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
@@ -205,28 +209,17 @@ class DBPopulateLmmData(DBParentClass):
             # personToTribeOfIsrael
             # "TN_Esther_0_2:1–20",
 
+            # bat kol, beit shamai bet hillel (groups)
+            # "BT_Eruvin_0_13b:10-14",
 
-            # ------------------------------------------------------
-            # amalek, joshua, moshe, etc.
-            # 'TN_Exodus_0_17:8-13',
+        #     black garments (symbol), am haaretz
+        #     'BT_Shabbat_0_114a:5-9',
 
-            # amorites, kadesh, etc.
-           # 'TN_Deuteronomy_0_1:41-2:1',
+        #     symbol - torah scroll
+        #     'BT_Sanhedrin_0_67b:22-68a:12',
 
-            # small, mostly empty source:
-            # 'TN_Psalms_0_120:1–7',
-
-            # tribes:
-            # 'TN_Isaiah_0_11:1–12:6',
-        #
-
-        #     test just for html clean:
-        #     'TN_Deuteronomy_0_32:7-12',
-        #     'BT_Chullin_0_22a:13',
-        #     'BT_Chullin_0_22a:14-22b:6',
-        #     'BT_Bava Batra_0_23b:1',
-        #     'TN_Deuteronomy_0_4:16-22',
-        #     'TN_Exodus_0_16:4-12',
+        #     symbol and compard to - the torah scroll and r eliezer
+        #     'BT_Sotah_0_49b:15-19'
 
 
         ]
