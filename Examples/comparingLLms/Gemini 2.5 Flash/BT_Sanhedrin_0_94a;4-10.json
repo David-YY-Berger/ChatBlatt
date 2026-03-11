@@ -1,0 +1,195 @@
+﻿{
+    "res": {
+        "en_summary": "Hezekiah's thwarted Messiahship, redemption, and Jethro's blessing.",
+        "heb_summary": "משיחות חזקיהו, גאולה נמנעת, וברכת יתרו.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rabbi Tanhum"
+                },
+                {
+                    "en_name": "Bar Kappara"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Sennacherib"
+                },
+                {
+                    "en_name": "Gog"
+                },
+                {
+                    "en_name": "Magog"
+                },
+                {
+                    "en_name": "Ezekiel"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rabbi Yitzhak"
+                },
+                {
+                    "en_name": "Isaiah"
+                },
+                {
+                    "en_name": "Dumah"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Pappeyas"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Yitro"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                },
+                {
+                    "en_name": "Attribute Of Justice"
+                },
+                {
+                    "en_name": "Angel Appointed To Oversee The World"
+                },
+                {
+                    "en_name": "Spirits"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Tzippori"
+                },
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Seir"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Assyria"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Throne Of David"
+                },
+                {
+                    "en_name": "Masoretic Text"
+                },
+                {
+                    "en_name": "Mem"
+                },
+                {
+                    "en_name": "Divine Voice"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Tanhum",
+                    "term2": "Bar Kappara"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Attribute Of Justice",
+                    "term2": "Holy One, Blessed Be He"
+                },
+                {
+                    "term1": "Angel Appointed To Oversee The World",
+                    "term2": "Holy One, Blessed Be He"
+                },
+                {
+                    "term1": "Spirits",
+                    "term2": "Dumah"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Assyria"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Gog",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Magog",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Children Of Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "Hezekiah"
+                },
+                {
+                    "term1": "Ezekiel",
+                    "term2": "Gog"
+                },
+                {
+                    "term1": "Ezekiel",
+                    "term2": "Magog"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Gog"
+                },
+                {
+                    "term1": "Assyria",
+                    "term2": "Magog"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_94a:4-10"
+}
