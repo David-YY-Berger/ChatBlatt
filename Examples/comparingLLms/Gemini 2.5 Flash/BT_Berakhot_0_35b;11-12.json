@@ -1,0 +1,67 @@
+﻿{
+    "res": {
+        "en_summary": "Sages discuss tithing obligation, generational differences.",
+        "heb_summary": "חכמים דנים על מעשרות, הבדלי דורות.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabba Bar Bar Hana"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yehuda"
+                },
+                {
+                    "en_name": "Rabbi Elai"
+                },
+                {
+                    "en_name": "Rabbi Yannai"
+                },
+                {
+                    "en_name": "Levite"
+                },
+                {
+                    "en_name": "Earlier Generations"
+                },
+                {
+                    "en_name": "Latter Generations"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabba Bar Bar Hana",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yehuda"
+                }
+            ],
+            "childOf": [
+                {
+                    "term1": "Rabbi Yehuda",
+                    "term2": "Rabbi Elai"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Latter Generations",
+                    "term2": "Earlier Generations"
+                },
+                {
+                    "term1": "Rabbi Yannai",
+                    "term2": "Rabbi Yohanan"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_35b:11-12"
+}

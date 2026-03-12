@@ -1,0 +1,112 @@
+﻿COST: Tokens: Total=7080 approx cost usd = $0.001231 (Prompt=3969, Completion=3111)
+SOURCE:
+Sotah 49b:15-19  (BT_Sotah_0_49b:15-19)
+
+HEBREW:
+בְּפוּלְמוּס הָאַחֲרוֹן גָּזְרוּ שֶׁלֹּא תֵּצֵא כַּלָּה בְּאַפִּרְיוֹן וְכוּ׳. מַאי טַעְמָא — מִשּׁוּם צְנִיעוּתָא.מִשֶּׁמֵּת רַבָּן יוֹחָנָן בָּטְלָה הַחׇכְמָה. תָּנוּ רַבָּנַן: מִשֶּׁמֵּת רַבִּי אֱלִיעֶזֶר נִגְנַז סֵפֶר תּוֹרָה. מִשֶּׁמֵּת רַבִּי יְהוֹשֻׁעַ בָּטְלָה עֵצָה וּמַחְשָׁבָה, מִשֶּׁמֵּת רַבִּי עֲקִיבָא בָּטְלוּ זְרוֹעֵי תוֹרָה וְנִסְתַּתְּמוּ מַעְיְינוֹת הַחׇכְמָה.מִשֶּׁמֵּת רַבִּי אֶלְעָזָר בֶּן עֲזַרְיָה בָּטְלוּ עַטְרוֹת חׇכְמָה, שֶׁ״עֲטֶרֶת חֲכָמִים עׇשְׁרָם״. מִשֶּׁמֵּת רַבִּי חֲנִינָא בֶּן דּוֹסָא בָּטְלוּ אַנְשֵׁי מַעֲשֶׂה. מִשֶּׁמֵּת אַבָּא יוֹסֵי בֶּן קְטוֹנְתָּא בָּטְלוּ חֲסִידִים, וְלָמָּה נִקְרָא שְׁמוֹ אַבָּא יוֹסֵי בֶּן קְטוֹנְתָּא — שֶׁהָיָה מִקְּטַנֵּי חֲסִידִים.מִשֶּׁמֵּת בֶּן עַזַּאי בָּטְלוּ הַשַּׁקְדָנִין, מִשֶּׁמֵּת בֶּן זוֹמָא בָּטְלוּ הַדַּרְשָׁנִין, מִשֶּׁמֵּת רַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל עָלָה גּוֹבַאי וְרַבּוּ צָרוֹת. מִשֶּׁמֵּת רַבִּי הוּכְפְּלוּ צָרוֹת.מִשֶּׁמֵּת רַבִּי בָּטְלָה עֲנָוָה וְיִרְאַת חֵטְא. אֲמַר לֵיהּ רַב יוֹסֵף לְתַנָּא: לָא תִּיתְנֵי עֲנָוָה, דְּאִיכָּא אֲנָא. אֲמַר לֵיהּ רַב נַחְמָן לְתַנָּא: לָא תִּיתְנֵי יִרְאַת חֵטְא, דְּאִיכָּא אֲנָא.
+
+ENGLISH:
+The mishna taught: In the last war the Sages decreed that a bride may not go out in a palanquin inside the city, but the later Sages permitted it. The Gemara explains: What is the reason they permitted this practice? Due to modesty, so that brides should not have to go out into the street and be seen by all.The mishna taught that from the time when Rabban Yohanan ben Zakkai died, wisdom ceased. The Sages taught: From the time when Rabbi Eliezer died, it was as if the Torah scroll had been interred, as he had memorized many secrets of the Torah. From the time when Rabbi Yehoshua died, council and deliberate thought ceased, as he had the sharpest mind in Israel. From the time when Rabbi Akiva died, the powerful arm of Torah, meaning the exposition of all the details of Torah scripture, ceased, and the fountains of wisdom were sealed. From the time when Rabbi Elazar ben Azarya died, the crowns of wisdom ceased, as the crown of the wise is their riches (Proverbs 14:24), and he was both a great Torah scholar and a very wealthy man. From the time when Rabbi Hanina ben Dosa died, the men of wondrous deeds ceased. From the time when Abba Yosei ben Katonta died, the pious men ceased. And why was he called Abba Yosei ben Katonta? Because he was among the diminished [ miktanei ] of the pious people, i.e., he lived in an era when the pious had become few. From the time when ben Azzai died, the diligent ceased; from the time when ben Zoma died, the exegetists ceased. From the time when Rabban Shimon ben Gamliel died, locusts ascended upon the land and troubles proliferated. From the time when Rabbi Yehuda HaNasi died, the troubles multiplied. The final line of the mishna states that from the time when Rabbi Yehuda HaNasi died, humility and fear of sin ceased. Rav Yosef said to the tanna who reviewed the mishna: Do not teach that humility ceased, for there is still one who is humble, namely me. Rav Nahman similarly said to the tanna who reviewed the mishna: Do not teach that fear of sin ceased, for there is still one who fears sin, namely me.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Sages mourn loss of wisdom and piety.",
+    "heb_summary": "חכמים אבלים על אובדן חכמה ויראת חטא.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Rabban Yohanan Ben Zakkai"
+        },
+        {
+          "en_name": "Rabbi Eliezer"
+        },
+        {
+          "en_name": "Rabbi Yehoshua"
+        },
+        {
+          "en_name": "Rabbi Akiva"
+        },
+        {
+          "en_name": "Rabbi Elazar Ben Azarya"
+        },
+        {
+          "en_name": "Rabbi Hanina Ben Dosa"
+        },
+        {
+          "en_name": "Abba Yosei Ben Katonta"
+        },
+        {
+          "en_name": "Ben Azzai"
+        },
+        {
+          "en_name": "Ben Zoma"
+        },
+        {
+          "en_name": "Rabban Shimon Ben Gamliel"
+        },
+        {
+          "en_name": "Rabbi Yehuda Hanasi"
+        },
+        {
+          "en_name": "Rav Yosef"
+        },
+        {
+          "en_name": "Rav Nahman"
+        },
+        {
+          "en_name": "Tanna"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Palanquin"
+        },
+        {
+          "en_name": "Torah Scroll"
+        },
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Powerful Arm Of Torah"
+        },
+        {
+          "en_name": "Fountains Of Wisdom"
+        },
+        {
+          "en_name": "Crowns Of Wisdom"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Rav Yosef",
+          "term2": "Tanna"
+        },
+        {
+          "term1": "Rav Nahman",
+          "term2": "Tanna"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Rabbi Yehoshua",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

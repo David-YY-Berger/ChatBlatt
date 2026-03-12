@@ -1,0 +1,169 @@
+﻿{
+    "res": {
+        "en_summary": "Nebuzaradan destroys Temple, Zechariah's blood boils.",
+        "heb_summary": "נבוזרדן הרס בית המקדש, דם זכריה רותח.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Nebuzaradan"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Sennacherib"
+                },
+                {
+                    "en_name": "Divine Voice"
+                },
+                {
+                    "en_name": "Zechariah"
+                },
+                {
+                    "en_name": "Naaman"
+                },
+                {
+                    "en_name": "Shemaya"
+                },
+                {
+                    "en_name": "Avtalyon"
+                },
+                {
+                    "en_name": "Haman"
+                },
+                {
+                    "en_name": "Ulla"
+                },
+                {
+                    "en_name": "Rabbi Shmuel Bar Nahmani"
+                },
+                {
+                    "en_name": "The Ministering Angels"
+                },
+                {
+                    "en_name": "The Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Sisera"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Sanctuary"
+                },
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Bnei Brak"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Aramea"
+                },
+                {
+                    "en_name": "Babylonia"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Iron Axes"
+                },
+                {
+                    "en_name": "Gate"
+                },
+                {
+                    "en_name": "Blood Of Zechariah"
+                }
+            ]
+        },
+        "Rel": {
+            "descendantOf": [
+                {
+                    "term1": "Shemaya",
+                    "term2": "Sennacherib"
+                },
+                {
+                    "term1": "Avtalyon",
+                    "term2": "Sennacherib"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Divine Voice",
+                    "term2": "Nebuzaradan"
+                },
+                {
+                    "term1": "The Ministering Angels",
+                    "term2": "The Holy One, Blessed Be He"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Sennacherib",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Zechariah",
+                    "term2": "Temple"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Sanctuary"
+                },
+                {
+                    "term1": "Nebuzaradan",
+                    "term2": "Temple"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Naaman",
+                    "term2": "Aramea"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Zechariah",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Zechariah",
+                    "term2": "Temple"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_96b:2-9"
+}

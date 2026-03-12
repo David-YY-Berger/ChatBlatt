@@ -1,0 +1,341 @@
+﻿{
+    "res": {
+        "en_summary": "Kings of Judah exiled to Babylon by Nebuchadnezzar.",
+        "heb_summary": "מלכי יהודה הוגלו לבבל על ידי נבוכדנצר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jehoahaz"
+                },
+                {
+                    "en_name": "Hamutal"
+                },
+                {
+                    "en_name": "Jeremiah"
+                },
+                {
+                    "en_name": "Pharaoh Neco"
+                },
+                {
+                    "en_name": "Eliakim"
+                },
+                {
+                    "en_name": "Josiah"
+                },
+                {
+                    "en_name": "Jehoiakim"
+                },
+                {
+                    "en_name": "Zebudah"
+                },
+                {
+                    "en_name": "Pedaiah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Jehoiachin"
+                },
+                {
+                    "en_name": "Nehushta"
+                },
+                {
+                    "en_name": "Elnathan"
+                },
+                {
+                    "en_name": "Mattaniah"
+                },
+                {
+                    "en_name": "Zedekiah"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Chaldeans"
+                },
+                {
+                    "en_name": "Arameans"
+                },
+                {
+                    "en_name": "Moabites"
+                },
+                {
+                    "en_name": "Ammonites"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Libnah"
+                },
+                {
+                    "en_name": "Riblah"
+                },
+                {
+                    "en_name": "Hamath"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Rumah"
+                },
+                {
+                    "en_name": "Babylon"
+                },
+                {
+                    "en_name": "Wadi Of Egypt"
+                },
+                {
+                    "en_name": "River Euphrates"
+                },
+                {
+                    "en_name": "Jericho"
+                },
+                {
+                    "en_name": "Arabah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Babylon"
+                },
+                {
+                    "en_name": "Chaldea"
+                },
+                {
+                    "en_name": "Aram"
+                },
+                {
+                    "en_name": "Moab"
+                },
+                {
+                    "en_name": "Ammon"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Hamutal"
+                },
+                {
+                    "term1": "Eliakim",
+                    "term2": "Josiah"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Jehoiakim"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Hamutal"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Jehoiachin"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Zedekiah"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Riblah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Pharaoh Neco",
+                    "term2": "Riblah"
+                },
+                {
+                    "term1": "Pharaoh Neco",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Arabah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Jericho"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Riblah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Chaldeans",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Chaldeans",
+                    "term2": "Arabah"
+                },
+                {
+                    "term1": "Chaldeans",
+                    "term2": "Jericho"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jehoahaz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Eliakim",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoiakim",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoiachin",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Zedekiah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Chaldeans",
+                    "term2": "Chaldea"
+                },
+                {
+                    "term1": "Arameans",
+                    "term2": "Aram"
+                },
+                {
+                    "term1": "Moabites",
+                    "term2": "Moab"
+                },
+                {
+                    "term1": "Ammonites",
+                    "term2": "Ammon"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Pharaoh Neco",
+                    "term2": "Jehoahaz"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Jehoiakim"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Jehoiachin"
+                },
+                {
+                    "term1": "Nebuchadnezzar",
+                    "term2": "Zedekiah"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Libnah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Rumah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Wadi Of Egypt",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "River Euphrates",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Jericho",
+                    "term2": "Judah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God",
+                    "term2": "Judah"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Eliakim",
+                    "term2": "Jehoiakim"
+                },
+                {
+                    "term1": "Mattaniah",
+                    "term2": "Zedekiah"
+                }
+            ]
+        }
+    },
+    "key": "TN_II Kings_0_23:31–25:7"
+}

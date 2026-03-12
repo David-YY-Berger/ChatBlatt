@@ -1,0 +1,106 @@
+﻿{
+    "res": {
+        "en_summary": "Mishnaic law, scholars, cleanliness, leadership, garments.",
+        "heb_summary": "הלכה, חכמים, טהרה, מנהיגות, בגדים.",
+        "passage_types": [
+            "LAW",
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabban Shimon Ben Gamliel"
+                },
+                {
+                    "en_name": "Rabbi Yehuda"
+                },
+                {
+                    "en_name": "Rabbi Yishmael"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Lakish"
+                },
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yannai"
+                },
+                {
+                    "en_name": "The Sages"
+                },
+                {
+                    "en_name": "Torah Scholars"
+                },
+                {
+                    "en_name": "Builders"
+                },
+                {
+                    "en_name": "Bath Attendants"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Country Overseas"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Donkeys Saddle"
+                },
+                {
+                    "en_name": "Fat Stain"
+                },
+                {
+                    "en_name": "Ritual Bath"
+                },
+                {
+                    "en_name": "Tractate Kalla"
+                },
+                {
+                    "en_name": "White Garments"
+                },
+                {
+                    "en_name": "Black Garments"
+                },
+                {
+                    "en_name": "Red Garments"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yehuda",
+                    "term2": "Rabbi Yishmael"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Shimon Ben Lakish",
+                    "term2": "Rabbi Hanina"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "White Garments",
+                    "term2": "Black Garments"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Builders",
+                    "term2": "Torah Scholars"
+                }
+            ]
+        }
+    },
+    "key": "BT_Shabbat_0_114a:5-9"
+}

@@ -1,0 +1,116 @@
+﻿COST: Tokens: Total=7173 approx cost usd = $0.001167 (Prompt=4378, Completion=2795)
+SOURCE:
+Shabbat 114a:5-9  (BT_Shabbat_0_114a:5-9)
+
+HEBREW:
+תְּנַן הָתָם: רְבָב עַל הַמַּרְדַּעַת חוֹצֵץ. רַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל אוֹמֵר: עַד כְּאִיסָּר הָאִיטַלְקִי. וְעַל הַבְּגָדִים, מִצַּד אֶחָד — אֵינוֹ חוֹצֵץ, מִשְּׁנֵי צְדָדִין — חוֹצֵץ. רַבִּי יְהוּדָה אוֹמֵר מִשּׁוּם רַבִּי יִשְׁמָעֵאל: אַף מִצַּד אֶחָד חוֹצֵץ.בְּעָא מִינֵּיהּ רַבִּי שִׁמְעוֹן בֶּן לָקִישׁ מֵרַבִּי חֲנִינָא: מַרְדַּעַת, מִצַּד אֶחָד אוֹ מִשְּׁנֵי צְדָדִין? אֲמַר לֵיהּ: זוֹ לֹא שָׁמַעְתִּי, כַּיּוֹצֵא בָּהּ שָׁמַעְתִּי. דִּתְנַן רַבִּי יוֹסֵי אוֹמֵר: שֶׁל בַּנָּאִין — מִצַּד אֶחָד, וְשֶׁל בּוּר — מִשְּׁנֵי צְדָדִין. וְלֹא תְּהֵא מַרְדַּעַת חֲשׁוּבָה מִבִּגְדּוֹ שֶׁל עַם הָאָרֶץ.מַאי ״בַּנָּאִין״? אָמַר רַבִּי יוֹחָנָן: אֵלּוּ תַּלְמִידֵי חֲכָמִים שֶׁעוֹסְקִין בְּבִנְיָנוֹ שֶׁל עוֹלָם כׇּל יְמֵיהֶן. וְאָמַר רַבִּי יוֹחָנָן: אֵיזֶהוּ תַּלְמִיד חָכָם שֶׁמַּחְזִירִין לוֹ אֲבֵידָה בִּטְבִיעוּת הָעַיִן — זֶה הַמַּקְפִּיד עַל חֲלוּקוֹ לְהוֹפְכוֹ. וְאָמַר רַבִּי יוֹחָנָן: אֵיזֶהוּ תַּלְמִיד חָכָם שֶׁמְּמַנִּין אוֹתוֹ פַּרְנָס עַל הַצִּיבּוּר — זֶה שֶׁשּׁוֹאֲלִין אוֹתוֹ דָּבָר הֲלָכָה בְּכׇל מָקוֹם וְאוֹמֵר, וַאֲפִילּוּ בְּמַסֶּכֶת כַּלָּה.וְאָמַר רַבִּי יוֹחָנָן: אֵיזֶהוּ תַּלְמִיד חָכָם שֶׁבְּנֵי עִירוֹ מְצֻוִּוין לַעֲשׂוֹת לוֹ מְלַאכְתּוֹ — זֶה שֶׁמַּנִּיחַ חֶפְצוֹ וְעוֹסֵק בְּחֶפְצֵי שָׁמַיִם. וְהָנֵי מִילֵּי לְמִיטְרַח בְּרִיפְתֵּיהּ. וְאָמַר רַבִּי יוֹחָנָן: אֵיזֶהוּ תַּלְמִיד חָכָם — כׇּל שֶׁשּׁוֹאֲלִין אוֹתוֹ הֲלָכָה בְּכׇל מָקוֹם, וְאוֹמְרָהּ. לְמַאי נָפְקָא מִינַּהּ — לְמַנּוֹיֵיהּ פַּרְנָס עַל הַצִּיבּוּר. אִי בַּחֲדָא מַסֶּכְתָּא — בְּאַתְרֵיהּ, אִי בְּכוּלֵּיהּ תַּנּוֹיֵהּ — בְּרֵישׁ מְתִיבְתָּא.רַבִּי שִׁמְעוֹן בֶּן לָקִישׁ אָמַר: אֵלּוּ כֵּלִים הָאוֹלְיָירִין הַבָּאִין מִמְּדִינַת הַיָּם. לְמֵימְרָא דְּחִיוָּרֵי נִינְהוּ? וְהָאֲמַר לְהוּ רַבִּי יַנַּאי לְבָנָיו: בָּנַי, אַל תִּקְבְּרוּנִי לֹא בְּכֵלִים לְבָנִים וְלֹא בְּכֵלִים שְׁחוֹרִים, לְבָנִים — שֶׁמָּא לֹא אֶזְכֶּה, וְאֶהְיֶה כְּחָתָן בֵּין אֲבֵלִים. שְׁחוֹרִים — שְׁמָא אֶזְכֶּה, וְאֶהְיֶה כְּאָבֵל בֵּין חֲתָנִים. אֶלָּא בְּכֵלִים הָאוֹלְיָירִין הַבָּאִין מִמְּדִינַת הַיָּם. אַלְמָא, סוּמָּקֵי נִינְהוּ! לָא קַשְׁיָא: הָא בִּגְלִימֵי, הָא בִּלְבוּשֵׁי.
+
+ENGLISH:
+We learned in a mishna there: A fat stain on a donkeys saddle interposes, i.e., if the saddle becomes impure, its immersion in a ritual bath is invalid unless the stain is removed. Rabban Shimon ben Gamliel says: A stain interposes only when it is as large as an Italian issar but not smaller. And if there were a fat stain on clothing on one side, it does not interpose, but if the stain is on both sides it interposes. Rabbi Yehuda says in the name of Rabbi Yishmael: It interposes even on one side. Rabbi Shimon ben Lakish raised a dilemma before Rabbi Hanina: Is a stain on a saddle an interposition even if it is on just one side, or only if it is on both sides? Rabbi Hanina said to him: That, I did not hear explicitly. However, I heard something similar to it. As we learned in that same mishna that Rabbi Yosei says: A garment belonging to builders [ bannain ] is considered to have an interposition if it has a stain on one side, and that of an ignoramus, who is not meticulous, is considered to have an interposition when the stain is on both sides. And certainly a donkeys saddle cannot be more important than the garment of an am haaretz . The Gemara asks: Who are the builders mentioned here? Rabbi Yohanan said: These are Torah scholars, who are engaged in building the world all of their days. And with regard to this, Rabbi Yohanan said: Who is a Torah scholar of whom the Sages said that one must return a lost object to him based on visual identification, even if he does not provide an identifying sign for it? That is one who makes sure his upper undergarment is turned inward so that the uneven stitching is not visible. This means that he conducts himself like a Torah scholar in all his ways, even in matters of cleanliness and order (Maharsha). On a related note, the Gemara adds that which Rabbi Yohanan said: Who is a Torah scholar who may be appointed as a leader of the community? This is one who is asked about matters of halakha on any topic and he is able to answer, and even if he were asked about tractate Kalla , a tractate that few have mastered. And Rabbi Yohanan said: Who is the Torah scholar for whom the inhabitants of his city are commanded to perform his labor for him? This is one who sets his own matters aside and engages in matters of Heaven. It is therefore fitting for the community to support him. And that applies only to exerting themselves to provide him with his bread, as it is appropriate that they sustain him. And Rabbi Yohanan said: Who is included in the category of a Torah scholar? Anyone who is asked about the halakha with regard to any topic and is able to state it. And they say: What are the practical consequences of this question? It is to appoint him a leader of the community. If he is an expert in a single tractate, they appoint him as a leader in his place; if he is an expert in all of his learning, they appoint him as the head of the yeshiva. Rabbi Shimon ben Lakish said: These garments of the bannain mentioned in the mishna are the clothes of the bath attendants [ ulairin ] that come from a country overseas, on which stains are apparent, and these men are meticulous about their cleanliness. The Gemara asks: Is that to say that these are white garments? Didnt Rabbi Yannai say to his sons: My sons, do not bury me in white garments nor in black garments. Not in white, lest I not be acquitted in judgment, and I will be among the wicked like a groom among mourners. And not in black, lest I be acquitted in judgment, and I will be among the righteous like a mourner among grooms. Rather, bury me in the clothes of the bath attendants who come from a country overseas, which are neither black nor white. Apparently, these clothes of the bath attendants are red. The Gemara answers: This is not difficult, as a distinction can be made. When Rabbi Yannai indicates that they are red, that is referring to overgarments; the statement of Rabbi Shimon ben Lakish that indicated that they are white, that is referring to undergarments.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Mishnaic law, scholars, cleanliness, leadership, garments.",
+    "heb_summary": "הלכה, חכמים, טהרה, מנהיגות, בגדים.",
+    "passage_types": [
+      "LAW",
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabban Shimon Ben Gamliel"
+        },
+        {
+          "en_name": "Rabbi Yehuda"
+        },
+        {
+          "en_name": "Rabbi Yishmael"
+        },
+        {
+          "en_name": "Rabbi Shimon Ben Lakish"
+        },
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Rabbi Yosei"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yannai"
+        },
+        {
+          "en_name": "The Sages"
+        },
+        {
+          "en_name": "Torah Scholars"
+        },
+        {
+          "en_name": "Builders"
+        },
+        {
+          "en_name": "Bath Attendants"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Country Overseas"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Donkeys Saddle"
+        },
+        {
+          "en_name": "Fat Stain"
+        },
+        {
+          "en_name": "Ritual Bath"
+        },
+        {
+          "en_name": "Tractate Kalla"
+        },
+        {
+          "en_name": "White Garments"
+        },
+        {
+          "en_name": "Black Garments"
+        },
+        {
+          "en_name": "Red Garments"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yehuda",
+          "term2": "Rabbi Yishmael"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rabbi Shimon Ben Lakish",
+          "term2": "Rabbi Hanina"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "White Garments",
+          "term2": "Black Garments"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Builders",
+          "term2": "Torah Scholars"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,126 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Eliezer's death, teachings, eulogy, and sorcery.",
+        "heb_summary": "מות רבי אליעזר, תורתו, הספדו, וכישופו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Akiva"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Hyrcanus"
+                },
+                {
+                    "en_name": "The Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Caesarea"
+                },
+                {
+                    "en_name": "Lod"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Romans"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Phylacteries"
+                },
+                {
+                    "en_name": "Torah Scrolls"
+                },
+                {
+                    "en_name": "Chariot Of Israel"
+                },
+                {
+                    "en_name": "Horsemen"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Rabbi Yehoshua"
+                },
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Rabbi Eliezer"
+                }
+            ],
+            "childOf": [
+                {
+                    "term1": "Hyrcanus",
+                    "term2": "Rabbi Eliezer"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Rabbi Eliezer"
+                },
+                {
+                    "term1": "Rabbi Yehoshua",
+                    "term2": "Rabbi Eliezer"
+                },
+                {
+                    "term1": "Hyrcanus",
+                    "term2": "The Sages"
+                },
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "Hyrcanus"
+                },
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "The Sages"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Caesarea"
+                },
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Lod"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "The Sages"
+                },
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "Rabbi Akiva"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "Chariot Of Israel"
+                },
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "Horsemen"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_67b:22-68a:12"
+}

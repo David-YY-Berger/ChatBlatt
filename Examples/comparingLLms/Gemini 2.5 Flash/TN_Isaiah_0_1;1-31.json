@@ -1,0 +1,310 @@
+﻿{
+    "res": {
+        "en_summary": "Isaiah prophesies Judah's sin, God's judgment.",
+        "heb_summary": "ישעיהו מנבא חטא יהודה, משפט אלוהים.",
+        "passage_types": [
+            "PROPHECY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaiah"
+                },
+                {
+                    "en_name": "Amoz"
+                },
+                {
+                    "en_name": "Uzziah"
+                },
+                {
+                    "en_name": "Jotham"
+                },
+                {
+                    "en_name": "Ahaz"
+                },
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "My People"
+                },
+                {
+                    "en_name": "Chieftains Of Sodom"
+                },
+                {
+                    "en_name": "Folk Of Gomorrah"
+                },
+                {
+                    "en_name": "Survivors"
+                },
+                {
+                    "en_name": "Murderers"
+                },
+                {
+                    "en_name": "Rulers"
+                },
+                {
+                    "en_name": "Rogues"
+                },
+                {
+                    "en_name": "Cronies Of Thieves"
+                },
+                {
+                    "en_name": "He Who Amassed It"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorah"
+                },
+                {
+                    "en_name": "Zion"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ox"
+                },
+                {
+                    "en_name": "Donkey"
+                },
+                {
+                    "en_name": "Burnt Offerings"
+                },
+                {
+                    "en_name": "Suet"
+                },
+                {
+                    "en_name": "Blood"
+                },
+                {
+                    "en_name": "Lambs"
+                },
+                {
+                    "en_name": "He-Goats"
+                },
+                {
+                    "en_name": "Oblations"
+                },
+                {
+                    "en_name": "Incense"
+                },
+                {
+                    "en_name": "New Moon"
+                },
+                {
+                    "en_name": "Sabbath"
+                },
+                {
+                    "en_name": "Solemnities"
+                },
+                {
+                    "en_name": "Assemblies"
+                },
+                {
+                    "en_name": "Crimson"
+                },
+                {
+                    "en_name": "Snow-White"
+                },
+                {
+                    "en_name": "Dyed Wool"
+                },
+                {
+                    "en_name": "Fleece"
+                },
+                {
+                    "en_name": "Sword"
+                },
+                {
+                    "en_name": "Silver"
+                },
+                {
+                    "en_name": "Dross"
+                },
+                {
+                    "en_name": "Wine"
+                },
+                {
+                    "en_name": "Water"
+                },
+                {
+                    "en_name": "Terebinths"
+                },
+                {
+                    "en_name": "Gardens"
+                },
+                {
+                    "en_name": "Tow"
+                },
+                {
+                    "en_name": "Spark"
+                },
+                {
+                    "en_name": "Booth"
+                },
+                {
+                    "en_name": "Hut"
+                },
+                {
+                    "en_name": "City Beleaguered"
+                },
+                {
+                    "en_name": "Courts"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "Amoz"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "My People"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Chieftains Of Sodom"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Folk Of Gomorrah"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Uzziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jotham",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Ahaz",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "My People",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Chieftains Of Sodom",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Folk Of Gomorrah",
+                    "term2": "Gomorah"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Zion",
+                    "term2": "Booth"
+                },
+                {
+                    "term1": "Zion",
+                    "term2": "Hut"
+                },
+                {
+                    "term1": "Zion",
+                    "term2": "City Beleaguered"
+                },
+                {
+                    "term1": "Survivors",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Survivors",
+                    "term2": "Gomorah"
+                },
+                {
+                    "term1": "Crimson",
+                    "term2": "Snow-White"
+                },
+                {
+                    "term1": "Dyed Wool",
+                    "term2": "Fleece"
+                },
+                {
+                    "term1": "My People",
+                    "term2": "Terebinths"
+                },
+                {
+                    "term1": "My People",
+                    "term2": "Gardens"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Israel",
+                    "term2": "Ox"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Donkey"
+                },
+                {
+                    "term1": "Silver",
+                    "term2": "Dross"
+                },
+                {
+                    "term1": "Wine",
+                    "term2": "Water"
+                }
+            ]
+        }
+    },
+    "key": "TN_Isaiah_0_1:1-31"
+}

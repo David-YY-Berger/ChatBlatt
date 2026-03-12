@@ -1,0 +1,406 @@
+﻿{
+    "res": {
+        "en_summary": "King Ahasuerus deposes Queen Vashti.",
+        "heb_summary": "המלך אחשוורוש מדיח את ושתי המלכה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Ahasuerus"
+                },
+                {
+                    "en_name": "Vashti"
+                },
+                {
+                    "en_name": "Mehuman"
+                },
+                {
+                    "en_name": "Bizzetha"
+                },
+                {
+                    "en_name": "Harbona"
+                },
+                {
+                    "en_name": "Bigtha"
+                },
+                {
+                    "en_name": "Abagtha"
+                },
+                {
+                    "en_name": "Zethar"
+                },
+                {
+                    "en_name": "Carcas"
+                },
+                {
+                    "en_name": "Carshena"
+                },
+                {
+                    "en_name": "Shethar"
+                },
+                {
+                    "en_name": "Admatha"
+                },
+                {
+                    "en_name": "Tarshish"
+                },
+                {
+                    "en_name": "Meres"
+                },
+                {
+                    "en_name": "Marsena"
+                },
+                {
+                    "en_name": "Memucan"
+                },
+                {
+                    "en_name": "The Seven Eunuchs"
+                },
+                {
+                    "en_name": "The Administration Of Persia And Media"
+                },
+                {
+                    "en_name": "The Seven Ministers Of Persia And Media"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "India"
+                },
+                {
+                    "en_name": "Nubia"
+                },
+                {
+                    "en_name": "Shushan"
+                },
+                {
+                    "en_name": "King'S Palace Garden"
+                },
+                {
+                    "en_name": "Royal Palace Of King Ahasuerus"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Persia"
+                },
+                {
+                    "en_name": "Media"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Royal Throne"
+                },
+                {
+                    "en_name": "Royal Diadem"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Carshena"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Shethar"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Admatha"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Tarshish"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Meres"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Marsena"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Memucan"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "The Seven Ministers Of Persia And Media"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Vashti"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Mehuman"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Bizzetha"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Harbona"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Bigtha"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Abagtha"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Zethar"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Carcas"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "The Seven Eunuchs"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Carshena"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Shethar"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Admatha"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Tarshish"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Meres"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Marsena"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Memucan"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "The Seven Ministers Of Persia And Media"
+                },
+                {
+                    "term1": "Memucan",
+                    "term2": "The Seven Ministers Of Persia And Media"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Shushan"
+                },
+                {
+                    "term1": "Vashti",
+                    "term2": "Royal Palace Of King Ahasuerus"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Ahasuerus",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Vashti",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Vashti",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Mehuman",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Mehuman",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Bizzetha",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Bizzetha",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Harbona",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Harbona",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Bigtha",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Bigtha",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Abagtha",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Abagtha",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Zethar",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Zethar",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Carcas",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Carcas",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Carshena",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Carshena",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Shethar",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Shethar",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Admatha",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Admatha",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Tarshish",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Tarshish",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Meres",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Meres",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Marsena",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Marsena",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Memucan",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Memucan",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "The Seven Eunuchs",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "The Seven Eunuchs",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "The Administration Of Persia And Media",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "The Administration Of Persia And Media",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "The Seven Ministers Of Persia And Media",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "The Seven Ministers Of Persia And Media",
+                    "term2": "Media"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "India",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "India",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Nubia",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Nubia",
+                    "term2": "Media"
+                },
+                {
+                    "term1": "Shushan",
+                    "term2": "Persia"
+                },
+                {
+                    "term1": "Shushan",
+                    "term2": "Media"
+                }
+            ]
+        }
+    },
+    "key": "TN_Esther_0_1:1–22"
+}

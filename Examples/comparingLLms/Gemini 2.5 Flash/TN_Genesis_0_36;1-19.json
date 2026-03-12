@@ -1,0 +1,330 @@
+﻿{
+    "res": {
+        "en_summary": "Esau's descendants, wives, and settlement in Seir.",
+        "heb_summary": "צאצאי עשו, נשותיו, והתיישבותו בשעיר.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Adah"
+                },
+                {
+                    "en_name": "Elon"
+                },
+                {
+                    "en_name": "Oholibamah"
+                },
+                {
+                    "en_name": "Anah"
+                },
+                {
+                    "en_name": "Zibeon"
+                },
+                {
+                    "en_name": "Basemath"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Nebaioth"
+                },
+                {
+                    "en_name": "Eliphaz"
+                },
+                {
+                    "en_name": "Reuel"
+                },
+                {
+                    "en_name": "Jeush"
+                },
+                {
+                    "en_name": "Jalam"
+                },
+                {
+                    "en_name": "Korah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Teman"
+                },
+                {
+                    "en_name": "Omar"
+                },
+                {
+                    "en_name": "Zepho"
+                },
+                {
+                    "en_name": "Gatam"
+                },
+                {
+                    "en_name": "Kenaz"
+                },
+                {
+                    "en_name": "Timna"
+                },
+                {
+                    "en_name": "Amalek"
+                },
+                {
+                    "en_name": "Nahath"
+                },
+                {
+                    "en_name": "Zerah"
+                },
+                {
+                    "en_name": "Shammah"
+                },
+                {
+                    "en_name": "Mizzah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Seir"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Edom"
+                },
+                {
+                    "en_name": "Canaanite"
+                },
+                {
+                    "en_name": "Hittite"
+                },
+                {
+                    "en_name": "Hivite"
+                },
+                {
+                    "en_name": "Ishmael"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Adah",
+                    "term2": "Elon"
+                },
+                {
+                    "term1": "Oholibamah",
+                    "term2": "Anah"
+                },
+                {
+                    "term1": "Anah",
+                    "term2": "Zibeon"
+                },
+                {
+                    "term1": "Basemath",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Eliphaz",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Reuel",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Jeush",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Jalam",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Korah",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Teman",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Omar",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Zepho",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Gatam",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Kenaz",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Amalek",
+                    "term2": "Eliphaz"
+                },
+                {
+                    "term1": "Nahath",
+                    "term2": "Reuel"
+                },
+                {
+                    "term1": "Zerah",
+                    "term2": "Reuel"
+                },
+                {
+                    "term1": "Shammah",
+                    "term2": "Reuel"
+                },
+                {
+                    "term1": "Mizzah",
+                    "term2": "Reuel"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Adah"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Oholibamah"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Basemath"
+                },
+                {
+                    "term1": "Eliphaz",
+                    "term2": "Timna"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Esau",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Seir"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Adah",
+                    "term2": "Canaanite"
+                },
+                {
+                    "term1": "Elon",
+                    "term2": "Hittite"
+                },
+                {
+                    "term1": "Oholibamah",
+                    "term2": "Hivite"
+                },
+                {
+                    "term1": "Zibeon",
+                    "term2": "Hivite"
+                },
+                {
+                    "term1": "Basemath",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Eliphaz",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Reuel",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Jeush",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Jalam",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Korah",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Teman",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Omar",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Zepho",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Gatam",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Kenaz",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Amalek",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Nahath",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Zerah",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Shammah",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Mizzah",
+                    "term2": "Edom"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Seir",
+                    "term2": "Edom"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Edom"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_36:1-19"
+}

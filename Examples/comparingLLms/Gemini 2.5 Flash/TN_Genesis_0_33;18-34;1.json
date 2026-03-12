@@ -1,0 +1,111 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob arrived Shechem, bought land, built altar.",
+        "heb_summary": "יעקב הגיע שכם, קנה אדמה, בנה מזבח.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Hamor"
+                },
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Kin Of Hamor"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Altar"
+                },
+                {
+                    "en_name": "El-Elohe-Yisrael"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Hamor"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Leah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Shechem"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Shechem",
+                    "term2": "Canaan"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Altar",
+                    "term2": "El-Elohe-Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_33:18-34:1"
+}

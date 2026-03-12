@@ -62,8 +62,8 @@ class PydanticCaller:
                 "Extract entities and relationships from the text.\n\n"
                 
                 "=== SUMMARY REQUIREMENTS ===\n"
-                f"- en_summary: EXACTLY {min_len_summary}-{max_len_summary} complete words in English. No partial sentences.\n"
-                f"- heb_summary: EXACTLY {min_len_summary}-{max_len_summary} complete words in Hebrew. No partial sentences.\n"
+                f"- en_summary: EXACTLY {min_len_summary}-{max_len_summary-2} complete words in English. No partial sentences.\n"
+                f"- heb_summary: EXACTLY {min_len_summary}-{max_len_summary-2} complete words in Hebrew. No partial sentences.\n"
                 "- Count words BEFORE responding. Rephrase if needed to fit the limit.\n\n"
                 
                 "=== ENTITY TYPES ===\n"

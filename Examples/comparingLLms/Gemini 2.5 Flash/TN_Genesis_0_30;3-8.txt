@@ -1,0 +1,77 @@
+﻿COST: Tokens: Total=4902 approx cost usd = $0.000654 (Prompt=3631, Completion=1271)
+SOURCE:
+Genesis 30:3-8  (TN_Genesis_0_30:3-8)
+
+HEBREW:
+וַתֹּ֕אמֶר הִנֵּ֛ה אֲמָתִ֥י בִלְהָ֖ה בֹּ֣א אֵלֶ֑יהָ וְתֵלֵד֙ עַל־בִּרְכַּ֔י וְאִבָּנֶ֥ה גַם־אָנֹכִ֖י מִמֶּֽנָּה׃ וַתִּתֶּן־ל֛וֹ אֶת־בִּלְהָ֥ה שִׁפְחָתָ֖הּ לְאִשָּׁ֑ה וַיָּבֹ֥א אֵלֶ֖יהָ יַעֲקֹֽב׃ וַתַּ֣הַר בִּלְהָ֔ה וַתֵּ֥לֶד לְיַעֲקֹ֖ב בֵּֽן׃ וַתֹּ֤אמֶר רָחֵל֙ דָּנַ֣נִּי אֱלֹהִ֔ים וְגַם֙ שָׁמַ֣ע בְּקֹלִ֔י וַיִּתֶּן־לִ֖י בֵּ֑ן עַל־כֵּ֛ן קָרְאָ֥ה שְׁמ֖וֹ דָּֽן׃ וַתַּ֣הַר ע֔וֹד וַתֵּ֕לֶד בִּלְהָ֖ה שִׁפְחַ֣ת רָחֵ֑ל בֵּ֥ן שֵׁנִ֖י לְיַעֲקֹֽב׃ וַתֹּ֣אמֶר רָחֵ֗ל נַפְתּוּלֵ֨י אֱלֹהִ֧ים׀נִפְתַּ֛לְתִּי עִם־אֲחֹתִ֖י גַּם־יָכֹ֑לְתִּי וַתִּקְרָ֥א שְׁמ֖וֹ נַפְתָּלִֽי׃
+
+ENGLISH:
+She said, Here is my maid Bilhah. Consort with her, that she may bear on my knees and that through her I too may have children. So she gave him her maid Bilhah as concubine, and Jacob cohabited with her. Bilhah conceived and bore Jacob a son. And Rachel said, God has vindicated me;, connected with Dan. indeed, [God] has heeded my plea and given me a son. Therefore she named him Dan. Rachels maid Bilhah conceived again and bore Jacob a second son. And Rachel said, A fateful contest I waged, connected with Naphtali. Lit. A contest of God.... with my sister; yes, and I have prevailed. So she named him Naphtali.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Bilhah bore Jacob sons Dan, Naphtali.",
+    "heb_summary": "בלהה ילדה ליעקב בנים דן, נפתלי.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Bilhah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Dan"
+        },
+        {
+          "en_name": "Naphtali"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Dan"
+        },
+        {
+          "en_name": "Naphtali"
+        }
+      ]
+    },
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "Dan",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Dan",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Naphtali",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Naphtali",
+          "term2": "Jacob"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        }
+      ]
+    }
+  }
+}

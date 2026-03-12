@@ -1,0 +1,211 @@
+﻿{
+    "res": {
+        "en_summary": "Balaam's fate, identity, and allies discussed.",
+        "heb_summary": "גורל בלעם, זהותו ובני בריתו נידונים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Balaam"
+                },
+                {
+                    "en_name": "Doeg"
+                },
+                {
+                    "en_name": "Ahithophel"
+                },
+                {
+                    "en_name": "Gehazi"
+                },
+                {
+                    "en_name": "Beor"
+                },
+                {
+                    "en_name": "Cushan-Rishathaim"
+                },
+                {
+                    "en_name": "Laban The Aramean"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Samson"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Sons Of Zeruiah"
+                },
+                {
+                    "en_name": "Haman"
+                },
+                {
+                    "en_name": "Esther"
+                },
+                {
+                    "en_name": "Sisera"
+                },
+                {
+                    "en_name": "Jael"
+                },
+                {
+                    "en_name": "Rav Pappa"
+                },
+                {
+                    "en_name": "Rav Nahman"
+                },
+                {
+                    "en_name": "Rav Sheshet"
+                },
+                {
+                    "en_name": "Mar Zutra"
+                },
+                {
+                    "en_name": "Mar, Son Of Ravina"
+                },
+                {
+                    "en_name": "The Jewish People"
+                },
+                {
+                    "en_name": "Elders Of Moab"
+                },
+                {
+                    "en_name": "Elders Of Midian"
+                },
+                {
+                    "en_name": "Princes Of Moab"
+                },
+                {
+                    "en_name": "Princes Of Midian"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Dan"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Netherworld"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Dan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Aramean"
+                },
+                {
+                    "en_name": "Moab"
+                },
+                {
+                    "en_name": "Midian"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Balaam",
+                    "term2": "Beor"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Yehoshua",
+                    "term2": "Rabbi Eliezer"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Balaam"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Samson",
+                    "term2": "Dan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Laban The Aramean",
+                    "term2": "Aramean"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Moab",
+                    "term2": "Midian"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Moab",
+                    "term2": "Midian"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Balaam",
+                    "term2": "World-To-Come"
+                },
+                {
+                    "term1": "Balaam",
+                    "term2": "The Jewish People"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Samson"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Sons Of Zeruiah",
+                    "term2": "David"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Balaam",
+                    "term2": "Samson"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Beor",
+                    "term2": "Cushan-Rishathaim"
+                },
+                {
+                    "term1": "Beor",
+                    "term2": "Laban The Aramean"
+                },
+                {
+                    "term1": "Cushan-Rishathaim",
+                    "term2": "Laban The Aramean"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sanhedrin_0_105a:7-105b:1"
+}

@@ -1,0 +1,95 @@
+﻿{
+    "res": {
+        "en_summary": "Sages teach wisdom, fear of God.",
+        "heb_summary": "חכמים מלמדים תורה, יראת שמיים.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "The Sages"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rav Hai Gaon"
+                },
+                {
+                    "en_name": "Meiri"
+                },
+                {
+                    "en_name": "Rabban Yohanan Ben Zakkai"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Non-Jew"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Yavne"
+                },
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "This World"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Divine Presence"
+                },
+                {
+                    "en_name": "Crowns"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Rabban Yohanan Ben Zakkai",
+                    "term2": "Non-Jew"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "The Sages",
+                    "term2": "Yavne"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Rav",
+                    "term2": "World-To-Come"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "World-To-Come",
+                    "term2": "This World"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_17a:7-12"
+}

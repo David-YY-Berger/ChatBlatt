@@ -22,8 +22,8 @@ class DBPopulateLmmData(DBParentClass):
 
         # ====== SWITCH MODEL HERE ======
         # Uncomment ONE of these lines to choose your model:
-        ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
-        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
+        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
         # ===============================
 
@@ -41,10 +41,22 @@ class DBPopulateLmmData(DBParentClass):
         asyncio.run(self.get_graphs_from_passages())
 
     async def get_graphs_from_passages(self):
+        total_cost_usd = 0.0
+        total_tokens = 0
+        total_input_tokens = 0
+        total_output_tokens = 0
+
         for src_content in self.get_examples_src_contents():
             passage = src_content.get_clean_en_text()
 
             graph_json_str, usage, cost_usd = await self.pydantic_caller.extract_graph_from_passage(passage)
+
+            # Accumulate totals
+            total_cost_usd += cost_usd
+            total_tokens += usage.total_tokens
+            total_input_tokens += usage.input_tokens
+            total_output_tokens += usage.output_tokens
+
             cost_summary = (
                 f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
                 f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})"
@@ -75,6 +87,12 @@ class DBPopulateLmmData(DBParentClass):
                 # FileTypeEnum.FileType.JSON,
                 path
             )
+
+        print(f"\n{'='*60}")
+        print(f"TOTAL COST SUMMARY:")
+        print(f"  Total Tokens: {total_tokens} (Prompt={total_input_tokens}, Completion={total_output_tokens})")
+        print(f"  Total Cost: ${total_cost_usd:.6f} USD")
+        print(f"{'='*60}")
         print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
 
     # SEE IN NOTES - THE PROMPT FOR THE LLM TO MAKE START THE PIPELINE!
@@ -218,10 +236,8 @@ class DBPopulateLmmData(DBParentClass):
         #     symbol - torah scroll
         #     'BT_Sanhedrin_0_67b:22-68a:12',
 
-        #     symbol and compard to - the torah scroll and r eliezer
+        #     symbol and compared to - the torah scroll and r eliezer
         #     'BT_Sotah_0_49b:15-19'
-
-
         ]
         res = [self.db_api.find_one_source_content(k) for k in key_strs]
         return res

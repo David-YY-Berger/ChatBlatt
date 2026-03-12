@@ -1,0 +1,109 @@
+﻿{
+    "res": {
+        "en_summary": "Rules for war on Shabbat in border towns.",
+        "heb_summary": "הלכות מלחמה בשבת בערי גבול.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Rav Yosef Bar Manyumi"
+                },
+                {
+                    "en_name": "Rav Nahman"
+                },
+                {
+                    "en_name": "Rabbi Dostai"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "The Philistines"
+                },
+                {
+                    "en_name": "Samuel"
+                },
+                {
+                    "en_name": "The Great Sanhedrin"
+                },
+                {
+                    "en_name": "Gentiles"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Nehardea"
+                },
+                {
+                    "en_name": "Biri"
+                },
+                {
+                    "en_name": "Keila"
+                },
+                {
+                    "en_name": "Rama"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Urim Vetummim"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Rav"
+                },
+                {
+                    "term1": "Rav Yosef Bar Manyumi",
+                    "term2": "Rav Nahman"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "David",
+                    "term2": "God"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "The Philistines",
+                    "term2": "Keila"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Keila"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "The Philistines",
+                    "term2": "Philistia"
+                }
+            ]
+        }
+    },
+    "key": "BT_Eruvin_0_45a:12-19"
+}

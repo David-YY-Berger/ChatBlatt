@@ -1,0 +1,182 @@
+﻿{
+    "res": {
+        "en_summary": "Hiram and Solomon build God's house.",
+        "heb_summary": "חירם ושלמה בונים בית לאלוהים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hiram"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "The Eternal"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Adoniram"
+                },
+                {
+                    "en_name": "The Sidonians"
+                },
+                {
+                    "en_name": "All Israel"
+                },
+                {
+                    "en_name": "70,000 Porters"
+                },
+                {
+                    "en_name": "80,000 Quarriers"
+                },
+                {
+                    "en_name": "Solomons Officials"
+                },
+                {
+                    "en_name": "Solomons Masons"
+                },
+                {
+                    "en_name": "Hirams Masons"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Tyre"
+                },
+                {
+                    "en_name": "Lebanon"
+                },
+                {
+                    "en_name": "Gebal"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Tyre"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Sidon"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "House"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Solomon",
+                    "term2": "David"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hiram",
+                    "term2": "Solomon"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Hiram",
+                    "term2": "Lebanon"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Lebanon"
+                },
+                {
+                    "term1": "Solomons Masons",
+                    "term2": "Gebal"
+                },
+                {
+                    "term1": "Hirams Masons",
+                    "term2": "Gebal"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hiram",
+                    "term2": "Tyre"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Adoniram",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "All Israel",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "70,000 Porters",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "80,000 Quarriers",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Solomons Officials",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "The Sidonians",
+                    "term2": "Sidon"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Hiram",
+                    "term2": "Solomon"
+                },
+                {
+                    "term1": "Hiram",
+                    "term2": "David"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Lebanon",
+                    "term2": "Tyre"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "The Eternal",
+                    "term2": "Solomon"
+                },
+                {
+                    "term1": "The Eternal",
+                    "term2": "House"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "The Eternal",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_I Kings_0_5:15–32"
+}

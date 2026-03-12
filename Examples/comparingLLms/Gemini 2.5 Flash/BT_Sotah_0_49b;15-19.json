@@ -1,0 +1,102 @@
+﻿{
+    "res": {
+        "en_summary": "Sages mourn loss of wisdom and piety.",
+        "heb_summary": "חכמים אבלים על אובדן חכמה ויראת חטא.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Rabban Yohanan Ben Zakkai"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua"
+                },
+                {
+                    "en_name": "Rabbi Akiva"
+                },
+                {
+                    "en_name": "Rabbi Elazar Ben Azarya"
+                },
+                {
+                    "en_name": "Rabbi Hanina Ben Dosa"
+                },
+                {
+                    "en_name": "Abba Yosei Ben Katonta"
+                },
+                {
+                    "en_name": "Ben Azzai"
+                },
+                {
+                    "en_name": "Ben Zoma"
+                },
+                {
+                    "en_name": "Rabban Shimon Ben Gamliel"
+                },
+                {
+                    "en_name": "Rabbi Yehuda Hanasi"
+                },
+                {
+                    "en_name": "Rav Yosef"
+                },
+                {
+                    "en_name": "Rav Nahman"
+                },
+                {
+                    "en_name": "Tanna"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Palanquin"
+                },
+                {
+                    "en_name": "Torah Scroll"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Powerful Arm Of Torah"
+                },
+                {
+                    "en_name": "Fountains Of Wisdom"
+                },
+                {
+                    "en_name": "Crowns Of Wisdom"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Rav Yosef",
+                    "term2": "Tanna"
+                },
+                {
+                    "term1": "Rav Nahman",
+                    "term2": "Tanna"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Rabbi Yehoshua",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Sotah_0_49b:15-19"
+}

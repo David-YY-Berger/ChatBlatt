@@ -1,0 +1,79 @@
+﻿{
+    "res": {
+        "en_summary": "Halakhic dispute, Divine Voice, Beit Hillel's humility.",
+        "heb_summary": "מחלוקת הלכתית, בת קול, ענוות בית הלל.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Abba"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Beit Shammai"
+                },
+                {
+                    "en_name": "Beit Hillel"
+                },
+                {
+                    "en_name": "Rabbi Yohanan Ben Hahoranit"
+                },
+                {
+                    "en_name": "Elders Of Beit Shammai"
+                },
+                {
+                    "en_name": "Elders Of Beit Hillel"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Divine Voice"
+                },
+                {
+                    "en_name": "Sukka"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Abba",
+                    "term2": "Shmuel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Beit Hillel",
+                    "term2": "Beit Shammai"
+                },
+                {
+                    "term1": "Elders Of Beit Hillel",
+                    "term2": "Rabbi Yohanan Ben Hahoranit"
+                },
+                {
+                    "term1": "Elders Of Beit Shammai",
+                    "term2": "Rabbi Yohanan Ben Hahoranit"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Beit Shammai",
+                    "term2": "Beit Hillel"
+                },
+                {
+                    "term1": "Beit Hillel",
+                    "term2": "Beit Shammai"
+                }
+            ]
+        }
+    },
+    "key": "BT_Eruvin_0_13b:10-14"
+}

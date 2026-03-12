@@ -1,0 +1,121 @@
+﻿COST: Tokens: Total=4934 approx cost usd = $0.000672 (Prompt=3590, Completion=1344)
+SOURCE:
+Genesis 33:18-34:1  (TN_Genesis_0_33:18-34:1)
+
+HEBREW:
+וַיָּבֹא֩ יַעֲקֹ֨ב שָׁלֵ֜ם עִ֣יר שְׁכֶ֗ם אֲשֶׁר֙ בְּאֶ֣רֶץ כְּנַ֔עַן בְּבֹא֖וֹ מִפַּדַּ֣ן אֲרָ֑ם וַיִּ֖חַן אֶת־פְּנֵ֥י הָעִֽיר׃ וַיִּ֜קֶן אֶת־חֶלְקַ֣ת הַשָּׂדֶ֗ה אֲשֶׁ֤ר נָֽטָה־שָׁם֙ אׇהֳל֔וֹ מִיַּ֥ד בְּנֵֽי־חֲמ֖וֹר אֲבִ֣י שְׁכֶ֑ם בְּמֵאָ֖ה קְשִׂיטָֽה׃ וַיַּצֶּב־שָׁ֖ם מִזְבֵּ֑חַ וַיִּ֨קְרָא־ל֔וֹ אֵ֖ל אֱלֹהֵ֥י יִשְׂרָאֵֽל׃ וַתֵּצֵ֤א דִינָה֙ בַּת־לֵאָ֔ה אֲשֶׁ֥ר יָלְדָ֖ה לְיַעֲקֹ֑ב לִרְא֖וֹת בִּבְנ֥וֹת הָאָֽרֶץ׃
+
+ENGLISH:
+Jacob arrived safe in the city of Shechem which is in the land of Canaan-having come thus from Paddan-aram-and he encamped before the city. The parcel of land where he pitched his tent he purchased from the kin of Hamor, Shechems father, for a hundred kesitah s., a unit of unknown value. He set up an altar there, and called it El-elohe-yisrael.Now Dinah, the daughter whom Leah had borne to Jacob, went out to visit the daughters of the land.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob arrived Shechem, bought land, built altar.",
+    "heb_summary": "יעקב הגיע שכם, קנה אדמה, בנה מזבח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Dinah"
+        },
+        {
+          "en_name": "Hamor"
+        },
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Kin Of Hamor"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Altar"
+        },
+        {
+          "en_name": "El-Elohe-Yisrael"
+        }
+      ]
+    },
+    "Rel": {
+      "childOf": [
+        {
+          "term1": "Dinah",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Dinah",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Shechem",
+          "term2": "Hamor"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Dinah",
+          "term2": "Shechem"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Shechem",
+          "term2": "Canaan"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Altar",
+          "term2": "El-Elohe-Yisrael"
+        }
+      ]
+    }
+  }
+}

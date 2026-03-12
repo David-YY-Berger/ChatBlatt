@@ -1,0 +1,67 @@
+﻿{
+    "res": {
+        "en_summary": "Bilhah bore Jacob sons Dan, Naphtali.",
+        "heb_summary": "בלהה ילדה ליעקב בנים דן, נפתלי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Bilhah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ]
+        },
+        "Rel": {
+            "childOf": [
+                {
+                    "term1": "Dan",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Dan",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Naphtali",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Naphtali",
+                    "term2": "Jacob"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:3-8"
+}

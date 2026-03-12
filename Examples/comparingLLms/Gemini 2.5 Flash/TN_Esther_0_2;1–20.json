@@ -1,0 +1,178 @@
+﻿{
+    "res": {
+        "en_summary": "Esther becomes queen, replacing Vashti.",
+        "heb_summary": "אסתר הופכת למלכה במקום ושתי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "King Ahasuerus"
+                },
+                {
+                    "en_name": "Vashti"
+                },
+                {
+                    "en_name": "Hege"
+                },
+                {
+                    "en_name": "Mordecai"
+                },
+                {
+                    "en_name": "Jair"
+                },
+                {
+                    "en_name": "Shimei"
+                },
+                {
+                    "en_name": "Kish"
+                },
+                {
+                    "en_name": "King Jeconiah"
+                },
+                {
+                    "en_name": "King Nebuchadnezzar"
+                },
+                {
+                    "en_name": "Hadassah"
+                },
+                {
+                    "en_name": "Esther"
+                },
+                {
+                    "en_name": "Hegai"
+                },
+                {
+                    "en_name": "Shaashgaz"
+                },
+                {
+                    "en_name": "Abihail"
+                },
+                {
+                    "en_name": "Benjamin"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shushan"
+                },
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "King'S Palace"
+                },
+                {
+                    "en_name": "Harem"
+                },
+                {
+                    "en_name": "Second Harem"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Benjamin"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Babylon"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Royal Diadem"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Esther",
+                    "term2": "Mordecai"
+                },
+                {
+                    "term1": "Esther",
+                    "term2": "Hegai"
+                }
+            ],
+            "childOf": [
+                {
+                    "term1": "Esther",
+                    "term2": "Abihail"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "King Ahasuerus",
+                    "term2": "Vashti"
+                },
+                {
+                    "term1": "King Ahasuerus",
+                    "term2": "Esther"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Mordecai",
+                    "term2": "Jair"
+                },
+                {
+                    "term1": "Jair",
+                    "term2": "Shimei"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Kish"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Esther",
+                    "term2": "Shushan"
+                },
+                {
+                    "term1": "Esther",
+                    "term2": "King'S Palace"
+                },
+                {
+                    "term1": "Mordecai",
+                    "term2": "Harem"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Mordecai",
+                    "term2": "Benjamin"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "King Jeconiah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "King Nebuchadnezzar",
+                    "term2": "Babylon"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hadassah",
+                    "term2": "Esther"
+                }
+            ]
+        }
+    },
+    "key": "TN_Esther_0_2:1–20"
+}

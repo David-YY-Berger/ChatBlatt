@@ -1,0 +1,133 @@
+﻿{
+    "res": {
+        "en_summary": "God speaks to Jacob, who goes to Bethel.",
+        "heb_summary": "אלוהים מדבר עם יעקב, הולך לבית אל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Household"
+                },
+                {
+                    "en_name": "Sons Of Jacob"
+                },
+                {
+                    "en_name": "Deborah"
+                },
+                {
+                    "en_name": "Rebekah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Luz"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                },
+                {
+                    "en_name": "Allon-Bacuth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Altar"
+                },
+                {
+                    "en_name": "Alien Gods"
+                },
+                {
+                    "en_name": "Rings"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [],
+            "childOf": [
+                {
+                    "term1": "Sons Of Jacob",
+                    "term2": "Jacob"
+                }
+            ],
+            "spouseOf": [],
+            "descendantOf": [],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Household"
+                }
+            ],
+            "bornIn": [],
+            "diedIn": [
+                {
+                    "term1": "Deborah",
+                    "term2": "Allon-Bacuth"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Luz"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                }
+            ],
+            "personToTribeOfIsrael": [],
+            "personBelongsToNation": [],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ],
+            "prophesiedAbout": [],
+            "comparedTo": [],
+            "contrastedWith": [],
+            "AliasOf": [
+                {
+                    "term1": "Luz",
+                    "term2": "Bethel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_35:1-9"
+}

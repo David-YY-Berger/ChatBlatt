@@ -1,19 +1,14 @@
 ﻿{
     "res": {
-        "en_summary": "Hezekiah's thwarted Messiahship, redemption, and Jethro's blessing.",
-        "heb_summary": "משיחות חזקיהו, גאולה נמנעת, וברכת יתרו.",
+        "en_summary": "Hezekiah, redemption, exile, and Israel's song.",
+        "heb_summary": "חזקיהו, גאולה, גלות ושירת ישראל.",
         "passage_types": [
-            "STORY",
-            "PHILOSOPHIC",
-            "PROPHECY"
+            "STORY"
         ],
         "Entities": {
             "Person": [
                 {
                     "en_name": "Hezekiah"
-                },
-                {
-                    "en_name": "David"
                 },
                 {
                     "en_name": "Rabbi Tanhum"
@@ -22,10 +17,10 @@
                     "en_name": "Bar Kappara"
                 },
                 {
-                    "en_name": "Holy One, Blessed Be He"
+                    "en_name": "Sennacherib"
                 },
                 {
-                    "en_name": "Sennacherib"
+                    "en_name": "David"
                 },
                 {
                     "en_name": "Gog"
@@ -34,7 +29,13 @@
                     "en_name": "Magog"
                 },
                 {
-                    "en_name": "Ezekiel"
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Attribute Of Justice"
+                },
+                {
+                    "en_name": "Earth"
                 },
                 {
                     "en_name": "Rava"
@@ -46,10 +47,13 @@
                     "en_name": "Isaiah"
                 },
                 {
-                    "en_name": "Dumah"
+                    "en_name": "Watchman"
                 },
                 {
                     "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Dumah"
                 },
                 {
                     "en_name": "Rabbi Pappeyas"
@@ -58,10 +62,10 @@
                     "en_name": "Moses"
                 },
                 {
-                    "en_name": "Yitro"
+                    "en_name": "Children Of Israel"
                 },
                 {
-                    "en_name": "Pharaoh"
+                    "en_name": "Yitro"
                 },
                 {
                     "en_name": "Rav"
@@ -70,13 +74,7 @@
                     "en_name": "Shmuel"
                 },
                 {
-                    "en_name": "Children Of Israel"
-                },
-                {
-                    "en_name": "Attribute Of Justice"
-                },
-                {
-                    "en_name": "Angel Appointed To Oversee The World"
+                    "en_name": "Pharaoh"
                 },
                 {
                     "en_name": "Spirits"
@@ -87,10 +85,10 @@
                     "en_name": "Tzippori"
                 },
                 {
-                    "en_name": "Earth"
+                    "en_name": "Seir"
                 },
                 {
-                    "en_name": "Seir"
+                    "en_name": "Egypt"
                 }
             ],
             "Nation": [
@@ -106,9 +104,6 @@
                     "en_name": "Throne Of David"
                 },
                 {
-                    "en_name": "Masoretic Text"
-                },
-                {
                     "en_name": "Mem"
                 },
                 {
@@ -121,6 +116,10 @@
                 {
                     "term1": "Rabbi Tanhum",
                     "term2": "Bar Kappara"
+                },
+                {
+                    "term1": "Rava",
+                    "term2": "Rabbi Yitzhak"
                 }
             ],
             "spokeWith": [
@@ -129,40 +128,46 @@
                     "term2": "Holy One, Blessed Be He"
                 },
                 {
-                    "term1": "Angel Appointed To Oversee The World",
+                    "term1": "Earth",
+                    "term2": "Holy One, Blessed Be He"
+                },
+                {
+                    "term1": "Dumah",
                     "term2": "Holy One, Blessed Be He"
                 },
                 {
                     "term1": "Spirits",
                     "term2": "Dumah"
+                },
+                {
+                    "term1": "Watchman",
+                    "term2": "Spirits"
+                },
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "Watchman"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Bar Kappara",
+                    "term2": "Tzippori"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Egypt"
                 }
             ],
             "personBelongsToNation": [
                 {
                     "term1": "Sennacherib",
                     "term2": "Assyria"
-                },
-                {
-                    "term1": "Pharaoh",
-                    "term2": "Egypt"
                 }
             ],
             "EnemyOf": [
                 {
-                    "term1": "Sennacherib",
-                    "term2": "Hezekiah"
-                },
-                {
-                    "term1": "Gog",
-                    "term2": "Hezekiah"
-                },
-                {
-                    "term1": "Magog",
-                    "term2": "Hezekiah"
-                },
-                {
-                    "term1": "Pharaoh",
-                    "term2": "Children Of Israel"
+                    "term1": "Hezekiah",
+                    "term2": "Sennacherib"
                 }
             ],
             "prophesiedAbout": [
@@ -171,11 +176,19 @@
                     "term2": "Hezekiah"
                 },
                 {
-                    "term1": "Ezekiel",
+                    "term1": "Isaiah",
+                    "term2": "Sennacherib"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Assyria"
+                },
+                {
+                    "term1": "Isaiah",
                     "term2": "Gog"
                 },
                 {
-                    "term1": "Ezekiel",
+                    "term1": "Isaiah",
                     "term2": "Magog"
                 }
             ],
