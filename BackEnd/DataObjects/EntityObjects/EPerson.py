@@ -19,18 +19,21 @@ class EPerson(Entity):
 
     # transient fields - Person/Group → Person/Group
     studiedFrom: List[str] = TransientField(default_factory=list)
-    siblingWith: List[str] = TransientField(default_factory=list)
-    childOf: List[str] = TransientField(default_factory=list)
+    childOfFather: List[str] = TransientField(default_factory=list)
+    childOfMother: List[str] = TransientField(default_factory=list)
     spouseOf: List[str] = TransientField(default_factory=list)
     descendantOf: List[str] = TransientField(default_factory=list)
     allyOf: List[str] = TransientField(default_factory=list)
     enemyOf: List[str] = TransientField(default_factory=list)
     spokeWith: List[str] = TransientField(default_factory=list)
+    disagreedWith: List[str] = TransientField(default_factory=list)
 
     # transient fields - Person/Group → Place
     bornIn: List[str] = TransientField(default_factory=list)
     diedIn: List[str] = TransientField(default_factory=list)
     visited: List[str] = TransientField(default_factory=list)
+    prayedAt: List[str] = TransientField(default_factory=list)
+    associatedWithPlace: List[str] = TransientField(default_factory=list)  # fallback
 
     # transient fields - Person/Group → TribeOfIsrael / Nation
     tribeOfIsrael: List[str] = TransientField(default_factory=list)

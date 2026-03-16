@@ -1,6 +1,7 @@
 from typing import List, Optional, Literal, Set
 from pydantic import BaseModel, Field, field_validator, model_validator
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -15,10 +16,23 @@ TRIBES_OF_ISRAEL = {
 ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol')
 
 # Symmetric relationships where (A, B) == (B, A)
-SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'EnemyOf', 'AllyOf', 'AliasOf')
+SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'disagreedWith', 'EnemyOf', 'AllyOf', 'AliasOf')
+
+# Person → Place relationships that supersede associatedWithPlace
+# If a (person, place) pair exists in any of these, it should NOT appear in associatedWithPlace
+PERSON_PLACE_SPECIFIC_RELATIONSHIPS = ('bornIn', 'diedIn', 'visited', 'prayedAt')
 
 max_len_summary: int = 10
 min_len_summary: int = 4
+
+
+def smart_title_case(s: str) -> str:
+    """Title case that doesn't capitalize after apostrophes (e.g., Putiel's not Putiel'S)."""
+    # First apply standard title case
+    titled = s.strip().title()
+    # Then fix apostrophe cases: replace X'Y with X'y (lowercase after apostrophe)
+    return re.sub(r"'([A-Z])", lambda m: "'" + m.group(1).lower(), titled)
+
 
 # --- Entity Models ---
 class Entity(BaseModel):
@@ -28,7 +42,7 @@ class Entity(BaseModel):
     @classmethod
     def normalize_to_proper_noun(cls, v: str) -> str:
         """Normalize entity name to proper noun format (title case)."""
-        return v.strip().title()
+        return smart_title_case(v)
 
 
 class Entities(BaseModel):
@@ -106,7 +120,7 @@ class Entities(BaseModel):
         """
         Auto-correct entity classification based on priority rules:
         - TribeOfIsrael entities should also appear in Person (tribes are named after people)
-        - This ensures relationships like childOf, bornIn work for tribe patriarchs
+        - This ensures relationships like childOfFather, childOfMother, bornIn work for tribe patriarchs
         """
         # Ensure TribeOfIsrael entities are also in Person
         if self.TribeOfIsrael:
@@ -221,21 +235,27 @@ class Relation(BaseModel):
     def normalize_terms(cls, v: str) -> str:
         if not v or not v.strip():
             raise ValueError("Relation terms cannot be empty or whitespace")
-        return v.strip().title()  # Match Entity normalization
+        return smart_title_case(v)  # Match Entity normalization
 
 
 class Relationships(BaseModel):
     # Person/Group → Person/Group
     studiedFrom: Optional[List[Relation]] = Field(default_factory=list)
-    childOf: Optional[List[Relation]] = Field(default_factory=list)
+    childOfFather: Optional[List[Relation]] = Field(default_factory=list)
+    childOfMother: Optional[List[Relation]] = Field(default_factory=list)
     spouseOf: Optional[List[Relation]] = Field(default_factory=list)
     descendantOf: Optional[List[Relation]] = Field(default_factory=list)
     spokeWith: Optional[List[Relation]] = Field(default_factory=list)
+    disagreedWith: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person/Group → Place
     bornIn: Optional[List[Relation]] = Field(default_factory=list)
     diedIn: Optional[List[Relation]] = Field(default_factory=list)
     visited: Optional[List[Relation]] = Field(default_factory=list)
+    prayedAt: Optional[List[Relation]] = Field(default_factory=list)
+
+    # Person/Group OR Symbol → Place
+    associatedWithPlace: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person/Group → TribeOfIsrael
     personToTribeOfIsrael: Optional[List[Relation]] = Field(default_factory=list)
@@ -327,15 +347,21 @@ class ExtractionResult(BaseModel):
         relationship_constraints = {
             # Person/Group → Person/Group
             'studiedFrom': ('Person', 'Person'),
-            'childOf': ('Person', 'Person'),
+            'childOfFather': ('Person', 'Person'),
+            'childOfMother': ('Person', 'Person'),
             'spouseOf': ('Person', 'Person'),
             'descendantOf': ('Person', 'Person'),
             'spokeWith': ('Person', 'Person'),
+            'disagreedWith': ('Person', 'Person'),
 
             # Person/Group → Place
             'bornIn': ('Person', 'Place'),
             'diedIn': ('Person', 'Place'),
             'visited': ('Person', 'Place'),
+            'prayedAt': ('Person', 'Place'),
+
+            # Person/Group OR Symbol → Place (NOT Nation)
+            'associatedWithPlace': [('Person', 'Place'), ('Symbol', 'Place')],
 
             # Person/Group → TribeOfIsrael
             'personToTribeOfIsrael': ('Person', 'TribeOfIsrael'),
@@ -343,9 +369,9 @@ class ExtractionResult(BaseModel):
             # Person/Group → Nation
             'personBelongsToNation': ('Person', 'Nation'),
 
-            # Nation → Nation  OR  Person/Group → Person/Group
-            'EnemyOf': [('Nation', 'Nation'), ('Person', 'Person')],
-            'AllyOf': [('Nation', 'Nation'), ('Person', 'Person')],
+            # Nation → Nation  OR  Person/Group → Person/Group  OR  Person/Group → Nation
+            'EnemyOf': [('Nation', 'Nation'), ('Person', 'Person'), ('Person', 'Nation')],
+            'AllyOf': [('Nation', 'Nation'), ('Person', 'Person'), ('Person', 'Nation')],
 
             # Place → Nation
             'placeToNation': ('Place', 'Nation'),
@@ -482,14 +508,23 @@ class ExtractionResult(BaseModel):
 
     @model_validator(mode='after')
     def clean_descendant_logic(self):
-        """Removes descendantOf links that are already defined as childOf."""
-        if not self.Rel or not self.Rel.childOf or not self.Rel.descendantOf:
+        """Removes descendantOf links that are already defined as childOfFather or childOfMother."""
+        if not self.Rel or not self.Rel.descendantOf:
             return self
 
-        # Create a set of (child, parent) tuples for fast lookup
-        direct_parents = {
-            (rel.term1, rel.term2) for rel in self.Rel.childOf
-        }
+        # Check if there are any direct parent relationships
+        has_father_rels = self.Rel.childOfFather and len(self.Rel.childOfFather) > 0
+        has_mother_rels = self.Rel.childOfMother and len(self.Rel.childOfMother) > 0
+
+        if not has_father_rels and not has_mother_rels:
+            return self
+
+        # Create a set of (child, parent) tuples for fast lookup from both relationships
+        direct_parents = set()
+        if self.Rel.childOfFather:
+            direct_parents.update((rel.term1, rel.term2) for rel in self.Rel.childOfFather)
+        if self.Rel.childOfMother:
+            direct_parents.update((rel.term1, rel.term2) for rel in self.Rel.childOfMother)
 
         # Filter descendantOf to keep only those NOT in direct_parents
         original_count = len(self.Rel.descendantOf)
@@ -499,7 +534,67 @@ class ExtractionResult(BaseModel):
         ]
 
         if len(self.Rel.descendantOf) < original_count:
-            logger.info(f"Removed redundant descendantOf links duplicated in childOf.")
+            logger.info(f"Removed redundant descendantOf links duplicated in childOfFather/childOfMother.")
+
+        return self
+
+    @model_validator(mode='after')
+    def clean_spokewith_disagreedwith_overlap(self):
+        """Removes disagreedWith links that overlap with spokeWith - a pair cannot be in both."""
+        if not self.Rel or not self.Rel.spokeWith or not self.Rel.disagreedWith:
+            return self
+
+        # Create a set of pairs from spokeWith (both directions since it's symmetric)
+        spokewith_pairs = set()
+        for rel in self.Rel.spokeWith:
+            spokewith_pairs.add((rel.term1, rel.term2))
+            spokewith_pairs.add((rel.term2, rel.term1))  # symmetric
+
+        # Filter disagreedWith to keep only those NOT in spokeWith pairs
+        original_count = len(self.Rel.disagreedWith)
+        self.Rel.disagreedWith = [
+            rel for rel in self.Rel.disagreedWith
+            if (rel.term1, rel.term2) not in spokewith_pairs
+        ]
+
+        removed_count = original_count - len(self.Rel.disagreedWith)
+        if removed_count > 0:
+            logger.info(f"Removed {removed_count} disagreedWith links that overlap with spokeWith.")
+
+        if not self.Rel.disagreedWith:
+            self.Rel.disagreedWith = None
+
+        return self
+
+    @model_validator(mode='after')
+    def clean_associated_with_place_logic(self):
+        """Removes associatedWithPlace links that are already covered by specific Person→Place relationships."""
+        if not self.Rel or not self.Rel.associatedWithPlace:
+            return self
+
+        # Collect all existing person-to-place relationships from specific relationship types
+        covered_pairs = set()
+
+        for rel_type in PERSON_PLACE_SPECIFIC_RELATIONSHIPS:
+            relations = getattr(self.Rel, rel_type, None)
+            if relations:
+                covered_pairs.update((rel.term1, rel.term2) for rel in relations)
+
+        # Filter associatedWithPlace to keep only those NOT in covered_pairs
+        original_count = len(self.Rel.associatedWithPlace)
+        self.Rel.associatedWithPlace = [
+            rel for rel in self.Rel.associatedWithPlace
+            if (rel.term1, rel.term2) not in covered_pairs
+        ]
+
+        removed_count = original_count - len(self.Rel.associatedWithPlace)
+        if removed_count > 0:
+            rel_types_str = '/'.join(PERSON_PLACE_SPECIFIC_RELATIONSHIPS)
+            logger.info(f"Removed {removed_count} redundant associatedWithPlace links already covered by {rel_types_str}.")
+
+        # Set to None if empty
+        if not self.Rel.associatedWithPlace:
+            self.Rel.associatedWithPlace = None
 
         return self
 

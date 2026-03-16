@@ -28,6 +28,7 @@ from BackEnd.DataObjects.PydanticModels.PydanticClasses import (
     TRIBES_OF_ISRAEL,
     ENTITY_CATEGORIES,
     SYMMETRIC_RELATIONSHIPS,
+    PERSON_PLACE_SPECIFIC_RELATIONSHIPS,
     min_len_summary,
     max_len_summary
 )
@@ -89,7 +90,8 @@ class PydanticCaller:
                 
                 "- Symbol: Specific Symbolic objects, concepts, or items with high significance.\n"
                 "  especially if used in comparison or contrastingly. Proper nouns or clearly defined concepts.\n"
-                "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush.\n\n"
+                "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush."
+                "  Examples: \n\n"
                 
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"
@@ -98,15 +100,26 @@ class PydanticCaller:
                 "=== RELATIONSHIP TYPES ===\n"
                 "Person ↔ Person:\n"
                 "- studiedFrom: Sage transmitting teaching ('X said in name of Y', 'X said that Y said').\n"
-                "- childOf: Explicit parent-child only.\n"
-                "- descendantOf: Non-adjacent ancestry (grandparent+). NOT if childOf exists.\n"
+                "- childOfFather: Explicit father-child relationship. term1 is the child, term2 is the father.\n"
+                "- childOfMother: Explicit mother-child relationship. term1 is the child, term2 is the mother.\n"
+                "- descendantOf: Non-adjacent ancestry (grandparent+). NOT if childOfFather/childOfMother exists for that pair.\n"
                 "- spouseOf: Married couples.\n"
-                "- spokeWith: Direct conversation or dialogue in the text.\n\n"
+                "- spokeWith: Direct conversation or dialogue in the text.\n"
+                "- disagreedWith: Halakhic or ideological dispute between persons.\n"
+                "  IMPORTANT: A pair cannot appear in BOTH spokeWith and disagreedWith.\n"
+                "  If they disagreed, use disagreedWith. If they merely conversed, use spokeWith.\n\n"
                 
                 "Person → Place:\n"
                 "- bornIn: Person's birthplace.\n"
                 "- diedIn: Place of death.\n"
-                "- visited: Person traveled to or was present at location.\n\n"
+                "- visited: Person traveled to or was present at location.\n"
+                "- prayedAt: Person prayed at a specific location.\n\n"
+                
+                "Person/Symbol → Place:\n"
+                "- associatedWithPlace: Any significant connection between a Person or Symbol and a Place\n"
+                "  NOT covered by bornIn, diedIn, visited, or prayedAt. Use ONLY if no other Person→Place relationship applies.\n"
+                "  Examples: 'The Ark of the Covenant' → 'Jerusalem', 'Moses' → 'Mount Sinai' (if not visited).\n"
+                "  NOT for Nations - use placeToNation instead.\n\n"
                 
                 "Person → TribeOfIsrael:\n"
                 "- personToTribeOfIsrael: Person belongs to or is associated with a tribe.\n\n"
@@ -115,8 +128,8 @@ class PydanticCaller:
                 "- personBelongsToNation: Person is a member of a nation.\n\n"
                 
                 "Nation/Person ↔ Nation/Person:\n"
-                "- EnemyOf: Hostile relationship between nations OR between persons.\n"
-                "- AllyOf: Alliance or friendly relationship between nations OR persons.\n\n"
+                "- EnemyOf: Hostile relationship between nations, between persons, or person against a nation.\n"
+                "- AllyOf: Alliance or friendly relationship between nations, persons, or person with a nation.\n\n"
                 
                 "Place → Nation:\n"
                 "- placeToNation: Place belongs to or is associated with a nation.\n\n"
@@ -127,6 +140,8 @@ class PydanticCaller:
                 "Any Entity ↔ Any Entity:\n"
                 "- comparedTo: Similarity or likeness drawn between entities.\n"
                 "- contrastedWith: Difference or opposition drawn between entities.\n"
+                "  NOTE: contrastedWith is for literary/symbolic contrasts, NOT for halakhic disagreements.\n"
+                "  Use disagreedWith for disputes between persons, not contrastedWith.\n"
                 "- AliasOf: Two names for the SAME entity. Only if text EXPLICITLY states they are the same.\n"
                 "  Examples: 'Hadassa, who is Esther', 'Jacob, who is Israel'.\n"
                 "  NOT for similar entities or comparisons - only explicit identity.\n\n"

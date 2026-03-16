@@ -41,6 +41,8 @@ class DBPopulateLmmData(DBParentClass):
         asyncio.run(self.get_graphs_from_passages())
 
     async def get_graphs_from_passages(self):
+        # todo get the references of a passage too!
+
         total_cost_usd = 0.0
         total_tokens = 0
         total_input_tokens = 0

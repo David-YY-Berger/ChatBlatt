@@ -12,4 +12,7 @@ class EPlace(Entity):
     personsDiedIn: List[str] = TransientField(default_factory=list)
     personsBornIn: List[str] = TransientField(default_factory=list)
     personsVisited: List[str] = TransientField(default_factory=list)
+    personsPrayedAt: List[str] = TransientField(default_factory=list)
+    personsAssociated: List[str] = TransientField(default_factory=list)  # reverse of associatedWithPlace
+    symbolsAssociated: List[str] = TransientField(default_factory=list)  # reverse of Symbol→Place
     inNation: List[str] = TransientField(default_factory=list)

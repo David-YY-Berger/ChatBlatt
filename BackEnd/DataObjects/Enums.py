@@ -19,7 +19,7 @@ class SourceType(DescribedEnum):
     MS = (4, "Mishna")
 
 class TimePeriod(DescribedEnum):
-    Tanach = (0, "Tanach Era")
+    Tanach = (0, "Tanach Era") # add more eras thoughout tanach...
     Tanaim = (1, "Tanaim")
     Amoraim = (2, "Amoraim")
     NoTimePeriod = (3, "No Time Period")
@@ -28,8 +28,8 @@ class SymbolType(DescribedEnum):
     Animal = (0, "Animal")
     Plant = (1, "Plant")
     Clothing = (2, "Clothing")
-    HumanRelationship = (3, "Human Relationship")
     Food = (4, "Food")
+    HolyObject = (5, "Holy Object")
 
 class PlaceType(DescribedEnum):
     City = (0, "City")
@@ -64,11 +64,12 @@ class EntityType(DescribedEnum):
 class RelType(DescribedEnum):
     # Person/Group → Person/Group
     studiedFrom = ("PP01", "studiedFrom")
-    siblingWith = ("PP02", "siblingWith")
-    childOf = ("PP03", "childOf")
+    childOfFather = ("PP03", "childOfFather")
+    childOfMother = ("PP08", "childOfMother")
     spouseOf = ("PP04", "spouseOf")
     descendantOf = ("PP05", "descendantOf")
     spokeWith = ("PP06", "spokeWith")
+    disagreedWith = ("PP07", "disagreedWith")
 
     # Person/Group → {anything}
     prophesiedAbout = ("PX01", "prophesiedAbout")
@@ -76,7 +77,12 @@ class RelType(DescribedEnum):
     # Person/Group → Place
     bornIn = ("PL01", "bornIn")
     diedIn = ("PL02", "diedIn")
+    prayedAt = ("PL03", "prayedAt")
     visited = ("PL04", "visited")
+    associatedWithPlace = ("PL05", "associatedWithPlace")  # Person/Symbol → Place fallback
+
+    # Symbol → Place
+    symbolAssociatedWithPlace = ("SL01", "symbolAssociatedWithPlace")
 
     # Person/Group → TribeOfIsrael
     personToTribeOfIsrael = ("PT01", "personToTribeOfIsrael")
@@ -94,10 +100,7 @@ class RelType(DescribedEnum):
     # {anything} → {anything}
     comparedTo = ("XS01", "comparedTo")
     contrastedWith = ("XS02", "contrastedWith")
-
-    # {anything} → {anything}
-    # alias = ("XX01", 'alias')
-    # aliasFromSages = ("XX02", "aliasFromSages")
+    AliasOf = ("XS03", "AliasOf")
 
 
 
