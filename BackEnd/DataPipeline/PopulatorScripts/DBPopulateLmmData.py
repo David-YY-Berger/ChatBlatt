@@ -22,8 +22,8 @@ class DBPopulateLmmData(DBParentClass):
 
         # ====== SWITCH MODEL HERE ======
         # Uncomment ONE of these lines to choose your model:
-        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
-        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
         # ===============================
 
@@ -183,8 +183,11 @@ class DBPopulateLmmData(DBParentClass):
 
         key_strs = [
 
-            # childof (levi)
+            # childofFather (levi)
             # 'TN_Exodus_0_6:14-25',
+
+            # childOfMother
+            "TN_I Kings_0_2:13–3:2",
 
             # descendantOf
             # 'BT_Sanhedrin_0_96b:2-9',
@@ -219,6 +222,9 @@ class DBPopulateLmmData(DBParentClass):
 
             # visited
             # 'TN_Genesis_0_33:18-34:1', # also place to Nation
+
+            # prayedAt
+            # "BT_Pesachim_0_88a:3-5",
 
             # enemyOF (nation to nation) - very long source
             # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
