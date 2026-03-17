@@ -1,0 +1,431 @@
+﻿{
+    "res": {
+        "en_summary": "Solomon executes rivals, marries, establishes kingdom.",
+        "heb_summary": "שלמה מחסל יריבים, מתחתן, מבסס מלכותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Adonijah"
+                },
+                {
+                    "en_name": "Haggith"
+                },
+                {
+                    "en_name": "Bathsheba"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Abishag The Shunammite"
+                },
+                {
+                    "en_name": "Abiathar"
+                },
+                {
+                    "en_name": "Joab"
+                },
+                {
+                    "en_name": "Zeruiah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Benaiah"
+                },
+                {
+                    "en_name": "Jehoiada"
+                },
+                {
+                    "en_name": "Eli"
+                },
+                {
+                    "en_name": "Absalom"
+                },
+                {
+                    "en_name": "Abner"
+                },
+                {
+                    "en_name": "Ner"
+                },
+                {
+                    "en_name": "Amasa"
+                },
+                {
+                    "en_name": "Jether"
+                },
+                {
+                    "en_name": "Descendants Of Joab"
+                },
+                {
+                    "en_name": "Descendants Of David"
+                },
+                {
+                    "en_name": "Zadok"
+                },
+                {
+                    "en_name": "Shimei"
+                },
+                {
+                    "en_name": "Achish"
+                },
+                {
+                    "en_name": "Maacah"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Pharaoh's Daughter"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Anathoth"
+                },
+                {
+                    "en_name": "Shiloh"
+                },
+                {
+                    "en_name": "Wilderness"
+                },
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Wadi Kidron"
+                },
+                {
+                    "en_name": "Gath"
+                },
+                {
+                    "en_name": "City Of David"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Gath"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Throne"
+                },
+                {
+                    "en_name": "Ark Of My Sovereign God"
+                },
+                {
+                    "en_name": "Tent Of God"
+                },
+                {
+                    "en_name": "Horns Of The Altar"
+                },
+                {
+                    "en_name": "Altar"
+                },
+                {
+                    "en_name": "House Of God"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Adonijah",
+                    "term2": "Haggith"
+                },
+                {
+                    "term1": "Joab",
+                    "term2": "Zeruiah"
+                },
+                {
+                    "term1": "Benaiah",
+                    "term2": "Jehoiada"
+                },
+                {
+                    "term1": "Abner",
+                    "term2": "Ner"
+                },
+                {
+                    "term1": "Amasa",
+                    "term2": "Jether"
+                },
+                {
+                    "term1": "Achish",
+                    "term2": "Maacah"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Bathsheba"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Pharaoh's Daughter"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Descendants Of Joab",
+                    "term2": "Joab"
+                },
+                {
+                    "term1": "Descendants Of David",
+                    "term2": "David"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Adonijah",
+                    "term2": "Bathsheba"
+                },
+                {
+                    "term1": "Bathsheba",
+                    "term2": "Solomon"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Benaiah"
+                },
+                {
+                    "term1": "Benaiah",
+                    "term2": "Joab"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Shimei"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Achish"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Joab",
+                    "term2": "Wilderness"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abiathar",
+                    "term2": "Anathoth"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Gath"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Pharaoh's Daughter",
+                    "term2": "City Of David"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "House Of God",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Eli",
+                    "term2": "Shiloh"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Amasa",
+                    "term2": "Judah"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Adonijah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Abner",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Israel"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Adonijah"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Abiathar"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Joab"
+                },
+                {
+                    "term1": "Joab",
+                    "term2": "Abner"
+                },
+                {
+                    "term1": "Joab",
+                    "term2": "Amasa"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Shimei"
+                },
+                {
+                    "term1": "Shimei",
+                    "term2": "David"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Adonijah",
+                    "term2": "Abiathar"
+                },
+                {
+                    "term1": "Adonijah",
+                    "term2": "Joab"
+                },
+                {
+                    "term1": "Abiathar",
+                    "term2": "David"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Pharaoh"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "City Of David",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God",
+                    "term2": "Eli"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Joab"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Joab",
+                    "term2": "Absalom"
+                }
+            ]
+        },
+        "person_epithets": [
+            {
+                "person": "Bathsheba",
+                "epithet": "Solomons mother"
+            },
+            {
+                "person": "Solomon",
+                "epithet": "King"
+            },
+            {
+                "person": "Bathsheba",
+                "epithet": "queen mother"
+            },
+            {
+                "person": "Bathsheba",
+                "epithet": "Mother"
+            },
+            {
+                "person": "Abiathar",
+                "epithet": "priest"
+            },
+            {
+                "person": "Joab",
+                "epithet": "son of Zeruiah"
+            },
+            {
+                "person": "David",
+                "epithet": "my father"
+            },
+            {
+                "person": "Benaiah",
+                "epithet": "son of Jehoiada"
+            },
+            {
+                "person": "God",
+                "epithet": "my Sovereign"
+            },
+            {
+                "person": "Abner",
+                "epithet": "son of Ner"
+            },
+            {
+                "person": "Abner",
+                "epithet": "the army commander of Israel"
+            },
+            {
+                "person": "Amasa",
+                "epithet": "son of Jether"
+            },
+            {
+                "person": "Amasa",
+                "epithet": "the army commander of Judah"
+            },
+            {
+                "person": "Zadok",
+                "epithet": "priest"
+            },
+            {
+                "person": "Achish",
+                "epithet": "King"
+            },
+            {
+                "person": "Achish",
+                "epithet": "son of Maacah of Gath"
+            },
+            {
+                "person": "Pharaoh",
+                "epithet": "king of Egypt"
+            }
+        ]
+    },
+    "key": "TN_I Kings_0_2:13–3:2"
+}

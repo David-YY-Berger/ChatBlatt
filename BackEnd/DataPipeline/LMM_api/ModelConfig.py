@@ -30,12 +30,16 @@ class ModelProvider(Enum):
     """
     Available LLM providers.
 
-    GEMINI_FREE  - Google AI Studio free tier (rate limited, good for testing)
-    GEMINI_PAID  - Google AI Studio paid tier (higher limits)
-    OPENAI       - OpenAI GPT-4o-mini (always paid, no free API tier)
+    GEMINI_FREE          - Google AI Studio free tier (rate limited, good for testing)
+    GEMINI_FREE_THINKING - Gemini 2.5 Flash with thinking enabled (free tier)
+    GEMINI_PAID          - Google AI Studio paid tier (higher limits)
+    GEMINI_PAID_THINKING - Gemini 2.5 Flash with thinking enabled (paid tier)
+    OPENAI               - OpenAI GPT-4o-mini (always paid, no free API tier)
     """
     GEMINI_FREE = "gemini_free"
+    GEMINI_FREE_THINKING = "gemini_free_thinking"
     GEMINI_PAID = "gemini_paid"
+    GEMINI_PAID_THINKING = "gemini_paid_thinking"
     OPENAI = "openai"
 
 
@@ -56,29 +60,43 @@ class ModelConfig:
     # Model names for each provider
     MODELS = {
         ModelProvider.GEMINI_FREE: "gemini-2.5-flash",
+        ModelProvider.GEMINI_FREE_THINKING: "gemini-2.5-flash",
         ModelProvider.GEMINI_PAID: "gemini-2.5-flash",
+        ModelProvider.GEMINI_PAID_THINKING: "gemini-2.5-flash",
         ModelProvider.OPENAI: "gpt-4o-mini",
     }
 
     # Environment variable names for API keys
     API_KEY_ENV_VARS = {
         ModelProvider.GEMINI_FREE: "GEMINI_FREE_API_KEY",
+        ModelProvider.GEMINI_FREE_THINKING: "GEMINI_FREE_API_KEY",
         ModelProvider.GEMINI_PAID: "GEMINI_PAID_API_KEY",
+        ModelProvider.GEMINI_PAID_THINKING: "GEMINI_PAID_API_KEY",
         ModelProvider.OPENAI: "OPENAI_API_KEY",
     }
 
     # pydantic-ai model string prefixes
     PYDANTIC_PREFIXES = {
         ModelProvider.GEMINI_FREE: "google-gla:",
+        ModelProvider.GEMINI_FREE_THINKING: "google-gla:",
         ModelProvider.GEMINI_PAID: "google-gla:",
+        ModelProvider.GEMINI_PAID_THINKING: "google-gla:",
         ModelProvider.OPENAI: "openai:",
+    }
+
+    # Providers that should use thinking mode
+    THINKING_PROVIDERS = {
+        ModelProvider.GEMINI_FREE_THINKING,
+        ModelProvider.GEMINI_PAID_THINKING,
     }
 
     # Cost per million tokens (approximate, for logging)
     COST_PER_MILLION = {
-        ModelProvider.GEMINI_FREE: {"input": 0.0, "output": 0.0},        # Free!
-        ModelProvider.GEMINI_PAID: {"input": 0.075, "output": 0.30},     # Gemini 2.5 Flash
-        ModelProvider.OPENAI: {"input": 0.15, "output": 0.60},           # GPT-4o-mini
+        ModelProvider.GEMINI_FREE: {"input": 0.0, "output": 0.0},              # Free!
+        ModelProvider.GEMINI_FREE_THINKING: {"input": 0.0, "output": 0.0},     # Free! (thinking tokens also free)
+        ModelProvider.GEMINI_PAID: {"input": 0.075, "output": 0.30},           # Gemini 2.5 Flash
+        ModelProvider.GEMINI_PAID_THINKING: {"input": 0.075, "output": 0.30},  # Flash + thinking
+        ModelProvider.OPENAI: {"input": 0.15, "output": 0.60},                 # GPT-4o-mini
     }
 
     @classmethod
@@ -120,6 +138,11 @@ class ModelConfig:
         return cls.COST_PER_MILLION[cls._current_provider]
 
     @classmethod
+    def is_thinking_enabled(cls) -> bool:
+        """Check if current provider should use thinking mode."""
+        return cls._current_provider in cls.THINKING_PROVIDERS
+
+    @classmethod
     def ensure_api_key_in_env(cls) -> None:
         """
         Ensure the appropriate API key environment variable is set.
@@ -134,7 +157,12 @@ class ModelConfig:
             )
 
         # pydantic-ai expects GOOGLE_API_KEY for Gemini
-        if cls._current_provider in (ModelProvider.GEMINI_FREE, ModelProvider.GEMINI_PAID):
+        if cls._current_provider in (
+            ModelProvider.GEMINI_FREE,
+            ModelProvider.GEMINI_FREE_THINKING,
+            ModelProvider.GEMINI_PAID,
+            ModelProvider.GEMINI_PAID_THINKING,
+        ):
             os.environ['GOOGLE_API_KEY'] = api_key
         # pydantic-ai expects OPENAI_API_KEY for OpenAI
         elif cls._current_provider == ModelProvider.OPENAI:

@@ -1,0 +1,441 @@
+﻿COST: Tokens: Total=14306 approx cost usd = $0.000000 (Prompt=5865, Completion=8441)
+SOURCE:
+I Kings 2:13–3:2  (TN_I Kings_0_2:13–3:2)
+
+HEBREW:
+וַיָּבֹ֞א אֲדֹנִיָּ֣הוּ בֶן־חַגִּ֗ית אֶל־בַּת־שֶׁ֙בַע֙ אֵם־שְׁלֹמֹ֔ה וַתֹּ֖אמֶר הֲשָׁל֣וֹם בֹּאֶ֑ךָ וַיֹּ֖אמֶר שָׁלֽוֹם׃ וַיֹּ֕אמֶר דָּבָ֥ר לִ֖י אֵלָ֑יִךְ וַתֹּ֖אמֶר דַּבֵּֽר׃ וַיֹּ֗אמֶר אַ֤תְּ יָדַ֙עַתְּ֙ כִּי־לִי֙ הָיְתָ֣ה הַמְּלוּכָ֔ה וְעָלַ֞י שָׂ֧מוּ כׇֽל־יִשְׂרָאֵ֛ל פְּנֵיהֶ֖ם לִמְלֹ֑ךְ וַתִּסֹּ֤ב הַמְּלוּכָה֙ וַתְּהִ֣י לְאָחִ֔י כִּ֥י מֵיְהֹוָ֖ה הָ֥יְתָה לּֽוֹ׃ וְעַתָּ֗ה שְׁאֵלָ֤ה אַחַת֙ אָֽנֹכִי֙ שֹׁאֵ֣ל מֵֽאִתָּ֔ךְ אַל־תָּשִׁ֖בִי אֶת־פָּנָ֑י וַתֹּ֥אמֶר אֵלָ֖יו דַּבֵּֽר׃ וַיֹּ֗אמֶר אִמְרִי־נָא֙ לִשְׁלֹמֹ֣ה הַמֶּ֔לֶךְ כִּ֥י לֹֽא־יָשִׁ֖יב אֶת־פָּנָ֑יִךְ וְיִתֶּן־לִ֛י אֶת־אֲבִישַׁ֥ג הַשּׁוּנַמִּ֖ית לְאִשָּֽׁה׃ וַתֹּ֥אמֶר בַּת־שֶׁ֖בַע ט֑וֹב אָנֹכִ֕י אֲדַבֵּ֥ר עָלֶ֖יךָ אֶל־הַמֶּֽלֶךְ׃ וַתָּבֹ֤א בַת־שֶׁ֙בַע֙ אֶל־הַמֶּ֣לֶךְ שְׁלֹמֹ֔ה לְדַבֶּר־ל֖וֹ עַל־אֲדֹנִיָּ֑הוּ וַיָּ֩קׇם֩ הַמֶּ֨לֶךְ לִקְרָאתָ֜הּ וַיִּשְׁתַּ֣חוּ לָ֗הּ וַיֵּ֙שֶׁב֙ עַל־כִּסְא֔וֹ וַיָּ֤שֶׂם כִּסֵּא֙ לְאֵ֣ם הַמֶּ֔לֶךְ וַתֵּ֖שֶׁב לִימִינֽוֹ׃ וַתֹּ֗אמֶר שְׁאֵלָ֨ה אַחַ֤ת קְטַנָּה֙ אָֽנֹכִי֙ שֹׁאֶ֣לֶת מֵֽאִתָּ֔ךְ אַל־תָּ֖שֶׁב אֶת־פָּנָ֑י וַיֹּֽאמֶר־לָ֤הּ הַמֶּ֙לֶךְ֙ שַׁאֲלִ֣י אִמִּ֔י כִּ֥י לֹא־אָשִׁ֖יב אֶת־פָּנָֽיִךְ׃ וַתֹּ֕אמֶר יֻתַּ֖ן אֶת־אֲבִישַׁ֣ג הַשֻּׁנַמִּ֑ית לַאֲדֹנִיָּ֥הוּ אָחִ֖יךָ לְאִשָּֽׁה׃ וַיַּ֩עַן֩ הַמֶּ֨לֶךְ שְׁלֹמֹ֜ה וַיֹּ֣אמֶר לְאִמּ֗וֹ וְלָמָה֩ אַ֨תְּ שֹׁאֶ֜לֶת אֶת־אֲבִישַׁ֤ג הַשֻּֽׁנַמִּית֙ לַאֲדֹ֣נִיָּ֔הוּ וְשַֽׁאֲלִי־לוֹ֙ אֶת־הַמְּלוּכָ֔ה כִּ֛י ה֥וּא אָחִ֖י הַגָּד֣וֹל מִמֶּ֑נִּי וְלוֹ֙ וּלְאֶבְיָתָ֣ר הַכֹּהֵ֔ן וּלְיוֹאָ֖ב בֶּן־צְרוּיָֽה׃ וַיִּשָּׁבַע֙ הַמֶּ֣לֶךְ שְׁלֹמֹ֔ה בַּיהֹוָ֖ה לֵאמֹ֑ר כֹּ֣ה יַֽעֲשֶׂה־לִּ֤י אֱלֹהִים֙ וְכֹ֣ה יוֹסִ֔יף כִּ֣י בְנַפְשׁ֔וֹ דִּבֶּר֙ אֲדֹ֣נִיָּ֔הוּ אֶת־הַדָּבָ֖ר הַזֶּֽה׃ וְעַתָּ֗ה חַי־יְהֹוָה֙ אֲשֶׁ֣ר הֱכִינַ֗נִי [וַיּֽוֹשִׁיבַ֙נִי֙] עַל־כִּסֵּא֙ דָּוִ֣ד אָבִ֔י וַאֲשֶׁ֧ר עָשָׂה־לִ֛י בַּ֖יִת כַּאֲשֶׁ֣ר דִּבֵּ֑ר כִּ֣י הַיּ֔וֹם יוּמַ֖ת אֲדֹנִיָּֽהוּ׃ וַיִּשְׁלַח֙ הַמֶּ֣לֶךְ שְׁלֹמֹ֔ה בְּיַ֖ד בְּנָיָ֣הוּ בֶן־יְהוֹיָדָ֑ע וַיִּפְגַּע־בּ֖וֹ וַיָּמֹֽת׃ וּלְאֶבְיָתָ֨ר הַכֹּהֵ֜ן אָמַ֣ר הַמֶּ֗לֶךְ עֲנָתֹת֙ לֵ֣ךְ עַל־שָׂדֶ֔יךָ כִּ֛י אִ֥ישׁ מָ֖וֶת אָ֑תָּה וּבַיּ֨וֹם הַזֶּ֜ה לֹ֣א אֲמִיתֶ֗ךָ כִּֽי־נָשָׂ֜אתָ אֶת־אֲר֨וֹן אֲדֹנָ֤י יֱהֹוִה֙ לִפְנֵי֙ דָּוִ֣ד אָבִ֔י וְכִ֣י הִתְעַנִּ֔יתָ בְּכֹ֥ל אֲשֶֽׁר־הִתְעַנָּ֖ה אָבִֽי׃ וַיְגָ֤רֶשׁ שְׁלֹמֹה֙ אֶת־אֶבְיָתָ֔ר מִֽהְי֥וֹת כֹּהֵ֖ן לַיהֹוָ֑ה לְמַלֵּא֙ אֶת־דְּבַ֣ר יְהֹוָ֔ה אֲשֶׁ֥ר דִּבֶּ֛ר עַל־בֵּ֥ית עֵלִ֖י בְּשִׁלֹֽה׃ וְהַשְּׁמֻעָה֙ בָּ֣אָה עַד־יוֹאָ֔ב כִּ֣י יוֹאָ֗ב נָטָה֙ אַחֲרֵ֣י אֲדֹנִיָּ֔ה וְאַחֲרֵ֥י אַבְשָׁל֖וֹם לֹ֣א נָטָ֑ה וַיָּ֤נׇס יוֹאָב֙ אֶל־אֹ֣הֶל יְהֹוָ֔ה וַֽיַּחֲזֵ֖ק בְּקַרְנ֥וֹת הַמִּזְבֵּֽחַ׃ וַיֻּגַּ֞ד לַמֶּ֣לֶךְ שְׁלֹמֹ֗ה כִּ֣י נָ֤ס יוֹאָב֙ אֶל־אֹ֣הֶל יְהֹוָ֔ה וְהִנֵּ֖ה אֵ֣צֶל הַמִּזְבֵּ֑חַ וַיִּשְׁלַ֨ח שְׁלֹמֹ֜ה אֶת־בְּנָיָ֧הוּ בֶן־יְהוֹיָדָ֛ע לֵאמֹ֖ר לֵ֥ךְ פְּגַע־בּֽוֹ׃ וַיָּבֹ֨א בְנָיָ֜הוּ אֶל־אֹ֣הֶל יְהֹוָ֗ה וַיֹּ֨אמֶר אֵלָ֜יו כֹּֽה־אָמַ֤ר הַמֶּ֙לֶךְ֙ צֵ֔א וַיֹּ֥אמֶֽר׀לֹ֖א כִּ֣י פֹ֣ה אָמ֑וּת וַיָּ֨שֶׁב בְּנָיָ֤הוּ אֶת־הַמֶּ֙לֶךְ֙ דָּבָ֣ר לֵאמֹ֔ר כֹּֽה־דִבֶּ֥ר יוֹאָ֖ב וְכֹ֥ה עָנָֽנִי׃ וַיֹּ֧אמֶר ל֣וֹ הַמֶּ֗לֶךְ עֲשֵׂה֙ כַּאֲשֶׁ֣ר דִּבֶּ֔ר וּפְגַע־בּ֖וֹ וּקְבַרְתּ֑וֹ וַהֲסִירֹ֣תָ׀ דְּמֵ֣י חִנָּ֗ם אֲשֶׁר֙ שָׁפַ֣ךְ יוֹאָ֔ב מֵעָלַ֕י וּמֵעַ֖ל בֵּ֥ית אָבִֽי׃ וְהֵשִׁיב֩ יְהֹוָ֨ה אֶת־דָּמ֜וֹ עַל־רֹאשׁ֗וֹ אֲשֶׁ֣ר פָּגַ֣ע בִּשְׁנֵֽי־אֲ֠נָשִׁ֠ים צַדִּקִ֨ים וְטֹבִ֤ים מִמֶּ֙נּוּ֙ וַיַּהַרְגֵ֣ם בַּחֶ֔רֶב וְאָבִ֥י דָוִ֖ד לֹ֣א יָדָ֑ע אֶת־אַבְנֵ֤ר בֶּן־נֵר֙ שַׂר־צְבָ֣א יִשְׂרָאֵ֔ל וְאֶת־עֲמָשָׂ֥א בֶן־יֶ֖תֶר שַׂר־צְבָ֥א יְהוּדָֽה׃ וְשָׁ֤בוּ דְמֵיהֶם֙ בְּרֹ֣אשׁ יוֹאָ֔ב וּבְרֹ֥אשׁ זַרְע֖וֹ לְעֹלָ֑ם וּלְדָוִ֡ד וּ֠לְזַרְע֠וֹ וּלְבֵית֨וֹ וּלְכִסְא֜וֹ יִהְיֶ֥ה שָׁל֛וֹם עַד־עוֹלָ֖ם מֵעִ֥ם יְהֹוָֽה׃ וַיַּ֗עַל בְּנָיָ֙הוּ֙ בֶּן־יְה֣וֹיָדָ֔ע וַיִּפְגַּע־בּ֖וֹ וַיְמִתֵ֑הוּ וַיִּקָּבֵ֥ר בְּבֵית֖וֹ בַּמִּדְבָּֽר׃ וַיִּתֵּ֨ן הַמֶּ֜לֶךְ אֶת־בְּנָיָ֧הוּ בֶן־יְהוֹיָדָ֛ע תַּחְתָּ֖יו עַל־הַצָּבָ֑א וְאֶת־צָד֤וֹק הַכֹּהֵן֙ נָתַ֣ן הַמֶּ֔לֶךְ תַּ֖חַת אֶבְיָתָֽר׃ וַיִּשְׁלַ֤ח הַמֶּ֙לֶךְ֙ וַיִּקְרָ֣א לְשִׁמְעִ֔י וַיֹּ֣אמֶר ל֗וֹ בְּֽנֵה־לְךָ֥ בַ֙יִת֙ בִּיר֣וּשָׁלַ֔͏ִם וְיָשַׁבְתָּ֖ שָׁ֑ם וְלֹא־תֵצֵ֥א מִשָּׁ֖ם אָ֥נֶה וָאָֽנָה׃ וְהָיָ֣ה׀ בְּי֣וֹם צֵאתְךָ֗ וְעָֽבַרְתָּ֙ אֶת־נַ֣חַל קִדְר֔וֹן יָדֹ֥עַ תֵּדַ֖ע כִּ֣י מ֣וֹת תָּמ֑וּת דָּמְךָ֖ יִהְיֶ֥ה בְרֹאשֶֽׁךָ׃ וַיֹּ֨אמֶר שִׁמְעִ֤י לַמֶּ֙לֶךְ֙ ט֣וֹב הַדָּבָ֔ר כַּאֲשֶׁ֤ר דִּבֶּר֙ אֲדֹנִ֣י הַמֶּ֔לֶךְ כֵּ֖ן יַעֲשֶׂ֣ה עַבְדֶּ֑ךָ וַיֵּ֧שֶׁב שִׁמְעִ֛י בִּירוּשָׁלַ֖͏ִם יָמִ֥ים רַבִּֽים׃ וַיְהִ֗י מִקֵּץ֙ שָׁלֹ֣שׁ שָׁנִ֔ים וַיִּבְרְח֤וּ שְׁנֵֽי־עֲבָדִים֙ לְשִׁמְעִ֔י אֶל־אָכִ֥ישׁ בֶּֽן־מַעֲכָ֖ה מֶ֣לֶךְ גַּ֑ת וַיַּגִּ֤ידוּ לְשִׁמְעִי֙ לֵאמֹ֔ר הִנֵּ֥ה עֲבָדֶ֖יךָ בְּגַֽת׃ וַיָּ֣קׇם שִׁמְעִ֗י וַֽיַּחֲבֹשׁ֙ אֶת־חֲמֹר֔וֹ וַיֵּ֤לֶךְ גַּ֙תָה֙ אֶל־אָכִ֔ישׁ לְבַקֵּ֖שׁ אֶת־עֲבָדָ֑יו וַיֵּ֣לֶךְ שִׁמְעִ֔י וַיָּבֵ֥א אֶת־עֲבָדָ֖יו מִגַּֽת׃ וַיֻּגַּ֖ד לִשְׁלֹמֹ֑ה כִּי־הָלַ֨ךְ שִׁמְעִ֧י מִירוּשָׁלַ֛͏ִם גַּ֖ת וַיָּשֹֽׁב׃ וַיִּשְׁלַ֨ח הַמֶּ֜לֶךְ וַיִּקְרָ֣א לְשִׁמְעִ֗י וַיֹּ֨אמֶר אֵלָ֜יו הֲל֧וֹא הִשְׁבַּעְתִּ֣יךָ בַיהֹוָ֗ה וָאָעִ֤ד בְּךָ֙ לֵאמֹ֔ר בְּי֣וֹם צֵאתְךָ֗ וְהָֽלַכְתָּ֙ אָ֣נֶה וָאָ֔נָה יָדֹ֥עַ תֵּדַ֖ע כִּ֣י מ֣וֹת תָּמ֑וּת וַתֹּ֧אמֶר אֵלַ֛י ט֥וֹב הַדָּבָ֖ר שָׁמָֽעְתִּי׃ וּמַדּ֕וּעַ לֹ֣א שָׁמַ֔רְתָּ אֵ֖ת שְׁבֻעַ֣ת יְהֹוָ֑ה וְאֶת־הַמִּצְוָ֖ה אֲשֶׁר־צִוִּ֥יתִי עָלֶֽיךָ׃ וַיֹּ֨אמֶר הַמֶּ֜לֶךְ אֶל־שִׁמְעִ֗י אַתָּ֤ה יָדַ֙עְתָּ֙ אֵ֣ת כׇּל־הָרָעָ֗ה אֲשֶׁ֤ר יָדַע֙ לְבָ֣בְךָ֔ אֲשֶׁ֥ר עָשִׂ֖יתָ לְדָוִ֣ד אָבִ֑י וְהֵשִׁ֧יב יְהֹוָ֛ה אֶת־רָעָתְךָ֖ בְּרֹאשֶֽׁךָ׃ וְהַמֶּ֥לֶךְ שְׁלֹמֹ֖ה בָּר֑וּךְ וְכִסֵּ֣א דָוִ֗ד יִהְיֶ֥ה נָכ֛וֹן לִפְנֵ֥י יְהֹוָ֖ה עַד־עוֹלָֽם׃ וַיְצַ֣ו הַמֶּ֗לֶךְ אֶת־בְּנָיָ֙הוּ֙ בֶּן־יְה֣וֹיָדָ֔ע וַיֵּצֵ֕א וַיִּפְגַּע־בּ֖וֹ וַיָּמֹ֑ת וְהַמַּמְלָכָ֥ה נָכ֖וֹנָה בְּיַד־שְׁלֹמֹֽה׃וַיִּתְחַתֵּ֣ן שְׁלֹמֹ֔ה אֶת־פַּרְעֹ֖ה מֶ֣לֶךְ מִצְרָ֑יִם וַיִּקַּ֣ח אֶת־בַּת־פַּרְעֹ֗ה וַיְבִיאֶ֙הָ֙ אֶל־עִ֣יר דָּוִ֔ד עַ֣ד כַּלֹּת֗וֹ לִבְנ֤וֹת אֶת־בֵּיתוֹ֙ וְאֶת־בֵּ֣ית יְהֹוָ֔ה וְאֶת־חוֹמַ֥ת יְרוּשָׁלַ֖͏ִם סָבִֽיב׃ רַ֣ק הָעָ֔ם מְזַבְּחִ֖ים בַּבָּמ֑וֹת כִּ֠י לֹֽא־נִבְנָ֥ה בַ֙יִת֙ לְשֵׁ֣ם יְהֹוָ֔ה עַ֖ד הַיָּמִ֥ים הָהֵֽם׃
+
+ENGLISH:
+Adonijah son of Haggith came to see Bathsheba, Solomons mother. She said, Do you come with friendly intent? Yes, he replied; and he continued, I would like to have a word with you. Speak up, she said. Then he said, You know that the kingship was rightly mine and that all Israel wanted me to reign. But the kingship passed on to my brother; it came to him by GODs will. And now I have one request to make of you; do not refuse me. She said, Speak up. He replied, Please ask King Solomon-for he wont refuse you-to give me Abishag the Shunammite as wife. Very well, said Bathsheba, I will speak to the king in your behalf. So Bathsheba went to King Solomon to speak to him about Adonijah. The king rose to greet her and bowed down to her. He sat on his throne; and he had a throne placed for the queen mother, and she sat on his right. She said, I have one small request to make of you, do not refuse me. He responded, Ask, Mother; I shall not refuse you. Then she said, Let Abishag the Shunammite be given to your brother Adonijah as wife. The king replied to his mother, Why request Abishag the Shunammite for Adonijah? Request the kingship for him! For he is my older brother, and the priest Abiathar and Joab son of Zeruiah are on his side. Thereupon, King Solomon swore by GOD, saying, So may God do to me and even more, if broaching this matter does not cost Adonijah his life! Now, as GOD lives, who has established me and set me on the throne of my father David and who has provided him with a house, as he promised, Adonijah shall be put to death this very day! And Solomon instructed Benaiah son of Jehoiada, who struck Adonijah down; and so he died. To the priest Abiathar, the king said, Go to your estate at Anathoth! You deserve to die, but I shall not put you to death at this time, because you carried the Ark of my Sovereign GOD before my father David and because you shared all the hardships that my father endured. So Solomon dismissed Abiathar from his office of priest of GOD-thus fulfilling what GOD had spoken at Shiloh regarding the house of Eli. When the news reached Joab, he fled to the Tent of GOD and grasped the horns of the altar-for Joab had sided with Adonijah, though he had not sided with Absalom. King Solomon was told that Joab had fled to the Tent of GOD and that he was there by the altar; so Solomon sent Benaiah son of Jehoiada, saying, Go and strike him down. Benaiah went to the Tent of GOD and said to him, Thus said the king: Come out! No! he replied; I will die here. Benaiah reported back to the king that Joab had answered thus and thus, and the king said, Do just as he said; strike him down and bury him, and remove guilt from me and my fathers house for the blood of the innocent that Joab has shed. Thus GOD will bring his blood guilt down upon his own head, because, unbeknown to my father, he struck down with the sword two men more righteous and honorable than he-Abner son of Ner, the army commander of Israel, and Amasa son of Jether, the army commander of Judah. May the guilt for their blood come down upon the head of Joab and his descendants forever, and may good fortune from GOD be granted forever to David and his descendants, his house and his throne. So Benaiah son of Jehoiada went up and struck him down. And he was buried at his home in the wilderness. In his place, the king appointed Benaiah son of Jehoiada over the army, and in place of Abiathar, the king appointed the priest Zadok. Then the king summoned Shimei and said to him, Build yourself a house in Jerusalem and stay there-do not ever go out from there anywhere else. On the very day that you go out and cross the Wadi Kidron, you can be sure that you will die; your blood shall be on your own head. That is fair, said Shimei to the king, your servant will do just as my lord the king has spoken. And for a long time, Shimei remained in Jerusalem. Three years later, two slaves of Shimei ran away to King Achish son of Maacah of Gath. Shimei was told, Your slaves are in Gath. Shimei thereupon saddled his donkey and went to Achish in Gath to claim his slaves; and Shimei returned from Gath with his slaves. Solomon was told that Shimei had gone from Jerusalem to Gath and back, and the king summoned Shimei and said to him, Did I not adjure you by GOD and warn you, On the very day that you leave and go anywhere else, you can be sure that you will die, and did you not say to me, It is fair; I accept? Why did you not abide by the oath before GOD and by the orders that I gave you? The king said further to Shimei, You know all the wrong, which you remember very well, that you did to my father David. Now GOD brings down your wrongdoing upon your own head. But King Solomon shall be blessed, and the throne of David shall be established before GOD forever. The king gave orders to Benaiah son of Jehoiada and he went out and struck Shimei down; and so he died. Thus the kingdom was secured in Solomons hands.Solomon allied himself by marriage with Pharaoh king of Egypt. He married Pharaohs daughter and brought her to the City of David [to live there] until he had finished building his palace, and the House of GOD, and the walls around Jerusalem. The people, however, continued to offer sacrifices at the open shrines, because up to that time no house had been built for GODs name.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Solomon executes rivals, marries, establishes kingdom.",
+    "heb_summary": "שלמה מחסל יריבים, מתחתן, מבסס מלכותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Adonijah"
+        },
+        {
+          "en_name": "Haggith"
+        },
+        {
+          "en_name": "Bathsheba"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "Abishag The Shunammite"
+        },
+        {
+          "en_name": "Abiathar"
+        },
+        {
+          "en_name": "Joab"
+        },
+        {
+          "en_name": "Zeruiah"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Benaiah"
+        },
+        {
+          "en_name": "Jehoiada"
+        },
+        {
+          "en_name": "Eli"
+        },
+        {
+          "en_name": "Absalom"
+        },
+        {
+          "en_name": "Abner"
+        },
+        {
+          "en_name": "Ner"
+        },
+        {
+          "en_name": "Amasa"
+        },
+        {
+          "en_name": "Jether"
+        },
+        {
+          "en_name": "Descendants Of Joab"
+        },
+        {
+          "en_name": "Descendants Of David"
+        },
+        {
+          "en_name": "Zadok"
+        },
+        {
+          "en_name": "Shimei"
+        },
+        {
+          "en_name": "Achish"
+        },
+        {
+          "en_name": "Maacah"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Pharaoh's Daughter"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Anathoth"
+        },
+        {
+          "en_name": "Shiloh"
+        },
+        {
+          "en_name": "Wilderness"
+        },
+        {
+          "en_name": "Jerusalem"
+        },
+        {
+          "en_name": "Wadi Kidron"
+        },
+        {
+          "en_name": "Gath"
+        },
+        {
+          "en_name": "City Of David"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Gath"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Throne"
+        },
+        {
+          "en_name": "Ark Of My Sovereign God"
+        },
+        {
+          "en_name": "Tent Of God"
+        },
+        {
+          "en_name": "Horns Of The Altar"
+        },
+        {
+          "en_name": "Altar"
+        },
+        {
+          "en_name": "House Of God"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Adonijah",
+          "term2": "Haggith"
+        },
+        {
+          "term1": "Joab",
+          "term2": "Zeruiah"
+        },
+        {
+          "term1": "Benaiah",
+          "term2": "Jehoiada"
+        },
+        {
+          "term1": "Abner",
+          "term2": "Ner"
+        },
+        {
+          "term1": "Amasa",
+          "term2": "Jether"
+        },
+        {
+          "term1": "Achish",
+          "term2": "Maacah"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Solomon",
+          "term2": "Bathsheba"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Solomon",
+          "term2": "Pharaoh's Daughter"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Descendants Of Joab",
+          "term2": "Joab"
+        },
+        {
+          "term1": "Descendants Of David",
+          "term2": "David"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Adonijah",
+          "term2": "Bathsheba"
+        },
+        {
+          "term1": "Bathsheba",
+          "term2": "Solomon"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Benaiah"
+        },
+        {
+          "term1": "Benaiah",
+          "term2": "Joab"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Shimei"
+        },
+        {
+          "term1": "Shimei",
+          "term2": "Achish"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Joab",
+          "term2": "Wilderness"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abiathar",
+          "term2": "Anathoth"
+        },
+        {
+          "term1": "Shimei",
+          "term2": "Gath"
+        },
+        {
+          "term1": "Shimei",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Pharaoh's Daughter",
+          "term2": "City Of David"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "House Of God",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Eli",
+          "term2": "Shiloh"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "Amasa",
+          "term2": "Judah"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Adonijah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Abner",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Israel"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Solomon",
+          "term2": "Adonijah"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Abiathar"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Joab"
+        },
+        {
+          "term1": "Joab",
+          "term2": "Abner"
+        },
+        {
+          "term1": "Joab",
+          "term2": "Amasa"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Shimei"
+        },
+        {
+          "term1": "Shimei",
+          "term2": "David"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Adonijah",
+          "term2": "Abiathar"
+        },
+        {
+          "term1": "Adonijah",
+          "term2": "Joab"
+        },
+        {
+          "term1": "Abiathar",
+          "term2": "David"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Pharaoh"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "City Of David",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Jerusalem",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "God",
+          "term2": "Eli"
+        },
+        {
+          "term1": "God",
+          "term2": "Joab"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Joab",
+          "term2": "Absalom"
+        }
+      ]
+    },
+    "person_epithets": [
+      {
+        "person": "Bathsheba",
+        "epithet": "Solomons mother"
+      },
+      {
+        "person": "Solomon",
+        "epithet": "King"
+      },
+      {
+        "person": "Bathsheba",
+        "epithet": "queen mother"
+      },
+      {
+        "person": "Bathsheba",
+        "epithet": "Mother"
+      },
+      {
+        "person": "Abiathar",
+        "epithet": "priest"
+      },
+      {
+        "person": "Joab",
+        "epithet": "son of Zeruiah"
+      },
+      {
+        "person": "David",
+        "epithet": "my father"
+      },
+      {
+        "person": "Benaiah",
+        "epithet": "son of Jehoiada"
+      },
+      {
+        "person": "God",
+        "epithet": "my Sovereign"
+      },
+      {
+        "person": "Abner",
+        "epithet": "son of Ner"
+      },
+      {
+        "person": "Abner",
+        "epithet": "the army commander of Israel"
+      },
+      {
+        "person": "Amasa",
+        "epithet": "son of Jether"
+      },
+      {
+        "person": "Amasa",
+        "epithet": "the army commander of Judah"
+      },
+      {
+        "person": "Zadok",
+        "epithet": "priest"
+      },
+      {
+        "person": "Achish",
+        "epithet": "King"
+      },
+      {
+        "person": "Achish",
+        "epithet": "son of Maacah of Gath"
+      },
+      {
+        "person": "Pharaoh",
+        "epithet": "king of Egypt"
+      }
+    ]
+  }
+}

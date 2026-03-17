@@ -22,9 +22,15 @@ class DBPopulateLmmData(DBParentClass):
 
         # ====== SWITCH MODEL HERE ======
         # Uncomment ONE of these lines to choose your model:
+
+        # Standard modes (no extended thinking):
         ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
         # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
+
+        # Thinking modes (deeper reasoning, better for complex passages):
+        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE_THINKING)   # Flash + thinking (free tier)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID_THINKING)   # Flash + thinking (paid tier)
         # ===============================
 
         self.pydantic_caller = PydanticCaller()

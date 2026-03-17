@@ -1,0 +1,142 @@
+﻿COST: Tokens: Total=8310 approx cost usd = $0.000000 (Prompt=5027, Completion=3283)
+SOURCE:
+Pesachim 88a:3-5  (BT_Pesachim_0_88a:3-5)
+
+HEBREW:
+וְאָמַר רַבִּי אֶלְעָזָר, מַאי דִּכְתִיב: ״וְהָלְכוּ עַמִּים רַבִּים וְאָמְרוּ לְכוּ וְנַעֲלֶה אֶל הַר ה׳ אֶל בֵּית אֱלֹהֵי יַעֲקֹב וְגוֹ׳״. אֱלֹהֵי יַעֲקֹב, וְלֹא אֱלֹהֵי אַבְרָהָם וְיִצְחָק?אֶלָּא, לֹא כְּאַבְרָהָם שֶׁכָּתוּב בּוֹ ״הַר״, שֶׁנֶּאֱמַר: ״אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר ה׳ יֵרָאֶה״, וְלֹא כְּיִצְחָק שֶׁכָּתוּב בּוֹ ״שָׂדֶה״, שֶׁנֶּאֱמַר: ״וַיֵּצֵא יִצְחָק לָשׂוּחַ בַּשָּׂדֶה״, אֶלָּא כְּיַעֲקֹב שֶׁקְּרָאוֹ ״בַּיִת״, שֶׁנֶּאֱמַר: ״וַיִּקְרָא אֶת שֵׁם הַמָּקוֹם הַהוּא בֵּית אֵל״.אָמַר רַבִּי יוֹחָנָן: גָּדוֹל קִבּוּץ גָּלִיּוֹת כַּיּוֹם שֶׁנִּבְרְאוּ בּוֹ שָׁמַיִם וָאָרֶץ, שֶׁנֶּאֱמַר: ״וְנִקְבְּצוּ בְּנֵי יְהוּדָה וּבְנֵי יִשְׂרָאֵל יַחְדָּו וְשָׂמוּ לָהֶם רֹאשׁ אֶחָד וְעָלוּ מִן הָאָרֶץ כִּי גָדוֹל יוֹם יִזְרְעֶאל״, וּכְתִיב: ״וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם אֶחָד״.
+
+ENGLISH:
+The Gemara returns to its discussion of prophecies of consolation that are related to those in the book of Hosea. And Rabbi Elazar said: What is the meaning of that which is written: And many peoples shall go and say: Go and let us go up to the mountain of the Lord, to the house of the God of Jacob; and He will teach us of His ways, and we will walk in His paths (Isaiah 2:3)? The Gemara notes that Jacob is the only Patriarch mentioned and asks: Is He the God of Jacob and not the God of Abraham and Isaac? Rather, the verse specifically mentions Jacob to allude to the fact that the Temple will ultimately be described in the same way that Jacob referred to it. It will not be referred to as it was referred to by Abraham. It is written of him that when he prayed at the location of the Temple mountain, he called it mount, as it is stated: As it is said on this day: On the mount where the Lord is seen (Genesis 22:14). And it will not be referred to as it was referred to by Isaac. It is written of him that he called the location of the Temple field when he prayed there, as it is stated: And Isaac went out to meditate in the field (Genesis 24:63). Rather, it will be described as it was referred to by Jacob, who called it house, as it is stated: And he called the name of that place Beth-El (Genesis 28:19), which means house of God. Rabbi Yohanan said: The day of the ingathering of exiles is as great as the day on which heaven and earth were created. This is derived by means of a verbal analogy between the word day in these two contexts, as it is stated concerning the ingathering of exiles: And the children of Judea and the children of Israel shall be gathered together, and they shall appoint themselves one head, and shall go up out of the land; for great shall be the day of Jezreel (Hosea 2:2), and it is written in the narrative of Creation: And there was evening and there was morning, one day (Genesis 1:5).
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Prophecies about Temple, exiles, and Jacob's house.",
+    "heb_summary": "נבואות על המקדש, גלויות, ובית יעקב.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Children Of Judea"
+        },
+        {
+          "en_name": "Children Of Israel"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple Mountain"
+        },
+        {
+          "en_name": "Field"
+        },
+        {
+          "en_name": "Beth-El"
+        },
+        {
+          "en_name": "Jezreel"
+        },
+        {
+          "en_name": "Mountain Of The Lord"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Judea"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Ingathering Of Exiles"
+        },
+        {
+          "en_name": "Heaven And Earth"
+        }
+      ]
+    },
+    "Rel": {
+      "prayedAt": [
+        {
+          "term1": "Abraham",
+          "term2": "Temple Mountain"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Field"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Beth-El"
+        },
+        {
+          "term1": "Temple",
+          "term2": "Temple Mountain"
+        },
+        {
+          "term1": "Temple",
+          "term2": "Mountain Of The Lord"
+        },
+        {
+          "term1": "Temple",
+          "term2": "Beth-El"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "Children Of Judea",
+          "term2": "Judah"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Children Of Judea",
+          "term2": "Judea"
+        },
+        {
+          "term1": "Children Of Israel",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Ingathering Of Exiles",
+          "term2": "Heaven And Earth"
+        }
+      ]
+    }
+  }
+}

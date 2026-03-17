@@ -51,14 +51,30 @@ class PydanticCaller:
         ModelConfig.ensure_api_key_in_env()
 
         model_str = ModelConfig.get_pydantic_model()
-        logger.info(f"Initializing PydanticCaller with model: {model_str}")
+        is_thinking = ModelConfig.is_thinking_enabled()
+        logger.info(f"Initializing PydanticCaller with model: {model_str}, thinking={is_thinking}")
+
+        # Configure model settings based on thinking mode
+        if is_thinking:
+            # Enable thinking with a budget (tokens allocated for internal reasoning)
+            # Higher budget = more thorough reasoning but more tokens used
+            settings = ModelSettings(
+                temperature=0.5,
+                extra_body={
+                    "thinkingConfig": {
+                        "thinkingBudget": 8192  # Tokens for internal reasoning (1024-24576)
+                    }
+                }
+            )
+        else:
+            settings = ModelSettings(
+                temperature=0.5  # Lower temp for consistent structured extraction
+            )
 
         self.agent = Agent(
             model=model_str,
             output_type=FinalResponse,
-            model_settings=ModelSettings(
-                temperature=0.5  # Lower temp for consistent structured extraction
-            ),
+            model_settings=settings,
             system_prompt=(
                 "Extract entities and relationships from the text.\n\n"
                 
@@ -117,7 +133,11 @@ class PydanticCaller:
                 "- bornIn: Person's birthplace.\n"
                 "- diedIn: Place of death.\n"
                 "- visited: Person traveled to or was present at location.\n"
-                "- prayedAt: Person prayed at a specific location.\n\n"
+                "- prayedAt: Person prayed at a specific location.\n"
+                "  IMPORTANT FOR ALL Person→Place RELATIONSHIPS: The place name may NOT appear directly next to the event.\n"
+                "  Read the ENTIRE passage holistically and use narrative context to infer where events occurred.\n"
+                "  If passage discusses a person's action and separately mentions a location in the same narrative, make the connection.\n"
+                "  Don't require explicit co-occurrence in the same sentence.\n\n"
                 
                 "Person/Symbol → Place:\n"
                 "- associatedWithPlace: Any significant connection between a Person or Symbol and a Place\n"
