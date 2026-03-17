@@ -88,7 +88,8 @@ class PydanticCaller:
                 "  Includes: humans, angels, idols/gods, talking animals.\n"
                 "  Groups: 'The 70 Elders', 'Children Of Israel', 'The Sanhedrin', 'The Spies'.\n"
                 "  Examples: Moses, David, Sarah, Gabriel, Balaam's Donkey.\n"
-                "  NOT generic terms: priest, king, prophet, man, woman.\n"
+                "  NOT: Generic roles (king, priest), anonymous descriptions (survivors, rulers),"
+                "  possessive phrases (my people, his servants), or indefinite references (he who, those who).\\n"
                 "  Extract even if mentioned incidentally or as possessives.\n\n"
                 
                 "- Place: Named geographic locations (proper nouns).\n"
@@ -100,14 +101,17 @@ class PydanticCaller:
                 "  Always classify tribe names as TribeOfIsrael.\n\n"
                 
                 "- Nation: Named nations/peoples (proper nouns only).\n"
-                "  Use singular form: Egypt (not Egyptians), Moab (not Moabites).\n"
-                "  Examples: Egypt, Moab, Assyria, Babylon, Philistia, Edom.\n"
+                "  ALWAYS use the nation/place NAME, NOT the demonym (people's adjective).\n"
+                "  Convert demonyms to nation names: Aramean→Aram, Egyptian→Egypt, Moabite→Moab.\n"
+                "  Use singular form: Egypt (not Egyptians), Moab (not Moabites), Aram (not Aramean/Arameans).\n"
+                "  Examples: Egypt, Moab, Assyria, Babylon, Philistia, Edom, Aram, Persia, Greece.\n"
                 "  NOT generic terms: nation, people, enemy, kingdom.\n\n"
                 
                 "- Symbol: Specific Symbolic objects, concepts, or items with high significance.\n"
                 "  especially if used in comparison or contrastingly. Proper nouns or clearly defined concepts.\n"
                 "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush."
-                "  Examples: \n\n"
+                "  NOT: Generic objects used in imagery (sword, ox, garden, booth) unless they have a\n"
+                "       specific proper name. Most passages have few or no Symbols. \n\n"
                 
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"
@@ -144,26 +148,26 @@ class PydanticCaller:
                 "  NOT covered by bornIn, diedIn, visited, or prayedAt. Use ONLY if no other Person→Place relationship applies.\n"
                 "  Examples: 'The Ark of the Covenant' → 'Jerusalem', 'Moses' → 'Mount Sinai' (if not visited).\n"
                 "  NOT for Nations - use placeToNation instead.\n\n"
-                
+
                 "Person → TribeOfIsrael:\n"
                 "- personToTribeOfIsrael: Person belongs to or is associated with a tribe.\n\n"
-                
+
                 "Person → Nation:\n"
                 "- personBelongsToNation: Person is a member of a nation.\n\n"
-                
+
                 "Nation/Person ↔ Nation/Person:\n"
                 "- EnemyOf: Hostile relationship between nations, between persons, or person against a nation.\n"
                 "- AllyOf: Alliance or friendly relationship between nations, persons, or person with a nation.\n\n"
                 
                 "Place → Nation:\n"
                 "- placeToNation: Place belongs to or is associated with a nation.\n\n"
-                
+
                 "Person → Any Entity:\n"
                 "- prophesiedAbout: Prophet making prediction about any entity.\n\n"
                 
                 "Any Entity ↔ Any Entity:\n"
-                "- comparedTo: Similarity or likeness drawn between entities.\n"
-                "- contrastedWith: Difference or opposition drawn between entities.\n"
+                "- comparedTo: EXPLICIT simile/comparison ('like', 'as', 'resembles').\n"
+                "- contrastedWith: EXPLICIT contrast or opposition.\n"
                 "  NOTE: contrastedWith is for literary/symbolic contrasts, NOT for halakhic disagreements.\n"
                 "  Use disagreedWith for disputes between persons, not contrastedWith.\n"
                 "- AliasOf: Two names for the SAME entity. Only if text EXPLICITLY states they are the same.\n"

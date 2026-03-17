@@ -15,6 +15,62 @@ TRIBES_OF_ISRAEL = {
 # Entity category names - used for validation and iteration
 ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol')
 
+# Demonym to Nation name mapping (lowercase keys for matching)
+# Includes nations from Tanach, Talmud, and Midrash
+DEMONYM_TO_NATION = {
+    # === Major Biblical Nations ===
+    'aramean': 'Aram',
+    'arameans': 'Aram',
+    'syrian': 'Syria',  # Aram often called Syria
+    'syrians': 'Syria',
+    'egyptian': 'Egypt',
+    'egyptians': 'Egypt',
+    'moabite': 'Moab',
+    'moabites': 'Moab',
+    'ammonite': 'Ammon',
+    'ammonites': 'Ammon',
+    'edomite': 'Edom',
+    'edomites': 'Edom',
+    'philistine': 'Philistia',
+    'philistines': 'Philistia',
+    'assyrian': 'Assyria',
+    'assyrians': 'Assyria',
+    'babylonian': 'Babylon',
+    'babylonians': 'Babylon',
+    'chaldean': 'Chaldea',  # Chaldeans ruled Babylon
+    'chaldeans': 'Chaldea',
+    'persian': 'Persia',
+    'persians': 'Persia',
+    'median': 'Media',
+    'medians': 'Media',
+    'mede': 'Media',
+    'medes': 'Media',
+    'greek': 'Greece',
+    'greeks': 'Greece',
+
+    # === Canaanite Nations (Seven Nations) ===
+    'canaanite': 'Canaan',
+    'canaanites': 'Canaan',
+    'hittite': 'Hittites',
+    'hittites': 'Hittites',
+    'amalekite': 'Amalek',
+    'amalekites': 'Amalek',
+    'midianite': 'Midian',
+    'midianites': 'Midian',
+    'ishmaelite': 'Ishmael',
+    'ishmaelites': 'Ishmael',
+    'kenite': 'Kenites',
+    'kenites': 'Kenites',
+    'jebusite': 'Jebusites',
+    'jebusites': 'Jebusites',
+    'girgashite': 'Girgashites',
+    'girgashites': 'Girgashites',
+    'hivite': 'Hivites',
+    'hivites': 'Hivites',
+    'perizzite': 'Perizzites',
+    'perizzites': 'Perizzites',
+}
+
 # Symmetric relationships where (A, B) == (B, A)
 SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'disagreedWith', 'EnemyOf', 'AllyOf', 'AliasOf')
 
@@ -71,6 +127,27 @@ class Entities(BaseModel):
 
         return valid_tribes if valid_tribes else None
 
+    @field_validator('Nation')
+    @classmethod
+    def convert_demonyms_to_nations(cls, v: Optional[List[Entity]]) -> Optional[List[Entity]]:
+        """Convert demonyms (e.g., Aramean) to proper nation names (e.g., Aram)."""
+        if not v:
+            return v
+
+        corrected = []
+        for entity in v:
+            name_lower = entity.en_name.lower()
+            if name_lower in DEMONYM_TO_NATION:
+                corrected_name = DEMONYM_TO_NATION[name_lower]
+                logger.info(
+                    f"Auto-corrected demonym: '{entity.en_name}' → '{corrected_name}'"
+                )
+                corrected.append(Entity(en_name=corrected_name))
+            else:
+                corrected.append(entity)
+
+        return corrected if corrected else None
+
     @field_validator('Person', 'Nation')
     @classmethod
     def validate_proper_nouns(cls, v: Optional[List[Entity]], info) -> Optional[List[Entity]]:
@@ -81,10 +158,18 @@ class Entities(BaseModel):
         # Common words that should NOT be entities (even if capitalized)
         # Note: Person includes both individuals AND named groups
         GENERIC_PERSON_WORDS = {
+            # Generic role titles (singular)
             'king', 'priest', 'prophet', 'leader', 'man', 'woman',
             'child', 'servant', 'warrior', 'elder', 'judge', 'scribe',
-            'people', 'person', 'soldier', 'messenger', 'angel',
-            'group', 'elders', 'children', 'men', 'women'  # generic group terms
+            'soldier', 'messenger', 'person',
+            # Generic plurals
+            'people', 'men', 'women', 'children', 'elders',
+            # Possessive phrases (these are descriptions, not names)
+            'my people', 'his people', 'your people', 'their people',
+            'my servants', 'his servants',
+            # Indefinite references
+            'he who', 'she who', 'they who', 'those who', 'one who',
+            'whoever', 'anyone', 'someone'
         }
 
         # todo remove this poor logic? use Opus to fix up this file file...
