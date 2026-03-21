@@ -387,6 +387,7 @@ class DBapiMongoDB(DBapiInterface):
         from BackEnd.DataObjects.EntityObjects.ENation import ENation
         from BackEnd.DataObjects.EntityObjects.ESymbol import ESymbol
         from BackEnd.DataObjects.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+        from BackEnd.DataObjects.EntityObjects.ENumber import ENumber
 
         # Remove MongoDB _id field
         doc = {k: v for k, v in doc.items() if k != '_id'}
@@ -402,6 +403,7 @@ class DBapiMongoDB(DBapiInterface):
             EntityType.ENation: ENation,
             EntityType.ESymbol: ESymbol,
             EntityType.ETribeOfIsrael: ETribeOfIsrael,
+            EntityType.ENumber: ENumber,
         }
 
         entity_class = entity_class_map.get(entity_type, Entity)

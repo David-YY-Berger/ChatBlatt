@@ -113,6 +113,12 @@ class PydanticCaller:
                 "  NOT: Generic objects used in imagery (sword, ox, garden, booth) unless they have a\n"
                 "       specific proper name. Most passages have few or no Symbols. \n\n"
                 
+                "- Number: EXPLICIT numeric values mentioned in the text (including fractions).\n"
+                "  ALWAYS provide numbers as NUMERIC VALUES, not words.\n"
+                "  Convert written numbers to digits: 'thirty seven' → '37', 'three and a half' → '3.5'.\n"
+                "  Examples: '7', '40', '12', '70', '3.5', '613'.\n"
+                "  NOT: 'a', 'an', 'one', 'each' unless it's an explicit count.\n\n"
+                
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"
                 "- If entity is both Place AND Nation → include in BOTH lists.\n\n"

@@ -15,7 +15,7 @@ TRIBES_OF_ISRAEL = {
 }
 
 # Entity category names - used for validation and iteration
-ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol')
+ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol', 'Number')
 
 # Demonym to Nation name mapping (lowercase keys for matching)
 # Includes nations from Tanach, Talmud, and Midrash
@@ -109,6 +109,7 @@ class Entities(BaseModel):
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
+    Number: Optional[List[Entity]] = Field(default_factory=list, description="Explicit numeric values (e.g., 7, 40, 3.5)")
 
     @field_validator('TribeOfIsrael')
     @classmethod
@@ -686,4 +687,4 @@ class ExtractionResult(BaseModel):
         return self
 
 class FinalResponse(BaseModel):
-
+    res: ExtractionResult

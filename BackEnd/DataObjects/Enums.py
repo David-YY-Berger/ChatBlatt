@@ -62,6 +62,7 @@ class EntityType(DescribedEnum):
     ETribeOfIsrael  = ("T", "TribeOfIsrael")
     ENation = ("N", "Nation")
     ESymbol = ("S", "Symbol")
+    ENumber = ("M", "Number")
 
 class RelType(DescribedEnum):
     # Person/Group → Person/Group

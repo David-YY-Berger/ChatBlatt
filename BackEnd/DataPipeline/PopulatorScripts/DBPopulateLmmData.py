@@ -193,7 +193,7 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_Exodus_0_6:14-25',
 
             # childOfMother
-            "TN_I Kings_0_2:13–3:2",
+            # "TN_I Kings_0_2:13–3:2",
 
             # descendantOf
             # 'BT_Sanhedrin_0_96b:2-9',
@@ -252,6 +252,9 @@ class DBPopulateLmmData(DBParentClass):
 
         #     symbol and compared to - the torah scroll and r eliezer
         #     'BT_Sotah_0_49b:15-19'
+
+            # number
+            "TN_II Kings_0_14:1–22"
         ]
         res = [self.db_api.find_one_source_content(k) for k in key_strs]
         return res
