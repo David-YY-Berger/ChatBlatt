@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from typing import List, Optional, Literal, Set
 from pydantic import BaseModel, Field, field_validator, model_validator
 import logging
@@ -684,4 +686,4 @@ class ExtractionResult(BaseModel):
         return self
 
 class FinalResponse(BaseModel):
-    res: ExtractionResult
+

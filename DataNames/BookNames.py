@@ -1,3 +1,4 @@
+# bs"d - lehagdil torah velahadir
 from dataclasses import dataclass
 
 @dataclass(frozen=True)

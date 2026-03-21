@@ -1,3 +1,4 @@
+# bs"d - lehagdil torah velahadir
 from BackEnd.DataObjects.EntityObjects.Entity import Entity, TransientField
 from BackEnd.DataObjects.Enums import PlaceType, EntityType
 from typing import List

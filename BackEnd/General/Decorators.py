@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 import threading
 from functools import wraps
 

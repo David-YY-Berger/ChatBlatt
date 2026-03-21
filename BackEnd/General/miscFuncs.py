@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 import re
 
 import unicodedata

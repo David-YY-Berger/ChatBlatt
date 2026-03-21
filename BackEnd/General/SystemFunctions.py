@@ -1,8 +1,10 @@
+# bs"d - lehagdil torah velahadir
 from datetime import datetime
 
 
 def get_ts():
     return datetime.now().isoformat()
+
 
 def get_ts_readable_str(ts: str) -> str:
     dt = datetime.fromisoformat(ts)

@@ -1,8 +1,6 @@
+# bs"d - lehagdil torah velahadir
 from dataclasses import dataclass, field
 from typing import List, Optional
-
-from BackEnd.DataObjects.EntityObjects.Entity import Entity
-from BackEnd.DataObjects.Rel import Rel
 from BackEnd.Main.QuestionFromUser import QuestionFromUser
 
 
@@ -27,5 +25,4 @@ class QuestionRow:
             rels=[str(n) for n in self.rels],  # ensure strings
             max_sources=self.max_sources or 0
         )
-
 

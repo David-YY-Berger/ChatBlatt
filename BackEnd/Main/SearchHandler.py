@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from BackEnd.DataObjects.SourceClasses.SourceClass import SourceClass
 from BackEnd.DataObjects.SourceClasses.SourceMetadata import SourceMetadata
 from BackEnd.DB.Collections import CollectionObjs

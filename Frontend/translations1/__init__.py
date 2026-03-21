@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from __future__ import annotations
 
 import functools
@@ -48,4 +50,3 @@ def get_text(key: str, lang: str) -> str:
     if value is None:
         return key
     return str(value)
-

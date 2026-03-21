@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from enum import Enum
 
 class DescribedEnum(Enum):

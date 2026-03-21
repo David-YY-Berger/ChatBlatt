@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from dataclasses import dataclass, field
 from typing import List
 
@@ -17,5 +19,4 @@ class Answer:
     key: str = field(default="0")  # TODO: assign proper unique db key later
     ts: str = field(default_factory=lambda: SystemFunctions.get_ts())
     src_contents: List[SourceContent] = field(default_factory=list) #optional..
-
 

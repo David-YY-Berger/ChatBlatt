@@ -1,3 +1,4 @@
+# bs"d - lehagdil torah velahadir
 import os
 
 ############################################## local Computer output paths #######################################

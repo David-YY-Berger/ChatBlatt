@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 class InvalidDataError(Exception):
     def __init__(self, ref, index, errors):
         self.ref = ref

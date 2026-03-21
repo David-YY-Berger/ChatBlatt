@@ -1,3 +1,5 @@
+# bs"d - lehagdil torah velahadir
+
 from dataclasses import dataclass, field
 from typing import List
 
