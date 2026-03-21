@@ -1,0 +1,417 @@
+﻿COST: Tokens: Total=12183 approx cost usd = $0.000000 (Prompt=5451, Completion=6732)
+SOURCE:
+II Kings 14:1–22  (TN_II Kings_0_14:1–22)
+
+HEBREW:
+בִּשְׁנַ֣ת שְׁתַּ֔יִם לְיוֹאָ֥שׁ בֶּן־יוֹאָחָ֖ז מֶ֣לֶךְ יִשְׂרָאֵ֑ל מָלַ֛ךְ אֲמַצְיָ֥הוּ בֶן־יוֹאָ֖שׁ מֶ֥לֶךְ יְהוּדָֽה׃ בֶּן־עֶשְׂרִ֨ים וְחָמֵ֤שׁ שָׁנָה֙ הָיָ֣ה בְמׇלְכ֔וֹ וְעֶשְׂרִ֤ים וָתֵ֙שַׁע֙ שָׁנָ֔ה מָלַ֖ךְ בִּירוּשָׁלָ֑͏ִם וְשֵׁ֣ם אִמּ֔וֹ [יְהוֹעַדָּ֖ן] מִן־יְרוּשָׁלָֽ͏ִם׃ וַיַּ֤עַשׂ הַיָּשָׁר֙ בְּעֵינֵ֣י יְהֹוָ֔ה רַ֕ק לֹ֖א כְּדָוִ֣ד אָבִ֑יו כְּכֹ֧ל אֲשֶׁר־עָשָׂ֛ה יוֹאָ֥שׁ אָבִ֖יו עָשָֽׂה׃ רַ֥ק הַבָּמ֖וֹת לֹא־סָ֑רוּ ע֥וֹד הָעָ֛ם מְזַבְּחִ֥ים וּֽמְקַטְּרִ֖ים בַּבָּמֽוֹת׃ וַיְהִ֕י כַּאֲשֶׁ֛ר חָזְקָ֥ה הַמַּמְלָכָ֖ה בְּיָד֑וֹ וַיַּךְ֙ אֶת־עֲבָדָ֔יו הַמַּכִּ֖ים אֶת־הַמֶּ֥לֶךְ אָבִֽיו׃ וְאֶת־בְּנֵ֥י הַמַּכִּ֖ים לֹ֣א הֵמִ֑ית כַּכָּת֣וּב בְּסֵֽפֶר־תּֽוֹרַת־מֹ֠שֶׁ֠ה אֲשֶׁר־צִוָּ֨ה יְהֹוָ֜ה לֵאמֹ֗ר לֹא־יוּמְת֨וּ אָב֤וֹת עַל־בָּנִים֙ וּבָנִים֙ לֹא־יוּמְת֣וּ עַל־אָב֔וֹת כִּ֛י אִם־אִ֥ישׁ בְּחֶטְא֖וֹ [יוּמָֽת] ׃ הוּא־הִכָּ֨ה אֶת־אֱד֤וֹם בְּגֵי־ (המלח) עֲשֶׂ֣רֶת אֲלָפִ֔ים וְתָפַ֥שׂ אֶת־הַסֶּ֖לַע בַּמִּלְחָמָ֑ה וַיִּקְרָ֤א אֶת־שְׁמָהּ֙ יׇקְתְאֵ֔ל עַ֖ד הַיּ֥וֹם הַזֶּֽה׃ אָ֣ז שָׁלַ֤ח אֲמַצְיָה֙ מַלְאָכִ֔ים אֶל־יְהוֹאָ֨שׁ בֶּן־יְהוֹאָחָ֧ז בֶּן־יֵה֛וּא מֶ֥לֶךְ יִשְׂרָאֵ֖ל לֵאמֹ֑ר לְכָ֖ה נִתְרָאֶ֥ה פָנִֽים׃ וַיִּשְׁלַ֞ח יְהוֹאָ֣שׁ מֶלֶךְ־יִשְׂרָאֵ֗ל אֶל־אֲמַצְיָ֣הוּ מֶלֶךְ־יְהוּדָה֮ לֵאמֹר֒ הַח֜וֹחַ אֲשֶׁ֣ר בַּלְּבָנ֗וֹן שָׁ֠לַ֠ח אֶל־הָאֶ֜רֶז אֲשֶׁ֤ר בַּלְּבָנוֹן֙ לֵאמֹ֔ר תְּנָה־אֶת־בִּתְּךָ֥ לִבְנִ֖י לְאִשָּׁ֑ה וַֽתַּעֲבֹ֞ר חַיַּ֤ת הַשָּׂדֶה֙ אֲשֶׁ֣ר בַּלְּבָנ֔וֹן וַתִּרְמֹ֖ס אֶת־הַחֽוֹחַ׃ הַכֵּ֤ה הִכִּ֙יתָ֙ אֶת־אֱד֔וֹם וּֽנְשָׂאֲךָ֖ לִבֶּ֑ךָ הִכָּבֵד֙ וְשֵׁ֣ב בְּבֵיתֶ֔ךָ וְלָ֤מָּה תִתְגָּרֶה֙ בְּרָעָ֔ה וְנָ֣פַלְתָּ֔ה אַתָּ֖ה וִיהוּדָ֥ה עִמָּֽךְ׃ וְלֹא־שָׁמַ֣ע אֲמַצְיָ֔הוּ וַיַּ֨עַל יְהוֹאָ֤שׁ מֶֽלֶךְ־יִשְׂרָאֵל֙ וַיִּתְרָא֣וּ פָנִ֔ים ה֖וּא וַאֲמַצְיָ֣הוּ מֶלֶךְ־יְהוּדָ֑ה בְּבֵ֥ית שֶׁ֖מֶשׁ אֲשֶׁ֥ר לִיהוּדָֽה׃ וַיִּנָּ֥גֶף יְהוּדָ֖ה לִפְנֵ֣י יִשְׂרָאֵ֑ל וַיָּנֻ֖סוּ אִ֥ישׁ לְאֹהָלָֽו ׃ וְאֵת֩ אֲמַצְיָ֨הוּ מֶלֶךְ־יְהוּדָ֜ה בֶּן־יְהוֹאָ֣שׁ בֶּן־אֲחַזְיָ֗הוּ תָּפַ֛שׂ יְהוֹאָ֥שׁ מֶלֶךְ־יִשְׂרָאֵ֖ל בְּבֵ֣ית שָׁ֑מֶשׁ [וַיָּבֹא֙] יְר֣וּשָׁלַ֔͏ִם וַיִּפְרֹץ֩ בְּחוֹמַ֨ת יְרוּשָׁלַ֜͏ִם בְּשַׁ֤עַר אֶפְרַ֙יִם֙ עַד־שַׁ֣עַר הַפִּנָּ֔ה אַרְבַּ֥ע מֵא֖וֹת אַמָּֽה׃ וְלָקַ֣ח אֶת־כׇּל־הַזָּֽהָב־וְ֠הַכֶּ֠סֶף וְאֵ֨ת כׇּל־הַכֵּלִ֜ים הַנִּמְצְאִ֣ים בֵּית־יְהֹוָ֗ה וּבְאֹֽצְרוֹת֙ בֵּ֣ית הַמֶּ֔לֶךְ וְאֵ֖ת בְּנֵ֣י הַתַּעֲרֻב֑וֹת וַיָּ֖שׇׁב שֹׁמְרֽוֹנָה׃ וְיֶ֩תֶר֩ דִּבְרֵ֨י יְהוֹאָ֜שׁ אֲשֶׁ֤ר עָשָׂה֙ וּגְב֣וּרָת֔וֹ וַאֲשֶׁ֣ר נִלְחַ֔ם עִ֖ם אֲמַצְיָ֣הוּ מֶלֶךְ־יְהוּדָ֑ה הֲלֹא־הֵ֣ם כְּתוּבִ֗ים עַל־סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יִשְׂרָאֵֽל׃ וַיִּשְׁכַּ֤ב יְהוֹאָשׁ֙ עִם־אֲבֹתָ֔יו וַיִּקָּבֵר֙ בְּשֹׁ֣מְר֔וֹן עִ֖ם מַלְכֵ֣י יִשְׂרָאֵ֑ל וַיִּמְלֹ֛ךְ יָרׇבְעָ֥ם בְּנ֖וֹ תַּחְתָּֽיו׃ וַיְחִ֨י אֲמַצְיָ֤הוּ בֶן־יוֹאָשׁ֙ מֶ֣לֶךְ יְהוּדָ֔ה אַחֲרֵ֣י מ֔וֹת יְהוֹאָ֥שׁ בֶּן־יְהוֹאָחָ֖ז מֶ֣לֶךְ יִשְׂרָאֵ֑ל חֲמֵ֥שׁ עֶשְׂרֵ֖ה שָׁנָֽה׃ וְיֶ֖תֶר דִּבְרֵ֣י אֲמַצְיָ֑הוּ הֲלֹא־הֵ֣ם כְּתֻבִ֗ים עַל־סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יְהוּדָֽה׃ וַיִּקְשְׁר֨וּ עָלָ֥יו קֶ֛שֶׁר בִּירוּשָׁלַ֖͏ִם וַיָּ֣נׇס לָכִ֑ישָׁה וַיִּשְׁלְח֤וּ אַחֲרָיו֙ לָכִ֔ישָׁה וַיְמִתֻ֖הוּ שָֽׁם׃ וַיִּשְׂא֥וּ אֹת֖וֹ עַל־הַסּוּסִ֑ים וַיִּקָּבֵ֧ר בִּירוּשָׁלַ֛͏ִם עִם־אֲבֹתָ֖יו בְּעִ֥יר דָּוִֽד׃ וַיִּקְח֞וּ כׇּל־עַ֤ם יְהוּדָה֙ אֶת־עֲזַרְיָ֔ה וְה֕וּא בֶּן־שֵׁ֥שׁ עֶשְׂרֵ֖ה שָׁנָ֑ה וַיַּמְלִ֣כוּ אֹת֔וֹ תַּ֖חַת אָבִ֥יו אֲמַצְיָֽהוּ׃ ה֚וּא בָּנָ֣ה אֶת־אֵילַ֔ת וַיְשִׁבֶ֖הָ לִֽיהוּדָ֑ה אַחֲרֵ֥י שְׁכַֽב־הַמֶּ֖לֶךְ עִם־אֲבֹתָֽיו׃
+
+ENGLISH:
+In the second year of King Joash son of Joahaz of Israel, Amaziah son of King Joash of Judah became king. He was twenty-five years old when he became king, and he reigned twenty-nine years in Jerusalem; his mothers name was Jehoaddan of Jerusalem. He did what was pleasing to GOD, but not like his forefather David; he did just as his father Joash had done. However, the shrines were not removed; the people continued to sacrifice and make offerings at the shrines. Once he had the kingdom firmly in his grasp, he put to death the courtiers who had assassinated his father the king. But he did not put to death the children of the assassins, in accordance with what is written in the Book of the Teaching of Moses, where GOD commanded, Parents shall not be put to death for children, nor children be put to death for parents; they shall be put to death only for their own crime. He defeated ten thousand Edomites in the Valley of Salt, and he captured Sela in battle and renamed it Joktheel, as is still the case. Then Amaziah sent envoys to King Jehoash son of Jehoahaz son of Jehu of Israel, with this message: Come, let us confront each other. King Jehoash of Israel sent back this message to King Amaziah of Judah: The thistle in Lebanon sent this message to the cedar in Lebanon, Give your daughter to my son in marriage. But a wild beast in Lebanon went by and trampled down the thistle. Because you have defeated Edom, you have become arrogant. Stay home and enjoy your glory, rather than provoke disaster and fall, dragging Judah down with you. But Amaziah paid no heed; so King Jehoash of Israel advanced, and he and King Amaziah of Judah confronted each other at Beth-shemesh in Judah. Judah was routed by Israel, and [the Judahites] fled to their homes. King Jehoash of Israel captured King Amaziah son of Jehoash son of Ahaziah of Judah at Beth-shemesh. He marched on Jerusalem, and he made a breach of four hundred cubits in the wall of Jerusalem, from the Ephraim Gate to the Corner Gate. He carried off all the gold and silver and all the vessels that there were in the House of GOD and in the treasuries of the royal palace, as well as hostages; and he returned to Samaria. The other events of Jehoashs reign, and all his actions and exploits, and his war with King Amaziah of Judah, are recorded in the Annals of the Kings of Israel. Jehoash rested with his ancestors, and was buried in Samaria with the kings of Israel; his son Jeroboam succeeded him as king. King Amaziah son of Joash of Judah lived fifteen years after the death of King Jehoash son of Jehoahaz of Israel. The other events of Amaziahs reign are recorded in the Annals of the Kings of Judah. A conspiracy was formed against him in Jerusalem and he fled to Lachish; but they sent agents after him to Lachish, and they killed him there. They brought back his body on horses, and he was buried with his ancestors in Jerusalem, in the City of David. Then all the people of Judah took Azariah, who was sixteen years old, and proclaimed him king to succeed his father Amaziah. It was he who rebuilt Elath and restored it to Judah, after King [Amaziah] rested with his ancestors.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Amaziah reigned Judah, fought Edom, lost to Israel.",
+    "heb_summary": "אמציה מלך יהודה, נלחם באדום, הפסיד לישראל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Amaziah"
+        },
+        {
+          "en_name": "King Joash (Judah)"
+        },
+        {
+          "en_name": "King Joash (Israel)"
+        },
+        {
+          "en_name": "Jehoaddan"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Courtiers"
+        },
+        {
+          "en_name": "Assassins"
+        },
+        {
+          "en_name": "King Jehoash (Israel)"
+        },
+        {
+          "en_name": "Jehu"
+        },
+        {
+          "en_name": "Jeroboam"
+        },
+        {
+          "en_name": "Azariah"
+        },
+        {
+          "en_name": "Ahaziah"
+        },
+        {
+          "en_name": "Joahaz"
+        },
+        {
+          "en_name": "People Of Judah"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jerusalem"
+        },
+        {
+          "en_name": "Valley Of Salt"
+        },
+        {
+          "en_name": "Sela"
+        },
+        {
+          "en_name": "Joktheel"
+        },
+        {
+          "en_name": "Beth-Shemesh"
+        },
+        {
+          "en_name": "Samaria"
+        },
+        {
+          "en_name": "City Of David"
+        },
+        {
+          "en_name": "Lachish"
+        },
+        {
+          "en_name": "Elath"
+        },
+        {
+          "en_name": "Ephraim Gate"
+        },
+        {
+          "en_name": "Corner Gate"
+        },
+        {
+          "en_name": "House Of God"
+        },
+        {
+          "en_name": "Royal Palace"
+        },
+        {
+          "en_name": "Lebanon"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Edom"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Book Of The Teaching Of Moses"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2"
+        },
+        {
+          "en_name": "25"
+        },
+        {
+          "en_name": "29"
+        },
+        {
+          "en_name": "10000"
+        },
+        {
+          "en_name": "400"
+        },
+        {
+          "en_name": "15"
+        },
+        {
+          "en_name": "16"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "King Joash (Israel)",
+          "term2": "Joahaz"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "King Joash (Judah)"
+        },
+        {
+          "term1": "Jeroboam",
+          "term2": "King Jehoash (Israel)"
+        },
+        {
+          "term1": "Azariah",
+          "term2": "Amaziah"
+        },
+        {
+          "term1": "King Joash (Judah)",
+          "term2": "Ahaziah"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Amaziah",
+          "term2": "Jehoaddan"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Amaziah",
+          "term2": "Ahaziah"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "David"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Amaziah",
+          "term2": "King Jehoash (Israel)"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Jehoaddan",
+          "term2": "Jerusalem"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Amaziah",
+          "term2": "Lachish"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "King Jehoash (Israel)",
+          "term2": "Samaria"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Amaziah",
+          "term2": "Beth-Shemesh"
+        },
+        {
+          "term1": "King Jehoash (Israel)",
+          "term2": "Beth-Shemesh"
+        },
+        {
+          "term1": "King Jehoash (Israel)",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "Lachish"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "God",
+          "term2": "House Of God"
+        },
+        {
+          "term1": "Book Of The Teaching Of Moses",
+          "term2": "House Of God"
+        }
+      ],
+      "personToTribeOfIsrael": [
+        {
+          "term1": "Amaziah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "King Joash (Judah)",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Jehoaddan",
+          "term2": "Judah"
+        },
+        {
+          "term1": "David",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Azariah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Ahaziah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "People Of Judah",
+          "term2": "Judah"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "King Joash (Israel)",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Joahaz",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "King Joash (Judah)",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Jehoaddan",
+          "term2": "Judah"
+        },
+        {
+          "term1": "King Jehoash (Israel)",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Jehu",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Jeroboam",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Azariah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Ahaziah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "People Of Judah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Courtiers",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Assassins",
+          "term2": "Judah"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Judah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Amaziah",
+          "term2": "King Jehoash (Israel)"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Edom"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Jerusalem",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Valley Of Salt",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Sela",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Joktheel",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Beth-Shemesh",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Samaria",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Lachish",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Elath",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Ephraim Gate",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Corner Gate",
+          "term2": "Judah"
+        },
+        {
+          "term1": "House Of God",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Royal Palace",
+          "term2": "Judah"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Amaziah",
+          "term2": "David"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Sela",
+          "term2": "Joktheel"
+        }
+      ]
+    }
+  }
+}

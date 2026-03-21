@@ -1,0 +1,407 @@
+﻿{
+    "res": {
+        "en_summary": "Amaziah reigned Judah, fought Edom, lost to Israel.",
+        "heb_summary": "אמציה מלך יהודה, נלחם באדום, הפסיד לישראל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Amaziah"
+                },
+                {
+                    "en_name": "King Joash (Judah)"
+                },
+                {
+                    "en_name": "King Joash (Israel)"
+                },
+                {
+                    "en_name": "Jehoaddan"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Courtiers"
+                },
+                {
+                    "en_name": "Assassins"
+                },
+                {
+                    "en_name": "King Jehoash (Israel)"
+                },
+                {
+                    "en_name": "Jehu"
+                },
+                {
+                    "en_name": "Jeroboam"
+                },
+                {
+                    "en_name": "Azariah"
+                },
+                {
+                    "en_name": "Ahaziah"
+                },
+                {
+                    "en_name": "Joahaz"
+                },
+                {
+                    "en_name": "People Of Judah"
+                },
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Valley Of Salt"
+                },
+                {
+                    "en_name": "Sela"
+                },
+                {
+                    "en_name": "Joktheel"
+                },
+                {
+                    "en_name": "Beth-Shemesh"
+                },
+                {
+                    "en_name": "Samaria"
+                },
+                {
+                    "en_name": "City Of David"
+                },
+                {
+                    "en_name": "Lachish"
+                },
+                {
+                    "en_name": "Elath"
+                },
+                {
+                    "en_name": "Ephraim Gate"
+                },
+                {
+                    "en_name": "Corner Gate"
+                },
+                {
+                    "en_name": "House Of God"
+                },
+                {
+                    "en_name": "Royal Palace"
+                },
+                {
+                    "en_name": "Lebanon"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Edom"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Book Of The Teaching Of Moses"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2"
+                },
+                {
+                    "en_name": "25"
+                },
+                {
+                    "en_name": "29"
+                },
+                {
+                    "en_name": "10000"
+                },
+                {
+                    "en_name": "400"
+                },
+                {
+                    "en_name": "15"
+                },
+                {
+                    "en_name": "16"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "King Joash (Israel)",
+                    "term2": "Joahaz"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "King Joash (Judah)"
+                },
+                {
+                    "term1": "Jeroboam",
+                    "term2": "King Jehoash (Israel)"
+                },
+                {
+                    "term1": "Azariah",
+                    "term2": "Amaziah"
+                },
+                {
+                    "term1": "King Joash (Judah)",
+                    "term2": "Ahaziah"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "Jehoaddan"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "Ahaziah"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "David"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "King Jehoash (Israel)"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Jehoaddan",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "Lachish"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "King Jehoash (Israel)",
+                    "term2": "Samaria"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "Beth-Shemesh"
+                },
+                {
+                    "term1": "King Jehoash (Israel)",
+                    "term2": "Beth-Shemesh"
+                },
+                {
+                    "term1": "King Jehoash (Israel)",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "Lachish"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "House Of God"
+                },
+                {
+                    "term1": "Book Of The Teaching Of Moses",
+                    "term2": "House Of God"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "King Joash (Judah)",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoaddan",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Azariah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Ahaziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "People Of Judah",
+                    "term2": "Judah"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "King Joash (Israel)",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Joahaz",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "King Joash (Judah)",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Jehoaddan",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "King Jehoash (Israel)",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Jehu",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Jeroboam",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Azariah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Ahaziah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "People Of Judah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Courtiers",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Assassins",
+                    "term2": "Judah"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Judah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Amaziah",
+                    "term2": "King Jehoash (Israel)"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Edom"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Valley Of Salt",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Sela",
+                    "term2": "Edom"
+                },
+                {
+                    "term1": "Joktheel",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Beth-Shemesh",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Samaria",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Lachish",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Elath",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Ephraim Gate",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Corner Gate",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "House Of God",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Royal Palace",
+                    "term2": "Judah"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Amaziah",
+                    "term2": "David"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Sela",
+                    "term2": "Joktheel"
+                }
+            ]
+        }
+    },
+    "key": "TN_II Kings_0_14:1–22"
+}
