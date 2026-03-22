@@ -74,7 +74,7 @@ DEMONYM_TO_NATION = {
 }
 
 # Symmetric relationships where (A, B) == (B, A)
-SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'disagreedWith', 'EnemyOf', 'AllyOf', 'AliasOf')
+SYMMETRIC_RELATIONSHIPS = ('spouseOf', 'spokeWith', 'disagreedWith', 'EnemyOf', 'AllyOf', 'AliasOf', 'comparedTo', 'contrastedWith')
 
 # Person → Place relationships that supersede associatedWithPlace
 # If a (person, place) pair exists in any of these, it should NOT appear in associatedWithPlace
