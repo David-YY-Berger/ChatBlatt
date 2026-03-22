@@ -562,7 +562,7 @@ class Relationships(BaseModel):
     visited: Optional[List[Relation]] = Field(default_factory=list)
     prayedAt: Optional[List[Relation]] = Field(default_factory=list)
 
-    # Person/Group OR Symbol → Place
+    # Person/Group → Place
     associatedWithPlace: Optional[List[Relation]] = Field(default_factory=list)
 
     # Person/Group → TribeOfIsrael
@@ -669,8 +669,8 @@ class ExtractionResult(BaseModel):
             'visited': ('Person', 'Place'),
             'prayedAt': ('Person', 'Place'),
 
-            # Person/Group OR Symbol → Place (NOT Nation)
-            'associatedWithPlace': [('Person', 'Place'), ('Symbol', 'Place')],
+            # Person/Group → Place (NOT Nation, NOT Symbol)
+            'associatedWithPlace': ('Person', 'Place'),
 
             # Person/Group → TribeOfIsrael
             'personToTribeOfIsrael': ('Person', 'TribeOfIsrael'),

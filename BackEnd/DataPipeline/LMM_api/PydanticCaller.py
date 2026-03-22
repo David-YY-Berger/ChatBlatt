@@ -89,8 +89,8 @@ class PydanticCaller:
                 "  Groups: 'The 70 Elders', 'Children Of Israel', 'The Sanhedrin', 'The Spies'.\n"
                 "  Examples: Moses, David, Sarah, Gabriel.\n"
                 "  NOT: Generic roles (king, priest), anonymous descriptions (survivors, rulers),\n"
-                "  possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
-                "  or talking animals (use Animal category for those).\n"
+                "  NOT: possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
+                "  NOT: or talking animals (use Animal category for those).\n"
                 "  Extract even if mentioned incidentally or as possessives.\n\n"
                 
                 "- Animal: Named real or mythical animals (proper nouns or specific types).\n"
@@ -182,11 +182,11 @@ class PydanticCaller:
                 "  If passage discusses a person's action and separately mentions a location in the same narrative, make the connection.\n"
                 "  Don't require explicit co-occurrence in the same sentence.\n\n"
                 
-                "Person/Symbol → Place:\n"
-                "- associatedWithPlace: Any significant connection between a Person or Symbol and a Place\n"
+                "Person → Place:\n"
+                "- associatedWithPlace: Any significant connection between a Person and a Place\n"
                 "  NOT covered by bornIn, diedIn, visited, or prayedAt. Use ONLY if no other Person→Place relationship applies.\n"
-                "  Examples: 'The Ark of the Covenant' → 'Jerusalem', 'Moses' → 'Mount Sinai' (if not visited).\n"
-                "  NOT for Nations - use placeToNation instead.\n\n"
+                "  Examples: 'Moses' → 'Mount Sinai' (if not visited).\n"
+                "  NOT for Symbols or Nations - use other relationships for those.\n\n"
 
                 "Person → TribeOfIsrael:\n"
                 "- personToTribeOfIsrael: Person belongs to or is associated with a tribe.\n\n"
@@ -202,7 +202,8 @@ class PydanticCaller:
                 "- placeToNation: Place belongs to or is associated with a nation.\n\n"
 
                 "Person → Any Entity:\n"
-                "- prophesiedAbout: ONLY PROPHETS (not sages) making prophetic statements about any entity.\n\n"
+                "- prophesiedAbout: ONLY PROPHETS (not sages) making prophetic statements about any entity.\n"
+                "  God, or angels, are not prophets. A prophet is only a person"
                 
                 "Any Entity ↔ Any Entity:\n"
                 "- comparedTo: EXPLICIT simile/comparison ('like', 'as', 'resembles').\n"

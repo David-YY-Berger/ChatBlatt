@@ -221,10 +221,10 @@ class DBPopulateLmmData(DBParentClass):
             # "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
 
             # contrastedWith, non literal places (world to come vs this world) - ensure rav no prophesying
-            'BT_Berakhot_0_17a:7-12',
+            # 'BT_Berakhot_0_17a:7-12',
 
             # AllyOf (person - person)
-            # 'TN_I Kings_0_5:15–32',
+            'TN_I Kings_0_5:15–32',
 
             # bornIn
             # 'TN_Genesis_0_41:47-53',
