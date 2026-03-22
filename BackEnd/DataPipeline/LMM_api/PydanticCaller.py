@@ -92,7 +92,7 @@ class PydanticCaller:
                 "  NOT: possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
                 "  NOT: or talking animals (use Animal category for those).\n"
                 "  Extract even if mentioned incidentally or as possessives.\n\n"
-                "  If same name appears with truly different spelling, exract as separate entities with Alias"
+                "  If same name appears with truly different spelling, extract as separate entities with Alias"
                 
                 "- Animal: Named real or mythical animals (proper nouns or specific types).\n"
                 "  Includes: Real animals (Lion, Eagle, Serpent, Ox, Dove, Quail).\n"
@@ -212,7 +212,7 @@ class PydanticCaller:
                 "- contrastedWith: EXPLICIT contrast or opposition.\n"
                 "  NOTE: contrastedWith is for literary/symbolic contrasts, NOT for halakhic disagreements.\n"
                 "  Use disagreedWith for disputes between persons, not contrastedWith.\n"
-                "- AliasOf: Two names for the SAME entity. Only if text EXPLICITLY states they are the same.\n"
+                "- AliasOf: Two names for the SAME entity. Only if text EXPLICITLY states they are the same, and it is LITERAL (not figurative).\n"
                 "  Examples: 'Hadassa, who is Esther', 'Jacob, who is Israel'.\n"
                 "  NOT for similar entities or comparisons - only explicit identity.\n\n"
                 

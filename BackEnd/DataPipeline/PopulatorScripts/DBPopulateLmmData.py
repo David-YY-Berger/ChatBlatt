@@ -241,7 +241,7 @@ class DBPopulateLmmData(DBParentClass):
             # diedIn (debora)
             # "TN_Genesis_0_35:1-9",
 
-            # personToTribeOfIsrael
+            # personToTribeOfIsrael, also same person appearing with diff spelling (hege and hegai)
             # "TN_Esther_0_2:1–20",
 
             # bat kol, beit shamai bet hillel (groups)
