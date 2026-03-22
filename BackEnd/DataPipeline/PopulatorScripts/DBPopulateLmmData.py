@@ -251,10 +251,23 @@ class DBPopulateLmmData(DBParentClass):
         #     'BT_Sanhedrin_0_67b:22-68a:12',
 
         #     symbol and compared to - the torah scroll and r eliezer
-        #     'BT_Sotah_0_49b:15-19'
+        #     'BT_Sotah_0_49b:15-19',
 
             # number
-            "TN_II Kings_0_14:1–22"
+            # "TN_II Kings_0_14:1–22",
+
+            # food - quail (food and animal)
+            "BT_Yoma_0_75a:19-75b:8",
+
+            # animal - re'em
+            # "BT_Gittin_0_68a:5-68b:20",
+            # animal speaking
+            # "BT_Gittin_0_45a:18-22",
+
+            # plant , carob ( = food), sycamore (not food)
+            # "BT_Bava Batra_0_70a:2-7",
+
+
         ]
         res = [self.db_api.find_one_source_content(k) for k in key_strs]
         return res

@@ -15,7 +15,7 @@ TRIBES_OF_ISRAEL = {
 }
 
 # Entity category names - used for validation and iteration
-ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol', 'Number')
+ENTITY_CATEGORIES = ('Person', 'Place', 'TribeOfIsrael', 'Nation', 'Symbol', 'Number', 'Animal', 'Food', 'Plant')
 
 # Demonym to Nation name mapping (lowercase keys for matching)
 # Includes nations from Tanach, Talmud, and Midrash
@@ -236,6 +236,9 @@ class Entities(BaseModel):
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
     Number: Optional[List[Entity]] = Field(default_factory=list, description="Explicit numeric values (e.g., 7, 40, 3.5)")
+    Animal: Optional[List[Entity]] = Field(default_factory=list, description="Real and mythical animals (e.g., Lion, Eagle, Serpent, Balaam's Donkey)")
+    Food: Optional[List[Entity]] = Field(default_factory=list, description="Food items in normalized singular form (e.g., Bread, Manna, Wine)")
+    Plant: Optional[List[Entity]] = Field(default_factory=list, description="Plants (edible and inedible) in normalized singular form (e.g., Grape, Fig, Cedar)")
 
     @field_validator('Number')
     @classmethod
@@ -347,6 +350,41 @@ class Entities(BaseModel):
         return valid_entities if valid_entities else None
 
     @model_validator(mode='after')
+    def exclude_from_symbol_if_in_other_categories(self):
+        """
+        If an entity appears in Animal, Food, or Plant, it should NOT appear in Symbol.
+        Remove such entities from Symbol.
+        """
+        if not self.Symbol:
+            return self
+
+        # Collect all entity names from Animal, Food, Plant
+        excluded_names = set()
+        for category in ['Animal', 'Food', 'Plant']:
+            entity_list = getattr(self, category, None)
+            if entity_list:
+                excluded_names.update(e.en_name.lower() for e in entity_list)
+
+        if not excluded_names:
+            return self
+
+        # Filter Symbol list
+        original_count = len(self.Symbol)
+        self.Symbol = [
+            entity for entity in self.Symbol
+            if entity.en_name.lower() not in excluded_names
+        ]
+
+        removed_count = original_count - len(self.Symbol)
+        if removed_count > 0:
+            logger.info(f"Removed {removed_count} entities from Symbol (already in Animal/Food/Plant)")
+
+        if not self.Symbol:
+            self.Symbol = None
+
+        return self
+
+    @model_validator(mode='after')
     def ensure_entity_overlap(self):
         """
         Auto-correct entity classification based on priority rules:
@@ -449,6 +487,45 @@ class Entities(BaseModel):
             if entity_list:
                 names.update(e.en_name for e in entity_list)
         return names
+
+    def get_all_entity_names_lower(self) -> dict:
+        """Helper to get mapping of lowercase entity names to actual names."""
+        name_map = {}
+        for category in ENTITY_CATEGORIES:
+            entity_list = getattr(self, category, None)
+            if entity_list:
+                for e in entity_list:
+                    name_map[e.en_name.lower()] = e.en_name
+        return name_map
+
+    def find_matching_entity(self, term: str) -> Optional[str]:
+        """
+        Find a matching entity name for a relationship term.
+        Handles case differences and simple plural forms (e.g., 'Chickens' -> 'Chicken').
+        Returns the actual entity name if found, None otherwise.
+        """
+        all_entities = self.get_all_entity_names()
+
+        # Exact match
+        if term in all_entities:
+            return term
+
+        # Case-insensitive match
+        name_map = self.get_all_entity_names_lower()
+        term_lower = term.lower()
+        if term_lower in name_map:
+            return name_map[term_lower]
+
+        # Try removing common plural suffixes
+        for suffix in ('s', 'es', 'ies'):
+            if term_lower.endswith(suffix):
+                singular = term_lower[:-len(suffix)]
+                if suffix == 'ies':
+                    singular += 'y'  # 'ies' -> 'y' (e.g., 'berries' -> 'berry')
+                if singular in name_map:
+                    return name_map[singular]
+
+        return None
 
     def get_entities_by_type(self, entity_type: str) -> Set[str]:
         """Get entity names for a specific type."""
@@ -575,14 +652,15 @@ class ExtractionResult(BaseModel):
         #   [(str, str), ...] → multiple allowed type pairs (any match = valid)
         #   (None, None)      → any entity types allowed
         # Note: "Person" includes both individuals AND groups
+        # Note: spokeWith also allows Person↔Animal and Animal↔Animal
         relationship_constraints = {
-            # Person/Group → Person/Group
+            # Person/Group ↔ Person/Group
             'studiedFrom': ('Person', 'Person'),
             'childOfFather': ('Person', 'Person'),
             'childOfMother': ('Person', 'Person'),
             'spouseOf': ('Person', 'Person'),
             'descendantOf': ('Person', 'Person'),
-            'spokeWith': ('Person', 'Person'),
+            'spokeWith': [('Person', 'Person'), ('Animal', 'Person'), ('Person', 'Animal'), ('Animal', 'Animal')],
             'disagreedWith': ('Person', 'Person'),
 
             # Person/Group → Place
@@ -617,6 +695,7 @@ class ExtractionResult(BaseModel):
         }
 
         invalid_count = 0
+        corrected_count = 0
 
         for rel_type, type_constraint in relationship_constraints.items():
             relations = getattr(self.Rel, rel_type, None)
@@ -635,18 +714,32 @@ class ExtractionResult(BaseModel):
                 is_valid = True
                 reason = None
 
+                # Try to auto-correct terms to match entity names (handles plurals, case differences)
+                corrected_term1 = self.Entities.find_matching_entity(rel.term1)
+                corrected_term2 = self.Entities.find_matching_entity(rel.term2)
+
+                # Log corrections
+                if corrected_term1 and corrected_term1 != rel.term1:
+                    logger.info(f"Auto-corrected relationship term: '{rel.term1}' → '{corrected_term1}'")
+                    rel.term1 = corrected_term1
+                    corrected_count += 1
+                if corrected_term2 and corrected_term2 != rel.term2:
+                    logger.info(f"Auto-corrected relationship term: '{rel.term2}' → '{corrected_term2}'")
+                    rel.term2 = corrected_term2
+                    corrected_count += 1
+
                 # Check for self-relationships
                 if rel.term1 == rel.term2:
                     is_valid = False
                     reason = f"Self-relationship: {rel.term1}"
 
                 # Check term1 exists in entities
-                elif rel.term1 not in all_entities:
+                elif corrected_term1 is None:
                     is_valid = False
                     reason = f"term1 '{rel.term1}' not in entities"
 
                 # Check term2 exists in entities
-                elif rel.term2 not in all_entities:
+                elif corrected_term2 is None:
                     is_valid = False
                     reason = f"term2 '{rel.term2}' not in entities"
 
@@ -690,6 +783,8 @@ class ExtractionResult(BaseModel):
             # Replace with filtered list
             setattr(self.Rel, rel_type, valid_relations if valid_relations else None)
 
+        if corrected_count > 0:
+            logger.info(f"Auto-corrected {corrected_count} relationship terms to match entity names")
         if invalid_count > 0:
             logger.info(f"Filtered out {invalid_count} invalid relationships")
 

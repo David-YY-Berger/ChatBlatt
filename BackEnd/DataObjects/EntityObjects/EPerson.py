@@ -9,7 +9,8 @@ class EPerson(Entity):
     """
     Represents a Person entity - includes both individuals AND groups of people.
     Examples: Moses, David, Sarah, The 70 Elders, Children of Israel, The Sanhedrin.
-    Also includes non-human beings like Angels and named animals.
+    Also includes non-human beings like Angels.
+    Note: Talking animals (e.g., Balaam's Donkey) are now in the Animal category.
     """
     # db fields
     entityType: EntityType = EntityType.EPerson

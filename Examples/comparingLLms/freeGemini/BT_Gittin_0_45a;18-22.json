@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Rav Ilish escapes captivity; daughters betray.",
+        "heb_summary": "רב איליש ברח משבי; הבנות בגדו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Nahman"
+                },
+                {
+                    "en_name": "Rav Nahman's Daughters"
+                },
+                {
+                    "en_name": "Rav Ilish"
+                },
+                {
+                    "en_name": "Congregation Of Israel"
+                },
+                {
+                    "en_name": "Captors"
+                },
+                {
+                    "en_name": "Men Of Nehardea"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Nehardea"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1000"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Raven"
+                },
+                {
+                    "en_name": "Dove"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rav Nahman's Daughters",
+                    "term2": "Rav Nahman"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rav Nahman's Daughters",
+                    "term2": "Nehardea"
+                },
+                {
+                    "term1": "Men Of Nehardea",
+                    "term2": "Nehardea"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Congregation Of Israel",
+                    "term2": "Israel"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Rav Ilish",
+                    "term2": "Captors"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Nehardea",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Gittin_0_45a:18-22"
+}

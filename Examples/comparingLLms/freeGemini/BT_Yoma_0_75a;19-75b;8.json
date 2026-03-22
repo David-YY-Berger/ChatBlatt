@@ -1,0 +1,215 @@
+﻿{
+    "res": {
+        "en_summary": "Moses set eating times; quail brought suffering.",
+        "heb_summary": "משה קבע זמני אכילה; השלו הביא סבל.",
+        "passage_types": [
+            "STORY",
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rabbi Aha Bar Yaakov"
+                },
+                {
+                    "en_name": "Reish Lakish"
+                },
+                {
+                    "en_name": "Jewish People"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Korha"
+                },
+                {
+                    "en_name": "Rabbi Yehuda Hanasi"
+                },
+                {
+                    "en_name": "Rabbi Yosei Son Of Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rav Hanan Bar Rava"
+                },
+                {
+                    "en_name": "Average People"
+                },
+                {
+                    "en_name": "Wicked"
+                },
+                {
+                    "en_name": "Youth"
+                },
+                {
+                    "en_name": "Elderly"
+                },
+                {
+                    "en_name": "Righteous"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Rav Hisda"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Enemies Of The Jewish People"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Camp"
+                },
+                {
+                    "en_name": "Storeroom"
+                },
+                {
+                    "en_name": "Fields"
+                },
+                {
+                    "en_name": "Roof"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1"
+                },
+                {
+                    "en_name": "13"
+                },
+                {
+                    "en_name": "4"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Chicken"
+                },
+                {
+                    "en_name": "Quail"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Sparrow"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Meat"
+                },
+                {
+                    "en_name": "Manna"
+                },
+                {
+                    "en_name": "Oil"
+                },
+                {
+                    "en_name": "Honey"
+                },
+                {
+                    "en_name": "Quail"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rava",
+                    "term2": "Rav Hisda"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Rabbi Yosei Son Of Rabbi Hanina",
+                    "term2": "Rabbi Hanina"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "Children Of Israel"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rabbi Yehuda Hanasi",
+                    "term2": "Rabbi Yehoshua Ben Korha"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rav Hisda",
+                    "term2": "Storeroom"
+                },
+                {
+                    "term1": "Rava",
+                    "term2": "Roof"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Moses",
+                    "term2": "Meat"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Jewish People",
+                    "term2": "Chicken"
+                },
+                {
+                    "term1": "Manna",
+                    "term2": "Bread"
+                },
+                {
+                    "term1": "Manna",
+                    "term2": "Oil"
+                },
+                {
+                    "term1": "Manna",
+                    "term2": "Honey"
+                },
+                {
+                    "term1": "Quail",
+                    "term2": "Sparrow"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Average People",
+                    "term2": "Wicked"
+                },
+                {
+                    "term1": "Righteous",
+                    "term2": "Wicked"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Enemies Of The Jewish People",
+                    "term2": "Jewish People"
+                }
+            ]
+        }
+    },
+    "key": "BT_Yoma_0_75a:19-75b:8"
+}

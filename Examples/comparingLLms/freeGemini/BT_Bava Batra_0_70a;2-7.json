@@ -1,0 +1,42 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis debate carob, sycamore tree sale rules.",
+        "heb_summary": "רבנים דנים על מכירת עץ חרוב ושקמה.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Aha Bar Huna"
+                },
+                {
+                    "en_name": "Rav Sheshet"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "0.5"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Carob Tree"
+                },
+                {
+                    "en_name": "Sycamore Trunk"
+                }
+            ]
+        },
+        "Rel": {
+            "disagreedWith": [
+                {
+                    "term1": "Rav Aha Bar Huna",
+                    "term2": "Rav Sheshet"
+                }
+            ]
+        }
+    },
+    "key": "BT_Bava Batra_0_70a:2-7"
+}

@@ -85,12 +85,36 @@ class PydanticCaller:
                 
                 "=== ENTITY TYPES ===\n"
                 "- Person: Named individuals AND groups (proper nouns only).\n"
-                "  Includes: humans, angels, idols/gods, talking animals.\n"
+                "  Includes: humans, angels, idols/gods.\n"
                 "  Groups: 'The 70 Elders', 'Children Of Israel', 'The Sanhedrin', 'The Spies'.\n"
-                "  Examples: Moses, David, Sarah, Gabriel, Balaam's Donkey.\n"
-                "  NOT: Generic roles (king, priest), anonymous descriptions (survivors, rulers),"
-                "  possessive phrases (my people, his servants), or indefinite references (he who, those who).\\n"
+                "  Examples: Moses, David, Sarah, Gabriel.\n"
+                "  NOT: Generic roles (king, priest), anonymous descriptions (survivors, rulers),\n"
+                "  possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
+                "  or talking animals (use Animal category for those).\n"
                 "  Extract even if mentioned incidentally or as possessives.\n\n"
+                
+                "- Animal: Named real or mythical animals (proper nouns or specific types).\n"
+                "  Includes: Real animals (Lion, Eagle, Serpent, Ox, Dove, Quail).\n"
+                "  Includes: Mythical creatures (Leviathan, Behemoth, Phoenix).\n"
+                "  Includes: Talking animals (Balaam's Donkey, The Serpent in Eden).\n"
+                "  Use the most normalized (singular), specific form.\n"
+                "  If an animal is also a food (e.g., Quail), include in BOTH Animal and Food.\n"
+                "  NOT: Generic animal references.\n\n"
+                
+                "- Food: Food items that act as food in context of the passage.\n"
+                "  Use the most normalized (singular), specific form.\n"
+                "  Examples: Bread, Manna, Wine, Grape, Apple, Olive, Quail, Fig.\n"
+                "  If something is both Food and Plant (e.g., Apple, Grape), include in BOTH.\n"
+                "  If something is both Food and Animal (e.g., Quail), include in BOTH.\n"
+                "  NOT: Generic food references.\n\n"
+                
+                "- Plant: Plants (edible and inedible) with specific names.\n"
+                "  Use the most normalized (singular), specific form.\n"
+                "  'Grape vine', 'Grape tree', 'Grape' → all become 'Grape'.\n"
+                "  'Apple tree' → 'Apple'.\n"
+                "  Examples: Grape, Fig, Cedar, Hyssop, Apple, Wheat, Olive, Pomegranate.\n"
+                "  If something is both Plant and Food (e.g., Apple), include in BOTH.\n"
+                "  NOT: Generic plant references.\n\n"
                 
                 "- Place: Named geographic locations (proper nouns).\n"
                 "  Includes: cities, regions, rivers, mountains, countries as locations.\n"
@@ -109,7 +133,9 @@ class PydanticCaller:
                 
                 "- Symbol: Specific Symbolic objects, concepts, or items with high significance.\n"
                 "  especially if used in comparison or contrastingly. Proper nouns or clearly defined concepts.\n"
-                "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush."
+                "  Examples: Ark of the Covenant, Menorah, Tablets, Burning Bush, Crown, Throne.\n"
+                "  IMPORTANT: Do NOT include animals, plants, or food items as Symbols.\n"
+                "  If something is an animal, plant, or food, use those categories instead.\n"
                 "  NOT: Generic objects used in imagery (sword, ox, garden, booth) unless they have a\n"
                 "       specific proper name. Most passages have few or no Symbols. \n\n"
                 
@@ -121,7 +147,10 @@ class PydanticCaller:
                 
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"
-                "- If entity is both Place AND Nation → include in BOTH lists.\n\n"
+                "- If entity is both Place AND Nation → include in BOTH lists.\n"
+                "- If entity is both Food AND Plant (e.g., Apple) → include in BOTH lists with SAME name.\n"
+                "- If entity is both Food AND Animal (e.g., Quail) → include in BOTH lists with SAME name.\n"
+                "- If entity appears in Animal, Food, or Plant → do NOT include in Symbol.\n\n"
                 
                 "=== RELATIONSHIP TYPES ===\n"
                 "Person ↔ Person:\n"
@@ -134,8 +163,12 @@ class PydanticCaller:
                 "  Biblical naming 'X son of Y' where Y is female = childOfMother (mother's name patronymic).\n"
                 "- descendantOf: Non-adjacent ancestry (grandparent+). NOT if childOfFather/childOfMother exists for that pair.\n"
                 "- spouseOf: Married couples.\n"
+                "- disagreedWith: Halakhic or ideological dispute between persons.\n\n"
+                
+                "Person/Animal ↔ Person/Animal (spokeWith ONLY):\n"
                 "- spokeWith: Direct conversation or dialogue in the text.\n"
-                "- disagreedWith: Halakhic or ideological dispute between persons.\n"
+                "  This is the ONLY relationship that includes Animals.\n"
+                "  Allows: Person↔Person, Person↔Animal, Animal↔Person, Animal↔Animal.\n"
                 "  IMPORTANT: A pair cannot appear in BOTH spokeWith and disagreedWith.\n"
                 "  If they disagreed, use disagreedWith. If they merely conversed, use spokeWith.\n\n"
                 
@@ -182,7 +215,7 @@ class PydanticCaller:
                 
                 "=== OPTIMIZATION ===\n"
                 "- Omit empty lists/objects entirely.\n"
-                "- All relationship terms MUST reference extracted entities.\n"
+                "- All relationship terms MUST use the EXACT SAME spelling as the extracted entity names.\n"
                 "- Return only populated data."
             ),
             retries=0,

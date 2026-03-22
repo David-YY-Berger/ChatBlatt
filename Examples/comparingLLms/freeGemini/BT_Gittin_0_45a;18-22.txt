@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=9154 approx cost usd = $0.000000 (Prompt=6039, Completion=3115)
+SOURCE:
+Gittin 45a:18-22  (BT_Gittin_0_45a:18-22)
+
+HEBREW:
+בְּנָתֵיהּ דְּרַב נַחְמָן בָּחֲשָׁן קִדְרָא בִּידַיְיהוּ. קַשְׁיָא לֵיהּ לְרַב עִילִישׁ, כְּתִיב: ״אָדָם אֶחָד מֵאֶלֶף מָצָאתִי וְאִשָּׁה בְכׇל אֵלֶּה לֹא מָצָאתִי״, הָא אִיכָּא בְּנָתֵיהּ דְּרַב נַחְמָן! גְּרַמָא לְהוּ מִילְּתָא וְאִשְׁתַּבְיָין, וְאִישְׁתְּבִאי אִיהוּ נָמֵי בַּהֲדַיְיהוּ.יוֹמָא חַד הֲוָה יָתֵיב גַּבֵּיהּ הָהוּא גַּבְרָא, דַּהֲוָה יָדַע בְּלִישָּׁנָא דְצִיפּוֹרֵי. אֲתָא עוֹרְבָא וְקָא קָרֵי לֵיהּ. אֲמַר לֵיהּ: מַאי קָאָמַר? אֲמַר לֵיהּ: ״עִילִישׁ בְּרַח, עִילִישׁ בְּרַח״. אָמַר: עוֹרְבָא שַׁקָּרָא הוּא וְלָא סָמֵיכְנָא עֲלֵיהּ.אַדְּהָכִי אֲתָא יוֹנָה וְקָא קָרְיָא. אֲמַר לֵיהּ: מַאי קָאָמְרָה? אֲמַר לֵיהּ: ״עִילִישׁ בְּרַח, עִילִישׁ בְּרַח״. אָמַר: כְּנֶסֶת יִשְׂרָאֵל כְּיוֹנָה מְתִילָא, שְׁמַע מִינַּהּ מִתְרְחִישׁ לִי נִיסָּא. אָמַר: אֵיזִיל אֶחְזֵי בְּנָתֵיהּ דְּרַב נַחְמָן, אִי קָיְימָן בְּהֵימָנוּתַיְיהוּ – אַהְדְּרִינְהוּ.אֲמַר: נְשֵׁי, כׇּל מִילֵּי דְּאִית לְהוּ סָדְרָן לַהֲדָדֵי בְּבֵית הַכִּסֵּא. שַׁמְעִינְהוּ דְּקָאָמְרָן: עָדֵי גּוּבְרִין וּנְהַרְדָּעֵי גּוּבְרִין, לֵימָא לְהוּ לְשָׁבוֹיַיְהוּ דְּלִירַחֲקִינְהוּ מֵהָכָא, דְּלָא לֵיתוֹ אִינָשִׁין וְלִישְׁמְעִי וְלִיפְרְקִינַן.קָם, עֲרַק, אֲתָא אִיהוּ וְהָהוּא גַּבְרָא. לְדִידֵיהּ אִיתְרְחִישׁ לֵיהּ נִיסָּא עֲבַר בְּמַבָּרָא, וְהָהוּא גַּבְרָא אַשְׁכְּחוּהּ וְקַטְלוּהּ. כִּי הָדְרָן וְאָתָן, אֲמַר: הֲווֹ קָא בָחֲשָׁן קִידְרָא בִּכְשָׁפִים.
+
+ENGLISH:
+The Gemara relates that Rav Nahmans daughters would stir a boiling pot with their bare hands, and people thought that the heat did not harm them due to their righteousness. Rav Ilish had a difficulty with a verse, as it is written: A man one of a thousand I have found, and a woman among all those have I not found (Ecclesiastes 7:28). Arent there Rav Nahmans daughters, who were exceptionally righteous? These words caused them to be taken captive, due to the evil eye, and Rav Ilish was also taken captive with them. One day a certain man was sitting with him in captivity who knew the language of birds. A raven came and called to Rav Ilish. Rav Ilish said to the man: What is the raven saying? He said to him that it is saying: Ilish, escape; Ilish, escape. Rav Ilish said: It is a lying raven, and I do not rely on it. In the meantime, a dove came and was calling out. Rav Ilish said to the man: What is it saying? He said to him that the dove said: Ilish, escape; Ilish, escape. Ilish said: The Congregation of Israel is compared to a dove; I conclude from the doves words that a miracle will happen for me, and I can attempt to escape. Rav Ilish said: Before I leave, I will go and I will see Rav Nahmans daughters. If they remained steadfast in their faith and are acting appropriately, then I will take them with me and I will return them to their home. He said: Women tell all of their secret matters to each other in the bathroom, so he went there to eavesdrop on them. He heard them saying: These captors are now our husbands, and the men of Nehardea to whom we are married are our husbands. We should tell our captors to distance us from here so that our husbands should not come to this area and hear that we are here, and redeem us, and take us home. They preferred to remain with their captors.Upon hearing this Rav Ilish arose and escaped. He and that man who knew the language of the birds came to a river crossing. A miracle happened for him and he crossed the river on a ferry, and the captors found that man and killed him. When Rav Nahmans daughters were returned and they came back from their captivity, Rav Ilish said: They would stir the pot with witchcraft, and that is why they were not burned by the boiling pot, but it was not due to their righteousness.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rav Ilish escapes captivity; daughters betray.",
+    "heb_summary": "רב איליש ברח משבי; הבנות בגדו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Nahman"
+        },
+        {
+          "en_name": "Rav Nahman's Daughters"
+        },
+        {
+          "en_name": "Rav Ilish"
+        },
+        {
+          "en_name": "Congregation Of Israel"
+        },
+        {
+          "en_name": "Captors"
+        },
+        {
+          "en_name": "Men Of Nehardea"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Nehardea"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1000"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Raven"
+        },
+        {
+          "en_name": "Dove"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rav Nahman's Daughters",
+          "term2": "Rav Nahman"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rav Nahman's Daughters",
+          "term2": "Nehardea"
+        },
+        {
+          "term1": "Men Of Nehardea",
+          "term2": "Nehardea"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Congregation Of Israel",
+          "term2": "Israel"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Rav Ilish",
+          "term2": "Captors"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Nehardea",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

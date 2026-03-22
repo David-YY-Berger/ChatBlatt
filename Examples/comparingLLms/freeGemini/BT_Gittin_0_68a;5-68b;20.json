@@ -1,0 +1,264 @@
+﻿{
+    "res": {
+        "en_summary": "Ashmedai and Solomon's wisdom, power, and exile.",
+        "heb_summary": "אשמדאי ושלמה: חכמה, כוח וגלות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Ashmedai"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Benayahu"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Sanhedrin"
+                },
+                {
+                    "en_name": "Queens"
+                },
+                {
+                    "en_name": "Bathsheba"
+                },
+                {
+                    "en_name": "Yavam"
+                },
+                {
+                    "en_name": "Shoemaker"
+                },
+                {
+                    "en_name": "Sorcerer"
+                },
+                {
+                    "en_name": "Servants"
+                },
+                {
+                    "en_name": "Warriors Of Israel"
+                },
+                {
+                    "en_name": "Angelic Minister Of The Sea"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shamir"
+                },
+                {
+                    "en_name": "Chain"
+                },
+                {
+                    "en_name": "Ring"
+                },
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Bed Of Solomon"
+                },
+                {
+                    "en_name": "Sword"
+                },
+                {
+                    "en_name": "Throne"
+                },
+                {
+                    "en_name": "Staff"
+                },
+                {
+                    "en_name": "Cloak"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "25"
+                },
+                {
+                    "en_name": "15"
+                },
+                {
+                    "en_name": "7"
+                },
+                {
+                    "en_name": "3"
+                },
+                {
+                    "en_name": "13"
+                },
+                {
+                    "en_name": "30"
+                },
+                {
+                    "en_name": "4"
+                },
+                {
+                    "en_name": "400"
+                },
+                {
+                    "en_name": "24"
+                },
+                {
+                    "en_name": "8"
+                },
+                {
+                    "en_name": "1"
+                },
+                {
+                    "en_name": "2"
+                },
+                {
+                    "en_name": "10"
+                },
+                {
+                    "en_name": "12"
+                },
+                {
+                    "en_name": "60"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Wild Rooster"
+                },
+                {
+                    "en_name": "Dukhifat"
+                },
+                {
+                    "en_name": "Hoopoe"
+                },
+                {
+                    "en_name": "Wild Ox"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Reed"
+                },
+                {
+                    "en_name": "Seed"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfMother": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Bathsheba"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Queens"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Ashmedai",
+                    "term2": "Solomon"
+                },
+                {
+                    "term1": "Benayahu",
+                    "term2": "Ashmedai"
+                },
+                {
+                    "term1": "Ashmedai",
+                    "term2": "Servants"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Servants"
+                },
+                {
+                    "term1": "Shoemaker",
+                    "term2": "Sorcerer"
+                },
+                {
+                    "term1": "Benayahu",
+                    "term2": "Sanhedrin"
+                },
+                {
+                    "term1": "Sanhedrin",
+                    "term2": "Queens"
+                },
+                {
+                    "term1": "Queens",
+                    "term2": "Bathsheba"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rav",
+                    "term2": "Shmuel"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Ashmedai",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Solomon",
+                    "term2": "World-To-Come"
+                },
+                {
+                    "term1": "Temple",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Ashmedai",
+                    "term2": "Heaven"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Warriors Of Israel",
+                    "term2": "Israel"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Jerusalem",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Gittin_0_68a:5-68b:20"
+}

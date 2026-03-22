@@ -27,10 +27,7 @@ class TimePeriod(DescribedEnum):
     NoTimePeriod = (3, "No Time Period")
 
 class SymbolType(DescribedEnum):
-    Animal = (0, "Animal")
-    Plant = (1, "Plant")
     Clothing = (2, "Clothing")
-    Food = (4, "Food")
     HolyObject = (5, "Holy Object")
 
 class PlaceType(DescribedEnum):
@@ -63,6 +60,9 @@ class EntityType(DescribedEnum):
     ENation = ("N", "Nation")
     ESymbol = ("S", "Symbol")
     ENumber = ("M", "Number")
+    EAnimal = ("A", "Animal")  # Real and mythical animals
+    EFood = ("F", "Food")  # Food items
+    EPlant = ("B", "Plant")  # Plants (edible and inedible)
 
 class RelType(DescribedEnum):
     # Person/Group → Person/Group
