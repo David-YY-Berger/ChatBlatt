@@ -202,7 +202,7 @@ class PydanticCaller:
                 "- placeToNation: Place belongs to or is associated with a nation.\n\n"
 
                 "Person → Any Entity:\n"
-                "- prophesiedAbout: Prophet making prediction about any entity.\n\n"
+                "- prophesiedAbout: ONLY PROPHETS (not sages) making prophetic statements about any entity.\n\n"
                 
                 "Any Entity ↔ Any Entity:\n"
                 "- comparedTo: EXPLICIT simile/comparison ('like', 'as', 'resembles').\n"

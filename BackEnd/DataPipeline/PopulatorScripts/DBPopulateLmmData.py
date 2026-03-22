@@ -189,6 +189,9 @@ class DBPopulateLmmData(DBParentClass):
 
         key_strs = [
 
+            # person used as example (Reuven and shimon, yaakov in yerusha)
+            # this case is not a concern... couldnt find passage of the gemara that have this phenomenom.. only in rishonim "BT_Bava Batra_0_116a:16-116b:3"
+
             # childofFather (levi)
             # 'TN_Exodus_0_6:14-25',
 
@@ -217,8 +220,8 @@ class DBPopulateLmmData(DBParentClass):
             # 'TN_Isaiah_0_1:1-31',
             # "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
 
-            # contrastedWith, non literal places (world to come vs this world)
-            # 'BT_Berakhot_0_17a:7-12',
+            # contrastedWith, non literal places (world to come vs this world) - ensure rav no prophesying
+            'BT_Berakhot_0_17a:7-12',
 
             # AllyOf (person - person)
             # 'TN_I Kings_0_5:15–32',
@@ -257,7 +260,7 @@ class DBPopulateLmmData(DBParentClass):
             # "TN_II Kings_0_14:1–22",
 
             # food - quail (food and animal)
-            "BT_Yoma_0_75a:19-75b:8",
+            # "BT_Yoma_0_75a:19-75b:8",
 
             # animal - re'em
             # "BT_Gittin_0_68a:5-68b:20",
