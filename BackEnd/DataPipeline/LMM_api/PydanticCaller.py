@@ -92,6 +92,7 @@ class PydanticCaller:
                 "  NOT: possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
                 "  NOT: or talking animals (use Animal category for those).\n"
                 "  Extract even if mentioned incidentally or as possessives.\n\n"
+                "  If same name appears with truly different spelling, exract as separate entities with Alias"
                 
                 "- Animal: Named real or mythical animals (proper nouns or specific types).\n"
                 "  Includes: Real animals (Lion, Eagle, Serpent, Ox, Dove, Quail).\n"
@@ -155,6 +156,7 @@ class PydanticCaller:
                 "=== RELATIONSHIP TYPES ===\n"
                 "Person ↔ Person:\n"
                 "- studiedFrom: Sage transmitting teaching ('X said in name of Y', 'X said that Y said').\n"
+                " A PERSON CAN ONLY STUDY FROM A SAGE; if Y is not a Sage, use spokeWith instead.\n"
                 "- childOfFather: term1 is the child, term2 is the MALE parent (father).\n"
                 "  IMPORTANT: 'son of Y' or 'daughter of Y' does NOT automatically mean Y is the father!\n"
                 "  Use childOfFather ONLY if Y is a MAN. Examples: 'Solomon son of David' → David is male → childOfFather.\n"
