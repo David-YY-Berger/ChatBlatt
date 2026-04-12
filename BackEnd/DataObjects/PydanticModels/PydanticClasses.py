@@ -5,6 +5,8 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 import logging
 import re
 
+from BackEnd.DataObjects.Enums import NumberCategory
+
 logger = logging.getLogger(__name__)
 
 # --- Global Constants ---
@@ -229,20 +231,102 @@ class Entity(BaseModel):
         return smart_title_case(v)
 
 
+# Build the allowed category literals from the enum
+_NUMBER_CATEGORY_VALUES = [e.description for e in NumberCategory]
+
+class NumberEntity(BaseModel):
+    """Pydantic model for Number entities extracted by the LLM.
+    Extends the basic entity with category, unit, and context."""
+    en_name: str = Field(min_length=1, description="The numeric value as a string (e.g., '7', '40', '3.5')")
+    number_category: str = Field(
+        description=(
+            "The category this number describes. "
+            f"Must be one of: {', '.join(_NUMBER_CATEGORY_VALUES)}"
+        )
+    )
+    unit: str = Field(
+        description=(
+            "A normalized, singular noun describing what is being counted or measured. "
+            "Examples: 'bull', 'year', 'silver', 'cubit', 'tribe', 'lash'. "
+            "Must be a single, lowercase, singular English word — no plurals, no phrases."
+        )
+    )
+    context: str = Field(
+        description=(
+            "A 1-6 word topic summary so this number is understandable outside the original passage. "
+            "Describe the general subject being discussed — someone seeing this entry elsewhere "
+            "should immediately understand what this number is about. "
+            "Examples: 'tabernacle construction', 'korbanot on sukkot', 'census in wilderness', "
+            "'noahs lifespan', 'punishment for theft'."
+        )
+    )
+
+    @field_validator('number_category')
+    @classmethod
+    def validate_number_category(cls, v: str) -> str:
+        """Ensure number_category is a valid NumberCategory. Falls back to Misc if unknown."""
+        valid = {e.description for e in NumberCategory}
+        if v not in valid:
+            # Try case-insensitive match
+            match = next((cat for cat in valid if cat.lower() == v.lower()), None)
+            if match:
+                return match
+            logger.warning(
+                f"Unknown number_category '{v}' — falling back to 'Misc'. "
+                f"Valid categories: {', '.join(sorted(valid))}"
+            )
+            return NumberCategory.Misc.description
+        return v
+
+    @field_validator('unit')
+    @classmethod
+    def normalize_unit(cls, v: str) -> str:
+        """Normalize unit to lowercase singular noun."""
+        v = v.strip().lower()
+        # Remove trailing 's' for naive de-pluralization (keeps words like 'class', 'brass')
+        if v.endswith('es') and len(v) > 3 and v not in ('incense', 'frankincense', 'bronze'):
+            v = v[:-2] if v.endswith('ies') else v[:-1] if v.endswith('ses') or v.endswith('zes') else v[:-2]
+        elif v.endswith('s') and not v.endswith('ss') and len(v) > 2:
+            v = v[:-1]
+        if not v:
+            raise ValueError("unit cannot be empty")
+        return v
+
+    @field_validator('context')
+    @classmethod
+    def validate_context(cls, v: str) -> str:
+        """Ensure context is 1-6 words and normalized."""
+        v = v.strip().lower()
+        word_count = len(v.split())
+        if word_count < 1:
+            raise ValueError("context cannot be empty")
+        if word_count > 6:
+            raise ValueError(f"context must be 1-6 words, got {word_count}: '{v}'")
+        return v
+
+
 class Entities(BaseModel):
     Person: Optional[List[Entity]] = Field(default_factory=list, description="Individuals AND groups of people (e.g., Moses, The 70 Elders, Children of Israel)")
     Place: Optional[List[Entity]] = Field(default_factory=list)
     TribeOfIsrael: Optional[List[Entity]] = Field(default_factory=list)
     Nation: Optional[List[Entity]] = Field(default_factory=list)
     Symbol: Optional[List[Entity]] = Field(default_factory=list)
-    Number: Optional[List[Entity]] = Field(default_factory=list, description="Explicit numeric values (e.g., 7, 40, 3.5)")
+    Number: Optional[List[NumberEntity]] = Field(
+        default_factory=list,
+        description=(
+            "Explicit numeric values with context. Each number must include: "
+            "en_name (the numeric value), number_category (one of: "
+            f"{', '.join(_NUMBER_CATEGORY_VALUES)}), "
+            "unit (normalized singular noun — what is counted/measured), and context (1-6 word topic summary)."
+        )
+    )
     Animal: Optional[List[Entity]] = Field(default_factory=list, description="Real and mythical animals (e.g., Lion, Eagle, Serpent, Balaam's Donkey)")
     Food: Optional[List[Entity]] = Field(default_factory=list, description="Food items in normalized singular form (e.g., Bread, Manna, Wine)")
     Plant: Optional[List[Entity]] = Field(default_factory=list, description="Plants (edible and inedible) in normalized singular form (e.g., Grape, Fig, Cedar)")
 
     @field_validator('Number')
     @classmethod
-    def validate_numbers(cls, v: Optional[List[Entity]]) -> Optional[List[Entity]]:
+    def validate_numbers(cls, v: Optional[List[NumberEntity]]) -> Optional[List[NumberEntity]]:
         """Validate and normalize Number entities to canonical numeric strings."""
         if not v:
             return v
@@ -253,7 +337,12 @@ class Entities(BaseModel):
             if normalized is None:
                 logger.warning(f"Filtered invalid Number entity: '{entity.en_name}'")
                 continue
-            valid_numbers.append(Entity(en_name=normalized))
+            valid_numbers.append(NumberEntity(
+                en_name=normalized,
+                number_category=entity.number_category,
+                unit=entity.unit,
+                context=entity.context
+            ))
 
         return valid_numbers if valid_numbers else None
 

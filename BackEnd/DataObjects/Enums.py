@@ -46,6 +46,14 @@ class RoleType(DescribedEnum):
     Rishon = (8, "Rishon")
     Acharon = (9, "Acharon")
 
+class NumberCategory(DescribedEnum):
+    Sacrifice = ("SAC", "Sacrifice")          # Offerings: animals, flour, oil, incense
+    Time = ("TIM", "Time")                    # Duration, age, dates, periods
+    Money = ("MON", "Money")                  # Currency, payment, value
+    People = ("PPL", "People")                # Counts of persons, armies, tribes
+    Measurement = ("MSR", "Measurement")      # Distance, weight, volume, area
+    Misc = ("MIS", "Misc")                    # Anything not covered above
+
 class PassageType(DescribedEnum):
     Law = (0, "Law")
     Story = (1, "Story")

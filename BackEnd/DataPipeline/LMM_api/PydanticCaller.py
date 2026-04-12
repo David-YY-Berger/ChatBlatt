@@ -23,6 +23,7 @@ from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
 
 from BackEnd.DataPipeline.LMM_api.ModelConfig import ModelConfig, ModelProvider
+from BackEnd.DataObjects.Enums import NumberCategory
 from BackEnd.DataObjects.PydanticModels.PydanticClasses import (
     FinalResponse,
     TRIBES_OF_ISRAEL,
@@ -36,6 +37,7 @@ from BackEnd.DataObjects.PydanticModels.PydanticClasses import (
 logger = logging.getLogger(__name__)
 
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
+NUMBER_CATEGORIES_STR = ', '.join(e.description for e in NumberCategory)
 
 
 class PydanticCaller:
@@ -144,7 +146,41 @@ class PydanticCaller:
                 "  ALWAYS provide numbers as NUMERIC VALUES, not words.\n"
                 "  Convert written numbers to digits: 'thirty seven' → '37', 'three and a half' → '3.5'.\n"
                 "  Examples: '7', '40', '12', '70', '3.5', '613'.\n"
-                "  NOT: 'a', 'an', 'one', 'each' unless it's an explicit count.\n\n"
+                "  NOT: 'a', 'an', 'one', 'each' unless it's an explicit count.\n"
+                "  NOT: Ordinal numbers — SKIP 'first', 'second', 'third', '1st', '2nd', '3rd', etc.\n"
+                "  Ordinals indicate order/rank, not a countable quantity. Do NOT extract them.\n\n"
+                
+                "  Each Number entity requires THREE additional fields:\n\n"
+                
+                f"  1) number_category — MUST be exactly one of these values: {NUMBER_CATEGORIES_STR}.\n"
+                "     Use 'Misc' ONLY if no other category fits.\n"
+                "     Examples:\n"
+                "       '7 bulls' → Sacrifice | '40 years' → Time | '100 silver' → Money\n"
+                "       '600,000 men' → People | '10 cubits' → Measurement\n\n"
+                
+                "  2) unit — a NORMALIZED, SINGULAR, LOWERCASE noun describing what the number counts or measures.\n"
+                "     This must be ONE word, always singular, always lowercase, always English.\n"
+                "     The goal is deterministic matching — use the same word every time for the same concept.\n"
+                "     Examples:\n"
+                "       Sacrifice: bull, ram, goat, lamb, sheep, flour, oil, frankincense, dove, offering\n"
+                "       Time: year, month, week, day, hour\n"
+                "       Money: shekel, silver, gold, talent, gerah\n"
+                "       People: man, woman, person, soldier, elder, priest\n"
+                "       Measurement: cubit, span, bath, hin, ephah, kor, seah\n"
+                "     WRONG: 'bulls' (plural), 'years old' (phrase), 'Silver Shekels' (capitalized/multi-word).\n\n"
+                
+                "  3) context — a 1-6 word lowercase topic summary so this number is understandable outside the original passage.\n"
+                "     Someone seeing this entry in a totally different place should immediately understand what this number is about.\n"
+                "     Describe the GENERAL SUBJECT being discussed, not the number itself.\n"
+                "     Examples:\n"
+                "       '7 bulls offered on the altar' → context: 'korbanot on sukkot'\n"
+                "       '40 years wandering' → context: 'wilderness punishment'\n"
+                "       '100 shekels of silver' → context: 'bride price for slander'\n"
+                "       '30 cubits high' → context: 'tabernacle construction'\n"
+                "       '600,000 men' → context: 'census in wilderness'\n"
+                "       '120 years old' → context: 'moshe lifespan'\n"
+                "       '10 generations' → context: 'genealogy adam to noah'\n"
+                "       '39 lashes' → context: 'punishment for transgression'.\n\n"
                 
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"

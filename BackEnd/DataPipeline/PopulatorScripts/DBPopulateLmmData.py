@@ -208,7 +208,7 @@ class DBPopulateLmmData(DBParentClass):
             # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
             # x said in name of y said in name of z.
             # 'BT_Berakhot_0_35b:11-12', # missing childOf
-            # "TN_Esther_0_1:1–22", # ensure no studied from!
+            "TN_Esther_0_1:1–22", # ensure no studied from! # also number
 
             # placeToNation (seir to edom)
             # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
@@ -223,7 +223,7 @@ class DBPopulateLmmData(DBParentClass):
             # contrastedWith, non literal places (world to come vs this world) - ensure rav no prophesying
             # 'BT_Berakhot_0_17a:7-12',
 
-            # AllyOf (person - person)
+            # AllyOf (person - person) also numbers
             # 'TN_I Kings_0_5:15–32',
 
             # bornIn
