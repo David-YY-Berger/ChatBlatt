@@ -1,0 +1,35 @@
+###################################################################
+get the file tree
+----------------------------------------------------------------------
+$root = 'C:\Users\U6072661\PycharmProjects\ChatBlatt'
+$exclude = @('.venv1', 'Examples', 'Notes')
+
+function Print-Tree {
+    param (
+        [string]$Path,
+        [string]$Prefix = ''
+    )
+
+    $items = Get-ChildItem -LiteralPath $Path -Force |
+        Where-Object {
+            $exclude -notcontains $_.Name -and
+            ($_.PSIsContainer -or $_.Extension -eq '.py')
+        }
+
+    for ($i = 0; $i -lt $items.Count; $i++) {
+        $item = $items[$i]
+        $isLast = ($i -eq $items.Count - 1)
+        $connector = if ($isLast) { '└── ' } else { '├── ' }
+
+        Write-Output ($Prefix + $connector + $item.Name)
+
+        if ($item.PSIsContainer) {
+            $nextPrefix = $Prefix + $(if ($isLast) { '    ' } else { '│   ' })
+            Print-Tree -Path $item.FullName -Prefix $nextPrefix
+        }
+    }
+}
+
+Write-Output (Split-Path $root -Leaf)
+Print-Tree -Path $root
+################################################################################
