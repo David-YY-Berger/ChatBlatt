@@ -1,9 +1,11 @@
 from abc import ABC
+from dataclasses import dataclass
 from typing import Any, List
 
 from BackEnd.DataObjects.Enums import SourceType
 
-""" must be init w key (can generate key from src_type & book & chapter & section)"""
+""" must be init w key"""
+@dataclass
 class SourceClass(ABC):
     # example key: BT_Bava Batra_0_13b:9-14a:4 , or TN_Joshua_0_2:1–24
     key: str # (src_type:SourceType _ book:str _ chapter:int _ section:str)
