@@ -1,2 +1,24 @@
 /.env
-/DB_backups/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Virtualenv
+.venv/
+venv/
+
+# Local / data artifacts (adjust to your needs)
+data_index_files/
+*.log
+.DS_Store
