@@ -7,7 +7,7 @@ from bson import ObjectId
 from backend.db.Collections import CollectionObjs
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.data_fetchers.SefariaFetcher import SefariaFetcher
-from backend.file_utils.JsonWriter import JsonWriter
+from backend.file_utils.JsonUtils import JsonWriter
 from backend.common import Paths, SystemFunctions, miscFuncs
 from backend.file_utils import OsFunctions
 from bs4 import BeautifulSoup

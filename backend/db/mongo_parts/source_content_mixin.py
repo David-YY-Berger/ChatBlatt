@@ -63,7 +63,9 @@ class SourceContentMongoMixin:
         }
 
         docs = self.get_collection(collection).find(query, {"key": 1, "content": 1, "_id": 0})
-        return [
+        results = [
             SourceContent(key=doc["key"], content=doc["content"])
             for doc in docs
         ]
+        results.sort()  # Uses SourceClass.__lt__ (book order, then section)
+        return results

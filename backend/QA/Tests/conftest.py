@@ -25,7 +25,7 @@ class FakeCollection:
 
     # ---- helpers ----
     def _matches(self, doc, filt):
-        """Very small query evaluator – supports top-level eq, $in, $or, $and, $regex."""
+        """Very small query evaluator – supports top-level eq, $in, $or, $and, $regex, $exists."""
         for key, val in filt.items():
             if key == "$or":
                 if not any(self._matches(doc, sub) for sub in val):
@@ -34,6 +34,12 @@ class FakeCollection:
                 if not all(self._matches(doc, sub) for sub in val):
                     return False
             elif isinstance(val, dict):
+                if "$exists" in val:
+                    exists = key in doc
+                    if val["$exists"] and not exists:
+                        return False
+                    if not val["$exists"] and exists:
+                        return False
                 if "$in" in val:
                     if doc.get(key) not in val["$in"]:
                         return False
@@ -72,7 +78,7 @@ class FakeCollection:
                 return deepcopy(d)
         return None
 
-    def find(self, filt=None):
+    def find(self, filt=None, projection=None):
         filt = filt or {}
         return [deepcopy(d) for d in self._docs if self._matches(d, filt)]
 
