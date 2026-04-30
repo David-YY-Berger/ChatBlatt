@@ -1,6 +1,7 @@
 import unittest
 import inspect
 
+from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 from backend.db.Collections import CollectionObjs
 from backend.db.DBapiInterface import DBapiInterface
 from backend.models.Enums import SourceType
@@ -147,15 +148,14 @@ class DBapiInterfaceContractTests(unittest.TestCase):
         db.connect("unused")
         self.assertTrue(db.connected)
 
-        inserted_key = db.insert(CollectionObjs.TN, {"key": "TN_Genesis_1_1", "content": ["en", "he", ""]})
-        self.assertEqual(inserted_key, "TN_Genesis_1_1")
-        self.assertTrue(db.exists(CollectionObjs.TN, "TN_Genesis_1_1"))
+        inserted_key = db.insert(CollectionObjs.TN, {"key": TEST_SOURCE_KEY, "content": ["en", "he", ""]})
+        self.assertEqual(inserted_key, TEST_SOURCE_KEY)
+        self.assertTrue(db.exists(CollectionObjs.TN, TEST_SOURCE_KEY))
 
         db.save_faiss_index(b"idx", b"meta")
         self.assertEqual(db.load_faiss_index(), (b"idx", b"meta"))
 
-        metadata = SourceMetadata(source_type=SourceType.TN)
-        metadata.key = "TN_Genesis_1_1"
+        metadata = SourceMetadata(TEST_SOURCE_KEY)
         self.assertEqual(db.upsert_source_metadata(metadata), metadata.key)
 
         db.disconnect()

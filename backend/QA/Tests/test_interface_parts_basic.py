@@ -1,5 +1,6 @@
 import unittest
 
+from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 from backend.db.Collections import CollectionObjs
 from backend.db.interface_parts.base_interface import BaseInterfaceMixin
 from backend.db.interface_parts.entity_interface import EntityInterfaceMixin
@@ -186,8 +187,7 @@ class InterfacePartsBasicTests(unittest.TestCase):
 
     def test_source_metadata_upsert_inserts_when_missing(self):
         repo = DummySourceMetadataInterface(exists=False)
-        metadata = SourceMetadata(source_type=SourceType.TN)
-        metadata.key = "TN_Genesis_1_1"
+        metadata = SourceMetadata(TEST_SOURCE_KEY)
 
         key = repo.upsert_source_metadata(metadata)
 
@@ -197,11 +197,11 @@ class InterfacePartsBasicTests(unittest.TestCase):
 
     def test_source_content_exists_and_find_one_source_content(self):
         repo = DummySourceContentInterface()
-        content = SourceContent(key="BT_Bava_1_1", content=["<p>en</p>", "heb", ""])
+        content = SourceContent(key=TEST_SOURCE_KEY, content=["<p>en</p>", "heb", ""])
 
         repo.insert_source_content(content, ref=None, start_index=0)
 
-        self.assertTrue(repo.exists(CollectionObjs.BT, content.key))
+        self.assertTrue(repo.exists(CollectionObjs.TN, content.key))
         found = repo.find_one_source_content(content.key)
         self.assertEqual(found.key, content.key)
         self.assertEqual(found.content[0], "<p>en</p>")

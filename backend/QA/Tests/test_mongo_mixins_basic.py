@@ -1,6 +1,7 @@
 import unittest
 from dataclasses import dataclass
 
+from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
 from backend.db.mongo_parts.entity_mixin import EntityMongoMixin
@@ -172,36 +173,33 @@ class MongoMixinsBasicTests(unittest.TestCase):
     def test_source_content_requires_client_for_find(self):
         mixin = DummySourceContentMongo(has_client=False)
         with self.assertRaises(Exception):
-            mixin.find_one(CollectionObjs.BT, "BT_Book_1_1")
+            mixin.find_one(CollectionObjs.BT, TEST_SOURCE_KEY)
 
     def test_source_content_get_all_filters_missing_fields(self):
         mixin = DummySourceContentMongo(has_client=True)
         coll = mixin.get_collection(CollectionObjs.BT)
         coll.find_result = [
-            {"key": "BT_A_1_1", "content": ["en", "he", ""]},
-            {"key": "BT_A_1_2"},
+            {"key": TEST_SOURCE_KEY, "content": ["en", "he", ""]},
+            {"key": TEST_SOURCE_KEY},
         ]
 
         results = mixin.get_all_src_contents_of_collection(CollectionObjs.BT)
 
         self.assertEqual(len(results), 1)
-        self.assertEqual(results[0].key, "BT_A_1_1")
+        self.assertEqual(results[0].key, TEST_SOURCE_KEY)
 
     def test_source_metadata_to_doc_serializes_enums_and_sets(self):
         mixin = DummySourceMetadataMongo()
-        src_metadata = SourceMetadata(
-            source_type=SourceType.TN,
-            summary_en="summary",
-            summary_heb="summary_he",
-            passage_types=[PassageType.Story],
-            entity_keys={"E1", "E2"},
-            rel_keys={"R1"},
-        )
-        src_metadata.key = "TN_Genesis_1_1"
+        src_metadata = SourceMetadata(TEST_SOURCE_KEY)
+        src_metadata.summary_en = "summary"
+        src_metadata.summary_heb = "summary_he"
+        src_metadata.passage_types = [PassageType.Story]
+        src_metadata.entity_keys = {"E1", "E2"}
+        src_metadata.rel_keys = {"R1"}
 
         doc = mixin._src_metadata_to_doc(src_metadata)
 
-        self.assertEqual(doc[DBFields.KEY], "TN_Genesis_1_1")
+        self.assertEqual(doc[DBFields.KEY], TEST_SOURCE_KEY)
         self.assertEqual(doc[DBFields.SOURCE_TYPE], SourceType.TN.value)
         self.assertEqual(doc[DBFields.PASSAGE_TYPES], [PassageType.Story.value])
         self.assertCountEqual(doc[DBFields.ENTITY_KEYS], ["E1", "E2"])

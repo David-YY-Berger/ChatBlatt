@@ -8,7 +8,7 @@ from backend.models.SourceClasses.SourceClass import SourceClass
 
 @dataclass
 class SourceMetadata(SourceClass):
-    source_type: SourceType
+    source_type: SourceType = field(init=False)
     summary_en: Optional[str] = None
     summary_heb: Optional[str] = None
     passage_types: List[PassageType] = field(default_factory=list)
@@ -23,8 +23,11 @@ class SourceMetadata(SourceClass):
         if self.rel_keys is None:
             self.rel_keys = set()
 
-        # Optional validation example
         if not isinstance(self.key, str):
-            raise ValueError("book_name must be a string")
-        if not isinstance(self.source_type, SourceType):
-            raise ValueError("source_type must be a SourceType instance")
+            raise ValueError("key must be a string")
+
+        derived = self.get_src_type()  # uses SourceClass.get_src_type_from_key(self.key)
+        if derived is None:
+            raise ValueError(f"Cannot derive SourceType from key: {self.key!r}")
+
+        self.source_type = derived

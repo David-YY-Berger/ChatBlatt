@@ -50,8 +50,7 @@ class SourceMetadataMongoMixin:
     def _doc_to_src_metadata(self, doc: Dict[str, Any]) -> SourceMetadata:
         from backend.models.Enums import PassageType, SourceType
 
-        sm = SourceMetadata(source_type=SourceType(doc[DBFields.SOURCE_TYPE]))
-        sm.key = doc[DBFields.KEY]
+        sm = SourceMetadata(DBFields.KEY)
         sm.summary_en = doc.get(DBFields.SUMMARY_EN)
         sm.summary_heb = doc.get(DBFields.SUMMARY_HEB)
         sm.passage_types = [PassageType(pt) for pt in doc.get(DBFields.PASSAGE_TYPES, [])]

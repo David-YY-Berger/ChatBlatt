@@ -1,5 +1,6 @@
 import unittest
 
+from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 from backend.db import mongo_parts
 from backend.models.EntityObjects.EAnimal import EAnimal
 from backend.models.EntityObjects.EFood import EFood
@@ -92,7 +93,7 @@ class ModelsAndExportsBasicTests(unittest.TestCase):
 
     def test_rel_to_db_dict_excludes_transient_fields(self):
         rel = Rel(key="R_1", term1="P_1", term2="P_2", rel_type=RelType.spokeWith)
-        rel.source_keys.extend(["TN_Genesis_1_1"])
+        rel.source_keys.extend([TEST_SOURCE_KEY])
 
         db_dict = rel.to_db_dict()
         full_dict = rel.to_full_dict()
@@ -102,7 +103,7 @@ class ModelsAndExportsBasicTests(unittest.TestCase):
         self.assertEqual(db_dict["rel_type"], RelType.spokeWith)
 
     def test_source_content_helpers(self):
-        src = SourceContent(key="TN_Genesis_1_1", content=["<p>Hello</p>", "shalom", "Hello"])
+        src = SourceContent(key=TEST_SOURCE_KEY, content=["<p>Hello</p>", "shalom", "Hello"])
 
         self.assertEqual(src.get_en_html_content(), "<p>Hello</p>")
         self.assertEqual(src.get_heb_html_content(), "shalom")
@@ -110,8 +111,7 @@ class ModelsAndExportsBasicTests(unittest.TestCase):
         self.assertIsInstance(src.get_clean_heb_text(), str)
 
     def test_source_metadata_defaults_and_types(self):
-        metadata = SourceMetadata(source_type=SourceType.TN)
-        metadata.key = "TN_Genesis_1_1"
+        metadata = SourceMetadata(TEST_SOURCE_KEY)
 
         self.assertEqual(metadata.source_type, SourceType.TN)
         self.assertEqual(metadata.passage_types, [])
