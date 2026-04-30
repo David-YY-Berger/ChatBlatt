@@ -10,21 +10,19 @@ class CollectionObjs:
     # DO NOT CHANGE THESE HARDCODED STRINGS they are written into the key's of objs in our db
 
     # Sources
-    BT = Collection("BT", "Sources")
-    JT = Collection("JT", "Sources")
-    RM = Collection("RM", "Sources")
-    TN = Collection("TN", "Sources")
-    MS = Collection("MS", "Sources")
+    BT = Collection(name="BT", db_name="Sources")
+    JT = Collection(name="JT", db_name="Sources")
+    RM = Collection(name="RM", db_name="Sources")
+    TN = Collection(name="TN", db_name="Sources")
+    MS = Collection(name="MS", db_name="Sources")
 
     # FAISS
-    FS = Collection("faiss_data", "Faiss")
+    FS = Collection(name="faiss_data", db_name="Faiss")
 
-    # LMM (Source Metadata)
-    SRC_METADATA = Collection("src_metadata", "LMM")
-
-    # Entities & Relations
-    ENTITIES = Collection("entities", "EntitiesRels")
-    RELATIONS = Collection("relations", "EntitiesRels")
+    # Graphes
+    SRC_METADATA = Collection(name="src_metadata", db_name="Graphs")
+    ENTITIES = Collection(name="entities", db_name="Graphs")
+    RELATIONS = Collection(name="relations", db_name="Graphs")
 
     @classmethod
     def all(cls):

@@ -3,6 +3,7 @@ import asyncio
 import json
 import os
 
+from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields
@@ -44,9 +45,11 @@ class DBPopulateLmmData(DBParentClass):
     def test_async_run(self):
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
         # Run the entire batch as one async task
-        asyncio.run(self.get_graphs_from_passages())
+        asyncio.run(self.test_populate_source_meta_data())
+        # asyncio.run(self.print_graphs_to_json())
 
-    async def get_graphs_from_passages(self):
+
+    async def print_graphs_to_json(self):
         # todo get the references of a passage too!
 
         total_cost_usd = 0.0
@@ -105,9 +108,10 @@ class DBPopulateLmmData(DBParentClass):
 
     ############################################## Populating Metadata ###############################################
 
-    def test_populate_source_meta_data(self):
-        pass
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.TN)
+    async def test_populate_source_meta_data(self):
+
+        print("Starting to populate source meta data.")
+        all_srcs = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
         # src_processed = 0
         # num_srcs_to_process = 20
         #
@@ -133,6 +137,7 @@ class DBPopulateLmmData(DBParentClass):
         #     is_success = self.db_api.insert_or_update_source_metadata(src)
         #     if is_success:
         #         src_processed += 1
+        return
 
     ############################################## helper methods ####################################################
     def get_examples_src_contents(self) -> list[SourceContent]:
