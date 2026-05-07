@@ -106,7 +106,7 @@ max_len_summary: int = 10
 min_len_summary: int = 4
 
 # Build the allowed category literals from the enum
-_NUMBER_CATEGORY_VALUES = [e.description for e in NumberCategory]
+_NUMBER_CATEGORY_VALUES = [e.value for e in NumberCategory]
 
 __all__ = [
     "TRIBES_OF_ISRAEL",

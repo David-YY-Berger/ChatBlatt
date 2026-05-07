@@ -58,7 +58,7 @@ class NumberEntity(BaseModel):
     @classmethod
     def validate_number_category(cls, v: str) -> str:
         """Ensure number_category is a valid NumberCategory. Falls back to Misc if unknown."""
-        valid = {e.description for e in NumberCategory}
+        valid = {e.value for e in NumberCategory}
         if v not in valid:
             match = next((cat for cat in valid if cat.lower() == v.lower()), None)
             if match:
@@ -67,7 +67,7 @@ class NumberEntity(BaseModel):
                 f"Unknown number_category '{v}' - falling back to 'Misc'. "
                 f"Valid categories: {', '.join(sorted(valid))}"
             )
-            return NumberCategory.Misc.description
+            return NumberCategory.Misc.value
         return v
 
     @field_validator("unit")

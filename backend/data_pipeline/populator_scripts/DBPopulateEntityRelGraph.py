@@ -23,10 +23,10 @@ from backend.common import Paths
 
 
 # Mapping from JSON category name -> EntityType enum
-_CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.description: et for et in EntityType}
+_CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in EntityType}
 
 # Mapping from JSON rel field name -> RelType enum
-_REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.description: rt for rt in RelType}
+_REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
 
 class DBPopulateLmmData(DBParentClass):
@@ -90,13 +90,13 @@ class DBPopulateLmmData(DBParentClass):
             print(f"ENTITIES INSERTED/FOUND: {len(all_entities)}")
             print(f"{'='*60}")
             for ent in all_entities:
-                print(f"  [{ent.entityType.description}] {ent.display_en_name} (key={ent.key})")
+                print(f"  [{ent.entityType.value}] {ent.display_en_name} (key={ent.key})")
 
             print(f"\n{'='*60}")
             print(f"RELATIONSHIPS INSERTED/FOUND: {len(all_rels)}")
             print(f"{'='*60}")
             for rel in all_rels:
-                print(f"  {rel.term1} --[{rel.rel_type.description}]--> {rel.term2} (key={rel.key})")
+                print(f"  {rel.term1} --[{rel.rel_type.value}]--> {rel.term2} (key={rel.key})")
 
         except Exception as e:
             print(f"TRANSACTION FAILED - all changes rolled back: {e}")
@@ -294,7 +294,7 @@ class DBPopulateLmmData(DBParentClass):
         _pt_map: Dict[str, PassageType] = {}
         for pt in PassageType:
             _pt_map[pt.name.upper()] = pt
-            _pt_map[pt.description.upper()] = pt
+            _pt_map[pt.value.upper()] = pt
 
         result: List[PassageType] = []
         for pt_str in passage_type_strs:
