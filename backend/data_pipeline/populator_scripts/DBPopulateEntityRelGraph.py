@@ -6,8 +6,7 @@ from typing import Dict, List, Optional, Tuple
 
 from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
-from backend.models.SourceClasses.SourceClass import SourceClass
-from backend.models.SourceClasses.SectionSorting import get_section_sort_key
+from backend.models.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models.EntityObjects.Entity import Entity
 from backend.models.Rel import Rel
 from backend.models.Enums import EntityType, RelType
@@ -17,7 +16,7 @@ from backend.data_pipeline.EntityRelManager import EntityRelManager
 from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend.data_pipeline.llm_api.PydanticCaller import PydanticCaller
 from backend.file_utils import LocalPrinter, FileTypeEnum, OsFunctions
-from backend.file_utils.JsonUtils import JsonWriter
+from backend.file_utils.JsonUtils import JsonUtils
 from backend.common import Paths
 
 
@@ -69,21 +68,13 @@ class DBPopulateLmmData(DBParentClass):
         dir_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\comparingLLms\Gemini 2.5 Flash"
 
         # 1. Read JSONs with source keys derived from filenames
-        json_entries: List[Tuple[str, dict]] = JsonWriter.read_jsons_from_dir_with_keys(dir_path)
+        json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
         if not json_entries:
             print("No JSON files found in directory.")
             return
 
         # 2. Sort by source key using SourceClass sorting logic
-        def _sort_key(entry: Tuple[str, dict]):
-            src_key = entry[0]
-            book = SourceClass.get_book_from_key(src_key)
-            book_order = book.order if book else 0
-            src_type_name = src_key[:2] if src_key else ""
-            section = SourceClass.get_section_from_key(src_key) if src_key else ""
-            return (book_order, get_section_sort_key(src_type_name, section))
-
-        json_entries.sort(key=_sort_key)
+        json_entries.sort(key=source_entry_sort_key)
         print(f"Loaded {len(json_entries)} JSON files, sorted by source key.")
 
         # 3. Transactional: use a MongoDB session with transaction
