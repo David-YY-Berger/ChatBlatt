@@ -2,17 +2,30 @@
 import asyncio
 import json
 import os
+from typing import Dict, List, Optional, Tuple
 
 from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
-from backend.db.Collections import CollectionObjs
+from backend.models.SourceClasses.SourceClass import SourceClass
+from backend.models.SourceClasses.SectionSorting import get_section_sort_key
+from backend.models.EntityObjects.Entity import Entity
+from backend.models.Rel import Rel
+from backend.models.Enums import EntityType, RelType
 from backend.db.DBConstants import DBFields
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.EntityRelManager import EntityRelManager
 from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend.data_pipeline.llm_api.PydanticCaller import PydanticCaller
 from backend.file_utils import LocalPrinter, FileTypeEnum, OsFunctions
+from backend.file_utils.JsonUtils import JsonWriter
 from backend.common import Paths
+
+
+# Mapping from JSON category name -> EntityType enum
+_CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.description: et for et in EntityType}
+
+# Mapping from JSON rel field name -> RelType enum
+_REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.description: rt for rt in RelType}
 
 
 class DBPopulateLmmData(DBParentClass):
@@ -42,12 +55,176 @@ class DBPopulateLmmData(DBParentClass):
 
     ############################################## Populating Entities and Relationships ###############################################
 
-    def test_async_run(self):
+    def test_async_run(self): # used to call Pydantic funcs..
         OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
         # Run the entire batch as one async task
-        asyncio.run(self.test_populate_source_meta_data())
-        # asyncio.run(self.print_graphs_to_json())
+        # asyncio.run(self.test_populate_source_meta_data())
+        asyncio.run(self.print_graphs_to_json())
 
+    def test_populate_entities_and_rels_from_jsons(self):
+        """
+        Transactional: reads JSON files from a directory, extracts entities and relationships,
+        inserts them into the DB. If any part fails, all inserts are rolled back.
+        """
+        dir_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\comparingLLms\Gemini 2.5 Flash"
+
+        # 1. Read JSONs with source keys derived from filenames
+        json_entries: List[Tuple[str, dict]] = JsonWriter.read_jsons_from_dir_with_keys(dir_path)
+        if not json_entries:
+            print("No JSON files found in directory.")
+            return
+
+        # 2. Sort by source key using SourceClass sorting logic
+        def _sort_key(entry: Tuple[str, dict]):
+            src_key = entry[0]
+            book = SourceClass.get_book_from_key(src_key)
+            book_order = book.order if book else 0
+            src_type_name = src_key[:2] if src_key else ""
+            section = SourceClass.get_section_from_key(src_key) if src_key else ""
+            return (book_order, get_section_sort_key(src_type_name, section))
+
+        json_entries.sort(key=_sort_key)
+        print(f"Loaded {len(json_entries)} JSON files, sorted by source key.")
+
+        # 3. Transactional: use a MongoDB session with transaction
+        session = self.db_api.client.start_session()
+        try:
+            with session.start_transaction():
+                all_entities, all_rels = self._process_json_entries(json_entries)
+
+            # Print results
+            print(f"\n{'='*60}")
+            print(f"ENTITIES INSERTED/FOUND: {len(all_entities)}")
+            print(f"{'='*60}")
+            for ent in all_entities:
+                print(f"  [{ent.entityType.description}] {ent.display_en_name} (key={ent.key})")
+
+            print(f"\n{'='*60}")
+            print(f"RELATIONSHIPS INSERTED/FOUND: {len(all_rels)}")
+            print(f"{'='*60}")
+            for rel in all_rels:
+                print(f"  {rel.term1} --[{rel.rel_type.description}]--> {rel.term2} (key={rel.key})")
+
+        except Exception as e:
+            print(f"TRANSACTION FAILED - all changes rolled back: {e}")
+            raise
+        finally:
+            session.end_session()
+
+    def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
+        """
+        Process all JSON entries: insert entities first, then relationships.
+        Returns (all_entities, all_rels) with keys populated.
+        """
+        all_entities: List[Entity] = []
+        # Map: (display_en_name_lower, entity_type) -> entity key
+        entity_key_map: Dict[Tuple[str, EntityType], str] = {}
+
+        # ---- Pass 1: Entities ----
+        for source_key, data in json_entries:
+            res = data.get("res", data)  # Handle both wrapped {"res": ...} and flat formats
+            entities_dict = res.get("Entities", {})
+
+            for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+                entity_list = entities_dict.get(category_name)
+                if not entity_list:
+                    continue
+
+                for entity_data in entity_list:
+                    en_name = entity_data.get("en_name", "").strip()
+                    if not en_name:
+                        continue
+
+                    lookup_key = (en_name.lower(), entity_type)
+                    if lookup_key in entity_key_map:
+                        # Already processed this entity
+                        continue
+
+                    entity = Entity.create_from_en_name(en_name, entity_type)
+                    generated_key = self.db_api.try_insert_entity(entity)
+                    entity.key = generated_key
+                    all_entities.append(entity)
+                    entity_key_map[lookup_key] = generated_key
+
+        print(f"  Entities pass complete: {len(all_entities)} unique entities.")
+
+        # ---- Pass 2: Relationships ----
+        all_rels: List[Rel] = []
+
+        for source_key, data in json_entries:
+            res = data.get("res", data)
+            rels_dict = res.get("Rel", {})
+            if not rels_dict:
+                continue
+
+            entities_dict = res.get("Entities", {})
+
+            for rel_field_name, rel_list in rels_dict.items():
+                rel_type = _REL_NAME_TO_REL_TYPE.get(rel_field_name)
+                if rel_type is None:
+                    # Try case-insensitive match
+                    rel_type = next(
+                        (rt for name, rt in _REL_NAME_TO_REL_TYPE.items()
+                         if name.lower() == rel_field_name.lower()),
+                        None
+                    )
+                if rel_type is None:
+                    print(f"  WARNING: Unknown rel type '{rel_field_name}' in source {source_key}, skipping.")
+                    continue
+
+                if not rel_list:
+                    continue
+
+                for relation_data in rel_list:
+                    term1_name = relation_data.get("term1", "").strip()
+                    term2_name = relation_data.get("term2", "").strip()
+                    if not term1_name or not term2_name:
+                        continue
+
+                    # Resolve entity keys by searching in our key map
+                    term1_key = self._resolve_entity_key(term1_name, entities_dict, entity_key_map)
+                    term2_key = self._resolve_entity_key(term2_name, entities_dict, entity_key_map)
+
+                    if not term1_key or not term2_key:
+                        print(f"  WARNING: Could not resolve entities for rel "
+                              f"'{term1_name}' --[{rel_field_name}]--> '{term2_name}' in {source_key}")
+                        continue
+
+                    rel = Rel.create(rel_type=rel_type, term1=term1_key, term2=term2_key)
+                    generated_key = self.db_api.try_insert_rel(rel)
+                    rel.key = generated_key
+                    all_rels.append(rel)
+
+        print(f"  Relationships pass complete: {len(all_rels)} relationships.")
+        return all_entities, all_rels
+
+    def _resolve_entity_key(self, en_name: str, entities_dict: dict,
+        entity_key_map: Dict[Tuple[str, EntityType], str]) -> Optional[str]:
+        """
+        Resolve an entity name to its key by checking which category it belongs to
+        in the entities_dict, then looking up in entity_key_map.
+        """
+        name_lower = en_name.lower()
+
+        # Search through all categories to find what type this entity is
+        for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+            entity_list = entities_dict.get(category_name, [])
+            if not entity_list:
+                continue
+            for entity_data in entity_list:
+                if entity_data.get("en_name", "").strip().lower() == name_lower:
+                    lookup = (name_lower, entity_type)
+                    return entity_key_map.get(lookup)
+
+        # Fallback: try all types
+        for entity_type in EntityType:
+            lookup = (name_lower, entity_type)
+            if lookup in entity_key_map:
+                return entity_key_map[lookup]
+
+        return None
+
+    ############################################## Print Graphs to JSON ###############################################
 
     async def print_graphs_to_json(self):
         # todo get the references of a passage too!
@@ -57,7 +234,9 @@ class DBPopulateLmmData(DBParentClass):
         total_input_tokens = 0
         total_output_tokens = 0
 
-        for src_content in self.get_examples_src_contents():
+        # contents = self.get_examples_src_contents()
+        contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
+        for src_content in contents:
             passage = src_content.get_clean_en_text()
 
             graph_json_str, usage, cost_usd = await self.pydantic_caller.extract_graph_from_passage(passage)

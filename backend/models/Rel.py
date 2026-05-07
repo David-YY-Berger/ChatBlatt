@@ -16,13 +16,18 @@ def TransientField(default=None, default_factory=None, **kwargs):
 class Rel(BaseModel):
     """Relationship between two entities."""
     # db fields
-    key: str
+    key: str = ""
     term1: str  # key of Entity
     term2: str  # key of Entity
     rel_type: RelType
 
     # transient fields
     source_keys: List[str] = TransientField(default_factory=list)
+
+    @classmethod
+    def create(cls, rel_type: RelType, term1: str, term2: str) -> "Rel":
+        """Factory: create a Rel from type and two entity keys."""
+        return cls(rel_type=rel_type, term1=term1, term2=term2)
 
     def to_db_dict(self) -> Dict[str, Any]:
         """Returns only the db-persisted fields as a dictionary."""

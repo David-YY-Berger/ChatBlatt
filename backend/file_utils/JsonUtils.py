@@ -45,7 +45,6 @@ class JsonWriter:
         except Exception as e:
             print(f"Error writing JSON to file: {e}")
 
-
     @staticmethod
     def write_to_string(data, indent=4):
         """
@@ -86,3 +85,48 @@ class JsonWriter:
 
         with open(output_json_path, "w", encoding="utf-8") as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
+
+    @staticmethod
+    def read_jsons_from_dir(dir_path: str) -> list:
+        """Reads all JSON files from a directory and returns a list of their contents."""
+        import os
+        json_data = []
+        for filename in os.listdir(dir_path):
+            if not filename.endswith(".json"):
+                continue
+            filepath = os.path.join(dir_path, filename)
+            if not os.path.isfile(filepath):
+                continue
+            with open(filepath, "r", encoding="utf-8-sig") as json_file:
+                try:
+                    data = json.load(json_file)
+                    json_data.append(data)
+                except json.JSONDecodeError as e:
+                    print(f"Error decoding JSON from file {filename}: {e}")
+        return json_data
+
+    @staticmethod
+    def read_jsons_from_dir_with_keys(dir_path: str) -> list:
+        """Reads all JSON files from a directory. Derives the source key from the filename.
+        Filenames use ';' in place of ':' (e.g. TN_Esther_0_1;1–22.json -> TN_Esther_0_1:1–22).
+        Returns a list of tuples (source_key, dict).
+        """
+        import os
+        results = []
+        for filename in os.listdir(dir_path):
+            if not filename.endswith(".json"):
+                continue
+            filepath = os.path.join(dir_path, filename)
+            if not os.path.isfile(filepath):
+                continue
+            with open(filepath, "r", encoding="utf-8-sig") as json_file:
+                try:
+                    data = json.load(json_file)
+                except json.JSONDecodeError as e:
+                    print(f"Error decoding JSON from file {filename}: {e}")
+                    continue
+            # Derive source key from filename (strip .json, replace ';' with ':')
+            source_key = filename[:-5].replace(";", ":")
+            results.append((source_key, data))
+        return results
+

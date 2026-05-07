@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from functools import total_ordering
 from typing import Any
 
+from backend.db.data_names.Books import Book
 from backend.models.Enums import SourceType
 from backend.models.SourceClasses.SectionSorting import get_section_sort_key
 
@@ -18,16 +19,20 @@ class SourceClass(ABC):
 
     ################################################## Sorting ############################################
 
+    # Canonical source-type ordering: TN first, then MS, then BT, then everything else
+    _SOURCE_TYPE_ORDER = {"TN": 0, "MS": 1, "BT": 2}
+
     def sort_key(self):
         """Return a tuple used for canonical ordering:
-        (book.order, section_sort_key)
+        (source_type_priority, book.order, section_sort_key)
+        Source type priority: TN=0, MS=1, BT=2, everything else=3.
         """
-        from backend.db.data_names.Books import Books
         book = self.get_book_from_key(self.key)
         book_order = book.order if book else 0
         src_type_name = self.key[:2] if self.key else ""
+        src_type_priority = self._SOURCE_TYPE_ORDER.get(src_type_name, 3)
         section = self.get_section_from_key(self.key) if self.key else ""
-        return (book_order, get_section_sort_key(src_type_name, section))
+        return src_type_priority, book_order, get_section_sort_key(src_type_name, section)
 
     def __eq__(self, other):
         if not isinstance(other, SourceClass):
@@ -129,7 +134,7 @@ class SourceClass(ABC):
         return SourceType[prefix] if prefix in SourceType.__members__ else None
 
     @staticmethod
-    def get_book_from_key(key):
+    def get_book_from_key(key) -> Book | None:
         """Return the Book object corresponding to the book name in the key.
         Falls back to None if the book is not found in the registry.
         """

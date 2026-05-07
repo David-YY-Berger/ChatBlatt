@@ -16,17 +16,26 @@ def TransientField(default=None, default_factory=None, **kwargs):
 
 class Entity(BaseModel):
     # db fields
-    key: str
+    key: str = ""
     display_en_name: str
-    display_heb_name: str
-    all_en_names: List[str]
-    all_heb_names: List[str]
+    display_heb_name: str = ""
+    all_en_names: List[str] = Field(default_factory=list)
+    all_heb_names: List[str] = Field(default_factory=list)
     entityType: EntityType
     alias_keys: List[str] = Field(default_factory=list)
 
     # transient fields
     comparedTo: List[str] = TransientField(default_factory=list)
     contrastedWith: List[str] = TransientField(default_factory=list)
+
+    @classmethod
+    def create_from_en_name(cls, en_name: str, entity_type: EntityType) -> "Entity":
+        """Factory: create an Entity from just the English display name and type."""
+        return cls(
+            display_en_name=en_name,
+            entityType=entity_type,
+            all_en_names=[en_name],
+        )
 
     def to_db_dict(self) -> Dict[str, Any]:
         """Returns only the db-persisted fields as a dictionary."""

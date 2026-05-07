@@ -62,7 +62,7 @@ class PassageType(DescribedEnum):
     PROPHECY = (4, "PROPHECY")
 
 class EntityType(DescribedEnum):
-    EPerson = ("P", "Person/Group")  # Includes individuals AND groups (e.g., "the 70 elders")
+    EPerson = ("P", "Person")  # Includes individuals AND groups (e.g., "the 70 elders")
     EPlace  = ("L", "Place")
     ETribeOfIsrael  = ("T", "TribeOfIsrael")
     ENation = ("N", "Nation")
