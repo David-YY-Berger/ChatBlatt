@@ -2,7 +2,7 @@
 import asyncio
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
@@ -10,7 +10,8 @@ from backend.models.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models.EntityObjects.Entity import Entity
 from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
 from backend.models.Rel import Rel
-from backend.models.Enums import EntityType, RelType
+from backend.models.Enums import EntityType, RelType, PassageType
+from backend.models.SourceClasses.SourceMetadata import SourceMetadata
 from backend.db.DBConstants import DBFields
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.EntityRelManager import EntityRelManager
@@ -105,13 +106,14 @@ class DBPopulateLmmData(DBParentClass):
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
         """
-        Process all JSON entries: insert entities, then relationships.
+        Process all JSON entries: insert entities, then relationships, then source metadata.
         For Person entities, family context is extracted per-entry from the JSON
         and the DB is queried directly to check for existing matches.
         Returns (all_entities, all_rels) with keys populated.
         """
         all_entities, entity_key_map = self._insert_entities_from_entries(json_entries)
-        all_rels = self._insert_rels_from_entries(json_entries, entity_key_map)
+        all_rels, source_rel_keys = self._insert_rels_from_entries(json_entries, entity_key_map)
+        self._upsert_source_metadata_for_entries(json_entries, entity_key_map, source_rel_keys)
         return all_entities, all_rels
 
     def _insert_entities_from_entries(
@@ -208,14 +210,17 @@ class DBPopulateLmmData(DBParentClass):
         self,
         json_entries: List[Tuple[str, dict]],
         entity_key_map: Dict[tuple, str],
-    ) -> List[Rel]:
+    ) -> Tuple[List[Rel], Dict[str, Set[str]]]:
         """
         Pass 2: iterate all JSON entries, insert each relationship into the DB.
         Relies on entity_key_map built in Pass 1 to resolve entity names to keys.
+        Returns (all_rels, source_rel_keys) where source_rel_keys maps source_key -> set of rel keys.
         """
         all_rels: List[Rel] = []
+        source_rel_keys: Dict[str, Set[str]] = {}
 
         for source_key, data in json_entries:
+            source_rel_keys[source_key] = set()
             res = self._get_res(data)
             rels_dict = res.get("Rel", {})
             if not rels_dict:
@@ -234,9 +239,71 @@ class DBPopulateLmmData(DBParentClass):
                     )
                     if rel is not None:
                         all_rels.append(rel)
+                        source_rel_keys[source_key].add(rel.key)
 
         print(f"  Relationships pass complete: {len(all_rels)} relationships.")
-        return all_rels
+        return all_rels, source_rel_keys
+
+    def _upsert_source_metadata_for_entries(
+        self,
+        json_entries: List[Tuple[str, dict]],
+        entity_key_map: Dict[tuple, str],
+        source_rel_keys: Dict[str, Set[str]],
+    ) -> None:
+        """
+        Pass 3: for each source entry, build a fully-populated SourceMetadata object
+        (key, source_type, summary_en, summary_heb, passage_types, entity_keys, rel_keys)
+        and upsert it into the DB.
+        """
+        upserted = 0
+        for source_key, data in json_entries:
+            res = self._get_res(data)
+
+            # Collect entity keys that appear in this source
+            entities_dict = res.get("Entities", {})
+            entity_keys: Set[str] = set()
+            for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+                for entity_data in entities_dict.get(category_name) or []:
+                    en_name = entity_data.get("en_name", "").strip()
+                    if en_name:
+                        lookup = (en_name.lower(), entity_type)
+                        if lookup in entity_key_map:
+                            entity_keys.add(entity_key_map[lookup])
+
+            # Parse passage types from LLM output
+            passage_types = self._parse_passage_types(res.get("passage_types", []))
+
+            src_metadata = SourceMetadata(key=source_key)
+            src_metadata.summary_en = res.get("en_summary")
+            src_metadata.summary_heb = res.get("heb_summary")
+            src_metadata.passage_types = passage_types
+            src_metadata.entity_keys = entity_keys
+            src_metadata.rel_keys = source_rel_keys.get(source_key, set())
+
+            self.db_api.upsert_source_metadata(src_metadata)
+            upserted += 1
+
+        print(f"  Source metadata pass complete: {upserted} entries upserted.")
+
+    @staticmethod
+    def _parse_passage_types(passage_type_strs: List[str]) -> List[PassageType]:
+        """
+        Convert LLM passage-type strings (e.g. "LAW", "STORY") to PassageType enum values.
+        Matching is case-insensitive against both enum name and description.
+        """
+        _pt_map: Dict[str, PassageType] = {}
+        for pt in PassageType:
+            _pt_map[pt.name.upper()] = pt
+            _pt_map[pt.description.upper()] = pt
+
+        result: List[PassageType] = []
+        for pt_str in passage_type_strs:
+            pt = _pt_map.get(pt_str.upper())
+            if pt is not None:
+                result.append(pt)
+            else:
+                print(f"  WARNING: Unknown passage type '{pt_str}', skipping.")
+        return result
 
     def _try_insert_rel(
         self,
