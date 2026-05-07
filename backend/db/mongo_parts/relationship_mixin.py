@@ -9,6 +9,60 @@ class RelationshipMongoMixin:
     def get_collection(self, collection):
         raise NotImplementedError
 
+    # ========================= Family context from DB =========================
+
+    def get_family_context_for_entity(self, entity_key: str) -> "PersonFamilyContext":
+        """
+        Build a PersonFamilyContext for an entity by querying the rels collection.
+        Looks up childOfFather, childOfMother, spouseOf rels where this entity is term1,
+        resolves term2 keys to display_en_name (lowercased).
+        """
+        from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
+        from backend.models.Enums import RelType
+
+        ctx = PersonFamilyContext()
+
+        # Family rel types where this entity is term1
+        family_rel_types = [
+            (RelType.childOfFather, "fathers"),
+            (RelType.childOfMother, "mothers"),
+            (RelType.spouseOf, "spouses"),
+        ]
+
+        for rel_type, attr_name in family_rel_types:
+            docs = self.get_collection(CollectionObjs.RELATIONS).find({
+                DBFields.TERM1: entity_key,
+                DBFields.REL_TYPE: rel_type.value,
+            })
+            for doc in docs:
+                term2_key = doc.get(DBFields.TERM2)
+                if term2_key:
+                    name = self._resolve_entity_key_to_name(term2_key)
+                    if name:
+                        getattr(ctx, attr_name).add(name)
+
+        # Also check spouseOf where this entity is term2 (spouse is bidirectional)
+        spouse_docs = self.get_collection(CollectionObjs.RELATIONS).find({
+            DBFields.TERM2: entity_key,
+            DBFields.REL_TYPE: RelType.spouseOf.value,
+        })
+        for doc in spouse_docs:
+            term1_key = doc.get(DBFields.TERM1)
+            if term1_key:
+                name = self._resolve_entity_key_to_name(term1_key)
+                if name:
+                    ctx.spouses.add(name)
+
+        return ctx
+
+    def _resolve_entity_key_to_name(self, entity_key: str) -> Optional[str]:
+        """Resolve an entity key to its lowercased display_en_name."""
+        doc = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.KEY: entity_key})
+        if doc is None:
+            return None
+        name = doc.get(DBFields.DISPLAY_EN_NAME, "")
+        return name.lower() if name else None
+
     # ========================= Primary insert method =========================
 
     def try_insert_rel(self, rel: Rel) -> str:

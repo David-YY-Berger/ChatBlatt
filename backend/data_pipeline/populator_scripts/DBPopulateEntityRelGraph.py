@@ -8,7 +8,7 @@ from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
 from backend.models.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models.EntityObjects.Entity import Entity
-from backend.models.EntityObjects.EntityIdentity import EntityIdentityContext
+from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
 from backend.models.Rel import Rel
 from backend.models.Enums import EntityType, RelType
 from backend.db.DBConstants import DBFields
@@ -105,69 +105,38 @@ class DBPopulateLmmData(DBParentClass):
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
         """
-        Process all JSON entries: build identity context, insert entities, then relationships.
+        Process all JSON entries: insert entities, then relationships.
+        For Person entities, family context is extracted per-entry from the JSON
+        and the DB is queried directly to check for existing matches.
         Returns (all_entities, all_rels) with keys populated.
         """
-        # Build identity context from relationship data in JSONs (needed for Person dedup)
-        identity_context = self._build_identity_context(json_entries)
-
-        all_entities, entity_key_map = self._insert_entities_from_entries(json_entries, identity_context)
+        all_entities, entity_key_map = self._insert_entities_from_entries(json_entries)
         all_rels = self._insert_rels_from_entries(json_entries, entity_key_map)
         return all_entities, all_rels
 
-    def _build_identity_context(self, json_entries: List[Tuple[str, dict]]) -> EntityIdentityContext:
-        """
-        Scan all JSON entries to extract family relationships (childOfFather,
-        childOfMother, spouseOf) needed for Person identity resolution.
-        This runs BEFORE entity insertion so the dedup logic has full context.
-        """
-        context = EntityIdentityContext()
-
-        for source_key, data in json_entries:
-            res = self._get_res(data)
-            rels_dict = res.get("Rel", {})
-            if not rels_dict:
-                continue
-
-            for rel_field_name, rel_list in rels_dict.items():
-                if not rel_list:
-                    continue
-                field_lower = rel_field_name.lower()
-
-                for relation_data in rel_list:
-                    term1 = relation_data.get("term1", "").strip()
-                    term2 = relation_data.get("term2", "").strip()
-                    if not term1 or not term2:
-                        continue
-
-                    if field_lower == "childoffather":
-                        # term1 is child, term2 is father
-                        context.add_child_of_father(term1, term2)
-                    elif field_lower == "childofmother":
-                        # term1 is child, term2 is mother
-                        context.add_child_of_mother(term1, term2)
-                    elif field_lower == "spouseof":
-                        context.add_spouse(term1, term2)
-
-        return context
-
     def _insert_entities_from_entries(
-        self, json_entries: List[Tuple[str, dict]], identity_context: EntityIdentityContext
+        self, json_entries: List[Tuple[str, dict]]
     ) -> Tuple[List[Entity], Dict[tuple, str]]:
         """
         Pass 1: iterate all JSON entries, insert each unique entity into the DB.
-        Uses identity_context for dedup (each entity defines its own equality via get_identity_tuple).
+        For Person entities, extracts family context from the current JSON entry's rels
+        and passes it to the DB layer for dedup against existing DB records.
         Returns (all_entities, entity_key_map) where entity_key_map maps
-        identity_tuple -> db key.
+        (name_lower, entity_type) -> db key.
         """
         all_entities: List[Entity] = []
         entity_key_map: Dict[tuple, str] = {}
 
         for source_key, data in json_entries:
-            entities_dict = self._get_res(data).get("Entities", {})
+            res = self._get_res(data)
+            entities_dict = res.get("Entities", {})
+            rels_dict = res.get("Rel", {})
+
             for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
                 for entity_data in entities_dict.get(category_name) or []:
-                    entity, was_new = self._try_insert_entity(entity_data, entity_type, entity_key_map, identity_context)
+                    entity, was_new = self._try_insert_entity(
+                        entity_data, entity_type, entity_key_map, rels_dict
+                    )
                     if was_new:
                         all_entities.append(entity)
 
@@ -176,11 +145,12 @@ class DBPopulateLmmData(DBParentClass):
 
     def _try_insert_entity(self, entity_data: dict, entity_type: EntityType,
                            entity_key_map: Dict[tuple, str],
-                           identity_context: EntityIdentityContext,
+                           rels_dict: dict,
     ) -> Tuple[Optional[Entity], bool]:
         """
         Insert a single entity into the DB if it hasn't been seen yet.
-        Uses the entity's get_identity_tuple() for in-memory dedup.
+        For Person entities, extracts family context from rels_dict and passes it
+        to the DB layer so it can check against existing DB records.
         Returns (entity, was_new). was_new=False means it was already in entity_key_map.
         """
         en_name = entity_data.get("en_name", "").strip()
@@ -188,14 +158,51 @@ class DBPopulateLmmData(DBParentClass):
             return None, False
 
         entity = Entity.create_from_en_name(en_name, entity_type)
-        identity_tuple = entity.get_identity_tuple(identity_context)
+        lookup_key = (en_name.lower(), entity_type)
 
-        if identity_tuple in entity_key_map:
-            return None, False  # already processed
+        if lookup_key in entity_key_map:
+            return None, False  # already processed in this batch
 
-        entity.key = self.db_api.try_insert_entity(entity, identity_context)
-        entity_key_map[identity_tuple] = entity.key
+        # For Person entities, build family context from the JSON rels
+        person_family = None
+        if entity_type == EntityType.EPerson:
+            person_family = self._extract_person_family_from_rels(en_name, rels_dict)
+
+        entity.key = self.db_api.try_insert_entity(entity, person_family)
+        entity_key_map[lookup_key] = entity.key
         return entity, True
+
+    @staticmethod
+    def _extract_person_family_from_rels(person_name: str, rels_dict: dict) -> PersonFamilyContext:
+        """
+        Extract family context (fathers, mothers, spouses) for a specific person
+        from the current JSON entry's relationship data.
+        """
+        ctx = PersonFamilyContext()
+        name_lower = person_name.lower()
+
+        for rel_field_name, rel_list in rels_dict.items():
+            if not rel_list:
+                continue
+            field_lower = rel_field_name.lower()
+
+            for relation_data in rel_list:
+                term1 = relation_data.get("term1", "").strip()
+                term2 = relation_data.get("term2", "").strip()
+                if not term1 or not term2:
+                    continue
+
+                if field_lower == "childoffather" and term1.lower() == name_lower:
+                    ctx.fathers.add(term2.lower())
+                elif field_lower == "childofmother" and term1.lower() == name_lower:
+                    ctx.mothers.add(term2.lower())
+                elif field_lower == "spouseof":
+                    if term1.lower() == name_lower:
+                        ctx.spouses.add(term2.lower())
+                    elif term2.lower() == name_lower:
+                        ctx.spouses.add(term1.lower())
+
+        return ctx
 
     def _insert_rels_from_entries(
         self,
@@ -287,7 +294,7 @@ class DBPopulateLmmData(DBParentClass):
         entity_key_map: Dict[tuple, str]) -> Optional[str]:
         """
         Resolve an entity name to its key by checking which category it belongs to
-        in the entities_dict, then looking up in entity_key_map using identity tuples.
+        in the entities_dict, then looking up in entity_key_map using (name_lower, entity_type).
         """
         name_lower = en_name.lower()
 
@@ -298,14 +305,9 @@ class DBPopulateLmmData(DBParentClass):
                 continue
             for entity_data in entity_list:
                 if entity_data.get("en_name", "").strip().lower() == name_lower:
-                    # Use default identity tuple (name, type) for lookup
                     lookup = (name_lower, entity_type)
                     if lookup in entity_key_map:
                         return entity_key_map[lookup]
-                    # Also try 3-tuple keys (Person with family context)
-                    for key_tuple, db_key in entity_key_map.items():
-                        if len(key_tuple) >= 2 and key_tuple[0] == name_lower and key_tuple[1] == entity_type:
-                            return db_key
 
         # Fallback: try all types
         for entity_type in EntityType:
