@@ -125,7 +125,7 @@
             ]
         },
         "Rel": {
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Balaam",
                     "term2": "Beor"

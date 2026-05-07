@@ -100,7 +100,7 @@
                     "term2": "Hegai"
                 }
             ],
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Esther",
                     "term2": "Abihail"

@@ -182,7 +182,7 @@
             ]
         },
         "Rel": {
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Isaiah",
                     "term2": "Amoz"

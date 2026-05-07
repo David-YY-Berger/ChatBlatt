@@ -74,7 +74,7 @@ EXTRACTED GRAPH (JSON):
     },
     "Rel": {
       "studiedFrom": [],
-      "childOf": [
+      "childOfFather": [
         {
           "term1": "Sons Of Jacob",
           "term2": "Jacob"

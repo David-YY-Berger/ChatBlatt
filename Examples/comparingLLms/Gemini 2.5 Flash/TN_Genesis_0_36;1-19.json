@@ -114,7 +114,7 @@
             ]
         },
         "Rel": {
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Adah",
                     "term2": "Elon"

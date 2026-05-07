@@ -44,7 +44,7 @@ EXTRACTED GRAPH (JSON):
       ]
     },
     "Rel": {
-      "childOf": [
+      "childOfFather": [
         {
           "term1": "Dan",
           "term2": "Bilhah"
