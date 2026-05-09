@@ -1,0 +1,28 @@
+﻿{
+    "res": {
+        "en_summary": "God creates animals on the earth",
+        "heb_summary": "אלוהים בורא חיות על הארץ",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                },
+                {
+                    "en_name": "Wild Beast"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:24-25"
+}

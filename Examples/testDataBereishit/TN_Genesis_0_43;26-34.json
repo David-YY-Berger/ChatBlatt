@@ -1,0 +1,88 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph meets brothers, weeps, serves meal.",
+        "heb_summary": "יוסף פוגש אחים, בוכה, מגיש ארוחה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Egyptians"
+                },
+                {
+                    "en_name": "Hebrews"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "Room"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Hebrew"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Meal"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egyptians"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Benjamin"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Hebrews"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Room"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Egyptians",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Hebrews",
+                    "term2": "Hebrew"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Egypt",
+                    "term2": "Hebrew"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_43:26-34"
+}

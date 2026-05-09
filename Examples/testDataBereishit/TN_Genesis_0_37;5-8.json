@@ -1,0 +1,39 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph dreams, brothers hate him, fear his rule.",
+        "heb_summary": "יוסף חולם, אחיו שונאים אותו, חוששים משלטונו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Sheaf"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's Brothers"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:5-8"
+}

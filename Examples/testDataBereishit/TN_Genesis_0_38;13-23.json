@@ -1,0 +1,115 @@
+﻿{
+    "res": {
+        "en_summary": "Tamar deceives Judah, conceives, takes pledges.",
+        "heb_summary": "תמר מרמה את יהודה, הרה, מקבלת ערבונות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Tamar"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Shelah"
+                },
+                {
+                    "en_name": "Adullamite"
+                },
+                {
+                    "en_name": "Council"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Timnah"
+                },
+                {
+                    "en_name": "Enaim"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Adullam"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Widows Garb"
+                },
+                {
+                    "en_name": "Veil"
+                },
+                {
+                    "en_name": "Seal"
+                },
+                {
+                    "en_name": "Cord"
+                },
+                {
+                    "en_name": "Staff"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Kid"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Kid"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shelah",
+                    "term2": "Judah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Tamar",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Adullamite"
+                },
+                {
+                    "term1": "Adullamite",
+                    "term2": "Council"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Judah",
+                    "term2": "Timnah"
+                },
+                {
+                    "term1": "Tamar",
+                    "term2": "Enaim"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Enaim"
+                },
+                {
+                    "term1": "Adullamite",
+                    "term2": "Enaim"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Adullamite",
+                    "term2": "Adullam"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_38:13-23"
+}

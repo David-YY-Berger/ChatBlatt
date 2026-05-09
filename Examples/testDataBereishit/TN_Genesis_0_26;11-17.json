@@ -1,0 +1,67 @@
+﻿{
+    "res": {
+        "en_summary": "Abimelech charged people; Isaac prospered, Philistines envied.",
+        "heb_summary": "אבימלך ציווה, יצחק הצליח, פלישתים קינאו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abraham"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gerar"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "100",
+                    "number_category": "Measurement",
+                    "unit": "fold",
+                    "context": "harvest yield"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Isaac"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Gerar"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Gerar",
+                    "term2": "Philistia"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_26:11-17"
+}

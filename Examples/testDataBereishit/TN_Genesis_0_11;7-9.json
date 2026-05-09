@@ -1,0 +1,37 @@
+﻿{
+    "res": {
+        "en_summary": "HASHEM confounded speech, scattered people from Babel.",
+        "heb_summary": "ה' בלבל שפה, הפיץ אנשים מבבל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Babel"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Babel"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_11:7-9"
+}

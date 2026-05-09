@@ -1,0 +1,72 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob prays, fears Esau, prepares gifts.",
+        "heb_summary": "יעקב מתפלל, חושש מעשו, מכין מתנות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jordan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "camp",
+                    "context": "jacob's group"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Jordan"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_32:10-14"
+}

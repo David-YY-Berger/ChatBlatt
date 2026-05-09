@@ -1,0 +1,108 @@
+﻿COST: Tokens: Total=8856 approx cost usd = $0.001163 (Prompt=6640, Completion=2216)
+SOURCE:
+Genesis 3:14-19  (TN_Genesis_0_3:14-19)
+
+HEBREW:
+וַיֹּ֩אמֶר֩ יְהֹוָ֨ה אֱלֹהִ֥ים׀אֶֽל־הַנָּחָשׁ֮ כִּ֣י עָשִׂ֣יתָ זֹּאת֒ אָר֤וּר אַתָּה֙ מִכׇּל־הַבְּהֵמָ֔ה וּמִכֹּ֖ל חַיַּ֣ת הַשָּׂדֶ֑ה עַל־גְּחֹנְךָ֣ תֵלֵ֔ךְ וְעָפָ֥ר תֹּאכַ֖ל כׇּל־יְמֵ֥י חַיֶּֽיךָ׃ וְאֵיבָ֣ה׀ אָשִׁ֗ית בֵּֽינְךָ֙ וּבֵ֣ין הָֽאִשָּׁ֔ה וּבֵ֥ין זַרְעֲךָ֖ וּבֵ֣ין זַרְעָ֑הּ ה֚וּא יְשׁוּפְךָ֣ רֹ֔אשׁ וְאַתָּ֖ה תְּשׁוּפֶ֥נּוּ עָקֵֽב׃ אֶֽל־הָאִשָּׁ֣ה אָמַ֗ר הַרְבָּ֤ה אַרְבֶּה֙ עִצְּבוֹנֵ֣ךְ וְהֵֽרֹנֵ֔ךְ בְּעֶ֖צֶב תֵּֽלְדִ֣י בָנִ֑ים וְאֶל־אִישֵׁךְ֙ תְּשׁ֣וּקָתֵ֔ךְ וְה֖וּא יִמְשׇׁל־בָּֽךְ׃ וּלְאָדָ֣ם אָמַ֗ר כִּֽי־שָׁמַ֘עְתָּ֮ לְק֣וֹל אִשְׁתֶּ֒ךָ֒ וַתֹּ֙אכַל֙ מִן־הָעֵ֔ץ אֲשֶׁ֤ר צִוִּיתִ֙יךָ֙ לֵאמֹ֔ר לֹ֥א תֹאכַ֖ל מִמֶּ֑נּוּ אֲרוּרָ֤ה הָֽאֲדָמָה֙ בַּֽעֲבוּרֶ֔ךָ בְּעִצָּבוֹן֙ תֹּֽאכְלֶ֔נָּה כֹּ֖ל יְמֵ֥י חַיֶּֽיךָ׃ וְק֥וֹץ וְדַרְדַּ֖ר תַּצְמִ֣יחַֽ לָ֑ךְ וְאָכַלְתָּ֖ אֶת־עֵ֥שֶׂב הַשָּׂדֶֽה׃ בְּזֵעַ֤ת אַפֶּ֙יךָ֙ תֹּ֣אכַל לֶ֔חֶם עַ֤ד שֽׁוּבְךָ֙ אֶל־הָ֣אֲדָמָ֔ה כִּ֥י מִמֶּ֖נָּה לֻקָּ֑חְתָּ כִּֽי־עָפָ֣ר אַ֔תָּה וְאֶל־עָפָ֖ר תָּשֽׁוּב׃
+
+ENGLISH:
+Then God HASHEM said to the serpent, Because you did this, More cursed shall you be Than all cattle And all the wild beasts: On your belly shall you crawl And dirt shall you eat All the days of your life. I will put enmity Between you and the woman, And between your offspring and hers; They shall strike at your head, And you shall strike at their heel. And to the woman [God] said, I will greatly expand Your hard labor-and your pregnancies; In hardship shall you bear children. Yet your urge shall be for your husband, And he shall rule over you. To Adam [God] said, Because you did as your wife said and ate of the tree about which I commanded you, You shall not eat of it, Cursed be the ground because of you; By hard labor shall you eat of it All the days of your life: Thorns and thistles shall it sprout for you. But your food shall be the grasses of the field; By the sweat of your brow Shall you get bread to eat, Until you return to the ground- For from it you were taken. For dust. Cf. the second note at 2.7. you are, And to dust you shall return.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God curses serpent, woman, and Adam",
+    "heb_summary": "אלוהים מקלל נחש, אישה ואדם",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Adam"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Ground"
+        },
+        {
+          "en_name": "Field"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Serpent"
+        },
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Wild Beast"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Dirt"
+        },
+        {
+          "en_name": "Grass"
+        },
+        {
+          "en_name": "Bread"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree"
+        },
+        {
+          "en_name": "Thorn"
+        },
+        {
+          "en_name": "Thistle"
+        },
+        {
+          "en_name": "Grass"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Serpent"
+        },
+        {
+          "term1": "God Hashem",
+          "term2": "Adam"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Adam",
+          "term2": "Ground"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Adam",
+          "term2": "Ground"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "God Hashem",
+          "term2": "Serpent"
+        },
+        {
+          "term1": "God Hashem",
+          "term2": "Adam"
+        }
+      ]
+    }
+  }
+}

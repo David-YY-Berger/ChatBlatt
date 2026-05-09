@@ -1,0 +1,60 @@
+﻿COST: Tokens: Total=7963 approx cost usd = $0.000922 (Prompt=6520, Completion=1443)
+SOURCE:
+Genesis 38:24-26  (TN_Genesis_0_38:24-26)
+
+HEBREW:
+וַיְהִ֣י׀ כְּמִשְׁלֹ֣שׁ חֳדָשִׁ֗ים וַיֻּגַּ֨ד לִֽיהוּדָ֤ה לֵאמֹר֙ זָֽנְתָה֙ תָּמָ֣ר כַּלָּתֶ֔ךָ וְגַ֛ם הִנֵּ֥ה הָרָ֖ה לִזְנוּנִ֑ים וַיֹּ֣אמֶר יְהוּדָ֔ה הוֹצִיא֖וּהָ וְתִשָּׂרֵֽף׃ הִ֣וא מוּצֵ֗את וְהִ֨יא שָׁלְחָ֤ה אֶל־חָמִ֙יהָ֙ לֵאמֹ֔ר לְאִישׁ֙ אֲשֶׁר־אֵ֣לֶּה לּ֔וֹ אָנֹכִ֖י הָרָ֑ה וַתֹּ֙אמֶר֙ הַכֶּר־נָ֔א לְמִ֞י הַחֹתֶ֧מֶת וְהַפְּתִילִ֛ים וְהַמַּטֶּ֖ה הָאֵֽלֶּה׃ וַיַּכֵּ֣ר יְהוּדָ֗ה וַיֹּ֙אמֶר֙ צָֽדְקָ֣ה מִמֶּ֔נִּי כִּֽי־עַל־כֵּ֥ן לֹא־נְתַתִּ֖יהָ לְשֵׁלָ֣ה בְנִ֑י וְלֹֽא־יָסַ֥ף ע֖וֹד לְדַעְתָּֽהּ׃
+
+ENGLISH:
+About three months later, Judah was told, Your daughter-in-law Tamar has played the harlot; in fact, she is pregnant from harlotry. Bring her out, said Judah. She should be burned! As she was being brought out, she sent this message to her father-in-law, Its by the man. to whom these belong that Im pregnant. And she added, Examine these: whose seal and cord and staff are these? Judah recognized them, and said, She is more in the right than I, inasmuch as I did not give her to my son Shelah. And he was not intimate with her again.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Judah condemns Tamar; she reveals his paternity.",
+    "heb_summary": "יהודה דן את תמר; היא חושפת אבהותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Tamar"
+        },
+        {
+          "en_name": "Shelah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Seal"
+        },
+        {
+          "en_name": "Cord"
+        },
+        {
+          "en_name": "Staff"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "month",
+          "context": "tamar's pregnancy"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Tamar",
+          "term2": "Judah"
+        }
+      ]
+    }
+  }
+}

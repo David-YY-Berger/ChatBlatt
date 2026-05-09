@@ -1,0 +1,102 @@
+﻿{
+    "res": {
+        "en_summary": "Judah pleads with Joseph for Benjamin's return.",
+        "heb_summary": "יהודה מתחנן ליוסף על בנימין.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "The Brothers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sheol"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "jacob's sons"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "jacob's sons"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Benjamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Benjamin",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Rachel"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Judah",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "The Brothers"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "The Brothers"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Sheol"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_44:18-34"
+}

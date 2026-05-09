@@ -1,0 +1,44 @@
+﻿COST: Tokens: Total=7647 approx cost usd = $0.000832 (Prompt=6498, Completion=1149)
+SOURCE:
+Genesis 38:27-30  (TN_Genesis_0_38:27-30)
+
+HEBREW:
+וַיְהִ֖י בְּעֵ֣ת לִדְתָּ֑הּ וְהִנֵּ֥ה תְאוֹמִ֖ים בְּבִטְנָֽהּ׃ וַיְהִ֥י בְלִדְתָּ֖הּ וַיִּתֶּן־יָ֑ד וַתִּקַּ֣ח הַמְיַלֶּ֗דֶת וַתִּקְשֹׁ֨ר עַל־יָד֤וֹ שָׁנִי֙ לֵאמֹ֔ר זֶ֖ה יָצָ֥א רִאשֹׁנָֽה׃ וַיְהִ֣י׀ כְּמֵשִׁ֣יב יָד֗וֹ וְהִנֵּה֙ יָצָ֣א אָחִ֔יו וַתֹּ֕אמֶר מַה־פָּרַ֖צְתָּ עָלֶ֣יךָ פָּ֑רֶץ וַיִּקְרָ֥א שְׁמ֖וֹ פָּֽרֶץ׃ וְאַחַר֙ יָצָ֣א אָחִ֔יו אֲשֶׁ֥ר עַל־יָד֖וֹ הַשָּׁנִ֑י וַיִּקְרָ֥א שְׁמ֖וֹ זָֽרַח׃
+
+ENGLISH:
+When the time came for her to give birth, there were twins in her womb! While she was in labor, one of them put out a hand, and the midwife tied a crimson thread on that hand, to signify: This one came out first. But just then it drew back its hand, and out came its brother; and she said, What a breach, connected with Perez. you have made for yourself! So he was named Perez. Afterward his brother came out, on whose hand was the crimson thread; he was named Zerah.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Twins Perez and Zerah born.",
+    "heb_summary": "פרץ וזרח תאומים נולדו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Perez"
+        },
+        {
+          "en_name": "Zerah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "person",
+          "context": "twin birth"
+        },
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "unit": "person",
+          "context": "hand came out"
+        }
+      ]
+    }
+  }
+}

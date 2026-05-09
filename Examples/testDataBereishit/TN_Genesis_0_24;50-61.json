@@ -1,0 +1,137 @@
+﻿{
+    "res": {
+        "en_summary": "Laban and Bethuel agree to Rebekah's marriage.",
+        "heb_summary": "לבן ובתואל מסכימים לנישואי רבקה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Abraham's Servant"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Rebekah's Brother"
+                },
+                {
+                    "en_name": "Rebekah's Mother"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "maiden stay"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Camel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Rebekah's Brother",
+                    "term2": "Bethuel"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Rebekah's Mother"
+                },
+                {
+                    "term1": "Rebekah's Brother",
+                    "term2": "Rebekah's Mother"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Laban",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Bethuel",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Abraham's Servant",
+                    "term2": "Rebekah"
+                },
+                {
+                    "term1": "Abraham's Servant",
+                    "term2": "Hashem"
+                },
+                {
+                    "term1": "Abraham's Servant",
+                    "term2": "Rebekah's Brother"
+                },
+                {
+                    "term1": "Abraham's Servant",
+                    "term2": "Rebekah's Mother"
+                },
+                {
+                    "term1": "Rebekah's Brother",
+                    "term2": "Rebekah"
+                },
+                {
+                    "term1": "Rebekah's Mother",
+                    "term2": "Rebekah"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Laban",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Bethuel",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Rebekah's Brother",
+                    "term2": "Abraham's Servant"
+                },
+                {
+                    "term1": "Rebekah's Mother",
+                    "term2": "Abraham's Servant"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:50-61"
+}

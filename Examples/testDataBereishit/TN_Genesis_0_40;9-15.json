@@ -1,0 +1,87 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph interprets cupbearer's dream, predicts release.",
+        "heb_summary": "יוסף פותר חלום שר המשקים, מנבא שחרור.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Chief Cupbearer"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Land Of The Hebrews"
+                },
+                {
+                    "en_name": "Dungeon"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hebrews"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "unit": "branch",
+                    "context": "dream interpretation"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Grape"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Vine"
+                },
+                {
+                    "en_name": "Grape"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Chief Cupbearer",
+                    "term2": "Joseph"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Dungeon"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Land Of The Hebrews"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Hebrews"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Chief Cupbearer"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_40:9-15"
+}

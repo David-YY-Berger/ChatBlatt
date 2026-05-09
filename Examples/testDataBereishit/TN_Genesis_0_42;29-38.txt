@@ -1,0 +1,117 @@
+﻿COST: Tokens: Total=9786 approx cost usd = $0.001420 (Prompt=6737, Completion=3049)
+SOURCE:
+Genesis 42:29-38  (TN_Genesis_0_42:29-38)
+
+HEBREW:
+וַיָּבֹ֛אוּ אֶל־יַעֲקֹ֥ב אֲבִיהֶ֖ם אַ֣רְצָה כְּנָ֑עַן וַיַּגִּ֣ידוּ ל֔וֹ אֵ֛ת כׇּל־הַקֹּרֹ֥ת אֹתָ֖ם לֵאמֹֽר׃ דִּ֠בֶּ֠ר הָאִ֨ישׁ אֲדֹנֵ֥י הָאָ֛רֶץ אִתָּ֖נוּ קָשׁ֑וֹת וַיִּתֵּ֣ן אֹתָ֔נוּ כִּֽמְרַגְּלִ֖ים אֶת־הָאָֽרֶץ׃ וַנֹּ֥אמֶר אֵלָ֖יו כֵּנִ֣ים אֲנָ֑חְנוּ לֹ֥א הָיִ֖ינוּ מְרַגְּלִֽים׃ שְׁנֵים־עָשָׂ֥ר אֲנַ֛חְנוּ אַחִ֖ים בְּנֵ֣י אָבִ֑ינוּ הָאֶחָ֣ד אֵינֶ֔נּוּ וְהַקָּטֹ֥ן הַיּ֛וֹם אֶת־אָבִ֖ינוּ בְּאֶ֥רֶץ כְּנָֽעַן׃ וַיֹּ֣אמֶר אֵלֵ֗ינוּ הָאִישׁ֙ אֲדֹנֵ֣י הָאָ֔רֶץ בְּזֹ֣את אֵדַ֔ע כִּ֥י כֵנִ֖ים אַתֶּ֑ם אֲחִיכֶ֤ם הָֽאֶחָד֙ הַנִּ֣יחוּ אִתִּ֔י וְאֶת־רַעֲב֥וֹן בָּתֵּיכֶ֖ם קְח֥וּ וָלֵֽכוּ׃ וְ֠הָבִ֠יאוּ אֶת־אֲחִיכֶ֣ם הַקָּטֹן֮ אֵלַי֒ וְאֵֽדְעָ֗ה כִּ֣י לֹ֤א מְרַגְּלִים֙ אַתֶּ֔ם כִּ֥י כֵנִ֖ים אַתֶּ֑ם אֶת־אֲחִיכֶם֙ אֶתֵּ֣ן לָכֶ֔ם וְאֶת־הָאָ֖רֶץ תִּסְחָֽרוּ׃ וַיְהִ֗י הֵ֚ם מְרִיקִ֣ים שַׂקֵּיהֶ֔ם וְהִנֵּה־אִ֥ישׁ צְרוֹר־כַּסְפּ֖וֹ בְּשַׂקּ֑וֹ וַיִּרְא֞וּ אֶת־צְרֹר֧וֹת כַּסְפֵּיהֶ֛ם הֵ֥מָּה וַאֲבִיהֶ֖ם וַיִּירָֽאוּ׃ וַיֹּ֤אמֶר אֲלֵהֶם֙ יַעֲקֹ֣ב אֲבִיהֶ֔ם אֹתִ֖י שִׁכַּלְתֶּ֑ם יוֹסֵ֤ף אֵינֶ֙נּוּ֙ וְשִׁמְע֣וֹן אֵינֶ֔נּוּ וְאֶת־בִּנְיָמִ֣ן תִּקָּ֔חוּ עָלַ֖י הָי֥וּ כֻלָּֽנָה׃ וַיֹּ֤אמֶר רְאוּבֵן֙ אֶל־אָבִ֣יו לֵאמֹ֔ר אֶת־שְׁנֵ֤י בָנַי֙ תָּמִ֔ית אִם־לֹ֥א אֲבִיאֶ֖נּוּ אֵלֶ֑יךָ תְּנָ֤ה אֹתוֹ֙ עַל־יָדִ֔י וַאֲנִ֖י אֲשִׁיבֶ֥נּוּ אֵלֶֽיךָ׃ וַיֹּ֕אמֶר לֹֽא־יֵרֵ֥ד בְּנִ֖י עִמָּכֶ֑ם כִּֽי־אָחִ֨יו מֵ֜ת וְה֧וּא לְבַדּ֣וֹ נִשְׁאָ֗ר וּקְרָאָ֤הוּ אָסוֹן֙ בַּדֶּ֙רֶךְ֙ אֲשֶׁ֣ר תֵּֽלְכוּ־בָ֔הּ וְהוֹרַדְתֶּ֧ם אֶת־שֵׂיבָתִ֛י בְּיָג֖וֹן שְׁאֽוֹלָה׃
+
+ENGLISH:
+When they came to their father Jacob in the land of Canaan, they told him all that had befallen them, saying, The man. who is lord of the land spoke harshly to us and accused us of spying on the land. We said to him, We are being honest; we have never been spies! There were twelve of us brothers, sons by the same father; but one is no more, and the youngest is now with our father in the land of Canaan. But the man-who is lord of the land-said to us, By this I shall know that you are being honest: leave one of your brothers with me, and take something for your starving households and be off. And bring your youngest brother to me, that I may know that you are not spies, that you are being honest. I will then restore your brother to you, and you shall be free to move about in the land. As they were emptying their sacks, there, in each ones sack, was his money-bag! When they and their father saw their money-bags, they were dismayed. Their father Jacob said to them, It is always me that you bereave: Joseph is no more and Simeon is no more, and now you would take away Benjamin. These things always happen to me! Then Reuben said to his father, You may kill my two sons if I do not bring him back to you. Put him in my care, and I will return him to you. But he said, My son must not go down with you, for his brother is dead and he alone is left. If he meets with disaster on the journey you are taking, you will send my white head down to Sheol in grief.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob's sons return, Jacob grieves.",
+    "heb_summary": "בני יעקב שבים, יעקב מתאבל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Reuben"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Sheol"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Joseph"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "People",
+          "unit": "brother",
+          "context": "sons of jacob"
+        },
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "unit": "brother",
+          "context": "son of jacob"
+        },
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "son",
+          "context": "reubens sons"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Reuben"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Sheol"
+        }
+      ]
+    }
+  }
+}

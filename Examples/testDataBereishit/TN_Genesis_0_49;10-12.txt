@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=8625 approx cost usd = $0.001123 (Prompt=6507, Completion=2118)
+SOURCE:
+Genesis 49:10-12  (TN_Genesis_0_49:10-12)
+
+HEBREW:
+לֹֽא־יָס֥וּר שֵׁ֙בֶט֙ מִֽיהוּדָ֔ה וּמְחֹקֵ֖ק מִבֵּ֣ין רַגְלָ֑יו עַ֚ד כִּֽי־יָבֹ֣א שִׁילֹ֔ה וְל֖וֹ יִקְּהַ֥ת עַמִּֽים׃ אֹסְרִ֤י לַגֶּ֙פֶן֙ עִירֹ֔ה וְלַשֹּׂרֵקָ֖ה בְּנִ֣י אֲתֹנ֑וֹ כִּבֵּ֤ס בַּיַּ֙יִן֙ לְבֻשׁ֔וֹ וּבְדַם־עֲנָבִ֖ים סוּתֹֽה ׃ חַכְלִילִ֥י עֵינַ֖יִם מִיָּ֑יִן וּלְבֶן־שִׁנַּ֖יִם מֵחָלָֽב׃
+
+ENGLISH:
+The scepter shall not depart from Judah, Nor the rulers staff from between his feet; So that tribute shall come to him as shai loh tribute to him, following the Midrash; cf. Isa. 18.7. Meaning of Heb. uncertain; lit. Until he comes to Shiloh. And the homage of peoples be his. He tethers his ass to a vine, His asss foal to a choice vine; He washes his garment in wine, His robe in blood of grapes. His eyes are darker than wine; His teeth are whiter than milk.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Judah's prophecy: power, abundance, future homage.",
+    "heb_summary": "נבואת יהודה: כוח, שפע, עתיד עמים.",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shiloh"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Scepter"
+        },
+        {
+          "en_name": "Ruler's Staff"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        },
+        {
+          "en_name": "Ass's Foal"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Wine"
+        },
+        {
+          "en_name": "Milk"
+        },
+        {
+          "en_name": "Grape"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Vine"
+        },
+        {
+          "en_name": "Grape"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Judah",
+          "term2": "Shiloh"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+﻿COST: Tokens: Total=8168 approx cost usd = $0.000974 (Prompt=6561, Completion=1607)
+SOURCE:
+Genesis 26:18-22  (TN_Genesis_0_26:18-22)
+
+HEBREW:
+וַיָּ֨שׇׁב יִצְחָ֜ק וַיַּחְפֹּ֣ר׀ אֶת־בְּאֵרֹ֣ת הַמַּ֗יִם אֲשֶׁ֤ר חָֽפְרוּ֙ בִּימֵי֙ אַבְרָהָ֣ם אָבִ֔יו וַיְסַתְּמ֣וּם פְּלִשְׁתִּ֔ים אַחֲרֵ֖י מ֣וֹת אַבְרָהָ֑ם וַיִּקְרָ֤א לָהֶן֙ שֵׁמ֔וֹת כַּשֵּׁמֹ֕ת אֲשֶׁר־קָרָ֥א לָהֶ֖ן אָבִֽיו׃ וַיַּחְפְּר֥וּ עַבְדֵֽי־יִצְחָ֖ק בַּנָּ֑חַל וַיִּ֨מְצְאוּ־שָׁ֔ם בְּאֵ֖ר מַ֥יִם חַיִּֽים׃ וַיָּרִ֜יבוּ רֹעֵ֣י גְרָ֗ר עִם־רֹעֵ֥י יִצְחָ֛ק לֵאמֹ֖ר לָ֣נוּ הַמָּ֑יִם וַיִּקְרָ֤א שֵֽׁם־הַבְּאֵר֙ עֵ֔שֶׂק כִּ֥י הִֽתְעַשְּׂק֖וּ עִמּֽוֹ׃ וַֽיַּחְפְּרוּ֙ בְּאֵ֣ר אַחֶ֔רֶת וַיָּרִ֖יבוּ גַּם־עָלֶ֑יהָ וַיִּקְרָ֥א שְׁמָ֖הּ שִׂטְנָֽה׃ וַיַּעְתֵּ֣ק מִשָּׁ֗ם וַיַּחְפֹּר֙ בְּאֵ֣ר אַחֶ֔רֶת וְלֹ֥א רָב֖וּ עָלֶ֑יהָ וַיִּקְרָ֤א שְׁמָהּ֙ רְחֹב֔וֹת וַיֹּ֗אמֶר כִּֽי־עַתָּ֞ה הִרְחִ֧יב יְהֹוָ֛ה לָ֖נוּ וּפָרִ֥ינוּ בָאָֽרֶץ׃
+
+ENGLISH:
+Isaac dug anew the wells which had been dug in the days of his father Abraham and which the Philistines had stopped up after Abrahams death; and he gave them the same names that his father had given them. But when Isaacs servants, digging in the wadi, found there a well of spring water, the herdsmen of Gerar quarreled with Isaacs herdsmen, saying, The water is ours. He named that well Esek, because they contended with him. And when they dug another well, they disputed over that one also; so he named it Sitnah. He moved from there and dug yet another well, and they did not quarrel over it; so he called it Rehoboth, saying, Now at last HASHEM has granted us ample space, connected with Rehoboth. to increase in the land.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac reopens wells, quarrels, finds peace.",
+    "heb_summary": "יצחק חופר בארות, מריבות, מוצא מרחב.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Philistines"
+        },
+        {
+          "en_name": "Isaac's Servants"
+        },
+        {
+          "en_name": "Herdsmen Of Gerar"
+        },
+        {
+          "en_name": "Isaac's Herdsmen"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gerar"
+        },
+        {
+          "en_name": "Esek"
+        },
+        {
+          "en_name": "Sitnah"
+        },
+        {
+          "en_name": "Rehoboth"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Philistia"
+        },
+        {
+          "en_name": "Gerar"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Isaac",
+          "term2": "Esek"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Sitnah"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Rehoboth"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Gerar"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Philistines",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Herdsmen Of Gerar",
+          "term2": "Isaac's Herdsmen"
+        }
+      ]
+    }
+  }
+}

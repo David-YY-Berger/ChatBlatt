@@ -1,0 +1,121 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph reunites with brothers, invites Jacob to Goshen",
+        "heb_summary": "יוסף מתאחד עם אחיו, מזמין יעקב לגושן",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Goshen"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "famine duration"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Benjamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Benjamin"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's Brothers"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Goshen",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_45:10-15"
+}

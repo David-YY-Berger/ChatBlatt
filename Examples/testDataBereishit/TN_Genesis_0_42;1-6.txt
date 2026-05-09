@@ -1,0 +1,107 @@
+﻿COST: Tokens: Total=9062 approx cost usd = $0.001243 (Prompt=6556, Completion=2506)
+SOURCE:
+Genesis 42:1-6  (TN_Genesis_0_42:1-6)
+
+HEBREW:
+וַיַּ֣רְא יַעֲקֹ֔ב כִּ֥י יֶשׁ־שֶׁ֖בֶר בְּמִצְרָ֑יִם וַיֹּ֤אמֶר יַעֲקֹב֙ לְבָנָ֔יו לָ֖מָּה תִּתְרָאֽוּ׃ וַיֹּ֕אמֶר הִנֵּ֣ה שָׁמַ֔עְתִּי כִּ֥י יֶשׁ־שֶׁ֖בֶר בְּמִצְרָ֑יִם רְדוּ־שָׁ֙מָּה֙ וְשִׁבְרוּ־לָ֣נוּ מִשָּׁ֔ם וְנִחְיֶ֖ה וְלֹ֥א נָמֽוּת׃ וַיֵּרְד֥וּ אֲחֵֽי־יוֹסֵ֖ף עֲשָׂרָ֑ה לִשְׁבֹּ֥ר בָּ֖ר מִמִּצְרָֽיִם׃ וְאֶת־בִּנְיָמִין֙ אֲחִ֣י יוֹסֵ֔ף לֹא־שָׁלַ֥ח יַעֲקֹ֖ב אֶת־אֶחָ֑יו כִּ֣י אָמַ֔ר פֶּן־יִקְרָאֶ֖נּוּ אָסֽוֹן׃ וַיָּבֹ֙אוּ֙ בְּנֵ֣י יִשְׂרָאֵ֔ל לִשְׁבֹּ֖ר בְּת֣וֹךְ הַבָּאִ֑ים כִּֽי־הָיָ֥ה הָרָעָ֖ב בְּאֶ֥רֶץ כְּנָֽעַן׃ וְיוֹסֵ֗ף ה֚וּא הַשַּׁלִּ֣יט עַל־הָאָ֔רֶץ ה֥וּא הַמַּשְׁבִּ֖יר לְכׇל־עַ֣ם הָאָ֑רֶץ וַיָּבֹ֙אוּ֙ אֲחֵ֣י יוֹסֵ֔ף וַיִּשְׁתַּֽחֲווּ־ל֥וֹ אַפַּ֖יִם אָֽרְצָה׃
+
+ENGLISH:
+When Jacob saw that there were food rations to be had in Egypt, he said to his sons, Why do you keep looking at one another? Now I hear, he went on, that there are rations to be had in Egypt. Go down and procure rations for us there, that we may live and not die. So ten of Josephs brothers went down to get grain rations in Egypt; for Jacob did not send Josephs brother Benjamin with his brothers, since he feared that he might meet with disaster. Thus the sons of Israel were among those who came to procure rations, for the famine extended to the land of Canaan. Now Joseph was the vizier of the land; it was he who dispensed rations to all the people of the land. And Josephs brothers came and bowed low to him, with their faces to the ground.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob sends sons to Egypt for food",
+    "heb_summary": "יעקב שולח בנים למצרים לאוכל",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Joseph's Brothers"
+        },
+        {
+          "en_name": "Sons Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "People",
+          "unit": "brother",
+          "context": "joseph's brothers"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Ration"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Joseph's Brothers"
+        },
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Joseph"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+﻿COST: Tokens: Total=8195 approx cost usd = $0.000971 (Prompt=6610, Completion=1585)
+SOURCE:
+Genesis 41:9-16  (TN_Genesis_0_41:9-16)
+
+HEBREW:
+וַיְדַבֵּר֙ שַׂ֣ר הַמַּשְׁקִ֔ים אֶת־פַּרְעֹ֖ה לֵאמֹ֑ר אֶת־חֲטָאַ֕י אֲנִ֖י מַזְכִּ֥יר הַיּֽוֹם׃ פַּרְעֹ֖ה קָצַ֣ף עַל־עֲבָדָ֑יו וַיִּתֵּ֨ן אֹתִ֜י בְּמִשְׁמַ֗ר בֵּ֚ית שַׂ֣ר הַטַּבָּחִ֔ים אֹתִ֕י וְאֵ֖ת שַׂ֥ר הָאֹפִֽים׃ וַנַּֽחַלְמָ֥ה חֲל֛וֹם בְּלַ֥יְלָה אֶחָ֖ד אֲנִ֣י וָה֑וּא אִ֛ישׁ כְּפִתְר֥וֹן חֲלֹמ֖וֹ חָלָֽמְנוּ׃ וְשָׁ֨ם אִתָּ֜נוּ נַ֣עַר עִבְרִ֗י עֶ֚בֶד לְשַׂ֣ר הַטַּבָּחִ֔ים וַ֨נְּסַפֶּר־ל֔וֹ וַיִּפְתׇּר־לָ֖נוּ אֶת־חֲלֹמֹתֵ֑ינוּ אִ֥ישׁ כַּחֲלֹמ֖וֹ פָּתָֽר׃ וַיְהִ֛י כַּאֲשֶׁ֥ר פָּֽתַר־לָ֖נוּ כֵּ֣ן הָיָ֑ה אֹתִ֛י הֵשִׁ֥יב עַל־כַּנִּ֖י וְאֹת֥וֹ תָלָֽה׃ וַיִּשְׁלַ֤ח פַּרְעֹה֙ וַיִּקְרָ֣א אֶת־יוֹסֵ֔ף וַיְרִיצֻ֖הוּ מִן־הַבּ֑וֹר וַיְגַלַּח֙ וַיְחַלֵּ֣ף שִׂמְלֹתָ֔יו וַיָּבֹ֖א אֶל־פַּרְעֹֽה׃ וַיֹּ֤אמֶר פַּרְעֹה֙ אֶל־יוֹסֵ֔ף חֲל֣וֹם חָלַ֔מְתִּי וּפֹתֵ֖ר אֵ֣ין אֹת֑וֹ וַאֲנִ֗י שָׁמַ֤עְתִּי עָלֶ֙יךָ֙ לֵאמֹ֔ר תִּשְׁמַ֥ע חֲל֖וֹם לִפְתֹּ֥ר אֹתֽוֹ׃ וַיַּ֨עַן יוֹסֵ֧ף אֶת־פַּרְעֹ֛ה לֵאמֹ֖ר בִּלְעָדָ֑י אֱלֹהִ֕ים יַעֲנֶ֖ה אֶת־שְׁל֥וֹם פַּרְעֹֽה׃
+
+ENGLISH:
+The chief cupbearer then spoke up and said to Pharaoh, I must make mention today of my offenses. Once Pharaoh was angry with his servants, and placed me in custody in the house of the prefect, together with the chief baker. We had dreams the same night, he and I, each of us a dream with a meaning of its own. A Hebrew youth was there with us, a servant of the prefect; and when we told him our dreams, he interpreted them for us, telling each of the meaning of his dream. And as he interpreted for us, so it came to pass: I was restored to my post, and the other was impaled. Thereupon Pharaoh sent for Joseph, and he was rushed from the dungeon. He had his hair cut and changed his clothes, and he appeared before Pharaoh. And Pharaoh said to Joseph, I have had a dream, but no one can interpret it. Now I have heard it said of you that for you to hear a dream is to tell its meaning. Joseph answered Pharaoh, saying, Not I! God will see to Pharaohs welfare.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Cupbearer tells Pharaoh about Joseph's dream interpretation.",
+    "heb_summary": "שר המשקים מספר לפרעה על יוסף.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Chief Cupbearer"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Chief Baker"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "House Of The Prefect"
+        },
+        {
+          "en_name": "Dungeon"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "unit": "night",
+          "context": "dreams interpretation"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Chief Cupbearer",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Chief Cupbearer",
+          "term2": "Chief Baker"
+        },
+        {
+          "term1": "Chief Cupbearer",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Chief Baker",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Joseph"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Chief Cupbearer",
+          "term2": "House Of The Prefect"
+        },
+        {
+          "term1": "Chief Baker",
+          "term2": "House Of The Prefect"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "House Of The Prefect"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Dungeon"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "Chief Cupbearer"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Chief Baker"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh"
+        }
+      ]
+    }
+  }
+}

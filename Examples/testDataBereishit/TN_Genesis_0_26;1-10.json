@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac in Gerar, God's promise, Rebekah deception",
+        "heb_summary": "יצחק בגרר, הבטחת ה', רבקה ואבימלך",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Rebekah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gerar"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Abimelech",
+                    "term2": "Isaac"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Gerar"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Philistia"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Gerar",
+                    "term2": "Philistia"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_26:1-10"
+}

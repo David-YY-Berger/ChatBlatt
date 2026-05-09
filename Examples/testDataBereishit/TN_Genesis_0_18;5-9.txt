@@ -1,0 +1,122 @@
+﻿COST: Tokens: Total=8357 approx cost usd = $0.001037 (Prompt=6534, Completion=1823)
+SOURCE:
+Genesis 18:5-9  (TN_Genesis_0_18:5-9)
+
+HEBREW:
+וְאֶקְחָ֨ה פַת־לֶ֜חֶם וְסַעֲד֤וּ לִבְּכֶם֙ אַחַ֣ר תַּעֲבֹ֔רוּ כִּֽי־עַל־כֵּ֥ן עֲבַרְתֶּ֖ם עַֽל־עַבְדְּכֶ֑ם וַיֹּ֣אמְר֔וּ כֵּ֥ן תַּעֲשֶׂ֖ה כַּאֲשֶׁ֥ר דִּבַּֽרְתָּ׃ וַיְמַהֵ֧ר אַבְרָהָ֛ם הָאֹ֖הֱלָה אֶל־שָׂרָ֑ה וַיֹּ֗אמֶר מַהֲרִ֞י שְׁלֹ֤שׁ סְאִים֙ קֶ֣מַח סֹ֔לֶת ל֖וּשִׁי וַעֲשִׂ֥י עֻגֽוֹת׃ וְאֶל־הַבָּקָ֖ר רָ֣ץ אַבְרָהָ֑ם וַיִּקַּ֨ח בֶּן־בָּקָ֜ר רַ֤ךְ וָטוֹב֙ וַיִּתֵּ֣ן אֶל־הַנַּ֔עַר וַיְמַהֵ֖ר לַעֲשׂ֥וֹת אֹתֽוֹ׃ וַיִּקַּ֨ח חֶמְאָ֜ה וְחָלָ֗ב וּבֶן־הַבָּקָר֙ אֲשֶׁ֣ר עָשָׂ֔ה וַיִּתֵּ֖ן לִפְנֵיהֶ֑ם וְהֽוּא־עֹמֵ֧ד עֲלֵיהֶ֛ם תַּ֥חַת הָעֵ֖ץ וַיֹּאכֵֽלוּ׃ וַיֹּאמְר֣וּ אֵׄלָ֔יׄוׄ אַיֵּ֖ה שָׂרָ֣ה אִשְׁתֶּ֑ךָ וַיֹּ֖אמֶר הִנֵּ֥ה בָאֹֽהֶל׃
+
+ENGLISH:
+And let me fetch a morsel of bread that you may refresh yourselves; then go on-seeing that you have come your servants way. They replied, Do as you have said. Abraham hastened into the tent to Sarah, and said, Quick, three seah s of choice flour! Knead and make cakes! Then Abraham ran to the herd, took a calf, tender and choice, and gave it to a servant-boy, who hastened to prepare it. He took curds and milk and the calf that had been prepared and set these before them; and he waited on them under the tree as they ate. They said to him, Where is your wife Sarah? And he replied, There, in the tent.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham and Sarah host heavenly visitors.",
+    "heb_summary": "אברהם ושרה מארחים אורחים באוהל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "They"
+        },
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Servant-Boy"
+        },
+        {
+          "en_name": "Servants"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Tent"
+        },
+        {
+          "en_name": "Under The Tree"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Measurement",
+          "unit": "seah",
+          "context": "flour for cakes"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Calf"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Flour"
+        },
+        {
+          "en_name": "Cake"
+        },
+        {
+          "en_name": "Calf"
+        },
+        {
+          "en_name": "Curd"
+        },
+        {
+          "en_name": "Milk"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "They"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Tent"
+        },
+        {
+          "term1": "They",
+          "term2": "Tent"
+        },
+        {
+          "term1": "They",
+          "term2": "Under The Tree"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Sarah",
+          "term2": "Tent"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Under The Tree"
+        }
+      ]
+    }
+  }
+}

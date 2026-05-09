@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph hosts Benjamin and brothers in Egypt.",
+        "heb_summary": "יוסף מארח בנימין ואחים במצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "El Shaddai"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "House Steward"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Joseph's House"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Money",
+                    "unit": "money",
+                    "context": "double gift payment"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "House Steward"
+                },
+                {
+                    "term1": "El Shaddai",
+                    "term2": "Joseph"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Benjamin",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Joseph's House"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's House"
+                },
+                {
+                    "term1": "House Steward",
+                    "term2": "Joseph's House"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Joseph's House",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_43:14-18"
+}

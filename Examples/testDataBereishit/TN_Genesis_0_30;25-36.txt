@@ -1,0 +1,88 @@
+﻿COST: Tokens: Total=8832 approx cost usd = $0.001129 (Prompt=6758, Completion=2074)
+SOURCE:
+Genesis 30:25-36  (TN_Genesis_0_30:25-36)
+
+HEBREW:
+וַיְהִ֕י כַּאֲשֶׁ֛ר יָלְדָ֥ה רָחֵ֖ל אֶת־יוֹסֵ֑ף וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל־לָבָ֔ן שַׁלְּחֵ֙נִי֙ וְאֵ֣לְכָ֔ה אֶל־מְקוֹמִ֖י וּלְאַרְצִֽי׃ תְּנָ֞ה אֶת־נָשַׁ֣י וְאֶת־יְלָדַ֗י אֲשֶׁ֨ר עָבַ֧דְתִּי אֹֽתְךָ֛ בָּהֵ֖ן וְאֵלֵ֑כָה כִּ֚י אַתָּ֣ה יָדַ֔עְתָּ אֶת־עֲבֹדָתִ֖י אֲשֶׁ֥ר עֲבַדְתִּֽיךָ׃ וַיֹּ֤אמֶר אֵלָיו֙ לָבָ֔ן אִם־נָ֛א מָצָ֥אתִי חֵ֖ן בְּעֵינֶ֑יךָ נִחַ֕שְׁתִּי וַיְבָרְכֵ֥נִי יְהֹוָ֖ה בִּגְלָלֶֽךָ׃ וַיֹּאמַ֑ר נׇקְבָ֧ה שְׂכָרְךָ֛ עָלַ֖י וְאֶתֵּֽנָה׃ וַיֹּ֣אמֶר אֵלָ֔יו אַתָּ֣ה יָדַ֔עְתָּ אֵ֖ת אֲשֶׁ֣ר עֲבַדְתִּ֑יךָ וְאֵ֛ת אֲשֶׁר־הָיָ֥ה מִקְנְךָ֖ אִתִּֽי׃ כִּ֡י מְעַט֩ אֲשֶׁר־הָיָ֨ה לְךָ֤ לְפָנַי֙ וַיִּפְרֹ֣ץ לָרֹ֔ב וַיְבָ֧רֶךְ יְהֹוָ֛ה אֹתְךָ֖ לְרַגְלִ֑י וְעַתָּ֗ה מָתַ֛י אֶֽעֱשֶׂ֥ה גַם־אָנֹכִ֖י לְבֵיתִֽי׃ וַיֹּ֖אמֶר מָ֣ה אֶתֶּן־לָ֑ךְ וַיֹּ֤אמֶר יַעֲקֹב֙ לֹא־תִתֶּן־לִ֣י מְא֔וּמָה אִם־תַּֽעֲשֶׂה־לִּי֙ הַדָּבָ֣ר הַזֶּ֔ה אָשׁ֛וּבָה אֶרְעֶ֥ה צֹֽאנְךָ֖ אֶשְׁמֹֽר׃ אֶֽעֱבֹ֨ר בְּכׇל־צֹֽאנְךָ֜ הַיּ֗וֹם הָסֵ֨ר מִשָּׁ֜ם כׇּל־שֶׂ֣ה׀ נָקֹ֣ד וְטָל֗וּא וְכׇל־שֶׂה־חוּם֙ בַּכְּשָׂבִ֔ים וְטָל֥וּא וְנָקֹ֖ד בָּעִזִּ֑ים וְהָיָ֖ה שְׂכָרִֽי׃ וְעָֽנְתָה־בִּ֤י צִדְקָתִי֙ בְּי֣וֹם מָחָ֔ר כִּֽי־תָב֥וֹא עַל־שְׂכָרִ֖י לְפָנֶ֑יךָ כֹּ֣ל אֲשֶׁר־אֵינֶ֩נּוּ֩ נָקֹ֨ד וְטָל֜וּא בָּֽעִזִּ֗ים וְחוּם֙ בַּכְּשָׂבִ֔ים גָּנ֥וּב ה֖וּא אִתִּֽי׃ וַיֹּ֥אמֶר לָבָ֖ן הֵ֑ן ל֖וּ יְהִ֥י כִדְבָרֶֽךָ׃ וַיָּ֣סַר בַּיּוֹם֩ הַה֨וּא אֶת־הַתְּיָשִׁ֜ים הָֽעֲקֻדִּ֣ים וְהַטְּלֻאִ֗ים וְאֵ֤ת כׇּל־הָֽעִזִּים֙ הַנְּקֻדּ֣וֹת וְהַטְּלֻאֹ֔ת כֹּ֤ל אֲשֶׁר־לָבָן֙ בּ֔וֹ וְכׇל־ח֖וּם בַּכְּשָׂבִ֑ים וַיִּתֵּ֖ן בְּיַד־בָּנָֽיו׃ וַיָּ֗שֶׂם דֶּ֚רֶךְ שְׁלֹ֣שֶׁת יָמִ֔ים בֵּינ֖וֹ וּבֵ֣ין יַעֲקֹ֑ב וְיַעֲקֹ֗ב רֹעֶ֛ה אֶת־צֹ֥אן לָבָ֖ן הַנּוֹתָרֹֽת׃
+
+ENGLISH:
+After Rachel had borne Joseph, Jacob said to Laban, Give me leave to go back to my own homeland. Give me my wives and my children, for whom I have served you, that I may go; for well you know what services I have rendered you. But Laban said to him, If you will indulge me, I have learned by divination that HASHEM has blessed me on your account. And he continued, Name the wages due from me, and I will pay you. But he said, You know well how I have served you and how your livestock has fared with me. For the little you had before I came has grown to much, since HASHEM has blessed you wherever I turned. And now, when shall I make provision for my own household? He said, What shall I pay you? And Jacob said, Pay me nothing! If you will do this thing for me, I will again pasture and keep your flocks: let me pass through your whole flock today, removing from there every speckled and spotted animal-every dark-colored sheep and every spotted and speckled goat. Such shall be my wages. In the future when you go over my wages, let my honesty toward you testify for me: if there are among my goats any that are not speckled or spotted or any sheep that are not dark-colored, they got there by theft. And Laban said, Very well, let it be as you say. But that same day he removed the streaked and spotted he-goats and all the speckled and spotted she-goats-every one that had white on it-and all the dark-colored sheep, and left them in the charge of his sons. And he put a distance of three days journey between himself and Jacob, while Jacob was pasturing the rest of Labans flock.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob and Laban agree on livestock wages.",
+    "heb_summary": "יעקב ולבן מסכמים על שכר צאן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Laban's Sons"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "journey distance"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        },
+        {
+          "en_name": "Goat"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Laban's Sons",
+          "term2": "Laban"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Joseph",
+          "term2": "Rachel"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

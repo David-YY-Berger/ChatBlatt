@@ -1,0 +1,96 @@
+﻿COST: Tokens: Total=9383 approx cost usd = $0.001329 (Prompt=6602, Completion=2781)
+SOURCE:
+Genesis 9:5-12  (TN_Genesis_0_9:5-12)
+
+HEBREW:
+וְאַ֨ךְ אֶת־דִּמְכֶ֤ם לְנַפְשֹֽׁתֵיכֶם֙ אֶדְרֹ֔שׁ מִיַּ֥ד כׇּל־חַיָּ֖ה אֶדְרְשֶׁ֑נּוּ וּמִיַּ֣ד הָֽאָדָ֗ם מִיַּד֙ אִ֣ישׁ אָחִ֔יו אֶדְרֹ֖שׁ אֶת־נֶ֥פֶשׁ הָֽאָדָֽם׃ שֹׁפֵךְ֙ דַּ֣ם הָֽאָדָ֔ם בָּֽאָדָ֖ם דָּמ֣וֹ יִשָּׁפֵ֑ךְ כִּ֚י בְּצֶ֣לֶם אֱלֹהִ֔ים עָשָׂ֖ה אֶת־הָאָדָֽם׃ וְאַתֶּ֖ם פְּר֣וּ וּרְב֑וּ שִׁרְצ֥וּ בָאָ֖רֶץ וּרְבוּ־בָֽהּ׃ וַיֹּ֤אמֶר אֱלֹהִים֙ אֶל־נֹ֔חַ וְאֶל־בָּנָ֥יו אִתּ֖וֹ לֵאמֹֽר׃ וַאֲנִ֕י הִנְנִ֥י מֵקִ֛ים אֶת־בְּרִיתִ֖י אִתְּכֶ֑ם וְאֶֽת־זַרְעֲכֶ֖ם אַֽחֲרֵיכֶֽם׃ וְאֵ֨ת כׇּל־נֶ֤פֶשׁ הַֽחַיָּה֙ אֲשֶׁ֣ר אִתְּכֶ֔ם בָּע֧וֹף בַּבְּהֵמָ֛ה וּֽבְכׇל־חַיַּ֥ת הָאָ֖רֶץ אִתְּכֶ֑ם מִכֹּל֙ יֹצְאֵ֣י הַתֵּבָ֔ה לְכֹ֖ל חַיַּ֥ת הָאָֽרֶץ׃ וַהֲקִמֹתִ֤י אֶת־בְּרִיתִי֙ אִתְּכֶ֔ם וְלֹֽא־יִכָּרֵ֧ת כׇּל־בָּשָׂ֛ר ע֖וֹד מִמֵּ֣י הַמַּבּ֑וּל וְלֹֽא־יִהְיֶ֥ה ע֛וֹד מַבּ֖וּל לְשַׁחֵ֥ת הָאָֽרֶץ׃ וַיֹּ֣אמֶר אֱלֹהִ֗ים זֹ֤את אֽוֹת־הַבְּרִית֙ אֲשֶׁר־אֲנִ֣י נֹתֵ֗ן בֵּינִי֙ וּבֵ֣ינֵיכֶ֔ם וּבֵ֛ין כׇּל־נֶ֥פֶשׁ חַיָּ֖ה אֲשֶׁ֣ר אִתְּכֶ֑ם לְדֹרֹ֖ת עוֹלָֽם׃
+
+ENGLISH:
+But for your own life-blood I will require a reckoning: I will require it of every beast; of humankind, too, will I require a reckoning for human life, of everyone for each other! Whoever sheds human blood, By human [hands] shall that ones blood be shed; For in the image of God Was humankind made. Be fertile, then, and increase; abound on the earth and increase on it. And God said to Noah and to his sons with him, I now establish My covenant with you and your offspring to come, and with every living thing that is with you-birds, cattle, and every wild beast as well-all that have come out of the ark, every living thing on earth. I will maintain My covenant with you: never again shall all flesh be cut off by the waters of a flood, and never again shall there be a flood to destroy the earth. God further said, This is the sign that I set for the covenant between Me and you, and every living creature with you, for all ages to come.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God establishes covenant with Noah and humankind.",
+    "heb_summary": "אלוהים כורת ברית עם נח ובני אדם.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Humankind"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Covenant"
+        },
+        {
+          "en_name": "Sign"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Cattle"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Noah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Humankind",
+          "term2": "Earth"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "God",
+          "term2": "Noah"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "God",
+          "term2": "Covenant"
+        },
+        {
+          "term1": "God",
+          "term2": "Bird"
+        },
+        {
+          "term1": "God",
+          "term2": "Cattle"
+        },
+        {
+          "term1": "God",
+          "term2": "Earth"
+        },
+        {
+          "term1": "God",
+          "term2": "Humankind"
+        }
+      ]
+    }
+  }
+}

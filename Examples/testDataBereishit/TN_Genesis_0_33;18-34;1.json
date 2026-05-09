@@ -1,0 +1,81 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob arrived, bought land, built altar.",
+        "heb_summary": "יעקב הגיע, קנה אדמה, בנה מזבח.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Hamor"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Altar"
+                },
+                {
+                    "en_name": "El-Elohe-Yisrael"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "100",
+                    "number_category": "Money",
+                    "unit": "kesitah",
+                    "context": "land purchase"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Dinah",
+                    "term2": "Leah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_33:18-34:1"
+}

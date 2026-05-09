@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=9472 approx cost usd = $0.001358 (Prompt=6592, Completion=2880)
+SOURCE:
+Genesis 43:19-25  (TN_Genesis_0_43:19-25)
+
+HEBREW:
+וַֽיִּגְּשׁוּ֙ אֶל־הָאִ֔ישׁ אֲשֶׁ֖ר עַל־בֵּ֣ית יוֹסֵ֑ף וַיְדַבְּר֥וּ אֵלָ֖יו פֶּ֥תַח הַבָּֽיִת׃ וַיֹּאמְר֖וּ בִּ֣י אֲדֹנִ֑י יָרֹ֥ד יָרַ֛דְנוּ בַּתְּחִלָּ֖ה לִשְׁבׇּר־אֹֽכֶל׃ וַיְהִ֞י כִּי־בָ֣אנוּ אֶל־הַמָּל֗וֹן וַֽנִּפְתְּחָה֙ אֶת־אַמְתְּחֹתֵ֔ינוּ וְהִנֵּ֤ה כֶֽסֶף־אִישׁ֙ בְּפִ֣י אַמְתַּחְתּ֔וֹ כַּסְפֵּ֖נוּ בְּמִשְׁקָל֑וֹ וַנָּ֥שֶׁב אֹת֖וֹ בְּיָדֵֽנוּ׃ וְכֶ֧סֶף אַחֵ֛ר הוֹרַ֥דְנוּ בְיָדֵ֖נוּ לִשְׁבׇּר־אֹ֑כֶל לֹ֣א יָדַ֔עְנוּ מִי־שָׂ֥ם כַּסְפֵּ֖נוּ בְּאַמְתְּחֹתֵֽינוּ׃ וַיֹּ֩אמֶר֩ שָׁל֨וֹם לָכֶ֜ם אַל־תִּירָ֗אוּ אֱלֹ֨הֵיכֶ֜ם וֵֽאלֹהֵ֤י אֲבִיכֶם֙ נָתַ֨ן לָכֶ֤ם מַטְמוֹן֙ בְּאַמְתְּחֹ֣תֵיכֶ֔ם כַּסְפְּכֶ֖ם בָּ֣א אֵלָ֑י וַיּוֹצֵ֥א אֲלֵהֶ֖ם אֶת־שִׁמְעֽוֹן׃ וַיָּבֵ֥א הָאִ֛ישׁ אֶת־הָאֲנָשִׁ֖ים בֵּ֣יתָה יוֹסֵ֑ף וַיִּתֶּן־מַ֙יִם֙ וַיִּרְחֲצ֣וּ רַגְלֵיהֶ֔ם וַיִּתֵּ֥ן מִסְפּ֖וֹא לַחֲמֹֽרֵיהֶֽם׃ וַיָּכִ֙ינוּ֙ אֶת־הַמִּנְחָ֔ה עַד־בּ֥וֹא יוֹסֵ֖ף בַּֽצׇּהֳרָ֑יִם כִּ֣י שָֽׁמְע֔וּ כִּי־שָׁ֖ם יֹ֥אכְלוּ לָֽחֶם׃
+
+ENGLISH:
+So they went up to Josephs house steward and spoke to him at the entrance of the house. If you please, my lord, they said, we came down once before to procure food. But when we arrived at the night encampment and opened our bags, there was each ones money in the mouth of his bag, our money in full. So we have brought it back with us. And we have brought down with us other money to procure food. We do not know who put the money in our bags. He replied, All is well with you; do not be afraid. Your God, the God of your fathers [house], must have put treasure in your bags for you. I got your payment. And he brought out Simeon to them. Then the steward brought the men into Josephs house; he gave them water to bathe their feet, and he provided feed for their asses. They laid out their gifts to await Josephs arrival at noon, for they had heard that they were to dine there.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph's brothers return money, meet steward.",
+    "heb_summary": "אחי יוסף חוזרים, פוגשים את הסוכן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "House Steward"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Josephs House"
+        },
+        {
+          "en_name": "Entrance Of The House"
+        },
+        {
+          "en_name": "Night Encampment"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Simeon"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Food"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "House Steward",
+          "term2": "Josephs House"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Josephs House"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Josephs House"
+        }
+      ]
+    }
+  }
+}

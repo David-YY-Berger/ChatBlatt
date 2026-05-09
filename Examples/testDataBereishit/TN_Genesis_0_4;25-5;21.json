@@ -1,0 +1,209 @@
+﻿{
+    "res": {
+        "en_summary": "Adam's lineage, long lives, and early generations.",
+        "heb_summary": "שושלת אדם, חיים ארוכים, דורות ראשונים.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Adam"
+                },
+                {
+                    "en_name": "Seth"
+                },
+                {
+                    "en_name": "Enosh"
+                },
+                {
+                    "en_name": "Cain"
+                },
+                {
+                    "en_name": "Kenan"
+                },
+                {
+                    "en_name": "Mahalalel"
+                },
+                {
+                    "en_name": "Jared"
+                },
+                {
+                    "en_name": "Enoch"
+                },
+                {
+                    "en_name": "Methuselah"
+                },
+                {
+                    "en_name": "Humankind"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "130",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "adam's age before seth"
+                },
+                {
+                    "en_name": "800",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "adam's life after seth"
+                },
+                {
+                    "en_name": "930",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "adam's lifespan"
+                },
+                {
+                    "en_name": "105",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "seth's age before enosh"
+                },
+                {
+                    "en_name": "807",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "seth's life after enosh"
+                },
+                {
+                    "en_name": "912",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "seth's lifespan"
+                },
+                {
+                    "en_name": "90",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enosh's age before kenan"
+                },
+                {
+                    "en_name": "815",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enosh's life after kenan"
+                },
+                {
+                    "en_name": "905",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enosh's lifespan"
+                },
+                {
+                    "en_name": "70",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "kenan's age before mahalalel"
+                },
+                {
+                    "en_name": "840",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "kenan's life after mahalalel"
+                },
+                {
+                    "en_name": "910",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "kenan's lifespan"
+                },
+                {
+                    "en_name": "65",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "mahalalel's age before jared"
+                },
+                {
+                    "en_name": "830",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "mahalalel's life after jared"
+                },
+                {
+                    "en_name": "895",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "mahalalel's lifespan"
+                },
+                {
+                    "en_name": "162",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "jared's age before enoch"
+                },
+                {
+                    "en_name": "962",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "jared's lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Seth",
+                    "term2": "Adam"
+                },
+                {
+                    "term1": "Enosh",
+                    "term2": "Seth"
+                },
+                {
+                    "term1": "Kenan",
+                    "term2": "Enosh"
+                },
+                {
+                    "term1": "Mahalalel",
+                    "term2": "Kenan"
+                },
+                {
+                    "term1": "Jared",
+                    "term2": "Mahalalel"
+                },
+                {
+                    "term1": "Enoch",
+                    "term2": "Jared"
+                },
+                {
+                    "term1": "Methuselah",
+                    "term2": "Enoch"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Humankind",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Seth",
+                    "term2": "Adam"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Humankind",
+                    "term2": "Adam"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:25-5:21"
+}

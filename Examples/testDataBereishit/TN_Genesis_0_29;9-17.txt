@@ -1,0 +1,91 @@
+﻿COST: Tokens: Total=8858 approx cost usd = $0.001167 (Prompt=6626, Completion=2232)
+SOURCE:
+Genesis 29:9-17  (TN_Genesis_0_29:9-17)
+
+HEBREW:
+עוֹדֶ֖נּוּ מְדַבֵּ֣ר עִמָּ֑ם וְרָחֵ֣ל׀ בָּ֗אָה עִם־הַצֹּאן֙ אֲשֶׁ֣ר לְאָבִ֔יהָ כִּ֥י רֹעָ֖ה הִֽוא׃ וַיְהִ֡י כַּאֲשֶׁר֩ רָאָ֨ה יַעֲקֹ֜ב אֶת־רָחֵ֗ל בַּת־לָבָן֙ אֲחִ֣י אִמּ֔וֹ וְאֶת־צֹ֥אן לָבָ֖ן אֲחִ֣י אִמּ֑וֹ וַיִּגַּ֣שׁ יַעֲקֹ֗ב וַיָּ֤גֶל אֶת־הָאֶ֙בֶן֙ מֵעַל֙ פִּ֣י הַבְּאֵ֔ר וַיַּ֕שְׁקְ אֶת־צֹ֥אן לָבָ֖ן אֲחִ֥י אִמּֽוֹ׃ וַיִּשַּׁ֥ק יַעֲקֹ֖ב לְרָחֵ֑ל וַיִּשָּׂ֥א אֶת־קֹל֖וֹ וַיֵּֽבְךְּ׃ וַיַּגֵּ֨ד יַעֲקֹ֜ב לְרָחֵ֗ל כִּ֣י אֲחִ֤י אָבִ֙יהָ֙ ה֔וּא וְכִ֥י בֶן־רִבְקָ֖ה ה֑וּא וַתָּ֖רׇץ וַתַּגֵּ֥ד לְאָבִֽיהָ׃ וַיְהִי֩ כִשְׁמֹ֨עַ לָבָ֜ן אֶת־שֵׁ֣מַע׀ יַעֲקֹ֣ב בֶּן־אֲחֹת֗וֹ וַיָּ֤רׇץ לִקְרָאתוֹ֙ וַיְחַבֶּק־לוֹ֙ וַיְנַשֶּׁק־ל֔וֹ וַיְבִיאֵ֖הוּ אֶל־בֵּית֑וֹ וַיְסַפֵּ֣ר לְלָבָ֔ן אֵ֥ת כׇּל־הַדְּבָרִ֖ים הָאֵֽלֶּה׃ וַיֹּ֤אמֶר לוֹ֙ לָבָ֔ן אַ֛ךְ עַצְמִ֥י וּבְשָׂרִ֖י אָ֑תָּה וַיֵּ֥שֶׁב עִמּ֖וֹ חֹ֥דֶשׁ יָמִֽים׃ וַיֹּ֤אמֶר לָבָן֙ לְיַעֲקֹ֔ב הֲכִי־אָחִ֣י אַ֔תָּה וַעֲבַדְתַּ֖נִי חִנָּ֑ם הַגִּ֥ידָה לִּ֖י מַה־מַּשְׂכֻּרְתֶּֽךָ׃ וּלְלָבָ֖ן שְׁתֵּ֣י בָנ֑וֹת שֵׁ֤ם הַגְּדֹלָה֙ לֵאָ֔ה וְשֵׁ֥ם הַקְּטַנָּ֖ה רָחֵֽל׃ וְעֵינֵ֥י לֵאָ֖ה רַכּ֑וֹת וְרָחֵל֙ הָֽיְתָ֔ה יְפַת־תֹּ֖אַר וִיפַ֥ת מַרְאֶֽה׃
+
+ENGLISH:
+While he was still speaking with them, Rachel came with her fathers flock-for she was its shepherd. And when Jacob saw Rachel, the daughter of his uncle Laban, and the flock of his uncle Laban, Jacob went up and rolled the stone off the mouth of the well, and watered the flock of his uncle Laban. Then Jacob kissed Rachel, and broke into tears. Jacob told Rachel that he was her fathers kinsman, that he was Rebekahs son; and she ran and told her father. On hearing the news of his sisters son Jacob, Laban ran to greet him; he embraced him and kissed him, and took him into his house. He told Laban all that had happened, and Laban said to him, You are truly my bone and flesh. When he had stayed with him a months time, Laban said to Jacob, Just because you are a kinsman, should you serve me for nothing? Tell me, what shall your wages be? Now Laban had two daughters; the name of the older one was Leah, and the name of the younger was Rachel. Leah had weak eyes; Rachel was shapely and beautiful.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob meets Rachel and Leah, Laban's daughters",
+    "heb_summary": "יעקב פוגש רחל ולאה, בנות לבן",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Leah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "unit": "month",
+          "context": "jacob stayed with laban"
+        },
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "daughter",
+          "context": "laban's daughters"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Laban"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Jacob",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Leah",
+          "term2": "Rachel"
+        }
+      ]
+    }
+  }
+}

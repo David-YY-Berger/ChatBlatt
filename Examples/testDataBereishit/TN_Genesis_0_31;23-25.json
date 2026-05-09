@@ -1,0 +1,83 @@
+﻿{
+    "res": {
+        "en_summary": "Laban pursued Jacob into Gilead, God warned him.",
+        "heb_summary": "לבן רדף יעקב לגילעד, אלוהים הזהיר אותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Kinsmen"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gilead"
+                },
+                {
+                    "en_name": "The Height"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Aram"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "laban pursued jacob"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Laban"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Laban",
+                    "term2": "Gilead"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Gilead"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "The Height"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Laban",
+                    "term2": "Aram"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Laban",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:23-25"
+}

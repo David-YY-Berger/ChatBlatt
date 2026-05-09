@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Rebekah deceives Isaac, Jacob receives blessing.",
+        "heb_summary": "רבקה מרמה את יצחק, יעקב מקבל ברכה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "House"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "unit": "kid",
+                    "context": "dish for father"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Kid"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Dish"
+                },
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Kid"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfMother": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rebekah"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Jacob"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Esau",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "House"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:6-17"
+}

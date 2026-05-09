@@ -1,0 +1,83 @@
+﻿COST: Tokens: Total=7755 approx cost usd = $0.000858 (Prompt=6526, Completion=1229)
+SOURCE:
+Genesis 27:1-5  (TN_Genesis_0_27:1-5)
+
+HEBREW:
+וַֽיְהִי֙ כִּֽי־זָקֵ֣ן יִצְחָ֔ק וַתִּכְהֶ֥יןָ עֵינָ֖יו מֵרְאֹ֑ת וַיִּקְרָ֞א אֶת־עֵשָׂ֣ו׀ בְּנ֣וֹ הַגָּדֹ֗ל וַיֹּ֤אמֶר אֵלָיו֙ בְּנִ֔י וַיֹּ֥אמֶר אֵלָ֖יו הִנֵּֽנִי׃ וַיֹּ֕אמֶר הִנֵּה־נָ֖א זָקַ֑נְתִּי לֹ֥א יָדַ֖עְתִּי י֥וֹם מוֹתִֽי׃ וְעַתָּה֙ שָׂא־נָ֣א כֵלֶ֔יךָ תֶּלְיְךָ֖ וְקַשְׁתֶּ֑ךָ וְצֵא֙ הַשָּׂדֶ֔ה וְצ֥וּדָה לִּ֖י [צָֽיִד] ׃ וַעֲשֵׂה־לִ֨י מַטְעַמִּ֜ים כַּאֲשֶׁ֥ר אָהַ֛בְתִּי וְהָבִ֥יאָה לִּ֖י וְאֹכֵ֑לָה בַּעֲב֛וּר תְּבָרֶכְךָ֥ נַפְשִׁ֖י בְּטֶ֥רֶם אָמֽוּת׃ וְרִבְקָ֣ה שֹׁמַ֔עַת בְּדַבֵּ֣ר יִצְחָ֔ק אֶל־עֵשָׂ֖ו בְּנ֑וֹ וַיֵּ֤לֶךְ עֵשָׂו֙ הַשָּׂדֶ֔ה לָצ֥וּד צַ֖יִד לְהָבִֽיא׃
+
+ENGLISH:
+When Isaac was old and his eyes were too dim to see, he called his older son Esau and said to him, My son. He answered, Here I am. And he said, I am old now, and I do not know how soon I may die. Take your gear, your quiver and bow, and go out into the open and hunt me some game. Then prepare a dish for me such as I like, and bring it to me to eat, so that I may give you my innermost blessing before I die. Rebekah had been listening as Isaac spoke to his son Esau. When Esau had gone out into the open to hunt game to bring home,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac, Esau, Rebekah: blessing, hunting, listening.",
+    "heb_summary": "יצחק, עשו, רבקה: ברכה, ציד, האזנה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Rebekah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Quiver"
+        },
+        {
+          "en_name": "Bow"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Dish"
+        },
+        {
+          "en_name": "Game"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Esau",
+          "term2": "Rebekah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Isaac",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Isaac",
+          "term2": "Esau"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+﻿COST: Tokens: Total=8920 approx cost usd = $0.001192 (Prompt=6596, Completion=2324)
+SOURCE:
+Genesis 44:10-16  (TN_Genesis_0_44:10-16)
+
+HEBREW:
+וַיֹּ֕אמֶר גַּם־עַתָּ֥ה כְדִבְרֵיכֶ֖ם כֶּן־ה֑וּא אֲשֶׁ֨ר יִמָּצֵ֤א אִתּוֹ֙ יִהְיֶה־לִּ֣י עָ֔בֶד וְאַתֶּ֖ם תִּהְי֥וּ נְקִיִּֽם׃ וַֽיְמַהֲר֗וּ וַיּוֹרִ֛דוּ אִ֥ישׁ אֶת־אַמְתַּחְתּ֖וֹ אָ֑רְצָה וַֽיִּפְתְּח֖וּ אִ֥ישׁ אַמְתַּחְתּֽוֹ׃ וַיְחַפֵּ֕שׂ בַּגָּד֣וֹל הֵחֵ֔ל וּבַקָּטֹ֖ן כִּלָּ֑ה וַיִּמָּצֵא֙ הַגָּבִ֔יעַ בְּאַמְתַּ֖חַת בִּנְיָמִֽן׃ וַֽיִּקְרְע֖וּ שִׂמְלֹתָ֑ם וַֽיַּעֲמֹס֙ אִ֣ישׁ עַל־חֲמֹר֔וֹ וַיָּשֻׁ֖בוּ הָעִֽירָה׃ וַיָּבֹ֨א יְהוּדָ֤ה וְאֶחָיו֙ בֵּ֣יתָה יוֹסֵ֔ף וְה֖וּא עוֹדֶ֣נּוּ שָׁ֑ם וַיִּפְּל֥וּ לְפָנָ֖יו אָֽרְצָה׃ וַיֹּ֤אמֶר לָהֶם֙ יוֹסֵ֔ף מָֽה־הַמַּעֲשֶׂ֥ה הַזֶּ֖ה אֲשֶׁ֣ר עֲשִׂיתֶ֑ם הֲל֣וֹא יְדַעְתֶּ֔ם כִּֽי־נַחֵ֧שׁ יְנַחֵ֛שׁ אִ֖ישׁ אֲשֶׁ֥ר כָּמֹֽנִי׃ וַיֹּ֣אמֶר יְהוּדָ֗ה מַה־נֹּאמַר֙ לַֽאדֹנִ֔י מַה־נְּדַבֵּ֖ר וּמַה־נִּצְטַדָּ֑ק הָאֱלֹהִ֗ים מָצָא֙ אֶת־עֲוֺ֣ן עֲבָדֶ֔יךָ הִנֶּ֤נּוּ עֲבָדִים֙ לַֽאדֹנִ֔י גַּם־אֲנַ֕חְנוּ גַּ֛ם אֲשֶׁר־נִמְצָ֥א הַגָּבִ֖יעַ בְּיָדֽוֹ׃
+
+ENGLISH:
+He replied, Although what you are proposing is right, only the one with whom it is found shall be my slave; but the rest of you shall go free. So each one hastened to lower his bag to the ground, and each one opened his bag. He searched, beginning with the oldest and ending with the youngest; and the goblet turned up in Benjamins bag. At this they rent their clothes. Each reloaded his pack animal, and they returned to the city. When Judah and his brothers reentered the house of Joseph, who was still there, they threw themselves on the ground before him. Joseph said to them, What is this deed that you have done? Do you not know that a man like me practices divination? Judah replied, What can we say to my lord? How can we plead, how can we prove our innocence? God has uncovered the crime of your servants. Here we are, then, slaves of my lord, the rest of us as much as he in whose possession the goblet was found.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph finds goblet in Benjamin's bag. Judah pleads.",
+    "heb_summary": "יוסף מוצא גביע בתיק בנימין. יהודה מתחנן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "House Of Joseph"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Goblet"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Judah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "House Of Joseph"
+        },
+        {
+          "term1": "Judah",
+          "term2": "House Of Joseph"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "House Of Joseph"
+        }
+      ]
+    }
+  }
+}

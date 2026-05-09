@@ -1,0 +1,79 @@
+﻿{
+    "res": {
+        "en_summary": "Messengers visit Lot in Sodom",
+        "heb_summary": "מלאכים מבקרים את לוט בסדום",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Messengers"
+                },
+                {
+                    "en_name": "Lot"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gate Of Sodom"
+                },
+                {
+                    "en_name": "Lot's House"
+                },
+                {
+                    "en_name": "Square"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "messenger",
+                    "context": "arrived in sodom"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Unleavened Bread"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Lot",
+                    "term2": "Messengers"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Messengers",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Gate Of Sodom"
+                },
+                {
+                    "term1": "Messengers",
+                    "term2": "Lot's House"
+                },
+                {
+                    "term1": "Messengers",
+                    "term2": "Square"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "Lot's House"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:1-3"
+}

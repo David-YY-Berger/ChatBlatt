@@ -1,0 +1,97 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob sends sons to Egypt for food",
+        "heb_summary": "יעקב שולח בנים למצרים לאוכל",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                },
+                {
+                    "en_name": "Sons Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "People",
+                    "unit": "brother",
+                    "context": "joseph's brothers"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Ration"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Joseph's Brothers"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Joseph"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_42:1-6"
+}

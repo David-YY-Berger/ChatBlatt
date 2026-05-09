@@ -1,0 +1,60 @@
+﻿COST: Tokens: Total=7675 approx cost usd = $0.000840 (Prompt=6500, Completion=1175)
+SOURCE:
+Genesis 4:13-16  (TN_Genesis_0_4:13-16)
+
+HEBREW:
+וַיֹּ֥אמֶר קַ֖יִן אֶל־יְהֹוָ֑ה גָּד֥וֹל עֲוֺנִ֖י מִנְּשֹֽׂא * (בספרי ספרד ואשכנז מִנְּשֽׂוֹא) ׃ הֵן֩ גֵּרַ֨שְׁתָּ אֹתִ֜י הַיּ֗וֹם מֵעַל֙ פְּנֵ֣י הָֽאֲדָמָ֔ה וּמִפָּנֶ֖יךָ אֶסָּתֵ֑ר וְהָיִ֜יתִי נָ֤ע וָנָד֙ בָּאָ֔רֶץ וְהָיָ֥ה כׇל־מֹצְאִ֖י יַֽהַרְגֵֽנִי׃ וַיֹּ֧אמֶר ל֣וֹ יְהֹוָ֗ה לָכֵן֙ כׇּל־הֹרֵ֣ג קַ֔יִן שִׁבְעָתַ֖יִם יֻקָּ֑ם וַיָּ֨שֶׂם יְהֹוָ֤ה לְקַ֙יִן֙ א֔וֹת לְבִלְתִּ֥י הַכּוֹת־אֹת֖וֹ כׇּל־מֹצְאֽוֹ׃ וַיֵּ֥צֵא קַ֖יִן מִלִּפְנֵ֣י יְהֹוָ֑ה וַיֵּ֥שֶׁב בְּאֶֽרֶץ־נ֖וֹד קִדְמַת־עֵֽדֶן׃
+
+ENGLISH:
+Cain said to HASHEM, My punishment is too great to bear! Since You have banished me this day from the soil, and I must avoid Your presence and become a restless wanderer on earth-anyone who meets me may kill me! HASHEM said to him, I promise, if anyone kills Cain, sevenfold vengeance shall be exacted. And HASHEM put a mark on Cain, lest anyone who met him should kill him. Cain left the presence of HASHEM and settled in the land of Nod, east of Eden.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Cain banished, marked, settled east of Eden.",
+    "heb_summary": "קין נענש, סומן, התיישב מזרחית לעדן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Nod"
+        },
+        {
+          "en_name": "Eden"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Misc",
+          "unit": "vengeance",
+          "context": "cain's punishment"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Cain",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Cain",
+          "term2": "Nod"
+        }
+      ]
+    }
+  }
+}

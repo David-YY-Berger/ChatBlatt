@@ -1,0 +1,50 @@
+﻿COST: Tokens: Total=8124 approx cost usd = $0.000960 (Prompt=6567, Completion=1557)
+SOURCE:
+Genesis 39:8-13  (TN_Genesis_0_39:8-13)
+
+HEBREW:
+וַיְמָאֵ֓ן׀ וַיֹּ֙אמֶר֙ אֶל־אֵ֣שֶׁת אֲדֹנָ֔יו הֵ֣ן אֲדֹנִ֔י לֹא־יָדַ֥ע אִתִּ֖י מַה־בַּבָּ֑יִת וְכֹ֥ל אֲשֶׁר־יֶשׁ־ל֖וֹ נָתַ֥ן בְּיָדִֽי׃ אֵינֶ֨נּוּ גָד֜וֹל בַּבַּ֣יִת הַזֶּה֮ מִמֶּ֒נִּי֒ וְלֹֽא־חָשַׂ֤ךְ מִמֶּ֙נִּי֙ מְא֔וּמָה כִּ֥י אִם־אוֹתָ֖ךְ בַּאֲשֶׁ֣ר אַתְּ־אִשְׁתּ֑וֹ וְאֵ֨יךְ אֶֽעֱשֶׂ֜ה הָרָעָ֤ה הַגְּדֹלָה֙ הַזֹּ֔את וְחָטָ֖אתִי לֵֽאלֹהִֽים׃ וַיְהִ֕י כְּדַבְּרָ֥הּ אֶל־יוֹסֵ֖ף י֣וֹם׀י֑וֹם וְלֹא־שָׁמַ֥ע אֵלֶ֛יהָ לִשְׁכַּ֥ב אֶצְלָ֖הּ לִהְי֥וֹת עִמָּֽהּ׃ וַֽיְהִי֙ כְּהַיּ֣וֹם הַזֶּ֔ה וַיָּבֹ֥א הַבַּ֖יְתָה לַעֲשׂ֣וֹת מְלַאכְתּ֑וֹ וְאֵ֨ין אִ֜ישׁ מֵאַנְשֵׁ֥י הַבַּ֛יִת שָׁ֖ם בַּבָּֽיִת׃ וַתִּתְפְּשֵׂ֧הוּ בְּבִגְד֛וֹ לֵאמֹ֖ר שִׁכְבָ֣ה עִמִּ֑י וַיַּעֲזֹ֤ב בִּגְדוֹ֙ בְּיָדָ֔הּ וַיָּ֖נׇס וַיֵּצֵ֥א הַחֽוּצָה׃ וַֽיְהִי֙ כִּרְאוֹתָ֔הּ כִּֽי־עָזַ֥ב בִּגְד֖וֹ בְּיָדָ֑הּ וַיָּ֖נׇס הַחֽוּצָה׃
+
+ENGLISH:
+But he refused. He said to his masters wife, Look, with me here, my master gives no thought to anything in this house, and all that he owns he has placed in my hands. He wields no more authority in this house than I, and he has withheld nothing from me except yourself, since you are his wife. How then could I do this most wicked thing, and sin before God? And much as she coaxed Joseph day after day, he did not yield to her request to lie beside her, to be with her. One such day, he came into the house to do his work. None of the household being there inside, she caught hold of him by his garment and said, Lie with me! But he left his garment in her hand and got away and fled outside. When she saw that he had left it in her hand and had fled outside,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph refuses Master's wife's advances.",
+    "heb_summary": "יוסף מסרב לאשת אדונו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Master"
+        },
+        {
+          "en_name": "Master's Wife"
+        },
+        {
+          "en_name": "God"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Master",
+          "term2": "Master's Wife"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Master's Wife"
+        }
+      ]
+    }
+  }
+}

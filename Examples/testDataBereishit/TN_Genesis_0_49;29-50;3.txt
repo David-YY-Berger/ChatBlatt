@@ -1,0 +1,161 @@
+﻿COST: Tokens: Total=9374 approx cost usd = $0.001326 (Prompt=6604, Completion=2770)
+SOURCE:
+Genesis 49:29-50:3  (TN_Genesis_0_49:29-50:3)
+
+HEBREW:
+וַיְצַ֣ו אוֹתָ֗ם וַיֹּ֤אמֶר אֲלֵהֶם֙ אֲנִי֙ נֶאֱסָ֣ף אֶל־עַמִּ֔י קִבְר֥וּ אֹתִ֖י אֶל־אֲבֹתָ֑י אֶ֨ל־הַמְּעָרָ֔ה אֲשֶׁ֥ר בִּשְׂדֵ֖ה עֶפְר֥וֹן הַֽחִתִּֽי׃ בַּמְּעָרָ֞ה אֲשֶׁ֨ר בִּשְׂדֵ֧ה הַמַּכְפֵּלָ֛ה אֲשֶׁ֥ר עַל־פְּנֵי־מַמְרֵ֖א בְּאֶ֣רֶץ כְּנָ֑עַן אֲשֶׁר֩ קָנָ֨ה אַבְרָהָ֜ם אֶת־הַשָּׂדֶ֗ה מֵאֵ֛ת עֶפְרֹ֥ן הַחִתִּ֖י לַאֲחֻזַּת־קָֽבֶר׃ שָׁ֣מָּה קָֽבְר֞וּ אֶת־אַבְרָהָ֗ם וְאֵת֙ שָׂרָ֣ה אִשְׁתּ֔וֹ שָׁ֚מָּה קָבְר֣וּ אֶת־יִצְחָ֔ק וְאֵ֖ת רִבְקָ֣ה אִשְׁתּ֑וֹ וְשָׁ֥מָּה קָבַ֖רְתִּי אֶת־לֵאָֽה׃ מִקְנֵ֧ה הַשָּׂדֶ֛ה וְהַמְּעָרָ֥ה אֲשֶׁר־בּ֖וֹ מֵאֵ֥ת בְּנֵי־חֵֽת׃ וַיְכַ֤ל יַעֲקֹב֙ לְצַוֺּ֣ת אֶת־בָּנָ֔יו וַיֶּאֱסֹ֥ף רַגְלָ֖יו אֶל־הַמִּטָּ֑ה וַיִּגְוַ֖ע וַיֵּאָ֥סֶף אֶל־עַמָּֽיו׃וַיִּפֹּ֥ל יוֹסֵ֖ף עַל־פְּנֵ֣י אָבִ֑יו וַיֵּ֥בְךְּ עָלָ֖יו וַיִּשַּׁק־לֽוֹ׃ וַיְצַ֨ו יוֹסֵ֤ף אֶת־עֲבָדָיו֙ אֶת־הָרֹ֣פְאִ֔ים לַחֲנֹ֖ט אֶת־אָבִ֑יו וַיַּחַנְט֥וּ הָרֹפְאִ֖ים אֶת־יִשְׂרָאֵֽל׃ וַיִּמְלְאוּ־לוֹ֙ אַרְבָּעִ֣ים י֔וֹם כִּ֛י כֵּ֥ן יִמְלְא֖וּ יְמֵ֣י הַחֲנֻטִ֑ים וַיִּבְכּ֥וּ אֹת֛וֹ מִצְרַ֖יִם שִׁבְעִ֥ים יֽוֹם׃
+
+ENGLISH:
+Then he instructed them, saying to them, I am about to be gathered to my kin. Bury me with my ancestors; trad. fathers. See the Dictionary under predecessors. in the cave which is in the field of Ephron the Hittite, the cave which is in the field of Machpelah, facing Mamre, in the land of Canaan, the field that Abraham bought from Ephron the Hittite for a burial site- there Abraham and his wife Sarah were buried; there Isaac and his wife Rebekah were buried; and there I buried Leah- the field and the cave in it, bought from the Hittites. When Jacob finished his instructions to his sons, he drew his feet into the bed and, breathing his last, he was gathered to his kin.Joseph flung himself upon his fathers face and wept over him and kissed him. Then Joseph ordered the physicians in his service to embalm his father, and the physicians embalmed Israel. It required forty days, for such is the full period of embalming. The Egyptians bewailed him seventy days;
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob's burial instructions, death, and mourning.",
+    "heb_summary": "הוראות קבורת יעקב, מותו, ואבל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Machpelah"
+        },
+        {
+          "en_name": "Mamre"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Hittites"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "40",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "embalming period"
+        },
+        {
+          "en_name": "70",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "mourning period"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Isaac",
+          "term2": "Sarah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rebekah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Machpelah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Sarah",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Machpelah"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

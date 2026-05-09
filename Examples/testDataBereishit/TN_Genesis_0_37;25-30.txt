@@ -1,0 +1,152 @@
+﻿COST: Tokens: Total=10098 approx cost usd = $0.001552 (Prompt=6565, Completion=3533)
+SOURCE:
+Genesis 37:25-30  (TN_Genesis_0_37:25-30)
+
+HEBREW:
+וַיֵּשְׁבוּ֮ לֶֽאֱכׇל־לֶ֒חֶם֒ וַיִּשְׂא֤וּ עֵֽינֵיהֶם֙ וַיִּרְא֔וּ וְהִנֵּה֙ אֹרְחַ֣ת יִשְׁמְעֵאלִ֔ים בָּאָ֖ה מִגִּלְעָ֑ד וּגְמַלֵּיהֶ֣ם נֹֽשְׂאִ֗ים נְכֹאת֙ וּצְרִ֣י וָלֹ֔ט הוֹלְכִ֖ים לְהוֹרִ֥יד מִצְרָֽיְמָה׃ וַיֹּ֥אמֶר יְהוּדָ֖ה אֶל־אֶחָ֑יו מַה־בֶּ֗צַע כִּ֤י נַהֲרֹג֙ אֶת־אָחִ֔ינוּ וְכִסִּ֖ינוּ אֶת־דָּמֽוֹ׃ לְכ֞וּ וְנִמְכְּרֶ֣נּוּ לַיִּשְׁמְעֵאלִ֗ים וְיָדֵ֙נוּ֙ אַל־תְּהִי־ב֔וֹ כִּֽי־אָחִ֥ינוּ בְשָׂרֵ֖נוּ ה֑וּא וַֽיִּשְׁמְע֖וּ אֶחָֽיו׃ וַיַּֽעַבְרוּ֩ אֲנָשִׁ֨ים מִדְיָנִ֜ים סֹֽחֲרִ֗ים וַֽיִּמְשְׁכוּ֙ וַיַּֽעֲל֤וּ אֶת־יוֹסֵף֙ מִן־הַבּ֔וֹר וַיִּמְכְּר֧וּ אֶת־יוֹסֵ֛ף לַיִּשְׁמְעֵאלִ֖ים בְּעֶשְׂרִ֣ים כָּ֑סֶף וַיָּבִ֥יאוּ אֶת־יוֹסֵ֖ף מִצְרָֽיְמָה׃ וַיָּ֤שׇׁב רְאוּבֵן֙ אֶל־הַבּ֔וֹר וְהִנֵּ֥ה אֵין־יוֹסֵ֖ף בַּבּ֑וֹר וַיִּקְרַ֖ע אֶת־בְּגָדָֽיו׃ וַיָּ֥שׇׁב אֶל־אֶחָ֖יו וַיֹּאמַ֑ר הַיֶּ֣לֶד אֵינֶ֔נּוּ וַאֲנִ֖י אָ֥נָה אֲנִי־בָֽא׃
+
+ENGLISH:
+Then they sat down to a meal. Looking up, they saw a caravan of Ishmaelites coming from Gilead, their camels bearing gum, balm, and ladanum to be taken to Egypt. Then Judah said to his brothers, What do we gain by killing our brother and covering up his blood? Come, let us sell him to the Ishmaelites, but let us not do away with him ourselves. After all, he is our brother, our own flesh. His brothers agreed. When Midianite traders passed by, they pulled Joseph up out of the pit. They sold Joseph for twenty pieces of silver to the Ishmaelites, who brought Joseph to Egypt. When Reuben returned to the pit and saw that Joseph was not in the pit, he rent his clothes. Returning to his brothers, he said, The boy is gone! Now, what am I to do?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph sold into slavery by his brothers.",
+    "heb_summary": "יוסף נמכר לעבדות על ידי אחיו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Ishmaelites"
+        },
+        {
+          "en_name": "Midianite Traders"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gilead"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Pit"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Joseph"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "Midian"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "20",
+          "number_category": "Money",
+          "unit": "silver",
+          "context": "joseph sale price"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Camel"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Gum"
+        },
+        {
+          "en_name": "Balm"
+        },
+        {
+          "en_name": "Ladanum"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Judah",
+          "term2": "Reuben"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Ishmaelites",
+          "term2": "Gilead"
+        },
+        {
+          "term1": "Ishmaelites",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Midianite Traders",
+          "term2": "Pit"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Pit"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Pit"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Ishmaelites",
+          "term2": "Ishmael"
+        },
+        {
+          "term1": "Midianite Traders",
+          "term2": "Midian"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Judah",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Ishmaelites",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Midianite Traders",
+          "term2": "Joseph"
+        }
+      ]
+    }
+  }
+}

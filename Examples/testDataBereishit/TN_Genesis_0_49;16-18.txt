@@ -1,0 +1,69 @@
+﻿COST: Tokens: Total=9596 approx cost usd = $0.001430 (Prompt=6441, Completion=3155)
+SOURCE:
+Genesis 49:16-18  (TN_Genesis_0_49:16-18)
+
+HEBREW:
+דָּ֖ן יָדִ֣ין עַמּ֑וֹ כְּאַחַ֖ד שִׁבְטֵ֥י יִשְׂרָאֵֽל׃ יְהִי־דָן֙ נָחָ֣שׁ עֲלֵי־דֶ֔רֶךְ שְׁפִיפֹ֖ן עֲלֵי־אֹ֑רַח הַנֹּשֵׁךְ֙ עִקְּבֵי־ס֔וּס וַיִּפֹּ֥ל רֹכְב֖וֹ אָחֽוֹר׃ לִישׁוּעָֽתְךָ֖ קִוִּ֥יתִי יְהֹוָֽה׃
+
+ENGLISH:
+Dan shall govern his people, As one of the tribes of Israel. Dan shall be a serpent by the road, A viper by the path, That bites the horses heels So that his rider is thrown backward. I wait for Your deliverance, O HASHEM !
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Dan governs his people, compared to serpent.",
+    "heb_summary": "דן ישפוט עמו, כנחש וצפע.",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Dan"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Dan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Serpent"
+        },
+        {
+          "en_name": "Viper"
+        },
+        {
+          "en_name": "Horse"
+        }
+      ]
+    },
+    "Rel": {
+      "personBelongsToNation": [
+        {
+          "term1": "Dan",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Dan",
+          "term2": "Serpent"
+        },
+        {
+          "term1": "Dan",
+          "term2": "Viper"
+        }
+      ]
+    }
+  }
+}

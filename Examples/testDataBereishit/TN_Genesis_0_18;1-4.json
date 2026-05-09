@@ -1,0 +1,58 @@
+﻿{
+    "res": {
+        "en_summary": "HASHEM appeared to Agent at Mamre.",
+        "heb_summary": "ה' נגלה לאיש בממרא.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Agent"
+                },
+                {
+                    "en_name": "Three Figures"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Mamre"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "People",
+                    "unit": "figure",
+                    "context": "figures seen by agent"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Agent",
+                    "term2": "Three Figures"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Agent",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Three Figures",
+                    "term2": "Mamre"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:1-4"
+}

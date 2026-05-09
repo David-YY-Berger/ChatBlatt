@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=8320 approx cost usd = $0.001030 (Prompt=6514, Completion=1806)
+SOURCE:
+Genesis 22:7-10  (TN_Genesis_0_22:7-10)
+
+HEBREW:
+וַיֹּ֨אמֶר יִצְחָ֜ק אֶל־אַבְרָהָ֤ם אָבִיו֙ וַיֹּ֣אמֶר אָבִ֔י וַיֹּ֖אמֶר הִנֶּ֣נִּֽי בְנִ֑י וַיֹּ֗אמֶר הִנֵּ֤ה הָאֵשׁ֙ וְהָ֣עֵצִ֔ים וְאַיֵּ֥ה הַשֶּׂ֖ה לְעֹלָֽה׃ וַיֹּ֙אמֶר֙ אַבְרָהָ֔ם אֱלֹהִ֞ים יִרְאֶה־לּ֥וֹ הַשֶּׂ֛ה לְעֹלָ֖ה בְּנִ֑י וַיֵּלְכ֥וּ שְׁנֵיהֶ֖ם יַחְדָּֽו׃ וַיָּבֹ֗אוּ אֶֽל־הַמָּקוֹם֮ אֲשֶׁ֣ר אָֽמַר־ל֣וֹ הָאֱלֹהִים֒ וַיִּ֨בֶן שָׁ֤ם אַבְרָהָם֙ אֶת־הַמִּזְבֵּ֔חַ וַֽיַּעֲרֹ֖ךְ אֶת־הָעֵצִ֑ים וַֽיַּעֲקֹד֙ אֶת־יִצְחָ֣ק בְּנ֔וֹ וַיָּ֤שֶׂם אֹתוֹ֙ עַל־הַמִּזְבֵּ֔חַ מִמַּ֖עַל לָעֵצִֽים׃ וַיִּשְׁלַ֤ח אַבְרָהָם֙ אֶת־יָד֔וֹ וַיִּקַּ֖ח אֶת־הַֽמַּאֲכֶ֑לֶת לִשְׁחֹ֖ט אֶת־בְּנֽוֹ׃
+
+ENGLISH:
+Then Isaac said to his father Abraham, Father! And he answered, Yes, my son. And he said, Here are the firestone and the wood; but where is the sheep for the burnt offering? And Abraham said, It is God who will see to the sheep for this burnt offering, my son. And the two of them walked on together. They arrived at the place of which God had told him. Abraham built an altar there; he laid out the wood; he bound his son Isaac; he laid him on the altar, on top of the wood. And Abraham picked up the knife to slay his son.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham prepares to sacrifice Isaac; God provides.",
+    "heb_summary": "אברהם עקד את יצחק; אלוהים יספק.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Altar"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

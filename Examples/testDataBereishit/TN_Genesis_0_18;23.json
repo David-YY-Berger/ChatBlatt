@@ -1,0 +1,17 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham questions God's justice",
+        "heb_summary": "אברהם שואל על צדק אלוהי",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:23"
+}

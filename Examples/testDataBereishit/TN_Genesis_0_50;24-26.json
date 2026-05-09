@@ -1,0 +1,119 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph dies, prophesies about the land.",
+        "heb_summary": "יוסף נפטר, מנבא על הארץ המובטחת.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Sons Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "The Land"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "110",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "joseph's lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "descendantOf": [
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Brothers"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Sons Of Israel"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "The Land"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "The Land"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "The Land"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Joseph",
+                    "term2": "The Land"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_50:24-26"
+}

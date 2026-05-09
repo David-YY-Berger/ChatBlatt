@@ -1,0 +1,40 @@
+﻿{
+    "res": {
+        "en_summary": "Serpent contradicts God about fruit and tree.",
+        "heb_summary": "נחש סותר את אלוהים על פרי ועץ.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Serpent"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Fruit"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree"
+                }
+            ]
+        },
+        "Rel": {
+            "contrastedWith": [
+                {
+                    "term1": "God",
+                    "term2": "Serpent"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:2-5"
+}

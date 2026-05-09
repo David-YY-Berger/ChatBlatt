@@ -1,0 +1,151 @@
+﻿{
+    "res": {
+        "en_summary": "Terah's family journeyed, settled, and died in Haran.",
+        "heb_summary": "מסע משפחת תרח, התיישבות ומוות בחרן.",
+        "passage_types": [
+            "STORY",
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Terah"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Haran"
+                },
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Milcah"
+                },
+                {
+                    "en_name": "Iscah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Ur Of The Chaldeans"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Haran"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Chaldea"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "70",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "terah fatherhood"
+                },
+                {
+                    "en_name": "205",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "terah lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Abram",
+                    "term2": "Terah"
+                },
+                {
+                    "term1": "Nahor",
+                    "term2": "Terah"
+                },
+                {
+                    "term1": "Haran",
+                    "term2": "Terah"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Milcah",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Iscah",
+                    "term2": "Haran"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                },
+                {
+                    "term1": "Nahor",
+                    "term2": "Milcah"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Haran",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Terah",
+                    "term2": "Haran"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Terah",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Terah",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Haran"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_11:26-32"
+}

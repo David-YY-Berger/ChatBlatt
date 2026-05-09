@@ -1,0 +1,73 @@
+﻿COST: Tokens: Total=8487 approx cost usd = $0.001072 (Prompt=6551, Completion=1936)
+SOURCE:
+Genesis 20:9-13  (TN_Genesis_0_20:9-13)
+
+HEBREW:
+וַיִּקְרָ֨א אֲבִימֶ֜לֶךְ לְאַבְרָהָ֗ם וַיֹּ֨אמֶר ל֜וֹ מֶֽה־עָשִׂ֤יתָ לָּ֙נוּ֙ וּמֶֽה־חָטָ֣אתִי לָ֔ךְ כִּֽי־הֵבֵ֧אתָ עָלַ֛י וְעַל־מַמְלַכְתִּ֖י חֲטָאָ֣ה גְדֹלָ֑ה מַעֲשִׂים֙ אֲשֶׁ֣ר לֹא־יֵֽעָשׂ֔וּ עָשִׂ֖יתָ עִמָּדִֽי׃ וַיֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל־אַבְרָהָ֑ם מָ֣ה רָאִ֔יתָ כִּ֥י עָשִׂ֖יתָ אֶת־הַדָּבָ֥ר הַזֶּֽה׃ וַיֹּ֙אמֶר֙ אַבְרָהָ֔ם כִּ֣י אָמַ֗רְתִּי רַ֚ק אֵין־יִרְאַ֣ת אֱלֹהִ֔ים בַּמָּק֖וֹם הַזֶּ֑ה וַהֲרָג֖וּנִי עַל־דְּבַ֥ר אִשְׁתִּֽי׃ וְגַם־אׇמְנָ֗ה אֲחֹתִ֤י בַת־אָבִי֙ הִ֔וא אַ֖ךְ לֹ֣א בַת־אִמִּ֑י וַתְּהִי־לִ֖י לְאִשָּֽׁה׃ וַיְהִ֞י כַּאֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗י אֱלֹהִים֮ מִבֵּ֣ית אָבִי֒ וָאֹמַ֣ר לָ֔הּ זֶ֣ה חַסְדֵּ֔ךְ אֲשֶׁ֥ר תַּעֲשִׂ֖י עִמָּדִ֑י אֶ֤ל כׇּל־הַמָּקוֹם֙ אֲשֶׁ֣ר נָב֣וֹא שָׁ֔מָּה אִמְרִי־לִ֖י אָחִ֥י הֽוּא׃
+
+ENGLISH:
+Then Abimelech summoned Abraham and said to him, What have you done to us? What wrong have I done that you should bring so great a guilt upon me and my kingdom? You have done to me things that ought not to be done. What, then, Abimelech demanded of Abraham, was your purpose in doing this thing? I thought, said Abraham, surely there is no fear of God in this place, and they will kill me because of my wife. And besides, she is in truth my sister, my fathers daughter though not my mothers; and she became my wife. So when God made me wander from my fathers house, I said to her, Let this be the kindness that you shall do me: whatever place we come to, say there of me: He is my brother.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abimelech confronts Abraham about his wife",
+    "heb_summary": "אבימלך מתעמת עם אברהם על אשתו",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Wife"
+        },
+        {
+          "en_name": "Father"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Wife",
+          "term2": "Father"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Father"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Wife",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abimelech",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Wife"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Abimelech",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

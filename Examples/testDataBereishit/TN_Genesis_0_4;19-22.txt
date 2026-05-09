@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=7428 approx cost usd = $0.000767 (Prompt=6495, Completion=933)
+SOURCE:
+Genesis 4:19-22  (TN_Genesis_0_4:19-22)
+
+HEBREW:
+וַיִּֽקַּֽח־ל֥וֹ לֶ֖מֶךְ שְׁתֵּ֣י נָשִׁ֑ים שֵׁ֤ם הָֽאַחַת֙ עָדָ֔ה וְשֵׁ֥ם הַשֵּׁנִ֖ית צִלָּֽה׃ וַתֵּ֥לֶד עָדָ֖ה אֶת־יָבָ֑ל ה֣וּא הָיָ֔ה אֲבִ֕י יֹשֵׁ֥ב אֹ֖הֶל וּמִקְנֶֽה׃ וְשֵׁ֥ם אָחִ֖יו יוּבָ֑ל ה֣וּא הָיָ֔ה אֲבִ֕י כׇּל־תֹּפֵ֥שׂ כִּנּ֖וֹר וְעוּגָֽב׃ וְצִלָּ֣ה גַם־הִ֗וא יָֽלְדָה֙ אֶת־תּ֣וּבַל קַ֔יִן לֹטֵ֕שׁ כׇּל־חֹרֵ֥שׁ נְחֹ֖שֶׁת וּבַרְזֶ֑ל וַֽאֲח֥וֹת תּֽוּבַל־קַ֖יִן נַֽעֲמָֽה׃
+
+ENGLISH:
+Lamech took to himself two wives: the name of the one was Adah, and the name of the other was Zillah. Adah bore Jabal; he was the ancestor of those who dwell in tents and amidst herds. And the name of his brother was Jubal; he was the ancestor of all who play the lyre and the pipe. As for Zillah, she bore Tubal-cain, who forged all implements of copper and iron. And the sister of Tubal-cain was Naamah.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Lamech's family: wives, children, their professions.",
+    "heb_summary": "משפחת למך: נשיו, ילדיו, עיסוקיהם.",
+    "passage_types": [
+      "STORY",
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lamech"
+        },
+        {
+          "en_name": "Adah"
+        },
+        {
+          "en_name": "Zillah"
+        },
+        {
+          "en_name": "Jabal"
+        },
+        {
+          "en_name": "Jubal"
+        },
+        {
+          "en_name": "Tubal-Cain"
+        },
+        {
+          "en_name": "Naamah"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jabal",
+          "term2": "Lamech"
+        },
+        {
+          "term1": "Jubal",
+          "term2": "Lamech"
+        },
+        {
+          "term1": "Tubal-Cain",
+          "term2": "Lamech"
+        },
+        {
+          "term1": "Naamah",
+          "term2": "Lamech"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Jabal",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Jubal",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Tubal-Cain",
+          "term2": "Zillah"
+        },
+        {
+          "term1": "Naamah",
+          "term2": "Zillah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Lamech",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Lamech",
+          "term2": "Zillah"
+        }
+      ]
+    }
+  }
+}

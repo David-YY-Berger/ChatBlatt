@@ -1,0 +1,122 @@
+﻿COST: Tokens: Total=8523 approx cost usd = $0.001063 (Prompt=6639, Completion=1884)
+SOURCE:
+Genesis 38:7-12  (TN_Genesis_0_38:7-12)
+
+HEBREW:
+וַיְהִ֗י עֵ֚ר בְּכ֣וֹר יְהוּדָ֔ה רַ֖ע בְּעֵינֵ֣י יְהֹוָ֑ה וַיְמִתֵ֖הוּ יְהֹוָֽה׃ וַיֹּ֤אמֶר יְהוּדָה֙ לְאוֹנָ֔ן בֹּ֛א אֶל־אֵ֥שֶׁת אָחִ֖יךָ וְיַבֵּ֣ם אֹתָ֑הּ וְהָקֵ֥ם זֶ֖רַע לְאָחִֽיךָ׃ וַיֵּ֣דַע אוֹנָ֔ן כִּ֛י לֹּ֥א ל֖וֹ יִהְיֶ֣ה הַזָּ֑רַע וְהָיָ֞ה אִם־בָּ֨א אֶל־אֵ֤שֶׁת אָחִיו֙ וְשִׁחֵ֣ת אַ֔רְצָה לְבִלְתִּ֥י נְתׇן־זֶ֖רַע לְאָחִֽיו׃ וַיֵּ֛רַע בְּעֵינֵ֥י יְהֹוָ֖ה אֲשֶׁ֣ר עָשָׂ֑ה וַיָּ֖מֶת גַּם־אֹתֽוֹ׃ וַיֹּ֣אמֶר יְהוּדָה֩ לְתָמָ֨ר כַּלָּת֜וֹ שְׁבִ֧י אַלְמָנָ֣ה בֵית־אָבִ֗יךְ עַד־יִגְדַּל֙ שֵׁלָ֣ה בְנִ֔י כִּ֣י אָמַ֔ר פֶּן־יָמ֥וּת גַּם־ה֖וּא כְּאֶחָ֑יו וַתֵּ֣לֶךְ תָּמָ֔ר וַתֵּ֖שֶׁב בֵּ֥ית אָבִֽיהָ׃ וַיִּרְבּוּ֙ הַיָּמִ֔ים וַתָּ֖מׇת בַּת־שׁ֣וּעַ אֵֽשֶׁת־יְהוּדָ֑ה וַיִּנָּ֣חֶם יְהוּדָ֗ה וַיַּ֜עַל עַל־גֹּֽזְזֵ֤י צֹאנוֹ֙ ה֗וּא וְחִירָ֛ה רֵעֵ֥הוּ הָעֲדֻלָּמִ֖י תִּמְנָֽתָה׃
+
+ENGLISH:
+But Er, Judahs first-born, was displeasing to HASHEM, and HASHEM took his life. Then Judah said to Onan, Join with your brothers wife and do your duty by her as a brother-in-law, and provide offspring for your brother. But Onan, knowing that the offspring would not count as his, let [the semen] go to waste; lit. spoil [it] groundward. NJPS let it go to waste, with offspring as the implausible co-referent of it. See the Dictionary under seed. whenever he joined with his brothers wife, so as not to provide offspring for his brother. What he did was displeasing to HASHEM, who took his life also. Then Judah said to his daughter-in-law Tamar, Stay as a widow in your fathers house until my son Shelah grows up-for he thought, He too might die like his brothers. So Tamar went to live in her fathers house. A long time afterward, Shuas daughter, the wife of Judah, died. When his period of mourning was over, Judah went up to Timnah to his sheepshearers, together with his friend Hirah the Adullamite.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Judah's sons displease God, Tamar's plight.",
+    "heb_summary": "בני יהודה מאכזבים את ה', תמר אלמנה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Er"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Onan"
+        },
+        {
+          "en_name": "Tamar"
+        },
+        {
+          "en_name": "Shelah"
+        },
+        {
+          "en_name": "Hirah"
+        },
+        {
+          "en_name": "Shua"
+        },
+        {
+          "en_name": "Shuas Daughter"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Timnah"
+        },
+        {
+          "en_name": "Adullam"
+        },
+        {
+          "en_name": "Father's House"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Er",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Shuas Daughter",
+          "term2": "Shua"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Er",
+          "term2": "Tamar"
+        },
+        {
+          "term1": "Onan",
+          "term2": "Tamar"
+        },
+        {
+          "term1": "Shuas Daughter",
+          "term2": "Judah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Judah",
+          "term2": "Onan"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Tamar"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Hirah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Judah",
+          "term2": "Timnah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Tamar",
+          "term2": "Father's House"
+        },
+        {
+          "term1": "Hirah",
+          "term2": "Adullam"
+        }
+      ]
+    }
+  }
+}

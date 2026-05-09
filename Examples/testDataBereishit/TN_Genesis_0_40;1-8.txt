@@ -1,0 +1,132 @@
+﻿COST: Tokens: Total=9361 approx cost usd = $0.001324 (Prompt=6598, Completion=2763)
+SOURCE:
+Genesis 40:1-8  (TN_Genesis_0_40:1-8)
+
+HEBREW:
+וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה חָ֥טְא֛וּ מַשְׁקֵ֥ה מֶֽלֶךְ־מִצְרַ֖יִם וְהָאֹפֶ֑ה לַאֲדֹנֵיהֶ֖ם לְמֶ֥לֶךְ מִצְרָֽיִם׃ וַיִּקְצֹ֣ף פַּרְעֹ֔ה עַ֖ל שְׁנֵ֣י סָרִיסָ֑יו עַ֚ל שַׂ֣ר הַמַּשְׁקִ֔ים וְעַ֖ל שַׂ֥ר הָאוֹפִֽים׃ וַיִּתֵּ֨ן אֹתָ֜ם בְּמִשְׁמַ֗ר בֵּ֛ית שַׂ֥ר הַטַּבָּחִ֖ים אֶל־בֵּ֣ית הַסֹּ֑הַר מְק֕וֹם אֲשֶׁ֥ר יוֹסֵ֖ף אָס֥וּר שָֽׁם׃ וַ֠יִּפְקֹ֠ד שַׂ֣ר הַטַּבָּחִ֧ים אֶת־יוֹסֵ֛ף אִתָּ֖ם וַיְשָׁ֣רֶת אֹתָ֑ם וַיִּהְי֥וּ יָמִ֖ים בְּמִשְׁמָֽר׃ וַיַּֽחַלְמוּ֩ חֲל֨וֹם שְׁנֵיהֶ֜ם אִ֤ישׁ חֲלֹמוֹ֙ בְּלַ֣יְלָה אֶחָ֔ד אִ֖ישׁ כְּפִתְר֣וֹן חֲלֹמ֑וֹ הַמַּשְׁקֶ֣ה וְהָאֹפֶ֗ה אֲשֶׁר֙ לְמֶ֣לֶךְ מִצְרַ֔יִם אֲשֶׁ֥ר אֲסוּרִ֖ים בְּבֵ֥ית הַסֹּֽהַר׃ וַיָּבֹ֧א אֲלֵיהֶ֛ם יוֹסֵ֖ף בַּבֹּ֑קֶר וַיַּ֣רְא אֹתָ֔ם וְהִנָּ֖ם זֹעֲפִֽים׃ וַיִּשְׁאַ֞ל אֶת־סְרִיסֵ֣י פַרְעֹ֗ה אֲשֶׁ֨ר אִתּ֧וֹ בְמִשְׁמַ֛ר בֵּ֥ית אֲדֹנָ֖יו לֵאמֹ֑ר מַדּ֛וּעַ פְּנֵיכֶ֥ם רָעִ֖ים הַיּֽוֹם׃ וַיֹּאמְר֣וּ אֵלָ֔יו חֲל֣וֹם חָלַ֔מְנוּ וּפֹתֵ֖ר אֵ֣ין אֹת֑וֹ וַיֹּ֨אמֶר אֲלֵהֶ֜ם יוֹסֵ֗ף הֲל֤וֹא לֵֽאלֹהִים֙ פִּתְרֹנִ֔ים סַפְּרוּ־נָ֖א לִֽי׃
+
+ENGLISH:
+Some time later, the cupbearer and the baker of the king of Egypt gave offense to their lord the king of Egypt. Pharaoh was angry with his two courtiers, the chief cupbearer and the chief baker, and put them in custody, in the house of the prefect, in the same prison house where Joseph was confined. The prefect assigned Joseph to them, and he attended them. When they had been in custody for some time, both of them-the cupbearer and the baker of the king of Egypt, who were confined in the prison-dreamed in the same night, each his own dream and each dream with its own meaning. When Joseph came to them in the morning, he saw that they were distraught. He asked Pharaohs courtiers, who were with him in custody in his masters house, saying, Why do you appear downcast today? And they said to him, We had dreams, and there is no one to interpret them. So Joseph said to them, Surely God can interpret! Tell me [your dreams].
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph interprets dreams for Pharaoh's courtiers",
+    "heb_summary": "יוסף מפרש חלומות לשרי פרעה",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "The Cupbearer"
+        },
+        {
+          "en_name": "The Baker"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "The Prefect"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "The House Of The Prefect"
+        },
+        {
+          "en_name": "The Prison House"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "courtier",
+          "context": "pharaoh's courtiers"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "The Cupbearer"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "The Baker"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "The House Of The Prefect"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "The Prison House"
+        },
+        {
+          "term1": "The Cupbearer",
+          "term2": "The House Of The Prefect"
+        },
+        {
+          "term1": "The Baker",
+          "term2": "The House Of The Prefect"
+        },
+        {
+          "term1": "The Cupbearer",
+          "term2": "The Prison House"
+        },
+        {
+          "term1": "The Baker",
+          "term2": "The Prison House"
+        },
+        {
+          "term1": "The Prefect",
+          "term2": "The House Of The Prefect"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "The Cupbearer",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "The Baker",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Pharaoh",
+          "term2": "The Cupbearer"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "The Baker"
+        }
+      ]
+    }
+  }
+}

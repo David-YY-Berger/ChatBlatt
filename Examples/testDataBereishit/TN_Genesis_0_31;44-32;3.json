@@ -1,0 +1,186 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob and Laban make pact at Gal-ed.",
+        "heb_summary": "יעקב ולבן כורתים ברית בגלעד.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Kinsmen"
+                },
+                {
+                    "en_name": "Daughters"
+                },
+                {
+                    "en_name": "Sons"
+                },
+                {
+                    "en_name": "Messengers Of God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Yegar-Sahadutha"
+                },
+                {
+                    "en_name": "Gal-Ed"
+                },
+                {
+                    "en_name": "Mizpah"
+                },
+                {
+                    "en_name": "Height"
+                },
+                {
+                    "en_name": "Mahanaim"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Stone"
+                },
+                {
+                    "en_name": "Pillar"
+                },
+                {
+                    "en_name": "Mound"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Meal"
+                },
+                {
+                    "en_name": "Sacrifice"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Nahor"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Daughters"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Sons"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Messengers Of God"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Gal-Ed"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Gal-Ed"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Mizpah"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Mizpah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Height"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Height"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Mahanaim"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Height"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Mizpah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Daughters",
+                    "term2": "Height"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "Height"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Yegar-Sahadutha",
+                    "term2": "Gal-Ed"
+                },
+                {
+                    "term1": "Gal-Ed",
+                    "term2": "Mound"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:44-32:3"
+}

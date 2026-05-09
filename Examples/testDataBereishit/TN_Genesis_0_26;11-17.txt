@@ -1,0 +1,77 @@
+﻿COST: Tokens: Total=7983 approx cost usd = $0.000923 (Prompt=6542, Completion=1441)
+SOURCE:
+Genesis 26:11-17  (TN_Genesis_0_26:11-17)
+
+HEBREW:
+וַיְצַ֣ו אֲבִימֶ֔לֶךְ אֶת־כׇּל־הָעָ֖ם לֵאמֹ֑ר הַנֹּגֵ֜עַ בָּאִ֥ישׁ הַזֶּ֛ה וּבְאִשְׁתּ֖וֹ מ֥וֹת יוּמָֽת׃ וַיִּזְרַ֤ע יִצְחָק֙ בָּאָ֣רֶץ הַהִ֔וא וַיִּמְצָ֛א בַּשָּׁנָ֥ה הַהִ֖וא מֵאָ֣ה שְׁעָרִ֑ים וַֽיְבָרְכֵ֖הוּ יְהֹוָֽה׃ וַיִּגְדַּ֖ל הָאִ֑ישׁ וַיֵּ֤לֶךְ הָלוֹךְ֙ וְגָדֵ֔ל עַ֥ד כִּֽי־גָדַ֖ל מְאֹֽד׃ וַֽיְהִי־ל֤וֹ מִקְנֵה־צֹאן֙ וּמִקְנֵ֣ה בָקָ֔ר וַעֲבֻדָּ֖ה רַבָּ֑ה וַיְקַנְא֥וּ אֹת֖וֹ פְּלִשְׁתִּֽים׃ וְכׇל־הַבְּאֵרֹ֗ת אֲשֶׁ֤ר חָֽפְרוּ֙ עַבְדֵ֣י אָבִ֔יו בִּימֵ֖י אַבְרָהָ֣ם אָבִ֑יו סִתְּמ֣וּם פְּלִשְׁתִּ֔ים וַיְמַלְא֖וּם עָפָֽר׃ וַיֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל־יִצְחָ֑ק לֵ֚ךְ מֵֽעִמָּ֔נוּ כִּֽי־עָצַ֥מְתָּ מִמֶּ֖נּוּ מְאֹֽד׃ וַיֵּ֥לֶךְ מִשָּׁ֖ם יִצְחָ֑ק וַיִּ֥חַן בְּנַֽחַל־גְּרָ֖ר וַיֵּ֥שֶׁב שָֽׁם׃
+
+ENGLISH:
+Abimelech then charged all the people, saying, Anyone who molests this man or his wife shall be put to death. Isaac sowed in that land and reaped a hundredfold the same year. HASHEM blessed him, and the man grew richer and richer until he was very wealthy: he acquired flocks and herds, and a large household, so that the Philistines envied him. And the Philistines stopped up all the wells which his fathers servants had dug in the days of his father Abraham, filling them with earth. And Abimelech said to Isaac, Go away from us, for you have become far too big for us. So Isaac departed from there and encamped in the wadi of Gerar, where he settled.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abimelech charged people; Isaac prospered, Philistines envied.",
+    "heb_summary": "אבימלך ציווה, יצחק הצליח, פלישתים קינאו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abraham"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gerar"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Philistia"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "100",
+          "number_category": "Measurement",
+          "unit": "fold",
+          "context": "harvest yield"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abimelech",
+          "term2": "Isaac"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Isaac",
+          "term2": "Gerar"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Gerar",
+          "term2": "Philistia"
+        }
+      ]
+    }
+  }
+}

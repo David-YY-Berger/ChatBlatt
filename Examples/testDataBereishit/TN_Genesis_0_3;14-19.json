@@ -1,0 +1,98 @@
+﻿{
+    "res": {
+        "en_summary": "God curses serpent, woman, and Adam",
+        "heb_summary": "אלוהים מקלל נחש, אישה ואדם",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Adam"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Ground"
+                },
+                {
+                    "en_name": "Field"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Serpent"
+                },
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Wild Beast"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Dirt"
+                },
+                {
+                    "en_name": "Grass"
+                },
+                {
+                    "en_name": "Bread"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree"
+                },
+                {
+                    "en_name": "Thorn"
+                },
+                {
+                    "en_name": "Thistle"
+                },
+                {
+                    "en_name": "Grass"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Serpent"
+                },
+                {
+                    "term1": "God Hashem",
+                    "term2": "Adam"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Adam",
+                    "term2": "Ground"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Adam",
+                    "term2": "Ground"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Serpent"
+                },
+                {
+                    "term1": "God Hashem",
+                    "term2": "Adam"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:14-19"
+}

@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=8211 approx cost usd = $0.000995 (Prompt=6525, Completion=1686)
+SOURCE:
+Genesis 1:14-19  (TN_Genesis_0_1:14-19)
+
+HEBREW:
+וַיֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהַבְדִּ֕יל בֵּ֥ין הַיּ֖וֹם וּבֵ֣ין הַלָּ֑יְלָה וְהָי֤וּ לְאֹתֹת֙ וּלְמ֣וֹעֲדִ֔ים וּלְיָמִ֖ים וְשָׁנִֽים׃ וְהָי֤וּ לִמְאוֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהָאִ֖יר עַל־הָאָ֑רֶץ וַֽיְהִי־כֵֽן׃ וַיַּ֣עַשׂ אֱלֹהִ֔ים אֶת־שְׁנֵ֥י הַמְּאֹרֹ֖ת הַגְּדֹלִ֑ים אֶת־הַמָּא֤וֹר הַגָּדֹל֙ לְמֶמְשֶׁ֣לֶת הַיּ֔וֹם וְאֶת־הַמָּא֤וֹר הַקָּטֹן֙ לְמֶמְשֶׁ֣לֶת הַלַּ֔יְלָה וְאֵ֖ת הַכּוֹכָבִֽים׃ וַיִּתֵּ֥ן אֹתָ֛ם אֱלֹהִ֖ים בִּרְקִ֣יעַ הַשָּׁמָ֑יִם לְהָאִ֖יר עַל־הָאָֽרֶץ׃ וְלִמְשֹׁל֙ בַּיּ֣וֹם וּבַלַּ֔יְלָה וּֽלְהַבְדִּ֔יל בֵּ֥ין הָא֖וֹר וּבֵ֣ין הַחֹ֑שֶׁךְ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃ וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם רְבִיעִֽי׃
+
+ENGLISH:
+God said, Let there be lights in the expanse of the sky to separate day from night; they shall serve as signs for the set times-the days and the years; and they shall serve as lights in the expanse of the sky to shine upon the earth. And it was so. God made the two great lights, the greater light to dominate the day and the lesser light to dominate the night, and the stars. And God set them in the expanse of the sky to shine upon the earth, to dominate the day and the night, and to separate light from darkness. And God saw that this was good. And there was evening and there was morning, a fourth day.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God created lights, day, night, stars.",
+    "heb_summary": "אלוהים ברא מאורות, יום, לילה, כוכבים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Expanse Of The Sky"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Lights"
+        },
+        {
+          "en_name": "Day"
+        },
+        {
+          "en_name": "Night"
+        },
+        {
+          "en_name": "Greater Light"
+        },
+        {
+          "en_name": "Lesser Light"
+        },
+        {
+          "en_name": "Stars"
+        },
+        {
+          "en_name": "Darkness"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "unit": "light",
+          "context": "created great lights"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "God",
+          "term2": "Expanse Of The Sky"
+        },
+        {
+          "term1": "God",
+          "term2": "Earth"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Day",
+          "term2": "Night"
+        }
+      ]
+    }
+  }
+}

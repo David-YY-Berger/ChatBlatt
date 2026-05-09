@@ -1,0 +1,68 @@
+﻿COST: Tokens: Total=9889 approx cost usd = $0.001506 (Prompt=6490, Completion=3399)
+SOURCE:
+Genesis 18:1-4  (TN_Genesis_0_18:1-4)
+
+HEBREW:
+וַיֵּרָ֤א אֵלָיו֙ יְהֹוָ֔ה בְּאֵלֹנֵ֖י מַמְרֵ֑א וְה֛וּא יֹשֵׁ֥ב פֶּֽתַח־הָאֹ֖הֶל כְּחֹ֥ם הַיּֽוֹם׃ וַיִּשָּׂ֤א עֵינָיו֙ וַיַּ֔רְא וְהִנֵּה֙ שְׁלֹשָׁ֣ה אֲנָשִׁ֔ים נִצָּבִ֖ים עָלָ֑יו וַיַּ֗רְא וַיָּ֤רׇץ לִקְרָאתָם֙ מִפֶּ֣תַח הָאֹ֔הֶל וַיִּשְׁתַּ֖חוּ אָֽרְצָה׃ וַיֹּאמַ֑ר אֲדֹנָ֗י אִם־נָ֨א מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ אַל־נָ֥א תַעֲבֹ֖ר מֵעַ֥ל עַבְדֶּֽךָ׃ יֻקַּֽח־נָ֣א מְעַט־מַ֔יִם וְרַחֲצ֖וּ רַגְלֵיכֶ֑ם וְהִֽשָּׁעֲנ֖וּ תַּ֥חַת הָעֵֽץ׃
+
+ENGLISH:
+HASHEM appeared to him by the terebinths of Mamre; he was sitting at the entrance of the tent as the day grew hot. Looking up, he saw three figures; Agent. standing near him. Perceiving this, he ran from the entrance of the tent to greet them and, bowing to the ground, he said, My lords! If it please you, do not go on past your servant. Let a little water be brought; bathe your feet and recline under the tree.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "HASHEM appeared to Agent at Mamre.",
+    "heb_summary": "ה' נגלה לאיש בממרא.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Agent"
+        },
+        {
+          "en_name": "Three Figures"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mamre"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "People",
+          "unit": "figure",
+          "context": "figures seen by agent"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Agent",
+          "term2": "Three Figures"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Hashem",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Agent",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Three Figures",
+          "term2": "Mamre"
+        }
+      ]
+    }
+  }
+}

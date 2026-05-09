@@ -1,0 +1,91 @@
+﻿COST: Tokens: Total=9482 approx cost usd = $0.001345 (Prompt=6667, Completion=2815)
+SOURCE:
+Genesis 19:30-38  (TN_Genesis_0_19:30-38)
+
+HEBREW:
+וַיַּ֩עַל֩ ל֨וֹט מִצּ֜וֹעַר וַיֵּ֣שֶׁב בָּהָ֗ר וּשְׁתֵּ֤י בְנֹתָיו֙ עִמּ֔וֹ כִּ֥י יָרֵ֖א לָשֶׁ֣בֶת בְּצ֑וֹעַר וַיֵּ֙שֶׁב֙ בַּמְּעָרָ֔ה ה֖וּא וּשְׁתֵּ֥י בְנֹתָֽיו׃ וַתֹּ֧אמֶר הַבְּכִירָ֛ה אֶל־הַצְּעִירָ֖ה אָבִ֣ינוּ זָקֵ֑ן וְאִ֨ישׁ אֵ֤ין בָּאָ֙רֶץ֙ לָב֣וֹא עָלֵ֔ינוּ כְּדֶ֖רֶךְ כׇּל־הָאָֽרֶץ׃ לְכָ֨ה נַשְׁקֶ֧ה אֶת־אָבִ֛ינוּ יַ֖יִן וְנִשְׁכְּבָ֣ה עִמּ֑וֹ וּנְחַיֶּ֥ה מֵאָבִ֖ינוּ זָֽרַע׃ וַתַּשְׁקֶ֧יןָ אֶת־אֲבִיהֶ֛ן יַ֖יִן בַּלַּ֣יְלָה ה֑וּא וַתָּבֹ֤א הַבְּכִירָה֙ וַתִּשְׁכַּ֣ב אֶת־אָבִ֔יהָ וְלֹֽא־יָדַ֥ע בְּשִׁכְבָ֖הּ וּבְקוּׄמָֽהּ׃ וַֽיְהִי֙ מִֽמׇּחֳרָ֔ת וַתֹּ֤אמֶר הַבְּכִירָה֙ אֶל־הַצְּעִירָ֔ה הֵן־שָׁכַ֥בְתִּי אֶ֖מֶשׁ אֶת־אָבִ֑י נַשְׁקֶ֨נּוּ יַ֜יִן גַּם־הַלַּ֗יְלָה וּבֹ֙אִי֙ שִׁכְבִ֣י עִמּ֔וֹ וּנְחַיֶּ֥ה מֵאָבִ֖ינוּ זָֽרַע׃ וַתַּשְׁקֶ֜יןָ גַּ֣ם בַּלַּ֧יְלָה הַה֛וּא אֶת־אֲבִיהֶ֖ן יָ֑יִן וַתָּ֤קׇם הַצְּעִירָה֙ וַתִּשְׁכַּ֣ב עִמּ֔וֹ וְלֹֽא־יָדַ֥ע בְּשִׁכְבָ֖הּ וּבְקֻמָֽהּ׃ וַֽתַּהֲרֶ֛יןָ שְׁתֵּ֥י בְנֽוֹת־ל֖וֹט מֵאֲבִיהֶֽן׃ וַתֵּ֤לֶד הַבְּכִירָה֙ בֵּ֔ן וַתִּקְרָ֥א שְׁמ֖וֹ מוֹאָ֑ב ה֥וּא אֲבִֽי־מוֹאָ֖ב עַד־הַיּֽוֹם׃ וְהַצְּעִירָ֤ה גַם־הִוא֙ יָ֣לְדָה בֵּ֔ן וַתִּקְרָ֥א שְׁמ֖וֹ בֶּן־עַמִּ֑י ה֛וּא אֲבִ֥י בְנֵֽי־עַמּ֖וֹן עַד־הַיּֽוֹם׃
+
+ENGLISH:
+Lot went up from Zoar and settled in the hill country with his two daughters, for he was afraid to dwell in Zoar; and he and his two daughters lived in a cave. And the older one said to the younger, Our father is old, and there is not a man on earth to consort with us in the way of all the world. Come, let us make our father drink wine, and let us lie with him, that we may maintain life through our father. That night they made their father drink wine, and the older one went in and lay with her father; he did not know when she lay down or when she rose. The next day the older one said to the younger, See, I lay with Father last night; let us make him drink wine tonight also, and you go and lie with him, that we may maintain life through our father. That night also they made their father drink wine, and the younger one went and lay with him; he did not know when she lay down or when she rose. Thus the two daughters of Lot became pregnant by their father. The older one bore a son and named him Moab; from (my) father. he is the father of the Moabites of today. And the younger also bore a son, and she called him Ben-ammi;. he is the father of the Ammonites of today.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Lot and daughters' incest; Moab, Ammon origins.",
+    "heb_summary": "לוט ובנותיו גילוי עריות; מוצא מואב ועמון.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Ben-Ammi"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Zoar"
+        },
+        {
+          "en_name": "Hill Country"
+        },
+        {
+          "en_name": "Cave"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Ammon"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "daughter",
+          "context": "lot's daughters"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Wine"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Moab",
+          "term2": "Lot"
+        },
+        {
+          "term1": "Ben-Ammi",
+          "term2": "Lot"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Lot",
+          "term2": "Zoar"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Hill Country"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Cave"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+﻿{
+    "res": {
+        "en_summary": "Noah, family, animals leave ark; God promises no more flood.",
+        "heb_summary": "נוח, משפחתו, וחיות עוזבים תיבה; אלוהים מבטיח ללא מבול.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Noah's Wife"
+                },
+                {
+                    "en_name": "Sons"
+                },
+                {
+                    "en_name": "Sons' Wives"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ark"
+                },
+                {
+                    "en_name": "Altar"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Animal"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                },
+                {
+                    "en_name": "Beast"
+                },
+                {
+                    "en_name": "Fish"
+                },
+                {
+                    "en_name": "Creature"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Flesh"
+                },
+                {
+                    "en_name": "Grass"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Grass"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Sons",
+                    "term2": "Noah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Noah",
+                    "term2": "Noah's Wife"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "Sons' Wives"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Noah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Noah",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Noah's Wife",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Sons' Wives",
+                    "term2": "Earth"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_8:16-9:4"
+}

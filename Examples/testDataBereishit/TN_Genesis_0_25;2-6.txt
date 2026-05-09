@@ -1,0 +1,229 @@
+﻿COST: Tokens: Total=8939 approx cost usd = $0.001215 (Prompt=6519, Completion=2420)
+SOURCE:
+Genesis 25:2-6  (TN_Genesis_0_25:2-6)
+
+HEBREW:
+וַתֵּ֣לֶד ל֗וֹ אֶת־זִמְרָן֙ וְאֶת־יׇקְשָׁ֔ן וְאֶת־מְדָ֖ן וְאֶת־מִדְיָ֑ן וְאֶת־יִשְׁבָּ֖ק וְאֶת־שֽׁוּחַ׃ וְיׇקְשָׁ֣ן יָלַ֔ד אֶת־שְׁבָ֖א וְאֶת־דְּדָ֑ן וּבְנֵ֣י דְדָ֔ן הָי֛וּ אַשּׁוּרִ֥ם וּלְטוּשִׁ֖ם וּלְאֻמִּֽים׃ וּבְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָעֵ֙פֶר֙ וַחֲנֹ֔ךְ וַאֲבִידָ֖ע וְאֶלְדָּעָ֑ה כׇּל־אֵ֖לֶּה בְּנֵ֥י קְטוּרָֽה׃ וַיִּתֵּ֧ן אַבְרָהָ֛ם אֶת־כׇּל־אֲשֶׁר־ל֖וֹ לְיִצְחָֽק׃ וְלִבְנֵ֤י הַפִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְאַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם מַתָּנֹ֑ת וַֽיְשַׁלְּחֵ֞ם מֵעַ֨ל יִצְחָ֤ק בְּנוֹ֙ בְּעוֹדֶ֣נּוּ חַ֔י קֵ֖דְמָה אֶל־אֶ֥רֶץ קֶֽדֶם׃
+
+ENGLISH:
+She bore him Zimran, Jokshan, Medan, Midian, Ishbak, and Shuah. Jokshan begot Sheba and Dedan. The descendants of Dedan were the Asshurim, the Letushim, and the Leummim. The descendants of Midian were Ephah, Epher, Enoch, Abida, and Eldaah. All these were descendants of Keturah. Abraham willed all that he owned to Isaac; but to Abrahams sons by concubines Abraham gave gifts while he was still living, and he sent them away from his son Isaac eastward, to the land of the East.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham's descendants by Keturah and their lineage.",
+    "heb_summary": "צאצאי אברהם מכתורה ושושלתם.",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Zimran"
+        },
+        {
+          "en_name": "Jokshan"
+        },
+        {
+          "en_name": "Medan"
+        },
+        {
+          "en_name": "Midian"
+        },
+        {
+          "en_name": "Ishbak"
+        },
+        {
+          "en_name": "Shuah"
+        },
+        {
+          "en_name": "Sheba"
+        },
+        {
+          "en_name": "Dedan"
+        },
+        {
+          "en_name": "Asshurim"
+        },
+        {
+          "en_name": "Letushim"
+        },
+        {
+          "en_name": "Leummim"
+        },
+        {
+          "en_name": "Ephah"
+        },
+        {
+          "en_name": "Epher"
+        },
+        {
+          "en_name": "Enoch"
+        },
+        {
+          "en_name": "Abida"
+        },
+        {
+          "en_name": "Eldaah"
+        },
+        {
+          "en_name": "Keturah"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Land Of The East"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Zimran",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Jokshan",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Medan",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Midian",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Ishbak",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Shuah",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Jokshan"
+        },
+        {
+          "term1": "Dedan",
+          "term2": "Jokshan"
+        },
+        {
+          "term1": "Ephah",
+          "term2": "Midian"
+        },
+        {
+          "term1": "Epher",
+          "term2": "Midian"
+        },
+        {
+          "term1": "Enoch",
+          "term2": "Midian"
+        },
+        {
+          "term1": "Abida",
+          "term2": "Midian"
+        },
+        {
+          "term1": "Eldaah",
+          "term2": "Midian"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Zimran",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Jokshan",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Medan",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Midian",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Ishbak",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Shuah",
+          "term2": "Keturah"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Asshurim",
+          "term2": "Dedan"
+        },
+        {
+          "term1": "Letushim",
+          "term2": "Dedan"
+        },
+        {
+          "term1": "Leummim",
+          "term2": "Dedan"
+        },
+        {
+          "term1": "Ephah",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Epher",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Enoch",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Abida",
+          "term2": "Keturah"
+        },
+        {
+          "term1": "Eldaah",
+          "term2": "Keturah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Zimran",
+          "term2": "Land Of The East"
+        },
+        {
+          "term1": "Jokshan",
+          "term2": "Land Of The East"
+        },
+        {
+          "term1": "Medan",
+          "term2": "Land Of The East"
+        },
+        {
+          "term1": "Midian",
+          "term2": "Land Of The East"
+        },
+        {
+          "term1": "Ishbak",
+          "term2": "Land Of The East"
+        },
+        {
+          "term1": "Shuah",
+          "term2": "Land Of The East"
+        }
+      ]
+    }
+  }
+}

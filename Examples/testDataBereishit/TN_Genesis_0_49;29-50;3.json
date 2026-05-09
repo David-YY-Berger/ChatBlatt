@@ -1,0 +1,151 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's burial instructions, death, and mourning.",
+        "heb_summary": "הוראות קבורת יעקב, מותו, ואבל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Machpelah"
+                },
+                {
+                    "en_name": "Mamre"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hittites"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "40",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "embalming period"
+                },
+                {
+                    "en_name": "70",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "mourning period"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Sarah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Leah"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Machpelah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Machpelah"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:29-50:3"
+}

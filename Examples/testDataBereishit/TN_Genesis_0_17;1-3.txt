@@ -1,0 +1,59 @@
+﻿COST: Tokens: Total=6984 approx cost usd = $0.000642 (Prompt=6457, Completion=527)
+SOURCE:
+Genesis 17:1-3  (TN_Genesis_0_17:1-3)
+
+HEBREW:
+וַיְהִ֣י אַבְרָ֔ם בֶּן־תִּשְׁעִ֥ים שָׁנָ֖ה וְתֵ֣שַׁע שָׁנִ֑ים וַיֵּרָ֨א יְהֹוָ֜ה אֶל־אַבְרָ֗ם וַיֹּ֤אמֶר אֵלָיו֙ אֲנִי־אֵ֣ל שַׁדַּ֔י הִתְהַלֵּ֥ךְ לְפָנַ֖י וֶהְיֵ֥ה תָמִֽים׃ וְאֶתְּנָ֥ה בְרִיתִ֖י בֵּינִ֣י וּבֵינֶ֑ךָ וְאַרְבֶּ֥ה אוֹתְךָ֖ בִּמְאֹ֥ד מְאֹֽד׃ וַיִּפֹּ֥ל אַבְרָ֖ם עַל־פָּנָ֑יו וַיְדַבֵּ֥ר אִתּ֛וֹ אֱלֹהִ֖ים לֵאמֹֽר׃
+
+ENGLISH:
+When Abram was ninety-nine years old, HASHEM appeared to Abram and said to him, I am El Shaddai. Walk in My ways and be blameless. I will establish My covenant between Me and you, and I will make you exceedingly numerous. Abram threw himself on his face; and God spoke to him further,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God appears to Abram, promises covenant.",
+    "heb_summary": "ה' נגלה לאברם ומבטיח ברית.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "99",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abram's age"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Abram"
+        },
+        {
+          "term1": "God",
+          "term2": "Abram"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

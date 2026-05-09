@@ -1,0 +1,81 @@
+﻿{
+    "res": {
+        "en_summary": "Lot and daughters' incest; Moab, Ammon origins.",
+        "heb_summary": "לוט ובנותיו גילוי עריות; מוצא מואב ועמון.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Moab"
+                },
+                {
+                    "en_name": "Ben-Ammi"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Zoar"
+                },
+                {
+                    "en_name": "Hill Country"
+                },
+                {
+                    "en_name": "Cave"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Moab"
+                },
+                {
+                    "en_name": "Ammon"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "daughter",
+                    "context": "lot's daughters"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Wine"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Moab",
+                    "term2": "Lot"
+                },
+                {
+                    "term1": "Ben-Ammi",
+                    "term2": "Lot"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "Zoar"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Hill Country"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Cave"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:30-38"
+}

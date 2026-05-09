@@ -1,0 +1,85 @@
+﻿COST: Tokens: Total=7293 approx cost usd = $0.000735 (Prompt=6456, Completion=837)
+SOURCE:
+Genesis 4:17-18  (TN_Genesis_0_4:17-18)
+
+HEBREW:
+וַיֵּ֤דַע קַ֙יִן֙ אֶת־אִשְׁתּ֔וֹ וַתַּ֖הַר וַתֵּ֣לֶד אֶת־חֲנ֑וֹךְ וַֽיְהִי֙ בֹּ֣נֶה עִ֔יר וַיִּקְרָא֙ שֵׁ֣ם הָעִ֔יר כְּשֵׁ֖ם בְּנ֥וֹ חֲנֽוֹךְ׃ וַיִּוָּלֵ֤ד לַֽחֲנוֹךְ֙ אֶת־עִירָ֔ד וְעִירָ֕ד יָלַ֖ד אֶת־מְחֽוּיָאֵ֑ל וּמְחִיָּיאֵ֗ל יָלַד֙ אֶת־מְת֣וּשָׁאֵ֔ל וּמְתוּשָׁאֵ֖ל יָלַ֥ד אֶת־לָֽמֶךְ׃
+
+ENGLISH:
+Cain knew his wife, and she conceived and bore Enoch. And he then founded a city, and named the city after his son Enoch. To Enoch was born Irad, and Irad begot Mehujael, and Mehujael. begot Methusael, and Methusael begot Lamech.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Cain's lineage and founding of Enoch City.",
+    "heb_summary": "יוחסין של קין וייסוד עיר חנוך.",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Enoch"
+        },
+        {
+          "en_name": "Irad"
+        },
+        {
+          "en_name": "Mehujael"
+        },
+        {
+          "en_name": "Methusael"
+        },
+        {
+          "en_name": "Lamech"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "City"
+        },
+        {
+          "en_name": "Enoch"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Enoch",
+          "term2": "Cain"
+        },
+        {
+          "term1": "Irad",
+          "term2": "Enoch"
+        },
+        {
+          "term1": "Mehujael",
+          "term2": "Irad"
+        },
+        {
+          "term1": "Methusael",
+          "term2": "Mehujael"
+        },
+        {
+          "term1": "Lamech",
+          "term2": "Methusael"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Cain",
+          "term2": "City"
+        },
+        {
+          "term1": "Enoch",
+          "term2": "City"
+        }
+      ]
+    }
+  }
+}

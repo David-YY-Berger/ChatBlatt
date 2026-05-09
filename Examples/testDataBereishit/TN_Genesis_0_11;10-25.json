@@ -1,0 +1,163 @@
+﻿{
+    "res": {
+        "en_summary": "Shem's descendants: Arpachshad to Terah",
+        "heb_summary": "שושלת שם: ארפכשד עד תרח",
+        "passage_types": [
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Arpachshad"
+                },
+                {
+                    "en_name": "Shelah"
+                },
+                {
+                    "en_name": "Eber"
+                },
+                {
+                    "en_name": "Peleg"
+                },
+                {
+                    "en_name": "Reu"
+                },
+                {
+                    "en_name": "Serug"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Terah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "100",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "shem's age at son's birth"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "after the flood"
+                },
+                {
+                    "en_name": "500",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "shem's lifespan after son's birth"
+                },
+                {
+                    "en_name": "35",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "arpachshad's age at son's birth"
+                },
+                {
+                    "en_name": "403",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "arpachshad's lifespan after son's birth"
+                },
+                {
+                    "en_name": "30",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "shelah's age at son's birth"
+                },
+                {
+                    "en_name": "34",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "eber's age at son's birth"
+                },
+                {
+                    "en_name": "430",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "eber's lifespan after son's birth"
+                },
+                {
+                    "en_name": "209",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "peleg's lifespan after son's birth"
+                },
+                {
+                    "en_name": "32",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "reu's age at son's birth"
+                },
+                {
+                    "en_name": "207",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "reu's lifespan after son's birth"
+                },
+                {
+                    "en_name": "200",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "serug's lifespan after son's birth"
+                },
+                {
+                    "en_name": "29",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "nahor's age at son's birth"
+                },
+                {
+                    "en_name": "119",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "nahor's lifespan after son's birth"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Arpachshad",
+                    "term2": "Shem"
+                },
+                {
+                    "term1": "Shelah",
+                    "term2": "Arpachshad"
+                },
+                {
+                    "term1": "Eber",
+                    "term2": "Shelah"
+                },
+                {
+                    "term1": "Peleg",
+                    "term2": "Eber"
+                },
+                {
+                    "term1": "Reu",
+                    "term2": "Peleg"
+                },
+                {
+                    "term1": "Serug",
+                    "term2": "Reu"
+                },
+                {
+                    "term1": "Nahor",
+                    "term2": "Serug"
+                },
+                {
+                    "term1": "Terah",
+                    "term2": "Nahor"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_11:10-25"
+}

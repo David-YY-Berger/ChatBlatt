@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=7608 approx cost usd = $0.000814 (Prompt=6525, Completion=1083)
+SOURCE:
+Genesis 21:22-26  (TN_Genesis_0_21:22-26)
+
+HEBREW:
+וַֽיְהִי֙ בָּעֵ֣ת הַהִ֔וא וַיֹּ֣אמֶר אֲבִימֶ֗לֶךְ וּפִיכֹל֙ שַׂר־צְבָא֔וֹ אֶל־אַבְרָהָ֖ם לֵאמֹ֑ר אֱלֹהִ֣ים עִמְּךָ֔ בְּכֹ֥ל אֲשֶׁר־אַתָּ֖ה עֹשֶֽׂה׃ וְעַתָּ֗ה הִשָּׁ֨בְעָה לִּ֤י בֵֽאלֹהִים֙ הֵ֔נָּה אִם־תִּשְׁקֹ֣ר לִ֔י וּלְנִינִ֖י וּלְנֶכְדִּ֑י כַּחֶ֜סֶד אֲשֶׁר־עָשִׂ֤יתִי עִמְּךָ֙ תַּעֲשֶׂ֣ה עִמָּדִ֔י וְעִם־הָאָ֖רֶץ אֲשֶׁר־גַּ֥רְתָּה בָּֽהּ׃ וַיֹּ֙אמֶר֙ אַבְרָהָ֔ם אָנֹכִ֖י אִשָּׁבֵֽעַ׃ וְהוֹכִ֥חַ אַבְרָהָ֖ם אֶת־אֲבִימֶ֑לֶךְ עַל־אֹדוֹת֙ בְּאֵ֣ר הַמַּ֔יִם אֲשֶׁ֥ר גָּזְל֖וּ עַבְדֵ֥י אֲבִימֶֽלֶךְ׃ וַיֹּ֣אמֶר אֲבִימֶ֔לֶךְ לֹ֣א יָדַ֔עְתִּי מִ֥י עָשָׂ֖ה אֶת־הַדָּבָ֣ר הַזֶּ֑ה וְגַם־אַתָּ֞ה לֹא־הִגַּ֣דְתָּ לִּ֗י וְגַ֧ם אָנֹכִ֛י לֹ֥א שָׁמַ֖עְתִּי בִּלְתִּ֥י הַיּֽוֹם׃
+
+ENGLISH:
+At that time Abimelech and Phicol, chief of his troops, said to Abraham, God is with you in everything that you do. Therefore swear to me here by God that you will not deal falsely with me or with my kith and kin, but will deal with me and with the land in which you have sojourned as loyally as I have dealt with you. And Abraham said, I swear it. Then Abraham reproached Abimelech for the well of water which the servants of Abimelech had seized. But Abimelech said, I do not know who did this; you did not tell me, nor have I heard of it until today.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abimelech and Phicol swear oath with Abraham.",
+    "heb_summary": "אבימלך ופיכל נשבעים ברית עם אברהם.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Phicol"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Servants Of Abimelech"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abimelech",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Phicol",
+          "term2": "Abraham"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Abimelech",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

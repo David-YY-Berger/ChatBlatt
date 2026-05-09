@@ -1,0 +1,115 @@
+﻿{
+    "res": {
+        "en_summary": "Sarah dies, Abraham mourns, buys burial site.",
+        "heb_summary": "שרה מתה, אברהם קונה קבר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hittites"
+                },
+                {
+                    "en_name": "Ephron"
+                },
+                {
+                    "en_name": "Zohar"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Kiriath-Arba"
+                },
+                {
+                    "en_name": "Hebron"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hittites"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "127",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "sarah lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Ephron",
+                    "term2": "Zohar"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Hittites"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Kiriath-Arba"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "Hebron"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "Canaan"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Kiriath-Arba"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Hebron"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Canaan"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Kiriath-Arba",
+                    "term2": "Hittites"
+                },
+                {
+                    "term1": "Hebron",
+                    "term2": "Hittites"
+                },
+                {
+                    "term1": "Canaan",
+                    "term2": "Hittites"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Kiriath-Arba",
+                    "term2": "Hebron"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_23:1-8"
+}

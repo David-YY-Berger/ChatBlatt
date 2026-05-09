@@ -1,0 +1,135 @@
+﻿COST: Tokens: Total=9338 approx cost usd = $0.001292 (Prompt=6707, Completion=2631)
+SOURCE:
+Genesis 23:10-20  (TN_Genesis_0_23:10-20)
+
+HEBREW:
+וְעֶפְר֥וֹן יֹשֵׁ֖ב בְּת֣וֹךְ בְּנֵי־חֵ֑ת וַיַּ֩עַן֩ עֶפְר֨וֹן הַחִתִּ֤י אֶת־אַבְרָהָם֙ בְּאׇזְנֵ֣י בְנֵי־חֵ֔ת לְכֹ֛ל בָּאֵ֥י שַֽׁעַר־עִיר֖וֹ לֵאמֹֽר׃ לֹֽא־אֲדֹנִ֣י שְׁמָעֵ֔נִי הַשָּׂדֶה֙ נָתַ֣תִּי לָ֔ךְ וְהַמְּעָרָ֥ה אֲשֶׁר־בּ֖וֹ לְךָ֣ נְתַתִּ֑יהָ לְעֵינֵ֧י בְנֵי־עַמִּ֛י נְתַתִּ֥יהָ לָּ֖ךְ קְבֹ֥ר מֵתֶֽךָ׃ וַיִּשְׁתַּ֙חוּ֙ אַבְרָהָ֔ם לִפְנֵ֖י עַ֥ם הָאָֽרֶץ׃ וַיְדַבֵּ֨ר אֶל־עֶפְר֜וֹן בְּאׇזְנֵ֤י עַם־הָאָ֙רֶץ֙ לֵאמֹ֔ר אַ֛ךְ אִם־אַתָּ֥ה ל֖וּ שְׁמָעֵ֑נִי נָתַ֜תִּי כֶּ֤סֶף הַשָּׂדֶה֙ קַ֣ח מִמֶּ֔נִּי וְאֶקְבְּרָ֥ה אֶת־מֵתִ֖י שָֽׁמָּה׃ וַיַּ֧עַן עֶפְר֛וֹן אֶת־אַבְרָהָ֖ם לֵאמֹ֥ר לֽוֹ׃ אֲדֹנִ֣י שְׁמָעֵ֔נִי אֶ֩רֶץ֩ אַרְבַּ֨ע מֵאֹ֧ת שֶֽׁקֶל־כֶּ֛סֶף בֵּינִ֥י וּבֵֽינְךָ֖ מַה־הִ֑וא וְאֶת־מֵתְךָ֖ קְבֹֽר׃ וַיִּשְׁמַ֣ע אַבְרָהָם֮ אֶל־עֶפְרוֹן֒ וַיִּשְׁקֹ֤ל אַבְרָהָם֙ לְעֶפְרֹ֔ן אֶת־הַכֶּ֕סֶף אֲשֶׁ֥ר דִּבֶּ֖ר בְּאׇזְנֵ֣י בְנֵי־חֵ֑ת אַרְבַּ֤ע מֵאוֹת֙ שֶׁ֣קֶל כֶּ֔סֶף עֹבֵ֖ר לַסֹּחֵֽר׃ וַיָּ֣קׇם׀ שְׂדֵ֣ה עֶפְר֗וֹן אֲשֶׁר֙ בַּמַּכְפֵּלָ֔ה אֲשֶׁ֖ר לִפְנֵ֣י מַמְרֵ֑א הַשָּׂדֶה֙ וְהַמְּעָרָ֣ה אֲשֶׁר־בּ֔וֹ וְכׇל־הָעֵץ֙ אֲשֶׁ֣ר בַּשָּׂדֶ֔ה אֲשֶׁ֥ר בְּכׇל־גְּבֻל֖וֹ סָבִֽיב׃ לְאַבְרָהָ֥ם לְמִקְנָ֖ה לְעֵינֵ֣י בְנֵי־חֵ֑ת בְּכֹ֖ל בָּאֵ֥י שַֽׁעַר־עִירֽוֹ׃ וְאַחֲרֵי־כֵן֩ קָבַ֨ר אַבְרָהָ֜ם אֶת־שָׂרָ֣ה אִשְׁתּ֗וֹ אֶל־מְעָרַ֞ת שְׂדֵ֧ה הַמַּכְפֵּלָ֛ה עַל־פְּנֵ֥י מַמְרֵ֖א הִ֣וא חֶבְר֑וֹן בְּאֶ֖רֶץ כְּנָֽעַן׃ וַיָּ֨קׇם הַשָּׂדֶ֜ה וְהַמְּעָרָ֧ה אֲשֶׁר־בּ֛וֹ לְאַבְרָהָ֖ם לַאֲחֻזַּת־קָ֑בֶר מֵאֵ֖ת בְּנֵי־חֵֽת׃
+
+ENGLISH:
+Ephron was present among the Hittites; so Ephron the Hittite answered Abraham in the hearing of the Hittites, the assembly in his towns gate, saying, No, my lord, hear me: I give you the field and I give you the cave that is in it; I give it to you in the presence of my people. Bury your dead. Then Abraham bowed low before the landowning citizens, and spoke to Ephron in the hearing of the landowning citizens, saying, If only you would hear me out! Let me pay the price of the land; accept it from me, that I may bury my dead there. And Ephron replied to Abraham, saying to him, My lord, do hear me! A piece of land worth four hundred shekels of silver-what is that between you and me? Go and bury your dead. Abraham accepted Ephrons terms. Abraham paid out to Ephron the money that he had named in the hearing of the Hittites-four hundred shekels of silver at the going merchants rate. So Ephrons land in Machpelah, near Mamre-the field with its cave and all the trees anywhere within the confines of that field-passed to Abraham as his possession, in the presence of the Hittites, of the assembly in his towns gate. And then Abraham buried his wife Sarah in the cave of the field of Machpelah, facing Mamre-now Hebron-in the land of Canaan. Thus the field with its cave passed from the Hittites to Abraham, as a burial site.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham buys Machpelah cave from Ephron.",
+    "heb_summary": "אברהם קונה מערת מכפלה מעפרון.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Ephron"
+        },
+        {
+          "en_name": "Hittites"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Sarah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Machpelah"
+        },
+        {
+          "en_name": "Mamre"
+        },
+        {
+          "en_name": "Hebron"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Towns Gate"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Heth"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "400",
+          "number_category": "Money",
+          "unit": "shekel",
+          "context": "land price"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Ephron",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Hebron"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Towns Gate"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Ephron",
+          "term2": "Heth"
+        },
+        {
+          "term1": "Hittites",
+          "term2": "Heth"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Machpelah",
+          "term2": "Heth"
+        },
+        {
+          "term1": "Mamre",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Hebron",
+          "term2": "Canaan"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Mamre",
+          "term2": "Hebron"
+        }
+      ]
+    }
+  }
+}

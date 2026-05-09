@@ -1,0 +1,87 @@
+﻿{
+    "res": {
+        "en_summary": "God blesses Sarah and Abraham with Isaac",
+        "heb_summary": "השם ברך שרה ואברהם בבן יצחק",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "8",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "isaac circumcision"
+                },
+                {
+                    "en_name": "100",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abraham age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Sarah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Sarah"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "Abraham"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Sarah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_21:1-8"
+}

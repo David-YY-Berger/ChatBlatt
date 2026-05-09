@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=8782 approx cost usd = $0.001128 (Prompt=6698, Completion=2084)
+SOURCE:
+Genesis 31:3-13  (TN_Genesis_0_31:3-13)
+
+HEBREW:
+וַיֹּ֤אמֶר יְהֹוָה֙ אֶֽל־יַעֲקֹ֔ב שׁ֛וּב אֶל־אֶ֥רֶץ אֲבוֹתֶ֖יךָ וּלְמוֹלַדְתֶּ֑ךָ וְאֶֽהְיֶ֖ה עִמָּֽךְ׃ וַיִּשְׁלַ֣ח יַעֲקֹ֔ב וַיִּקְרָ֖א לְרָחֵ֣ל וּלְלֵאָ֑ה הַשָּׂדֶ֖ה אֶל־צֹאנֽוֹ׃ וַיֹּ֣אמֶר לָהֶ֗ן רֹאֶ֤ה אָנֹכִי֙ אֶת־פְּנֵ֣י אֲבִיכֶ֔ן כִּֽי־אֵינֶ֥נּוּ אֵלַ֖י כִּתְמֹ֣ל שִׁלְשֹׁ֑ם וֵֽאלֹהֵ֣י אָבִ֔י הָיָ֖ה עִמָּדִֽי׃ וְאַתֵּ֖נָה יְדַעְתֶּ֑ן כִּ֚י בְּכׇל־כֹּחִ֔י עָבַ֖דְתִּי אֶת־אֲבִיכֶֽן׃ וַאֲבִיכֶן֙ הֵ֣תֶל בִּ֔י וְהֶחֱלִ֥ף אֶת־מַשְׂכֻּרְתִּ֖י עֲשֶׂ֣רֶת מֹנִ֑ים וְלֹֽא־נְתָנ֣וֹ אֱלֹהִ֔ים לְהָרַ֖ע עִמָּדִֽי׃ אִם־כֹּ֣ה יֹאמַ֗ר נְקֻדִּים֙ יִהְיֶ֣ה שְׂכָרֶ֔ךָ וְיָלְד֥וּ כׇל־הַצֹּ֖אן נְקֻדִּ֑ים וְאִם־כֹּ֣ה יֹאמַ֗ר עֲקֻדִּים֙ יִהְיֶ֣ה שְׂכָרֶ֔ךָ וְיָלְד֥וּ כׇל־הַצֹּ֖אן עֲקֻדִּֽים׃ וַיַּצֵּ֧ל אֱלֹהִ֛ים אֶת־מִקְנֵ֥ה אֲבִיכֶ֖ם וַיִּתֶּן־לִֽי׃ וַיְהִ֗י בְּעֵת֙ יַחֵ֣ם הַצֹּ֔אן וָאֶשָּׂ֥א עֵינַ֛י וָאֵ֖רֶא בַּחֲל֑וֹם וְהִנֵּ֤ה הָֽעַתֻּדִים֙ הָעֹלִ֣ים עַל־הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּבְרֻדִּֽים׃ וַיֹּ֨אמֶר אֵלַ֜י מַלְאַ֧ךְ הָאֱלֹהִ֛ים בַּחֲל֖וֹם יַֽעֲקֹ֑ב וָאֹמַ֖ר הִנֵּֽנִי׃ וַיֹּ֗אמֶר שָׂא־נָ֨א עֵינֶ֤יךָ וּרְאֵה֙ כׇּל־הָֽעַתֻּדִים֙ הָעֹלִ֣ים עַל־הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּבְרֻדִּ֑ים כִּ֣י רָאִ֔יתִי אֵ֛ת כׇּל־אֲשֶׁ֥ר לָבָ֖ן עֹ֥שֶׂה לָּֽךְ׃ אָנֹכִ֤י הָאֵל֙ בֵּֽית־אֵ֔ל אֲשֶׁ֨ר מָשַׁ֤חְתָּ שָּׁם֙ מַצֵּבָ֔ה אֲשֶׁ֨ר נָדַ֥רְתָּ לִּ֛י שָׁ֖ם נֶ֑דֶר עַתָּ֗ה ק֥וּם צֵא֙ מִן־הָאָ֣רֶץ הַזֹּ֔את וְשׁ֖וּב אֶל־אֶ֥רֶץ מוֹלַדְתֶּֽךָ׃
+
+ENGLISH:
+Then HASHEM said to Jacob, Return to your ancestors land-where you were born-and I will be with you. Jacob had Rachel and Leah called to the field, where his flock was, and said to them, I see that your fathers manner toward me is not as it has been in the past. But the God of my fathers [house] has been with me. As you know, I have served your father with all my might; but your father has cheated me, changing my wages time and again. God, however, would not let him do me harm. If he said thus, The speckled shall be your wages, then all the flocks would drop speckled young; and if he said thus, The streaked shall be your wages, then all the flocks would drop streaked young. God has taken away your fathers livestock and given it to me. Once, at the mating time of the flocks, I had a dream in which I saw that the he-goats mating with the flock were streaked, speckled, and mottled. And in the dream a messenger of God said to me, Jacob! Here, I answered. And the messenger said, Note well that all the he-goats which are mating with the flock are streaked, speckled, and mottled; for I have noted all that Laban has been doing to you. I am the God of Bethel, where you anointed a pillar and where you made a vow to Me. Now, arise and leave this land and return to your native land.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God speaks to Jacob, discusses Laban.",
+    "heb_summary": "אלוהים מדבר עם יעקב על לבן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Messenger Of God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Bethel"
+        },
+        {
+          "en_name": "Field"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Pillar"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "He-Goat"
+        },
+        {
+          "en_name": "Flock"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Laban"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Messenger Of God",
+          "term2": "Jacob"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Jacob",
+          "term2": "Bethel"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Field"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Bethel"
+        }
+      ]
+    }
+  }
+}

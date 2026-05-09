@@ -1,0 +1,78 @@
+﻿COST: Tokens: Total=7745 approx cost usd = $0.000872 (Prompt=6453, Completion=1292)
+SOURCE:
+Genesis 4:23-24  (TN_Genesis_0_4:23-24)
+
+HEBREW:
+וַיֹּ֨אמֶר לֶ֜מֶךְ לְנָשָׁ֗יו עָדָ֤ה וְצִלָּה֙ שְׁמַ֣עַן קוֹלִ֔י נְשֵׁ֣י לֶ֔מֶךְ הַאְזֵ֖נָּה אִמְרָתִ֑י כִּ֣י אִ֤ישׁ הָרַ֙גְתִּי֙ לְפִצְעִ֔י וְיֶ֖לֶד לְחַבֻּרָתִֽי׃ כִּ֥י שִׁבְעָתַ֖יִם יֻקַּם־קָ֑יִן וְלֶ֖מֶךְ שִׁבְעִ֥ים וְשִׁבְעָֽה׃
+
+ENGLISH:
+And Lamech said to his wives, Adah and Zillah, hear my voice; O wives of Lamech, give ear to my speech. I have slain a person for wounding me, And a lad for bruising me. If Cain is avenged sevenfold, Then Lamech seventy-sevenfold.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Lamech boasts of greater vengeance than Cain.",
+    "heb_summary": "למך מתפאר בנקמה גדולה יותר מקין.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lamech"
+        },
+        {
+          "en_name": "Adah"
+        },
+        {
+          "en_name": "Zillah"
+        },
+        {
+          "en_name": "Cain"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Misc",
+          "unit": "fold",
+          "context": "cain vengeance"
+        },
+        {
+          "en_name": "77",
+          "number_category": "Misc",
+          "unit": "fold",
+          "context": "lamech vengeance"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Lamech",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Lamech",
+          "term2": "Zillah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Lamech",
+          "term2": "Adah"
+        },
+        {
+          "term1": "Lamech",
+          "term2": "Zillah"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Lamech",
+          "term2": "Cain"
+        }
+      ]
+    }
+  }
+}

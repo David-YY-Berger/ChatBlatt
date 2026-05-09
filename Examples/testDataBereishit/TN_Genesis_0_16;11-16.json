@@ -1,0 +1,83 @@
+﻿{
+    "res": {
+        "en_summary": "Hagar bore Ishmael; God heard her suffering.",
+        "heb_summary": "הגר ילדה ישמעאל; ה' שמע סבלה.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Abram"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Kadesh"
+                },
+                {
+                    "en_name": "Bered"
+                },
+                {
+                    "en_name": "Beer-Lahai-Roi"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "El-Roi"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "86",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abram age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abram"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Ishmael",
+                    "term2": "Hagar"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Hagar"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Beer-Lahai-Roi"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Ishmael"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_16:11-16"
+}

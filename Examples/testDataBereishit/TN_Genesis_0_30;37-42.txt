@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=8154 approx cost usd = $0.000964 (Prompt=6587, Completion=1567)
+SOURCE:
+Genesis 30:37-42  (TN_Genesis_0_30:37-42)
+
+HEBREW:
+וַיִּֽקַּֽח־ל֣וֹ יַעֲקֹ֗ב מַקַּ֥ל לִבְנֶ֛ה לַ֖ח וְל֣וּז וְעַרְמ֑וֹן וַיְפַצֵּ֤ל בָּהֵן֙ פְּצָל֣וֹת לְבָנ֔וֹת מַחְשֹׂף֙ הַלָּבָ֔ן אֲשֶׁ֖ר עַל־הַמַּקְלֽוֹת׃ וַיַּצֵּ֗ג אֶת־הַמַּקְלוֹת֙ אֲשֶׁ֣ר פִּצֵּ֔ל בָּרְהָטִ֖ים בְּשִֽׁקְת֣וֹת הַמָּ֑יִם אֲשֶׁר֩ תָּבֹ֨אןָ הַצֹּ֤אן לִשְׁתּוֹת֙ לְנֹ֣כַח הַצֹּ֔אן וַיֵּחַ֖מְנָה בְּבֹאָ֥ן לִשְׁתּֽוֹת׃ וַיֶּחֱמ֥וּ הַצֹּ֖אן אֶל־הַמַּקְל֑וֹת וַתֵּלַ֣דְןָ הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּטְלֻאִֽים׃ וְהַכְּשָׂבִים֮ הִפְרִ֣יד יַעֲקֹב֒ וַ֠יִּתֵּ֠ן פְּנֵ֨י הַצֹּ֧אן אֶל־עָקֹ֛ד וְכׇל־ח֖וּם בְּצֹ֣אן לָבָ֑ן וַיָּֽשֶׁת־ל֤וֹ עֲדָרִים֙ לְבַדּ֔וֹ וְלֹ֥א שָׁתָ֖ם עַל־צֹ֥אן לָבָֽן׃ וְהָיָ֗ה בְּכׇל־יַחֵם֮ הַצֹּ֣אן הַמְקֻשָּׁרוֹת֒ וְשָׂ֨ם יַעֲקֹ֧ב אֶת־הַמַּקְל֛וֹת לְעֵינֵ֥י הַצֹּ֖אן בָּרְהָטִ֑ים לְיַחְמֵ֖נָּה בַּמַּקְלֽוֹת׃ וּבְהַעֲטִ֥יף הַצֹּ֖אן לֹ֣א יָשִׂ֑ים וְהָיָ֤ה הָעֲטֻפִים֙ לְלָבָ֔ן וְהַקְּשֻׁרִ֖ים לְיַעֲקֹֽב׃
+
+ENGLISH:
+Jacob then got fresh shoots of poplar, and of almond and plane, and peeled white stripes in them, laying bare the white of the shoots. The rods that he had peeled he set up in front of the goats in the troughs, the water receptacles, that the goats came to drink from. Their mating occurred when they came to drink, and since the goats mated by the rods, the goats brought forth streaked, speckled, and spotted young. But Jacob dealt separately with the sheep; he made these animals face the streaked or wholly dark-colored animals in Labans flock. And so he produced special flocks for himself, which he did not put with Labans flocks. Moreover, when the sturdier animals were mating, Jacob would place the rods in the troughs, in full view of the animals, so that they mated by the rods; but with the feebler animals he would not place them there. Thus the feeble ones went to Laban and the sturdy to Jacob.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob breeds flocks, outsmarts Laban.",
+    "heb_summary": "יעקב מרבה צאן, עורמה כלפי לבן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Troughs"
+        },
+        {
+          "en_name": "Water Receptacles"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Rod"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Goat"
+        },
+        {
+          "en_name": "Sheep"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Poplar"
+        },
+        {
+          "en_name": "Almond"
+        },
+        {
+          "en_name": "Plane"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Troughs"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Water Receptacles"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

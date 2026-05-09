@@ -1,0 +1,51 @@
+﻿{
+    "res": {
+        "en_summary": "God creates sea creatures and birds.",
+        "heb_summary": "אלוהים ברא יצורים ימיים וציפורים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Water"
+                },
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Sky"
+                },
+                {
+                    "en_name": "Sea"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "creation day"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Living Creature"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Sea Monster"
+                }
+            ]
+        },
+        "Rel": {}
+    },
+    "key": "TN_Genesis_0_1:20-23"
+}

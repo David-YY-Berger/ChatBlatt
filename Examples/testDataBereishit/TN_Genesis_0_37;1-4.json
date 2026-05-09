@@ -1,0 +1,100 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph, Jacob's son, hated by brothers.",
+        "heb_summary": "יוסף, בן יעקב, שנא על ידי אחיו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Bilhah"
+                },
+                {
+                    "en_name": "Zilpah"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ornamented Tunic"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "17",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "joseph age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Zilpah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Brothers"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Joseph"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Israel",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:1-4"
+}

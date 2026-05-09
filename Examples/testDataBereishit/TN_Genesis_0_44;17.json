@@ -1,0 +1,17 @@
+﻿{
+    "res": {
+        "en_summary": "Goblet found, one will be slave.",
+        "heb_summary": "הגביע נמצא, אחד יהיה עבד.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Symbol": [
+                {
+                    "en_name": "Goblet"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_44:17"
+}

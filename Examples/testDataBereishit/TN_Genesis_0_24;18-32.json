@@ -1,0 +1,178 @@
+﻿{
+    "res": {
+        "en_summary": "Rebekah meets Abraham's servant, offers hospitality.",
+        "heb_summary": "רבקה פוגשת עבד אברהם, מציעה הכנסת אורחים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "The Man"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Milcah"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Rebekah's Mother's Household"
+                },
+                {
+                    "en_name": "The Entourage"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Well"
+                },
+                {
+                    "en_name": "Trough"
+                },
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "Spring"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "0.5",
+                    "number_category": "Money",
+                    "unit": "shekel",
+                    "context": "gold nose-ring weight"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Money",
+                    "unit": "shekel",
+                    "context": "gold arm-bands weight"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Camel"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Straw"
+                },
+                {
+                    "en_name": "Feed"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Straw"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Bethuel",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Bethuel",
+                    "term2": "Milcah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Milcah",
+                    "term2": "Nahor"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Milcah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "The Man"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "The Man"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Well"
+                },
+                {
+                    "term1": "The Man",
+                    "term2": "Well"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Spring"
+                },
+                {
+                    "term1": "The Man",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Spring"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "The Man",
+                    "term2": "Well"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "House"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "The Man",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:18-32"
+}

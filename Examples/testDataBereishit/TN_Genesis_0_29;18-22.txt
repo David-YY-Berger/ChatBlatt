@@ -1,0 +1,58 @@
+﻿COST: Tokens: Total=7169 approx cost usd = $0.000687 (Prompt=6504, Completion=665)
+SOURCE:
+Genesis 29:18-22  (TN_Genesis_0_29:18-22)
+
+HEBREW:
+וַיֶּאֱהַ֥ב יַעֲקֹ֖ב אֶת־רָחֵ֑ל וַיֹּ֗אמֶר אֶֽעֱבׇדְךָ֙ שֶׁ֣בַע שָׁנִ֔ים בְּרָחֵ֥ל בִּתְּךָ֖ הַקְּטַנָּֽה׃ וַיֹּ֣אמֶר לָבָ֗ן ט֚וֹב תִּתִּ֣י אֹתָ֣הּ לָ֔ךְ מִתִּתִּ֥י אֹתָ֖הּ לְאִ֣ישׁ אַחֵ֑ר שְׁבָ֖ה עִמָּדִֽי׃ וַיַּעֲבֹ֧ד יַעֲקֹ֛ב בְּרָחֵ֖ל שֶׁ֣בַע שָׁנִ֑ים וַיִּהְי֤וּ בְעֵינָיו֙ כְּיָמִ֣ים אֲחָדִ֔ים בְּאַהֲבָת֖וֹ אֹתָֽהּ׃ וַיֹּ֨אמֶר יַעֲקֹ֤ב אֶל־לָבָן֙ הָבָ֣ה אֶת־אִשְׁתִּ֔י כִּ֥י מָלְא֖וּ יָמָ֑י וְאָב֖וֹאָה אֵלֶֽיהָ׃ וַיֶּאֱסֹ֥ף לָבָ֛ן אֶת־כׇּל־אַנְשֵׁ֥י הַמָּק֖וֹם וַיַּ֥עַשׂ מִשְׁתֶּֽה׃
+
+ENGLISH:
+Jacob loved Rachel; so he answered, I will serve you seven years for your younger daughter Rachel. Laban said, Better that I give her to you than that I should give her to an outsider. Stay with me. So Jacob served seven years for Rachel and they seemed to him but a few days because of his love for her. Then Jacob said to Laban, Give me my wife, for my time is fulfilled, that I may cohabit with her. And Laban gathered all the people of the place. See the Dictionary under ish . and made a feast.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob served Laban seven years for Rachel.",
+    "heb_summary": "יעקב עבד לבן שבע שנים עבור רחל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "People Of The Place"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jacob served laban"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

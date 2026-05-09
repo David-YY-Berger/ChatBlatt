@@ -1,0 +1,60 @@
+﻿COST: Tokens: Total=9266 approx cost usd = $0.001315 (Prompt=6508, Completion=2758)
+SOURCE:
+Genesis 2:10-14  (TN_Genesis_0_2:10-14)
+
+HEBREW:
+וְנָהָר֙ יֹצֵ֣א מֵעֵ֔דֶן לְהַשְׁק֖וֹת אֶת־הַגָּ֑ן וּמִשָּׁם֙ יִפָּרֵ֔ד וְהָיָ֖ה לְאַרְבָּעָ֥ה רָאשִֽׁים׃ שֵׁ֥ם הָֽאֶחָ֖ד פִּישׁ֑וֹן ה֣וּא הַסֹּבֵ֗ב אֵ֚ת כׇּל־אֶ֣רֶץ הַֽחֲוִילָ֔ה אֲשֶׁר־שָׁ֖ם הַזָּהָֽב׃ וּֽזְהַ֛ב הָאָ֥רֶץ הַהִ֖וא ט֑וֹב שָׁ֥ם הַבְּדֹ֖לַח וְאֶ֥בֶן הַשֹּֽׁהַם׃ וְשֵֽׁם־הַנָּהָ֥ר הַשֵּׁנִ֖י גִּיח֑וֹן ה֣וּא הַסּוֹבֵ֔ב אֵ֖ת כׇּל־אֶ֥רֶץ כּֽוּשׁ׃ וְשֵׁ֨ם הַנָּהָ֤ר הַשְּׁלִישִׁי֙ חִדֶּ֔קֶל ה֥וּא הַֽהֹלֵ֖ךְ קִדְמַ֣ת אַשּׁ֑וּר וְהַנָּהָ֥ר הָֽרְבִיעִ֖י ה֥וּא פְרָֽת׃
+
+ENGLISH:
+A river issues from Eden to water the garden, and it then divides and becomes four branches. The name of the first is Pishon, the one that winds through the whole land of Havilah, where the gold is. (The gold of that land is good; bdellium is there, and lapis lazuli. uncertain. ) The name of the second river is Gihon, the one that winds through the whole land of Cush. The name of the third river is Tigris, the one that flows east of Asshur. And the fourth river is the Euphrates.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Eden river divides into four branches.",
+    "heb_summary": "נהר עדן מתפצל לארבעה נהרות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Place": [
+        {
+          "en_name": "Eden"
+        },
+        {
+          "en_name": "Garden"
+        },
+        {
+          "en_name": "Pishon"
+        },
+        {
+          "en_name": "Havilah"
+        },
+        {
+          "en_name": "Gihon"
+        },
+        {
+          "en_name": "Cush"
+        },
+        {
+          "en_name": "Tigris"
+        },
+        {
+          "en_name": "Asshur"
+        },
+        {
+          "en_name": "Euphrates"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "4",
+          "number_category": "Misc",
+          "unit": "branch",
+          "context": "river branches"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}

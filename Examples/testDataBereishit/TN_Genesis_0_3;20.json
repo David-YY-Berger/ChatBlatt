@@ -1,0 +1,28 @@
+﻿{
+    "res": {
+        "en_summary": "Human named his wife Eve.",
+        "heb_summary": "האדם קרא לאשתו חוה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Human"
+                },
+                {
+                    "en_name": "Eve"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Human",
+                    "term2": "Eve"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:20"
+}

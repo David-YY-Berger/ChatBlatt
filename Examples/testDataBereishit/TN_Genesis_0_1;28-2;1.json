@@ -1,0 +1,61 @@
+﻿{
+    "res": {
+        "en_summary": "God creates earth, life, gives commands.",
+        "heb_summary": "אלוהים ברא עולם, ציווה למלאו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Sea"
+                },
+                {
+                    "en_name": "Sky"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Fish"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Animal"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Plant"
+                },
+                {
+                    "en_name": "Fruit"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Plant"
+                },
+                {
+                    "en_name": "Tree"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:28-2:1"
+}

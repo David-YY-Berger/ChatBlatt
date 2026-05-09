@@ -1,0 +1,64 @@
+﻿COST: Tokens: Total=7461 approx cost usd = $0.000785 (Prompt=6459, Completion=1002)
+SOURCE:
+Genesis 1:26-27  (TN_Genesis_0_1:26-27)
+
+HEBREW:
+וַיֹּ֣אמֶר אֱלֹהִ֔ים נַֽעֲשֶׂ֥ה אָדָ֛ם בְּצַלְמֵ֖נוּ כִּדְמוּתֵ֑נוּ וְיִרְדּוּ֩ בִדְגַ֨ת הַיָּ֜ם וּבְע֣וֹף הַשָּׁמַ֗יִם וּבַבְּהֵמָה֙ וּבְכׇל־הָאָ֔רֶץ וּבְכׇל־הָרֶ֖מֶשׂ הָֽרֹמֵ֥שׂ עַל־הָאָֽרֶץ׃ וַיִּבְרָ֨א אֱלֹהִ֤ים׀אֶת־הָֽאָדָם֙ בְּצַלְמ֔וֹ בְּצֶ֥לֶם אֱלֹהִ֖ים בָּרָ֣א אֹת֑וֹ זָכָ֥ר וּנְקֵבָ֖ה בָּרָ֥א אֹתָֽם׃
+
+ENGLISH:
+And God said, Let us make humankind in our image, after our likeness. They shall rule the fish of the sea, the birds of the sky, the cattle, the whole earth, and all the creeping things that creep on earth. And God created humankind in the divine image, creating it in the image of God- creating them male and female.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates humankind in divine image.",
+    "heb_summary": "אלוהים ברא אדם בצלמו ובדמותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Humankind"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Image"
+        },
+        {
+          "en_name": "Likeness"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Fish"
+        },
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Creeping Thing"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Humankind",
+          "term2": "Image"
+        },
+        {
+          "term1": "Humankind",
+          "term2": "Likeness"
+        }
+      ]
+    }
+  }
+}

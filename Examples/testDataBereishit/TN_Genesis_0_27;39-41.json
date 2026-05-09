@@ -1,0 +1,55 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac blesses Esau; Esau plans to kill Jacob.",
+        "heb_summary": "יצחק מברך עשו; עשו רוצה להרוג יעקב.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Sword"
+                },
+                {
+                    "en_name": "Yoke"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Esau"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:39-41"
+}

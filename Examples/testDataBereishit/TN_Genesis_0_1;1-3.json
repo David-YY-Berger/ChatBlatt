@@ -1,0 +1,45 @@
+﻿{
+    "res": {
+        "en_summary": "God created heaven, earth, and light.",
+        "heb_summary": "אלוהים ברא שמיים, ארץ, ואור.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Deep"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Light"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Heaven"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:1-3"
+}

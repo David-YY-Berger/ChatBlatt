@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=7135 approx cost usd = $0.000691 (Prompt=6442, Completion=693)
+SOURCE:
+Genesis 3:12-13  (TN_Genesis_0_3:12-13)
+
+HEBREW:
+וַיֹּ֖אמֶר הָֽאָדָ֑ם הָֽאִשָּׁה֙ אֲשֶׁ֣ר נָתַ֣תָּה עִמָּדִ֔י הִ֛וא נָֽתְנָה־לִּ֥י מִן־הָעֵ֖ץ וָאֹכֵֽל׃ וַיֹּ֨אמֶר יְהֹוָ֧ה אֱלֹהִ֛ים לָאִשָּׁ֖ה מַה־זֹּ֣את עָשִׂ֑ית וַתֹּ֙אמֶר֙ הָֽאִשָּׁ֔ה הַנָּחָ֥שׁ הִשִּׁיאַ֖נִי וָאֹכֵֽל׃
+
+ENGLISH:
+The Human said, The woman You put at my side-she gave me of the tree, and I ate. And God HASHEM said to the woman, What is this you have done! The woman replied, The serpent duped me, and I ate.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Human, woman, serpent spoke; ate tree.",
+    "heb_summary": "האדם, האישה, הנחש דיברו; אכלו מהעץ.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Human"
+        },
+        {
+          "en_name": "God Hashem"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Serpent"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Human",
+          "term2": "God Hashem"
+        }
+      ]
+    }
+  }
+}

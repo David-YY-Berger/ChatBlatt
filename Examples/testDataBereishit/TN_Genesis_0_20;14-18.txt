@@ -1,0 +1,83 @@
+﻿COST: Tokens: Total=8276 approx cost usd = $0.001015 (Prompt=6525, Completion=1751)
+SOURCE:
+Genesis 20:14-18  (TN_Genesis_0_20:14-18)
+
+HEBREW:
+וַיִּקַּ֨ח אֲבִימֶ֜לֶךְ צֹ֣אן וּבָקָ֗ר וַעֲבָדִים֙ וּשְׁפָחֹ֔ת וַיִּתֵּ֖ן לְאַבְרָהָ֑ם וַיָּ֣שֶׁב ל֔וֹ אֵ֖ת שָׂרָ֥ה אִשְׁתּֽוֹ׃ וַיֹּ֣אמֶר אֲבִימֶ֔לֶךְ הִנֵּ֥ה אַרְצִ֖י לְפָנֶ֑יךָ בַּטּ֥וֹב בְּעֵינֶ֖יךָ שֵֽׁב׃ וּלְשָׂרָ֣ה אָמַ֗ר הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כֶּ֙סֶף֙ לְאָחִ֔יךְ הִנֵּ֤ה הוּא־לָךְ֙ כְּס֣וּת עֵינַ֔יִם לְכֹ֖ל אֲשֶׁ֣ר אִתָּ֑ךְ וְאֵ֥ת כֹּ֖ל וְנֹכָֽחַת׃ וַיִּתְפַּלֵּ֥ל אַבְרָהָ֖ם אֶל־הָאֱלֹהִ֑ים וַיִּרְפָּ֨א אֱלֹהִ֜ים אֶת־אֲבִימֶ֧לֶךְ וְאֶת־אִשְׁתּ֛וֹ וְאַמְהֹתָ֖יו וַיֵּלֵֽדוּ׃ כִּֽי־עָצֹ֤ר עָצַר֙ יְהֹוָ֔ה בְּעַ֥ד כׇּל־רֶ֖חֶם לְבֵ֣ית אֲבִימֶ֑לֶךְ עַל־דְּבַ֥ר שָׂרָ֖ה אֵ֥שֶׁת אַבְרָהָֽם׃
+
+ENGLISH:
+Abimelech took sheep and oxen, and male and female slaves, and gave them to Abraham; and he restored his wife Sarah to him. And Abimelech said, Here, my land is before you; settle wherever you please. And to Sarah he said, I herewith give your brother a thousand pieces of silver; this will serve you as vindication before all who are with you, and you are cleared before everyone. Abraham then prayed to God, and God healed Abimelech and his wife and his slave girls, so that they bore children; for HASHEM had closed fast every womb of the household of Abimelech because of Sarah, the wife of Abraham.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abimelech restores Sarah, gives silver, God heals.",
+    "heb_summary": "אבימלך החזיר שרה, נתן כסף, אלוהים ריפא.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1000",
+          "number_category": "Money",
+          "unit": "silver",
+          "context": "vindication for sarah"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        },
+        {
+          "en_name": "Ox"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abimelech",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Abimelech",
+          "term2": "Sarah"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "God"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

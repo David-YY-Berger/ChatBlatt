@@ -1,0 +1,85 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph interprets baker's dream; Pharaoh impales baker.",
+        "heb_summary": "יוסף פותר חלום אופה; פרעה תולה אופה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Chief Baker"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Chief Cupbearer"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Basket"
+                },
+                {
+                    "en_name": "Pole"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "unit": "basket",
+                    "context": "baker's dream"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Bird"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Food"
+                },
+                {
+                    "en_name": "Flesh"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Chief Baker",
+                    "term2": "Joseph"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Chief Baker"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Chief Cupbearer"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Chief Baker"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Chief Cupbearer"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_40:16-22"
+}

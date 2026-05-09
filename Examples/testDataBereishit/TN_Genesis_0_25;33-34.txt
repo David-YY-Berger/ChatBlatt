@@ -1,0 +1,52 @@
+﻿COST: Tokens: Total=7020 approx cost usd = $0.000656 (Prompt=6445, Completion=575)
+SOURCE:
+Genesis 25:33-34  (TN_Genesis_0_25:33-34)
+
+HEBREW:
+וַיֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָה לִּי֙ כַּיּ֔וֹם וַיִּשָּׁבַ֖ע ל֑וֹ וַיִּמְכֹּ֥ר אֶת־בְּכֹרָת֖וֹ לְיַעֲקֹֽב׃ וְיַעֲקֹ֞ב נָתַ֣ן לְעֵשָׂ֗ו לֶ֚חֶם וּנְזִ֣יד עֲדָשִׁ֔ים וַיֹּ֣אכַל וַיֵּ֔שְׁתְּ וַיָּ֖קׇם וַיֵּלַ֑ךְ וַיִּ֥בֶז עֵשָׂ֖ו אֶת־הַבְּכֹרָֽה׃
+
+ENGLISH:
+But Jacob said, Swear to me first. So he swore to him, and sold his birthright to Jacob. Jacob then gave Esau bread and lentil stew; he ate and drank, and he rose and went away. Thus did Esau spurn the birthright.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob buys Esau's birthright for food.",
+    "heb_summary": "יעקב קונה בכורה מעשו באוכל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Lentil Stew"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

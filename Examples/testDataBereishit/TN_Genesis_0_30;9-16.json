@@ -1,0 +1,135 @@
+﻿{
+    "res": {
+        "en_summary": "Leah, Rachel, Jacob, sons, mandrakes, concubine.",
+        "heb_summary": "לאה, רחל, יעקב, בנים, דודאים, פילגש.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Zilpah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Asher"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Field"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Asher"
+                },
+                {
+                    "en_name": "Reuben"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "zilpah's children"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Mandrakes"
+                },
+                {
+                    "en_name": "Wheat"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Mandrakes"
+                },
+                {
+                    "en_name": "Wheat"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Gad",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Asher",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Gad",
+                    "term2": "Zilpah"
+                },
+                {
+                    "term1": "Asher",
+                    "term2": "Zilpah"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Leah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Leah",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Field"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Field"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:9-16"
+}

@@ -1,0 +1,74 @@
+﻿COST: Tokens: Total=7863 approx cost usd = $0.000904 (Prompt=6466, Completion=1397)
+SOURCE:
+Genesis 48:22-49:2  (TN_Genesis_0_48:22-49:2)
+
+HEBREW:
+וַאֲנִ֞י נָתַ֧תִּֽי לְךָ֛ שְׁכֶ֥ם אַחַ֖ד עַל־אַחֶ֑יךָ אֲשֶׁ֤ר לָקַ֙חְתִּי֙ מִיַּ֣ד הָֽאֱמֹרִ֔י בְּחַרְבִּ֖י וּבְקַשְׁתִּֽי׃ וַיִּקְרָ֥א יַעֲקֹ֖ב אֶל־בָּנָ֑יו וַיֹּ֗אמֶר הֵאָֽסְפוּ֙ וְאַגִּ֣ידָה לָכֶ֔ם אֵ֛ת אֲשֶׁר־יִקְרָ֥א אֶתְכֶ֖ם בְּאַחֲרִ֥ית הַיָּמִֽים׃ הִקָּבְצ֥וּ וְשִׁמְע֖וּ בְּנֵ֣י יַעֲקֹ֑ב וְשִׁמְע֖וּ אֶל־יִשְׂרָאֵ֥ל אֲבִיכֶֽם׃
+
+ENGLISH:
+And now, I assign to you one portion uncertain; others mountain slope. more than to your brothers, which I wrested from the Amorites with my sword and bow.And Jacob called his sons and said, Come together that I may tell you what is to befall you in days to come. Assemble and hearken, O sons of Jacob; Hearken to Israel your father:
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob calls sons, assigns portion, defeats Amorites.",
+    "heb_summary": "יעקב קורא לבניו, מחלק נחלה, נלחם באמורים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Jacob's Sons"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Amorites"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "unit": "portion",
+          "context": "assigned portion"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Jacob's Sons"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Jacob's Sons"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Amorites"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Amorites"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

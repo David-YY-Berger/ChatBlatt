@@ -1,0 +1,99 @@
+﻿{
+    "res": {
+        "en_summary": "Leah bears Issachar, Zebulun, Dinah; Rachel conceived.",
+        "heb_summary": "לאה ילדה יששכר, זבולון, דינה; רחל הרתה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Issachar"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Zebulun"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Rachel"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Issachar"
+                },
+                {
+                    "en_name": "Zebulun"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "leah's child"
+                },
+                {
+                    "en_name": "6",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "leah's child"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "unit": "daughter",
+                    "context": "leah's child"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Issachar",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Zebulun",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Issachar",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Zebulun",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Leah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Leah",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:17-22"
+}

@@ -1,0 +1,150 @@
+﻿{
+    "res": {
+        "en_summary": "Angels save Lot, family from city destruction.",
+        "heb_summary": "מלאכים מצילים לוט ומשפחתו מהרס העיר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Agents"
+                },
+                {
+                    "en_name": "Sons-In-Law"
+                },
+                {
+                    "en_name": "Sons"
+                },
+                {
+                    "en_name": "Daughters"
+                },
+                {
+                    "en_name": "Wife"
+                },
+                {
+                    "en_name": "Messengers"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "City"
+                },
+                {
+                    "en_name": "Plain"
+                },
+                {
+                    "en_name": "Hills"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "daughter",
+                    "context": "lot's remaining family"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Daughters",
+                    "term2": "Lot"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "Lot"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Sons-In-Law",
+                    "term2": "Daughters"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Wife"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Agents",
+                    "term2": "Lot"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Sons-In-Law"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Agents",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Agents",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Sons-In-Law",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Daughters",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Wife",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Plain"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Hills"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Lot",
+                    "term2": "City"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Messengers",
+                    "term2": "Agents"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:10-18"
+}

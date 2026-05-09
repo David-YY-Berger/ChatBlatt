@@ -1,0 +1,73 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac marries Rebekah, finds comfort after Sarah's death",
+        "heb_summary": "יצחק נושא את רבקה, מתנחם לאחר מות שרה",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Sarah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Lahai-Roi"
+                },
+                {
+                    "en_name": "Negeb"
+                },
+                {
+                    "en_name": "Field"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Camel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfMother": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Sarah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Beer-Lahai-Roi"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Field"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Field"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Negeb"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:62-67"
+}

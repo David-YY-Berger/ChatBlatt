@@ -1,0 +1,918 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's seventy descendants came to Egypt.",
+        "heb_summary": "משפחת יעקב ירדה למצרים שבעים נפש.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Israelites"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Enoch"
+                },
+                {
+                    "en_name": "Pallu"
+                },
+                {
+                    "en_name": "Hezron"
+                },
+                {
+                    "en_name": "Carmi"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Jemuel"
+                },
+                {
+                    "en_name": "Jamin"
+                },
+                {
+                    "en_name": "Ohad"
+                },
+                {
+                    "en_name": "Jachin"
+                },
+                {
+                    "en_name": "Zohar"
+                },
+                {
+                    "en_name": "Saul"
+                },
+                {
+                    "en_name": "Canaanite Woman"
+                },
+                {
+                    "en_name": "Levi"
+                },
+                {
+                    "en_name": "Gershon"
+                },
+                {
+                    "en_name": "Kohath"
+                },
+                {
+                    "en_name": "Merari"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Er"
+                },
+                {
+                    "en_name": "Onan"
+                },
+                {
+                    "en_name": "Shelah"
+                },
+                {
+                    "en_name": "Perez"
+                },
+                {
+                    "en_name": "Zerah"
+                },
+                {
+                    "en_name": "Hamul"
+                },
+                {
+                    "en_name": "Issachar"
+                },
+                {
+                    "en_name": "Tola"
+                },
+                {
+                    "en_name": "Puvah"
+                },
+                {
+                    "en_name": "Iob"
+                },
+                {
+                    "en_name": "Shimron"
+                },
+                {
+                    "en_name": "Zebulun"
+                },
+                {
+                    "en_name": "Sered"
+                },
+                {
+                    "en_name": "Elon"
+                },
+                {
+                    "en_name": "Jahleel"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Ziphion"
+                },
+                {
+                    "en_name": "Haggi"
+                },
+                {
+                    "en_name": "Shuni"
+                },
+                {
+                    "en_name": "Ezbon"
+                },
+                {
+                    "en_name": "Eri"
+                },
+                {
+                    "en_name": "Arodi"
+                },
+                {
+                    "en_name": "Areli"
+                },
+                {
+                    "en_name": "Asher"
+                },
+                {
+                    "en_name": "Imnah"
+                },
+                {
+                    "en_name": "Ishvah"
+                },
+                {
+                    "en_name": "Ishvi"
+                },
+                {
+                    "en_name": "Beriah"
+                },
+                {
+                    "en_name": "Serah"
+                },
+                {
+                    "en_name": "Heber"
+                },
+                {
+                    "en_name": "Malchiel"
+                },
+                {
+                    "en_name": "Zilpah"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Asenath"
+                },
+                {
+                    "en_name": "Poti-Phera"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Hushim"
+                },
+                {
+                    "en_name": "Naphtali"
+                },
+                {
+                    "en_name": "Jahzeel"
+                },
+                {
+                    "en_name": "Guni"
+                },
+                {
+                    "en_name": "Jezer"
+                },
+                {
+                    "en_name": "Shillem"
+                },
+                {
+                    "en_name": "Bilhah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Paddan-Aram"
+                },
+                {
+                    "en_name": "On"
+                },
+                {
+                    "en_name": "Goshen"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Issachar"
+                },
+                {
+                    "en_name": "Zebulun"
+                },
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Asher"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "33",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "leah's descendants"
+                },
+                {
+                    "en_name": "16",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "zilpah's descendants"
+                },
+                {
+                    "en_name": "14",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "rachel's descendants"
+                },
+                {
+                    "en_name": "7",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "bilhah's descendants"
+                },
+                {
+                    "en_name": "66",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "jacob's issue to egypt"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "joseph's sons in egypt"
+                },
+                {
+                    "en_name": "70",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "jacob's household to egypt"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Enoch",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Pallu",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Hezron",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Carmi",
+                    "term2": "Reuben"
+                },
+                {
+                    "term1": "Jemuel",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jamin",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Ohad",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jachin",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Zohar",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Saul",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Gershon",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Kohath",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Merari",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Er",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Onan",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Shelah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Perez",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Zerah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Hezron",
+                    "term2": "Perez"
+                },
+                {
+                    "term1": "Hamul",
+                    "term2": "Perez"
+                },
+                {
+                    "term1": "Tola",
+                    "term2": "Issachar"
+                },
+                {
+                    "term1": "Puvah",
+                    "term2": "Issachar"
+                },
+                {
+                    "term1": "Iob",
+                    "term2": "Issachar"
+                },
+                {
+                    "term1": "Shimron",
+                    "term2": "Issachar"
+                },
+                {
+                    "term1": "Sered",
+                    "term2": "Zebulun"
+                },
+                {
+                    "term1": "Elon",
+                    "term2": "Zebulun"
+                },
+                {
+                    "term1": "Jahleel",
+                    "term2": "Zebulun"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ziphion",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Haggi",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Shuni",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Ezbon",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Eri",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Arodi",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Areli",
+                    "term2": "Gad"
+                },
+                {
+                    "term1": "Imnah",
+                    "term2": "Asher"
+                },
+                {
+                    "term1": "Ishvah",
+                    "term2": "Asher"
+                },
+                {
+                    "term1": "Ishvi",
+                    "term2": "Asher"
+                },
+                {
+                    "term1": "Beriah",
+                    "term2": "Asher"
+                },
+                {
+                    "term1": "Serah",
+                    "term2": "Asher"
+                },
+                {
+                    "term1": "Heber",
+                    "term2": "Beriah"
+                },
+                {
+                    "term1": "Malchiel",
+                    "term2": "Beriah"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Asenath",
+                    "term2": "Poti-Phera"
+                },
+                {
+                    "term1": "Hushim",
+                    "term2": "Dan"
+                },
+                {
+                    "term1": "Jahzeel",
+                    "term2": "Naphtali"
+                },
+                {
+                    "term1": "Guni",
+                    "term2": "Naphtali"
+                },
+                {
+                    "term1": "Jezer",
+                    "term2": "Naphtali"
+                },
+                {
+                    "term1": "Shillem",
+                    "term2": "Naphtali"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Saul",
+                    "term2": "Canaanite Woman"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Issachar",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Zebulun",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Gad",
+                    "term2": "Zilpah"
+                },
+                {
+                    "term1": "Asher",
+                    "term2": "Zilpah"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Asenath"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Asenath"
+                },
+                {
+                    "term1": "Dan",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Naphtali",
+                    "term2": "Bilhah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Israelites",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Enoch",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Pallu",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Hezron",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Carmi",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jemuel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ohad",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jachin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Zohar",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Saul",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Gershon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Kohath",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Merari",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Er",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Onan",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shelah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Perez",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Zerah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Hezron",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Hamul",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Tola",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Puvah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Iob",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shimron",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Sered",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Elon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jahleel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ziphion",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Haggi",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shuni",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ezbon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Eri",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Arodi",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Areli",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Imnah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ishvah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ishvi",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Beriah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Serah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Heber",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Malchiel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Hushim",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jahzeel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Guni",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jezer",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shillem",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Rachel"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Issachar",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Zebulun",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Egypt"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Er",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Onan",
+                    "term2": "Canaan"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Israelites",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Israelites",
+                    "term2": "Goshen"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Poti-Phera",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "On",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_46:8-28"
+}

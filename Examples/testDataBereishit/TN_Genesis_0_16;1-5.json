@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "Sarai, Abram, Hagar, and Canaan story.",
+        "heb_summary": "שרה, אברם, הגר, וארץ כנען.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abram dwelt in canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Sarai",
+                    "term2": "Abram"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Sarai",
+                    "term2": "Abram"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Canaan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_16:1-5"
+}

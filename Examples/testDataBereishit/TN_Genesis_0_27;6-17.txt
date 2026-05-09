@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=9312 approx cost usd = $0.001291 (Prompt=6676, Completion=2636)
+SOURCE:
+Genesis 27:6-17  (TN_Genesis_0_27:6-17)
+
+HEBREW:
+וְרִבְקָה֙ אָֽמְרָ֔ה אֶל־יַעֲקֹ֥ב בְּנָ֖הּ לֵאמֹ֑ר הִנֵּ֤ה שָׁמַ֙עְתִּי֙ אֶת־אָבִ֔יךָ מְדַבֵּ֛ר אֶל־עֵשָׂ֥ו אָחִ֖יךָ לֵאמֹֽר׃ הָבִ֨יאָה לִּ֥י צַ֛יִד וַעֲשֵׂה־לִ֥י מַטְעַמִּ֖ים וְאֹכֵ֑לָה וַאֲבָרֶכְכָ֛ה לִפְנֵ֥י יְהֹוָ֖ה לִפְנֵ֥י מוֹתִֽי׃ וְעַתָּ֥ה בְנִ֖י שְׁמַ֣ע בְּקֹלִ֑י לַאֲשֶׁ֥ר אֲנִ֖י מְצַוָּ֥ה אֹתָֽךְ׃ לֶךְ־נָא֙ אֶל־הַצֹּ֔אן וְקַֽח־לִ֣י מִשָּׁ֗ם שְׁנֵ֛י גְּדָיֵ֥י עִזִּ֖ים טֹבִ֑ים וְאֶֽעֱשֶׂ֨ה אֹתָ֧ם מַטְעַמִּ֛ים לְאָבִ֖יךָ כַּאֲשֶׁ֥ר אָהֵֽב׃ וְהֵבֵאתָ֥ לְאָבִ֖יךָ וְאָכָ֑ל בַּעֲבֻ֛ר אֲשֶׁ֥ר יְבָרֶכְךָ֖ לִפְנֵ֥י מוֹתֽוֹ׃ וַיֹּ֣אמֶר יַעֲקֹ֔ב אֶל־רִבְקָ֖ה אִמּ֑וֹ הֵ֣ן עֵשָׂ֤ו אָחִי֙ אִ֣ישׁ שָׂעִ֔ר וְאָנֹכִ֖י אִ֥ישׁ חָלָֽק׃ אוּלַ֤י יְמֻשֵּׁ֙נִי֙ אָבִ֔י וְהָיִ֥יתִי בְעֵינָ֖יו כִּמְתַעְתֵּ֑עַ וְהֵבֵאתִ֥י עָלַ֛י קְלָלָ֖ה וְלֹ֥א בְרָכָֽה׃ וַתֹּ֤אמֶר לוֹ֙ אִמּ֔וֹ עָלַ֥י קִלְלָתְךָ֖ בְּנִ֑י אַ֛ךְ שְׁמַ֥ע בְּקֹלִ֖י וְלֵ֥ךְ קַֽח־לִֽי׃ וַיֵּ֙לֶךְ֙ וַיִּקַּ֔ח וַיָּבֵ֖א לְאִמּ֑וֹ וַתַּ֤עַשׂ אִמּוֹ֙ מַטְעַמִּ֔ים כַּאֲשֶׁ֖ר אָהֵ֥ב אָבִֽיו׃ וַתִּקַּ֣ח רִ֠בְקָ֠ה אֶת־בִּגְדֵ֨י עֵשָׂ֜ו בְּנָ֤הּ הַגָּדֹל֙ הַחֲמֻדֹ֔ת אֲשֶׁ֥ר אִתָּ֖הּ בַּבָּ֑יִת וַתַּלְבֵּ֥שׁ אֶֽת־יַעֲקֹ֖ב בְּנָ֥הּ הַקָּטָֽן׃ וְאֵ֗ת עֹרֹת֙ גְּדָיֵ֣י הָֽעִזִּ֔ים הִלְבִּ֖ישָׁה עַל־יָדָ֑יו וְעַ֖ל חֶלְקַ֥ת צַוָּארָֽיו׃ וַתִּתֵּ֧ן אֶת־הַמַּטְעַמִּ֛ים וְאֶת־הַלֶּ֖חֶם אֲשֶׁ֣ר עָשָׂ֑תָה בְּיַ֖ד יַעֲקֹ֥ב בְּנָֽהּ׃
+
+ENGLISH:
+Rebekah said to her son Jacob, I overheard your father speaking to your brother Esau, saying, Bring me some game and prepare a dish for me to eat, that I may bless you, with HASHEMs approval, before I die. Now, my son, listen carefully as I instruct you. Go to the flock and fetch me two choice kids, and I will make of them a dish for your father, such as he likes. Then take it to your father to eat, in order that he may bless you before he dies. Jacob answered his mother Rebekah, But my brother Esau is a hairy man and I am smooth-skinned. If my father touches me, I shall appear to him as a trickster and bring upon myself a curse, not a blessing. But his mother said to him, Your curse, my son, be upon me! Just do as I say and go fetch them for me. He got them and brought them to his mother, and his mother prepared a dish such as his father liked. Rebekah then took the best clothes of her older son Esau, which were there, lit. with her. in the house, and had her younger son Jacob put them on; and she covered his hands and the hairless part of his neck with the skins of the kids. Then she put in the hands of her son Jacob the dish and the bread that she had prepared.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rebekah deceives Isaac, Jacob receives blessing.",
+    "heb_summary": "רבקה מרמה את יצחק, יעקב מקבל ברכה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "House"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "unit": "kid",
+          "context": "dish for father"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Kid"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Dish"
+        },
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Kid"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfMother": [
+        {
+          "term1": "Jacob",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rebekah",
+          "term2": "Jacob"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Esau",
+          "term2": "House"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "House"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "House"
+        }
+      ]
+    }
+  }
+}

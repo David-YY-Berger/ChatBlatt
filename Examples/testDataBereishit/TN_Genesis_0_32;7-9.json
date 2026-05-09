@@ -1,0 +1,51 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob fears Esau; divides people.",
+        "heb_summary": "יעקב פחד מעשו; חילק אנשים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Messengers"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "400",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "esau's retinue"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "unit": "camp",
+                    "context": "jacob's division"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Messengers",
+                    "term2": "Jacob"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_32:7-9"
+}

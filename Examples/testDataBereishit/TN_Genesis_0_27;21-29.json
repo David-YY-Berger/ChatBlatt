@@ -1,0 +1,97 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac blesses Jacob, mistaking him for Esau.",
+        "heb_summary": "יצחק מברך יעקב, טועה בו לאסו.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Game"
+                },
+                {
+                    "en_name": "Wine"
+                },
+                {
+                    "en_name": "Grain"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Grape"
+                },
+                {
+                    "en_name": "Grain"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Jacob"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Heaven"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Grain"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Wine"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:21-29"
+}

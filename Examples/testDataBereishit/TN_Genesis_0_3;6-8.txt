@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=9028 approx cost usd = $0.001244 (Prompt=6509, Completion=2519)
+SOURCE:
+Genesis 3:6-8  (TN_Genesis_0_3:6-8)
+
+HEBREW:
+וַתֵּ֣רֶא הָֽאִשָּׁ֡ה כִּ֣י טוֹב֩ הָעֵ֨ץ לְמַאֲכָ֜ל וְכִ֧י תַֽאֲוָה־ה֣וּא לָעֵינַ֗יִם וְנֶחְמָ֤ד הָעֵץ֙ לְהַשְׂכִּ֔יל וַתִּקַּ֥ח מִפִּרְי֖וֹ וַתֹּאכַ֑ל וַתִּתֵּ֧ן גַּם־לְאִישָׁ֛הּ עִמָּ֖הּ וַיֹּאכַֽל׃ וַתִּפָּקַ֙חְנָה֙ עֵינֵ֣י שְׁנֵיהֶ֔ם וַיֵּ֣דְע֔וּ כִּ֥י עֵֽירֻמִּ֖ם הֵ֑ם וַֽיִּתְפְּרוּ֙ עֲלֵ֣ה תְאֵנָ֔ה וַיַּעֲשׂ֥וּ לָהֶ֖ם חֲגֹרֹֽת׃ וַֽיִּשְׁמְע֞וּ אֶת־ק֨וֹל יְהֹוָ֧ה אֱלֹהִ֛ים מִתְהַלֵּ֥ךְ בַּגָּ֖ן לְר֣וּחַ הַיּ֑וֹם וַיִּתְחַבֵּ֨א הָֽאָדָ֜ם וְאִשְׁתּ֗וֹ מִפְּנֵי֙ יְהֹוָ֣ה אֱלֹהִ֔ים בְּת֖וֹךְ עֵ֥ץ הַגָּֽן׃
+
+ENGLISH:
+When the woman saw that the tree was good for eating and a delight to the eyes, and that the tree was desirable as a source of wisdom, she took of its fruit and ate. She also gave some to her husband, and he ate. Then the eyes of both of them were opened and they perceived that they were naked; and they sewed together fig leaves and made themselves loincloths. They heard the sound of God HASHEM moving about in the garden at the breezy time of day; and the Human and his wife hid from God HASHEM among the trees of the garden.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God visits Garden; forbidden fruit eaten.",
+    "heb_summary": "אלוהים מבקר בגן; פרי אסור נאכל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Garden Of Eden"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Fruit"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree"
+        },
+        {
+          "en_name": "Fig"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "God",
+          "term2": "Garden Of Eden"
+        }
+      ]
+    }
+  }
+}

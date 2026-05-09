@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=8635 approx cost usd = $0.001130 (Prompt=6490, Completion=2145)
+SOURCE:
+Genesis 28:20-29:1  (TN_Genesis_0_28:20-29:1)
+
+HEBREW:
+וַיִּדַּ֥ר יַעֲקֹ֖ב נֶ֣דֶר לֵאמֹ֑ר אִם־יִהְיֶ֨ה אֱלֹהִ֜ים עִמָּדִ֗י וּשְׁמָרַ֙נִי֙ בַּדֶּ֤רֶךְ הַזֶּה֙ אֲשֶׁ֣ר אָנֹכִ֣י הוֹלֵ֔ךְ וְנָֽתַן־לִ֥י לֶ֛חֶם לֶאֱכֹ֖ל וּבֶ֥גֶד לִלְבֹּֽשׁ׃ וְשַׁבְתִּ֥י בְשָׁל֖וֹם אֶל־בֵּ֣ית אָבִ֑י וְהָיָ֧ה יְהֹוָ֛ה לִ֖י לֵאלֹהִֽים׃ וְהָאֶ֣בֶן הַזֹּ֗את אֲשֶׁר־שַׂ֙מְתִּי֙ מַצֵּבָ֔ה יִהְיֶ֖ה בֵּ֣ית אֱלֹהִ֑ים וְכֹל֙ אֲשֶׁ֣ר תִּתֶּן־לִ֔י עַשֵּׂ֖ר אֲעַשְּׂרֶ֥נּוּ לָֽךְ׃וַיִּשָּׂ֥א יַעֲקֹ֖ב רַגְלָ֑יו וַיֵּ֖לֶךְ אַ֥רְצָה בְנֵי־קֶֽדֶם׃
+
+ENGLISH:
+Jacob then made a vow, saying, If God remains with me, protecting me on this journey that I am making, and giving me bread to eat and clothing to wear, and I return safe to my fathers house- HASHEM shall be my God. And this stone, which I have set up as a pillar, shall be Gods abode; and of all that You give me, I will set aside a tithe for You.Jacob resumed his journey and came to the land of the Easterners.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob's vow, God's protection, tithe.",
+    "heb_summary": "נדר יעקב, הגנה מאלוהים, מעשר.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Father's House"
+        },
+        {
+          "en_name": "Land Of The Easterners"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Stone"
+        },
+        {
+          "en_name": "Pillar"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "Sacrifice",
+          "unit": "percent",
+          "context": "jacob's vow offering"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Father's House"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Land Of The Easterners"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

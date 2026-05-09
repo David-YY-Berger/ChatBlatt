@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Human, woman, serpent spoke; ate tree.",
+        "heb_summary": "האדם, האישה, הנחש דיברו; אכלו מהעץ.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Human"
+                },
+                {
+                    "en_name": "God Hashem"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Serpent"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Human",
+                    "term2": "God Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:12-13"
+}

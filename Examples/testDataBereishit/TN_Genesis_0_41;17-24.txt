@@ -1,0 +1,113 @@
+﻿COST: Tokens: Total=8228 approx cost usd = $0.000987 (Prompt=6584, Completion=1644)
+SOURCE:
+Genesis 41:17-24  (TN_Genesis_0_41:17-24)
+
+HEBREW:
+וַיְדַבֵּ֥ר פַּרְעֹ֖ה אֶל־יוֹסֵ֑ף בַּחֲלֹמִ֕י הִנְנִ֥י עֹמֵ֖ד עַל־שְׂפַ֥ת הַיְאֹֽר׃ וְהִנֵּ֣ה מִן־הַיְאֹ֗ר עֹלֹת֙ שֶׁ֣בַע פָּר֔וֹת בְּרִיא֥וֹת בָּשָׂ֖ר וִיפֹ֣ת תֹּ֑אַר וַתִּרְעֶ֖ינָה בָּאָֽחוּ׃ וְהִנֵּ֞ה שֶֽׁבַע־פָּר֤וֹת אֲחֵרוֹת֙ עֹל֣וֹת אַחֲרֵיהֶ֔ן דַּלּ֨וֹת וְרָע֥וֹת תֹּ֛אַר מְאֹ֖ד וְרַקּ֣וֹת בָּשָׂ֑ר לֹֽא־רָאִ֧יתִי כָהֵ֛נָּה בְּכׇל־אֶ֥רֶץ מִצְרַ֖יִם לָרֹֽעַ׃ וַתֹּאכַ֙לְנָה֙ הַפָּר֔וֹת הָרַקּ֖וֹת וְהָרָע֑וֹת אֵ֣ת שֶׁ֧בַע הַפָּר֛וֹת הָרִאשֹׁנ֖וֹת הַבְּרִיאֹֽת׃ וַתָּבֹ֣אנָה אֶל־קִרְבֶּ֗נָה וְלֹ֤א נוֹדַע֙ כִּי־בָ֣אוּ אֶל־קִרְבֶּ֔נָה וּמַרְאֵיהֶ֣ן רַ֔ע כַּאֲשֶׁ֖ר בַּתְּחִלָּ֑ה וָאִיקָֽץ׃ וָאֵ֖רֶא בַּחֲלֹמִ֑י וְהִנֵּ֣ה׀ שֶׁ֣בַע שִׁבֳּלִ֗ים עֹלֹ֛ת בְּקָנֶ֥ה אֶחָ֖ד מְלֵאֹ֥ת וְטֹבֽוֹת׃ וְהִנֵּה֙ שֶׁ֣בַע שִׁבֳּלִ֔ים צְנֻמ֥וֹת דַּקּ֖וֹת שְׁדֻפ֣וֹת קָדִ֑ים צֹמְח֖וֹת אַחֲרֵיהֶֽם׃ וַתִּבְלַ֙עְןָ֙ הַשִּׁבֳּלִ֣ים הַדַּקֹּ֔ת אֵ֛ת שֶׁ֥בַע הַֽשִּׁבֳּלִ֖ים הַטֹּב֑וֹת וָֽאֹמַר֙ אֶל־הַֽחַרְטֻמִּ֔ים וְאֵ֥ין מַגִּ֖יד לִֽי׃
+
+ENGLISH:
+Then Pharaoh said to Joseph, In my dream, I was standing on the bank of the Nile, when out of the Nile came up seven sturdy and well-formed cows and grazed in the reed grass. Presently there followed them seven other cows, scrawny, ill-formed, and emaciated-never had I seen their likes for ugliness in all the land of Egypt! And the seven lean and ugly cows ate up the first seven cows, the sturdy ones; but when they had consumed them, one could not tell that they had consumed them, for they looked just as bad as before. And I awoke. In my other dream, I saw seven ears of grain, full and healthy, growing on a single stalk; but right behind them sprouted seven ears, shriveled, thin, and scorched by the east wind. And the thin ears swallowed the seven healthy ears. I have told my magician-priests, but none has an explanation for me.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Pharaoh's dream: seven cows, seven ears.",
+    "heb_summary": "חלום פרעה: שבע פרות, שבע שיבולים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Magician-Priests"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Nile"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Misc",
+          "unit": "cow",
+          "context": "pharaohs dream"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Cow"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Grain"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Reed Grass"
+        },
+        {
+          "en_name": "Stalk"
+        },
+        {
+          "en_name": "Grain"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Magician-Priests"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Nile"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Magician-Priests",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Nile",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

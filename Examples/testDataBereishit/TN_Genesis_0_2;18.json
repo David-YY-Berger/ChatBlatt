@@ -1,0 +1,28 @@
+﻿{
+    "res": {
+        "en_summary": "God creates companion for Human",
+        "heb_summary": "אלוהים בורא עזר לאדם",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Human"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Human"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_2:18"
+}

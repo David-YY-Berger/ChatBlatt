@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=8220 approx cost usd = $0.001007 (Prompt=6486, Completion=1734)
+SOURCE:
+Genesis 11:4-6  (TN_Genesis_0_11:4-6)
+
+HEBREW:
+וַיֹּאמְר֞וּ הָ֣בָה׀ נִבְנֶה־לָּ֣נוּ עִ֗יר וּמִגְדָּל֙ וְרֹאשׁ֣וֹ בַשָּׁמַ֔יִם וְנַֽעֲשֶׂה־לָּ֖נוּ שֵׁ֑ם פֶּן־נָפ֖וּץ עַל־פְּנֵ֥י כׇל־הָאָֽרֶץ׃ וַיֵּ֣רֶד יְהֹוָ֔ה לִרְאֹ֥ת אֶת־הָעִ֖יר וְאֶת־הַמִּגְדָּ֑ל אֲשֶׁ֥ר בָּנ֖וּ בְּנֵ֥י הָאָדָֽם׃ וַיֹּ֣אמֶר יְהֹוָ֗ה הֵ֣ן עַ֤ם אֶחָד֙ וְשָׂפָ֤ה אַחַת֙ לְכֻלָּ֔ם וְזֶ֖ה הַחִלָּ֣ם לַעֲשׂ֑וֹת וְעַתָּה֙ לֹֽא־יִבָּצֵ֣ר מֵהֶ֔ם כֹּ֛ל אֲשֶׁ֥ר יָזְמ֖וּ לַֽעֲשֽׂוֹת׃
+
+ENGLISH:
+And they said, Come, let us build us a city, and a tower with its top in the sky, to make a name for ourselves; else we shall be scattered all over the world. HASHEM came down to look at the city and tower that humanity had built, and HASHEM said, If, as one people with one language for all, this is how they have begun to act, then nothing that they may propose to do will be out of their reach.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Humanity builds tower; God scatters them.",
+    "heb_summary": "האנושות בונה מגדל; אלוהים מפזר אותם.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Humanity"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Tower"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "unit": "people",
+          "context": "humanity's unity"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "Humanity",
+          "term2": "World"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob calls sons, assigns portion, defeats Amorites.",
+        "heb_summary": "יעקב קורא לבניו, מחלק נחלה, נלחם באמורים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Jacob's Sons"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Amorites"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "unit": "portion",
+                    "context": "assigned portion"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Jacob's Sons"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Jacob's Sons"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Amorites"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Amorites"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_48:22-49:2"
+}

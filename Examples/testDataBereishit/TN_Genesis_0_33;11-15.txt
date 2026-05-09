@@ -1,0 +1,71 @@
+﻿COST: Tokens: Total=8638 approx cost usd = $0.001115 (Prompt=6561, Completion=2077)
+SOURCE:
+Genesis 33:11-15  (TN_Genesis_0_33:11-15)
+
+HEBREW:
+קַח־נָ֤א אֶת־בִּרְכָתִי֙ אֲשֶׁ֣ר הֻבָ֣את לָ֔ךְ כִּֽי־חַנַּ֥נִי אֱלֹהִ֖ים וְכִ֣י יֶשׁ־לִי־כֹ֑ל וַיִּפְצַר־בּ֖וֹ וַיִּקָּֽח׃ וַיֹּ֖אמֶר נִסְעָ֣ה וְנֵלֵ֑כָה וְאֵלְכָ֖ה לְנֶגְדֶּֽךָ׃ וַיֹּ֣אמֶר אֵלָ֗יו אֲדֹנִ֤י יֹדֵ֙עַ֙ כִּֽי־הַיְלָדִ֣ים רַכִּ֔ים וְהַצֹּ֥אן וְהַבָּקָ֖ר עָל֣וֹת עָלָ֑י וּדְפָקוּם֙ י֣וֹם אֶחָ֔ד וָמֵ֖תוּ כׇּל־הַצֹּֽאן׃ יַעֲבׇר־נָ֥א אֲדֹנִ֖י לִפְנֵ֣י עַבְדּ֑וֹ וַאֲנִ֞י אֶֽתְנָהֲלָ֣ה לְאִטִּ֗י לְרֶ֨גֶל הַמְּלָאכָ֤ה אֲשֶׁר־לְפָנַי֙ וּלְרֶ֣גֶל הַיְלָדִ֔ים עַ֛ד אֲשֶׁר־אָבֹ֥א אֶל־אֲדֹנִ֖י שֵׂעִֽירָה׃ וַיֹּ֣אמֶר עֵשָׂ֔ו אַצִּֽיגָה־נָּ֣א עִמְּךָ֔ מִן־הָעָ֖ם אֲשֶׁ֣ר אִתִּ֑י וַיֹּ֙אמֶר֙ לָ֣מָּה זֶּ֔ה אֶמְצָא־חֵ֖ן בְּעֵינֵ֥י אֲדֹנִֽי׃
+
+ENGLISH:
+Please accept my present which has been brought to you, for God has favored me and I have plenty. And when he urged him, he accepted. And [Esau] said, Let us start on our journey, and I will proceed at your pace. But he said to him, My lord knows that the children are frail and that the flocks and herds, which are nursing, are a care to me; if they are driven hard a single day, all the flocks will die. Let my lord go on ahead of his servant, while I travel slowly, at the pace of the cattle before me and at the pace of the children, until I come to my lord in Seir. Then Esau said, Let me assign to you some of the people who are with me. But he said, Oh no, my lord is too kind to me!
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob and Esau discuss travel arrangements.",
+    "heb_summary": "יעקב ועשו דנים בסידורי נסיעה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Seir"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "travel duration"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Flock"
+        },
+        {
+          "en_name": "Herd"
+        },
+        {
+          "en_name": "Cattle"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Seir"
+        }
+      ]
+    }
+  }
+}

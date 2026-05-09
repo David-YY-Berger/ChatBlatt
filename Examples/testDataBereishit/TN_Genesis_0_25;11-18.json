@@ -1,0 +1,335 @@
+﻿{
+    "res": {
+        "en_summary": "God blessed Isaac; Ishmael's lineage and dwelling.",
+        "heb_summary": "אלוהים ברך יצחק; שושלת ישמעאל ומקום מגוריו.",
+        "passage_types": [
+            "STORY",
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Nebaioth"
+                },
+                {
+                    "en_name": "Kedar"
+                },
+                {
+                    "en_name": "Adbeel"
+                },
+                {
+                    "en_name": "Mibsam"
+                },
+                {
+                    "en_name": "Mishma"
+                },
+                {
+                    "en_name": "Dumah"
+                },
+                {
+                    "en_name": "Massa"
+                },
+                {
+                    "en_name": "Hadad"
+                },
+                {
+                    "en_name": "Tema"
+                },
+                {
+                    "en_name": "Jetur"
+                },
+                {
+                    "en_name": "Naphish"
+                },
+                {
+                    "en_name": "Kedmah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Lahai-Roi"
+                },
+                {
+                    "en_name": "Havilah"
+                },
+                {
+                    "en_name": "Shur"
+                },
+                {
+                    "en_name": "Asshur"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "People",
+                    "unit": "chieftain",
+                    "context": "ishmael's sons"
+                },
+                {
+                    "en_name": "137",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "ishmael lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Nebaioth",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Kedar",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Adbeel",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Mibsam",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Mishma",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Dumah",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Massa",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Hadad",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Tema",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Jetur",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Naphish",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Kedmah",
+                    "term2": "Ishmael"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Ishmael",
+                    "term2": "Hagar"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Beer-Lahai-Roi"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Nebaioth",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Kedar",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Adbeel",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Mibsam",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Mishma",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Dumah",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Massa",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Hadad",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Tema",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Jetur",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Naphish",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Kedmah",
+                    "term2": "Havilah"
+                },
+                {
+                    "term1": "Nebaioth",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Kedar",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Adbeel",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Mibsam",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Mishma",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Dumah",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Massa",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Hadad",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Tema",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Jetur",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Naphish",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Kedmah",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Nebaioth",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Kedar",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Adbeel",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Mibsam",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Mishma",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Dumah",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Massa",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Hadad",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Tema",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Jetur",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Naphish",
+                    "term2": "Asshur"
+                },
+                {
+                    "term1": "Kedmah",
+                    "term2": "Asshur"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Shur",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:11-18"
+}

@@ -1,0 +1,173 @@
+﻿COST: Tokens: Total=9242 approx cost usd = $0.001263 (Prompt=6710, Completion=2532)
+SOURCE:
+Genesis 11:10-25  (TN_Genesis_0_11:10-25)
+
+HEBREW:
+אֵ֚לֶּה תּוֹלְדֹ֣ת שֵׁ֔ם שֵׁ֚ם בֶּן־מְאַ֣ת שָׁנָ֔ה וַיּ֖וֹלֶד אֶת־אַרְפַּכְשָׁ֑ד שְׁנָתַ֖יִם אַחַ֥ר הַמַּבּֽוּל׃ וַֽיְחִי־שֵׁ֗ם אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־אַרְפַּכְשָׁ֔ד חֲמֵ֥שׁ מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וְאַרְפַּכְשַׁ֣ד חַ֔י חָמֵ֥שׁ וּשְׁלֹשִׁ֖ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־שָֽׁלַח׃ וַיְחִ֣י אַרְפַּכְשַׁ֗ד אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־שֶׁ֔לַח שָׁלֹ֣שׁ שָׁנִ֔ים וְאַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וְשֶׁ֥לַח חַ֖י שְׁלֹשִׁ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־עֵֽבֶר׃ וַֽיְחִי־שֶׁ֗לַח אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־עֵ֔בֶר שָׁלֹ֣שׁ שָׁנִ֔ים וְאַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַֽיְחִי־עֵ֕בֶר אַרְבַּ֥ע וּשְׁלֹשִׁ֖ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־פָּֽלֶג׃ וַֽיְחִי־עֵ֗בֶר אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־פֶּ֔לֶג שְׁלֹשִׁ֣ים שָׁנָ֔ה וְאַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַֽיְחִי־פֶ֖לֶג שְׁלֹשִׁ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־רְעֽוּ׃ וַֽיְחִי־פֶ֗לֶג אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־רְע֔וּ תֵּ֥שַׁע שָׁנִ֖ים וּמָאתַ֣יִם שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיְחִ֣י רְע֔וּ שְׁתַּ֥יִם וּשְׁלֹשִׁ֖ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־שְׂרֽוּג׃ וַיְחִ֣י רְע֗וּ אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־שְׂר֔וּג שֶׁ֥בַע שָׁנִ֖ים וּמָאתַ֣יִם שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיְחִ֥י שְׂר֖וּג שְׁלֹשִׁ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־נָחֽוֹר׃ וַיְחִ֣י שְׂר֗וּג אַחֲרֵ֛י הוֹלִיד֥וֹ אֶת־נָח֖וֹר מָאתַ֣יִם שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיְחִ֣י נָח֔וֹר תֵּ֥שַׁע וְעֶשְׂרִ֖ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־תָּֽרַח׃ וַיְחִ֣י נָח֗וֹר אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־תֶּ֔רַח תְּשַֽׁע־עֶשְׂרֵ֥ה שָׁנָ֖ה וּמְאַ֣ת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃
+
+ENGLISH:
+This is the line of Shem. Shem was 100 years old when he begot Arpachshad, two years after the Flood. After the birth of Arpachshad, Shem lived 500 years and begot sons and daughters. When Arpachshad had lived 35 years, he begot Shelah. After the birth of Shelah, Arpachshad lived 403 years and begot sons and daughters. When Shelah had lived 30 years, he begot Eber. After the birth of Eber, Shelah lived 403 years and begot sons and daughters. When Eber had lived 34 years, he begot Peleg. After the birth of Peleg, Eber lived 430 years and begot sons and daughters. When Peleg had lived 30 years, he begot Reu. After the birth of Reu, Peleg lived 209 years and begot sons and daughters. When Reu had lived 32 years, he begot Serug. After the birth of Serug, Reu lived 207 years and begot sons and daughters. When Serug had lived 30 years, he begot Nahor. After the birth of Nahor, Serug lived 200 years and begot sons and daughters. When Nahor had lived 29 years, he begot Terah. After the birth of Terah, Nahor lived 119 years and begot sons and daughters.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Shem's descendants: Arpachshad to Terah",
+    "heb_summary": "שושלת שם: ארפכשד עד תרח",
+    "passage_types": [
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Arpachshad"
+        },
+        {
+          "en_name": "Shelah"
+        },
+        {
+          "en_name": "Eber"
+        },
+        {
+          "en_name": "Peleg"
+        },
+        {
+          "en_name": "Reu"
+        },
+        {
+          "en_name": "Serug"
+        },
+        {
+          "en_name": "Nahor"
+        },
+        {
+          "en_name": "Terah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "100",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "shem's age at son's birth"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "after the flood"
+        },
+        {
+          "en_name": "500",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "shem's lifespan after son's birth"
+        },
+        {
+          "en_name": "35",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "arpachshad's age at son's birth"
+        },
+        {
+          "en_name": "403",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "arpachshad's lifespan after son's birth"
+        },
+        {
+          "en_name": "30",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "shelah's age at son's birth"
+        },
+        {
+          "en_name": "34",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "eber's age at son's birth"
+        },
+        {
+          "en_name": "430",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "eber's lifespan after son's birth"
+        },
+        {
+          "en_name": "209",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "peleg's lifespan after son's birth"
+        },
+        {
+          "en_name": "32",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "reu's age at son's birth"
+        },
+        {
+          "en_name": "207",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "reu's lifespan after son's birth"
+        },
+        {
+          "en_name": "200",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "serug's lifespan after son's birth"
+        },
+        {
+          "en_name": "29",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "nahor's age at son's birth"
+        },
+        {
+          "en_name": "119",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "nahor's lifespan after son's birth"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Arpachshad",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Eber",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Reu",
+          "term2": "Peleg"
+        },
+        {
+          "term1": "Serug",
+          "term2": "Reu"
+        },
+        {
+          "term1": "Nahor",
+          "term2": "Serug"
+        },
+        {
+          "term1": "Terah",
+          "term2": "Nahor"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac and Rebekah pray for children",
+        "heb_summary": "יצחק ורבקה מתפללים לה׳ על ילדים",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Paddan-Aram"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Aram"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "40",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "isaac's age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Hashem"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Hashem"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Bethuel",
+                    "term2": "Aram"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Aram"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Paddan-Aram",
+                    "term2": "Aram"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:19-22"
+}

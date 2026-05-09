@@ -1,0 +1,74 @@
+﻿{
+    "res": {
+        "en_summary": "Noah, sons, God, Earth, corruption",
+        "heb_summary": "נח, בניו, אלוהים, ארץ, שחיתות",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Ham"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "noah's children"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shem",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Noah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Noah",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_6:9-13"
+}

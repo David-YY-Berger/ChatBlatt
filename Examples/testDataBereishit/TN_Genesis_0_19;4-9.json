@@ -1,0 +1,92 @@
+﻿{
+    "res": {
+        "en_summary": "Sodomites demand Lot's visitors, Lot offers daughters.",
+        "heb_summary": "אנשי סדום דורשים אורחים, לוט מציע בנותיו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Town Council"
+                },
+                {
+                    "en_name": "Militia Of Sodom"
+                },
+                {
+                    "en_name": "Townspeople"
+                },
+                {
+                    "en_name": "Men Of Sodom"
+                },
+                {
+                    "en_name": "Daughters"
+                },
+                {
+                    "en_name": "Visitors"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "Entrance"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "daughter",
+                    "context": "lot's family"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Men Of Sodom",
+                    "term2": "Lot"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Daughters",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Visitors",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Town Council",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Militia Of Sodom",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Townspeople",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Men Of Sodom",
+                    "term2": "Sodom"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:4-9"
+}

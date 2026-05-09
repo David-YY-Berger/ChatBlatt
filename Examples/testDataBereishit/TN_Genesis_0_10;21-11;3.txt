@@ -1,0 +1,642 @@
+﻿COST: Tokens: Total=14166 approx cost usd = $0.002742 (Prompt=6703, Completion=7463)
+SOURCE:
+Genesis 10:21-11:3  (TN_Genesis_0_10:21-11:3)
+
+HEBREW:
+וּלְשֵׁ֥ם יֻלַּ֖ד גַּם־ה֑וּא אֲבִי֙ כׇּל־בְּנֵי־עֵ֔בֶר אֲחִ֖י יֶ֥פֶת הַגָּדֽוֹל׃ בְּנֵ֥י שֵׁ֖ם עֵילָ֣ם וְאַשּׁ֑וּר וְאַרְפַּכְשַׁ֖ד וְל֥וּד וַֽאֲרָֽם׃ וּבְנֵ֖י אֲרָ֑ם ע֥וּץ וְח֖וּל וְגֶ֥תֶר וָמַֽשׁ׃ וְאַרְפַּכְשַׁ֖ד יָלַ֣ד אֶת־שָׁ֑לַח וְשֶׁ֖לַח יָלַ֥ד אֶת־עֵֽבֶר׃ וּלְעֵ֥בֶר יֻלַּ֖ד שְׁנֵ֣י בָנִ֑ים שֵׁ֣ם הָֽאֶחָ֞ד פֶּ֗לֶג כִּ֤י בְיָמָיו֙ נִפְלְגָ֣ה הָאָ֔רֶץ וְשֵׁ֥ם אָחִ֖יו יׇקְטָֽן׃ וְיׇקְטָ֣ן יָלַ֔ד אֶת־אַלְמוֹדָ֖ד וְאֶת־שָׁ֑לֶף וְאֶת־חֲצַרְמָ֖וֶת וְאֶת־יָֽרַח׃ וְאֶת־הֲדוֹרָ֥ם וְאֶת־אוּזָ֖ל וְאֶת־דִּקְלָֽה׃ וְאֶת־עוֹבָ֥ל וְאֶת־אֲבִֽימָאֵ֖ל וְאֶת־שְׁבָֽא׃ וְאֶת־אוֹפִ֥ר וְאֶת־חֲוִילָ֖ה וְאֶת־יוֹבָ֑ב כׇּל־אֵ֖לֶּה בְּנֵ֥י יׇקְטָֽן׃ וַיְהִ֥י מוֹשָׁבָ֖ם מִמֵּשָׁ֑א בֹּאֲכָ֥ה סְפָ֖רָה הַ֥ר הַקֶּֽדֶם׃ אֵ֣לֶּה בְנֵי־שֵׁ֔ם לְמִשְׁפְּחֹתָ֖ם לִלְשֹׁנֹתָ֑ם בְּאַרְצֹתָ֖ם לְגוֹיֵהֶֽם׃ אֵ֣לֶּה מִשְׁפְּחֹ֧ת בְּנֵי־נֹ֛חַ לְתוֹלְדֹתָ֖ם בְּגוֹיֵהֶ֑ם וּמֵאֵ֜לֶּה נִפְרְד֧וּ הַגּוֹיִ֛ם בָּאָ֖רֶץ אַחַ֥ר הַמַּבּֽוּל׃ וַיְהִ֥י כׇל־הָאָ֖רֶץ שָׂפָ֣ה אֶחָ֑ת וּדְבָרִ֖ים אֲחָדִֽים׃ וַיְהִ֖י בְּנׇסְעָ֣ם מִקֶּ֑דֶם וַֽיִּמְצְא֥וּ בִקְעָ֛ה בְּאֶ֥רֶץ שִׁנְעָ֖ר וַיֵּ֥שְׁבוּ שָֽׁם׃ וַיֹּאמְר֞וּ אִ֣ישׁ אֶל־רֵעֵ֗הוּ הָ֚בָה נִלְבְּנָ֣ה לְבֵנִ֔ים וְנִשְׂרְפָ֖ה לִשְׂרֵפָ֑ה וַתְּהִ֨י לָהֶ֤ם הַלְּבֵנָה֙ לְאָ֔בֶן וְהַ֣חֵמָ֔ר הָיָ֥ה לָהֶ֖ם לַחֹֽמֶר׃
+
+ENGLISH:
+Sons were also born to Shem, ancestor of all the descendants of Eber and older brother of Japheth. The descendants of Shem: Elam, Asshur, Arpachshad, Lud, and Aram. The descendants of Aram: Uz, Hul, Gether, and Mash. Arpachshad begot Shelah, and Shelah begot Eber. Two sons were born to Eber: the name of the first was Peleg, for in his days the earth was divided;, play on Peleg. and the name of his brother was Joktan. Joktan begot Almodad, Sheleph, Hazarmaveth, Jerah, Hadoram, Uzal, Diklah, Obal, Abimael, Sheba, Ophir, Havilah, and Jobab; all these were the descendants of Joktan. Their settlements extended from Mesha as far as Sephar, the hill country to the east. These are the descendants of Shem according to their clans and languages, by their lands, according to their nations. These are the groupings of Noahs descendants, according to their origins, by their nations; and from these the nations branched out over the earth after the Flood.Everyone on earth had the same language and the same words. And as they migrated from the east, they came upon a valley in the land of Shinar and settled there. They said to one another, Come, let us make bricks and burn them hard.-Brick served them as stone, and bitumen served them as mortar.-
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Shem's descendants, Eber's sons, Tower of Babel",
+    "heb_summary": "צאצאי שם, בני עבר, מגדל בבל",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Eber"
+        },
+        {
+          "en_name": "Japheth"
+        },
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Asshur"
+        },
+        {
+          "en_name": "Arpachshad"
+        },
+        {
+          "en_name": "Lud"
+        },
+        {
+          "en_name": "Aram"
+        },
+        {
+          "en_name": "Uz"
+        },
+        {
+          "en_name": "Hul"
+        },
+        {
+          "en_name": "Gether"
+        },
+        {
+          "en_name": "Mash"
+        },
+        {
+          "en_name": "Shelah"
+        },
+        {
+          "en_name": "Peleg"
+        },
+        {
+          "en_name": "Joktan"
+        },
+        {
+          "en_name": "Almodad"
+        },
+        {
+          "en_name": "Sheleph"
+        },
+        {
+          "en_name": "Hazarmaveth"
+        },
+        {
+          "en_name": "Jerah"
+        },
+        {
+          "en_name": "Hadoram"
+        },
+        {
+          "en_name": "Uzal"
+        },
+        {
+          "en_name": "Diklah"
+        },
+        {
+          "en_name": "Obal"
+        },
+        {
+          "en_name": "Abimael"
+        },
+        {
+          "en_name": "Sheba"
+        },
+        {
+          "en_name": "Ophir"
+        },
+        {
+          "en_name": "Havilah"
+        },
+        {
+          "en_name": "Jobab"
+        },
+        {
+          "en_name": "Noah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mesha"
+        },
+        {
+          "en_name": "Sephar"
+        },
+        {
+          "en_name": "Shinar"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Asshur"
+        },
+        {
+          "en_name": "Aram"
+        },
+        {
+          "en_name": "Sheba"
+        },
+        {
+          "en_name": "Ophir"
+        },
+        {
+          "en_name": "Havilah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "son",
+          "context": "eber's children"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Shem",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Elam",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Asshur",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Arpachshad",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Lud",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Aram",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Uz",
+          "term2": "Aram"
+        },
+        {
+          "term1": "Hul",
+          "term2": "Aram"
+        },
+        {
+          "term1": "Gether",
+          "term2": "Aram"
+        },
+        {
+          "term1": "Mash",
+          "term2": "Aram"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Eber",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Joktan"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Joktan"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Elam",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Asshur",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Arpachshad",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Lud",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Aram",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Eber",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Eber",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Eber",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Peleg",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Uz",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Uz",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Hul",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Hul",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Gether",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Gether",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Mash",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Mash",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Almodad",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Sheleph",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Hazarmaveth",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Jerah",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Hadoram",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Uzal",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Diklah",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Obal",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Abimael",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Sheba",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Ophir",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Havilah",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Eber"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Shelah"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Arpachshad"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Noah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joktan",
+          "term2": "Mesha"
+        },
+        {
+          "term1": "Joktan",
+          "term2": "Sephar"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=9167 approx cost usd = $0.001279 (Prompt=6539, Completion=2628)
+SOURCE:
+Genesis 49:22-26  (TN_Genesis_0_49:22-26)
+
+HEBREW:
+בֵּ֤ן פֹּרָת֙ יוֹסֵ֔ף בֵּ֥ן פֹּרָ֖ת עֲלֵי־עָ֑יִן בָּנ֕וֹת צָעֲדָ֖ה עֲלֵי־שֽׁוּר׃ וַֽיְמָרְרֻ֖הוּ וָרֹ֑בּוּ וַֽיִּשְׂטְמֻ֖הוּ בַּעֲלֵ֥י חִצִּֽים׃ וַתֵּ֤שֶׁב בְּאֵיתָן֙ קַשְׁתּ֔וֹ וַיָּפֹ֖זּוּ זְרֹעֵ֣י יָדָ֑יו מִידֵי֙ אֲבִ֣יר יַעֲקֹ֔ב מִשָּׁ֥ם רֹעֶ֖ה אֶ֥בֶן יִשְׂרָאֵֽל׃ מֵאֵ֨ל אָבִ֜יךָ וְיַעְזְרֶ֗ךָּ וְאֵ֤ת שַׁדַּי֙ וִיבָ֣רְכֶ֔ךָּ בִּרְכֹ֤ת שָׁמַ֙יִם֙ מֵעָ֔ל בִּרְכֹ֥ת תְּה֖וֹם רֹבֶ֣צֶת תָּ֑חַת בִּרְכֹ֥ת שָׁדַ֖יִם וָרָֽחַם׃ בִּרְכֹ֣ת אָבִ֗יךָ גָּֽבְרוּ֙ עַל־בִּרְכֹ֣ת הוֹרַ֔י עַֽד־תַּאֲוַ֖ת גִּבְעֹ֣ת עוֹלָ֑ם תִּֽהְיֶ֙יןָ֙ לְרֹ֣אשׁ יוֹסֵ֔ף וּלְקׇדְקֹ֖ד נְזִ֥יר אֶחָֽיו׃
+
+ENGLISH:
+Joseph is a wild ass, A wild ass by a spring -Wild colts on a hillside. Archers bitterly assailed him; They shot at him and harried him. Yet his bow stayed taut, And his arms were made firm By the hands of the Mighty One of Jacob- There, the Shepherd, the Rock of Israel- The God of your fathers [house], who helps you, And Shaddai who blesses you With blessings of heaven above, Blessings of the deep that couches below, Blessings of the breast and womb. The blessings of your father Surpass the blessings of my ancestors, To the utmost bounds of the eternal hills. May they rest on the head of Joseph, On the brow of the elect of his brothers.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph blessed by God; compared to wild ass.",
+    "heb_summary": "יוסף מקבל ברכות; נמשל לאתון פראית.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Joseph"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        },
+        {
+          "en_name": "Colt"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Jacob",
+          "term2": "Joseph"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Joseph",
+          "term2": "Ass"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Colt"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

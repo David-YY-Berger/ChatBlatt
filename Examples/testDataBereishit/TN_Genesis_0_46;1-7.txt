@@ -1,0 +1,145 @@
+﻿COST: Tokens: Total=8463 approx cost usd = $0.001057 (Prompt=6586, Completion=1877)
+SOURCE:
+Genesis 46:1-7  (TN_Genesis_0_46:1-7)
+
+HEBREW:
+וַיִּסַּ֤ע יִשְׂרָאֵל֙ וְכׇל־אֲשֶׁר־ל֔וֹ וַיָּבֹ֖א בְּאֵ֣רָה שָּׁ֑בַע וַיִּזְבַּ֣ח זְבָחִ֔ים לֵאלֹהֵ֖י אָבִ֥יו יִצְחָֽק׃ וַיֹּ֨אמֶר אֱלֹהִ֤ים׀לְיִשְׂרָאֵל֙ בְּמַרְאֹ֣ת הַלַּ֔יְלָה וַיֹּ֖אמֶר יַעֲקֹ֣ב׀יַעֲקֹ֑ב וַיֹּ֖אמֶר הִנֵּֽנִי׃ וַיֹּ֕אמֶר אָנֹכִ֥י הָאֵ֖ל אֱלֹהֵ֣י אָבִ֑יךָ אַל־תִּירָא֙ מֵרְדָ֣ה מִצְרַ֔יְמָה כִּֽי־לְג֥וֹי גָּד֖וֹל אֲשִֽׂימְךָ֥ שָֽׁם׃ אָנֹכִ֗י אֵרֵ֤ד עִמְּךָ֙ מִצְרַ֔יְמָה וְאָנֹכִ֖י אַֽעַלְךָ֣ גַם־עָלֹ֑ה וְיוֹסֵ֕ף יָשִׁ֥ית יָד֖וֹ עַל־עֵינֶֽיךָ׃ וַיָּ֥קׇם יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע וַיִּשְׂא֨וּ בְנֵֽי־יִשְׂרָאֵ֜ל אֶת־יַעֲקֹ֣ב אֲבִיהֶ֗ם וְאֶת־טַפָּם֙ וְאֶת־נְשֵׁיהֶ֔ם בָּעֲגָל֕וֹת אֲשֶׁר־שָׁלַ֥ח פַּרְעֹ֖ה לָשֵׂ֥את אֹתֽוֹ׃ וַיִּקְח֣וּ אֶת־מִקְנֵיהֶ֗ם וְאֶת־רְכוּשָׁם֙ אֲשֶׁ֤ר רָֽכְשׁוּ֙ בְּאֶ֣רֶץ כְּנַ֔עַן וַיָּבֹ֖אוּ מִצְרָ֑יְמָה יַעֲקֹ֖ב וְכׇל־זַרְע֥וֹ אִתּֽוֹ׃ בָּנָ֞יו וּבְנֵ֤י בָנָיו֙ אִתּ֔וֹ בְּנֹתָ֛יו וּבְנ֥וֹת בָּנָ֖יו וְכׇל־זַרְע֑וֹ הֵבִ֥יא אִתּ֖וֹ מִצְרָֽיְמָה׃
+
+ENGLISH:
+So Israel set out with all that was his, and he came to Beer-sheba, where he offered sacrifices to the God of his father Isaacs [house]. God called to Israel in a vision by night: Jacob! Jacob! He answered, Here. I am God, the God of your fathers [house]. Fear not to go down to Egypt, for I will make you there into a great nation. I Myself will go down with you to Egypt, and I Myself will also bring you back; and Josephs hand shall close your eyes. So Jacob set out from Beer-sheba. The sons of Israel put their father Jacob and their children and their wives in the wagons that Pharaoh had sent to transport him; and they took along their livestock and the wealth that they had amassed in the land of Canaan. Thus Jacob and all his offspring with him came to Egypt: he brought with him to Egypt his sons and grandsons, his daughters and granddaughters-all his offspring.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob goes to Beer-sheba, then Egypt.",
+    "heb_summary": "יעקב הולך לבאר שבע, ואז למצרים.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Sons Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Beer-Sheba"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Israel"
+        },
+        {
+          "term1": "God",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Israel",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "God",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Israel",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Beer-Sheba"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "God",
+          "term2": "Israel"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Israel",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

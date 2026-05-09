@@ -1,0 +1,25 @@
+﻿{
+    "res": {
+        "en_summary": "God created vegetation and trees on third day.",
+        "heb_summary": "אלוהים ברא צמחים ועצים ביום השלישי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "creation day"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:12-13"
+}

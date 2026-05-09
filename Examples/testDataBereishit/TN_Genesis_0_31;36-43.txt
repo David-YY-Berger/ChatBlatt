@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=9490 approx cost usd = $0.001340 (Prompt=6699, Completion=2791)
+SOURCE:
+Genesis 31:36-43  (TN_Genesis_0_31:36-43)
+
+HEBREW:
+וַיִּ֥חַר לְיַעֲקֹ֖ב וַיָּ֣רֶב בְּלָבָ֑ן וַיַּ֤עַן יַעֲקֹב֙ וַיֹּ֣אמֶר לְלָבָ֔ן מַה־פִּשְׁעִי֙ מַ֣ה חַטָּאתִ֔י כִּ֥י דָלַ֖קְתָּ אַחֲרָֽי׃ כִּֽי־מִשַּׁ֣שְׁתָּ אֶת־כׇּל־כֵּלַ֗י מַה־מָּצָ֙אתָ֙ מִכֹּ֣ל כְּלֵי־בֵיתֶ֔ךָ שִׂ֣ים כֹּ֔ה נֶ֥גֶד אַחַ֖י וְאַחֶ֑יךָ וְיוֹכִ֖יחוּ בֵּ֥ין שְׁנֵֽינוּ׃ זֶה֩ עֶשְׂרִ֨ים שָׁנָ֤ה אָנֹכִי֙ עִמָּ֔ךְ רְחֵלֶ֥יךָ וְעִזֶּ֖יךָ לֹ֣א שִׁכֵּ֑לוּ וְאֵילֵ֥י צֹאנְךָ֖ לֹ֥א אָכָֽלְתִּי׃ טְרֵפָה֙ לֹא־הֵבֵ֣אתִי אֵלֶ֔יךָ אָנֹכִ֣י אֲחַטֶּ֔נָּה מִיָּדִ֖י תְּבַקְשֶׁ֑נָּה גְּנֻֽבְתִ֣י י֔וֹם וּגְנֻֽבְתִ֖י לָֽיְלָה׃ הָיִ֧יתִי בַיּ֛וֹם אֲכָלַ֥נִי חֹ֖רֶב וְקֶ֣רַח בַּלָּ֑יְלָה וַתִּדַּ֥ד שְׁנָתִ֖י מֵֽעֵינָֽי׃ זֶה־לִּ֞י עֶשְׂרִ֣ים שָׁנָה֮ בְּבֵיתֶ֒ךָ֒ עֲבַדְתִּ֜יךָ אַרְבַּֽע־עֶשְׂרֵ֤ה שָׁנָה֙ בִּשְׁתֵּ֣י בְנֹתֶ֔יךָ וְשֵׁ֥שׁ שָׁנִ֖ים בְּצֹאנֶ֑ךָ וַתַּחֲלֵ֥ף אֶת־מַשְׂכֻּרְתִּ֖י עֲשֶׂ֥רֶת מֹנִֽים׃ לוּלֵ֡י אֱלֹהֵ֣י אָבִי֩ אֱלֹהֵ֨י אַבְרָהָ֜ם וּפַ֤חַד יִצְחָק֙ הָ֣יָה לִ֔י כִּ֥י עַתָּ֖ה רֵיקָ֣ם שִׁלַּחְתָּ֑נִי אֶת־עׇנְיִ֞י וְאֶת־יְגִ֧יעַ כַּפַּ֛י רָאָ֥ה אֱלֹהִ֖ים וַיּ֥וֹכַח אָֽמֶשׁ׃ וַיַּ֨עַן לָבָ֜ן וַיֹּ֣אמֶר אֶֽל־יַעֲקֹ֗ב הַבָּנ֨וֹת בְּנֹתַ֜י וְהַבָּנִ֤ים בָּנַי֙ וְהַצֹּ֣אן צֹאנִ֔י וְכֹ֛ל אֲשֶׁר־אַתָּ֥ה רֹאֶ֖ה לִי־ה֑וּא וְלִבְנֹתַ֞י מָֽה־אֶעֱשֶׂ֤ה לָאֵ֙לֶּה֙ הַיּ֔וֹם א֥וֹ לִבְנֵיהֶ֖ן אֲשֶׁ֥ר יָלָֽדוּ׃
+
+ENGLISH:
+Now Jacob became incensed and took up his grievance with Laban. Jacob spoke up and said to Laban, What is my crime, what is my guilt that you should pursue me? You rummaged through all my things; what have you found of all your household objects? Set it here, before my kin and yours, and let them decide between us two. These twenty years I have spent in your service, your ewes and she-goats never miscarried, nor did I feast on rams from your flock. That which was torn by beasts I never brought to you; I myself made good the loss; you exacted it of me, whether snatched by day or snatched by night. Often, scorching heat ravaged me by day and frost by night; and sleep fled from my eyes. Of the twenty years that I spent in your household, I served you fourteen years for your two daughters, and six years for your flocks; and you changed my wages time and again. Had not the God of my fathers [house]-the God of Abraham and the Fear uncertain. of Isaac-been with me, you would have sent me away empty-handed. But it was my plight and the toil of my hands that God took notice of-and gave judgment on last night. Then Laban spoke up and said to Jacob, The daughters are my daughters, the children are my children, and the flocks are my flocks; all that you see is mine. Yet what can I do now about my daughters or the children they have borne?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob and Laban dispute over service.",
+    "heb_summary": "יעקב ולבן רבו על השירות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "God Of Abraham"
+        },
+        {
+          "en_name": "Fear Of Isaac"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "20",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "service duration"
+        },
+        {
+          "en_name": "14",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "service for daughters"
+        },
+        {
+          "en_name": "6",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "service for flocks"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ewe"
+        },
+        {
+          "en_name": "She-Goat"
+        },
+        {
+          "en_name": "Ram"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Ram"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "God Of Abraham",
+          "term2": "God"
+        },
+        {
+          "term1": "Fear Of Isaac",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

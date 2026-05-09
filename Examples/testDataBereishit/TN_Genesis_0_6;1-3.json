@@ -1,0 +1,25 @@
+﻿{
+    "res": {
+        "en_summary": "God limits human lifespan to 120 years.",
+        "heb_summary": "אלוהים מגביל חיי אדם ל-120 שנה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "120",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "human lifespan limit"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_6:1-3"
+}

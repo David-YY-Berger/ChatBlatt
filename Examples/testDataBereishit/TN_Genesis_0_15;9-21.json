@@ -1,0 +1,181 @@
+﻿{
+    "res": {
+        "en_summary": "God covenants Abram; offspring enslaved, then inherit land.",
+        "heb_summary": "אלוהים כורת ברית עם אברהם; צאצאים יורשים ארץ.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Offspring"
+                },
+                {
+                    "en_name": "Ancestors"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Land"
+                },
+                {
+                    "en_name": "River Of Egypt"
+                },
+                {
+                    "en_name": "Euphrates"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Amorite"
+                },
+                {
+                    "en_name": "Kenites"
+                },
+                {
+                    "en_name": "Kenizzite"
+                },
+                {
+                    "en_name": "Kadmonite"
+                },
+                {
+                    "en_name": "Hittites"
+                },
+                {
+                    "en_name": "Perizzites"
+                },
+                {
+                    "en_name": "Rephaite"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Girgashites"
+                },
+                {
+                    "en_name": "Jebusites"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Smoking Oven"
+                },
+                {
+                    "en_name": "Flaming Torch"
+                },
+                {
+                    "en_name": "Covenant"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Sacrifice",
+                    "unit": "year",
+                    "context": "animal offering"
+                },
+                {
+                    "en_name": "400",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enslavement duration"
+                },
+                {
+                    "en_name": "4",
+                    "number_category": "Time",
+                    "unit": "generation",
+                    "context": "return to land"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Heifer"
+                },
+                {
+                    "en_name": "She-Goat"
+                },
+                {
+                    "en_name": "Ram"
+                },
+                {
+                    "en_name": "Turtledove"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Bird Of Prey"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "God"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Offspring",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Offspring",
+                    "term2": "Amorite"
+                },
+                {
+                    "term1": "Offspring",
+                    "term2": "Kenizzite"
+                },
+                {
+                    "term1": "Offspring",
+                    "term2": "Kadmonite"
+                },
+                {
+                    "term1": "Offspring",
+                    "term2": "Rephaite"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "River Of Egypt",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Land",
+                    "term2": "Kenizzite"
+                },
+                {
+                    "term1": "Land",
+                    "term2": "Kadmonite"
+                },
+                {
+                    "term1": "Land",
+                    "term2": "Rephaite"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_15:9-21"
+}

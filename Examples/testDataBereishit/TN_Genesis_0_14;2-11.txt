@@ -1,0 +1,476 @@
+﻿COST: Tokens: Total=13092 approx cost usd = $0.002411 (Prompt=6741, Completion=6351)
+SOURCE:
+Genesis 14:2-11  (TN_Genesis_0_14:2-11)
+
+HEBREW:
+עָשׂ֣וּ מִלְחָמָ֗ה אֶת־בֶּ֙רַע֙ מֶ֣לֶךְ סְדֹ֔ם וְאֶת־בִּרְשַׁ֖ע מֶ֣לֶךְ עֲמֹרָ֑ה שִׁנְאָ֣ב׀ מֶ֣לֶךְ אַדְמָ֗ה וְשֶׁמְאֵ֙בֶר֙ מֶ֣לֶךְ [צְבוֹיִ֔ם] וּמֶ֥לֶךְ בֶּ֖לַע הִיא־צֹֽעַר׃ כׇּל־אֵ֙לֶּה֙ חָֽבְר֔וּ אֶל־עֵ֖מֶק הַשִּׂדִּ֑ים ה֖וּא יָ֥ם הַמֶּֽלַח׃ שְׁתֵּ֤ים עֶשְׂרֵה֙ שָׁנָ֔ה עָבְד֖וּ אֶת־כְּדׇרְלָעֹ֑מֶר וּשְׁלֹשׁ־עֶשְׂרֵ֥ה שָׁנָ֖ה מָרָֽדוּ׃ וּבְאַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה בָּ֣א כְדׇרְלָעֹ֗מֶר וְהַמְּלָכִים֙ אֲשֶׁ֣ר אִתּ֔וֹ וַיַּכּ֤וּ אֶת־רְפָאִים֙ בְּעַשְׁתְּרֹ֣ת קַרְנַ֔יִם וְאֶת־הַזּוּזִ֖ים בְּהָ֑ם וְאֵת֙ הָֽאֵימִ֔ים בְּשָׁוֵ֖ה קִרְיָתָֽיִם׃ וְאֶת־הַחֹרִ֖י בְּהַרְרָ֣ם שֵׂעִ֑יר עַ֚ד אֵ֣יל פָּארָ֔ן אֲשֶׁ֖ר עַל־הַמִּדְבָּֽר׃ וַ֠יָּשֻׁ֠בוּ וַיָּבֹ֜אוּ אֶל־עֵ֤ין מִשְׁפָּט֙ הִ֣וא קָדֵ֔שׁ וַיַּכּ֕וּ אֶֽת־כׇּל־שְׂדֵ֖ה הָעֲמָלֵקִ֑י וְגַם֙ אֶת־הָ֣אֱמֹרִ֔י הַיֹּשֵׁ֖ב בְּחַֽצְצֹ֥ן תָּמָֽר׃ וַיֵּצֵ֨א מֶֽלֶךְ־סְדֹ֜ם וּמֶ֣לֶךְ עֲמֹרָ֗ה וּמֶ֤לֶךְ אַדְמָה֙ וּמֶ֣לֶךְ [צְבוֹיִ֔ם] וּמֶ֥לֶךְ בֶּ֖לַע הִוא־צֹ֑עַר וַיַּֽעַרְכ֤וּ אִתָּם֙ מִלְחָמָ֔ה בְּעֵ֖מֶק הַשִּׂדִּֽים׃ אֵ֣ת כְּדׇרְלָעֹ֜מֶר מֶ֣לֶךְ עֵילָ֗ם וְתִדְעָל֙ מֶ֣לֶךְ גּוֹיִ֔ם וְאַמְרָפֶל֙ מֶ֣לֶךְ שִׁנְעָ֔ר וְאַרְי֖וֹךְ מֶ֣לֶךְ אֶלָּסָ֑ר אַרְבָּעָ֥ה מְלָכִ֖ים אֶת־הַחֲמִשָּֽׁה׃ וְעֵ֣מֶק הַשִּׂדִּ֗ים בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ חֵמָ֔ר וַיָּנֻ֛סוּ מֶֽלֶךְ־סְדֹ֥ם וַעֲמֹרָ֖ה וַיִּפְּלוּ־שָׁ֑מָּה וְהַנִּשְׁאָרִ֖ים הֶ֥רָה נָּֽסוּ׃ וַ֠יִּקְח֠וּ אֶת־כׇּל־רְכֻ֨שׁ סְדֹ֧ם וַעֲמֹרָ֛ה וְאֶת־כׇּל־אׇכְלָ֖ם וַיֵּלֵֽכוּ׃
+
+ENGLISH:
+made war on King Bera of Sodom, King Birsha of Gomorrah, King Shinab of Admah, King Shemeber of Zeboiim, and the king of Bela, which is Zoar, all the latter joined forces at the Valley of Siddim, now the Dead Sea. Twelve years they served Chedorlaomer, and in the thirteenth year they rebelled. In the fourteenth year Chedorlaomer and the kings who were with him came and defeated the Rephaim at Ashteroth-karnaim, the Zuzim at Ham, the Emim at Shaveh-kiriathaim, and the Horites in their hill country of Seir as far as El-paran, which is by the wilderness. On their way back they came to En-mishpat, which is Kadesh, and subdued all the territory of the Amalekites, and also the Amorites who dwelt in Hazazon-tamar. Then the king of Sodom, the king of Gomorrah, the king of Admah, the king of Zeboiim, and the king of Bela, which is Zoar, went forth and engaged them in battle in the Valley of Siddim: King Chedorlaomer of Elam, King Tidal of Goiim, King Amraphel of Shinar, and King Arioch of Ellasar-four kings against those five. Now the Valley of Siddim was dotted with bitumen pits; and the kings of Sodom and Gomorrah, in their flight, threw themselves into them, while the rest escaped to the hill country. [The invaders] seized all the wealth of Sodom and Gomorrah and all their provisions, and went their way.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Kings wage war, rebellion, battle, defeat.",
+    "heb_summary": "מלכים נלחמים, מרד, קרב, תבוסה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Bera"
+        },
+        {
+          "en_name": "Birsha"
+        },
+        {
+          "en_name": "Shinab"
+        },
+        {
+          "en_name": "Shemeber"
+        },
+        {
+          "en_name": "King Of Bela"
+        },
+        {
+          "en_name": "Chedorlaomer"
+        },
+        {
+          "en_name": "Tidal"
+        },
+        {
+          "en_name": "Amraphel"
+        },
+        {
+          "en_name": "Arioch"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "Gomorrah"
+        },
+        {
+          "en_name": "Admah"
+        },
+        {
+          "en_name": "Zeboiim"
+        },
+        {
+          "en_name": "Bela"
+        },
+        {
+          "en_name": "Zoar"
+        },
+        {
+          "en_name": "Valley Of Siddim"
+        },
+        {
+          "en_name": "Dead Sea"
+        },
+        {
+          "en_name": "Ashteroth-Karnaim"
+        },
+        {
+          "en_name": "Ham"
+        },
+        {
+          "en_name": "Shaveh-Kiriathaim"
+        },
+        {
+          "en_name": "Seir"
+        },
+        {
+          "en_name": "El-Paran"
+        },
+        {
+          "en_name": "Wilderness"
+        },
+        {
+          "en_name": "En-Mishpat"
+        },
+        {
+          "en_name": "Kadesh"
+        },
+        {
+          "en_name": "Hazazon-Tamar"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Goiim"
+        },
+        {
+          "en_name": "Shinar"
+        },
+        {
+          "en_name": "Ellasar"
+        },
+        {
+          "en_name": "Rephaim"
+        },
+        {
+          "en_name": "Zuzim"
+        },
+        {
+          "en_name": "Emim"
+        },
+        {
+          "en_name": "Horites"
+        },
+        {
+          "en_name": "Amalek"
+        },
+        {
+          "en_name": "Amorites"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "servitude to chedorlaomer"
+        },
+        {
+          "en_name": "13",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "rebellion"
+        },
+        {
+          "en_name": "14",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "chedorlaomer's campaign"
+        },
+        {
+          "en_name": "4",
+          "number_category": "People",
+          "unit": "king",
+          "context": "attacking kings"
+        },
+        {
+          "en_name": "5",
+          "number_category": "People",
+          "unit": "king",
+          "context": "defending kings"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Ashteroth-Karnaim"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Ham"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Shaveh-Kiriathaim"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "El-Paran"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "En-Mishpat"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Kadesh"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Hazazon-Tamar"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Valley Of Siddim"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Valley Of Siddim"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Valley Of Siddim"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Valley Of Siddim"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Valley Of Siddim"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Valley Of Siddim"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Bera",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Gomorrah"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Admah"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Zeboiim"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Bela"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Zoar"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Elam"
+        },
+        {
+          "term1": "Tidal",
+          "term2": "Goiim"
+        },
+        {
+          "term1": "Amraphel",
+          "term2": "Shinar"
+        },
+        {
+          "term1": "Arioch",
+          "term2": "Ellasar"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Bera",
+          "term2": "Chedorlaomer"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Chedorlaomer"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Chedorlaomer"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Chedorlaomer"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Chedorlaomer"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "King Of Bela",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Rephaim"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Zuzim"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Emim"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Horites"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Amorites"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Bera",
+          "term2": "Birsha"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Shinab"
+        },
+        {
+          "term1": "Bera",
+          "term2": "Shemeber"
+        },
+        {
+          "term1": "Bera",
+          "term2": "King Of Bela"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Shinab"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "Shemeber"
+        },
+        {
+          "term1": "Birsha",
+          "term2": "King Of Bela"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "Shemeber"
+        },
+        {
+          "term1": "Shinab",
+          "term2": "King Of Bela"
+        },
+        {
+          "term1": "Shemeber",
+          "term2": "King Of Bela"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Tidal"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Tidal",
+          "term2": "Amraphel"
+        },
+        {
+          "term1": "Tidal",
+          "term2": "Arioch"
+        },
+        {
+          "term1": "Amraphel",
+          "term2": "Arioch"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Ashteroth-Karnaim",
+          "term2": "Rephaim"
+        },
+        {
+          "term1": "Ham",
+          "term2": "Zuzim"
+        },
+        {
+          "term1": "Shaveh-Kiriathaim",
+          "term2": "Emim"
+        },
+        {
+          "term1": "Seir",
+          "term2": "Horites"
+        },
+        {
+          "term1": "Hazazon-Tamar",
+          "term2": "Amorites"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Bela",
+          "term2": "Zoar"
+        },
+        {
+          "term1": "Valley Of Siddim",
+          "term2": "Dead Sea"
+        },
+        {
+          "term1": "En-Mishpat",
+          "term2": "Kadesh"
+        }
+      ]
+    }
+  }
+}

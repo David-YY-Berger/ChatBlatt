@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=7546 approx cost usd = $0.000804 (Prompt=6486, Completion=1060)
+SOURCE:
+Genesis 1:6-9  (TN_Genesis_0_1:6-9)
+
+HEBREW:
+וַיֹּ֣אמֶר אֱלֹהִ֔ים יְהִ֥י רָקִ֖יעַ בְּת֣וֹךְ הַמָּ֑יִם וִיהִ֣י מַבְדִּ֔יל בֵּ֥ין מַ֖יִם לָמָֽיִם׃ וַיַּ֣עַשׂ אֱלֹהִים֮ אֶת־הָרָקִ֒יעַ֒ וַיַּבְדֵּ֗ל בֵּ֤ין הַמַּ֙יִם֙ אֲשֶׁר֙ מִתַּ֣חַת לָרָקִ֔יעַ וּבֵ֣ין הַמַּ֔יִם אֲשֶׁ֖ר מֵעַ֣ל לָרָקִ֑יעַ וַֽיְהִי־כֵֽן׃ וַיִּקְרָ֧א אֱלֹהִ֛ים לָֽרָקִ֖יעַ שָׁמָ֑יִם וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם שֵׁנִֽי׃ וַיֹּ֣אמֶר אֱלֹהִ֗ים יִקָּו֨וּ הַמַּ֜יִם מִתַּ֤חַת הַשָּׁמַ֙יִם֙ אֶל־מָק֣וֹם אֶחָ֔ד וְתֵרָאֶ֖ה הַיַּבָּשָׁ֑ה וַֽיְהִי־כֵֽן׃
+
+ENGLISH:
+God said, Let there be an expanse in the midst of the water, that it may separate water from water. God made the expanse, and it separated the water which was below the expanse from the water which was above the expanse. And it was so. God called the expanse Sky. And there was evening and there was morning, a second day. God said, Let the water below the sky be gathered into one area, that the dry land may appear. And it was so.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates sky, separates waters, dry land appears",
+    "heb_summary": "אלוהים ברא רקיע, הפריד מים, יבשה הופיעה",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sky"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Expanse"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "unit": "area",
+          "context": "water gathered"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "God",
+          "term2": "Sky"
+        }
+      ]
+    }
+  }
+}

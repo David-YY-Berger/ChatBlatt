@@ -1,0 +1,104 @@
+﻿COST: Tokens: Total=7682 approx cost usd = $0.000842 (Prompt=6502, Completion=1180)
+SOURCE:
+Genesis 25:19-22  (TN_Genesis_0_25:19-22)
+
+HEBREW:
+וְאֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן־אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד אֶת־יִצְחָֽק׃ וַיְהִ֤י יִצְחָק֙ בֶּן־אַרְבָּעִ֣ים שָׁנָ֔ה בְּקַחְתּ֣וֹ אֶת־רִבְקָ֗ה בַּת־בְּתוּאֵל֙ הָֽאֲרַמִּ֔י מִפַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן הָאֲרַמִּ֖י ל֥וֹ לְאִשָּֽׁה׃ וַיֶּעְתַּ֨ר יִצְחָ֤ק לַֽיהֹוָה֙ לְנֹ֣כַח אִשְׁתּ֔וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא וַיֵּעָ֤תֶר לוֹ֙ יְהֹוָ֔ה וַתַּ֖הַר רִבְקָ֥ה אִשְׁתּֽוֹ׃ וַיִּתְרֹֽצְצ֤וּ הַבָּנִים֙ בְּקִרְבָּ֔הּ וַתֹּ֣אמֶר אִם־כֵּ֔ן לָ֥מָּה זֶּ֖ה אָנֹ֑כִי וַתֵּ֖לֶךְ לִדְרֹ֥שׁ אֶת־יְהֹוָֽה׃
+
+ENGLISH:
+This is the story of Isaac, son of Abraham. Abraham begot Isaac. Isaac was forty years old when he took to wife Rebekah, daughter of Bethuel the Aramean of Paddan-aram, sister of Laban the Aramean. Isaac pleaded with HASHEM on behalf of his wife, because she was barren; and HASHEM responded to his plea, and his wife Rebekah conceived. But the children struggled in her womb, and she said, If so, why do I exist? She went to inquire of HASHEM,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac and Rebekah pray for children",
+    "heb_summary": "יצחק ורבקה מתפללים לה׳ על ילדים",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Aram"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "40",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "isaac's age"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Isaac",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Isaac",
+          "term2": "Hashem"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Hashem"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Bethuel",
+          "term2": "Aram"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Aram"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Paddan-Aram",
+          "term2": "Aram"
+        }
+      ]
+    }
+  }
+}

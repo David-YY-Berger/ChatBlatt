@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Naphtali compared to a hind and fawns",
+        "heb_summary": "נפתלי נמשל לאיילה ולעופרים",
+        "passage_types": [
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Naphtali"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Naphtali"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Hind"
+                },
+                {
+                    "en_name": "Fawn"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Naphtali",
+                    "term2": "Hind"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:21"
+}

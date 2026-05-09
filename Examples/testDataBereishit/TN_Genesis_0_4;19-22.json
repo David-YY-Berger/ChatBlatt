@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Lamech's family: wives, children, their professions.",
+        "heb_summary": "משפחת למך: נשיו, ילדיו, עיסוקיהם.",
+        "passage_types": [
+            "STORY",
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lamech"
+                },
+                {
+                    "en_name": "Adah"
+                },
+                {
+                    "en_name": "Zillah"
+                },
+                {
+                    "en_name": "Jabal"
+                },
+                {
+                    "en_name": "Jubal"
+                },
+                {
+                    "en_name": "Tubal-Cain"
+                },
+                {
+                    "en_name": "Naamah"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jabal",
+                    "term2": "Lamech"
+                },
+                {
+                    "term1": "Jubal",
+                    "term2": "Lamech"
+                },
+                {
+                    "term1": "Tubal-Cain",
+                    "term2": "Lamech"
+                },
+                {
+                    "term1": "Naamah",
+                    "term2": "Lamech"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Jabal",
+                    "term2": "Adah"
+                },
+                {
+                    "term1": "Jubal",
+                    "term2": "Adah"
+                },
+                {
+                    "term1": "Tubal-Cain",
+                    "term2": "Zillah"
+                },
+                {
+                    "term1": "Naamah",
+                    "term2": "Zillah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Lamech",
+                    "term2": "Adah"
+                },
+                {
+                    "term1": "Lamech",
+                    "term2": "Zillah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:19-22"
+}

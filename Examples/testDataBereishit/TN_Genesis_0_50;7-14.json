@@ -1,0 +1,256 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph buries father in Canaan; Egyptians mourn.",
+        "heb_summary": "יוסף קובר אביו בכנען; מצרים מתאבלים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Officials Of Pharaoh"
+                },
+                {
+                    "en_name": "Senior Members Of His Court"
+                },
+                {
+                    "en_name": "Egypt's Dignitaries"
+                },
+                {
+                    "en_name": "Joseph's Household"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Ephron The Hittite"
+                },
+                {
+                    "en_name": "Canaanite Inhabitants"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Goshen"
+                },
+                {
+                    "en_name": "Goren Ha-Atad"
+                },
+                {
+                    "en_name": "Jordan"
+                },
+                {
+                    "en_name": "Abel-Mizraim"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Machpelah"
+                },
+                {
+                    "en_name": "Mamre"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Hittites"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "mourning period"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Flock"
+                },
+                {
+                    "en_name": "Herd"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Officials Of Pharaoh",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Officials Of Pharaoh",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Officials Of Pharaoh",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Officials Of Pharaoh",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Senior Members Of His Court",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Senior Members Of His Court",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Senior Members Of His Court",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Senior Members Of His Court",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Egypt's Dignitaries",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Egypt's Dignitaries",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Egypt's Dignitaries",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Egypt's Dignitaries",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Joseph's Household",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Joseph's Household",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Joseph's Household",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Joseph's Household",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Goren Ha-Atad"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Canaanite Inhabitants",
+                    "term2": "Goren Ha-Atad"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Ephron The Hittite",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Ephron The Hittite",
+                    "term2": "Mamre"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Canaanite Inhabitants",
+                    "term2": "Canaan"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Officials Of Pharaoh"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Senior Members Of His Court"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt's Dignitaries"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's Household"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Brothers"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Goshen",
+                    "term2": "Egypt"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Abel-Mizraim",
+                    "term2": "Goren Ha-Atad"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_50:7-14"
+}

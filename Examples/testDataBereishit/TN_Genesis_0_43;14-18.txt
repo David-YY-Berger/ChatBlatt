@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=9273 approx cost usd = $0.001301 (Prompt=6582, Completion=2691)
+SOURCE:
+Genesis 43:14-18  (TN_Genesis_0_43:14-18)
+
+HEBREW:
+וְאֵ֣ל שַׁדַּ֗י יִתֵּ֨ן לָכֶ֤ם רַחֲמִים֙ לִפְנֵ֣י הָאִ֔ישׁ וְשִׁלַּ֥ח לָכֶ֛ם אֶת־אֲחִיכֶ֥ם אַחֵ֖ר וְאֶת־בִּנְיָמִ֑ין וַאֲנִ֕י כַּאֲשֶׁ֥ר שָׁכֹ֖לְתִּי שָׁכָֽלְתִּי׃ וַיִּקְח֤וּ הָֽאֲנָשִׁים֙ אֶת־הַמִּנְחָ֣ה הַזֹּ֔את וּמִשְׁנֶה־כֶּ֛סֶף לָקְח֥וּ בְיָדָ֖ם וְאֶת־בִּנְיָמִ֑ן וַיָּקֻ֙מוּ֙ וַיֵּרְד֣וּ מִצְרַ֔יִם וַיַּֽעַמְד֖וּ לִפְנֵ֥י יוֹסֵֽף׃ וַיַּ֨רְא יוֹסֵ֣ף אִתָּם֮ אֶת־בִּנְיָמִין֒ וַיֹּ֙אמֶר֙ לַֽאֲשֶׁ֣ר עַל־בֵּית֔וֹ הָבֵ֥א אֶת־הָאֲנָשִׁ֖ים הַבָּ֑יְתָה וּטְבֹ֤חַ טֶ֙בַח֙ וְהָכֵ֔ן כִּ֥י אִתִּ֛י יֹאכְל֥וּ הָאֲנָשִׁ֖ים בַּֽצׇּהֳרָֽיִם׃ וַיַּ֣עַשׂ הָאִ֔ישׁ כַּֽאֲשֶׁ֖ר אָמַ֣ר יוֹסֵ֑ף וַיָּבֵ֥א הָאִ֛ישׁ אֶת־הָאֲנָשִׁ֖ים בֵּ֥יתָה יוֹסֵֽף׃ וַיִּֽירְא֣וּ הָֽאֲנָשִׁ֗ים כִּ֣י הֽוּבְאוּ֮ בֵּ֣ית יוֹסֵף֒ וַיֹּאמְר֗וּ עַל־דְּבַ֤ר הַכֶּ֙סֶף֙ הַשָּׁ֤ב בְּאַמְתְּחֹתֵ֙ינוּ֙ בַּתְּחִלָּ֔ה אֲנַ֖חְנוּ מֽוּבָאִ֑ים לְהִתְגֹּלֵ֤ל עָלֵ֙ינוּ֙ וּלְהִתְנַפֵּ֣ל עָלֵ֔ינוּ וְלָקַ֧חַת אֹתָ֛נוּ לַעֲבָדִ֖ים וְאֶת־חֲמֹרֵֽינוּ׃
+
+ENGLISH:
+And may El Shaddai dispose the man to mercy toward you, that he may release to you your other brother, as well as Benjamin. As for me, if I am to be bereaved, I shall be bereaved. So the agents; Agent. took that gift, and they took with them double the money, as well as Benjamin. They made their way down to Egypt, where they presented themselves to Joseph. When Joseph saw Benjamin with them, he said to his house steward, Take those men. into the house; slaughter and prepare an animal, for those men will dine with me at noon. The man did as Joseph said, and he brought the men into Josephs house. But the men were frightened at being brought into Josephs house. It must be, they thought, because of the money replaced in our bags the first time that we have been brought inside, as a pretext to attack us and seize us as slaves, with our pack animals.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph hosts Benjamin and brothers in Egypt.",
+    "heb_summary": "יוסף מארח בנימין ואחים במצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "El Shaddai"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "House Steward"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Joseph's House"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Money",
+          "unit": "money",
+          "context": "double gift payment"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "House Steward"
+        },
+        {
+          "term1": "El Shaddai",
+          "term2": "Joseph"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Benjamin",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Joseph's House"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Joseph's House"
+        },
+        {
+          "term1": "House Steward",
+          "term2": "Joseph's House"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Joseph's House",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

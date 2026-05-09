@@ -1,0 +1,89 @@
+﻿COST: Tokens: Total=8262 approx cost usd = $0.001013 (Prompt=6512, Completion=1750)
+SOURCE:
+Genesis 19:1-3  (TN_Genesis_0_19:1-3)
+
+HEBREW:
+וַ֠יָּבֹ֠אוּ שְׁנֵ֨י הַמַּלְאָכִ֤ים סְדֹ֙מָה֙ בָּעֶ֔רֶב וְל֖וֹט יֹשֵׁ֣ב בְּשַֽׁעַר־סְדֹ֑ם וַיַּרְא־לוֹט֙ וַיָּ֣קׇם לִקְרָאתָ֔ם וַיִּשְׁתַּ֥חוּ אַפַּ֖יִם אָֽרְצָה׃ וַיֹּ֜אמֶר הִנֶּ֣ה נָּא־אֲדֹנַ֗י ס֣וּרוּ נָ֠א אֶל־בֵּ֨ית עַבְדְּכֶ֤ם וְלִ֙ינוּ֙ וְרַחֲצ֣וּ רַגְלֵיכֶ֔ם וְהִשְׁכַּמְתֶּ֖ם וַהֲלַכְתֶּ֣ם לְדַרְכְּכֶ֑ם וַיֹּאמְר֣וּ לֹּ֔א כִּ֥י בָרְח֖וֹב נָלִֽין׃ וַיִּפְצַר־בָּ֣ם מְאֹ֔ד וַיָּסֻ֣רוּ אֵלָ֔יו וַיָּבֹ֖אוּ אֶל־בֵּית֑וֹ וַיַּ֤עַשׂ לָהֶם֙ מִשְׁתֶּ֔ה וּמַצּ֥וֹת אָפָ֖ה וַיֹּאכֵֽלוּ׃
+
+ENGLISH:
+The two messengers arrived in Sodom in the evening, as Lot was sitting in the gate of Sodom. When Lot saw them, he rose to greet them and, bowing low with his face to the ground, he said, Please, my lords, turn aside to your servants house to spend the night, and bathe your feet; then you may be on your way early. But they said, No, we will spend the night in the square. But he urged them strongly, so they turned his way and entered his house. He prepared a feast for them and baked unleavened bread, and they ate.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Messengers visit Lot in Sodom",
+    "heb_summary": "מלאכים מבקרים את לוט בסדום",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Messengers"
+        },
+        {
+          "en_name": "Lot"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "Gate Of Sodom"
+        },
+        {
+          "en_name": "Lot's House"
+        },
+        {
+          "en_name": "Square"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "messenger",
+          "context": "arrived in sodom"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Unleavened Bread"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Lot",
+          "term2": "Messengers"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Messengers",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Gate Of Sodom"
+        },
+        {
+          "term1": "Messengers",
+          "term2": "Lot's House"
+        },
+        {
+          "term1": "Messengers",
+          "term2": "Square"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Lot",
+          "term2": "Lot's House"
+        }
+      ]
+    }
+  }
+}

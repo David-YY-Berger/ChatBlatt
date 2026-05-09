@@ -1,0 +1,56 @@
+﻿{
+    "res": {
+        "en_summary": "Sarah will have a son next year.",
+        "heb_summary": "שרה תלד בן בשנה הבאה.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "sarah son birth"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Sarah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Sarah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:10-15"
+}

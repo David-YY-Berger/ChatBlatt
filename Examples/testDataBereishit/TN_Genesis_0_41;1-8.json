@@ -1,0 +1,106 @@
+﻿{
+    "res": {
+        "en_summary": "Pharaoh dreams of cows and grain",
+        "heb_summary": "פרעה חולם על פרות ושיבולים",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Magician-Priests Of Egypt"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Nile"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "pharaoh's dream"
+                },
+                {
+                    "en_name": "7",
+                    "number_category": "Misc",
+                    "unit": "cow",
+                    "context": "pharaoh's dream"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Cow"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Grain"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Reed Grass"
+                },
+                {
+                    "en_name": "Stalk"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Magician-Priests Of Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Sages"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Nile"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Magician-Priests Of Egypt",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Magician-Priests Of Egypt",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_41:1-8"
+}

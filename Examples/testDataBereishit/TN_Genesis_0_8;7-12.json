@@ -1,0 +1,58 @@
+﻿{
+    "res": {
+        "en_summary": "Noah sends raven, doves; waters recede.",
+        "heb_summary": "נוח שולח עורב יונה; המים יורדים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Noah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Ark"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "waiting for dove"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Raven"
+                },
+                {
+                    "en_name": "Dove"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Olive"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "Noah",
+                    "term2": "Ark"
+                },
+                {
+                    "term1": "Noah",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_8:7-12"
+}

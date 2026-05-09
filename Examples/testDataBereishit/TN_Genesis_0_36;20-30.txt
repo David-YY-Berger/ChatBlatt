@@ -1,0 +1,354 @@
+﻿COST: Tokens: Total=10563 approx cost usd = $0.001662 (Prompt=6696, Completion=3867)
+SOURCE:
+Genesis 36:20-30  (TN_Genesis_0_36:20-30)
+
+HEBREW:
+אֵ֤לֶּה בְנֵֽי־שֵׂעִיר֙ הַחֹרִ֔י יֹשְׁבֵ֖י הָאָ֑רֶץ לוֹטָ֥ן וְשׁוֹבָ֖ל וְצִבְע֥וֹן וַעֲנָֽה׃ וְדִשׁ֥וֹן וְאֵ֖צֶר וְדִישָׁ֑ן אֵ֣לֶּה אַלּוּפֵ֧י הַחֹרִ֛י בְּנֵ֥י שֵׂעִ֖יר בְּאֶ֥רֶץ אֱדֽוֹם׃ וַיִּהְי֥וּ בְנֵי־לוֹטָ֖ן חֹרִ֣י וְהֵימָ֑ם וַאֲח֥וֹת לוֹטָ֖ן תִּמְנָֽע׃ וְאֵ֙לֶּה֙ בְּנֵ֣י שׁוֹבָ֔ל עַלְוָ֥ן וּמָנַ֖חַת וְעֵיבָ֑ל שְׁפ֖וֹ וְאוֹנָֽם׃ וְאֵ֥לֶּה בְנֵֽי־צִבְע֖וֹן וְאַיָּ֣ה וַעֲנָ֑ה ה֣וּא עֲנָ֗ה אֲשֶׁ֨ר מָצָ֤א אֶת־הַיֵּמִם֙ בַּמִּדְבָּ֔ר בִּרְעֹת֥וֹ אֶת־הַחֲמֹרִ֖ים לְצִבְע֥וֹן אָבִֽיו׃ וְאֵ֥לֶּה בְנֵֽי־עֲנָ֖ה דִּשֹׁ֑ן וְאׇהֳלִיבָמָ֖ה בַּת־עֲנָֽה׃ וְאֵ֖לֶּה בְּנֵ֣י דִישָׁ֑ן חֶמְדָּ֥ן וְאֶשְׁבָּ֖ן וְיִתְרָ֥ן וּכְרָֽן׃ אֵ֖לֶּה בְּנֵי־אֵ֑צֶר בִּלְהָ֥ן וְזַעֲוָ֖ן וַעֲקָֽן׃ אֵ֥לֶּה בְנֵֽי־דִישָׁ֖ן ע֥וּץ וַאֲרָֽן׃ אֵ֖לֶּה אַלּוּפֵ֣י הַחֹרִ֑י אַלּ֤וּף לוֹטָן֙ אַלּ֣וּף שׁוֹבָ֔ל אַלּ֥וּף צִבְע֖וֹן אַלּ֥וּף עֲנָֽה׃ אַלּ֥וּף דִּשֹׁ֛ן אַלּ֥וּף אֵ֖צֶר אַלּ֣וּף דִּישָׁ֑ן אֵ֣לֶּה אַלּוּפֵ֧י הַחֹרִ֛י לְאַלֻּפֵיהֶ֖ם בְּאֶ֥רֶץ שֵׂעִֽיר׃
+
+ENGLISH:
+These were the sons of Seir the Horite, who were settled in the land: Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. Those are the clans of the Horites, the descendants of Seir, in the land of Edom. The sons of Lotan were Hori and Hemam; and Lotans sister was Timna. The sons of Shobal were these: Alvan, Manahath, Ebal, Shepho, and Onam. The sons of Zibeon were these: Aiah and Anah-that was the Anah who discovered the hot springs uncertain. in the wilderness while pasturing the asses of his father Zibeon. The children of Anah were these: Dishon and Anahs daughter Oholibamah. The sons of Dishon; but cf. vv. 21, 25, 28, and 30, and 1 Chron. 1.41. were these: Hemdan, Eshban, Ithran, and Cheran. The sons of Ezer were these: Bilhan, Zaavan, and Akan. And the sons of Dishan were these: Uz and Aran. These are the clans of the Horites: the clans Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. Those are the clans of the Horites, clan by clan, in the land of Seir.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Horite clans and descendants of Seir in Edom.",
+    "heb_summary": "משפחות החורי בזרע שעיר באדום.",
+    "passage_types": [
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Seir"
+        },
+        {
+          "en_name": "Lotan"
+        },
+        {
+          "en_name": "Shobal"
+        },
+        {
+          "en_name": "Zibeon"
+        },
+        {
+          "en_name": "Anah"
+        },
+        {
+          "en_name": "Dishon"
+        },
+        {
+          "en_name": "Ezer"
+        },
+        {
+          "en_name": "Dishan"
+        },
+        {
+          "en_name": "Hori"
+        },
+        {
+          "en_name": "Hemam"
+        },
+        {
+          "en_name": "Timna"
+        },
+        {
+          "en_name": "Alvan"
+        },
+        {
+          "en_name": "Manahath"
+        },
+        {
+          "en_name": "Ebal"
+        },
+        {
+          "en_name": "Shepho"
+        },
+        {
+          "en_name": "Onam"
+        },
+        {
+          "en_name": "Aiah"
+        },
+        {
+          "en_name": "Oholibamah"
+        },
+        {
+          "en_name": "Hemdan"
+        },
+        {
+          "en_name": "Eshban"
+        },
+        {
+          "en_name": "Ithran"
+        },
+        {
+          "en_name": "Cheran"
+        },
+        {
+          "en_name": "Bilhan"
+        },
+        {
+          "en_name": "Zaavan"
+        },
+        {
+          "en_name": "Akan"
+        },
+        {
+          "en_name": "Uz"
+        },
+        {
+          "en_name": "Aran"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Seir"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Hor"
+        },
+        {
+          "en_name": "Edom"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Lotan",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Shobal",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Zibeon",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Anah",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Dishon",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Ezer",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Dishan",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Hori",
+          "term2": "Lotan"
+        },
+        {
+          "term1": "Hemam",
+          "term2": "Lotan"
+        },
+        {
+          "term1": "Alvan",
+          "term2": "Shobal"
+        },
+        {
+          "term1": "Manahath",
+          "term2": "Shobal"
+        },
+        {
+          "term1": "Ebal",
+          "term2": "Shobal"
+        },
+        {
+          "term1": "Shepho",
+          "term2": "Shobal"
+        },
+        {
+          "term1": "Onam",
+          "term2": "Shobal"
+        },
+        {
+          "term1": "Aiah",
+          "term2": "Zibeon"
+        },
+        {
+          "term1": "Anah",
+          "term2": "Zibeon"
+        },
+        {
+          "term1": "Dishon",
+          "term2": "Anah"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Anah"
+        },
+        {
+          "term1": "Hemdan",
+          "term2": "Dishon"
+        },
+        {
+          "term1": "Eshban",
+          "term2": "Dishon"
+        },
+        {
+          "term1": "Ithran",
+          "term2": "Dishon"
+        },
+        {
+          "term1": "Cheran",
+          "term2": "Dishon"
+        },
+        {
+          "term1": "Bilhan",
+          "term2": "Ezer"
+        },
+        {
+          "term1": "Zaavan",
+          "term2": "Ezer"
+        },
+        {
+          "term1": "Akan",
+          "term2": "Ezer"
+        },
+        {
+          "term1": "Uz",
+          "term2": "Dishan"
+        },
+        {
+          "term1": "Aran",
+          "term2": "Dishan"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Seir",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Lotan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Shobal",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Zibeon",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Anah",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Dishon",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Ezer",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Dishan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Hori",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Hemam",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Timna",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Alvan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Manahath",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Ebal",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Shepho",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Onam",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Aiah",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Hemdan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Eshban",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Ithran",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Cheran",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Bilhan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Zaavan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Akan",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Uz",
+          "term2": "Hor"
+        },
+        {
+          "term1": "Aran",
+          "term2": "Hor"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Seir",
+          "term2": "Hor"
+        }
+      ]
+    }
+  }
+}

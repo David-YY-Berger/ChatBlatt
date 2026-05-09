@@ -1,0 +1,43 @@
+﻿{
+    "res": {
+        "en_summary": "God creates sky, separates waters, dry land appears",
+        "heb_summary": "אלוהים ברא רקיע, הפריד מים, יבשה הופיעה",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sky"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Expanse"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "unit": "area",
+                    "context": "water gathered"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Sky"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:6-9"
+}

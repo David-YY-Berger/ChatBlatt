@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=7274 approx cost usd = $0.000719 (Prompt=6503, Completion=771)
+SOURCE:
+Genesis 6:9-13  (TN_Genesis_0_6:9-13)
+
+HEBREW:
+אֵ֚לֶּה תּוֹלְדֹ֣ת נֹ֔חַ נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּדֹֽרֹתָ֑יו אֶת־הָֽאֱלֹהִ֖ים הִֽתְהַלֶּךְ־נֹֽחַ׃ וַיּ֥וֹלֶד נֹ֖חַ שְׁלֹשָׁ֣ה בָנִ֑ים אֶת־שֵׁ֖ם אֶת־חָ֥ם וְאֶת־יָֽפֶת׃ וַתִּשָּׁחֵ֥ת הָאָ֖רֶץ לִפְנֵ֣י הָֽאֱלֹהִ֑ים וַתִּמָּלֵ֥א הָאָ֖רֶץ חָמָֽס׃ וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָאָ֖רֶץ וְהִנֵּ֣ה נִשְׁחָ֑תָה כִּֽי־הִשְׁחִ֧ית כׇּל־בָּשָׂ֛ר אֶת־דַּרְכּ֖וֹ עַל־הָאָֽרֶץ׃ וַיֹּ֨אמֶר אֱלֹהִ֜ים לְנֹ֗חַ קֵ֤ץ כׇּל־בָּשָׂר֙ בָּ֣א לְפָנַ֔י כִּֽי־מָלְאָ֥ה הָאָ֛רֶץ חָמָ֖ס מִפְּנֵיהֶ֑ם וְהִנְנִ֥י מַשְׁחִיתָ֖ם אֶת־הָאָֽרֶץ׃
+
+ENGLISH:
+This is the line of Noah.-Noah was a righteous man; he was blameless in his age; Noah walked with God.- Noah begot three sons: Shem, Ham, and Japheth. The earth became corrupt before God; the earth was filled with lawlessness. When God saw how corrupt the earth was, for all flesh had corrupted its ways on earth, God said to Noah, I have decided to put an end to all flesh, for the earth is filled with lawlessness because of them: I am about to destroy them with the earth.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Noah, sons, God, Earth, corruption",
+    "heb_summary": "נח, בניו, אלוהים, ארץ, שחיתות",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Ham"
+        },
+        {
+          "en_name": "Japheth"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "People",
+          "unit": "son",
+          "context": "noah's children"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Shem",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Ham",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Japheth",
+          "term2": "Noah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Noah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Noah",
+          "term2": "Earth"
+        },
+        {
+          "term1": "God",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+﻿COST: Tokens: Total=7785 approx cost usd = $0.000867 (Prompt=6526, Completion=1259)
+SOURCE:
+Genesis 41:54-57  (TN_Genesis_0_41:54-57)
+
+HEBREW:
+וַתְּחִלֶּ֜ינָה שֶׁ֣בַע שְׁנֵ֤י הָרָעָב֙ לָב֔וֹא כַּאֲשֶׁ֖ר אָמַ֣ר יוֹסֵ֑ף וַיְהִ֤י רָעָב֙ בְּכׇל־הָ֣אֲרָצ֔וֹת וּבְכׇל־אֶ֥רֶץ מִצְרַ֖יִם הָ֥יָה לָֽחֶם׃ וַתִּרְעַב֙ כׇּל־אֶ֣רֶץ מִצְרַ֔יִם וַיִּצְעַ֥ק הָעָ֛ם אֶל־פַּרְעֹ֖ה לַלָּ֑חֶם וַיֹּ֨אמֶר פַּרְעֹ֤ה לְכׇל־מִצְרַ֙יִם֙ לְכ֣וּ אֶל־יוֹסֵ֔ף אֲשֶׁר־יֹאמַ֥ר לָכֶ֖ם תַּעֲשֽׂוּ׃ וְהָרָעָ֣ב הָיָ֔ה עַ֖ל כׇּל־פְּנֵ֣י הָאָ֑רֶץ וַיִּפְתַּ֨ח יוֹסֵ֜ף אֶֽת־כׇּל־אֲשֶׁ֤ר בָּהֶם֙ וַיִּשְׁבֹּ֣ר לְמִצְרַ֔יִם וַיֶּחֱזַ֥ק הָֽרָעָ֖ב בְּאֶ֥רֶץ מִצְרָֽיִם׃ וְכׇל־הָאָ֙רֶץ֙ בָּ֣אוּ מִצְרַ֔יְמָה לִשְׁבֹּ֖ר אֶל־יוֹסֵ֑ף כִּֽי־חָזַ֥ק הָרָעָ֖ב בְּכׇל־הָאָֽרֶץ׃
+
+ENGLISH:
+and the seven years of famine set in, just as Joseph had foretold. There was famine in all lands, but throughout the land of Egypt there was bread. And when all the land of Egypt felt the hunger, the people cried out to Pharaoh for bread; and Pharaoh said to all the Egyptians, Go to Joseph; whatever he tells you, you shall do.- Accordingly, when the famine became severe in the land of Egypt, Joseph laid open all that was within, and rationed out grain to the Egyptians. The famine, however, spread over the whole world. So all the world came to Joseph in Egypt to procure rations, for the famine had become severe throughout the world.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph rations grain during severe famine",
+    "heb_summary": "יוסף מחלק תבואה בזמן רעב קשה",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Egyptians"
+        },
+        {
+          "en_name": "All The World"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "famine years"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Grain"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Egyptians",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Joseph"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "All The World",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "7"
+        }
+      ]
+    }
+  }
+}

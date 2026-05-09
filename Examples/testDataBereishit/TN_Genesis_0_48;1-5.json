@@ -1,0 +1,145 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob blesses Joseph's sons, adopts them.",
+        "heb_summary": "יעקב מברך בני יוסף, מאמץ אותם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "El Shaddai"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Luz"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "joseph's sons"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "El Shaddai",
+                    "term2": "Jacob"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Manasseh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Egypt"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Luz"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "El Shaddai",
+                    "term2": "Luz"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Israel",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_48:1-5"
+}

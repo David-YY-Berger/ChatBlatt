@@ -1,0 +1,81 @@
+﻿COST: Tokens: Total=10559 approx cost usd = $0.001677 (Prompt=6627, Completion=3932)
+SOURCE:
+Genesis 2:2-7  (TN_Genesis_0_2:2-7)
+
+HEBREW:
+וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכׇּל־מְלַאכְתּ֖וֹ אֲשֶׁ֥ר עָשָֽׂה׃ וַיְבָ֤רֶךְ אֱלֹהִים֙ אֶת־י֣וֹם הַשְּׁבִיעִ֔י וַיְקַדֵּ֖שׁ אֹת֑וֹ כִּ֣י ב֤וֹ שָׁבַת֙ מִכׇּל־מְלַאכְתּ֔וֹ אֲשֶׁר־בָּרָ֥א אֱלֹהִ֖ים לַעֲשֽׂוֹת׃ אֵ֣לֶּה תוֹלְד֧וֹת הַשָּׁמַ֛יִם וְהָאָ֖רֶץ בְּהִבָּֽרְאָ֑ם בְּי֗וֹם עֲשׂ֛וֹת יְהֹוָ֥ה אֱלֹהִ֖ים אֶ֥רֶץ וְשָׁמָֽיִם׃ וְכֹ֣ל׀ שִׂ֣יחַ הַשָּׂדֶ֗ה טֶ֚רֶם יִֽהְיֶ֣ה בָאָ֔רֶץ וְכׇל־עֵ֥שֶׂב הַשָּׂדֶ֖ה טֶ֣רֶם יִצְמָ֑ח כִּי֩ לֹ֨א הִמְטִ֜יר יְהֹוָ֤ה אֱלֹהִים֙ עַל־הָאָ֔רֶץ וְאָדָ֣ם אַ֔יִן לַֽעֲבֹ֖ד אֶת־הָֽאֲדָמָֽה׃ וְאֵ֖ד יַֽעֲלֶ֣ה מִן־הָאָ֑רֶץ וְהִשְׁקָ֖ה אֶֽת־כׇּל־פְּנֵ֥י הָֽאֲדָמָֽה׃ וַיִּ֩יצֶר֩ יְהֹוָ֨ה אֱלֹהִ֜ים אֶת־הָֽאָדָ֗ם עָפָר֙ מִן־הָ֣אֲדָמָ֔ה וַיִּפַּ֥ח בְּאַפָּ֖יו נִשְׁמַ֣ת חַיִּ֑ים וַיְהִ֥י הָֽאָדָ֖ם לְנֶ֥פֶשׁ חַיָּֽה׃
+
+ENGLISH:
+On the seventh day God finished the work that had been undertaken: [God] ceased on the seventh day from doing any of the work. And God blessed the seventh day and declared it holy-having ceased on it from all the work of creation that God had done. Such is the story of heaven and earth when they were created. When God HASHEM made earth and heaven- when no shrub of the field was yet on earth and no grasses of the field had yet sprouted, because God HASHEM had not sent rain upon the earth and there were no human beings to till the soil, but a flow would well up from the ground and water the whole surface of the earth- God HASHEM formed the Human; trad. man. In the eyes of ancient Israel, the typical initiator of a lineage was male, and so the first human being would also have been imagined as male. See further the Dictionary under adam . from the soils humus,, rendered to emulate the wordplay with Heb. ha-adam the Human; more precisely, loose dirt from the soil. NJPS dust of the earth. blowing into his nostrils the breath of life: the Human became a living being.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God created earth, heaven, and human",
+    "heb_summary": "אלוהים ברא שמיים, ארץ, ואדם",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Human"
+        },
+        {
+          "en_name": "Ancient Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        },
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Breath Of Life"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Shrub"
+        },
+        {
+          "en_name": "Grass"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "God",
+          "term2": "Earth"
+        },
+        {
+          "term1": "God",
+          "term2": "Heaven"
+        },
+        {
+          "term1": "Human",
+          "term2": "Earth"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Ancient Israel",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

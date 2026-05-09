@@ -1,0 +1,92 @@
+﻿COST: Tokens: Total=7845 approx cost usd = $0.000875 (Prompt=6573, Completion=1272)
+SOURCE:
+Genesis 37:13-19  (TN_Genesis_0_37:13-19)
+
+HEBREW:
+וַיֹּ֨אמֶר יִשְׂרָאֵ֜ל אֶל־יוֹסֵ֗ף הֲל֤וֹא אַחֶ֙יךָ֙ רֹעִ֣ים בִּשְׁכֶ֔ם לְכָ֖ה וְאֶשְׁלָחֲךָ֣ אֲלֵיהֶ֑ם וַיֹּ֥אמֶר ל֖וֹ הִנֵּֽנִי׃ וַיֹּ֣אמֶר ל֗וֹ לֶךְ־נָ֨א רְאֵ֜ה אֶת־שְׁל֤וֹם אַחֶ֙יךָ֙ וְאֶת־שְׁל֣וֹם הַצֹּ֔אן וַהֲשִׁבֵ֖נִי דָּבָ֑ר וַיִּשְׁלָחֵ֙הוּ֙ מֵעֵ֣מֶק חֶבְר֔וֹן וַיָּבֹ֖א שְׁכֶֽמָה׃ וַיִּמְצָאֵ֣הוּ אִ֔ישׁ וְהִנֵּ֥ה תֹעֶ֖ה בַּשָּׂדֶ֑ה וַיִּשְׁאָלֵ֧הוּ הָאִ֛ישׁ לֵאמֹ֖ר מַה־תְּבַקֵּֽשׁ׃ וַיֹּ֕אמֶר אֶת־אַחַ֖י אָנֹכִ֣י מְבַקֵּ֑שׁ הַגִּֽידָה־נָּ֣א לִ֔י אֵיפֹ֖ה הֵ֥ם רֹעִֽים׃ וַיֹּ֤אמֶר הָאִישׁ֙ נָסְע֣וּ מִזֶּ֔ה כִּ֤י שָׁמַ֙עְתִּי֙ אֹֽמְרִ֔ים נֵלְכָ֖ה דֹּתָ֑יְנָה וַיֵּ֤לֶךְ יוֹסֵף֙ אַחַ֣ר אֶחָ֔יו וַיִּמְצָאֵ֖ם בְּדֹתָֽן׃ וַיִּרְא֥וּ אֹת֖וֹ מֵרָחֹ֑ק וּבְטֶ֙רֶם֙ יִקְרַ֣ב אֲלֵיהֶ֔ם וַיִּֽתְנַכְּל֥וּ אֹת֖וֹ לַהֲמִיתֽוֹ׃ וַיֹּאמְר֖וּ אִ֣ישׁ אֶל־אָחִ֑יו הִנֵּ֗ה בַּ֛עַל הַחֲלֹמ֥וֹת הַלָּזֶ֖ה בָּֽא׃
+
+ENGLISH:
+Israel said to Joseph, Your brothers are pasturing at Shechem. Come, I will send you to them. He answered, I am ready. And he said to him, Go and see how your brothers are and how the flocks are faring, and bring me back word. So he sent him from the valley of Hebron. When he reached Shechem, a man came upon him; Agent. wandering in the fields. The man asked him, What are you looking for? He answered, I am looking for my brothers. Could you tell me where they are pasturing? The man said, They have gone from here, for I heard them say: Let us go to Dothan. So Joseph followed his brothers and found them at Dothan. They saw him from afar, and before he came close to them they conspired to kill him. They said to one another, Here comes that dreamer!
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph seeks brothers, finds them, they conspire.",
+    "heb_summary": "יוסף מחפש אחים, מוצא, הם קושרים קשר.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Brothers"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Hebron"
+        },
+        {
+          "en_name": "Dothan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Israel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Israel",
+          "term2": "Joseph"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Joseph",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Dothan"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Dothan"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Israel",
+          "term2": "Hebron"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Brothers",
+          "term2": "Joseph"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+﻿COST: Tokens: Total=8801 approx cost usd = $0.001163 (Prompt=6565, Completion=2236)
+SOURCE:
+Genesis 40:16-22  (TN_Genesis_0_40:16-22)
+
+HEBREW:
+וַיַּ֥רְא שַׂר־הָאֹפִ֖ים כִּ֣י ט֣וֹב פָּתָ֑ר וַיֹּ֙אמֶר֙ אֶל־יוֹסֵ֔ף אַף־אֲנִי֙ בַּחֲלוֹמִ֔י וְהִנֵּ֗ה שְׁלֹשָׁ֛ה סַלֵּ֥י חֹרִ֖י עַל־רֹאשִֽׁי׃ וּבַסַּ֣ל הָֽעֶלְי֗וֹן מִכֹּ֛ל מַאֲכַ֥ל פַּרְעֹ֖ה מַעֲשֵׂ֣ה אֹפֶ֑ה וְהָע֗וֹף אֹכֵ֥ל אֹתָ֛ם מִן־הַסַּ֖ל מֵעַ֥ל רֹאשִֽׁי׃ וַיַּ֤עַן יוֹסֵף֙ וַיֹּ֔אמֶר זֶ֖ה פִּתְרֹנ֑וֹ שְׁלֹ֙שֶׁת֙ הַסַּלִּ֔ים שְׁלֹ֥שֶׁת יָמִ֖ים הֵֽם׃ בְּע֣וֹד׀ שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֨א פַרְעֹ֤ה אֶת־רֹֽאשְׁךָ֙ מֵֽעָלֶ֔יךָ וְתָלָ֥ה אוֹתְךָ֖ עַל־עֵ֑ץ וְאָכַ֥ל הָע֛וֹף אֶת־בְּשָׂרְךָ֖ מֵעָלֶֽיךָ׃ וַיְהִ֣י׀ בַּיּ֣וֹם הַשְּׁלִישִׁ֗י י֚וֹם הֻלֶּ֣דֶת אֶת־פַּרְעֹ֔ה וַיַּ֥עַשׂ מִשְׁתֶּ֖ה לְכׇל־עֲבָדָ֑יו וַיִּשָּׂ֞א אֶת־רֹ֣אשׁ׀ שַׂ֣ר הַמַּשְׁקִ֗ים וְאֶת־רֹ֛אשׁ שַׂ֥ר הָאֹפִ֖ים בְּת֥וֹךְ עֲבָדָֽיו׃ וַיָּ֛שֶׁב אֶת־שַׂ֥ר הַמַּשְׁקִ֖ים עַל־מַשְׁקֵ֑הוּ וַיִּתֵּ֥ן הַכּ֖וֹס עַל־כַּ֥ף פַּרְעֹֽה׃ וְאֵ֛ת שַׂ֥ר הָאֹפִ֖ים תָּלָ֑ה כַּאֲשֶׁ֥ר פָּתַ֛ר לָהֶ֖ם יוֹסֵֽף׃
+
+ENGLISH:
+When the chief baker saw how favorably he had interpreted, he said to Joseph, In my dream, similarly, there were three openwork baskets uncertain. on my head. In the uppermost basket were all kinds of food for Pharaoh that a baker prepares; and the birds were eating it out of the basket above my head. Joseph answered, This is its interpretation: The three baskets are three days. In three days Pharaoh will lift off your head and impale you upon a pole; and the birds will pick off your flesh. On the third day-his birthday-Pharaoh made a banquet for all his officials, and he singled out his chief cupbearer and his chief baker from among his officials. He restored the chief cupbearer to his cupbearing, and he placed the cup in Pharaohs hand; but the chief baker he impaled-just as Joseph had interpreted to them.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph interprets baker's dream; Pharaoh impales baker.",
+    "heb_summary": "יוסף פותר חלום אופה; פרעה תולה אופה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Chief Baker"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Chief Cupbearer"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Basket"
+        },
+        {
+          "en_name": "Pole"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "unit": "basket",
+          "context": "baker's dream"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Bird"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Food"
+        },
+        {
+          "en_name": "Flesh"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Chief Baker",
+          "term2": "Joseph"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Chief Baker"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Chief Cupbearer"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "Chief Baker"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Chief Cupbearer"
+        }
+      ]
+    }
+  }
+}

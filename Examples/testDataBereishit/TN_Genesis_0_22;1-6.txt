@@ -1,0 +1,88 @@
+﻿COST: Tokens: Total=7616 approx cost usd = $0.000804 (Prompt=6582, Completion=1034)
+SOURCE:
+Genesis 22:1-6  (TN_Genesis_0_22:1-6)
+
+HEBREW:
+וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וְהָ֣אֱלֹהִ֔ים נִסָּ֖ה אֶת־אַבְרָהָ֑ם וַיֹּ֣אמֶר אֵלָ֔יו אַבְרָהָ֖ם וַיֹּ֥אמֶר הִנֵּֽנִי׃ וַיֹּ֡אמֶר קַח־נָ֠א אֶת־בִּנְךָ֨ אֶת־יְחִֽידְךָ֤ אֲשֶׁר־אָהַ֙בְתָּ֙ אֶת־יִצְחָ֔ק וְלֶ֨ךְ־לְךָ֔ אֶל־אֶ֖רֶץ הַמֹּרִיָּ֑ה וְהַעֲלֵ֤הוּ שָׁם֙ לְעֹלָ֔ה עַ֚ל אַחַ֣ד הֶֽהָרִ֔ים אֲשֶׁ֖ר אֹמַ֥ר אֵלֶֽיךָ׃ וַיַּשְׁכֵּ֨ם אַבְרָהָ֜ם בַּבֹּ֗קֶר וַֽיַּחֲבֹשׁ֙ אֶת־חֲמֹר֔וֹ וַיִּקַּ֞ח אֶת־שְׁנֵ֤י נְעָרָיו֙ אִתּ֔וֹ וְאֵ֖ת יִצְחָ֣ק בְּנ֑וֹ וַיְבַקַּע֙ עֲצֵ֣י עֹלָ֔ה וַיָּ֣קׇם וַיֵּ֔לֶךְ אֶל־הַמָּק֖וֹם אֲשֶׁר־אָֽמַר־ל֥וֹ הָאֱלֹהִֽים׃ בַּיּ֣וֹם הַשְּׁלִישִׁ֗י וַיִּשָּׂ֨א אַבְרָהָ֧ם אֶת־עֵינָ֛יו וַיַּ֥רְא אֶת־הַמָּק֖וֹם מֵרָחֹֽק׃ וַיֹּ֨אמֶר אַבְרָהָ֜ם אֶל־נְעָרָ֗יו שְׁבוּ־לָכֶ֥ם פֹּה֙ עִֽם־הַחֲמ֔וֹר וַאֲנִ֣י וְהַנַּ֔עַר נֵלְכָ֖ה עַד־כֹּ֑ה וְנִֽשְׁתַּחֲוֶ֖ה וְנָשׁ֥וּבָה אֲלֵיכֶֽם׃ וַיִּקַּ֨ח אַבְרָהָ֜ם אֶת־עֲצֵ֣י הָעֹלָ֗ה וַיָּ֙שֶׂם֙ עַל־יִצְחָ֣ק בְּנ֔וֹ וַיִּקַּ֣ח בְּיָד֔וֹ אֶת־הָאֵ֖שׁ וְאֶת־הַֽמַּאֲכֶ֑לֶת וַיֵּלְכ֥וּ שְׁנֵיהֶ֖ם יַחְדָּֽו׃
+
+ENGLISH:
+Some time afterward, God put Abraham to the test, saying to him, Abraham. He answered, Here I am. Take your son, your favored one, Isaac, whom you love, and go to the land of Moriah, and offer him there as a burnt offering on one of the heights that I will point out to you. So early next morning, Abraham saddled his ass and took with him two of his servants and his son Isaac. He split the wood for the burnt offering, and he set out for the place of which God had told him. On the third day Abraham looked up and saw the place from afar. Then Abraham said to his servants, You stay here with the ass. The boy and I will go up there; we will worship and we will return to you. Abraham took the wood for the burnt offering and put it on his son Isaac. He himself took the firestone and the knife; and the two walked off together.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God tests Abraham, commands Isaac's sacrifice.",
+    "heb_summary": "אלוהים בוחן אברהם, מצווה להקריב יצחק.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Servants"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Moriah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "journey to moriah"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Servants"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Moriah"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Moriah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "God",
+          "term2": "Moriah"
+        }
+      ]
+    }
+  }
+}

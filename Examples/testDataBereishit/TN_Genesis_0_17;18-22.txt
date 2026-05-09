@@ -1,0 +1,88 @@
+﻿COST: Tokens: Total=7521 approx cost usd = $0.000787 (Prompt=6531, Completion=990)
+SOURCE:
+Genesis 17:18-22  (TN_Genesis_0_17:18-22)
+
+HEBREW:
+וַיֹּ֥אמֶר אַבְרָהָ֖ם אֶל־הָֽאֱלֹהִ֑ים ל֥וּ יִשְׁמָעֵ֖אל יִחְיֶ֥ה לְפָנֶֽיךָ׃ וַיֹּ֣אמֶר אֱלֹהִ֗ים אֲבָל֙ שָׂרָ֣ה אִשְׁתְּךָ֗ יֹלֶ֤דֶת לְךָ֙ בֵּ֔ן וְקָרָ֥אתָ אֶת־שְׁמ֖וֹ יִצְחָ֑ק וַהֲקִמֹתִ֨י אֶת־בְּרִיתִ֥י אִתּ֛וֹ לִבְרִ֥ית עוֹלָ֖ם לְזַרְע֥וֹ אַחֲרָֽיו׃ וּֽלְיִשְׁמָעֵאל֮ שְׁמַעְתִּ֒יךָ֒ הִנֵּ֣ה׀ בֵּרַ֣כְתִּי אֹת֗וֹ וְהִפְרֵיתִ֥י אֹת֛וֹ וְהִרְבֵּיתִ֥י אֹת֖וֹ בִּמְאֹ֣ד מְאֹ֑ד שְׁנֵים־עָשָׂ֤ר נְשִׂיאִם֙ יוֹלִ֔יד וּנְתַתִּ֖יו לְג֥וֹי גָּדֽוֹל׃ וְאֶת־בְּרִיתִ֖י אָקִ֣ים אֶת־יִצְחָ֑ק אֲשֶׁר֩ תֵּלֵ֨ד לְךָ֤ שָׂרָה֙ לַמּוֹעֵ֣ד הַזֶּ֔ה בַּשָּׁנָ֖ה הָאַחֶֽרֶת׃ וַיְכַ֖ל לְדַבֵּ֣ר אִתּ֑וֹ וַיַּ֣עַל אֱלֹהִ֔ים מֵעַ֖ל אַבְרָהָֽם׃
+
+ENGLISH:
+And Abraham said to God, O that Ishmael might live by Your favor! God said, Nevertheless, Sarah your wife shall bear you a son, and you shall name him Isaac;, from sahaq , laugh. and I will maintain My covenant with him as an everlasting covenant for his offspring to come. As for Ishmael, I have heeded you., play on Ishmael. I hereby bless him. I will make him fertile and exceedingly numerous. He shall be the father of twelve chieftains, and I will make of him a great nation. But My covenant I will maintain with Isaac, whom Sarah shall bear to you at this season next year. Done speaking with him, God was gone from Abraham.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God promises Isaac, blesses Ishmael",
+    "heb_summary": "אלוהים מבטיח יצחק, מברך ישמעאל",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Isaac"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Covenant"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "People",
+          "unit": "chieftain",
+          "context": "ishmael's descendants"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "isaac's birth"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Ishmael",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Isaac",
+          "term2": "Sarah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

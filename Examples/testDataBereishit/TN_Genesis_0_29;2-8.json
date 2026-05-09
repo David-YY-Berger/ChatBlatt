@@ -1,0 +1,88 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob meets shepherds, asks about Laban and Rachel.",
+        "heb_summary": "יעקב פגש רועים, שאל על לבן ורחל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Shepherds"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Rachel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Haran"
+                },
+                {
+                    "en_name": "Well"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "unit": "flock",
+                    "context": "sheep at well"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Laban",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Shepherds"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Well"
+                },
+                {
+                    "term1": "Shepherds",
+                    "term2": "Well"
+                },
+                {
+                    "term1": "Rachel",
+                    "term2": "Well"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Shepherds",
+                    "term2": "Haran"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_29:2-8"
+}

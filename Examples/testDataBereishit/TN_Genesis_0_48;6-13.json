@@ -1,0 +1,93 @@
+﻿{
+    "res": {
+        "en_summary": "Israel blesses Joseph's sons; Rachel dies.",
+        "heb_summary": "ישראל מברך בני יוסף; רחל מתה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Manasseh"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Paddan"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Ephrath"
+                },
+                {
+                    "en_name": "Bethlehem"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Manasseh"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Joseph"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Bethlehem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Israel",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Bethlehem"
+                },
+                {
+                    "term1": "Rachel",
+                    "term2": "Canaan"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Ephrath",
+                    "term2": "Bethlehem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_48:6-13"
+}

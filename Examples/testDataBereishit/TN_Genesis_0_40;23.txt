@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=6835 approx cost usd = $0.000610 (Prompt=6403, Completion=432)
+SOURCE:
+Genesis 40:23  (TN_Genesis_0_40:23)
+
+HEBREW:
+וְלֹֽא־זָכַ֧ר שַֽׂר־הַמַּשְׁקִ֛ים אֶת־יוֹסֵ֖ף וַיִּשְׁכָּחֵֽהוּ׃
+
+ENGLISH:
+Yet the chief cupbearer did not think of Joseph; he forgot him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Chief cupbearer forgot Joseph",
+    "heb_summary": "שר המשקים שכח את יוסף",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Chief Cupbearer"
+        },
+        {
+          "en_name": "Joseph"
+        }
+      ]
+    }
+  }
+}

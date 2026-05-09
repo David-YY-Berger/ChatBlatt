@@ -1,0 +1,100 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob and Esau reconcile, gifts exchanged.",
+        "heb_summary": "יעקב ועשו מתפייסים, מתנות מוחלפות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Maids"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "400",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "esau's retinue"
+                },
+                {
+                    "en_name": "7",
+                    "number_category": "Misc",
+                    "unit": "time",
+                    "context": "jacob bowed"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Rachel"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Maids"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_33:1-10"
+}

@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Brothers punished for Joseph's anguish, Reuben's warning.",
+        "heb_summary": "אחים נענשים על יוסף, ראובן מזהיר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Night Encampment"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Simeon"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "one of brothers"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Grain"
+                },
+                {
+                    "en_name": "Ration"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Brothers"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Brothers"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Night Encampment"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_42:21-28"
+}

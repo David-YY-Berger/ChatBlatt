@@ -1,0 +1,98 @@
+﻿COST: Tokens: Total=8065 approx cost usd = $0.000934 (Prompt=6603, Completion=1462)
+SOURCE:
+Genesis 29:2-8  (TN_Genesis_0_29:2-8)
+
+HEBREW:
+וַיַּ֞רְא וְהִנֵּ֧ה בְאֵ֣ר בַּשָּׂדֶ֗ה וְהִנֵּה־שָׁ֞ם שְׁלֹשָׁ֤ה עֶדְרֵי־צֹאן֙ רֹבְצִ֣ים עָלֶ֔יהָ כִּ֚י מִן־הַבְּאֵ֣ר הַהִ֔וא יַשְׁק֖וּ הָעֲדָרִ֑ים וְהָאֶ֥בֶן גְּדֹלָ֖ה עַל־פִּ֥י הַבְּאֵֽר׃ וְנֶאֶסְפוּ־שָׁ֣מָּה כׇל־הָעֲדָרִ֗ים וְגָלְל֤וּ אֶת־הָאֶ֙בֶן֙ מֵעַל֙ פִּ֣י הַבְּאֵ֔ר וְהִשְׁק֖וּ אֶת־הַצֹּ֑אן וְהֵשִׁ֧יבוּ אֶת־הָאֶ֛בֶן עַל־פִּ֥י הַבְּאֵ֖ר לִמְקֹמָֽהּ׃ וַיֹּ֤אמֶר לָהֶם֙ יַעֲקֹ֔ב אַחַ֖י מֵאַ֣יִן אַתֶּ֑ם וַיֹּ֣אמְר֔וּ מֵחָרָ֖ן אֲנָֽחְנוּ׃ וַיֹּ֣אמֶר לָהֶ֔ם הַיְדַעְתֶּ֖ם אֶת־לָבָ֣ן בֶּן־נָח֑וֹר וַיֹּאמְר֖וּ יָדָֽעְנוּ׃ וַיֹּ֥אמֶר לָהֶ֖ם הֲשָׁל֣וֹם ל֑וֹ וַיֹּאמְר֣וּ שָׁל֔וֹם וְהִנֵּה֙ רָחֵ֣ל בִּתּ֔וֹ בָּאָ֖ה עִם־הַצֹּֽאן׃ וַיֹּ֗אמֶר הֵ֥ן עוֹד֙ הַיּ֣וֹם גָּד֔וֹל לֹא־עֵ֖ת הֵאָסֵ֣ף הַמִּקְנֶ֑ה הַשְׁק֥וּ הַצֹּ֖אן וּלְכ֥וּ רְעֽוּ׃ וַיֹּאמְרוּ֮ לֹ֣א נוּכַל֒ עַ֣ד אֲשֶׁ֤ר יֵאָֽסְפוּ֙ כׇּל־הָ֣עֲדָרִ֔ים וְגָֽלְלוּ֙ אֶת־הָאֶ֔בֶן מֵעַ֖ל פִּ֣י הַבְּאֵ֑ר וְהִשְׁקִ֖ינוּ הַצֹּֽאן׃
+
+ENGLISH:
+There before his eyes was a well in the open. Three flocks of sheep were lying there beside it, for the flocks were watered from that well. The stone on the mouth of the well was large. When all the flocks were gathered there, the stone would be rolled from the mouth of the well and the sheep watered; then the stone would be put back in its place on the mouth of the well. Jacob said to them, My friends, where are you from? And they said, We are from Haran. He said to them, Do you know Laban the son of Nahor? And they said, Yes, we do. He continued, Is he well? They answered, Yes, he is; and there is his daughter Rachel, coming with the flock. He said, It is still broad daylight, too early to round up the animals; water the flock and take them to pasture. But they said, We cannot, until all the flocks are rounded up; then the stone is rolled off the mouth of the well and we water the sheep.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob meets shepherds, asks about Laban and Rachel.",
+    "heb_summary": "יעקב פגש רועים, שאל על לבן ורחל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Shepherds"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Nahor"
+        },
+        {
+          "en_name": "Rachel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Haran"
+        },
+        {
+          "en_name": "Well"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "unit": "flock",
+          "context": "sheep at well"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Laban",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Shepherds"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Well"
+        },
+        {
+          "term1": "Shepherds",
+          "term2": "Well"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Well"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Shepherds",
+          "term2": "Haran"
+        }
+      ]
+    }
+  }
+}

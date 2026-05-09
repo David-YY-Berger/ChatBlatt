@@ -1,0 +1,128 @@
+﻿COST: Tokens: Total=9607 approx cost usd = $0.001406 (Prompt=6562, Completion=3045)
+SOURCE:
+Genesis 21:27-34  (TN_Genesis_0_21:27-34)
+
+HEBREW:
+וַיִּקַּ֤ח אַבְרָהָם֙ צֹ֣אן וּבָקָ֔ר וַיִּתֵּ֖ן לַאֲבִימֶ֑לֶךְ וַיִּכְרְת֥וּ שְׁנֵיהֶ֖ם בְּרִֽית׃ וַיַּצֵּ֣ב אַבְרָהָ֗ם אֶת־שֶׁ֛בַע כִּבְשֹׂ֥ת הַצֹּ֖אן לְבַדְּהֶֽן׃ וַיֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל־אַבְרָהָ֑ם מָ֣ה הֵ֗נָּה שֶׁ֤בַע כְּבָשֹׂת֙ הָאֵ֔לֶּה אֲשֶׁ֥ר הִצַּ֖בְתָּ לְבַדָּֽנָה׃ וַיֹּ֕אמֶר כִּ֚י אֶת־שֶׁ֣בַע כְּבָשֹׂ֔ת תִּקַּ֖ח מִיָּדִ֑י בַּעֲבוּר֙ תִּֽהְיֶה־לִּ֣י לְעֵדָ֔ה כִּ֥י חָפַ֖רְתִּי אֶת־הַבְּאֵ֥ר הַזֹּֽאת׃ עַל־כֵּ֗ן קָרָ֛א לַמָּק֥וֹם הַה֖וּא בְּאֵ֣ר שָׁ֑בַע כִּ֛י שָׁ֥ם נִשְׁבְּע֖וּ שְׁנֵיהֶֽם׃ וַיִּכְרְת֥וּ בְרִ֖ית בִּבְאֵ֣ר שָׁ֑בַע וַיָּ֣קׇם אֲבִימֶ֗לֶךְ וּפִיכֹל֙ שַׂר־צְבָא֔וֹ וַיָּשֻׁ֖בוּ אֶל־אֶ֥רֶץ פְּלִשְׁתִּֽים׃ וַיִּטַּ֥ע אֶ֖שֶׁל בִּבְאֵ֣ר שָׁ֑בַע וַיִּ֨קְרָא־שָׁ֔ם בְּשֵׁ֥ם יְהֹוָ֖ה אֵ֥ל עוֹלָֽם׃ וַיָּ֧גׇר אַבְרָהָ֛ם בְּאֶ֥רֶץ פְּלִשְׁתִּ֖ים יָמִ֥ים רַבִּֽים׃
+
+ENGLISH:
+Abraham took sheep and oxen and gave them to Abimelech, and the two of them made a pact. Abraham then set seven ewes of the flock by themselves, and Abimelech said to Abraham, What mean these seven ewes which you have set apart? He replied, You are to accept these seven ewes from me as proof that I dug this well. Hence that place was called Beer-sheba, for there the two of them swore an oath. When they had concluded the pact at Beer-sheba, Abimelech and Phicol, chief of his troops, departed and returned to the land of the Philistines. [Abraham] planted a tamarisk at Beer-sheba, and invoked there the name of HASHEM, the Everlasting God. And Abraham resided in the land of the Philistines a long time.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham and Abimelech make pact at Beer-sheba.",
+    "heb_summary": "אברהם ואבימלך כרתו ברית בבאר שבע.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Phicol"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Beer-Sheba"
+        },
+        {
+          "en_name": "Land Of The Philistines"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Philistia"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Sacrifice",
+          "unit": "ewe",
+          "context": "pact offering"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        },
+        {
+          "en_name": "Ox"
+        },
+        {
+          "en_name": "Ewe"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tamarisk"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "Abimelech"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Abimelech",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Phicol",
+          "term2": "Beer-Sheba"
+        },
+        {
+          "term1": "Abimelech",
+          "term2": "Land Of The Philistines"
+        },
+        {
+          "term1": "Phicol",
+          "term2": "Land Of The Philistines"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Abraham",
+          "term2": "Beer-Sheba"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "Land Of The Philistines"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Abimelech"
+        },
+        {
+          "term1": "Abimelech",
+          "term2": "Phicol"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Land Of The Philistines",
+          "term2": "Philistia"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=9243 approx cost usd = $0.001271 (Prompt=6673, Completion=2570)
+SOURCE:
+Genesis 45:1-9  (TN_Genesis_0_45:1-9)
+
+HEBREW:
+וְלֹֽא־יָכֹ֨ל יוֹסֵ֜ף לְהִתְאַפֵּ֗ק לְכֹ֤ל הַנִּצָּבִים֙ עָלָ֔יו וַיִּקְרָ֕א הוֹצִ֥יאוּ כׇל־אִ֖ישׁ מֵעָלָ֑י וְלֹא־עָ֤מַד אִישׁ֙ אִתּ֔וֹ בְּהִתְוַדַּ֥ע יוֹסֵ֖ף אֶל־אֶחָֽיו׃ וַיִּתֵּ֥ן אֶת־קֹל֖וֹ בִּבְכִ֑י וַיִּשְׁמְע֣וּ מִצְרַ֔יִם וַיִּשְׁמַ֖ע בֵּ֥ית פַּרְעֹֽה׃ וַיֹּ֨אמֶר יוֹסֵ֤ף אֶל־אֶחָיו֙ אֲנִ֣י יוֹסֵ֔ף הַע֥וֹד אָבִ֖י חָ֑י וְלֹֽא־יָכְל֤וּ אֶחָיו֙ לַעֲנ֣וֹת אֹת֔וֹ כִּ֥י נִבְהֲל֖וּ מִפָּנָֽיו׃ וַיֹּ֨אמֶר יוֹסֵ֧ף אֶל־אֶחָ֛יו גְּשׁוּ־נָ֥א אֵלַ֖י וַיִּגָּ֑שׁוּ וַיֹּ֗אמֶר אֲנִי֙ יוֹסֵ֣ף אֲחִיכֶ֔ם אֲשֶׁר־מְכַרְתֶּ֥ם אֹתִ֖י מִצְרָֽיְמָה׃ וְעַתָּ֣ה׀ אַל־תֵּעָ֣צְב֗וּ וְאַל־יִ֙חַר֙ בְּעֵ֣ינֵיכֶ֔ם כִּֽי־מְכַרְתֶּ֥ם אֹתִ֖י הֵ֑נָּה כִּ֣י לְמִֽחְיָ֔ה שְׁלָחַ֥נִי אֱלֹהִ֖ים לִפְנֵיכֶֽם׃ כִּי־זֶ֛ה שְׁנָתַ֥יִם הָרָעָ֖ב בְּקֶ֣רֶב הָאָ֑רֶץ וְעוֹד֙ חָמֵ֣שׁ שָׁנִ֔ים אֲשֶׁ֥ר אֵין־חָרִ֖ישׁ וְקָצִֽיר׃ וַיִּשְׁלָחֵ֤נִי אֱלֹהִים֙ לִפְנֵיכֶ֔ם לָשׂ֥וּם לָכֶ֛ם שְׁאֵרִ֖ית בָּאָ֑רֶץ וּלְהַחֲי֣וֹת לָכֶ֔ם לִפְלֵיטָ֖ה גְּדֹלָֽה׃ וְעַתָּ֗ה לֹֽא־אַתֶּ֞ם שְׁלַחְתֶּ֤ם אֹתִי֙ הֵ֔נָּה כִּ֖י הָאֱלֹהִ֑ים וַיְשִׂימֵ֨נִֽי לְאָ֜ב לְפַרְעֹ֗ה וּלְאָדוֹן֙ לְכׇל־בֵּית֔וֹ וּמֹשֵׁ֖ל בְּכׇל־אֶ֥רֶץ מִצְרָֽיִם׃ מַהֲרוּ֮ וַעֲל֣וּ אֶל־אָבִי֒ וַאֲמַרְתֶּ֣ם אֵלָ֗יו כֹּ֤ה אָמַר֙ בִּנְךָ֣ יוֹסֵ֔ף שָׂמַ֧נִי אֱלֹהִ֛ים לְאָד֖וֹן לְכׇל־מִצְרָ֑יִם רְדָ֥ה אֵלַ֖י אַֽל־תַּעֲמֹֽד׃
+
+ENGLISH:
+Joseph could no longer control himself before all his attendants, and he cried out, Have everyone withdraw from me! So there was no one else about when Joseph made himself known to his brothers. His sobs were so loud that the Egyptians could hear, and so the news reached Pharaohs palace. Joseph said to his brothers, I am Joseph. Is my father still well? But his brothers could not answer him, so dumbfounded were they on account of him. Then Joseph said to his brothers, Come forward to me. And when they came forward, he said, I am your brother Joseph, he whom you sold into Egypt. Now, do not be distressed or reproach yourselves because you sold me hither; it was to save life that God sent me ahead of you. It is now two years that there has been famine in the land, and there are still five years to come in which there shall be no yield from tilling. God has sent me ahead of you to ensure your survival on earth, and to save your lives in an extraordinary deliverance. So, it was not you who sent me here, but God-who has made me a father to Pharaoh,. lord of all his household, and ruler over the whole land of Egypt. Now, hurry back to my father and say to him: Thus says your son Joseph, God has made me lord of all Egypt; come down to me without delay.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph reveals identity to brothers in Egypt",
+    "heb_summary": "יוסף מתגלה לאחיו במצרים",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Attendants"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Father"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Pharaoh's Palace"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "famine duration"
+        },
+        {
+          "en_name": "5",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "famine remaining"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Father"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Brothers"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh's Palace"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Pharaoh's Palace",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

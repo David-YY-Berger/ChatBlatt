@@ -1,0 +1,101 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham died at 175, buried with Sarah.",
+        "heb_summary": "אברהם נפטר בגיל 175, נקבר עם שרה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Ephron"
+                },
+                {
+                    "en_name": "Zohar"
+                },
+                {
+                    "en_name": "Sarah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Machpelah"
+                },
+                {
+                    "en_name": "Mamre"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hittites"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "175",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abraham's lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Ephron",
+                    "term2": "Zohar"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Sarah",
+                    "term2": "Machpelah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Ishmael",
+                    "term2": "Machpelah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Ephron",
+                    "term2": "Machpelah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:7-10"
+}

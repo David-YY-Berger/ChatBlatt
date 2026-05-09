@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=7243 approx cost usd = $0.000725 (Prompt=6436, Completion=807)
+SOURCE:
+Genesis 49:14-15  (TN_Genesis_0_49:14-15)
+
+HEBREW:
+יִשָּׂשכָ֖ר חֲמֹ֣ר גָּ֑רֶם רֹבֵ֖ץ בֵּ֥ין הַֽמִּשְׁפְּתָֽיִם׃ וַיַּ֤רְא מְנֻחָה֙ כִּ֣י ט֔וֹב וְאֶת־הָאָ֖רֶץ כִּ֣י נָעֵ֑מָה וַיֵּ֤ט שִׁכְמוֹ֙ לִסְבֹּ֔ל וַיְהִ֖י לְמַס־עֹבֵֽד׃
+
+ENGLISH:
+Issachar is a strong-boned ass, Crouching among the sheepfolds. When he saw how good was security, And how pleasant was the country, He bent his shoulder to the burden, And became a toiling serf.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Issachar compared to a strong, burdened ass.",
+    "heb_summary": "יששכר נמשל לחמור חזק ועמל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Issachar"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Issachar"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        },
+        {
+          "en_name": "Sheep"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Issachar",
+          "term2": "Ass"
+        }
+      ]
+    }
+  }
+}

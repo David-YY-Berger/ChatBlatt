@@ -1,0 +1,185 @@
+﻿{
+    "res": {
+        "en_summary": "Abram rescues Lot, defeats kings, meets Melchizedek.",
+        "heb_summary": "אברם מציל את לוט, מנצח מלכים, פוגש מלכיצדק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Chedorlaomer"
+                },
+                {
+                    "en_name": "King Of Sodom"
+                },
+                {
+                    "en_name": "Melchizedek"
+                },
+                {
+                    "en_name": "Eshkol"
+                },
+                {
+                    "en_name": "Aner"
+                },
+                {
+                    "en_name": "Mamre"
+                },
+                {
+                    "en_name": "God Most High"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Hobah"
+                },
+                {
+                    "en_name": "Damascus"
+                },
+                {
+                    "en_name": "Valley Of Shaveh"
+                },
+                {
+                    "en_name": "Valley Of The King"
+                },
+                {
+                    "en_name": "Salem"
+                },
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Amorite"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "318",
+                    "number_category": "People",
+                    "unit": "man",
+                    "context": "abrams retainers"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Misc",
+                    "unit": "percent",
+                    "context": "abram gave tithe"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Wine"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Terebinth"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Melchizedek",
+                    "term2": "Abram"
+                },
+                {
+                    "term1": "King Of Sodom",
+                    "term2": "Abram"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Dan"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Hobah"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Damascus"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Valley Of Shaveh"
+                },
+                {
+                    "term1": "King Of Sodom",
+                    "term2": "Valley Of Shaveh"
+                },
+                {
+                    "term1": "Melchizedek",
+                    "term2": "Valley Of Shaveh"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "Sodom"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Mamre",
+                    "term2": "Amorite"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Chedorlaomer"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Eshkol"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Aner"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Mamre"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God Most High"
+                },
+                {
+                    "term1": "Valley Of The King",
+                    "term2": "Valley Of Shaveh"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_14:12-24"
+}

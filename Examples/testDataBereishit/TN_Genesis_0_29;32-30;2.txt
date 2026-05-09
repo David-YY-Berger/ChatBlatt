@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=7763 approx cost usd = $0.000839 (Prompt=6620, Completion=1143)
+SOURCE:
+Genesis 29:32-30:2  (TN_Genesis_0_29:32-30:2)
+
+HEBREW:
+וַתַּ֤הַר לֵאָה֙ וַתֵּ֣לֶד בֵּ֔ן וַתִּקְרָ֥א שְׁמ֖וֹ רְאוּבֵ֑ן כִּ֣י אָֽמְרָ֗ה כִּֽי־רָאָ֤ה יְהֹוָה֙ בְּעׇנְיִ֔י כִּ֥י עַתָּ֖ה יֶאֱהָבַ֥נִי אִישִֽׁי׃ וַתַּ֣הַר עוֹד֮ וַתֵּ֣לֶד בֵּן֒ וַתֹּ֗אמֶר כִּֽי־שָׁמַ֤ע יְהֹוָה֙ כִּֽי־שְׂנוּאָ֣ה אָנֹ֔כִי וַיִּתֶּן־לִ֖י גַּם־אֶת־זֶ֑ה וַתִּקְרָ֥א שְׁמ֖וֹ שִׁמְעֽוֹן׃ וַתַּ֣הַר עוֹד֮ וַתֵּ֣לֶד בֵּן֒ וַתֹּ֗אמֶר עַתָּ֤ה הַפַּ֙עַם֙ יִלָּוֶ֤ה אִישִׁי֙ אֵלַ֔י כִּֽי־יָלַ֥דְתִּי ל֖וֹ שְׁלֹשָׁ֣ה בָנִ֑ים עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ לֵוִֽי׃ וַתַּ֨הַר ע֜וֹד וַתֵּ֣לֶד בֵּ֗ן וַתֹּ֙אמֶר֙ הַפַּ֙עַם֙ אוֹדֶ֣ה אֶת־יְהֹוָ֔ה עַל־כֵּ֛ן קָרְאָ֥ה שְׁמ֖וֹ יְהוּדָ֑ה וַֽתַּעֲמֹ֖ד מִלֶּֽדֶת׃וַתֵּ֣רֶא רָחֵ֗ל כִּ֣י לֹ֤א יָֽלְדָה֙ לְיַעֲקֹ֔ב וַתְּקַנֵּ֥א רָחֵ֖ל בַּאֲחֹתָ֑הּ וַתֹּ֤אמֶר אֶֽל־יַעֲקֹב֙ הָֽבָה־לִּ֣י בָנִ֔ים וְאִם־אַ֖יִן מֵתָ֥ה אָנֹֽכִי׃ וַיִּֽחַר־אַ֥ף יַעֲקֹ֖ב בְּרָחֵ֑ל וַיֹּ֗אמֶר הֲתַ֤חַת אֱלֹהִים֙ אָנֹ֔כִי אֲשֶׁר־מָנַ֥ע מִמֵּ֖ךְ פְּרִי־בָֽטֶן׃
+
+ENGLISH:
+Leah conceived and bore a son, and named him Reuben; for she declared, It means: HASHEM has seen, connected with the first part of Reuben. my affliction; it also means: Now my husband will love me., connected with the end of Reuben. She conceived again and bore a son, and declared, This is because HASHEM heard, connected with Simeon. that I was unloved and has given me this one also; so she named him Simeon. Again she conceived and bore a son and declared, This time my husband will become attached, connected with Levi. to me, for I have borne him three sons. Therefore he was named Levi. She conceived again and bore a son, and declared, This time I will praise, connected with Judah. HASHEM. Therefore she named him Judah. Then she stopped bearing.When Rachel saw that she had borne Jacob no children, she became envious of her sister; and Rachel said to Jacob, Give me children, or I shall die. Jacob was incensed at Rachel, and said, Can I take the place of God, who has denied you fruit of the womb?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Leah bore Reuben, Simeon, Levi, Judah. Rachel envied.",
+    "heb_summary": "לאה ילדה ראובן, שמעון, לוי, יהודה. רחל קינאה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "People",
+          "unit": "son",
+          "context": "leah sons to levi"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfMother": [
+        {
+          "term1": "Reuben",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Levi",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Leah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Leah",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rachel",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

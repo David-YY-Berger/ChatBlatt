@@ -1,0 +1,76 @@
+﻿COST: Tokens: Total=7395 approx cost usd = $0.000750 (Prompt=6527, Completion=868)
+SOURCE:
+Genesis 17:23-27  (TN_Genesis_0_17:23-27)
+
+HEBREW:
+וַיִּקַּ֨ח אַבְרָהָ֜ם אֶת־יִשְׁמָעֵ֣אל בְּנ֗וֹ וְאֵ֨ת כׇּל־יְלִידֵ֤י בֵיתוֹ֙ וְאֵת֙ כׇּל־מִקְנַ֣ת כַּסְפּ֔וֹ כׇּל־זָכָ֕ר בְּאַנְשֵׁ֖י בֵּ֣ית אַבְרָהָ֑ם וַיָּ֜מׇל אֶת־בְּשַׂ֣ר עׇרְלָתָ֗ם בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה כַּאֲשֶׁ֛ר דִּבֶּ֥ר אִתּ֖וֹ אֱלֹהִֽים׃ וְאַ֨בְרָהָ֔ם בֶּן־תִּשְׁעִ֥ים וָתֵ֖שַׁע שָׁנָ֑ה בְּהִמֹּל֖וֹ בְּשַׂ֥ר עׇרְלָתֽוֹ׃ וְיִשְׁמָעֵ֣אל בְּנ֔וֹ בֶּן־שְׁלֹ֥שׁ עֶשְׂרֵ֖ה שָׁנָ֑ה בְּהִ֨מֹּל֔וֹ אֵ֖ת בְּשַׂ֥ר עׇרְלָתֽוֹ׃ בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה נִמּ֖וֹל אַבְרָהָ֑ם וְיִשְׁמָעֵ֖אל בְּנֽוֹ׃ וְכׇל־אַנְשֵׁ֤י בֵיתוֹ֙ יְלִ֣יד בָּ֔יִת וּמִקְנַת־כֶּ֖סֶף מֵאֵ֣ת בֶּן־נֵכָ֑ר נִמֹּ֖לוּ אִתּֽוֹ׃
+
+ENGLISH:
+Then Abraham took his son Ishmael, and all his homeborn slaves and all those he had bought, every male in Abrahams household, and he circumcised the flesh of their foreskins on that very day, as God had spoken to him. Abraham was ninety-nine years old when he circumcised the flesh of his foreskin, and his son Ishmael was thirteen years old when he was circumcised in the flesh of his foreskin. Thus Abraham and his son Ishmael were circumcised on that very day; and all [men of] his household, his homeborn slaves and those that had been bought from outsiders, were circumcised with him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham circumcises himself, Ishmael, and household",
+    "heb_summary": "אברהם מל את עצמו, ישמעאל וביתו",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Homeborn Slaves"
+        },
+        {
+          "en_name": "Those He Had Bought"
+        },
+        {
+          "en_name": "Every Male In Abrahams Household"
+        },
+        {
+          "en_name": "Men Of His Household"
+        },
+        {
+          "en_name": "Outsiders"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "99",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abraham age"
+        },
+        {
+          "en_name": "13",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "ishmael age"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Ishmael",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

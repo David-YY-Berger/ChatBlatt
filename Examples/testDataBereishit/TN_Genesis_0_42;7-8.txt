@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=7287 approx cost usd = $0.000735 (Prompt=6449, Completion=838)
+SOURCE:
+Genesis 42:7-8  (TN_Genesis_0_42:7-8)
+
+HEBREW:
+וַיַּ֥רְא יוֹסֵ֛ף אֶת־אֶחָ֖יו וַיַּכִּרֵ֑ם וַיִּתְנַכֵּ֨ר אֲלֵיהֶ֜ם וַיְדַבֵּ֧ר אִתָּ֣ם קָשׁ֗וֹת וַיֹּ֤אמֶר אֲלֵהֶם֙ מֵאַ֣יִן בָּאתֶ֔ם וַיֹּ֣אמְר֔וּ מֵאֶ֥רֶץ כְּנַ֖עַן לִשְׁבׇּר־אֹֽכֶל׃ וַיַּכֵּ֥ר יוֹסֵ֖ף אֶת־אֶחָ֑יו וְהֵ֖ם לֹ֥א הִכִּרֻֽהוּ׃
+
+ENGLISH:
+When Joseph saw his brothers, he recognized them; but he acted like a stranger toward them and spoke harshly to them. He asked them, Where do you come from? And they said, From the land of Canaan, to procure food. For though Joseph recognized his brothers, they did not recognize him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph recognized his brothers; they didn't recognize him.",
+    "heb_summary": "יוסף זיהה את אחיו; הם לא זיהו אותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Joseph's Brothers"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Joseph's Brothers"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

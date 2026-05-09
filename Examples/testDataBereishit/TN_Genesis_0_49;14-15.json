@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Issachar compared to a strong, burdened ass.",
+        "heb_summary": "יששכר נמשל לחמור חזק ועמל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Issachar"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Issachar"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                },
+                {
+                    "en_name": "Sheep"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Issachar",
+                    "term2": "Ass"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:14-15"
+}

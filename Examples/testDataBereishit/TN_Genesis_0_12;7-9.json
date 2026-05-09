@@ -1,0 +1,63 @@
+﻿{
+    "res": {
+        "en_summary": "HASHEM appeared to Abram, promised land, Abram built altars.",
+        "heb_summary": "ה' נגלה לאברם, הבטיח ארץ, אברם בנה מזבחות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abram"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Ai"
+                },
+                {
+                    "en_name": "Negeb"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abram"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Ai"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Negeb"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Abram",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Ai"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_12:7-9"
+}

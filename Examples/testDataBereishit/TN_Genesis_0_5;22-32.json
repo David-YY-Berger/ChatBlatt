@@ -1,0 +1,126 @@
+﻿{
+    "res": {
+        "en_summary": "Generations of Enoch, Methuselah, Lamech, Noah.",
+        "heb_summary": "דורות חנוך, מתושלח, למך, נח.",
+        "passage_types": [
+            "STORY",
+            "GENEALOGY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Enoch"
+                },
+                {
+                    "en_name": "Methuselah"
+                },
+                {
+                    "en_name": "Lamech"
+                },
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Ham"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "300",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enoch walked with god"
+                },
+                {
+                    "en_name": "365",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "enoch lifespan"
+                },
+                {
+                    "en_name": "187",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "methuselah lived before lamech"
+                },
+                {
+                    "en_name": "782",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "methuselah lived after lamech"
+                },
+                {
+                    "en_name": "969",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "methuselah lifespan"
+                },
+                {
+                    "en_name": "182",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "lamech lived before noah"
+                },
+                {
+                    "en_name": "595",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "lamech lived after noah"
+                },
+                {
+                    "en_name": "777",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "lamech lifespan"
+                },
+                {
+                    "en_name": "500",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "noah lived before sons"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Methuselah",
+                    "term2": "Enoch"
+                },
+                {
+                    "term1": "Lamech",
+                    "term2": "Methuselah"
+                },
+                {
+                    "term1": "Noah",
+                    "term2": "Lamech"
+                },
+                {
+                    "term1": "Shem",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Noah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_5:22-32"
+}

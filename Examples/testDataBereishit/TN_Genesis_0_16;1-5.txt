@@ -1,0 +1,88 @@
+﻿COST: Tokens: Total=7454 approx cost usd = $0.000755 (Prompt=6583, Completion=871)
+SOURCE:
+Genesis 16:1-5  (TN_Genesis_0_16:1-5)
+
+HEBREW:
+וְשָׂרַי֙ אֵ֣שֶׁת אַבְרָ֔ם לֹ֥א יָלְדָ֖ה ל֑וֹ וְלָ֛הּ שִׁפְחָ֥ה מִצְרִ֖ית וּשְׁמָ֥הּ הָגָֽר׃ וַתֹּ֨אמֶר שָׂרַ֜י אֶל־אַבְרָ֗ם הִנֵּה־נָ֞א עֲצָרַ֤נִי יְהֹוָה֙ מִלֶּ֔דֶת בֹּא־נָא֙ אֶל־שִׁפְחָתִ֔י אוּלַ֥י אִבָּנֶ֖ה מִמֶּ֑נָּה וַיִּשְׁמַ֥ע אַבְרָ֖ם לְק֥וֹל שָׂרָֽי׃ וַתִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת־אַבְרָ֗ם אֶת־הָגָ֤ר הַמִּצְרִית֙ שִׁפְחָתָ֔הּ מִקֵּץ֙ עֶ֣שֶׂר שָׁנִ֔ים לְשֶׁ֥בֶת אַבְרָ֖ם בְּאֶ֣רֶץ כְּנָ֑עַן וַתִּתֵּ֥ן אֹתָ֛הּ לְאַבְרָ֥ם אִישָׁ֖הּ ל֥וֹ לְאִשָּֽׁה׃ וַיָּבֹ֥א אֶל־הָגָ֖ר וַתַּ֑הַר וַתֵּ֙רֶא֙ כִּ֣י הָרָ֔תָה וַתֵּקַ֥ל גְּבִרְתָּ֖הּ בְּעֵינֶֽיהָ׃ וַתֹּ֨אמֶר שָׂרַ֣י אֶל־אַבְרָם֮ חֲמָסִ֣י עָלֶ֒יךָ֒ אָנֹכִ֗י נָתַ֤תִּי שִׁפְחָתִי֙ בְּחֵיקֶ֔ךָ וַתֵּ֙רֶא֙ כִּ֣י הָרָ֔תָה וָאֵקַ֖ל בְּעֵינֶ֑יהָ יִשְׁפֹּ֥ט יְהֹוָ֖ה בֵּינִ֥י וּבֵינֶֽיׄךָ׃
+
+ENGLISH:
+Sarai, Abrams wife, had borne him no children. She had an Egyptian maidservant whose name was Hagar. And Sarai said to Abram, Look, HASHEM has kept me from bearing. Consort with my maid; perhaps I shall have a child child and banah build up. See the Dictionary under ben . through her. And Abram heeded Sarais request. So Sarai, Abrams wife, took her maid, Hagar the Egyptian-after Abram had dwelt in the land of Canaan ten years-and gave her to her husband Abram as concubine. He cohabited with Hagar and she conceived; and when she saw that she had conceived, her mistress was lowered in her esteem. And Sarai said to Abram, The wrong done me is your fault! I myself put my maid in your bosom; now that she sees that she is pregnant, I am lowered in her esteem. HASHEM decide between you and me!
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Sarai, Abram, Hagar, and Canaan story.",
+    "heb_summary": "שרה, אברם, הגר, וארץ כנען.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Hagar"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abram dwelt in canaan"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Sarai",
+          "term2": "Abram"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sarai",
+          "term2": "Abram"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abram",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Canaan"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Hagar",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

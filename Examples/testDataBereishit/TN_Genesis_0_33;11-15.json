@@ -1,0 +1,61 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob and Esau discuss travel arrangements.",
+        "heb_summary": "יעקב ועשו דנים בסידורי נסיעה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Seir"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "travel duration"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Flock"
+                },
+                {
+                    "en_name": "Herd"
+                },
+                {
+                    "en_name": "Cattle"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Seir"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_33:11-15"
+}

@@ -1,0 +1,97 @@
+﻿COST: Tokens: Total=7801 approx cost usd = $0.000858 (Prompt=6588, Completion=1213)
+SOURCE:
+Genesis 40:9-15  (TN_Genesis_0_40:9-15)
+
+HEBREW:
+וַיְסַפֵּ֧ר שַֽׂר־הַמַּשְׁקִ֛ים אֶת־חֲלֹמ֖וֹ לְיוֹסֵ֑ף וַיֹּ֣אמֶר ל֔וֹ בַּחֲלוֹמִ֕י וְהִנֵּה־גֶ֖פֶן לְפָנָֽי׃ וּבַגֶּ֖פֶן שְׁלֹשָׁ֣ה שָׂרִיגִ֑ם וְהִ֤וא כְפֹרַ֙חַת֙ עָלְתָ֣ה נִצָּ֔הּ הִבְשִׁ֥ילוּ אַשְׁכְּלֹתֶ֖יהָ עֲנָבִֽים׃ וְכ֥וֹס פַּרְעֹ֖ה בְּיָדִ֑י וָאֶקַּ֣ח אֶת־הָֽעֲנָבִ֗ים וָֽאֶשְׂחַ֤ט אֹתָם֙ אֶל־כּ֣וֹס פַּרְעֹ֔ה וָאֶתֵּ֥ן אֶת־הַכּ֖וֹס עַל־כַּ֥ף פַּרְעֹֽה׃ וַיֹּ֤אמֶר לוֹ֙ יוֹסֵ֔ף זֶ֖ה פִּתְרֹנ֑וֹ שְׁלֹ֙שֶׁת֙ הַשָּׂ֣רִגִ֔ים שְׁלֹ֥שֶׁת יָמִ֖ים הֵֽם׃ בְּע֣וֹד׀ שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֤א פַרְעֹה֙ אֶת־רֹאשֶׁ֔ךָ וַהֲשִֽׁיבְךָ֖ עַל־כַּנֶּ֑ךָ וְנָתַתָּ֤ כוֹס־פַּרְעֹה֙ בְּיָד֔וֹ כַּמִּשְׁפָּט֙ הָֽרִאשׁ֔וֹן אֲשֶׁ֥ר הָיִ֖יתָ מַשְׁקֵֽהוּ׃ כִּ֧י אִם־זְכַרְתַּ֣נִי אִתְּךָ֗ כַּאֲשֶׁר֙ יִ֣יטַב לָ֔ךְ וְעָשִֽׂיתָ־נָּ֥א עִמָּדִ֖י חָ֑סֶד וְהִזְכַּרְתַּ֙נִי֙ אֶל־פַּרְעֹ֔ה וְהוֹצֵאתַ֖נִי מִן־הַבַּ֥יִת הַזֶּֽה׃ כִּֽי־גֻנֹּ֣ב גֻּנַּ֔בְתִּי מֵאֶ֖רֶץ הָעִבְרִ֑ים וְגַם־פֹּה֙ לֹא־עָשִׂ֣יתִֽי מְא֔וּמָה כִּֽי־שָׂמ֥וּ אֹתִ֖י בַּבּֽוֹר׃
+
+ENGLISH:
+Then the chief cupbearer told his dream to Joseph. He said to him, In my dream, there was a vine in front of me. On the vine were three branches. It had barely budded, when out came its blossoms and its clusters ripened into grapes. Pharaohs cup was in my hand, and I took the grapes, pressed them into Pharaohs cup, and placed the cup in Pharaohs hand. Joseph said to him, This is its interpretation: The three branches are three days. In three days Pharaoh will pardon you and restore you to your post; you will place Pharaohs cup in his hand, as was your custom formerly when you were his cupbearer. But think of me when all is well with you again, and do me the kindness of mentioning me to Pharaoh, so as to free me from this place. For in truth, I was kidnapped from the land of the Hebrews; nor have I done anything here that they should have put me in the dungeon.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph interprets cupbearer's dream, predicts release.",
+    "heb_summary": "יוסף פותר חלום שר המשקים, מנבא שחרור.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Chief Cupbearer"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Land Of The Hebrews"
+        },
+        {
+          "en_name": "Dungeon"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Hebrews"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "unit": "branch",
+          "context": "dream interpretation"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Grape"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Vine"
+        },
+        {
+          "en_name": "Grape"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Chief Cupbearer",
+          "term2": "Joseph"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Dungeon"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Land Of The Hebrews"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Hebrews"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "Chief Cupbearer"
+        }
+      ]
+    }
+  }
+}

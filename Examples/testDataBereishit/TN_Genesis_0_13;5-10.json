@@ -1,0 +1,87 @@
+﻿{
+    "res": {
+        "en_summary": "Abram and Lot separate, Lot chooses Jordan.",
+        "heb_summary": "אברם ולוט נפרדים, לוט בוחר בירדן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Abram"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jordan"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                },
+                {
+                    "en_name": "Zoar"
+                },
+                {
+                    "en_name": "Garden Of Hashem"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Perizzites"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "Lot"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Lot",
+                    "term2": "Jordan"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Gomorrah"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Zoar"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Jordan",
+                    "term2": "Garden Of Hashem"
+                },
+                {
+                    "term1": "Jordan",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_13:5-10"
+}

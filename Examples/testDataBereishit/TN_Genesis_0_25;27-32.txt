@@ -1,0 +1,95 @@
+﻿COST: Tokens: Total=7935 approx cost usd = $0.000906 (Prompt=6552, Completion=1383)
+SOURCE:
+Genesis 25:27-32  (TN_Genesis_0_25:27-32)
+
+HEBREW:
+וַֽיִּגְדְּלוּ֙ הַנְּעָרִ֔ים וַיְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ שָׂדֶ֑ה וְיַעֲקֹב֙ אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים׃ וַיֶּאֱהַ֥ב יִצְחָ֛ק אֶת־עֵשָׂ֖ו כִּי־צַ֣יִד בְּפִ֑יו וְרִבְקָ֖ה אֹהֶ֥בֶת אֶֽת־יַעֲקֹֽב׃ וַיָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַיָּבֹ֥א עֵשָׂ֛ו מִן־הַשָּׂדֶ֖ה וְה֥וּא עָיֵֽף׃ וַיֹּ֨אמֶר עֵשָׂ֜ו אֶֽל־יַעֲקֹ֗ב הַלְעִיטֵ֤נִי נָא֙ מִן־הָאָדֹ֤ם הָאָדֹם֙ הַזֶּ֔ה כִּ֥י עָיֵ֖ף אָנֹ֑כִי עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ אֱדֽוֹם׃ וַיֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹרָתְךָ֖ לִֽי׃ וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת וְלָמָּה־זֶּ֥ה לִ֖י בְּכֹרָֽה׃
+
+ENGLISH:
+When the boys grew up, Esau became a skillful hunter, a man of the outdoors; but Jacob became a mild man, raising livestock.; NJPS who stayed in camp, lit. a sitter in tents. The idiom for a pastoralist; cf. 4.20. Isaac favored Esau because he had a taste for game; but Rebekah favored Jacob. Once when Jacob was cooking a stew, Esau came in from the open, famished. And Esau said to Jacob, Give me some of that red stuff to gulp down, for I am famished-which is why he was named Edom. red. Jacob said, First sell me your birthright. And Esau said, I am at the point of death, so of what use is my birthright to me?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Esau sells birthright to Jacob for stew.",
+    "heb_summary": "עשיו מוכר בכורה ליעקב תמורת נזיד.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Rebekah"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Edom"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Stew"
+        },
+        {
+          "en_name": "Game"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Esau",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rebekah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Isaac",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Esau",
+          "term2": "Edom"
+        }
+      ]
+    }
+  }
+}

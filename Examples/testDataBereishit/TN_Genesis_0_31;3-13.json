@@ -1,0 +1,99 @@
+﻿{
+    "res": {
+        "en_summary": "God speaks to Jacob, discusses Laban.",
+        "heb_summary": "אלוהים מדבר עם יעקב על לבן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Messenger Of God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Field"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Pillar"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "He-Goat"
+                },
+                {
+                    "en_name": "Flock"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Laban"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Messenger Of God",
+                    "term2": "Jacob"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bethel"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Field"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Bethel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:3-13"
+}

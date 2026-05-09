@@ -1,0 +1,102 @@
+﻿COST: Tokens: Total=8433 approx cost usd = $0.001032 (Prompt=6659, Completion=1774)
+SOURCE:
+Genesis 19:4-9  (TN_Genesis_0_19:4-9)
+
+HEBREW:
+טֶ֘רֶם֮ יִשְׁכָּ֒בוּ֒ וְאַנְשֵׁ֨י הָעִ֜יר אַנְשֵׁ֤י סְדֹם֙ נָסַ֣בּוּ עַל־הַבַּ֔יִת מִנַּ֖עַר וְעַד־זָקֵ֑ן כׇּל־הָעָ֖ם מִקָּצֶֽה׃ וַיִּקְרְא֤וּ אֶל־לוֹט֙ וַיֹּ֣אמְרוּ ל֔וֹ אַיֵּ֧ה הָאֲנָשִׁ֛ים אֲשֶׁר־בָּ֥אוּ אֵלֶ֖יךָ הַלָּ֑יְלָה הוֹצִיאֵ֣ם אֵלֵ֔ינוּ וְנֵדְעָ֖ה אֹתָֽם׃ וַיֵּצֵ֧א אֲלֵהֶ֛ם ל֖וֹט הַפֶּ֑תְחָה וְהַדֶּ֖לֶת סָגַ֥ר אַחֲרָֽיו׃ וַיֹּאמַ֑ר אַל־נָ֥א אַחַ֖י תָּרֵֽעוּ׃ הִנֵּה־נָ֨א לִ֜י שְׁתֵּ֣י בָנ֗וֹת אֲשֶׁ֤ר לֹֽא־יָדְעוּ֙ אִ֔ישׁ אוֹצִֽיאָה־נָּ֤א אֶתְהֶן֙ אֲלֵיכֶ֔ם וַעֲשׂ֣וּ לָהֶ֔ן כַּטּ֖וֹב בְּעֵינֵיכֶ֑ם רַ֠ק לָֽאֲנָשִׁ֤ים הָאֵל֙ אַל־תַּעֲשׂ֣וּ דָבָ֔ר כִּֽי־עַל־כֵּ֥ן בָּ֖אוּ בְּצֵ֥ל קֹרָתִֽי׃ וַיֹּאמְר֣וּ׀ גֶּשׁ־הָ֗לְאָה וַיֹּֽאמְרוּ֙ הָאֶחָ֤ד בָּֽא־לָגוּר֙ וַיִּשְׁפֹּ֣ט שָׁפ֔וֹט עַתָּ֕ה נָרַ֥ע לְךָ֖ מֵהֶ֑ם וַיִּפְצְר֨וּ בָאִ֤ישׁ בְּלוֹט֙ מְאֹ֔ד וַֽיִּגְּשׁ֖וּ לִשְׁבֹּ֥ר הַדָּֽלֶת׃
+
+ENGLISH:
+They had not yet lain down, when the town council [and] the militia of Sodom; NJPS the townspeople, the men of Sodom, trad. the men of the city, the men of Sodom. -insignificant and influential alike,. See the Dictionary under naar and elders. the whole assembly without exception-gathered about the house. And they shouted to Lot and said to him, Where are the ones. who came to you tonight? Bring them out to us, that we may be intimate with them. So Lot went out to them to the entrance, shut the door behind him, and said, I beg you, my friends, do not commit such a wrong. Look, I have two daughters who have not known a man. Let me bring them out to you, and you may do to them as you please; but do not do anything to the others, since they have come under the shelter of my roof. But they said, Stand back! The fellow, they said, came here as an alien, and already he acts the ruler! Now we will deal worse with you than with them. And they pressed hard against that householder; NJPS against the person [of Lot], trad. upon the man. See the Dictionary under ish . -against Lot-and moved forward to break the door.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Sodomites demand Lot's visitors, Lot offers daughters.",
+    "heb_summary": "אנשי סדום דורשים אורחים, לוט מציע בנותיו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Town Council"
+        },
+        {
+          "en_name": "Militia Of Sodom"
+        },
+        {
+          "en_name": "Townspeople"
+        },
+        {
+          "en_name": "Men Of Sodom"
+        },
+        {
+          "en_name": "Daughters"
+        },
+        {
+          "en_name": "Visitors"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "House"
+        },
+        {
+          "en_name": "Entrance"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "daughter",
+          "context": "lot's family"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Men Of Sodom",
+          "term2": "Lot"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Lot",
+          "term2": "House"
+        },
+        {
+          "term1": "Daughters",
+          "term2": "House"
+        },
+        {
+          "term1": "Visitors",
+          "term2": "House"
+        },
+        {
+          "term1": "Town Council",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Militia Of Sodom",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Townspeople",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Men Of Sodom",
+          "term2": "Sodom"
+        }
+      ]
+    }
+  }
+}

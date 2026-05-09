@@ -1,0 +1,75 @@
+﻿COST: Tokens: Total=7712 approx cost usd = $0.000862 (Prompt=6453, Completion=1259)
+SOURCE:
+Genesis 6:6-8  (TN_Genesis_0_6:6-8)
+
+HEBREW:
+וַיִּנָּ֣חֶם יְהֹוָ֔ה כִּֽי־עָשָׂ֥ה אֶת־הָֽאָדָ֖ם בָּאָ֑רֶץ וַיִּתְעַצֵּ֖ב אֶל־לִבּֽוֹ׃ וַיֹּ֣אמֶר יְהֹוָ֗ה אֶמְחֶ֨ה אֶת־הָאָדָ֤ם אֲשֶׁר־בָּרָ֙אתִי֙ מֵעַל֙ פְּנֵ֣י הָֽאֲדָמָ֔ה מֵֽאָדָם֙ עַד־בְּהֵמָ֔ה עַד־רֶ֖מֶשׂ וְעַד־ע֣וֹף הַשָּׁמָ֑יִם כִּ֥י נִחַ֖מְתִּי כִּ֥י עֲשִׂיתִֽם׃ וְנֹ֕חַ מָ֥צָא חֵ֖ן בְּעֵינֵ֥י יְהֹוָֽה׃
+
+ENGLISH:
+And HASHEM regretted having made humankind on earth. With a sorrowful heart, HASHEM said, I will blot out from the earth humankind whom I created-humans together with beasts, creeping things, and birds of the sky; for I regret that I made them. But Noah found favor with HASHEM.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "HASHEM regrets creating humans and animals, but Noah.",
+    "heb_summary": "ה' מתחרט על בריאת האדם והחי, אך נוח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Humankind"
+        },
+        {
+          "en_name": "Noah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Beast"
+        },
+        {
+          "en_name": "Creeping Thing"
+        },
+        {
+          "en_name": "Bird"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "Humankind",
+          "term2": "Earth"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Hashem",
+          "term2": "Humankind"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Noah",
+          "term2": "Hashem"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Humankind",
+          "term2": "Noah"
+        }
+      ]
+    }
+  }
+}

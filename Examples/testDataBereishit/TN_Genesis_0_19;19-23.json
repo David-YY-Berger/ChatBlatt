@@ -1,0 +1,36 @@
+﻿{
+    "res": {
+        "en_summary": "Lot flees to Zoar, saved by grace.",
+        "heb_summary": "לוט בורח לצֹעַר, ניצל בחסד.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Hills"
+                },
+                {
+                    "en_name": "Zoar"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Lot",
+                    "term2": "Zoar"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:19-23"
+}

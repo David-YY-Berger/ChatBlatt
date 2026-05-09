@@ -1,0 +1,105 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph forgives brothers, lives in Egypt 110 years.",
+        "heb_summary": "יוסף סולח לאחיו, חי במצרים 110 שנים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                },
+                {
+                    "en_name": "Father"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Machir"
+                },
+                {
+                    "en_name": "Manasseh"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Manasseh"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "110",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "joseph lifespan"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "generation",
+                    "context": "ephraim children"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Father"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Machir",
+                    "term2": "Manasseh"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Joseph"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_50:15-23"
+}

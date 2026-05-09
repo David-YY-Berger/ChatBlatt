@@ -1,0 +1,139 @@
+﻿COST: Tokens: Total=9226 approx cost usd = $0.001246 (Prompt=6762, Completion=2464)
+SOURCE:
+Genesis 41:25-39  (TN_Genesis_0_41:25-39)
+
+HEBREW:
+וַיֹּ֤אמֶר יוֹסֵף֙ אֶל־פַּרְעֹ֔ה חֲל֥וֹם פַּרְעֹ֖ה אֶחָ֣ד ה֑וּא אֵ֣ת אֲשֶׁ֧ר הָאֱלֹהִ֛ים עֹשֶׂ֖ה הִגִּ֥יד לְפַרְעֹֽה׃ שֶׁ֧בַע פָּרֹ֣ת הַטֹּבֹ֗ת שֶׁ֤בַע שָׁנִים֙ הֵ֔נָּה וְשֶׁ֤בַע הַֽשִּׁבֳּלִים֙ הַטֹּבֹ֔ת שֶׁ֥בַע שָׁנִ֖ים הֵ֑נָּה חֲל֖וֹם אֶחָ֥ד הֽוּא׃ וְשֶׁ֣בַע הַ֠פָּר֠וֹת הָֽרַקּ֨וֹת וְהָרָעֹ֜ת הָעֹלֹ֣ת אַחֲרֵיהֶ֗ן שֶׁ֤בַע שָׁנִים֙ הֵ֔נָּה וְשֶׁ֤בַע הַֽשִּׁבֳּלִים֙ הָרֵק֔וֹת שְׁדֻפ֖וֹת הַקָּדִ֑ים יִהְי֕וּ שֶׁ֖בַע שְׁנֵ֥י רָעָֽב׃ ה֣וּא הַדָּבָ֔ר אֲשֶׁ֥ר דִּבַּ֖רְתִּי אֶל־פַּרְעֹ֑ה אֲשֶׁ֧ר הָאֱלֹהִ֛ים עֹשֶׂ֖ה הֶרְאָ֥ה אֶת־פַּרְעֹֽה׃ הִנֵּ֛ה שֶׁ֥בַע שָׁנִ֖ים בָּא֑וֹת שָׂבָ֥ע גָּד֖וֹל בְּכׇל־אֶ֥רֶץ מִצְרָֽיִם׃ וְ֠קָ֠מוּ שֶׁ֜בַע שְׁנֵ֤י רָעָב֙ אַחֲרֵיהֶ֔ן וְנִשְׁכַּ֥ח כׇּל־הַשָּׂבָ֖ע בְּאֶ֣רֶץ מִצְרָ֑יִם וְכִלָּ֥ה הָרָעָ֖ב אֶת־הָאָֽרֶץ׃ וְלֹֽא־יִוָּדַ֤ע הַשָּׂבָע֙ בָּאָ֔רֶץ מִפְּנֵ֛י הָרָעָ֥ב הַה֖וּא אַחֲרֵי־כֵ֑ן כִּֽי־כָבֵ֥ד ה֖וּא מְאֹֽד׃ וְעַ֨ל הִשָּׁנ֧וֹת הַחֲל֛וֹם אֶל־פַּרְעֹ֖ה פַּעֲמָ֑יִם כִּֽי־נָכ֤וֹן הַדָּבָר֙ מֵעִ֣ם הָאֱלֹהִ֔ים וּמְמַהֵ֥ר הָאֱלֹהִ֖ים לַעֲשֹׂתֽוֹ׃ וְעַתָּה֙ יֵרֶ֣א פַרְעֹ֔ה אִ֖ישׁ נָב֣וֹן וְחָכָ֑ם וִישִׁיתֵ֖הוּ עַל־אֶ֥רֶץ מִצְרָֽיִם׃ יַעֲשֶׂ֣ה פַרְעֹ֔ה וְיַפְקֵ֥ד פְּקִדִ֖ים עַל־הָאָ֑רֶץ וְחִמֵּשׁ֙ אֶת־אֶ֣רֶץ מִצְרַ֔יִם בְּשֶׁ֖בַע שְׁנֵ֥י הַשָּׂבָֽע׃ וְיִקְבְּצ֗וּ אֶת־כׇּל־אֹ֙כֶל֙ הַשָּׁנִ֣ים הַטֹּב֔וֹת הַבָּאֹ֖ת הָאֵ֑לֶּה וְיִצְבְּרוּ־בָ֞ר תַּ֧חַת יַד־פַּרְעֹ֛ה אֹ֥כֶל בֶּעָרִ֖ים וְשָׁמָֽרוּ׃ וְהָיָ֨ה הָאֹ֤כֶל לְפִקָּדוֹן֙ לָאָ֔רֶץ לְשֶׁ֙בַע֙ שְׁנֵ֣י הָרָעָ֔ב אֲשֶׁ֥ר תִּהְיֶ֖יןָ בְּאֶ֣רֶץ מִצְרָ֑יִם וְלֹֽא־תִכָּרֵ֥ת הָאָ֖רֶץ בָּרָעָֽב׃ וַיִּיטַ֥ב הַדָּבָ֖ר בְּעֵינֵ֣י פַרְעֹ֑ה וּבְעֵינֵ֖י כׇּל־עֲבָדָֽיו׃ וַיֹּ֥אמֶר פַּרְעֹ֖ה אֶל־עֲבָדָ֑יו הֲנִמְצָ֣א כָזֶ֔ה אִ֕ישׁ אֲשֶׁ֛ר ר֥וּחַ אֱלֹהִ֖ים בּֽוֹ׃ וַיֹּ֤אמֶר פַּרְעֹה֙ אֶל־יוֹסֵ֔ף אַחֲרֵ֨י הוֹדִ֧יעַ אֱלֹהִ֛ים אוֹתְךָ֖ אֶת־כׇּל־זֹ֑את אֵין־נָב֥וֹן וְחָכָ֖ם כָּמֽוֹךָ׃
+
+ENGLISH:
+And Joseph said to Pharaoh, Pharaohs dreams are one and the same: Pharaoh has been told what God is about to do. The seven healthy cows are seven years, and the seven healthy ears are seven years; it is the same dream. The seven lean and ugly cows that followed are seven years, as are also the seven empty ears scorched by the east wind; they are seven years of famine. It is just as I have told Pharaoh: Pharaoh has been shown what God is about to do. Immediately ahead are seven years of great abundance in all the land of Egypt. After them will come seven years of famine, and all the abundance in the land of Egypt will be forgotten. As the land is ravaged by famine, no trace of the abundance will be left in the land because of the famine thereafter, for it will be very severe. As for Pharaoh having had the same dream twice, it means that the matter has been determined by God, and that God will soon carry it out. Accordingly, let Pharaoh find someone. whos discerning and wise, whom you can set over the land of Egypt. And let Pharaoh take steps to appoint overseers over the land, and organize the land of Egypt in the seven years of plenty. Let all the food of these good years that are coming be gathered, and let the grain be collected under Pharaohs authority as food to be stored in the cities. Let that food be a reserve for the land for the seven years of famine which will come upon the land of Egypt, so that the land may not perish in the famine. The plan pleased Pharaoh and all his courtiers. And Pharaoh said to his courtiers, Could we find another like him-a man with the divine spirit? So Pharaoh said to Joseph, Since God has made all this known to you, there is none so discerning and wise as you.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph interprets Pharaoh's dream; plans for famine.",
+    "heb_summary": "יוסף מפרש חלום פרעה; תכנית לרעב.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Courtiers"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Healthy Cow"
+        },
+        {
+          "en_name": "Healthy Ear"
+        },
+        {
+          "en_name": "Lean And Ugly Cow"
+        },
+        {
+          "en_name": "Empty Ear"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abundance years"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Food"
+        },
+        {
+          "en_name": "Grain"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Courtiers"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Courtiers",
+          "term2": "Egypt"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Food"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Grain"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Healthy Cow"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Healthy Ear"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Lean And Ugly Cow"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Empty Ear"
+        }
+      ]
+    }
+  }
+}

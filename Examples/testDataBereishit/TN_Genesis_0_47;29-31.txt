@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=7450 approx cost usd = $0.000772 (Prompt=6504, Completion=946)
+SOURCE:
+Genesis 47:29-31  (TN_Genesis_0_47:29-31)
+
+HEBREW:
+וַיִּקְרְב֣וּ יְמֵֽי־יִשְׂרָאֵל֮ לָמוּת֒ וַיִּקְרָ֣א׀ לִבְנ֣וֹ לְיוֹסֵ֗ף וַיֹּ֤אמֶר לוֹ֙ אִם־נָ֨א מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ שִֽׂים־נָ֥א יָדְךָ֖ תַּ֣חַת יְרֵכִ֑י וְעָשִׂ֤יתָ עִמָּדִי֙ חֶ֣סֶד וֶאֱמֶ֔ת אַל־נָ֥א תִקְבְּרֵ֖נִי בְּמִצְרָֽיִם׃ וְשָֽׁכַבְתִּי֙ עִם־אֲבֹתַ֔י וּנְשָׂאתַ֙נִי֙ מִמִּצְרַ֔יִם וּקְבַרְתַּ֖נִי בִּקְבֻרָתָ֑ם וַיֹּאמַ֕ר אָנֹכִ֖י אֶֽעֱשֶׂ֥ה כִדְבָרֶֽךָ׃ וַיֹּ֗אמֶר הִשָּֽׁבְעָה֙ לִ֔י וַיִּשָּׁבַ֖ע ל֑וֹ וַיִּשְׁתַּ֥חוּ יִשְׂרָאֵ֖ל עַל־רֹ֥אשׁ הַמִּטָּֽה׃
+
+ENGLISH:
+And when the time approached for Israel to die, he summoned his son Joseph and said to him, Do me this favor, place your hand under my thigh as a pledge of your steadfast loyalty: please do not bury me in Egypt. When I lie down with my ancestors,; trad. fathers. See the Dictionary under predecessors. take me up from Egypt and bury me in their burial-place. He replied, I will do as you have spoken. And he said, Swear to me. And he swore to him. Then Israel bowed at the head of the bed.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Israel asks Joseph to bury him outside Egypt.",
+    "heb_summary": "ישראל מבקש מיוסף לקבור אותו מחוץ למצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Joseph"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Israel",
+          "term2": "Joseph"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph's brothers return money, meet steward.",
+        "heb_summary": "אחי יוסף חוזרים, פוגשים את הסוכן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "House Steward"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Josephs House"
+                },
+                {
+                    "en_name": "Entrance Of The House"
+                },
+                {
+                    "en_name": "Night Encampment"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Simeon"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Food"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "House Steward",
+                    "term2": "Josephs House"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Josephs House"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Josephs House"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_43:19-25"
+}

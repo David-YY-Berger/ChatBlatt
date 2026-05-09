@@ -1,0 +1,145 @@
+﻿COST: Tokens: Total=8340 approx cost usd = $0.001010 (Prompt=6629, Completion=1711)
+SOURCE:
+Genesis 30:9-16  (TN_Genesis_0_30:9-16)
+
+HEBREW:
+וַתֵּ֣רֶא לֵאָ֔ה כִּ֥י עָמְדָ֖ה מִלֶּ֑דֶת וַתִּקַּח֙ אֶת־זִלְפָּ֣ה שִׁפְחָתָ֔הּ וַתִּתֵּ֥ן אֹתָ֛הּ לְיַעֲקֹ֖ב לְאִשָּֽׁה׃ וַתֵּ֗לֶד זִלְפָּ֛ה שִׁפְחַ֥ת לֵאָ֖ה לְיַעֲקֹ֥ב בֵּֽן׃ וַתֹּ֥אמֶר לֵאָ֖ה [בָּ֣א גָ֑ד] וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ גָּֽד׃ וַתֵּ֗לֶד זִלְפָּה֙ שִׁפְחַ֣ת לֵאָ֔ה בֵּ֥ן שֵׁנִ֖י לְיַעֲקֹֽב׃ וַתֹּ֣אמֶר לֵאָ֔ה בְּאׇשְׁרִ֕י כִּ֥י אִשְּׁר֖וּנִי בָּנ֑וֹת וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ אָשֵֽׁר׃ וַיֵּ֨לֶךְ רְאוּבֵ֜ן בִּימֵ֣י קְצִיר־חִטִּ֗ים וַיִּמְצָ֤א דֽוּדָאִים֙ בַּשָּׂדֶ֔ה וַיָּבֵ֣א אֹתָ֔ם אֶל־לֵאָ֖ה אִמּ֑וֹ וַתֹּ֤אמֶר רָחֵל֙ אֶל־לֵאָ֔ה תְּנִי־נָ֣א לִ֔י מִדּוּדָאֵ֖י בְּנֵֽךְ׃ וַתֹּ֣אמֶר לָ֗הּ הַמְעַט֙ קַחְתֵּ֣ךְ אֶת־אִישִׁ֔י וְלָקַ֕חַת גַּ֥ם אֶת־דּוּדָאֵ֖י בְּנִ֑י וַתֹּ֣אמֶר רָחֵ֗ל לָכֵן֙ יִשְׁכַּ֤ב עִמָּךְ֙ הַלַּ֔יְלָה תַּ֖חַת דּוּדָאֵ֥י בְנֵֽךְ׃ וַיָּבֹ֨א יַעֲקֹ֣ב מִן־הַשָּׂדֶה֮ בָּעֶ֒רֶב֒ וַתֵּצֵ֨א לֵאָ֜ה לִקְרָאת֗וֹ וַתֹּ֙אמֶר֙ אֵלַ֣י תָּב֔וֹא כִּ֚י שָׂכֹ֣ר שְׂכַרְתִּ֔יךָ בְּדוּדָאֵ֖י בְּנִ֑י וַיִּשְׁכַּ֥ב עִמָּ֖הּ בַּלַּ֥יְלָה הֽוּא׃
+
+ENGLISH:
+When Leah saw that she had stopped bearing children, she took her maid Zilpah and gave her to Jacob as concubine. And when Leahs maid Zilpah bore Jacob a son, Leah said, What luck!, which reads begad ; the qere reads ba gad luck has come; connected with Gad. So she named him Gad. When Leahs maid Zilpah bore Jacob a second son, Leah declared, What fortune!, connected with Asher. meaning, Women will deem me fortunate. So she named him Asher. Once, at the time of the wheat harvest, Reuben came upon some mandrakes in the field and brought them to his mother Leah. Rachel said to Leah, Please give me some of your sons mandrakes. But she said to her, Was it not enough for you to take away my husband, that you would also take my sons mandrakes? Rachel replied, I promise, he shall lie with you tonight, in return for your sons mandrakes. When Jacob came home from the field in the evening, Leah went out to meet him and said, You are to sleep with me, for I have hired you with my sons mandrakes. And he lay with her that night.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Leah, Rachel, Jacob, sons, mandrakes, concubine.",
+    "heb_summary": "לאה, רחל, יעקב, בנים, דודאים, פילגש.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Zilpah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Field"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        },
+        {
+          "en_name": "Reuben"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "son",
+          "context": "zilpah's children"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Mandrakes"
+        },
+        {
+          "en_name": "Wheat"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Mandrakes"
+        },
+        {
+          "en_name": "Wheat"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Gad",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Asher",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Gad",
+          "term2": "Zilpah"
+        },
+        {
+          "term1": "Asher",
+          "term2": "Zilpah"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Leah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Leah",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Field"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Field"
+        }
+      ]
+    }
+  }
+}

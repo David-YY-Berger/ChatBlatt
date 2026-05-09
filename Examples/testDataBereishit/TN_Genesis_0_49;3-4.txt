@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=7591 approx cost usd = $0.000827 (Prompt=6445, Completion=1146)
+SOURCE:
+Genesis 49:3-4  (TN_Genesis_0_49:3-4)
+
+HEBREW:
+רְאוּבֵן֙ בְּכֹ֣רִי אַ֔תָּה כֹּחִ֖י וְרֵאשִׁ֣ית אוֹנִ֑י יֶ֥תֶר שְׂאֵ֖ת וְיֶ֥תֶר עָֽז׃ פַּ֤חַז כַּמַּ֙יִם֙ אַל־תּוֹתַ֔ר כִּ֥י עָלִ֖יתָ מִשְׁכְּבֵ֣י אָבִ֑יךָ אָ֥ז חִלַּ֖לְתָּ יְצוּעִ֥י עָלָֽה׃
+
+ENGLISH:
+Reuben, you are my first-born, My might and first fruit of my vigor, Exceeding in rank And exceeding in honor. Unstable as water, you shall excel no longer; For when you mounted your fathers bed, You brought disgrace-my couch he mounted!
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Reuben's birthright revoked due to transgression.",
+    "heb_summary": "בכורתו של ראובן נשללה עקב חטא.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Reuben"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}

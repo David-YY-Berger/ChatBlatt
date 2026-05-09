@@ -1,0 +1,363 @@
+﻿COST: Tokens: Total=12153 approx cost usd = $0.002151 (Prompt=6645, Completion=5508)
+SOURCE:
+Genesis 35:16-26  (TN_Genesis_0_35:16-26)
+
+HEBREW:
+וַיִּסְעוּ֙ מִבֵּ֣ית אֵ֔ל וַֽיְהִי־ע֥וֹד כִּבְרַת־הָאָ֖רֶץ לָב֣וֹא אֶפְרָ֑תָה וַתֵּ֥לֶד רָחֵ֖ל וַתְּקַ֥שׁ בְּלִדְתָּֽהּ׃ וַיְהִ֥י בְהַקְשֹׁתָ֖הּ בְּלִדְתָּ֑הּ וַתֹּ֨אמֶר לָ֤הּ הַמְיַלֶּ֙דֶת֙ אַל־תִּ֣ירְאִ֔י כִּֽי־גַם־זֶ֥ה לָ֖ךְ בֵּֽן׃ וַיְהִ֞י בְּצֵ֤את נַפְשָׁהּ֙ כִּ֣י מֵ֔תָה וַתִּקְרָ֥א שְׁמ֖וֹ בֶּן־אוֹנִ֑י וְאָבִ֖יו קָֽרָא־ל֥וֹ בִנְיָמִֽין׃ וַתָּ֖מׇת רָחֵ֑ל וַתִּקָּבֵר֙ בְּדֶ֣רֶךְ אֶפְרָ֔תָה הִ֖וא בֵּ֥ית לָֽחֶם׃ וַיַּצֵּ֧ב יַעֲקֹ֛ב מַצֵּבָ֖ה עַל־קְבֻרָתָ֑הּ הִ֛וא מַצֶּ֥בֶת קְבֻֽרַת־רָחֵ֖ל עַד־הַיּֽוֹם׃ וַיִּסַּ֖ע יִשְׂרָאֵ֑ל וַיֵּ֣ט אׇֽהֳלֹ֔ה מֵהָ֖לְאָה לְמִגְדַּל־עֵֽדֶר׃ וַיְהִ֗י בִּשְׁכֹּ֤ן יִשְׂרָאֵל֙ בָּאָ֣רֶץ הַהִ֔וא וַיֵּ֣לֶךְ רְאוּבֵ֗֔ן וַיִּשְׁכַּ֕ב֙ אֶת־בִּלְהָ֖ה֙ פִּילֶ֣גֶשׁ אָבִ֑֔יו וַיִּשְׁמַ֖ע יִשְׂרָאֵ֑͏ֽל׃ וַיִּֽהְי֥וּ בְנֵֽי־יַעֲקֹ֖ב שְׁנֵ֥ים עָשָֽׂר׃ בְּנֵ֣י לֵאָ֔ה בְּכ֥וֹר יַעֲקֹ֖ב רְאוּבֵ֑ן וְשִׁמְעוֹן֙ וְלֵוִ֣י וִֽיהוּדָ֔ה וְיִשָּׂשכָ֖ר וּזְבֻלֽוּן׃ בְּנֵ֣י רָחֵ֔ל יוֹסֵ֖ף וּבִנְיָמִֽן׃ וּבְנֵ֤י בִלְהָה֙ שִׁפְחַ֣ת רָחֵ֔ל דָּ֖ן וְנַפְתָּלִֽי׃ וּבְנֵ֥י זִלְפָּ֛ה שִׁפְחַ֥ת לֵאָ֖ה גָּ֣ד וְאָשֵׁ֑ר אֵ֚לֶּה בְּנֵ֣י יַעֲקֹ֔ב אֲשֶׁ֥ר יֻלַּד־ל֖וֹ בְּפַדַּ֥ן אֲרָֽם׃
+
+ENGLISH:
+They set out from Bethel; but when they were still some distance short of Ephrath, Rachel was in childbirth, and she had hard labor. When her labor was at its hardest, the midwife said to her, Have no fear, for it is another boy for you. But as she breathed her last-for she was dying-she named him Ben-oni; but his father called him Benjamin. Thus Rachel died. She was buried on the road to Ephrath-now Bethlehem. Over her grave Jacob set up a pillar; it is the pillar at Rachels grave to this day. Israel journeyed on, and pitched his tent beyond Migdal-eder. While Israel stayed in that land, Reuben went and lay with Bilhah, his fathers concubine; and Israel found out. Now the sons of Jacob were twelve in number. The sons of Leah: Reuben-Jacobs first-born-Simeon, Levi, Judah, Issachar, and Zebulun. The sons of Rachel: Joseph and Benjamin. The sons of Bilhah, Rachels maid: Dan and Naphtali. And the sons of Zilpah, Leahs maid: Gad and Asher. These are the sons of Jacob who were born to him in Paddan-aram.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rachel dies in childbirth; Jacob's twelve sons listed.",
+    "heb_summary": "רחל מתה בלידה; שנים עשר בני יעקב.",
+    "passage_types": [
+      "STORY",
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Midwife"
+        },
+        {
+          "en_name": "Ben-Oni"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Bilhah"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Dan"
+        },
+        {
+          "en_name": "Naphtali"
+        },
+        {
+          "en_name": "Zilpah"
+        },
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Issachar"
+        },
+        {
+          "en_name": "Zebulun"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Bethel"
+        },
+        {
+          "en_name": "Ephrath"
+        },
+        {
+          "en_name": "Bethlehem"
+        },
+        {
+          "en_name": "Migdal-Eder"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Issachar"
+        },
+        {
+          "en_name": "Zebulun"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Dan"
+        },
+        {
+          "en_name": "Naphtali"
+        },
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Pillar"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "People",
+          "unit": "son",
+          "context": "jacobs sons"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Benjamin",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Levi",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Issachar",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Zebulun",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Dan",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Naphtali",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Gad",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Asher",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Ben-Oni",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Levi",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Issachar",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Zebulun",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Dan",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Naphtali",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Gad",
+          "term2": "Zilpah"
+        },
+        {
+          "term1": "Asher",
+          "term2": "Zilpah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Zilpah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Midwife",
+          "term2": "Rachel"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Reuben",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Simeon",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Levi",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Judah",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Issachar",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Zebulun",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Dan",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Naphtali",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Gad",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Asher",
+          "term2": "Paddan-Aram"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Rachel",
+          "term2": "Ephrath"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Migdal-Eder"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Ephrath"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Ben-Oni",
+          "term2": "Benjamin"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+﻿{
+    "res": {
+        "en_summary": "Pharaoh appoints Joseph ruler over all Egypt.",
+        "heb_summary": "פרעה ממנה את יוסף לשליט מצרים כולה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Asenath"
+                },
+                {
+                    "en_name": "Poti-Phera"
+                },
+                {
+                    "en_name": "Zaphenath-Paneah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "On"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "30",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "josephs age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Asenath",
+                    "term2": "Poti-Phera"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Asenath"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Joseph"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Poti-Phera",
+                    "term2": "On"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Asenath",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Poti-Phera",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "On",
+                    "term2": "Egypt"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Zaphenath-Paneah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_41:40-46"
+}

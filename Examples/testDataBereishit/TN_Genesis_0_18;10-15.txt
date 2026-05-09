@@ -1,0 +1,66 @@
+﻿COST: Tokens: Total=8573 approx cost usd = $0.001082 (Prompt=6623, Completion=1950)
+SOURCE:
+Genesis 18:10-15  (TN_Genesis_0_18:10-15)
+
+HEBREW:
+וַיֹּ֗אמֶר שׁ֣וֹב אָשׁ֤וּב אֵלֶ֙יךָ֙ כָּעֵ֣ת חַיָּ֔ה וְהִנֵּה־בֵ֖ן לְשָׂרָ֣ה אִשְׁתֶּ֑ךָ וְשָׂרָ֥ה שֹׁמַ֛עַת פֶּ֥תַח הָאֹ֖הֶל וְה֥וּא אַחֲרָֽיו׃ וְאַבְרָהָ֤ם וְשָׂרָה֙ זְקֵנִ֔ים בָּאִ֖ים בַּיָּמִ֑ים חָדַל֙ לִהְי֣וֹת לְשָׂרָ֔ה אֹ֖רַח כַּנָּשִֽׁים׃ וַתִּצְחַ֥ק שָׂרָ֖ה בְּקִרְבָּ֣הּ לֵאמֹ֑ר אַחֲרֵ֤י בְלֹתִי֙ הָֽיְתָה־לִּ֣י עֶדְנָ֔ה וַֽאדֹנִ֖י זָקֵֽן׃ וַיֹּ֥אמֶר יְהֹוָ֖ה אֶל־אַבְרָהָ֑ם לָ֣מָּה זֶּה֩ צָחֲקָ֨ה שָׂרָ֜ה לֵאמֹ֗ר הַאַ֥ף אֻמְנָ֛ם אֵלֵ֖ד וַאֲנִ֥י זָקַֽנְתִּי׃ הֲיִפָּלֵ֥א מֵיְהֹוָ֖ה דָּבָ֑ר לַמּוֹעֵ֞ד אָשׁ֥וּב אֵלֶ֛יךָ כָּעֵ֥ת חַיָּ֖ה וּלְשָׂרָ֥ה בֵֽן׃ וַתְּכַחֵ֨שׁ שָׂרָ֧ה׀לֵאמֹ֛ר לֹ֥א צָחַ֖קְתִּי כִּ֣י׀יָרֵ֑אָה וַיֹּ֥אמֶֽר׀לֹ֖א כִּ֥י צָחָֽקְתְּ׃
+
+ENGLISH:
+Then one said, I will return to you next year,; cf. Gen. 17.21; 2 Kings 4.16-17. and your wife Sarah shall have a son! Sarah was listening at the entrance of the tent, which was behind him. Now Abraham and Sarah were old, advanced in years; Sarah had stopped having her periods., lit. the way of women; NJPS the periods of women. (Perhaps, in light of Akkadian arhu month, the lit. meaning is actually womens menses.) And Sarah laughed to herself, saying, Now that Ive lost the ability, uncertain. NJPS I am withered, trad. I am waxed old. am I to have enjoyment-with my husband so old? Then HASHEM said to Abraham, Why did Sarah laugh, saying, Shall I in truth bear a child, old as I am? Is anything too wondrous for HASHEM ? I will return to you at the same season next year, and Sarah shall have a son. Sarah lied, saying, I did not laugh, for she was frightened. Came the reply, You did laugh.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Sarah will have a son next year.",
+    "heb_summary": "שרה תלד בן בשנה הבאה.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "sarah son birth"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Sarah"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Hashem",
+          "term2": "Sarah"
+        }
+      ]
+    }
+  }
+}

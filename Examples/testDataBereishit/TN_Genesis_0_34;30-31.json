@@ -1,0 +1,63 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob fears Canaanites, Perizzites after sons' actions.",
+        "heb_summary": "יעקב חושש מפני כנענים ופריזים אחרי מעשי בניו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Perizzites"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Simeon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Levi"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Perizzites"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_34:30-31"
+}

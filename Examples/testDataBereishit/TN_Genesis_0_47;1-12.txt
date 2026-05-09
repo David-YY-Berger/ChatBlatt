@@ -1,0 +1,174 @@
+﻿COST: Tokens: Total=9835 approx cost usd = $0.001433 (Prompt=6746, Completion=3089)
+SOURCE:
+Genesis 47:1-12  (TN_Genesis_0_47:1-12)
+
+HEBREW:
+וַיָּבֹ֣א יוֹסֵף֮ וַיַּגֵּ֣ד לְפַרְעֹה֒ וַיֹּ֗אמֶר אָבִ֨י וְאַחַ֜י וְצֹאנָ֤ם וּבְקָרָם֙ וְכׇל־אֲשֶׁ֣ר לָהֶ֔ם בָּ֖אוּ מֵאֶ֣רֶץ כְּנָ֑עַן וְהִנָּ֖ם בְּאֶ֥רֶץ גֹּֽשֶׁן׃ וּמִקְצֵ֣ה אֶחָ֔יו לָקַ֖ח חֲמִשָּׁ֣ה אֲנָשִׁ֑ים וַיַּצִּגֵ֖ם לִפְנֵ֥י פַרְעֹֽה׃ וַיֹּ֧אמֶר פַּרְעֹ֛ה אֶל־אֶחָ֖יו מַה־מַּעֲשֵׂיכֶ֑ם וַיֹּאמְר֣וּ אֶל־פַּרְעֹ֗ה רֹעֵ֥ה צֹאן֙ עֲבָדֶ֔יךָ גַּם־אֲנַ֖חְנוּ גַּם־אֲבוֹתֵֽינוּ׃ וַיֹּאמְר֣וּ אֶל־פַּרְעֹ֗ה לָג֣וּר בָּאָ֘רֶץ֮ בָּ֒אנוּ֒ כִּי־אֵ֣ין מִרְעֶ֗ה לַצֹּאן֙ אֲשֶׁ֣ר לַעֲבָדֶ֔יךָ כִּֽי־כָבֵ֥ד הָרָעָ֖ב בְּאֶ֣רֶץ כְּנָ֑עַן וְעַתָּ֛ה יֵֽשְׁבוּ־נָ֥א עֲבָדֶ֖יךָ בְּאֶ֥רֶץ גֹּֽשֶׁן׃ וַיֹּ֣אמֶר פַּרְעֹ֔ה אֶל־יוֹסֵ֖ף לֵאמֹ֑ר אָבִ֥יךָ וְאַחֶ֖יךָ בָּ֥אוּ אֵלֶֽיךָ׃ אֶ֤רֶץ מִצְרַ֙יִם֙ לְפָנֶ֣יךָ הִ֔וא בְּמֵיטַ֣ב הָאָ֔רֶץ הוֹשֵׁ֥ב אֶת־אָבִ֖יךָ וְאֶת־אַחֶ֑יךָ יֵשְׁבוּ֙ בְּאֶ֣רֶץ גֹּ֔שֶׁן וְאִם־יָדַ֗עְתָּ וְיֶשׁ־בָּם֙ אַנְשֵׁי־חַ֔יִל וְשַׂמְתָּ֛ם שָׂרֵ֥י מִקְנֶ֖ה עַל־אֲשֶׁר־לִֽי׃ וַיָּבֵ֤א יוֹסֵף֙ אֶת־יַֽעֲקֹ֣ב אָבִ֔יו וַיַּֽעֲמִדֵ֖הוּ לִפְנֵ֣י פַרְעֹ֑ה וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת־פַּרְעֹֽה׃ וַיֹּ֥אמֶר פַּרְעֹ֖ה אֶֽל־יַעֲקֹ֑ב כַּמָּ֕ה יְמֵ֖י שְׁנֵ֥י חַיֶּֽיךָ׃ וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל־פַּרְעֹ֔ה יְמֵי֙ שְׁנֵ֣י מְגוּרַ֔י שְׁלֹשִׁ֥ים וּמְאַ֖ת שָׁנָ֑ה מְעַ֣ט וְרָעִ֗ים הָיוּ֙ יְמֵי֙ שְׁנֵ֣י חַיַּ֔י וְלֹ֣א הִשִּׂ֗יגוּ אֶת־יְמֵי֙ שְׁנֵי֙ חַיֵּ֣י אֲבֹתַ֔י בִּימֵ֖י מְגוּרֵיהֶֽם׃ וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת־פַּרְעֹ֑ה וַיֵּצֵ֖א מִלִּפְנֵ֥י פַרְעֹֽה׃ וַיּוֹשֵׁ֣ב יוֹסֵף֮ אֶת־אָבִ֣יו וְאֶת־אֶחָיו֒ וַיִּתֵּ֨ן לָהֶ֤ם אֲחֻזָּה֙ בְּאֶ֣רֶץ מִצְרַ֔יִם בְּמֵיטַ֥ב הָאָ֖רֶץ בְּאֶ֣רֶץ רַעְמְסֵ֑ס כַּאֲשֶׁ֖ר צִוָּ֥ה פַרְעֹֽה׃ וַיְכַלְכֵּ֤ל יוֹסֵף֙ אֶת־אָבִ֣יו וְאֶת־אֶחָ֔יו וְאֵ֖ת כׇּל־בֵּ֣ית אָבִ֑יו לֶ֖חֶם לְפִ֥י הַטָּֽף׃
+
+ENGLISH:
+Then Joseph came and reported to Pharaoh, saying, My father and my brothers, with their flocks and herds and all that is theirs, have come from the land of Canaan and are now in the region of Goshen. And carefully selecting a few of his brothers, he presented them to Pharaoh. Pharaoh said to his brothers, What is your occupation? They answered Pharaoh, We your servants are shepherds, as were also our fathers. We have come, they told Pharaoh, to sojourn in this land, for there is no pasture for your servants flocks, the famine being severe in the land of Canaan. Pray, then, let your servants stay in the region of Goshen. Then Pharaoh said to Joseph, As regards your father and your brothers who have come to you, the land of Egypt is open before you: settle your father and your brothers in the best part of the land; let them stay in the region of Goshen. And if you know some men of ability. among them, put them in charge of my livestock. Joseph then brought his father Jacob and presented him to Pharaoh; and Jacob greeted Pharaoh. Pharaoh asked Jacob, How many are the years of your life? And Jacob answered Pharaoh, The years of my sojourn [on earth] are one hundred and thirty. Few and hard have been the years of my life, nor do they come up to the life spans of my ancestors. during their sojourns. Then Jacob bade Pharaoh farewell, and left Pharaohs presence. So Joseph settled his father and his brothers, giving them holdings in the choicest part of the land of Egypt, in the region of Rameses, as Pharaoh had commanded. Joseph sustained his father, and his brothers, and all his fathers household with bread, down to the little ones.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph settles family in Egypt, Jacob meets Pharaoh.",
+    "heb_summary": "יוסף מיישב משפחה במצרים, יעקב פוגש פרעה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "Ancestors"
+        },
+        {
+          "en_name": "Little Ones"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Goshen"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Rameses"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "130",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jacob's lifespan"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Pharaoh"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Pharaoh"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Goshen"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Goshen"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rameses"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Rameses"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Goshen"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Rameses"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Goshen",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Rameses",
+          "term2": "Egypt"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Jacob",
+          "term2": "Ancestors"
+        }
+      ]
+    }
+  }
+}

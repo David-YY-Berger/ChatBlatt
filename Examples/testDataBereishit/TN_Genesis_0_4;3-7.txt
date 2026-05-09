@@ -1,0 +1,41 @@
+﻿COST: Tokens: Total=7377 approx cost usd = $0.000746 (Prompt=6519, Completion=858)
+SOURCE:
+Genesis 4:3-7  (TN_Genesis_0_4:3-7)
+
+HEBREW:
+וַֽיְהִ֖י מִקֵּ֣ץ יָמִ֑ים וַיָּבֵ֨א קַ֜יִן מִפְּרִ֧י הָֽאֲדָמָ֛ה מִנְחָ֖ה לַֽיהֹוָֽה׃ וְהֶ֨בֶל הֵבִ֥יא גַם־ה֛וּא מִבְּכֹר֥וֹת צֹאנ֖וֹ וּמֵֽחֶלְבֵהֶ֑ן וַיִּ֣שַׁע יְהֹוָ֔ה אֶל־הֶ֖בֶל וְאֶל־מִנְחָתֽוֹ׃ וְאֶל־קַ֥יִן וְאֶל־מִנְחָת֖וֹ לֹ֣א שָׁעָ֑ה וַיִּ֤חַר לְקַ֙יִן֙ מְאֹ֔ד וַֽיִּפְּל֖וּ פָּנָֽיו׃ וַיֹּ֥אמֶר יְהֹוָ֖ה אֶל־קָ֑יִן לָ֚מָּה חָ֣רָה לָ֔ךְ וְלָ֖מָּה נָפְל֥וּ פָנֶֽיךָ׃ הֲל֤וֹא אִם־תֵּיטִיב֙ שְׂאֵ֔ת וְאִם֙ לֹ֣א תֵיטִ֔יב לַפֶּ֖תַח חַטָּ֣את רֹבֵ֑ץ וְאֵלֶ֙יךָ֙ תְּשׁ֣וּקָת֔וֹ וְאַתָּ֖ה תִּמְשׇׁל־בּֽוֹ׃
+
+ENGLISH:
+In the course of time, Cain brought an offering to HASHEM from the fruit of the soil; and Abel, for his part, brought the choicest of the firstlings of his flock. HASHEM paid heed to Abel and his offering, but to Cain and his offering [God] paid no heed. Cain was much distressed and his face fell. And HASHEM said to Cain, Why are you distressed, And why is your face fallen? Surely, if you do right, There is uplift. But if you do not do right Sin couches at the door; Its urge is toward you, Yet you can be its master.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Cain and Abel offer sacrifices to God.",
+    "heb_summary": "קין והבל מביאים קורבנות לה'.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Abel"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Cain"
+        }
+      ]
+    }
+  }
+}

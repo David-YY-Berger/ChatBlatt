@@ -1,0 +1,62 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham bargains with God for Sodom's innocent.",
+        "heb_summary": "אברהם מתמקח עם ה' על סדום.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Judge Of All The Earth"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "50",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "sodom's innocent"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sodom"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Sodom"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Judge Of All The Earth",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:24-27"
+}

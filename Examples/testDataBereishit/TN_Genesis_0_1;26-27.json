@@ -1,0 +1,54 @@
+﻿{
+    "res": {
+        "en_summary": "God creates humankind in divine image.",
+        "heb_summary": "אלוהים ברא אדם בצלמו ובדמותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Humankind"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Image"
+                },
+                {
+                    "en_name": "Likeness"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Fish"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Humankind",
+                    "term2": "Image"
+                },
+                {
+                    "term1": "Humankind",
+                    "term2": "Likeness"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:26-27"
+}

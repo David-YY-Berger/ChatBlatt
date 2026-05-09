@@ -1,0 +1,113 @@
+﻿COST: Tokens: Total=9506 approx cost usd = $0.001377 (Prompt=6553, Completion=2953)
+SOURCE:
+Genesis 6:14-18  (TN_Genesis_0_6:14-18)
+
+HEBREW:
+עֲשֵׂ֤ה לְךָ֙ תֵּבַ֣ת עֲצֵי־גֹ֔פֶר קִנִּ֖ים תַּֽעֲשֶׂ֣ה אֶת־הַתֵּבָ֑ה וְכָֽפַרְתָּ֥ אֹתָ֛הּ מִבַּ֥יִת וּמִח֖וּץ בַּכֹּֽפֶר׃ וְזֶ֕ה אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה אֹתָ֑הּ שְׁלֹ֧שׁ מֵא֣וֹת אַמָּ֗ה אֹ֚רֶךְ הַתֵּבָ֔ה חֲמִשִּׁ֤ים אַמָּה֙ רׇחְבָּ֔הּ וּשְׁלֹשִׁ֥ים אַמָּ֖ה קוֹמָתָֽהּ׃ צֹ֣הַר׀ תַּעֲשֶׂ֣ה לַתֵּבָ֗ה וְאֶל־אַמָּה֙ תְּכַלֶּ֣נָּה מִלְמַ֔עְלָה וּפֶ֥תַח הַתֵּבָ֖ה בְּצִדָּ֣הּ תָּשִׂ֑ים תַּחְתִּיִּ֛ם שְׁנִיִּ֥ם וּשְׁלִשִׁ֖ים תַּֽעֲשֶֽׂהָ׃ וַאֲנִ֗י הִנְנִי֩ מֵבִ֨יא אֶת־הַמַּבּ֥וּל מַ֙יִם֙ עַל־הָאָ֔רֶץ לְשַׁחֵ֣ת כׇּל־בָּשָׂ֗ר אֲשֶׁר־בּוֹ֙ ר֣וּחַ חַיִּ֔ים מִתַּ֖חַת הַשָּׁמָ֑יִם כֹּ֥ל אֲשֶׁר־בָּאָ֖רֶץ יִגְוָֽע׃ וַהֲקִמֹתִ֥י אֶת־בְּרִיתִ֖י אִתָּ֑ךְ וּבָאתָ֙ אֶל־הַתֵּבָ֔ה אַתָּ֕ה וּבָנֶ֛יךָ וְאִשְׁתְּךָ֥ וּנְשֵֽׁי־בָנֶ֖יךָ אִתָּֽךְ׃
+
+ENGLISH:
+Make yourself an ark of gopher wood; make it an ark with compartments, and cover it inside and out with pitch. This is how you shall make it: the length of the ark shall be three hundred cubits, its width fifty cubits, and its height thirty cubits. Make an opening for daylight in the ark, and terminate it within a cubit of the top. Put the entrance to the ark in its side; make it with bottom, second, and third decks. For My part, I am about to bring the Flood-waters upon the earth-to destroy all flesh under the sky in which there is breath of life; everything on earth shall perish. But I will establish My covenant with you, and you shall enter the ark, with your sons, your wife, and your sons wives.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God commands Noah to build ark for flood.",
+    "heb_summary": "אלוהים מצווה נח לבנות תיבה למבול.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Noah's Sons"
+        },
+        {
+          "en_name": "Noah's Wife"
+        },
+        {
+          "en_name": "Noah's Sons' Wives"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Ark"
+        },
+        {
+          "en_name": "Covenant"
+        },
+        {
+          "en_name": "Flood"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "300",
+          "number_category": "Measurement",
+          "unit": "cubit",
+          "context": "ark length"
+        },
+        {
+          "en_name": "50",
+          "number_category": "Measurement",
+          "unit": "cubit",
+          "context": "ark width"
+        },
+        {
+          "en_name": "30",
+          "number_category": "Measurement",
+          "unit": "cubit",
+          "context": "ark height"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Measurement",
+          "unit": "cubit",
+          "context": "ark opening"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "unit": "deck",
+          "context": "ark decks"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Gopher Wood"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Noah's Sons",
+          "term2": "Noah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Noah",
+          "term2": "Noah's Wife"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Noah"
+        }
+      ]
+    }
+  }
+}

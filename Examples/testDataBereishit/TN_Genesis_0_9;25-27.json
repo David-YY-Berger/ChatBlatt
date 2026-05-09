@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Canaan cursed, Shem and Japheth blessed.",
+        "heb_summary": "קללת כנען, ברכת שם ויפת.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ]
+        },
+        "Rel": {
+            "EnemyOf": [
+                {
+                    "term1": "Canaan",
+                    "term2": "Shem"
+                },
+                {
+                    "term1": "Canaan",
+                    "term2": "Japheth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_9:25-27"
+}

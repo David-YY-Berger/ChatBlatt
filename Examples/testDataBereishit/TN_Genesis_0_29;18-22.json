@@ -1,0 +1,48 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob served Laban seven years for Rachel.",
+        "heb_summary": "יעקב עבד לבן שבע שנים עבור רחל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "People Of The Place"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "jacob served laban"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_29:18-22"
+}

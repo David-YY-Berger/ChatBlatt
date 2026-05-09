@@ -1,0 +1,297 @@
+﻿{
+    "res": {
+        "en_summary": "Noah's descendants and their nations after the Flood.",
+        "heb_summary": "צאצאי נח ואומותיהם לאחר המבול.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Ham"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "Gomer"
+                },
+                {
+                    "en_name": "Magog"
+                },
+                {
+                    "en_name": "Madai"
+                },
+                {
+                    "en_name": "Javan"
+                },
+                {
+                    "en_name": "Tubal"
+                },
+                {
+                    "en_name": "Meshech"
+                },
+                {
+                    "en_name": "Tiras"
+                },
+                {
+                    "en_name": "Ashkenaz"
+                },
+                {
+                    "en_name": "Riphath"
+                },
+                {
+                    "en_name": "Togarmah"
+                },
+                {
+                    "en_name": "Elishah"
+                },
+                {
+                    "en_name": "Tarshish"
+                },
+                {
+                    "en_name": "Kittim"
+                },
+                {
+                    "en_name": "Dodanim"
+                },
+                {
+                    "en_name": "Cush"
+                },
+                {
+                    "en_name": "Mizraim"
+                },
+                {
+                    "en_name": "Put"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Seba"
+                },
+                {
+                    "en_name": "Havilah"
+                },
+                {
+                    "en_name": "Sabtah"
+                },
+                {
+                    "en_name": "Raamah"
+                },
+                {
+                    "en_name": "Sabteca"
+                },
+                {
+                    "en_name": "Sheba"
+                },
+                {
+                    "en_name": "Dedan"
+                },
+                {
+                    "en_name": "Nimrod"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Kittim"
+                },
+                {
+                    "en_name": "Dodanim"
+                },
+                {
+                    "en_name": "Cush"
+                },
+                {
+                    "en_name": "Mizraim"
+                },
+                {
+                    "en_name": "Put"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Seba"
+                },
+                {
+                    "en_name": "Havilah"
+                },
+                {
+                    "en_name": "Sabtah"
+                },
+                {
+                    "en_name": "Raamah"
+                },
+                {
+                    "en_name": "Sabteca"
+                },
+                {
+                    "en_name": "Sheba"
+                },
+                {
+                    "en_name": "Dedan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "350",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "noah after flood"
+                },
+                {
+                    "en_name": "950",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "noah lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shem",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Gomer",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Magog",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Madai",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Javan",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Tubal",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Meshech",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Tiras",
+                    "term2": "Japheth"
+                },
+                {
+                    "term1": "Ashkenaz",
+                    "term2": "Gomer"
+                },
+                {
+                    "term1": "Riphath",
+                    "term2": "Gomer"
+                },
+                {
+                    "term1": "Togarmah",
+                    "term2": "Gomer"
+                },
+                {
+                    "term1": "Elishah",
+                    "term2": "Javan"
+                },
+                {
+                    "term1": "Tarshish",
+                    "term2": "Javan"
+                },
+                {
+                    "term1": "Kittim",
+                    "term2": "Javan"
+                },
+                {
+                    "term1": "Dodanim",
+                    "term2": "Javan"
+                },
+                {
+                    "term1": "Cush",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Mizraim",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Put",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Canaan",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Seba",
+                    "term2": "Cush"
+                },
+                {
+                    "term1": "Havilah",
+                    "term2": "Cush"
+                },
+                {
+                    "term1": "Sabtah",
+                    "term2": "Cush"
+                },
+                {
+                    "term1": "Raamah",
+                    "term2": "Cush"
+                },
+                {
+                    "term1": "Sabteca",
+                    "term2": "Cush"
+                },
+                {
+                    "term1": "Sheba",
+                    "term2": "Raamah"
+                },
+                {
+                    "term1": "Dedan",
+                    "term2": "Raamah"
+                },
+                {
+                    "term1": "Nimrod",
+                    "term2": "Cush"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Nimrod",
+                    "term2": "Earth"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Nimrod",
+                    "term2": "Cush"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_9:28-10:8"
+}

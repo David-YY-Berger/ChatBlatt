@@ -1,0 +1,57 @@
+﻿{
+    "res": {
+        "en_summary": "God covenants with Abraham, promises nations, land.",
+        "heb_summary": "אלוהים כורת ברית עם אברהם, מבטיח עמים וארץ.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Abraham"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "8",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "circumcision age"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Canaan"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_17:4-14"
+}

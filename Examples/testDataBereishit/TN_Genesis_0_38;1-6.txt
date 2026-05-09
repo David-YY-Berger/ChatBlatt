@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=8696 approx cost usd = $0.001144 (Prompt=6510, Completion=2186)
+SOURCE:
+Genesis 38:1-6  (TN_Genesis_0_38:1-6)
+
+HEBREW:
+וַֽיְהִי֙ בָּעֵ֣ת הַהִ֔וא וַיֵּ֥רֶד יְהוּדָ֖ה מֵאֵ֣ת אֶחָ֑יו וַיֵּ֛ט עַד־אִ֥ישׁ עֲדֻלָּמִ֖י וּשְׁמ֥וֹ חִירָֽה׃ וַיַּרְא־שָׁ֧ם יְהוּדָ֛ה בַּת־אִ֥ישׁ כְּנַעֲנִ֖י וּשְׁמ֣וֹ שׁ֑וּעַ וַיִּקָּחֶ֖הָ וַיָּבֹ֥א אֵלֶֽיהָ׃ וַתַּ֖הַר וַתֵּ֣לֶד בֵּ֑ן וַיִּקְרָ֥א אֶת־שְׁמ֖וֹ עֵֽר׃ וַתַּ֥הַר ע֖וֹד וַתֵּ֣לֶד בֵּ֑ן וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ אוֹנָֽן׃ וַתֹּ֤סֶף עוֹד֙ וַתֵּ֣לֶד בֵּ֔ן וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ שֵׁלָ֑ה וְהָיָ֥ה בִכְזִ֖יב בְּלִדְתָּ֥הּ אֹתֽוֹ׃ וַיִּקַּ֧ח יְהוּדָ֛ה אִשָּׁ֖ה לְעֵ֣ר בְּכוֹר֑וֹ וּשְׁמָ֖הּ תָּמָֽר׃
+
+ENGLISH:
+About that time Judah left his brothers and camped near a certain Adullamite whose name was Hirah. There Judah saw the daughter of a certain Canaanite whose name was Shua, and he took her [into his household as wife] and cohabited with her. She conceived and bore a son, and he named him Er. She conceived again and bore a son, and named him Onan. Once again she bore a son, and named him Shelah; he was at Chezib when she bore him. Judah got a wife for Er his first-born; her name was Tamar.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Judah marries, has sons Er, Onan, Shelah.",
+    "heb_summary": "יהודה מתחתן, נולדים לו ער, אונן, שלה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Hirah"
+        },
+        {
+          "en_name": "Shua"
+        },
+        {
+          "en_name": "Er"
+        },
+        {
+          "en_name": "Onan"
+        },
+        {
+          "en_name": "Shelah"
+        },
+        {
+          "en_name": "Tamar"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Chezib"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Adullam"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Er",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Onan",
+          "term2": "Judah"
+        },
+        {
+          "term1": "Shelah",
+          "term2": "Judah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Er",
+          "term2": "Tamar"
+        }
+      ],
+      "bornIn": [
+        {
+          "term1": "Shelah",
+          "term2": "Chezib"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Hirah",
+          "term2": "Adullam"
+        },
+        {
+          "term1": "Shua",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

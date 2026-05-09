@@ -1,0 +1,72 @@
+﻿COST: Tokens: Total=7107 approx cost usd = $0.000665 (Prompt=6522, Completion=585)
+SOURCE:
+Genesis 18:24-27  (TN_Genesis_0_18:24-27)
+
+HEBREW:
+אוּלַ֥י יֵ֛שׁ חֲמִשִּׁ֥ים צַדִּיקִ֖ם בְּת֣וֹךְ הָעִ֑יר הַאַ֤ף תִּסְפֶּה֙ וְלֹא־תִשָּׂ֣א לַמָּק֔וֹם לְמַ֛עַן חֲמִשִּׁ֥ים הַצַּדִּיקִ֖ם אֲשֶׁ֥ר בְּקִרְבָּֽהּ׃ חָלִ֨לָה לְּךָ֜ מֵעֲשֹׂ֣ת׀ כַּדָּבָ֣ר הַזֶּ֗ה לְהָמִ֤ית צַדִּיק֙ עִם־רָשָׁ֔ע וְהָיָ֥ה כַצַּדִּ֖יק כָּרָשָׁ֑ע חָלִ֣לָה לָּ֔ךְ הֲשֹׁפֵט֙ כׇּל־הָאָ֔רֶץ לֹ֥א יַעֲשֶׂ֖ה מִשְׁפָּֽט׃ וַיֹּ֣אמֶר יְהֹוָ֔ה אִם־אֶמְצָ֥א בִסְדֹ֛ם חֲמִשִּׁ֥ים צַדִּיקִ֖ם בְּת֣וֹךְ הָעִ֑יר וְנָשָׂ֥אתִי לְכׇל־הַמָּק֖וֹם בַּעֲבוּרָֽם׃ וַיַּ֥עַן אַבְרָהָ֖ם וַיֹּאמַ֑ר הִנֵּה־נָ֤א הוֹאַ֙לְתִּי֙ לְדַבֵּ֣ר אֶל־אֲדֹנָ֔י וְאָנֹכִ֖י עָפָ֥ר וָאֵֽפֶר׃
+
+ENGLISH:
+What if there should be fifty innocent within the city; will You then wipe out the place and not forgive it for the sake of the innocent fifty who are in it? Far be it from You to do such a thing, to bring death upon the innocent as well as the guilty, so that innocent and guilty fare alike. Far be it from You! Shall not the Judge of all the earth deal justly? And HASHEM answered, If I find within the city of Sodom fifty innocent ones, I will forgive the whole place for their sake. Abraham spoke up, saying, Here I venture to speak to my lord, I who am but dust and ashes:
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham bargains with God for Sodom's innocent.",
+    "heb_summary": "אברהם מתמקח עם ה' על סדום.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Judge Of All The Earth"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "50",
+          "number_category": "People",
+          "unit": "person",
+          "context": "sodom's innocent"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Sodom"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Hashem",
+          "term2": "Sodom"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Judge Of All The Earth",
+          "term2": "Hashem"
+        }
+      ]
+    }
+  }
+}

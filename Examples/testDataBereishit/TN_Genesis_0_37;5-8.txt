@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=8388 approx cost usd = $0.001058 (Prompt=6484, Completion=1904)
+SOURCE:
+Genesis 37:5-8  (TN_Genesis_0_37:5-8)
+
+HEBREW:
+וַיַּחֲלֹ֤ם יוֹסֵף֙ חֲל֔וֹם וַיַּגֵּ֖ד לְאֶחָ֑יו וַיּוֹסִ֥פוּ ע֖וֹד שְׂנֹ֥א אֹתֽוֹ׃ וַיֹּ֖אמֶר אֲלֵיהֶ֑ם שִׁמְעוּ־נָ֕א הַחֲל֥וֹם הַזֶּ֖ה אֲשֶׁ֥ר חָלָֽמְתִּי׃ וְ֠הִנֵּ֠ה אֲנַ֜חְנוּ מְאַלְּמִ֤ים אֲלֻמִּים֙ בְּת֣וֹךְ הַשָּׂדֶ֔ה וְהִנֵּ֛ה קָ֥מָה אֲלֻמָּתִ֖י וְגַם־נִצָּ֑בָה וְהִנֵּ֤ה תְסֻבֶּ֙ינָה֙ אֲלֻמֹּ֣תֵיכֶ֔ם וַתִּֽשְׁתַּחֲוֶ֖יןָ לַאֲלֻמָּתִֽי׃ וַיֹּ֤אמְרוּ לוֹ֙ אֶחָ֔יו הֲמָלֹ֤ךְ תִּמְלֹךְ֙ עָלֵ֔ינוּ אִם־מָשׁ֥וֹל תִּמְשֹׁ֖ל בָּ֑נוּ וַיּוֹסִ֤פוּ עוֹד֙ שְׂנֹ֣א אֹת֔וֹ עַל־חֲלֹמֹתָ֖יו וְעַל־דְּבָרָֽיו׃
+
+ENGLISH:
+Once Joseph had a dream which he told to his brothers; and they hated him even more. He said to them, Hear this dream which I have dreamed: There we were binding sheaves in the field, when suddenly my sheaf stood up and remained upright; then your sheaves gathered around and bowed low to my sheaf. His brothers answered, Do you mean to reign over us? Do you mean to rule over us? And they hated him even more for his talk about his dreams.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph dreams, brothers hate him, fear his rule.",
+    "heb_summary": "יוסף חולם, אחיו שונאים אותו, חוששים משלטונו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Joseph's Brothers"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Sheaf"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Joseph's Brothers"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Joseph"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "res": {
+        "en_summary": "God questions Human hiding naked in garden.",
+        "heb_summary": "אלוהים שואל אדם מתחבא בגן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Human"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Garden"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Tree"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Human"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Garden"
+                },
+                {
+                    "term1": "Human",
+                    "term2": "Garden"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:9-11"
+}

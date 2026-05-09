@@ -1,0 +1,53 @@
+﻿{
+    "res": {
+        "en_summary": "God prophesies about two nations, Esau, Jacob.",
+        "heb_summary": "ה' מתנבא על שני עמים, עשו, יעקב.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "nation",
+                    "context": "nations in womb"
+                },
+                {
+                    "en_name": "60",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "isaac age at birth"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:23-26"
+}

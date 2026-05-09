@@ -1,0 +1,103 @@
+﻿{
+    "res": {
+        "en_summary": "God commands Noah to build ark for flood.",
+        "heb_summary": "אלוהים מצווה נח לבנות תיבה למבול.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Noah's Sons"
+                },
+                {
+                    "en_name": "Noah's Wife"
+                },
+                {
+                    "en_name": "Noah's Sons' Wives"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ark"
+                },
+                {
+                    "en_name": "Covenant"
+                },
+                {
+                    "en_name": "Flood"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "300",
+                    "number_category": "Measurement",
+                    "unit": "cubit",
+                    "context": "ark length"
+                },
+                {
+                    "en_name": "50",
+                    "number_category": "Measurement",
+                    "unit": "cubit",
+                    "context": "ark width"
+                },
+                {
+                    "en_name": "30",
+                    "number_category": "Measurement",
+                    "unit": "cubit",
+                    "context": "ark height"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Measurement",
+                    "unit": "cubit",
+                    "context": "ark opening"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "unit": "deck",
+                    "context": "ark decks"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Gopher Wood"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Noah's Sons",
+                    "term2": "Noah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Noah",
+                    "term2": "Noah's Wife"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_6:14-18"
+}

@@ -1,0 +1,122 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph interprets dreams for Pharaoh's courtiers",
+        "heb_summary": "יוסף מפרש חלומות לשרי פרעה",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "The Cupbearer"
+                },
+                {
+                    "en_name": "The Baker"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "The Prefect"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "The House Of The Prefect"
+                },
+                {
+                    "en_name": "The Prison House"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "courtier",
+                    "context": "pharaoh's courtiers"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "The Cupbearer"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "The Baker"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "The House Of The Prefect"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "The Prison House"
+                },
+                {
+                    "term1": "The Cupbearer",
+                    "term2": "The House Of The Prefect"
+                },
+                {
+                    "term1": "The Baker",
+                    "term2": "The House Of The Prefect"
+                },
+                {
+                    "term1": "The Cupbearer",
+                    "term2": "The Prison House"
+                },
+                {
+                    "term1": "The Baker",
+                    "term2": "The Prison House"
+                },
+                {
+                    "term1": "The Prefect",
+                    "term2": "The House Of The Prefect"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "The Cupbearer",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "The Baker",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "The Cupbearer"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "The Baker"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_40:1-8"
+}

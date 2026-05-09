@@ -1,0 +1,115 @@
+﻿COST: Tokens: Total=8105 approx cost usd = $0.000978 (Prompt=6459, Completion=1646)
+SOURCE:
+Genesis 35:27-29  (TN_Genesis_0_35:27-29)
+
+HEBREW:
+וַיָּבֹ֤א יַעֲקֹב֙ אֶל־יִצְחָ֣ק אָבִ֔יו מַמְרֵ֖א קִרְיַ֣ת הָֽאַרְבַּ֑ע הִ֣וא חֶבְר֔וֹן אֲשֶׁר־גָּֽר־שָׁ֥ם אַבְרָהָ֖ם וְיִצְחָֽק׃ וַיִּֽהְי֖וּ יְמֵ֣י יִצְחָ֑ק מְאַ֥ת שָׁנָ֖ה וּשְׁמֹנִ֥ים שָׁנָֽה׃ וַיִּגְוַ֨ע יִצְחָ֤ק וַיָּ֙מׇת֙ וַיֵּאָ֣סֶף אֶל־עַמָּ֔יו זָקֵ֖ן וּשְׂבַ֣ע יָמִ֑ים וַיִּקְבְּר֣וּ אֹת֔וֹ עֵשָׂ֥ו וְיַעֲקֹ֖ב בָּנָֽיו׃
+
+ENGLISH:
+And Jacob came to his father Isaac at Mamre, at Kiriath-arba-now Hebron-where Abraham and Isaac had sojourned. Isaac was a hundred and eighty years old when he breathed his last and died. He was gathered to his kin in ripe old age; and he was buried by his sons Esau and Jacob.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob visits Isaac; Isaac dies, buried by sons.",
+    "heb_summary": "יעקב ביקר יצחק; יצחק מת, נקבר על ידי בניו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mamre"
+        },
+        {
+          "en_name": "Kiriath-Arba"
+        },
+        {
+          "en_name": "Hebron"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "180",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "isaac lifespan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Isaac",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Kiriath-Arba"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Hebron"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Kiriath-Arba"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Hebron"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Kiriath-Arba"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Hebron"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Kiriath-Arba",
+          "term2": "Hebron"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+﻿{
+    "res": {
+        "en_summary": "Dan governs his people, compared to serpent.",
+        "heb_summary": "דן ישפוט עמו, כנחש וצפע.",
+        "passage_types": [
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Dan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Serpent"
+                },
+                {
+                    "en_name": "Viper"
+                },
+                {
+                    "en_name": "Horse"
+                }
+            ]
+        },
+        "Rel": {
+            "personBelongsToNation": [
+                {
+                    "term1": "Dan",
+                    "term2": "Israel"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Dan",
+                    "term2": "Serpent"
+                },
+                {
+                    "term1": "Dan",
+                    "term2": "Viper"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:16-18"
+}

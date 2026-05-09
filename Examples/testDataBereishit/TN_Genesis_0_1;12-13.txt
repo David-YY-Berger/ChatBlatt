@@ -1,0 +1,35 @@
+﻿COST: Tokens: Total=7121 approx cost usd = $0.000688 (Prompt=6436, Completion=685)
+SOURCE:
+Genesis 1:12-13  (TN_Genesis_0_1:12-13)
+
+HEBREW:
+וַתּוֹצֵ֨א הָאָ֜רֶץ דֶּ֠שֶׁא עֵ֣שֶׂב מַזְרִ֤יעַ זֶ֙רַע֙ לְמִינֵ֔הוּ וְעֵ֧ץ עֹֽשֶׂה־פְּרִ֛י אֲשֶׁ֥ר זַרְעוֹ־ב֖וֹ לְמִינֵ֑הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃ וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם שְׁלִישִֽׁי׃
+
+ENGLISH:
+The earth brought forth vegetation: seed-bearing plants of every kind, and trees of every kind bearing fruit with the seed in it. And God saw that this was good. And there was evening and there was morning, a third day.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God created vegetation and trees on third day.",
+    "heb_summary": "אלוהים ברא צמחים ועצים ביום השלישי.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "creation day"
+        }
+      ]
+    }
+  }
+}

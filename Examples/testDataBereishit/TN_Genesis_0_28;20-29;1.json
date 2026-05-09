@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's vow, God's protection, tithe.",
+        "heb_summary": "נדר יעקב, הגנה מאלוהים, מעשר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Father's House"
+                },
+                {
+                    "en_name": "Land Of The Easterners"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Stone"
+                },
+                {
+                    "en_name": "Pillar"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "Sacrifice",
+                    "unit": "percent",
+                    "context": "jacob's vow offering"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Father's House"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Land Of The Easterners"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_28:20-29:1"
+}

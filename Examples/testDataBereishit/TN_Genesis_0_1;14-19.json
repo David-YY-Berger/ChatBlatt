@@ -1,0 +1,74 @@
+﻿{
+    "res": {
+        "en_summary": "God created lights, day, night, stars.",
+        "heb_summary": "אלוהים ברא מאורות, יום, לילה, כוכבים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Expanse Of The Sky"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Lights"
+                },
+                {
+                    "en_name": "Day"
+                },
+                {
+                    "en_name": "Night"
+                },
+                {
+                    "en_name": "Greater Light"
+                },
+                {
+                    "en_name": "Lesser Light"
+                },
+                {
+                    "en_name": "Stars"
+                },
+                {
+                    "en_name": "Darkness"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "unit": "light",
+                    "context": "created great lights"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Expanse Of The Sky"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Day",
+                    "term2": "Night"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:14-19"
+}

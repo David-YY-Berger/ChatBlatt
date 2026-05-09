@@ -1,0 +1,93 @@
+﻿COST: Tokens: Total=7340 approx cost usd = $0.000744 (Prompt=6479, Completion=861)
+SOURCE:
+Genesis 31:23-25  (TN_Genesis_0_31:23-25)
+
+HEBREW:
+וַיִּקַּ֤ח אֶת־אֶחָיו֙ עִמּ֔וֹ וַיִּרְדֹּ֣ף אַחֲרָ֔יו דֶּ֖רֶךְ שִׁבְעַ֣ת יָמִ֑ים וַיַּדְבֵּ֥ק אֹת֖וֹ בְּהַ֥ר הַגִּלְעָֽד׃ וַיָּבֹ֧א אֱלֹהִ֛ים אֶל־לָבָ֥ן הָאֲרַמִּ֖י בַּחֲלֹ֣ם הַלָּ֑יְלָה וַיֹּ֣אמֶר ל֗וֹ הִשָּׁ֧מֶר לְךָ֛ פֶּן־תְּדַבֵּ֥ר עִֽם־יַעֲקֹ֖ב מִטּ֥וֹב עַד־רָֽע׃ וַיַּשֵּׂ֥ג לָבָ֖ן אֶֽת־יַעֲקֹ֑ב וְיַעֲקֹ֗ב תָּקַ֤ע אֶֽת־אׇהֳלוֹ֙ בָּהָ֔ר וְלָבָ֛ן תָּקַ֥ע אֶת־אֶחָ֖יו בְּהַ֥ר הַגִּלְעָֽד׃
+
+ENGLISH:
+So he took his kinsmen with him and pursued him a distance of seven days, catching up with him in the hill country of Gilead. But God appeared to Laban the Aramean in a dream by night and said to him, Beware of attempting anything with Jacob, good or bad. Laban overtook Jacob. Jacob had pitched his tent on the Height, and Laban with his kinsmen encamped in the hill country of Gilead.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Laban pursued Jacob into Gilead, God warned him.",
+    "heb_summary": "לבן רדף יעקב לגילעד, אלוהים הזהיר אותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Kinsmen"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gilead"
+        },
+        {
+          "en_name": "The Height"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Aram"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "laban pursued jacob"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Laban"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Laban",
+          "term2": "Gilead"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Gilead"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "The Height"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Laban",
+          "term2": "Aram"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Laban",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

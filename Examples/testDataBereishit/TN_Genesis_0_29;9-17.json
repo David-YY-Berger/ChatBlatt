@@ -1,0 +1,81 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob meets Rachel and Leah, Laban's daughters",
+        "heb_summary": "יעקב פוגש רחל ולאה, בנות לבן",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Leah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "unit": "month",
+                    "context": "jacob stayed with laban"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "daughter",
+                    "context": "laban's daughters"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Laban"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                },
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Leah",
+                    "term2": "Rachel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_29:9-17"
+}

@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob and Laban agree on livestock wages.",
+        "heb_summary": "יעקב ולבן מסכמים על שכר צאן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Laban's Sons"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "journey distance"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                },
+                {
+                    "en_name": "Goat"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Laban's Sons",
+                    "term2": "Laban"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Rachel"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Rachel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:25-36"
+}

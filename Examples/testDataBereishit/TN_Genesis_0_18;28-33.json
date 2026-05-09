@@ -1,0 +1,72 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham bargains with God for city's sake",
+        "heb_summary": "אברהם מתמקח עם ה' למען העיר",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "50",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "5",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "45",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "40",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "30",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "20",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "innocent people"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:28-33"
+}

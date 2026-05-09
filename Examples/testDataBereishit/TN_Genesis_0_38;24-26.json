@@ -1,0 +1,50 @@
+﻿{
+    "res": {
+        "en_summary": "Judah condemns Tamar; she reveals his paternity.",
+        "heb_summary": "יהודה דן את תמר; היא חושפת אבהותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Tamar"
+                },
+                {
+                    "en_name": "Shelah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Seal"
+                },
+                {
+                    "en_name": "Cord"
+                },
+                {
+                    "en_name": "Staff"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "month",
+                    "context": "tamar's pregnancy"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Tamar",
+                    "term2": "Judah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_38:24-26"
+}

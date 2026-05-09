@@ -1,0 +1,103 @@
+﻿COST: Tokens: Total=7935 approx cost usd = $0.000914 (Prompt=6516, Completion=1419)
+SOURCE:
+Genesis 37:9-12  (TN_Genesis_0_37:9-12)
+
+HEBREW:
+וַיַּחֲלֹ֥ם עוֹד֙ חֲל֣וֹם אַחֵ֔ר וַיְסַפֵּ֥ר אֹת֖וֹ לְאֶחָ֑יו וַיֹּ֗אמֶר הִנֵּ֨ה חָלַ֤מְתִּֽי חֲלוֹם֙ ע֔וֹד וְהִנֵּ֧ה הַשֶּׁ֣מֶשׁ וְהַיָּרֵ֗חַ וְאַחַ֤ד עָשָׂר֙ כּֽוֹכָבִ֔ים מִֽשְׁתַּחֲוִ֖ים לִֽי׃ וַיְסַפֵּ֣ר אֶל־אָבִיו֮ וְאֶל־אֶחָיו֒ וַיִּגְעַר־בּ֣וֹ אָבִ֔יו וַיֹּ֣אמֶר ל֔וֹ מָ֛ה הַחֲל֥וֹם הַזֶּ֖ה אֲשֶׁ֣ר חָלָ֑מְתָּ הֲב֣וֹא נָב֗וֹא אֲנִי֙ וְאִמְּךָ֣ וְאַחֶ֔יךָ לְהִשְׁתַּחֲוֺ֥ת לְךָ֖ אָֽרְצָה׃ וַיְקַנְאוּ־ב֖וֹ אֶחָ֑יו וְאָבִ֖יו שָׁמַ֥ר אֶת־הַדָּבָֽר׃ וַיֵּלְכ֖וּ אֶחָ֑יו לִרְע֛וֹת אֶׄתׄ־צֹ֥אן אֲבִיהֶ֖ם בִּשְׁכֶֽם׃
+
+ENGLISH:
+He dreamed another dream and told it to his brothers, saying, Look, I have had another dream: And this time, the sun, the moon, and eleven stars were bowing down to me. And when he told it to his father and brothers, his father berated him. What, he said to him, is this dream you have dreamed? Are we to come, I and your mother and your brothers, and bow low to you to the ground? So his brothers were wrought up at him, and his father kept the matter in mind. One time, when his brothers had gone to pasture their fathers flock at Shechem,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Dreamer's prophetic dream angers his family.",
+    "heb_summary": "חלום המנבא השתחוויה, משפחה כועסת.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "The Dreamer"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "Father"
+        },
+        {
+          "en_name": "Mother"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shechem"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Sun"
+        },
+        {
+          "en_name": "Moon"
+        },
+        {
+          "en_name": "Stars"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "11",
+          "number_category": "People",
+          "unit": "star",
+          "context": "brothers bowing"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "The Dreamer",
+          "term2": "Brothers"
+        },
+        {
+          "term1": "The Dreamer",
+          "term2": "Father"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Brothers",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Father",
+          "term2": "Shechem"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Sun",
+          "term2": "Father"
+        },
+        {
+          "term1": "Moon",
+          "term2": "Mother"
+        },
+        {
+          "term1": "Stars",
+          "term2": "Brothers"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Brothers",
+          "term2": "The Dreamer"
+        }
+      ]
+    }
+  }
+}

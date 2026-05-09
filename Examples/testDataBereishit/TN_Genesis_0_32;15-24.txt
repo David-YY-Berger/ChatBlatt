@@ -1,0 +1,162 @@
+﻿COST: Tokens: Total=9841 approx cost usd = $0.001441 (Prompt=6719, Completion=3122)
+SOURCE:
+Genesis 32:15-24  (TN_Genesis_0_32:15-24)
+
+HEBREW:
+עִזִּ֣ים מָאתַ֔יִם וּתְיָשִׁ֖ים עֶשְׂרִ֑ים רְחֵלִ֥ים מָאתַ֖יִם וְאֵילִ֥ים עֶשְׂרִֽים׃ גְּמַלִּ֧ים מֵינִיק֛וֹת וּבְנֵיהֶ֖ם שְׁלֹשִׁ֑ים פָּר֤וֹת אַרְבָּעִים֙ וּפָרִ֣ים עֲשָׂרָ֔ה אֲתֹנֹ֣ת עֶשְׂרִ֔ים וַעְיָרִ֖ם עֲשָׂרָֽה׃ וַיִּתֵּן֙ בְּיַד־עֲבָדָ֔יו עֵ֥דֶר עֵ֖דֶר לְבַדּ֑וֹ וַיֹּ֤אמֶר אֶל־עֲבָדָיו֙ עִבְר֣וּ לְפָנַ֔י וְרֶ֣וַח תָּשִׂ֔ימוּ בֵּ֥ין עֵ֖דֶר וּבֵ֥ין עֵֽדֶר׃ וַיְצַ֥ו אֶת־הָרִאשׁ֖וֹן לֵאמֹ֑ר כִּ֣י יִֽפְגׇשְׁךָ֞ עֵשָׂ֣ו אָחִ֗י וּשְׁאֵֽלְךָ֙ לֵאמֹ֔ר לְמִי־אַ֙תָּה֙ וְאָ֣נָה תֵלֵ֔ךְ וּלְמִ֖י אֵ֥לֶּה לְפָנֶֽיךָ׃ וְאָֽמַרְתָּ֙ לְעַבְדְּךָ֣ לְיַעֲקֹ֔ב מִנְחָ֥ה הִוא֙ שְׁלוּחָ֔ה לַֽאדֹנִ֖י לְעֵשָׂ֑ו וְהִנֵּ֥ה גַם־ה֖וּא אַחֲרֵֽינוּ׃ וַיְצַ֞ו גַּ֣ם אֶת־הַשֵּׁנִ֗י גַּ֚ם אֶת־הַשְּׁלִישִׁ֔י גַּ֚ם אֶת־כׇּל־הַהֹ֣לְכִ֔ים אַחֲרֵ֥י הָעֲדָרִ֖ים לֵאמֹ֑ר כַּדָּבָ֤ר הַזֶּה֙ תְּדַבְּר֣וּן אֶל־עֵשָׂ֔ו בְּמֹצַאֲכֶ֖ם אֹתֽוֹ׃ וַאֲמַרְתֶּ֕ם גַּ֗ם הִנֵּ֛ה עַבְדְּךָ֥ יַעֲקֹ֖ב אַחֲרֵ֑ינוּ כִּֽי־אָמַ֞ר אֲכַפְּרָ֣ה פָנָ֗יו בַּמִּנְחָה֙ הַהֹלֶ֣כֶת לְפָנָ֔י וְאַחֲרֵי־כֵן֙ אֶרְאֶ֣ה פָנָ֔יו אוּלַ֖י יִשָּׂ֥א פָנָֽי׃ וַתַּעֲבֹ֥ר הַמִּנְחָ֖ה עַל־פָּנָ֑יו וְה֛וּא לָ֥ן בַּלַּֽיְלָה־הַה֖וּא בַּֽמַּחֲנֶֽה׃ וַיָּ֣קׇם׀ בַּלַּ֣יְלָה ה֗וּא וַיִּקַּ֞ח אֶת־שְׁתֵּ֤י נָשָׁיו֙ וְאֶת־שְׁתֵּ֣י שִׁפְחֹתָ֔יו וְאֶת־אַחַ֥ד עָשָׂ֖ר יְלָדָ֑יו וַֽיַּעֲבֹ֔ר אֵ֖ת מַעֲבַ֥ר יַבֹּֽק׃ וַיִּ֨קָּחֵ֔ם וַיַּֽעֲבִרֵ֖ם אֶת־הַנָּ֑חַל וַֽיַּעֲבֵ֖ר אֶת־אֲשֶׁר־לֽוֹ׃
+
+ENGLISH:
+200 she-goats and 20 he-goats; 200 ewes and 20 rams; 30 milch camels with their colts; 40 cows and 10 bulls; 20 she-asses and 10 he-asses. These he put in the charge of his servants, drove by drove, and he told his servants, Go on ahead, and keep a distance between droves. He instructed the one in front as follows, When my brother Esau meets you and asks you, Whos your master? Where are you going? And whose [animals] are these ahead of you? you shall answer, Your servant Jacobs; they are a gift sent to my lord Esau; and [Jacob] himself is right behind us. He gave similar instructions to the second one, and the third, and all the others who followed the droves, namely, Thus and so shall you say to Esau when you reach him. And you shall add, And your servant Jacob himself is right behind us. For he reasoned, If I propitiate him with presents in advance, and then face him, perhaps he will show me favor. And so the gift went on ahead, while he remained in camp that night. That same night he arose, and taking his two wives, his two maidservants, and his eleven sons,. Given the specified number, the reference cannot include Jacobs daughter(s). English idiom warrants the greater gender specificity. he crossed the ford of the Jabbok. After taking them across the stream, he sent across all his possessions.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob sends gifts to Esau, crosses Jabbok.",
+    "heb_summary": "יעקב שולח מתנות לעשו, חוצה יבוק.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Servants"
+        },
+        {
+          "en_name": "Wives"
+        },
+        {
+          "en_name": "Maidservants"
+        },
+        {
+          "en_name": "Sons"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jabbok"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "200",
+          "number_category": "Misc",
+          "unit": "goat",
+          "context": "gift to esau"
+        },
+        {
+          "en_name": "20",
+          "number_category": "Misc",
+          "unit": "goat",
+          "context": "gift to esau"
+        },
+        {
+          "en_name": "30",
+          "number_category": "Misc",
+          "unit": "camel",
+          "context": "gift to esau"
+        },
+        {
+          "en_name": "40",
+          "number_category": "Misc",
+          "unit": "cow",
+          "context": "gift to esau"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Misc",
+          "unit": "bull",
+          "context": "gift to esau"
+        },
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "wife",
+          "context": "jacob's family"
+        },
+        {
+          "en_name": "11",
+          "number_category": "People",
+          "unit": "son",
+          "context": "jacob's family"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Goat"
+        },
+        {
+          "en_name": "Ewe"
+        },
+        {
+          "en_name": "Ram"
+        },
+        {
+          "en_name": "Camel"
+        },
+        {
+          "en_name": "Cow"
+        },
+        {
+          "en_name": "Bull"
+        },
+        {
+          "en_name": "Ass"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Sons",
+          "term2": "Jacob"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Wives"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Servants"
+        },
+        {
+          "term1": "Servants",
+          "term2": "Esau"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Jabbok"
+        },
+        {
+          "term1": "Wives",
+          "term2": "Jabbok"
+        },
+        {
+          "term1": "Maidservants",
+          "term2": "Jabbok"
+        },
+        {
+          "term1": "Sons",
+          "term2": "Jabbok"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

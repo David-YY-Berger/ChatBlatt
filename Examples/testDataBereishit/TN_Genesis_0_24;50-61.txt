@@ -1,0 +1,147 @@
+﻿COST: Tokens: Total=11834 approx cost usd = $0.002042 (Prompt=6705, Completion=5129)
+SOURCE:
+Genesis 24:50-61  (TN_Genesis_0_24:50-61)
+
+HEBREW:
+וַיַּ֨עַן לָבָ֤ן וּבְתוּאֵל֙ וַיֹּ֣אמְר֔וּ מֵיְהֹוָ֖ה יָצָ֣א הַדָּבָ֑ר לֹ֥א נוּכַ֛ל דַּבֵּ֥ר אֵלֶ֖יךָ רַ֥ע אוֹ־טֽוֹב׃ הִנֵּֽה־רִבְקָ֥ה לְפָנֶ֖יךָ קַ֣ח וָלֵ֑ךְ וּתְהִ֤י אִשָּׁה֙ לְבֶן־אֲדֹנֶ֔יךָ כַּאֲשֶׁ֖ר דִּבֶּ֥ר יְהֹוָֽה׃ וַיְהִ֕י כַּאֲשֶׁ֥ר שָׁמַ֛ע עֶ֥בֶד אַבְרָהָ֖ם אֶת־דִּבְרֵיהֶ֑ם וַיִּשְׁתַּ֥חוּ אַ֖רְצָה לַֽיהֹוָֽה׃ וַיּוֹצֵ֨א הָעֶ֜בֶד כְּלֵי־כֶ֨סֶף וּכְלֵ֤י זָהָב֙ וּבְגָדִ֔ים וַיִּתֵּ֖ן לְרִבְקָ֑ה וּמִ֨גְדָּנֹ֔ת נָתַ֥ן לְאָחִ֖יהָ וּלְאִמָּֽהּ׃ וַיֹּאכְל֣וּ וַיִּשְׁתּ֗וּ ה֛וּא וְהָאֲנָשִׁ֥ים אֲשֶׁר־עִמּ֖וֹ וַיָּלִ֑ינוּ וַיָּק֣וּמוּ בַבֹּ֔קֶר וַיֹּ֖אמֶר שַׁלְּחֻ֥נִי לַֽאדֹנִֽי׃ וַיֹּ֤אמֶר אָחִ֙יהָ֙ וְאִמָּ֔הּ תֵּשֵׁ֨ב הַנַּעֲרָ֥ אִתָּ֛נוּ יָמִ֖ים א֣וֹ עָשׂ֑וֹר אַחַ֖ר תֵּלֵֽךְ׃ וַיֹּ֤אמֶר אֲלֵהֶם֙ אַל־תְּאַחֲר֣וּ אֹתִ֔י וַֽיהֹוָ֖ה הִצְלִ֣יחַ דַּרְכִּ֑י שַׁלְּח֕וּנִי וְאֵלְכָ֖ה לַֽאדֹנִֽי׃ וַיֹּאמְר֖וּ נִקְרָ֣א לַֽנַּעֲרָ֑ וְנִשְׁאֲלָ֖ה אֶת־פִּֽיהָ׃ וַיִּקְרְא֤וּ לְרִבְקָה֙ וַיֹּאמְר֣וּ אֵלֶ֔יהָ הֲתֵלְכִ֖י עִם־הָאִ֣ישׁ הַזֶּ֑ה וַתֹּ֖אמֶר אֵלֵֽךְ׃ וַֽיְשַׁלְּח֛וּ אֶת־רִבְקָ֥ה אֲחֹתָ֖ם וְאֶת־מֵנִקְתָּ֑הּ וְאֶת־עֶ֥בֶד אַבְרָהָ֖ם וְאֶת־אֲנָשָֽׁיו׃ וַיְבָרְכ֤וּ אֶת־רִבְקָה֙ וַיֹּ֣אמְרוּ לָ֔הּ אֲחֹתֵ֕נוּ אַ֥תְּ הֲיִ֖י לְאַלְפֵ֣י רְבָבָ֑ה וְיִירַ֣שׁ זַרְעֵ֔ךְ אֵ֖ת שַׁ֥עַר שֹׂנְאָֽיו׃ וַתָּ֨קׇם רִבְקָ֜ה וְנַעֲרֹתֶ֗יהָ וַתִּרְכַּ֙בְנָה֙ עַל־הַגְּמַלִּ֔ים וַתֵּלַ֖כְנָה אַחֲרֵ֣י הָאִ֑ישׁ וַיִּקַּ֥ח הָעֶ֛בֶד אֶת־רִבְקָ֖ה וַיֵּלַֽךְ׃
+
+ENGLISH:
+Then Laban and Bethuel answered, The matter was decreed by HASHEM; we cannot speak to you bad or good. Here is Rebekah before you; take her and go, and let her be a wife to your masters son, as HASHEM has spoken. When Abrahams servant heard their words, he bowed low to the ground before HASHEM. The servant brought out objects of silver and gold, and garments, and gave them to Rebekah; and he gave presents to her brother and her mother. Then he and the entourage under him ate and drank, and they spent the night. When they arose next morning, he said, Give me leave to go to my master. But her brother and her mother said, Let the maiden remain with us some ten days; then you may go. He said to them, Do not delay me, now that HASHEM has made my errand successful. Give me leave that I may go to my master. And they said, Let us call the girl and ask for her reply. They called Rebekah and said to her, Will you go with this man? And she said, I will. So they sent off their sister Rebekah and her nurse along with Abrahams servant and his entourage. And they blessed Rebekah and said to her, O sister! May you grow Into thousands of myriads; May your descendants seize The gates of their foes. Then Rebekah and her maids arose, mounted the camels, and followed the man. So the servant took Rebekah and went his way.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Laban and Bethuel agree to Rebekah's marriage.",
+    "heb_summary": "לבן ובתואל מסכימים לנישואי רבקה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Abraham's Servant"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Rebekah's Brother"
+        },
+        {
+          "en_name": "Rebekah's Mother"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "maiden stay"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Camel"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Rebekah's Brother",
+          "term2": "Bethuel"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Rebekah",
+          "term2": "Rebekah's Mother"
+        },
+        {
+          "term1": "Rebekah's Brother",
+          "term2": "Rebekah's Mother"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Laban",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Bethuel",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Abraham's Servant",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Abraham's Servant",
+          "term2": "Hashem"
+        },
+        {
+          "term1": "Abraham's Servant",
+          "term2": "Rebekah's Brother"
+        },
+        {
+          "term1": "Abraham's Servant",
+          "term2": "Rebekah's Mother"
+        },
+        {
+          "term1": "Rebekah's Brother",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Rebekah's Mother",
+          "term2": "Rebekah"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Laban",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Bethuel",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Rebekah's Brother",
+          "term2": "Abraham's Servant"
+        },
+        {
+          "term1": "Rebekah's Mother",
+          "term2": "Abraham's Servant"
+        }
+      ]
+    }
+  }
+}

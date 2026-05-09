@@ -1,0 +1,112 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph tests brothers, accuses them of being spies.",
+        "heb_summary": "יוסף בוחן את אחיו, מאשים אותם בריגול.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Guardhouse"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "People",
+                    "unit": "brother",
+                    "context": "joseph's brothers"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "brothers' confinement"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Rations"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Brothers"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Guardhouse"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Canaan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_42:9-20"
+}

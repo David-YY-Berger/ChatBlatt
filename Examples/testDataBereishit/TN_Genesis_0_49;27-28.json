@@ -1,0 +1,43 @@
+﻿{
+    "res": {
+        "en_summary": "Benjamin compared to wolf, twelve tribes.",
+        "heb_summary": "בנימין כזאב, שנים עשר שבטים.",
+        "passage_types": [
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Benjamin"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Benjamin"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "People",
+                    "unit": "tribe",
+                    "context": "tribes of israel"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Wolf"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Benjamin",
+                    "term2": "Wolf"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:27-28"
+}

@@ -1,0 +1,141 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob flees Laban with family and wealth.",
+        "heb_summary": "יעקב בורח מלבן עם משפחתו ורכושו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Paddan-Aram"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Euphrates"
+                },
+                {
+                    "en_name": "Gilead"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Aram"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Household Idols"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "laban told jacob fled"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Euphrates"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Gilead"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Laban",
+                    "term2": "Aram"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Laban"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:14-22"
+}

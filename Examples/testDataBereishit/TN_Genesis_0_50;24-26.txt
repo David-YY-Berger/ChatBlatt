@@ -1,0 +1,129 @@
+﻿COST: Tokens: Total=8570 approx cost usd = $0.001112 (Prompt=6486, Completion=2084)
+SOURCE:
+Genesis 50:24-26  (TN_Genesis_0_50:24-26)
+
+HEBREW:
+וַיֹּ֤אמֶר יוֹסֵף֙ אֶל־אֶחָ֔יו אָנֹכִ֖י מֵ֑ת וֵֽאלֹהִ֞ים פָּקֹ֧ד יִפְקֹ֣ד אֶתְכֶ֗ם וְהֶעֱלָ֤ה אֶתְכֶם֙ מִן־הָאָ֣רֶץ הַזֹּ֔את אֶל־הָאָ֕רֶץ אֲשֶׁ֥ר נִשְׁבַּ֛ע לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹֽב׃ וַיַּשְׁבַּ֣ע יוֹסֵ֔ף אֶת־בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר פָּקֹ֨ד יִפְקֹ֤ד אֱלֹהִים֙ אֶתְכֶ֔ם וְהַעֲלִתֶ֥ם אֶת־עַצְמֹתַ֖י מִזֶּֽה׃ וַיָּ֣מׇת יוֹסֵ֔ף בֶּן־מֵאָ֥ה וָעֶ֖שֶׂר שָׁנִ֑ים וַיַּחַנְט֣וּ אֹת֔וֹ וַיִּ֥ישֶׂם בָּאָר֖וֹן בְּמִצְרָֽיִם׃
+
+ENGLISH:
+At length, Joseph said to his brothers, I am about to die. God will surely take notice of you and bring you up from this land to the land promised on oath to Abraham, to Isaac, and to Jacob. So Joseph made the sons of Israel swear, saying, When God has taken notice of you, you shall carry up my bones from here. Joseph died at the age of one hundred and ten years; and he was embalmed and placed in a coffin in Egypt.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph dies, prophesies about the land.",
+    "heb_summary": "יוסף נפטר, מנבא על הארץ המובטחת.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Sons Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "The Land"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "110",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "joseph's lifespan"
+        }
+      ]
+    },
+    "Rel": {
+      "descendantOf": [
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Brothers"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Sons Of Israel"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "The Land"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "The Land"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "The Land"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Joseph",
+          "term2": "The Land"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

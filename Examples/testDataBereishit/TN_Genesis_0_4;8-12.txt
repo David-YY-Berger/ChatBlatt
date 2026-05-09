@@ -1,0 +1,88 @@
+﻿COST: Tokens: Total=7484 approx cost usd = $0.000780 (Prompt=6511, Completion=973)
+SOURCE:
+Genesis 4:8-12  (TN_Genesis_0_4:8-12)
+
+HEBREW:
+וַיֹּ֥אמֶר קַ֖יִן אֶל־הֶ֣בֶל אָחִ֑יו וַֽיְהִי֙ בִּהְיוֹתָ֣ם בַּשָּׂדֶ֔ה וַיָּ֥קׇם קַ֛יִן אֶל־הֶ֥בֶל אָחִ֖יו וַיַּהַרְגֵֽהוּ׃ וַיֹּ֤אמֶר יְהֹוָה֙ אֶל־קַ֔יִן אֵ֖י הֶ֣בֶל אָחִ֑יךָ וַיֹּ֙אמֶר֙ לֹ֣א יָדַ֔עְתִּי הֲשֹׁמֵ֥ר אָחִ֖י אָנֹֽכִי׃ וַיֹּ֖אמֶר מֶ֣ה עָשִׂ֑יתָ ק֚וֹל דְּמֵ֣י אָחִ֔יךָ צֹעֲקִ֥ים אֵלַ֖י מִן־הָֽאֲדָמָֽה׃ וְעַתָּ֖ה אָר֣וּר אָ֑תָּה מִן־הָֽאֲדָמָה֙ אֲשֶׁ֣ר פָּצְתָ֣ה אֶת־פִּ֔יהָ לָקַ֛חַת אֶת־דְּמֵ֥י אָחִ֖יךָ מִיָּדֶֽךָ׃ כִּ֤י תַֽעֲבֹד֙ אֶת־הָ֣אֲדָמָ֔ה לֹֽא־תֹסֵ֥ף תֵּת־כֹּחָ֖הּ לָ֑ךְ נָ֥ע וָנָ֖ד תִּֽהְיֶ֥ה בָאָֽרֶץ׃
+
+ENGLISH:
+Cain said to his brother Abel ... and when they were in the field, Cain set upon his brother Abel and killed him. HASHEM said to Cain, Where is your brother Abel? And he said, I do not know. Am I my brothers keeper? What have you done? Hark, your brothers blood cries out to Me from the ground! Therefore, you shall be more cursed than the ground, which opened its mouth to receive your brothers blood from your hand. If you till the soil, it shall no longer yield its strength to you. You shall become a ceaseless wanderer on earth.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Cain killed Abel; God cursed Cain.",
+    "heb_summary": "קין הרג את הבל; אלוהים קילל את קין.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Abel"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Field"
+        },
+        {
+          "en_name": "Ground"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Cain",
+          "term2": "Abel"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Cain"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Abel",
+          "term2": "Field"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Cain",
+          "term2": "Field"
+        },
+        {
+          "term1": "Abel",
+          "term2": "Field"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Cain",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Abel",
+          "term2": "Ground"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Cain",
+          "term2": "Abel"
+        }
+      ]
+    }
+  }
+}

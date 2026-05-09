@@ -1,0 +1,151 @@
+﻿COST: Tokens: Total=8469 approx cost usd = $0.001057 (Prompt=6594, Completion=1875)
+SOURCE:
+Genesis 31:14-22  (TN_Genesis_0_31:14-22)
+
+HEBREW:
+וַתַּ֤עַן רָחֵל֙ וְלֵאָ֔ה וַתֹּאמַ֖רְנָה ל֑וֹ הַע֥וֹד לָ֛נוּ חֵ֥לֶק וְנַחֲלָ֖ה בְּבֵ֥ית אָבִֽינוּ׃ הֲל֧וֹא נׇכְרִיּ֛וֹת נֶחְשַׁ֥בְנוּ ל֖וֹ כִּ֣י מְכָרָ֑נוּ וַיֹּ֥אכַל גַּם־אָכ֖וֹל אֶת־כַּסְפֵּֽנוּ׃ כִּ֣י כׇל־הָעֹ֗שֶׁר אֲשֶׁ֨ר הִצִּ֤יל אֱלֹהִים֙ מֵֽאָבִ֔ינוּ לָ֥נוּ ה֖וּא וּלְבָנֵ֑ינוּ וְעַתָּ֗ה כֹּל֩ אֲשֶׁ֨ר אָמַ֧ר אֱלֹהִ֛ים אֵלֶ֖יךָ עֲשֵֽׂה׃ וַיָּ֖קׇם יַעֲקֹ֑ב וַיִּשָּׂ֛א אֶת־בָּנָ֥יו וְאֶת־נָשָׁ֖יו עַל־הַגְּמַלִּֽים׃ וַיִּנְהַ֣ג אֶת־כׇּל־מִקְנֵ֗הוּ וְאֶת־כׇּל־רְכֻשׁוֹ֙ אֲשֶׁ֣ר רָכָ֔שׁ מִקְנֵה֙ קִנְיָנ֔וֹ אֲשֶׁ֥ר רָכַ֖שׁ בְּפַדַּ֣ן אֲרָ֑ם לָב֛וֹא אֶל־יִצְחָ֥ק אָבִ֖יו אַ֥רְצָה כְּנָֽעַן׃ וְלָבָ֣ן הָלַ֔ךְ לִגְזֹ֖ז אֶת־צֹאנ֑וֹ וַתִּגְנֹ֣ב רָחֵ֔ל אֶת־הַתְּרָפִ֖ים אֲשֶׁ֥ר לְאָבִֽיהָ׃ וַיִּגְנֹ֣ב יַעֲקֹ֔ב אֶת־לֵ֥ב לָבָ֖ן הָאֲרַמִּ֑י עַל־בְּלִי֙ הִגִּ֣יד ל֔וֹ כִּ֥י בֹרֵ֖חַ הֽוּא׃ וַיִּבְרַ֥ח הוּא֙ וְכׇל־אֲשֶׁר־ל֔וֹ וַיָּ֖קׇם וַיַּעֲבֹ֣ר אֶת־הַנָּהָ֑ר וַיָּ֥שֶׂם אֶת־פָּנָ֖יו הַ֥ר הַגִּלְעָֽד׃ וַיֻּגַּ֥ד לְלָבָ֖ן בַּיּ֣וֹם הַשְּׁלִישִׁ֑י כִּ֥י בָרַ֖ח יַעֲקֹֽב׃
+
+ENGLISH:
+Then Rachel and Leah answered him, saying, Have we still a share in the inheritance of our fathers house? Surely, he regards us as outsiders, now that he has sold us and has used up our purchase price. Truly, all the wealth that God has taken away from our father belongs to us and to our children. Now then, do just as God has told you. Thereupon Jacob put his children and wives on camels; and he drove off all his livestock and all the wealth that he had amassed, the livestock in his possession that he had acquired in Paddan-aram, to go to his father Isaac in the land of Canaan. Meanwhile Laban had gone to shear his sheep, and Rachel stole her fathers household idols. Jacob kept Laban the Aramean in the dark, not telling him that he was fleeing, and fled with all that he had. Soon he was across the Euphrates and heading toward the hill country of Gilead. On the third day, Laban was told that Jacob had fled.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob flees Laban with family and wealth.",
+    "heb_summary": "יעקב בורח מלבן עם משפחתו ורכושו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Isaac"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Paddan-Aram"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Euphrates"
+        },
+        {
+          "en_name": "Gilead"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Aram"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Household Idols"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "laban told jacob fled"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Rachel",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rachel",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Euphrates"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Gilead"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Isaac",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Laban",
+          "term2": "Aram"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

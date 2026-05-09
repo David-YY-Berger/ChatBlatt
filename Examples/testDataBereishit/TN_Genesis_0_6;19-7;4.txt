@@ -1,0 +1,77 @@
+﻿COST: Tokens: Total=8866 approx cost usd = $0.001173 (Prompt=6610, Completion=2256)
+SOURCE:
+Genesis 6:19-7:4  (TN_Genesis_0_6:19-7:4)
+
+HEBREW:
+וּמִכׇּל־הָ֠חַ֠י מִֽכׇּל־בָּשָׂ֞ר שְׁנַ֧יִם מִכֹּ֛ל תָּבִ֥יא אֶל־הַתֵּבָ֖ה לְהַחֲיֹ֣ת אִתָּ֑ךְ זָכָ֥ר וּנְקֵבָ֖ה יִֽהְיֽוּ׃ מֵהָע֣וֹף לְמִינֵ֗הוּ וּמִן־הַבְּהֵמָה֙ לְמִינָ֔הּ מִכֹּ֛ל רֶ֥מֶשׂ הָֽאֲדָמָ֖ה לְמִינֵ֑הוּ שְׁנַ֧יִם מִכֹּ֛ל יָבֹ֥אוּ אֵלֶ֖יךָ לְהַֽחֲיֽוֹת׃ וְאַתָּ֣ה קַח־לְךָ֗ מִכׇּל־מַֽאֲכָל֙ אֲשֶׁ֣ר יֵֽאָכֵ֔ל וְאָסַפְתָּ֖ אֵלֶ֑יךָ וְהָיָ֥ה לְךָ֛ וְלָהֶ֖ם לְאׇכְלָֽה׃ וַיַּ֖עַשׂ נֹ֑חַ כְּ֠כֹ֠ל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛וֹ אֱלֹהִ֖ים כֵּ֥ן עָשָֽׂה׃וַיֹּ֤אמֶר יְהֹוָה֙ לְנֹ֔חַ בֹּֽא־אַתָּ֥ה וְכׇל־בֵּיתְךָ֖ אֶל־הַתֵּבָ֑ה כִּֽי־אֹתְךָ֥ רָאִ֛יתִי צַדִּ֥יק לְפָנַ֖י בַּדּ֥וֹר הַזֶּֽה׃ מִכֹּ֣ל׀ הַבְּהֵמָ֣ה הַטְּהוֹרָ֗ה תִּֽקַּח־לְךָ֛ שִׁבְעָ֥ה שִׁבְעָ֖ה אִ֣ישׁ וְאִשְׁתּ֑וֹ וּמִן־הַבְּהֵמָ֡ה אֲ֠שֶׁ֠ר לֹ֣א טְהֹרָ֥ה הִ֛וא שְׁנַ֖יִם אִ֥ישׁ וְאִשְׁתּֽוֹ׃ גַּ֣ם מֵע֧וֹף הַשָּׁמַ֛יִם שִׁבְעָ֥ה שִׁבְעָ֖ה זָכָ֣ר וּנְקֵבָ֑ה לְחַיּ֥וֹת זֶ֖רַע עַל־פְּנֵ֥י כׇל־הָאָֽרֶץ׃ כִּי֩ לְיָמִ֨ים ע֜וֹד שִׁבְעָ֗ה אָֽנֹכִי֙ מַמְטִ֣יר עַל־הָאָ֔רֶץ אַרְבָּעִ֣ים י֔וֹם וְאַרְבָּעִ֖ים לָ֑יְלָה וּמָחִ֗יתִי אֶֽת־כׇּל־הַיְקוּם֙ אֲשֶׁ֣ר עָשִׂ֔יתִי מֵעַ֖ל פְּנֵ֥י הָֽאֲדָמָֽה׃
+
+ENGLISH:
+And of all that lives, of all flesh, you shall take two of each into the ark to keep alive with you; they shall be male and female. From birds of every kind, cattle of every kind, every kind of creeping thing on earth, two of each shall come to you to stay alive. For your part, take of everything that is eaten and store it away, to serve as food for you and for them. Noah did so; just as God commanded him, so he did.Then HASHEM said to Noah, Go into the ark, with all your household, for you alone have I found righteous before Me in this generation. Of every pure animal you shall take seven pairs, males and their mates, and of every animal that is not pure, two, a male and its mate; of the birds of the sky also, seven pairs, male and female, to keep seed alive upon all the earth. For in seven days time I will make it rain upon the earth, forty days and forty nights, and I will blot out from the earth all existence that I created.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God commands Noah to gather animals.",
+    "heb_summary": "אלוהים מצווה על נח לאסוף חיות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "pair",
+          "context": "all living things"
+        },
+        {
+          "en_name": "7",
+          "number_category": "People",
+          "unit": "pair",
+          "context": "pure animals"
+        },
+        {
+          "en_name": "40",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "flood duration"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Creeping Thing"
+        },
+        {
+          "en_name": "Animal"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Noah"
+        }
+      ]
+    }
+  }
+}

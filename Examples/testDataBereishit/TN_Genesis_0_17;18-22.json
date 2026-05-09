@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "God promises Isaac, blesses Ishmael",
+        "heb_summary": "אלוהים מבטיח יצחק, מברך ישמעאל",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Covenant"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "People",
+                    "unit": "chieftain",
+                    "context": "ishmael's descendants"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "isaac's birth"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Sarah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_17:18-22"
+}

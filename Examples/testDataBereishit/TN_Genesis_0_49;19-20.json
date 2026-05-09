@@ -1,0 +1,36 @@
+﻿{
+    "res": {
+        "en_summary": "Gad and Asher's tribal blessings.",
+        "heb_summary": "ברכות שבטי גד ואשר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Asher"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Gad"
+                },
+                {
+                    "en_name": "Asher"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Dainty"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:19-20"
+}

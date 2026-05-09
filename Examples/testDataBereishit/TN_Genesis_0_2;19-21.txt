@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=8160 approx cost usd = $0.000972 (Prompt=6559, Completion=1601)
+SOURCE:
+Genesis 2:19-21  (TN_Genesis_0_2:19-21)
+
+HEBREW:
+וַיִּ֩צֶר֩ יְהֹוָ֨ה אֱלֹהִ֜ים מִן־הָֽאֲדָמָ֗ה כׇּל־חַיַּ֤ת הַשָּׂדֶה֙ וְאֵת֙ כׇּל־ע֣וֹף הַשָּׁמַ֔יִם וַיָּבֵא֙ אֶל־הָ֣אָדָ֔ם לִרְא֖וֹת מַה־יִּקְרָא־ל֑וֹ וְכֹל֩ אֲשֶׁ֨ר יִקְרָא־ל֧וֹ הָֽאָדָ֛ם נֶ֥פֶשׁ חַיָּ֖ה ה֥וּא שְׁמֽוֹ׃ וַיִּקְרָ֨א הָֽאָדָ֜ם שֵׁמ֗וֹת לְכׇל־הַבְּהֵמָה֙ וּלְע֣וֹף הַשָּׁמַ֔יִם וּלְכֹ֖ל חַיַּ֣ת הַשָּׂדֶ֑ה וּלְאָדָ֕ם לֹֽא־מָצָ֥א עֵ֖זֶר כְּנֶגְדּֽוֹ׃ וַיַּפֵּל֩ יְהֹוָ֨ה אֱלֹהִ֧ים׀תַּרְדֵּמָ֛ה עַל־הָאָדָ֖ם וַיִּישָׁ֑ן וַיִּקַּ֗ח אַחַת֙ מִצַּלְעֹתָ֔יו וַיִּסְגֹּ֥ר בָּשָׂ֖ר תַּחְתֶּֽנָּה׃
+
+ENGLISH:
+And God HASHEM formed out of the earth all the wild beasts and all the birds of the sky, and brought them to the Human to see what he would call them; and whatever the Human called each living creature, that would be its name. And the Human gave names to all the cattle and to the birds of the sky and to all the wild beasts; but no fitting counterpart for a human being was found. So God HASHEM cast a deep sleep upon the Human; and, while he slept, [God] took one of his sides, trad. ribs. Cf. 1 Kings 6.34; Exod. 25.12; 26.20, 26-27, 35; 30.4. and closed up the flesh at that site.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates human, names animals",
+    "heb_summary": "אלוהים ברא אדם, קרא לחיות",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Human"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "unit": "side",
+          "context": "human creation"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Cattle"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Human"
+        },
+        {
+          "term1": "Human",
+          "term2": "Cattle"
+        }
+      ]
+    }
+  }
+}

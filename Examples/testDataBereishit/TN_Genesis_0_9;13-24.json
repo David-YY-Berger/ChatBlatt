@@ -1,0 +1,93 @@
+﻿{
+    "res": {
+        "en_summary": "Noah, his sons, and the covenant.",
+        "heb_summary": "נח, בניו, והברית עם הארץ.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Ham"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Bow"
+                },
+                {
+                    "en_name": "Covenant"
+                },
+                {
+                    "en_name": "Ark"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "noah sons"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Wine"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shem",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Canaan",
+                    "term2": "Ham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Noah",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_9:13-24"
+}

@@ -1,0 +1,142 @@
+﻿COST: Tokens: Total=9622 approx cost usd = $0.001363 (Prompt=6772, Completion=2850)
+SOURCE:
+Genesis 43:1-13  (TN_Genesis_0_43:1-13)
+
+HEBREW:
+וְהָרָעָ֖ב כָּבֵ֥ד בָּאָֽרֶץ׃ וַיְהִ֗י כַּאֲשֶׁ֤ר כִּלּוּ֙ לֶאֱכֹ֣ל אֶת־הַשֶּׁ֔בֶר אֲשֶׁ֥ר הֵבִ֖יאוּ מִמִּצְרָ֑יִם וַיֹּ֤אמֶר אֲלֵיהֶם֙ אֲבִיהֶ֔ם שֻׁ֖בוּ שִׁבְרוּ־לָ֥נוּ מְעַט־אֹֽכֶל׃ וַיֹּ֧אמֶר אֵלָ֛יו יְהוּדָ֖ה לֵאמֹ֑ר הָעֵ֣ד הֵעִד֩ בָּ֨נוּ הָאִ֤ישׁ לֵאמֹר֙ לֹֽא־תִרְא֣וּ פָנַ֔י בִּלְתִּ֖י אֲחִיכֶ֥ם אִתְּכֶֽם׃ אִם־יֶשְׁךָ֛ מְשַׁלֵּ֥חַ אֶת־אָחִ֖ינוּ אִתָּ֑נוּ נֵרְדָ֕ה וְנִשְׁבְּרָ֥ה לְךָ֖ אֹֽכֶל׃ וְאִם־אֵינְךָ֥ מְשַׁלֵּ֖חַ לֹ֣א נֵרֵ֑ד כִּֽי־הָאִ֞ישׁ אָמַ֤ר אֵלֵ֙ינוּ֙ לֹֽא־תִרְא֣וּ פָנַ֔י בִּלְתִּ֖י אֲחִיכֶ֥ם אִתְּכֶֽם׃ וַיֹּ֙אמֶר֙ יִשְׂרָאֵ֔ל לָמָ֥ה הֲרֵעֹתֶ֖ם לִ֑י לְהַגִּ֣יד לָאִ֔ישׁ הַע֥וֹד לָכֶ֖ם אָֽח׃ וַיֹּאמְר֡וּ שָׁא֣וֹל שָֽׁאַל־הָ֠אִ֠ישׁ לָ֣נוּ וּלְמֽוֹלַדְתֵּ֜נוּ לֵאמֹ֗ר הַע֨וֹד אֲבִיכֶ֥ם חַי֙ הֲיֵ֣שׁ לָכֶ֣ם אָ֔ח וַנַּ֨גֶּד־ל֔וֹ עַל־פִּ֖י הַדְּבָרִ֣ים הָאֵ֑לֶּה הֲיָד֣וֹעַ נֵדַ֔ע כִּ֣י יֹאמַ֔ר הוֹרִ֖ידוּ אֶת־אֲחִיכֶֽם׃ וַיֹּ֨אמֶר יְהוּדָ֜ה אֶל־יִשְׂרָאֵ֣ל אָבִ֗יו שִׁלְחָ֥ה הַנַּ֛עַר אִתִּ֖י וְנָק֣וּמָה וְנֵלֵ֑כָה וְנִֽחְיֶה֙ וְלֹ֣א נָמ֔וּת גַּם־אֲנַ֥חְנוּ גַם־אַתָּ֖ה גַּם־טַפֵּֽנוּ׃ אָֽנֹכִי֙ אֶֽעֶרְבֶ֔נּוּ מִיָּדִ֖י תְּבַקְשֶׁ֑נּוּ אִם־לֹ֨א הֲבִיאֹתִ֤יו אֵלֶ֙יךָ֙ וְהִצַּגְתִּ֣יו לְפָנֶ֔יךָ וְחָטָ֥אתִֽי לְךָ֖ כׇּל־הַיָּמִֽים׃ כִּ֖י לוּלֵ֣א הִתְמַהְמָ֑הְנוּ כִּֽי־עַתָּ֥ה שַׁ֖בְנוּ זֶ֥ה פַעֲמָֽיִם׃ וַיֹּ֨אמֶר אֲלֵהֶ֜ם יִשְׂרָאֵ֣ל אֲבִיהֶ֗ם אִם־כֵּ֣ן׀אֵפוֹא֮ זֹ֣את עֲשׂוּ֒ קְח֞וּ מִזִּמְרַ֤ת הָאָ֙רֶץ֙ בִּכְלֵיכֶ֔ם וְהוֹרִ֥ידוּ לָאִ֖ישׁ מִנְחָ֑ה מְעַ֤ט צֳרִי֙ וּמְעַ֣ט דְּבַ֔שׁ נְכֹ֣את וָלֹ֔ט בׇּטְנִ֖ים וּשְׁקֵדִֽים׃ וְכֶ֥סֶף מִשְׁנֶ֖ה קְח֣וּ בְיֶדְכֶ֑ם וְאֶת־הַכֶּ֜סֶף הַמּוּשָׁ֨ב בְּפִ֤י אַמְתְּחֹֽתֵיכֶם֙ תָּשִׁ֣יבוּ בְיֶדְכֶ֔ם אוּלַ֥י מִשְׁגֶּ֖ה הֽוּא׃ וְאֶת־אֲחִיכֶ֖ם קָ֑חוּ וְק֖וּמוּ שׁ֥וּבוּ אֶל־הָאִֽישׁ׃
+
+ENGLISH:
+But the famine in the land was severe. And when they had eaten up the rations which they had brought from Egypt, their father said to them, Go again and procure some food for us. But Judah said to him, The man warned us, Do not let me see your faces unless your brother is with you. If you will let our brother go with us, we will go down and procure food for you; but if you will not let him go, we will not go down, for that man said to us, Do not let me see your faces unless your brother is with you. And Israel said, Why did you serve me so ill as to tell the man that you had another brother? They replied, But the man kept asking about us and our family, saying, Is your father still living? Have you another brother? And we answered him accordingly. How were we to know that he would say, Bring your brother here? Then Judah said to his father Israel, Send the boy in my care, and let us be on our way, that we may live and not die-you and we and our children. I myself will be surety for him; you may hold me responsible: if I do not bring him back to you and set him before you, I shall stand guilty before you forever. For we could have been there and back twice if we had not dawdled. Then their father Israel said to them, If it must be so, do this: take some of the choice products of the land in your baggage, and carry them down as a gift for the man-some balm and some honey, gum, ladanum, pistachio nuts, and almonds. And take with you double the money, carrying back with you the money that was replaced in the mouths of your bags; perhaps it was a mistake. Take your brother too; and go back at once to the man.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Judah pleads with Israel for Benjamin to go.",
+    "heb_summary": "יהודה משכנע את ישראל לשלוח את בנימין.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Sons Of Israel"
+        },
+        {
+          "en_name": "Children Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "unit": "trip",
+          "context": "travel time"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Ration"
+        },
+        {
+          "en_name": "Food"
+        },
+        {
+          "en_name": "Balm"
+        },
+        {
+          "en_name": "Honey"
+        },
+        {
+          "en_name": "Gum"
+        },
+        {
+          "en_name": "Ladanum"
+        },
+        {
+          "en_name": "Pistachio Nut"
+        },
+        {
+          "en_name": "Almond"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Balm"
+        },
+        {
+          "en_name": "Honey"
+        },
+        {
+          "en_name": "Gum"
+        },
+        {
+          "en_name": "Ladanum"
+        },
+        {
+          "en_name": "Pistachio Nut"
+        },
+        {
+          "en_name": "Almond"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Judah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Benjamin",
+          "term2": "Israel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Judah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Sons Of Israel"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Sons Of Israel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Israel",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,139 @@
+﻿{
+    "res": {
+        "en_summary": "Simeon and Levi avenge Dinah's defilement.",
+        "heb_summary": "שמעון ולוי נקמו את דינה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Hamor"
+                },
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Jacob's Sons"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "The City"
+                },
+                {
+                    "en_name": "Shechem"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "jacob's sons avenged dinah"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Simeon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Hamor"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Hamor",
+                    "term2": "The City"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "The City"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Simeon",
+                    "term2": "The City"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "The City"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "The City"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Shechem"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Simeon",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Shechem"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Simeon",
+                    "term2": "Levi"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_34:25-29"
+}

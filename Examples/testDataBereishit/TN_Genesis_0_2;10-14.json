@@ -1,0 +1,50 @@
+﻿{
+    "res": {
+        "en_summary": "Eden river divides into four branches.",
+        "heb_summary": "נהר עדן מתפצל לארבעה נהרות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Place": [
+                {
+                    "en_name": "Eden"
+                },
+                {
+                    "en_name": "Garden"
+                },
+                {
+                    "en_name": "Pishon"
+                },
+                {
+                    "en_name": "Havilah"
+                },
+                {
+                    "en_name": "Gihon"
+                },
+                {
+                    "en_name": "Cush"
+                },
+                {
+                    "en_name": "Tigris"
+                },
+                {
+                    "en_name": "Asshur"
+                },
+                {
+                    "en_name": "Euphrates"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Misc",
+                    "unit": "branch",
+                    "context": "river branches"
+                }
+            ]
+        },
+        "Rel": {}
+    },
+    "key": "TN_Genesis_0_2:10-14"
+}

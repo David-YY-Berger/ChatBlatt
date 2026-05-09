@@ -1,0 +1,136 @@
+﻿COST: Tokens: Total=9128 approx cost usd = $0.001245 (Prompt=6638, Completion=2490)
+SOURCE:
+Genesis 5:22-32  (TN_Genesis_0_5:22-32)
+
+HEBREW:
+וַיִּתְהַלֵּ֨ךְ חֲנ֜וֹךְ אֶת־הָֽאֱלֹהִ֗ים אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־מְתוּשֶׁ֔לַח שְׁלֹ֥שׁ מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיְהִ֖י כׇּל־יְמֵ֣י חֲנ֑וֹךְ חָמֵ֤שׁ וְשִׁשִּׁים֙ שָׁנָ֔ה וּשְׁלֹ֥שׁ מֵא֖וֹת שָׁנָֽה׃ וַיִּתְהַלֵּ֥ךְ חֲנ֖וֹךְ אֶת־הָֽאֱלֹהִ֑ים וְאֵינֶ֕נּוּ כִּֽי־לָקַ֥ח אֹת֖וֹ אֱלֹהִֽים׃ וַיְחִ֣י מְתוּשֶׁ֔לַח שֶׁ֧בַע וּשְׁמֹנִ֛ים שָׁנָ֖ה וּמְאַ֣ת שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־לָֽמֶךְ׃ וַיְחִ֣י מְתוּשֶׁ֗לַח אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־לֶ֔מֶךְ שְׁתַּ֤יִם וּשְׁמוֹנִים֙ שָׁנָ֔ה וּשְׁבַ֥ע מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּהְיוּ֙ כׇּל־יְמֵ֣י מְתוּשֶׁ֔לַח תֵּ֤שַׁע וְשִׁשִּׁים֙ שָׁנָ֔ה וּתְשַׁ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַֽיְחִי־לֶ֕מֶךְ שְׁתַּ֧יִם וּשְׁמֹנִ֛ים שָׁנָ֖ה וּמְאַ֣ת שָׁנָ֑ה וַיּ֖וֹלֶד בֵּֽן׃ וַיִּקְרָ֧א אֶת־שְׁמ֛וֹ נֹ֖חַ לֵאמֹ֑ר זֶ֞֠ה יְנַחֲמֵ֤נוּ מִֽמַּעֲשֵׂ֙נוּ֙ וּמֵעִצְּב֣וֹן יָדֵ֔ינוּ מִן־הָ֣אֲדָמָ֔ה אֲשֶׁ֥ר אֵֽרְרָ֖הּ יְהֹוָֽה׃ וַֽיְחִי־לֶ֗מֶךְ אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־נֹ֔חַ חָמֵ֤שׁ וְתִשְׁעִים֙ שָׁנָ֔ה וַחֲמֵ֥שׁ מֵאֹ֖ת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַֽיְהִי֙ כׇּל־יְמֵי־לֶ֔מֶךְ שֶׁ֤בַע וְשִׁבְעִים֙ שָׁנָ֔ה וּשְׁבַ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַֽיְהִי־נֹ֕חַ בֶּן־חֲמֵ֥שׁ מֵא֖וֹת שָׁנָ֑ה וַיּ֣וֹלֶד נֹ֔חַ אֶת־שֵׁ֖ם אֶת־חָ֥ם וְאֶת־יָֽפֶת׃
+
+ENGLISH:
+After the birth of Methuselah, Enoch walked with God 300 years; and he begot sons and daughters. All the days of Enoch came to 365 years. Enoch walked with God; then he was no more, for God took him. When Methuselah had lived 187 years, he begot Lamech. After the birth of Lamech, Methuselah lived 782 years and begot sons and daughters. All the days of Methuselah came to 969 years; then he died. When Lamech had lived 182 years, he begot a son. And he named him Noah, saying, This one will provide us relief to comfort; cf. 9.20ff. from our work and from the toil of our hands, out of the very soil which HASHEM placed under a curse. After the birth of Noah, Lamech lived 595 years and begot sons and daughters. All the days of Lamech came to 777 years; then he died. When Noah had lived 500 years, Noah begot Shem, Ham, and Japheth.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Generations of Enoch, Methuselah, Lamech, Noah.",
+    "heb_summary": "דורות חנוך, מתושלח, למך, נח.",
+    "passage_types": [
+      "STORY",
+      "GENEALOGY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Enoch"
+        },
+        {
+          "en_name": "Methuselah"
+        },
+        {
+          "en_name": "Lamech"
+        },
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Ham"
+        },
+        {
+          "en_name": "Japheth"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "300",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enoch walked with god"
+        },
+        {
+          "en_name": "365",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enoch lifespan"
+        },
+        {
+          "en_name": "187",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "methuselah lived before lamech"
+        },
+        {
+          "en_name": "782",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "methuselah lived after lamech"
+        },
+        {
+          "en_name": "969",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "methuselah lifespan"
+        },
+        {
+          "en_name": "182",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "lamech lived before noah"
+        },
+        {
+          "en_name": "595",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "lamech lived after noah"
+        },
+        {
+          "en_name": "777",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "lamech lifespan"
+        },
+        {
+          "en_name": "500",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "noah lived before sons"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Methuselah",
+          "term2": "Enoch"
+        },
+        {
+          "term1": "Lamech",
+          "term2": "Methuselah"
+        },
+        {
+          "term1": "Noah",
+          "term2": "Lamech"
+        },
+        {
+          "term1": "Shem",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Ham",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Japheth",
+          "term2": "Noah"
+        }
+      ]
+    }
+  }
+}

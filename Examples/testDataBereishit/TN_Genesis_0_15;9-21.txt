@@ -1,0 +1,191 @@
+﻿COST: Tokens: Total=11470 approx cost usd = $0.001932 (Prompt=6707, Completion=4763)
+SOURCE:
+Genesis 15:9-21  (TN_Genesis_0_15:9-21)
+
+HEBREW:
+וַיֹּ֣אמֶר אֵלָ֗יו קְחָ֥ה לִי֙ עֶגְלָ֣ה מְשֻׁלֶּ֔שֶׁת וְעֵ֥ז מְשֻׁלֶּ֖שֶׁת וְאַ֣יִל מְשֻׁלָּ֑שׁ וְתֹ֖ר וְגוֹזָֽל׃ וַיִּֽקַּֽח־ל֣וֹ אֶת־כׇּל־אֵ֗לֶּה וַיְבַתֵּ֤ר אֹתָם֙ בַּתָּ֔וֶךְ וַיִּתֵּ֥ן אִישׁ־בִּתְר֖וֹ לִקְרַ֣את רֵעֵ֑הוּ וְאֶת־הַצִּפֹּ֖ר לֹ֥א בָתָֽר׃ וַיֵּ֥רֶד הָעַ֖יִט עַל־הַפְּגָרִ֑ים וַיַּשֵּׁ֥ב אֹתָ֖ם אַבְרָֽם׃ וַיְהִ֤י הַשֶּׁ֙מֶשׁ֙ לָב֔וֹא וְתַרְדֵּמָ֖ה נָפְלָ֣ה עַל־אַבְרָ֑ם וְהִנֵּ֥ה אֵימָ֛ה חֲשֵׁכָ֥ה גְדֹלָ֖ה נֹפֶ֥לֶת עָלָֽיו׃ וַיֹּ֣אמֶר לְאַבְרָ֗ם יָדֹ֨עַ תֵּדַ֜ע כִּי־גֵ֣ר׀ יִהְיֶ֣ה זַרְעֲךָ֗ בְּאֶ֙רֶץ֙ לֹ֣א לָהֶ֔ם וַעֲבָד֖וּם וְעִנּ֣וּ אֹתָ֑ם אַרְבַּ֥ע מֵא֖וֹת שָׁנָֽה׃ וְגַ֧ם אֶת־הַגּ֛וֹי אֲשֶׁ֥ר יַעֲבֹ֖דוּ דָּ֣ן אָנֹ֑כִי וְאַחֲרֵי־כֵ֥ן יֵצְא֖וּ בִּרְכֻ֥שׁ גָּדֽוֹל׃ וְאַתָּ֛ה תָּב֥וֹא אֶל־אֲבֹתֶ֖יךָ בְּשָׁל֑וֹם תִּקָּבֵ֖ר בְּשֵׂיבָ֥ה טוֹבָֽה׃ וְד֥וֹר רְבִיעִ֖י יָשׁ֣וּבוּ הֵ֑נָּה כִּ֧י לֹא־שָׁלֵ֛ם עֲוֺ֥ן הָאֱמֹרִ֖י עַד־הֵֽנָּה׃ וַיְהִ֤י הַשֶּׁ֙מֶשׁ֙ בָּ֔אָה וַעֲלָטָ֖ה הָיָ֑ה וְהִנֵּ֨ה תַנּ֤וּר עָשָׁן֙ וְלַפִּ֣יד אֵ֔שׁ אֲשֶׁ֣ר עָבַ֔ר בֵּ֖ין הַגְּזָרִ֥ים הָאֵֽלֶּה׃ בַּיּ֣וֹם הַה֗וּא כָּרַ֧ת יְהֹוָ֛ה אֶת־אַבְרָ֖ם בְּרִ֣ית לֵאמֹ֑ר לְזַרְעֲךָ֗ נָתַ֙תִּי֙ אֶת־הָאָ֣רֶץ הַזֹּ֔את מִנְּהַ֣ר מִצְרַ֔יִם עַד־הַנָּהָ֥ר הַגָּדֹ֖ל נְהַר־פְּרָֽת׃ אֶת־הַקֵּינִי֙ וְאֶת־הַקְּנִזִּ֔י וְאֵ֖ת הַקַּדְמֹנִֽי׃ וְאֶת־הַחִתִּ֥י וְאֶת־הַפְּרִזִּ֖י וְאֶת־הָרְפָאִֽים׃ וְאֶת־הָֽאֱמֹרִי֙ וְאֶת־הַֽכְּנַעֲנִ֔י וְאֶת־הַגִּרְגָּשִׁ֖י וְאֶת־הַיְבוּסִֽי׃
+
+ENGLISH:
+Came the reply, Bring Me a three-year-old heifer, a three-year-old she-goat, a three-year-old ram, a turtledove, and a young bird. He brought all these and cut them in two, placing each half opposite the other; but he did not cut up the bird. Birds of prey came down upon the carcasses, and Abram drove them away. As the sun was about to set, a deep sleep fell upon Abram, and a great dark dread descended upon him. And [God] said to Abram, Know well that your offspring shall be strangers in a land not theirs, and they shall be enslaved and oppressed four hundred years; but I will execute judgment on the nation they shall serve, and in the end they shall go free with great wealth. As for you, You shall go to your ancestors in peace; You shall be buried at a ripe old age. And they shall return here in the fourth generation, for the iniquity of the Amorites is not yet complete. When the sun set and it was very dark, there appeared a smoking oven, and a flaming torch which passed between those pieces. On that day HASHEM made a covenant with Abram: To your offspring I assign this land, from the river of Egypt to the great river, the river Euphrates- the Kenites, the Kenizzites, the Kadmonites, the Hittites, the Perizzites, the Rephaim, the Amorites, the Canaanites, the Girgashites, and the Jebusites.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God covenants Abram; offspring enslaved, then inherit land.",
+    "heb_summary": "אלוהים כורת ברית עם אברהם; צאצאים יורשים ארץ.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Offspring"
+        },
+        {
+          "en_name": "Ancestors"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Land"
+        },
+        {
+          "en_name": "River Of Egypt"
+        },
+        {
+          "en_name": "Euphrates"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Amorite"
+        },
+        {
+          "en_name": "Kenites"
+        },
+        {
+          "en_name": "Kenizzite"
+        },
+        {
+          "en_name": "Kadmonite"
+        },
+        {
+          "en_name": "Hittites"
+        },
+        {
+          "en_name": "Perizzites"
+        },
+        {
+          "en_name": "Rephaite"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Girgashites"
+        },
+        {
+          "en_name": "Jebusites"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Smoking Oven"
+        },
+        {
+          "en_name": "Flaming Torch"
+        },
+        {
+          "en_name": "Covenant"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Sacrifice",
+          "unit": "year",
+          "context": "animal offering"
+        },
+        {
+          "en_name": "400",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enslavement duration"
+        },
+        {
+          "en_name": "4",
+          "number_category": "Time",
+          "unit": "generation",
+          "context": "return to land"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Heifer"
+        },
+        {
+          "en_name": "She-Goat"
+        },
+        {
+          "en_name": "Ram"
+        },
+        {
+          "en_name": "Turtledove"
+        },
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Bird Of Prey"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "God"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Offspring",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Offspring",
+          "term2": "Amorite"
+        },
+        {
+          "term1": "Offspring",
+          "term2": "Kenizzite"
+        },
+        {
+          "term1": "Offspring",
+          "term2": "Kadmonite"
+        },
+        {
+          "term1": "Offspring",
+          "term2": "Rephaite"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "River Of Egypt",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Land",
+          "term2": "Kenizzite"
+        },
+        {
+          "term1": "Land",
+          "term2": "Kadmonite"
+        },
+        {
+          "term1": "Land",
+          "term2": "Rephaite"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

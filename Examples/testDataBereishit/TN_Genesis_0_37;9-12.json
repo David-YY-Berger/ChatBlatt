@@ -1,0 +1,93 @@
+﻿{
+    "res": {
+        "en_summary": "Dreamer's prophetic dream angers his family.",
+        "heb_summary": "חלום המנבא השתחוויה, משפחה כועסת.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "The Dreamer"
+                },
+                {
+                    "en_name": "Brothers"
+                },
+                {
+                    "en_name": "Father"
+                },
+                {
+                    "en_name": "Mother"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shechem"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Sun"
+                },
+                {
+                    "en_name": "Moon"
+                },
+                {
+                    "en_name": "Stars"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "11",
+                    "number_category": "People",
+                    "unit": "star",
+                    "context": "brothers bowing"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "The Dreamer",
+                    "term2": "Brothers"
+                },
+                {
+                    "term1": "The Dreamer",
+                    "term2": "Father"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Father",
+                    "term2": "Shechem"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Sun",
+                    "term2": "Father"
+                },
+                {
+                    "term1": "Moon",
+                    "term2": "Mother"
+                },
+                {
+                    "term1": "Stars",
+                    "term2": "Brothers"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Brothers",
+                    "term2": "The Dreamer"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:9-12"
+}

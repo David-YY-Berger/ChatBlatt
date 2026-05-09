@@ -1,0 +1,49 @@
+﻿{
+    "res": {
+        "en_summary": "God appears to Abram, promises covenant.",
+        "heb_summary": "ה' נגלה לאברם ומבטיח ברית.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "99",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abram's age"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abram"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Abram"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_17:1-3"
+}

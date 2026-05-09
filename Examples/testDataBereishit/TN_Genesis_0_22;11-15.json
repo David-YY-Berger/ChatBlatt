@@ -1,0 +1,57 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham offers ram, God provides.",
+        "heb_summary": "אברהם מקריב איל, אלוהים מספק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Messenger Of Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Adonai-Yireh"
+                },
+                {
+                    "en_name": "Mount Of Hashem"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ram"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Messenger Of Hashem",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Adonai-Yireh"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Mount Of Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_22:11-15"
+}

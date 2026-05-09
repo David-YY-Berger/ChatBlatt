@@ -1,0 +1,219 @@
+﻿COST: Tokens: Total=10062 approx cost usd = $0.001471 (Prompt=6876, Completion=3186)
+SOURCE:
+Genesis 4:25-5:21  (TN_Genesis_0_4:25-5:21)
+
+HEBREW:
+וַיֵּ֨דַע אָדָ֥ם עוֹד֙ אֶת־אִשְׁתּ֔וֹ וַתֵּ֣לֶד בֵּ֔ן וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ שֵׁ֑ת כִּ֣י שָֽׁת־לִ֤י אֱלֹהִים֙ זֶ֣רַע אַחֵ֔ר תַּ֣חַת הֶ֔בֶל כִּ֥י הֲרָג֖וֹ קָֽיִן׃ וּלְשֵׁ֤ת גַּם־הוּא֙ יֻלַּד־בֵּ֔ן וַיִּקְרָ֥א אֶת־שְׁמ֖וֹ אֱנ֑וֹשׁ אָ֣ז הוּחַ֔ל לִקְרֹ֖א בְּשֵׁ֥ם יְהֹוָֽה׃ זֶ֣ה סֵ֔פֶר * (בספרי תימן סֵ֔ פֶר בסמ״ך גדולה) תּוֹלְדֹ֖ת אָדָ֑ם בְּי֗וֹם בְּרֹ֤א אֱלֹהִים֙ אָדָ֔ם בִּדְמ֥וּת אֱלֹהִ֖ים עָשָׂ֥ה אֹתֽוֹ׃ זָכָ֥ר וּנְקֵבָ֖ה בְּרָאָ֑ם וַיְבָ֣רֶךְ אֹתָ֗ם וַיִּקְרָ֤א אֶת־שְׁמָם֙ אָדָ֔ם בְּי֖וֹם הִבָּֽרְאָֽם׃ וַיְחִ֣י אָדָ֗ם שְׁלֹשִׁ֤ים וּמְאַת֙ שָׁנָ֔ה וַיּ֥וֹלֶד בִּדְמוּת֖וֹ כְּצַלְמ֑וֹ וַיִּקְרָ֥א אֶת־שְׁמ֖וֹ שֵֽׁת׃ וַיִּֽהְי֣וּ יְמֵי־אָדָ֗ם אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־שֵׁ֔ת שְׁמֹנֶ֥ה מֵאֹ֖ת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּֽהְי֞וּ כׇּל־יְמֵ֤י אָדָם֙ אֲשֶׁר־חַ֔י תְּשַׁ֤ע מֵאוֹת֙ שָׁנָ֔ה וּשְׁלֹשִׁ֖ים שָׁנָ֑ה וַיָּמֹֽת׃ וַֽיְחִי־שֵׁ֕ת חָמֵ֥שׁ שָׁנִ֖ים וּמְאַ֣ת שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־אֱנֽוֹשׁ׃ וַֽיְחִי־שֵׁ֗ת אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־אֱנ֔וֹשׁ שֶׁ֣בַע שָׁנִ֔ים וּשְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּֽהְיוּ֙ כׇּל־יְמֵי־שֵׁ֔ת שְׁתֵּ֤ים עֶשְׂרֵה֙ שָׁנָ֔ה וּתְשַׁ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַיְחִ֥י אֱנ֖וֹשׁ תִּשְׁעִ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־קֵינָֽן׃ וַיְחִ֣י אֱנ֗וֹשׁ אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־קֵינָ֔ן חֲמֵ֤שׁ עֶשְׂרֵה֙ שָׁנָ֔ה וּשְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּֽהְיוּ֙ כׇּל־יְמֵ֣י אֱנ֔וֹשׁ חָמֵ֣שׁ שָׁנִ֔ים וּתְשַׁ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַיְחִ֥י קֵינָ֖ן שִׁבְעִ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־מַֽהֲלַלְאֵֽל׃ וַיְחִ֣י קֵינָ֗ן אַחֲרֵי֙ הוֹלִיד֣וֹ אֶת־מַֽהֲלַלְאֵ֔ל אַרְבָּעִ֣ים שָׁנָ֔ה וּשְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּֽהְיוּ֙ כׇּל־יְמֵ֣י קֵינָ֔ן עֶ֣שֶׂר שָׁנִ֔ים וּתְשַׁ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַיְחִ֣י מַֽהֲלַלְאֵ֔ל חָמֵ֥שׁ שָׁנִ֖ים וְשִׁשִּׁ֣ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־יָֽרֶד׃ וַיְחִ֣י מַֽהֲלַלְאֵ֗ל אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־יֶ֔רֶד שְׁלֹשִׁ֣ים שָׁנָ֔ה וּשְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּהְיוּ֙ כׇּל־יְמֵ֣י מַהֲלַלְאֵ֔ל חָמֵ֤שׁ וְתִשְׁעִים֙ שָׁנָ֔ה וּשְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַֽיְחִי־יֶ֕רֶד שְׁתַּ֧יִם וְשִׁשִּׁ֛ים שָׁנָ֖ה וּמְאַ֣ת שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־חֲנֽוֹךְ׃ וַֽיְחִי־יֶ֗רֶד אַֽחֲרֵי֙ הוֹלִיד֣וֹ אֶת־חֲנ֔וֹךְ שְׁמֹנֶ֥ה מֵא֖וֹת שָׁנָ֑ה וַיּ֥וֹלֶד בָּנִ֖ים וּבָנֽוֹת׃ וַיִּֽהְיוּ֙ כׇּל־יְמֵי־יֶ֔רֶד שְׁתַּ֤יִם וְשִׁשִּׁים֙ שָׁנָ֔ה וּתְשַׁ֥ע מֵא֖וֹת שָׁנָ֑ה וַיָּמֹֽת׃ וַיְחִ֣י חֲנ֔וֹךְ חָמֵ֥שׁ וְשִׁשִּׁ֖ים שָׁנָ֑ה וַיּ֖וֹלֶד אֶת־מְתוּשָֽׁלַח׃
+
+ENGLISH:
+Adam knew his wife again, and she bore a son and named him Seth, meaning, God has provided me with, connected with Seth. another offspring in place of Abel, for Cain had killed him. And to Seth, in turn, a son was born, and he named him Enosh. It was then that HASHEM began to be invoked by name.This is the record of Adams line.-When God created humankind, it was made in the likeness of God; male and female were they created. And when they were created, [God] blessed them and called them Humankind.; NJPS Man, trad. Adam. - When Adam had lived 130 years, he begot a son in his likeness after his image, and he named him Seth. After the birth of Seth, Adam lived 800 years and begot sons and daughters. All the days that Adam lived came to 930 years; then he died. When Seth had lived 105 years, he begot Enosh. After the birth of Enosh, Seth lived 807 years and begot sons and daughters. All the days of Seth came to 912 years; then he died. When Enosh had lived 90 years, he begot Kenan. After the birth of Kenan, Enosh lived 815 years and begot sons and daughters. All the days of Enosh came to 905 years; then he died. When Kenan had lived 70 years, he begot Mahalalel. After the birth of Mahalalel, Kenan lived 840 years and begot sons and daughters. All the days of Kenan came to 910 years; then he died. When Mahalalel had lived 65 years, he begot Jared. After the birth of Jared, Mahalalel lived 830 years and begot sons and daughters. All the days of Mahalalel came to 895 years; then he died. When Jared had lived 162 years, he begot Enoch. After the birth of Enoch, Jared lived 800 years and begot sons and daughters. All the days of Jared came to 962 years; then he died. When Enoch had lived 65 years, he begot Methuselah.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Adam's lineage, long lives, and early generations.",
+    "heb_summary": "שושלת אדם, חיים ארוכים, דורות ראשונים.",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Adam"
+        },
+        {
+          "en_name": "Seth"
+        },
+        {
+          "en_name": "Enosh"
+        },
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Kenan"
+        },
+        {
+          "en_name": "Mahalalel"
+        },
+        {
+          "en_name": "Jared"
+        },
+        {
+          "en_name": "Enoch"
+        },
+        {
+          "en_name": "Methuselah"
+        },
+        {
+          "en_name": "Humankind"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "130",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "adam's age before seth"
+        },
+        {
+          "en_name": "800",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "adam's life after seth"
+        },
+        {
+          "en_name": "930",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "adam's lifespan"
+        },
+        {
+          "en_name": "105",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "seth's age before enosh"
+        },
+        {
+          "en_name": "807",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "seth's life after enosh"
+        },
+        {
+          "en_name": "912",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "seth's lifespan"
+        },
+        {
+          "en_name": "90",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enosh's age before kenan"
+        },
+        {
+          "en_name": "815",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enosh's life after kenan"
+        },
+        {
+          "en_name": "905",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "enosh's lifespan"
+        },
+        {
+          "en_name": "70",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "kenan's age before mahalalel"
+        },
+        {
+          "en_name": "840",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "kenan's life after mahalalel"
+        },
+        {
+          "en_name": "910",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "kenan's lifespan"
+        },
+        {
+          "en_name": "65",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "mahalalel's age before jared"
+        },
+        {
+          "en_name": "830",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "mahalalel's life after jared"
+        },
+        {
+          "en_name": "895",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "mahalalel's lifespan"
+        },
+        {
+          "en_name": "162",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jared's age before enoch"
+        },
+        {
+          "en_name": "962",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jared's lifespan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Seth",
+          "term2": "Adam"
+        },
+        {
+          "term1": "Enosh",
+          "term2": "Seth"
+        },
+        {
+          "term1": "Kenan",
+          "term2": "Enosh"
+        },
+        {
+          "term1": "Mahalalel",
+          "term2": "Kenan"
+        },
+        {
+          "term1": "Jared",
+          "term2": "Mahalalel"
+        },
+        {
+          "term1": "Enoch",
+          "term2": "Jared"
+        },
+        {
+          "term1": "Methuselah",
+          "term2": "Enoch"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Humankind",
+          "term2": "God"
+        },
+        {
+          "term1": "Seth",
+          "term2": "Adam"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Humankind",
+          "term2": "Adam"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham buys Machpelah cave from Ephron.",
+        "heb_summary": "אברהם קונה מערת מכפלה מעפרון.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Ephron"
+                },
+                {
+                    "en_name": "Hittites"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Machpelah"
+                },
+                {
+                    "en_name": "Mamre"
+                },
+                {
+                    "en_name": "Hebron"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Towns Gate"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Heth"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "400",
+                    "number_category": "Money",
+                    "unit": "shekel",
+                    "context": "land price"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Ephron",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Machpelah"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Hebron"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Towns Gate"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Ephron",
+                    "term2": "Heth"
+                },
+                {
+                    "term1": "Hittites",
+                    "term2": "Heth"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Machpelah",
+                    "term2": "Heth"
+                },
+                {
+                    "term1": "Mamre",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Hebron",
+                    "term2": "Canaan"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Mamre",
+                    "term2": "Hebron"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_23:10-20"
+}

@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "God tests Abraham, commands Isaac's sacrifice.",
+        "heb_summary": "אלוהים בוחן אברהם, מצווה להקריב יצחק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Servants"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Moriah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "journey to moriah"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Servants"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Moriah"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Moriah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Moriah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_22:1-6"
+}

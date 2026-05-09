@@ -1,0 +1,111 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's sons deceive Shechem and Hamor",
+        "heb_summary": "בני יעקב מרמים שכם וחמור",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Hamor"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Jacob's Sons"
+                },
+                {
+                    "en_name": "Youth"
+                },
+                {
+                    "en_name": "Town Council"
+                },
+                {
+                    "en_name": "Fellow Townsmen"
+                },
+                {
+                    "en_name": "Men Of Their City"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Land"
+                },
+                {
+                    "en_name": "Town"
+                },
+                {
+                    "en_name": "Public Place"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "unit": "kindred",
+                    "context": "become one kindred"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shechem",
+                    "term2": "Hamor"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Hamor",
+                    "term2": "Town Council"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Town Council"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Hamor",
+                    "term2": "Public Place"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Public Place"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Land"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Youth",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Fellow Townsmen",
+                    "term2": "Town Council"
+                },
+                {
+                    "term1": "Men Of Their City",
+                    "term2": "Town Council"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_34:13-24"
+}

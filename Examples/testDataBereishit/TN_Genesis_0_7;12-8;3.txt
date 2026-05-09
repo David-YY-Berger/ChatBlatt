@@ -1,0 +1,167 @@
+﻿COST: Tokens: Total=9269 approx cost usd = $0.001251 (Prompt=6797, Completion=2472)
+SOURCE:
+Genesis 7:12-8:3  (TN_Genesis_0_7:12-8:3)
+
+HEBREW:
+וַיְהִ֥י הַגֶּ֖שֶׁם עַל־הָאָ֑רֶץ אַרְבָּעִ֣ים י֔וֹם וְאַרְבָּעִ֖ים לָֽיְלָה׃ בְּעֶ֨צֶם הַיּ֤וֹם הַזֶּה֙ בָּ֣א נֹ֔חַ וְשֵׁם־וְחָ֥ם וָיֶ֖פֶת בְּנֵי־נֹ֑חַ וְאֵ֣שֶׁת נֹ֗חַ וּשְׁלֹ֧שֶׁת נְשֵֽׁי־בָנָ֛יו אִתָּ֖ם אֶל־הַתֵּבָֽה׃ הֵ֜מָּה וְכׇל־הַֽחַיָּ֣ה לְמִינָ֗הּ וְכׇל־הַבְּהֵמָה֙ לְמִינָ֔הּ וְכׇל־הָרֶ֛מֶשׂ הָרֹמֵ֥שׂ עַל־הָאָ֖רֶץ לְמִינֵ֑הוּ וְכׇל־הָע֣וֹף לְמִינֵ֔הוּ כֹּ֖ל צִפּ֥וֹר כׇּל־כָּנָֽף׃ וַיָּבֹ֥אוּ אֶל־נֹ֖חַ אֶל־הַתֵּבָ֑ה שְׁנַ֤יִם שְׁנַ֙יִם֙ מִכׇּל־הַבָּשָׂ֔ר אֲשֶׁר־בּ֖וֹ ר֥וּחַ חַיִּֽים׃ וְהַבָּאִ֗ים זָכָ֨ר וּנְקֵבָ֤ה מִכׇּל־בָּשָׂר֙ בָּ֔אוּ כַּֽאֲשֶׁ֛ר צִוָּ֥ה אֹת֖וֹ אֱלֹהִ֑ים וַיִּסְגֹּ֥ר יְהֹוָ֖ה בַּֽעֲדֽוֹ׃ וַֽיְהִ֧י הַמַּבּ֛וּל אַרְבָּעִ֥ים י֖וֹם עַל־הָאָ֑רֶץ וַיִּרְבּ֣וּ הַמַּ֗יִם וַיִּשְׂאוּ֙ אֶת־הַתֵּבָ֔ה וַתָּ֖רׇם מֵעַ֥ל הָאָֽרֶץ׃ וַיִּגְבְּר֥וּ הַמַּ֛יִם וַיִּרְבּ֥וּ מְאֹ֖ד עַל־הָאָ֑רֶץ וַתֵּ֥לֶךְ הַתֵּבָ֖ה עַל־פְּנֵ֥י הַמָּֽיִם׃ וְהַמַּ֗יִם גָּ֥בְר֛וּ מְאֹ֥ד מְאֹ֖ד עַל־הָאָ֑רֶץ וַיְכֻסּ֗וּ כׇּל־הֶֽהָרִים֙ הַגְּבֹהִ֔ים אֲשֶׁר־תַּ֖חַת כׇּל־הַשָּׁמָֽיִם׃ חֲמֵ֨שׁ עֶשְׂרֵ֤ה אַמָּה֙ מִלְמַ֔עְלָה גָּבְר֖וּ הַמָּ֑יִם וַיְכֻסּ֖וּ הֶהָרִֽים׃ וַיִּגְוַ֞ע כׇּל־בָּשָׂ֣ר׀ הָרֹמֵ֣שׂ עַל־הָאָ֗רֶץ בָּע֤וֹף וּבַבְּהֵמָה֙ וּבַ֣חַיָּ֔ה וּבְכׇל־הַשֶּׁ֖רֶץ הַשֹּׁרֵ֣ץ עַל־הָאָ֑רֶץ וְכֹ֖ל הָאָדָֽם׃ כֹּ֡ל אֲשֶׁר֩ נִשְׁמַת־ר֨וּחַ חַיִּ֜ים בְּאַפָּ֗יו מִכֹּ֛ל אֲשֶׁ֥ר בֶּחָֽרָבָ֖ה מֵֽתוּ׃ וַיִּ֜מַח אֶֽת־כׇּל־הַיְק֣וּם׀ אֲשֶׁ֣ר׀ עַל־פְּנֵ֣י הָֽאֲדָמָ֗ה מֵאָדָ֤ם עַד־בְּהֵמָה֙ עַד־רֶ֙מֶשׂ֙ וְעַד־ע֣וֹף הַשָּׁמַ֔יִם וַיִּמָּח֖וּ מִן־הָאָ֑רֶץ וַיִּשָּׁ֧אֶר אַךְ־נֹ֛חַ וַֽאֲשֶׁ֥ר אִתּ֖וֹ בַּתֵּבָֽה׃ וַיִּגְבְּר֥וּ הַמַּ֖יִם עַל־הָאָ֑רֶץ חֲמִשִּׁ֥ים וּמְאַ֖ת יֽוֹם׃וַיִּזְכֹּ֤ר אֱלֹהִים֙ אֶת־נֹ֔חַ וְאֵ֤ת כׇּל־הַֽחַיָּה֙ וְאֶת־כׇּל־הַבְּהֵמָ֔ה אֲשֶׁ֥ר אִתּ֖וֹ בַּתֵּבָ֑ה וַיַּעֲבֵ֨ר אֱלֹהִ֥ים ר֙וּחַ֙ עַל־הָאָ֔רֶץ וַיָּשֹׁ֖כּוּ הַמָּֽיִם׃ וַיִּסָּֽכְרוּ֙ מַעְיְנֹ֣ת תְּה֔וֹם וַֽאֲרֻבֹּ֖ת הַשָּׁמָ֑יִם וַיִּכָּלֵ֥א הַגֶּ֖שֶׁם מִן־הַשָּׁמָֽיִם׃ וַיָּשֻׁ֧בוּ הַמַּ֛יִם מֵעַ֥ל הָאָ֖רֶץ הָל֣וֹךְ וָשׁ֑וֹב וַיַּחְסְר֣וּ הַמַּ֔יִם מִקְצֵ֕ה חֲמִשִּׁ֥ים וּמְאַ֖ת יֽוֹם׃
+
+ENGLISH:
+(The rain fell on the earth forty days and forty nights.) That same day Noah and Noahs sons, Shem, Ham, and Japheth, went into the ark, with Noahs wife and the three wives of his sons- they and all beasts of every kind, all cattle of every kind, all creatures of every kind that creep on the earth, and all birds of every kind, every bird, every winged thing. They came to Noah into the ark, two each of all flesh in which there was breath of life. Thus they that entered comprised male and female of all flesh, as God had commanded him. And HASHEM shut him in. The Flood continued forty days on the earth, and the waters increased and raised the ark so that it rose above the earth. The waters swelled and increased greatly upon the earth, and the ark drifted upon the waters. When the waters had swelled much more upon the earth, all the highest mountains everywhere under the sky were covered. Fifteen cubits higher did the waters swell, as the mountains were covered. And all flesh that stirred on earth perished-birds, cattle, beasts, and all the things that swarmed upon the earth, and all humankind. All in whose nostrils was the merest breath of life, all that was on dry land, died. All existence on earth was blotted out-humans, cattle, creeping things, and birds of the sky; they were blotted out from the earth. Only Noah was left, and those with him in the ark. And when the waters had swelled on the earth one hundred and fifty days,God remembered Noah and all the beasts and all the cattle that were with him in the ark, and God caused a wind to blow across the earth, and the waters subsided. The fountains of the deep and the floodgates of the sky were stopped up, and the rain from the sky was held back; the waters then receded steadily from the earth. At the end of one hundred and fifty days the waters diminished,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Noah, family, animals entered ark; flood covered earth.",
+    "heb_summary": "נח, משפחתו, וחיות נכנסו לתיבה; מבול כיסה ארץ.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Ham"
+        },
+        {
+          "en_name": "Japheth"
+        },
+        {
+          "en_name": "Noah's Wife"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        },
+        {
+          "en_name": "Ark"
+        },
+        {
+          "en_name": "Mountains"
+        },
+        {
+          "en_name": "Sky"
+        },
+        {
+          "en_name": "Dry Land"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "40",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "rain duration"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "unit": "pair",
+          "context": "ark entry"
+        },
+        {
+          "en_name": "15",
+          "number_category": "Measurement",
+          "unit": "cubit",
+          "context": "water height"
+        },
+        {
+          "en_name": "150",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "water swelling duration"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Beast"
+        },
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Creature"
+        },
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Winged Thing"
+        },
+        {
+          "en_name": "Flesh"
+        },
+        {
+          "en_name": "Creeping Thing"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Shem",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Ham",
+          "term2": "Noah"
+        },
+        {
+          "term1": "Japheth",
+          "term2": "Noah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Noah",
+          "term2": "Noah's Wife"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Noah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Noah",
+          "term2": "Ark"
+        },
+        {
+          "term1": "Shem",
+          "term2": "Ark"
+        },
+        {
+          "term1": "Ham",
+          "term2": "Ark"
+        },
+        {
+          "term1": "Japheth",
+          "term2": "Ark"
+        },
+        {
+          "term1": "Noah's Wife",
+          "term2": "Ark"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

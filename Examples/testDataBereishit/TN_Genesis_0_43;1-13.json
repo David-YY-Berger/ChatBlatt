@@ -1,0 +1,132 @@
+﻿{
+    "res": {
+        "en_summary": "Judah pleads with Israel for Benjamin to go.",
+        "heb_summary": "יהודה משכנע את ישראל לשלוח את בנימין.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Sons Of Israel"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "unit": "trip",
+                    "context": "travel time"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Ration"
+                },
+                {
+                    "en_name": "Food"
+                },
+                {
+                    "en_name": "Balm"
+                },
+                {
+                    "en_name": "Honey"
+                },
+                {
+                    "en_name": "Gum"
+                },
+                {
+                    "en_name": "Ladanum"
+                },
+                {
+                    "en_name": "Pistachio Nut"
+                },
+                {
+                    "en_name": "Almond"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Balm"
+                },
+                {
+                    "en_name": "Honey"
+                },
+                {
+                    "en_name": "Gum"
+                },
+                {
+                    "en_name": "Ladanum"
+                },
+                {
+                    "en_name": "Pistachio Nut"
+                },
+                {
+                    "en_name": "Almond"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Judah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Israel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Judah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Sons Of Israel"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Sons Of Israel"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Israel",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_43:1-13"
+}

@@ -1,0 +1,82 @@
+﻿COST: Tokens: Total=8489 approx cost usd = $0.001070 (Prompt=6562, Completion=1927)
+SOURCE:
+Genesis 32:10-14  (TN_Genesis_0_32:10-14)
+
+HEBREW:
+וַיֹּ֘אמֶר֮ יַעֲקֹב֒ אֱלֹהֵי֙ אָבִ֣י אַבְרָהָ֔ם וֵאלֹהֵ֖י אָבִ֣י יִצְחָ֑ק יְהֹוָ֞ה הָאֹמֵ֣ר אֵלַ֗י שׁ֧וּב לְאַרְצְךָ֛ וּלְמוֹלַדְתְּךָ֖ וְאֵיטִ֥יבָה עִמָּֽךְ׃ קָטֹ֜נְתִּי מִכֹּ֤ל הַחֲסָדִים֙ וּמִכׇּל־הָ֣אֱמֶ֔ת אֲשֶׁ֥ר עָשִׂ֖יתָ אֶת־עַבְדֶּ֑ךָ כִּ֣י בְמַקְלִ֗י עָבַ֙רְתִּי֙ אֶת־הַיַּרְדֵּ֣ן הַזֶּ֔ה וְעַתָּ֥ה הָיִ֖יתִי לִשְׁנֵ֥י מַחֲנֽוֹת׃ הַצִּילֵ֥נִי נָ֛א מִיַּ֥ד אָחִ֖י מִיַּ֣ד עֵשָׂ֑ו כִּֽי־יָרֵ֤א אָנֹכִי֙ אֹת֔וֹ פֶּן־יָב֣וֹא וְהִכַּ֔נִי אֵ֖ם עַל־בָּנִֽים׃ וְאַתָּ֣ה אָמַ֔רְתָּ הֵיטֵ֥ב אֵיטִ֖יב עִמָּ֑ךְ וְשַׂמְתִּ֤י אֶֽת־זַרְעֲךָ֙ כְּח֣וֹל הַיָּ֔ם אֲשֶׁ֥ר לֹא־יִסָּפֵ֖ר מֵרֹֽב׃ וַיָּ֥לֶן שָׁ֖ם בַּלַּ֣יְלָה הַה֑וּא וַיִּקַּ֞ח מִן־הַבָּ֧א בְיָד֛וֹ מִנְחָ֖ה לְעֵשָׂ֥ו אָחִֽיו׃
+
+ENGLISH:
+Then Jacob said, O God of my father Abrahams [house] and God of my father Isaacs [house], O HASHEM, who said to me, Return to your native land and I will deal bountifully with you! I am unworthy of all the kindness that You have so steadfastly shown Your servant: with my staff alone I crossed this Jordan, and now I have become two camps. Deliver me, I pray, from the hand of my brother, from the hand of Esau; else, I fear, he may come and strike me down, mothers and children alike. Yet You have said, I will deal bountifully with you and make your offspring as the sands of the sea, which are too numerous to count. After spending the night there, he selected from what was at hand these presents for his brother Esau:
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob prays, fears Esau, prepares gifts.",
+    "heb_summary": "יעקב מתפלל, חושש מעשו, מכין מתנות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jordan"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "camp",
+          "context": "jacob's group"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Jordan"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

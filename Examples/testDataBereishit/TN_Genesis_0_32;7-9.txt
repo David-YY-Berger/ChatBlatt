@@ -1,0 +1,61 @@
+﻿COST: Tokens: Total=8293 approx cost usd = $0.001032 (Prompt=6470, Completion=1823)
+SOURCE:
+Genesis 32:7-9  (TN_Genesis_0_32:7-9)
+
+HEBREW:
+וַיָּשֻׁ֙בוּ֙ הַמַּלְאָכִ֔ים אֶֽל־יַעֲקֹ֖ב לֵאמֹ֑ר בָּ֤אנוּ אֶל־אָחִ֙יךָ֙ אֶל־עֵשָׂ֔ו וְגַם֙ הֹלֵ֣ךְ לִקְרָֽאתְךָ֔ וְאַרְבַּע־מֵא֥וֹת אִ֖ישׁ עִמּֽוֹ׃ וַיִּירָ֧א יַעֲקֹ֛ב מְאֹ֖ד וַיֵּ֣צֶר ל֑וֹ וַיַּ֜חַץ אֶת־הָעָ֣ם אֲשֶׁר־אִתּ֗וֹ וְאֶת־הַצֹּ֧אן וְאֶת־הַבָּקָ֛ר וְהַגְּמַלִּ֖ים לִשְׁנֵ֥י מַחֲנֽוֹת׃ וַיֹּ֕אמֶר אִם־יָב֥וֹא עֵשָׂ֛ו אֶל־הַמַּחֲנֶ֥ה הָאַחַ֖ת וְהִכָּ֑הוּ וְהָיָ֛ה הַמַּחֲנֶ֥ה הַנִּשְׁאָ֖ר לִפְלֵיטָֽה׃
+
+ENGLISH:
+The messengers returned to Jacob, saying, We came to your brother Esau; he himself is coming to meet you, and his retinue. numbers four hundred. Jacob was greatly frightened; in his anxiety, he divided the people with him, and the flocks and herds and camels, into two camps, thinking, If Esau comes to the one camp and attacks it, the other camp may yet escape.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob fears Esau; divides people.",
+    "heb_summary": "יעקב פחד מעשו; חילק אנשים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Messengers"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "400",
+          "number_category": "People",
+          "unit": "person",
+          "context": "esau's retinue"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "unit": "camp",
+          "context": "jacob's division"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Messengers",
+          "term2": "Jacob"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

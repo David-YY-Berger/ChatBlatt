@@ -1,0 +1,42 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob buys Esau's birthright for food.",
+        "heb_summary": "יעקב קונה בכורה מעשו באוכל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Lentil Stew"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:33-34"
+}

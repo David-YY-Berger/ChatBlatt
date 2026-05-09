@@ -1,0 +1,73 @@
+﻿{
+    "res": {
+        "en_summary": "Abimelech restores Sarah, gives silver, God heals.",
+        "heb_summary": "אבימלך החזיר שרה, נתן כסף, אלוהים ריפא.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1000",
+                    "number_category": "Money",
+                    "unit": "silver",
+                    "context": "vindication for sarah"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                },
+                {
+                    "en_name": "Ox"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Abimelech",
+                    "term2": "Sarah"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "God"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_20:14-18"
+}

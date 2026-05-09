@@ -1,0 +1,31 @@
+﻿{
+    "res": {
+        "en_summary": "Cain and Abel offer sacrifices to God.",
+        "heb_summary": "קין והבל מביאים קורבנות לה'.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Cain"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abel"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Cain"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:3-7"
+}

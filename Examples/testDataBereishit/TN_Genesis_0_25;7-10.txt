@@ -1,0 +1,111 @@
+﻿COST: Tokens: Total=8053 approx cost usd = $0.000956 (Prompt=6487, Completion=1566)
+SOURCE:
+Genesis 25:7-10  (TN_Genesis_0_25:7-10)
+
+HEBREW:
+וְאֵ֗לֶּה יְמֵ֛י שְׁנֵֽי־חַיֵּ֥י אַבְרָהָ֖ם אֲשֶׁר־חָ֑י מְאַ֥ת שָׁנָ֛ה וְשִׁבְעִ֥ים שָׁנָ֖ה וְחָמֵ֥שׁ שָׁנִֽים׃ וַיִּגְוַ֨ע וַיָּ֧מׇת אַבְרָהָ֛ם בְּשֵׂיבָ֥ה טוֹבָ֖ה זָקֵ֣ן וְשָׂבֵ֑עַ וַיֵּאָ֖סֶף אֶל־עַמָּֽיו׃ וַיִּקְבְּר֨וּ אֹת֜וֹ יִצְחָ֤ק וְיִשְׁמָעֵאל֙ בָּנָ֔יו אֶל־מְעָרַ֖ת הַמַּכְפֵּלָ֑ה אֶל־שְׂדֵ֞ה עֶפְרֹ֤ן בֶּן־צֹ֙חַר֙ הַֽחִתִּ֔י אֲשֶׁ֖ר עַל־פְּנֵ֥י מַמְרֵֽא׃ הַשָּׂדֶ֛ה אֲשֶׁר־קָנָ֥ה אַבְרָהָ֖ם מֵאֵ֣ת בְּנֵי־חֵ֑ת שָׁ֛מָּה קֻבַּ֥ר אַבְרָהָ֖ם וְשָׂרָ֥ה אִשְׁתּֽוֹ׃
+
+ENGLISH:
+This was the total span of Abrahams life: one hundred and seventy-five years. And Abraham breathed his last, dying at a good ripe age, old and contented; and he was gathered to his kin. His sons Isaac and Ishmael buried him in the cave of Machpelah, in the field of Ephron son of Zohar the Hittite, facing Mamre, the field that Abraham had bought from the Hittites; there Abraham was buried, and Sarah his wife.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham died at 175, buried with Sarah.",
+    "heb_summary": "אברהם נפטר בגיל 175, נקבר עם שרה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "Ephron"
+        },
+        {
+          "en_name": "Zohar"
+        },
+        {
+          "en_name": "Sarah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Machpelah"
+        },
+        {
+          "en_name": "Mamre"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Hittites"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "175",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abraham's lifespan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Ishmael",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Ephron",
+          "term2": "Zohar"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Abraham",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Sarah",
+          "term2": "Machpelah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Isaac",
+          "term2": "Machpelah"
+        },
+        {
+          "term1": "Ishmael",
+          "term2": "Machpelah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Ephron",
+          "term2": "Machpelah"
+        }
+      ]
+    }
+  }
+}

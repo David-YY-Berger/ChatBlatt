@@ -1,0 +1,36 @@
+﻿{
+    "res": {
+        "en_summary": "Judah praised, triumphs over foes, compared to lion.",
+        "heb_summary": "יהודה מבורך, מנצח אויבים, כאריה.",
+        "passage_types": [
+            "PROPHECY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Lion"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Judah",
+                    "term2": "Lion"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:8-9"
+}

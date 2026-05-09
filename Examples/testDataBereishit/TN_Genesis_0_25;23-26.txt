@@ -1,0 +1,63 @@
+﻿COST: Tokens: Total=7633 approx cost usd = $0.000827 (Prompt=6500, Completion=1133)
+SOURCE:
+Genesis 25:23-26  (TN_Genesis_0_25:23-26)
+
+HEBREW:
+וַיֹּ֨אמֶר יְהֹוָ֜ה לָ֗הּ שְׁנֵ֤י [גוֹיִם֙] בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י לְאֻמִּ֔ים מִמֵּעַ֖יִךְ יִפָּרֵ֑דוּ וּלְאֹם֙ מִלְאֹ֣ם יֶֽאֱמָ֔ץ וְרַ֖ב יַעֲבֹ֥ד צָעִֽיר׃ וַיִּמְלְא֥וּ יָמֶ֖יהָ לָלֶ֑דֶת וְהִנֵּ֥ה תוֹמִ֖ם בְּבִטְנָֽהּ׃ וַיֵּצֵ֤א הָרִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖וֹ כְּאַדֶּ֣רֶת שֵׂעָ֑ר וַיִּקְרְא֥וּ שְׁמ֖וֹ עֵשָֽׂו׃ וְאַֽחֲרֵי־כֵ֞ן יָצָ֣א אָחִ֗יו וְיָד֤וֹ אֹחֶ֙זֶת֙ בַּעֲקֵ֣ב עֵשָׂ֔ו וַיִּקְרָ֥א שְׁמ֖וֹ יַעֲקֹ֑ב וְיִצְחָ֛ק בֶּן־שִׁשִּׁ֥ים שָׁנָ֖ה בְּלֶ֥דֶת אֹתָֽם׃
+
+ENGLISH:
+and HASHEM answered her, Two nations are in your womb, Two separate peoples shall issue from your body; One people shall be mightier than the other, And the older shall serve the younger. When her time to give birth was at hand, there were twins in her womb. The first one emerged red, like a hairy mantle all over; so they named him Esau. hair. Then his brother emerged, holding on to the heel of Esau; so they named him Jacob. heel. Isaac was sixty years old when they were born.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God prophesies about two nations, Esau, Jacob.",
+    "heb_summary": "ה' מתנבא על שני עמים, עשו, יעקב.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Isaac"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "unit": "nation",
+          "context": "nations in womb"
+        },
+        {
+          "en_name": "60",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "isaac age at birth"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ]
+    }
+  }
+}

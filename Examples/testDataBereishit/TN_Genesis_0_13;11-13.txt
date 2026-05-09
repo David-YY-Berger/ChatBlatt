@@ -1,0 +1,69 @@
+﻿COST: Tokens: Total=8345 approx cost usd = $0.001052 (Prompt=6453, Completion=1892)
+SOURCE:
+Genesis 13:11-13  (TN_Genesis_0_13:11-13)
+
+HEBREW:
+וַיִּבְחַר־ל֣וֹ ל֗וֹט אֵ֚ת כׇּל־כִּכַּ֣ר הַיַּרְדֵּ֔ן וַיִּסַּ֥ע ל֖וֹט מִקֶּ֑דֶם וַיִּפָּ֣רְד֔וּ אִ֖ישׁ מֵעַ֥ל אָחִֽיו׃ אַבְרָ֖ם יָשַׁ֣ב בְּאֶֽרֶץ־כְּנָ֑עַן וְל֗וֹט יָשַׁב֙ בְּעָרֵ֣י הַכִּכָּ֔ר וַיֶּאֱהַ֖ל עַד־סְדֹֽם׃ וְאַנְשֵׁ֣י סְדֹ֔ם רָעִ֖ים וְחַטָּאִ֑ים לַיהֹוָ֖ה מְאֹֽד׃
+
+ENGLISH:
+So Lot chose for himself the whole plain of the Jordan, and Lot journeyed eastward. Thus they parted from each other; Abram remained in the land of Canaan, while Lot settled in the cities of the Plain, pitching his tents near Sodom. Now the inhabitants of Sodom were very wicked sinners against HASHEM.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Lot and Abram parted; Lot settled near Sodom.",
+    "heb_summary": "לוט ואברם נפרדו; לוט התיישב ליד סדום.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Inhabitants Of Sodom"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Plain Of The Jordan"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Sodom"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Lot",
+          "term2": "Plain Of The Jordan"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Sodom"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Inhabitants Of Sodom",
+          "term2": "Hashem"
+        }
+      ]
+    }
+  }
+}

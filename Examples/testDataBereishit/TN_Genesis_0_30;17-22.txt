@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=8296 approx cost usd = $0.001023 (Prompt=6516, Completion=1780)
+SOURCE:
+Genesis 30:17-22  (TN_Genesis_0_30:17-22)
+
+HEBREW:
+וַיִּשְׁמַ֥ע אֱלֹהִ֖ים אֶל־לֵאָ֑ה וַתַּ֛הַר וַתֵּ֥לֶד לְיַעֲקֹ֖ב בֵּ֥ן חֲמִישִֽׁי׃ וַתֹּ֣אמֶר לֵאָ֗ה נָתַ֤ן אֱלֹהִים֙ שְׂכָרִ֔י אֲשֶׁר־נָתַ֥תִּי שִׁפְחָתִ֖י לְאִישִׁ֑י וַתִּקְרָ֥א שְׁמ֖וֹ יִשָּׂשכָֽר׃ וַתַּ֤הַר עוֹד֙ לֵאָ֔ה וַתֵּ֥לֶד בֵּן־שִׁשִּׁ֖י לְיַעֲקֹֽב׃ וַתֹּ֣אמֶר לֵאָ֗ה זְבָדַ֨נִי אֱלֹהִ֥ים׀אֹתִי֮ זֵ֣בֶד טוֹב֒ הַפַּ֙עַם֙ יִזְבְּלֵ֣נִי אִישִׁ֔י כִּֽי־יָלַ֥דְתִּי ל֖וֹ שִׁשָּׁ֣ה בָנִ֑ים וַתִּקְרָ֥א אֶת־שְׁמ֖וֹ זְבֻלֽוּן׃ וְאַחַ֖ר יָ֣לְדָה בַּ֑ת וַתִּקְרָ֥א אֶת־שְׁמָ֖הּ דִּינָֽה׃ וַיִּזְכֹּ֥ר אֱלֹהִ֖ים אֶת־רָחֵ֑ל וַיִּשְׁמַ֤ע אֵלֶ֙יהָ֙ אֱלֹהִ֔ים וַיִּפְתַּ֖ח אֶת־רַחְמָֽהּ׃
+
+ENGLISH:
+God heeded Leah, and she conceived and bore him a fifth son. And Leah said, God has given me my reward, connected with Issachar. for having given my maid to my husband. So she named him Issachar. When Leah conceived again and bore Jacob a sixth son, Leah said, God has given me a choice gift;. this time my husband will exalt me,; others will dwell with me. for I have borne him six sons. So she named him Zebulun. Last, she bore him a daughter, and named her Dinah. Now God remembered Rachel; God heeded her and opened her womb.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Leah bears Issachar, Zebulun, Dinah; Rachel conceived.",
+    "heb_summary": "לאה ילדה יששכר, זבולון, דינה; רחל הרתה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Issachar"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Zebulun"
+        },
+        {
+          "en_name": "Dinah"
+        },
+        {
+          "en_name": "Rachel"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Issachar"
+        },
+        {
+          "en_name": "Zebulun"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "5",
+          "number_category": "People",
+          "unit": "son",
+          "context": "leah's child"
+        },
+        {
+          "en_name": "6",
+          "number_category": "People",
+          "unit": "son",
+          "context": "leah's child"
+        },
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "unit": "daughter",
+          "context": "leah's child"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Issachar",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Zebulun",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Dinah",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Issachar",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Zebulun",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Dinah",
+          "term2": "Leah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Leah",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

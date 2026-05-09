@@ -1,0 +1,110 @@
+﻿COST: Tokens: Total=8240 approx cost usd = $0.000999 (Prompt=6545, Completion=1695)
+SOURCE:
+Genesis 37:1-4  (TN_Genesis_0_37:1-4)
+
+HEBREW:
+וַיֵּ֣שֶׁב יַעֲקֹ֔ב בְּאֶ֖רֶץ מְגוּרֵ֣י אָבִ֑יו בְּאֶ֖רֶץ כְּנָֽעַן׃ אֵ֣לֶּה׀ תֹּלְד֣וֹת יַעֲקֹ֗ב יוֹסֵ֞ף בֶּן־שְׁבַֽע־עֶשְׂרֵ֤ה שָׁנָה֙ הָיָ֨ה רֹעֶ֤ה אֶת־אֶחָיו֙ בַּצֹּ֔אן וְה֣וּא נַ֗עַר אֶת־בְּנֵ֥י בִלְהָ֛ה וְאֶת־בְּנֵ֥י זִלְפָּ֖ה נְשֵׁ֣י אָבִ֑יו וַיָּבֵ֥א יוֹסֵ֛ף אֶת־דִּבָּתָ֥ם רָעָ֖ה אֶל־אֲבִיהֶֽם׃ וְיִשְׂרָאֵ֗ל אָהַ֤ב אֶת־יוֹסֵף֙ מִכׇּל־בָּנָ֔יו כִּֽי־בֶן־זְקֻנִ֥ים ה֖וּא ל֑וֹ וְעָ֥שָׂה ל֖וֹ כְּתֹ֥נֶת פַּסִּֽים׃ וַיִּרְא֣וּ אֶחָ֗יו כִּֽי־אֹת֞וֹ אָהַ֤ב אֲבִיהֶם֙ מִכׇּל־אֶחָ֔יו וַֽיִּשְׂנְא֖וּ אֹת֑וֹ וְלֹ֥א יָכְל֖וּ דַּבְּר֥וֹ לְשָׁלֹֽם׃
+
+ENGLISH:
+Now Jacob was settled in the land where his father had sojourned, the land of Canaan. This, then, is the line of Jacob: At seventeen years of age, Joseph tended the flocks with his brothers, as a helper to the sons of his fathers wives Bilhah and Zilpah. And Joseph brought bad reports of them to their father. Now Israel loved Joseph best of all his sons-he was his child of old age; is used here as a category label; it seems to denote a special, favored status. Cf. 44.20. and he had made him an ornamented tunic. And when his brothers saw that their father loved him more than any of his brothers, they hated him so that they could not speak a friendly word to him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph, Jacob's son, hated by brothers.",
+    "heb_summary": "יוסף, בן יעקב, שנא על ידי אחיו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Bilhah"
+        },
+        {
+          "en_name": "Zilpah"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Ornamented Tunic"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "17",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "joseph age"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Brothers",
+          "term2": "Bilhah"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Zilpah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Brothers"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Brothers",
+          "term2": "Joseph"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Israel",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

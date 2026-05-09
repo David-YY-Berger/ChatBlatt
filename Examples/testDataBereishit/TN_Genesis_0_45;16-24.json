@@ -1,0 +1,109 @@
+﻿{
+    "res": {
+        "en_summary": "Pharaoh invites Joseph's family to Egypt.",
+        "heb_summary": "פרעה מזמין משפחת יוסף למצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Sons Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Pharaoh's Palace"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "300",
+                    "number_category": "Money",
+                    "unit": "silver",
+                    "context": "benjamin gift"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Misc",
+                    "unit": "ass",
+                    "context": "joseph's father gift"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Grain"
+                },
+                {
+                    "en_name": "Bread"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's Brothers"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Pharaoh's Palace"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Sons Of Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_45:16-24"
+}

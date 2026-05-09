@@ -1,0 +1,129 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph interprets Pharaoh's dream; plans for famine.",
+        "heb_summary": "יוסף מפרש חלום פרעה; תכנית לרעב.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Courtiers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Healthy Cow"
+                },
+                {
+                    "en_name": "Healthy Ear"
+                },
+                {
+                    "en_name": "Lean And Ugly Cow"
+                },
+                {
+                    "en_name": "Empty Ear"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abundance years"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Food"
+                },
+                {
+                    "en_name": "Grain"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Pharaoh"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Courtiers"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Courtiers",
+                    "term2": "Egypt"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Pharaoh"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Food"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Grain"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Healthy Cow"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Healthy Ear"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Lean And Ugly Cow"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Empty Ear"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_41:25-39"
+}

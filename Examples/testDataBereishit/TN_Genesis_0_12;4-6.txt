@@ -1,0 +1,136 @@
+﻿COST: Tokens: Total=8479 approx cost usd = $0.001081 (Prompt=6502, Completion=1977)
+SOURCE:
+Genesis 12:4-6  (TN_Genesis_0_12:4-6)
+
+HEBREW:
+וַיֵּ֣לֶךְ אַבְרָ֗ם כַּאֲשֶׁ֨ר דִּבֶּ֤ר אֵלָיו֙ יְהֹוָ֔ה וַיֵּ֥לֶךְ אִתּ֖וֹ ל֑וֹט וְאַבְרָ֗ם בֶּן־חָמֵ֤שׁ שָׁנִים֙ וְשִׁבְעִ֣ים שָׁנָ֔ה בְּצֵאת֖וֹ מֵחָרָֽן׃ וַיִּקַּ֣ח אַבְרָם֩ אֶת־שָׂרַ֨י אִשְׁתּ֜וֹ וְאֶת־ל֣וֹט בֶּן־אָחִ֗יו וְאֶת־כׇּל־רְכוּשָׁם֙ אֲשֶׁ֣ר רָכָ֔שׁוּ וְאֶת־הַנֶּ֖פֶשׁ אֲשֶׁר־עָשׂ֣וּ בְחָרָ֑ן וַיֵּצְא֗וּ לָלֶ֙כֶת֙ אַ֣רְצָה כְּנַ֔עַן וַיָּבֹ֖אוּ אַ֥רְצָה כְּנָֽעַן׃ וַיַּעֲבֹ֤ר אַבְרָם֙ בָּאָ֔רֶץ עַ֚ד מְק֣וֹם שְׁכֶ֔ם עַ֖ד אֵל֣וֹן מוֹרֶ֑ה וְהַֽכְּנַעֲנִ֖י אָ֥ז בָּאָֽרֶץ׃
+
+ENGLISH:
+Abram went forth as HASHEM had commanded him, and Lot went with him. Abram was seventy-five years old when he left Haran. Abram took his wife Sarai and his brothers son Lot, and all the wealth that they had amassed, and the persons that they had acquired in Haran; and they set out for the land of Canaan. When they arrived in the land of Canaan, Abram passed through the land as far as the site of Shechem, at the terebinth of Moreh. The Canaanites were then in the land.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abram, Lot, Sarai journey to Canaan.",
+    "heb_summary": "אברם, לוט, שרי יצאו לכנען.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Canaanites"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Haran"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Shechem"
+        },
+        {
+          "en_name": "Moreh"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "75",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abram's age"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abram",
+          "term2": "Sarai"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abram",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Moreh"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Moreh"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Shechem"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Moreh"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Canaanites",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

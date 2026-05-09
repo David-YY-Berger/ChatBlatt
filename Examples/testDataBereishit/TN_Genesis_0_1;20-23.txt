@@ -1,0 +1,61 @@
+﻿COST: Tokens: Total=7390 approx cost usd = $0.000754 (Prompt=6500, Completion=890)
+SOURCE:
+Genesis 1:20-23  (TN_Genesis_0_1:20-23)
+
+HEBREW:
+וַיֹּ֣אמֶר אֱלֹהִ֔ים יִשְׁרְצ֣וּ הַמַּ֔יִם שֶׁ֖רֶץ נֶ֣פֶשׁ חַיָּ֑ה וְעוֹף֙ יְעוֹפֵ֣ף עַל־הָאָ֔רֶץ עַל־פְּנֵ֖י רְקִ֥יעַ הַשָּׁמָֽיִם׃ וַיִּבְרָ֣א אֱלֹהִ֔ים אֶת־הַתַּנִּינִ֖ם הַגְּדֹלִ֑ים וְאֵ֣ת כׇּל־נֶ֣פֶשׁ הַֽחַיָּ֣ה׀הָֽרֹמֶ֡שֶׂת אֲשֶׁר֩ שָׁרְצ֨וּ הַמַּ֜יִם לְמִֽינֵהֶ֗ם וְאֵ֨ת כׇּל־ע֤וֹף כָּנָף֙ לְמִינֵ֔הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃ וַיְבָ֧רֶךְ אֹתָ֛ם אֱלֹהִ֖ים לֵאמֹ֑ר פְּר֣וּ וּרְב֗וּ וּמִלְא֤וּ אֶת־הַמַּ֙יִם֙ בַּיַּמִּ֔ים וְהָע֖וֹף יִ֥רֶב בָּאָֽרֶץ׃ וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם חֲמִישִֽׁי׃
+
+ENGLISH:
+God said, Let the waters bring forth swarms of living creatures, and birds that fly above the earth across the expanse of the sky. God created the great sea monsters, and all the living creatures of every kind that creep, which the waters brought forth in swarms, and all the winged birds of every kind. And God saw that this was good. God blessed them, saying, Be fertile and increase, fill the waters in the seas, and let the birds increase on the earth. And there was evening and there was morning, a fifth day.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates sea creatures and birds.",
+    "heb_summary": "אלוהים ברא יצורים ימיים וציפורים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Water"
+        },
+        {
+          "en_name": "Earth"
+        },
+        {
+          "en_name": "Sky"
+        },
+        {
+          "en_name": "Sea"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "5",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "creation day"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Living Creature"
+        },
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Sea Monster"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}

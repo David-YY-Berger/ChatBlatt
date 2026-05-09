@@ -1,0 +1,88 @@
+﻿{
+    "res": {
+        "en_summary": "Simeon and Levi's violent actions cursed by Jacob.",
+        "heb_summary": "שמעון ולוי מקוללים על מעשיהם האלימים.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Levi"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ox"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Simeon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Levi",
+                    "term2": "Jacob"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Levi"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Levi"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Simeon"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Levi"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:5-7"
+}

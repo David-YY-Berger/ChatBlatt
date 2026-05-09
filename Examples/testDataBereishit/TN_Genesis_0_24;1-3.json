@@ -1,0 +1,55 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham makes servant swear about son's wife.",
+        "heb_summary": "אברהם משביע עבד על אשת בנו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Son"
+                },
+                {
+                    "en_name": "Canaanites"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "personBelongsToNation": [
+                {
+                    "term1": "Canaanites",
+                    "term2": "Canaan"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Son",
+                    "term2": "Canaan"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:1-3"
+}

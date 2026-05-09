@@ -1,0 +1,157 @@
+﻿{
+    "res": {
+        "en_summary": "Noah, family, animals entered ark; flood covered earth.",
+        "heb_summary": "נח, משפחתו, וחיות נכנסו לתיבה; מבול כיסה ארץ.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Shem"
+                },
+                {
+                    "en_name": "Ham"
+                },
+                {
+                    "en_name": "Japheth"
+                },
+                {
+                    "en_name": "Noah's Wife"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Ark"
+                },
+                {
+                    "en_name": "Mountains"
+                },
+                {
+                    "en_name": "Sky"
+                },
+                {
+                    "en_name": "Dry Land"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "40",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "rain duration"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "unit": "pair",
+                    "context": "ark entry"
+                },
+                {
+                    "en_name": "15",
+                    "number_category": "Measurement",
+                    "unit": "cubit",
+                    "context": "water height"
+                },
+                {
+                    "en_name": "150",
+                    "number_category": "Time",
+                    "unit": "day",
+                    "context": "water swelling duration"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Beast"
+                },
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Creature"
+                },
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Winged Thing"
+                },
+                {
+                    "en_name": "Flesh"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shem",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Noah"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Noah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Noah",
+                    "term2": "Noah's Wife"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Noah",
+                    "term2": "Ark"
+                },
+                {
+                    "term1": "Shem",
+                    "term2": "Ark"
+                },
+                {
+                    "term1": "Ham",
+                    "term2": "Ark"
+                },
+                {
+                    "term1": "Japheth",
+                    "term2": "Ark"
+                },
+                {
+                    "term1": "Noah's Wife",
+                    "term2": "Ark"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_7:12-8:3"
+}

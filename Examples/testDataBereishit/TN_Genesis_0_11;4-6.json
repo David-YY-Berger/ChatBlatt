@@ -1,0 +1,46 @@
+﻿{
+    "res": {
+        "en_summary": "Humanity builds tower; God scatters them.",
+        "heb_summary": "האנושות בונה מגדל; אלוהים מפזר אותם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Humanity"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Tower"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "unit": "people",
+                    "context": "humanity's unity"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "Humanity",
+                    "term2": "World"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_11:4-6"
+}

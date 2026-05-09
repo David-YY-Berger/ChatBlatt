@@ -1,0 +1,44 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob deceives Isaac for Esau's blessing.",
+        "heb_summary": "יעקב מרמה את יצחק לברכת עשו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:18-20"
+}

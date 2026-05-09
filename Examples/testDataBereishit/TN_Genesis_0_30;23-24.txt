@@ -1,0 +1,41 @@
+﻿COST: Tokens: Total=7617 approx cost usd = $0.000837 (Prompt=6436, Completion=1181)
+SOURCE:
+Genesis 30:23-24  (TN_Genesis_0_30:23-24)
+
+HEBREW:
+וַתַּ֖הַר וַתֵּ֣לֶד בֵּ֑ן וַתֹּ֕אמֶר אָסַ֥ף אֱלֹהִ֖ים אֶת־חֶרְפָּתִֽי׃ וַתִּקְרָ֧א אֶת־שְׁמ֛וֹ יוֹסֵ֖ף לֵאמֹ֑ר יֹסֵ֧ף יְהֹוָ֛ה לִ֖י בֵּ֥ן אַחֵֽר׃
+
+ENGLISH:
+She conceived and bore a son, and said, God has taken away, connected with Joseph. my disgrace. So she named him Joseph, which is to say, May HASHEM add, connected with Joseph. another son for me.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Woman names son Joseph, God adds.",
+    "heb_summary": "אישה קראה לבנה יוסף, ה' הוסיף.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ]
+    },
+    "Rel": {
+      "AliasOf": [
+        {
+          "term1": "God",
+          "term2": "Hashem"
+        }
+      ]
+    }
+  }
+}

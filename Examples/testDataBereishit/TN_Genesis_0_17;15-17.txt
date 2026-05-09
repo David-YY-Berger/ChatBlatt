@@ -1,0 +1,74 @@
+﻿COST: Tokens: Total=7814 approx cost usd = $0.000884 (Prompt=6490, Completion=1324)
+SOURCE:
+Genesis 17:15-17  (TN_Genesis_0_17:15-17)
+
+HEBREW:
+וַיֹּ֤אמֶר אֱלֹהִים֙ אֶל־אַבְרָהָ֔ם שָׂרַ֣י אִשְׁתְּךָ֔ לֹא־תִקְרָ֥א אֶת־שְׁמָ֖הּ שָׂרָ֑י כִּ֥י שָׂרָ֖ה שְׁמָֽהּ׃ וּבֵרַכְתִּ֣י אֹתָ֔הּ וְגַ֨ם נָתַ֧תִּי מִמֶּ֛נָּה לְךָ֖ בֵּ֑ן וּבֵֽרַכְתִּ֙יהָ֙ וְהָֽיְתָ֣ה לְגוֹיִ֔ם מַלְכֵ֥י עַמִּ֖ים מִמֶּ֥נָּה יִהְיֽוּ׃ וַיִּפֹּ֧ל אַבְרָהָ֛ם עַל־פָּנָ֖יו וַיִּצְחָ֑ק וַיֹּ֣אמֶר בְּלִבּ֗וֹ הַלְּבֶ֤ן מֵאָֽה־שָׁנָה֙ יִוָּלֵ֔ד וְאִ֨ם־שָׂרָ֔ה הֲבַת־תִּשְׁעִ֥ים שָׁנָ֖ה תֵּלֵֽד׃
+
+ENGLISH:
+And God said to Abraham, As for your wife Sarai, you shall not call her Sarai, but her name shall be Sarah. I will bless her; indeed, I will give you a son by her. I will bless her so that she shall give rise to nations; rulers of peoples shall issue from her. Abraham threw himself on his face and laughed, as he said to himself, Can a child be born to a man a hundred years old, or can Sarah bear a child at ninety?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God renames Sarai to Sarah, promises son.",
+    "heb_summary": "אלוהים משנה את שרה, מבטיח בן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Sarah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "100",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "abraham age"
+        },
+        {
+          "en_name": "90",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "sarah age"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Sarai"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Sarah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Abraham"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Sarai",
+          "term2": "Sarah"
+        }
+      ]
+    }
+  }
+}

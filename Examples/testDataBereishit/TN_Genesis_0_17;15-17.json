@@ -1,0 +1,64 @@
+﻿{
+    "res": {
+        "en_summary": "God renames Sarai to Sarah, promises son.",
+        "heb_summary": "אלוהים משנה את שרה, מבטיח בן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Sarah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "100",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abraham age"
+                },
+                {
+                    "en_name": "90",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "sarah age"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarai"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Sarai",
+                    "term2": "Sarah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_17:15-17"
+}

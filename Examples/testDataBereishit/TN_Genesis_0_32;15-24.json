@@ -1,0 +1,152 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob sends gifts to Esau, crosses Jabbok.",
+        "heb_summary": "יעקב שולח מתנות לעשו, חוצה יבוק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Servants"
+                },
+                {
+                    "en_name": "Wives"
+                },
+                {
+                    "en_name": "Maidservants"
+                },
+                {
+                    "en_name": "Sons"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jabbok"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "200",
+                    "number_category": "Misc",
+                    "unit": "goat",
+                    "context": "gift to esau"
+                },
+                {
+                    "en_name": "20",
+                    "number_category": "Misc",
+                    "unit": "goat",
+                    "context": "gift to esau"
+                },
+                {
+                    "en_name": "30",
+                    "number_category": "Misc",
+                    "unit": "camel",
+                    "context": "gift to esau"
+                },
+                {
+                    "en_name": "40",
+                    "number_category": "Misc",
+                    "unit": "cow",
+                    "context": "gift to esau"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Misc",
+                    "unit": "bull",
+                    "context": "gift to esau"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "wife",
+                    "context": "jacob's family"
+                },
+                {
+                    "en_name": "11",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "jacob's family"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Goat"
+                },
+                {
+                    "en_name": "Ewe"
+                },
+                {
+                    "en_name": "Ram"
+                },
+                {
+                    "en_name": "Camel"
+                },
+                {
+                    "en_name": "Cow"
+                },
+                {
+                    "en_name": "Bull"
+                },
+                {
+                    "en_name": "Ass"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Sons",
+                    "term2": "Jacob"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Wives"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Servants"
+                },
+                {
+                    "term1": "Servants",
+                    "term2": "Esau"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Jabbok"
+                },
+                {
+                    "term1": "Wives",
+                    "term2": "Jabbok"
+                },
+                {
+                    "term1": "Maidservants",
+                    "term2": "Jabbok"
+                },
+                {
+                    "term1": "Sons",
+                    "term2": "Jabbok"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_32:15-24"
+}

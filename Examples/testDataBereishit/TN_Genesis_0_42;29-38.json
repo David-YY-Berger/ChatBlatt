@@ -1,0 +1,107 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob's sons return, Jacob grieves.",
+        "heb_summary": "בני יעקב שבים, יעקב מתאבל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Reuben"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Sheol"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Simeon"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Joseph"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "People",
+                    "unit": "brother",
+                    "context": "sons of jacob"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "unit": "brother",
+                    "context": "son of jacob"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "son",
+                    "context": "reubens sons"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Simeon",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Reuben"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Sheol"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_42:29-38"
+}

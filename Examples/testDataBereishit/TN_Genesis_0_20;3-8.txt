@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=8491 approx cost usd = $0.001062 (Prompt=6600, Completion=1891)
+SOURCE:
+Genesis 20:3-8  (TN_Genesis_0_20:3-8)
+
+HEBREW:
+וַיָּבֹ֧א אֱלֹהִ֛ים אֶל־אֲבִימֶ֖לֶךְ בַּחֲל֣וֹם הַלָּ֑יְלָה וַיֹּ֣אמֶר ל֗וֹ הִנְּךָ֥ מֵת֙ עַל־הָאִשָּׁ֣ה אֲשֶׁר־לָקַ֔חְתָּ וְהִ֖וא בְּעֻ֥לַת בָּֽעַל׃ וַאֲבִימֶ֕לֶךְ לֹ֥א קָרַ֖ב אֵלֶ֑יהָ וַיֹּאמַ֕ר אֲדֹנָ֕י הֲג֥וֹי גַּם־צַדִּ֖יק תַּהֲרֹֽג׃ הֲלֹ֨א ה֤וּא אָֽמַר־לִי֙ אֲחֹ֣תִי הִ֔וא וְהִֽיא־גַם־הִ֥וא אָֽמְרָ֖ה אָחִ֣י ה֑וּא בְּתׇם־לְבָבִ֛י וּבְנִקְיֹ֥ן כַּפַּ֖י עָשִׂ֥יתִי זֹֽאת׃ וַיֹּ֩אמֶר֩ אֵלָ֨יו הָֽאֱלֹהִ֜ים בַּחֲלֹ֗ם גַּ֣ם אָנֹכִ֤י יָדַ֙עְתִּי֙ כִּ֤י בְתׇם־לְבָבְךָ֙ עָשִׂ֣יתָ זֹּ֔את וָאֶחְשֹׂ֧ךְ גַּם־אָנֹכִ֛י אֽוֹתְךָ֖ מֵחֲטוֹ־לִ֑י עַל־כֵּ֥ן לֹא־נְתַתִּ֖יךָ לִנְגֹּ֥עַ אֵלֶֽיהָ׃ וְעַתָּ֗ה הָשֵׁ֤ב אֵֽשֶׁת־הָאִישׁ֙ כִּֽי־נָבִ֣יא ה֔וּא וְיִתְפַּלֵּ֥ל בַּֽעַדְךָ֖ וֶֽחְיֵ֑ה וְאִם־אֵֽינְךָ֣ מֵשִׁ֔יב דַּ֚ע כִּי־מ֣וֹת תָּמ֔וּת אַתָּ֖ה וְכׇל־אֲשֶׁר־לָֽךְ׃ וַיַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ בַּבֹּ֗קֶר וַיִּקְרָא֙ לְכׇל־עֲבָדָ֔יו וַיְדַבֵּ֛ר אֶת־כׇּל־הַדְּבָרִ֥ים הָאֵ֖לֶּה בְּאׇזְנֵיהֶ֑ם וַיִּֽירְא֥וּ הָאֲנָשִׁ֖ים מְאֹֽד׃
+
+ENGLISH:
+But God came to Abimelech in a dream by night and said to him, You are to die because of the woman that you have taken, for she is a married woman. Now Abimelech had not approached her. He said, O lord, will You slay people even though innocent? He himself said to me, She is my sister! And she also said, He is my brother. When I did this, my heart was blameless and my hands were clean. And God said to him in the dream, I knew that you did this with a blameless heart, and so I kept you from sinning against Me. That was why I did not let you touch her. Therefore, restore the mans wife-since he is a prophet, he will intercede for you-to save your life. If you fail to restore her, know that you shall die, you and all that are yours. Early next morning, Abimelech called his servants and told them all that had happened; and they. were greatly frightened.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God warns Abimelech about taking a married woman.",
+    "heb_summary": "אלוהים מזהיר את אבימלך על אישה נשואה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "God"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abimelech",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

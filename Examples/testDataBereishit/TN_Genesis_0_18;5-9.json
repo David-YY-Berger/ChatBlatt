@@ -1,0 +1,112 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham and Sarah host heavenly visitors.",
+        "heb_summary": "אברהם ושרה מארחים אורחים באוהל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "They"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Servant-Boy"
+                },
+                {
+                    "en_name": "Servants"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Tent"
+                },
+                {
+                    "en_name": "Under The Tree"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Measurement",
+                    "unit": "seah",
+                    "context": "flour for cakes"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Calf"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Flour"
+                },
+                {
+                    "en_name": "Cake"
+                },
+                {
+                    "en_name": "Calf"
+                },
+                {
+                    "en_name": "Curd"
+                },
+                {
+                    "en_name": "Milk"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "They"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Tent"
+                },
+                {
+                    "term1": "They",
+                    "term2": "Tent"
+                },
+                {
+                    "term1": "They",
+                    "term2": "Under The Tree"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Tent"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Under The Tree"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:5-9"
+}

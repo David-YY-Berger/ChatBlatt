@@ -1,0 +1,35 @@
+﻿COST: Tokens: Total=9429 approx cost usd = $0.001375 (Prompt=6460, Completion=2969)
+SOURCE:
+Genesis 6:1-3  (TN_Genesis_0_6:1-3)
+
+HEBREW:
+וַֽיְהִי֙ כִּֽי־הֵחֵ֣ל הָֽאָדָ֔ם לָרֹ֖ב עַל־פְּנֵ֣י הָֽאֲדָמָ֑ה וּבָנ֖וֹת יֻלְּד֥וּ לָהֶֽם׃ וַיִּרְא֤וּ בְנֵי־הָֽאֱלֹהִים֙ אֶת־בְּנ֣וֹת הָֽאָדָ֔ם כִּ֥י טֹבֹ֖ת הֵ֑נָּה וַיִּקְח֤וּ לָהֶם֙ נָשִׁ֔ים מִכֹּ֖ל אֲשֶׁ֥ר בָּחָֽרוּ׃ וַיֹּ֣אמֶר יְהֹוָ֗ה לֹֽא־יָד֨וֹן רוּחִ֤י בָֽאָדָם֙ לְעֹלָ֔ם בְּשַׁגַּ֖ם ה֣וּא בָשָׂ֑ר וְהָי֣וּ יָמָ֔יו מֵאָ֥ה וְעֶשְׂרִ֖ים שָׁנָֽה׃
+
+ENGLISH:
+When humankind began to increase on earth and daughters were born to them, the [males among the] divine beings saw how pleasing the human women were and took wives from among those who delighted them.- HASHEM said, My breath shall not abide in humankind forever, since it too is flesh; let the days allowed them be one hundred and twenty years.-
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God limits human lifespan to 120 years.",
+    "heb_summary": "אלוהים מגביל חיי אדם ל-120 שנה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "120",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "human lifespan limit"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,151 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph acquired Egypt's land for Pharaoh.",
+        "heb_summary": "יוסף קנה אדמת מצרים לפרעה.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Egyptians"
+                },
+                {
+                    "en_name": "Priests"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Goshen"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "0.2",
+                    "number_category": "Misc",
+                    "unit": "share",
+                    "context": "harvest tax to pharaoh"
+                },
+                {
+                    "en_name": "0.8",
+                    "number_category": "Misc",
+                    "unit": "share",
+                    "context": "farmer's share of harvest"
+                },
+                {
+                    "en_name": "17",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "jacob lived in egypt"
+                },
+                {
+                    "en_name": "147",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "jacob total lifespan"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Seed"
+                },
+                {
+                    "en_name": "Food"
+                },
+                {
+                    "en_name": "Nourishment"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egyptians"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Israel",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Goshen"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Priests",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Egyptians",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Priests",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Goshen",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_47:20-28"
+}

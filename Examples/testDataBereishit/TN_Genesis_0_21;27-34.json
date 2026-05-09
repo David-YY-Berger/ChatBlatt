@@ -1,0 +1,118 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham and Abimelech make pact at Beer-sheba.",
+        "heb_summary": "אברהם ואבימלך כרתו ברית בבאר שבע.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Phicol"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Sheba"
+                },
+                {
+                    "en_name": "Land Of The Philistines"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Sacrifice",
+                    "unit": "ewe",
+                    "context": "pact offering"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                },
+                {
+                    "en_name": "Ox"
+                },
+                {
+                    "en_name": "Ewe"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tamarisk"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Abimelech"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Abimelech",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Phicol",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Abimelech",
+                    "term2": "Land Of The Philistines"
+                },
+                {
+                    "term1": "Phicol",
+                    "term2": "Land Of The Philistines"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Land Of The Philistines"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Abimelech"
+                },
+                {
+                    "term1": "Abimelech",
+                    "term2": "Phicol"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Land Of The Philistines",
+                    "term2": "Philistia"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_21:27-34"
+}

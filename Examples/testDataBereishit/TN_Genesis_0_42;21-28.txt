@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=9192 approx cost usd = $0.001262 (Prompt=6648, Completion=2544)
+SOURCE:
+Genesis 42:21-28  (TN_Genesis_0_42:21-28)
+
+HEBREW:
+וַיֹּאמְר֞וּ אִ֣ישׁ אֶל־אָחִ֗יו אֲבָל֮ אֲשֵׁמִ֣ים׀אֲנַ֘חְנוּ֮ עַל־אָחִ֒ינוּ֒ אֲשֶׁ֨ר רָאִ֜ינוּ צָרַ֥ת נַפְשׁ֛וֹ בְּהִתְחַֽנְנ֥וֹ אֵלֵ֖ינוּ וְלֹ֣א שָׁמָ֑עְנוּ עַל־כֵּן֙ בָּ֣אָה אֵלֵ֔ינוּ הַצָּרָ֖ה הַזֹּֽאת׃ וַיַּ֩עַן֩ רְאוּבֵ֨ן אֹתָ֜ם לֵאמֹ֗ר הֲלוֹא֩ אָמַ֨רְתִּי אֲלֵיכֶ֧ם׀לֵאמֹ֛ר אַל־תֶּחֶטְא֥וּ בַיֶּ֖לֶד וְלֹ֣א שְׁמַעְתֶּ֑ם וְגַם־דָּמ֖וֹ הִנֵּ֥ה נִדְרָֽשׁ׃ וְהֵם֙ לֹ֣א יָֽדְע֔וּ כִּ֥י שֹׁמֵ֖עַ יוֹסֵ֑ף כִּ֥י הַמֵּלִ֖יץ בֵּינֹתָֽם׃ וַיִּסֹּ֥ב מֵֽעֲלֵיהֶ֖ם וַיֵּ֑בְךְּ וַיָּ֤שׇׁב אֲלֵהֶם֙ וַיְדַבֵּ֣ר אֲלֵהֶ֔ם וַיִּקַּ֤ח מֵֽאִתָּם֙ אֶת־שִׁמְע֔וֹן וַיֶּאֱסֹ֥ר אֹת֖וֹ לְעֵינֵיהֶֽם׃ וַיְצַ֣ו יוֹסֵ֗ף וַיְמַלְא֣וּ אֶת־כְּלֵיהֶם֮ בָּר֒ וּלְהָשִׁ֤יב כַּסְפֵּיהֶם֙ אִ֣ישׁ אֶל־שַׂקּ֔וֹ וְלָתֵ֥ת לָהֶ֛ם צֵדָ֖ה לַדָּ֑רֶךְ וַיַּ֥עַשׂ לָהֶ֖ם כֵּֽן׃ וַיִּשְׂא֥וּ אֶת־שִׁבְרָ֖ם עַל־חֲמֹרֵיהֶ֑ם וַיֵּלְכ֖וּ מִשָּֽׁם׃ וַיִּפְתַּ֨ח הָאֶחָ֜ד אֶת־שַׂקּ֗וֹ לָתֵ֥ת מִסְפּ֛וֹא לַחֲמֹר֖וֹ בַּמָּל֑וֹן וַיַּרְא֙ אֶת־כַּסְפּ֔וֹ וְהִנֵּה־ה֖וּא בְּפִ֥י אַמְתַּחְתּֽוֹ׃ וַיֹּ֤אמֶר אֶל־אֶחָיו֙ הוּשַׁ֣ב כַּסְפִּ֔י וְגַ֖ם הִנֵּ֣ה בְאַמְתַּחְתִּ֑י וַיֵּצֵ֣א לִבָּ֗ם וַיֶּֽחֶרְד֞וּ אִ֤ישׁ אֶל־אָחִיו֙ לֵאמֹ֔ר מַה־זֹּ֛את עָשָׂ֥ה אֱלֹהִ֖ים לָֽנוּ׃
+
+ENGLISH:
+They said to one another, Alas, we are being punished on account of our brother, because we looked on at his anguish, yet paid no heed as he pleaded with us. That is why this distress has come upon us. Then Reuben spoke up and said to them, Did I not tell you, Do no wrong to the boy? But you paid no heed. Now comes the reckoning for his blood. They did not know that Joseph understood, for there was an interpreter between him and them. He turned away from them and wept. But he came back to them and spoke to them; and he took Simeon from among them and had him bound before their eyes. Then Joseph gave orders to fill their bags with grain, return each ones money to his sack, and give them provisions for the journey; and this was done for them. So they loaded their asses with the rations and departed from there. As one of them was opening his sack to give feed to his ass at the night encampment, he saw his money right there at the mouth of his bag. And he said to his brothers, My money has been returned! It is here in my bag! Their hearts sank; and, trembling, they turned to one another, saying, What is this that God has done to us?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Brothers punished for Joseph's anguish, Reuben's warning.",
+    "heb_summary": "אחים נענשים על יוסף, ראובן מזהיר.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Night Encampment"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Simeon"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "unit": "person",
+          "context": "one of brothers"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ass"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Grain"
+        },
+        {
+          "en_name": "Ration"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Reuben",
+          "term2": "Brothers"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Brothers"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Brothers",
+          "term2": "Night Encampment"
+        }
+      ]
+    }
+  }
+}

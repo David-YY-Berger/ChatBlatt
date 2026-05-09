@@ -1,0 +1,65 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham sends servant to find Isaac a wife.",
+        "heb_summary": "אברהם שולח עבד למצוא אשה ליצחק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Aram-Naharaim"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Well"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "Misc",
+                    "unit": "camel",
+                    "context": "servant took camels"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Camel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Aram-Naharaim"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Nahor"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:4-11"
+}

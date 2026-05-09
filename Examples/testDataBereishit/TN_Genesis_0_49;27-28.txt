@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=7520 approx cost usd = $0.000804 (Prompt=6454, Completion=1066)
+SOURCE:
+Genesis 49:27-28  (TN_Genesis_0_49:27-28)
+
+HEBREW:
+בִּנְיָמִין֙ זְאֵ֣ב יִטְרָ֔ף בַּבֹּ֖קֶר יֹ֣אכַל עַ֑ד וְלָעֶ֖רֶב יְחַלֵּ֥ק שָׁלָֽל׃ כׇּל־אֵ֛לֶּה שִׁבְטֵ֥י יִשְׂרָאֵ֖ל שְׁנֵ֣ים עָשָׂ֑ר וְ֠זֹ֠את אֲשֶׁר־דִּבֶּ֨ר לָהֶ֤ם אֲבִיהֶם֙ וַיְבָ֣רֶךְ אוֹתָ֔ם אִ֛ישׁ אֲשֶׁ֥ר כְּבִרְכָת֖וֹ בֵּרַ֥ךְ אֹתָֽם׃
+
+ENGLISH:
+Benjamin is a ravenous wolf; In the morning he consumes the foe, uncertain; others booty. And in the evening he divides the spoil. All these were the tribes of Israel, twelve in number, and this is what their father said to them as he bade them farewell, addressing to each a parting word appropriate to him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Benjamin compared to wolf, twelve tribes.",
+    "heb_summary": "בנימין כזאב, שנים עשר שבטים.",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Benjamin"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Benjamin"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "People",
+          "unit": "tribe",
+          "context": "tribes of israel"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Wolf"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Benjamin",
+          "term2": "Wolf"
+        }
+      ]
+    }
+  }
+}

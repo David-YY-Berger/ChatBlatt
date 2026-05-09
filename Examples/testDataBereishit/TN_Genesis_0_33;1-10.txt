@@ -1,0 +1,110 @@
+﻿COST: Tokens: Total=8384 approx cost usd = $0.001012 (Prompt=6682, Completion=1702)
+SOURCE:
+Genesis 33:1-10  (TN_Genesis_0_33:1-10)
+
+HEBREW:
+וַיִּשָּׂ֨א יַעֲקֹ֜ב עֵינָ֗יו וַיַּרְא֙ וְהִנֵּ֣ה עֵשָׂ֣ו בָּ֔א וְעִמּ֕וֹ אַרְבַּ֥ע מֵא֖וֹת אִ֑ישׁ וַיַּ֣חַץ אֶת־הַיְלָדִ֗ים עַל־לֵאָה֙ וְעַל־רָחֵ֔ל וְעַ֖ל שְׁתֵּ֥י הַשְּׁפָחֽוֹת׃ וַיָּ֧שֶׂם אֶת־הַשְּׁפָח֛וֹת וְאֶת־יַלְדֵיהֶ֖ן רִֽאשֹׁנָ֑ה וְאֶת־לֵאָ֤ה וִֽילָדֶ֙יהָ֙ אַחֲרֹנִ֔ים וְאֶת־רָחֵ֥ל וְאֶת־יוֹסֵ֖ף אַחֲרֹנִֽים׃ וְה֖וּא עָבַ֣ר לִפְנֵיהֶ֑ם וַיִּשְׁתַּ֤חוּ אַ֙רְצָה֙ שֶׁ֣בַע פְּעָמִ֔ים עַד־גִּשְׁתּ֖וֹ עַד־אָחִֽיו׃ וַיָּ֨רׇץ עֵשָׂ֤ו לִקְרָאתוֹ֙ וַֽיְחַבְּקֵ֔הוּ וַיִּפֹּ֥ל עַל־צַוָּארָ֖ו וַׄיִּׄשָּׁׄקֵ֑ׄהׄוּׄ וַיִּבְכּֽוּ׃ וַיִּשָּׂ֣א אֶת־עֵינָ֗יו וַיַּ֤רְא אֶת־הַנָּשִׁים֙ וְאֶת־הַיְלָדִ֔ים וַיֹּ֖אמֶר מִי־אֵ֣לֶּה לָּ֑ךְ וַיֹּאמַ֕ר הַיְלָדִ֕ים אֲשֶׁר־חָנַ֥ן אֱלֹהִ֖ים אֶת־עַבְדֶּֽךָ׃ וַתִּגַּ֧שְׁןָ הַשְּׁפָח֛וֹת הֵ֥נָּה וְיַלְדֵיהֶ֖ן וַתִּֽשְׁתַּחֲוֶֽיןָ׃ וַתִּגַּ֧שׁ גַּם־לֵאָ֛ה וִילָדֶ֖יהָ וַיִּֽשְׁתַּחֲו֑וּ וְאַחַ֗ר נִגַּ֥שׁ יוֹסֵ֛ף וְרָחֵ֖ל וַיִּֽשְׁתַּחֲוֽוּ׃ וַיֹּ֕אמֶר מִ֥י לְךָ֛ כׇּל־הַמַּחֲנֶ֥ה הַזֶּ֖ה אֲשֶׁ֣ר פָּגָ֑שְׁתִּי וַיֹּ֕אמֶר לִמְצֹא־חֵ֖ן בְּעֵינֵ֥י אֲדֹנִֽי׃ וַיֹּ֥אמֶר עֵשָׂ֖ו יֶשׁ־לִ֣י רָ֑ב אָחִ֕י יְהִ֥י לְךָ֖ אֲשֶׁר־לָֽךְ׃ וַיֹּ֣אמֶר יַעֲקֹ֗ב אַל־נָא֙ אִם־נָ֨א מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ וְלָקַחְתָּ֥ מִנְחָתִ֖י מִיָּדִ֑י כִּ֣י עַל־כֵּ֞ן רָאִ֣יתִי פָנֶ֗יךָ כִּרְאֹ֛ת פְּנֵ֥י אֱלֹהִ֖ים וַתִּרְצֵֽנִי׃
+
+ENGLISH:
+Looking up, Jacob saw Esau coming, with a retinue of four hundred. He divided the children, referring here only to Jacobs sons (see 32.23) in anticipation of their becoming the progenitors of Israels tribes; and so through v. 14. among Leah, Rachel, and the two maids, putting the maids and their children first, Leah and her children next, and Rachel and Joseph last. He himself went on ahead and bowed low to the ground seven times until he was near his brother. Esau ran to greet him. He embraced him and, falling on his neck, he kissed him; and they wept. Looking about, he saw the women and the children. Who, he asked, are these with you? He answered, The children with whom God has favored your servant. Then the maids, with their children, came forward and bowed low; next Leah, with her children, came forward and bowed low; and last, Joseph and Rachel came forward and bowed low. And he asked, What do you mean by all this company which I have met? He answered, To gain my lords favor. Esau said, I have enough, my brother; let what you have remain yours. But Jacob said, No, I pray you; if you would do me this favor, accept from me this gift; for to see your face is like seeing the face of God, and you have received me favorably.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob and Esau reconcile, gifts exchanged.",
+    "heb_summary": "יעקב ועשו מתפייסים, מתנות מוחלפות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Maids"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "400",
+          "number_category": "People",
+          "unit": "person",
+          "context": "esau's retinue"
+        },
+        {
+          "en_name": "7",
+          "number_category": "Misc",
+          "unit": "time",
+          "context": "jacob bowed"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Joseph",
+          "term2": "Rachel"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Maids"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

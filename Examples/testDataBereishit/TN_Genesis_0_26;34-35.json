@@ -1,0 +1,80 @@
+﻿{
+    "res": {
+        "en_summary": "Esau married Hittite women, bitter to Isaac, Rebekah.",
+        "heb_summary": "עשו נשא נשים חתיות, מרירות ליצחק ורבקה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Judith"
+                },
+                {
+                    "en_name": "Beeri"
+                },
+                {
+                    "en_name": "Basemath"
+                },
+                {
+                    "en_name": "Elon"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Rebekah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hittites"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "40",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "esau's age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Judith",
+                    "term2": "Beeri"
+                },
+                {
+                    "term1": "Basemath",
+                    "term2": "Elon"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Esau",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Judith"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Basemath"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_26:34-35"
+}

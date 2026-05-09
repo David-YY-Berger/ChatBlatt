@@ -1,0 +1,68 @@
+﻿COST: Tokens: Total=8602 approx cost usd = $0.001108 (Prompt=6546, Completion=2056)
+SOURCE:
+Genesis 8:7-12  (TN_Genesis_0_8:7-12)
+
+HEBREW:
+וַיְשַׁלַּ֖ח אֶת־הָֽעֹרֵ֑ב וַיֵּצֵ֤א יָצוֹא֙ וָשׁ֔וֹב עַד־יְבֹ֥שֶׁת הַמַּ֖יִם מֵעַ֥ל הָאָֽרֶץ׃ וַיְשַׁלַּ֥ח אֶת־הַיּוֹנָ֖ה מֵאִתּ֑וֹ לִרְאוֹת֙ הֲקַ֣לּוּ הַמַּ֔יִם מֵעַ֖ל פְּנֵ֥י הָֽאֲדָמָֽה׃ וְלֹֽא־מָצְאָה֩ הַיּוֹנָ֨ה מָנ֜וֹחַ לְכַף־רַגְלָ֗הּ וַתָּ֤שׇׁב אֵלָיו֙ אֶל־הַתֵּבָ֔ה כִּי־מַ֖יִם עַל־פְּנֵ֣י כׇל־הָאָ֑רֶץ וַיִּשְׁלַ֤ח יָדוֹ֙ וַיִּקָּחֶ֔הָ וַיָּבֵ֥א אֹתָ֛הּ אֵלָ֖יו אֶל־הַתֵּבָֽה׃ וַיָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים וַיֹּ֛סֶף שַׁלַּ֥ח אֶת־הַיּוֹנָ֖ה מִן־הַתֵּבָֽה׃ וַתָּבֹ֨א אֵלָ֤יו הַיּוֹנָה֙ לְעֵ֣ת עֶ֔רֶב וְהִנֵּ֥ה עֲלֵה־זַ֖יִת טָרָ֣ף בְּפִ֑יהָ וַיֵּ֣דַע נֹ֔חַ כִּי־קַ֥לּוּ הַמַּ֖יִם מֵעַ֥ל הָאָֽרֶץ׃ וַיִּיָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים וַיְשַׁלַּח֙ אֶת־הַיּוֹנָ֔ה וְלֹֽא־יָסְפָ֥ה שׁוּב־אֵלָ֖יו עֽוֹד׃
+
+ENGLISH:
+and sent out the raven; it went to and fro until the waters had dried up from the earth. Then he sent out the dove to see whether the waters had decreased from the surface of the ground. But the dove could not find a resting place for its foot, and returned to him to the ark, for there was water over all the earth. So putting out his hand, he took it into the ark with him. He waited another seven days, and again sent out the dove from the ark. The dove came back to him toward evening, and there in its bill was a plucked-off olive leaf! Then Noah knew that the waters had decreased on the earth. He waited still another seven days and sent the dove forth; and it did not return to him any more.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Noah sends raven, doves; waters recede.",
+    "heb_summary": "נוח שולח עורב יונה; המים יורדים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Noah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        },
+        {
+          "en_name": "Ark"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "waiting for dove"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Raven"
+        },
+        {
+          "en_name": "Dove"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Olive"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "Noah",
+          "term2": "Ark"
+        },
+        {
+          "term1": "Noah",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

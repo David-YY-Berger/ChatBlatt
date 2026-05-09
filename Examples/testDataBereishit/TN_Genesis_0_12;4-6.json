@@ -1,0 +1,126 @@
+﻿{
+    "res": {
+        "en_summary": "Abram, Lot, Sarai journey to Canaan.",
+        "heb_summary": "אברם, לוט, שרי יצאו לכנען.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Canaanites"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Haran"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Moreh"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "75",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abram's age"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Moreh"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Moreh"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Moreh"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Canaanites",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_12:4-6"
+}

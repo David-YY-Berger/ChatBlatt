@@ -1,0 +1,119 @@
+﻿COST: Tokens: Total=9664 approx cost usd = $0.001405 (Prompt=6643, Completion=3021)
+SOURCE:
+Genesis 45:16-24  (TN_Genesis_0_45:16-24)
+
+HEBREW:
+וְהַקֹּ֣ל נִשְׁמַ֗ע בֵּ֤ית פַּרְעֹה֙ לֵאמֹ֔ר בָּ֖אוּ אֲחֵ֣י יוֹסֵ֑ף וַיִּיטַב֙ בְּעֵינֵ֣י פַרְעֹ֔ה וּבְעֵינֵ֖י עֲבָדָֽיו׃ וַיֹּ֤אמֶר פַּרְעֹה֙ אֶל־יוֹסֵ֔ף אֱמֹ֥ר אֶל־אַחֶ֖יךָ זֹ֣את עֲשׂ֑וּ טַֽעֲנוּ֙ אֶת־בְּעִ֣ירְכֶ֔ם וּלְכוּ־בֹ֖אוּ אַ֥רְצָה כְּנָֽעַן׃ וּקְח֧וּ אֶת־אֲבִיכֶ֛ם וְאֶת־בָּתֵּיכֶ֖ם וּבֹ֣אוּ אֵלָ֑י וְאֶתְּנָ֣ה לָכֶ֗ם אֶת־טוּב֙ אֶ֣רֶץ מִצְרַ֔יִם וְאִכְל֖וּ אֶת־חֵ֥לֶב הָאָֽרֶץ׃ וְאַתָּ֥ה צֻוֵּ֖יתָה זֹ֣את עֲשׂ֑וּ קְחוּ־לָכֶם֩ מֵאֶ֨רֶץ מִצְרַ֜יִם עֲגָל֗וֹת לְטַפְּכֶם֙ וְלִנְשֵׁיכֶ֔ם וּנְשָׂאתֶ֥ם אֶת־אֲבִיכֶ֖ם וּבָאתֶֽם׃ וְעֵ֣ינְכֶ֔ם אַל־תָּחֹ֖ס עַל־כְּלֵיכֶ֑ם כִּי־ט֛וּב כׇּל־אֶ֥רֶץ מִצְרַ֖יִם לָכֶ֥ם הֽוּא׃ וַיַּֽעֲשׂוּ־כֵן֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וַיִּתֵּ֨ן לָהֶ֥ם יוֹסֵ֛ף עֲגָל֖וֹת עַל־פִּ֣י פַרְעֹ֑ה וַיִּתֵּ֥ן לָהֶ֛ם צֵדָ֖ה לַדָּֽרֶךְ׃ לְכֻלָּ֥ם נָתַ֛ן לָאִ֖ישׁ חֲלִפ֣וֹת שְׂמָלֹ֑ת וּלְבִנְיָמִ֤ן נָתַן֙ שְׁלֹ֣שׁ מֵא֣וֹת כֶּ֔סֶף וְחָמֵ֖שׁ חֲלִפֹ֥ת שְׂמָלֹֽת׃ וּלְאָבִ֞יו שָׁלַ֤ח כְּזֹאת֙ עֲשָׂרָ֣ה חֲמֹרִ֔ים נֹשְׂאִ֖ים מִטּ֣וּב מִצְרָ֑יִם וְעֶ֣שֶׂר אֲתֹנֹ֡ת נֹֽ֠שְׂאֹ֠ת בָּ֣ר וָלֶ֧חֶם וּמָז֛וֹן לְאָבִ֖יו לַדָּֽרֶךְ׃ וַיְשַׁלַּ֥ח אֶת־אֶחָ֖יו וַיֵּלֵ֑כוּ וַיֹּ֣אמֶר אֲלֵהֶ֔ם אַֽל־תִּרְגְּז֖וּ בַּדָּֽרֶךְ׃
+
+ENGLISH:
+The news reached Pharaohs palace: Josephs brothers have come. Pharaoh and his courtiers were pleased. And Pharaoh said to Joseph, Say to your brothers, Do as follows: load up your beasts and go at once to the land of Canaan. Take your father and your households and come to me; I will give you the best of the land of Egypt and you shall live off the fat of the land. And you are bidden [to add], Do as follows: take from the land of Egypt wagons for your children and your wives, and bring your father here. And never mind your belongings, for the best of all the land of Egypt shall be yours. The sons of Israel did so; Joseph gave them wagons as Pharaoh had commanded, and he supplied them with provisions for the journey. To each of them, moreover, he gave a change of clothing; but to Benjamin he gave three hundred pieces of silver and several changes of clothing. And to his father he sent the following: ten he-asses laden with the best things of Egypt, and ten she-asses laden with grain, bread, and provisions for his father on the journey. As he sent his brothers off on their way, he told them, Do not be quarrelsome on the way.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Pharaoh invites Joseph's family to Egypt.",
+    "heb_summary": "פרעה מזמין משפחת יוסף למצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Joseph's Brothers"
+        },
+        {
+          "en_name": "Benjamin"
+        },
+        {
+          "en_name": "Sons Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Pharaoh's Palace"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "300",
+          "number_category": "Money",
+          "unit": "silver",
+          "context": "benjamin gift"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Misc",
+          "unit": "ass",
+          "context": "joseph's father gift"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Grain"
+        },
+        {
+          "en_name": "Bread"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Joseph's Brothers"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Pharaoh's Palace"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Sons Of Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Joseph's Brothers",
+          "term2": "Sons Of Israel"
+        }
+      ]
+    }
+  }
+}

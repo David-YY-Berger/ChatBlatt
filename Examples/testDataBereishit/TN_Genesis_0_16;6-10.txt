@@ -1,0 +1,78 @@
+﻿COST: Tokens: Total=7616 approx cost usd = $0.000814 (Prompt=6538, Completion=1078)
+SOURCE:
+Genesis 16:6-10  (TN_Genesis_0_16:6-10)
+
+HEBREW:
+וַיֹּ֨אמֶר אַבְרָ֜ם אֶל־שָׂרַ֗י הִנֵּ֤ה שִׁפְחָתֵךְ֙ בְּיָדֵ֔ךְ עֲשִׂי־לָ֖הּ הַטּ֣וֹב בְּעֵינָ֑יִךְ וַתְּעַנֶּ֣הָ שָׂרַ֔י וַתִּבְרַ֖ח מִפָּנֶֽיהָ׃ וַֽיִּמְצָאָ֞הּ מַלְאַ֧ךְ יְהֹוָ֛ה עַל־עֵ֥ין הַמַּ֖יִם בַּמִּדְבָּ֑ר עַל־הָעַ֖יִן בְּדֶ֥רֶךְ שֽׁוּר׃ וַיֹּאמַ֗ר הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי־מִזֶּ֥ה בָ֖את וְאָ֣נָה תֵלֵ֑כִי וַתֹּ֕אמֶר מִפְּנֵי֙ שָׂרַ֣י גְּבִרְתִּ֔י אָנֹכִ֖י בֹּרַֽחַת׃ וַיֹּ֤אמֶר לָהּ֙ מַלְאַ֣ךְ יְהֹוָ֔ה שׁ֖וּבִי אֶל־גְּבִרְתֵּ֑ךְ וְהִתְעַנִּ֖י תַּ֥חַת יָדֶֽיהָ׃ וַיֹּ֤אמֶר לָהּ֙ מַלְאַ֣ךְ יְהֹוָ֔ה הַרְבָּ֥ה אַרְבֶּ֖ה אֶת־זַרְעֵ֑ךְ וְלֹ֥א יִסָּפֵ֖ר מֵרֹֽב׃
+
+ENGLISH:
+Abram said to Sarai, Your maid is in your hands. Deal with her as you think right. Then Sarai treated her harshly, and she ran away from her. A messenger of HASHEM found her by a spring of water in the wilderness, the spring on the road to Shur, and said, Hagar, slave of Sarai, where have you come from, and where are you going? And she said, I am running away from my mistress Sarai. And the messenger of HASHEM said to her, Go back to your mistress, and submit to her harsh treatment. And the messenger of HASHEM said to her, I will greatly increase your offspring, And they shall be too many to count.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abram, Sarai, Hagar, messenger, wilderness",
+    "heb_summary": "אברם, שרה, הגר, מלאך, מדבר",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Hagar"
+        },
+        {
+          "en_name": "Messenger Of Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Wilderness"
+        },
+        {
+          "en_name": "Shur"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abram",
+          "term2": "Sarai"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "Sarai"
+        },
+        {
+          "term1": "Messenger Of Hashem",
+          "term2": "Hagar"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Hagar",
+          "term2": "Wilderness"
+        },
+        {
+          "term1": "Hagar",
+          "term2": "Shur"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Messenger Of Hashem",
+          "term2": "Hagar"
+        }
+      ]
+    }
+  }
+}

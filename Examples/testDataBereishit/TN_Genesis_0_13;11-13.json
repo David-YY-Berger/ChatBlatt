@@ -1,0 +1,59 @@
+﻿{
+    "res": {
+        "en_summary": "Lot and Abram parted; Lot settled near Sodom.",
+        "heb_summary": "לוט ואברם נפרדו; לוט התיישב ליד סדום.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Inhabitants Of Sodom"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Plain Of The Jordan"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Sodom"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Lot",
+                    "term2": "Plain Of The Jordan"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Sodom"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Inhabitants Of Sodom",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_13:11-13"
+}

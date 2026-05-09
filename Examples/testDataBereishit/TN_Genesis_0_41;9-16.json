@@ -1,0 +1,112 @@
+﻿{
+    "res": {
+        "en_summary": "Cupbearer tells Pharaoh about Joseph's dream interpretation.",
+        "heb_summary": "שר המשקים מספר לפרעה על יוסף.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Chief Cupbearer"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Chief Baker"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "House Of The Prefect"
+                },
+                {
+                    "en_name": "Dungeon"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "unit": "night",
+                    "context": "dreams interpretation"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Chief Cupbearer",
+                    "term2": "Pharaoh"
+                },
+                {
+                    "term1": "Chief Cupbearer",
+                    "term2": "Chief Baker"
+                },
+                {
+                    "term1": "Chief Cupbearer",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Chief Baker",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Joseph"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Chief Cupbearer",
+                    "term2": "House Of The Prefect"
+                },
+                {
+                    "term1": "Chief Baker",
+                    "term2": "House Of The Prefect"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "House Of The Prefect"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Dungeon"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Chief Cupbearer"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Chief Baker"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Pharaoh"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_41:9-16"
+}

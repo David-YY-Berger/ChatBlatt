@@ -1,0 +1,66 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham circumcises himself, Ishmael, and household",
+        "heb_summary": "אברהם מל את עצמו, ישמעאל וביתו",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Homeborn Slaves"
+                },
+                {
+                    "en_name": "Those He Had Bought"
+                },
+                {
+                    "en_name": "Every Male In Abrahams Household"
+                },
+                {
+                    "en_name": "Men Of His Household"
+                },
+                {
+                    "en_name": "Outsiders"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "99",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "abraham age"
+                },
+                {
+                    "en_name": "13",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "ishmael age"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_17:23-27"
+}

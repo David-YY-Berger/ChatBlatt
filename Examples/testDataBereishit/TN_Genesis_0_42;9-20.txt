@@ -1,0 +1,122 @@
+﻿COST: Tokens: Total=9398 approx cost usd = $0.001310 (Prompt=6709, Completion=2689)
+SOURCE:
+Genesis 42:9-20  (TN_Genesis_0_42:9-20)
+
+HEBREW:
+וַיִּזְכֹּ֣ר יוֹסֵ֔ף אֵ֚ת הַחֲלֹמ֔וֹת אֲשֶׁ֥ר חָלַ֖ם לָהֶ֑ם וַיֹּ֤אמֶר אֲלֵהֶם֙ מְרַגְּלִ֣ים אַתֶּ֔ם לִרְא֛וֹת אֶת־עֶרְוַ֥ת הָאָ֖רֶץ בָּאתֶֽם׃ וַיֹּאמְר֥וּ אֵלָ֖יו לֹ֣א אֲדֹנִ֑י וַעֲבָדֶ֥יךָ בָּ֖אוּ לִשְׁבׇּר־אֹֽכֶל׃ כֻּלָּ֕נוּ בְּנֵ֥י אִישׁ־אֶחָ֖ד נָ֑חְנוּ כֵּנִ֣ים אֲנַ֔חְנוּ לֹא־הָי֥וּ עֲבָדֶ֖יךָ מְרַגְּלִֽים׃ וַיֹּ֖אמֶר אֲלֵהֶ֑ם לֹ֕א כִּֽי־עֶרְוַ֥ת הָאָ֖רֶץ בָּאתֶ֥ם לִרְאֽוֹת׃ וַיֹּאמְר֗וּ שְׁנֵ֣ים עָשָׂר֩ עֲבָדֶ֨יךָ אַחִ֧ים׀אֲנַ֛חְנוּ בְּנֵ֥י אִישׁ־אֶחָ֖ד בְּאֶ֣רֶץ כְּנָ֑עַן וְהִנֵּ֨ה הַקָּטֹ֤ן אֶת־אָבִ֙ינוּ֙ הַיּ֔וֹם וְהָאֶחָ֖ד אֵינֶֽנּוּ׃ וַיֹּ֥אמֶר אֲלֵהֶ֖ם יוֹסֵ֑ף ה֗וּא אֲשֶׁ֨ר דִּבַּ֧רְתִּי אֲלֵכֶ֛ם לֵאמֹ֖ר מְרַגְּלִ֥ים אַתֶּֽם׃ בְּזֹ֖את תִּבָּחֵ֑נוּ חֵ֤י פַרְעֹה֙ אִם־תֵּצְא֣וּ מִזֶּ֔ה כִּ֧י אִם־בְּב֛וֹא אֲחִיכֶ֥ם הַקָּטֹ֖ן הֵֽנָּה׃ שִׁלְח֨וּ מִכֶּ֣ם אֶחָד֮ וְיִקַּ֣ח אֶת־אֲחִיכֶם֒ וְאַתֶּם֙ הֵאָ֣סְר֔וּ וְיִבָּֽחֲנוּ֙ דִּבְרֵיכֶ֔ם הַֽאֱמֶ֖ת אִתְּכֶ֑ם וְאִם־לֹ֕א חֵ֣י פַרְעֹ֔ה כִּ֥י מְרַגְּלִ֖ים אַתֶּֽם׃ וַיֶּאֱסֹ֥ף אֹתָ֛ם אֶל־מִשְׁמָ֖ר שְׁלֹ֥שֶׁת יָמִֽים׃ וַיֹּ֨אמֶר אֲלֵהֶ֤ם יוֹסֵף֙ בַּיּ֣וֹם הַשְּׁלִישִׁ֔י זֹ֥את עֲשׂ֖וּ וִֽחְי֑וּ אֶת־הָאֱלֹהִ֖ים אֲנִ֥י יָרֵֽא׃ אִם־כֵּנִ֣ים אַתֶּ֔ם אֲחִיכֶ֣ם אֶחָ֔ד יֵאָסֵ֖ר בְּבֵ֣ית מִשְׁמַרְכֶ֑ם וְאַתֶּם֙ לְכ֣וּ הָבִ֔יאוּ שֶׁ֖בֶר רַעֲב֥וֹן בָּתֵּיכֶֽם׃ וְאֶת־אֲחִיכֶ֤ם הַקָּטֹן֙ תָּבִ֣יאוּ אֵלַ֔י וְיֵאָמְנ֥וּ דִבְרֵיכֶ֖ם וְלֹ֣א תָמ֑וּתוּ וַיַּעֲשׂוּ־כֵֽן׃
+
+ENGLISH:
+Recalling the dreams that he had dreamed about them, Joseph said to them, You are spies, you have come to see the land in its nakedness. But they said to him, No, my lord! Truly, your servants have come to procure food. We are all of us sons of the same man; we are being honest; your servants have never been spies! And he said to them, No, you have come to see the land in its nakedness! And they replied, We your servants were twelve brothers, sons of a certain man in the land of Canaan; the youngest, however, is now with our father, and one is no more. But Joseph said to them, It is just as I have told you: You are spies! By this you shall be put to the test: unless your youngest brother comes here, by Pharaoh, you shall not depart from this place! Let one of you go and bring your brother, while the rest of you remain confined, that your words may be put to the test whether there is truth in you. Else, by Pharaoh, you are nothing but spies! And he confined them in the guardhouse for three days. On the third day Joseph said to them, Do this and you shall live, for I fear God. If you are being honest, let one of your brothers be held in your place of detention, while the rest of you go and take home rations for your starving households; but you must bring me your youngest brother, that your words may be verified and that you may not die. And they did accordingly.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph tests brothers, accuses them of being spies.",
+    "heb_summary": "יוסף בוחן את אחיו, מאשים אותם בריגול.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Brothers"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Guardhouse"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "12",
+          "number_category": "People",
+          "unit": "brother",
+          "context": "joseph's brothers"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "unit": "day",
+          "context": "brothers' confinement"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Rations"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Brothers",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Brothers"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Brothers",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Guardhouse"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Brothers",
+          "term2": "Canaan"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

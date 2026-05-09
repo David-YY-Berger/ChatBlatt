@@ -1,0 +1,45 @@
+﻿{
+    "res": {
+        "en_summary": "God creates human, names animals",
+        "heb_summary": "אלוהים ברא אדם, קרא לחיות",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Human"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "unit": "side",
+                    "context": "human creation"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Cattle"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Human"
+                },
+                {
+                    "term1": "Human",
+                    "term2": "Cattle"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_2:19-21"
+}

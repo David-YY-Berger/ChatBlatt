@@ -1,0 +1,122 @@
+﻿{
+    "res": {
+        "en_summary": "Rebekah found for Abraham's son.",
+        "heb_summary": "רבקה נמצאה לבן אברהם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Milcah"
+                },
+                {
+                    "en_name": "Canaanites"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Spring"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ring"
+                },
+                {
+                    "en_name": "Bands"
+                },
+                {
+                    "en_name": "Jar"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                },
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Camel"
+                },
+                {
+                    "en_name": "Ass"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Bethuel",
+                    "term2": "Nahor"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Milcah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sarah"
+                },
+                {
+                    "term1": "Nahor",
+                    "term2": "Milcah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Spring"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Canaan"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Canaanites",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:33-49"
+}

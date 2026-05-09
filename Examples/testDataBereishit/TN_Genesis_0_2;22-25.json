@@ -1,0 +1,25 @@
+﻿{
+    "res": {
+        "en_summary": "God creates woman; man and woman unite.",
+        "heb_summary": "אלוהים בורא אישה; אדם ואישה מתאחדים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "unit": "person",
+                    "context": "naked people"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_2:22-25"
+}

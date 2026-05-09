@@ -1,0 +1,99 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob and Laban dispute over service.",
+        "heb_summary": "יעקב ולבן רבו על השירות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "God Of Abraham"
+                },
+                {
+                    "en_name": "Fear Of Isaac"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "20",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "service duration"
+                },
+                {
+                    "en_name": "14",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "service for daughters"
+                },
+                {
+                    "en_name": "6",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "service for flocks"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ewe"
+                },
+                {
+                    "en_name": "She-Goat"
+                },
+                {
+                    "en_name": "Ram"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Ram"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "God Of Abraham",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Fear Of Isaac",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:36-43"
+}

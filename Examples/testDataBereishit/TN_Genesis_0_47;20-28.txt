@@ -1,0 +1,161 @@
+﻿COST: Tokens: Total=8615 approx cost usd = $0.001081 (Prompt=6681, Completion=1934)
+SOURCE:
+Genesis 47:20-28  (TN_Genesis_0_47:20-28)
+
+HEBREW:
+וַיִּ֨קֶן יוֹסֵ֜ף אֶת־כׇּל־אַדְמַ֤ת מִצְרַ֙יִם֙ לְפַרְעֹ֔ה כִּֽי־מָכְר֤וּ מִצְרַ֙יִם֙ אִ֣ישׁ שָׂדֵ֔הוּ כִּֽי־חָזַ֥ק עֲלֵהֶ֖ם הָרָעָ֑ב וַתְּהִ֥י הָאָ֖רֶץ לְפַרְעֹֽה׃ וְאֶ֨ת־הָעָ֔ם הֶעֱבִ֥יר אֹת֖וֹ לֶעָרִ֑ים מִקְצֵ֥ה גְבוּל־מִצְרַ֖יִם וְעַד־קָצֵֽהוּ׃ רַ֛ק אַדְמַ֥ת הַכֹּהֲנִ֖ים לֹ֣א קָנָ֑ה כִּי֩ חֹ֨ק לַכֹּהֲנִ֜ים מֵאֵ֣ת פַּרְעֹ֗ה וְאָֽכְל֤וּ אֶת־חֻקָּם֙ אֲשֶׁ֨ר נָתַ֤ן לָהֶם֙ פַּרְעֹ֔ה עַל־כֵּ֕ן לֹ֥א מָכְר֖וּ אֶת־אַדְמָתָֽם׃ וַיֹּ֤אמֶר יוֹסֵף֙ אֶל־הָעָ֔ם הֵן֩ קָנִ֨יתִי אֶתְכֶ֥ם הַיּ֛וֹם וְאֶת־אַדְמַתְכֶ֖ם לְפַרְעֹ֑ה הֵֽא־לָכֶ֣ם זֶ֔רַע וּזְרַעְתֶּ֖ם אֶת־הָאֲדָמָֽה׃ וְהָיָה֙ בַּתְּבוּאֹ֔ת וּנְתַתֶּ֥ם חֲמִישִׁ֖ית לְפַרְעֹ֑ה וְאַרְבַּ֣ע הַיָּדֹ֡ת יִהְיֶ֣ה לָכֶם֩ לְזֶ֨רַע הַשָּׂדֶ֧ה וּֽלְאׇכְלְכֶ֛ם וְלַאֲשֶׁ֥ר בְּבָתֵּיכֶ֖ם וְלֶאֱכֹ֥ל לְטַפְּכֶֽם׃ וַיֹּאמְר֖וּ הֶחֱיִתָ֑נוּ נִמְצָא־חֵן֙ בְּעֵינֵ֣י אֲדֹנִ֔י וְהָיִ֥ינוּ עֲבָדִ֖ים לְפַרְעֹֽה׃ וַיָּ֣שֶׂם אֹתָ֣הּ יוֹסֵ֡ף לְחֹק֩ עַד־הַיּ֨וֹם הַזֶּ֜ה עַל־אַדְמַ֥ת מִצְרַ֛יִם לְפַרְעֹ֖ה לַחֹ֑מֶשׁ רַ֞ק אַדְמַ֤ת הַכֹּֽהֲנִים֙ לְבַדָּ֔ם לֹ֥א הָיְתָ֖ה לְפַרְעֹֽה׃ וַיֵּ֧שֶׁב יִשְׂרָאֵ֛ל בְּאֶ֥רֶץ מִצְרַ֖יִם בְּאֶ֣רֶץ גֹּ֑שֶׁן וַיֵּאָחֲז֣וּ בָ֔הּ וַיִּפְר֥וּ וַיִּרְבּ֖וּ מְאֹֽד׃ וַיְחִ֤י יַעֲקֹב֙ בְּאֶ֣רֶץ מִצְרַ֔יִם שְׁבַ֥ע עֶשְׂרֵ֖ה שָׁנָ֑ה וַיְהִ֤י יְמֵֽי־יַעֲקֹב֙ שְׁנֵ֣י חַיָּ֔יו שֶׁ֣בַע שָׁנִ֔ים וְאַרְבָּעִ֥ים וּמְאַ֖ת שָׁנָֽה׃
+
+ENGLISH:
+So Joseph gained possession of all the farm land of Egypt for Pharaoh, all the Egyptians having sold their fields because the famine was too much for them; thus the land passed over to Pharaoh. And he removed the population town by town, uncertain. from one end of Egypts border to the other. Only the land of the priests he did not take over, for the priests had an allotment from Pharaoh, and they lived off the allotment which Pharaoh had made to them; therefore they did not sell their land. Then Joseph said to the people, Whereas I have this day acquired you and your land for Pharaoh, here is seed for you to sow the land. And when harvest comes, you shall give one-fifth to Pharaoh, and four-fifths shall be yours as seed for the fields and as food for you and those in your households, and as nourishment for your children. And they said, You have saved our lives! We are grateful to my lord, and we shall be serfs to Pharaoh. And Joseph made it into a land law in Egypt, which is still valid, that a fifth should be Pharaohs; only the land of the priests did not become Pharaohs. Thus Israel settled in the country of Egypt, in the region of Goshen; they acquired holdings in it, and were fertile and increased greatly. Jacob lived seventeen years in the land of Egypt, so that the span of Jacobs life came to one hundred and forty-seven years.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph acquired Egypt's land for Pharaoh.",
+    "heb_summary": "יוסף קנה אדמת מצרים לפרעה.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Egyptians"
+        },
+        {
+          "en_name": "Priests"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Goshen"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "0.2",
+          "number_category": "Misc",
+          "unit": "share",
+          "context": "harvest tax to pharaoh"
+        },
+        {
+          "en_name": "0.8",
+          "number_category": "Misc",
+          "unit": "share",
+          "context": "farmer's share of harvest"
+        },
+        {
+          "en_name": "17",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jacob lived in egypt"
+        },
+        {
+          "en_name": "147",
+          "number_category": "Time",
+          "unit": "year",
+          "context": "jacob total lifespan"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Seed"
+        },
+        {
+          "en_name": "Food"
+        },
+        {
+          "en_name": "Nourishment"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Egyptians"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Israel",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Goshen"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Priests",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Priests",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Goshen",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

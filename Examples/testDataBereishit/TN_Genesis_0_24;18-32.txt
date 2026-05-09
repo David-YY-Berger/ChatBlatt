@@ -1,0 +1,188 @@
+﻿COST: Tokens: Total=9850 approx cost usd = $0.001417 (Prompt=6836, Completion=3014)
+SOURCE:
+Genesis 24:18-32  (TN_Genesis_0_24:18-32)
+
+HEBREW:
+וַתֹּ֖אמֶר שְׁתֵ֣ה אֲדֹנִ֑י וַתְּמַהֵ֗ר וַתֹּ֧רֶד כַּדָּ֛הּ עַל־יָדָ֖הּ וַתַּשְׁקֵֽהוּ׃ וַתְּכַ֖ל לְהַשְׁקֹת֑וֹ וַתֹּ֗אמֶר גַּ֤ם לִגְמַלֶּ֙יךָ֙ אֶשְׁאָ֔ב עַ֥ד אִם־כִּלּ֖וּ לִשְׁתֹּֽת׃ וַתְּמַהֵ֗ר וַתְּעַ֤ר כַּדָּהּ֙ אֶל־הַשֹּׁ֔קֶת וַתָּ֥רׇץ ע֛וֹד אֶֽל־הַבְּאֵ֖ר לִשְׁאֹ֑ב וַתִּשְׁאַ֖ב לְכׇל־גְּמַלָּֽיו׃ וְהָאִ֥ישׁ מִשְׁתָּאֵ֖ה לָ֑הּ מַחֲרִ֕ישׁ לָדַ֗עַת הַֽהִצְלִ֧יחַ יְהֹוָ֛ה דַּרְכּ֖וֹ אִם־לֹֽא׃ וַיְהִ֗י כַּאֲשֶׁ֨ר כִּלּ֤וּ הַגְּמַלִּים֙ לִשְׁתּ֔וֹת וַיִּקַּ֤ח הָאִישׁ֙ נֶ֣זֶם זָהָ֔ב בֶּ֖קַע מִשְׁקָל֑וֹ וּשְׁנֵ֤י צְמִידִים֙ עַל־יָדֶ֔יהָ עֲשָׂרָ֥ה זָהָ֖ב מִשְׁקָלָֽם׃ וַיֹּ֙אמֶר֙ בַּת־מִ֣י אַ֔תְּ הַגִּ֥ידִי נָ֖א לִ֑י הֲיֵ֧שׁ בֵּית־אָבִ֛יךְ מָק֥וֹם לָ֖נוּ לָלִֽין׃ וַתֹּ֣אמֶר אֵלָ֔יו בַּת־בְּתוּאֵ֖ל אָנֹ֑כִי בֶּן־מִלְכָּ֕ה אֲשֶׁ֥ר יָלְדָ֖ה לְנָחֽוֹר׃ וַתֹּ֣אמֶר אֵלָ֔יו גַּם־תֶּ֥בֶן גַּם־מִסְפּ֖וֹא רַ֣ב עִמָּ֑נוּ גַּם־מָק֖וֹם לָלֽוּן׃ וַיִּקֹּ֣ד הָאִ֔ישׁ וַיִּשְׁתַּ֖חוּ לַֽיהֹוָֽה׃ וַיֹּ֗אמֶר בָּר֤וּךְ יְהֹוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם אֲ֠שֶׁ֠ר לֹֽא־עָזַ֥ב חַסְדּ֛וֹ וַאֲמִתּ֖וֹ מֵעִ֣ם אֲדֹנִ֑י אָנֹכִ֗י בַּדֶּ֙רֶךְ֙ נָחַ֣נִי יְהֹוָ֔ה בֵּ֖ית אֲחֵ֥י אֲדֹנִֽי׃ וַתָּ֙רׇץ֙ הַֽנַּעֲרָ֔ וַתַּגֵּ֖ד לְבֵ֣ית אִמָּ֑הּ כַּדְּבָרִ֖ים הָאֵֽלֶּה׃ וּלְרִבְקָ֥ה אָ֖ח וּשְׁמ֣וֹ לָבָ֑ן וַיָּ֨רׇץ לָבָ֧ן אֶל־הָאִ֛ישׁ הַח֖וּצָה אֶל־הָעָֽיִן׃ וַיְהִ֣י׀ כִּרְאֹ֣ת אֶת־הַנֶּ֗זֶם וְֽאֶת־הַצְּמִדִים֮ עַל־יְדֵ֣י אֲחֹתוֹ֒ וּכְשׇׁמְע֗וֹ אֶת־דִּבְרֵ֞י רִבְקָ֤ה אֲחֹתוֹ֙ לֵאמֹ֔ר כֹּֽה־דִבֶּ֥ר אֵלַ֖י הָאִ֑ישׁ וַיָּבֹא֙ אֶל־הָאִ֔ישׁ וְהִנֵּ֛ה עֹמֵ֥ד עַל־הַגְּמַלִּ֖ים עַל־הָעָֽיִן׃ וַיֹּ֕אמֶר בּ֖וֹא בְּר֣וּךְ יְהֹוָ֑ה לָ֤מָּה תַעֲמֹד֙ בַּח֔וּץ וְאָנֹכִי֙ פִּנִּ֣יתִי הַבַּ֔יִת וּמָק֖וֹם לַגְּמַלִּֽים׃ וַיָּבֹ֤א הָאִישׁ֙ הַבַּ֔יְתָה וַיְפַתַּ֖ח הַגְּמַלִּ֑ים וַיִּתֵּ֨ן תֶּ֤בֶן וּמִסְפּוֹא֙ לַגְּמַלִּ֔ים וּמַ֙יִם֙ לִרְחֹ֣ץ רַגְלָ֔יו וְרַגְלֵ֥י הָאֲנָשִׁ֖ים אֲשֶׁ֥ר אִתּֽוֹ׃
+
+ENGLISH:
+Drink, my lord, she said, and she quickly lowered her jar upon her hand and let him drink. When she had let him drink his fill, she said, I will also draw for your camels, until they finish drinking. Quickly emptying her jar into the trough, she ran back to the well to draw, and she drew for all his camels. The man,; Agent. meanwhile, stood gazing at her, silently wondering whether HASHEM had made his errand successful or not. When the camels had finished drinking, the man took a gold nose-ring weighing a half-shekel,. and two gold bands for her arms, ten shekels in weight. Pray tell me, he said, whose daughter are you? Is there room in your fathers house for us to spend the night? She replied, I am the daughter of Bethuel the son of Milcah, whom she bore to Nahor. And she went on, There is plenty of straw, shredded straw, which in the East is mixed with feed; cf. v. 32. and feed at home, and also room to spend the night. The man bowed low in homage to HASHEM and said, Blessed be HASHEM, the God of my master Abrahams [house], who has not withheld steadfast faithfulness from my master. For I have been guided on my errand by HASHEM, to the house of my masters kin. The maiden ran and told all this to her mothers household. Now Rebekah had a brother whose name was Laban. Laban ran out to the man at the spring- when he saw the nose-ring and the bands on his sisters arms, and when he heard his sister Rebekah say, Thus the man spoke to me. He went up to the man, who was still standing beside the camels at the spring. Come in, O blessed of HASHEM, he said, why do you remain outside, when I have made ready the house and a place for the camels? So the man entered the house, and the camels were unloaded. The camels were given straw and feed, and water was brought to bathe his feet and the feet of the entourage. under him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rebekah meets Abraham's servant, offers hospitality.",
+    "heb_summary": "רבקה פוגשת עבד אברהם, מציעה הכנסת אורחים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "The Man"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "Milcah"
+        },
+        {
+          "en_name": "Nahor"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Rebekah's Mother's Household"
+        },
+        {
+          "en_name": "The Entourage"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Well"
+        },
+        {
+          "en_name": "Trough"
+        },
+        {
+          "en_name": "House"
+        },
+        {
+          "en_name": "Spring"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "0.5",
+          "number_category": "Money",
+          "unit": "shekel",
+          "context": "gold nose-ring weight"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Money",
+          "unit": "shekel",
+          "context": "gold arm-bands weight"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Camel"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Straw"
+        },
+        {
+          "en_name": "Feed"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Straw"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Bethuel",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Bethuel",
+          "term2": "Milcah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Milcah",
+          "term2": "Nahor"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Rebekah",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Milcah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rebekah",
+          "term2": "The Man"
+        },
+        {
+          "term1": "Laban",
+          "term2": "The Man"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Rebekah",
+          "term2": "Well"
+        },
+        {
+          "term1": "The Man",
+          "term2": "Well"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Spring"
+        },
+        {
+          "term1": "The Man",
+          "term2": "House"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "House"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Spring"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "The Man",
+          "term2": "Well"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "House"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "The Man",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

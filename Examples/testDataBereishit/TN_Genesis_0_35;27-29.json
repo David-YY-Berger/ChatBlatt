@@ -1,0 +1,105 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob visits Isaac; Isaac dies, buried by sons.",
+        "heb_summary": "יעקב ביקר יצחק; יצחק מת, נקבר על ידי בניו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Mamre"
+                },
+                {
+                    "en_name": "Kiriath-Arba"
+                },
+                {
+                    "en_name": "Hebron"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "180",
+                    "number_category": "Time",
+                    "unit": "year",
+                    "context": "isaac lifespan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Kiriath-Arba"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Hebron"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Kiriath-Arba"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Hebron"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Kiriath-Arba"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Hebron"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Kiriath-Arba",
+                    "term2": "Hebron"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_35:27-29"
+}

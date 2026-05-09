@@ -1,0 +1,27 @@
+﻿COST: Tokens: Total=7439 approx cost usd = $0.000791 (Prompt=6405, Completion=1034)
+SOURCE:
+Genesis 18:23  (TN_Genesis_0_18:23)
+
+HEBREW:
+וַיִּגַּ֥שׁ אַבְרָהָ֖ם וַיֹּאמַ֑ר הַאַ֣ף תִּסְפֶּ֔ה צַדִּ֖יק עִם־רָשָֽׁע׃
+
+ENGLISH:
+Abraham came forward and said, Will You sweep away the innocent along with the guilty?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham questions God's justice",
+    "heb_summary": "אברהם שואל על צדק אלוהי",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        }
+      ]
+    }
+  }
+}

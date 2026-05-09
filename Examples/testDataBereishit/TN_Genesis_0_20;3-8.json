@@ -1,0 +1,28 @@
+﻿{
+    "res": {
+        "en_summary": "God warns Abimelech about taking a married woman.",
+        "heb_summary": "אלוהים מזהיר את אבימלך על אישה נשואה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "God"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_20:3-8"
+}
