@@ -5,7 +5,7 @@ import bson
 from bson import ObjectId
 
 
-class JsonWriter:
+class JsonUtils:
     """
         A static class for writing Python dictionaries to JSON files.
         """

@@ -1,9 +1,14 @@
 # bs"d - lehagdil torah velahadir
 
+from __future__ import annotations
+
 from pydantic import BaseModel, Field
-from typing import List, Any, Dict
+from typing import List, Any, Dict, Optional, TYPE_CHECKING
 
 from backend.models.Enums import EntityType
+
+if TYPE_CHECKING:
+    from backend.models.EntityObjects.EntityIdentity import EntityIdentityContext
 
 
 # Helper function for transient fields (excluded from serialization/db)
@@ -27,6 +32,32 @@ class Entity(BaseModel):
     # transient fields
     comparedTo: List[str] = TransientField(default_factory=list)
     contrastedWith: List[str] = TransientField(default_factory=list)
+
+    # ========================= Identity / Equality =========================
+
+    def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
+        """
+        Returns a hashable tuple that uniquely identifies this entity for dedup purposes.
+        Two entities with the same identity tuple are considered 'the same entity'.
+
+        Default: (display_en_name lowercased, entityType).
+        Subclasses override for richer semantics.
+        """
+        return (self.display_en_name.lower(), self.entityType)
+
+    def build_existence_query(self, context: Optional["EntityIdentityContext"] = None) -> Dict[str, Any]:
+        """
+        Returns a MongoDB query dict to find an existing entity that is 'equal' to this one.
+        Used by the DB layer for dedup on insert.
+
+        Default: match by display_en_name (case-insensitive) + entityType.
+        Subclasses override for richer semantics.
+        """
+        from backend.db.DBConstants import DBFields, DBOperators
+        return {
+            DBFields.DISPLAY_EN_NAME: {DBOperators.REGEX: f"^{self.display_en_name}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE},
+            DBFields.ENTITY_TYPE: self.entityType.value,
+        }
 
     @classmethod
     def create_from_en_name(cls, en_name: str, entity_type: EntityType) -> "Entity":

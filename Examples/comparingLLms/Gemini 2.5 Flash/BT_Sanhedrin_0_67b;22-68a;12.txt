@@ -73,7 +73,7 @@ EXTRACTED GRAPH (JSON):
           "term2": "Rabbi Eliezer"
         }
       ],
-      "childOf": [
+      "childOfFather": [
         {
           "term1": "Hyrcanus",
           "term2": "Rabbi Eliezer"

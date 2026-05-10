@@ -33,23 +33,26 @@
             ]
         },
         "Rel": {
-            "childOf": [
+            "childOfFather": [
                 {
-                    "term1": "Dan",
-                    "term2": "Bilhah"
-                },
-                {
-                    "term1": "Dan",
+                    "term1": "Naphtali",
                     "term2": "Jacob"
                 },
                 {
-                    "term1": "Naphtali",
-                    "term2": "Bilhah"
-                },
-                {
-                    "term1": "Naphtali",
+                    "term1": "Dan",
                     "term2": "Jacob"
                 }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Naphtali",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Dan",
+                    "term2": "Bilhah"
+                }
+
             ],
             "spouseOf": [
                 {

@@ -2,117 +2,106 @@
 
 from enum import Enum
 
-class DescribedEnum(Enum):
-    def __new__(cls, value, description):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.description = description
-        return obj
 
-    def __str__(self):
-        return self.description
+class SourceType(Enum):
+    BT = "Babylonian Talmud"
+    JT = "Jerusalem Talmud"
+    RM = "Rambam Mishne Torah"
+    TN = "Tanach"
+    MS = "Mishna"
 
-class SourceType(DescribedEnum):
-    # DONT CHANGE THESE ABBREVIATIONS! hardcoded in MongoDB impl
-    BT = (0, "Babylonian Talmud")
-    JT = (1, "Jerusalem Talmud")
-    RM = (2, "Rambam Mishne Torah")
-    TN = (3, "Tanach")
-    MS = (4, "Mishna")
+class TimePeriod(Enum):
+    Tanach = "Tanach"  # add more eras throughout tanach...
+    Tanaim = "Tanaim"
+    Amoraim = "Amoraim"
+    NoTimePeriod = "No Time Period"
 
-class TimePeriod(DescribedEnum):
-    Tanach = (0, "Tanach Era") # add more eras thoughout tanach...
-    Tanaim = (1, "Tanaim")
-    Amoraim = (2, "Amoraim")
-    NoTimePeriod = (3, "No Time Period")
+class SymbolType(Enum):
+    Clothing = "Clothing"
+    HolyObject = "Holy Object"
 
-class SymbolType(DescribedEnum):
-    Clothing = (2, "Clothing")
-    HolyObject = (5, "Holy Object")
+class PlaceType(Enum):
+    City = "City"
+    BodyOfWater = "Body of Water"
+    Mountain = "Mountain"
 
-class PlaceType(DescribedEnum):
-    City = (0, "City")
-    BodyOfWater = (1, "Body of Water")
-    Mountain = (2, "Mountain")
+class RoleType(Enum):
+    Prophet = "Prophet"
+    King = "King"
+    Judge = "Judge"
+    Kohen = "Kohen"
+    Tanna = "Tanna"
+    Amora = "Amora"
+    Geon = "Geon"
+    Rishon = "Rishon"
+    Acharon = "Acharon"
 
-class RoleType(DescribedEnum):
-    Prophet = (1, "Prophet")
-    King = (2, "King")
-    Judge = (3, "Judge")
-    Kohen = (4, "Kohen")
-    Tanna = (5, "Tanna")
-    Amora = (6, "Amora")
-    Geon = (7, "Geon")
-    Rishon = (8, "Rishon")
-    Acharon = (9, "Acharon")
+class NumberCategory(Enum):
+    Sacrifice = "Sacrifice"       # Offerings: animals, flour, oil, incense
+    Time = "Time"                 # Duration, age, dates, periods
+    Money = "Money"               # Currency, payment, value
+    People = "People"             # Counts of persons, armies, tribes
+    Measurement = "Measurement"   # Distance, weight, volume, area
+    Misc = "Misc"                 # Anything not covered above
 
-class NumberCategory(DescribedEnum):
-    Sacrifice = ("SAC", "Sacrifice")          # Offerings: animals, flour, oil, incense
-    Time = ("TIM", "Time")                    # Duration, age, dates, periods
-    Money = ("MON", "Money")                  # Currency, payment, value
-    People = ("PPL", "People")                # Counts of persons, armies, tribes
-    Measurement = ("MSR", "Measurement")      # Distance, weight, volume, area
-    Misc = ("MIS", "Misc")                    # Anything not covered above
+class PassageType(Enum):
+    Law = "Law"
+    Story = "Story"
+    PHILOSOPHIC = "PHILOSOPHIC"
+    GENEALOGY = "GENEALOGY"
+    PROPHECY = "PROPHECY"
 
-class PassageType(DescribedEnum):
-    Law = (0, "Law")
-    Story = (1, "Story")
-    PHILOSOPHIC = (2, "PHILOSOPHIC")
-    GENEALOGY = (3, "GENEALOGY")
-    PROPHECY = (4, "PROPHECY")
+class EntityType(Enum):
+    EPerson = "Person"          # Includes individuals AND groups (e.g., "the 70 elders")
+    EPlace = "Place"
+    ETribeOfIsrael = "TribeOfIsrael"
+    ENation = "Nation"
+    ESymbol = "Symbol"
+    ENumber = "Number"
+    EAnimal = "Animal"          # Real and mythical animals
+    EFood = "Food"              # Food items
+    EPlant = "Plant"            # Plants (edible and inedible)
 
-class EntityType(DescribedEnum):
-    EPerson = ("P", "Person")  # Includes individuals AND groups (e.g., "the 70 elders")
-    EPlace  = ("L", "Place")
-    ETribeOfIsrael  = ("T", "TribeOfIsrael")
-    ENation = ("N", "Nation")
-    ESymbol = ("S", "Symbol")
-    ENumber = ("M", "Number")
-    EAnimal = ("A", "Animal")  # Real and mythical animals
-    EFood = ("F", "Food")  # Food items
-    EPlant = ("B", "Plant")  # Plants (edible and inedible)
-
-class RelType(DescribedEnum):
+class RelType(Enum):
     # Person/Group → Person/Group
-    studiedFrom = ("PP01", "studiedFrom")
-    childOfFather = ("PP03", "childOfFather")
-    childOfMother = ("PP08", "childOfMother")
-    spouseOf = ("PP04", "spouseOf")
-    descendantOf = ("PP05", "descendantOf")
-    spokeWith = ("PP06", "spokeWith")
-    disagreedWith = ("PP07", "disagreedWith")
+    studiedFrom = "studiedFrom"
+    childOfFather = "childOfFather"
+    childOfMother = "childOfMother"
+    spouseOf = "spouseOf"
+    descendantOf = "descendantOf"
+    spokeWith = "spokeWith"
+    disagreedWith = "disagreedWith"
 
     # Person/Group → {anything}
-    prophesiedAbout = ("PX01", "prophesiedAbout")
+    prophesiedAbout = "prophesiedAbout"
 
     # Person/Group → Place
-    bornIn = ("PL01", "bornIn")
-    diedIn = ("PL02", "diedIn")
-    prayedAt = ("PL03", "prayedAt")
-    visited = ("PL04", "visited")
-    associatedWithPlace = ("PL05", "associatedWithPlace")  # Person/Symbol → Place fallback
+    bornIn = "bornIn"
+    diedIn = "diedIn"
+    prayedAt = "prayedAt"
+    visited = "visited"
+    associatedWithPlace = "associatedWithPlace"  # Person/Symbol → Place fallback
 
     # Symbol → Place
-    symbolAssociatedWithPlace = ("SL01", "symbolAssociatedWithPlace")
+    symbolAssociatedWithPlace = "symbolAssociatedWithPlace"
 
     # Person/Group → TribeOfIsrael
-    personToTribeOfIsrael = ("PT01", "personToTribeOfIsrael")
+    personToTribeOfIsrael = "personToTribeOfIsrael"
 
     # Person/Group → Nation
-    personBelongsToNation = ("PN01", "personBelongsToNation")
+    personBelongsToNation = "personBelongsToNation"
 
     # Nation → Nation, or Person/Group → Person/Group
-    enemyOf = ("NN01", "enemyOf")
-    allyOf = ("NN02", "allyOf")
+    enemyOf = "enemyOf"
+    allyOf = "allyOf"
 
     # Place → Nation
-    placeToNation = ("LN01", "placeToNation")
+    placeToNation = "placeToNation"
 
     # {anything} → {anything}
-    comparedTo = ("XS01", "comparedTo")
-    contrastedWith = ("XS02", "contrastedWith")
-    AliasOf = ("XS03", "AliasOf")
-
+    comparedTo = "comparedTo"
+    contrastedWith = "contrastedWith"
+    AliasOf = "AliasOf"
 
 
 class SourceContentType(Enum):

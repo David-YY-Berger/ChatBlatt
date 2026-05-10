@@ -2,30 +2,31 @@
 import asyncio
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
 from backend.models.SourceClasses.SourceContent import SourceContent
-from backend.models.SourceClasses.SourceClass import SourceClass
-from backend.models.SourceClasses.SectionSorting import get_section_sort_key
+from backend.models.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models.EntityObjects.Entity import Entity
+from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
 from backend.models.Rel import Rel
-from backend.models.Enums import EntityType, RelType
+from backend.models.Enums import EntityType, RelType, PassageType
+from backend.models.SourceClasses.SourceMetadata import SourceMetadata
 from backend.db.DBConstants import DBFields
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.EntityRelManager import EntityRelManager
 from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend.data_pipeline.llm_api.PydanticCaller import PydanticCaller
 from backend.file_utils import LocalPrinter, FileTypeEnum, OsFunctions
-from backend.file_utils.JsonUtils import JsonWriter
+from backend.file_utils.JsonUtils import JsonUtils
 from backend.common import Paths
 
 
 # Mapping from JSON category name -> EntityType enum
-_CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.description: et for et in EntityType}
+_CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in EntityType}
 
 # Mapping from JSON rel field name -> RelType enum
-_REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.description: rt for rt in RelType}
+_REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
 
 class DBPopulateLmmData(DBParentClass):
@@ -69,21 +70,13 @@ class DBPopulateLmmData(DBParentClass):
         dir_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\comparingLLms\Gemini 2.5 Flash"
 
         # 1. Read JSONs with source keys derived from filenames
-        json_entries: List[Tuple[str, dict]] = JsonWriter.read_jsons_from_dir_with_keys(dir_path)
+        json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
         if not json_entries:
             print("No JSON files found in directory.")
             return
 
         # 2. Sort by source key using SourceClass sorting logic
-        def _sort_key(entry: Tuple[str, dict]):
-            src_key = entry[0]
-            book = SourceClass.get_book_from_key(src_key)
-            book_order = book.order if book else 0
-            src_type_name = src_key[:2] if src_key else ""
-            section = SourceClass.get_section_from_key(src_key) if src_key else ""
-            return (book_order, get_section_sort_key(src_type_name, section))
-
-        json_entries.sort(key=_sort_key)
+        json_entries.sort(key=source_entry_sort_key)
         print(f"Loaded {len(json_entries)} JSON files, sorted by source key.")
 
         # 3. Transactional: use a MongoDB session with transaction
@@ -97,13 +90,13 @@ class DBPopulateLmmData(DBParentClass):
             print(f"ENTITIES INSERTED/FOUND: {len(all_entities)}")
             print(f"{'='*60}")
             for ent in all_entities:
-                print(f"  [{ent.entityType.description}] {ent.display_en_name} (key={ent.key})")
+                print(f"  [{ent.entityType.value}] {ent.display_en_name} (key={ent.key})")
 
             print(f"\n{'='*60}")
             print(f"RELATIONSHIPS INSERTED/FOUND: {len(all_rels)}")
             print(f"{'='*60}")
             for rel in all_rels:
-                print(f"  {rel.term1} --[{rel.rel_type.description}]--> {rel.term2} (key={rel.key})")
+                print(f"  {rel.term1} --[{rel.rel_type.value}]--> {rel.term2} (key={rel.key})")
 
         except Exception as e:
             print(f"TRANSACTION FAILED - all changes rolled back: {e}")
@@ -113,96 +106,262 @@ class DBPopulateLmmData(DBParentClass):
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
         """
-        Process all JSON entries: insert entities first, then relationships.
+        Process all JSON entries: insert entities, then relationships, then source metadata.
+        For Person entities, family context is extracted per-entry from the JSON
+        and the DB is queried directly to check for existing matches.
         Returns (all_entities, all_rels) with keys populated.
         """
-        all_entities: List[Entity] = []
-        # Map: (display_en_name_lower, entity_type) -> entity key
-        entity_key_map: Dict[Tuple[str, EntityType], str] = {}
+        all_entities, entity_key_map = self._insert_entities_from_entries(json_entries)
+        all_rels, source_rel_keys = self._insert_rels_from_entries(json_entries, entity_key_map)
+        self._upsert_source_metadata_for_entries(json_entries, entity_key_map, source_rel_keys)
+        return all_entities, all_rels
 
-        # ---- Pass 1: Entities ----
+    def _insert_entities_from_entries(
+        self, json_entries: List[Tuple[str, dict]]
+    ) -> Tuple[List[Entity], Dict[tuple, str]]:
+        """
+        Pass 1: iterate all JSON entries, insert each unique entity into the DB.
+        For Person entities, extracts family context from the current JSON entry's rels
+        and passes it to the DB layer for dedup against existing DB records.
+        Returns (all_entities, entity_key_map) where entity_key_map maps
+        (name_lower, entity_type) -> db key.
+        """
+        all_entities: List[Entity] = []
+        entity_key_map: Dict[tuple, str] = {}
+
         for source_key, data in json_entries:
-            res = data.get("res", data)  # Handle both wrapped {"res": ...} and flat formats
+            res = self._get_res(data)
             entities_dict = res.get("Entities", {})
+            rels_dict = res.get("Rel", {})
 
             for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
-                entity_list = entities_dict.get(category_name)
-                if not entity_list:
-                    continue
-
-                for entity_data in entity_list:
-                    en_name = entity_data.get("en_name", "").strip()
-                    if not en_name:
-                        continue
-
-                    lookup_key = (en_name.lower(), entity_type)
-                    if lookup_key in entity_key_map:
-                        # Already processed this entity
-                        continue
-
-                    entity = Entity.create_from_en_name(en_name, entity_type)
-                    generated_key = self.db_api.try_insert_entity(entity)
-                    entity.key = generated_key
-                    all_entities.append(entity)
-                    entity_key_map[lookup_key] = generated_key
+                for entity_data in entities_dict.get(category_name) or []:
+                    entity, was_new = self._try_insert_entity(
+                        entity_data, entity_type, entity_key_map, rels_dict
+                    )
+                    if was_new:
+                        all_entities.append(entity)
 
         print(f"  Entities pass complete: {len(all_entities)} unique entities.")
+        return all_entities, entity_key_map
 
-        # ---- Pass 2: Relationships ----
+    def _try_insert_entity(self, entity_data: dict, entity_type: EntityType,
+                           entity_key_map: Dict[tuple, str],
+                           rels_dict: dict,
+    ) -> Tuple[Optional[Entity], bool]:
+        """
+        Insert a single entity into the DB if it hasn't been seen yet.
+        For Person entities, extracts family context from rels_dict and passes it
+        to the DB layer so it can check against existing DB records.
+        Returns (entity, was_new). was_new=False means it was already in entity_key_map.
+        """
+        en_name = entity_data.get("en_name", "").strip()
+        if not en_name:
+            return None, False
+
+        entity = Entity.create_from_en_name(en_name, entity_type)
+        lookup_key = (en_name.lower(), entity_type)
+
+        if lookup_key in entity_key_map:
+            return None, False  # already processed in this batch
+
+        # For Person entities, build family context from the JSON rels
+        person_family = None
+        if entity_type == EntityType.EPerson:
+            person_family = self._extract_person_family_from_rels(en_name, rels_dict)
+
+        entity.key = self.db_api.try_insert_entity(entity, person_family)
+        entity_key_map[lookup_key] = entity.key
+        return entity, True
+
+    @staticmethod
+    def _extract_person_family_from_rels(person_name: str, rels_dict: dict) -> PersonFamilyContext:
+        """
+        Extract family context (fathers, mothers, spouses) for a specific person
+        from the current JSON entry's relationship data.
+        """
+        ctx = PersonFamilyContext()
+        name_lower = person_name.lower()
+
+        for rel_field_name, rel_list in rels_dict.items():
+            if not rel_list:
+                continue
+            field_lower = rel_field_name.lower()
+
+            for relation_data in rel_list:
+                term1 = relation_data.get("term1", "").strip()
+                term2 = relation_data.get("term2", "").strip()
+                if not term1 or not term2:
+                    continue
+
+                if field_lower == "childoffather" and term1.lower() == name_lower:
+                    ctx.fathers.add(term2.lower())
+                elif field_lower == "childofmother" and term1.lower() == name_lower:
+                    ctx.mothers.add(term2.lower())
+                elif field_lower == "spouseof":
+                    if term1.lower() == name_lower:
+                        ctx.spouses.add(term2.lower())
+                    elif term2.lower() == name_lower:
+                        ctx.spouses.add(term1.lower())
+
+        return ctx
+
+    def _insert_rels_from_entries(
+        self,
+        json_entries: List[Tuple[str, dict]],
+        entity_key_map: Dict[tuple, str],
+    ) -> Tuple[List[Rel], Dict[str, Set[str]]]:
+        """
+        Pass 2: iterate all JSON entries, insert each relationship into the DB.
+        Relies on entity_key_map built in Pass 1 to resolve entity names to keys.
+        Returns (all_rels, source_rel_keys) where source_rel_keys maps source_key -> set of rel keys.
+        """
         all_rels: List[Rel] = []
+        source_rel_keys: Dict[str, Set[str]] = {}
 
         for source_key, data in json_entries:
-            res = data.get("res", data)
+            source_rel_keys[source_key] = set()
+            res = self._get_res(data)
             rels_dict = res.get("Rel", {})
             if not rels_dict:
                 continue
-
             entities_dict = res.get("Entities", {})
 
             for rel_field_name, rel_list in rels_dict.items():
-                rel_type = _REL_NAME_TO_REL_TYPE.get(rel_field_name)
-                if rel_type is None:
-                    # Try case-insensitive match
-                    rel_type = next(
-                        (rt for name, rt in _REL_NAME_TO_REL_TYPE.items()
-                         if name.lower() == rel_field_name.lower()),
-                        None
-                    )
-                if rel_type is None:
-                    print(f"  WARNING: Unknown rel type '{rel_field_name}' in source {source_key}, skipping.")
-                    continue
-
-                if not rel_list:
+                rel_type = self._resolve_rel_type(rel_field_name, source_key)
+                if rel_type is None or not rel_list:
                     continue
 
                 for relation_data in rel_list:
-                    term1_name = relation_data.get("term1", "").strip()
-                    term2_name = relation_data.get("term2", "").strip()
-                    if not term1_name or not term2_name:
-                        continue
-
-                    # Resolve entity keys by searching in our key map
-                    term1_key = self._resolve_entity_key(term1_name, entities_dict, entity_key_map)
-                    term2_key = self._resolve_entity_key(term2_name, entities_dict, entity_key_map)
-
-                    if not term1_key or not term2_key:
-                        print(f"  WARNING: Could not resolve entities for rel "
-                              f"'{term1_name}' --[{rel_field_name}]--> '{term2_name}' in {source_key}")
-                        continue
-
-                    rel = Rel.create(rel_type=rel_type, term1=term1_key, term2=term2_key)
-                    generated_key = self.db_api.try_insert_rel(rel)
-                    rel.key = generated_key
-                    all_rels.append(rel)
+                    rel = self._try_insert_rel(
+                        relation_data, rel_type, rel_field_name, source_key,
+                        entities_dict, entity_key_map
+                    )
+                    if rel is not None:
+                        all_rels.append(rel)
+                        source_rel_keys[source_key].add(rel.key)
 
         print(f"  Relationships pass complete: {len(all_rels)} relationships.")
-        return all_entities, all_rels
+        return all_rels, source_rel_keys
+
+    def _upsert_source_metadata_for_entries(
+        self,
+        json_entries: List[Tuple[str, dict]],
+        entity_key_map: Dict[tuple, str],
+        source_rel_keys: Dict[str, Set[str]],
+    ) -> None:
+        """
+        Pass 3: for each source entry, build a fully-populated SourceMetadata object
+        (key, source_type, summary_en, summary_heb, passage_types, entity_keys, rel_keys)
+        and upsert it into the DB.
+        """
+        upserted = 0
+        for source_key, data in json_entries:
+            res = self._get_res(data)
+
+            # Collect entity keys that appear in this source
+            entities_dict = res.get("Entities", {})
+            entity_keys: Set[str] = set()
+            for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+                for entity_data in entities_dict.get(category_name) or []:
+                    en_name = entity_data.get("en_name", "").strip()
+                    if en_name:
+                        lookup = (en_name.lower(), entity_type)
+                        if lookup in entity_key_map:
+                            entity_keys.add(entity_key_map[lookup])
+
+            # Parse passage types from LLM output
+            passage_types = self._parse_passage_types(res.get("passage_types", []))
+
+            src_metadata = SourceMetadata(key=source_key)
+            src_metadata.summary_en = res.get("en_summary")
+            src_metadata.summary_heb = res.get("heb_summary")
+            src_metadata.passage_types = passage_types
+            src_metadata.entity_keys = entity_keys
+            src_metadata.rel_keys = source_rel_keys.get(source_key, set())
+
+            self.db_api.upsert_source_metadata(src_metadata)
+            upserted += 1
+
+        print(f"  Source metadata pass complete: {upserted} entries upserted.")
+
+    @staticmethod
+    def _parse_passage_types(passage_type_strs: List[str]) -> List[PassageType]:
+        """
+        Convert LLM passage-type strings (e.g. "LAW", "STORY") to PassageType enum values.
+        Matching is case-insensitive against both enum name and description.
+        """
+        _pt_map: Dict[str, PassageType] = {}
+        for pt in PassageType:
+            _pt_map[pt.name.upper()] = pt
+            _pt_map[pt.value.upper()] = pt
+
+        result: List[PassageType] = []
+        for pt_str in passage_type_strs:
+            pt = _pt_map.get(pt_str.upper())
+            if pt is not None:
+                result.append(pt)
+            else:
+                print(f"  WARNING: Unknown passage type '{pt_str}', skipping.")
+        return result
+
+    def _try_insert_rel(
+        self,
+        relation_data: dict,
+        rel_type: RelType,
+        rel_field_name: str,
+        source_key: str,
+        entities_dict: dict,
+        entity_key_map: Dict[tuple, str],
+    ) -> Optional[Rel]:
+        """
+        Insert a single relationship into the DB.
+        Returns the Rel on success, or None if entity names could not be resolved.
+        """
+        term1_name = relation_data.get("term1", "").strip()
+        term2_name = relation_data.get("term2", "").strip()
+        if not term1_name or not term2_name:
+            return None
+
+        term1_key = self._resolve_entity_key(term1_name, entities_dict, entity_key_map)
+        term2_key = self._resolve_entity_key(term2_name, entities_dict, entity_key_map)
+
+        if not term1_key or not term2_key:
+            print(f"  WARNING: Could not resolve entities for rel "
+                  f"'{term1_name}' --[{rel_field_name}]--> '{term2_name}' in {source_key}")
+            return None
+
+        rel = Rel.create(rel_type=rel_type, term1=term1_key, term2=term2_key)
+        rel.key = self.db_api.try_insert_rel(rel)
+        return rel
+
+    @staticmethod
+    def _get_res(data: dict) -> dict:
+        """Unwrap {"res": ...} wrapper if present, otherwise return data as-is."""
+        return data.get("res", data)
+
+    @staticmethod
+    def _resolve_rel_type(rel_field_name: str, source_key: str) -> Optional[RelType]:
+        """
+        Look up RelType by field name (exact match first, then case-insensitive).
+        Prints a warning and returns None if the name is unrecognised.
+        """
+        rel_type = _REL_NAME_TO_REL_TYPE.get(rel_field_name)
+        if rel_type is None:
+            rel_type = next(
+                (rt for name, rt in _REL_NAME_TO_REL_TYPE.items()
+                 if name.lower() == rel_field_name.lower()),
+                None,
+            )
+        if rel_type is None:
+            print(f"  WARNING: Unknown rel type '{rel_field_name}' in source {source_key}, skipping.")
+        return rel_type
 
     def _resolve_entity_key(self, en_name: str, entities_dict: dict,
-        entity_key_map: Dict[Tuple[str, EntityType], str]) -> Optional[str]:
+        entity_key_map: Dict[tuple, str]) -> Optional[str]:
         """
         Resolve an entity name to its key by checking which category it belongs to
-        in the entities_dict, then looking up in entity_key_map.
+        in the entities_dict, then looking up in entity_key_map using (name_lower, entity_type).
         """
         name_lower = en_name.lower()
 
@@ -214,13 +373,18 @@ class DBPopulateLmmData(DBParentClass):
             for entity_data in entity_list:
                 if entity_data.get("en_name", "").strip().lower() == name_lower:
                     lookup = (name_lower, entity_type)
-                    return entity_key_map.get(lookup)
+                    if lookup in entity_key_map:
+                        return entity_key_map[lookup]
 
         # Fallback: try all types
         for entity_type in EntityType:
             lookup = (name_lower, entity_type)
             if lookup in entity_key_map:
                 return entity_key_map[lookup]
+        # Fallback: scan all keys for matching name
+        for key_tuple, db_key in entity_key_map.items():
+            if key_tuple[0] == name_lower:
+                return db_key
 
         return None
 

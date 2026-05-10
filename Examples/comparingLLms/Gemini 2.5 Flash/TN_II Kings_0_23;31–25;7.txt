@@ -148,7 +148,7 @@ EXTRACTED GRAPH (JSON):
       ]
     },
     "Rel": {
-      "childOf": [
+      "childOfFather": [
         {
           "term1": "Jehoahaz",
           "term2": "Hamutal"

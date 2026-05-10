@@ -110,4 +110,20 @@ def get_section_sort_key(source_type_name: str, section: str) -> Tuple:
     return fn(section)
 
 
+def source_entry_sort_key(entry: Tuple[str, dict]) -> Tuple:
+    """
+    Sort key for a (source_key, data) entry, ordering by book then by section.
+    Suitable for use as a key= argument when sorting JSON entry lists.
+    """
+    # Import here to avoid circular imports at module load time
+    from backend.models.SourceClasses.SourceClass import SourceClass
+
+    src_key = entry[0]
+    book = SourceClass.get_book_from_key(src_key)
+    book_order = book.order if book else 0
+    src_type_name = src_key[:2] if src_key else ""
+    section = SourceClass.get_section_from_key(src_key) if src_key else ""
+    return (book_order, get_section_sort_key(src_type_name, section))
+
+
 

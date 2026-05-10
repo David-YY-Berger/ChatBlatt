@@ -45,7 +45,7 @@
                     "term2": "Rabbi Yehuda"
                 }
             ],
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Rabbi Yehuda",
                     "term2": "Rabbi Elai"

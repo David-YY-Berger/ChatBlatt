@@ -55,7 +55,7 @@
             ]
         },
         "Rel": {
-            "childOf": [
+            "childOfFather": [
                 {
                     "term1": "Dinah",
                     "term2": "Jacob"

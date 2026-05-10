@@ -7,7 +7,7 @@ from bson import ObjectId
 from backend.db.Collections import CollectionObjs
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.data_fetchers.SefariaFetcher import SefariaFetcher
-from backend.file_utils.JsonUtils import JsonWriter
+from backend.file_utils.JsonUtils import JsonUtils
 from backend.common import Paths, SystemFunctions, miscFuncs
 from backend.file_utils import OsFunctions
 from bs4 import BeautifulSoup
@@ -212,7 +212,7 @@ class DBPopulateSourceContent(DBParentClass):
         output_json_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\DB_backups\converted_backup.json"
 
         # Convert BSON to JSON
-        JsonWriter.bson_to_json(input_bson_path, output_json_path)
+        JsonUtils.bson_to_json(input_bson_path, output_json_path)
 
     @staticmethod
     def write_glossary_csv(english_terms):

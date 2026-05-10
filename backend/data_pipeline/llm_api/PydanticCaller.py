@@ -37,7 +37,7 @@ from backend.models.PydanticModels.PydanticClasses import (
 logger = logging.getLogger(__name__)
 
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
-NUMBER_CATEGORIES_STR = ', '.join(e.description for e in NumberCategory)
+NUMBER_CATEGORIES_STR = ', '.join(e.value for e in NumberCategory)
 
 
 class PydanticCaller:
