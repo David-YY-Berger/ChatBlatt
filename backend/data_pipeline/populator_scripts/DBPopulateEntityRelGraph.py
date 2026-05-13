@@ -67,7 +67,7 @@ class DBPopulateLmmData(DBParentClass):
         Transactional: reads JSON files from a directory, extracts entities and relationships,
         inserts them into the DB. If any part fails, all inserts are rolled back.
         """
-        dir_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\comparingLLms\Gemini 2.5 Flash"
+        dir_path = r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\testDataBereishit"
 
         # 1. Read JSONs with source keys derived from filenames
         json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
