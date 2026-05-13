@@ -10,6 +10,11 @@ FRONTEND_DIR = Path(__file__).resolve().parent
 if str(FRONTEND_DIR) not in sys.path:
     sys.path.insert(0, str(FRONTEND_DIR))
 
+# Add project root to path so 'backend' package is importable
+PROJECT_ROOT = FRONTEND_DIR.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 
 from components.header import render_header

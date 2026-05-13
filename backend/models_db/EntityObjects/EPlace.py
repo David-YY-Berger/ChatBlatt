@@ -1,13 +1,13 @@
 # bs"d - lehagdil torah velahadir
 from backend.models_db.EntityObjects.Entity import Entity, TransientField
 from backend.models_db.Enums import PlaceType, EntityType
-from typing import List
+from typing import List, Optional
 
 
 class EPlace(Entity):
     # db fields
     entityType: EntityType = EntityType.EPlace
-    placeType: PlaceType
+    placeType: Optional[PlaceType] = None
 
     # transient fields
     personsDiedIn: List[str] = TransientField(default_factory=list)

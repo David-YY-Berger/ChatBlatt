@@ -19,9 +19,9 @@ class EPerson(Entity):
     """
     # db fields
     entityType: EntityType = EntityType.EPerson
-    timePeriod: TimePeriod
-    isWoman: bool
-    isNonJew: bool
+    timePeriod: Optional[TimePeriod] = None
+    isWoman: bool = False
+    isNonJew: bool = False
     isGroup: bool = False  # True for groups like "the 70 elders", "children of Israel"
     roles: List[RoleType] = []
 
