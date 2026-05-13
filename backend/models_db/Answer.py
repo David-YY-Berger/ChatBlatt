@@ -3,11 +3,11 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.Rel import Rel
-from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Rel import Rel
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend.common import SystemFunctions
-from backend.models.SourceClasses import SourceContent
+from backend.models_db.SourceClasses import SourceContent
 
 
 @dataclass

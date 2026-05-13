@@ -4,12 +4,12 @@ from collections import defaultdict
 
 import requests
 
-from backend.models.SourceClasses.SourceClass import SourceClass
+from backend.models_db.SourceClasses.SourceClass import SourceClass
 from backend.common import Logger
-from backend.models.SourceClasses import SourceContent
-from backend.models.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses import SourceContent
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 
-from backend.models.Enums import SourceType, SourceContentType
+from backend.models_db.Enums import SourceType, SourceContentType
 
 
 class SefariaFetcher:

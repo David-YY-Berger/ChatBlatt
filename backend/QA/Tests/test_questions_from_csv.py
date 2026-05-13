@@ -10,7 +10,7 @@ from backend.file_utils.FileTypeEnum import FileType
 
 from backend.QA.Objects.QuestionRow import QuestionRow
 from backend.app.SearchHandler import SearchHandler
-from backend.models.Enums import SourceType
+from backend.models_db.Enums import SourceType
 
 
 class QuestionsFromCSVTests(unittest.TestCase):

@@ -1,7 +1,7 @@
 # bs"d - lehagdil torah velahadir
 from dataclasses import dataclass
 
-from backend.models.Enums import SourceType
+from backend.models_db.Enums import SourceType
 
 
 @dataclass(frozen=True, order=True)

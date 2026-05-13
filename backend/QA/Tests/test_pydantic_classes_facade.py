@@ -1,8 +1,8 @@
 # # bs'd
 # import unittest
 #
-# from backend.models.Enums import NumberCategory
-# from backend.models.PydanticModels import PydanticClasses as pc
+# from backend.models_db.Enums import NumberCategory
+# from backend.models_db.PydanticModels import PydanticClasses as pc
 #
 #
 # class PydanticClassesFacadeTests(unittest.TestCase):

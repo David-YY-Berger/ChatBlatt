@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional, Tuple
 
-from backend.models.Rel import Rel
+from backend.models_db.Rel import Rel
 
 
 class RelationshipInterfaceMixin(ABC):

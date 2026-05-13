@@ -3,10 +3,10 @@ import asyncio
 import json
 import os
 
-from backend.models.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields
-from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.EntityRelManager import EntityRelManager
 from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider

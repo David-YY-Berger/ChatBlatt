@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Any, List
 
-from backend.models.Enums import SourceContentType
-from backend.models.SourceClasses.SourceClass import SourceClass
+from backend.models_db.Enums import SourceContentType
+from backend.models_db.SourceClasses.SourceClass import SourceClass
 from backend.common import miscFuncs
 
 

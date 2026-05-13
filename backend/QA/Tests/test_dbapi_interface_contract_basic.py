@@ -4,8 +4,8 @@
 # from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 # from backend.db.Collections import CollectionObjs
 # from backend.db.DBapiInterface import DBapiInterface
-# from backend.models.Enums import SourceType
-# from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+# from backend.models_db.Enums import SourceType
+# from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 #
 #
 # class InMemoryDBapi(DBapiInterface):

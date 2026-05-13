@@ -3,8 +3,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Set
 
-from backend.models.Enums import SourceType, PassageType
-from backend.models.SourceClasses.SourceClass import SourceClass
+from backend.models_db.Enums import SourceType, PassageType
+from backend.models_db.SourceClasses.SourceClass import SourceClass
 
 @dataclass
 class SourceMetadata(SourceClass):

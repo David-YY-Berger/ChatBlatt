@@ -13,7 +13,7 @@ from backend.file_utils import OsFunctions
 from bs4 import BeautifulSoup
 
 from backend.common.exceptions import InvalidDataError
-from backend.models.Enums import SourceContentType
+from backend.models_db.Enums import SourceContentType
 
 
 class DBPopulateSourceContent(DBParentClass):

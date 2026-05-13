@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
-from backend.models.Rel import Rel
+from backend.models_db.Rel import Rel
 
 
 class RelationshipMongoMixin:
@@ -17,8 +17,8 @@ class RelationshipMongoMixin:
         Looks up childOfFather, childOfMother, spouseOf rels where this entity is term1,
         resolves term2 keys to display_en_name (lowercased).
         """
-        from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
-        from backend.models.Enums import RelType
+        from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
+        from backend.models_db.Enums import RelType
 
         ctx = PersonFamilyContext()
 
@@ -190,7 +190,7 @@ class RelationshipMongoMixin:
         return (result.upserted_count, result.modified_count)
 
     def _doc_to_rel(self, doc: Dict[str, Any]) -> Rel:
-        from backend.models.Enums import RelType
+        from backend.models_db.Enums import RelType
 
         doc = {k: v for k, v in doc.items() if k != "_id"}
 

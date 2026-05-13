@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from backend.models.EntityObjects.Entity import Entity, TransientField
-from backend.models.Enums import TimePeriod, RoleType, EntityType
+from backend.models_db.EntityObjects.Entity import Entity, TransientField
+from backend.models_db.Enums import TimePeriod, RoleType, EntityType
 from typing import Any, Dict, List, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from backend.models.EntityObjects.EntityIdentity import EntityIdentityContext
+    from backend.models_db.EntityObjects.EntityIdentity import EntityIdentityContext
 
 
 class EPerson(Entity):

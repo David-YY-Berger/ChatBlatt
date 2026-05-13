@@ -10,12 +10,12 @@ Covers:
 """
 import unittest
 
-from backend.models.SourceClasses.SectionSorting import (
+from backend.models_db.SourceClasses.SectionSorting import (
     bt_section_sort_key,
     tn_section_sort_key,
     get_section_sort_key,
 )
-from backend.models.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.db.data_names.Books import Books
 
 

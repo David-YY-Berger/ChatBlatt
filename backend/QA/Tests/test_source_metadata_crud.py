@@ -3,8 +3,8 @@
 # import logging, unittest
 # from backend.QA.Tests.conftest import FakeDBapi, TEST_SOURCE_KEY
 # from backend.db.Collections import CollectionObjs
-# from backend.models.Enums import SourceType, PassageType
-# from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+# from backend.models_db.Enums import SourceType, PassageType
+# from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 #
 # logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
 # log = logging.getLogger(__name__)

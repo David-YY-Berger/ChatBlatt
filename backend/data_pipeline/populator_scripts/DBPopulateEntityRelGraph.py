@@ -5,13 +5,13 @@ import os
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
-from backend.models.SourceClasses.SourceContent import SourceContent
-from backend.models.SourceClasses.SectionSorting import source_entry_sort_key
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
-from backend.models.Rel import Rel
-from backend.models.Enums import EntityType, RelType, PassageType
-from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses.SectionSorting import source_entry_sort_key
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
+from backend.models_db.Rel import Rel
+from backend.models_db.Enums import EntityType, RelType, PassageType
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend.db.DBConstants import DBFields
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.EntityRelManager import EntityRelManager

@@ -2,7 +2,7 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
-from backend.models.PydanticModels.name_utils import smart_title_case
+from backend.models_db.PydanticModels.name_utils import smart_title_case
 
 
 class Relation(BaseModel):

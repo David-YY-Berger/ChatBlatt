@@ -1,4 +1,4 @@
-from backend.models.Enums import NumberCategory
+from backend.models_db.Enums import NumberCategory
 
 # --- Global Constants ---
 TRIBES_OF_ISRAEL = {

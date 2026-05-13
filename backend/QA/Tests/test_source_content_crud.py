@@ -3,7 +3,7 @@
 # import logging, unittest
 # from backend.QA.Tests.conftest import FakeDBapi, TEST_SOURCE_KEY
 # from backend.db.Collections import CollectionObjs
-# from backend.models.SourceClasses.SourceContent import SourceContent
+# from backend.models_db.SourceClasses.SourceContent import SourceContent
 #
 # logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
 # log = logging.getLogger(__name__)

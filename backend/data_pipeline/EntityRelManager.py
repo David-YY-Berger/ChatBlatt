@@ -1,8 +1,8 @@
 from typing import Dict, List
 
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.Enums import EntityType, SourceType
-from backend.models.Rel import Rel
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import EntityType, SourceType
+from backend.models_db.Rel import Rel
 from backend.db.DBFactory import DBFactory
 from backend.common.Decorators import singleton
 

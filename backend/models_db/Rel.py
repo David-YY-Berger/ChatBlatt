@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, Field
 from typing import List, Any, Dict
-from backend.models.Enums import RelType
+from backend.models_db.Enums import RelType
 
 
 # Helper function for transient fields (excluded from serialization/db)

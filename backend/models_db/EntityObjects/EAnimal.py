@@ -1,7 +1,7 @@
 # bs"d - lehagdil torah velahadir
 
-from backend.models.EntityObjects.Entity import Entity, TransientField
-from backend.models.Enums import EntityType
+from backend.models_db.EntityObjects.Entity import Entity, TransientField
+from backend.models_db.Enums import EntityType
 from typing import List
 
 

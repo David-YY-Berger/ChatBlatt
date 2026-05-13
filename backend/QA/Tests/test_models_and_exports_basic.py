@@ -2,16 +2,16 @@
 #
 # from backend.QA.Tests.conftest import TEST_SOURCE_KEY
 # from backend.db import mongo_parts
-# from backend.models.EntityObjects.EAnimal import EAnimal
-# from backend.models.EntityObjects.EFood import EFood
-# from backend.models.EntityObjects.ENation import ENation
-# from backend.models.EntityObjects.ENumber import ENumber
-# from backend.models.EntityObjects.EPerson import EPerson
-# from backend.models.EntityObjects.EPlace import EPlace
-# from backend.models.EntityObjects.EPlant import EPlant
-# from backend.models.EntityObjects.ESymbol import ESymbol
-# from backend.models.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
-# from backend.models.Enums import (
+# from backend.models_db.EntityObjects.EAnimal import EAnimal
+# from backend.models_db.EntityObjects.EFood import EFood
+# from backend.models_db.EntityObjects.ENation import ENation
+# from backend.models_db.EntityObjects.ENumber import ENumber
+# from backend.models_db.EntityObjects.EPerson import EPerson
+# from backend.models_db.EntityObjects.EPlace import EPlace
+# from backend.models_db.EntityObjects.EPlant import EPlant
+# from backend.models_db.EntityObjects.ESymbol import ESymbol
+# from backend.models_db.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+# from backend.models_db.Enums import (
 #     EntityType,
 #     NumberCategory,
 #     PlaceType,
@@ -21,9 +21,9 @@
 #     SymbolType,
 #     TimePeriod,
 # )
-# from backend.models.Rel import Rel
-# from backend.models.SourceClasses.SourceContent import SourceContent
-# from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+# from backend.models_db.Rel import Rel
+# from backend.models_db.SourceClasses.SourceContent import SourceContent
+# from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 #
 #
 # class ModelsAndExportsBasicTests(unittest.TestCase):

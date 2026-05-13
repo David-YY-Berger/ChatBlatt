@@ -3,9 +3,9 @@ from typing import Any, Dict, List
 
 from backend.db.Collections import CollectionObjs, Collection
 from backend.db.DBConstants import DBFields
-from backend.models.Enums import SourceType, SourceContentType
-from backend.models.SourceClasses.SourceClass import SourceClass
-from backend.models.SourceClasses.SourceContent import SourceContent
+from backend.models_db.Enums import SourceType, SourceContentType
+from backend.models_db.SourceClasses.SourceClass import SourceClass
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 
 
 class SourceContentInterfaceMixin(ABC):

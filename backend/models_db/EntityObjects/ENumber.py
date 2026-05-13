@@ -1,8 +1,8 @@
 # bs"d - lehagdil torah velahadir
 
 from typing import Optional
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.Enums import EntityType, NumberCategory
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import EntityType, NumberCategory
 
 
 class ENumber(Entity):

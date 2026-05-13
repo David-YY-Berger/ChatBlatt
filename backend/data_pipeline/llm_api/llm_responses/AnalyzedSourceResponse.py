@@ -1,13 +1,13 @@
 # from dataclasses import dataclass, field
 # from typing import List, Dict, Union
 #
-# from backend.models.EntityObjects.EPerson import EPerson
-# from backend.models.EntityObjects.EPlace import EPlace
-# from backend.models.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
-# from backend.models.EntityObjects.ENation import ENation
-# from backend.models.EntityObjects.ESymbol import ESymbol
-# from backend.models.Enums import PassageType, EntityType, RelType
-# from backend.models.Rel import Rel
+# from backend.models_db.EntityObjects.EPerson import EPerson
+# from backend.models_db.EntityObjects.EPlace import EPlace
+# from backend.models_db.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+# from backend.models_db.EntityObjects.ENation import ENation
+# from backend.models_db.EntityObjects.ESymbol import ESymbol
+# from backend.models_db.Enums import PassageType, EntityType, RelType
+# from backend.models_db.Rel import Rel
 #
 #
 # @dataclass

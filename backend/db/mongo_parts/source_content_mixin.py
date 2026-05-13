@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 from backend.db.Collections import Collection, CollectionObjs
 from backend.db.data_names.Books import Book
-from backend.models.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 
 
 class SourceContentMongoMixin:

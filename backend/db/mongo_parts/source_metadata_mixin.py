@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Optional
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
-from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 
 
 class SourceMetadataMongoMixin:
@@ -48,7 +48,7 @@ class SourceMetadataMongoMixin:
         }
 
     def _doc_to_src_metadata(self, doc: Dict[str, Any]) -> SourceMetadata:
-        from backend.models.Enums import PassageType, SourceType
+        from backend.models_db.Enums import PassageType, SourceType
 
         sm = SourceMetadata(DBFields.KEY)
         sm.summary_en = doc.get(DBFields.SUMMARY_EN)

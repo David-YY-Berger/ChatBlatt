@@ -7,11 +7,11 @@
 # from backend.db.interface_parts.relationship_interface import RelationshipInterfaceMixin
 # from backend.db.interface_parts.source_content_interface import SourceContentInterfaceMixin
 # from backend.db.interface_parts.source_metadata_interface import SourceMetadataInterfaceMixin
-# from backend.models.EntityObjects.EFood import EFood
-# from backend.models.Enums import EntityType, RelType, SourceType
-# from backend.models.Rel import Rel
-# from backend.models.SourceClasses.SourceContent import SourceContent
-# from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+# from backend.models_db.EntityObjects.EFood import EFood
+# from backend.models_db.Enums import EntityType, RelType, SourceType
+# from backend.models_db.Rel import Rel
+# from backend.models_db.SourceClasses.SourceContent import SourceContent
+# from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 #
 #
 # class DummyEntityInterface(EntityInterfaceMixin):

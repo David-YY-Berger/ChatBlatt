@@ -2,11 +2,11 @@ from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.Enums import EntityType
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import EntityType
 
 if TYPE_CHECKING:
-    from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
+    from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 
 
 class EntityMongoMixin:
@@ -51,7 +51,7 @@ class EntityMongoMixin:
         For other types: simple name + type match.
         Returns its key if found, else None.
         """
-        from backend.models.Enums import EntityType
+        from backend.models_db.Enums import EntityType
 
         if entity.entityType == EntityType.EPerson and person_family_names is not None:
             return self._find_existing_person_by_family(entity, person_family_names)
@@ -75,7 +75,7 @@ class EntityMongoMixin:
         4. If a DB person shares a father, mother, or spouse -> same person.
         5. If no DB person matches family context -> not found (will be inserted as new).
         """
-        from backend.models.EntityObjects.EntityIdentity import PersonFamilyContext
+        from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 
         # Find all persons with same name
         query = entity.build_existence_query()
@@ -131,7 +131,7 @@ class EntityMongoMixin:
         Check if two people (by lowercased name) are spouses according to DB rels.
         Finds entity keys for both names, then checks for a spouseOf rel between them.
         """
-        from backend.models.Enums import RelType
+        from backend.models_db.Enums import RelType
 
         # Find entities by name
         regex1 = {DBOperators.REGEX: f"^{name1}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
@@ -248,15 +248,15 @@ class EntityMongoMixin:
         return (result.upserted_count, result.modified_count)
 
     def _doc_to_entity(self, doc: Dict[str, Any]) -> Entity:
-        from backend.models.EntityObjects.EAnimal import EAnimal
-        from backend.models.EntityObjects.EFood import EFood
-        from backend.models.EntityObjects.ENation import ENation
-        from backend.models.EntityObjects.ENumber import ENumber
-        from backend.models.EntityObjects.EPerson import EPerson
-        from backend.models.EntityObjects.EPlace import EPlace
-        from backend.models.EntityObjects.EPlant import EPlant
-        from backend.models.EntityObjects.ESymbol import ESymbol
-        from backend.models.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+        from backend.models_db.EntityObjects.EAnimal import EAnimal
+        from backend.models_db.EntityObjects.EFood import EFood
+        from backend.models_db.EntityObjects.ENation import ENation
+        from backend.models_db.EntityObjects.ENumber import ENumber
+        from backend.models_db.EntityObjects.EPerson import EPerson
+        from backend.models_db.EntityObjects.EPlace import EPlace
+        from backend.models_db.EntityObjects.EPlant import EPlant
+        from backend.models_db.EntityObjects.ESymbol import ESymbol
+        from backend.models_db.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
 
         doc = {k: v for k, v in doc.items() if k != "_id"}
 

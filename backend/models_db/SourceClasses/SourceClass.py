@@ -4,8 +4,8 @@ from functools import total_ordering
 from typing import Any
 
 from backend.db.data_names.Books import Book
-from backend.models.Enums import SourceType
-from backend.models.SourceClasses.SectionSorting import get_section_sort_key
+from backend.models_db.Enums import SourceType
+from backend.models_db.SourceClasses.SectionSorting import get_section_sort_key
 
 """ must be init w key"""
 @total_ordering

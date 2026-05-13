@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional, Tuple
 
-from backend.models.EntityObjects.Entity import Entity
-from backend.models.Enums import EntityType
+from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import EntityType
 
 
 class EntityInterfaceMixin(ABC):

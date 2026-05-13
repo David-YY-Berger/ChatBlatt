@@ -2,8 +2,8 @@
 # """CRUD tests for Relationship (Rel) via RelationshipMongoMixin."""
 # import logging, unittest
 # from backend.QA.Tests.conftest import FakeDBapi
-# from backend.models.Enums import RelType
-# from backend.models.Rel import Rel
+# from backend.models_db.Enums import RelType
+# from backend.models_db.Rel import Rel
 #
 # logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
 # log = logging.getLogger(__name__)

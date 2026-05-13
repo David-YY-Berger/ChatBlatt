@@ -5,10 +5,10 @@ from __future__ import annotations
 from pydantic import BaseModel, Field
 from typing import List, Any, Dict, Optional, TYPE_CHECKING
 
-from backend.models.Enums import EntityType
+from backend.models_db.Enums import EntityType
 
 if TYPE_CHECKING:
-    from backend.models.EntityObjects.EntityIdentity import EntityIdentityContext
+    from backend.models_db.EntityObjects.EntityIdentity import EntityIdentityContext
 
 
 # Helper function for transient fields (excluded from serialization/db)

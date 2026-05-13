@@ -9,10 +9,10 @@
 # from backend.db.mongo_parts.relationship_mixin import RelationshipMongoMixin
 # from backend.db.mongo_parts.source_content_mixin import SourceContentMongoMixin
 # from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixin
-# from backend.models.EntityObjects.EPlant import EPlant
-# from backend.models.Enums import PassageType, RelType, SourceType
-# from backend.models.Rel import Rel
-# from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+# from backend.models_db.EntityObjects.EPlant import EPlant
+# from backend.models_db.Enums import PassageType, RelType, SourceType
+# from backend.models_db.Rel import Rel
+# from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 #
 #
 # @dataclass

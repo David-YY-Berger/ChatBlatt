@@ -23,8 +23,8 @@ from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
 
 from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
-from backend.models.Enums import NumberCategory
-from backend.models.PydanticModels.PydanticClasses import (
+from backend.models_db.Enums import NumberCategory
+from backend.models_db.PydanticModels.PydanticClasses import (
     FinalResponse,
     TRIBES_OF_ISRAEL,
     ENTITY_CATEGORIES,

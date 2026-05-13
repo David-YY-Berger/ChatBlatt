@@ -116,7 +116,7 @@ def source_entry_sort_key(entry: Tuple[str, dict]) -> Tuple:
     Suitable for use as a key= argument when sorting JSON entry lists.
     """
     # Import here to avoid circular imports at module load time
-    from backend.models.SourceClasses.SourceClass import SourceClass
+    from backend.models_db.SourceClasses.SourceClass import SourceClass
 
     src_key = entry[0]
     book = SourceClass.get_book_from_key(src_key)

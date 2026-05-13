@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from backend.models.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 
 
 class SourceMetadataInterfaceMixin(ABC):
