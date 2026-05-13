@@ -13,6 +13,7 @@ from backend.db.DBapiInterface import DBapiInterface
 from backend.db.mongo_parts.entity_mixin import EntityMongoMixin
 from backend.db.mongo_parts.faiss_mixin import FaissMongoMixin
 from backend.db.mongo_parts.relationship_mixin import RelationshipMongoMixin
+from backend.db.mongo_parts.select_option_mixin import SelectOptionMongoMixin
 from backend.db.mongo_parts.source_content_mixin import SourceContentMongoMixin
 from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixin
 
@@ -24,6 +25,7 @@ class DBapiMongoDB(
     EntityMongoMixin,
     RelationshipMongoMixin,
     SourceMetadataMongoMixin,
+    SelectOptionMongoMixin,
     DBapiInterface,
 ):
     """Mongo implementation composed from per-domain mixins."""
