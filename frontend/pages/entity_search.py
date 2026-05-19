@@ -48,7 +48,7 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
       2. Go button (disabled until selection)
       3. Detail view with DB fields + transient relationship lists
     """
-    from backend.app.controllers.entity_search_controller import get_entity_search_handler
+    from backend.app.controllers.entity_search.entity_search_controller import get_entity_search_handler
 
     handler = get_entity_search_handler(entity_tab)
     if handler is None:

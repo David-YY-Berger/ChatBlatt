@@ -87,68 +87,10 @@ class BaseEntitySearchHandler(ABC):
         return entity
 
 
-# ========================= Person Implementation =========================
-
-
-class PersonSearchHandler(BaseEntitySearchHandler):
-    """Entity search handler for Person entities."""
-
-    def get_entity_type(self) -> EntityType:
-        return EntityType.EPerson
-
-    def get_select_options(self) -> List[EntitySelectOption]:
-        return self.db.getPersonSelectOptions()
-
-    def get_transient_field_labels(self) -> List[Tuple[str, str]]:
-        """
-        Ordered list of (field_name, translation_key) for Person transient fields.
-        These are displayed as scrollable lists in the UI.
-        """
-        return [
-            # Person → Person
-            ("childOfFather", "entity_fields.childOfFather"),
-            ("childOfMother", "entity_fields.childOfMother"),
-            ("spouseOf", "entity_fields.spouseOf"),
-            ("descendantOf", "entity_fields.descendantOf"),
-            ("studiedFrom", "entity_fields.studiedFrom"),
-            ("spokeWith", "entity_fields.spokeWith"),
-            ("disagreedWith", "entity_fields.disagreedWith"),
-            ("allyOf", "entity_fields.allyOf"),
-            ("enemyOf", "entity_fields.enemyOf"),
-            # Person → Place
-            ("bornIn", "entity_fields.bornIn"),
-            ("diedIn", "entity_fields.diedIn"),
-            ("visited", "entity_fields.visited"),
-            ("prayedAt", "entity_fields.prayedAt"),
-            ("associatedWithPlace", "entity_fields.associatedWithPlace"),
-            # Person → TribeOfIsrael / Nation
-            ("tribeOfIsrael", "entity_fields.tribeOfIsrael"),
-            ("belongsToNation", "entity_fields.belongsToNation"),
-            # Person → {anything}
-            ("prophesiedAbout", "entity_fields.prophesiedAbout"),
-            # General
-            ("comparedTo", "entity_fields.comparedTo"),
-            ("contrastedWith", "entity_fields.contrastedWith"),
-        ]
-
-    def get_db_field_display(self, entity: Entity) -> List[Tuple[str, str]]:
-        """Display the Person-specific DB fields."""
-        from backend.models_db.EntityObjects.EPerson import EPerson
-        if not isinstance(entity, EPerson):
-            return []
-
-        fields = [
-            ("entity_fields.timePeriod", entity.timePeriod.value if entity.timePeriod else ""),
-            ("entity_fields.isWoman", "✓" if entity.isWoman else "✗"),
-            ("entity_fields.isNonJew", "✓" if entity.isNonJew else "✗"),
-            ("entity_fields.isGroup", "✓" if entity.isGroup else "✗"),
-        ]
-        if entity.roles:
-            fields.append(("entity_fields.roles", ", ".join(r.value for r in entity.roles)))
-        return fields
-
 
 # ========================= Handler Registry =========================
+
+from backend.app.controllers.entity_search.person_search_handler import PersonSearchHandler  # noqa: E402
 
 _HANDLER_REGISTRY: Dict[str, Type[BaseEntitySearchHandler]] = {
     "people": PersonSearchHandler,
