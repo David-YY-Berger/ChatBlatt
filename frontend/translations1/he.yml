@@ -45,6 +45,8 @@ entity_fields:
   roles: "תפקידים"
   childOfFather: "אב"
   childOfMother: "אם"
+  children: "ילדים"
+  siblings: "אחים ואחיות"
   spouseOf: "בן/בת זוג"
   descendantOf: "צאצא של"
   studiedFrom: "למד מ"

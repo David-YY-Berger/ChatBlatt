@@ -45,6 +45,8 @@ entity_fields:
   roles: "Roles"
   childOfFather: "Father"
   childOfMother: "Mother"
+  children: "Children"
+  siblings: "Siblings"
   spouseOf: "Spouse"
   descendantOf: "Descendant Of"
   studiedFrom: "Studied From"

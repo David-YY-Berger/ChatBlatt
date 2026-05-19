@@ -119,6 +119,10 @@ class PersonPopulator(BaseEntityPopulator):
             (RelType.disagreedWith, AS_TERM1): "disagreedWith",
             (RelType.disagreedWith, AS_TERM2): "disagreedWith",  # symmetric
 
+            # Children: entity is term2 (the referenced parent) in childOf rels
+            (RelType.childOfFather, AS_TERM2): "children",
+            (RelType.childOfMother, AS_TERM2): "children",
+
             # Person/Group → Place (entity is term1)
             (RelType.bornIn, AS_TERM1): "bornIn",
             (RelType.diedIn, AS_TERM1): "diedIn",
@@ -139,6 +143,49 @@ class PersonPopulator(BaseEntityPopulator):
             (RelType.contrastedWith, AS_TERM1): "contrastedWith",
             (RelType.contrastedWith, AS_TERM2): "contrastedWith",
         }
+
+    def populate(self, entity: Entity, rels: List[Rel], db: DBapiMongoDB) -> Entity:
+        """
+        Extends base populate() to also compute siblings:
+        people who share at least one parent (father or mother) with this entity.
+        """
+        # Standard field population (including children via rel_field_map)
+        entity = super().populate(entity, rels, db)
+
+        # --- Siblings ---
+        # Collect parent keys from rels where entity is term1
+        parent_keys: set = set()
+        for rel in rels:
+            if rel.term1 == entity.key and rel.rel_type in (
+                RelType.childOfFather, RelType.childOfMother
+            ):
+                parent_keys.add(rel.term2)
+
+        if not parent_keys:
+            return entity
+
+        # For each parent, find all other children (co-children of the same parent)
+        sibling_keys: set = set()
+        for parent_key in parent_keys:
+            parent_rels = db.get_rels_for_entity(parent_key)
+            for rel in parent_rels:
+                # The parent is term2 in childOfFather / childOfMother rels
+                if rel.term2 == parent_key and rel.rel_type in (
+                    RelType.childOfFather, RelType.childOfMother
+                ):
+                    if rel.term1 != entity.key:
+                        sibling_keys.add(rel.term1)
+
+        if not sibling_keys:
+            return entity
+
+        # Resolve sibling keys to display names
+        sibling_name_map = self._resolve_keys_to_names(sibling_keys, db)
+        for sibling_name in sibling_name_map.values():
+            if sibling_name and sibling_name not in entity.siblings:
+                entity.siblings.append(sibling_name)
+
+        return entity
 
 
 class PlacePopulator(BaseEntityPopulator):

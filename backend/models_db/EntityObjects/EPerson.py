@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from backend.models_db.EntityObjects.Entity import Entity, TransientField
 from backend.models_db.Enums import TimePeriod, RoleType, EntityType
-from typing import Any, Dict, List, Optional, TYPE_CHECKING
+from typing import Any, ClassVar, Dict, List, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
     from backend.models_db.EntityObjects.EntityIdentity import EntityIdentityContext
@@ -21,10 +21,12 @@ class EPerson(Entity):
     # Ordered tuple of transient field names used for UI display.
     # This is the single source of truth for which EPerson attributes are shown
     # and in what order (used by PersonSearchHandler.get_transient_field_labels).
-    TRANSIENT_DISPLAY_FIELDS: tuple = (
+    TRANSIENT_DISPLAY_FIELDS: ClassVar[tuple] = (
         # Person → Person
         "childOfFather",
         "childOfMother",
+        "children",
+        "siblings",
         "spouseOf",
         "descendantOf",
         "studiedFrom",
@@ -60,6 +62,8 @@ class EPerson(Entity):
     studiedFrom: List[str] = TransientField(default_factory=list)
     childOfFather: List[str] = TransientField(default_factory=list)
     childOfMother: List[str] = TransientField(default_factory=list)
+    children: List[str] = TransientField(default_factory=list)   # people whose father/mother is this person
+    siblings: List[str] = TransientField(default_factory=list)   # people sharing the same father or mother
     spouseOf: List[str] = TransientField(default_factory=list)
     descendantOf: List[str] = TransientField(default_factory=list)
     allyOf: List[str] = TransientField(default_factory=list)
