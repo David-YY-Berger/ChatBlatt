@@ -104,6 +104,20 @@ class RelType(Enum):
     AliasOf = "AliasOf"
 
 
+class BookCategoryName(Enum):
+    # Tanach
+    Torah = "Torah"
+    Neviim = "Neviim"
+    Ketuvim = "Ketuvim"
+    # Babylonian Talmud
+    Zeraim = "Zeraim"
+    Moed = "Moed"
+    Nashim = "Nashim"
+    Nezikin = "Nezikin"
+    Kodashim = "Kodashim"
+    Tahorot = "Tahorot"
+
+
 class SourceContentType(Enum):
     EN = 0
     HEB = 1
