@@ -45,11 +45,11 @@ class NumberCategory(Enum):
     Misc = "Misc"                 # Anything not covered above
 
 class PassageType(Enum):
-    Law = "Law"
-    Story = "Story"
-    PHILOSOPHIC = "PHILOSOPHIC"
-    GENEALOGY = "GENEALOGY"
-    PROPHECY = "PROPHECY"
+    LAW = "Law"
+    STORY = "Story"
+    PHILOSOPHIC = "Philosophic"
+    GENEALOGY = "Genealogy"
+    PROPHECY = "Prophecy"
 
 class EntityType(Enum):
     EPerson = "Person"          # Includes individuals AND groups (e.g., "the 70 elders")
