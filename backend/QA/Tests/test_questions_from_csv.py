@@ -32,7 +32,7 @@ class QuestionsFromCSVTests(unittest.TestCase):
     def test_print_questions_from_csv(self):
         question_rows = self.get_BT_live_questions_from_csv()
         for q in question_rows:
-            real_q = q.to_question_from_user(SourceType.BT.name)
+            real_q = q.to_question_from_user(SourceType.BT)
             ans = self.qaHandler.get_full_answer(real_q)
             html_ans = self.htmlWriter.get_full_html(ans)
             path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.question_name)

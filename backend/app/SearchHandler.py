@@ -8,7 +8,7 @@ from backend.db.DBapiMongoDB import DBapiMongoDB
 from backend.data_pipeline.EntityRelManager import EntityRelManager
 from backend.data_pipeline.faiss_api.FaissEngine import FaissEngine
 from backend.models_db.Answer import Answer
-from backend.app.QuestionFromUser import QuestionFromUser
+from backend.app.SourceSearchQuery import SourceSearchQuery
 
 from typing import Optional, List
 
@@ -30,9 +30,9 @@ class SearchHandler:
         self.faiss = FaissEngine(dbapi=self.db_api)
         self.entity_rel_manager = EntityRelManager()
 
-    def get_answer_w_source_metadata(self, question: QuestionFromUser) -> Answer:
+    def get_answer_w_source_metadata(self, question: SourceSearchQuery) -> Answer:
 
-        ref_list = self.ordered_ref_from_faiss(question.question_content, question.max_sources)
+        ref_list = self.ordered_ref_from_faiss(question.free_text_similarity, question.max_sources)
 
         src_metadata_lst = self.create_src_metadata_obj(ref_list)
         src_metadata_lst = self.filter_by_book(src_metadata_lst, question)
@@ -43,26 +43,26 @@ class SearchHandler:
 
         return self.create_answer_obj(question, src_metadata_lst)
 
-    def create_answer_obj(self, question:QuestionFromUser, src_metadata_lst) -> Answer:
+    def create_answer_obj(self, question:SourceSearchQuery, src_metadata_lst) -> Answer:
 
         # this code is possibly temporary.. the final front end might expect to be packaged differently..
         entities_from_q = [
-            e for ent_id in question.entities
+            e for ent_id in question.entity_ids
             if (e := self.entity_rel_manager.get_entity_from_id(ent_id)) is not None
         ]
         rels_from_q = [
-            n for rel_id in question.rels
+            n for rel_id in question.rel_ids
             if (n := self.entity_rel_manager.get_rel_from_id(rel_id)) is not None
         ]
         # Create Answer object
         return Answer(
-            question_content=question.question_content,
+            question_content=question.free_text_similarity,
             src_metadata_lst=src_metadata_lst,
             entities=entities_from_q,
             rels=rels_from_q
         )
 
-    def get_full_answer(self, question: QuestionFromUser) -> Answer:
+    def get_full_answer(self, question: SourceSearchQuery) -> Answer:
         ans = self.get_answer_w_source_metadata(question)
 
         for src_metadata in ans.src_metadata_lst:
