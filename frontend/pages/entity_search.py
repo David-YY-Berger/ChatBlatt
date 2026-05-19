@@ -13,9 +13,16 @@ Currently implemented: Person (people tab).
 
 from __future__ import annotations
 
+import json
+import os
+
 import streamlit as st
+from dotenv import load_dotenv
 
 from translations1 import get_text, is_rtl
+
+load_dotenv()
+_DEBUG_FE = os.getenv("PRINT_DEBUG_LOGS_FE", "false").strip().lower() == "true"
 
 
 def render(lang: str, selected: str | None = None) -> None:
@@ -121,6 +128,9 @@ def _render_entity_detail(handler, entity_key: str, lang: str) -> None:
     if entity is None:
         st.error(get_text("entity_search_ui.not_found", lang))
         return
+
+    if _DEBUG_FE:
+        _debug_log_entity(entity, handler.get_transient_field_labels())
 
     rtl = is_rtl(lang)
 
@@ -275,6 +285,44 @@ def _entity_type_to_tab(entity_type) -> str | None:
         EntityType.ESymbol: "symbols",
     }
     return _TAB_MAP.get(entity_type)
+
+
+# =============================================================================
+#  Debug logging
+# =============================================================================
+
+def _debug_log_entity(entity, transient_labels: list) -> None:
+    """
+    When PRINT_DEBUG_LOGS_FE=true, prints to console:
+      1. The full entity data as JSON.
+      2. Each transient relationship field with its list of display names.
+    """
+    sep = "=" * 60
+
+    # ── 1. Full entity JSON ──────────────────────────────────────────
+    try:
+        # Pydantic v2
+        entity_dict = entity.model_dump()
+    except AttributeError:
+        # Pydantic v1 fallback
+        entity_dict = entity.dict()
+
+    print(f"\n{sep}")
+    print(f"[DEBUG FE] Full entity data for: {getattr(entity, 'display_en_name', entity.key)}")
+    print(sep)
+    print(json.dumps(entity_dict, ensure_ascii=False, indent=2, default=str))
+
+    # ── 2. Transient / relationship fields ───────────────────────────
+    print(f"\n{sep}")
+    print("[DEBUG FE] Related entities by relationship:")
+    print(sep)
+    for field_name, label_key in transient_labels:
+        values = getattr(entity, field_name, None)
+        if values and isinstance(values, list) and len(values) > 0:
+            print(f"  {field_name} ({len(values)}):")
+            for name in values:
+                print(f"    • {name}")
+    print(sep + "\n")
 
 
 # =============================================================================

@@ -189,6 +189,11 @@ class RelationshipMongoMixin:
         result = self.get_collection(CollectionObjs.RELATIONS).bulk_write(operations)
         return (result.upserted_count, result.modified_count)
 
+    def drop_all_rels(self) -> int:
+        """Delete all relationship documents from the relations collection. Returns deleted count."""
+        result = self.get_collection(CollectionObjs.RELATIONS).delete_many({})
+        return result.deleted_count
+
     def _doc_to_rel(self, doc: Dict[str, Any]) -> Rel:
         from backend.models_db.Enums import RelType
 

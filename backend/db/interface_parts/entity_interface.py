@@ -52,3 +52,8 @@ class EntityInterfaceMixin(ABC):
     def upsert_entities_bulk(self, entities: List[Entity]) -> Tuple[int, int]:
         pass
 
+    @abstractmethod
+    def drop_all_entities(self) -> int:
+        """Delete all entity documents. Returns the count of deleted documents."""
+        pass
+

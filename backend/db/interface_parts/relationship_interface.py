@@ -47,3 +47,8 @@ class RelationshipInterfaceMixin(ABC):
     def upsert_rels_bulk(self, rels: List[Rel]) -> Tuple[int, int]:
         pass
 
+    @abstractmethod
+    def drop_all_rels(self) -> int:
+        """Delete all relationship documents. Returns the count of deleted documents."""
+        pass
+

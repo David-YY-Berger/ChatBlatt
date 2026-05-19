@@ -247,6 +247,11 @@ class EntityMongoMixin:
         result = self.get_collection(CollectionObjs.ENTITIES).bulk_write(operations)
         return (result.upserted_count, result.modified_count)
 
+    def drop_all_entities(self) -> int:
+        """Delete all entity documents from the entities collection. Returns deleted count."""
+        result = self.get_collection(CollectionObjs.ENTITIES).delete_many({})
+        return result.deleted_count
+
     def _doc_to_entity(self, doc: Dict[str, Any]) -> Entity:
         from backend.models_db.EntityObjects.EAnimal import EAnimal
         from backend.models_db.EntityObjects.EFood import EFood
