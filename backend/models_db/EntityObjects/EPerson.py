@@ -17,6 +17,37 @@ class EPerson(Entity):
     Also includes non-human beings like Angels.
     Note: Talking animals (e.g., Balaam's Donkey) are now in the Animal category.
     """
+
+    # Ordered tuple of transient field names used for UI display.
+    # This is the single source of truth for which EPerson attributes are shown
+    # and in what order (used by PersonSearchHandler.get_transient_field_labels).
+    TRANSIENT_DISPLAY_FIELDS: tuple = (
+        # Person → Person
+        "childOfFather",
+        "childOfMother",
+        "spouseOf",
+        "descendantOf",
+        "studiedFrom",
+        "spokeWith",
+        "disagreedWith",
+        "allyOf",
+        "enemyOf",
+        # Person → Place
+        "bornIn",
+        "diedIn",
+        "visited",
+        "prayedAt",
+        "associatedWithPlace",
+        # Person → TribeOfIsrael / Nation
+        "tribeOfIsrael",
+        "belongsToNation",
+        # Person → {anything}
+        "prophesiedAbout",
+        # General
+        "comparedTo",
+        "contrastedWith",
+    )
+
     # db fields
     entityType: EntityType = EntityType.EPerson
     timePeriod: Optional[TimePeriod] = None
