@@ -1,10 +1,20 @@
 # bs"d - lehagdil torah velahadir
 from backend.models_db.EntityObjects.Entity import Entity, TransientField
 from backend.models_db.Enums import EntityType
-from typing import List
+from typing import ClassVar, List
 
 
 class ENation(Entity):
+    # Ordered tuple of transient field names used for UI display.
+    TRANSIENT_DISPLAY_FIELDS: ClassVar[tuple] = (
+        "personsBelongTo",
+        "placesIn",
+        "enemyOf",
+        "allyOf",
+        "comparedTo",
+        "contrastedWith",
+    )
+
     # db fields
     entityType: EntityType = EntityType.ENation
 

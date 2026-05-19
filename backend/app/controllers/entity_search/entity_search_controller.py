@@ -90,13 +90,16 @@ class BaseEntitySearchHandler(ABC):
 
 # ========================= Handler Registry =========================
 
-from backend.app.controllers.entity_search.person_search_handler import PersonSearchHandler  # noqa: E402
+from backend.app.controllers.entity_search.person_search_handler import PersonSearchHandler        # noqa: E402
+from backend.app.controllers.entity_search.nation_search_handler import NationSearchHandler        # noqa: E402
+from backend.app.controllers.entity_search.place_search_handler import PlaceSearchHandler          # noqa: E402
+from backend.app.controllers.entity_search.tribe_of_israel_search_handler import TribeOfIsraelSearchHandler  # noqa: E402
 
 _HANDLER_REGISTRY: Dict[str, Type[BaseEntitySearchHandler]] = {
     "people": PersonSearchHandler,
-    # "places": PlaceSearchHandler,       # TODO
-    # "nations": NationSearchHandler,     # TODO
-    # "tribes": TribeSearchHandler,       # TODO
+    "places": PlaceSearchHandler,
+    "nations": NationSearchHandler,
+    "tribes": TribeOfIsraelSearchHandler,
 }
 
 

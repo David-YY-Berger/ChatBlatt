@@ -42,6 +42,7 @@ def _nav_items(lang: str) -> list[dict]:
                 {"key": "people", "label": get_text("entity_tabs.people", lang)},
                 {"key": "places", "label": get_text("entity_tabs.places", lang)},
                 {"key": "nations", "label": get_text("entity_tabs.nations", lang)},
+                {"key": "tribes", "label": get_text("entity_tabs.tribes", lang)},
                 {"key": "symbols", "label": get_text("entity_tabs.symbols", lang)},
             ],
         },
@@ -98,7 +99,7 @@ def _render_page(page_key: str, lang: str) -> None:
         about.render(lang)
     elif page_key == "search":
         search.render(lang)
-    elif page_key in ("entity_search", "people", "places", "nations", "symbols"):
+    elif page_key in ("entity_search", "people", "places", "nations", "tribes", "symbols"):
         entity_search.render(lang, selected=page_key if page_key != "entity_search" else None)
     elif page_key in ("maps", "genology", "studied_from"):
         maps.render(lang, selected=page_key if page_key != "maps" else None)

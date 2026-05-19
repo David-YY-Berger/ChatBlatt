@@ -271,6 +271,7 @@ def _entity_type_to_tab(entity_type) -> str | None:
         EntityType.EPerson: "people",
         EntityType.EPlace: "places",
         EntityType.ENation: "nations",
+        EntityType.ETribeOfIsrael: "tribes",
         EntityType.ESymbol: "symbols",
     }
     return _TAB_MAP.get(entity_type)

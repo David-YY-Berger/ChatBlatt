@@ -18,6 +18,7 @@ entity_tabs:
   people: "People"
   places: "Places"
   nations: "Nations"
+  tribes: "Tribes of Israel"
   symbols: "Symbols"
   label: "Choose an entity view"
 
@@ -68,6 +69,20 @@ entity_fields:
   prophesiedAbout: "Prophesied About"
   comparedTo: "Compared To"
   contrastedWith: "Contrasted With"
+  # Nation fields
+  personsBelongTo: "Members"
+  placesIn: "Places"
+  # Place fields
+  placeType: "Place Type"
+  personsBornIn: "Born Here"
+  personsDiedIn: "Died Here"
+  personsVisited: "Visited"
+  personsPrayedAt: "Prayed Here"
+  personsAssociated: "Associated Persons"
+  symbolsAssociated: "Associated Symbols"
+  inNation: "Nation"
+  # TribeOfIsrael fields
+  membersOfTribeIsrael: "Tribe Members"
 
 page_titles:
   home: "Welcome to Mapalee"
@@ -77,6 +92,7 @@ page_titles:
   people: "People"
   places: "Places"
   nations: "Nations"
+  tribes: "Tribes of Israel"
   symbols: "Symbols"
   maps: "Maps"
   genology: "Genology Map"
