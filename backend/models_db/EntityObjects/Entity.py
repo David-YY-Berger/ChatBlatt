@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel, Field
-from typing import List, Any, Dict, Optional, TYPE_CHECKING
+from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 from backend.models_db.Enums import EntityType
 
@@ -32,6 +32,9 @@ class Entity(BaseModel):
     # transient fields
     comparedTo: List[str] = TransientField(default_factory=list)
     contrastedWith: List[str] = TransientField(default_factory=list)
+    # Navigation metadata: maps display_name -> (entity_key, EntityType)
+    # Populated by the entity populator; used by the UI for click-through navigation.
+    rel_links: Dict[str, Tuple[str, Any]] = TransientField(default_factory=dict)
 
     # ========================= Identity / Equality =========================
 

@@ -159,6 +159,7 @@ def _render_relationship_fields(entity, transient_labels: list, lang: str) -> No
     Render all transient (relationship) fields as titled scrollable lists.
     Only shows fields that have data.
     Uses a 3-column grid layout.
+    Each item in a list is rendered as a st.popover button with action options.
     """
     # Filter to fields that have data
     fields_with_data = []
@@ -171,6 +172,9 @@ def _render_relationship_fields(entity, transient_labels: list, lang: str) -> No
         st.info(get_text("entity_search_ui.no_relationships", lang))
         return
 
+    # Navigation link map: display_name -> (entity_key, EntityType)
+    rel_links = getattr(entity, "rel_links", {})
+
     # Render in a 3-column grid
     COLS = 3
     for row_start in range(0, len(fields_with_data), COLS):
@@ -179,46 +183,97 @@ def _render_relationship_fields(entity, transient_labels: list, lang: str) -> No
         for col_idx, (field_name, label_key, values) in enumerate(row_items):
             with cols[col_idx]:
                 label = get_text(label_key, lang)
-                _render_scrollable_list(label, values, field_name)
+                _render_relationship_list(label, values, field_name, rel_links, lang)
 
 
-def _render_scrollable_list(title: str, items: list[str], field_name: str) -> None:
+def _render_relationship_list(
+    title: str,
+    items: list[str],
+    field_name: str,
+    rel_links: dict,
+    lang: str,
+) -> None:
     """
-    Render a titled scrollable list of items using styled HTML.
-    Max height with overflow scroll for long lists.
+    Render a titled list of related entities.
+    Each item is a popover button that shows action options:
+      1. View Entity — navigates to the entity's page
+      2. View Sources of Relationship — shows "coming soon"
     """
-    items_html = "".join(f"<li>{item}</li>" for item in items)
-    st.markdown(
-        f"""
-        <div style="
-            background: var(--card, #1f2f4a);
-            border: 1px solid var(--border, #24354e);
-            border-radius: 10px;
-            padding: 0.75rem 1rem;
-            margin-bottom: 0.75rem;
-        ">
-            <div style="
-                font-weight: 600;
-                font-size: 0.95rem;
-                margin-bottom: 0.5rem;
-                color: var(--accent, #1f6feb);
-            ">{title} ({len(items)})</div>
-            <div style="
-                max-height: 180px;
-                overflow-y: auto;
-                padding-right: 0.5rem;
-            ">
-                <ul style="
-                    margin: 0;
-                    padding-left: 1.2rem;
-                    list-style-type: disc;
-                    color: var(--text, #f8f9fa);
-                ">{items_html}</ul>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    with st.container(border=True):
+        st.markdown(
+            f"<div style='font-weight:600; font-size:0.95rem; "
+            f"color:var(--accent,#1f6feb); margin-bottom:0.4rem;'>"
+            f"{title} ({len(items)})</div>",
+            unsafe_allow_html=True,
+        )
+        for item in items:
+            _render_entity_item_popover(item, field_name, rel_links, lang)
+
+
+def _render_entity_item_popover(
+    item_name: str,
+    field_name: str,
+    rel_links: dict,
+    lang: str,
+) -> None:
+    """Render a single related-entity name as a popover button with action choices."""
+    link_info = rel_links.get(item_name)  # (entity_key, EntityType) | None
+
+    with st.popover(f"• {item_name}", use_container_width=True):
+        # ── Action 1: View Entity ──────────────────────────────────────
+        if link_info:
+            entity_key, entity_type = link_info
+            tab_key = _entity_type_to_tab(entity_type)
+            btn_label = get_text("entity_search_ui.view_entity", lang)
+            if tab_key:
+                if st.button(
+                    btn_label,
+                    key=f"nav_{tab_key}_{entity_key}_{field_name}",
+                    use_container_width=True,
+                    type="primary",
+                ):
+                    st.session_state["active_page"] = tab_key
+                    st.session_state[f"entity_detail_{tab_key}"] = entity_key
+                    st.rerun()
+            else:
+                st.button(
+                    btn_label,
+                    key=f"nav_disabled_{hash(item_name)}_{field_name}",
+                    use_container_width=True,
+                    disabled=True,
+                    help=get_text("entity_search_ui.nav_not_available", lang),
+                )
+        else:
+            st.button(
+                get_text("entity_search_ui.view_entity", lang),
+                key=f"nav_nolink_{hash(item_name)}_{field_name}",
+                use_container_width=True,
+                disabled=True,
+            )
+
+        st.divider()
+
+        # ── Action 2: View Sources of Relationship ─────────────────────
+        st.button(
+            get_text("entity_search_ui.view_sources", lang),
+            key=f"src_{hash(item_name)}_{field_name}",
+            use_container_width=True,
+            disabled=True,
+            help=get_text("entity_search_ui.coming_soon", lang),
+        )
+
+
+def _entity_type_to_tab(entity_type) -> str | None:
+    """Map an EntityType to its navigation tab key, or None if not yet supported."""
+    from backend.models_db.Enums import EntityType
+
+    _TAB_MAP = {
+        EntityType.EPerson: "people",
+        EntityType.EPlace: "places",
+        EntityType.ENation: "nations",
+        EntityType.ESymbol: "symbols",
+    }
+    return _TAB_MAP.get(entity_type)
 
 
 # =============================================================================

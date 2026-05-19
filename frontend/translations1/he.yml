@@ -35,6 +35,10 @@ entity_search_ui:
   loading: "טוען פרטי ישות…"
   not_found: "הישות לא נמצאה."
   no_relationships: "לא נמצאו קשרים עבור ישות זו."
+  view_entity: "צפה בישות"
+  view_sources: "צפה במקורות הקשר"
+  coming_soon: "בקרוב"
+  nav_not_available: "ניווט אינו זמין עבור סוג ישות זה עדיין"
 
 entity_fields:
   also_known_as: "ידוע גם בשם"

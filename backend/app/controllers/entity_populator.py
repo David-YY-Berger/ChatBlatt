@@ -51,6 +51,7 @@ class BaseEntityPopulator(ABC):
         """
         Populate all transient fields on the entity from the given relationships.
         Resolves entity keys to display_en_name for readability.
+        Also populates entity.rel_links for UI navigation (display_name -> (key, EntityType)).
         Returns the same entity object with transient fields filled in.
         """
         rel_field_map = self.get_rel_field_map()
@@ -62,8 +63,8 @@ class BaseEntityPopulator(ABC):
             all_keys.add(rel.term2)
         all_keys.discard(entity.key)
 
-        # Batch-resolve keys to display names
-        key_to_name = self._resolve_keys_to_names(all_keys, db)
+        # Batch-resolve keys to (display_name, EntityType)
+        key_to_info = self._resolve_keys_to_names(all_keys, db)
 
         # Populate transient fields
         for rel in rels:
@@ -81,21 +82,27 @@ class BaseEntityPopulator(ABC):
             if field_name is None:
                 continue
 
-            other_name = key_to_name.get(other_key, other_key)
+            info = key_to_info.get(other_key)
+            other_name = info[0] if info else other_key
+            other_type = info[1] if info else None
 
             field_value = getattr(entity, field_name, None)
             if isinstance(field_value, list):
                 if other_name not in field_value:
                     field_value.append(other_name)
 
+            # Store navigation link for UI click-through
+            if other_name and other_key:
+                entity.rel_links[other_name] = (other_key, other_type)
+
         return entity
 
-    def _resolve_keys_to_names(self, keys: set, db: DBapiMongoDB) -> Dict[str, str]:
-        """Batch-resolve entity keys to display_en_name."""
+    def _resolve_keys_to_names(self, keys: set, db: DBapiMongoDB) -> Dict[str, Tuple]:
+        """Batch-resolve entity keys to (display_en_name, EntityType)."""
         if not keys:
             return {}
         entities = db.get_entities_by_keys(list(keys))
-        return {e.key: e.display_en_name for e in entities}
+        return {e.key: (e.display_en_name, e.entityType) for e in entities}
 
 
 class PersonPopulator(BaseEntityPopulator):
@@ -179,11 +186,12 @@ class PersonPopulator(BaseEntityPopulator):
         if not sibling_keys:
             return entity
 
-        # Resolve sibling keys to display names
-        sibling_name_map = self._resolve_keys_to_names(sibling_keys, db)
-        for sibling_name in sibling_name_map.values():
+        # Resolve sibling keys to display names and types
+        sibling_info_map = self._resolve_keys_to_names(sibling_keys, db)
+        for sibling_key, (sibling_name, sibling_type) in sibling_info_map.items():
             if sibling_name and sibling_name not in entity.siblings:
                 entity.siblings.append(sibling_name)
+                entity.rel_links[sibling_name] = (sibling_key, sibling_type)
 
         return entity
 

@@ -35,6 +35,10 @@ entity_search_ui:
   loading: "Loading entity details…"
   not_found: "Entity not found."
   no_relationships: "No relationships found for this entity."
+  view_entity: "View Entity"
+  view_sources: "View Sources of Relationship"
+  coming_soon: "Coming soon"
+  nav_not_available: "Navigation not available for this entity type yet"
 
 entity_fields:
   also_known_as: "Also known as"
