@@ -14,6 +14,14 @@ class RelationshipInterfaceMixin(ABC):
         pass
 
     @abstractmethod
+    def try_insert_rel(self, rel: Rel) -> str:
+        """
+        Inserts a Rel if one with the same rel_type, term1 and term2 does not already exist.
+        Returns the key whether newly inserted or already existing.
+        """
+        pass
+
+    @abstractmethod
     def update_rel(self, rel: Rel) -> int:
         pass
 

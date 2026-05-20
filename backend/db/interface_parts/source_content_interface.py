@@ -1,11 +1,14 @@
 from abc import ABC, abstractmethod
-from typing import Any, Dict, List
+from typing import Any, Dict, List, TYPE_CHECKING
 
 from backend.db.Collections import CollectionObjs, Collection
 from backend.db.DBConstants import DBFields
 from backend.models_db.Enums import SourceType, SourceContentType
 from backend.models_db.SourceClasses.SourceClass import SourceClass
 from backend.models_db.SourceClasses.SourceContent import SourceContent
+
+if TYPE_CHECKING:
+    from backend.db.data_names.Books import Book
 
 
 class SourceContentInterfaceMixin(ABC):
@@ -37,6 +40,11 @@ class SourceContentInterfaceMixin(ABC):
 
     @abstractmethod
     def get_all_src_contents_of_collection(self, collection: Collection) -> List[SourceContent]:
+        pass
+
+    @abstractmethod
+    def get_all_src_contents_by_book(self, book: "Book") -> List[SourceContent]:
+        """Get all SourceContent documents that belong to a specific book."""
         pass
 
     def insert_source_content(self, result: SourceContent, ref, start_index):
