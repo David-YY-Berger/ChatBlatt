@@ -12,7 +12,7 @@ from backend.models_db.SourceClasses import SourceContent
 
 @dataclass
 class Answer:
-    question_content: str
+    free_text_input: str
     src_metadata_lst: List[SourceMetadata] # must be set by input
     entities: List[Entity] = field(default_factory=list)
     rels: List[Rel] = field(default_factory=list)

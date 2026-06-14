@@ -13,9 +13,6 @@ from backend.app.SourceSearchQuery import SourceSearchQuery
 from typing import Optional, List
 
 
-# from your_module import DBapiMongoDB, FaissEngine, Question
-
-
 class SearchHandler:
     def __init__(self):
         """Initialize the handler: load environment variables and set up db + FAISS."""
@@ -30,40 +27,40 @@ class SearchHandler:
         self.faiss = FaissEngine(dbapi=self.db_api)
         self.entity_rel_manager = EntityRelManager()
 
-    def get_answer_w_source_metadata(self, question: SourceSearchQuery) -> Answer:
+    def get_answer_w_source_metadata(self, query: SourceSearchQuery) -> Answer:
 
-        ref_list = self.ordered_ref_from_faiss(question.free_text_similarity, question.max_sources)
+        ref_list = self.ordered_ref_from_faiss(query.free_text_similarity, query.max_sources)
 
         src_metadata_lst = self.create_src_metadata_obj(ref_list)
-        src_metadata_lst = self.filter_by_book(src_metadata_lst, question)
+        src_metadata_lst = self.filter_by_book(src_metadata_lst, query)
         src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
-        src_metadata_lst = self.filter_by_entity_rel(question, src_metadata_lst)
+        src_metadata_lst = self.filter_by_entity_rel(query, src_metadata_lst)
 
-        src_metadata_lst = src_metadata_lst[:question.max_sources]
+        src_metadata_lst = src_metadata_lst[:query.max_sources]
 
-        return self.create_answer_obj(question, src_metadata_lst)
+        return self.create_answer_obj(query, src_metadata_lst)
 
-    def create_answer_obj(self, question:SourceSearchQuery, src_metadata_lst) -> Answer:
+    def create_answer_obj(self, query:SourceSearchQuery, src_metadata_lst) -> Answer:
 
         # this code is possibly temporary.. the final front end might expect to be packaged differently..
         entities_from_q = [
-            e for ent_id in question.entity_ids
+            e for ent_id in query.entity_ids
             if (e := self.entity_rel_manager.get_entity_from_id(ent_id)) is not None
         ]
         rels_from_q = [
-            n for rel_id in question.rel_ids
+            n for rel_id in query.rel_ids
             if (n := self.entity_rel_manager.get_rel_from_id(rel_id)) is not None
         ]
         # Create Answer object
         return Answer(
-            question_content=question.free_text_similarity,
+            free_text_input=query.free_text_similarity,
             src_metadata_lst=src_metadata_lst,
             entities=entities_from_q,
             rels=rels_from_q
         )
 
-    def get_full_answer(self, question: SourceSearchQuery) -> Answer:
-        ans = self.get_answer_w_source_metadata(question)
+    def get_full_answer(self, query: SourceSearchQuery) -> Answer:
+        ans = self.get_answer_w_source_metadata(query)
 
         for src_metadata in ans.src_metadata_lst:
             # This still returns a string like "BT", "TN", "FS", etc.
@@ -113,7 +110,7 @@ class SearchHandler:
         return src_metadata_lst
 
 
-    def filter_by_book(self, src_metadata_lst, question):
+    def filter_by_book(self, src_metadata_lst, query):
         # todo
         return src_metadata_lst
 
@@ -122,6 +119,6 @@ class SearchHandler:
         # todo from enetity ids, get the values (name, hebrew name, etc..)
         return src_metadata_lst
 
-    def filter_by_entity_rel(self, question, src_metadata_lst):
+    def filter_by_entity_rel(self, query, src_metadata_lst):
         # todo from rel ids, get the values (name, hebrew name, etc..)
         return src_metadata_lst

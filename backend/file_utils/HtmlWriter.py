@@ -60,7 +60,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:20px;
         return f"""
         <div class="header">
             <div class="question-label">Question:</div>
-            <div class="question-content">{ans.question_content}</div>
+            <div class="question-content">{ans.free_text_input}</div>
             <div class="timestamp">{readable_timestamp}</div>
             <div class="header-info">
                 <div class="info-item">

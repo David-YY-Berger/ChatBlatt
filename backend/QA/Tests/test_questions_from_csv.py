@@ -8,12 +8,12 @@ from backend.common import Paths
 from backend.file_utils import OsFunctions, LocalPrinter
 from backend.file_utils.FileTypeEnum import FileType
 
-from backend.QA.Objects.QuestionRow import QuestionRow
+from backend.QA.Objects.QueryRow import QueryRow
 from backend.app.SearchHandler import SearchHandler
 from backend.models_db.Enums import SourceType
 
 
-class QuestionsFromCSVTests(unittest.TestCase):
+class QuerysFromCSVTests(unittest.TestCase):
 
     def setUp(self):
         super().setUp()
@@ -29,20 +29,20 @@ class QuestionsFromCSVTests(unittest.TestCase):
 
 
 ############################################# 1. Basic Tests ####################################################
-    def test_print_questions_from_csv(self):
-        question_rows = self.get_BT_live_questions_from_csv()
-        for q in question_rows:
-            real_q = q.to_question_from_user(SourceType.BT)
+    def test_print_query_from_csv(self):
+        query_rows = self.get_BT_live_query_from_csv()
+        for q in query_rows:
+            real_q = q.to_query_from_user(SourceType.BT)
             ans = self.qaHandler.get_full_answer(real_q)
             html_ans = self.htmlWriter.get_full_html(ans)
-            path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.question_name)
+            path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.query_name)
             LocalPrinter.print_to_file(html_ans, FileType.HTML, path)
 
 
 ############################################# Helper Functions ####################################################
 
-    def read_csv_to_objects(self, file_path: str) -> List[QuestionRow]:
-        rows: List[QuestionRow] = []
+    def read_csv_to_objects(self, file_path: str) -> List[QueryRow]:
+        rows: List[QueryRow] = []
         with open(file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -64,15 +64,15 @@ class QuestionsFromCSVTests(unittest.TestCase):
                     elif key in {"question_name", "question_content"}:
                         clean_row[key] = v or None
 
-                rows.append(QuestionRow(**clean_row))
+                rows.append(QueryRow(**clean_row))
         return rows
 
 
-    def get_BT_live_questions_from_csv(self) -> List[QuestionRow]:
+    def get_BT_live_query_from_csv(self) -> List[QueryRow]:
         all_q_from_csv = self.read_csv_to_objects(Paths.QA1_PATH)
         return [
             q for q in all_q_from_csv
-            if q.BT == 1 and q.question_content is not None and q.question_content.strip() != ""
+            if q.BT == 1 and q.query_content is not None and q.query_content.strip() != ""
         ]
 
 #######################################################################################################################
