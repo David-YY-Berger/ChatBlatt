@@ -29,7 +29,7 @@ def render(lang: str) -> None:
     Clicking Find Sources calls backend.app.SearchHandler.SearchHandler.get_answer_w_source_metadata
     with a SourceSearchQuery built from the text input and selected facets.
     """
-    title = get_text("page_titles.search", lang)
+    title = get_text("page_titles.source_search", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
     rtl = is_rtl(lang)

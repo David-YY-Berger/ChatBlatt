@@ -10,7 +10,7 @@ ui:
 nav:
   home: "Home"
   about: "About"
-  search: "Search"
+  source_search: "Search"
   entity_search: "Entity Search"
   maps: "Maps"
 
@@ -87,7 +87,7 @@ entity_fields:
 page_titles:
   home: "Welcome to Mapalee"
   about: "About Mapalee"
-  search: "Search Jewish Sources"
+  source_search: "Search Jewish Sources"
   entity_search: "Entity Search"
   people: "People"
   places: "Places"

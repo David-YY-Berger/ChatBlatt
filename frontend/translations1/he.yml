@@ -10,7 +10,7 @@ ui:
 nav:
   home: "בית"
   about: "אודות"
-  search: "חיפוש"
+  source_search: "חיפוש"
   entity_search: "חיפוש ישות"
   maps: "מפות"
 
@@ -87,7 +87,7 @@ entity_fields:
 page_titles:
   home: "ברוכים הבאים למפה-לי"
   about: "אודות מפה-לי"
-  search: "חיפוש במקורות יהודיים"
+  source_search: "חיפוש במקורות יהודיים"
   entity_search: "חיפוש ישות"
   people: "אנשים"
   places: "מקומות"

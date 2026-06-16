@@ -34,7 +34,7 @@ def _nav_items(lang: str) -> list[dict]:
     return [
         {"key": "home", "label": get_text("nav.home", lang), "children": []},
         {"key": "about", "label": get_text("nav.about", lang), "children": []},
-        {"key": "search", "label": get_text("nav.search", lang), "children": []},
+        {"key": "source_search", "label": get_text("nav.source_search", lang), "children": []},
         {
             "key": "entity_search",
             "label": get_text("nav.entity_search", lang),
@@ -97,8 +97,8 @@ def _render_page(page_key: str, lang: str) -> None:
         home.render(lang)
     elif page_key == "about":
         about.render(lang)
-    elif page_key == "search":
-        search.render(lang)
+    elif page_key == "source_search":
+        source_search.render(lang)
     elif page_key in ("entity_search", "people", "places", "nations", "tribes", "symbols"):
         entity_search.render(lang, selected=page_key if page_key != "entity_search" else None)
     elif page_key in ("maps", "genology", "studied_from"):

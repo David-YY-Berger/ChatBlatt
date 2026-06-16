@@ -1,5 +1,6 @@
 import faiss
 import pickle
+import time
 from typing import List, Dict
 
 from sentence_transformers import SentenceTransformer
