@@ -20,7 +20,7 @@ import streamlit as st
 from components.header import render_header
 from components.layout import apply_layout, language_selector
 from translations1 import get_text, is_rtl
-from pages import about, entity_search, home, maps, search
+from pages import about, entity_search, home, maps, source_search
 
 
 def _init_state() -> None:
