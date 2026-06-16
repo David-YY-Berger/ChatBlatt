@@ -81,9 +81,16 @@ class SearchHandler:
         return ans
 
 
-    def ordered_ref_from_faiss(self, prompt: str, max_sources: int) -> List[str]:
+    def ordered_ref_from_faiss(self, text_similarity_text: str, max_sources: int) -> List[str]:
 
-        ref_list = self.faiss.search(prompt, max_sources) # can be huge list...
+        if (text_similarity_text is None) or (text_similarity_text == ""):
+            src_content_lst = (self.db_api.get_all_src_contents_of_collection(collection=CollectionObjs.TN)
+                               + self.db_api.get_all_src_contents_of_collection(collection=CollectionObjs.BT))
+            sorted(src_content_lst)
+            return [src_cont.get_key() for src_cont in src_content_lst][:max_sources]
+        # todo fix this, this is inneficiently bringing the whole obj.. should write a dedicated mongo query.
+
+        ref_list = self.faiss.search(text_similarity_text, max_sources) # can be huge list...
         # Example ref list
         # ref_list = [
         #     "BT_Bava Batra_0_3b:4-7",
