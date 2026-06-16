@@ -58,7 +58,8 @@ class DBPopulateFaiss(DBParentClass):
         Safe to re-run: already-indexed passages are skipped automatically.
         Expected runtime: ~3-8 minutes for 15k passages on CPU (was 15+ hours).
         """
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.TN)
+        # all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.TN)
+        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
         print(f"{len(all_srcs)} sources found")
 
         docs = [
