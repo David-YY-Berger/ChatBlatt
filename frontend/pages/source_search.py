@@ -12,6 +12,8 @@ from backend.models_db.Enums import SourceType, PassageType, BookCategoryName
 from backend.db.data_names.Books import Books
 from backend.app.SearchHandler import SearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
+from backend.file_utils.HtmlWriter import HtmlWriter
+import streamlit.components.v1 as components
 
 
 def _group_books_by_category() -> dict[BookCategoryName, list]:
@@ -140,14 +142,25 @@ def render(lang: str) -> None:
             )
 
             handler = SearchHandler()
+            html_writer = HtmlWriter()
             with st.spinner("Searching..."):
                 try:
-                    ans = handler.get_answer_w_source_metadata(query_obj)
+                    # get_full_answer will populate src_contents so we can render full text
+                    ans = handler.get_full_answer(query_obj)
                 except Exception as e:
                     st.error(f"Search failed: {e}")
                     return
 
-            st.success(f"Found {len(ans.src_metadata_lst)} sources (metadata only)")
-            for src in ans.src_metadata_lst[:20]:
-                st.markdown(f"- **{src.key}** — {getattr(src, 'summary_en', '')}")
+            st.success(f"Found {len(ans.src_metadata_lst)} sources")
+
+            # Render the full answer as HTML and embed into Streamlit
+            try:
+                html = html_writer.get_full_html(ans)
+                # use components.html so JS for collapsibles runs
+                components.html(html, height=800, scrolling=True)
+            except Exception as e:
+                st.error(f"Failed to render HTML: {e}")
+                # fallback: show metadata list
+                for src in ans.src_metadata_lst[:20]:
+                    st.markdown(f"- **{src.key}** — {getattr(src, 'summary_en', '')}")
 
