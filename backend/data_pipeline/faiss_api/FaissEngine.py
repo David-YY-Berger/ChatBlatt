@@ -1,3 +1,5 @@
+
+
 import faiss
 import pickle
 import time
@@ -95,20 +97,91 @@ class FaissEngine:
         # Delegate saving the serialized bytes to the db API's method
         self.dbapi.save_faiss_index(index_bytes, metadata_bytes)
 
-    def add_documents(self, docs: List[Dict[str, str]]):
+    # faiss_engine.py  — only the changed/added methods shown
 
+    def add_documents(self, docs: List[Dict[str, str]]):
+        """
+        One-off addition (small batches). Saves to Mongo after every call.
+        For bulk population of thousands of docs, use populate_bulk() instead.
+        """
         new_docs = self.get_new_docs(docs)
         if not new_docs:
-            return  # Nothing new to add
+            return
 
         texts = [doc["content"] for doc in new_docs]
-        embeddings = self.model.encode(texts, convert_to_numpy=True)
+        embeddings = self.model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
         self.index.add(embeddings)
-
-        # Store only the keys (references)
         self.metadata.extend([doc["key"] for doc in new_docs])
-
         self._save_to_mongo()
+
+    def populate_bulk(
+            self,
+            docs: List[Dict[str, str]],
+            batch_size: int = 256,
+            checkpoint_every: int = 1000,
+    ):
+        """
+        Efficient bulk ingestion for thousands of documents.
+
+        - Encodes in batches (GPU/CPU-friendly, uses SentenceTransformer parallelism).
+        - Saves to Mongo only at checkpoints and at the end — not per document.
+        - Skips already-indexed keys automatically, so safe to re-run after a crash.
+
+        :param docs:              List of {"key": str, "content": str} dicts.
+        :param batch_size:        Encoding batch size. 256 is a good default for CPU;
+                                  raise to 512-1024 if you have a GPU.
+        :param checkpoint_every:  Save to Mongo every N *new* documents added.
+                                  Lower = safer on flaky connections; higher = faster.
+        """
+        new_docs = self.get_new_docs(docs)
+        if not new_docs:
+            print("[FaissEngine] Nothing new to index.")
+            return
+
+        total = len(new_docs)
+        print(f"[FaissEngine] Indexing {total} new documents ({len(docs) - total} already present).")
+
+        added_since_checkpoint = 0
+        start_time = time.time()
+
+        for batch_start in range(0, total, batch_size):
+            batch = new_docs[batch_start: batch_start + batch_size]
+            texts = [doc["content"] for doc in batch]
+
+            embeddings = self.model.encode(
+                texts,
+                convert_to_numpy=True,
+                show_progress_bar=False,  # we handle progress ourselves
+                batch_size=batch_size,
+            )
+
+            self.index.add(embeddings)
+            self.metadata.extend([doc["key"] for doc in batch])
+            added_since_checkpoint += len(batch)
+
+            # Progress log
+            done = batch_start + len(batch)
+            elapsed = time.time() - start_time
+            rate = done / elapsed  # docs/sec
+            eta = (total - done) / rate if rate > 0 else 0
+            print(
+                f"  {done}/{total} docs "
+                f"({done * 100 // total}%)  "
+                f"{rate:.1f} docs/s  "
+                f"ETA {eta / 60:.1f} min"
+            )
+
+            # Checkpoint save — recovers gracefully if Mongo drops mid-run
+            if added_since_checkpoint >= checkpoint_every:
+                print(f"  [checkpoint] Saving to Mongo at {done} docs…")
+                self._save_to_mongo()
+                added_since_checkpoint = 0
+
+        # Final save (always, even if last batch didn't hit the checkpoint threshold)
+        print("[FaissEngine] Saving final index to Mongo…")
+        self._save_to_mongo()
+        elapsed = time.time() - start_time
+        print(f"[FaissEngine] Done. {total} documents indexed in {elapsed / 60:.1f} min.")
 
     def get_new_docs(self, docs):
         existing_keys = set(self.metadata)
