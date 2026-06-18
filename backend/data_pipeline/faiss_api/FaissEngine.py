@@ -193,7 +193,7 @@ class FaissEngine:
         new_docs = [doc for doc in docs if doc["key"] not in existing_keys]
         return new_docs
 
-    def search(self, query: str, top_k: int = 5) -> List[str]:
+    def search(self, query: str, top_k: int = 100000) -> List[str]:
         query_vec = self.model.encode([query], convert_to_numpy=True)
         distances, indices = self.index.search(query_vec, top_k)
 

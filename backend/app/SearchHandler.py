@@ -29,9 +29,12 @@ class SearchHandler:
 
     def get_answer_w_source_metadata(self, query: SourceSearchQuery) -> Answer:
 
-        ref_list = self.ordered_ref_from_faiss(query.free_text_similarity, query.max_sources)
+        if query.free_text_similarity:
+            ref_list = self.ordered_ref_from_faiss(query.free_text_similarity)
+            src_metadata_lst = self.create_src_metadata_objs(ref_list)
+        else:
+            src_metadata_lst = self.db_api.get_all_source_metadata()
 
-        src_metadata_lst = self.create_src_metadata_obj(ref_list)
         src_metadata_lst = self.filter_by_book(src_metadata_lst, query)
         src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
         src_metadata_lst = self.filter_by_entity_rel(query, src_metadata_lst)
@@ -63,34 +66,14 @@ class SearchHandler:
         ans = self.get_answer_w_source_metadata(query)
 
         for src_metadata in ans.src_metadata_lst:
-            # This still returns a string like "BT", "TN", "FS", etc.
-            collection_str = SourceClass.get_collection_name_from_key(src_metadata.key)
-
-            # Convert the string to the corresponding Collection object
-            try:
-                collection_obj = next(
-                    c for c in CollectionObjs.all() if c.name == collection_str
-                )
-            except StopIteration:
-                raise ValueError(f"Unknown collection name '{collection_str}' for key '{src_metadata.key}'")
-
-            # Fetch the Source object using the Collection object
             src = self.db_api.find_one_source_content(src_metadata.key)
             ans.src_contents.append(src)
 
         return ans
 
+    def ordered_ref_from_faiss(self, text_similarity_text: str,) -> List[str]:
 
-    def ordered_ref_from_faiss(self, text_similarity_text: str, max_sources: int) -> List[str]:
-
-        if (text_similarity_text is None) or (text_similarity_text == ""):
-            src_content_lst = (self.db_api.get_all_src_contents_of_collection(collection=CollectionObjs.TN)
-                               + self.db_api.get_all_src_contents_of_collection(collection=CollectionObjs.BT))
-            sorted(src_content_lst)
-            return [src_cont.get_key() for src_cont in src_content_lst][:max_sources]
-        # todo fix this, this is inneficiently bringing the whole obj.. should write a dedicated mongo query.
-
-        ref_list = self.faiss.search(text_similarity_text, max_sources) # can be huge list...
+        ref_list = self.faiss.search(text_similarity_text) # can be huge list...
         # Example ref list
         # ref_list = [
         #     "BT_Bava Batra_0_3b:4-7",
@@ -99,28 +82,16 @@ class SearchHandler:
         # ]
         return ref_list
 
-    def create_src_metadata_obj(self, ref_list):
+    def create_src_metadata_objs(self, ref_list):
         src_metadata_lst = []
         for ref in ref_list:
-            src_type = SourceClass.get_src_type_from_key(ref)
-            # todo: query db: get summary, entities ids, and rels..
-            src_meta = SourceMetadata(ref)
-            src_meta.summary_en ="no summary yet"
-            src_meta.summary_heb="עוד לא הוספנו סיכום"
-            # src_meta.passage_types=[]
-            # src_meta.entity_keys=None
-            # src_meta.rel_keys=[]
-
-
-            src_metadata_lst.append(src_meta)
+            src_metadata_lst.append(self.db_api.get_source_metadata_by_key(ref))
 
         return src_metadata_lst
-
 
     def filter_by_book(self, src_metadata_lst, query):
         # todo
         return src_metadata_lst
-
 
     def populate_entity_rel(self, src_metadata_lst):
         # todo from enetity ids, get the values (name, hebrew name, etc..)
