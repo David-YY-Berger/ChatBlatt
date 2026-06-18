@@ -42,52 +42,100 @@ def _group_books_by_category() -> dict[BookCategoryName, list]:
     return grouped
 
 
+def _inject_facet_css() -> None:
+    st.markdown(
+        """
+        <style>
+        /* ── Compact facet checkboxes ── */
+        div[data-testid="stCheckbox"] {
+            margin-bottom: -10px;
+        }
+
+        /* ── Facet section expander: outer container ── */
+        div[data-testid="stExpander"] {
+            border: 1px solid #c5cae9;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            background-color: #f3f6fd;
+        }
+
+        /* ── Facet section expander: header row ── */
+        div[data-testid="stExpander"] summary {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #2c3e7a;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+
+        div[data-testid="stExpander"] summary:hover {
+            background-color: #dde4f5;
+            border-radius: 8px;
+        }
+
+        /* ── Nested book-category expanders: slightly lighter ── */
+        div[data-testid="stExpander"] div[data-testid="stExpander"] {
+            border: 1px solid #dce3f5;
+            background-color: #ffffff;
+        }
+
+        div[data-testid="stExpander"] div[data-testid="stExpander"] summary {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: #445080;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Facet renderers
 # ---------------------------------------------------------------------------
 
 def _render_source_type_facet() -> None:
-    st.markdown("**Source Type**")
-    for stype in SourceType:
-        st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=False)
+    with st.expander("📄  Source Type", expanded=False):
+        for stype in SourceType:
+            st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=False)
 
 
 def _render_book_facet() -> None:
-    st.markdown("**Book**")
-    books_by_cat = _group_books_by_category()
-    for cat in BookCategoryName:
-        books = books_by_cat.get(cat, [])
-        if not books:
-            continue
-        with st.expander(cat.value, expanded=False):
-            for b in books:
-                st.checkbox(
-                    f"{b.en_display_name} ({b.heb_display_name})",
-                    key=f"facet_book_{b.database_name}",
-                    value=False,
-                )
+    with st.expander("📚  Book", expanded=False):
+        books_by_cat = _group_books_by_category()
+        for cat in BookCategoryName:
+            books = books_by_cat.get(cat, [])
+            if not books:
+                continue
+            with st.expander(cat.value, expanded=False):
+                for b in books:
+                    st.checkbox(
+                        f"{b.en_display_name} ({b.heb_display_name})",
+                        key=f"facet_book_{b.database_name}",
+                        value=False,
+                    )
 
 
 def _render_passage_type_facet() -> None:
-    st.markdown("**Passage Type**")
-    for p in PassageType:
-        st.checkbox(p.value, key=f"facet_passage_{p.name}", value=False)
+    with st.expander("🔖  Passage Type", expanded=False):
+        for p in PassageType:
+            st.checkbox(p.value, key=f"facet_passage_{p.name}", value=False)
 
 
 def _render_entity_facets() -> None:
-    st.markdown("**Entities**")
-    for ent_key, ent_label in _ENTITIES:
-        cols = st.columns([3, 1])
-        with cols[0]:
-            st.markdown(ent_label)
-        with cols[1]:
-            if st.button("Select", key=f"select_ent_{ent_key}"):
-                # open blank popover/modal for now (placeholder)
-                with st.popover("Select entity", use_container_width=True):
-                    st.write("")
+    with st.expander("🏷️  Entities", expanded=False):
+        for ent_key, ent_label in _ENTITIES:
+            cols = st.columns([3, 1])
+            with cols[0]:
+                st.markdown(ent_label)
+            with cols[1]:
+                if st.button("Select", key=f"select_ent_{ent_key}"):
+                    with st.popover("Select entity", use_container_width=True):
+                        st.write("")
 
 
 def _render_facets_panel() -> None:
+    _inject_facet_css()
     st.subheader("Facets")
     _render_source_type_facet()
     _render_book_facet()
@@ -143,11 +191,8 @@ def _run_search(query_obj: SourceSearchQuery):
     return ans, elapsed
 
 
-def _render_results(ans, elapsed: str) -> None:
-    """Display search results: success banner + HTML component, with a plain-text fallback."""
-    found_count = len(getattr(ans, "src_metadata_lst", []))
-    st.success(f"Found {found_count} sources in {elapsed}")
-
+def _render_results_body(ans, elapsed: str) -> None:
+    """Display search results HTML component, with a plain-text fallback."""
     html_writer = HtmlWriter()
     try:
         html = html_writer.get_full_html(ans)
@@ -169,15 +214,34 @@ def _render_search_panel() -> None:
     st.text_input("text similarity search", key="free_text_query")
     st.markdown("</div>", unsafe_allow_html=True)
 
-    if st.button("Find Sources"):
-        try:
-            query_obj = _collect_search_query()
-            ans, elapsed = _run_search(query_obj)
-        except Exception as e:
-            logger.error(f"Search failed: {e}")
-            st.error(f"Search failed: {e}")
-            return
-        _render_results(ans, elapsed)
+    btn_col, msg_col = st.columns([1, 4])
+    with btn_col:
+        if st.button("Find Sources"):
+            try:
+                query_obj = _collect_search_query()
+                ans, elapsed = _run_search(query_obj)
+                st.session_state["_search_ans"] = ans
+                st.session_state["_search_elapsed"] = elapsed
+                st.session_state.pop("_search_error", None)
+            except Exception as e:
+                logger.error(f"Search failed: {e}")
+                st.session_state["_search_error"] = str(e)
+                st.session_state.pop("_search_ans", None)
+
+    with msg_col:
+        if st.session_state.get("_search_error"):
+            st.error(st.session_state["_search_error"])
+        elif "_search_ans" in st.session_state:
+            ans = st.session_state["_search_ans"]
+            elapsed = st.session_state.get("_search_elapsed", "")
+            found_count = len(getattr(ans, "src_metadata_lst", []))
+            st.success(f"Found {found_count} sources in {elapsed}")
+
+    if "_search_ans" in st.session_state:
+        _render_results_body(
+            st.session_state["_search_ans"],
+            st.session_state.get("_search_elapsed", ""),
+        )
 
 
 # ---------------------------------------------------------------------------
