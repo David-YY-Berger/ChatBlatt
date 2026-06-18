@@ -20,8 +20,6 @@ def get_ts_readable_str(ts: str) -> str:
     return dt.strftime("%A, %B %d, %Y at %I:%M %p")
 
 def get_secret(key: str):
-    import streamlit as st
-    import os
 
     if key in st.secrets:
         return st.secrets[key]

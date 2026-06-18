@@ -17,7 +17,6 @@ import json
 import os
 
 import streamlit as st
-from dotenv import load_dotenv
 
 from translations1 import get_text, is_rtl
 from system_common.SystemFunctions import get_secret

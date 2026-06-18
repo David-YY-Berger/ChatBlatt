@@ -2,7 +2,6 @@
 import os
 import subprocess
 from datetime import datetime
-from dotenv import load_dotenv
 
 from backend.db.DBapiMongoDB import DBapiMongoDB
 from system_common.SystemFunctions import get_secret
@@ -12,7 +11,6 @@ class DBFactory:
 
     @staticmethod
     def get_prod_db_mongo() -> DBapiMongoDB:
-        load_dotenv()
 
         # Retrieve the database username and password from environment variables
         username = get_secret('DB_BT_USERNAME')
@@ -29,7 +27,6 @@ class DBFactory:
     # #2
     # @staticmethod
     # def get_test_db_mongo() -> DBapiMongoDB:
-    #     load_dotenv()
     #
     #     # Retrieve the database username and password from environment variables
     #     username = get_secret('DB_BT_USERNAME')
@@ -45,7 +42,6 @@ class DBFactory:
 
     @staticmethod
     def run_mongo_dump():
-        load_dotenv()
 
         username = get_secret("DB_BT_USERNAME")
         password = get_secret("DB_BT_PASSWORD")

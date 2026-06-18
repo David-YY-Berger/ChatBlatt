@@ -21,11 +21,8 @@ Usage:
 import os
 from enum import Enum
 from typing import Optional
-from dotenv import load_dotenv
 
 from system_common.SystemFunctions import get_secret
-
-load_dotenv()
 
 
 class ModelProvider(Enum):
