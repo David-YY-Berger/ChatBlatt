@@ -99,9 +99,24 @@ class SourceClass(ABC):
         }
 
     def __str__(self) -> str:
+        """English human-readable representation: e.g. 'Bava Batra 13b:9-14a:4' or 'Joshua 2:1–24'"""
         book = self.get_book()
-        book_name = book.database_name if book else ""
-        return f"{book_name} {self.get_section()} {self.get_chapter_str()} ({self.get_key()})"
+        book_name = book.en_display_name if book else self.get_book_name()
+        section = self.get_section()
+        chapter = self.get_chapter()
+        location = section if section else (str(chapter) if chapter else "")
+        category = f" ({book.category.value})" if book and book.category else ""
+        return f"{book_name}{category} {location}".strip()
+
+    def to_heb_str(self) -> str:
+        """Hebrew human-readable representation: e.g. 'בבא בתרא יג:ט' or 'יהושע ב:א'"""
+        book = self.get_book()
+        book_name = book.heb_display_name if book else self.get_book_name()
+        section = self.get_section()
+        chapter = self.get_chapter()
+        location = section if section else (str(chapter) if chapter else "")
+        category = f" ({book.category.value})" if book and book.category else ""
+        return f"{location} {book_name}{category}".strip()
 
     ################################################## misc ############################################
 

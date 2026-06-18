@@ -33,13 +33,17 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
 .info-label { font-weight:bold; color:#ecf0f1; }
 /* --- Source section collapsible --- */
 .source-section { margin-bottom:6px; border:1px solid #ccc; border-radius:6px; overflow:hidden; }
-.source-header { background:#34495e; color:white; padding:8px 12px; cursor:pointer; user-select:none; display:flex; flex-direction:column; gap:3px; position:relative; }
+.source-header { background:#34495e; color:white; padding:8px 12px; cursor:pointer; user-select:none; display:flex; flex-direction:column; gap:4px; position:relative; }
 .source-header:hover { background:#2c3e50; }
-.source-title-row { display:flex; align-items:center; justify-content:space-between; font-size:1em; font-weight:bold; }
-.source-arrow { font-size:12px; transition:transform 0.25s; flex-shrink:0; margin-left:8px; }
+.source-title-row { display:flex; align-items:center; justify-content:space-between; font-size:1em; font-weight:bold; gap:8px; }
+.source-title-en { flex:1; text-align:left; }
+.source-title-right { display:flex; align-items:center; gap:8px; }
+.source-title-heb { direction:rtl; text-align:right; font-weight:bold; }
+.source-arrow { font-size:12px; transition:transform 0.25s; flex-shrink:0; }
 .source-header.open .source-arrow { transform:rotate(90deg); }
-.source-summary-en { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; }
-.source-summary-heb { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; direction:rtl; text-align:right; }
+.source-summary-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+.source-summary-en { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; flex:1; text-align:left; }
+.source-summary-heb { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; direction:rtl; text-align:right; flex:1; }
 /* --- Source body --- */
 .source-body { display:none; padding:8px 10px; background:white; }
 .source-body.open { display:block; }
@@ -93,22 +97,35 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
         body_id = f"src-body-{index}"
         header_id = f"src-hdr-{index}"
 
-        # Build title
-        title = f"Source {index + 1}: {self._escape_html(src_metadata.key)}"
+        # English and Hebrew toString representations
+        title_en = self._escape_html(str(src_metadata))
+        title_heb = self._escape_html(src_metadata.to_heb_str())
 
-        # Build summary lines
-        summary_en_html = ""
-        summary_heb_html = ""
-        if getattr(src_metadata, 'summary_en', None):
-            summary_en_html = f'<div class="source-summary-en">{self._escape_html(src_metadata.summary_en)}</div>'
-        if getattr(src_metadata, 'summary_heb', None):
-            summary_heb_html = f'<div class="source-summary-heb">{self._escape_html(src_metadata.summary_heb)}</div>'
+        # Summary row (EN left, HEB right — on same line)
+        summary_en = self._escape_html(getattr(src_metadata, 'summary_en', None) or "")
+        summary_heb = self._escape_html(getattr(src_metadata, 'summary_heb', None) or "")
+        summary_row_html = ""
+        if summary_en or summary_heb:
+            summary_row_html = (
+                f'<div class="source-summary-row">'
+                f'<span class="source-summary-en">{summary_en}</span>'
+                f'<span class="source-summary-heb">{summary_heb}</span>'
+                f'</div>'
+            )
 
         html = f'<div class="source-section">'
-        html += (f'<div class="source-header" id="{header_id}" onclick="toggleSource(\'{body_id}\', \'{header_id}\')">'
-                 f'<div class="source-title-row"><span>{title}</span><span class="source-arrow">▶</span></div>'
-                 f'{summary_en_html}{summary_heb_html}'
-                 f'</div>')
+        html += (
+            f'<div class="source-header" id="{header_id}" onclick="toggleSource(\'{body_id}\', \'{header_id}\')">'
+            f'<div class="source-title-row">'
+            f'<span class="source-title-en">{title_en}</span>'
+            f'<div class="source-title-right">'
+            f'<span class="source-title-heb">{title_heb}</span>'
+            f'<span class="source-arrow">▶</span>'
+            f'</div>'
+            f'</div>'
+            f'{summary_row_html}'
+            f'</div>'
+        )
         html += f'<div class="source-body" id="{body_id}">'
         html += self._get_source_content(source, index) if source else '<div class="no-content">No source content available</div>'
         html += '</div></div>'
