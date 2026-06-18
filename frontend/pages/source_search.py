@@ -195,7 +195,7 @@ def _render_results_body(ans, elapsed: str) -> None:
     """Display search results HTML component, with a plain-text fallback."""
     html_writer = HtmlWriter()
     try:
-        html = html_writer.get_full_html(ans)
+        html = html_writer.get_full_html(ans, False)
         components.html(html, height=800, scrolling=True)
         logger.info("Rendered HTML successfully.")
     except Exception as e:
