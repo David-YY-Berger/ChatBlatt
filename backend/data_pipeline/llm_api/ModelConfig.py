@@ -23,6 +23,8 @@ from enum import Enum
 from typing import Optional
 from dotenv import load_dotenv
 
+from system_common.SystemFunctions import get_secret
+
 load_dotenv()
 
 
@@ -118,7 +120,7 @@ class ModelConfig:
     def get_api_key(cls) -> Optional[str]:
         """Get the API key for the current provider from environment."""
         env_var = cls.API_KEY_ENV_VARS[cls._current_provider]
-        return os.getenv(env_var)
+        return get_secret(env_var)
 
     @classmethod
     def get_pydantic_model(cls) -> str:

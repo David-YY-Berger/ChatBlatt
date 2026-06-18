@@ -5,6 +5,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 from backend.db.DBapiMongoDB import DBapiMongoDB
+from system_common.SystemFunctions import get_secret
 
 
 class DBFactory:
@@ -14,8 +15,8 @@ class DBFactory:
         load_dotenv()
 
         # Retrieve the database username and password from environment variables
-        username = os.getenv('DB_BT_USERNAME')
-        password = os.getenv('DB_BT_PASSWORD')
+        username = get_secret('DB_BT_USERNAME')
+        password = get_secret('DB_BT_PASSWORD')
 
         # MongoDB URI
         uri = (
@@ -31,8 +32,8 @@ class DBFactory:
     #     load_dotenv()
     #
     #     # Retrieve the database username and password from environment variables
-    #     username = os.getenv('DB_BT_USERNAME')
-    #     password = os.getenv('DB_BT_PASSWORD')
+    #     username = get_secret('DB_BT_USERNAME')
+    #     password = get_secret('DB_BT_PASSWORD')
     #
     #     # MongoDB URI
     #     uri = (
@@ -46,8 +47,8 @@ class DBFactory:
     def run_mongo_dump():
         load_dotenv()
 
-        username = os.getenv("DB_BT_USERNAME")
-        password = os.getenv("DB_BT_PASSWORD")
+        username = get_secret("DB_BT_USERNAME")
+        password = get_secret("DB_BT_PASSWORD")
 
         if not username or not password:
             raise ValueError("Missing db credentials in .env")

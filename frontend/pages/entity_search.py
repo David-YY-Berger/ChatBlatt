@@ -20,9 +20,10 @@ import streamlit as st
 from dotenv import load_dotenv
 
 from translations1 import get_text, is_rtl
+from system_common.SystemFunctions import get_secret
 
 load_dotenv()
-_DEBUG_FE = os.getenv("PRINT_DEBUG_LOGS_FE", "false").strip().lower() == "true"
+_DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE", "false").strip().lower() == "true"
 
 
 def render(lang: str, selected: str | None = None) -> None:
