@@ -2,7 +2,10 @@
 from datetime import datetime
 import os
 import streamlit as st
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 
 def get_ts_str() -> str:
@@ -17,8 +20,14 @@ def get_ts_readable_str(ts: str) -> str:
     return dt.strftime("%A, %B %d, %Y at %I:%M %p")
 
 def get_secret(key: str):
+    import streamlit as st
+    import os
+
     if key in st.secrets:
         return st.secrets[key]
-    load_dotenv()
+
+    if load_dotenv:
+        load_dotenv()
+
     return os.getenv(key)
 
