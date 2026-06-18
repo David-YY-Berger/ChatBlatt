@@ -7,6 +7,7 @@ from collections import defaultdict
 
 from translations1 import get_text, is_rtl
 
+from system_common.SystemFunctions import get_ts_datetime
 # Backend imports to populate facets and to call the search handler
 from backend.models_db.Enums import SourceType, PassageType, BookCategoryName
 from backend.db.data_names.Books import Books
@@ -14,6 +15,8 @@ from backend.app.SearchHandler import SearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
 from backend.file_utils.HtmlWriter import HtmlWriter
 import streamlit.components.v1 as components
+
+from frontend.app import logger
 
 
 def _group_books_by_category() -> dict[BookCategoryName, list]:
@@ -143,22 +146,32 @@ def render(lang: str) -> None:
 
             handler = SearchHandler()
             html_writer = HtmlWriter()
+            time_begin_search = get_ts_datetime()
+            logger.info("Starting search with SearchHandler.get_full_answer. search start time: " + str(time_begin_search))
             with st.spinner("Searching..."):
                 try:
                     # get_full_answer will populate src_contents so we can render full text
                     ans = handler.get_full_answer(query_obj)
                 except Exception as e:
+                    logger.error(f"Search failed: {e}")
                     st.error(f"Search failed: {e}")
                     return
 
-            st.success(f"Found {len(ans.src_metadata_lst)} sources")
+            found_count = len(getattr(ans, 'src_metadata_lst', []))
+            time_end_search = get_ts_datetime()
+            time_it_took = str(time_end_search - time_begin_search)
+            logger.info(f"Search completed. Found {found_count} sources. total search time: " + time_it_took)
+            st.success(f"Found {found_count} sources in " + time_it_took)
 
             # Render the full answer as HTML and embed into Streamlit
             try:
                 html = html_writer.get_full_html(ans)
                 # use components.html so JS for collapsibles runs
                 components.html(html, height=800, scrolling=True)
+                time_end_render = get_ts_datetime()
+                logger.info("Rendered HTML successfully. total rendering time: " + str(time_end_render - time_end_search))
             except Exception as e:
+                logger.error(f"Failed to render HTML: {e}")
                 st.error(f"Failed to render HTML: {e}")
                 # fallback: show metadata list
                 for src in ans.src_metadata_lst[:20]:

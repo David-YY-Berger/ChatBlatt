@@ -6,7 +6,7 @@ from typing import List
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.Rel import Rel
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
-from backend.common import SystemFunctions
+from system_common import SystemFunctions
 from backend.models_db.SourceClasses import SourceContent
 
 
@@ -17,6 +17,6 @@ class Answer:
     entities: List[Entity] = field(default_factory=list)
     rels: List[Rel] = field(default_factory=list)
     key: str = field(default="0")  # TODO: assign proper unique db key later
-    ts: str = field(default_factory=lambda: SystemFunctions.get_ts())
+    ts: str = field(default_factory=lambda: SystemFunctions.get_ts_str())
     src_contents: List[SourceContent] = field(default_factory=list) #optional..
 

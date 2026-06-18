@@ -8,7 +8,8 @@ from backend.db.Collections import CollectionObjs
 from backend.data_pipeline.DBScriptParentClass import DBParentClass
 from backend.data_pipeline.data_fetchers.SefariaFetcher import SefariaFetcher
 from backend.file_utils.JsonUtils import JsonUtils
-from backend.common import Paths, SystemFunctions, miscFuncs
+from backend.common import Paths, miscFuncs
+from system_common import SystemFunctions
 from backend.file_utils import OsFunctions
 from bs4 import BeautifulSoup
 
@@ -75,7 +76,7 @@ class DBPopulateSourceContent(DBParentClass):
                     start_index += 1
                     if source_content.get_book() not in book_name_set:
                         book_name_set.add(source_content.get_book())
-                        print(f"{source_content.get_book()} -- {SystemFunctions.get_ts()} -- {start_index}")
+                        print(f"{source_content.get_book()} -- {SystemFunctions.get_ts_str()} -- {start_index}")
 
                     process_function(source_content, ref, start_index)
 
@@ -83,7 +84,7 @@ class DBPopulateSourceContent(DBParentClass):
                     print(f"Error fetching reference {ref} index {start_index}: {e}")
                     break
 
-        print(f"finished - {SystemFunctions.get_ts()}")
+        print(f"finished - {SystemFunctions.get_ts_str()}")
 
     ############################################ Processing Scripts ####################################################
 

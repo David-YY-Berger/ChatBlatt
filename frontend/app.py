@@ -22,6 +22,11 @@ from components.layout import apply_layout, language_selector
 from translations1 import get_text, is_rtl
 from pages import about, entity_search, home, maps, source_search
 
+import logging
+
+logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdout)])
+logger = logging.getLogger(__name__)
+
 
 def _init_state() -> None:
     if "lang" not in st.session_state:

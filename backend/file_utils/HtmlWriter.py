@@ -1,5 +1,5 @@
 from backend.models_db.SourceClasses.SourceContent import SourceContent
-from backend.common import SystemFunctions
+from system_common import SystemFunctions
 from backend.models_db.Answer import Answer
 from typing import List
 
