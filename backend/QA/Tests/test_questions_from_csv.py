@@ -33,6 +33,10 @@ class QuerysFromCSVTests(unittest.TestCase):
         query_rows = self.get_BT_live_query_from_csv()
         for q in query_rows:
             real_q = q.to_query_from_user(SourceType.BT)
+
+            # when zscalar on, uncomment this line:
+            real_q.free_text_similarity = ''
+
             ans = self.qaHandler.get_full_answer(real_q)
             html_ans = self.htmlWriter.get_full_html(ans)
             path = os.path.join(Paths.QUESTIONS_OUTPUT_DIR, q.query_name)
@@ -61,7 +65,7 @@ class QuerysFromCSVTests(unittest.TestCase):
                     elif key in {"entities", "ners"}:
                         clean_row[key] = [x.strip() for x in v.split(",")] if v else []
                     # string fields
-                    elif key in {"question_name", "question_content"}:
+                    elif key in {"query_name", "query_content"}:
                         clean_row[key] = v or None
 
                 rows.append(QueryRow(**clean_row))

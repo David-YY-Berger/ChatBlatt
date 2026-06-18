@@ -1,4 +1,4 @@
-BT,JT,RM,TN,MS,question_name,question_content,entities,rels,max_sources
+BT,JT,RM,TN,MS,query_name,query_content,entities,rels,max_sources
 1,0,0,1,0,Greece,Greece,,,20,
 1,0,0,1,0,fight,fight,,,20,
 1,0,0,1,0,1 english phrase,leniencies while fighting a war,,,20,
