@@ -61,60 +61,43 @@ def _inject_facet_css() -> None:
             margin-bottom: -10px;
         }
 
-        /* ── Facet section expander: outer container (level 1) ── */
-        div[data-testid="stExpander"] {
+        /* ── Custom facet header row: kill column gaps and align items ── */
+        .facet-header-row > div[data-testid="stHorizontalBlock"] {
+            gap: 0 !important;
+            align-items: center !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* ── Custom facet section wrapper ── */
+        .facet-section {
             border: 1px solid #24354e;
             border-radius: 8px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             background-color: #1f2f4a;
+            padding: 2px 6px 4px 6px;
         }
 
-        /* ── Facet section expander: header row (level 1) ── */
-        div[data-testid="stExpander"] > details > summary,
-        div[data-testid="stExpander"] summary {
-            font-weight: 700;
-            font-size: 0.92rem;
-            color: #cdd6f4;
-            padding: 6px 10px;
-            border-radius: 8px;
-        }
-
-        div[data-testid="stExpander"] summary:hover {
-            background-color: #2a3f5f;
-            border-radius: 8px;
-        }
-
-        /* ── Nested expanders: level 2 (e.g. Source Type inside Book) ── */
-        div[data-testid="stExpander"] div[data-testid="stExpander"] {
-            border: 1px solid #1e3352;
-            background-color: #152a42;
-        }
-
-        div[data-testid="stExpander"] div[data-testid="stExpander"] summary {
-            font-weight: 600;
-            font-size: 0.88rem;
-            color: #94a3b8;
-        }
-
-        /* ── Triply-nested expanders: level 3 (category inside source type) ── */
-        div[data-testid="stExpander"] div[data-testid="stExpander"] div[data-testid="stExpander"] {
-            border: 1px solid #18304d;
-            background-color: #0f1e30;
-        }
-
-        div[data-testid="stExpander"] div[data-testid="stExpander"] div[data-testid="stExpander"] summary {
-            font-weight: 500;
-            font-size: 0.84rem;
-            color: #7a8ba8;
-        }
-
-        /* ── Select All / None buttons inside facet expanders: compact ── */
-        div[data-testid="stExpander"] [data-testid="stButton"] > button {
-            padding: 1px 6px !important;
+        /* ── All buttons inside the facet panel: ultra-compact ── */
+        .facet-section [data-testid="stButton"] > button,
+        .facet-header-row [data-testid="stButton"] > button {
+            padding: 0px 5px !important;
             font-size: 0.72rem !important;
             min-height: 22px !important;
             height: 22px !important;
+            line-height: 1 !important;
             border-radius: 4px !important;
+        }
+
+        /* ── Nested facet sections: level 2 (source type inside book) ── */
+        .facet-section .facet-section {
+            background-color: #152a42;
+            border-color: #1e3352;
+        }
+
+        /* ── Nested facet sections: level 3 (category inside source type) ── */
+        .facet-section .facet-section .facet-section {
+            background-color: #0f1e30;
+            border-color: #18304d;
         }
         </style>
         """,
@@ -123,22 +106,78 @@ def _inject_facet_css() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Select All / Deselect All helper
+# Custom collapsible facet section header
 # ---------------------------------------------------------------------------
 
-def _render_select_all_buttons(section_key: str, state_keys: list[str]) -> None:
-    """Render compact ✓ All / ✗ None buttons that bulk-toggle a set of checkbox keys."""
-    c1, c2, _ = st.columns([1, 1, 4])
-    with c1:
-        if st.button("✓ All", key=f"sel_all_{section_key}", use_container_width=True):
-            for k in state_keys:
-                st.session_state[k] = True
-            st.rerun()
-    with c2:
-        if st.button("✗ None", key=f"sel_none_{section_key}", use_container_width=True):
-            for k in state_keys:
-                st.session_state[k] = False
-            st.rerun()
+def _selection_status_html(state_keys: list[str]) -> str:
+    """Return a coloured HTML badge: ALL / NONE / SOME (n/total)."""
+    num_selected = sum(1 for k in state_keys if st.session_state.get(k, False))
+    total = len(state_keys)
+    if num_selected == total:
+        return "<span style='color:#4ade80;font-size:0.70rem;margin-left:6px;font-weight:400'>● ALL</span>"
+    elif num_selected == 0:
+        return "<span style='color:#64748b;font-size:0.70rem;margin-left:6px;font-weight:400'>○ NONE</span>"
+    else:
+        return (
+            f"<span style='color:#fbbf24;font-size:0.70rem;margin-left:6px;font-weight:400'>"
+            f"◑ {num_selected}/{total}</span>"
+        )
+
+
+def _facet_section_header(title: str, section_key: str, state_keys: list[str] | None = None) -> bool:
+    """Render a single compact row: [▶/▼] [title + status] [✓] [✗].
+
+    Clicking ▶/▼ toggles expansion; ✓/✗ bulk-toggle checkboxes.
+    A coloured badge (ALL / NONE / SOME) is shown next to the title when
+    *state_keys* is provided.
+    Returns True when the section is currently expanded.
+    """
+    is_open = st.session_state.get(f"_open_{section_key}", False)
+    has_keys = bool(state_keys)
+
+    status_html = _selection_status_html(state_keys) if state_keys else ""
+
+    # Column widths: toggle | label | (✓ | ✗ only when checkboxes exist)
+    if has_keys:
+        c_tog, c_lbl, c_all, c_none = st.columns([0.35, 3.8, 0.55, 0.55])
+        with c_tog:
+            arrow = "▼" if is_open else "▶"
+            if st.button(arrow, key=f"toggle_{section_key}"):
+                st.session_state[f"_open_{section_key}"] = not is_open
+                st.rerun()
+        with c_lbl:
+            st.markdown(
+                f"<div style='padding-top:4px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>"
+                f"{title}{status_html}</div>",
+                unsafe_allow_html=True,
+            )
+        with c_all:
+            if st.button("✓", key=f"sel_all_{section_key}", help="Select all"):
+                for k in state_keys:
+                    st.session_state[k] = True
+                st.rerun()
+        with c_none:
+            if st.button("✗", key=f"sel_none_{section_key}", help="Deselect all"):
+                for k in state_keys:
+                    st.session_state[k] = False
+                st.rerun()
+    else:
+        c_tog, c_lbl = st.columns([0.35, 5.0])
+        with c_tog:
+            arrow = "▼" if is_open else "▶"
+            if st.button(arrow, key=f"toggle_{section_key}"):
+                st.session_state[f"_open_{section_key}"] = not is_open
+                st.rerun()
+        with c_lbl:
+            st.markdown(
+                f"<div style='padding-top:4px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>{title}</div>",
+                unsafe_allow_html=True,
+            )
+
+    return st.session_state.get(f"_open_{section_key}", False)
+
+
+# (select-all helper removed – functionality now lives in _facet_section_header)
 
 
 # ---------------------------------------------------------------------------
@@ -147,17 +186,17 @@ def _render_select_all_buttons(section_key: str, state_keys: list[str]) -> None:
 
 def _render_source_type_facet() -> None:
     all_keys = [f"facet_src_type_{stype.name}" for stype in SourceType]
-    with st.expander("📄  Source Type", expanded=False):
-        _render_select_all_buttons("src_type", all_keys)
+    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
+    if _facet_section_header("📄 Source Type", "src_type", all_keys):
         for stype in SourceType:
             st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=False)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _render_book_facet() -> None:
     all_book_keys = [f"facet_book_{b.database_name}" for b in Books.sorted_all()]
-    with st.expander("📚  Book", expanded=False):
-        _render_select_all_buttons("book_all", all_book_keys)
-
+    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
+    if _facet_section_header("📚 Book", "book_all", all_book_keys):
         books_by_src = _group_books_by_source_then_category()
         for src_type, cats in books_by_src.items():
             src_book_keys = [
@@ -165,33 +204,37 @@ def _render_book_facet() -> None:
                 for cat_books in cats.values()
                 for b in cat_books
             ]
-            with st.expander(f"📖  {src_type.value}", expanded=False):
-                _render_select_all_buttons(f"book_src_{src_type.name}", src_book_keys)
-
+            # ── Source-type level (indented, same facet-section style) ──
+            st.markdown('<div class="facet-section" style="margin-left:8px;margin-top:4px;">', unsafe_allow_html=True)
+            if _facet_section_header(f"📖 {src_type.value}", f"book_src_{src_type.name}", src_book_keys):
                 for cat, cat_books in cats.items():
                     cat_keys = [f"facet_book_{b.database_name}" for b in cat_books]
-                    with st.expander(cat.value, expanded=False):
-                        _render_select_all_buttons(
-                            f"book_cat_{src_type.name}_{cat.name}", cat_keys
-                        )
+                    # ── Category level (further indented) ──
+                    st.markdown('<div class="facet-section" style="margin-left:16px;margin-top:4px;">', unsafe_allow_html=True)
+                    if _facet_section_header(cat.value, f"book_cat_{src_type.name}_{cat.name}", cat_keys):
                         for b in cat_books:
                             st.checkbox(
                                 f"{b.en_display_name} ({b.heb_display_name})",
                                 key=f"facet_book_{b.database_name}",
                                 value=False,
                             )
+                    st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _render_passage_type_facet() -> None:
     all_keys = [f"facet_passage_{p.name}" for p in PassageType]
-    with st.expander("🔖  Passage Type", expanded=False):
-        _render_select_all_buttons("passage_type", all_keys)
+    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
+    if _facet_section_header("🔖 Passage Type", "passage_type", all_keys):
         for p in PassageType:
             st.checkbox(p.value, key=f"facet_passage_{p.name}", value=False)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _render_entity_facets() -> None:
-    with st.expander("🏷️  Entities", expanded=False):
+    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
+    if _facet_section_header("🏷️ Entities", "entities"):
         for ent_key, ent_label in _ENTITIES:
             cols = st.columns([3, 1])
             with cols[0]:
@@ -200,6 +243,7 @@ def _render_entity_facets() -> None:
                 if st.button("Select", key=f"select_ent_{ent_key}"):
                     with st.popover("Select entity", use_container_width=True):
                         st.write("")
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _render_facets_panel() -> None:
