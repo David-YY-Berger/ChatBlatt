@@ -42,6 +42,16 @@ def _group_books_by_category() -> dict[BookCategoryName, list]:
     return grouped
 
 
+def _group_books_by_source_then_category() -> dict[SourceType, dict[BookCategoryName, list]]:
+    """Returns {SourceType: {BookCategoryName: [Book, ...]}} preserving sorted order."""
+    result: dict[SourceType, dict[BookCategoryName, list]] = {}
+    for b in Books.sorted_all():
+        result.setdefault(b.source_type, {})
+        result[b.source_type].setdefault(b.category, [])
+        result[b.source_type][b.category].append(b)
+    return result
+
+
 def _inject_facet_css() -> None:
     st.markdown(
         """
@@ -51,38 +61,60 @@ def _inject_facet_css() -> None:
             margin-bottom: -10px;
         }
 
-        /* ── Facet section expander: outer container ── */
+        /* ── Facet section expander: outer container (level 1) ── */
         div[data-testid="stExpander"] {
-            border: 1px solid #c5cae9;
+            border: 1px solid #24354e;
             border-radius: 8px;
             margin-bottom: 6px;
-            background-color: #f3f6fd;
+            background-color: #1f2f4a;
         }
 
-        /* ── Facet section expander: header row ── */
+        /* ── Facet section expander: header row (level 1) ── */
+        div[data-testid="stExpander"] > details > summary,
         div[data-testid="stExpander"] summary {
             font-weight: 700;
             font-size: 0.92rem;
-            color: #2c3e7a;
+            color: #cdd6f4;
             padding: 6px 10px;
             border-radius: 8px;
         }
 
         div[data-testid="stExpander"] summary:hover {
-            background-color: #dde4f5;
+            background-color: #2a3f5f;
             border-radius: 8px;
         }
 
-        /* ── Nested book-category expanders: slightly lighter ── */
+        /* ── Nested expanders: level 2 (e.g. Source Type inside Book) ── */
         div[data-testid="stExpander"] div[data-testid="stExpander"] {
-            border: 1px solid #dce3f5;
-            background-color: #ffffff;
+            border: 1px solid #1e3352;
+            background-color: #152a42;
         }
 
         div[data-testid="stExpander"] div[data-testid="stExpander"] summary {
             font-weight: 600;
             font-size: 0.88rem;
-            color: #445080;
+            color: #94a3b8;
+        }
+
+        /* ── Triply-nested expanders: level 3 (category inside source type) ── */
+        div[data-testid="stExpander"] div[data-testid="stExpander"] div[data-testid="stExpander"] {
+            border: 1px solid #18304d;
+            background-color: #0f1e30;
+        }
+
+        div[data-testid="stExpander"] div[data-testid="stExpander"] div[data-testid="stExpander"] summary {
+            font-weight: 500;
+            font-size: 0.84rem;
+            color: #7a8ba8;
+        }
+
+        /* ── Select All / None buttons inside facet expanders: compact ── */
+        div[data-testid="stExpander"] [data-testid="stButton"] > button {
+            padding: 1px 6px !important;
+            font-size: 0.72rem !important;
+            min-height: 22px !important;
+            height: 22px !important;
+            border-radius: 4px !important;
         }
         </style>
         """,
@@ -91,33 +123,69 @@ def _inject_facet_css() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Select All / Deselect All helper
+# ---------------------------------------------------------------------------
+
+def _render_select_all_buttons(section_key: str, state_keys: list[str]) -> None:
+    """Render compact ✓ All / ✗ None buttons that bulk-toggle a set of checkbox keys."""
+    c1, c2, _ = st.columns([1, 1, 4])
+    with c1:
+        if st.button("✓ All", key=f"sel_all_{section_key}", use_container_width=True):
+            for k in state_keys:
+                st.session_state[k] = True
+            st.rerun()
+    with c2:
+        if st.button("✗ None", key=f"sel_none_{section_key}", use_container_width=True):
+            for k in state_keys:
+                st.session_state[k] = False
+            st.rerun()
+
+
+# ---------------------------------------------------------------------------
 # Facet renderers
 # ---------------------------------------------------------------------------
 
 def _render_source_type_facet() -> None:
+    all_keys = [f"facet_src_type_{stype.name}" for stype in SourceType]
     with st.expander("📄  Source Type", expanded=False):
+        _render_select_all_buttons("src_type", all_keys)
         for stype in SourceType:
             st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=False)
 
 
 def _render_book_facet() -> None:
+    all_book_keys = [f"facet_book_{b.database_name}" for b in Books.sorted_all()]
     with st.expander("📚  Book", expanded=False):
-        books_by_cat = _group_books_by_category()
-        for cat in BookCategoryName:
-            books = books_by_cat.get(cat, [])
-            if not books:
-                continue
-            with st.expander(cat.value, expanded=False):
-                for b in books:
-                    st.checkbox(
-                        f"{b.en_display_name} ({b.heb_display_name})",
-                        key=f"facet_book_{b.database_name}",
-                        value=False,
-                    )
+        _render_select_all_buttons("book_all", all_book_keys)
+
+        books_by_src = _group_books_by_source_then_category()
+        for src_type, cats in books_by_src.items():
+            src_book_keys = [
+                f"facet_book_{b.database_name}"
+                for cat_books in cats.values()
+                for b in cat_books
+            ]
+            with st.expander(f"📖  {src_type.value}", expanded=False):
+                _render_select_all_buttons(f"book_src_{src_type.name}", src_book_keys)
+
+                for cat, cat_books in cats.items():
+                    cat_keys = [f"facet_book_{b.database_name}" for b in cat_books]
+                    with st.expander(cat.value, expanded=False):
+                        _render_select_all_buttons(
+                            f"book_cat_{src_type.name}_{cat.name}", cat_keys
+                        )
+                        for b in cat_books:
+                            st.checkbox(
+                                f"{b.en_display_name} ({b.heb_display_name})",
+                                key=f"facet_book_{b.database_name}",
+                                value=False,
+                            )
 
 
 def _render_passage_type_facet() -> None:
+    all_keys = [f"facet_passage_{p.name}" for p in PassageType]
     with st.expander("🔖  Passage Type", expanded=False):
+        _render_select_all_buttons("passage_type", all_keys)
         for p in PassageType:
             st.checkbox(p.value, key=f"facet_passage_{p.name}", value=False)
 
@@ -195,7 +263,7 @@ def _render_results_body(ans, elapsed: str) -> None:
     """Display search results HTML component, with a plain-text fallback."""
     html_writer = HtmlWriter()
     try:
-        html = html_writer.get_full_html(ans, False)
+        html = html_writer.get_full_html(ans)
         components.html(html, height=800, scrolling=True)
         logger.info("Rendered HTML successfully.")
     except Exception as e:
