@@ -8,7 +8,7 @@ def print_to_file(content, file_type: FileTypeEnum.FileType, file_path: str):
     if not isinstance(file_type, FileTypeEnum.FileType):
         raise ValueError("Invalid file extension. Use FileType Enum.")
 
-    logger = Logger.Logger()
+    # logger = Logger.Logger()
     path = Path(file_path).with_suffix(f".{file_type.value}")
 
     try:
@@ -20,6 +20,6 @@ def print_to_file(content, file_type: FileTypeEnum.FileType, file_path: str):
                     file.write(content)
                 case FileTypeEnum.FileType.TXT:
                     file.write(content)
-        logger.log(f"Content successfully written to {path}")
+        print(f"Content successfully written to {path}")
     except Exception as e:
-        logger.error(f"Failed to write to file: {e}")
+        print(f"Failed to write to file: {e}")
