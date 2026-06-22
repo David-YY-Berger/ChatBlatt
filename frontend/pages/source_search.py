@@ -20,7 +20,7 @@ import streamlit.components.v1 as components
 
 from translations1 import get_text, is_rtl
 from backend.file_utils.HtmlWriter import HtmlWriter
-from components.facets import render_facets_panel
+from components.facets import inject_facet_css, render_entity_facets, render_facets_panel
 from .source_search_logic import collect_search_query, run_search
 
 logger = logging.getLogger(__name__)
@@ -31,8 +31,6 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 def _render_search_panel() -> None:
-    st.text_input("text similarity search", key="free_text_query")
-
     btn_col, msg_col = st.columns([1, 4])
     with btn_col:
         if st.button("Find Sources"):
@@ -90,8 +88,14 @@ def render(lang: str) -> None:
 
     _rtl = is_rtl(lang)  # available for future RTL layout adjustments
 
+    inject_facet_css()
+
     left_col, main_col = st.columns([2, 6])
     with left_col:
         render_facets_panel()
     with main_col:
+        # Entity facets at the top of the right area
+        render_entity_facets()
+        # Free-text similarity search below entity filters
+        st.text_input("Text similarity search", key="free_text_query")
         _render_search_panel()

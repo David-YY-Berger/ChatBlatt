@@ -118,17 +118,17 @@ def render_passage_type_facet() -> None:
 
 
 def render_entity_facets() -> None:
-    """Entity-type filter (expand-to-pick pattern, future: entity selector popover)."""
-    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
-    if facet_section_header("🏷️ Entities", "entities"):
-        for ent_key, ent_label in ENTITY_OPTIONS:
-            cols = st.columns([3, 1])
-            with cols[0]:
-                st.markdown(ent_label)
-            with cols[1]:
-                if st.button("Select", key=f"select_ent_{ent_key}"):
-                    with st.popover("Select entity", use_container_width=True):
-                        st.write("")
+    """Entity-type filter – compact vertical collapsibles, one per entity type."""
+    st.markdown('<div class="entity-panel">', unsafe_allow_html=True)
+    st.markdown(
+        "<div class='entity-panel-title'>🏷️ Filter by Entity</div>",
+        unsafe_allow_html=True,
+    )
+    for ent_key, ent_label in ENTITY_OPTIONS:
+        st.markdown('<div class="facet-section entity-section">', unsafe_allow_html=True)
+        if facet_section_header(ent_label, f"ent_{ent_key}"):
+            st.button("Select", key=f"select_ent_{ent_key}")
+        st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 
@@ -137,11 +137,13 @@ def render_entity_facets() -> None:
 # ---------------------------------------------------------------------------
 
 def render_facets_panel() -> None:
-    """Render the complete facets sidebar panel (CSS + all facet groups)."""
-    inject_facet_css()
+    """Render the left-column facets panel (source type, book, passage type).
+
+    Entity facets are rendered separately at the top of the page via
+    :func:`render_entity_facets`.  CSS injection is handled by the caller.
+    """
     st.subheader("Facets")
     render_source_type_facet()
     render_book_facet()
     render_passage_type_facet()
-    render_entity_facets()
 
