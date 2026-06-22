@@ -3,6 +3,30 @@ div[data-testid="stCheckbox"] {
     margin-bottom: -10px;
 }
 
+/* =========================================================
+   Kill Streamlit's default vertical whitespace in facets
+   ========================================================= */
+
+/* Tighten the gap between stacked elements (header rows, wrappers, checkboxes) */
+div[data-testid="stVerticalBlock"] {
+    gap: 0.15rem !important;
+}
+
+/* The open/close `<div class="facet-section">` markdown tags render as empty
+   elements – collapse them so they contribute no height. */
+div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.facet-section:empty),
+div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.entity-section:empty),
+div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"]:empty) {
+    display: none !important;
+}
+
+/* Remove the residual vertical margin Streamlit adds around markdown blocks
+   used purely as section wrappers/labels. */
+.facet-section div[data-testid="stMarkdown"],
+.entity-panel div[data-testid="stMarkdown"] {
+    margin-bottom: 0 !important;
+}
+
 /* ── Custom facet header row: kill column gaps and align items ── */
 .facet-header-row > div[data-testid="stHorizontalBlock"] {
     gap: 0 !important;
@@ -14,9 +38,9 @@ div[data-testid="stCheckbox"] {
 .facet-section {
     border: 1px solid #24354e;
     border-radius: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     background-color: #1f2f4a;
-    padding: 2px 6px 4px 6px;
+    padding: 1px 6px 2px 6px;
 }
 
 /* ── All buttons inside the facet panel: ultra-compact ── */
@@ -51,7 +75,7 @@ div[data-testid="stCheckbox"] {
     border: 1px solid #24354e;
     border-radius: 8px;
     background-color: #1a2b44;
-    padding: 4px 8px 6px 8px;
+    padding: 2px 8px 4px 8px;
     margin-bottom: 12px;
 }
 
@@ -60,12 +84,12 @@ div[data-testid="stCheckbox"] {
     font-size: 0.85rem;
     font-weight: 700;
     color: #93c5fd;
-    padding: 4px 2px 6px 2px;
+    padding: 2px 2px 2px 2px;
     letter-spacing: 0.02em;
 }
 
 /* Individual entity rows – reuse .facet-section base, tighten spacing */
 .entity-panel .entity-section {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 

@@ -53,7 +53,7 @@ def facet_section_header(
                 st.rerun()
         with c_lbl:
             st.markdown(
-                f"<div style='padding-top:4px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>"
+                f"<div style='padding-top:2px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>"
                 f"{title}{status_html}</div>",
                 unsafe_allow_html=True,
             )
@@ -76,7 +76,7 @@ def facet_section_header(
                 st.rerun()
         with c_lbl:
             st.markdown(
-                f"<div style='padding-top:4px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>{title}</div>",
+                f"<div style='padding-top:2px;font-weight:700;font-size:0.9rem;color:#cdd6f4'>{title}</div>",
                 unsafe_allow_html=True,
             )
 
