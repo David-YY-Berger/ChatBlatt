@@ -10,7 +10,7 @@ Typical usage::
 Lower-level helpers are importable directly from their submodules when needed
 by other pages::
 
-    from components.facets.section import facet_section_header, selection_status_html
+    from components.facets.section import facet_section_header
     from components.facets.renderers import render_book_facet
 """
 
@@ -23,7 +23,7 @@ from .renderers import (
     render_passage_type_facet,
     render_source_type_facet,
 )
-from .section import facet_section_header, selection_status_html
+from .section import facet_section_header
 
 __all__ = [
     # Panel
@@ -36,7 +36,6 @@ __all__ = [
     "render_entity_facets",
     # Generic section widget (reusable on any page)
     "facet_section_header",
-    "selection_status_html",
     # Constants
     "ENTITY_OPTIONS",
 ]

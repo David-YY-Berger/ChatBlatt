@@ -54,6 +54,12 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
     border-radius: 4px !important;
 }
 
+/* ── Tri-state checkbox button: larger font for box symbols ── */
+.facet-section [data-testid="stButton"]:has(button[kind="secondary"]) > button[title="Select all"],
+.facet-section [data-testid="stButton"]:has(button[kind="secondary"]) > button[title="Deselect all"] {
+    font-size: 0.9rem !important;
+}
+
 /* ── Nested facet sections: level 2 (source type inside book) ── */
 .facet-section .facet-section {
     background-color: #152a42;

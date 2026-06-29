@@ -74,7 +74,7 @@ def render_source_type_facet() -> None:
     st.markdown('<div class="facet-section">', unsafe_allow_html=True)
     if facet_section_header("📄 Source Type", "src_type", all_keys):
         for stype in SourceType:
-            st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=False)
+            st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 
@@ -100,7 +100,7 @@ def render_book_facet() -> None:
                             st.checkbox(
                                 f"{b.en_display_name} ({b.heb_display_name})",
                                 key=f"facet_book_{b.database_name}",
-                                value=False,
+                                value=True,
                             )
                     st.markdown("</div>", unsafe_allow_html=True)
             st.markdown("</div>", unsafe_allow_html=True)
@@ -113,7 +113,7 @@ def render_passage_type_facet() -> None:
     st.markdown('<div class="facet-section">', unsafe_allow_html=True)
     if facet_section_header("🔖 Passage Type", "passage_type", all_keys):
         for p in PassageType:
-            st.checkbox(p.value, key=f"facet_passage_{p.name}", value=False)
+            st.checkbox(p.value, key=f"facet_passage_{p.name}", value=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 
