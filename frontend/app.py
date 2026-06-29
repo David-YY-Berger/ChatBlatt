@@ -20,7 +20,7 @@ import streamlit as st
 from components.header import render_header
 from components.layout import apply_layout, language_selector
 from translations1 import get_text, is_rtl
-from pages import about, entity_search, home, maps, source_search
+from pages import about, entity_search, home, maps, number_search, source_search
 
 import logging
 
@@ -39,6 +39,7 @@ def _nav_items(lang: str) -> list[dict]:
     return [
         {"key": "home", "label": get_text("nav.home", lang), "children": []},
         {"key": "about", "label": get_text("nav.about", lang), "children": []},
+        {"key": "number_search", "label": get_text("nav.number_search", lang), "children": []},
         {"key": "source_search", "label": get_text("nav.source_search", lang), "children": []},
         {
             "key": "entity_search",
@@ -102,6 +103,8 @@ def _render_page(page_key: str, lang: str) -> None:
         home.render(lang)
     elif page_key == "about":
         about.render(lang)
+    elif page_key == "number_search":
+        number_search.render(lang)
     elif page_key == "source_search":
         source_search.render(lang)
     elif page_key in ("entity_search", "people", "places", "nations", "tribes", "symbols"):

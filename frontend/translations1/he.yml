@@ -10,7 +10,8 @@ ui:
 nav:
   home: "בית"
   about: "אודות"
-  source_search: "חיפוש"
+  number_search: "חיפוש מספריפ"
+  source_search: "חיפוש מקורות"
   entity_search: "חיפוש ישות"
   maps: "מפות"
 
@@ -87,6 +88,7 @@ entity_fields:
 page_titles:
   home: "ברוכים הבאים למפה-לי"
   about: "אודות מפה-לי"
+  number_search: "חיפוש מספרי"
   source_search: "חיפוש במקורות יהודיים"
   entity_search: "חיפוש ישות"
   people: "אנשים"
@@ -98,3 +100,7 @@ page_titles:
   genology: "מפת גנולוגיה"
   studied_from: "מפת מקורות לימוד"
 
+number_search_ui:
+  input_label: "הכנס מספר"
+  search_button: "חפש"
+  coming_soon: "חיפוש מספרי יהיה זמין בקרוב."
