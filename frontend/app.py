@@ -116,7 +116,7 @@ def _render_page(page_key: str, lang: str) -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="Mapalee | מפה-לי", layout="wide")
+    st.set_page_config(page_title="MapaLi | מפה-לי", layout="wide")
 
     _init_state()
     apply_layout(st.session_state["lang"])
