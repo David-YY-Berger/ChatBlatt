@@ -1,4 +1,4 @@
-class MapNumbersController:
+class SourceSearchController:
     def __init__(self):
         pass
 

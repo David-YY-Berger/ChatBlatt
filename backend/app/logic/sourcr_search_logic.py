@@ -1,4 +1,4 @@
-class MapNumbersLogic:
+class SourceSearchLogic:
     def __init__(self):
         pass
 

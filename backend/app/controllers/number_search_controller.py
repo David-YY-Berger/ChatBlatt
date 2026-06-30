@@ -1,4 +1,4 @@
-class MainSearchController:
+class NumberSearchController:
     def __init__(self):
         pass
 

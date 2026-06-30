@@ -1,4 +1,4 @@
-class MainSearchLogic:
+class NumberSearchLogic:
     def __init__(self):
         pass
 
