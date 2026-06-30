@@ -101,6 +101,12 @@ page_titles:
   studied_from: "Studied From Map"
 
 number_search_ui:
+  type_label: "Number Type"
+  type_whole: "Whole Number (1, 5, 8)"
+  type_fraction: "Fraction (1/3, 1/4)"
+  placeholder_whole: "e.g. 7"
+  placeholder_fraction: "e.g. 1/3"
   input_label: "Enter a number"
   search_button: "Search"
   coming_soon: "Number search is coming soon."
+  error_empty: "Please enter a number before searching"

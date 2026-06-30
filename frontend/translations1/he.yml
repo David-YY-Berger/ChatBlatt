@@ -101,6 +101,12 @@ page_titles:
   studied_from: "מפת מקורות לימוד"
 
 number_search_ui:
+  type_label: "סוג המספר"
+  type_whole: "מספר שלם (1, 5, 8)"
+  type_fraction: "שבר (1/3, 1/4)"
+  placeholder_whole: "לדוגמה: 7"
+  placeholder_fraction: "לדוגמה: 1/3"
   input_label: "הכנס מספר"
   search_button: "חפש"
   coming_soon: "חיפוש מספרי יהיה זמין בקרוב."
+  error_empty: "אנא הכנס מספר לפני החיפוש"
