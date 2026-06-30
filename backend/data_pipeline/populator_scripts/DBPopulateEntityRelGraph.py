@@ -8,6 +8,7 @@ from backend.db.data_names.Books import Books
 from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.models_db.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType
@@ -159,8 +160,9 @@ class DBPopulateLmmData(DBParentClass):
         if not en_name:
             return None, False
 
-        entity = Entity.create_from_en_name(en_name, entity_type)
-        lookup_key = (en_name.lower(), entity_type)
+        entity_class = Entity.get_class_for_type(entity_type)
+        entity = entity_class.create_from_entity_data(entity_data, entity_type)
+        lookup_key = entity.get_identity_tuple()
 
         if lookup_key in entity_key_map:
             return None, False  # already processed in this batch
@@ -361,22 +363,25 @@ class DBPopulateLmmData(DBParentClass):
         entity_key_map: Dict[tuple, str]) -> Optional[str]:
         """
         Resolve an entity name to its key by checking which category it belongs to
-        in the entities_dict, then looking up in entity_key_map using (name_lower, entity_type).
+        in the entities_dict, then looking up in entity_key_map.
+        Each entity type uses its own identity tuple via create_from_entity_data + get_identity_tuple.
         """
         name_lower = en_name.lower()
 
-        # Search through all categories to find what type this entity is
+        # Primary: find this entity in the entities_dict so we can build its exact identity tuple
         for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
             entity_list = entities_dict.get(category_name, [])
             if not entity_list:
                 continue
             for entity_data in entity_list:
                 if entity_data.get("en_name", "").strip().lower() == name_lower:
-                    lookup = (name_lower, entity_type)
+                    entity_class = Entity.get_class_for_type(entity_type)
+                    lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
                     if lookup in entity_key_map:
                         return entity_key_map[lookup]
 
-        # Fallback: try all types
+        # Fallback: try all types by default name-based key
+        # (ENumber keys are not name-based, so they won't match here — no special-casing needed)
         for entity_type in EntityType:
             lookup = (name_lower, entity_type)
             if lookup in entity_key_map:

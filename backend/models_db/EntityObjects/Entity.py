@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel, Field
-from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
+from typing import Any, Dict, List, Optional, Tuple, Type, TYPE_CHECKING
 
 from backend.models_db.Enums import EntityType
 
@@ -63,6 +63,21 @@ class Entity(BaseModel):
         }
 
     @classmethod
+    def get_class_for_type(cls, entity_type: EntityType) -> "Type[Entity]":
+        """
+        Returns the Entity subclass whose entityType default matches the given type,
+        or Entity itself if no specialized subclass has been imported yet.
+
+        Works via Python's __subclasses__() — no explicit registry needed.
+        Any subclass that has been imported is automatically discoverable.
+        """
+        for subclass in cls.__subclasses__():
+            field = subclass.model_fields.get("entityType")
+            if field is not None and field.default == entity_type:
+                return subclass
+        return cls
+
+    @classmethod
     def create_from_en_name(cls, en_name: str, entity_type: EntityType) -> "Entity":
         """Factory: create an Entity from just the English display name and type."""
         return cls(
@@ -70,6 +85,16 @@ class Entity(BaseModel):
             entityType=entity_type,
             all_en_names=[en_name],
         )
+
+    @classmethod
+    def create_from_entity_data(cls, entity_data: dict, entity_type: EntityType) -> "Entity":
+        """
+        Factory: create an Entity from raw JSON entity_data dict.
+        Base implementation uses only en_name. Subclasses override to extract
+        additional fields (e.g. ENumber extracts numberCategory, unit, context).
+        """
+        en_name = entity_data.get("en_name", "").strip()
+        return cls.create_from_en_name(en_name, entity_type)
 
     def to_db_dict(self) -> Dict[str, Any]:
         """Returns only the db-persisted fields as a dictionary."""
