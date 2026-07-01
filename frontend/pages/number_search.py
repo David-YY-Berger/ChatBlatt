@@ -5,9 +5,9 @@ Number-search page.
 UI responsibilities only:
   - search bar (type selector, input box, search button) laid out in one row
   - live input validation with specific, descriptive error messages
-  - result display (coming soon)
+  - result display grouped by NumberCategory → unit
 
-All search logic will live in number_search_logic.py via NumberSearchController.
+All search logic lives in number_search_logic.py via NumberSearchController.
 """
 
 from __future__ import annotations
@@ -18,7 +18,9 @@ from translations1 import get_text, is_rtl
 from backend.app.controllers.number_search_controller import (
     NumberSearchController,
     NumberSearchRequest,
+    NumberSearchResponse,
 )
+from backend.app.logic.number_search_logic import NumberSearchResult
 
 
 # ---------------------------------------------------------------------------
@@ -130,14 +132,70 @@ def _render_search_bar(lang: str) -> None:
 # ---------------------------------------------------------------------------
 
 def _run_search(number_type: str, value: str, lang: str) -> None:
-    """Pass the validated input to the controller and display the response."""
+    """Pass the validated input to the controller and store the response in session state."""
     controller = NumberSearchController()
     request = NumberSearchRequest(number_type=number_type, value=value)
     response = controller.handle(request)
-    if response.error:
-        st.error(response.error)
-    else:
-        st.info(get_text("number_search_ui.coming_soon", lang))
+    print(f"[number_search._run_search] {request} → {response}")
+    st.session_state["number_search_response"] = response
+    st.session_state["number_search_value"] = value
+
+
+# ---------------------------------------------------------------------------
+# Results rendering
+# ---------------------------------------------------------------------------
+
+def _render_results(lang: str) -> None:
+    """Read results from session state and render them grouped by category → unit."""
+    response: NumberSearchResponse | None = st.session_state.get("number_search_response")
+    if response is None:
+        return
+
+    value: str = st.session_state.get("number_search_value", "")
+
+    if not response.success or response.error:
+        st.error(response.error or get_text("number_search_ui.error_generic", lang))
+        return
+
+    result: NumberSearchResult | None = response.result
+    if result is None:
+        st.warning(get_text("number_search_ui.no_results", lang).format(value=value))
+        return
+
+    st.markdown(
+        f"### {get_text('number_search_ui.results_header', lang).format(value=value)}"
+    )
+    st.caption(
+        f"{result.total_count} {get_text('number_search_ui.results_count', lang)}"
+    )
+
+    for category, units_dict in result.by_category.items():
+        cat_label = (
+            category.value if category else get_text("number_search_ui.no_category", lang)
+        )
+        with st.expander(f"📂 {cat_label}", expanded=True):
+            for unit, number_results in units_dict.items():
+                unit_label = unit if unit else get_text("number_search_ui.no_unit", lang)
+                st.markdown(f"**{unit_label}**")
+
+                for nr in number_results:
+                    context_str = nr.number.context or ""
+                    if context_str:
+                        st.caption(
+                            f"{get_text('number_search_ui.context_label', lang)}: {context_str}"
+                        )
+
+                    if nr.sources:
+                        st.markdown(
+                            f"*{get_text('number_search_ui.sources_label', lang)}:*"
+                        )
+                        for src in nr.sources:
+                            st.markdown(f"  - {str(src)}")
+                    else:
+                        st.caption(get_text("number_search_ui.no_sources", lang))
+
+                    if nr is not number_results[-1]:
+                        st.divider()
 
 
 # ---------------------------------------------------------------------------
@@ -151,4 +209,4 @@ def render(lang: str) -> None:
     _render_search_bar(lang)
 
     st.divider()
-    # Results will be rendered here once number_search_logic is implemented
+    _render_results(lang)

@@ -1,3 +1,4 @@
+import re
 from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 from backend.db.Collections import CollectionObjs
@@ -251,6 +252,23 @@ class EntityMongoMixin:
         """Delete all entity documents from the entities collection. Returns deleted count."""
         result = self.get_collection(CollectionObjs.ENTITIES).delete_many({})
         return result.deleted_count
+
+    def get_enumbers_by_value(self, value: str) -> List["ENumber"]:
+        """
+        Return all ENumber entities whose display_en_name exactly matches
+        the given value (case-insensitive). Used by the number-search feature.
+        """
+        from backend.models_db.EntityObjects.ENumber import ENumber
+
+        query = {
+            DBFields.ENTITY_TYPE: EntityType.ENumber.value,
+            DBFields.DISPLAY_EN_NAME: {
+                DBOperators.REGEX: f"^{re.escape(value)}$",
+                DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE,
+            },
+        }
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
+        return [self._doc_to_entity(doc) for doc in docs]
 
     def _doc_to_entity(self, doc: Dict[str, Any]) -> Entity:
         from backend.models_db.EntityObjects.EAnimal import EAnimal

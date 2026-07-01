@@ -45,6 +45,16 @@ class ENumber(Entity):
 
     # ========================= Factory =========================
 
+    def __str__(self) -> str:
+        parts = [self.display_en_name]
+        if self.numberCategory:
+            parts.append(f"[{self.numberCategory.value}]")
+        if self.unit:
+            parts.append(self.unit)
+        if self.context:
+            parts.append(f"({self.context})")
+        return " ".join(parts)
+
     @classmethod
     def create_from_entity_data(cls, entity_data: dict, entity_type: EntityType = EntityType.ENumber) -> "ENumber":
         """Create an ENumber from raw JSON entity_data (as produced by the LLM pipeline)."""

@@ -69,3 +69,11 @@ class EntityInterfaceMixin(ABC):
         """Delete all entity documents. Returns the count of deleted documents."""
         pass
 
+    @abstractmethod
+    def get_enumbers_by_value(self, value: str) -> list:
+        """
+        Return all ENumber entities whose display_en_name exactly matches
+        the given value (case-insensitive).
+        """
+        pass
+

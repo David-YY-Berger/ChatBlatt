@@ -37,6 +37,17 @@ class SourceMetadataMongoMixin:
         docs = self.get_collection(CollectionObjs.SRC_METADATA).find({})
         return [self._doc_to_src_metadata(doc) for doc in docs]
 
+    def get_source_metadata_by_entity_key(self, entity_key: str) -> List[SourceMetadata]:
+        """
+        Return all SourceMetadata documents whose entity_keys array contains
+        the given entity_key. Used by the number-search feature to find every
+        source passage that mentions a specific entity.
+        """
+        docs = self.get_collection(CollectionObjs.SRC_METADATA).find(
+            {DBFields.ENTITY_KEYS: entity_key}
+        )
+        return [self._doc_to_src_metadata(doc) for doc in docs]
+
     def _src_metadata_to_doc(self, src_metadata: SourceMetadata) -> Dict[str, Any]:
         return {
             DBFields.KEY: src_metadata.key,

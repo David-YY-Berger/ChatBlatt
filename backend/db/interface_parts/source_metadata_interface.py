@@ -31,3 +31,11 @@ class SourceMetadataInterfaceMixin(ABC):
     def get_all_source_metadata(self) -> List[SourceMetadata]:
         pass
 
+    @abstractmethod
+    def get_source_metadata_by_entity_key(self, entity_key: str) -> List[SourceMetadata]:
+        """
+        Return all SourceMetadata documents whose entity_keys array contains
+        the given entity_key.
+        """
+        pass
+
