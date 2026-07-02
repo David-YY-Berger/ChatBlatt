@@ -9,6 +9,7 @@ from typing_extensions import override
 
 from backend.common.Decorators import singleton
 from backend.db.Collections import CollectionObjs, Collection
+from backend.db.DBConstants import DBFields
 from backend.db.DBapiInterface import DBapiInterface
 from backend.db.mongo_parts.entity_mixin import EntityMongoMixin
 from backend.db.mongo_parts.faiss_mixin import FaissMongoMixin
@@ -57,6 +58,42 @@ class DBapiMongoDB(
         for collection in CollectionObjs.all():
             if collection.db_name not in self.dbs:
                 self.dbs[collection.db_name] = self.client.get_database(collection.db_name)
+
+        self._ensure_indexes()
+
+    def _ensure_indexes(self) -> None:
+        """
+        Create indexes on first connect (idempotent — safe to call repeatedly).
+
+        Entities collection:
+          - Compound (entityType, display_en_name): covers get_enumbers_by_value and
+            all name+type existence queries during population.
+          - Single (key): fast key-based lookups everywhere.
+
+        SourceMetadata collection:
+          - Multikey (entity_keys): MongoDB indexes each array element individually,
+            making "find all SourceMetadata containing entity key X" an index scan
+            instead of a full collection scan.
+        """
+        from pymongo import ASCENDING
+
+        entities = self.get_collection(CollectionObjs.ENTITIES)
+        entities.create_index(
+            [(DBFields.ENTITY_TYPE, ASCENDING), (DBFields.DISPLAY_EN_NAME, ASCENDING)],
+            name="idx_entity_type_name",
+        )
+        entities.create_index(
+            [(DBFields.KEY, ASCENDING)],
+            name="idx_entity_key",
+            unique=True,
+            sparse=True,  # sparse: documents without 'key' (during insert) are excluded
+        )
+
+        src_metadata = self.get_collection(CollectionObjs.SRC_METADATA)
+        src_metadata.create_index(
+            [(DBFields.ENTITY_KEYS, ASCENDING)],
+            name="idx_src_metadata_entity_keys",
+        )
 
     @override
     def disconnect(self) -> None:

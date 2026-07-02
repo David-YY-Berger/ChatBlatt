@@ -125,13 +125,10 @@ class EPerson(Entity):
         parent (via childOfFather / childOfMother relationships).
         Falls back to name-only if no family context.
         """
-        from backend.db.DBConstants import DBFields, DBOperators
+        from backend.db.DBConstants import DBFields
 
         base_query = {
-            DBFields.DISPLAY_EN_NAME: {
-                DBOperators.REGEX: f"^{self.display_en_name}$",
-                DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE,
-            },
+            DBFields.DISPLAY_EN_NAME: self.display_en_name,  # already lowercase
             DBFields.ENTITY_TYPE: self.entityType.value,
         }
 

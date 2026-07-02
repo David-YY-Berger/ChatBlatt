@@ -1,4 +1,3 @@
-import re
 from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 from backend.db.Collections import CollectionObjs
@@ -135,14 +134,12 @@ class EntityMongoMixin:
         from backend.models_db.Enums import RelType
 
         # Find entities by name
-        regex1 = {DBOperators.REGEX: f"^{name1}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
-        doc1 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: regex1})
+        doc1 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: name1.lower()})
         if not doc1:
             return False
         key1 = doc1.get(DBFields.KEY) or str(doc1["_id"])
 
-        regex2 = {DBOperators.REGEX: f"^{name2}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
-        doc2 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: regex2})
+        doc2 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: name2.lower()})
         if not doc2:
             return False
         key2 = doc2.get(DBFields.KEY) or str(doc2["_id"])
@@ -262,10 +259,7 @@ class EntityMongoMixin:
 
         query = {
             DBFields.ENTITY_TYPE: EntityType.ENumber.value,
-            DBFields.DISPLAY_EN_NAME: {
-                DBOperators.REGEX: f"^{re.escape(value)}$",
-                DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE,
-            },
+            DBFields.DISPLAY_EN_NAME: value.lower(),
         }
         docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
         return [self._doc_to_entity(doc) for doc in docs]

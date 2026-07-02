@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import Any, Dict, List, Optional, Tuple, Type, TYPE_CHECKING
 
 from backend.models_db.Enums import EntityType
@@ -36,6 +36,11 @@ class Entity(BaseModel):
     # Populated by the entity populator; used by the UI for click-through navigation.
     rel_links: Dict[str, Tuple[str, Any]] = TransientField(default_factory=dict)
 
+    @field_validator("display_en_name", mode="before")
+    @classmethod
+    def _lowercase_display_en_name(cls, v: str) -> str:
+        return v.lower() if isinstance(v, str) else v
+
     # ========================= Identity / Equality =========================
 
     def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
@@ -43,7 +48,7 @@ class Entity(BaseModel):
         Returns a hashable tuple that uniquely identifies this entity for dedup purposes.
         Two entities with the same identity tuple are considered 'the same entity'.
 
-        Default: (display_en_name lowercased, entityType).
+        Default: (display_en_name, entityType) — display_en_name is always stored lowercase.
         Subclasses override for richer semantics.
         """
         return (self.display_en_name.lower(), self.entityType)
@@ -53,12 +58,12 @@ class Entity(BaseModel):
         Returns a MongoDB query dict to find an existing entity that is 'equal' to this one.
         Used by the DB layer for dedup on insert.
 
-        Default: match by display_en_name (case-insensitive) + entityType.
+        Default: match by display_en_name (always lowercase) + entityType.
         Subclasses override for richer semantics.
         """
-        from backend.db.DBConstants import DBFields, DBOperators
+        from backend.db.DBConstants import DBFields
         return {
-            DBFields.DISPLAY_EN_NAME: {DBOperators.REGEX: f"^{self.display_en_name}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE},
+            DBFields.DISPLAY_EN_NAME: self.display_en_name,  # already lowercase
             DBFields.ENTITY_TYPE: self.entityType.value,
         }
 

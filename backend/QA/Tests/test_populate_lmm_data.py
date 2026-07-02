@@ -10,11 +10,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
 
     ABRAHAM = {
         # --- scalar entity fields ---
-        "display_en_name": "Abraham",
-        "display_heb_name": "",
-        "all_en_names":  ["Abraham"],
-        "all_heb_names": [],
-        "entityType":    "EPerson",
+        "display_en_name": "abraham",
         "alias_keys":    [],
         "timePeriod":    None,
         "isWoman":       False,
@@ -42,7 +38,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
                                  "Machpelah", "The Land"],                                                   "outgoing"),
     }
     HEBRON = {
-        "display_en_name": "Hebron",
+        "display_en_name": "hebron",
         "display_heb_name": "",
         "all_en_names":  ["Hebron"],
         "all_heb_names": [],
@@ -57,7 +53,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
         "placeToNation":       (["Hittites", "Canaan"],                    "outgoing"),
     }
     EGYPT_NATION = {
-        "display_en_name": "Egypt",
+        "display_en_name": "egypt",
         "display_heb_name": "",
         "all_en_names":  ["Egypt"],
         "all_heb_names": [],
@@ -70,7 +66,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
         "contrastedWith":        (["Hebrew"],                                                            "both"),
     }
     EGYPT_PLACE = {
-        "display_en_name": "Egypt",
+        "display_en_name": "egypt",
         "display_heb_name": "",
         "all_en_names":  ["Egypt"],
         "all_heb_names": [],
@@ -89,7 +85,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
         "comparedTo":          (["Jordan"],                                                                       "both"),
     }
     JACOB = {
-        "display_en_name": "Jacob",
+        "display_en_name": "jacob",
         "display_heb_name": "",
         "all_en_names":  ["Jacob"],
         "all_heb_names": [],
