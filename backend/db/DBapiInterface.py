@@ -4,6 +4,7 @@ from typing import Any, Dict
 from backend.db.Collections import Collection
 from backend.db.interface_parts.entity_interface import EntityInterfaceMixin
 from backend.db.interface_parts.faiss_interface import FaissInterfaceMixin
+from backend.db.interface_parts.genealogy_interface import GenealogyInterfaceMixin
 from backend.db.interface_parts.relationship_interface import RelationshipInterfaceMixin
 from backend.db.interface_parts.source_content_interface import SourceContentInterfaceMixin
 from backend.db.interface_parts.source_metadata_interface import SourceMetadataInterfaceMixin
@@ -15,6 +16,7 @@ class DBapiInterface(
     EntityInterfaceMixin,
     RelationshipInterfaceMixin,
     SourceMetadataInterfaceMixin,
+    GenealogyInterfaceMixin,
     ABC,
 ):
     """Shared DB API contract, composed from per-domain mixins."""

@@ -1,12 +1,10 @@
 # bs"d - lehagdil torah velahadir
 
-from backend.models_db.SourceClasses.SourceClass import SourceClass
-from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
-from backend.db.Collections import CollectionObjs
 from backend.db.DBFactory import DBFactory
 from backend.db.DBapiMongoDB import DBapiMongoDB
-from backend.data_pipeline.EntityRelManager import EntityRelManager
-from backend.data_pipeline.faiss_api.FaissEngine import FaissEngine
+from backend.db import EntityRelManager
+from backend.faiss_api.FaissEngine import FaissEngine
+
 from backend.models_db.Answer import Answer
 from backend.app.SourceSearchQuery import SourceSearchQuery
 

@@ -28,6 +28,21 @@ map_tabs:
   studied_from: "studiedFrom"
   label: "Choose a map view"
 
+maps_ui:
+  select_map_prompt: "Please select a map type from the menu above."
+  studied_from_coming_soon: "The 'Studied From' map is coming soon."
+
+genealogy_ui:
+  select_person_label: "Select a person to centre the family tree on"
+  prompt_select_person: "Choose a person above to view their genealogy graph."
+  depth_label: "Edge closeness"
+  depth_1: "1 — Direct family"
+  depth_2: "2 — Family of family"
+  graph_title: "Family Tree"
+  no_data: "No genealogy data found for this person."
+  nodes_label: "people"
+  edges_label: "connections"
+
 entity_search_ui:
   select_tab_prompt: "Please select an entity type from the menu above."
   not_implemented: "This entity type is not yet available."

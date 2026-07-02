@@ -28,6 +28,21 @@ map_tabs:
   studied_from: "מקורות לימוד"
   label: "בחר תצוגת מפה"
 
+maps_ui:
+  select_map_prompt: "אנא בחרו סוג מפה מהתפריט למעלה."
+  studied_from_coming_soon: "מפת 'מקורות לימוד' תהיה זמינה בקרוב."
+
+genealogy_ui:
+  select_person_label: "בחר אדם למרכז עץ המשפחה"
+  prompt_select_person: "בחרו אדם למעלה כדי לצפות בגרף הגנולוגי שלו."
+  depth_label: "קרבה גרפית"
+  depth_1: "1 — משפחה ישירה"
+  depth_2: "2 — משפחת המשפחה"
+  graph_title: "עץ משפחה"
+  no_data: "לא נמצאו נתוני גנולוגיה עבור אדם זה."
+  nodes_label: "אנשים"
+  edges_label: "קשרים"
+
 entity_search_ui:
   select_tab_prompt: "אנא בחרו סוג ישות מהתפריט למעלה."
   not_implemented: "סוג ישות זה עדיין לא זמין."
