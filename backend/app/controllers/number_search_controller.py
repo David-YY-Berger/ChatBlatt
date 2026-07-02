@@ -11,9 +11,10 @@ from backend.app.logic.number_search_logic import NumberSearchLogic, NumberSearc
 class NumberSearchRequest:
     number_type: str  # "whole" or "fraction"
     value: str
+    lang: str = "en"  # UI language — "en" or "he"
 
     def __str__(self) -> str:
-        return f"NumberSearchRequest(type={self.number_type}, value={self.value!r})"
+        return f"NumberSearchRequest(type={self.number_type}, value={self.value!r}, lang={self.lang!r})"
 
 
 @dataclass
@@ -34,7 +35,7 @@ class NumberSearchController:
 
     def handle(self, request: NumberSearchRequest) -> NumberSearchResponse:
         try:
-            result = self._logic.execute(request.value)
+            result = self._logic.execute(request.value, request.lang)
             return NumberSearchResponse(success=True, result=result)
         except Exception as e:
             return NumberSearchResponse(success=False, error=str(e))

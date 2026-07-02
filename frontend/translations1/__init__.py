@@ -6,7 +6,16 @@ import functools
 from pathlib import Path
 from typing import Any, Dict
 
+import sys
+
 import yaml
+
+# Ensure the project root is on the path so system_common is importable
+_PROJECT_ROOT = str(Path(__file__).resolve().parent.parent.parent)
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
+from system_common.Constants import LANG_EN, LANG_HE, FALLBACK_LANG  # noqa: E402
 
 TRANSLATIONS_DIR = Path(__file__).parent
 
@@ -23,7 +32,7 @@ def _load_translations() -> Dict[str, Dict[str, Any]]:
 
 def available_languages() -> Dict[str, str]:
     # Display names for selection UI.
-    return {"en": "English", "he": "עברית"}
+    return {LANG_EN: "English", LANG_HE: "עברית"}
 
 
 def is_rtl(lang: str) -> bool:
@@ -41,12 +50,11 @@ def _get_nested(data: Dict[str, Any], path: list[str]) -> Any:
 
 def get_text(key: str, lang: str) -> str:
     translations = _load_translations()
-    fallback_lang = "en"
     path = key.split(".")
 
     value = _get_nested(translations.get(lang, {}), path)
-    if value is None and lang != fallback_lang:
-        value = _get_nested(translations.get(fallback_lang, {}), path)
+    if value is None and lang != FALLBACK_LANG:
+        value = _get_nested(translations.get(FALLBACK_LANG, {}), path)
     if value is None:
         return key
     return str(value)

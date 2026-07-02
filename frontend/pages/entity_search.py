@@ -20,6 +20,9 @@ import streamlit as st
 
 from translations1 import get_text, is_rtl
 from system_common.SystemFunctions import get_secret
+from system_common.Constants import (
+    PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
+)
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
 
@@ -277,11 +280,11 @@ def _entity_type_to_tab(entity_type) -> str | None:
     from backend.models_db.Enums import EntityType
 
     _TAB_MAP = {
-        EntityType.EPerson: "people",
-        EntityType.EPlace: "places",
-        EntityType.ENation: "nations",
-        EntityType.ETribeOfIsrael: "tribes",
-        EntityType.ESymbol: "symbols",
+        EntityType.EPerson: PAGE_PEOPLE,
+        EntityType.EPlace: PAGE_PLACES,
+        EntityType.ENation: PAGE_NATIONS,
+        EntityType.ETribeOfIsrael: PAGE_TRIBES,
+        EntityType.ESymbol: PAGE_SYMBOLS,
     }
     return _TAB_MAP.get(entity_type)
 

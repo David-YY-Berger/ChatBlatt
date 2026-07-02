@@ -20,7 +20,8 @@ from backend.app.controllers.number_search_controller import (
     NumberSearchRequest,
     NumberSearchResponse,
 )
-from backend.app.logic.number_search_logic import NumberSearchResult
+from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
+from system_common.Constants import NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION
 
 
 # ---------------------------------------------------------------------------
@@ -33,7 +34,7 @@ def _validate_number(value: str, number_type: str) -> str | None:
     if not s:
         return None  # Empty — silently ignored until Search is clicked
 
-    if number_type == "whole":
+    if number_type == NUMBER_TYPE_WHOLE:
         if "/" in s:
             return "❌ Whole numbers cannot contain '/' — did you mean to select 'Fraction'?"
         if "." in s:
@@ -81,10 +82,10 @@ def _render_search_bar(lang: str) -> None:
     with type_col:
         number_type = st.radio(
             get_text("number_search_ui.type_label", lang),
-            options=["whole", "fraction"],
+            options=[NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION],
             format_func=lambda x: (
                 get_text("number_search_ui.type_whole", lang)
-                if x == "whole"
+                if x == NUMBER_TYPE_WHOLE
                 else get_text("number_search_ui.type_fraction", lang)
             ),
             key="number_type",
@@ -94,7 +95,7 @@ def _render_search_bar(lang: str) -> None:
     with input_col:
         placeholder = (
             get_text("number_search_ui.placeholder_whole", lang)
-            if number_type == "whole"
+            if number_type == NUMBER_TYPE_WHOLE
             else get_text("number_search_ui.placeholder_fraction", lang)
         )
         value = st.text_input(
@@ -134,7 +135,7 @@ def _render_search_bar(lang: str) -> None:
 def _run_search(number_type: str, value: str, lang: str) -> None:
     """Pass the validated input to the controller and store the response in session state."""
     controller = NumberSearchController()
-    request = NumberSearchRequest(number_type=number_type, value=value)
+    request = NumberSearchRequest(number_type=number_type, value=value, lang=lang)
     response = controller.handle(request)
     print(f"[number_search._run_search] {request} → {response}")
     st.session_state["number_search_response"] = response
@@ -146,7 +147,7 @@ def _run_search(number_type: str, value: str, lang: str) -> None:
 # ---------------------------------------------------------------------------
 
 def _render_results(lang: str) -> None:
-    """Read results from session state and render them grouped by category → unit."""
+    """Read results from session state and render them grouped by category, then unit."""
     response: NumberSearchResponse | None = st.session_state.get("number_search_response")
     if response is None:
         return
@@ -169,32 +170,35 @@ def _render_results(lang: str) -> None:
         f"{result.total_count} {get_text('number_search_ui.results_count', lang)}"
     )
 
-    for category, units_dict in result.by_category.items():
+    for category, occurrences in result.by_category.items():
         cat_label = (
             category.value if category else get_text("number_search_ui.no_category", lang)
         )
         with st.expander(f"📂 {cat_label}", expanded=True):
-            for unit, number_results in units_dict.items():
+            # Sub-group by unit for cleaner display (unit is inside DTO, not a map key)
+            unit_groups: dict = {}
+            for occ in occurrences:
+                unit_key = occ.unit  # may be None
+                if unit_key not in unit_groups:
+                    unit_groups[unit_key] = []
+                unit_groups[unit_key].append(occ)
+
+            for unit, unit_occs in unit_groups.items():
                 unit_label = unit if unit else get_text("number_search_ui.no_unit", lang)
                 st.markdown(f"**{unit_label}**")
 
-                for nr in number_results:
-                    context_str = nr.number.context or ""
-                    if context_str:
+                for occ in unit_occs:
+                    if occ.context:
                         st.caption(
-                            f"{get_text('number_search_ui.context_label', lang)}: {context_str}"
+                            f"{get_text('number_search_ui.context_label', lang)}: {occ.context}"
                         )
+                    st.markdown(
+                        f"*{get_text('number_search_ui.sources_label', lang)}:* {occ.source_str}"
+                    )
+                    if occ.summary:
+                        st.caption(occ.summary)
 
-                    if nr.sources:
-                        st.markdown(
-                            f"*{get_text('number_search_ui.sources_label', lang)}:*"
-                        )
-                        for src in nr.sources:
-                            st.markdown(f"  - {str(src)}")
-                    else:
-                        st.caption(get_text("number_search_ui.no_sources", lang))
-
-                    if nr is not number_results[-1]:
+                    if occ is not unit_occs[-1]:
                         st.divider()
 
 

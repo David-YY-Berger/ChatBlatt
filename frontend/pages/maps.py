@@ -5,6 +5,7 @@ from __future__ import annotations
 import streamlit as st
 
 from translations1 import get_text, is_rtl
+from system_common.Constants import PAGE_MAPS
 
 LOREM_EN = (
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
@@ -21,7 +22,7 @@ def render(lang: str, selected: str | None = None) -> None:
     if selected:
         title_key = f"page_titles.{selected}"
     else:
-        title_key = "page_titles.maps"
+        title_key = f"page_titles.{PAGE_MAPS}"
 
     title = get_text(title_key, lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
