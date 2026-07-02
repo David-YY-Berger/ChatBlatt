@@ -5,13 +5,14 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from backend.app.logic.number_search_logic import NumberSearchLogic, NumberSearchResult
+from system_common.Constants import LANG_EN
 
 
 @dataclass
 class NumberSearchRequest:
     number_type: str  # "whole" or "fraction"
     value: str
-    lang: str = "en"  # UI language — "en" or "he"
+    lang: str = LANG_EN  # UI language — "en" or "he"
 
     def __str__(self) -> str:
         return f"NumberSearchRequest(type={self.number_type}, value={self.value!r}, lang={self.lang!r})"

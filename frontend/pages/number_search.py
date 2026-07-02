@@ -15,6 +15,7 @@ from __future__ import annotations
 import html
 
 import streamlit as st
+import streamlit.components.v1 as st_components
 
 from translations1 import get_text, is_rtl
 from system_common.SystemFunctions import get_secret
@@ -29,6 +30,11 @@ from backend.app.controllers.number_search_controller import (
 from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
 from backend.models_db.Enums import NumberCategory
 from system_common.Constants import NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION
+from frontend.components.source_popup import (
+    source_popup_css_js,
+    source_popup_html,
+    source_link_html,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -75,8 +81,21 @@ div[data-testid="stTabs"] button[role="tab"]:nth-child({i}):hover {{
     return "\n".join(parts)
 
 
-def _occurrences_table(occurrences: list[NumberOccurrenceDTO], accent: str) -> str:
-    """Return an HTML table string for the given occurrences, sorted by Unit."""
+def _occurrences_table(
+    occurrences: list[NumberOccurrenceDTO],
+    accent: str,
+    source_contents: dict,
+) -> tuple[str, int]:
+    """
+    Return ``(full_html, iframe_height)`` for the given occurrences.
+
+    ``full_html`` is a self-contained HTML document that includes:
+      - the styled occurrences table with clickable source links
+      - hidden popup overlays for each source
+      - the required CSS + JS
+
+    ``source_contents`` maps source_key → SourceContent (or None).
+    """
     sorted_occs = sorted(occurrences, key=lambda o: (o.unit is None, (o.unit or "").lower()))
 
     header_bg = _hex_rgba(accent, 0.10)
@@ -92,22 +111,48 @@ def _occurrences_table(occurrences: list[NumberOccurrenceDTO], accent: str) -> s
     border_style = f"border-bottom:1px solid {_hex_rgba(accent, 0.12)};"
 
     rows_html = []
+    popup_html_parts = []
+    seen_popup_keys: set[str] = set()
+
     for idx, occ in enumerate(sorted_occs):
-        row_bg = f"background:{stripe_bg};" if idx % 2 == 1 else ""
+        row_bg  = f"background:{stripe_bg};" if idx % 2 == 1 else ""
         unit    = html.escape(occ.unit or "—")
         context = html.escape(occ.context or "—")
-        source  = html.escape(occ.source_str or "—")
         summary = html.escape(occ.summary or "—")
+
+        # Build source cell: clickable link if content is available
+        src_content = source_contents.get(occ.source_key)
+        if src_content is not None:
+            source_cell = source_link_html(occ.source_key, occ.source_str, color=accent)
+        else:
+            source_cell = html.escape(occ.source_str or "—")
+
         rows_html.append(
             f"<tr style='{row_bg}'>"
             f"<td style='{td_base}{border_style} font-weight:500;'>{unit}</td>"
             f"<td style='{td_base}{border_style}'>{context}</td>"
-            f"<td style='{td_base}{border_style} color:{accent}; font-weight:500;'>{source}</td>"
+            f"<td style='{td_base}{border_style}'>{source_cell}</td>"
             f"<td style='{td_base}{border_style} color:#475569;'>{summary}</td>"
             f"</tr>"
         )
 
-    table = (
+        # Build popup HTML once per unique source key
+        if src_content is not None and occ.source_key not in seen_popup_keys:
+            seen_popup_keys.add(occ.source_key)
+            content_list = src_content._get_content() if hasattr(src_content, "_get_content") else getattr(src_content, "content", [])
+            en_html  = content_list[0] if len(content_list) > 0 else ""
+            heb_html = content_list[1] if len(content_list) > 1 else ""
+            popup_html_parts.append(
+                source_popup_html(
+                    source_key=occ.source_key,
+                    title_en=occ.source_str_en,
+                    title_heb=occ.source_str_heb,
+                    en_content=en_html,
+                    heb_content=heb_html,
+                )
+            )
+
+    table_html = (
         "<div style='overflow-x:auto; border-radius:8px; border:1px solid "
         + border_col + "; margin-top:0.5rem;'>"
         "<table style='width:100%; border-collapse:collapse;'>"
@@ -120,12 +165,56 @@ def _occurrences_table(occurrences: list[NumberOccurrenceDTO], accent: str) -> s
         "<tbody>" + "".join(rows_html) + "</tbody>"
         "</table></div>"
     )
-    return table
+
+    full_html = (
+        "<!DOCTYPE html><html><head><meta charset='UTF-8'>"
+        + source_popup_css_js()
+        + "</head><body style='margin:0;padding:0;'>"
+        + table_html
+        + "".join(popup_html_parts)
+        + "</body></html>"
+    )
+
+    # Height: enough for table rows + a minimum for the popup to be usable
+    height = max(520, 80 + len(sorted_occs) * 52)
+    return full_html, height
 
 
 # ---------------------------------------------------------------------------
-# Validation
+# Source content fetching
 # ---------------------------------------------------------------------------
+
+def _fetch_source_contents(result: NumberSearchResult) -> dict:
+    """
+    Fetch SourceContent objects for all unique source keys in *result*.
+    Results are cached in session_state to avoid repeated DB calls on re-renders.
+    Returns a dict mapping source_key → SourceContent (or None on error).
+    """
+    cache_key = "number_search_source_contents"
+    cached: dict | None = st.session_state.get(cache_key)
+    if cached is not None:
+        return cached
+
+    unique_keys: set[str] = set()
+    for occurrences in result.by_category.values():
+        for occ in occurrences:
+            unique_keys.add(occ.source_key)
+
+    from backend.db.DBFactory import DBFactory
+    db = DBFactory.get_prod_db_mongo()
+
+    contents: dict = {}
+    for key in unique_keys:
+        try:
+            contents[key] = db.find_one_source_content(key)
+        except Exception:
+            contents[key] = None
+
+    st.session_state[cache_key] = contents
+    return contents
+
+
+
 
 def _validate_number(value: str, number_type: str) -> str | None:
     """Return a descriptive error message, or None when the input is valid."""
@@ -240,6 +329,8 @@ def _run_search(number_type: str, value: str, lang: str) -> None:
         _debug_log_result(request, response)
     st.session_state["number_search_response"] = response
     st.session_state["number_search_value"] = value
+    # Clear cached source contents so they're re-fetched for the new result
+    st.session_state.pop("number_search_source_contents", None)
 
 
 # ---------------------------------------------------------------------------
@@ -299,6 +390,9 @@ def _render_results(lang: str) -> None:
         st.warning(get_text("number_search_ui.no_results", lang).format(value=value))
         return
 
+    # Fetch source content for popup support (cached in session_state)
+    source_contents = _fetch_source_contents(result)
+
     # ── Big number header ──────────────────────────────────────────────────
     plural = "s" if result.total_count != 1 else ""
     st.markdown(
@@ -354,7 +448,8 @@ def _render_results(lang: str) -> None:
                 f"{count} occurrence{plural}</p>",
                 unsafe_allow_html=True,
             )
-            st.markdown(_occurrences_table(occurrences, color), unsafe_allow_html=True)
+            table_html, iframe_height = _occurrences_table(occurrences, color, source_contents)
+            st_components.html(table_html, height=iframe_height, scrolling=False)
 
 
 # ---------------------------------------------------------------------------

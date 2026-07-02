@@ -17,6 +17,7 @@ from backend.models_db.SourceClasses.SectionSorting import (
 )
 from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.db.data_names.Books import Books
+from system_common.Constants import LANG_EN
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -105,7 +106,7 @@ class TestSourceContentSorting(unittest.TestCase):
     """SourceContent objects should be sortable by book order then section."""
 
     def _make(self, key):
-        return SourceContent(key=key, content=["en", "heb", ""])
+        return SourceContent(key=key, content=[LANG_EN, "heb", ""])
 
     def test_bt_sources_sort_by_section(self):
         keys = [
@@ -194,7 +195,7 @@ class TestGetAllSrcContentsByBookSorted(unittest.TestCase):
         from backend.db.Collections import CollectionObjs
         col = CollectionObjs.get_col_obj_from_str(book.source_type.name)
         for k in keys:
-            self.db.get_collection(col).insert_one({"key": k, "content": ["en", "heb", ""]})
+            self.db.get_collection(col).insert_one({"key": k, "content": [LANG_EN, "heb", ""]})
 
     def test_bt_book_returns_sorted(self):
         keys_shuffled = [

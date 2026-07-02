@@ -5,19 +5,22 @@ from typing import Dict, List, Optional
 
 from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.Enums import NumberCategory
+from system_common.Constants import LANG_EN, LANG_HE
 
 
 @dataclass
 class NumberOccurrenceDTO:
     """
     One (ENumber × SourceMetadata) occurrence enriched with display strings.
-    All five fields come directly from the ENumber entity and its SourceMetadata.
+    All fields come directly from the ENumber entity and its SourceMetadata.
     """
     unit: Optional[str]       # number.unit
     context: Optional[str]    # number.context
     source_str: str           # SourceClass.__str__() or to_heb_str() depending on lang
     summary: Optional[str]    # SourceMetadata.summary_en or summary_heb depending on lang
     source_key: str           # SourceMetadata.key
+    source_str_en: str = ""   # English display title (SourceClass.__str__())
+    source_str_heb: str = ""  # Hebrew display title  (SourceClass.to_heb_str())
 
     def __str__(self) -> str:
         return (
@@ -52,7 +55,7 @@ class NumberSearchLogic:
         from backend.db.DBFactory import DBFactory
         self.db = DBFactory.get_prod_db_mongo()
 
-    def execute(self, value: str, lang: str = "en") -> Optional[NumberSearchResult]:
+    def execute(self, value: str, lang: str = LANG_EN) -> Optional[NumberSearchResult]:
         """
         Find all ENumber entities matching *value* and build a map of
         NumberCategory → [NumberOccurrenceDTO], where each DTO holds the five
@@ -79,8 +82,8 @@ class NumberSearchLogic:
                 by_category[cat] = []
 
             for src in sources_sorted:
-                source_str = src.to_heb_str() if lang == "he" else str(src)
-                summary = src.summary_heb if lang == "he" else src.summary_en
+                source_str = src.to_heb_str() if lang == LANG_HE else str(src)
+                summary = src.summary_heb if lang == LANG_HE else src.summary_en
 
                 by_category[cat].append(
                     NumberOccurrenceDTO(
@@ -89,6 +92,8 @@ class NumberSearchLogic:
                         source_str=source_str,
                         summary=summary,
                         source_key=src.key,
+                        source_str_en=str(src),
+                        source_str_heb=src.to_heb_str(),
                     )
                 )
                 total_count += 1

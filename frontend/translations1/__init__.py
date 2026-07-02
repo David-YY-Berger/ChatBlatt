@@ -36,7 +36,7 @@ def available_languages() -> Dict[str, str]:
 
 
 def is_rtl(lang: str) -> bool:
-    return lang.lower().startswith("he")
+    return lang.lower().startswith(LANG_HE)
 
 
 def _get_nested(data: Dict[str, Any], path: list[str]) -> Any:
