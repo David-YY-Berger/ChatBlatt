@@ -1,5 +1,5 @@
 app:
-  title: "Mapalee"
+  title: "MapaLi"
   subtitle: "The indexed database of Jewish Sources"
   dedication: "lilui nishmat feyga menucha bat yechiel gershon"
 
@@ -86,8 +86,8 @@ entity_fields:
   membersOfTribeIsrael: "Tribe Members"
 
 page_titles:
-  home: "Welcome to Mapalee"
-  about: "About Mapalee"
+  home: "Welcome to MapaLi"
+  about: "About MapaLi"
   number_search: "Number Search"
   source_search: "Search Jewish Sources"
   entity_search: "Entity Search"
