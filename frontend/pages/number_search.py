@@ -5,12 +5,14 @@ Number-search page.
 UI responsibilities only:
   - search bar (type selector, input box, search button) laid out in one row
   - live input validation with specific, descriptive error messages
-  - result display grouped by NumberCategory → unit
+  - result display: big number header → coloured category tabs → sorted table
 
 All search logic lives in number_search_logic.py via NumberSearchController.
 """
 
 from __future__ import annotations
+
+import html
 
 import streamlit as st
 
@@ -25,7 +27,100 @@ from backend.app.controllers.number_search_controller import (
     NumberSearchResponse,
 )
 from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
+from backend.models_db.Enums import NumberCategory
 from system_common.Constants import NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION
+
+
+# ---------------------------------------------------------------------------
+# Category display configuration
+# ---------------------------------------------------------------------------
+
+_CATEGORY_CONFIG: dict = {
+    NumberCategory.Sacrifice:    {"emoji": "🔥", "color": "#e85d04"},
+    NumberCategory.Time:         {"emoji": "⏳", "color": "#1d6fa4"},
+    NumberCategory.Money:        {"emoji": "💰", "color": "#b8860b"},
+    NumberCategory.People:       {"emoji": "👥", "color": "#2d6a4f"},
+    NumberCategory.Measurement:  {"emoji": "📏", "color": "#6d28d9"},
+    NumberCategory.Misc:         {"emoji": "📦", "color": "#475569"},
+}
+_NONE_CAT_CONFIG = {"emoji": "❓", "color": "#94a3b8"}
+
+
+def _hex_rgba(hex_color: str, alpha: float) -> str:
+    h = hex_color.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{alpha})"
+
+
+def _tab_css(colors: list[str]) -> str:
+    parts: list[str] = []
+    for i, col in enumerate(colors, 1):
+        bg_sel = _hex_rgba(col, 0.09)
+        bg_hov = _hex_rgba(col, 0.05)
+        parts.append(f"""
+div[data-testid="stTabs"] button[role="tab"]:nth-child({i}) {{
+    color: {col};
+    transition: background 0.15s, border-bottom 0.15s;
+}}
+div[data-testid="stTabs"] button[role="tab"]:nth-child({i})[aria-selected="true"] {{
+    color: {col} !important;
+    border-bottom: 3px solid {col} !important;
+    background: {bg_sel};
+    font-weight: 700;
+}}
+div[data-testid="stTabs"] button[role="tab"]:nth-child({i}):hover {{
+    background: {bg_hov};
+}}
+""")
+    return "\n".join(parts)
+
+
+def _occurrences_table(occurrences: list[NumberOccurrenceDTO], accent: str) -> str:
+    """Return an HTML table string for the given occurrences, sorted by Unit."""
+    sorted_occs = sorted(occurrences, key=lambda o: (o.unit is None, (o.unit or "").lower()))
+
+    header_bg = _hex_rgba(accent, 0.10)
+    border_col = _hex_rgba(accent, 0.25)
+    stripe_bg = _hex_rgba(accent, 0.04)
+
+    th_style = (
+        f"padding:0.55rem 0.8rem; text-align:left; font-weight:600;"
+        f" color:{accent}; background:{header_bg};"
+        f" border-bottom:2px solid {border_col}; white-space:nowrap;"
+    )
+    td_base = "padding:0.5rem 0.8rem; vertical-align:top; font-size:0.875rem; line-height:1.45;"
+    border_style = f"border-bottom:1px solid {_hex_rgba(accent, 0.12)};"
+
+    rows_html = []
+    for idx, occ in enumerate(sorted_occs):
+        row_bg = f"background:{stripe_bg};" if idx % 2 == 1 else ""
+        unit    = html.escape(occ.unit or "—")
+        context = html.escape(occ.context or "—")
+        source  = html.escape(occ.source_str or "—")
+        summary = html.escape(occ.summary or "—")
+        rows_html.append(
+            f"<tr style='{row_bg}'>"
+            f"<td style='{td_base}{border_style} font-weight:500;'>{unit}</td>"
+            f"<td style='{td_base}{border_style}'>{context}</td>"
+            f"<td style='{td_base}{border_style} color:{accent}; font-weight:500;'>{source}</td>"
+            f"<td style='{td_base}{border_style} color:#475569;'>{summary}</td>"
+            f"</tr>"
+        )
+
+    table = (
+        "<div style='overflow-x:auto; border-radius:8px; border:1px solid "
+        + border_col + "; margin-top:0.5rem;'>"
+        "<table style='width:100%; border-collapse:collapse;'>"
+        "<thead><tr>"
+        f"<th style='{th_style}'>Unit</th>"
+        f"<th style='{th_style}'>Context</th>"
+        f"<th style='{th_style}'>Source</th>"
+        f"<th style='{th_style}'>Source Summary</th>"
+        "</tr></thead>"
+        "<tbody>" + "".join(rows_html) + "</tbody>"
+        "</table></div>"
+    )
+    return table
 
 
 # ---------------------------------------------------------------------------
@@ -188,7 +283,7 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
 # ---------------------------------------------------------------------------
 
 def _render_results(lang: str) -> None:
-    """Read results from session state and render them grouped by category, then unit."""
+    """Render the number header, category tabs, and occurrence table."""
     response: NumberSearchResponse | None = st.session_state.get("number_search_response")
     if response is None:
         return
@@ -204,43 +299,62 @@ def _render_results(lang: str) -> None:
         st.warning(get_text("number_search_ui.no_results", lang).format(value=value))
         return
 
+    # ── Big number header ──────────────────────────────────────────────────
+    plural = "s" if result.total_count != 1 else ""
     st.markdown(
-        f"### {get_text('number_search_ui.results_header', lang).format(value=value)}"
+        f"""
+        <div style="text-align:center; padding:1.25rem 0 1rem 0;">
+            <div style="font-size:3.5rem; font-weight:900; letter-spacing:-0.02em;
+                        color:#1e293b; line-height:1;">{html.escape(value)}</div>
+            <div style="font-size:0.875rem; color:#64748b; margin-top:0.35rem;">
+                {result.total_count} occurrence{plural} found
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
-    st.caption(
-        f"{result.total_count} {get_text('number_search_ui.results_count', lang)}"
-    )
 
-    for category, occurrences in result.by_category.items():
-        cat_label = (
-            category.value if category else get_text("number_search_ui.no_category", lang)
-        )
-        with st.expander(f"📂 {cat_label}", expanded=True):
-            # Sub-group by unit for cleaner display (unit is inside DTO, not a map key)
-            unit_groups: dict = {}
-            for occ in occurrences:
-                unit_key = occ.unit  # may be None
-                if unit_key not in unit_groups:
-                    unit_groups[unit_key] = []
-                unit_groups[unit_key].append(occ)
+    # ── Build ordered tab entries (all NumberCategory values + None if present) ──
+    by_cat = result.by_category
+    tab_entries: list[tuple] = []  # (cat, color, label)
+    for cat in NumberCategory:
+        cfg = _CATEGORY_CONFIG[cat]
+        count = len(by_cat.get(cat, []))
+        label = f"{cfg['emoji']} {cat.value}  ({count})"
+        tab_entries.append((cat, cfg["color"], label))
 
-            for unit, unit_occs in unit_groups.items():
-                unit_label = unit if unit else get_text("number_search_ui.no_unit", lang)
-                st.markdown(f"**{unit_label}**")
+    if None in by_cat:
+        cfg = _NONE_CAT_CONFIG
+        count = len(by_cat[None])
+        tab_entries.append((None, cfg["color"], f"{cfg['emoji']} Other  ({count})"))
 
-                for occ in unit_occs:
-                    if occ.context:
-                        st.caption(
-                            f"{get_text('number_search_ui.context_label', lang)}: {occ.context}"
-                        )
-                    st.markdown(
-                        f"*{get_text('number_search_ui.sources_label', lang)}:* {occ.source_str}"
-                    )
-                    if occ.summary:
-                        st.caption(occ.summary)
+    # ── Inject per-tab colour CSS ──────────────────────────────────────────
+    colors = [e[1] for e in tab_entries]
+    st.markdown(f"<style>{_tab_css(colors)}</style>", unsafe_allow_html=True)
 
-                    if occ is not unit_occs[-1]:
-                        st.divider()
+    # ── Render tabs ────────────────────────────────────────────────────────
+    tabs = st.tabs([e[2] for e in tab_entries])
+
+    for tab_widget, (cat, color, _) in zip(tabs, tab_entries):
+        with tab_widget:
+            occurrences = by_cat.get(cat, [])
+            if not occurrences:
+                cat_name = cat.value if cat else "other"
+                st.markdown(
+                    f'<p style="color:#94a3b8; padding:0.75rem 0; font-style:italic;">'
+                    f"No {cat_name} occurrences for this number.</p>",
+                    unsafe_allow_html=True,
+                )
+                continue
+
+            count = len(occurrences)
+            plural = "s" if count != 1 else ""
+            st.markdown(
+                f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
+                f"{count} occurrence{plural}</p>",
+                unsafe_allow_html=True,
+            )
+            st.markdown(_occurrences_table(occurrences, color), unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------------------
@@ -252,6 +366,4 @@ def render(lang: str) -> None:
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
     _render_search_bar(lang)
-
-    st.divider()
     _render_results(lang)
