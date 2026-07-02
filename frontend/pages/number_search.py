@@ -15,6 +15,10 @@ from __future__ import annotations
 import streamlit as st
 
 from translations1 import get_text, is_rtl
+from system_common.SystemFunctions import get_secret
+
+_DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
+
 from backend.app.controllers.number_search_controller import (
     NumberSearchController,
     NumberSearchRequest,
@@ -137,9 +141,46 @@ def _run_search(number_type: str, value: str, lang: str) -> None:
     controller = NumberSearchController()
     request = NumberSearchRequest(number_type=number_type, value=value, lang=lang)
     response = controller.handle(request)
-    print(f"[number_search._run_search] {request} → {response}")
+    if _DEBUG_FE:
+        _debug_log_result(request, response)
     st.session_state["number_search_response"] = response
     st.session_state["number_search_value"] = value
+
+
+# ---------------------------------------------------------------------------
+# Debug logging
+# ---------------------------------------------------------------------------
+
+def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchResponse") -> None:
+    """When PRINT_DEBUG_LOGS_FE=true, prints the search request and full result to the console."""
+    sep = "=" * 60
+    print(f"\n{sep}")
+    print(f"[DEBUG FE] Number search: type={request.number_type}  value={request.value}  lang={request.lang}")
+    print(sep)
+
+    if not response.success or response.error:
+        print(f"  ERROR: {response.error}")
+        print(sep + "\n")
+        return
+
+    result = response.result
+    if result is None:
+        print("  No results found.")
+        print(sep + "\n")
+        return
+
+    print(f"  Total occurrences: {result.total_count}")
+    for category, occurrences in result.by_category.items():
+        cat_label = category.value if category else "(no category)"
+        print(f"\n  📂 {cat_label} ({len(occurrences)} occurrence(s))")
+        for occ in occurrences:
+            unit_label = occ.unit or "(no unit)"
+            print(f"    [{unit_label}]  sources: {occ.source_str}")
+            if occ.context:
+                print(f"      context : {occ.context}")
+            if occ.summary:
+                print(f"      summary : {occ.summary}")
+    print(sep + "\n")
 
 
 # ---------------------------------------------------------------------------
