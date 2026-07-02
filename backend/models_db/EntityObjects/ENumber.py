@@ -28,6 +28,12 @@ class ENumber(Entity):
             self.context.lower() if self.context else None,
         )
 
+    def to_db_dict(self) -> Dict[str, Any]:
+        data = super().to_db_dict()
+        if isinstance(data.get("numberCategory"), NumberCategory):
+            data["numberCategory"] = data["numberCategory"].value
+        return data
+
     def build_existence_query(self, context: Optional["EntityIdentityContext"] = None) -> Dict[str, Any]:
         """
         Query DB for a Number with the same numberCategory, unit (case-insensitive),
