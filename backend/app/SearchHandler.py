@@ -2,7 +2,7 @@
 
 from backend.db.DBFactory import DBFactory
 from backend.db.DBapiMongoDB import DBapiMongoDB
-from backend.db import EntityRelManager
+from backend.db.EntityRelManager import EntityRelManager
 from backend.faiss_api.FaissEngine import FaissEngine
 
 from backend.models_db.Answer import Answer
