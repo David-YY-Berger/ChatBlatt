@@ -63,6 +63,7 @@ class NumberSearchLogic:
         """
         enumbers: List[ENumber] = self.db.get_enumbers_by_value(value)
         if not enumbers:
+            print("no numbers found in db call")
             return None
 
         by_category: Dict[Optional[NumberCategory], List[NumberOccurrenceDTO]] = {}
