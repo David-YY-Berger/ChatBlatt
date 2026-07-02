@@ -381,7 +381,6 @@ class DBPopulateLmmData(DBParentClass):
                         return entity_key_map[lookup]
 
         # Fallback: try all types by default name-based key
-        # (ENumber keys are not name-based, so they won't match here — no special-casing needed)
         for entity_type in EntityType:
             lookup = (name_lower, entity_type)
             if lookup in entity_key_map:
