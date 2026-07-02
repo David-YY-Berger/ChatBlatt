@@ -268,7 +268,8 @@ class DBPopulateLmmData(DBParentClass):
                 for entity_data in entities_dict.get(category_name) or []:
                     en_name = entity_data.get("en_name", "").strip()
                     if en_name:
-                        lookup = (en_name.lower(), entity_type)
+                        entity_class = Entity.get_class_for_type(entity_type)
+                        lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
                         if lookup in entity_key_map:
                             entity_keys.add(entity_key_map[lookup])
 
