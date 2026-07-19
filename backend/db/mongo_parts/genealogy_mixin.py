@@ -41,6 +41,25 @@ class GenealogyMongoMixin:
         })
         return [self._doc_to_rel(doc) for doc in docs]
 
+    def get_family_rels_for_entities(self, entity_keys: List[str]) -> List[Rel]:
+        """
+        Query the relations collection for all family rels involving ANY of the
+        given entity_keys (as term1 or term2), in a single round-trip.
+
+        Used to expand a whole BFS "frontier" level at once when building an
+        N-degree family graph, instead of issuing one query per entity.
+        """
+        if not entity_keys:
+            return []
+        docs = self.get_collection(CollectionObjs.RELATIONS).find({
+            DBOperators.OR: [
+                {DBFields.TERM1: {DBOperators.IN: list(entity_keys)}},
+                {DBFields.TERM2: {DBOperators.IN: list(entity_keys)}},
+            ],
+            DBFields.REL_TYPE: {DBOperators.IN: _FAMILY_REL_TYPE_VALUES},
+        })
+        return [self._doc_to_rel(doc) for doc in docs]
+
     def get_entities_by_keys_map(self, keys: List[str]) -> Dict[str, Entity]:
         """
         Batch-fetch entities by key and return a key→Entity mapping.

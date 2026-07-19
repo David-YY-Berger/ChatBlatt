@@ -25,6 +25,19 @@ class GenealogyInterfaceMixin(ABC):
         ...
 
     @abstractmethod
+    def get_family_rels_for_entities(self, entity_keys: List[str]) -> List[Rel]:
+        """
+        Batch-fetch family-type relationships for a whole list of entity keys
+        in a single query (entity as term1 or term2, in either direction).
+        Family rel types: childOfFather, childOfMother, spouseOf.
+
+        Used to fetch an entire BFS frontier "level" at once when expanding
+        an N-degree family graph (e.g. direct family = 1 hop, family of
+        family = 2 hops, etc.), instead of querying once per entity.
+        """
+        ...
+
+    @abstractmethod
     def get_entities_by_keys_map(self, keys: List[str]) -> Dict[str, Entity]:
         """
         Batch-fetch entities by key and return as a dict: key → Entity.
