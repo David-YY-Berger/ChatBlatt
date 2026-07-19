@@ -107,7 +107,7 @@ def _occurrences_table(
         f" color:{accent}; background:{header_bg};"
         f" border-bottom:2px solid {border_col}; white-space:nowrap;"
     )
-    td_base = "padding:0.5rem 0.8rem; vertical-align:top; font-size:0.875rem; line-height:1.45;"
+    td_base = "padding:0.5rem 0.8rem; vertical-align:top; font-size:0.875rem; line-height:1.45; color: inherit;"
     border_style = f"border-bottom:1px solid {_hex_rgba(accent, 0.12)};"
 
     rows_html = []
@@ -132,7 +132,7 @@ def _occurrences_table(
             f"<td style='{td_base}{border_style} font-weight:500;'>{unit}</td>"
             f"<td style='{td_base}{border_style}'>{context}</td>"
             f"<td style='{td_base}{border_style}'>{source_cell}</td>"
-            f"<td style='{td_base}{border_style} color:#475569;'>{summary}</td>"
+            f"<td style='{td_base}{border_style}' class='summary-cell'>{summary}</td>"
             f"</tr>"
         )
 
@@ -166,8 +166,22 @@ def _occurrences_table(
         "</table></div>"
     )
 
+    _IFRAME_DARK_CSS = """<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    body { background-color: #0e1117; color: #e2e8f0; }
+    .summary-cell { color: #94a3b8; }
+  }
+  @media (prefers-color-scheme: light) {
+    body { background-color: #ffffff; color: #1e293b; }
+    .summary-cell { color: #475569; }
+  }
+</style>"""
+
     full_html = (
         "<!DOCTYPE html><html><head><meta charset='UTF-8'>"
+        + _IFRAME_DARK_CSS
         + source_popup_css_js()
         + "</head><body style='margin:0;padding:0;'>"
         + table_html
@@ -399,8 +413,8 @@ def _render_results(lang: str) -> None:
         f"""
         <div style="text-align:center; padding:1.25rem 0 1rem 0;">
             <div style="font-size:3.5rem; font-weight:900; letter-spacing:-0.02em;
-                        color:#1e293b; line-height:1;">{html.escape(value)}</div>
-            <div style="font-size:0.875rem; color:#64748b; margin-top:0.35rem;">
+                        color: inherit; line-height:1;">{html.escape(value)}</div>
+            <div style="font-size:0.875rem; color:#94a3b8; margin-top:0.35rem;">
                 {result.total_count} occurrence{plural} found
             </div>
         </div>
