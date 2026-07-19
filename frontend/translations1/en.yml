@@ -42,6 +42,15 @@ genealogy_ui:
   no_data: "No genealogy data found for this person."
   nodes_label: "people"
   edges_label: "connections"
+  role_grandparent: "Grandparent"
+  role_parent: "Parent"
+  role_sibling: "Sibling"
+  role_center: "Selected person"
+  role_spouse: "Spouse"
+  role_child: "Child"
+  role_grandchild: "Grandchild"
+  gender_man: "Man"
+  gender_woman: "Woman"
 
 entity_search_ui:
   select_tab_prompt: "Please select an entity type from the menu above."

@@ -42,6 +42,15 @@ genealogy_ui:
   no_data: "לא נמצאו נתוני גנולוגיה עבור אדם זה."
   nodes_label: "אנשים"
   edges_label: "קשרים"
+  role_grandparent: "סב/סבתא"
+  role_parent: "הורה"
+  role_sibling: "אח/אחות"
+  role_center: "האדם הנבחר"
+  role_spouse: "בן/בת זוג"
+  role_child: "ילד/ה"
+  role_grandchild: "נכד/ה"
+  gender_man: "גבר"
+  gender_woman: "אישה"
 
 entity_search_ui:
   select_tab_prompt: "אנא בחרו סוג ישות מהתפריט למעלה."
