@@ -24,7 +24,7 @@ from pydantic import ValidationError
 
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig
 from backend.models_db.Enums import NumberCategory
-from backend.models_db.PydanticModels.PydanticClasses import (
+from backend_pipeline.data_pipeline.PydanticModels.PydanticClasses import (
     FinalResponse,
     TRIBES_OF_ISRAEL,
     min_len_summary,

@@ -3,14 +3,14 @@ from typing import List, Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-from backend.models_db.PydanticModels.entity_models import Entities
-from backend.models_db.PydanticModels.pydantic_constants import (
+from backend_pipeline.data_pipeline.PydanticModels.entity_models import Entities
+from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
     PERSON_PLACE_SPECIFIC_RELATIONSHIPS,
     SYMMETRIC_RELATIONSHIPS,
     max_len_summary,
     min_len_summary,
 )
-from backend.models_db.PydanticModels.relationship_models import Relationships
+from backend_pipeline.data_pipeline.PydanticModels.relationship_models import Relationships
 
 logger = logging.getLogger(__name__)
 

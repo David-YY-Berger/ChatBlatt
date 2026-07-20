@@ -7,9 +7,9 @@ in smaller modules in the same directory.
 """
 
 from backend.models_db.Enums import NumberCategory
-from backend.models_db.PydanticModels.entity_models import Entities, Entity, NumberEntity
-from backend.models_db.PydanticModels.name_utils import smart_title_case
-from backend.models_db.PydanticModels.number_normalization import (
+from backend_pipeline.data_pipeline.PydanticModels.entity_models import Entities, Entity, NumberEntity
+from backend_pipeline.data_pipeline.PydanticModels.name_utils import smart_title_case
+from backend_pipeline.data_pipeline.PydanticModels.number_normalization import (
     _FRACTION_WORDS,
     _NUMBER_SCALES,
     _NUMBER_WORDS,
@@ -17,7 +17,7 @@ from backend.models_db.PydanticModels.number_normalization import (
     _normalize_number_string,
     _parse_word_number,
 )
-from backend.models_db.PydanticModels.pydantic_constants import (
+from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
     DEMONYM_TO_NATION,
     ENTITY_CATEGORIES,
     PERSON_PLACE_SPECIFIC_RELATIONSHIPS,
@@ -27,8 +27,8 @@ from backend.models_db.PydanticModels.pydantic_constants import (
     max_len_summary,
     min_len_summary,
 )
-from backend.models_db.PydanticModels.relationship_models import Relation, Relationships
-from backend.models_db.PydanticModels.response_models import ExtractionResult, FinalResponse
+from backend_pipeline.data_pipeline.PydanticModels.relationship_models import Relation, Relationships
+from backend_pipeline.data_pipeline.PydanticModels.response_models import ExtractionResult, FinalResponse
 
 __all__ = [
     "TRIBES_OF_ISRAEL",

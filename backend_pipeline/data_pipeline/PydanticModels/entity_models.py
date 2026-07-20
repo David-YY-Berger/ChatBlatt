@@ -4,9 +4,9 @@ from typing import List, Optional, Set
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 from backend.models_db.Enums import NumberCategory
-from backend.models_db.PydanticModels.name_utils import smart_title_case
-from backend.models_db.PydanticModels.number_normalization import _normalize_number_string
-from backend.models_db.PydanticModels.pydantic_constants import (
+from backend_pipeline.data_pipeline.PydanticModels.name_utils import smart_title_case
+from backend_pipeline.data_pipeline.PydanticModels.number_normalization import _normalize_number_string
+from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
     DEMONYM_TO_NATION,
     ENTITY_CATEGORIES,
     TRIBES_OF_ISRAEL,
