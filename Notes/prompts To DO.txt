@@ -1,16 +1,8 @@
-open this in notepadd++!!
-----------------------------------------------
 
-
-see backend_pipeline/data_pipeline/llm_api/PydanticCaller.py
-
-backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
-
-i want to make a brand new populator_script, to use pydantic AI, in backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py
-
-This script will also iterate over each source, query pydantic AI once (no retries), process json entries, add things to DB, etc.
-
-refactor backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py so that it inherits from a parent class, and i can now extend that parent class for another populator script
+#################################################################################
+########################## populate metadata ############################
+#################################################################################
+{{
 
 ----------------
 now implement
@@ -18,6 +10,174 @@ backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py  
 
 add to 
 
+}}
+#################################################################################
+########################## Join Entitys s ############################
+#################################################################################
+{{
+
+heres what an entity looks in our db:
+
+{
+  "_id": {
+    "$oid": "6a467c2701fbb1a2983bf4fb"
+  },
+  "display_en_name": "god",
+  "display_heb_name": "",
+  "all_en_names": [
+    "God"
+  ],
+  "all_heb_names": [],
+  "entityType": "Person",
+  "alias_keys": [],
+  "key": "6a467c2701fbb1a2983bf4fb"
+}
+
+or:
+
+{
+  "_id": {
+    "$oid": "6a467c2701fbb1a2983bf4fc"
+  },
+  "display_en_name": "heaven",
+  "display_heb_name": "",
+  "all_en_names": [
+    "Heaven"
+  ],
+  "all_heb_names": [],
+  "entityType": "Place",
+  "alias_keys": [],
+  "key": "6a467c2701fbb1a2983bf4fc"
+}
+
+
+display_en_name is usually unique
+
+look at relationship:
+{
+  "_id": {
+    "$oid": "6a467d1801fbb1a2983bf93f"
+  },
+  "term1": "6a467c2701fbb1a2983bf4fb",
+  "term2": "6a467c2701fbb1a2983bf4fc",
+  "rel_type": "associatedWithPlace",
+  "key": "6a467d1801fbb1a2983bf93f"
+}
+
+also, a Source metadata obj contains the entity key:
+
+
+I need a new dbpopulater script, (make new Dbpopulator called 'DAta Correction') that will properly unify 2 different entities. 
+It will read this csv:
+final_display_name,display_names_to_join,merged
+God,god|god hashem|god most high|god of abraham|hashem,
+
+
+find the entitys with this display name, and combine them to one. there will now only be 1 obj in the db to represent this entity, with all relevent relationships, and Source metadata objs, updated to only point to that obj. 
+
+in the event that we find more than 1 entity for that display_name, than clearly log it, and skip that line. 
+after running the whole csv, the program should mark merged or not. 
+if there was an error while running, the file should mark 'merged' for whatever it was successful with.
 
 
 
+}}
+#################################################################################
+########################## fix entity rel population ############################
+#################################################################################
+{{
+pydantic creating graph, remove entitys with display name like (.lower()):
+son, sons, daughter, daughters, wife, wives, husband, husbands, - all family relationship general words.. 
+king
+
+}}
+
+#################################################################################
+########################## old prompts ############################
+#################################################################################
+{{
+
+
+
+
+
+Facets:
+This should be a few sections, each one checkboxes/ staggered checkboxes.
+section1 - Source Type - populated by backend.models_db.Enums.SourceType
+section2 - Book - pop by backend.db.data_names.Books.Books. There must be sub sections, group by Book Category. ensure that you keep the order with the order field
+section3- Passage Type - pop by backend.models_db.Enums.PassageType
+section4- Entity - these entitys: Animal, Food, Nation, Number, Person, Place, Plant, Symbol, TribeOfIsrael. each should be their on sub section. there should be a button (label=select) at each section, which will open up a popup. in the popup, for now, leave it blank.
+
+
+try to make these facets look nice, well layout, 
+
+----
+
+-----
+in Facets:
+ 
+ - select all / none etc is glitchy. 
+ (1) i dont like the V and X anymore. instead, just put a checkbox at section header. 
+ (2) init all the checkboxes to selected for all facets
+ (3) the section header checkboxes can have three states - fully checked (select All), fully un checked (None), or partially checked (however you want to depict that). 
+ (4) collapsing a section should not impact all any selections of that section.
+
+ 
+
+	- now lets work on the entity selector componenet of the facet
+	(0) each entity selection component should be the same one used in that individual Entity search page. frontend.pages.entity_search.render
+	(1) remove the button of each entity facet section and any logic around it.
+	(2) each entity section, when expanded, should have a dropdown select list. exactly like done in entity_Search.
+	
+	
+	 - its so slow!
+	 
+	 
+	
+	
+	[should do with sonnet, see, and then potentially do with Opus]
+	- currently, this func backend.file_utils.HtmlWriter.HtmlWriter.get_full_html creates an html from the sources list. I want you to undertand how this html is built, and recreate it uses more native feeling streamlit components. See the general style of my ui (look at frontend/assets/facets.css and frontend/assets/styles.css etc) . feel free to add more files if needed. 
+	
+
+
+(dovid, test this page out a little)
+
+-----
+fix pop up to select entitys .
+----
+ensure Search page works in Hebrew (RTL) properly. When in RTL, the facets should appear on the right side.
+----
+
+----
+
+implement the link to open source to see where entity came from
+--
+(after implementing the other ones, add the links to the other entitys..) also, it should count how many times each relationship is found in a source, and bring the most common ones to the top
+---
+write quality QA for source searching. also source populating the rel and entity (give the llm an example from the json and ask it to very it made those objects)
+
+
+############################ OPUS ###################
+----
+look at the flow of retrieving all the SelectOptions. My SelectOptions list is meant to grow to be at least 10,000, maybe even 100,000 big. 
+any way to speed up loading these terms? i dont want pagination, i want to load them all into that dropdown. maybe a way to speed it up with multi threading or anything like that?
+
+also, can you add a spinner when it's waiting?
+--
+###############################################
+
+
+UNTIL WE DONT FIX THE FE, NO POINT TO FIX THE LOGIC...
+take a look at how the parameters come from the front end to the source search query logic. Something is missed, and the filtering doesnt work. look it over and tell me whats going on. 
+
+-----
+allow filtering the sources with the same left pane as there is in source search?
+
+------
+
+
+
+
+
+
+}}
