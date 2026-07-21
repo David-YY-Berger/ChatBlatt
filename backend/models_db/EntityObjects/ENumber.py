@@ -13,6 +13,8 @@ class ENumber(Entity):
     numberCategory: Optional[NumberCategory] = None
     en_unit: Optional[str] = None                # Normalized singular noun — what the number counts/measures (e.g., "bull", "year", "silver")
     en_context: Optional[str] = None             # 1-6 word topic summary so the number is understandable out of context
+    heb_unit: Optional[str] = None
+    heb_context: Optional[str] = None
 
     # ========================= Identity / Equality =========================
 
@@ -77,11 +79,14 @@ class ENumber(Entity):
                         number_category = nc
                         break
 
-        unit_raw = entity_data.get("en_unit", "").strip()
+        unit_raw = (entity_data.get("en_unit") or "").strip()
         en_unit = unit_raw.lower() if unit_raw else None
 
-        context_raw = entity_data.get("en_context", "").strip()
+        context_raw = (entity_data.get("en_context") or "").strip()
         context = context_raw.lower() if context_raw else None
+
+        heb_unit = (entity_data.get("heb_unit") or "").strip() or None
+        heb_context = (entity_data.get("heb_context") or "").strip() or None
 
         return cls(
             display_en_name=en_name,
@@ -89,5 +94,6 @@ class ENumber(Entity):
             numberCategory=number_category,
             en_unit=en_unit,
             en_context=context,
+            heb_unit=heb_unit,
+            heb_context=heb_context,
         )
-
