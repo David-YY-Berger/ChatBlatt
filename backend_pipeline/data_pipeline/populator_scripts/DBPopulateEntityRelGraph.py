@@ -67,7 +67,7 @@ class DBPopulateLmmData(DBPopulateLlmBase):
         Transactional: reads JSON files from a directory, extracts entities and relationships,
         inserts them into the DB. If any part fails, all inserts are rolled back.
         """
-        dir_path = r"/Examples/testDataBereishit"
+        dir_path = Paths.TEST_DATA_BEREISHIT_DIR
 
         # 1. Read JSONs with source keys derived from filenames
         json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
@@ -426,7 +426,6 @@ class DBPopulateLmmData(DBPopulateLlmBase):
         return
 
     ############################################## helper methods ####################################################
-
 
 
 

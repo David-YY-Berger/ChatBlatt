@@ -15,8 +15,11 @@ ENRICHMENT_RESPONSES_OUTPUT_DIR = os.path.join(TESTS_DIR, "Enrichment Responses"
 current_file = os.path.abspath(__file__) #paths.py
 GENERAL_DIR = os.path.dirname(current_file)
 BACKEND_DIR= os.path.dirname(GENERAL_DIR)
+PROJECT_ROOT_DIR = os.path.dirname(BACKEND_DIR)
 MONGO_QUERIES_DIR = os.path.join(BACKEND_DIR, "data_pipeline/mongo_queries")
 QA1_PATH = os.path.join(GENERAL_DIR, "../", "QA", "QA_Question_Sheet.csv")
+EXAMPLES_DIR = os.path.join(PROJECT_ROOT_DIR, "Examples")
+TEST_DATA_BEREISHIT_DIR = os.path.join(EXAMPLES_DIR, "testDataBereishit")
 
 QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")
 DATA_CLEANUP_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_cleanup_mongo_queries.json")
