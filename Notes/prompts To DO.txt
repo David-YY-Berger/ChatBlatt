@@ -1,0 +1,23 @@
+open this in notepadd++!!
+----------------------------------------------
+
+
+see backend_pipeline/data_pipeline/llm_api/PydanticCaller.py
+
+backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
+
+i want to make a brand new populator_script, to use pydantic AI, in backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py
+
+This script will also iterate over each source, query pydantic AI once (no retries), process json entries, add things to DB, etc.
+
+refactor backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py so that it inherits from a parent class, and i can now extend that parent class for another populator script
+
+----------------
+now implement
+backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py  : 
+
+add to 
+
+
+
+
