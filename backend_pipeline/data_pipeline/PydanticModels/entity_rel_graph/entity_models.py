@@ -28,7 +28,7 @@ class Entity(BaseModel):
 
 class NumberEntity(BaseModel):
     """Pydantic model for Number entities extracted by the LLM.
-    Extends the basic entity with category, unit, and context."""
+    Extends the basic entity with category, unit, and English context."""
 
     en_name: str = Field(min_length=1, description="The numeric value as a string (e.g., '7', '40', '3.5')")
     number_category: str = Field(
@@ -44,7 +44,7 @@ class NumberEntity(BaseModel):
             "Must be a single, lowercase, singular English word - no plurals, no phrases."
         )
     )
-    context: str = Field(
+    en_context: str = Field(
         description=(
             "A 1-6 word topic summary so this number is understandable outside the original passage. "
             "Describe the general subject being discussed - someone seeing this entry elsewhere "
@@ -83,16 +83,16 @@ class NumberEntity(BaseModel):
             raise ValueError("en_unit cannot be empty")
         return v
 
-    @field_validator("context")
+    @field_validator("en_context")
     @classmethod
     def validate_context(cls, v: str) -> str:
-        """Ensure context is 1-6 words and normalized."""
+        """Ensure en_context is 1-6 words and normalized."""
         v = v.strip().lower()
         word_count = len(v.split())
         if word_count < 1:
-            raise ValueError("context cannot be empty")
+            raise ValueError("en_context cannot be empty")
         if word_count > 6:
-            raise ValueError(f"context must be 1-6 words, got {word_count}: '{v}'")
+            raise ValueError(f"en_context must be 1-6 words, got {word_count}: '{v}'")
         return v
 
 
@@ -111,7 +111,7 @@ class Entities(BaseModel):
             "Explicit numeric values with context. Each number must include: "
             "en_name (the numeric value), number_category (one of: "
             f"{', '.join(_NUMBER_CATEGORY_VALUES)}), "
-            "en_unit (normalized singular noun - what is counted/measured), and context (1-6 word topic summary)."
+            "en_unit (normalized singular noun - what is counted/measured), and en_context (1-6 word topic summary)."
         ),
     )
     Animal: Optional[List[Entity]] = Field(
@@ -145,7 +145,7 @@ class Entities(BaseModel):
                     en_name=normalized,
                     number_category=entity.number_category,
                     en_unit=entity.en_unit,
-                    context=entity.context,
+                    en_context=entity.en_context,
                 )
             )
 

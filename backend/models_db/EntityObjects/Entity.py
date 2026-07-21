@@ -71,11 +71,34 @@ class Entity(BaseModel):
     def get_class_for_type(cls, entity_type: EntityType) -> "Type[Entity]":
         """
         Returns the Entity subclass whose entityType default matches the given type,
-        or Entity itself if no specialized subclass has been imported yet.
+        or Entity itself if no specialized subclass exists.
 
-        Works via Python's __subclasses__() — no explicit registry needed.
-        Any subclass that has been imported is automatically discoverable.
+        Subclasses are imported lazily so callers do not depend on import order.
         """
+        from backend.models_db.EntityObjects.EAnimal import EAnimal
+        from backend.models_db.EntityObjects.EFood import EFood
+        from backend.models_db.EntityObjects.ENation import ENation
+        from backend.models_db.EntityObjects.ENumber import ENumber
+        from backend.models_db.EntityObjects.EPerson import EPerson
+        from backend.models_db.EntityObjects.EPlace import EPlace
+        from backend.models_db.EntityObjects.EPlant import EPlant
+        from backend.models_db.EntityObjects.ESymbol import ESymbol
+        from backend.models_db.EntityObjects.ETribeOfIsrael import ETribeOfIsrael
+
+        entity_class_map: Dict[EntityType, Type[Entity]] = {
+            EntityType.EPerson: EPerson,
+            EntityType.EPlace: EPlace,
+            EntityType.ENation: ENation,
+            EntityType.ESymbol: ESymbol,
+            EntityType.ETribeOfIsrael: ETribeOfIsrael,
+            EntityType.ENumber: ENumber,
+            EntityType.EAnimal: EAnimal,
+            EntityType.EFood: EFood,
+            EntityType.EPlant: EPlant,
+        }
+        if entity_type in entity_class_map:
+            return entity_class_map[entity_type]
+
         for subclass in cls.__subclasses__():
             field = subclass.model_fields.get("entityType")
             if field is not None and field.default == entity_type:

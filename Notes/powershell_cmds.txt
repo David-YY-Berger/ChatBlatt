@@ -33,13 +33,16 @@ function Print-Tree {
 Write-Output (Split-Path $root -Leaf)
 Print-Tree -Path $root
 ################################################################################
-$targetDir = "C:\path\to\your\directory" # Dir: Replace with your target folder path
-$findText  = "old_text"                 # Find: Replace with the text to search for
-$replaceWith = "new_text"               # Replace: Replace with the new text
+$targetDir = "C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\testDataBereishit"
+$utf8 = [System.Text.Encoding]::UTF8
 
 Get-ChildItem -Path $targetDir -Recurse -Include *.txt, *.json -File | ForEach-Object {
-    (Get-Content -Path $_.FullName -Raw) -replace [regex]::Escape($findText), $replaceWith |
-    Set-Content -Path $_.FullName -NoNewline
-}
+    $filePath = $_.FullName
+    $content = [System.IO.File]::ReadAllText($filePath, $utf8)
 
+    if ($content) {
+        $content = $content.Replace("unit", "en_unit").Replace("context", "en_context")
+        [System.IO.File]::WriteAllText($filePath, $content, $utf8)
+    }
+}
 

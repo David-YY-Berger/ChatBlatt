@@ -80,7 +80,7 @@ class ENumber(Entity):
         unit_raw = entity_data.get("en_unit", "").strip()
         en_unit = unit_raw.lower() if unit_raw else None
 
-        context_raw = entity_data.get("context", "").strip()
+        context_raw = entity_data.get("en_context", "").strip()
         context = context_raw.lower() if context_raw else None
 
         return cls(
