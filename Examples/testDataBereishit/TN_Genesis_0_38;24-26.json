@@ -32,8 +32,8 @@
                 {
                     "en_name": "3",
                     "number_category": "Time",
-                    "unit": "month",
-                    "context": "tamar's pregnancy"
+                    "en_unit": "month",
+                    "en_context": "tamar's pregnancy"
                 }
             ]
         },

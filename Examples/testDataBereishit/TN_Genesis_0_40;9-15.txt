@@ -45,8 +45,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "Misc",
-          "unit": "branch",
-          "context": "dream interpretation"
+          "en_unit": "branch",
+          "en_context": "dream interpretation"
         }
       ],
       "Food": [

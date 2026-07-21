@@ -37,8 +37,8 @@
                 {
                     "en_name": "10",
                     "number_category": "Sacrifice",
-                    "unit": "percent",
-                    "context": "jacob's vow offering"
+                    "en_unit": "percent",
+                    "en_context": "jacob's vow offering"
                 }
             ],
             "Food": [

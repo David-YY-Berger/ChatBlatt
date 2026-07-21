@@ -41,8 +41,8 @@
                 {
                     "en_name": "11",
                     "number_category": "People",
-                    "unit": "star",
-                    "context": "brothers bowing"
+                    "en_unit": "star",
+                    "en_context": "brothers bowing"
                 }
             ]
         },

@@ -57,8 +57,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "Misc",
-          "unit": "light",
-          "context": "created great lights"
+          "en_unit": "light",
+          "en_context": "created great lights"
         }
       ]
     },

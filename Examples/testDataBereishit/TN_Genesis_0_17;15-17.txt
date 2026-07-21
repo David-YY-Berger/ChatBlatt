@@ -35,14 +35,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "100",
           "number_category": "Time",
-          "unit": "year",
-          "context": "abraham age"
+          "en_unit": "year",
+          "en_context": "abraham age"
         },
         {
           "en_name": "90",
           "number_category": "Time",
-          "unit": "year",
-          "context": "sarah age"
+          "en_unit": "year",
+          "en_context": "sarah age"
         }
       ]
     },

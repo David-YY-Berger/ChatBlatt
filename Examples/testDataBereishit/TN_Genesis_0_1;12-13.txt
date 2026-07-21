@@ -26,8 +26,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "Time",
-          "unit": "day",
-          "context": "creation day"
+          "en_unit": "day",
+          "en_context": "creation day"
         }
       ]
     }

@@ -144,8 +144,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "People",
-          "unit": "son",
-          "context": "jacobs sons"
+          "en_unit": "son",
+          "en_context": "jacobs sons"
         }
       ]
     },

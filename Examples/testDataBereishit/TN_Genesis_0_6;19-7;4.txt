@@ -34,20 +34,20 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "pair",
-          "context": "all living things"
+          "en_unit": "pair",
+          "en_context": "all living things"
         },
         {
           "en_name": "7",
           "number_category": "People",
-          "unit": "pair",
-          "context": "pure animals"
+          "en_unit": "pair",
+          "en_context": "pure animals"
         },
         {
           "en_name": "40",
           "number_category": "Time",
-          "unit": "day",
-          "context": "flood duration"
+          "en_unit": "day",
+          "en_context": "flood duration"
         }
       ],
       "Animal": [

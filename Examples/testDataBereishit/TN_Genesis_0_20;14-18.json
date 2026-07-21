@@ -27,8 +27,8 @@
                 {
                     "en_name": "1000",
                     "number_category": "Money",
-                    "unit": "silver",
-                    "context": "vindication for sarah"
+                    "en_unit": "silver",
+                    "en_context": "vindication for sarah"
                 }
             ],
             "Animal": [

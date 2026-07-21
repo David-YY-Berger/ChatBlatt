@@ -58,8 +58,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "110",
           "number_category": "Time",
-          "unit": "year",
-          "context": "joseph's lifespan"
+          "en_unit": "year",
+          "en_context": "joseph's lifespan"
         }
       ]
     },

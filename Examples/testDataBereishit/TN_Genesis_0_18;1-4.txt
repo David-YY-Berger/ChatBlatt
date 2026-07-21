@@ -37,8 +37,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "People",
-          "unit": "figure",
-          "context": "figures seen by agent"
+          "en_unit": "figure",
+          "en_context": "figures seen by agent"
         }
       ]
     },

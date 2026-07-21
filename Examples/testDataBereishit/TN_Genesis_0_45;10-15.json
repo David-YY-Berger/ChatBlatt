@@ -1,6 +1,6 @@
 ﻿{
     "res": {
-        "en_summary": "Joseph reunites with brothers, invites Jacob to Goshen",
+        "en_summary": "Joseph reen_unites with brothers, invites Jacob to Goshen",
         "heb_summary": "יוסף מתאחד עם אחיו, מזמין יעקב לגושן",
         "passage_types": [
             "STORY"
@@ -37,8 +37,8 @@
                 {
                     "en_name": "5",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "famine duration"
+                    "en_unit": "year",
+                    "en_context": "famine duration"
                 }
             ]
         },

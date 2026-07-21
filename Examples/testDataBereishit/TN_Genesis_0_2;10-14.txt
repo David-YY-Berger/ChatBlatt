@@ -50,8 +50,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "4",
           "number_category": "Misc",
-          "unit": "branch",
-          "context": "river branches"
+          "en_unit": "branch",
+          "en_context": "river branches"
         }
       ]
     },

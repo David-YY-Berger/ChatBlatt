@@ -38,8 +38,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "8",
           "number_category": "Time",
-          "unit": "day",
-          "context": "circumcision age"
+          "en_unit": "day",
+          "en_context": "circumcision age"
         }
       ]
     },

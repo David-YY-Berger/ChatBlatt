@@ -53,14 +53,14 @@
                 {
                     "en_name": "70",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "terah fatherhood"
+                    "en_unit": "year",
+                    "en_context": "terah fatherhood"
                 },
                 {
                     "en_name": "205",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "terah lifespan"
+                    "en_unit": "year",
+                    "en_context": "terah lifespan"
                 }
             ]
         },

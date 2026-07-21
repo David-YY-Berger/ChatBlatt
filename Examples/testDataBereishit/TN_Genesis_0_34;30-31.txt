@@ -6,7 +6,7 @@ HEBREW:
 וַיֹּ֨אמֶר יַעֲקֹ֜ב אֶל־שִׁמְע֣וֹן וְאֶל־לֵוִי֮ עֲכַרְתֶּ֣ם אֹתִי֒ לְהַבְאִישֵׁ֙נִי֙ בְּיֹשֵׁ֣ב הָאָ֔רֶץ בַּֽכְּנַעֲנִ֖י וּבַפְּרִזִּ֑י וַאֲנִי֙ מְתֵ֣י מִסְפָּ֔ר וְנֶאֶסְפ֤וּ עָלַי֙ וְהִכּ֔וּנִי וְנִשְׁמַדְתִּ֖י אֲנִ֥י וּבֵיתִֽי׃ וַיֹּאמְר֑וּ הַכְזוֹנָ֕ה יַעֲשֶׂ֖ה אֶת־אֲחוֹתֵֽנוּ׃
 
 ENGLISH:
-Jacob said to Simeon and Levi, You have brought trouble on me, making me odious among the inhabitants of the land, the Canaanites and the Perizzites; my fighters (in construct form); cf. Deut. 2.34; 3.6; Isa. 3.25. NJPS men. are few in number, so that if they unite against me and attack me, I and my house will be destroyed. But they answered, Should our sister be treated like a whore?
+Jacob said to Simeon and Levi, You have brought trouble on me, making me odious among the inhabitants of the land, the Canaanites and the Perizzites; my fighters (in construct form); cf. Deut. 2.34; 3.6; Isa. 3.25. NJPS men. are few in number, so that if they en_unite against me and attack me, I and my house will be destroyed. But they answered, Should our sister be treated like a whore?
 
 EXTRACTED GRAPH (JSON):
 {

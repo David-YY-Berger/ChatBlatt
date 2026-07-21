@@ -62,104 +62,104 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "130",
           "number_category": "Time",
-          "unit": "year",
-          "context": "adam's age before seth"
+          "en_unit": "year",
+          "en_context": "adam's age before seth"
         },
         {
           "en_name": "800",
           "number_category": "Time",
-          "unit": "year",
-          "context": "adam's life after seth"
+          "en_unit": "year",
+          "en_context": "adam's life after seth"
         },
         {
           "en_name": "930",
           "number_category": "Time",
-          "unit": "year",
-          "context": "adam's lifespan"
+          "en_unit": "year",
+          "en_context": "adam's lifespan"
         },
         {
           "en_name": "105",
           "number_category": "Time",
-          "unit": "year",
-          "context": "seth's age before enosh"
+          "en_unit": "year",
+          "en_context": "seth's age before enosh"
         },
         {
           "en_name": "807",
           "number_category": "Time",
-          "unit": "year",
-          "context": "seth's life after enosh"
+          "en_unit": "year",
+          "en_context": "seth's life after enosh"
         },
         {
           "en_name": "912",
           "number_category": "Time",
-          "unit": "year",
-          "context": "seth's lifespan"
+          "en_unit": "year",
+          "en_context": "seth's lifespan"
         },
         {
           "en_name": "90",
           "number_category": "Time",
-          "unit": "year",
-          "context": "enosh's age before kenan"
+          "en_unit": "year",
+          "en_context": "enosh's age before kenan"
         },
         {
           "en_name": "815",
           "number_category": "Time",
-          "unit": "year",
-          "context": "enosh's life after kenan"
+          "en_unit": "year",
+          "en_context": "enosh's life after kenan"
         },
         {
           "en_name": "905",
           "number_category": "Time",
-          "unit": "year",
-          "context": "enosh's lifespan"
+          "en_unit": "year",
+          "en_context": "enosh's lifespan"
         },
         {
           "en_name": "70",
           "number_category": "Time",
-          "unit": "year",
-          "context": "kenan's age before mahalalel"
+          "en_unit": "year",
+          "en_context": "kenan's age before mahalalel"
         },
         {
           "en_name": "840",
           "number_category": "Time",
-          "unit": "year",
-          "context": "kenan's life after mahalalel"
+          "en_unit": "year",
+          "en_context": "kenan's life after mahalalel"
         },
         {
           "en_name": "910",
           "number_category": "Time",
-          "unit": "year",
-          "context": "kenan's lifespan"
+          "en_unit": "year",
+          "en_context": "kenan's lifespan"
         },
         {
           "en_name": "65",
           "number_category": "Time",
-          "unit": "year",
-          "context": "mahalalel's age before jared"
+          "en_unit": "year",
+          "en_context": "mahalalel's age before jared"
         },
         {
           "en_name": "830",
           "number_category": "Time",
-          "unit": "year",
-          "context": "mahalalel's life after jared"
+          "en_unit": "year",
+          "en_context": "mahalalel's life after jared"
         },
         {
           "en_name": "895",
           "number_category": "Time",
-          "unit": "year",
-          "context": "mahalalel's lifespan"
+          "en_unit": "year",
+          "en_context": "mahalalel's lifespan"
         },
         {
           "en_name": "162",
           "number_category": "Time",
-          "unit": "year",
-          "context": "jared's age before enoch"
+          "en_unit": "year",
+          "en_context": "jared's age before enoch"
         },
         {
           "en_name": "962",
           "number_category": "Time",
-          "unit": "year",
-          "context": "jared's lifespan"
+          "en_unit": "year",
+          "en_context": "jared's lifespan"
         }
       ]
     },

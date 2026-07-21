@@ -160,14 +160,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "350",
           "number_category": "Time",
-          "unit": "year",
-          "context": "noah after flood"
+          "en_unit": "year",
+          "en_context": "noah after flood"
         },
         {
           "en_name": "950",
           "number_category": "Time",
-          "unit": "year",
-          "context": "noah lifespan"
+          "en_unit": "year",
+          "en_context": "noah lifespan"
         }
       ]
     },

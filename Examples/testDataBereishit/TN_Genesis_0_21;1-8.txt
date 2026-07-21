@@ -38,14 +38,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "8",
           "number_category": "Time",
-          "unit": "day",
-          "context": "isaac circumcision"
+          "en_unit": "day",
+          "en_context": "isaac circumcision"
         },
         {
           "en_name": "100",
           "number_category": "Time",
-          "unit": "year",
-          "context": "abraham age"
+          "en_unit": "year",
+          "en_context": "abraham age"
         }
       ]
     },

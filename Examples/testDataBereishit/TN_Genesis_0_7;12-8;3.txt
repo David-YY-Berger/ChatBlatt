@@ -61,26 +61,26 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "40",
           "number_category": "Time",
-          "unit": "day",
-          "context": "rain duration"
+          "en_unit": "day",
+          "en_context": "rain duration"
         },
         {
           "en_name": "2",
           "number_category": "Misc",
-          "unit": "pair",
-          "context": "ark entry"
+          "en_unit": "pair",
+          "en_context": "ark entry"
         },
         {
           "en_name": "15",
           "number_category": "Measurement",
-          "unit": "cubit",
-          "context": "water height"
+          "en_unit": "cubit",
+          "en_context": "water height"
         },
         {
           "en_name": "150",
           "number_category": "Time",
-          "unit": "day",
-          "context": "water swelling duration"
+          "en_unit": "day",
+          "en_context": "water swelling duration"
         }
       ],
       "Animal": [

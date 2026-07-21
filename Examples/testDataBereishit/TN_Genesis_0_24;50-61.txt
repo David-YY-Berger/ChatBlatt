@@ -47,8 +47,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "10",
           "number_category": "Time",
-          "unit": "day",
-          "context": "maiden stay"
+          "en_unit": "day",
+          "en_context": "maiden stay"
         }
       ],
       "Animal": [

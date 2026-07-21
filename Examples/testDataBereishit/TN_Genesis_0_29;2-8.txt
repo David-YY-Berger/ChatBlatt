@@ -46,8 +46,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "Misc",
-          "unit": "flock",
-          "context": "sheep at well"
+          "en_unit": "flock",
+          "en_context": "sheep at well"
         }
       ],
       "Animal": [

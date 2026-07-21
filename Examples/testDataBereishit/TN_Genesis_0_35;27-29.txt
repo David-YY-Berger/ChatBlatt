@@ -46,8 +46,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "180",
           "number_category": "Time",
-          "unit": "year",
-          "context": "isaac lifespan"
+          "en_unit": "year",
+          "en_context": "isaac lifespan"
         }
       ]
     },

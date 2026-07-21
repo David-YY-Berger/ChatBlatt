@@ -54,8 +54,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "175",
           "number_category": "Time",
-          "unit": "year",
-          "context": "abraham's lifespan"
+          "en_unit": "year",
+          "en_context": "abraham's lifespan"
         }
       ]
     },

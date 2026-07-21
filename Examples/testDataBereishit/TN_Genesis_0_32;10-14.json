@@ -32,8 +32,8 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "camp",
-                    "context": "jacob's group"
+                    "en_unit": "camp",
+                    "en_context": "jacob's group"
                 }
             ]
         },

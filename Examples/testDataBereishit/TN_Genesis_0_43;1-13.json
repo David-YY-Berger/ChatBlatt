@@ -38,8 +38,8 @@
                 {
                     "en_name": "2",
                     "number_category": "Misc",
-                    "unit": "trip",
-                    "context": "travel time"
+                    "en_unit": "trip",
+                    "en_context": "travel time"
                 }
             ],
             "Food": [

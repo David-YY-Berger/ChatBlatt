@@ -34,8 +34,8 @@
                 {
                     "en_name": "10",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "abram dwelt in canaan"
+                    "en_unit": "year",
+                    "en_context": "abram dwelt in canaan"
                 }
             ]
         },

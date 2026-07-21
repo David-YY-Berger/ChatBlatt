@@ -135,32 +135,32 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "Time",
-          "unit": "year",
-          "context": "servitude to chedorlaomer"
+          "en_unit": "year",
+          "en_context": "servitude to chedorlaomer"
         },
         {
           "en_name": "13",
           "number_category": "Time",
-          "unit": "year",
-          "context": "rebellion"
+          "en_unit": "year",
+          "en_context": "rebellion"
         },
         {
           "en_name": "14",
           "number_category": "Time",
-          "unit": "year",
-          "context": "chedorlaomer's campaign"
+          "en_unit": "year",
+          "en_context": "chedorlaomer's campaign"
         },
         {
           "en_name": "4",
           "number_category": "People",
-          "unit": "king",
-          "context": "attacking kings"
+          "en_unit": "king",
+          "en_context": "attacking kings"
         },
         {
           "en_name": "5",
           "number_category": "People",
-          "unit": "king",
-          "context": "defending kings"
+          "en_unit": "king",
+          "en_context": "defending kings"
         }
       ]
     },

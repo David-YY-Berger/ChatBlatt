@@ -49,8 +49,8 @@
                 {
                     "en_name": "400",
                     "number_category": "Money",
-                    "unit": "shekel",
-                    "context": "land price"
+                    "en_unit": "shekel",
+                    "en_context": "land price"
                 }
             ]
         },

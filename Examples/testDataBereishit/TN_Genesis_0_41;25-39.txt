@@ -60,8 +60,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "7",
           "number_category": "Time",
-          "unit": "year",
-          "context": "abundance years"
+          "en_unit": "year",
+          "en_context": "abundance years"
         }
       ],
       "Food": [

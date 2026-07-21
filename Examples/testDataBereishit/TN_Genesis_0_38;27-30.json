@@ -18,14 +18,14 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "person",
-                    "context": "twin birth"
+                    "en_unit": "person",
+                    "en_context": "twin birth"
                 },
                 {
                     "en_name": "1",
                     "number_category": "People",
-                    "unit": "person",
-                    "context": "hand came out"
+                    "en_unit": "person",
+                    "en_context": "hand came out"
                 }
             ]
         }

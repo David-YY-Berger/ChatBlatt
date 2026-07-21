@@ -35,44 +35,44 @@
                 {
                     "en_name": "200",
                     "number_category": "Misc",
-                    "unit": "goat",
-                    "context": "gift to esau"
+                    "en_unit": "goat",
+                    "en_context": "gift to esau"
                 },
                 {
                     "en_name": "20",
                     "number_category": "Misc",
-                    "unit": "goat",
-                    "context": "gift to esau"
+                    "en_unit": "goat",
+                    "en_context": "gift to esau"
                 },
                 {
                     "en_name": "30",
                     "number_category": "Misc",
-                    "unit": "camel",
-                    "context": "gift to esau"
+                    "en_unit": "camel",
+                    "en_context": "gift to esau"
                 },
                 {
                     "en_name": "40",
                     "number_category": "Misc",
-                    "unit": "cow",
-                    "context": "gift to esau"
+                    "en_unit": "cow",
+                    "en_context": "gift to esau"
                 },
                 {
                     "en_name": "10",
                     "number_category": "Misc",
-                    "unit": "bull",
-                    "context": "gift to esau"
+                    "en_unit": "bull",
+                    "en_context": "gift to esau"
                 },
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "wife",
-                    "context": "jacob's family"
+                    "en_unit": "wife",
+                    "en_context": "jacob's family"
                 },
                 {
                     "en_name": "11",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "jacob's family"
+                    "en_unit": "son",
+                    "en_context": "jacob's family"
                 }
             ],
             "Animal": [

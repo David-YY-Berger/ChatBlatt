@@ -31,8 +31,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "People",
-          "unit": "tribe",
-          "context": "tribes of israel"
+          "en_unit": "tribe",
+          "en_context": "tribes of israel"
         }
       ],
       "Animal": [

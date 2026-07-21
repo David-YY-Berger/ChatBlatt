@@ -15,8 +15,8 @@
                 {
                     "en_name": "120",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "human lifespan limit"
+                    "en_unit": "year",
+                    "en_context": "human lifespan limit"
                 }
             ]
         }

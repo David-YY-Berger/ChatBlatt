@@ -29,26 +29,26 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "601",
           "number_category": "Time",
-          "unit": "year",
-          "context": "flood timeline"
+          "en_unit": "year",
+          "en_context": "flood timeline"
         },
         {
           "en_name": "1",
           "number_category": "Time",
-          "unit": "month",
-          "context": "flood timeline"
+          "en_unit": "month",
+          "en_context": "flood timeline"
         },
         {
           "en_name": "2",
           "number_category": "Time",
-          "unit": "month",
-          "context": "flood timeline"
+          "en_unit": "month",
+          "en_context": "flood timeline"
         },
         {
           "en_name": "27",
           "number_category": "Time",
-          "unit": "day",
-          "context": "flood timeline"
+          "en_unit": "day",
+          "en_context": "flood timeline"
         }
       ]
     },

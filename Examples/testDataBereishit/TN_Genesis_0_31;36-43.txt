@@ -44,20 +44,20 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "20",
           "number_category": "Time",
-          "unit": "year",
-          "context": "service duration"
+          "en_unit": "year",
+          "en_context": "service duration"
         },
         {
           "en_name": "14",
           "number_category": "Time",
-          "unit": "year",
-          "context": "service for daughters"
+          "en_unit": "year",
+          "en_context": "service for daughters"
         },
         {
           "en_name": "6",
           "number_category": "Time",
-          "unit": "year",
-          "context": "service for flocks"
+          "en_unit": "year",
+          "en_context": "service for flocks"
         }
       ],
       "Animal": [

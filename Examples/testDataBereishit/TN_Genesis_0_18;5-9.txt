@@ -46,8 +46,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "Measurement",
-          "unit": "seah",
-          "context": "flour for cakes"
+          "en_unit": "seah",
+          "en_context": "flour for cakes"
         }
       ],
       "Animal": [

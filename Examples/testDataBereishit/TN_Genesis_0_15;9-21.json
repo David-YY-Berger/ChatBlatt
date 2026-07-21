@@ -85,20 +85,20 @@
                 {
                     "en_name": "3",
                     "number_category": "Sacrifice",
-                    "unit": "year",
-                    "context": "animal offering"
+                    "en_unit": "year",
+                    "en_context": "animal offering"
                 },
                 {
                     "en_name": "400",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "enslavement duration"
+                    "en_unit": "year",
+                    "en_context": "enslavement duration"
                 },
                 {
                     "en_name": "4",
                     "number_category": "Time",
-                    "unit": "generation",
-                    "context": "return to land"
+                    "en_unit": "generation",
+                    "en_context": "return to land"
                 }
             ],
             "Animal": [

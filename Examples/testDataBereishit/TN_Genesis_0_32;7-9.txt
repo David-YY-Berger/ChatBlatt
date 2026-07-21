@@ -32,14 +32,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "400",
           "number_category": "People",
-          "unit": "person",
-          "context": "esau's retinue"
+          "en_unit": "person",
+          "en_context": "esau's retinue"
         },
         {
           "en_name": "2",
           "number_category": "Misc",
-          "unit": "camp",
-          "context": "jacob's division"
+          "en_unit": "camp",
+          "en_context": "jacob's division"
         }
       ]
     },

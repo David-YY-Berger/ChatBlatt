@@ -6,7 +6,7 @@ HEBREW:
 וַיָּבֹא֩ יַעֲקֹ֨ב שָׁלֵ֜ם עִ֣יר שְׁכֶ֗ם אֲשֶׁר֙ בְּאֶ֣רֶץ כְּנַ֔עַן בְּבֹא֖וֹ מִפַּדַּ֣ן אֲרָ֑ם וַיִּ֖חַן אֶת־פְּנֵ֥י הָעִֽיר׃ וַיִּ֜קֶן אֶת־חֶלְקַ֣ת הַשָּׂדֶ֗ה אֲשֶׁ֤ר נָֽטָה־שָׁם֙ אׇהֳל֔וֹ מִיַּ֥ד בְּנֵֽי־חֲמ֖וֹר אֲבִ֣י שְׁכֶ֑ם בְּמֵאָ֖ה קְשִׂיטָֽה׃ וַיַּצֶּב־שָׁ֖ם מִזְבֵּ֑חַ וַיִּ֨קְרָא־ל֔וֹ אֵ֖ל אֱלֹהֵ֥י יִשְׂרָאֵֽל׃ וַתֵּצֵ֤א דִינָה֙ בַּת־לֵאָ֔ה אֲשֶׁ֥ר יָלְדָ֖ה לְיַעֲקֹ֑ב לִרְא֖וֹת בִּבְנ֥וֹת הָאָֽרֶץ׃
 
 ENGLISH:
-Jacob arrived safe in the city of Shechem which is in the land of Canaan-having come thus from Paddan-aram-and he encamped before the city. The parcel of land where he pitched his tent he purchased from the kin of Hamor, Shechems father, for a hundred kesitah s., a unit of unknown value. He set up an altar there, and called it El-elohe-yisrael.Now Dinah, the daughter whom Leah had borne to Jacob, went out to visit the daughters of the land.
+Jacob arrived safe in the city of Shechem which is in the land of Canaan-having come thus from Paddan-aram-and he encamped before the city. The parcel of land where he pitched his tent he purchased from the kin of Hamor, Shechems father, for a hundred kesitah s., a en_unit of unknown value. He set up an altar there, and called it El-elohe-yisrael.Now Dinah, the daughter whom Leah had borne to Jacob, went out to visit the daughters of the land.
 
 EXTRACTED GRAPH (JSON):
 {
@@ -54,8 +54,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "100",
           "number_category": "Money",
-          "unit": "kesitah",
-          "context": "land purchase"
+          "en_unit": "kesitah",
+          "en_context": "land purchase"
         }
       ]
     },

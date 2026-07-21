@@ -53,8 +53,8 @@
                 {
                     "en_name": "3",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "leah sons to levi"
+                    "en_unit": "son",
+                    "en_context": "leah sons to levi"
                 }
             ]
         },

@@ -42,8 +42,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "100",
           "number_category": "Measurement",
-          "unit": "fold",
-          "context": "harvest yield"
+          "en_unit": "fold",
+          "en_context": "harvest yield"
         }
       ]
     },

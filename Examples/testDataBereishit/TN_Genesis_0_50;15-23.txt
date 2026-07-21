@@ -62,14 +62,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "110",
           "number_category": "Time",
-          "unit": "year",
-          "context": "joseph lifespan"
+          "en_unit": "year",
+          "en_context": "joseph lifespan"
         },
         {
           "en_name": "3",
           "number_category": "Time",
-          "unit": "generation",
-          "context": "ephraim children"
+          "en_unit": "generation",
+          "en_context": "ephraim children"
         }
       ]
     },

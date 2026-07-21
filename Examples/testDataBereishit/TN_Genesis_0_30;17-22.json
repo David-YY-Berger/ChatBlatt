@@ -41,20 +41,20 @@
                 {
                     "en_name": "5",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "leah's child"
+                    "en_unit": "son",
+                    "en_context": "leah's child"
                 },
                 {
                     "en_name": "6",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "leah's child"
+                    "en_unit": "son",
+                    "en_context": "leah's child"
                 },
                 {
                     "en_name": "1",
                     "number_category": "People",
-                    "unit": "daughter",
-                    "context": "leah's child"
+                    "en_unit": "daughter",
+                    "en_context": "leah's child"
                 }
             ]
         },

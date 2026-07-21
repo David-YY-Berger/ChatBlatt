@@ -55,32 +55,32 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "300",
           "number_category": "Measurement",
-          "unit": "cubit",
-          "context": "ark length"
+          "en_unit": "cubit",
+          "en_context": "ark length"
         },
         {
           "en_name": "50",
           "number_category": "Measurement",
-          "unit": "cubit",
-          "context": "ark width"
+          "en_unit": "cubit",
+          "en_context": "ark width"
         },
         {
           "en_name": "30",
           "number_category": "Measurement",
-          "unit": "cubit",
-          "context": "ark height"
+          "en_unit": "cubit",
+          "en_context": "ark height"
         },
         {
           "en_name": "1",
           "number_category": "Measurement",
-          "unit": "cubit",
-          "context": "ark opening"
+          "en_unit": "cubit",
+          "en_context": "ark opening"
         },
         {
           "en_name": "3",
           "number_category": "Misc",
-          "unit": "deck",
-          "context": "ark decks"
+          "en_unit": "deck",
+          "en_context": "ark decks"
         }
       ],
       "Plant": [

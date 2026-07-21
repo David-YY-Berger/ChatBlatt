@@ -37,8 +37,8 @@
                 {
                     "en_name": "2",
                     "number_category": "Money",
-                    "unit": "money",
-                    "context": "double gift payment"
+                    "en_unit": "money",
+                    "en_context": "double gift payment"
                 }
             ]
         },

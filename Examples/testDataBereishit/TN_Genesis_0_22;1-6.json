@@ -29,8 +29,8 @@
                 {
                     "en_name": "3",
                     "number_category": "Time",
-                    "unit": "day",
-                    "context": "journey to moriah"
+                    "en_unit": "day",
+                    "en_context": "journey to moriah"
                 }
             ],
             "Animal": [

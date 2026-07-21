@@ -36,32 +36,32 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "7",
           "number_category": "Time",
-          "unit": "month",
-          "context": "ark rested"
+          "en_unit": "month",
+          "en_context": "ark rested"
         },
         {
           "en_name": "17",
           "number_category": "Time",
-          "unit": "day",
-          "context": "ark rested"
+          "en_unit": "day",
+          "en_context": "ark rested"
         },
         {
           "en_name": "10",
           "number_category": "Time",
-          "unit": "month",
-          "context": "waters diminished"
+          "en_unit": "month",
+          "en_context": "waters diminished"
         },
         {
           "en_name": "1",
           "number_category": "Time",
-          "unit": "day",
-          "context": "mountains visible"
+          "en_unit": "day",
+          "en_context": "mountains visible"
         },
         {
           "en_name": "40",
           "number_category": "Time",
-          "unit": "day",
-          "context": "noah opened window"
+          "en_unit": "day",
+          "en_context": "noah opened window"
         }
       ]
     },

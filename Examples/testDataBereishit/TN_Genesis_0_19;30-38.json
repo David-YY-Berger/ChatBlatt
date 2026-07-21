@@ -40,8 +40,8 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "daughter",
-                    "context": "lot's daughters"
+                    "en_unit": "daughter",
+                    "en_context": "lot's daughters"
                 }
             ],
             "Food": [

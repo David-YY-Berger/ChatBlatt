@@ -43,14 +43,14 @@
                 {
                     "en_name": "2",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "famine duration"
+                    "en_unit": "year",
+                    "en_context": "famine duration"
                 },
                 {
                     "en_name": "5",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "famine remaining"
+                    "en_unit": "year",
+                    "en_context": "famine remaining"
                 }
             ]
         },

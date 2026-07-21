@@ -36,8 +36,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "1",
           "number_category": "Misc",
-          "unit": "area",
-          "context": "water gathered"
+          "en_unit": "area",
+          "en_context": "water gathered"
         }
       ]
     },

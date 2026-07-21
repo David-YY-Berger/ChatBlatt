@@ -43,14 +43,14 @@
                 {
                     "en_name": "300",
                     "number_category": "Money",
-                    "unit": "silver",
-                    "context": "benjamin gift"
+                    "en_unit": "silver",
+                    "en_context": "benjamin gift"
                 },
                 {
                     "en_name": "10",
                     "number_category": "Misc",
-                    "unit": "ass",
-                    "context": "joseph's father gift"
+                    "en_unit": "ass",
+                    "en_context": "joseph's father gift"
                 }
             ],
             "Food": [

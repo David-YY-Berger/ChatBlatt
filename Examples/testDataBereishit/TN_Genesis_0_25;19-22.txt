@@ -51,8 +51,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "40",
           "number_category": "Time",
-          "unit": "year",
-          "context": "isaac's age"
+          "en_unit": "year",
+          "en_context": "isaac's age"
         }
       ]
     },

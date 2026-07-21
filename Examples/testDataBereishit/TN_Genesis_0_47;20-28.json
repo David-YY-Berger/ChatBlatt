@@ -44,26 +44,26 @@
                 {
                     "en_name": "0.2",
                     "number_category": "Misc",
-                    "unit": "share",
-                    "context": "harvest tax to pharaoh"
+                    "en_unit": "share",
+                    "en_context": "harvest tax to pharaoh"
                 },
                 {
                     "en_name": "0.8",
                     "number_category": "Misc",
-                    "unit": "share",
-                    "context": "farmer's share of harvest"
+                    "en_unit": "share",
+                    "en_context": "farmer's share of harvest"
                 },
                 {
                     "en_name": "17",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "jacob lived in egypt"
+                    "en_unit": "year",
+                    "en_context": "jacob lived in egypt"
                 },
                 {
                     "en_name": "147",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "jacob total lifespan"
+                    "en_unit": "year",
+                    "en_context": "jacob total lifespan"
                 }
             ],
             "Food": [

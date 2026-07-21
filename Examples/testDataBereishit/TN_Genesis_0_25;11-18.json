@@ -83,14 +83,14 @@
                 {
                     "en_name": "12",
                     "number_category": "People",
-                    "unit": "chieftain",
-                    "context": "ishmael's sons"
+                    "en_unit": "chieftain",
+                    "en_context": "ishmael's sons"
                 },
                 {
                     "en_name": "137",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "ishmael lifespan"
+                    "en_unit": "year",
+                    "en_context": "ishmael lifespan"
                 }
             ]
         },

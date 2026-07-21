@@ -43,8 +43,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "People",
-          "unit": "son",
-          "context": "noah's children"
+          "en_unit": "son",
+          "en_context": "noah's children"
         }
       ]
     },

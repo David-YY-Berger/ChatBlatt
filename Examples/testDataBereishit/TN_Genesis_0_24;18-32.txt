@@ -67,14 +67,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "0.5",
           "number_category": "Money",
-          "unit": "shekel",
-          "context": "gold nose-ring weight"
+          "en_unit": "shekel",
+          "en_context": "gold nose-ring weight"
         },
         {
           "en_name": "10",
           "number_category": "Money",
-          "unit": "shekel",
-          "context": "gold arm-bands weight"
+          "en_unit": "shekel",
+          "en_context": "gold arm-bands weight"
         }
       ],
       "Animal": [

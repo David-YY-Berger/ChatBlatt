@@ -6,12 +6,12 @@ HEBREW:
 וַיִּ֩בֶן֩ יְהֹוָ֨ה אֱלֹהִ֧ים׀אֶֽת־הַצֵּלָ֛ע אֲשֶׁר־לָקַ֥ח מִן־הָֽאָדָ֖ם לְאִשָּׁ֑ה וַיְבִאֶ֖הָ אֶל־הָֽאָדָֽם׃ וַיֹּ֘אמֶר֮ הָֽאָדָם֒ זֹ֣את הַפַּ֗עַם עֶ֚צֶם מֵֽעֲצָמַ֔י וּבָשָׂ֖ר מִבְּשָׂרִ֑י לְזֹאת֙ יִקָּרֵ֣א אִשָּׁ֔ה כִּ֥י מֵאִ֖ישׁ לֻֽקְחָה־זֹּֽאת׃ עַל־כֵּן֙ יַֽעֲזׇב־אִ֔ישׁ אֶת־אָבִ֖יו וְאֶת־אִמּ֑וֹ וְדָבַ֣ק בְּאִשְׁתּ֔וֹ וְהָי֖וּ לְבָשָׂ֥ר אֶחָֽד׃ וַיִּֽהְי֤וּ שְׁנֵיהֶם֙ עֲרוּמִּ֔ים הָֽאָדָ֖ם וְאִשְׁתּ֑וֹ וְלֹ֖א יִתְבֹּשָֽׁשׁוּ׃
 
 ENGLISH:
-And God HASHEM fashioned the side that had been taken from the Human into a woman, bringing her to the Human. Then the Human said, This one at last Is bone of my bones And flesh of my flesh. This one shall be called Woman,; so trad. More precisely in context, a (female) member of the human species. See next note and the Dictionary under ish . For from a Human. was she taken. Hence a man. Contrast the previous verse. leaves his father and mother and clings to his wife, (with possessive suffix). Cf. the previous note and contrast the previous verse. so that they become one flesh. The two of them were naked,, play on arum shrewd in 3.1. the Human; trad. the man. See note at v. 7. and his wife, yet they felt no shame.
+And God HASHEM fashioned the side that had been taken from the Human into a woman, bringing her to the Human. Then the Human said, This one at last Is bone of my bones And flesh of my flesh. This one shall be called Woman,; so trad. More precisely in en_context, a (female) member of the human species. See next note and the Dictionary under ish . For from a Human. was she taken. Hence a man. Contrast the previous verse. leaves his father and mother and clings to his wife, (with possessive suffix). Cf. the previous note and contrast the previous verse. so that they become one flesh. The two of them were naked,, play on arum shrewd in 3.1. the Human; trad. the man. See note at v. 7. and his wife, yet they felt no shame.
 
 EXTRACTED GRAPH (JSON):
 {
   "res": {
-    "en_summary": "God creates woman; man and woman unite.",
+    "en_summary": "God creates woman; man and woman en_unite.",
     "heb_summary": "אלוהים בורא אישה; אדם ואישה מתאחדים.",
     "passage_types": [
       "STORY"
@@ -26,8 +26,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "person",
-          "context": "naked people"
+          "en_unit": "person",
+          "en_context": "naked people"
         }
       ]
     }

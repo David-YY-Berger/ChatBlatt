@@ -29,44 +29,44 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "50",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "5",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "45",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "40",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "30",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "20",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         },
         {
           "en_name": "10",
           "number_category": "People",
-          "unit": "person",
-          "context": "innocent people"
+          "en_unit": "person",
+          "en_context": "innocent people"
         }
       ]
     },

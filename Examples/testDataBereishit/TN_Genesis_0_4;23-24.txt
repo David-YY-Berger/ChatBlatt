@@ -35,14 +35,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "7",
           "number_category": "Misc",
-          "unit": "fold",
-          "context": "cain vengeance"
+          "en_unit": "fold",
+          "en_context": "cain vengeance"
         },
         {
           "en_name": "77",
           "number_category": "Misc",
-          "unit": "fold",
-          "context": "lamech vengeance"
+          "en_unit": "fold",
+          "en_context": "lamech vengeance"
         }
       ]
     },

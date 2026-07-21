@@ -76,14 +76,14 @@
                 {
                     "en_name": "318",
                     "number_category": "People",
-                    "unit": "man",
-                    "context": "abrams retainers"
+                    "en_unit": "man",
+                    "en_context": "abrams retainers"
                 },
                 {
                     "en_name": "10",
                     "number_category": "Misc",
-                    "unit": "percent",
-                    "context": "abram gave tithe"
+                    "en_unit": "percent",
+                    "en_context": "abram gave tithe"
                 }
             ],
             "Food": [

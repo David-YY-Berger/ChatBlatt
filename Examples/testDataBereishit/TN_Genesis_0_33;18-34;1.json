@@ -43,8 +43,8 @@
                 {
                     "en_name": "100",
                     "number_category": "Money",
-                    "unit": "kesitah",
-                    "context": "land purchase"
+                    "en_unit": "kesitah",
+                    "en_context": "land purchase"
                 }
             ]
         },

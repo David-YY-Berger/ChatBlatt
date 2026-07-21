@@ -60,20 +60,20 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "People",
-          "unit": "brother",
-          "context": "sons of jacob"
+          "en_unit": "brother",
+          "en_context": "sons of jacob"
         },
         {
           "en_name": "1",
           "number_category": "People",
-          "unit": "brother",
-          "context": "son of jacob"
+          "en_unit": "brother",
+          "en_context": "son of jacob"
         },
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "son",
-          "context": "reubens sons"
+          "en_unit": "son",
+          "en_context": "reubens sons"
         }
       ]
     },

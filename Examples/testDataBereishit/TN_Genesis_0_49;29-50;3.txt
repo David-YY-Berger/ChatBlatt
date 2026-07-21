@@ -66,14 +66,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "40",
           "number_category": "Time",
-          "unit": "day",
-          "context": "embalming period"
+          "en_unit": "day",
+          "en_context": "embalming period"
         },
         {
           "en_name": "70",
           "number_category": "Time",
-          "unit": "day",
-          "context": "mourning period"
+          "en_unit": "day",
+          "en_context": "mourning period"
         }
       ]
     },

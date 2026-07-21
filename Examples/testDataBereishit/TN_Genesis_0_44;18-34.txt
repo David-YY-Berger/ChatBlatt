@@ -49,14 +49,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "son",
-          "context": "jacob's sons"
+          "en_unit": "son",
+          "en_context": "jacob's sons"
         },
         {
           "en_name": "1",
           "number_category": "People",
-          "unit": "son",
-          "context": "jacob's sons"
+          "en_unit": "son",
+          "en_context": "jacob's sons"
         }
       ]
     },

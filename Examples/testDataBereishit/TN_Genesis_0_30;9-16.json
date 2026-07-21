@@ -49,8 +49,8 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "zilpah's children"
+                    "en_unit": "son",
+                    "en_context": "zilpah's children"
                 }
             ],
             "Food": [

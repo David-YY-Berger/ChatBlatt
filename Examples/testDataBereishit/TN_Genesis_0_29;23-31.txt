@@ -44,14 +44,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "7",
           "number_category": "Time",
-          "unit": "year",
-          "context": "service for wives"
+          "en_unit": "year",
+          "en_context": "service for wives"
         },
         {
           "en_name": "1",
           "number_category": "Time",
-          "unit": "week",
-          "context": "leah bridal week"
+          "en_unit": "week",
+          "en_context": "leah bridal week"
         }
       ]
     },

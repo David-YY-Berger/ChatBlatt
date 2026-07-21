@@ -6,7 +6,7 @@ HEBREW:
 וַיְהִ֗י אַחֲרֵי֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וַיֹּ֣אמֶר לְיוֹסֵ֔ף הִנֵּ֥ה אָבִ֖יךָ חֹלֶ֑ה וַיִּקַּ֞ח אֶת־שְׁנֵ֤י בָנָיו֙ עִמּ֔וֹ אֶת־מְנַשֶּׁ֖ה וְאֶת־אֶפְרָֽיִם׃ וַיַּגֵּ֣ד לְיַעֲקֹ֔ב וַיֹּ֕אמֶר הִנֵּ֛ה בִּנְךָ֥ יוֹסֵ֖ף בָּ֣א אֵלֶ֑יךָ וַיִּתְחַזֵּק֙ יִשְׂרָאֵ֔ל וַיֵּ֖שֶׁב עַל־הַמִּטָּֽה׃ וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל־יוֹסֵ֔ף אֵ֥ל שַׁדַּ֛י נִרְאָֽה־אֵלַ֥י בְּל֖וּז בְּאֶ֣רֶץ כְּנָ֑עַן וַיְבָ֖רֶךְ אֹתִֽי׃ וַיֹּ֣אמֶר אֵלַ֗י הִנְנִ֤י מַפְרְךָ֙ וְהִרְבִּיתִ֔ךָ וּנְתַתִּ֖יךָ לִקְהַ֣ל עַמִּ֑ים וְנָ֨תַתִּ֜י אֶת־הָאָ֧רֶץ הַזֹּ֛את לְזַרְעֲךָ֥ אַחֲרֶ֖יךָ אֲחֻזַּ֥ת עוֹלָֽם׃ וְעַתָּ֡ה שְׁנֵֽי־בָנֶ֩יךָ֩ הַנּוֹלָדִ֨ים לְךָ֜ בְּאֶ֣רֶץ מִצְרַ֗יִם עַד־בֹּאִ֥י אֵלֶ֛יךָ מִצְרַ֖יְמָה לִי־הֵ֑ם אֶפְרַ֙יִם֙ וּמְנַשֶּׁ֔ה כִּרְאוּבֵ֥ן וְשִׁמְע֖וֹן יִֽהְיוּ־לִֽי׃
 
 ENGLISH:
-Some time afterward, Joseph was told, Your father is ill. So he took with him his two sons, Manasseh and Ephraim. When Jacob was told, Your son Joseph has come to see you, Israel summoned his strength and sat up in bed. And Jacob said to Joseph, El Shaddai, who appeared to me at Luz in the land of Canaan, blessed me- and said to me, I will make you fertile and numerous, making of you a community of peoples; and I will assign this land to your offspring to come for an everlasting possession. Now, your two sons, who were born to you in the land of Egypt before I came to you in Egypt, shall be mine; Ephraim and Manasseh shall be mine no less than Reuben and Simeon.
+Some time afterward, Joseph was told, Your father is ill. So he took with him his two sons, Manasseh and Ephraim. When Jacob was told, Your son Joseph has come to see you, Israel summoned his strength and sat up in bed. And Jacob said to Joseph, El Shaddai, who appeared to me at Luz in the land of Canaan, blessed me- and said to me, I will make you fertile and numerous, making of you a commen_unity of peoples; and I will assign this land to your offspring to come for an everlasting possession. Now, your two sons, who were born to you in the land of Egypt before I came to you in Egypt, shall be mine; Ephraim and Manasseh shall be mine no less than Reuben and Simeon.
 
 EXTRACTED GRAPH (JSON):
 {
@@ -72,8 +72,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "son",
-          "context": "joseph's sons"
+          "en_unit": "son",
+          "en_context": "joseph's sons"
         }
       ]
     },

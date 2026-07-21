@@ -54,14 +54,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "People",
-          "unit": "brother",
-          "context": "joseph's brothers"
+          "en_unit": "brother",
+          "en_context": "joseph's brothers"
         },
         {
           "en_name": "3",
           "number_category": "Time",
-          "unit": "day",
-          "context": "brothers' confinement"
+          "en_unit": "day",
+          "en_context": "brothers' confinement"
         }
       ],
       "Food": [

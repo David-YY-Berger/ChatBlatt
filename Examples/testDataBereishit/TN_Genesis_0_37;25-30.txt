@@ -71,8 +71,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "20",
           "number_category": "Money",
-          "unit": "silver",
-          "context": "joseph sale price"
+          "en_unit": "silver",
+          "en_context": "joseph sale price"
         }
       ],
       "Animal": [

@@ -43,8 +43,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "10",
           "number_category": "Misc",
-          "unit": "camel",
-          "context": "servant took camels"
+          "en_unit": "camel",
+          "en_context": "servant took camels"
         }
       ],
       "Animal": [

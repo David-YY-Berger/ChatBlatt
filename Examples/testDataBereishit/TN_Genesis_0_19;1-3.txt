@@ -43,8 +43,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "messenger",
-          "context": "arrived in sodom"
+          "en_unit": "messenger",
+          "en_context": "arrived in sodom"
         }
       ],
       "Food": [

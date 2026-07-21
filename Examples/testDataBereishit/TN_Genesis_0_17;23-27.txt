@@ -47,14 +47,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "99",
           "number_category": "Time",
-          "unit": "year",
-          "context": "abraham age"
+          "en_unit": "year",
+          "en_context": "abraham age"
         },
         {
           "en_name": "13",
           "number_category": "Time",
-          "unit": "year",
-          "context": "ishmael age"
+          "en_unit": "year",
+          "en_context": "ishmael age"
         }
       ]
     },

@@ -38,14 +38,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "1",
           "number_category": "Time",
-          "unit": "month",
-          "context": "jacob stayed with laban"
+          "en_unit": "month",
+          "en_context": "jacob stayed with laban"
         },
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "daughter",
-          "context": "laban's daughters"
+          "en_unit": "daughter",
+          "en_context": "laban's daughters"
         }
       ]
     },

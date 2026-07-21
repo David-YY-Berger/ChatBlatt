@@ -49,8 +49,8 @@
                 {
                     "en_name": "130",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "jacob's lifespan"
+                    "en_unit": "year",
+                    "en_context": "jacob's lifespan"
                 }
             ],
             "Food": [

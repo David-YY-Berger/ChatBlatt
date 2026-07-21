@@ -57,8 +57,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "3",
           "number_category": "People",
-          "unit": "son",
-          "context": "noah sons"
+          "en_unit": "son",
+          "en_context": "noah sons"
         }
       ],
       "Food": [

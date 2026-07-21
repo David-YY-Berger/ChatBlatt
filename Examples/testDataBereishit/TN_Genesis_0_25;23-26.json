@@ -25,14 +25,14 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "nation",
-                    "context": "nations in womb"
+                    "en_unit": "nation",
+                    "en_context": "nations in womb"
                 },
                 {
                     "en_name": "60",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "isaac age at birth"
+                    "en_unit": "year",
+                    "en_context": "isaac age at birth"
                 }
             ]
         },

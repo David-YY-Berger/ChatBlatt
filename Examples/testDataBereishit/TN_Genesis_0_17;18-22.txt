@@ -43,14 +43,14 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "12",
           "number_category": "People",
-          "unit": "chieftain",
-          "context": "ishmael's descendants"
+          "en_unit": "chieftain",
+          "en_context": "ishmael's descendants"
         },
         {
           "en_name": "1",
           "number_category": "Time",
-          "unit": "year",
-          "context": "isaac's birth"
+          "en_unit": "year",
+          "en_context": "isaac's birth"
         }
       ]
     },

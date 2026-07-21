@@ -57,8 +57,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "2",
           "number_category": "People",
-          "unit": "courtier",
-          "context": "pharaoh's courtiers"
+          "en_unit": "courtier",
+          "en_context": "pharaoh's courtiers"
         }
       ]
     },

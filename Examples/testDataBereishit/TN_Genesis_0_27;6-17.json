@@ -26,8 +26,8 @@
                 {
                     "en_name": "2",
                     "number_category": "Misc",
-                    "unit": "kid",
-                    "context": "dish for father"
+                    "en_unit": "kid",
+                    "en_context": "dish for father"
                 }
             ],
             "Animal": [

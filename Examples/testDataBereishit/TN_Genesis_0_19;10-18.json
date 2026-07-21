@@ -50,8 +50,8 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "daughter",
-                    "context": "lot's remaining family"
+                    "en_unit": "daughter",
+                    "en_context": "lot's remaining family"
                 }
             ]
         },

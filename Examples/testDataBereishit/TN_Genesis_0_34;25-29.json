@@ -49,8 +49,8 @@
                 {
                     "en_name": "2",
                     "number_category": "People",
-                    "unit": "son",
-                    "context": "jacob's sons avenged dinah"
+                    "en_unit": "son",
+                    "en_context": "jacob's sons avenged dinah"
                 }
             ]
         },

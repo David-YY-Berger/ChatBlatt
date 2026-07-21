@@ -40,8 +40,8 @@
                 {
                     "en_name": "10",
                     "number_category": "People",
-                    "unit": "brother",
-                    "context": "joseph's brothers"
+                    "en_unit": "brother",
+                    "en_context": "joseph's brothers"
                 }
             ],
             "Food": [

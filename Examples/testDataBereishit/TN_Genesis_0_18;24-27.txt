@@ -37,8 +37,8 @@ EXTRACTED GRAPH (JSON):
         {
           "en_name": "50",
           "number_category": "People",
-          "unit": "person",
-          "context": "sodom's innocent"
+          "en_unit": "person",
+          "en_context": "sodom's innocent"
         }
       ]
     },

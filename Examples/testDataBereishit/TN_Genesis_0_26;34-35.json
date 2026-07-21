@@ -38,8 +38,8 @@
                 {
                     "en_name": "40",
                     "number_category": "Time",
-                    "unit": "year",
-                    "context": "esau's age"
+                    "en_unit": "year",
+                    "en_context": "esau's age"
                 }
             ]
         },
