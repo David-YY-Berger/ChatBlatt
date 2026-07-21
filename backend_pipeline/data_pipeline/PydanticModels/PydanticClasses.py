@@ -3,21 +3,18 @@
 """Backward-compatible facade for split Pydantic model modules.
 
 This file keeps the original import surface stable while implementation now lives
-in smaller modules in the same directory.
+in entity_rel_graph/ (ERG-specific models) and the generic utility modules.
 """
 
 from backend.models_db.Enums import NumberCategory
-from backend_pipeline.data_pipeline.PydanticModels.entity_models import Entities, Entity, NumberEntity
-from backend_pipeline.data_pipeline.PydanticModels.name_utils import smart_title_case
-from backend_pipeline.data_pipeline.PydanticModels.number_normalization import (
-    _FRACTION_WORDS,
-    _NUMBER_SCALES,
-    _NUMBER_WORDS,
-    _SPECIAL_CORRECTIONS,
-    _normalize_number_string,
-    _parse_word_number,
-)
-from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
+from backend_pipeline.data_pipeline.PydanticModels.entity_rel_graph import (
+    Entities,
+    Entity,
+    NumberEntity,
+    Relation,
+    Relationships,
+    ExtractionResult,
+    FinalResponse,
     DEMONYM_TO_NATION,
     ENTITY_CATEGORIES,
     PERSON_PLACE_SPECIFIC_RELATIONSHIPS,
@@ -27,8 +24,15 @@ from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
     max_len_summary,
     min_len_summary,
 )
-from backend_pipeline.data_pipeline.PydanticModels.relationship_models import Relation, Relationships
-from backend_pipeline.data_pipeline.PydanticModels.response_models import ExtractionResult, FinalResponse
+from backend_pipeline.data_pipeline.PydanticModels.name_utils import smart_title_case
+from backend_pipeline.data_pipeline.PydanticModels.number_normalization import (
+    _FRACTION_WORDS,
+    _NUMBER_SCALES,
+    _NUMBER_WORDS,
+    _SPECIAL_CORRECTIONS,
+    _normalize_number_string,
+    _parse_word_number,
+)
 
 __all__ = [
     "TRIBES_OF_ISRAEL",

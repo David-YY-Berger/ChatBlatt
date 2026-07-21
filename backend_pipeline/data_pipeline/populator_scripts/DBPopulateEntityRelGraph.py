@@ -2,14 +2,12 @@
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
-from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.models_db.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
-from backend.db.DBConstants import DBFields
 from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
 from backend.db.EntityRelManager import EntityRelManager
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
@@ -428,96 +426,7 @@ class DBPopulateLmmData(DBPopulateLlmBase):
         return
 
     ############################################## helper methods ####################################################
-    def get_examples_src_contents(self) -> list[SourceContent]:
-        # took sources from file:///C:/Users/U6072661/AppData/Local/Chatblatt/Tests/Questions/fight.html
 
-        key_strs = [
-
-            # person used as example (Reuven and shimon, yaakov in yerusha)
-            # this case is not a concern... couldnt find passage of the gemara that have this phenomenom.. only in rishonim "BT_Bava Batra_0_116a:16-116b:3"
-
-            # childofFather (levi)
-            # 'TN_Exodus_0_6:14-25',
-
-            # childOfMother
-            # "TN_I Kings_0_2:13–3:2",
-
-            # descendantOf
-            # 'BT_Sanhedrin_0_96b:2-9',
-
-            # spouseOf
-            # 'TN_Genesis_0_30:3-8',
-
-            # studiedFrom
-            # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
-            # x said in name of y said in name of z.
-            # 'BT_Berakhot_0_35b:11-12', # missing childOf
-            "TN_Esther_0_1:1–22", # ensure no studied from! # also number
-
-            # placeToNation (seir to edom)
-            # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
-
-            # personBelongsToNation
-            # 'BT_Sanhedrin_0_94a:4-10', # bad alias, (should be comparison..)
-
-            # comparedTo
-            # 'TN_Isaiah_0_1:1-31',
-            # "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
-
-            # contrastedWith, non literal places (world to come vs this world) - ensure rav no prophesying
-            # 'BT_Berakhot_0_17a:7-12',
-
-            # AllyOf (person - person) also numbers
-            # 'TN_I Kings_0_5:15–32',
-
-            # bornIn
-            # 'TN_Genesis_0_41:47-53',
-
-            # visited
-            # 'TN_Genesis_0_33:18-34:1', # also place to Nation
-
-            # prayedAt
-            # "BT_Pesachim_0_88a:3-5",
-
-            # enemyOF (nation to nation) - very long source
-            # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
-            #
-            # diedIn (debora)
-            # "TN_Genesis_0_35:1-9",
-
-            # personToTribeOfIsrael, also same person appearing with diff spelling (hege and hegai)
-            # "TN_Esther_0_2:1–20",
-
-            # bat kol, beit shamai bet hillel (groups)
-            # "BT_Eruvin_0_13b:10-14",
-
-        #     black garments (symbol), am haaretz
-        #     'BT_Shabbat_0_114a:5-9',
-
-        #     symbol - torah scroll
-        #     'BT_Sanhedrin_0_67b:22-68a:12',
-
-        #     symbol and compared to - the torah scroll and r eliezer
-        #     'BT_Sotah_0_49b:15-19',
-
-            # number
-            # "TN_II Kings_0_14:1–22",
-
-            # food - quail (food and animal)
-            # "BT_Yoma_0_75a:19-75b:8",
-
-            # animal - re'em
-            # "BT_Gittin_0_68a:5-68b:20",
-            # animal speaking
-            # "BT_Gittin_0_45a:18-22",
-
-            # plant , carob ( = food), sycamore (not food)
-            # "BT_Bava Batra_0_70a:2-7",
-
-
-        ]
-        res = [self.db_api.find_one_source_content(k) for k in key_strs]
-        return res
 
 
 

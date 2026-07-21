@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 from backend.models_db.Enums import NumberCategory
 from backend_pipeline.data_pipeline.PydanticModels.name_utils import smart_title_case
 from backend_pipeline.data_pipeline.PydanticModels.number_normalization import _normalize_number_string
-from backend_pipeline.data_pipeline.PydanticModels.pydantic_constants import (
+from backend_pipeline.data_pipeline.PydanticModels.entity_rel_graph.erg_constants import (
     DEMONYM_TO_NATION,
     ENTITY_CATEGORIES,
     TRIBES_OF_ISRAEL,
@@ -393,4 +393,3 @@ class Entities(BaseModel):
 
 
 __all__ = ["Entity", "NumberEntity", "Entities"]
-
