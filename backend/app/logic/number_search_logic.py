@@ -14,8 +14,8 @@ class NumberOccurrenceDTO:
     One (ENumber × SourceMetadata) occurrence enriched with display strings.
     All fields come directly from the ENumber entity and its SourceMetadata.
     """
-    unit: Optional[str]       # number.unit
-    context: Optional[str]    # number.context
+    en_unit: Optional[str]       # number.en_unit
+    en_context: Optional[str]    # number.en_context
     source_str: str           # SourceClass.__str__() or to_heb_str() depending on lang
     summary: Optional[str]    # SourceMetadata.summary_en or summary_heb depending on lang
     source_key: str           # SourceMetadata.key
@@ -24,7 +24,7 @@ class NumberOccurrenceDTO:
 
     def __str__(self) -> str:
         return (
-            f"NumberOccurrenceDTO(unit={self.unit!r}, context={self.context!r}, "
+            f"NumberOccurrenceDTO(en_unit={self.en_unit!r}, en_context={self.en_context!r}, "
             f"source={self.source_str!r}, source_key={self.source_key!r})"
         )
 
@@ -87,8 +87,8 @@ class NumberSearchLogic:
 
                 by_category[cat].append(
                     NumberOccurrenceDTO(
-                        unit=number.unit,
-                        context=number.context,
+                        en_unit=number.en_unit,
+                        en_context=number.en_context,
                         source_str=source_str,
                         summary=summary,
                         source_key=src.key,

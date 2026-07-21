@@ -96,7 +96,7 @@ def _occurrences_table(
 
     ``source_contents`` maps source_key → SourceContent (or None).
     """
-    sorted_occs = sorted(occurrences, key=lambda o: (o.unit is None, (o.unit or "").lower()))
+    sorted_occs = sorted(occurrences, key=lambda o: (o.en_unit is None, (o.en_unit or "").lower()))
 
     header_bg = _hex_rgba(accent, 0.10)
     border_col = _hex_rgba(accent, 0.25)
@@ -116,8 +116,8 @@ def _occurrences_table(
 
     for idx, occ in enumerate(sorted_occs):
         row_bg  = f"background:{stripe_bg};" if idx % 2 == 1 else ""
-        unit    = html.escape(occ.unit or "—")
-        context = html.escape(occ.context or "—")
+        en_unit    = html.escape(occ.en_unit or "—")
+        context = html.escape(occ.en_context or "—")
         summary = html.escape(occ.summary or "—")
 
         # Build source cell: clickable link if content is available
@@ -129,7 +129,7 @@ def _occurrences_table(
 
         rows_html.append(
             f"<tr style='{row_bg}'>"
-            f"<td style='{td_base}{border_style} font-weight:500;'>{unit}</td>"
+            f"<td style='{td_base}{border_style} font-weight:500;'>{en_unit}</td>"
             f"<td style='{td_base}{border_style}'>{context}</td>"
             f"<td style='{td_base}{border_style}'>{source_cell}</td>"
             f"<td style='{td_base}{border_style}' class='summary-cell'>{summary}</td>"
@@ -374,10 +374,10 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
         cat_label = category.value if category else "(no category)"
         print(f"\n  📂 {cat_label} ({len(occurrences)} occurrence(s))")
         for occ in occurrences:
-            unit_label = occ.unit or "(no unit)"
+            unit_label = occ.en_unit or "(no unit)"
             print(f"    [{unit_label}]  sources: {occ.source_str}")
-            if occ.context:
-                print(f"      context : {occ.context}")
+            if occ.en_context:
+                print(f"      context : {occ.en_context}")
             if occ.summary:
                 print(f"      summary : {occ.summary}")
     print(sep + "\n")

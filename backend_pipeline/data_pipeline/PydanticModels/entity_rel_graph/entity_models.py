@@ -37,7 +37,7 @@ class NumberEntity(BaseModel):
             f"Must be one of: {', '.join(_NUMBER_CATEGORY_VALUES)}"
         )
     )
-    unit: str = Field(
+    en_unit: str = Field(
         description=(
             "A normalized, singular noun describing what is being counted or measured. "
             "Examples: 'bull', 'year', 'silver', 'cubit', 'tribe', 'lash'. "
@@ -70,7 +70,7 @@ class NumberEntity(BaseModel):
             return NumberCategory.Misc.value
         return v
 
-    @field_validator("unit")
+    @field_validator("en_unit")
     @classmethod
     def normalize_unit(cls, v: str) -> str:
         """Normalize unit to lowercase singular noun."""
@@ -80,7 +80,7 @@ class NumberEntity(BaseModel):
         elif v.endswith("s") and not v.endswith("ss") and len(v) > 2:
             v = v[:-1]
         if not v:
-            raise ValueError("unit cannot be empty")
+            raise ValueError("en_unit cannot be empty")
         return v
 
     @field_validator("context")
@@ -111,7 +111,7 @@ class Entities(BaseModel):
             "Explicit numeric values with context. Each number must include: "
             "en_name (the numeric value), number_category (one of: "
             f"{', '.join(_NUMBER_CATEGORY_VALUES)}), "
-            "unit (normalized singular noun - what is counted/measured), and context (1-6 word topic summary)."
+            "en_unit (normalized singular noun - what is counted/measured), and context (1-6 word topic summary)."
         ),
     )
     Animal: Optional[List[Entity]] = Field(
@@ -144,7 +144,7 @@ class Entities(BaseModel):
                 NumberEntity(
                     en_name=normalized,
                     number_category=entity.number_category,
-                    unit=entity.unit,
+                    en_unit=entity.en_unit,
                     context=entity.context,
                 )
             )

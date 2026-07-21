@@ -11,8 +11,8 @@ if TYPE_CHECKING:
 class ENumber(Entity):
     entityType: EntityType = EntityType.ENumber
     numberCategory: Optional[NumberCategory] = None
-    unit: Optional[str] = None                # Normalized singular noun — what the number counts/measures (e.g., "bull", "year", "silver")
-    context: Optional[str] = None             # 1-6 word topic summary so the number is understandable out of context
+    en_unit: Optional[str] = None                # Normalized singular noun — what the number counts/measures (e.g., "bull", "year", "silver")
+    en_context: Optional[str] = None             # 1-6 word topic summary so the number is understandable out of context
 
     # ========================= Identity / Equality =========================
 
@@ -24,8 +24,8 @@ class ENumber(Entity):
         return (
             self.entityType,
             self.numberCategory,
-            self.unit.lower() if self.unit else None,
-            self.context.lower() if self.context else None,
+            self.en_unit.lower() if self.en_unit else None,
+            self.en_context.lower() if self.en_context else None,
         )
 
     def to_db_dict(self) -> Dict[str, Any]:
@@ -43,10 +43,10 @@ class ENumber(Entity):
         query: Dict[str, Any] = {DBFields.ENTITY_TYPE: self.entityType.value}
         if self.numberCategory is not None:
             query["numberCategory"] = self.numberCategory.value
-        if self.unit is not None:
-            query["unit"] = {DBOperators.REGEX: f"^{self.unit}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
-        if self.context is not None:
-            query["context"] = {DBOperators.REGEX: f"^{self.context}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
+        if self.en_unit is not None:
+            query["en_unit"] = {DBOperators.REGEX: f"^{self.en_unit}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
+        if self.en_context is not None:
+            query["en_context"] = {DBOperators.REGEX: f"^{self.en_context}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
         return query
 
     # ========================= Factory =========================
@@ -55,10 +55,10 @@ class ENumber(Entity):
         parts = [self.display_en_name]
         if self.numberCategory:
             parts.append(f"[{self.numberCategory.value}]")
-        if self.unit:
-            parts.append(self.unit)
-        if self.context:
-            parts.append(f"({self.context})")
+        if self.en_unit:
+            parts.append(self.en_unit)
+        if self.en_context:
+            parts.append(f"({self.en_context})")
         return " ".join(parts)
 
     @classmethod
@@ -77,8 +77,8 @@ class ENumber(Entity):
                         number_category = nc
                         break
 
-        unit_raw = entity_data.get("unit", "").strip()
-        unit = unit_raw.lower() if unit_raw else None
+        unit_raw = entity_data.get("en_unit", "").strip()
+        en_unit = unit_raw.lower() if unit_raw else None
 
         context_raw = entity_data.get("context", "").strip()
         context = context_raw.lower() if context_raw else None
@@ -87,7 +87,7 @@ class ENumber(Entity):
             display_en_name=en_name,
             all_en_names=[en_name],
             numberCategory=number_category,
-            unit=unit,
-            context=context,
+            en_unit=en_unit,
+            en_context=context,
         )
 

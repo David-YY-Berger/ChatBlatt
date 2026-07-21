@@ -2,13 +2,42 @@
 #################################################################################
 ########################## populate metadata ############################
 #################################################################################
+
 {{
 
-----------------
-now implement
+
+i began to refactor C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\populator_scripts\DBPopulateEntityRelGraph.py, i created backend_pipeline/data_pipeline/populator_scripts/DBPopulateLlmBase.py, bec i am doing another pydantic prompt to get a diff json per source. 
+
+i see thought that many files exist, they are named as generic 'pydantic' files, but much of their content relates specifically to the populating of Entity Rel Graph.
+
+refactor those files - ideally separate into general pydantic code (ie Source Content, Source Metadata, etc) and specific to Entity Rel Graph, but at the very list - change names of the files ,or at least restructure them with dirs or inheritance files, so that it's clear that those relate to Entity Rel Graph 
+
+------
+
+add func to Entity (which implemented at base, but can be overriden) called 'hasMetadata'. 
+true - if display_heb_name is not empty
+false - else
+
+-----
+ENumber - want to now support hebrew unit, and hebrew context. 
+add en_unit, heb_unit
+
+
+--- 
+rerun populating db...
+----
+
+ implement
 backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py  : 
 
-add to 
+i will describe everything which must happen, some of the code might already be written in base files / pydanticCaller, etc. 
+if doesnt exist there, you will probably find similar code in backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
+
+1. iterate over sources, for now from get_examples_src_contents
+2. for every source, query the db and get the list of Entitys linked to that source. 
+3. if an Entity already has metadata - remove it from the list (ie we dont want to touch it).
+
+
 
 }}
 #################################################################################

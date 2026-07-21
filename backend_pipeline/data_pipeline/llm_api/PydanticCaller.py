@@ -155,7 +155,7 @@ class PydanticCaller:
                 "       '7 bulls' → Sacrifice | '40 years' → Time | '100 silver' → Money\n"
                 "       '600,000 men' → People | '10 cubits' → Measurement\n\n"
                 
-                "  2) unit — a NORMALIZED, SINGULAR, LOWERCASE noun describing what the number counts or measures.\n"
+                "  2) en_unit — a NORMALIZED, SINGULAR, LOWERCASE noun describing what the number counts or measures.\n"
                 "     This must be ONE word, always singular, always lowercase, always English.\n"
                 "     The goal is deterministic matching — use the same word every time for the same concept.\n"
                 "     Examples:\n"
