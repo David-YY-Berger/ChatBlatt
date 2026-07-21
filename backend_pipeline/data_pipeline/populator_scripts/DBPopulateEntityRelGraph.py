@@ -1,7 +1,4 @@
 # bs'd
-import asyncio
-import json
-import os
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
@@ -13,12 +10,10 @@ from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend.db.DBConstants import DBFields
-from backend_pipeline.data_pipeline.DBScriptParentClass import DBParentClass
+from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
 from backend.db.EntityRelManager import EntityRelManager
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend_pipeline.data_pipeline.llm_api.PydanticCaller import PydanticCaller
-from backend.file_utils import FileTypeEnum, OsFunctions
-from backend_pipeline.file_utils_pipeline import LocalPrinter
 from backend_pipeline.file_utils_pipeline.JsonUtils import JsonUtils
 from backend.common import Paths
 
@@ -30,7 +25,7 @@ _CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in Entity
 _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
 
-class DBPopulateLmmData(DBParentClass):
+class DBPopulateLmmData(DBPopulateLlmBase):
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""
@@ -55,13 +50,19 @@ class DBPopulateLmmData(DBParentClass):
     def tearDown(self):
         super().tearDown()
 
-    ############################################## Populating Entities and Relationships ###############################################
+    # ─── DBPopulateLlmBase abstract method implementations ────────────────────
 
-    def test_async_run(self): # used to call Pydantic funcs..
-        OsFunctions.clear_create_directory(Paths.LMM_RESPONSES_OUTPUT_DIR)
-        # Run the entire batch as one async task
-        # asyncio.run(self.test_populate_source_meta_data())
-        asyncio.run(self.print_graphs_to_json())
+    def _get_output_dir(self) -> str:
+        return Paths.LMM_RESPONSES_OUTPUT_DIR
+
+    async def _extract_from_passage(self, passage: str):
+        return await self.pydantic_caller.extract_graph_from_passage(passage)
+
+    # ─── Entry points ─────────────────────────────────────────────────────────
+
+    def test_async_run(self):
+        """Run LLM extraction for all sources → saves JSON files."""
+        self.test_run_extraction()
 
     def test_populate_entities_and_rels_from_jsons(self):
         """
@@ -392,67 +393,6 @@ class DBPopulateLmmData(DBParentClass):
                 return db_key
 
         return None
-
-    ############################################## Print Graphs to JSON ###############################################
-
-    async def print_graphs_to_json(self):
-        # todo get the references of a passage too!
-
-        total_cost_usd = 0.0
-        total_tokens = 0
-        total_input_tokens = 0
-        total_output_tokens = 0
-
-        # contents = self.get_examples_src_contents()
-        contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
-        for src_content in contents:
-            passage = src_content.get_clean_en_text()
-
-            graph_json_str, usage, cost_usd = await self.pydantic_caller.extract_graph_from_passage(passage)
-
-            # Accumulate totals
-            total_cost_usd += cost_usd
-            total_tokens += usage.total_tokens
-            total_input_tokens += usage.input_tokens
-            total_output_tokens += usage.output_tokens
-
-            cost_summary = (
-                f"Tokens: Total={usage.total_tokens} approx cost usd = ${cost_usd:.6f} "
-                f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})"
-            )
-            # Add the src_key to the JSON
-            graph_dict = json.loads(graph_json_str)
-            graph_dict[DBFields.KEY] = src_content.key
-
-            path = str(os.path.join(Paths.LMM_RESPONSES_OUTPUT_DIR, src_content.key.replace(':', ';')))
-
-            output_text = (
-                f"COST: {cost_summary}\n"
-                f"SOURCE:\n{src_content}\n\n"
-                f"HEBREW:\n{src_content.get_clean_heb_text()}\n\n"
-                f"ENGLISH:\n{passage}\n\n"
-                f"EXTRACTED GRAPH (JSON):\n{graph_json_str}"
-            )
-
-            LocalPrinter.print_to_file(
-                graph_dict,  # Pass dict directly - LocalPrinter handles JSON formatting
-                # FileTypeEnum.FileType.TXT,
-                FileTypeEnum.FileType.JSON,
-                path
-            )
-            LocalPrinter.print_to_file(
-                output_text,
-                FileTypeEnum.FileType.TXT,
-                # FileTypeEnum.FileType.JSON,
-                path
-            )
-
-        print(f"\n{'='*60}")
-        print(f"TOTAL COST SUMMARY:")
-        print(f"  Total Tokens: {total_tokens} (Prompt={total_input_tokens}, Completion={total_output_tokens})")
-        print(f"  Total Cost: ${total_cost_usd:.6f} USD")
-        print(f"{'='*60}")
-        print(f"Results saved to: {Paths.LMM_RESPONSES_OUTPUT_DIR}")
 
     ############################################## Populating Metadata ###############################################
 

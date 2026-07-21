@@ -7,6 +7,7 @@ LOGS_DIR = os.path.join(BASE_DIR, "Logs")
 TESTS_DIR = os.path.join(BASE_DIR, "Tests")
 QUESTIONS_OUTPUT_DIR = os.path.join(TESTS_DIR, "Questions")
 LMM_RESPONSES_OUTPUT_DIR = os.path.join(TESTS_DIR, "LMM Responses")
+ENRICHMENT_RESPONSES_OUTPUT_DIR = os.path.join(TESTS_DIR, "Enrichment Responses")
 
 
 ############################################## local paths for this project #######################################
