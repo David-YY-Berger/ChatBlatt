@@ -19,11 +19,19 @@ class TimePeriod(Enum):
 class SymbolType(Enum):
     Clothing = "Clothing"
     HolyObject = "Holy Object"
+    BodyPart = "Body Part"
+    NotPhysical = "Not Physical"
+    Other = "Other"
+#     todo think of others!
 
 class PlaceType(Enum):
     City = "City"
     BodyOfWater = "Body of Water"
     Mountain = "Mountain"
+    Desert = "Desert"
+    NotPhysical = "Not Physical"
+    Other = "Other"
+    #     todo think of others!
 
 class RoleType(Enum):
     Prophet = "Prophet"
