@@ -23,7 +23,7 @@ _CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in Entity
 _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
 
-class DBPopulateLmmData(DBPopulateLlmBase):
+class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""

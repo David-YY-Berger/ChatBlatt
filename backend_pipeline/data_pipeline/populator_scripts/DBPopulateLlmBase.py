@@ -1,5 +1,6 @@
 # bs"d
 import asyncio
+from html import escape
 import json
 import os
 from abc import abstractmethod
@@ -76,6 +77,90 @@ class DBPopulateLlmBase(DBParentClass):
         OsFunctions.clear_create_directory(self._get_output_dir())
         asyncio.run(self._extract_all_to_json())
 
+    def test_print_examples_src_contents_to_html(self) -> None:
+        """Print example source contents to HTML files for visual inspection."""
+        output_dir = os.path.join(Paths.TESTS_DIR, "source_content_examples")
+        OsFunctions.clear_create_directory(output_dir)
+        self._print_src_contents_to_html(get_examples_src_contents(self.db_api), output_dir)
+
+    def _print_src_contents_to_html(
+        self, src_contents: list[SourceContent], output_dir: str
+    ) -> None:
+        """
+        Iterate source contents and print their HTML + clean text variants as HTML files.
+        Raw HTML content is embedded directly so it renders nicely in a browser.
+        """
+        for src in src_contents:
+            out_path = os.path.join(output_dir, src.key.replace(":", ";"))
+            html_content = self._src_content_debug_html(src)
+            LocalPrinter.print_to_file(html_content, FileTypeEnum.FileType.HTML, out_path)
+
+        print(f"Source content HTML files saved to: {output_dir}")
+
+    @staticmethod
+    def _src_content_debug_html(src: SourceContent) -> str:
+        return f"""<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{escape(src.key)}</title>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 24px;
+        }}
+        section {{
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            padding: 16px;
+        }}
+        h1, h2 {{
+            margin-top: 0;
+        }}
+        .hebrew {{
+            direction: rtl;
+            text-align: right;
+        }}
+        .clean-text {{
+            background: #f8f8f8;
+            border-radius: 6px;
+            padding: 12px;
+            white-space: pre-wrap;
+        }}
+        .raw-text {{
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }}
+    </style>
+</head>
+<body>
+    <h1>{escape(src.key)}</h1>
+
+    <section>
+        <h2>src.get_heb_html_content()</h2>
+        <div class="hebrew">{src.get_heb_html_content()}</div>
+    </section>
+
+    <section>
+        <h2>src.get_clean_heb_text()</h2>
+        <div class="hebrew clean-text">{escape(src.get_clean_heb_text())}</div>
+    </section>
+
+    <section>
+        <h2>src.get_en_html_content()</h2>
+        <div>{src.get_en_html_content()}</div>
+    </section>
+
+    <section>
+        <h2>src.get_clean_en_text() (RAW repr — not rendered)</h2>
+        <pre class="clean-text raw-text">{escape(repr(src.get_clean_en_text()))}</pre>
+    </section>
+</body>
+</html>"""
+
     async def _extract_all_to_json(self, book=Books.GENESIS) -> None:
         """
         Iterate all sources for *book*, call the LLM once per source,
@@ -147,76 +232,76 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
         # "TN_I Kings_0_2:13–3:2",
 
         # descendantOf
-        # 'BT_Sanhedrin_0_96b:2-9',
+        'BT_Sanhedrin_0_96b:2-9',
 
         # spouseOf
         # 'TN_Genesis_0_30:3-8',
 
         # studiedFrom
-        # 'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
+        'BT_Eruvin_0_45a:12-19', # doesnt catch the second 'studied from!'
         # x said in name of y said in name of z.
-        # 'BT_Berakhot_0_35b:11-12', # missing childOf
+        'BT_Berakhot_0_35b:11-12', # missing childOf
         "TN_Esther_0_1:1–22", # ensure no studied from! # also number
 
         # placeToNation (seir to edom)
-        # 'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
+        'TN_Genesis_0_36:1-19', # bad studied from - esav not studied from yaakov!. missed alias..
 
         # personBelongsToNation
-        # 'BT_Sanhedrin_0_94a:4-10', # bad alias, (should be comparison..)
+        'BT_Sanhedrin_0_94a:4-10', # bad alias, (should be comparison..)
 
         # comparedTo
-        # 'TN_Isaiah_0_1:1-31',
-        # "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
+        'TN_Isaiah_0_1:1-31',
+        "BT_Sanhedrin_0_105a:7-105b:1", # comparedTo, allyOf...
 
         # contrastedWith, non literal places (world to come vs this world) - ensure rav no prophesying
-        # 'BT_Berakhot_0_17a:7-12',
+        'BT_Berakhot_0_17a:7-12',
 
         # AllyOf (person - person) also numbers
-        # 'TN_I Kings_0_5:15–32',
+        'TN_I Kings_0_5:15–32',
 
         # bornIn
-        # 'TN_Genesis_0_41:47-53',
+        'TN_Genesis_0_41:47-53',
 
         # visited
-        # 'TN_Genesis_0_33:18-34:1', # also place to Nation
+        'TN_Genesis_0_33:18-34:1', # also place to Nation
 
         # prayedAt
-        # "BT_Pesachim_0_88a:3-5",
+        "BT_Pesachim_0_88a:3-5",
 
         # enemyOF (nation to nation) - very long source
-        # 'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
+        'TN_II Kings_0_23:31–25:7', #todo include validation in pydatic!!
         #
         # diedIn (debora)
-        # "TN_Genesis_0_35:1-9",
+        "TN_Genesis_0_35:1-9",
 
         # personToTribeOfIsrael, also same person appearing with diff spelling (hege and hegai)
-        # "TN_Esther_0_2:1–20",
+        "TN_Esther_0_2:1–20",
 
         # bat kol, beit shamai bet hillel (groups)
-        # "BT_Eruvin_0_13b:10-14",
+        "BT_Eruvin_0_13b:10-14",
 
     #     black garments (symbol), am haaretz
-    #     'BT_Shabbat_0_114a:5-9',
+        'BT_Shabbat_0_114a:5-9',
 
     #     symbol - torah scroll
-    #     'BT_Sanhedrin_0_67b:22-68a:12',
+        'BT_Sanhedrin_0_67b:22-68a:12',
 
     #     symbol and compared to - the torah scroll and r eliezer
-    #     'BT_Sotah_0_49b:15-19',
+        'BT_Sotah_0_49b:15-19',
 
         # number
-        # "TN_II Kings_0_14:1–22",
+        "TN_II Kings_0_14:1–22",
 
         # food - quail (food and animal)
-        # "BT_Yoma_0_75a:19-75b:8",
+        "BT_Yoma_0_75a:19-75b:8",
 
         # animal - re'em
-        # "BT_Gittin_0_68a:5-68b:20",
+        "BT_Gittin_0_68a:5-68b:20",
         # animal speaking
-        # "BT_Gittin_0_45a:18-22",
+        "BT_Gittin_0_45a:18-22",
 
         # plant , carob ( = food), sycamore (not food)
-        # "BT_Bava Batra_0_70a:2-7",
+        "BT_Bava Batra_0_70a:2-7",
 
 
     ]

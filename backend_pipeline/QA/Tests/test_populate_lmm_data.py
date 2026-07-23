@@ -165,8 +165,8 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
         print(f"Dropped {deleted_entities} entities and {deleted_rels} rels before populate.")
 
         # 2. Run the populator
-        from backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph import DBPopulateLmmData
-        populator = DBPopulateLmmData('test_populate_entities_and_rels_from_jsons')
+        from backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph import DBPopulateEntityRelGraph
+        populator = DBPopulateEntityRelGraph('test_populate_entities_and_rels_from_jsons')
         populator.db_api = self.db_api  # share the live connection
         populator.setUp()
         populator.test_populate_entities_and_rels_from_jsons()
