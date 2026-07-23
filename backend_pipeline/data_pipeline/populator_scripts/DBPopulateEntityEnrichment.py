@@ -1,13 +1,17 @@
 # bs"d
 """
-DBPopulateEntityEnrichment - Enrich existing Person entities with attributes derived from passages.
+DBPopulateEntityEnrichment - Enrich existing entities with attributes derived from passages.
 
 Two-phase workflow (inherited from DBPopulateLlmBase):
   Phase 1 (test_run_extraction):  iterate sources -> call LLM -> save JSON files
   Phase 2 (test_populate_from_jsons): load JSON files -> update DB entities
 
-Each JSON file contains an EnrichmentResponse (people: [...]) for one source.
-Phase 2 resolves each person entry to a DB entity by name and patches its fields.
+For each source, the LLM is given a passage (clean English + clean Hebrew, no vowels)
+plus the JSON of any associated entities (Person/Number/Place/Symbol, ...) that have not
+yet been enriched. Each JSON file contains an EnrichmentResponse (entities: [...]) keyed
+by entity 'key', filling in fields like display_heb_name, Person.timePeriod/isWoman/
+isNonJew/isGroup/roles, Number.heb_unit/heb_context, Place.placeType, Symbol.symbolType.
+Phase 2 resolves each entry back to a DB entity by key and patches its fields.
 """
 
 from typing import List, Optional, Tuple
@@ -46,8 +50,15 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     def _get_output_dir(self) -> str:
         return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
 
-    async def _extract_from_passage(self, passage: str):
-        return await self.enrichment_caller.extract_from_passage(passage)
+    async def _extract_from_passage(self, passage: str, entity_json_list: Optional[List[str]] = None):
+        """
+        *passage* is expected to already contain BOTH the clean English and clean
+        Hebrew (no vowels) text of the source. *entity_json_list* is a list of JSON
+        strings — one per DB entity associated with this passage that has not yet
+        been enriched with metadata (e.g. Person/Number/Place/Symbol entities pulled
+        from this source's SourceMetadata.entity_keys).
+        """
+        return await self.enrichment_caller.extract_from_passage(passage, entity_json_list)
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> None:
         pass

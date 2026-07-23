@@ -3,7 +3,7 @@ import asyncio
 import json
 import os
 from abc import abstractmethod
-from typing import Any, List, Tuple
+from typing import Any, List, Optional, Tuple
 
 from backend.db.data_names.Books import Books
 from backend.db.DBConstants import DBFields
@@ -51,10 +51,15 @@ class DBPopulateLlmBase(DBParentClass):
         ...
 
     @abstractmethod
-    async def _extract_from_passage(self, passage: str) -> Tuple[str, Any, float]:
+    async def _extract_from_passage(
+        self, passage: str, entity_json_list: Optional[List[str]] = None
+    ) -> Tuple[str, Any, float]:
         """
         Call the LLM for a single passage; return (json_str, usage, cost_usd).
         *usage* must expose .total_tokens, .input_tokens, .output_tokens.
+        *entity_json_list* is an optional list of JSON strings (one per DB entity)
+        that subclasses may use to give the LLM additional context — e.g. entities
+        already found for this passage that still need metadata enrichment.
         Single attempt — no retries.
         """
         ...
