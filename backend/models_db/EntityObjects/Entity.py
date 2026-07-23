@@ -67,9 +67,13 @@ class Entity(BaseModel):
             DBFields.ENTITY_TYPE: self.entityType.value,
         }
 
+    def hasMetadata(self) -> bool:
+        """Returns True when display_heb_name is not empty."""
+        return bool(self.display_heb_name.strip())
+
     def has_metadata(self) -> bool:
         """Returns True when this entity has display metadata."""
-        return bool(self.display_heb_name.strip())
+        return self.hasMetadata()
 
     @classmethod
     def get_class_for_type(cls, entity_type: EntityType) -> "Type[Entity]":
