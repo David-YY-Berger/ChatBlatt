@@ -125,6 +125,9 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             )
             LocalPrinter.print_to_file(result_dict, FileTypeEnum.FileType.JSON, out_path)
             LocalPrinter.print_to_file(output_text, FileTypeEnum.FileType.TXT, out_path)
+            entity_list_out_path = f"{out_path}_entity_json_list"
+            LocalPrinter.print_to_file(entity_json_list, FileTypeEnum.FileType.JSON, entity_list_out_path)
+            LocalPrinter.print_to_file(entities_block, FileTypeEnum.FileType.TXT, entity_list_out_path)
 
         print(f"\n{'='*60}")
         print(f"PROCESSED: {num_processed} sources, SKIPPED (no entities to enrich): {num_skipped}")
@@ -157,5 +160,4 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             f"ENGLISH:\n{src_content.get_clean_en_text()}\n\n"
             f"HEBREW:\n{src_content.get_clean_heb_text()}"
         )
-
 
