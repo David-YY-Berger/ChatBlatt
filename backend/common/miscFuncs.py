@@ -65,12 +65,17 @@ def clean_heb_text_from_html_tags(html_content) -> str:
     # once the diacritics are stripped below.
     text = text.replace('\u05be', ' ')
 
-    # 8. Strip Hebrew vowels (niqqud), cantillation marks (te'amim), and other
-    # combining diacritics, leaving just the plain Hebrew letters.
-    # This covers the full Hebrew diacritics block (U+0591-U+05C7).
-    text = re.sub(r'[\u0591-\u05C7]', '', text)
+    # 8. Keep sof pasuq (U+05C3), the Hebrew "sentence end" marker, by
+    # converting it to a regular colon so sentence boundaries survive cleanup.
+    text = text.replace('\u05c3', ':')
 
-    # 9. Collapse multiple spaces (but preserve Hebrew text integrity)
+    # 9. Strip Hebrew vowels (niqqud), cantillation marks (te'amim), and other
+    # combining diacritics, leaving just the plain Hebrew letters.
+    # This covers the full Hebrew diacritics block (U+0591-U+05C7), excluding
+    # sof pasuq (U+05C3) which was already converted to ':' above.
+    text = re.sub(r'[\u0591-\u05C2\u05C4-\u05C7]', '', text)
+
+    # 10. Collapse multiple spaces (but preserve Hebrew text integrity)
     text = re.sub(r' +', ' ', text).strip()
 
     return text
