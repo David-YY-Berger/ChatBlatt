@@ -1,17 +1,34 @@
 
 todo {{
 
-	tokens: 
-		- improve clean hebrew html - 
-		
-		fix raw underender...
-		backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase.DBPopulateLlmBase.test_print_examples_src_contents_to_html
-		
-	
+
+see backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment._extract_all_to_json
+
+here - json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list) we have the json string of entities. it can look like this:
+{
+    "entities": [
+        {
+            "key": "6a5fa5fe011460404dfc3eea",
+            "display_heb_name": "אלהים",
+            "timePeriod": "Tanach"
+        },
+        {
+            "key": "6a5fa694011460404dfc4176",
+            "display_heb_name": "רחל",
+            "timePeriod": "Tanach",
+            "isWoman": true
+        },
+ 
+    ],
+    "key": "TN_Genesis_0_30:3-8"
+}
+
+now, i want you to reinsert those entities into the DB. 
+(1) make sure to verify the Enum values with the actual values.
+(2) notice - there can be fields missing
+(3) we already have this func - backend.db.mongo_parts.entity_mixin.EntityMongoMixin.update_entity - just make sure that it makes sense. 
+
 }}
-
-
-
 
 
 
@@ -19,9 +36,6 @@ todo {{
 ########################## populate metadata ############################
 #################################################################################
 
-func print clean hebrew {{
-see how the CSS makes sure the the english is raw text? do the same for the hebrew..
-}}
 
 impl populate entity metadata {{
 
