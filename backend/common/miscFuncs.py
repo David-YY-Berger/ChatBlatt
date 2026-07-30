@@ -60,7 +60,17 @@ def clean_heb_text_from_html_tags(html_content) -> str:
     text = text.replace('&nbsp;', ' ')
     text = text.replace('&thinsp;', '')
 
-    # 7. Collapse multiple spaces (but preserve Hebrew text integrity)
+    # 7. Replace maqaf (U+05BE), the Hebrew "hyphen" used to join words
+    # (e.g. בְּנֵֽי־יִשְׂרָאֵ֛ל), with a space so words don't get glued together
+    # once the diacritics are stripped below.
+    text = text.replace('\u05be', ' ')
+
+    # 8. Strip Hebrew vowels (niqqud), cantillation marks (te'amim), and other
+    # combining diacritics, leaving just the plain Hebrew letters.
+    # This covers the full Hebrew diacritics block (U+0591-U+05C7).
+    text = re.sub(r'[\u0591-\u05C7]', '', text)
+
+    # 9. Collapse multiple spaces (but preserve Hebrew text integrity)
     text = re.sub(r' +', ' ', text).strip()
 
     return text
