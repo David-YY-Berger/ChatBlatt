@@ -1,4 +1,20 @@
 
+todo {{
+
+	tokens: 
+		- improve clean hebrew html - 
+		
+		fix raw underender...
+		backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase.DBPopulateLlmBase.test_print_examples_src_contents_to_html
+		
+	
+}}
+
+
+
+
+
+
 #################################################################################
 ########################## populate metadata ############################
 #################################################################################
@@ -55,10 +71,8 @@ if doesnt exist there, you will probably find similar code in backend_pipeline.d
 
 
 }}
-#################################################################################
-########################## Join Entitys s ############################
-#################################################################################
-{{
+
+Join Entitys s {{
 
 heres what an entity looks in our db:
 
@@ -126,20 +140,15 @@ if there was an error while running, the file should mark 'merged' for whatever 
 
 
 }}
-#################################################################################
-########################## fix entity rel population ############################
-#################################################################################
-{{
+
+fix entity rel population {{
 pydantic creating graph, remove entitys with display name like (.lower()):
 son, sons, daughter, daughters, wife, wives, husband, husbands, - all family relationship general words.. 
 king
 
 }}
 
-#################################################################################
-########################## old prompts ############################
-#################################################################################
-{{
+old prompts {{
 
 
 
