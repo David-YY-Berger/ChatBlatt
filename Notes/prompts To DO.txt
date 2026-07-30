@@ -1,6 +1,23 @@
 
 todo {{
 
+in this func backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment._get_unenriched_entities_for_source
+
+we retrieve Entitys. 
+but, even though in my DB, the entity with key X has indeed metadata, the entity obj that my code pulls from the DB does NOT has metadata. for example - it does not have Person does not have Person.display_heb_name populated. why not?
+
+backend.db.mongo_parts.entity_mixin.EntityMongoMixin.get_entities_by_keys
+backend.models_db.EntityObjects.EPerson.EPerson
+
+}}
+
+
+
+#################################################################################
+########################## populate metadata ############################
+#################################################################################
+
+finished - entity enrichemnt add to db {{ 
 
 see backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment._extract_all_to_json
 
@@ -27,17 +44,9 @@ now, i want you to reinsert those entities into the DB.
 (1) make sure to verify the Enum values with the actual values.
 (2) notice - there can be fields missing
 (3) we already have this func - backend.db.mongo_parts.entity_mixin.EntityMongoMixin.update_entity - just make sure that it makes sense. 
-
-}}
-
-
-
-#################################################################################
-########################## populate metadata ############################
-#################################################################################
-
-
-impl populate entity metadata {{
+ }}
+ 
+FINISHED impl populate entity metadata {{
 
 ----
 implement: backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase.DBPopulateLlmBase._extract_from_passage 
@@ -86,7 +95,7 @@ if doesnt exist there, you will probably find similar code in backend_pipeline.d
 
 }}
 
-Join Entitys s {{
+Merge/Join Entitys s {{
 
 heres what an entity looks in our db:
 
@@ -155,7 +164,7 @@ if there was an error while running, the file should mark 'merged' for whatever 
 
 }}
 
-fix entity rel population {{
+fix entity rel population (pydantic){{
 pydantic creating graph, remove entitys with display name like (.lower() (not contained, exactly equal..)
 
 	in the prompt, give it the enums to guide it.. should be alphabetized !
