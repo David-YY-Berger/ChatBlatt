@@ -21,11 +21,15 @@ class SymbolType(Enum):
     HolyObject = "Holy Object"
     BodyPart = "Body Part"
     NotPhysical = "Not Physical"
+    PartOfNature = "Part of Nature"
+    Weapon = "Weapon"
     Other = "Other"
 #     todo think of others!
 
 class PlaceType(Enum):
     City = "City"
+    CountryOrRegion = "Country or Region"
+    BuildingOrStructure = "Building or Structure"
     BodyOfWater = "Body of Water"
     Mountain = "Mountain"
     Desert = "Desert"

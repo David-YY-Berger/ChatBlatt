@@ -142,9 +142,14 @@ if there was an error while running, the file should mark 'merged' for whatever 
 }}
 
 fix entity rel population {{
-pydantic creating graph, remove entitys with display name like (.lower()):
-son, sons, daughter, daughters, wife, wives, husband, husbands, - all family relationship general words.. 
-king
+pydantic creating graph, remove entitys with display name like (.lower() (not contained, exactly equal..)
+
+	in the prompt, give it the enums to guide it.. should be alphabetized !
+
+	Person -all family relationship general words - get a huge list.
+			son, sons, daughter, daughters, wife, wives, husband, husbands, -
+			king
+	Place - house, city, plain, hills, entrace, gate, door, Field,
 
 }}
 

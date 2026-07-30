@@ -226,7 +226,13 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
         # this case is not a concern... couldnt find passage of the gemara that have this phenomenom.. only in rishonim "BT_Bava Batra_0_116a:16-116b:3"
 
         # spouseOf
-        'TN_Genesis_0_30:3-8',
+        # 'TN_Genesis_0_30:3-8',
+
+        "TN_Genesis_0_46:8-28",
+        "TN_Genesis_0_38:13-23"
+        # "TN_Genesis_0_10:21-11:3",
+        # "TN_Genesis_0_14:2-11",
+        # "TN_Genesis_0_36:1-19"
 
     #     # childofFather (levi)
     #     'TN_Exodus_0_6:14-25',
