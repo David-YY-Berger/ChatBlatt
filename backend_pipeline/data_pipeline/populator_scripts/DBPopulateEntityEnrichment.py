@@ -72,6 +72,9 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
     # --- Phase 1 override: custom source list + entity filtering --------------
 
+    def test_run(self) -> None:
+        self.test_run_extraction()
+
     async def _extract_all_to_json(self) -> None:
         """
         Iterate the example sources (get_examples_src_contents), and for each one:

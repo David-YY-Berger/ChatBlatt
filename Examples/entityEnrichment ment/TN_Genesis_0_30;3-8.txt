@@ -1,0 +1,58 @@
+﻿COST: Tokens: Total=4515 approx cost=$0.000000 (Prompt=2680, Completion=1835)
+SOURCE:
+Bereishit (Torah) 30:3-8
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa5fe011460404dfc3eea","display_en_name":"god","display_heb_name":"","all_en_names":["God"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa689011460404dfc4149","display_en_name":"jacob","display_heb_name":"","all_en_names":["Jacob"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa694011460404dfc4176","display_en_name":"rachel","display_heb_name":"","all_en_names":["Rachel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa696011460404dfc417e","display_en_name":"bilhah","display_heb_name":"","all_en_names":["Bilhah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa699011460404dfc418a","display_en_name":"dan","display_heb_name":"","all_en_names":["Dan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa699011460404dfc418b","display_en_name":"naphtali","display_heb_name":"","all_en_names":["Naphtali"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa699011460404dfc418c","display_en_name":"dan","display_heb_name":"","all_en_names":["Dan"],"all_heb_names":[],"entityType":"TribeOfIsrael","alias_keys":[]}
+{"key":"6a5fa699011460404dfc418d","display_en_name":"naphtali","display_heb_name":"","all_en_names":["Naphtali"],"all_heb_names":[],"entityType":"TribeOfIsrael","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+She said, Here is my maid Bilhah. Consort with her, that she may bear on my knees and that through her I too may have children. So she gave him her maid Bilhah as concubine, and Jacob cohabited with her. Bilhah conceived and bore Jacob a son. And Rachel said, God has vindicated me;, connected with Dan. indeed, [God] has heeded my plea and given me a son. Therefore she named him Dan. Rachels maid Bilhah conceived again and bore Jacob a second son. And Rachel said, A fateful contest I waged, connected with Naphtali. Lit. A contest of God.... with my sister; yes, and I have prevailed. So she named him Naphtali.
+
+HEBREW:
+וַתֹּ֕אמֶר הִנֵּ֛ה אֲמָתִ֥י בִלְהָ֖ה בֹּ֣א אֵלֶ֑יהָ וְתֵלֵד֙ עַל־בִּרְכַּ֔י וְאִבָּנֶ֥ה גַם־אָנֹכִ֖י מִמֶּֽנָּה׃ וַתִּתֶּן־ל֛וֹ אֶת־בִּלְהָ֥ה שִׁפְחָתָ֖הּ לְאִשָּׁ֑ה וַיָּבֹ֥א אֵלֶ֖יהָ יַעֲקֹֽב׃ וַתַּ֣הַר בִּלְהָ֔ה וַתֵּ֥לֶד לְיַעֲקֹ֖ב בֵּֽן׃ וַתֹּ֤אמֶר רָחֵל֙ דָּנַ֣נִּי אֱלֹהִ֔ים וְגַם֙ שָׁמַ֣ע בְּקֹלִ֔י וַיִּתֶּן־לִ֖י בֵּ֑ן עַל־כֵּ֛ן קָרְאָ֥ה שְׁמ֖וֹ דָּֽן׃ וַתַּ֣הַר ע֔וֹד וַתֵּ֕לֶד בִּלְהָ֖ה שִׁפְחַ֣ת רָחֵ֑ל בֵּ֥ן שֵׁנִ֖י לְיַעֲקֹֽב׃ וַתֹּ֣אמֶר רָחֵ֗ל נַפְתּוּלֵ֨י אֱלֹהִ֧ים׀נִפְתַּ֛לְתִּי עִם־אֲחֹתִ֖י גַּם־יָכֹ֑לְתִּי וַתִּקְרָ֥א שְׁמ֖וֹ נַפְתָּלִֽי׃
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa5fe011460404dfc3eea",
+      "display_heb_name": "אלהים",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa689011460404dfc4149",
+      "display_heb_name": "יעקב",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa694011460404dfc4176",
+      "display_heb_name": "רחל",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa696011460404dfc417e",
+      "display_heb_name": "בלהה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa699011460404dfc418a",
+      "display_heb_name": "דן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa699011460404dfc418b",
+      "display_heb_name": "נפתלי",
+      "timePeriod": "Tanach"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa5fe011460404dfc3eea",
+            "display_heb_name": "אלהים",
+            "timePeriod": "Tanach"
+        },
+        {
+            "key": "6a5fa689011460404dfc4149",
+            "display_heb_name": "יעקב",
+            "timePeriod": "Tanach"
+        },
+        {
+            "key": "6a5fa694011460404dfc4176",
+            "display_heb_name": "רחל",
+            "timePeriod": "Tanach",
+            "isWoman": true
+        },
+        {
+            "key": "6a5fa696011460404dfc417e",
+            "display_heb_name": "בלהה",
+            "timePeriod": "Tanach",
+            "isWoman": true
+        },
+        {
+            "key": "6a5fa699011460404dfc418a",
+            "display_heb_name": "דן",
+            "timePeriod": "Tanach"
+        },
+        {
+            "key": "6a5fa699011460404dfc418b",
+            "display_heb_name": "נפתלי",
+            "timePeriod": "Tanach"
+        }
+    ],
+    "key": "TN_Genesis_0_30:3-8"
+}
