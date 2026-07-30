@@ -3,30 +3,43 @@
 ########################## populate metadata ############################
 #################################################################################
 
-{{
+func print clean hebrew {{
+see how the CSS makes sure the the english is raw text? do the same for the hebrew..
+}}
 
+impl populate entity metadata {{
 
-i began to refactor C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\populator_scripts\DBPopulateEntityRelGraph.py, i created backend_pipeline/data_pipeline/populator_scripts/DBPopulateLlmBase.py, bec i am doing another pydantic prompt to get a diff json per source. 
-
-i see thought that many files exist, they are named as generic 'pydantic' files, but much of their content relates specifically to the populating of Entity Rel Graph.
-
-refactor those files - ideally separate into general pydantic code (ie Source Content, Source Metadata, etc) and specific to Entity Rel Graph, but at the very list - change names of the files ,or at least restructure them with dirs or inheritance files, so that it's clear that those relate to Entity Rel Graph 
-
-------
-
-add func to Entity (which implemented at base, but can be overriden) called 'hasMetadata'. 
-true - if display_heb_name is not empty
-false - else
-
------
-ENumber - want to now support hebrew unit, and hebrew context. 
-add en_unit, heb_unit
-
-
---- 
-rerun populating db...
 ----
+implement: backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase.DBPopulateLlmBase._extract_from_passage 
 
+for 
+backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment
+
+see how we did it in backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
+
+but this time:
+the 'passage' will include both the clean english, and clean hebrew text (no vowels), and in addition to the package, we will send a list of entities (in json format) that we will get from the DB. DONT WORRY ABOUT:
+- the runner code/loop
+- which entities we'll eventually get
+
+JUST FOCUS ON THE PYDANTIC CALLING CODE.
+
+We must add an optional param to this func, the func should be a list of Strings 'entity_json_list'
+
+we will be sending the passage (eng + heb), and a list of Entitys associated with that Passage (derived from Source Metadata) that have not yet been enriched with metadata (if an entity has already been enriched, it will not be sent). 
+
+
+how the prompt to pydantic should look:
+We want pydantic to essentially fill in the fields that the db didnt. so:
+for every Entity: display_heb_name. This should be taken almost exactly from the hebrew text sent in passage in prompt, but should be normalized. no vowels.
+Person: timePeriod (send backend.models_db.Enums.TimePeriod enum), isWoman (bool), isNonJew (bool), isGroup (bool), roles (send backend.models_db.Enums.RoleType)
+Number: heb_unit, heb_context. No Vowels, same direction as english unit and context.
+Place: PlaceType (send enum backend.models_db.Enums.PlaceType)
+Symbol: SymbolType (send enum backend.models_db.Enums.SymbolType)
+
+validate - if a value received for Person.timePeriod, Person.roleType, place.placeType, symbol.SymbolType does not exist in the original enum - then simply filter it out of the final json response (log it, like that way we long in populate Entity Rel Graph)
+
+-------
  implement
 backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py  : 
 
@@ -35,8 +48,10 @@ if doesnt exist there, you will probably find similar code in backend_pipeline.d
 
 1. iterate over sources, for now from get_examples_src_contents
 2. for every source, query the db and get the list of Entitys linked to that source. 
-3. if an Entity already has metadata - remove it from the list (ie we dont want to touch it).
+3. if an Entity already has metadata - remove it from the list (ie we dont want to touch it). use Entity.has_metadata
 
+4. send to the pydantic caller both the clean english and clean hebrew text, with entity list.
+5. just like we do in DBPopulateEntityRelGraph, print the output as txt files nad jsons.. in a nice dir. if we dont already have a good dir, feel free to create one.
 
 
 }}
