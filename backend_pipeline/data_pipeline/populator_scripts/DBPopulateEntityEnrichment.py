@@ -21,10 +21,14 @@ from typing import List, Optional, Tuple
 from backend.common import Paths
 from backend.db.DBConstants import DBFields
 from backend.file_utils import FileTypeEnum
+from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.EntityObjects.Entity import Entity
-from backend.models_db.Enums import EntityType, RoleType, TimePeriod
+from backend.models_db.EntityObjects.EPerson import EPerson
+from backend.models_db.EntityObjects.EPlace import EPlace
+from backend.models_db.EntityObjects.ESymbol import ESymbol
+from backend.models_db.Enums import EntityType, PlaceType, RoleType, SymbolType, TimePeriod
 from backend.models_db.SourceClasses.SourceContent import SourceContent
-from backend_pipeline.data_pipeline.llm_api.EntityEnrichmentCaller import EntityEnrichmentCaller
+from backend_pipeline.data_pipeline.llm_api.EntityEnrichmentCaller import EntityEnrichmentCaller, _match_enum_value
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase, get_examples_src_contents
 from backend_pipeline.file_utils_pipeline import LocalPrinter
@@ -68,7 +72,130 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         return await self.enrichment_caller.extract_from_passage(passage, entity_json_list)
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> None:
-        pass
+        """
+        Each entry is (source_key, data) where data == {"entities": [...], "key": source_key}
+        (see EnrichmentResponse in EntityEnrichmentCaller). For every entity dict, resolve
+        the matching DB entity by its 'key', patch in whichever enrichment fields are
+        present (missing fields are simply left untouched), re-validating any enum-typed
+        fields against the actual Python Enum values (values may have drifted since the
+        JSON file was generated), then persist via EntityMongoMixin.update_entity.
+        """
+        num_updated = num_missing = num_unchanged = 0
+
+        for source_key, data in json_entries:
+            entity_dicts = data.get("entities") or []
+            for entity_dict in entity_dicts:
+                key = entity_dict.get(DBFields.KEY) or entity_dict.get("key")
+                if not key:
+                    print(f"  WARNING [{source_key}]: entity entry missing 'key', skipping: {entity_dict}")
+                    continue
+
+                entity = self.db_api.get_entity_by_key(key)
+                if entity is None:
+                    print(f"  WARNING [{source_key}]: no DB entity found for key '{key}', skipping.")
+                    num_missing += 1
+                    continue
+
+                if self._apply_enrichment(entity, entity_dict, source_key):
+                    self.db_api.update_entity(entity)
+                    num_updated += 1
+                else:
+                    num_unchanged += 1
+
+        print(f"\n{'='*60}")
+        print(
+            f"ENRICHMENT DB UPDATE: updated={num_updated}, "
+            f"missing_entity={num_missing}, unchanged={num_unchanged}"
+        )
+        print(f"{'='*60}")
+
+    @classmethod
+    def _apply_enrichment(cls, entity: Entity, entity_dict: dict, source_key: str) -> bool:
+        """
+        Patch *entity* in place with whichever fields are present in *entity_dict*.
+        Returns True if any field was actually changed.
+        """
+        changed = False
+
+        heb_name = (entity_dict.get("display_heb_name") or "").strip()
+        if heb_name and heb_name != entity.display_heb_name:
+            entity.display_heb_name = heb_name
+            changed = True
+
+        if isinstance(entity, EPerson):
+            changed = cls._apply_person_fields(entity, entity_dict, source_key) or changed
+        if isinstance(entity, ENumber):
+            changed = cls._apply_number_fields(entity, entity_dict) or changed
+        if isinstance(entity, EPlace):
+            changed = cls._apply_place_fields(entity, entity_dict, source_key) or changed
+        if isinstance(entity, ESymbol):
+            changed = cls._apply_symbol_fields(entity, entity_dict, source_key) or changed
+
+        return changed
+
+    @staticmethod
+    def _apply_person_fields(entity: EPerson, entity_dict: dict, source_key: str) -> bool:
+        changed = False
+
+        raw_time_period = entity_dict.get("timePeriod")
+        if raw_time_period:
+            matched = _match_enum_value(raw_time_period, TimePeriod, f"timePeriod ({source_key})")
+            if matched and entity.timePeriod != TimePeriod(matched):
+                entity.timePeriod = TimePeriod(matched)
+                changed = True
+
+        for bool_field in ("isWoman", "isNonJew", "isGroup"):
+            raw_value = entity_dict.get(bool_field)
+            if isinstance(raw_value, bool) and getattr(entity, bool_field) != raw_value:
+                setattr(entity, bool_field, raw_value)
+                changed = True
+
+        raw_roles = entity_dict.get("roles")
+        if raw_roles:
+            matched_roles = {
+                RoleType(matched)
+                for matched in (
+                    _match_enum_value(raw_role, RoleType, f"roles ({source_key})") for raw_role in raw_roles
+                )
+                if matched
+            }
+            if matched_roles and not matched_roles.issubset(entity.roles):
+                entity.roles = list(set(entity.roles) | matched_roles)
+                changed = True
+
+        return changed
+
+    @staticmethod
+    def _apply_number_fields(entity: ENumber, entity_dict: dict) -> bool:
+        changed = False
+        for field in ("heb_unit", "heb_context"):
+            raw_value = (entity_dict.get(field) or "").strip()
+            if raw_value and raw_value != getattr(entity, field):
+                setattr(entity, field, raw_value)
+                changed = True
+        return changed
+
+    @staticmethod
+    def _apply_place_fields(entity: EPlace, entity_dict: dict, source_key: str) -> bool:
+        raw_place_type = entity_dict.get("placeType")
+        if not raw_place_type:
+            return False
+        matched = _match_enum_value(raw_place_type, PlaceType, f"placeType ({source_key})")
+        if matched and entity.placeType != PlaceType(matched):
+            entity.placeType = PlaceType(matched)
+            return True
+        return False
+
+    @staticmethod
+    def _apply_symbol_fields(entity: ESymbol, entity_dict: dict, source_key: str) -> bool:
+        raw_symbol_type = entity_dict.get("symbolType")
+        if not raw_symbol_type:
+            return False
+        matched = _match_enum_value(raw_symbol_type, SymbolType, f"symbolType ({source_key})")
+        if matched and entity.symbolType != SymbolType(matched):
+            entity.symbolType = SymbolType(matched)
+            return True
+        return False
 
     # --- Phase 1 override: custom source list + entity filtering --------------
 
