@@ -78,7 +78,7 @@ class DBPopulateLlmBase(DBParentClass):
         asyncio.run(self._extract_all_to_json())
 
     def test_print_examples_src_contents_to_html(self) -> None:
-        """Print example source contents to HTML files for visual inspection."""
+        """Print example source contents to HTML and TXT files for inspection."""
         output_dir = os.path.join(Paths.TESTS_DIR, "source_content_examples")
         OsFunctions.clear_create_directory(output_dir)
         self._print_src_contents_to_html(get_examples_src_contents(self.db_api), output_dir)
@@ -87,15 +87,17 @@ class DBPopulateLlmBase(DBParentClass):
         self, src_contents: list[SourceContent], output_dir: str
     ) -> None:
         """
-        Iterate source contents and print their HTML + clean text variants as HTML files.
+        Iterate source contents and print their HTML + clean text variants to files.
         Raw HTML content is embedded directly so it renders nicely in a browser.
         """
         for src in src_contents:
             out_path = os.path.join(output_dir, src.key.replace(":", ";"))
             html_content = self._src_content_debug_html(src)
+            txt_content = self._src_content_debug_text(src)
             LocalPrinter.print_to_file(html_content, FileTypeEnum.FileType.HTML, out_path)
+            LocalPrinter.print_to_file(txt_content, FileTypeEnum.FileType.TXT, out_path)
 
-        print(f"Source content HTML files saved to: {output_dir}")
+        print(f"Source content HTML and TXT files saved to: {output_dir}")
 
     @staticmethod
     def _src_content_debug_html(src: SourceContent) -> str:
@@ -160,6 +162,20 @@ class DBPopulateLlmBase(DBParentClass):
     </section>
 </body>
 </html>"""
+
+    @staticmethod
+    def _src_content_debug_text(src: SourceContent) -> str:
+        return (
+            f"{src.key}\n\n"
+            f"src.get_heb_html_content()\n"
+            f"{src.get_heb_html_content()}\n\n"
+            f"src.get_clean_heb_text()\n"
+            f"{src.get_clean_heb_text()}\n\n"
+            f"src.get_en_html_content()\n"
+            f"{src.get_en_html_content()}\n\n"
+            f"src.get_clean_en_text()\n"
+            f"{src.get_clean_en_text()}"
+        )
 
     async def _extract_all_to_json(self, book=Books.GENESIS) -> None:
         """
