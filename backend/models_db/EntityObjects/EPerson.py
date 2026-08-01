@@ -85,6 +85,16 @@ class EPerson(Entity):
     # transient fields - Person/Group → {anything}
     prophesiedAbout: List[str] = TransientField(default_factory=list)
 
+    def has_metadata(self) -> bool:
+        return (
+            super().has_metadata()
+            and self.timePeriod is not None
+            and self.isWoman is not None
+            and self.isNonJew is not None
+            and self.isGroup is not None
+            and self.roles is not None
+        )
+
     # ========================= Identity / Equality =========================
 
     def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
@@ -187,4 +197,3 @@ class EPerson(Entity):
 
         # Different family — different person despite same name
         return False
-

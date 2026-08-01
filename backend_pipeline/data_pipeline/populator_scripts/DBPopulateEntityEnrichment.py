@@ -217,6 +217,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         num_processed = num_skipped = 0
 
         contents = get_examples_src_contents(self.db_api)
+        # contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
@@ -237,6 +238,11 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
             result_dict = json.loads(json_str)
             result_dict[DBFields.KEY] = src_content.key
+            entity_display_en_names_by_key = {entity.key: entity.display_en_name for entity in entities}
+            for entity_dict in result_dict.get("entities") or []:
+                entity_key = entity_dict.get(DBFields.KEY) or entity_dict.get("key")
+                if entity_key in entity_display_en_names_by_key:
+                    entity_dict[DBFields.DISPLAY_EN_NAME] = entity_display_en_names_by_key[entity_key]
 
             out_path = os.path.join(
                 self._get_output_dir(), src_content.key.replace(":", ";")
@@ -287,4 +293,3 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             f"ENGLISH:\n{src_content.get_clean_en_text()}\n\n"
             f"HEBREW:\n{src_content.get_clean_heb_text()}"
         )
-

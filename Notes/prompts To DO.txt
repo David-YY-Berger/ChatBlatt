@@ -8,6 +8,10 @@ but, even though in my DB, the entity with key X has indeed metadata, the entity
 
 backend.db.mongo_parts.entity_mixin.EntityMongoMixin.get_entities_by_keys
 backend.models_db.EntityObjects.EPerson.EPerson
+-------
+
+make read from json str and just debug the code...
+
 
 }}
 

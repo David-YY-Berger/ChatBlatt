@@ -22,6 +22,9 @@ class EPlace(Entity):
     entityType: EntityType = EntityType.EPlace
     placeType: Optional[PlaceType] = None
 
+    def has_metadata(self) -> bool:
+        return super().has_metadata() and self.placeType is not None
+
     # transient fields
     personsDiedIn: List[str] = TransientField(default_factory=list)
     personsBornIn: List[str] = TransientField(default_factory=list)

@@ -67,13 +67,16 @@ class Entity(BaseModel):
             DBFields.ENTITY_TYPE: self.entityType.value,
         }
 
-    def hasMetadata(self) -> bool:
-        """Returns True when display_heb_name is not empty."""
+    def _has_display_metadata(self) -> bool:
         return bool(self.display_heb_name.strip())
+
+    def hasMetadata(self) -> bool:
+        """Returns True when this entity has metadata."""
+        return self.has_metadata()
 
     def has_metadata(self) -> bool:
         """Returns True when this entity has display metadata."""
-        return self.hasMetadata()
+        return self._has_display_metadata()
 
     @classmethod
     def get_class_for_type(cls, entity_type: EntityType) -> "Type[Entity]":
@@ -133,8 +136,11 @@ class Entity(BaseModel):
         return cls.create_from_en_name(en_name, entity_type)
 
     def to_db_dict(self) -> Dict[str, Any]:
-        """Returns only the db-persisted fields as a dictionary."""
-        return self.model_dump(exclude_none=True)
+        """Returns only the db-persisted fields as a dictionary.
+        Uses exclude_defaults=True so fields that equal their default value
+        (e.g. display_heb_name="") are omitted from $set, preventing them
+        from silently overwriting enriched values already in the DB."""
+        return self.model_dump(exclude_none=True, exclude_defaults=True)
 
     def to_full_dict(self) -> Dict[str, Any]:
         """Returns all fields including transient ones."""

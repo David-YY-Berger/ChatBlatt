@@ -16,6 +16,15 @@ class ENumber(Entity):
     heb_unit: Optional[str] = None
     heb_context: Optional[str] = None
 
+    def has_metadata(self) -> bool:
+        return (
+            super().has_metadata()
+            and self.heb_unit is not None
+            and bool(self.heb_unit.strip())
+            and self.heb_context is not None
+            and bool(self.heb_context.strip())
+        )
+
     # ========================= Identity / Equality =========================
 
     def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
