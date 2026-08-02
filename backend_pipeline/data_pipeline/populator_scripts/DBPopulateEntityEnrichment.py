@@ -2,16 +2,25 @@
 """
 DBPopulateEntityEnrichment - Enrich existing entities with attributes derived from passages.
 
-Two-phase workflow (inherited from DBPopulateLlmBase):
-  Phase 1 (test_run_extraction):  iterate sources -> call LLM -> save JSON files
-  Phase 2 (test_populate_from_jsons): load JSON files -> update DB entities
+Two-phase workflow (inherited from DBPopulateLlmBase, driven by test_run_extraction_and_population):
+  Phase 1 (_extract_all_to_json): iterate sources -> call LLM -> save JSON files.
+    Each source is fully handled before moving to the next one: get content,
+    call the LLM, then immediately populate/update the DB for that source.
+    This ensures that if the same entity is linked to multiple sources, later
+    sources in the same run already see it as enriched (Entity.has_metadata())
+    and won't re-send it to the LLM.
+  Phase 2 (test_populate_from_jsons): load ALL JSON files from the output dir and
+    (re-)apply them to the DB. Since Phase 1 already persisted each source as it
+    was processed, this pass is idempotent — it just confirms/re-syncs, acting as
+    a safety net (e.g. useful if you only want to (re)run population from
+    previously-generated JSON files without calling the LLM again).
 
 For each source, the LLM is given a passage (clean English + clean Hebrew, no vowels)
 plus the JSON of any associated entities (Person/Number/Place/Symbol, ...) that have not
 yet been enriched. Each JSON file contains an EnrichmentResponse (entities: [...]) keyed
 by entity 'key', filling in fields like display_heb_name, Person.timePeriod/isWoman/
 isNonJew/isGroup/roles, Number.heb_unit/heb_context, Place.placeType, Symbol.symbolType.
-Phase 2 resolves each entry back to a DB entity by key and patches its fields.
+Each entry is resolved back to a DB entity by key and patches its fields.
 """
 
 import json
@@ -203,8 +212,6 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
     def test_run(self) -> None:
         self.test_run_extraction_and_population()
-        self.test_populate_from_jsons()
-
 
     async def _extract_all_to_json(self) -> None:
         """
@@ -213,12 +220,21 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
           - fetch those entities and drop any that already have metadata
           - if nothing is left to enrich, skip the source entirely (saves LLM calls)
           - otherwise call the LLM with the bilingual passage + remaining entities
+          - immediately populate the DB with that source's enrichment result
+
+        Sources are processed one at a time, fully, before moving to the next:
+        get content -> populate metadata -> update DB -> next source. This matters
+        because the same entity can be linked to multiple sources; persisting to the
+        DB right away means that by the time a later source is processed,
+        `_get_unenriched_entities_for_source` already sees the earlier update and
+        won't re-send an already-enriched entity to the LLM.
+
         Saves JSON and TXT output files under _get_output_dir(), mirroring
         DBPopulateEntityRelGraph's Phase 1 output style.
         """
         total_cost_usd = 0.0
         total_tokens = total_input_tokens = total_output_tokens = 0
-        num_processed = num_skipped = 0
+        num_processed = num_skipped = num_populate_failed = 0
 
         contents = get_examples_src_contents(self.db_api)
         # contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
@@ -245,6 +261,13 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             result_dict[DBFields.KEY] = src_content.key
             await self.add_display_en_name(entities, result_dict)
 
+            # Populate the DB for THIS source right away, before moving to the next one.
+            try:
+                self._process_json_entries([(src_content.key, result_dict)])
+            except Exception as e:
+                print(f"  WARNING [{src_content.key}]: failed to populate DB for this source: {e}")
+                num_populate_failed += 1
+
             out_path = os.path.join(
                 self._get_output_dir(), src_content.key.replace(":", ";")
             )
@@ -264,7 +287,10 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             LocalPrinter.print_to_file(entities_block, FileTypeEnum.FileType.TXT, entity_list_out_path)
 
         print(f"\n{'='*60}")
-        print(f"PROCESSED: {num_processed} sources, SKIPPED (no entities to enrich): {num_skipped}")
+        print(
+            f"PROCESSED: {num_processed} sources, SKIPPED (no entities to enrich): {num_skipped}, "
+            f"DB POPULATE FAILURES: {num_populate_failed}"
+        )
         print(
             f"TOTAL: {total_tokens} tokens "
             f"(prompt={total_input_tokens}, completion={total_output_tokens}), "

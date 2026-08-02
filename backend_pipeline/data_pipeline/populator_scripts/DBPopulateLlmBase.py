@@ -73,9 +73,14 @@ class DBPopulateLlmBase(DBParentClass):
     # ─── Phase 1: LLM extraction → JSON files ─────────────────────────────────
 
     def test_run_extraction_and_population(self) -> None:
-        """Entry point: clear output dir, then run LLM extraction for all sources."""
+        """
+        Entry point: clear output dir, run LLM extraction for all sources (phase 1,
+        written to JSON/TXT files under _get_output_dir()), then load those JSON
+        files back and populate the DB (phase 2).
+        """
         OsFunctions.clear_create_directory(self._get_output_dir())
         asyncio.run(self._extract_all_to_json())
+        self.test_populate_from_jsons()
 
     def test_print_examples_src_contents_to_html(self) -> None:
         """Print example source contents to HTML and TXT files for inspection."""
