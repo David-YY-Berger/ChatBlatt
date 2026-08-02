@@ -30,6 +30,7 @@ from types import SimpleNamespace
 
 from backend.common import Paths
 from backend.db.DBConstants import DBFields
+from backend.db.data_names.Books import Books
 from backend.file_utils import FileTypeEnum
 from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.EntityObjects.Entity import Entity
