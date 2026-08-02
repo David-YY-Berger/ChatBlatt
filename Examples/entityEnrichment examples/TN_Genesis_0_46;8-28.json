@@ -1,0 +1,564 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa611011460404dfc3f3c",
+            "display_heb_name": "חנוך",
+            "timePeriod": "Tanach",
+            "display_en_name": "enoch"
+        },
+        {
+            "key": "6a5fa631011460404dfc3fc8",
+            "display_heb_name": "כנען",
+            "display_en_name": "canaan"
+        },
+        {
+            "key": "6a5fa63e011460404dfc4000",
+            "display_heb_name": "שלה",
+            "timePeriod": "Tanach",
+            "display_en_name": "shelah"
+        },
+        {
+            "key": "6a5fa64a011460404dfc4033",
+            "display_heb_name": "כנען",
+            "placeType": "Country or Region",
+            "display_en_name": "canaan"
+        },
+        {
+            "key": "6a5fa64d011460404dfc4042",
+            "display_heb_name": "מצרים",
+            "placeType": "Country or Region",
+            "display_en_name": "egypt"
+        },
+        {
+            "key": "6a5fa64e011460404dfc4044",
+            "display_heb_name": "מצרים",
+            "display_en_name": "egypt"
+        },
+        {
+            "key": "6a5fa67a011460404dfc410a",
+            "display_heb_name": "צחר",
+            "timePeriod": "Tanach",
+            "display_en_name": "zohar"
+        },
+        {
+            "key": "6a5fa67e011460404dfc4118",
+            "display_heb_name": "לבן",
+            "timePeriod": "Tanach",
+            "display_en_name": "laban"
+        },
+        {
+            "key": "6a5fa688011460404dfc4146",
+            "display_heb_name": "פדן ארם",
+            "placeType": "Country or Region",
+            "display_en_name": "paddan-aram"
+        },
+        {
+            "key": "6a5fa68f011460404dfc415d",
+            "display_heb_name": "אלון",
+            "timePeriod": "Tanach",
+            "display_en_name": "elon"
+        },
+        {
+            "key": "6a5fa695011460404dfc4178",
+            "display_heb_name": "לאה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "leah"
+        },
+        {
+            "key": "6a5fa696011460404dfc417d",
+            "display_heb_name": "זלפה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "zilpah"
+        },
+        {
+            "key": "6a5fa697011460404dfc4181",
+            "display_heb_name": "ראובן",
+            "timePeriod": "Tanach",
+            "display_en_name": "reuben"
+        },
+        {
+            "key": "6a5fa697011460404dfc4182",
+            "display_heb_name": "שמעון",
+            "timePeriod": "Tanach",
+            "display_en_name": "simeon"
+        },
+        {
+            "key": "6a5fa697011460404dfc4183",
+            "display_heb_name": "לוי",
+            "timePeriod": "Tanach",
+            "display_en_name": "levi"
+        },
+        {
+            "key": "6a5fa697011460404dfc4184",
+            "display_heb_name": "יהודה",
+            "timePeriod": "Tanach",
+            "display_en_name": "judah"
+        },
+        {
+            "key": "6a5fa698011460404dfc4185",
+            "display_heb_name": "ראובן",
+            "display_en_name": "reuben"
+        },
+        {
+            "key": "6a5fa698011460404dfc4186",
+            "display_heb_name": "שמעון",
+            "display_en_name": "simeon"
+        },
+        {
+            "key": "6a5fa698011460404dfc4187",
+            "display_heb_name": "לוי",
+            "display_en_name": "levi"
+        },
+        {
+            "key": "6a5fa698011460404dfc4188",
+            "display_heb_name": "יהודה",
+            "display_en_name": "judah"
+        },
+        {
+            "key": "6a5fa699011460404dfc418c",
+            "display_heb_name": "דן",
+            "display_en_name": "dan"
+        },
+        {
+            "key": "6a5fa699011460404dfc418d",
+            "display_heb_name": "נפתלי",
+            "display_en_name": "naphtali"
+        },
+        {
+            "key": "6a5fa69a011460404dfc418e",
+            "display_heb_name": "גד",
+            "timePeriod": "Tanach",
+            "display_en_name": "gad"
+        },
+        {
+            "key": "6a5fa69a011460404dfc418f",
+            "display_heb_name": "אשר",
+            "timePeriod": "Tanach",
+            "display_en_name": "asher"
+        },
+        {
+            "key": "6a5fa69a011460404dfc4190",
+            "display_heb_name": "גד",
+            "display_en_name": "gad"
+        },
+        {
+            "key": "6a5fa69a011460404dfc4191",
+            "display_heb_name": "אשר",
+            "display_en_name": "asher"
+        },
+        {
+            "key": "6a5fa69c011460404dfc4197",
+            "display_heb_name": "יששכר",
+            "timePeriod": "Tanach",
+            "display_en_name": "issachar"
+        },
+        {
+            "key": "6a5fa69c011460404dfc4198",
+            "display_heb_name": "זבלון",
+            "timePeriod": "Tanach",
+            "display_en_name": "zebulun"
+        },
+        {
+            "key": "6a5fa69c011460404dfc4199",
+            "display_heb_name": "דינה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "dinah"
+        },
+        {
+            "key": "6a5fa69c011460404dfc419a",
+            "display_heb_name": "יששכר",
+            "display_en_name": "issachar"
+        },
+        {
+            "key": "6a5fa69d011460404dfc419b",
+            "display_heb_name": "זבלון",
+            "display_en_name": "zebulun"
+        },
+        {
+            "key": "6a5fa69d011460404dfc419e",
+            "display_heb_name": "יוסף",
+            "timePeriod": "Tanach",
+            "display_en_name": "joseph"
+        },
+        {
+            "key": "6a5fa6b0011460404dfc41f5",
+            "display_heb_name": "בנימן",
+            "timePeriod": "Tanach",
+            "display_en_name": "benjamin"
+        },
+        {
+            "key": "6a5fa6b1011460404dfc41f9",
+            "display_heb_name": "יוסף",
+            "display_en_name": "joseph"
+        },
+        {
+            "key": "6a5fa6b2011460404dfc41fa",
+            "display_heb_name": "בנימן",
+            "display_en_name": "benjamin"
+        },
+        {
+            "key": "6a5fa6b6011460404dfc420e",
+            "display_heb_name": "זרח",
+            "timePeriod": "Tanach",
+            "display_en_name": "zerah"
+        },
+        {
+            "key": "6a5fa6bd011460404dfc422f",
+            "display_heb_name": "שאול",
+            "timePeriod": "Tanach",
+            "display_en_name": "saul"
+        },
+        {
+            "key": "6a5fa6bf011460404dfc4236",
+            "display_heb_name": "בני ישראל",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "israelites"
+        },
+        {
+            "key": "6a5fa6c9011460404dfc4261",
+            "display_heb_name": "ער",
+            "timePeriod": "Tanach",
+            "display_en_name": "er"
+        },
+        {
+            "key": "6a5fa6c9011460404dfc4262",
+            "display_heb_name": "אונן",
+            "timePeriod": "Tanach",
+            "display_en_name": "onan"
+        },
+        {
+            "key": "6a5fa6ce011460404dfc4272",
+            "display_heb_name": "פרץ",
+            "timePeriod": "Tanach",
+            "display_en_name": "perez"
+        },
+        {
+            "key": "6a5fa6d9011460404dfc429c",
+            "display_heb_name": "אסנת",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "asenath"
+        },
+        {
+            "key": "6a5fa6d9011460404dfc429d",
+            "display_heb_name": "פוטי פרע",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "poti-phera"
+        },
+        {
+            "key": "6a5fa6da011460404dfc429f",
+            "display_heb_name": "אן",
+            "placeType": "City",
+            "display_en_name": "on"
+        },
+        {
+            "key": "6a5fa6da011460404dfc42a1",
+            "display_heb_name": "מנשה",
+            "timePeriod": "Tanach",
+            "display_en_name": "manasseh"
+        },
+        {
+            "key": "6a5fa6da011460404dfc42a2",
+            "display_heb_name": "אפרים",
+            "timePeriod": "Tanach",
+            "display_en_name": "ephraim"
+        },
+        {
+            "key": "6a5fa6da011460404dfc42a3",
+            "display_heb_name": "מנשה",
+            "display_en_name": "manasseh"
+        },
+        {
+            "key": "6a5fa6db011460404dfc42a4",
+            "display_heb_name": "אפרים",
+            "display_en_name": "ephraim"
+        },
+        {
+            "key": "6a5fa6e6011460404dfc42d1",
+            "display_heb_name": "גשן",
+            "placeType": "Country or Region",
+            "display_en_name": "goshen"
+        },
+        {
+            "key": "6a5fa6e6011460404dfc42d4",
+            "display_heb_name": "פלוא",
+            "timePeriod": "Tanach",
+            "display_en_name": "pallu"
+        },
+        {
+            "key": "6a5fa6e7011460404dfc42d5",
+            "display_heb_name": "חצרן",
+            "timePeriod": "Tanach",
+            "display_en_name": "hezron"
+        },
+        {
+            "key": "6a5fa6e7011460404dfc42d6",
+            "display_heb_name": "כרמי",
+            "timePeriod": "Tanach",
+            "display_en_name": "carmi"
+        },
+        {
+            "key": "6a5fa6e7011460404dfc42d7",
+            "display_heb_name": "ימואל",
+            "timePeriod": "Tanach",
+            "display_en_name": "jemuel"
+        },
+        {
+            "key": "6a5fa6e7011460404dfc42d8",
+            "display_heb_name": "ימין",
+            "timePeriod": "Tanach",
+            "display_en_name": "jamin"
+        },
+        {
+            "key": "6a5fa6e7011460404dfc42d9",
+            "display_heb_name": "אהד",
+            "timePeriod": "Tanach",
+            "display_en_name": "ohad"
+        },
+        {
+            "key": "6a5fa6e8011460404dfc42da",
+            "display_heb_name": "יכין",
+            "timePeriod": "Tanach",
+            "display_en_name": "jachin"
+        },
+        {
+            "key": "6a5fa6e8011460404dfc42db",
+            "display_heb_name": "הכנענית",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "canaanite woman"
+        },
+        {
+            "key": "6a5fa6e8011460404dfc42dc",
+            "display_heb_name": "גרשון",
+            "timePeriod": "Tanach",
+            "display_en_name": "gershon"
+        },
+        {
+            "key": "6a5fa6e8011460404dfc42dd",
+            "display_heb_name": "קהת",
+            "timePeriod": "Tanach",
+            "display_en_name": "kohath"
+        },
+        {
+            "key": "6a5fa6e9011460404dfc42de",
+            "display_heb_name": "מררי",
+            "timePeriod": "Tanach",
+            "display_en_name": "merari"
+        },
+        {
+            "key": "6a5fa6e9011460404dfc42df",
+            "display_heb_name": "חמול",
+            "timePeriod": "Tanach",
+            "display_en_name": "hamul"
+        },
+        {
+            "key": "6a5fa6e9011460404dfc42e0",
+            "display_heb_name": "תולע",
+            "timePeriod": "Tanach",
+            "display_en_name": "tola"
+        },
+        {
+            "key": "6a5fa6e9011460404dfc42e1",
+            "display_heb_name": "פוה",
+            "timePeriod": "Tanach",
+            "display_en_name": "puvah"
+        },
+        {
+            "key": "6a5fa6ea011460404dfc42e2",
+            "display_heb_name": "יוב",
+            "timePeriod": "Tanach",
+            "display_en_name": "iob"
+        },
+        {
+            "key": "6a5fa6ea011460404dfc42e3",
+            "display_heb_name": "שמרן",
+            "timePeriod": "Tanach",
+            "display_en_name": "shimron"
+        },
+        {
+            "key": "6a5fa6ea011460404dfc42e4",
+            "display_heb_name": "סרד",
+            "timePeriod": "Tanach",
+            "display_en_name": "sered"
+        },
+        {
+            "key": "6a5fa6ea011460404dfc42e5",
+            "display_heb_name": "יחלאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "jahleel"
+        },
+        {
+            "key": "6a5fa6ea011460404dfc42e6",
+            "display_heb_name": "צפיון",
+            "timePeriod": "Tanach",
+            "display_en_name": "ziphion"
+        },
+        {
+            "key": "6a5fa6eb011460404dfc42e7",
+            "display_heb_name": "חגי",
+            "timePeriod": "Tanach",
+            "display_en_name": "haggi"
+        },
+        {
+            "key": "6a5fa6eb011460404dfc42e8",
+            "display_heb_name": "שוני",
+            "timePeriod": "Tanach",
+            "display_en_name": "shuni"
+        },
+        {
+            "key": "6a5fa6eb011460404dfc42e9",
+            "display_heb_name": "אצבן",
+            "timePeriod": "Tanach",
+            "display_en_name": "ezbon"
+        },
+        {
+            "key": "6a5fa6ec011460404dfc42ea",
+            "display_heb_name": "ערי",
+            "timePeriod": "Tanach",
+            "display_en_name": "eri"
+        },
+        {
+            "key": "6a5fa6ed011460404dfc42eb",
+            "display_heb_name": "ארודי",
+            "timePeriod": "Tanach",
+            "display_en_name": "arodi"
+        },
+        {
+            "key": "6a5fa6ed011460404dfc42ec",
+            "display_heb_name": "אראלי",
+            "timePeriod": "Tanach",
+            "display_en_name": "areli"
+        },
+        {
+            "key": "6a5fa6ed011460404dfc42ed",
+            "display_heb_name": "ימנה",
+            "timePeriod": "Tanach",
+            "display_en_name": "imnah"
+        },
+        {
+            "key": "6a5fa6ed011460404dfc42ee",
+            "display_heb_name": "ישוה",
+            "timePeriod": "Tanach",
+            "display_en_name": "ishvah"
+        },
+        {
+            "key": "6a5fa6ee011460404dfc42ef",
+            "display_heb_name": "ישוי",
+            "timePeriod": "Tanach",
+            "display_en_name": "ishvi"
+        },
+        {
+            "key": "6a5fa6ee011460404dfc42f0",
+            "display_heb_name": "בריעה",
+            "timePeriod": "Tanach",
+            "display_en_name": "beriah"
+        },
+        {
+            "key": "6a5fa6ee011460404dfc42f1",
+            "display_heb_name": "שרח",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "serah"
+        },
+        {
+            "key": "6a5fa6ee011460404dfc42f2",
+            "display_heb_name": "חבר",
+            "timePeriod": "Tanach",
+            "display_en_name": "heber"
+        },
+        {
+            "key": "6a5fa6ef011460404dfc42f3",
+            "display_heb_name": "מלכיאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "malchiel"
+        },
+        {
+            "key": "6a5fa6ef011460404dfc42f4",
+            "display_heb_name": "חשים",
+            "timePeriod": "Tanach",
+            "display_en_name": "hushim"
+        },
+        {
+            "key": "6a5fa6ef011460404dfc42f5",
+            "display_heb_name": "יחצאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "jahzeel"
+        },
+        {
+            "key": "6a5fa6ef011460404dfc42f6",
+            "display_heb_name": "גוני",
+            "timePeriod": "Tanach",
+            "display_en_name": "guni"
+        },
+        {
+            "key": "6a5fa6f0011460404dfc42f7",
+            "display_heb_name": "יצר",
+            "timePeriod": "Tanach",
+            "display_en_name": "jezer"
+        },
+        {
+            "key": "6a5fa6f0011460404dfc42f8",
+            "display_heb_name": "שלם",
+            "timePeriod": "Tanach",
+            "display_en_name": "shillem"
+        },
+        {
+            "key": "6a5fa6f0011460404dfc42f9",
+            "display_heb_name": "שלשים ושלש",
+            "heb_unit": "נפש",
+            "heb_context": "צאצאי לאה",
+            "display_en_name": "33"
+        },
+        {
+            "key": "6a5fa6f0011460404dfc42fa",
+            "display_heb_name": "שש עשרה",
+            "heb_unit": "נפש",
+            "heb_context": "צאצאי זלפה",
+            "display_en_name": "16"
+        },
+        {
+            "key": "6a5fa6f0011460404dfc42fb",
+            "display_heb_name": "ארבעה עשר",
+            "heb_unit": "נפש",
+            "heb_context": "צאצאי רחל",
+            "display_en_name": "14"
+        },
+        {
+            "key": "6a5fa6f1011460404dfc42fc",
+            "display_heb_name": "שבעה",
+            "heb_unit": "נפש",
+            "heb_context": "צאצאי בלהה",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa6f1011460404dfc42fd",
+            "display_heb_name": "ששים ושש",
+            "heb_unit": "נפש",
+            "heb_context": "צאצאי יעקב למצרים",
+            "display_en_name": "66"
+        },
+        {
+            "key": "6a5fa6f1011460404dfc42fe",
+            "display_heb_name": "שנים",
+            "heb_unit": "נפש",
+            "heb_context": "בני יוסף במצרים",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa6f1011460404dfc42ff",
+            "display_heb_name": "שבעים",
+            "heb_unit": "נפש",
+            "heb_context": "בית יעקב למצרים",
+            "display_en_name": "70"
+        }
+    ],
+    "key": "TN_Genesis_0_46:8-28"
+}

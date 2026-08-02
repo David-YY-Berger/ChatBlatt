@@ -60,7 +60,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     def test_async_run(self):
         """Run LLM extraction for all sources → saves JSON files."""
-        self.test_run_extraction()
+        self.test_run_extraction_and_population()
 
     def test_populate_entities_and_rels_from_jsons(self):
         """

@@ -1,0 +1,17 @@
+﻿[
+    "{\"key\":\"6a5fa63e011460404dfc4000\",\"display_en_name\":\"shelah\",\"display_heb_name\":\"\",\"all_en_names\":[\"Shelah\"],\"all_heb_names\":[],\"entityType\":\"Person\",\"alias_keys\":[],\"isWoman\":false,\"isNonJew\":false,\"isGroup\":false,\"roles\":[]}",
+    "{\"key\":\"6a5fa690011460404dfc4162\",\"display_en_name\":\"kid\",\"display_heb_name\":\"\",\"all_en_names\":[\"Kid\"],\"all_heb_names\":[],\"entityType\":\"Animal\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa690011460404dfc4163\",\"display_en_name\":\"kid\",\"display_heb_name\":\"\",\"all_en_names\":[\"Kid\"],\"all_heb_names\":[],\"entityType\":\"Food\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa697011460404dfc4184\",\"display_en_name\":\"judah\",\"display_heb_name\":\"\",\"all_en_names\":[\"Judah\"],\"all_heb_names\":[],\"entityType\":\"Person\",\"alias_keys\":[],\"isWoman\":false,\"isNonJew\":false,\"isGroup\":false,\"roles\":[]}",
+    "{\"key\":\"6a5fa6c9011460404dfc4263\",\"display_en_name\":\"tamar\",\"display_heb_name\":\"\",\"all_en_names\":[\"Tamar\"],\"all_heb_names\":[],\"entityType\":\"Person\",\"alias_keys\":[],\"isWoman\":false,\"isNonJew\":false,\"isGroup\":false,\"roles\":[]}",
+    "{\"key\":\"6a5fa6ca011460404dfc4265\",\"display_en_name\":\"adullam\",\"display_heb_name\":\"\",\"all_en_names\":[\"Adullam\"],\"all_heb_names\":[],\"entityType\":\"Nation\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6cb011460404dfc4267\",\"display_en_name\":\"timnah\",\"display_heb_name\":\"\",\"all_en_names\":[\"Timnah\"],\"all_heb_names\":[],\"entityType\":\"Place\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6cb011460404dfc4269\",\"display_en_name\":\"adullamite\",\"display_heb_name\":\"\",\"all_en_names\":[\"Adullamite\"],\"all_heb_names\":[],\"entityType\":\"Person\",\"alias_keys\":[],\"isWoman\":false,\"isNonJew\":false,\"isGroup\":false,\"roles\":[]}",
+    "{\"key\":\"6a5fa6cc011460404dfc426a\",\"display_en_name\":\"council\",\"display_heb_name\":\"\",\"all_en_names\":[\"Council\"],\"all_heb_names\":[],\"entityType\":\"Person\",\"alias_keys\":[],\"isWoman\":false,\"isNonJew\":false,\"isGroup\":false,\"roles\":[]}",
+    "{\"key\":\"6a5fa6cc011460404dfc426b\",\"display_en_name\":\"enaim\",\"display_heb_name\":\"\",\"all_en_names\":[\"Enaim\"],\"all_heb_names\":[],\"entityType\":\"Place\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6cd011460404dfc426c\",\"display_en_name\":\"widows garb\",\"display_heb_name\":\"\",\"all_en_names\":[\"Widows Garb\"],\"all_heb_names\":[],\"entityType\":\"Symbol\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6cd011460404dfc426d\",\"display_en_name\":\"veil\",\"display_heb_name\":\"\",\"all_en_names\":[\"Veil\"],\"all_heb_names\":[],\"entityType\":\"Symbol\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6ce011460404dfc426e\",\"display_en_name\":\"seal\",\"display_heb_name\":\"\",\"all_en_names\":[\"Seal\"],\"all_heb_names\":[],\"entityType\":\"Symbol\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6ce011460404dfc426f\",\"display_en_name\":\"cord\",\"display_heb_name\":\"\",\"all_en_names\":[\"Cord\"],\"all_heb_names\":[],\"entityType\":\"Symbol\",\"alias_keys\":[]}",
+    "{\"key\":\"6a5fa6ce011460404dfc4270\",\"display_en_name\":\"staff\",\"display_heb_name\":\"\",\"all_en_names\":[\"Staff\"],\"all_heb_names\":[],\"entityType\":\"Symbol\",\"alias_keys\":[]}"
+]

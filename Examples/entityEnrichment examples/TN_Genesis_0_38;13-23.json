@@ -1,0 +1,90 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa63e011460404dfc4000",
+            "display_heb_name": "שלה",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "shelah"
+        },
+        {
+            "key": "6a5fa697011460404dfc4184",
+            "display_heb_name": "יהודה",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "judah"
+        },
+        {
+            "key": "6a5fa6c9011460404dfc4263",
+            "display_heb_name": "תמר",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "tamar"
+        },
+        {
+            "key": "6a5fa6cb011460404dfc4267",
+            "display_heb_name": "תמנה",
+            "placeType": "City",
+            "display_en_name": "timnah"
+        },
+        {
+            "key": "6a5fa6cb011460404dfc4269",
+            "display_heb_name": "העדלמי",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "adullamite"
+        },
+        {
+            "key": "6a5fa6cc011460404dfc426a",
+            "display_heb_name": "אנשי המקום",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": true,
+            "display_en_name": "council"
+        },
+        {
+            "key": "6a5fa6cc011460404dfc426b",
+            "display_heb_name": "עינים",
+            "placeType": "City",
+            "display_en_name": "enaim"
+        },
+        {
+            "key": "6a5fa6cd011460404dfc426c",
+            "display_heb_name": "בגדי אלמנות",
+            "symbolType": "Clothing",
+            "display_en_name": "widows garb"
+        },
+        {
+            "key": "6a5fa6cd011460404dfc426d",
+            "display_heb_name": "צעיף",
+            "symbolType": "Clothing",
+            "display_en_name": "veil"
+        },
+        {
+            "key": "6a5fa6ce011460404dfc426e",
+            "display_heb_name": "חותם",
+            "symbolType": "Other",
+            "display_en_name": "seal"
+        },
+        {
+            "key": "6a5fa6ce011460404dfc426f",
+            "display_heb_name": "פתיל",
+            "symbolType": "Other",
+            "display_en_name": "cord"
+        },
+        {
+            "key": "6a5fa6ce011460404dfc4270",
+            "display_heb_name": "מטה",
+            "symbolType": "Other",
+            "display_en_name": "staff"
+        }
+    ],
+    "key": "TN_Genesis_0_38:13-23"
+}

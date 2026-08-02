@@ -202,8 +202,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- Phase 1 override: custom source list + entity filtering --------------
 
     def test_run(self) -> None:
-        self.test_run_extraction()
-        # self.test_populate_from_jsons()
+        self.test_run_extraction_and_population()
+        self.test_populate_from_jsons()
 
 
     async def _extract_all_to_json(self) -> None:
@@ -232,8 +232,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             entity_json_list = [e.model_dump_json(exclude_none=True) for e in entities]
             passage = self._build_bilingual_passage(src_content)
 
-            # json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
-            cost_usd, json_str, usage = await self.temp_read_json_from_file()
+            json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            # cost_usd, json_str, usage = await self.temp_read_json_from_file() TEMP TESTING...
 
             total_cost_usd += cost_usd
             total_tokens += usage.total_tokens

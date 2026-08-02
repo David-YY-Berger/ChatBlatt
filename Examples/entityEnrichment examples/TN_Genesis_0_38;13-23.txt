@@ -1,0 +1,106 @@
+﻿COST: Tokens: Total=5421 approx cost=$0.000000 (Prompt=3337, Completion=2084)
+SOURCE:
+Bereishit (Torah) 38:13-23
+
+ENTITIES TO ENRICH (15):
+{"key":"6a5fa63e011460404dfc4000","display_en_name":"shelah","display_heb_name":"","all_en_names":["Shelah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa690011460404dfc4162","display_en_name":"kid","display_heb_name":"","all_en_names":["Kid"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa690011460404dfc4163","display_en_name":"kid","display_heb_name":"","all_en_names":["Kid"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa697011460404dfc4184","display_en_name":"judah","display_heb_name":"","all_en_names":["Judah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c9011460404dfc4263","display_en_name":"tamar","display_heb_name":"","all_en_names":["Tamar"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ca011460404dfc4265","display_en_name":"adullam","display_heb_name":"","all_en_names":["Adullam"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa6cb011460404dfc4267","display_en_name":"timnah","display_heb_name":"","all_en_names":["Timnah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6cb011460404dfc4269","display_en_name":"adullamite","display_heb_name":"","all_en_names":["Adullamite"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6cc011460404dfc426a","display_en_name":"council","display_heb_name":"","all_en_names":["Council"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6cc011460404dfc426b","display_en_name":"enaim","display_heb_name":"","all_en_names":["Enaim"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6cd011460404dfc426c","display_en_name":"widows garb","display_heb_name":"","all_en_names":["Widows Garb"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6cd011460404dfc426d","display_en_name":"veil","display_heb_name":"","all_en_names":["Veil"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6ce011460404dfc426e","display_en_name":"seal","display_heb_name":"","all_en_names":["Seal"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6ce011460404dfc426f","display_en_name":"cord","display_heb_name":"","all_en_names":["Cord"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6ce011460404dfc4270","display_en_name":"staff","display_heb_name":"","all_en_names":["Staff"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And Tamar was told, Your father-in-law is coming up to Timnah for the sheepshearing. So she took off her widows garb, covered her face with a veil, and, wrapping herself up, sat down at the entrance to Enaim, which is on the road to Timnah; for she saw that Shelah was grown up, yet she had not been given to him as wife. When Judah saw her, he took her for a harlot; for she had covered her face. So he turned aside to her by the road and said, Here, let me sleep with you-for he did not know that she was his daughter-in-law. What, she asked, will you pay for sleeping with me? He replied, I will send a kid from my flock. But she said, You must leave a pledge until you have sent it. And he said, What pledge shall I give you? She replied, Your seal and cord, and the staff which you carry. So he gave them to her and slept with her, and she conceived by him. Then she went on her way. She took off her veil and again put on her widows garb. Judah sent the kid by his friend the Adullamite, to redeem the pledge from the woman; but he could not find her. He inquired of the council of that locale,; cf. 26.7; 29.22; 34.20. NJPS people of that town, trad. men of.... See further the Dictionary under ish . Where is the prostitute, uncertain. Perhaps a type of female functionary at a religious site. Trad. harlot. NJPS cult prostitute, but the notion that ancient Near Eastern religions included prostitution as a religious act has since been discredited. the one at Enaim, by the road? But they said, There has been no prostitute here. So he returned to Judah and said, I could not find her; moreover, the local council; NJPS the townspeople. See the first note at v. 21. said: There has been no prostitute here. Judah said, Let her keep them, lest we become a laughingstock. I did send her this kid, but you did not find her.
+
+HEBREW:
+ויגד לתמר לאמר הנה חמיך עלה תמנתה לגז צאנו: ותסר בגדי אלמנותה מעליה ותכס בצעיף ותתעלף ותשב בפתח עינים אשר על דרך תמנתה כי ראתה כי גדל שלה והוא לא נתנה לו לאשה: ויראה יהודה ויחשבה לזונה כי כסתה פניה: ויט אליה אל הדרך ויאמר הבה נא אבוא אליך כי לא ידע כי כלתו הוא ותאמר מה תתן לי כי תבוא אלי: ויאמר אנכי אשלח גדי עזים מן הצאן ותאמר אם תתן ערבון עד שלחך: ויאמר מה הערבון אשר אתן לך ותאמר חתמך ופתילך ומטך אשר בידך ויתן לה ויבא אליה ותהר לו: ותקם ותלך ותסר צעיפה מעליה ותלבש בגדי אלמנותה: וישלח יהודה את גדי העזים ביד רעהו העדלמי לקחת הערבון מיד האשה ולא מצאה: וישאל את אנשי מקמה לאמר איה הקדשה הוא בעינים על הדרך ויאמרו לא היתה בזה קדשה: וישב אל יהודה ויאמר לא מצאתיה וגם אנשי המקום אמרו לא היתה בזה קדשה: ויאמר יהודה תקח לה פן נהיה לבוז הנה שלחתי הגדי הזה ואתה לא מצאתה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa63e011460404dfc4000",
+      "display_heb_name": "שלה",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa697011460404dfc4184",
+      "display_heb_name": "יהודה",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa6c9011460404dfc4263",
+      "display_heb_name": "תמר",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isNonJew": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa6cb011460404dfc4267",
+      "display_heb_name": "תמנה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6cb011460404dfc4269",
+      "display_heb_name": "העדלמי",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa6cc011460404dfc426a",
+      "display_heb_name": "אנשי המקום",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6cc011460404dfc426b",
+      "display_heb_name": "עינים",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6cd011460404dfc426c",
+      "display_heb_name": "בגדי אלמנות",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa6cd011460404dfc426d",
+      "display_heb_name": "צעיף",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa6ce011460404dfc426e",
+      "display_heb_name": "חותם",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6ce011460404dfc426f",
+      "display_heb_name": "פתיל",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6ce011460404dfc4270",
+      "display_heb_name": "מטה",
+      "symbolType": "Other"
+    }
+  ]
+}
