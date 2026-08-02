@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=3260 approx cost=$0.000463 (Prompt=2289, Completion=971)
+SOURCE:
+Bereishit (Torah) 30:37-42
+
+ENTITIES TO ENRICH (7):
+{"key":"6a5fa69e011460404dfc41a1","display_en_name":"goat","display_heb_name":"","all_en_names":["Goat"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa69e011460404dfc41a2","display_en_name":"troughs","display_heb_name":"","all_en_names":["Troughs"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa69e011460404dfc41a3","display_en_name":"water receptacles","display_heb_name":"","all_en_names":["Water Receptacles"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa69f011460404dfc41a4","display_en_name":"rod","display_heb_name":"","all_en_names":["Rod"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa69f011460404dfc41a5","display_en_name":"poplar","display_heb_name":"","all_en_names":["Poplar"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa69f011460404dfc41a6","display_en_name":"almond","display_heb_name":"","all_en_names":["Almond"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa69f011460404dfc41a7","display_en_name":"plane","display_heb_name":"","all_en_names":["Plane"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Jacob then got fresh shoots of poplar, and of almond and plane, and peeled white stripes in them, laying bare the white of the shoots. The rods that he had peeled he set up in front of the goats in the troughs, the water receptacles, that the goats came to drink from. Their mating occurred when they came to drink, and since the goats mated by the rods, the goats brought forth streaked, speckled, and spotted young. But Jacob dealt separately with the sheep; he made these animals face the streaked or wholly dark-colored animals in Labans flock. And so he produced special flocks for himself, which he did not put with Labans flocks. Moreover, when the sturdier animals were mating, Jacob would place the rods in the troughs, in full view of the animals, so that they mated by the rods; but with the feebler animals he would not place them there. Thus the feeble ones went to Laban and the sturdy to Jacob.
+
+HEBREW:
+ויקח לו יעקב מקל לבנה לח ולוז וערמון ויפצל בהן פצלות לבנות מחשף הלבן אשר על המקלות: ויצג את המקלות אשר פצל ברהטים בשקתות המים אשר תבאן הצאן לשתות לנכח הצאן ויחמנה בבאן לשתות: ויחמו הצאן אל המקלות ותלדן הצאן עקדים נקדים וטלאים: והכשבים הפריד יעקב ויתן פני הצאן אל עקד וכל חום בצאן לבן וישת לו עדרים לבדו ולא שתם על צאן לבן: והיה בכל יחם הצאן המקשרות ושם יעקב את המקלות לעיני הצאן ברהטים ליחמנה במקלות: ובהעטיף הצאן לא ישים והיה העטפים ללבן והקשרים ליעקב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa69e011460404dfc41a1",
+      "display_heb_name": "צאן"
+    },
+    {
+      "key": "6a5fa69e011460404dfc41a2",
+      "display_heb_name": "רהטים",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa69e011460404dfc41a3",
+      "display_heb_name": "שקתות מים",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa69f011460404dfc41a4",
+      "display_heb_name": "מקל",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa69f011460404dfc41a5",
+      "display_heb_name": "לבנה"
+    },
+    {
+      "key": "6a5fa69f011460404dfc41a6",
+      "display_heb_name": "לוז"
+    },
+    {
+      "key": "6a5fa69f011460404dfc41a7",
+      "display_heb_name": "ערמון"
+    }
+  ]
+}

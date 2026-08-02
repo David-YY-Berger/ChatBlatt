@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2054 approx cost=$0.000235 (Prompt=1692, Completion=362)
+SOURCE:
+Bereishit (Torah) 13:11-13
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa650011460404dfc404d","display_en_name":"inhabitants of sodom","display_heb_name":"","all_en_names":["Inhabitants Of Sodom"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa650011460404dfc404e","display_en_name":"plain of the jordan","display_heb_name":"","all_en_names":["Plain Of The Jordan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+So Lot chose for himself the whole plain of the Jordan, and Lot journeyed eastward. Thus they parted from each other; Abram remained in the land of Canaan, while Lot settled in the cities of the Plain, pitching his tents near Sodom. Now the inhabitants of Sodom were very wicked sinners against HASHEM.
+
+HEBREW:
+ויבחר לו לוט את כל ככר הירדן ויסע לוט מקדם ויפרדו איש מעל אחיו: אברם ישב בארץ כנען ולוט ישב בערי הככר ויאהל עד סדם: ואנשי סדם רעים וחטאים ליהוה מאד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa650011460404dfc404d",
+      "display_heb_name": "אנשי סדם",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa650011460404dfc404e",
+      "display_heb_name": "ככר הירדן",
+      "placeType": "Country or Region"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa665011460404dfc40aa",
+            "display_heb_name": "מאת",
+            "heb_unit": "שנה",
+            "heb_context": "גיל אברהם",
+            "display_en_name": "100"
+        },
+        {
+            "key": "6a5fa673011460404dfc40e9",
+            "display_heb_name": "שמנת",
+            "heb_unit": "יום",
+            "heb_context": "מילת יצחק",
+            "display_en_name": "8"
+        }
+    ],
+    "key": "TN_Genesis_0_21:1-8"
+}

@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa665011460404dfc40a9",
+            "display_heb_name": "שרה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "sarah"
+        },
+        {
+            "key": "6a5fa665011460404dfc40aa",
+            "heb_unit": "שנה",
+            "heb_context": "גיל אברהם",
+            "display_en_name": "100"
+        },
+        {
+            "key": "6a5fa665011460404dfc40ab",
+            "heb_unit": "שנה",
+            "heb_context": "גיל שרה",
+            "display_en_name": "90"
+        }
+    ],
+    "key": "TN_Genesis_0_17:15-17"
+}

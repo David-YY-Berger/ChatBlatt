@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6aa011460404dfc41d6",
+            "display_heb_name": "השפחות",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "maids"
+        },
+        {
+            "key": "6a5fa6aa011460404dfc41d7",
+            "display_heb_name": "שבע",
+            "heb_unit": "פעמים",
+            "heb_context": "יעקב השתחווה",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_33:1-10"
+}

@@ -1,0 +1,40 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f4011460404dfc4308",
+            "display_heb_name": "כהנים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "priests"
+        },
+        {
+            "key": "6a5fa6f4011460404dfc4309",
+            "display_heb_name": "חמישית",
+            "heb_unit": "חלק",
+            "heb_context": "חמישית לפרעה",
+            "display_en_name": "0.2"
+        },
+        {
+            "key": "6a5fa6f4011460404dfc430a",
+            "display_heb_name": "ארבע הידת",
+            "heb_unit": "חלק",
+            "heb_context": "חלק איכר מהתבואה",
+            "display_en_name": "0.8"
+        },
+        {
+            "key": "6a5fa6f4011460404dfc430b",
+            "display_heb_name": "שבע עשרה",
+            "heb_unit": "שנה",
+            "heb_context": "יעקב חי במצרים",
+            "display_en_name": "17"
+        },
+        {
+            "key": "6a5fa6f5011460404dfc430c",
+            "display_heb_name": "שבע שנים וארבעים ומאת שנה",
+            "heb_unit": "שנה",
+            "heb_context": "ימי חיי יעקב",
+            "display_en_name": "147"
+        }
+    ],
+    "key": "TN_Genesis_0_47:20-28"
+}

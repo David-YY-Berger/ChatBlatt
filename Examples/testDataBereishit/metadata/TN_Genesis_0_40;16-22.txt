@@ -1,0 +1,44 @@
+﻿COST: Tokens: Total=3155 approx cost=$0.000478 (Prompt=2083, Completion=1072)
+SOURCE:
+Bereishit (Torah) 40:16-22
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6d3011460404dfc4287","display_en_name":"chief baker","display_heb_name":"","all_en_names":["Chief Baker"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d4011460404dfc4288","display_en_name":"basket","display_heb_name":"","all_en_names":["Basket"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d4011460404dfc4289","display_en_name":"pole","display_heb_name":"","all_en_names":["Pole"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d4011460404dfc428a","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"basket","en_context":"baker's dream"}
+
+PASSAGE:
+ENGLISH:
+When the chief baker saw how favorably he had interpreted, he said to Joseph, In my dream, similarly, there were three openwork baskets uncertain. on my head. In the uppermost basket were all kinds of food for Pharaoh that a baker prepares; and the birds were eating it out of the basket above my head. Joseph answered, This is its interpretation: The three baskets are three days. In three days Pharaoh will lift off your head and impale you upon a pole; and the birds will pick off your flesh. On the third day-his birthday-Pharaoh made a banquet for all his officials, and he singled out his chief cupbearer and his chief baker from among his officials. He restored the chief cupbearer to his cupbearing, and he placed the cup in Pharaohs hand; but the chief baker he impaled-just as Joseph had interpreted to them.
+
+HEBREW:
+וירא שר האפים כי טוב פתר ויאמר אל יוסף אף אני בחלומי והנה שלשה סלי חרי על ראשי: ובסל העליון מכל מאכל פרעה מעשה אפה והעוף אכל אתם מן הסל מעל ראשי: ויען יוסף ויאמר זה פתרנו שלשת הסלים שלשת ימים הם: בעוד שלשת ימים ישא פרעה את ראשך מעליך ותלה אותך על עץ ואכל העוף את בשרך מעליך: ויהי ביום השלישי יום הלדת את פרעה ויעש משתה לכל עבדיו וישא את ראש שר המשקים ואת ראש שר האפים בתוך עבדיו: וישב את שר המשקים על משקהו ויתן הכוס על כף פרעה: ואת שר האפים תלה כאשר פתר להם יוסף:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d3011460404dfc4287",
+      "display_heb_name": "שר האפים",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6d4011460404dfc4288",
+      "display_heb_name": "סל",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6d4011460404dfc4289",
+      "display_heb_name": "עץ",
+      "symbolType": "Weapon"
+    },
+    {
+      "key": "6a5fa6d4011460404dfc428a",
+      "display_heb_name": "שלשה",
+      "heb_unit": "סל",
+      "heb_context": "חלום האפים"
+    }
+  ]
+}

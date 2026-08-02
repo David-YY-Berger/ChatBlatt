@@ -1,0 +1,173 @@
+﻿COST: Tokens: Total=8596 approx cost=$0.001691 (Prompt=3945, Completion=4651)
+SOURCE:
+Bereishit (Torah) 36:20-30
+
+ENTITIES TO ENRICH (23):
+{"key":"6a5fa6b7011460404dfc4213","display_en_name":"seir","display_heb_name":"","all_en_names":["Seir"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b7011460404dfc4214","display_en_name":"lotan","display_heb_name":"","all_en_names":["Lotan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b7011460404dfc4215","display_en_name":"shobal","display_heb_name":"","all_en_names":["Shobal"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b8011460404dfc4216","display_en_name":"dishon","display_heb_name":"","all_en_names":["Dishon"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b8011460404dfc4217","display_en_name":"ezer","display_heb_name":"","all_en_names":["Ezer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b8011460404dfc4218","display_en_name":"dishan","display_heb_name":"","all_en_names":["Dishan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b8011460404dfc4219","display_en_name":"hori","display_heb_name":"","all_en_names":["Hori"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b8011460404dfc421a","display_en_name":"hemam","display_heb_name":"","all_en_names":["Hemam"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b9011460404dfc421b","display_en_name":"alvan","display_heb_name":"","all_en_names":["Alvan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b9011460404dfc421c","display_en_name":"manahath","display_heb_name":"","all_en_names":["Manahath"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b9011460404dfc421d","display_en_name":"ebal","display_heb_name":"","all_en_names":["Ebal"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b9011460404dfc421e","display_en_name":"shepho","display_heb_name":"","all_en_names":["Shepho"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ba011460404dfc421f","display_en_name":"onam","display_heb_name":"","all_en_names":["Onam"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ba011460404dfc4220","display_en_name":"aiah","display_heb_name":"","all_en_names":["Aiah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ba011460404dfc4221","display_en_name":"hemdan","display_heb_name":"","all_en_names":["Hemdan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ba011460404dfc4222","display_en_name":"eshban","display_heb_name":"","all_en_names":["Eshban"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ba011460404dfc4223","display_en_name":"ithran","display_heb_name":"","all_en_names":["Ithran"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bb011460404dfc4224","display_en_name":"cheran","display_heb_name":"","all_en_names":["Cheran"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bb011460404dfc4225","display_en_name":"bilhan","display_heb_name":"","all_en_names":["Bilhan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bb011460404dfc4226","display_en_name":"zaavan","display_heb_name":"","all_en_names":["Zaavan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bb011460404dfc4227","display_en_name":"akan","display_heb_name":"","all_en_names":["Akan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bc011460404dfc4228","display_en_name":"aran","display_heb_name":"","all_en_names":["Aran"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6bc011460404dfc4229","display_en_name":"hor","display_heb_name":"","all_en_names":["Hor"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+These were the sons of Seir the Horite, who were settled in the land: Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. Those are the clans of the Horites, the descendants of Seir, in the land of Edom. The sons of Lotan were Hori and Hemam; and Lotans sister was Timna. The sons of Shobal were these: Alvan, Manahath, Ebal, Shepho, and Onam. The sons of Zibeon were these: Aiah and Anah-that was the Anah who discovered the hot springs uncertain. in the wilderness while pasturing the asses of his father Zibeon. The children of Anah were these: Dishon and Anahs daughter Oholibamah. The sons of Dishon; but cf. vv. 21, 25, 28, and 30, and 1 Chron. 1.41. were these: Hemdan, Eshban, Ithran, and Cheran. The sons of Ezer were these: Bilhan, Zaavan, and Akan. And the sons of Dishan were these: Uz and Aran. These are the clans of the Horites: the clans Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. Those are the clans of the Horites, clan by clan, in the land of Seir.
+
+HEBREW:
+אלה בני שעיר החרי ישבי הארץ לוטן ושובל וצבעון וענה: ודשון ואצר ודישן אלה אלופי החרי בני שעיר בארץ אדום: ויהיו בני לוטן חרי והימם ואחות לוטן תמנע: ואלה בני שובל עלון ומנחת ועיבל שפו ואונם: ואלה בני צבעון ואיה וענה הוא ענה אשר מצא את הימם במדבר ברעתו את החמרים לצבעון אביו: ואלה בני ענה דשן ואהליבמה בת ענה: ואלה בני דישן חמדן ואשבן ויתרן וכרן: אלה בני אצר בלהן וזעון ועקן: אלה בני דישן עוץ וארן: אלה אלופי החרי אלוף לוטן אלוף שובל אלוף צבעון אלוף ענה: אלוף דשן אלוף אצר אלוף דישן אלה אלופי החרי לאלפיהם בארץ שעיר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6b7011460404dfc4213",
+      "display_heb_name": "שעיר",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b7011460404dfc4214",
+      "display_heb_name": "לוטן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b7011460404dfc4215",
+      "display_heb_name": "שובל",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b8011460404dfc4216",
+      "display_heb_name": "דשון",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b8011460404dfc4217",
+      "display_heb_name": "אצר",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b8011460404dfc4218",
+      "display_heb_name": "דישן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b8011460404dfc4219",
+      "display_heb_name": "חרי",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b8011460404dfc421a",
+      "display_heb_name": "הימם",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b9011460404dfc421b",
+      "display_heb_name": "עלון",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b9011460404dfc421c",
+      "display_heb_name": "מנחת",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b9011460404dfc421d",
+      "display_heb_name": "עיבל",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6b9011460404dfc421e",
+      "display_heb_name": "שפו",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ba011460404dfc421f",
+      "display_heb_name": "אונם",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ba011460404dfc4220",
+      "display_heb_name": "איה",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ba011460404dfc4221",
+      "display_heb_name": "חמדן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ba011460404dfc4222",
+      "display_heb_name": "אשבן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ba011460404dfc4223",
+      "display_heb_name": "יתרן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6bb011460404dfc4224",
+      "display_heb_name": "כרן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6bb011460404dfc4225",
+      "display_heb_name": "בלהן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6bb011460404dfc4226",
+      "display_heb_name": "זעון",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6bb011460404dfc4227",
+      "display_heb_name": "עקן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6bc011460404dfc4228",
+      "display_heb_name": "ארן",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+﻿COST: Tokens: Total=4432 approx cost=$0.000664 (Prompt=2960, Completion=1472)
+SOURCE:
+Bereishit (Torah) 7:12-8:3
+
+ENTITIES TO ENRICH (9):
+{"key":"6a5fa623011460404dfc3f8b","display_en_name":"mountains","display_heb_name":"","all_en_names":["Mountains"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa623011460404dfc3f8c","display_en_name":"dry land","display_heb_name":"","all_en_names":["Dry Land"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa623011460404dfc3f8d","display_en_name":"40","display_heb_name":"","all_en_names":["40"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"rain duration"}
+{"key":"6a5fa624011460404dfc3f8e","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"pair","en_context":"ark entry"}
+{"key":"6a5fa624011460404dfc3f8f","display_en_name":"15","display_heb_name":"","all_en_names":["15"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"cubit","en_context":"water height"}
+{"key":"6a5fa624011460404dfc3f90","display_en_name":"150","display_heb_name":"","all_en_names":["150"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"water swelling duration"}
+{"key":"6a5fa624011460404dfc3f91","display_en_name":"creature","display_heb_name":"","all_en_names":["Creature"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa625011460404dfc3f92","display_en_name":"winged thing","display_heb_name":"","all_en_names":["Winged Thing"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa625011460404dfc3f93","display_en_name":"flesh","display_heb_name":"","all_en_names":["Flesh"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+(The rain fell on the earth forty days and forty nights.) That same day Noah and Noahs sons, Shem, Ham, and Japheth, went into the ark, with Noahs wife and the three wives of his sons- they and all beasts of every kind, all cattle of every kind, all creatures of every kind that creep on the earth, and all birds of every kind, every bird, every winged thing. They came to Noah into the ark, two each of all flesh in which there was breath of life. Thus they that entered comprised male and female of all flesh, as God had commanded him. And HASHEM shut him in. The Flood continued forty days on the earth, and the waters increased and raised the ark so that it rose above the earth. The waters swelled and increased greatly upon the earth, and the ark drifted upon the waters. When the waters had swelled much more upon the earth, all the highest mountains everywhere under the sky were covered. Fifteen cubits higher did the waters swell, as the mountains were covered. And all flesh that stirred on earth perished-birds, cattle, beasts, and all the things that swarmed upon the earth, and all humankind. All in whose nostrils was the merest breath of life, all that was on dry land, died. All existence on earth was blotted out-humans, cattle, creeping things, and birds of the sky; they were blotted out from the earth. Only Noah was left, and those with him in the ark. And when the waters had swelled on the earth one hundred and fifty days,God remembered Noah and all the beasts and all the cattle that were with him in the ark, and God caused a wind to blow across the earth, and the waters subsided. The fountains of the deep and the floodgates of the sky were stopped up, and the rain from the sky was held back; the waters then receded steadily from the earth. At the end of one hundred and fifty days the waters diminished,
+
+HEBREW:
+ויהי הגשם על הארץ ארבעים יום וארבעים לילה: בעצם היום הזה בא נח ושם וחם ויפת בני נח ואשת נח ושלשת נשי בניו אתם אל התבה: המה וכל החיה למינה וכל הבהמה למינה וכל הרמש הרמש על הארץ למינהו וכל העוף למינהו כל צפור כל כנף: ויבאו אל נח אל התבה שנים שנים מכל הבשר אשר בו רוח חיים: והבאים זכר ונקבה מכל בשר באו כאשר צוה אתו אלהים ויסגר יהוה בעדו: ויהי המבול ארבעים יום על הארץ וירבו המים וישאו את התבה ותרם מעל הארץ: ויגברו המים וירבו מאד על הארץ ותלך התבה על פני המים: והמים גברו מאד מאד על הארץ ויכסו כל ההרים הגבהים אשר תחת כל השמים: חמש עשרה אמה מלמעלה גברו המים ויכסו ההרים: ויגוע כל בשר הרמש על הארץ בעוף ובבהמה ובחיה ובכל השרץ השרץ על הארץ וכל האדם: כל אשר נשמת רוח חיים באפיו מכל אשר בחרבה מתו: וימח את כל היקום אשר על פני האדמה מאדם עד בהמה עד רמש ועד עוף השמים וימחו מן הארץ וישאר אך נח ואשר אתו בתבה: ויגברו המים על הארץ חמשים ומאת יום:ויזכר אלהים את נח ואת כל החיה ואת כל הבהמה אשר אתו בתבה ויעבר אלהים רוח על הארץ וישכו המים: ויסכרו מעינת תהום וארבת השמים ויכלא הגשם מן השמים: וישבו המים מעל הארץ הלוך ושוב ויחסרו המים מקצה חמשים ומאת יום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa623011460404dfc3f8b",
+      "display_heb_name": "ההרים",
+      "placeType": "Mountain"
+    },
+    {
+      "key": "6a5fa623011460404dfc3f8c",
+      "display_heb_name": "חרבה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa623011460404dfc3f8d",
+      "display_heb_name": "ארבעים",
+      "heb_unit": "יום",
+      "heb_context": "משך גשם"
+    },
+    {
+      "key": "6a5fa624011460404dfc3f8e",
+      "display_heb_name": "שנים",
+      "heb_unit": "שנים",
+      "heb_context": "כניסה לתיבה"
+    },
+    {
+      "key": "6a5fa624011460404dfc3f8f",
+      "display_heb_name": "חמש עשרה",
+      "heb_unit": "אמה",
+      "heb_context": "גובה מים"
+    },
+    {
+      "key": "6a5fa624011460404dfc3f90",
+      "display_heb_name": "חמשים ומאת",
+      "heb_unit": "יום",
+      "heb_context": "משך התגברות המים"
+    },
+    {
+      "key": "6a5fa624011460404dfc3f91",
+      "display_heb_name": "חיה"
+    },
+    {
+      "key": "6a5fa625011460404dfc3f92",
+      "display_heb_name": "כנף"
+    },
+    {
+      "key": "6a5fa625011460404dfc3f93",
+      "display_heb_name": "בשר"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3425 approx cost=$0.000490 (Prompt=2389, Completion=1036)
+SOURCE:
+Bereishit (Torah) 47:1-12
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6f2011460404dfc4303","display_en_name":"little ones","display_heb_name":"","all_en_names":["Little Ones"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6f3011460404dfc4304","display_en_name":"rameses","display_heb_name":"","all_en_names":["Rameses"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6f3011460404dfc4305","display_en_name":"130","display_heb_name":"","all_en_names":["130"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jacob's lifespan"}
+
+PASSAGE:
+ENGLISH:
+Then Joseph came and reported to Pharaoh, saying, My father and my brothers, with their flocks and herds and all that is theirs, have come from the land of Canaan and are now in the region of Goshen. And carefully selecting a few of his brothers, he presented them to Pharaoh. Pharaoh said to his brothers, What is your occupation? They answered Pharaoh, We your servants are shepherds, as were also our fathers. We have come, they told Pharaoh, to sojourn in this land, for there is no pasture for your servants flocks, the famine being severe in the land of Canaan. Pray, then, let your servants stay in the region of Goshen. Then Pharaoh said to Joseph, As regards your father and your brothers who have come to you, the land of Egypt is open before you: settle your father and your brothers in the best part of the land; let them stay in the region of Goshen. And if you know some men of ability. among them, put them in charge of my livestock. Joseph then brought his father Jacob and presented him to Pharaoh; and Jacob greeted Pharaoh. Pharaoh asked Jacob, How many are the years of your life? And Jacob answered Pharaoh, The years of my sojourn [on earth] are one hundred and thirty. Few and hard have been the years of my life, nor do they come up to the life spans of my ancestors. during their sojourns. Then Jacob bade Pharaoh farewell, and left Pharaohs presence. So Joseph settled his father and his brothers, giving them holdings in the choicest part of the land of Egypt, in the region of Rameses, as Pharaoh had commanded. Joseph sustained his father, and his brothers, and all his fathers household with bread, down to the little ones.
+
+HEBREW:
+ויבא יוסף ויגד לפרעה ויאמר אבי ואחי וצאנם ובקרם וכל אשר להם באו מארץ כנען והנם בארץ גשן: ומקצה אחיו לקח חמשה אנשים ויצגם לפני פרעה: ויאמר פרעה אל אחיו מה מעשיכם ויאמרו אל פרעה רעה צאן עבדיך גם אנחנו גם אבותינו: ויאמרו אל פרעה לגור בארץ באנו כי אין מרעה לצאן אשר לעבדיך כי כבד הרעב בארץ כנען ועתה ישבו נא עבדיך בארץ גשן: ויאמר פרעה אל יוסף לאמר אביך ואחיך באו אליך: ארץ מצרים לפניך הוא במיטב הארץ הושב את אביך ואת אחיך ישבו בארץ גשן ואם ידעת ויש בם אנשי חיל ושמתם שרי מקנה על אשר לי: ויבא יוסף את יעקב אביו ויעמדהו לפני פרעה ויברך יעקב את פרעה: ויאמר פרעה אל יעקב כמה ימי שני חייך: ויאמר יעקב אל פרעה ימי שני מגורי שלשים ומאת שנה מעט ורעים היו ימי שני חיי ולא השיגו את ימי שני חיי אבתי בימי מגוריהם: ויברך יעקב את פרעה ויצא מלפני פרעה: ויושב יוסף את אביו ואת אחיו ויתן להם אחזה בארץ מצרים במיטב הארץ בארץ רעמסס כאשר צוה פרעה: ויכלכל יוסף את אביו ואת אחיו ואת כל בית אביו לחם לפי הטף:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f2011460404dfc4303",
+      "display_heb_name": "הטף",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6f3011460404dfc4304",
+      "display_heb_name": "רעמסס",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa6f3011460404dfc4305",
+      "display_heb_name": "שלשים ומאת",
+      "heb_unit": "שנה",
+      "heb_context": "ימי שני חיי יעקב"
+    }
+  ]
+}

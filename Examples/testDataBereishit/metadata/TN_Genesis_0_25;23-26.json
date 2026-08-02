@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa689011460404dfc414a",
+            "display_heb_name": "שני",
+            "heb_unit": "גוי",
+            "heb_context": "גוים בבטן",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa689011460404dfc414b",
+            "display_heb_name": "ששים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל יצחק בלידה",
+            "display_en_name": "60"
+        }
+    ],
+    "key": "TN_Genesis_0_25:23-26"
+}

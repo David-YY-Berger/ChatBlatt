@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2113 approx cost=$0.000235 (Prompt=1771, Completion=342)
+SOURCE:
+Bereishit (Torah) 20:14-18
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa673011460404dfc40e8","display_en_name":"1000","display_heb_name":"","all_en_names":["1000"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"silver","en_context":"vindication for sarah"}
+
+PASSAGE:
+ENGLISH:
+Abimelech took sheep and oxen, and male and female slaves, and gave them to Abraham; and he restored his wife Sarah to him. And Abimelech said, Here, my land is before you; settle wherever you please. And to Sarah he said, I herewith give your brother a thousand pieces of silver; this will serve you as vindication before all who are with you, and you are cleared before everyone. Abraham then prayed to God, and God healed Abimelech and his wife and his slave girls, so that they bore children; for HASHEM had closed fast every womb of the household of Abimelech because of Sarah, the wife of Abraham.
+
+HEBREW:
+ויקח אבימלך צאן ובקר ועבדים ושפחת ויתן לאברהם וישב לו את שרה אשתו: ויאמר אבימלך הנה ארצי לפניך בטוב בעיניך שב: ולשרה אמר הנה נתתי אלף כסף לאחיך הנה הוא לך כסות עינים לכל אשר אתך ואת כל ונכחת: ויתפלל אברהם אל האלהים וירפא אלהים את אבימלך ואת אשתו ואמהתיו וילדו: כי עצר עצר יהוה בעד כל רחם לבית אבימלך על דבר שרה אשת אברהם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa673011460404dfc40e8",
+      "display_heb_name": "אלף",
+      "heb_unit": "כסף",
+      "heb_context": "כסות עינים לשרה"
+    }
+  ]
+}

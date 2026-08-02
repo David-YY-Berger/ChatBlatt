@@ -1,0 +1,42 @@
+﻿COST: Tokens: Total=3173 approx cost=$0.000480 (Prompt=2097, Completion=1076)
+SOURCE:
+Bereishit (Torah) 46:29-34
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6aa011460404dfc41d9","display_en_name":"herd","display_heb_name":"","all_en_names":["Herd"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa6f2011460404dfc4300","display_en_name":"father's household","display_heb_name":"","all_en_names":["Father's Household"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6f2011460404dfc4301","display_en_name":"fathers","display_heb_name":"","all_en_names":["Fathers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6f2011460404dfc4302","display_en_name":"livestock","display_heb_name":"","all_en_names":["Livestock"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Joseph ordered his chariot and went to Goshen to meet his father Israel; he presented himself to him and, embracing him around the neck, he wept on his neck a good while. Then Israel said to Joseph, Now I can die, having seen for myself that you are still alive. Then Joseph said to his brothers and to his fathers household, I will go up and tell the news to Pharaoh, and say to him, My brothers and my fathers household, who were in the land of Canaan, have come to me. They happen to be shepherds; they have always been breeders of livestock, and they have brought with them their flocks and herds and all that is theirs. So when Pharaoh summons you and asks, What is your occupation? you shall answer, Your servants have been breeders of livestock from the start until now, both we and our fathers-so that you may stay in the region of Goshen. For all shepherds are abhorrent to Egyptians.
+
+HEBREW:
+ויאסר יוסף מרכבתו ויעל לקראת ישראל אביו גשנה וירא אליו ויפל על צואריו ויבך על צואריו עוד: ויאמר ישראל אל יוסף אמותה הפעם אחרי ראותי את פניך כי עודך חי: ויאמר יוסף אל אחיו ואל בית אביו אעלה ואגידה לפרעה ואמרה אליו אחי ובית אבי אשר בארץ כנען באו אלי: והאנשים רעי צאן כי אנשי מקנה היו וצאנם ובקרם וכל אשר להם הביאו: והיה כי יקרא לכם פרעה ואמר מה מעשיכם: ואמרתם אנשי מקנה היו עבדיך מנעורינו ועד עתה גם אנחנו גם אבתינו בעבור תשבו בארץ גשן כי תועבת מצרים כל רעה צאן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6aa011460404dfc41d9",
+      "display_heb_name": "בקר"
+    },
+    {
+      "key": "6a5fa6f2011460404dfc4300",
+      "display_heb_name": "בית אביו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6f2011460404dfc4301",
+      "display_heb_name": "אבתינו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6f2011460404dfc4302",
+      "display_heb_name": "מקנה"
+    }
+  ]
+}

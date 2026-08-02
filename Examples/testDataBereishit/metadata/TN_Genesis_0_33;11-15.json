@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6aa011460404dfc41d8",
+            "display_heb_name": "אחד",
+            "heb_unit": "יום",
+            "heb_context": "משך נסיעה",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_33:11-15"
+}

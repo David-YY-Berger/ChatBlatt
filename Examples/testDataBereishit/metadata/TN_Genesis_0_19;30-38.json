@@ -1,0 +1,40 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa671011460404dfc40df",
+            "display_heb_name": "מואב",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "moab"
+        },
+        {
+            "key": "6a5fa671011460404dfc40e0",
+            "display_heb_name": "בן עמי",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "ben-ammi"
+        },
+        {
+            "key": "6a5fa671011460404dfc40e1",
+            "display_heb_name": "הר",
+            "placeType": "Country or Region",
+            "display_en_name": "hill country"
+        },
+        {
+            "key": "6a5fa672011460404dfc40e2",
+            "display_heb_name": "מערה",
+            "placeType": "Building or Structure",
+            "display_en_name": "cave"
+        },
+        {
+            "key": "6a5fa672011460404dfc40e5",
+            "display_heb_name": "שתי",
+            "heb_unit": "בת",
+            "heb_context": "בנות לוט",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_19:30-38"
+}

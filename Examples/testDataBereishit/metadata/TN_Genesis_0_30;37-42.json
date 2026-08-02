@@ -1,0 +1,43 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa69e011460404dfc41a1",
+            "display_heb_name": "צאן",
+            "display_en_name": "goat"
+        },
+        {
+            "key": "6a5fa69e011460404dfc41a2",
+            "display_heb_name": "רהטים",
+            "placeType": "Building or Structure",
+            "display_en_name": "troughs"
+        },
+        {
+            "key": "6a5fa69e011460404dfc41a3",
+            "display_heb_name": "שקתות מים",
+            "placeType": "Building or Structure",
+            "display_en_name": "water receptacles"
+        },
+        {
+            "key": "6a5fa69f011460404dfc41a4",
+            "display_heb_name": "מקל",
+            "symbolType": "Other",
+            "display_en_name": "rod"
+        },
+        {
+            "key": "6a5fa69f011460404dfc41a5",
+            "display_heb_name": "לבנה",
+            "display_en_name": "poplar"
+        },
+        {
+            "key": "6a5fa69f011460404dfc41a6",
+            "display_heb_name": "לוז",
+            "display_en_name": "almond"
+        },
+        {
+            "key": "6a5fa69f011460404dfc41a7",
+            "display_heb_name": "ערמון",
+            "display_en_name": "plane"
+        }
+    ],
+    "key": "TN_Genesis_0_30:37-42"
+}

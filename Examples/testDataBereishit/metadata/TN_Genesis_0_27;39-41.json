@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa691011460404dfc4167",
+            "display_heb_name": "חרב",
+            "symbolType": "Weapon",
+            "display_en_name": "sword"
+        },
+        {
+            "key": "6a5fa691011460404dfc4168",
+            "display_heb_name": "על",
+            "symbolType": "Other",
+            "display_en_name": "yoke"
+        }
+    ],
+    "key": "TN_Genesis_0_27:39-41"
+}

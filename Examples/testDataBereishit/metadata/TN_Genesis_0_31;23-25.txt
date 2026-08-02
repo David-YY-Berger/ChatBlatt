@@ -1,0 +1,39 @@
+﻿COST: Tokens: Total=2596 approx cost=$0.000368 (Prompt=1824, Completion=772)
+SOURCE:
+Bereishit (Torah) 31:23-25
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6a1011460404dfc41ad","display_en_name":"kinsmen","display_heb_name":"","all_en_names":["Kinsmen"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a1011460404dfc41ae","display_en_name":"the height","display_heb_name":"","all_en_names":["The Height"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a1011460404dfc41af","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"laban pursued jacob"}
+
+PASSAGE:
+ENGLISH:
+So he took his kinsmen with him and pursued him a distance of seven days, catching up with him in the hill country of Gilead. But God appeared to Laban the Aramean in a dream by night and said to him, Beware of attempting anything with Jacob, good or bad. Laban overtook Jacob. Jacob had pitched his tent on the Height, and Laban with his kinsmen encamped in the hill country of Gilead.
+
+HEBREW:
+ויקח את אחיו עמו וירדף אחריו דרך שבעת ימים וידבק אתו בהר הגלעד: ויבא אלהים אל לבן הארמי בחלם הלילה ויאמר לו השמר לך פן תדבר עם יעקב מטוב עד רע: וישג לבן את יעקב ויעקב תקע את אהלו בהר ולבן תקע את אחיו בהר הגלעד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a1011460404dfc41ad",
+      "display_heb_name": "אחיו",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6a1011460404dfc41ae",
+      "display_heb_name": "בהר",
+      "placeType": "Mountain"
+    },
+    {
+      "key": "6a5fa6a1011460404dfc41af",
+      "display_heb_name": "שבעת",
+      "heb_unit": "יום",
+      "heb_context": "לבן רדף יעקב"
+    }
+  ]
+}

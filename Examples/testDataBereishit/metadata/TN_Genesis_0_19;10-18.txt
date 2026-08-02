@@ -1,0 +1,51 @@
+﻿COST: Tokens: Total=4075 approx cost=$0.000670 (Prompt=2455, Completion=1620)
+SOURCE:
+Bereishit (Torah) 19:10-18
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa66f011460404dfc40d7","display_en_name":"sons-in-law","display_heb_name":"","all_en_names":["Sons-In-Law"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66f011460404dfc40d8","display_en_name":"wife","display_heb_name":"","all_en_names":["Wife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa670011460404dfc40d9","display_en_name":"plain","display_heb_name":"","all_en_names":["Plain"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa670011460404dfc40da","display_en_name":"hills","display_heb_name":"","all_en_names":["Hills"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa670011460404dfc40db","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"daughter","en_context":"lot's remaining family"}
+
+PASSAGE:
+ENGLISH:
+But the agents stretched out their hands and pulled Lot into the house with them, and shut the door. And the people. who were at the entrance of the house, low and high alike,; NJPS young and old, trad. both small and great. they struck with blinding light, so that they were helpless to find the entrance. Then the agents said to Lot, Whom else have you here? Sons-in-law, your sons and daughters, or anyone else that you have in the city-bring them out of the place. For we are about to destroy this place; because the outcry against them before HASHEM has become so great that HASHEM has sent us to destroy it. So Lot went out and spoke to his sons-in-law, who had married his daughters, and said, Up, get out of this place, for HASHEM is about to destroy the city. But he seemed to his sons-in-law as one who jests. As dawn broke, the messengers urged Lot on, saying, Up, take your wife and your two remaining daughters, lest you be swept away because of the iniquity of the city. Still he delayed. So the agents seized his hand, and the hands of his wife and his two daughters-in HASHEMs mercy on him-and brought him out and left him outside the city. When they had brought them outside, one said, Flee for your life! Do not look behind you, nor stop anywhere in the Plain; flee to the hills, lest you be swept away. But Lot said to them, Oh no, my lord!
+
+HEBREW:
+וישלחו האנשים את ידם ויביאו את לוט אליהם הביתה ואת הדלת סגרו: ואת האנשים אשר פתח הבית הכו בסנורים מקטן ועד גדול וילאו למצא הפתח: ויאמרו האנשים אל לוט עד מי לך פה חתן ובניך ובנתיך וכל אשר לך בעיר הוצא מן המקום: כי משחתים אנחנו את המקום הזה כי גדלה צעקתם את פני יהוה וישלחנו יהוה לשחתה: ויצא לוט וידבר אל חתניו לקחי בנתיו ויאמר קומו צאו מן המקום הזה כי משחית יהוה את העיר ויהי כמצחק בעיני חתניו: וכמו השחר עלה ויאיצו המלאכים בלוט לאמר קום קח את אשתך ואת שתי בנתיך הנמצאת פן תספה בעון העיר: ויתמהמה ויחזיקו האנשים בידו וביד אשתו וביד שתי בנתיו בחמלת יהוה עליו ויצאהו וינחהו מחוץ לעיר: ויהי כהוציאם אתם החוצה ויאמר המלט על נפשך אל תביט אחריך ואל תעמד בכל הככר ההרה המלט פן תספה: ויאמר לוט אלהם אל נא אדני:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66f011460404dfc40d7",
+      "display_heb_name": "חתניו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66f011460404dfc40d8",
+      "display_heb_name": "אשתו",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa670011460404dfc40d9",
+      "display_heb_name": "הככר",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa670011460404dfc40da",
+      "display_heb_name": "ההרה",
+      "placeType": "Mountain"
+    },
+    {
+      "key": "6a5fa670011460404dfc40db",
+      "display_heb_name": "שתי",
+      "heb_unit": "בת",
+      "heb_context": "משפחתו הנותרת של לוט"
+    }
+  ]
+}

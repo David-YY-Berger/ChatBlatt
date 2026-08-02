@@ -1,0 +1,70 @@
+﻿COST: Tokens: Total=4458 approx cost=$0.000796 (Prompt=2404, Completion=2054)
+SOURCE:
+Bereishit (Torah) 12:10-16
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa610011460404dfc3f39","display_en_name":"sheep","display_heb_name":"","all_en_names":["Sheep"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa64c011460404dfc403f","display_en_name":"egyptians","display_heb_name":"","all_en_names":["Egyptians"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa64d011460404dfc4040","display_en_name":"pharaoh","display_heb_name":"","all_en_names":["Pharaoh"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa64d011460404dfc4041","display_en_name":"pharaohs courtiers","display_heb_name":"","all_en_names":["Pharaohs Courtiers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa64d011460404dfc4043","display_en_name":"pharaohs palace","display_heb_name":"","all_en_names":["Pharaohs Palace"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64e011460404dfc4045","display_en_name":"ox","display_heb_name":"","all_en_names":["Ox"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa64e011460404dfc4046","display_en_name":"ass","display_heb_name":"","all_en_names":["Ass"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa64e011460404dfc4047","display_en_name":"camel","display_heb_name":"","all_en_names":["Camel"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+There was a famine in the land, and Abram went down to Egypt to sojourn there, for the famine was severe in the land. As he was about to enter Egypt, he said to his wife Sarai, I in Judg. 5.7; Jer. 2.20; Mic. 4.13, etc. know what a beautiful woman you are. If the Egyptians see you, and think, She is his wife, they will kill me and let you live. Please say that you are my sister, that it may go well with me because of you, and that I may remain alive thanks to you. When Abram entered Egypt, the Egyptians saw how very beautiful the woman was. Pharaohs courtiers saw her and praised her to Pharaoh, and the woman was taken into Pharaohs palace. And because of her, it went well with Abram; he acquired sheep, oxen, asses, male and female slaves, she-asses, and camels.
+
+HEBREW:
+ויהי רעב בארץ וירד אברם מצרימה לגור שם כי כבד הרעב בארץ: ויהי כאשר הקריב לבוא מצרימה ויאמר אל שרי אשתו הנה נא ידעתי כי אשה יפת מראה את: והיה כי יראו אתך המצרים ואמרו אשתו זאת והרגו אתי ואתך יחיו: אמרי נא אחתי את למען ייטב לי בעבורך וחיתה נפשי בגללך: ויהי כבוא אברם מצרימה ויראו המצרים את האשה כי יפה הוא מאד: ויראו אתה שרי פרעה ויהללו אתה אל פרעה ותקח האשה בית פרעה: ולאברם היטיב בעבורה ויהי לו צאן ובקר וחמרים ועבדים ושפחת ואתנת וגמלים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64c011460404dfc403f",
+      "display_heb_name": "מצרים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa64d011460404dfc4040",
+      "display_heb_name": "פרעה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "roles": [
+        "King"
+      ]
+    },
+    {
+      "key": "6a5fa64d011460404dfc4041",
+      "display_heb_name": "שרי פרעה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa64d011460404dfc4043",
+      "display_heb_name": "בית פרעה",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa610011460404dfc3f39",
+      "display_heb_name": "צאן"
+    },
+    {
+      "key": "6a5fa64e011460404dfc4045",
+      "display_heb_name": "בקר"
+    },
+    {
+      "key": "6a5fa64e011460404dfc4046",
+      "display_heb_name": "חמרים"
+    },
+    {
+      "key": "6a5fa64e011460404dfc4047",
+      "display_heb_name": "גמלים"
+    }
+  ]
+}

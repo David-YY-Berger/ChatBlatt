@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f2011460404dfc4303",
+            "display_heb_name": "הטף",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "little ones"
+        },
+        {
+            "key": "6a5fa6f3011460404dfc4304",
+            "display_heb_name": "רעמסס",
+            "placeType": "Country or Region",
+            "display_en_name": "rameses"
+        },
+        {
+            "key": "6a5fa6f3011460404dfc4305",
+            "display_heb_name": "שלשים ומאת",
+            "heb_unit": "שנה",
+            "heb_context": "ימי שני חיי יעקב",
+            "display_en_name": "130"
+        }
+    ],
+    "key": "TN_Genesis_0_47:1-12"
+}

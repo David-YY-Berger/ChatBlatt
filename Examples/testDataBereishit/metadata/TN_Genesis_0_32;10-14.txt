@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=3247 approx cost=$0.000563 (Prompt=1829, Completion=1418)
+SOURCE:
+Bereishit (Torah) 32:10-14
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6a6011460404dfc41c5","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"camp","en_context":"jacob's group"}
+
+PASSAGE:
+ENGLISH:
+Then Jacob said, O God of my father Abrahams [house] and God of my father Isaacs [house], O HASHEM, who said to me, Return to your native land and I will deal bountifully with you! I am unworthy of all the kindness that You have so steadfastly shown Your servant: with my staff alone I crossed this Jordan, and now I have become two camps. Deliver me, I pray, from the hand of my brother, from the hand of Esau; else, I fear, he may come and strike me down, mothers and children alike. Yet You have said, I will deal bountifully with you and make your offspring as the sands of the sea, which are too numerous to count. After spending the night there, he selected from what was at hand these presents for his brother Esau:
+
+HEBREW:
+ויאמר יעקב אלהי אבי אברהם ואלהי אבי יצחק יהוה האמר אלי שוב לארצך ולמולדתך ואיטיבה עמך: קטנתי מכל החסדים ומכל האמת אשר עשית את עבדך כי במקלי עברתי את הירדן הזה ועתה הייתי לשני מחנות: הצילני נא מיד אחי מיד עשו כי ירא אנכי אתו פן יבוא והכני אם על בנים: ואתה אמרת היטב איטיב עמך ושמתי את זרעך כחול הים אשר לא יספר מרב: וילן שם בלילה ההוא ויקח מן הבא בידו מנחה לעשו אחיו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a6011460404dfc41c5",
+      "display_heb_name": "שני",
+      "heb_unit": "מחנה",
+      "heb_context": "קבוצת יעקב"
+    }
+  ]
+}

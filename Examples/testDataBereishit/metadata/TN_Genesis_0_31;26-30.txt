@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2072 approx cost=$0.000216 (Prompt=1803, Completion=269)
+SOURCE:
+Bereishit (Torah) 31:26-30
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6a1011460404dfc41b0","display_en_name":"gods","display_heb_name":"","all_en_names":["Gods"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And Laban said to Jacob, What did you mean by keeping me in the dark and carrying off my daughters like captives of the sword? Why did you flee in secrecy and mislead me and not tell me? I would have sent you off with festive music, with timbrel and lyre. You did not even let me kiss my sons and daughters, a stock phrase (see, e.g., 46.15; 1 Sam. 30.6; Neh. 5.5) that means progeny, thus including grandchildren. good-by! It was a foolish thing for you to do. I have it in my power to do you harm; but the God of your fathers [house] said to me last night, Beware of attempting anything with Jacob, good or bad. Very well, you had to leave because you were longing for your fathers house; but why did you steal my gods?
+
+HEBREW:
+ויאמר לבן ליעקב מה עשית ותגנב את לבבי ותנהג את בנתי כשביות חרב: למה נחבאת לברח ותגנב אתי ולא הגדת לי ואשלחך בשמחה ובשרים בתף ובכנור: ולא נטשתני לנשק לבני ולבנתי עתה הסכלת עשו: יש לאל ידי לעשות עמכם רע ואלהי אביכם אמש אמר אלי לאמר השמר לך מדבר עם יעקב מטוב עד רע: ועתה הלך הלכת כי נכסף נכספתה לבית אביך למה גנבת את אלהי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a1011460404dfc41b0",
+      "display_heb_name": "אלהי",
+      "symbolType": "Holy Object"
+    }
+  ]
+}

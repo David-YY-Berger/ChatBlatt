@@ -1,0 +1,107 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa685011460404dfc4139",
+            "display_heb_name": "קדר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "kedar"
+        },
+        {
+            "key": "6a5fa686011460404dfc413a",
+            "display_heb_name": "אדבאל",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "adbeel"
+        },
+        {
+            "key": "6a5fa686011460404dfc413b",
+            "display_heb_name": "מבשם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "mibsam"
+        },
+        {
+            "key": "6a5fa686011460404dfc413c",
+            "display_heb_name": "משמע",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "mishma"
+        },
+        {
+            "key": "6a5fa686011460404dfc413d",
+            "display_heb_name": "דומה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "dumah"
+        },
+        {
+            "key": "6a5fa687011460404dfc413e",
+            "display_heb_name": "משא",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "massa"
+        },
+        {
+            "key": "6a5fa687011460404dfc413f",
+            "display_heb_name": "חדד",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "hadad"
+        },
+        {
+            "key": "6a5fa687011460404dfc4140",
+            "display_heb_name": "תימא",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "tema"
+        },
+        {
+            "key": "6a5fa687011460404dfc4141",
+            "display_heb_name": "יטור",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "jetur"
+        },
+        {
+            "key": "6a5fa687011460404dfc4142",
+            "display_heb_name": "נפיש",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "naphish"
+        },
+        {
+            "key": "6a5fa688011460404dfc4143",
+            "display_heb_name": "קדמה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "kedmah"
+        },
+        {
+            "key": "6a5fa688011460404dfc4144",
+            "display_heb_name": "שנים עשר",
+            "heb_unit": "נשיא",
+            "heb_context": "בני ישמעאל",
+            "display_en_name": "12"
+        },
+        {
+            "key": "6a5fa688011460404dfc4145",
+            "display_heb_name": "מאת שנה ושלשים שנה ושבע שנים",
+            "heb_unit": "שנה",
+            "heb_context": "שני חיי ישמעאל",
+            "display_en_name": "137"
+        }
+    ],
+    "key": "TN_Genesis_0_25:11-18"
+}

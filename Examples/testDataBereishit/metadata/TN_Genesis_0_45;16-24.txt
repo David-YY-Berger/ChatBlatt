@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=3228 approx cost=$0.000494 (Prompt=2109, Completion=1119)
+SOURCE:
+Bereishit (Torah) 45:16-24
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6e6011460404dfc42d2","display_en_name":"300","display_heb_name":"","all_en_names":["300"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"silver","en_context":"benjamin gift"}
+{"key":"6a5fa6e6011460404dfc42d3","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"ass","en_context":"joseph's father gift"}
+
+PASSAGE:
+ENGLISH:
+The news reached Pharaohs palace: Josephs brothers have come. Pharaoh and his courtiers were pleased. And Pharaoh said to Joseph, Say to your brothers, Do as follows: load up your beasts and go at once to the land of Canaan. Take your father and your households and come to me; I will give you the best of the land of Egypt and you shall live off the fat of the land. And you are bidden [to add], Do as follows: take from the land of Egypt wagons for your children and your wives, and bring your father here. And never mind your belongings, for the best of all the land of Egypt shall be yours. The sons of Israel did so; Joseph gave them wagons as Pharaoh had commanded, and he supplied them with provisions for the journey. To each of them, moreover, he gave a change of clothing; but to Benjamin he gave three hundred pieces of silver and several changes of clothing. And to his father he sent the following: ten he-asses laden with the best things of Egypt, and ten she-asses laden with grain, bread, and provisions for his father on the journey. As he sent his brothers off on their way, he told them, Do not be quarrelsome on the way.
+
+HEBREW:
+והקל נשמע בית פרעה לאמר באו אחי יוסף וייטב בעיני פרעה ובעיני עבדיו: ויאמר פרעה אל יוסף אמר אל אחיך זאת עשו טענו את בעירכם ולכו באו ארצה כנען: וקחו את אביכם ואת בתיכם ובאו אלי ואתנה לכם את טוב ארץ מצרים ואכלו את חלב הארץ: ואתה צויתה זאת עשו קחו לכם מארץ מצרים עגלות לטפכם ולנשיכם ונשאתם את אביכם ובאתם: ועינכם אל תחס על כליכם כי טוב כל ארץ מצרים לכם הוא: ויעשו כן בני ישראל ויתן להם יוסף עגלות על פי פרעה ויתן להם צדה לדרך: לכלם נתן לאיש חלפות שמלת ולבנימן נתן שלש מאות כסף וחמש חלפת שמלת: ולאביו שלח כזאת עשרה חמרים נשאים מטוב מצרים ועשר אתנת נשאת בר ולחם ומזון לאביו לדרך: וישלח את אחיו וילכו ויאמר אלהם אל תרגזו בדרך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e6011460404dfc42d2",
+      "display_heb_name": "שלש מאות",
+      "heb_unit": "כסף",
+      "heb_context": "מתנה לבנימן"
+    },
+    {
+      "key": "6a5fa6e6011460404dfc42d3",
+      "display_heb_name": "עשרה",
+      "heb_unit": "חמור",
+      "heb_context": "מתנה לאביו"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=4892 approx cost=$0.001087 (Prompt=1691, Completion=3201)
+SOURCE:
+Bereishit (Torah) 4:23-24
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa614011460404dfc3f49","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"fold","en_context":"cain vengeance"}
+{"key":"6a5fa614011460404dfc3f4a","display_en_name":"77","display_heb_name":"","all_en_names":["77"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"fold","en_context":"lamech vengeance"}
+
+PASSAGE:
+ENGLISH:
+And Lamech said to his wives, Adah and Zillah, hear my voice; O wives of Lamech, give ear to my speech. I have slain a person for wounding me, And a lad for bruising me. If Cain is avenged sevenfold, Then Lamech seventy-sevenfold.
+
+HEBREW:
+ויאמר למך לנשיו עדה וצלה שמען קולי נשי למך האזנה אמרתי כי איש הרגתי לפצעי וילד לחברתי: כי שבעתים יקם קין ולמך שבעים ושבעה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa614011460404dfc3f49",
+      "display_heb_name": "שבעתים",
+      "heb_context": "יקם קין"
+    },
+    {
+      "key": "6a5fa614011460404dfc3f4a",
+      "display_heb_name": "שבעים ושבעה",
+      "heb_context": "למך"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa665011460404dfc40ac",
+            "display_heb_name": "יצחק",
+            "timePeriod": "Tanach",
+            "display_en_name": "isaac"
+        },
+        {
+            "key": "6a5fa666011460404dfc40ad",
+            "display_heb_name": "שנים עשר",
+            "heb_unit": "נשיא",
+            "heb_context": "צאצאי ישמעאל",
+            "display_en_name": "12"
+        },
+        {
+            "key": "6a5fa666011460404dfc40ae",
+            "display_heb_name": "אחת",
+            "heb_unit": "שנה",
+            "heb_context": "לידת יצחק",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_17:18-22"
+}

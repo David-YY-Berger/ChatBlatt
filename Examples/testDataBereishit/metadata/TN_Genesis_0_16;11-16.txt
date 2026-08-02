@@ -1,0 +1,43 @@
+﻿COST: Tokens: Total=3044 approx cost=$0.000460 (Prompt=2015, Completion=1029)
+SOURCE:
+Bereishit (Torah) 16:11-16
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa663011460404dfc40a3","display_en_name":"bered","display_heb_name":"","all_en_names":["Bered"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa663011460404dfc40a4","display_en_name":"beer-lahai-roi","display_heb_name":"","all_en_names":["Beer-Lahai-Roi"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa664011460404dfc40a5","display_en_name":"el-roi","display_heb_name":"","all_en_names":["El-Roi"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa664011460404dfc40a6","display_en_name":"86","display_heb_name":"","all_en_names":["86"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abram age"}
+
+PASSAGE:
+ENGLISH:
+The messenger of HASHEM said to her further, Behold, you are pregnant And shall bear a son; You shall call him Ishmael, For HASHEM has paid heed to your suffering. He shall be a wild ass of a person;. His hand against everyone, And everyones hand against him; He shall dwell alongside of all his kin. And she called HASHEM who spoke to her, You Are El-roi, by which she meant, Have I not gone on seeing after my being seen! Therefore the well was called Beer-lahai-roi; it is between Kadesh and Bered.- Hagar bore a son to Abram, and Abram gave the son that Hagar bore him the name Ishmael. Abram was eighty-six years old when Hagar bore Ishmael to Abram.
+
+HEBREW:
+ויאמר לה מלאך יהוה הנך הרה וילדת בן וקראת שמו ישמעאל כי שמע יהוה אל עניך: והוא יהיה פרא אדם ידו בכל ויד כל בו ועל פני כל אחיו ישכן: ותקרא שם יהוה הדבר אליה אתה אל ראי כי אמרה הגם הלם ראיתי אחרי ראי: על כן קרא לבאר באר לחי ראי הנה בין קדש ובין ברד: ותלד הגר לאברם בן ויקרא אברם שם בנו אשר ילדה הגר ישמעאל: ואברם בן שמנים שנה ושש שנים בלדת הגר את ישמעאל לאברם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa663011460404dfc40a3",
+      "display_heb_name": "ברד",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa663011460404dfc40a4",
+      "display_heb_name": "באר לחי ראי",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa664011460404dfc40a5",
+      "display_heb_name": "אל ראי",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa664011460404dfc40a6",
+      "display_heb_name": "שמנים ושש",
+      "heb_unit": "שנה",
+      "heb_context": "גיל אברם"
+    }
+  ]
+}

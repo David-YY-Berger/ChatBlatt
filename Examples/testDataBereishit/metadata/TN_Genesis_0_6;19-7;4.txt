@@ -1,0 +1,39 @@
+﻿COST: Tokens: Total=4814 approx cost=$0.000966 (Prompt=2125, Completion=2689)
+SOURCE:
+Bereishit (Torah) 6:19-7:4
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa621011460404dfc3f84","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"pair","en_context":"all living things"}
+{"key":"6a5fa621011460404dfc3f85","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"pair","en_context":"pure animals"}
+{"key":"6a5fa622011460404dfc3f86","display_en_name":"40","display_heb_name":"","all_en_names":["40"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"flood duration"}
+
+PASSAGE:
+ENGLISH:
+And of all that lives, of all flesh, you shall take two of each into the ark to keep alive with you; they shall be male and female. From birds of every kind, cattle of every kind, every kind of creeping thing on earth, two of each shall come to you to stay alive. For your part, take of everything that is eaten and store it away, to serve as food for you and for them. Noah did so; just as God commanded him, so he did.Then HASHEM said to Noah, Go into the ark, with all your household, for you alone have I found righteous before Me in this generation. Of every pure animal you shall take seven pairs, males and their mates, and of every animal that is not pure, two, a male and its mate; of the birds of the sky also, seven pairs, male and female, to keep seed alive upon all the earth. For in seven days time I will make it rain upon the earth, forty days and forty nights, and I will blot out from the earth all existence that I created.
+
+HEBREW:
+ומכל החי מכל בשר שנים מכל תביא אל התבה להחית אתך זכר ונקבה יהיו: מהעוף למינהו ומן הבהמה למינה מכל רמש האדמה למינהו שנים מכל יבאו אליך להחיות: ואתה קח לך מכל מאכל אשר יאכל ואספת אליך והיה לך ולהם לאכלה: ויעש נח ככל אשר צוה אתו אלהים כן עשה:ויאמר יהוה לנח בא אתה וכל ביתך אל התבה כי אתך ראיתי צדיק לפני בדור הזה: מכל הבהמה הטהורה תקח לך שבעה שבעה איש ואשתו ומן הבהמה אשר לא טהרה הוא שנים איש ואשתו: גם מעוף השמים שבעה שבעה זכר ונקבה לחיות זרע על פני כל הארץ: כי לימים עוד שבעה אנכי ממטיר על הארץ ארבעים יום וארבעים לילה ומחיתי את כל היקום אשר עשיתי מעל פני האדמה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa621011460404dfc3f84",
+      "display_heb_name": "שנים",
+      "heb_unit": "זוג",
+      "heb_context": "כל החי"
+    },
+    {
+      "key": "6a5fa621011460404dfc3f85",
+      "display_heb_name": "שבעה",
+      "heb_unit": "איש ואשתו",
+      "heb_context": "בהמה טהורה"
+    },
+    {
+      "key": "6a5fa622011460404dfc3f86",
+      "display_heb_name": "ארבעים",
+      "heb_unit": "יום",
+      "heb_context": "משך מבול"
+    }
+  ]
+}

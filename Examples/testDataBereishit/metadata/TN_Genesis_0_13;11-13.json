@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa650011460404dfc404d",
+            "display_heb_name": "אנשי סדם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "inhabitants of sodom"
+        },
+        {
+            "key": "6a5fa650011460404dfc404e",
+            "display_heb_name": "ככר הירדן",
+            "placeType": "Country or Region",
+            "display_en_name": "plain of the jordan"
+        }
+    ],
+    "key": "TN_Genesis_0_13:11-13"
+}

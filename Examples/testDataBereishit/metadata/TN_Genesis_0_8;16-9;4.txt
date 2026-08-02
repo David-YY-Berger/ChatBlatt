@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3183 approx cost=$0.000435 (Prompt=2312, Completion=871)
+SOURCE:
+Bereishit (Torah) 8:16-9:4
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa628011460404dfc3fa1","display_en_name":"sons","display_heb_name":"","all_en_names":["Sons"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa628011460404dfc3fa2","display_en_name":"sons' wives","display_heb_name":"","all_en_names":["Sons' Wives"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa629011460404dfc3fa4","display_en_name":"flesh","display_heb_name":"","all_en_names":["Flesh"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Come out of the ark, together with your wife, your sons, and your sons wives. Bring out with you every living thing of all flesh that is with you: birds, animals, and everything that creeps on earth; and let them swarm on the earth and be fertile and increase on earth. So Noah came out, together with his sons, his wife, and his sons wives. Every animal, every creeping thing, and every bird, everything that stirs on earth came out of the ark by families. Then Noah built an altar to HASHEM and, taking of every pure animal and of every pure bird, he offered burnt offerings on the altar. HASHEM smelled the pleasing odor, and HASHEM resolved: Never again will I doom the earth because of humankind, since the devisings of the human mind are evil from youth; nor will I ever again destroy every living being, as I have done. So long as the earth endures, Seedtime and harvest, Cold and heat, Summer and winter, Day and night Shall not cease.God blessed Noah and his sons, and said to them, Be fertile and increase, and fill the earth. The fear and the dread of you shall be upon all the beasts of the earth and upon all the birds of the sky-everything with which the earth is astir-and upon all the fish of the sea; they are given into your hand. Every creature that lives shall be yours to eat; as with the green grasses, I give you all these. You must not, however, eat flesh with its life-blood in it.
+
+HEBREW:
+צא מן התבה אתה ואשתך ובניך ונשי בניך אתך: כל החיה אשר אתך מכל בשר בעוף ובבהמה ובכל הרמש הרמש על הארץ [היצא] אתך ושרצו בארץ ופרו ורבו על הארץ: ויצא נח ובניו ואשתו ונשי בניו אתו: כל החיה כל הרמש וכל העוף כל רומש על הארץ למשפחתיהם יצאו מן התבה: ויבן נח מזבח ליהוה ויקח מכל הבהמה הטהרה ומכל העוף הטהור ויעל עלת במזבח: וירח יהוה את ריח הניחח ויאמר יהוה אל לבו לא אסף לקלל עוד את האדמה בעבור האדם כי יצר לב האדם רע מנעריו ולא אסף עוד להכות את כל חי כאשר עשיתי: עד כל ימי הארץ זרע וקציר וקר וחם וקיץ וחרף ויום ולילה לא ישבתו:ויברך אלהים את נח ואת בניו ויאמר להם פרו ורבו ומלאו את הארץ: ומוראכם וחתכם יהיה על כל חית הארץ ועל כל עוף השמים בכל אשר תרמש האדמה ובכל דגי הים בידכם נתנו: כל רמש אשר הוא חי לכם יהיה לאכלה כירק עשב נתתי לכם את כל: אך בשר בנפשו דמו לא תאכלו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa628011460404dfc3fa1",
+      "display_heb_name": "בניו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa628011460404dfc3fa2",
+      "display_heb_name": "נשי בניו",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa629011460404dfc3fa4",
+      "display_heb_name": "בשר"
+    }
+  ]
+}

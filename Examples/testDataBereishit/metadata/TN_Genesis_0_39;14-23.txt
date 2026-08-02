@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2209 approx cost=$0.000203 (Prompt=2043, Completion=166)
+SOURCE:
+Bereishit (Torah) 39:14-23
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6d0011460404dfc4279","display_en_name":"prison","display_heb_name":"","all_en_names":["Prison"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+she called out to her servants and said to them, Look, he had to bring us a Hebrew to dally with us! This one came to lie with me; but I screamed loud. And when he heard me screaming at the top of my voice, he left his garment with me and got away and fled outside. She kept his garment beside her, until his master came home. Then she told him the same story, saying, The Hebrew slave whom you brought into our house came to me to dally with me; but when I screamed at the top of my voice, he left his garment with me and fled outside. When his master heard the story that his wife told him, namely, Thus and so your slave did to me, he was furious. So Josephs master had him put in prison, where the kings prisoners were confined. But even while he was there in prison, HASHEM was with Joseph-extending kindness to him and disposing the chief jailer favorably toward him. The chief jailer put in Josephs charge all the prisoners who were in that prison, and he was the one to carry out everything that was done there. The chief jailer did not supervise anything that was in Josephs charge, because HASHEM was with him, and whatever he did HASHEM made successful.
+
+HEBREW:
+ותקרא לאנשי ביתה ותאמר להם לאמר ראו הביא לנו איש עברי לצחק בנו בא אלי לשכב עמי ואקרא בקול גדול: ויהי כשמעו כי הרימתי קולי ואקרא ויעזב בגדו אצלי וינס ויצא החוצה: ותנח בגדו אצלה עד בוא אדניו אל ביתו: ותדבר אליו כדברים האלה לאמר בא אלי העבד העברי אשר הבאת לנו לצחק בי: ויהי כהרימי קולי ואקרא ויעזב בגדו אצלי וינס החוצה: ויהי כשמע אדניו את דברי אשתו אשר דברה אליו לאמר כדברים האלה עשה לי עבדך ויחר אפו: ויקח אדני יוסף אתו ויתנהו אל בית הסהר מקום אשר (אסורי) המלך אסורים ויהי שם בבית הסהר: ויהי יהוה את יוסף ויט אליו חסד ויתן חנו בעיני שר בית הסהר: ויתן שר בית הסהר ביד יוסף את כל האסירם אשר בבית הסהר ואת כל אשר עשים שם הוא היה עשה: אין שר בית הסהר ראה את כל מאומה בידו באשר יהוה אתו ואשר הוא עשה יהוה מצליח:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d0011460404dfc4279",
+      "display_heb_name": "בית הסהר",
+      "placeType": "Building or Structure"
+    }
+  ]
+}

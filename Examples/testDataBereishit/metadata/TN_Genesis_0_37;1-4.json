@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c3011460404dfc4249",
+            "display_heb_name": "אחיו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "brothers"
+        },
+        {
+            "key": "6a5fa6c3011460404dfc424a",
+            "display_heb_name": "כתנת פסים",
+            "symbolType": "Clothing",
+            "display_en_name": "ornamented tunic"
+        },
+        {
+            "key": "6a5fa6c3011460404dfc424b",
+            "display_heb_name": "שבע עשרה",
+            "heb_unit": "שנה",
+            "heb_context": "גיל יוסף",
+            "display_en_name": "17"
+        }
+    ],
+    "key": "TN_Genesis_0_37:1-4"
+}

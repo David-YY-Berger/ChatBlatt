@@ -1,0 +1,26 @@
+﻿COST: Tokens: Total=2018 approx cost=$0.000226 (Prompt=1685, Completion=333)
+SOURCE:
+Bereishit (Torah) 50:4-6
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f9011460404dfc4320","display_en_name":"pharaoh's court","display_heb_name":"","all_en_names":["Pharaoh's Court"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+and when the wailing period was over, Joseph spoke to Pharaohs court, saying, Do me this favor, and lay this appeal before Pharaoh: My father made me swear, saying, I am about to die. Be sure to bury me in the grave which I made ready for myself in the land of Canaan. Now, therefore, let me go up and bury my father; then I shall return. And Pharaoh said, Go up and bury your father, as he made you promise on oath.
+
+HEBREW:
+ויעברו ימי בכיתו וידבר יוסף אל בית פרעה לאמר אם נא מצאתי חן בעיניכם דברו נא באזני פרעה לאמר: אבי השביעני לאמר הנה אנכי מת בקברי אשר כריתי לי בארץ כנען שמה תקברני ועתה אעלה נא ואקברה את אבי ואשובה: ויאמר פרעה עלה וקבר את אביך כאשר השביעך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f9011460404dfc4320",
+      "display_heb_name": "בית פרעה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    }
+  ]
+}

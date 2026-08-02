@@ -1,0 +1,40 @@
+﻿COST: Tokens: Total=2412 approx cost=$0.000330 (Prompt=1749, Completion=663)
+SOURCE:
+Bereishit (Torah) 26:34-35
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa68e011460404dfc415a","display_en_name":"judith","display_heb_name":"","all_en_names":["Judith"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68e011460404dfc415b","display_en_name":"beeri","display_heb_name":"","all_en_names":["Beeri"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68f011460404dfc415e","display_en_name":"40","display_heb_name":"","all_en_names":["40"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"esau's age"}
+
+PASSAGE:
+ENGLISH:
+When Esau was forty years old, he took to wife Judith daughter of Beeri the Hittite, and Basemath daughter of Elon the Hittite; and they were a source of bitterness to Isaac and Rebekah.
+
+HEBREW:
+ויהי עשו בן ארבעים שנה ויקח אשה את יהודית בת בארי החתי ואת בשמת בת אילן החתי: ותהיין מרת רוח ליצחק ולרבקה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68e011460404dfc415a",
+      "display_heb_name": "יהודית",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa68e011460404dfc415b",
+      "display_heb_name": "בארי",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa68f011460404dfc415e",
+      "display_heb_name": "ארבעים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל עשו"
+    }
+  ]
+}

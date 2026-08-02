@@ -1,0 +1,46 @@
+﻿COST: Tokens: Total=2782 approx cost=$0.000347 (Prompt=2167, Completion=615)
+SOURCE:
+Bereishit (Torah) 23:1-8
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa67a011460404dfc4108","display_en_name":"hittites","display_heb_name":"","all_en_names":["Hittites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67a011460404dfc4109","display_en_name":"ephron","display_heb_name":"","all_en_names":["Ephron"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67b011460404dfc410b","display_en_name":"kiriath-arba","display_heb_name":"","all_en_names":["Kiriath-Arba"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67b011460404dfc410c","display_en_name":"127","display_heb_name":"","all_en_names":["127"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"sarah lifespan"}
+
+PASSAGE:
+ENGLISH:
+Sarahs lifetime-the span of Sarahs life-came to one hundred and twenty-seven years. Sarah died in Kiriath-arba-now Hebron-in the land of Canaan; and Abraham proceeded to mourn for Sarah and to bewail her. Then Abraham rose from beside his dead, and spoke to the Hittites, saying, I am a resident alien among you; sell me a burial site among you, that I may remove my dead for burial. And the Hittites replied to Abraham, saying to him, Hear us, my lord: you are the elect of God among us. Bury your dead in the choicest of our burial places; none of us will withhold his burial place from you for burying your dead. Thereupon Abraham bowed low to the landowning citizens,; lit. people of the land. See the Dictionary under am . the Hittites, and he said to them, If it is your wish that I remove my dead for burial, you must agree to intercede for me with Ephron son of Zohar.
+
+HEBREW:
+ויהיו חיי שרה מאה שנה ועשרים שנה ושבע שנים שני חיי שרה: ותמת שרה בקרית ארבע הוא חברון בארץ כנען ויבא אברהם לספד לשרה ולבכתה: ויקם אברהם מעל פני מתו וידבר אל בני חת לאמר: גר ותושב אנכי עמכם תנו לי אחזת קבר עמכם ואקברה מתי מלפני: ויענו בני חת את אברהם לאמר לו: שמענו אדני נשיא אלהים אתה בתוכנו במבחר קברינו קבר את מתך איש ממנו את קברו לא יכלה ממך מקבר מתך: ויקם אברהם וישתחו לעם הארץ לבני חת: וידבר אתם לאמר אם יש את נפשכם לקבר את מתי מלפני שמעוני ופגעו לי בעפרון בן צחר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67a011460404dfc4108",
+      "display_heb_name": "בני חת",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa67a011460404dfc4109",
+      "display_heb_name": "עפרון",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa67b011460404dfc410b",
+      "display_heb_name": "קרית ארבע",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa67b011460404dfc410c",
+      "display_heb_name": "מאה שנה ועשרים שנה ושבע שנים",
+      "heb_unit": "שנה",
+      "heb_context": "חיי שרה"
+    }
+  ]
+}

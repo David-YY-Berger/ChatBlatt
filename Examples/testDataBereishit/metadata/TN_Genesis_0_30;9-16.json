@@ -1,0 +1,32 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa69b011460404dfc4192",
+            "display_heb_name": "שני",
+            "heb_unit": "בן",
+            "heb_context": "ילדי זלפה",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa69b011460404dfc4193",
+            "display_heb_name": "דודאים",
+            "display_en_name": "mandrakes"
+        },
+        {
+            "key": "6a5fa69b011460404dfc4194",
+            "display_heb_name": "חטים",
+            "display_en_name": "wheat"
+        },
+        {
+            "key": "6a5fa69b011460404dfc4195",
+            "display_heb_name": "דודאים",
+            "display_en_name": "mandrakes"
+        },
+        {
+            "key": "6a5fa69b011460404dfc4196",
+            "display_heb_name": "חטים",
+            "display_en_name": "wheat"
+        }
+    ],
+    "key": "TN_Genesis_0_30:9-16"
+}

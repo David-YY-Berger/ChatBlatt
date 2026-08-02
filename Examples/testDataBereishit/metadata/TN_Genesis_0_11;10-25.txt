@@ -1,0 +1,148 @@
+﻿COST: Tokens: Total=7173 approx cost=$0.001311 (Prompt=3736, Completion=3437)
+SOURCE:
+Bereishit (Torah) 11:10-25
+
+ENTITIES TO ENRICH (18):
+{"key":"6a5fa644011460404dfc401a","display_en_name":"reu","display_heb_name":"","all_en_names":["Reu"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa644011460404dfc401b","display_en_name":"serug","display_heb_name":"","all_en_names":["Serug"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa644011460404dfc401c","display_en_name":"nahor","display_heb_name":"","all_en_names":["Nahor"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa645011460404dfc401d","display_en_name":"terah","display_heb_name":"","all_en_names":["Terah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa645011460404dfc401e","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"shem's age at son's birth"}
+{"key":"6a5fa645011460404dfc401f","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"after the flood"}
+{"key":"6a5fa645011460404dfc4020","display_en_name":"500","display_heb_name":"","all_en_names":["500"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"shem's lifespan after son's birth"}
+{"key":"6a5fa645011460404dfc4021","display_en_name":"35","display_heb_name":"","all_en_names":["35"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"arpachshad's age at son's birth"}
+{"key":"6a5fa646011460404dfc4022","display_en_name":"403","display_heb_name":"","all_en_names":["403"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"arpachshad's lifespan after son's birth"}
+{"key":"6a5fa646011460404dfc4023","display_en_name":"30","display_heb_name":"","all_en_names":["30"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"shelah's age at son's birth"}
+{"key":"6a5fa646011460404dfc4024","display_en_name":"34","display_heb_name":"","all_en_names":["34"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"eber's age at son's birth"}
+{"key":"6a5fa646011460404dfc4025","display_en_name":"430","display_heb_name":"","all_en_names":["430"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"eber's lifespan after son's birth"}
+{"key":"6a5fa647011460404dfc4026","display_en_name":"209","display_heb_name":"","all_en_names":["209"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"peleg's lifespan after son's birth"}
+{"key":"6a5fa647011460404dfc4027","display_en_name":"32","display_heb_name":"","all_en_names":["32"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"reu's age at son's birth"}
+{"key":"6a5fa647011460404dfc4028","display_en_name":"207","display_heb_name":"","all_en_names":["207"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"reu's lifespan after son's birth"}
+{"key":"6a5fa647011460404dfc4029","display_en_name":"200","display_heb_name":"","all_en_names":["200"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"serug's lifespan after son's birth"}
+{"key":"6a5fa648011460404dfc402a","display_en_name":"29","display_heb_name":"","all_en_names":["29"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"nahor's age at son's birth"}
+{"key":"6a5fa648011460404dfc402b","display_en_name":"119","display_heb_name":"","all_en_names":["119"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"nahor's lifespan after son's birth"}
+
+PASSAGE:
+ENGLISH:
+This is the line of Shem. Shem was 100 years old when he begot Arpachshad, two years after the Flood. After the birth of Arpachshad, Shem lived 500 years and begot sons and daughters. When Arpachshad had lived 35 years, he begot Shelah. After the birth of Shelah, Arpachshad lived 403 years and begot sons and daughters. When Shelah had lived 30 years, he begot Eber. After the birth of Eber, Shelah lived 403 years and begot sons and daughters. When Eber had lived 34 years, he begot Peleg. After the birth of Peleg, Eber lived 430 years and begot sons and daughters. When Peleg had lived 30 years, he begot Reu. After the birth of Reu, Peleg lived 209 years and begot sons and daughters. When Reu had lived 32 years, he begot Serug. After the birth of Serug, Reu lived 207 years and begot sons and daughters. When Serug had lived 30 years, he begot Nahor. After the birth of Nahor, Serug lived 200 years and begot sons and daughters. When Nahor had lived 29 years, he begot Terah. After the birth of Terah, Nahor lived 119 years and begot sons and daughters.
+
+HEBREW:
+אלה תולדת שם שם בן מאת שנה ויולד את ארפכשד שנתים אחר המבול: ויחי שם אחרי הולידו את ארפכשד חמש מאות שנה ויולד בנים ובנות: וארפכשד חי חמש ושלשים שנה ויולד את שלח: ויחי ארפכשד אחרי הולידו את שלח שלש שנים וארבע מאות שנה ויולד בנים ובנות: ושלח חי שלשים שנה ויולד את עבר: ויחי שלח אחרי הולידו את עבר שלש שנים וארבע מאות שנה ויולד בנים ובנות: ויחי עבר ארבע ושלשים שנה ויולד את פלג: ויחי עבר אחרי הולידו את פלג שלשים שנה וארבע מאות שנה ויולד בנים ובנות: ויחי פלג שלשים שנה ויולד את רעו: ויחי פלג אחרי הולידו את רעו תשע שנים ומאתים שנה ויולד בנים ובנות: ויחי רעו שתים ושלשים שנה ויולד את שרוג: ויחי רעו אחרי הולידו את שרוג שבע שנים ומאתים שנה ויולד בנים ובנות: ויחי שרוג שלשים שנה ויולד את נחור: ויחי שרוג אחרי הולידו את נחור מאתים שנה ויולד בנים ובנות: ויחי נחור תשע ועשרים שנה ויולד את תרח: ויחי נחור אחרי הולידו את תרח תשע עשרה שנה ומאת שנה ויולד בנים ובנות:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa644011460404dfc401a",
+      "display_heb_name": "רעו",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa644011460404dfc401b",
+      "display_heb_name": "שרוג",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa644011460404dfc401c",
+      "display_heb_name": "נחור",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa645011460404dfc401d",
+      "display_heb_name": "תרח",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa645011460404dfc401e",
+      "display_heb_name": "מאת",
+      "heb_unit": "שנה",
+      "heb_context": "גיל שם בלידת בנו"
+    },
+    {
+      "key": "6a5fa645011460404dfc401f",
+      "display_heb_name": "שנתים",
+      "heb_unit": "שנה",
+      "heb_context": "אחרי המבול"
+    },
+    {
+      "key": "6a5fa645011460404dfc4020",
+      "display_heb_name": "חמש מאות",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של שם אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa645011460404dfc4021",
+      "display_heb_name": "חמש ושלשים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל ארפכשד בלידת בנו"
+    },
+    {
+      "key": "6a5fa646011460404dfc4022",
+      "display_heb_name": "שלש שנים וארבע מאות",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של ארפכשד אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa646011460404dfc4023",
+      "display_heb_name": "שלשים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל שלח בלידת בנו"
+    },
+    {
+      "key": "6a5fa646011460404dfc4024",
+      "display_heb_name": "ארבע ושלשים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל עבר בלידת בנו"
+    },
+    {
+      "key": "6a5fa646011460404dfc4025",
+      "display_heb_name": "שלשים שנה וארבע מאות",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של עבר אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa647011460404dfc4026",
+      "display_heb_name": "תשע שנים ומאתים",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של פלג אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa647011460404dfc4027",
+      "display_heb_name": "שתים ושלשים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל רעו בלידת בנו"
+    },
+    {
+      "key": "6a5fa647011460404dfc4028",
+      "display_heb_name": "שבע שנים ומאתים",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של רעו אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa647011460404dfc4029",
+      "display_heb_name": "מאתים",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של שרוג אחרי לידת בנו"
+    },
+    {
+      "key": "6a5fa648011460404dfc402a",
+      "display_heb_name": "תשע ועשרים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל נחור בלידת בנו"
+    },
+    {
+      "key": "6a5fa648011460404dfc402b",
+      "display_heb_name": "תשע עשרה שנה ומאת",
+      "heb_unit": "שנה",
+      "heb_context": "תוחלת החיים של נחור אחרי לידת בנו"
+    }
+  ]
+}

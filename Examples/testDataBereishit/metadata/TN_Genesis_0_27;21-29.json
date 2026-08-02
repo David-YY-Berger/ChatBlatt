@@ -1,0 +1,15 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa690011460404dfc4164",
+            "display_heb_name": "דגן",
+            "display_en_name": "grain"
+        },
+        {
+            "key": "6a5fa691011460404dfc4166",
+            "display_heb_name": "דגן",
+            "display_en_name": "grain"
+        }
+    ],
+    "key": "TN_Genesis_0_27:21-29"
+}

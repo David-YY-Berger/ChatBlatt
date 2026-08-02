@@ -1,0 +1,43 @@
+﻿COST: Tokens: Total=3628 approx cost=$0.000660 (Prompt=1904, Completion=1724)
+SOURCE:
+Bereishit (Torah) 28:20-29:1
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa693011460404dfc4171","display_en_name":"father's house","display_heb_name":"","all_en_names":["Father's House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa693011460404dfc4172","display_en_name":"land of the easterners","display_heb_name":"","all_en_names":["Land Of The Easterners"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa694011460404dfc4173","display_en_name":"stone","display_heb_name":"","all_en_names":["Stone"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa694011460404dfc4174","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Sacrifice","en_unit":"percent","en_context":"jacob's vow offering"}
+
+PASSAGE:
+ENGLISH:
+Jacob then made a vow, saying, If God remains with me, protecting me on this journey that I am making, and giving me bread to eat and clothing to wear, and I return safe to my fathers house- HASHEM shall be my God. And this stone, which I have set up as a pillar, shall be Gods abode; and of all that You give me, I will set aside a tithe for You.Jacob resumed his journey and came to the land of the Easterners.
+
+HEBREW:
+וידר יעקב נדר לאמר אם יהיה אלהים עמדי ושמרני בדרך הזה אשר אנכי הולך ונתן לי לחם לאכל ובגד ללבש: ושבתי בשלום אל בית אבי והיה יהוה לי לאלהים: והאבן הזאת אשר שמתי מצבה יהיה בית אלהים וכל אשר תתן לי עשר אעשרנו לך:וישא יעקב רגליו וילך ארצה בני קדם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa693011460404dfc4171",
+      "display_heb_name": "בית אבי",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa693011460404dfc4172",
+      "display_heb_name": "ארצה בני קדם",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa694011460404dfc4173",
+      "display_heb_name": "אבן",
+      "symbolType": "Holy Object"
+    },
+    {
+      "key": "6a5fa694011460404dfc4174",
+      "display_heb_name": "עשר",
+      "heb_unit": "אחוז",
+      "heb_context": "מנחת נדר יעקב"
+    }
+  ]
+}

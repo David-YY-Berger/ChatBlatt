@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2239 approx cost=$0.000256 (Prompt=1847, Completion=392)
+SOURCE:
+Bereishit (Torah) 41:54-57
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6db011460404dfc42a7","display_en_name":"all the world","display_heb_name":"","all_en_names":["All The World"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6dc011460404dfc42a8","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"famine years"}
+
+PASSAGE:
+ENGLISH:
+and the seven years of famine set in, just as Joseph had foretold. There was famine in all lands, but throughout the land of Egypt there was bread. And when all the land of Egypt felt the hunger, the people cried out to Pharaoh for bread; and Pharaoh said to all the Egyptians, Go to Joseph; whatever he tells you, you shall do.- Accordingly, when the famine became severe in the land of Egypt, Joseph laid open all that was within, and rationed out grain to the Egyptians. The famine, however, spread over the whole world. So all the world came to Joseph in Egypt to procure rations, for the famine had become severe throughout the world.
+
+HEBREW:
+ותחלינה שבע שני הרעב לבוא כאשר אמר יוסף ויהי רעב בכל הארצות ובכל ארץ מצרים היה לחם: ותרעב כל ארץ מצרים ויצעק העם אל פרעה ללחם ויאמר פרעה לכל מצרים לכו אל יוסף אשר יאמר לכם תעשו: והרעב היה על כל פני הארץ ויפתח יוסף את כל אשר בהם וישבר למצרים ויחזק הרעב בארץ מצרים: וכל הארץ באו מצרימה לשבר אל יוסף כי חזק הרעב בכל הארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6db011460404dfc42a7",
+      "display_heb_name": "כל הארץ",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6dc011460404dfc42a8",
+      "heb_unit": "שנה",
+      "heb_context": "שני רעב"
+    }
+  ]
+}

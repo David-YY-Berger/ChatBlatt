@@ -1,0 +1,41 @@
+﻿COST: Tokens: Total=2920 approx cost=$0.000385 (Prompt=2180, Completion=740)
+SOURCE:
+Bereishit (Torah) 50:15-23
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6fb011460404dfc4329","display_en_name":"machir","display_heb_name":"","all_en_names":["Machir"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fc011460404dfc432a","display_en_name":"110","display_heb_name":"","all_en_names":["110"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"joseph lifespan"}
+{"key":"6a5fa6fc011460404dfc432b","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"generation","en_context":"ephraim children"}
+
+PASSAGE:
+ENGLISH:
+When Josephs brothers saw that their father was dead, they said, What if Joseph still bears a grudge against us and pays us back for all the wrong that we did him! So they sent this message to Joseph, Before his death your father left this instruction: So shall you say to Joseph, Forgive, I urge you, the offense and guilt of your brothers who treated you so harshly. Therefore, please forgive the offense of the servants of the God of your fathers [house]. And Joseph was in tears as they spoke to him. His brothers went to him themselves, flung themselves before him, and said, We are prepared to be your slaves. But Joseph said to them, Have no fear! Am I a substitute for God? Besides, although you intended me harm, God intended it for good, so as to bring about the present result-the survival of many people. And so, fear not. I will sustain you and your dependents.. Thus he reassured them, speaking kindly to them. So Joseph and his fathers household remained in Egypt. Joseph lived one hundred and ten years. Joseph lived to see children of the third generation of Ephraim; the children of Machir son of Manasseh were likewise born upon Josephs knees.
+
+HEBREW:
+ויראו אחי יוסף כי מת אביהם ויאמרו לו ישטמנו יוסף והשב ישיב לנו את כל הרעה אשר גמלנו אתו: ויצוו אל יוסף לאמר אביך צוה לפני מותו לאמר: כה תאמרו ליוסף אנא שא נא פשע אחיך וחטאתם כי רעה גמלוך ועתה שא נא לפשע עבדי אלהי אביך ויבך יוסף בדברם אליו: וילכו גם אחיו ויפלו לפניו ויאמרו הננו לך לעבדים: ויאמר אלהם יוסף אל תיראו כי התחת אלהים אני: ואתם חשבתם עלי רעה אלהים חשבה לטבה למען עשה כיום הזה להחית עם רב: ועתה אל תיראו אנכי אכלכל אתכם ואת טפכם וינחם אותם וידבר על לבם: וישב יוסף במצרים הוא ובית אביו ויחי יוסף מאה ועשר שנים: וירא יוסף לאפרים בני שלשים גם בני מכיר בן מנשה ילדו על ברכי יוסף:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6fb011460404dfc4329",
+      "display_heb_name": "מכיר",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa6fc011460404dfc432a",
+      "display_heb_name": "מאה ועשר",
+      "heb_unit": "שנה",
+      "heb_context": "חיי יוסף"
+    },
+    {
+      "key": "6a5fa6fc011460404dfc432b",
+      "display_heb_name": "שלשים",
+      "heb_unit": "דור",
+      "heb_context": "בני אפרים"
+    }
+  ]
+}

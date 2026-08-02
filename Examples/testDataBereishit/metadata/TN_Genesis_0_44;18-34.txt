@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=3061 approx cost=$0.000351 (Prompt=2522, Completion=539)
+SOURCE:
+Bereishit (Torah) 44:18-34
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6e4011460404dfc42cb","display_en_name":"the brothers","display_heb_name":"","all_en_names":["The Brothers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6e4011460404dfc42cc","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"jacob's sons"}
+
+PASSAGE:
+ENGLISH:
+Then Judah went up to him and said, Please, my lord, let your servant appeal to my lord, and do not be impatient with your servant, you who are the equal of Pharaoh. My lord asked his servants, Have you a father or another brother? We told my lord, We have an old father, and there is a child of his old age, the youngest; his full brother is dead, so that he alone is left of his mother, and his father dotes on him. Then you said to your servants, Bring him down to me, that I may set eyes on him. We said to my lord, The boy cannot leave his father; if he were to leave him, his father would die. But you said to your servants, Unless your youngest brother comes down with you, do not let me see your faces. When we came back to your servant my father, we reported my lords words to him. Later our father said, Go back and procure some food for us. We answered, We cannot go down; only if our youngest brother is with us can we go down, for we may not show our faces to the man unless our youngest brother is with us. Your servant my father said to us, As you know, my wife bore me two sons. But one is gone from me, and I said: Alas, he was torn by a beast! And I have not seen him since. If you take this one from me, too, and he meets with disaster, you will send my white head down to Sheol in sorrow. Now, if I come to your servant my father and the boy is not with us-since his own life is so bound up with his- when he sees that the boy is not with us, he will die, and your servants will send the white head of your servant our father down to Sheol in grief. Now your servant has pledged himself for the boy to my father, saying, If I do not bring him back to you, I shall stand guilty before my father forever. Therefore, please let your servant remain as a slave to my lord instead of the boy, and let the boy go back with his brothers. For how can I go back to my father unless the boy is with me? Let me not be witness to the woe that would overtake my father!
+
+HEBREW:
+ויגש אליו יהודה ויאמר בי אדני ידבר נא עבדך דבר באזני אדני ואל יחר אפך בעבדך כי כמוך כפרעה: אדני שאל את עבדיו לאמר היש לכם אב או אח: ונאמר אל אדני יש לנו אב זקן וילד זקנים קטן ואחיו מת ויותר הוא לבדו לאמו ואביו אהבו: ותאמר אל עבדיך הורדהו אלי ואשימה עיני עליו: ונאמר אל אדני לא יוכל הנער לעזב את אביו ועזב את אביו ומת: ותאמר אל עבדיך אם לא ירד אחיכם הקטן אתכם לא תספון לראות פני: ויהי כי עלינו אל עבדך אבי ונגד לו את דברי אדני: ויאמר אבינו שבו שברו לנו מעט אכל: ונאמר לא נוכל לרדת אם יש אחינו הקטן אתנו וירדנו כי לא נוכל לראות פני האיש ואחינו הקטן איננו אתנו: ויאמר עבדך אבי אלינו אתם ידעתם כי שנים ילדה לי אשתי: ויצא האחד מאתי ואמר אך טרף טרף ולא ראיתיו עד הנה: ולקחתם גם את זה מעם פני וקרהו אסון והורדתם את שיבתי ברעה שאלה: ועתה כבאי אל עבדך אבי והנער איננו אתנו ונפשו קשורה בנפשו: והיה כראותו כי אין הנער ומת והורידו עבדיך את שיבת עבדך אבינו ביגון שאלה: כי עבדך ערב את הנער מעם אבי לאמר אם לא אביאנו אליך וחטאתי לאבי כל הימים: ועתה ישב נא עבדך תחת הנער עבד לאדני והנער יעל עם אחיו: כי איך אעלה אל אבי והנער איננו אתי פן אראה ברע אשר ימצא את אבי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e4011460404dfc42cb",
+      "display_heb_name": "אחיו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6e4011460404dfc42cc",
+      "display_heb_name": "2",
+      "heb_unit": "בן",
+      "heb_context": "בנים"
+    }
+  ]
+}

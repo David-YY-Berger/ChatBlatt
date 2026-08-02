@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2061 approx cost=$0.000234 (Prompt=1708, Completion=353)
+SOURCE:
+Bereishit (Torah) 12:7-9
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa64c011460404dfc403d","display_en_name":"ai","display_heb_name":"","all_en_names":["Ai"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64c011460404dfc403e","display_en_name":"negeb","display_heb_name":"","all_en_names":["Negeb"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+HASHEM appeared to Abram and said, I will assign this land to your offspring. And he built an altar there to HASHEM who had appeared to him. From there he moved on to the hill country east of Bethel and pitched his tent, with Bethel on the west and Ai on the east; and he built there an altar to HASHEM and invoked HASHEM by name. Then Abram journeyed by stages toward the Negeb.
+
+HEBREW:
+וירא יהוה אל אברם ויאמר לזרעך אתן את הארץ הזאת ויבן שם מזבח ליהוה הנראה אליו: ויעתק משם ההרה מקדם לבית אל ויט אהלה בית אל מים והעי מקדם ויבן שם מזבח ליהוה ויקרא בשם יהוה: ויסע אברם הלוך ונסוע הנגבה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64c011460404dfc403d",
+      "display_heb_name": "העי",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa64c011460404dfc403e",
+      "display_heb_name": "הנגב",
+      "placeType": "Desert"
+    }
+  ]
+}

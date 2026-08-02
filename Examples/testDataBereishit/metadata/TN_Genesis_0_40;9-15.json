@@ -1,0 +1,51 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa690011460404dfc4165",
+            "display_heb_name": "ענבים",
+            "display_en_name": "grape"
+        },
+        {
+            "key": "6a5fa6d2011460404dfc4280",
+            "display_heb_name": "שר המשקים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "chief cupbearer"
+        },
+        {
+            "key": "6a5fa6d2011460404dfc4281",
+            "display_heb_name": "ארץ העברים",
+            "placeType": "Country or Region",
+            "display_en_name": "land of the hebrews"
+        },
+        {
+            "key": "6a5fa6d2011460404dfc4282",
+            "display_heb_name": "בור",
+            "placeType": "Building or Structure",
+            "display_en_name": "dungeon"
+        },
+        {
+            "key": "6a5fa6d3011460404dfc4283",
+            "display_heb_name": "העברים",
+            "display_en_name": "hebrews"
+        },
+        {
+            "key": "6a5fa6d3011460404dfc4284",
+            "display_heb_name": "שלשה",
+            "heb_unit": "שרג",
+            "heb_context": "פתרון חלום",
+            "display_en_name": "3"
+        },
+        {
+            "key": "6a5fa6d3011460404dfc4285",
+            "display_heb_name": "ענבים",
+            "display_en_name": "grape"
+        },
+        {
+            "key": "6a5fa6d3011460404dfc4286",
+            "display_heb_name": "גפן",
+            "display_en_name": "vine"
+        }
+    ],
+    "key": "TN_Genesis_0_40:9-15"
+}

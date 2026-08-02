@@ -1,0 +1,57 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64c011460404dfc403f",
+            "display_heb_name": "מצרים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "egyptians"
+        },
+        {
+            "key": "6a5fa64d011460404dfc4040",
+            "display_heb_name": "פרעה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "pharaoh"
+        },
+        {
+            "key": "6a5fa64d011460404dfc4041",
+            "display_heb_name": "שרי פרעה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "pharaohs courtiers"
+        },
+        {
+            "key": "6a5fa64d011460404dfc4043",
+            "display_heb_name": "בית פרעה",
+            "placeType": "Building or Structure",
+            "display_en_name": "pharaohs palace"
+        },
+        {
+            "key": "6a5fa610011460404dfc3f39",
+            "display_heb_name": "צאן",
+            "display_en_name": "sheep"
+        },
+        {
+            "key": "6a5fa64e011460404dfc4045",
+            "display_heb_name": "בקר",
+            "display_en_name": "ox"
+        },
+        {
+            "key": "6a5fa64e011460404dfc4046",
+            "display_heb_name": "חמרים",
+            "display_en_name": "ass"
+        },
+        {
+            "key": "6a5fa64e011460404dfc4047",
+            "display_heb_name": "גמלים",
+            "display_en_name": "camel"
+        }
+    ],
+    "key": "TN_Genesis_0_12:10-16"
+}

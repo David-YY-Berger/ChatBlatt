@@ -1,0 +1,162 @@
+﻿COST: Tokens: Total=9331 approx cost=$0.001760 (Prompt=4621, Completion=4710)
+SOURCE:
+Bereishit (Torah) 4:25-5:21
+
+ENTITIES TO ENRICH (24):
+{"key":"6a5fa614011460404dfc3f4b","display_en_name":"seth","display_heb_name":"","all_en_names":["Seth"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa614011460404dfc3f4c","display_en_name":"enosh","display_heb_name":"","all_en_names":["Enosh"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa615011460404dfc3f4d","display_en_name":"kenan","display_heb_name":"","all_en_names":["Kenan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa615011460404dfc3f4e","display_en_name":"mahalalel","display_heb_name":"","all_en_names":["Mahalalel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa615011460404dfc3f4f","display_en_name":"jared","display_heb_name":"","all_en_names":["Jared"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa615011460404dfc3f50","display_en_name":"methuselah","display_heb_name":"","all_en_names":["Methuselah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa616011460404dfc3f51","display_en_name":"hashem","display_heb_name":"","all_en_names":["Hashem"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa616011460404dfc3f52","display_en_name":"130","display_heb_name":"","all_en_names":["130"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"adam's age before seth"}
+{"key":"6a5fa616011460404dfc3f53","display_en_name":"800","display_heb_name":"","all_en_names":["800"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"adam's life after seth"}
+{"key":"6a5fa616011460404dfc3f54","display_en_name":"930","display_heb_name":"","all_en_names":["930"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"adam's lifespan"}
+{"key":"6a5fa616011460404dfc3f55","display_en_name":"105","display_heb_name":"","all_en_names":["105"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"seth's age before enosh"}
+{"key":"6a5fa617011460404dfc3f56","display_en_name":"807","display_heb_name":"","all_en_names":["807"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"seth's life after enosh"}
+{"key":"6a5fa617011460404dfc3f57","display_en_name":"912","display_heb_name":"","all_en_names":["912"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"seth's lifespan"}
+{"key":"6a5fa617011460404dfc3f58","display_en_name":"90","display_heb_name":"","all_en_names":["90"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"enosh's age before kenan"}
+{"key":"6a5fa617011460404dfc3f59","display_en_name":"815","display_heb_name":"","all_en_names":["815"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"enosh's life after kenan"}
+{"key":"6a5fa618011460404dfc3f5a","display_en_name":"905","display_heb_name":"","all_en_names":["905"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"enosh's lifespan"}
+{"key":"6a5fa618011460404dfc3f5b","display_en_name":"70","display_heb_name":"","all_en_names":["70"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"kenan's age before mahalalel"}
+{"key":"6a5fa618011460404dfc3f5c","display_en_name":"840","display_heb_name":"","all_en_names":["840"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"kenan's life after mahalalel"}
+{"key":"6a5fa618011460404dfc3f5d","display_en_name":"910","display_heb_name":"","all_en_names":["910"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"kenan's lifespan"}
+{"key":"6a5fa618011460404dfc3f5e","display_en_name":"65","display_heb_name":"","all_en_names":["65"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"mahalalel's age before jared"}
+{"key":"6a5fa619011460404dfc3f5f","display_en_name":"830","display_heb_name":"","all_en_names":["830"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"mahalalel's life after jared"}
+{"key":"6a5fa619011460404dfc3f60","display_en_name":"895","display_heb_name":"","all_en_names":["895"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"mahalalel's lifespan"}
+{"key":"6a5fa619011460404dfc3f61","display_en_name":"162","display_heb_name":"","all_en_names":["162"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jared's age before enoch"}
+{"key":"6a5fa619011460404dfc3f62","display_en_name":"962","display_heb_name":"","all_en_names":["962"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jared's lifespan"}
+
+PASSAGE:
+ENGLISH:
+Adam knew his wife again, and she bore a son and named him Seth, meaning, God has provided me with, connected with Seth. another offspring in place of Abel, for Cain had killed him. And to Seth, in turn, a son was born, and he named him Enosh. It was then that HASHEM began to be invoked by name.This is the record of Adams line.-When God created humankind, it was made in the likeness of God; male and female were they created. And when they were created, [God] blessed them and called them Humankind.; NJPS Man, trad. Adam. - When Adam had lived 130 years, he begot a son in his likeness after his image, and he named him Seth. After the birth of Seth, Adam lived 800 years and begot sons and daughters. All the days that Adam lived came to 930 years; then he died. When Seth had lived 105 years, he begot Enosh. After the birth of Enosh, Seth lived 807 years and begot sons and daughters. All the days of Seth came to 912 years; then he died. When Enosh had lived 90 years, he begot Kenan. After the birth of Kenan, Enosh lived 815 years and begot sons and daughters. All the days of Enosh came to 905 years; then he died. When Kenan had lived 70 years, he begot Mahalalel. After the birth of Mahalalel, Kenan lived 840 years and begot sons and daughters. All the days of Kenan came to 910 years; then he died. When Mahalalel had lived 65 years, he begot Jared. After the birth of Jared, Mahalalel lived 830 years and begot sons and daughters. All the days of Mahalalel came to 895 years; then he died. When Jared had lived 162 years, he begot Enoch. After the birth of Enoch, Jared lived 800 years and begot sons and daughters. All the days of Jared came to 962 years; then he died. When Enoch had lived 65 years, he begot Methuselah.
+
+HEBREW:
+וידע אדם עוד את אשתו ותלד בן ותקרא את שמו שת כי שת לי אלהים זרע אחר תחת הבל כי הרגו קין: ולשת גם הוא ילד בן ויקרא את שמו אנוש אז הוחל לקרא בשם יהוה: זה ספר * (בספרי תימן ס פר בסמ״ך גדולה) תולדת אדם ביום ברא אלהים אדם בדמות אלהים עשה אתו: זכר ונקבה בראם ויברך אתם ויקרא את שמם אדם ביום הבראם: ויחי אדם שלשים ומאת שנה ויולד בדמותו כצלמו ויקרא את שמו שת: ויהיו ימי אדם אחרי הולידו את שת שמנה מאת שנה ויולד בנים ובנות: ויהיו כל ימי אדם אשר חי תשע מאות שנה ושלשים שנה וימת: ויחי שת חמש שנים ומאת שנה ויולד את אנוש: ויחי שת אחרי הולידו את אנוש שבע שנים ושמנה מאות שנה ויולד בנים ובנות: ויהיו כל ימי שת שתים עשרה שנה ותשע מאות שנה וימת: ויחי אנוש תשעים שנה ויולד את קינן: ויחי אנוש אחרי הולידו את קינן חמש עשרה שנה ושמנה מאות שנה ויולד בנים ובנות: ויהיו כל ימי אנוש חמש שנים ותשע מאות שנה וימת: ויחי קינן שבעים שנה ויולד את מהללאל: ויחי קינן אחרי הולידו את מהללאל ארבעים שנה ושמנה מאות שנה ויולד בנים ובנות: ויהיו כל ימי קינן עשר שנים ותשע מאות שנה וימת: ויחי מהללאל חמש שנים וששים שנה ויולד את ירד: ויחי מהללאל אחרי הולידו את ירד שלשים שנה ושמנה מאות שנה ויולד בנים ובנות: ויהיו כל ימי מהללאל חמש ותשעים שנה ושמנה מאות שנה וימת: ויחי ירד שתים וששים שנה ומאת שנה ויולד את חנוך: ויחי ירד אחרי הולידו את חנוך שמנה מאות שנה ויולד בנים ובנות: ויהיו כל ימי ירד שתים וששים שנה ותשע מאות שנה וימת: ויחי חנוך חמש וששים שנה ויולד את מתושלח:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa614011460404dfc3f4b",
+      "display_heb_name": "שת",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa614011460404dfc3f4c",
+      "display_heb_name": "אנוש",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa615011460404dfc3f4d",
+      "display_heb_name": "קינן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa615011460404dfc3f4e",
+      "display_heb_name": "מהללאל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa615011460404dfc3f4f",
+      "display_heb_name": "ירד",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa615011460404dfc3f50",
+      "display_heb_name": "מתושלח",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa616011460404dfc3f51",
+      "display_heb_name": "יהוה",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa616011460404dfc3f52",
+      "heb_unit": "שנה",
+      "heb_context": "אדם לפני שת"
+    },
+    {
+      "key": "6a5fa616011460404dfc3f53",
+      "heb_unit": "שנה",
+      "heb_context": "אדם אחרי הולידו את שת"
+    },
+    {
+      "key": "6a5fa616011460404dfc3f54",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי אדם"
+    },
+    {
+      "key": "6a5fa616011460404dfc3f55",
+      "heb_unit": "שנה",
+      "heb_context": "שת לפני אנוש"
+    },
+    {
+      "key": "6a5fa617011460404dfc3f56",
+      "heb_unit": "שנה",
+      "heb_context": "שת אחרי הולידו את אנוש"
+    },
+    {
+      "key": "6a5fa617011460404dfc3f57",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי שת"
+    },
+    {
+      "key": "6a5fa617011460404dfc3f58",
+      "heb_unit": "שנה",
+      "heb_context": "אנוש לפני קינן"
+    },
+    {
+      "key": "6a5fa617011460404dfc3f59",
+      "heb_unit": "שנה",
+      "heb_context": "אנוש אחרי הולידו את קינן"
+    },
+    {
+      "key": "6a5fa618011460404dfc3f5a",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי אנוש"
+    },
+    {
+      "key": "6a5fa618011460404dfc3f5b",
+      "heb_unit": "שנה",
+      "heb_context": "קינן לפני מהללאל"
+    },
+    {
+      "key": "6a5fa618011460404dfc3f5c",
+      "heb_unit": "שנה",
+      "heb_context": "קינן אחרי הולידו את מהללאל"
+    },
+    {
+      "key": "6a5fa618011460404dfc3f5d",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי קינן"
+    },
+    {
+      "key": "6a5fa618011460404dfc3f5e",
+      "heb_unit": "שנה",
+      "heb_context": "מהללאל לפני ירד"
+    },
+    {
+      "key": "6a5fa619011460404dfc3f5f",
+      "heb_unit": "שנה",
+      "heb_context": "מהללאל אחרי הולידו את ירד"
+    },
+    {
+      "key": "6a5fa619011460404dfc3f60",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי מהללאל"
+    },
+    {
+      "key": "6a5fa619011460404dfc3f61",
+      "heb_unit": "שנה",
+      "heb_context": "ירד לפני חנוך"
+    },
+    {
+      "key": "6a5fa619011460404dfc3f62",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי ירד"
+    }
+  ]
+}

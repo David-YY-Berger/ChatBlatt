@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c4011460404dfc424c",
+            "display_heb_name": "אחיו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "joseph's brothers"
+        },
+        {
+            "key": "6a5fa6c4011460404dfc424d",
+            "display_heb_name": "אלמה",
+            "symbolType": "Part of Nature",
+            "display_en_name": "sheaf"
+        }
+    ],
+    "key": "TN_Genesis_0_37:5-8"
+}

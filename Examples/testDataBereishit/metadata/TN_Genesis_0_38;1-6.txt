@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2609 approx cost=$0.000360 (Prompt=1880, Completion=729)
+SOURCE:
+Bereishit (Torah) 38:1-6
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6c8011460404dfc425f","display_en_name":"hirah","display_heb_name":"","all_en_names":["Hirah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c9011460404dfc4260","display_en_name":"shua","display_heb_name":"","all_en_names":["Shua"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ca011460404dfc4264","display_en_name":"chezib","display_heb_name":"","all_en_names":["Chezib"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+About that time Judah left his brothers and camped near a certain Adullamite whose name was Hirah. There Judah saw the daughter of a certain Canaanite whose name was Shua, and he took her [into his household as wife] and cohabited with her. She conceived and bore a son, and he named him Er. She conceived again and bore a son, and named him Onan. Once again she bore a son, and named him Shelah; he was at Chezib when she bore him. Judah got a wife for Er his first-born; her name was Tamar.
+
+HEBREW:
+ויהי בעת ההוא וירד יהודה מאת אחיו ויט עד איש עדלמי ושמו חירה: וירא שם יהודה בת איש כנעני ושמו שוע ויקחה ויבא אליה: ותהר ותלד בן ויקרא את שמו ער: ותהר עוד ותלד בן ותקרא את שמו אונן: ותסף עוד ותלד בן ותקרא את שמו שלה והיה בכזיב בלדתה אתו: ויקח יהודה אשה לער בכורו ושמה תמר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c8011460404dfc425f",
+      "display_heb_name": "חירה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6c9011460404dfc4260",
+      "display_heb_name": "שוע",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ca011460404dfc4264",
+      "display_heb_name": "כזיב",
+      "placeType": "City"
+    }
+  ]
+}

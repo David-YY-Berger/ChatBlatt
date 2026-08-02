@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e1011460404dfc42bd",
+            "display_heb_name": "אשר על ביתו",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "house steward"
+        },
+        {
+            "key": "6a5fa6e1011460404dfc42be",
+            "display_heb_name": "בית יוסף",
+            "placeType": "Building or Structure",
+            "display_en_name": "joseph's house"
+        },
+        {
+            "key": "6a5fa6e1011460404dfc42bf",
+            "display_heb_name": "משנה",
+            "heb_unit": "כסף",
+            "heb_context": "משנה כסף",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_43:14-18"
+}

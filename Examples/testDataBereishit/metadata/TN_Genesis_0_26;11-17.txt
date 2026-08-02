@@ -1,0 +1,26 @@
+﻿COST: Tokens: Total=2658 approx cost=$0.000373 (Prompt=1886, Completion=772)
+SOURCE:
+Bereishit (Torah) 26:11-17
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa63c011460404dfc3ff6","display_en_name":"philistia","display_heb_name":"","all_en_names":["Philistia"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa68b011460404dfc4150","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"fold","en_context":"harvest yield"}
+
+PASSAGE:
+ENGLISH:
+Abimelech then charged all the people, saying, Anyone who molests this man or his wife shall be put to death. Isaac sowed in that land and reaped a hundredfold the same year. HASHEM blessed him, and the man grew richer and richer until he was very wealthy: he acquired flocks and herds, and a large household, so that the Philistines envied him. And the Philistines stopped up all the wells which his fathers servants had dug in the days of his father Abraham, filling them with earth. And Abimelech said to Isaac, Go away from us, for you have become far too big for us. So Isaac departed from there and encamped in the wadi of Gerar, where he settled.
+
+HEBREW:
+ויצו אבימלך את כל העם לאמר הנגע באיש הזה ובאשתו מות יומת: ויזרע יצחק בארץ ההוא וימצא בשנה ההוא מאה שערים ויברכהו יהוה: ויגדל האיש וילך הלוך וגדל עד כי גדל מאד: ויהי לו מקנה צאן ומקנה בקר ועבדה רבה ויקנאו אתו פלשתים: וכל הבארת אשר חפרו עבדי אביו בימי אברהם אביו סתמום פלשתים וימלאום עפר: ויאמר אבימלך אל יצחק לך מעמנו כי עצמת ממנו מאד: וילך משם יצחק ויחן בנחל גרר וישב שם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68b011460404dfc4150",
+      "display_heb_name": "מאה",
+      "heb_unit": "שערים",
+      "heb_context": "תנובת קציר"
+    }
+  ]
+}

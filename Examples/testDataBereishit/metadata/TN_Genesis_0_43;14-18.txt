@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3545 approx cost=$0.000603 (Prompt=2046, Completion=1499)
+SOURCE:
+Bereishit (Torah) 43:14-18
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6e1011460404dfc42bd","display_en_name":"house steward","display_heb_name":"","all_en_names":["House Steward"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6e1011460404dfc42be","display_en_name":"joseph's house","display_heb_name":"","all_en_names":["Joseph's House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e1011460404dfc42bf","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"money","en_context":"double gift payment"}
+
+PASSAGE:
+ENGLISH:
+And may El Shaddai dispose the man to mercy toward you, that he may release to you your other brother, as well as Benjamin. As for me, if I am to be bereaved, I shall be bereaved. So the agents; Agent. took that gift, and they took with them double the money, as well as Benjamin. They made their way down to Egypt, where they presented themselves to Joseph. When Joseph saw Benjamin with them, he said to his house steward, Take those men. into the house; slaughter and prepare an animal, for those men will dine with me at noon. The man did as Joseph said, and he brought the men into Josephs house. But the men were frightened at being brought into Josephs house. It must be, they thought, because of the money replaced in our bags the first time that we have been brought inside, as a pretext to attack us and seize us as slaves, with our pack animals.
+
+HEBREW:
+ואל שדי יתן לכם רחמים לפני האיש ושלח לכם את אחיכם אחר ואת בנימין ואני כאשר שכלתי שכלתי: ויקחו האנשים את המנחה הזאת ומשנה כסף לקחו בידם ואת בנימן ויקמו וירדו מצרים ויעמדו לפני יוסף: וירא יוסף אתם את בנימין ויאמר לאשר על ביתו הבא את האנשים הביתה וטבח טבח והכן כי אתי יאכלו האנשים בצהרים: ויעש האיש כאשר אמר יוסף ויבא האיש את האנשים ביתה יוסף: וייראו האנשים כי הובאו בית יוסף ויאמרו על דבר הכסף השב באמתחתינו בתחלה אנחנו מובאים להתגלל עלינו ולהתנפל עלינו ולקחת אתנו לעבדים ואת חמרינו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e1011460404dfc42bd",
+      "display_heb_name": "אשר על ביתו",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6e1011460404dfc42be",
+      "display_heb_name": "בית יוסף",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6e1011460404dfc42bf",
+      "display_heb_name": "משנה",
+      "heb_unit": "כסף",
+      "heb_context": "משנה כסף"
+    }
+  ]
+}

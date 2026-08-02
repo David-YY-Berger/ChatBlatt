@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2766 approx cost=$0.000363 (Prompt=2073, Completion=693)
+SOURCE:
+Bereishit (Torah) 29:9-17
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa695011460404dfc4179","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"month","en_context":"jacob stayed with laban"}
+{"key":"6a5fa695011460404dfc417a","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"daughter","en_context":"laban's daughters"}
+
+PASSAGE:
+ENGLISH:
+While he was still speaking with them, Rachel came with her fathers flock-for she was its shepherd. And when Jacob saw Rachel, the daughter of his uncle Laban, and the flock of his uncle Laban, Jacob went up and rolled the stone off the mouth of the well, and watered the flock of his uncle Laban. Then Jacob kissed Rachel, and broke into tears. Jacob told Rachel that he was her fathers kinsman, that he was Rebekahs son; and she ran and told her father. On hearing the news of his sisters son Jacob, Laban ran to greet him; he embraced him and kissed him, and took him into his house. He told Laban all that had happened, and Laban said to him, You are truly my bone and flesh. When he had stayed with him a months time, Laban said to Jacob, Just because you are a kinsman, should you serve me for nothing? Tell me, what shall your wages be? Now Laban had two daughters; the name of the older one was Leah, and the name of the younger was Rachel. Leah had weak eyes; Rachel was shapely and beautiful.
+
+HEBREW:
+עודנו מדבר עמם ורחל באה עם הצאן אשר לאביה כי רעה הוא: ויהי כאשר ראה יעקב את רחל בת לבן אחי אמו ואת צאן לבן אחי אמו ויגש יעקב ויגל את האבן מעל פי הבאר וישק את צאן לבן אחי אמו: וישק יעקב לרחל וישא את קלו ויבך: ויגד יעקב לרחל כי אחי אביה הוא וכי בן רבקה הוא ותרץ ותגד לאביה: ויהי כשמע לבן את שמע יעקב בן אחתו וירץ לקראתו ויחבק לו וינשק לו ויביאהו אל ביתו ויספר ללבן את כל הדברים האלה: ויאמר לו לבן אך עצמי ובשרי אתה וישב עמו חדש ימים: ויאמר לבן ליעקב הכי אחי אתה ועבדתני חנם הגידה לי מה משכרתך: וללבן שתי בנות שם הגדלה לאה ושם הקטנה רחל: ועיני לאה רכות ורחל היתה יפת תאר ויפת מראה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa695011460404dfc4179",
+      "display_heb_name": "חדש",
+      "heb_unit": "חדש",
+      "heb_context": "יעקב ישב עם לבן"
+    },
+    {
+      "key": "6a5fa695011460404dfc417a",
+      "display_heb_name": "שתי",
+      "heb_unit": "בת",
+      "heb_context": "בנות לבן"
+    }
+  ]
+}

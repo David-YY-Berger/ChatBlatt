@@ -1,0 +1,39 @@
+﻿COST: Tokens: Total=3212 approx cost=$0.000435 (Prompt=2350, Completion=862)
+SOURCE:
+Bereishit (Torah) 42:29-38
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6de011460404dfc42b1","display_en_name":"12","display_heb_name":"","all_en_names":["12"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"brother","en_context":"sons of jacob"}
+{"key":"6a5fa6de011460404dfc42b2","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"brother","en_context":"son of jacob"}
+{"key":"6a5fa6de011460404dfc42b3","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"reubens sons"}
+
+PASSAGE:
+ENGLISH:
+When they came to their father Jacob in the land of Canaan, they told him all that had befallen them, saying, The man. who is lord of the land spoke harshly to us and accused us of spying on the land. We said to him, We are being honest; we have never been spies! There were twelve of us brothers, sons by the same father; but one is no more, and the youngest is now with our father in the land of Canaan. But the man-who is lord of the land-said to us, By this I shall know that you are being honest: leave one of your brothers with me, and take something for your starving households and be off. And bring your youngest brother to me, that I may know that you are not spies, that you are being honest. I will then restore your brother to you, and you shall be free to move about in the land. As they were emptying their sacks, there, in each ones sack, was his money-bag! When they and their father saw their money-bags, they were dismayed. Their father Jacob said to them, It is always me that you bereave: Joseph is no more and Simeon is no more, and now you would take away Benjamin. These things always happen to me! Then Reuben said to his father, You may kill my two sons if I do not bring him back to you. Put him in my care, and I will return him to you. But he said, My son must not go down with you, for his brother is dead and he alone is left. If he meets with disaster on the journey you are taking, you will send my white head down to Sheol in grief.
+
+HEBREW:
+ויבאו אל יעקב אביהם ארצה כנען ויגידו לו את כל הקרת אתם לאמר: דבר האיש אדני הארץ אתנו קשות ויתן אתנו כמרגלים את הארץ: ונאמר אליו כנים אנחנו לא היינו מרגלים: שנים עשר אנחנו אחים בני אבינו האחד איננו והקטן היום את אבינו בארץ כנען: ויאמר אלינו האיש אדני הארץ בזאת אדע כי כנים אתם אחיכם האחד הניחו אתי ואת רעבון בתיכם קחו ולכו: והביאו את אחיכם הקטן אלי ואדעה כי לא מרגלים אתם כי כנים אתם את אחיכם אתן לכם ואת הארץ תסחרו: ויהי הם מריקים שקיהם והנה איש צרור כספו בשקו ויראו את צררות כספיהם המה ואביהם וייראו: ויאמר אלהם יעקב אביהם אתי שכלתם יוסף איננו ושמעון איננו ואת בנימן תקחו עלי היו כלנה: ויאמר ראובן אל אביו לאמר את שני בני תמית אם לא אביאנו אליך תנה אתו על ידי ואני אשיבנו אליך: ויאמר לא ירד בני עמכם כי אחיו מת והוא לבדו נשאר וקראהו אסון בדרך אשר תלכו בה והורדתם את שיבתי ביגון שאולה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6de011460404dfc42b1",
+      "display_heb_name": "שנים עשר",
+      "heb_unit": "אח",
+      "heb_context": "בני יעקב"
+    },
+    {
+      "key": "6a5fa6de011460404dfc42b2",
+      "display_heb_name": "אחד",
+      "heb_unit": "אח",
+      "heb_context": "בן יעקב"
+    },
+    {
+      "key": "6a5fa6de011460404dfc42b3",
+      "display_heb_name": "שני",
+      "heb_unit": "בן",
+      "heb_context": "בני ראובן"
+    }
+  ]
+}

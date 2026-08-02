@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f9011460404dfc431e",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "יום",
+            "heb_context": "ימי החנטים",
+            "display_en_name": "40"
+        },
+        {
+            "key": "6a5fa6f9011460404dfc431f",
+            "display_heb_name": "שבעים",
+            "heb_unit": "יום",
+            "heb_context": "ימי אבל",
+            "display_en_name": "70"
+        }
+    ],
+    "key": "TN_Genesis_0_49:29-50:3"
+}

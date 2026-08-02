@@ -1,0 +1,49 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68c011460404dfc4151",
+            "display_heb_name": "עבדי יצחק",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "isaac's servants"
+        },
+        {
+            "key": "6a5fa68c011460404dfc4152",
+            "display_heb_name": "רעי גרר",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "herdsmen of gerar"
+        },
+        {
+            "key": "6a5fa68c011460404dfc4153",
+            "display_heb_name": "רעי יצחק",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "isaac's herdsmen"
+        },
+        {
+            "key": "6a5fa68c011460404dfc4154",
+            "display_heb_name": "עשק",
+            "placeType": "Building or Structure",
+            "display_en_name": "esek"
+        },
+        {
+            "key": "6a5fa68d011460404dfc4155",
+            "display_heb_name": "שטנה",
+            "placeType": "Building or Structure",
+            "display_en_name": "sitnah"
+        },
+        {
+            "key": "6a5fa68d011460404dfc4156",
+            "display_heb_name": "רחבות",
+            "placeType": "Building or Structure",
+            "display_en_name": "rehoboth"
+        },
+        {
+            "key": "6a5fa68d011460404dfc4157",
+            "display_heb_name": "גרר",
+            "display_en_name": "gerar"
+        }
+    ],
+    "key": "TN_Genesis_0_26:18-22"
+}

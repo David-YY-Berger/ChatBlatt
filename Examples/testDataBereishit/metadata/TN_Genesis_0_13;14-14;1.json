@@ -1,0 +1,35 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa651011460404dfc4053",
+            "display_heb_name": "ממרא",
+            "placeType": "Other",
+            "display_en_name": "mamre"
+        },
+        {
+            "key": "6a5fa651011460404dfc4054",
+            "display_heb_name": "חברון",
+            "placeType": "City",
+            "display_en_name": "hebron"
+        },
+        {
+            "key": "6a5fa651011460404dfc4055",
+            "display_heb_name": "אלסר",
+            "placeType": "Country or Region",
+            "display_en_name": "ellasar"
+        },
+        {
+            "key": "6a5fa652011460404dfc4056",
+            "display_heb_name": "עילם",
+            "placeType": "Country or Region",
+            "display_en_name": "elam"
+        },
+        {
+            "key": "6a5fa652011460404dfc4057",
+            "display_heb_name": "גוים",
+            "placeType": "Country or Region",
+            "display_en_name": "goiim"
+        }
+    ],
+    "key": "TN_Genesis_0_13:14-14:1"
+}

@@ -1,0 +1,52 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6df011460404dfc42b4",
+            "display_heb_name": "פעמים",
+            "heb_unit": "פעם",
+            "heb_context": "זמן נסיעה",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa6df011460404dfc42b5",
+            "display_heb_name": "דבש",
+            "display_en_name": "honey"
+        },
+        {
+            "key": "6a5fa6df011460404dfc42b6",
+            "display_heb_name": "בטנים",
+            "display_en_name": "pistachio nut"
+        },
+        {
+            "key": "6a5fa6df011460404dfc42b7",
+            "display_heb_name": "שקדים",
+            "display_en_name": "almond"
+        },
+        {
+            "key": "6a5fa6df011460404dfc42b8",
+            "display_heb_name": "צרי",
+            "display_en_name": "balm"
+        },
+        {
+            "key": "6a5fa6e0011460404dfc42b9",
+            "display_heb_name": "דבש",
+            "display_en_name": "honey"
+        },
+        {
+            "key": "6a5fa6e0011460404dfc42ba",
+            "display_heb_name": "נכאת",
+            "display_en_name": "gum"
+        },
+        {
+            "key": "6a5fa6e0011460404dfc42bb",
+            "display_heb_name": "לט",
+            "display_en_name": "ladanum"
+        },
+        {
+            "key": "6a5fa6e0011460404dfc42bc",
+            "display_heb_name": "בטנים",
+            "display_en_name": "pistachio nut"
+        }
+    ],
+    "key": "TN_Genesis_0_43:1-13"
+}

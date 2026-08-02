@@ -1,0 +1,23 @@
+﻿COST: Tokens: Total=2923 approx cost=$0.000482 (Prompt=1756, Completion=1167)
+SOURCE:
+Bereishit (Torah) 49:22-26
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f8011460404dfc431b","display_en_name":"colt","display_heb_name":"","all_en_names":["Colt"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Joseph is a wild ass, A wild ass by a spring -Wild colts on a hillside. Archers bitterly assailed him; They shot at him and harried him. Yet his bow stayed taut, And his arms were made firm By the hands of the Mighty One of Jacob- There, the Shepherd, the Rock of Israel- The God of your fathers [house], who helps you, And Shaddai who blesses you With blessings of heaven above, Blessings of the deep that couches below, Blessings of the breast and womb. The blessings of your father Surpass the blessings of my ancestors, To the utmost bounds of the eternal hills. May they rest on the head of Joseph, On the brow of the elect of his brothers.
+
+HEBREW:
+בן פרת יוסף בן פרת עלי עין בנות צעדה עלי שור: וימררהו ורבו וישטמהו בעלי חצים: ותשב באיתן קשתו ויפזו זרעי ידיו מידי אביר יעקב משם רעה אבן ישראל: מאל אביך ויעזרך ואת שדי ויברכך ברכת שמים מעל ברכת תהום רבצת תחת ברכת שדים ורחם: ברכת אביך גברו על ברכת הורי עד תאות גבעת עולם תהיין לראש יוסף ולקדקד נזיר אחיו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f8011460404dfc431b",
+      "display_heb_name": "בן פרת"
+    }
+  ]
+}

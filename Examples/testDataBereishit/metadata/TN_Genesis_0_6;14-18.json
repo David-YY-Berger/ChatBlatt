@@ -1,0 +1,85 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa61e011460404dfc3f78",
+            "display_heb_name": "בניך",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "noah's sons"
+        },
+        {
+            "key": "6a5fa61f011460404dfc3f79",
+            "display_heb_name": "אשתך",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "noah's wife"
+        },
+        {
+            "key": "6a5fa61f011460404dfc3f7a",
+            "display_heb_name": "נשי בניך",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "noah's sons' wives"
+        },
+        {
+            "key": "6a5fa61f011460404dfc3f7b",
+            "display_heb_name": "תבה",
+            "symbolType": "Other",
+            "display_en_name": "ark"
+        },
+        {
+            "key": "6a5fa61f011460404dfc3f7c",
+            "display_heb_name": "ברית",
+            "symbolType": "Not Physical",
+            "display_en_name": "covenant"
+        },
+        {
+            "key": "6a5fa620011460404dfc3f7d",
+            "display_heb_name": "מבול",
+            "symbolType": "Part of Nature",
+            "display_en_name": "flood"
+        },
+        {
+            "key": "6a5fa620011460404dfc3f7e",
+            "display_heb_name": "שלש מאות",
+            "heb_unit": "אמה",
+            "heb_context": "ארך התבה",
+            "display_en_name": "300"
+        },
+        {
+            "key": "6a5fa620011460404dfc3f7f",
+            "display_heb_name": "חמשים",
+            "heb_unit": "אמה",
+            "heb_context": "רחבה",
+            "display_en_name": "50"
+        },
+        {
+            "key": "6a5fa620011460404dfc3f80",
+            "display_heb_name": "שלשים",
+            "heb_unit": "אמה",
+            "heb_context": "קומתה",
+            "display_en_name": "30"
+        },
+        {
+            "key": "6a5fa620011460404dfc3f81",
+            "display_heb_name": "אמה",
+            "heb_unit": "אמה",
+            "heb_context": "אמה תכלנה מלמעלה",
+            "display_en_name": "1"
+        },
+        {
+            "key": "6a5fa621011460404dfc3f82",
+            "display_heb_name": "שלשים",
+            "heb_unit": "תחתית",
+            "heb_context": "תחתים שנים ושלשים",
+            "display_en_name": "3"
+        },
+        {
+            "key": "6a5fa621011460404dfc3f83",
+            "display_heb_name": "עצי גפר",
+            "display_en_name": "gopher wood"
+        }
+    ],
+    "key": "TN_Genesis_0_6:14-18"
+}

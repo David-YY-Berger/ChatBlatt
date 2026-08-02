@@ -1,0 +1,54 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6ad011460404dfc41e4",
+            "display_heb_name": "שמעון",
+            "timePeriod": "Tanach",
+            "roles": []
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e5",
+            "display_heb_name": "לוי",
+            "timePeriod": "Tanach",
+            "roles": []
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e6",
+            "display_heb_name": "דינה",
+            "timePeriod": "Tanach",
+            "isWoman": true
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e7",
+            "display_heb_name": "העיר",
+            "placeType": "City",
+            "display_en_name": "the city"
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e9",
+            "display_heb_name": "חמור",
+            "timePeriod": "Tanach",
+            "isNonJew": true
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41ea",
+            "display_heb_name": "שכם",
+            "timePeriod": "Tanach",
+            "isNonJew": true
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41eb",
+            "display_heb_name": "בני יעקב",
+            "timePeriod": "Tanach",
+            "isGroup": true
+        },
+        {
+            "key": "6a5fa6ae011460404dfc41e8",
+            "display_heb_name": "שני",
+            "heb_unit": "בן",
+            "heb_context": "בני יעקב נקמו דינה",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_34:25-29"
+}

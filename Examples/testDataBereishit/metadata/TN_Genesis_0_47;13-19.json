@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6dd011460404dfc42ae",
+            "display_heb_name": "שבר",
+            "display_en_name": "rations"
+        },
+        {
+            "key": "6a5fa6f3011460404dfc4306",
+            "display_heb_name": "סוס",
+            "display_en_name": "horse"
+        },
+        {
+            "key": "6a5fa6f3011460404dfc4307",
+            "display_heb_name": "זרע",
+            "display_en_name": "seed"
+        }
+    ],
+    "key": "TN_Genesis_0_47:13-19"
+}

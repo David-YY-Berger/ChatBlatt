@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a4011460404dfc41be",
+            "display_heb_name": "לחם",
+            "display_en_name": "meal"
+        },
+        {
+            "key": "6a5fa6e2011460404dfc42c2",
+            "display_heb_name": "העברים",
+            "timePeriod": "Tanach",
+            "isNonJew": false,
+            "isGroup": true,
+            "display_en_name": "hebrews"
+        },
+        {
+            "key": "6a5fa6e2011460404dfc42c3",
+            "display_heb_name": "חדרה",
+            "placeType": "Building or Structure",
+            "display_en_name": "room"
+        }
+    ],
+    "key": "TN_Genesis_0_43:26-34"
+}

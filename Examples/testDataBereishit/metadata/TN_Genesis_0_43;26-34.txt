@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3968 approx cost=$0.000682 (Prompt=2261, Completion=1707)
+SOURCE:
+Bereishit (Torah) 43:26-34
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6a4011460404dfc41be","display_en_name":"meal","display_heb_name":"","all_en_names":["Meal"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6e2011460404dfc42c2","display_en_name":"hebrews","display_heb_name":"","all_en_names":["Hebrews"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6e2011460404dfc42c3","display_en_name":"room","display_heb_name":"","all_en_names":["Room"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e2011460404dfc42c4","display_en_name":"hebrew","display_heb_name":"","all_en_names":["Hebrew"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When Joseph came home, they presented to him the gifts that they had brought with them into the house, bowing low before him to the ground. He greeted them, and he said, How is your aged father of whom you spoke? Is he still in good health? They replied, It is well with your servant our father; he is still in good health. And they bowed and made obeisance. Looking about, he saw his brother Benjamin, his mothers son, and asked, Is this your youngest brother of whom you spoke to me? And he went on, May God be gracious to you, my boy. With that, Joseph hurried out, for he was overcome with feeling toward his brother and was on the verge of tears; he went into a room and wept there. Then he washed his face, reappeared, and-now in control of himself-gave the order, Serve the meal. They served him by himself, and them by themselves, and the Egyptians who ate with him by themselves; for the Egyptians could not dine with the Hebrews, since that would be abhorrent to the Egyptians. As they were seated by his direction, from the oldest in the order of his seniority to the youngest in the order of his youth, the men looked at one another in astonishment. Portions were served them from his table; but Benjamins portion was several times that of anyone else. And they drank their fill with him.
+
+HEBREW:
+ויבא יוסף הביתה ויביאו לו את המנחה אשר בידם הביתה וישתחוו לו ארצה: וישאל להם לשלום ויאמר השלום אביכם הזקן אשר אמרתם העודנו חי: ויאמרו שלום לעבדך לאבינו עודנו חי ויקדו [וישתחוו] : וישא עיניו וירא את בנימין אחיו בן אמו ויאמר הזה אחיכם הקטן אשר אמרתם אלי ויאמר אלהים יחנך בני: וימהר יוסף כי נכמרו רחמיו אל אחיו ויבקש לבכות ויבא החדרה ויבך שמה: וירחץ פניו ויצא ויתאפק ויאמר שימו לחם: וישימו לו לבדו ולהם לבדם ולמצרים האכלים אתו לבדם כי לא יוכלון המצרים לאכל את העברים לחם כי תועבה הוא למצרים: וישבו לפניו הבכר כבכרתו והצעיר כצערתו ויתמהו האנשים איש אל רעהו: וישא משאת מאת פניו אלהם ותרב משאת בנימן ממשאת כלם חמש ידות וישתו וישכרו עמו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a4011460404dfc41be",
+      "display_heb_name": "לחם"
+    },
+    {
+      "key": "6a5fa6e2011460404dfc42c2",
+      "display_heb_name": "העברים",
+      "timePeriod": "Tanach",
+      "isNonJew": false,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6e2011460404dfc42c3",
+      "display_heb_name": "חדרה",
+      "placeType": "Building or Structure"
+    }
+  ]
+}

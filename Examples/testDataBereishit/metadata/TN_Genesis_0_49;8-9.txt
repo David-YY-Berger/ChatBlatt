@@ -1,0 +1,18 @@
+﻿COST: Tokens: Total=1788 approx cost=$0.000172 (Prompt=1619, Completion=169)
+SOURCE:
+Bereishit (Torah) 49:8-9
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f6011460404dfc4311","display_en_name":"lion","display_heb_name":"","all_en_names":["Lion"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+You, O Judah, your brothers shall praise; Your hand shall be on the nape of your foes; Your fathers sons shall bow low to you. Judah is a lions whelp; On prey, my son, have you grown. He crouches, lies down like a lion, Like a lioness as referring to a different sex than ari earlier in the verse, given that it is the females who hunt for their pride. NJPS king of beasts, taking lavi as a breed of lion. -who dare rouse him?
+
+HEBREW:
+יהודה אתה יודוך אחיך ידך בערף איביך ישתחוו לך בני אביך: גור אריה יהודה מטרף בני עלית כרע רבץ כאריה וכלביא מי יקימנו:
+
+EXTRACTED (JSON):
+{
+  "entities": []
+}

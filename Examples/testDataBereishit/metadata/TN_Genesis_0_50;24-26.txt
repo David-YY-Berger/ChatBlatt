@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2167 approx cost=$0.000256 (Prompt=1753, Completion=414)
+SOURCE:
+Bereishit (Torah) 50:24-26
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6fc011460404dfc432c","display_en_name":"the land","display_heb_name":"","all_en_names":["The Land"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6fc011460404dfc432d","display_en_name":"110","display_heb_name":"","all_en_names":["110"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"joseph's lifespan"}
+
+PASSAGE:
+ENGLISH:
+At length, Joseph said to his brothers, I am about to die. God will surely take notice of you and bring you up from this land to the land promised on oath to Abraham, to Isaac, and to Jacob. So Joseph made the sons of Israel swear, saying, When God has taken notice of you, you shall carry up my bones from here. Joseph died at the age of one hundred and ten years; and he was embalmed and placed in a coffin in Egypt.
+
+HEBREW:
+ויאמר יוסף אל אחיו אנכי מת ואלהים פקד יפקד אתכם והעלה אתכם מן הארץ הזאת אל הארץ אשר נשבע לאברהם ליצחק וליעקב: וישבע יוסף את בני ישראל לאמר פקד יפקד אלהים אתכם והעלתם את עצמתי מזה: וימת יוסף בן מאה ועשר שנים ויחנטו אתו ויישם בארון במצרים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6fc011460404dfc432c",
+      "display_heb_name": "הארץ",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa6fc011460404dfc432d",
+      "display_heb_name": "מאה ועשר",
+      "heb_unit": "שנה",
+      "heb_context": "שנות חיי יוסף"
+    }
+  ]
+}

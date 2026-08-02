@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=4317 approx cost=$0.000704 (Prompt=2625, Completion=1692)
+SOURCE:
+Bereishit (Torah) 41:25-39
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa6d7011460404dfc4296","display_en_name":"courtiers","display_heb_name":"","all_en_names":["Courtiers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d8011460404dfc4297","display_en_name":"healthy cow","display_heb_name":"","all_en_names":["Healthy Cow"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d8011460404dfc4298","display_en_name":"healthy ear","display_heb_name":"","all_en_names":["Healthy Ear"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d8011460404dfc4299","display_en_name":"lean and ugly cow","display_heb_name":"","all_en_names":["Lean And Ugly Cow"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d8011460404dfc429a","display_en_name":"empty ear","display_heb_name":"","all_en_names":["Empty Ear"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6d9011460404dfc429b","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abundance years"}
+
+PASSAGE:
+ENGLISH:
+And Joseph said to Pharaoh, Pharaohs dreams are one and the same: Pharaoh has been told what God is about to do. The seven healthy cows are seven years, and the seven healthy ears are seven years; it is the same dream. The seven lean and ugly cows that followed are seven years, as are also the seven empty ears scorched by the east wind; they are seven years of famine. It is just as I have told Pharaoh: Pharaoh has been shown what God is about to do. Immediately ahead are seven years of great abundance in all the land of Egypt. After them will come seven years of famine, and all the abundance in the land of Egypt will be forgotten. As the land is ravaged by famine, no trace of the abundance will be left in the land because of the famine thereafter, for it will be very severe. As for Pharaoh having had the same dream twice, it means that the matter has been determined by God, and that God will soon carry it out. Accordingly, let Pharaoh find someone. whos discerning and wise, whom you can set over the land of Egypt. And let Pharaoh take steps to appoint overseers over the land, and organize the land of Egypt in the seven years of plenty. Let all the food of these good years that are coming be gathered, and let the grain be collected under Pharaohs authority as food to be stored in the cities. Let that food be a reserve for the land for the seven years of famine which will come upon the land of Egypt, so that the land may not perish in the famine. The plan pleased Pharaoh and all his courtiers. And Pharaoh said to his courtiers, Could we find another like him-a man with the divine spirit? So Pharaoh said to Joseph, Since God has made all this known to you, there is none so discerning and wise as you.
+
+HEBREW:
+ויאמר יוסף אל פרעה חלום פרעה אחד הוא את אשר האלהים עשה הגיד לפרעה: שבע פרת הטבת שבע שנים הנה ושבע השבלים הטבת שבע שנים הנה חלום אחד הוא: ושבע הפרות הרקות והרעת העלת אחריהן שבע שנים הנה ושבע השבלים הרקות שדפות הקדים יהיו שבע שני רעב: הוא הדבר אשר דברתי אל פרעה אשר האלהים עשה הראה את פרעה: הנה שבע שנים באות שבע גדול בכל ארץ מצרים: וקמו שבע שני רעב אחריהן ונשכח כל השבע בארץ מצרים וכלה הרעב את הארץ: ולא יודע השבע בארץ מפני הרעב ההוא אחרי כן כי כבד הוא מאד: ועל השנות החלום אל פרעה פעמים כי נכון הדבר מעם האלהים וממהר האלהים לעשתו: ועתה ירא פרעה איש נבון וחכם וישיתהו על ארץ מצרים: יעשה פרעה ויפקד פקדים על הארץ וחמש את ארץ מצרים בשבע שני השבע: ויקבצו את כל אכל השנים הטבות הבאת האלה ויצברו בר תחת יד פרעה אכל בערים ושמרו: והיה האכל לפקדון לארץ לשבע שני הרעב אשר תהיין בארץ מצרים ולא תכרת הארץ ברעב: וייטב הדבר בעיני פרעה ובעיני כל עבדיו: ויאמר פרעה אל עבדיו הנמצא כזה איש אשר רוח אלהים בו: ויאמר פרעה אל יוסף אחרי הודיע אלהים אותך את כל זאת אין נבון וחכם כמוך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d7011460404dfc4296",
+      "display_heb_name": "עבדים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6d8011460404dfc4297",
+      "display_heb_name": "פרה טובה",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6d8011460404dfc4298",
+      "display_heb_name": "שבולה טובה",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6d8011460404dfc4299",
+      "display_heb_name": "פרה רקה ורעה",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6d8011460404dfc429a",
+      "display_heb_name": "שבולה רקה",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6d9011460404dfc429b",
+      "display_heb_name": "שבע",
+      "heb_unit": "שנה",
+      "heb_context": "שני שבע"
+    }
+  ]
+}

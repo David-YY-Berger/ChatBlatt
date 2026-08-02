@@ -1,0 +1,44 @@
+﻿COST: Tokens: Total=4285 approx cost=$0.000773 (Prompt=2279, Completion=2006)
+SOURCE:
+Bereishit (Torah) 2:2-7
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa607011460404dfc3f0f","display_en_name":"human","display_heb_name":"","all_en_names":["Human"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa607011460404dfc3f10","display_en_name":"ancient israel","display_heb_name":"","all_en_names":["Ancient Israel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa607011460404dfc3f11","display_en_name":"israel","display_heb_name":"","all_en_names":["Israel"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa607011460404dfc3f12","display_en_name":"breath of life","display_heb_name":"","all_en_names":["Breath Of Life"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa607011460404dfc3f13","display_en_name":"shrub","display_heb_name":"","all_en_names":["Shrub"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa608011460404dfc3f14","display_en_name":"grass","display_heb_name":"","all_en_names":["Grass"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+On the seventh day God finished the work that had been undertaken: [God] ceased on the seventh day from doing any of the work. And God blessed the seventh day and declared it holy-having ceased on it from all the work of creation that God had done. Such is the story of heaven and earth when they were created. When God HASHEM made earth and heaven- when no shrub of the field was yet on earth and no grasses of the field had yet sprouted, because God HASHEM had not sent rain upon the earth and there were no human beings to till the soil, but a flow would well up from the ground and water the whole surface of the earth- God HASHEM formed the Human; trad. man. In the eyes of ancient Israel, the typical initiator of a lineage was male, and so the first human being would also have been imagined as male. See further the Dictionary under adam . from the soils humus,, rendered to emulate the wordplay with Heb. ha-adam the Human; more precisely, loose dirt from the soil. NJPS dust of the earth. blowing into his nostrils the breath of life: the Human became a living being.
+
+HEBREW:
+ויכל אלהים ביום השביעי מלאכתו אשר עשה וישבת ביום השביעי מכל מלאכתו אשר עשה: ויברך אלהים את יום השביעי ויקדש אתו כי בו שבת מכל מלאכתו אשר ברא אלהים לעשות: אלה תולדות השמים והארץ בהבראם ביום עשות יהוה אלהים ארץ ושמים: וכל שיח השדה טרם יהיה בארץ וכל עשב השדה טרם יצמח כי לא המטיר יהוה אלהים על הארץ ואדם אין לעבד את האדמה: ואד יעלה מן הארץ והשקה את כל פני האדמה: וייצר יהוה אלהים את האדם עפר מן האדמה ויפח באפיו נשמת חיים ויהי האדם לנפש חיה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa607011460404dfc3f0f",
+      "display_heb_name": "האדם",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa607011460404dfc3f12",
+      "display_heb_name": "נשמת חיים",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa607011460404dfc3f13",
+      "display_heb_name": "שיח"
+    },
+    {
+      "key": "6a5fa608011460404dfc3f14",
+      "display_heb_name": "עשב"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+﻿COST: Tokens: Total=4383 approx cost=$0.000722 (Prompt=2634, Completion=1749)
+SOURCE:
+Bereishit (Torah) 50:7-14
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa6f9011460404dfc4321","display_en_name":"officials of pharaoh","display_heb_name":"","all_en_names":["Officials Of Pharaoh"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fa011460404dfc4322","display_en_name":"senior members of his court","display_heb_name":"","all_en_names":["Senior Members Of His Court"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fa011460404dfc4323","display_en_name":"egypt's dignitaries","display_heb_name":"","all_en_names":["Egypt's Dignitaries"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fa011460404dfc4324","display_en_name":"joseph's household","display_heb_name":"","all_en_names":["Joseph's Household"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fa011460404dfc4325","display_en_name":"ephron the hittite","display_heb_name":"","all_en_names":["Ephron The Hittite"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fb011460404dfc4326","display_en_name":"canaanite inhabitants","display_heb_name":"","all_en_names":["Canaanite Inhabitants"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6fb011460404dfc4327","display_en_name":"goren ha-atad","display_heb_name":"","all_en_names":["Goren Ha-Atad"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6fb011460404dfc4328","display_en_name":"abel-mizraim","display_heb_name":"","all_en_names":["Abel-Mizraim"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+So Joseph went up to bury his father; and with him went up all the officials of Pharaoh, the senior members of his court, and all of Egypts dignitaries, together with all of Josephs household, his brothers, and his fathers household; only their children, their flocks, and their herds were left in the region of Goshen. Chariots, too, and horsemen went up with him; it was a very large troop. When they came to Goren ha-Atad, which is beyond the Jordan, they held there a very great and solemn lamentation; and he observed a mourning period of seven days for his father. And when the Canaanite inhabitants of the land saw the mourning at Goren ha-Atad, they said, This is a solemn mourning on the part of the Egyptians. That is why it was named Abel-mizraim, which is beyond the Jordan. Thus his sons did for him as he had instructed them. His sons carried him to the land of Canaan, and buried him in the cave of the field of Machpelah, the field near Mamre, which Abraham had bought for a burial site from Ephron the Hittite. After burying his father, Joseph returned to Egypt, he and his brothers and all who had gone up with him to bury his father.
+
+HEBREW:
+ויעל יוסף לקבר את אביו ויעלו אתו כל עבדי פרעה זקני ביתו וכל זקני ארץ מצרים: וכל בית יוסף ואחיו ובית אביו רק טפם וצאנם ובקרם עזבו בארץ גשן: ויעל עמו גם רכב גם פרשים ויהי המחנה כבד מאד: ויבאו עד גרן האטד אשר בעבר הירדן ויספדו שם מספד גדול וכבד מאד ויעש לאביו אבל שבעת ימים: וירא יושב הארץ הכנעני את האבל בגרן האטד ויאמרו אבל כבד זה למצרים על כן קרא שמה אבל מצרים אשר בעבר הירדן: ויעשו בניו לו כן כאשר צום: וישאו אתו בניו ארצה כנען ויקברו אתו במערת שדה המכפלה אשר קנה אברהם את השדה לאחזת קבר מאת עפרן החתי על פני ממרא: וישב יוסף מצרימה הוא ואחיו וכל העלים אתו לקבר את אביו אחרי קברו את אביו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f9011460404dfc4321",
+      "display_heb_name": "עבדי פרעה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6fa011460404dfc4322",
+      "display_heb_name": "זקני ביתו",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6fa011460404dfc4323",
+      "display_heb_name": "זקני ארץ מצרים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6fa011460404dfc4324",
+      "display_heb_name": "בית יוסף",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6fa011460404dfc4325",
+      "display_heb_name": "עפרן החתי",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6fb011460404dfc4326",
+      "display_heb_name": "יושב הארץ הכנעני",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6fb011460404dfc4327",
+      "display_heb_name": "גרן האטד",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6fb011460404dfc4328",
+      "display_heb_name": "אבל מצרים",
+      "placeType": "Other"
+    }
+  ]
+}

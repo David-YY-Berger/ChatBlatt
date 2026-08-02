@@ -1,0 +1,70 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa648011460404dfc402c",
+            "display_heb_name": "אברם",
+            "timePeriod": "Tanach",
+            "display_en_name": "abram"
+        },
+        {
+            "key": "6a5fa648011460404dfc402d",
+            "display_heb_name": "הרן",
+            "timePeriod": "Tanach",
+            "display_en_name": "haran"
+        },
+        {
+            "key": "6a5fa648011460404dfc402e",
+            "display_heb_name": "לוט",
+            "timePeriod": "Tanach",
+            "display_en_name": "lot"
+        },
+        {
+            "key": "6a5fa649011460404dfc402f",
+            "display_heb_name": "שרי",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "sarai"
+        },
+        {
+            "key": "6a5fa649011460404dfc4030",
+            "display_heb_name": "מלכה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "milcah"
+        },
+        {
+            "key": "6a5fa649011460404dfc4031",
+            "display_heb_name": "יסכה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "iscah"
+        },
+        {
+            "key": "6a5fa649011460404dfc4032",
+            "display_heb_name": "אור כשדים",
+            "placeType": "City",
+            "display_en_name": "ur of the chaldeans"
+        },
+        {
+            "key": "6a5fa64a011460404dfc4034",
+            "display_heb_name": "חרן",
+            "placeType": "City",
+            "display_en_name": "haran"
+        },
+        {
+            "key": "6a5fa64a011460404dfc4036",
+            "display_heb_name": "שבעים",
+            "heb_unit": "שנה",
+            "heb_context": "אבהות תרח",
+            "display_en_name": "70"
+        },
+        {
+            "key": "6a5fa64b011460404dfc4037",
+            "display_heb_name": "חמש שנים ומאתים",
+            "heb_unit": "שנה",
+            "heb_context": "חיי תרח",
+            "display_en_name": "205"
+        }
+    ],
+    "key": "TN_Genesis_0_11:26-32"
+}

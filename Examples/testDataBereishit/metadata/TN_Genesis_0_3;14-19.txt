@@ -1,0 +1,61 @@
+﻿COST: Tokens: Total=3985 approx cost=$0.000649 (Prompt=2430, Completion=1555)
+SOURCE:
+Bereishit (Torah) 3:14-19
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa60c011460404dfc3f29","display_en_name":"adam","display_heb_name":"","all_en_names":["Adam"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa60d011460404dfc3f2a","display_en_name":"ground","display_heb_name":"","all_en_names":["Ground"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60d011460404dfc3f2b","display_en_name":"field","display_heb_name":"","all_en_names":["Field"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60d011460404dfc3f2c","display_en_name":"dirt","display_heb_name":"","all_en_names":["Dirt"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa60d011460404dfc3f2d","display_en_name":"grass","display_heb_name":"","all_en_names":["Grass"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa60e011460404dfc3f2e","display_en_name":"bread","display_heb_name":"","all_en_names":["Bread"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa60e011460404dfc3f2f","display_en_name":"thorn","display_heb_name":"","all_en_names":["Thorn"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa60e011460404dfc3f30","display_en_name":"thistle","display_heb_name":"","all_en_names":["Thistle"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then God HASHEM said to the serpent, Because you did this, More cursed shall you be Than all cattle And all the wild beasts: On your belly shall you crawl And dirt shall you eat All the days of your life. I will put enmity Between you and the woman, And between your offspring and hers; They shall strike at your head, And you shall strike at their heel. And to the woman [God] said, I will greatly expand Your hard labor-and your pregnancies; In hardship shall you bear children. Yet your urge shall be for your husband, And he shall rule over you. To Adam [God] said, Because you did as your wife said and ate of the tree about which I commanded you, You shall not eat of it, Cursed be the ground because of you; By hard labor shall you eat of it All the days of your life: Thorns and thistles shall it sprout for you. But your food shall be the grasses of the field; By the sweat of your brow Shall you get bread to eat, Until you return to the ground- For from it you were taken. For dust. Cf. the second note at 2.7. you are, And to dust you shall return.
+
+HEBREW:
+ויאמר יהוה אלהיםאל הנחש כי עשית זאת ארור אתה מכל הבהמה ומכל חית השדה על גחנך תלך ועפר תאכל כל ימי חייך: ואיבה אשית בינך ובין האשה ובין זרעך ובין זרעה הוא ישופך ראש ואתה תשופנו עקב: אל האשה אמר הרבה ארבה עצבונך והרנך בעצב תלדי בנים ואל אישך תשוקתך והוא ימשל בך: ולאדם אמר כי שמעת לקול אשתך ותאכל מן העץ אשר צויתיך לאמר לא תאכל ממנו ארורה האדמה בעבורך בעצבון תאכלנה כל ימי חייך: וקוץ ודרדר תצמיח לך ואכלת את עשב השדה: בזעת אפיך תאכל לחם עד שובך אל האדמה כי ממנה לקחת כי עפר אתה ואל עפר תשוב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60c011460404dfc3f29",
+      "display_heb_name": "אדם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa60d011460404dfc3f2a",
+      "display_heb_name": "אדמה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa60d011460404dfc3f2b",
+      "display_heb_name": "שדה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa60d011460404dfc3f2c",
+      "display_heb_name": "עפר"
+    },
+    {
+      "key": "6a5fa60d011460404dfc3f2d",
+      "display_heb_name": "עשב"
+    },
+    {
+      "key": "6a5fa60e011460404dfc3f2e",
+      "display_heb_name": "לחם"
+    },
+    {
+      "key": "6a5fa60e011460404dfc3f2f",
+      "display_heb_name": "קוץ"
+    },
+    {
+      "key": "6a5fa60e011460404dfc3f30",
+      "display_heb_name": "דרדר"
+    }
+  ]
+}

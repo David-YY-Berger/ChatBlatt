@@ -1,0 +1,63 @@
+﻿COST: Tokens: Total=5622 approx cost=$0.001009 (Prompt=3011, Completion=2611)
+SOURCE:
+Bereishit (Torah) 24:18-32
+
+ENTITIES TO ENRICH (9):
+{"key":"6a5fa67d011460404dfc4117","display_en_name":"the man","display_heb_name":"","all_en_names":["The Man"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67e011460404dfc4119","display_en_name":"rebekah's mother's household","display_heb_name":"","all_en_names":["Rebekah's Mother's Household"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67e011460404dfc411a","display_en_name":"the entourage","display_heb_name":"","all_en_names":["The Entourage"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67e011460404dfc411b","display_en_name":"trough","display_heb_name":"","all_en_names":["Trough"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67e011460404dfc411c","display_en_name":"0.5","display_heb_name":"","all_en_names":["0.5"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"shekel","en_context":"gold nose-ring weight"}
+{"key":"6a5fa67f011460404dfc411d","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"shekel","en_context":"gold arm-bands weight"}
+{"key":"6a5fa67f011460404dfc411e","display_en_name":"straw","display_heb_name":"","all_en_names":["Straw"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa67f011460404dfc411f","display_en_name":"feed","display_heb_name":"","all_en_names":["Feed"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa67f011460404dfc4120","display_en_name":"straw","display_heb_name":"","all_en_names":["Straw"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Drink, my lord, she said, and she quickly lowered her jar upon her hand and let him drink. When she had let him drink his fill, she said, I will also draw for your camels, until they finish drinking. Quickly emptying her jar into the trough, she ran back to the well to draw, and she drew for all his camels. The man,; Agent. meanwhile, stood gazing at her, silently wondering whether HASHEM had made his errand successful or not. When the camels had finished drinking, the man took a gold nose-ring weighing a half-shekel,. and two gold bands for her arms, ten shekels in weight. Pray tell me, he said, whose daughter are you? Is there room in your fathers house for us to spend the night? She replied, I am the daughter of Bethuel the son of Milcah, whom she bore to Nahor. And she went on, There is plenty of straw, shredded straw, which in the East is mixed with feed; cf. v. 32. and feed at home, and also room to spend the night. The man bowed low in homage to HASHEM and said, Blessed be HASHEM, the God of my master Abrahams [house], who has not withheld steadfast faithfulness from my master. For I have been guided on my errand by HASHEM, to the house of my masters kin. The maiden ran and told all this to her mothers household. Now Rebekah had a brother whose name was Laban. Laban ran out to the man at the spring- when he saw the nose-ring and the bands on his sisters arms, and when he heard his sister Rebekah say, Thus the man spoke to me. He went up to the man, who was still standing beside the camels at the spring. Come in, O blessed of HASHEM, he said, why do you remain outside, when I have made ready the house and a place for the camels? So the man entered the house, and the camels were unloaded. The camels were given straw and feed, and water was brought to bathe his feet and the feet of the entourage. under him.
+
+HEBREW:
+ותאמר שתה אדני ותמהר ותרד כדה על ידה ותשקהו: ותכל להשקתו ותאמר גם לגמליך אשאב עד אם כלו לשתת: ותמהר ותער כדה אל השקת ותרץ עוד אל הבאר לשאב ותשאב לכל גמליו: והאיש משתאה לה מחריש לדעת ההצליח יהוה דרכו אם לא: ויהי כאשר כלו הגמלים לשתות ויקח האיש נזם זהב בקע משקלו ושני צמידים על ידיה עשרה זהב משקלם: ויאמר בת מי את הגידי נא לי היש בית אביך מקום לנו ללין: ותאמר אליו בת בתואל אנכי בן מלכה אשר ילדה לנחור: ותאמר אליו גם תבן גם מספוא רב עמנו גם מקום ללון: ויקד האיש וישתחו ליהוה: ויאמר ברוך יהוה אלהי אדני אברהם אשר לא עזב חסדו ואמתו מעם אדני אנכי בדרך נחני יהוה בית אחי אדני: ותרץ הנער ותגד לבית אמה כדברים האלה: ולרבקה אח ושמו לבן וירץ לבן אל האיש החוצה אל העין: ויהי כראת את הנזם ואת הצמדים על ידי אחתו וכשמעו את דברי רבקה אחתו לאמר כה דבר אלי האיש ויבא אל האיש והנה עמד על הגמלים על העין: ויאמר בוא ברוך יהוה למה תעמד בחוץ ואנכי פניתי הבית ומקום לגמלים: ויבא האיש הביתה ויפתח הגמלים ויתן תבן ומספוא לגמלים ומים לרחץ רגליו ורגלי האנשים אשר אתו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67d011460404dfc4117",
+      "display_heb_name": "האיש",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa67e011460404dfc4119",
+      "display_heb_name": "בית אמה",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa67e011460404dfc411a",
+      "display_heb_name": "האנשים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa67e011460404dfc411b",
+      "display_heb_name": "השקת",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa67e011460404dfc411c",
+      "display_heb_name": "בקע",
+      "heb_unit": "שקל",
+      "heb_context": "משקל נזם זהב"
+    },
+    {
+      "key": "6a5fa67f011460404dfc411d",
+      "display_heb_name": "עשרה",
+      "heb_unit": "שקל",
+      "heb_context": "משקל צמידי זהב"
+    }
+  ]
+}

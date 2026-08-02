@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=3695 approx cost=$0.000649 (Prompt=2041, Completion=1654)
+SOURCE:
+Bereishit (Torah) 37:9-12
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa6c4011460404dfc424e","display_en_name":"the dreamer","display_heb_name":"","all_en_names":["The Dreamer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c4011460404dfc424f","display_en_name":"mother","display_heb_name":"","all_en_names":["Mother"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c4011460404dfc4250","display_en_name":"sun","display_heb_name":"","all_en_names":["Sun"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6c5011460404dfc4251","display_en_name":"moon","display_heb_name":"","all_en_names":["Moon"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6c5011460404dfc4252","display_en_name":"11","display_heb_name":"","all_en_names":["11"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"star","en_context":"brothers bowing"}
+
+PASSAGE:
+ENGLISH:
+He dreamed another dream and told it to his brothers, saying, Look, I have had another dream: And this time, the sun, the moon, and eleven stars were bowing down to me. And when he told it to his father and brothers, his father berated him. What, he said to him, is this dream you have dreamed? Are we to come, I and your mother and your brothers, and bow low to you to the ground? So his brothers were wrought up at him, and his father kept the matter in mind. One time, when his brothers had gone to pasture their fathers flock at Shechem,
+
+HEBREW:
+ויחלם עוד חלום אחר ויספר אתו לאחיו ויאמר הנה חלמתי חלום עוד והנה השמש והירח ואחד עשר כוכבים משתחוים לי: ויספר אל אביו ואל אחיו ויגער בו אביו ויאמר לו מה החלום הזה אשר חלמת הבוא נבוא אני ואמך ואחיך להשתחות לך ארצה: ויקנאו בו אחיו ואביו שמר את הדבר: וילכו אחיו לרעות את צאן אביהם בשכם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c4011460404dfc424e",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6c4011460404dfc424f",
+      "display_heb_name": "אמך",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa6c4011460404dfc4250",
+      "display_heb_name": "השמש",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6c5011460404dfc4251",
+      "display_heb_name": "הירח",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa6c5011460404dfc4252",
+      "display_heb_name": "אחד עשר",
+      "heb_unit": "כוכב",
+      "heb_context": "אחים משתחוים"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2363 approx cost=$0.000288 (Prompt=1871, Completion=492)
+SOURCE:
+Bereishit (Torah) 21:22-26
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa674011460404dfc40ef","display_en_name":"phicol","display_heb_name":"","all_en_names":["Phicol"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa675011460404dfc40f0","display_en_name":"servants of abimelech","display_heb_name":"","all_en_names":["Servants Of Abimelech"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+At that time Abimelech and Phicol, chief of his troops, said to Abraham, God is with you in everything that you do. Therefore swear to me here by God that you will not deal falsely with me or with my kith and kin, but will deal with me and with the land in which you have sojourned as loyally as I have dealt with you. And Abraham said, I swear it. Then Abraham reproached Abimelech for the well of water which the servants of Abimelech had seized. But Abimelech said, I do not know who did this; you did not tell me, nor have I heard of it until today.
+
+HEBREW:
+ויהי בעת ההוא ויאמר אבימלך ופיכל שר צבאו אל אברהם לאמר אלהים עמך בכל אשר אתה עשה: ועתה השבעה לי באלהים הנה אם תשקר לי ולניני ולנכדי כחסד אשר עשיתי עמך תעשה עמדי ועם הארץ אשר גרתה בה: ויאמר אברהם אנכי אשבע: והוכח אברהם את אבימלך על אדות באר המים אשר גזלו עבדי אבימלך: ויאמר אבימלך לא ידעתי מי עשה את הדבר הזה וגם אתה לא הגדת לי וגם אנכי לא שמעתי בלתי היום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa674011460404dfc40ef",
+      "display_heb_name": "פיכל",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa675011460404dfc40f0",
+      "display_heb_name": "עבדי אבימלך",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    }
+  ]
+}

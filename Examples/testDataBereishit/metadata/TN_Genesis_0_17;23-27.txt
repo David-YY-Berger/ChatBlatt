@@ -1,0 +1,62 @@
+﻿COST: Tokens: Total=4156 approx cost=$0.000724 (Prompt=2322, Completion=1834)
+SOURCE:
+Bereishit (Torah) 17:23-27
+
+ENTITIES TO ENRICH (7):
+{"key":"6a5fa665011460404dfc40aa","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abraham age","heb_unit":"שנה","heb_context":"גיל אברהם"}
+{"key":"6a5fa666011460404dfc40af","display_en_name":"homeborn slaves","display_heb_name":"","all_en_names":["Homeborn Slaves"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa666011460404dfc40b0","display_en_name":"those he had bought","display_heb_name":"","all_en_names":["Those He Had Bought"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa666011460404dfc40b1","display_en_name":"every male in abrahams household","display_heb_name":"","all_en_names":["Every Male In Abrahams Household"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa667011460404dfc40b2","display_en_name":"men of his household","display_heb_name":"","all_en_names":["Men Of His Household"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa667011460404dfc40b3","display_en_name":"outsiders","display_heb_name":"","all_en_names":["Outsiders"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa667011460404dfc40b4","display_en_name":"13","display_heb_name":"","all_en_names":["13"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"ishmael age"}
+
+PASSAGE:
+ENGLISH:
+Then Abraham took his son Ishmael, and all his homeborn slaves and all those he had bought, every male in Abrahams household, and he circumcised the flesh of their foreskins on that very day, as God had spoken to him. Abraham was ninety-nine years old when he circumcised the flesh of his foreskin, and his son Ishmael was thirteen years old when he was circumcised in the flesh of his foreskin. Thus Abraham and his son Ishmael were circumcised on that very day; and all [men of] his household, his homeborn slaves and those that had been bought from outsiders, were circumcised with him.
+
+HEBREW:
+ויקח אברהם את ישמעאל בנו ואת כל ילידי ביתו ואת כל מקנת כספו כל זכר באנשי בית אברהם וימל את בשר ערלתם בעצם היום הזה כאשר דבר אתו אלהים: ואברהם בן תשעים ותשע שנה בהמלו בשר ערלתו: וישמעאל בנו בן שלש עשרה שנה בהמלו את בשר ערלתו: בעצם היום הזה נמול אברהם וישמעאל בנו: וכל אנשי ביתו יליד בית ומקנת כסף מאת בן נכר נמלו אתו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa666011460404dfc40af",
+      "display_heb_name": "ילידי ביתו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa666011460404dfc40b0",
+      "display_heb_name": "מקנת כספו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa666011460404dfc40b1",
+      "display_heb_name": "כל זכר באנשי בית אברהם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa667011460404dfc40b2",
+      "display_heb_name": "אנשי ביתו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa667011460404dfc40b3",
+      "display_heb_name": "בן נכר",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa667011460404dfc40b4",
+      "display_heb_name": "שלש עשרה",
+      "heb_unit": "שנה",
+      "heb_context": "גיל ישמעאל"
+    }
+  ]
+}

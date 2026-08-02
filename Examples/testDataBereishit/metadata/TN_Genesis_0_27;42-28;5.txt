@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2317 approx cost=$0.000215 (Prompt=2133, Completion=184)
+SOURCE:
+Bereishit (Torah) 27:42-28:5
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa691011460404dfc4169","display_en_name":"el shaddai","display_heb_name":"","all_en_names":["El Shaddai"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+When the words of her older son Esau were reported to Rebekah, she sent for her younger son Jacob and said to him, Your brother Esau is consoling himself by planning to kill you. Now, my son, listen to me. Flee at once to Haran, to my brother Laban. Stay with him a while, until your brothers fury subsides- until your brothers anger against you subsides-and he forgets what you have done to him. Then I will fetch you from there. Let me not lose you both in one day! Rebekah said to Isaac, I am disgusted with my life because of the Hittite women. If Jacob marries a Hittite woman like these, from among the native women, what good will life be to me?So Isaac sent for Jacob and blessed him. He instructed him, saying, You shall not take a wife from among the Canaanite women. Up, go to Paddan-aram, to the house of Bethuel, your mothers father, and take a wife there from among the daughters of Laban, your mothers brother. May El Shaddai bless you, make you fertile and numerous, so that you become an assembly of peoples. May you and your offspring be granted the blessing of Abraham, that you may possess the land where you are sojourning, which God assigned to Abraham. Then Isaac sent Jacob off, and he went to Paddan-aram, to Laban the son of Bethuel the Aramean, the brother of Rebekah, mother of Jacob and Esau.
+
+HEBREW:
+ויגד לרבקה את דברי עשו בנה הגדל ותשלח ותקרא ליעקב בנה הקטן ותאמר אליו הנה עשו אחיך מתנחם לך להרגך: ועתה בני שמע בקלי וקום ברח לך אל לבן אחי חרנה: וישבת עמו ימים אחדים עד אשר תשוב חמת אחיך: עד שוב אף אחיך ממך ושכח את אשר עשית לו ושלחתי ולקחתיך משם למה אשכל גם שניכם יום אחד: ותאמר רבקה אל יצחק קצתי בחיי מפני בנות חת אם לקח יעקב אשה מבנות חת כאלה מבנות הארץ למה לי חיים:ויקרא יצחק אל יעקב ויברך אתו ויצוהו ויאמר לו לא תקח אשה מבנות כנען: קום לך פדנה ארם ביתה בתואל אבי אמך וקח לך משם אשה מבנות לבן אחי אמך: ואל שדי יברך אתך ויפרך וירבך והיית לקהל עמים: ויתן לך את ברכת אברהם לך ולזרעך אתך לרשתך את ארץ מגריך אשר נתן אלהים לאברהם: וישלח יצחק את יעקב וילך פדנה ארם אל לבן בן בתואל הארמי אחי רבקה אם יעקב ועשו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa691011460404dfc4169",
+      "display_heb_name": "אל שדי",
+      "timePeriod": "Tanach"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c8011460404dfc425f",
+            "display_heb_name": "חירה",
+            "timePeriod": "Tanach",
+            "display_en_name": "hirah"
+        },
+        {
+            "key": "6a5fa6c9011460404dfc4260",
+            "display_heb_name": "שוע",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "shua"
+        },
+        {
+            "key": "6a5fa6ca011460404dfc4264",
+            "display_heb_name": "כזיב",
+            "placeType": "City",
+            "display_en_name": "chezib"
+        }
+    ],
+    "key": "TN_Genesis_0_38:1-6"
+}

@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa673011460404dfc40e8",
+            "display_heb_name": "אלף",
+            "heb_unit": "כסף",
+            "heb_context": "כסות עינים לשרה",
+            "display_en_name": "1000"
+        }
+    ],
+    "key": "TN_Genesis_0_20:14-18"
+}

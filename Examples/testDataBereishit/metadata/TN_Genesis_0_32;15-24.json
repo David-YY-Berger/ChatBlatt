@@ -1,0 +1,84 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa675011460404dfc40f3",
+            "display_heb_name": "רחלים",
+            "display_en_name": "ewe"
+        },
+        {
+            "key": "6a5fa6a6011460404dfc41c6",
+            "display_heb_name": "נשיו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "wives"
+        },
+        {
+            "key": "6a5fa6a6011460404dfc41c7",
+            "display_heb_name": "שפחתיו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "maidservants"
+        },
+        {
+            "key": "6a5fa6a7011460404dfc41c8",
+            "display_heb_name": "יבק",
+            "placeType": "Body of Water",
+            "display_en_name": "jabbok"
+        },
+        {
+            "key": "6a5fa6a7011460404dfc41c9",
+            "display_heb_name": "מאתים",
+            "heb_unit": "עז",
+            "heb_context": "מנחה לעשו",
+            "display_en_name": "200"
+        },
+        {
+            "key": "6a5fa6a7011460404dfc41ca",
+            "display_heb_name": "שלשים",
+            "heb_unit": "גמל",
+            "heb_context": "מנחה לעשו",
+            "display_en_name": "30"
+        },
+        {
+            "key": "6a5fa6a7011460404dfc41cb",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "פרה",
+            "heb_context": "מנחה לעשו",
+            "display_en_name": "40"
+        },
+        {
+            "key": "6a5fa6a7011460404dfc41cc",
+            "display_heb_name": "עשרה",
+            "heb_unit": "פר",
+            "heb_context": "מנחה לעשו",
+            "display_en_name": "10"
+        },
+        {
+            "key": "6a5fa6a8011460404dfc41cd",
+            "display_heb_name": "שתי",
+            "heb_unit": "אשה",
+            "heb_context": "משפחת יעקב",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa6a8011460404dfc41ce",
+            "display_heb_name": "אחד עשר",
+            "heb_unit": "בן",
+            "heb_context": "משפחת יעקב",
+            "display_en_name": "11"
+        },
+        {
+            "key": "6a5fa6a8011460404dfc41cf",
+            "display_heb_name": "פרה",
+            "display_en_name": "cow"
+        },
+        {
+            "key": "6a5fa6a8011460404dfc41d0",
+            "display_heb_name": "פר",
+            "display_en_name": "bull"
+        }
+    ],
+    "key": "TN_Genesis_0_32:15-24"
+}

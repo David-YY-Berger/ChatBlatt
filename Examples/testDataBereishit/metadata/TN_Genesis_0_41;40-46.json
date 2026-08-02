@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d9011460404dfc429e",
+            "display_heb_name": "צפנת פענח",
+            "timePeriod": "Tanach",
+            "display_en_name": "zaphenath-paneah"
+        },
+        {
+            "key": "6a5fa6da011460404dfc42a0",
+            "heb_unit": "שנה",
+            "heb_context": "גיל יוסף",
+            "display_en_name": "30"
+        }
+    ],
+    "key": "TN_Genesis_0_41:40-46"
+}

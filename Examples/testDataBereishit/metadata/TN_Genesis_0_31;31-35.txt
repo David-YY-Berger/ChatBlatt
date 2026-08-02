@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2238 approx cost=$0.000259 (Prompt=1833, Completion=405)
+SOURCE:
+Bereishit (Torah) 31:31-35
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6a2011460404dfc41b1","display_en_name":"idols","display_heb_name":"","all_en_names":["Idols"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Jacob answered Laban, saying, I was afraid because I thought you would take your daughters from me by force. But anyone with whom you find your gods shall not remain alive! In the presence of our kin, point out what I have of yours and take it. Jacob, of course, did not know that Rachel had stolen them. So Laban went into Jacobs tent and Leahs tent and the tents of the two maidservants; but he did not find them. Leaving Leahs tent, he entered Rachels tent. Rachel, meanwhile, had taken the idols and placed them in the camel cushion and sat on them; and Laban rummaged through the tent without finding them. For she said to her father, Let not my lord take it amiss that I cannot rise before you, for I am in a womanly way. Thus he searched, but could not find the household idols.
+
+HEBREW:
+ויען יעקב ויאמר ללבן כי יראתי כי אמרתי פן תגזל את בנותיך מעמי: עם אשר תמצא את אלהיך לא יחיה נגד אחינו הכר לך מה עמדי וקח לך ולא ידע יעקב כי רחל גנבתם: ויבא לבן באהל יעקב ובאהל לאה ובאהל שתי האמהת ולא מצא ויצא מאהל לאה ויבא באהל רחל: ורחל לקחה את התרפים ותשמם בכר הגמל ותשב עליהם וימשש לבן את כל האהל ולא מצא: ותאמר אל אביה אל יחר בעיני אדני כי לוא אוכל לקום מפניך כי דרך נשים לי ויחפש ולא מצא את התרפים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a2011460404dfc41b1",
+      "display_heb_name": "התרפים",
+      "symbolType": "Holy Object"
+    }
+  ]
+}

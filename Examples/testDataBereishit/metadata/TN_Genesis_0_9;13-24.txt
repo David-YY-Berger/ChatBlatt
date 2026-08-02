@@ -1,0 +1,40 @@
+﻿COST: Tokens: Total=3215 approx cost=$0.000448 (Prompt=2297, Completion=918)
+SOURCE:
+Bereishit (Torah) 9:13-24
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa629011460404dfc3fa6","display_en_name":"canaan","display_heb_name":"","all_en_names":["Canaan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa629011460404dfc3fa7","display_en_name":"bow","display_heb_name":"","all_en_names":["Bow"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa62a011460404dfc3fa8","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"noah sons"}
+{"key":"6a5fa62a011460404dfc3fa9","display_en_name":"wine","display_heb_name":"","all_en_names":["Wine"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+I have set My bow in the clouds, and it shall serve as a sign of the covenant between Me and the earth. When I bring clouds over the earth, and the bow appears in the clouds, I will remember My covenant between Me and you and every living creature among all flesh, so that the waters shall never again become a flood to destroy all flesh. When the bow is in the clouds, I will see it and remember the everlasting covenant between God and all living creatures, all flesh that is on earth. That, God said to Noah, shall be the sign of the covenant that I have established between Me and all flesh that is on earth. The sons of Noah who came out of the ark were Shem, Ham, and Japheth-Ham being the father of Canaan. These three were the sons of Noah, and from these the whole world branched out. Noah, the tiller of the soil, was the first to plant a vineyard. He drank of the wine and became drunk, and he uncovered himself within his tent. Ham, the father of Canaan, saw his fathers nakedness and told his two brothers outside. But Shem and Japheth took a cloth, placed it against both their backs and, walking backward, they covered their fathers nakedness; their faces were turned the other way, so that they did not see their fathers nakedness. When Noah woke up from his wine and learned what his youngest son had done to him,
+
+HEBREW:
+את קשתי נתתי בענן והיתה לאות ברית ביני ובין הארץ: והיה בענני ענן על הארץ ונראתה הקשת בענן: וזכרתי את בריתי אשר ביני וביניכם ובין כל נפש חיה בכל בשר ולא יהיה עוד המים למבול לשחת כל בשר: והיתה הקשת בענן וראיתיה לזכר ברית עולם בין אלהים ובין כל נפש חיה בכל בשר אשר על הארץ: ויאמר אלהים אל נח זאת אות הברית אשר הקמתי ביני ובין כל בשר אשר על הארץ: ויהיו בני נח היצאים מן התבה שם וחם ויפת וחם הוא אבי כנען: שלשה אלה בני נח ומאלה נפצה כל הארץ: ויחל נח איש האדמה ויטע כרם: וישת מן היין וישכר ויתגל בתוך אהלה: וירא חם אבי כנען את ערות אביו ויגד לשני אחיו בחוץ: ויקח שם ויפת את השמלה וישימו על שכם שניהם וילכו אחרנית ויכסו את ערות אביהם ופניהם אחרנית וערות אביהם לא ראו: וייקץ נח מיינו וידע את אשר עשה לו בנו הקטן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa629011460404dfc3fa6",
+      "display_heb_name": "כנען",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa629011460404dfc3fa7",
+      "display_heb_name": "קשת",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa62a011460404dfc3fa8",
+      "display_heb_name": "שלשה",
+      "heb_unit": "בן",
+      "heb_context": "בני נח"
+    }
+  ]
+}

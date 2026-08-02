@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=5202 approx cost=$0.000941 (Prompt=2753, Completion=2449)
+SOURCE:
+Bereishit (Torah) 31:44-32:3
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa6a3011460404dfc41b8","display_en_name":"yegar-sahadutha","display_heb_name":"","all_en_names":["Yegar-Sahadutha"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a3011460404dfc41b9","display_en_name":"gal-ed","display_heb_name":"","all_en_names":["Gal-Ed"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a4011460404dfc41ba","display_en_name":"mizpah","display_heb_name":"","all_en_names":["Mizpah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a4011460404dfc41bb","display_en_name":"height","display_heb_name":"","all_en_names":["Height"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a4011460404dfc41bc","display_en_name":"mahanaim","display_heb_name":"","all_en_names":["Mahanaim"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a4011460404dfc41bd","display_en_name":"mound","display_heb_name":"","all_en_names":["Mound"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6a4011460404dfc41be","display_en_name":"meal","display_heb_name":"","all_en_names":["Meal"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6a5011460404dfc41bf","display_en_name":"sacrifice","display_heb_name":"","all_en_names":["Sacrifice"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Come, then, let us make a pact, you and I, that there may be a witness between you and me. Thereupon Jacob took a stone and set it up as a pillar. And Jacob said to his kinsmen, Gather stones. So they took stones and made a mound; and they partook of a meal there by the mound. Laban named it Yegar-sahadutha, but Jacob named it Gal-ed. And Laban declared, This mound is a witness between you and me this day. That is why it was named Gal-ed; and [it was called] Mizpah, because he said, May HASHEM watch, associated with Mizpah . between you and me, when we are out of sight of each other. If you ill-treat my daughters or take other wives besides my daughters-though no one else. be about, remember, it is God who will be witness between you and me. And Laban said to Jacob, Here is this mound and here the pillar which I have set up between you and me: this mound shall be witness and this pillar shall be witness that I am not to cross to you past this mound, and that you are not to cross to me past this mound and this pillar, with hostile intent. May the God of Abrahams [house] and the god of Nahors [house]-their ancestral deities-judge between us. And Jacob swore by the Fear uncertain. of his father Isaacs [house]. Jacob then offered up a sacrifice on the Height, and invited his kinsmen to partake of the meal. After the meal, they spent the night on the Height.Early in the morning, Laban kissed his sons and daughters and bade them good-by; then Laban left on his journey homeward. Jacob went on his way, and messengers of God encountered him. When he saw them, Jacob said, This is Gods camp. So he named that place Mahanaim. camp.
+
+HEBREW:
+ועתה לכה נכרתה ברית אני ואתה והיה לעד ביני ובינך: ויקח יעקב אבן וירימה מצבה: ויאמר יעקב לאחיו לקטו אבנים ויקחו אבנים ויעשו גל ויאכלו שם על הגל: ויקרא לו לבן יגר שהדותא ויעקב קרא לו גלעד: ויאמר לבן הגל הזה עד ביני ובינך היום על כן קרא שמו גלעד: והמצפה אשר אמר יצף יהוה ביני ובינך כי נסתר איש מרעהו: אם תענה את בנתי ואם תקח נשים על בנתי אין איש עמנו ראה אלהים עד ביני ובינך: ויאמר לבן ליעקב הנה הגל הזה והנה המצבה אשר יריתי ביני ובינך: עד הגל הזה ועדה המצבה אם אני לא אעבר אליך את הגל הזה ואם אתה לא תעבר אלי את הגל הזה ואת המצבה הזאת לרעה: אלהי אברהם ואלהי נחור ישפטו בינינו אלהי אביהם וישבע יעקב בפחד אביו יצחק: ויזבח יעקב זבח בהר ויקרא לאחיו לאכל לחם ויאכלו לחם וילינו בהר:וישכם לבן בבקר וינשק לבניו ולבנותיו ויברך אתהם וילך וישב לבן למקמו: ויעקב הלך לדרכו ויפגעו בו מלאכי אלהים: ויאמר יעקב כאשר ראם מחנה אלהים זה ויקרא שם המקום ההוא מחנים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a3011460404dfc41b8",
+      "display_heb_name": "יגר שהדותא",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6a3011460404dfc41b9",
+      "display_heb_name": "גלעד",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6a4011460404dfc41ba",
+      "display_heb_name": "מצפה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa6a4011460404dfc41bb",
+      "display_heb_name": "הר",
+      "placeType": "Mountain"
+    },
+    {
+      "key": "6a5fa6a4011460404dfc41bc",
+      "display_heb_name": "מחנים",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6a4011460404dfc41bd",
+      "display_heb_name": "גל",
+      "symbolType": "Other"
+    }
+  ]
+}

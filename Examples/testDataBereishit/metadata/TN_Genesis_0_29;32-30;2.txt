@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2741 approx cost=$0.000391 (Prompt=1918, Completion=823)
+SOURCE:
+Bereishit (Torah) 29:32-30:2
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa699011460404dfc4189","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"leah sons to levi"}
+
+PASSAGE:
+ENGLISH:
+Leah conceived and bore a son, and named him Reuben; for she declared, It means: HASHEM has seen, connected with the first part of Reuben. my affliction; it also means: Now my husband will love me., connected with the end of Reuben. She conceived again and bore a son, and declared, This is because HASHEM heard, connected with Simeon. that I was unloved and has given me this one also; so she named him Simeon. Again she conceived and bore a son and declared, This time my husband will become attached, connected with Levi. to me, for I have borne him three sons. Therefore he was named Levi. She conceived again and bore a son, and declared, This time I will praise, connected with Judah. HASHEM. Therefore she named him Judah. Then she stopped bearing.When Rachel saw that she had borne Jacob no children, she became envious of her sister; and Rachel said to Jacob, Give me children, or I shall die. Jacob was incensed at Rachel, and said, Can I take the place of God, who has denied you fruit of the womb?
+
+HEBREW:
+ותהר לאה ותלד בן ותקרא שמו ראובן כי אמרה כי ראה יהוה בעניי כי עתה יאהבני אישי: ותהר עוד ותלד בן ותאמר כי שמע יהוה כי שנואה אנכי ויתן לי גם את זה ותקרא שמו שמעון: ותהר עוד ותלד בן ותאמר עתה הפעם ילוה אישי אלי כי ילדתי לו שלשה בנים על כן קרא שמו לוי: ותהר עוד ותלד בן ותאמר הפעם אודה את יהוה על כן קראה שמו יהודה ותעמד מלדת:ותרא רחל כי לא ילדה ליעקב ותקנא רחל באחתה ותאמר אל יעקב הבה לי בנים ואם אין מתה אנכי: ויחר אף יעקב ברחל ויאמר התחת אלהים אנכי אשר מנע ממך פרי בטן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa699011460404dfc4189",
+      "display_heb_name": "שלשה",
+      "heb_unit": "בן",
+      "heb_context": "לאה בנים ללוי"
+    }
+  ]
+}

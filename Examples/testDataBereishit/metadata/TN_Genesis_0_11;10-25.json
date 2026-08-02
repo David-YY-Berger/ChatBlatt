@@ -1,0 +1,135 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa644011460404dfc401a",
+            "display_heb_name": "רעו",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "reu"
+        },
+        {
+            "key": "6a5fa644011460404dfc401b",
+            "display_heb_name": "שרוג",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "serug"
+        },
+        {
+            "key": "6a5fa644011460404dfc401c",
+            "display_heb_name": "נחור",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "nahor"
+        },
+        {
+            "key": "6a5fa645011460404dfc401d",
+            "display_heb_name": "תרח",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "terah"
+        },
+        {
+            "key": "6a5fa645011460404dfc401e",
+            "display_heb_name": "מאת",
+            "heb_unit": "שנה",
+            "heb_context": "גיל שם בלידת בנו",
+            "display_en_name": "100"
+        },
+        {
+            "key": "6a5fa645011460404dfc401f",
+            "display_heb_name": "שנתים",
+            "heb_unit": "שנה",
+            "heb_context": "אחרי המבול",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa645011460404dfc4020",
+            "display_heb_name": "חמש מאות",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של שם אחרי לידת בנו",
+            "display_en_name": "500"
+        },
+        {
+            "key": "6a5fa645011460404dfc4021",
+            "display_heb_name": "חמש ושלשים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל ארפכשד בלידת בנו",
+            "display_en_name": "35"
+        },
+        {
+            "key": "6a5fa646011460404dfc4022",
+            "display_heb_name": "שלש שנים וארבע מאות",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של ארפכשד אחרי לידת בנו",
+            "display_en_name": "403"
+        },
+        {
+            "key": "6a5fa646011460404dfc4023",
+            "display_heb_name": "שלשים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל שלח בלידת בנו",
+            "display_en_name": "30"
+        },
+        {
+            "key": "6a5fa646011460404dfc4024",
+            "display_heb_name": "ארבע ושלשים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל עבר בלידת בנו",
+            "display_en_name": "34"
+        },
+        {
+            "key": "6a5fa646011460404dfc4025",
+            "display_heb_name": "שלשים שנה וארבע מאות",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של עבר אחרי לידת בנו",
+            "display_en_name": "430"
+        },
+        {
+            "key": "6a5fa647011460404dfc4026",
+            "display_heb_name": "תשע שנים ומאתים",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של פלג אחרי לידת בנו",
+            "display_en_name": "209"
+        },
+        {
+            "key": "6a5fa647011460404dfc4027",
+            "display_heb_name": "שתים ושלשים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל רעו בלידת בנו",
+            "display_en_name": "32"
+        },
+        {
+            "key": "6a5fa647011460404dfc4028",
+            "display_heb_name": "שבע שנים ומאתים",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של רעו אחרי לידת בנו",
+            "display_en_name": "207"
+        },
+        {
+            "key": "6a5fa647011460404dfc4029",
+            "display_heb_name": "מאתים",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של שרוג אחרי לידת בנו",
+            "display_en_name": "200"
+        },
+        {
+            "key": "6a5fa648011460404dfc402a",
+            "display_heb_name": "תשע ועשרים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל נחור בלידת בנו",
+            "display_en_name": "29"
+        },
+        {
+            "key": "6a5fa648011460404dfc402b",
+            "display_heb_name": "תשע עשרה שנה ומאת",
+            "heb_unit": "שנה",
+            "heb_context": "תוחלת החיים של נחור אחרי לידת בנו",
+            "display_en_name": "119"
+        }
+    ],
+    "key": "TN_Genesis_0_11:10-25"
+}

@@ -1,0 +1,219 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa62a011460404dfc3faa",
+            "display_heb_name": "גמר",
+            "timePeriod": "Tanach",
+            "display_en_name": "gomer"
+        },
+        {
+            "key": "6a5fa62a011460404dfc3fab",
+            "display_heb_name": "מגוג",
+            "timePeriod": "Tanach",
+            "display_en_name": "magog"
+        },
+        {
+            "key": "6a5fa62b011460404dfc3fac",
+            "display_heb_name": "מדי",
+            "timePeriod": "Tanach",
+            "display_en_name": "madai"
+        },
+        {
+            "key": "6a5fa62b011460404dfc3fad",
+            "display_heb_name": "יון",
+            "timePeriod": "Tanach",
+            "display_en_name": "javan"
+        },
+        {
+            "key": "6a5fa62b011460404dfc3fae",
+            "display_heb_name": "תבל",
+            "timePeriod": "Tanach",
+            "display_en_name": "tubal"
+        },
+        {
+            "key": "6a5fa62b011460404dfc3faf",
+            "display_heb_name": "משך",
+            "timePeriod": "Tanach",
+            "display_en_name": "meshech"
+        },
+        {
+            "key": "6a5fa62c011460404dfc3fb0",
+            "display_heb_name": "תירס",
+            "timePeriod": "Tanach",
+            "display_en_name": "tiras"
+        },
+        {
+            "key": "6a5fa62c011460404dfc3fb1",
+            "display_heb_name": "אשכנז",
+            "timePeriod": "Tanach",
+            "display_en_name": "ashkenaz"
+        },
+        {
+            "key": "6a5fa62c011460404dfc3fb2",
+            "display_heb_name": "ריפת",
+            "timePeriod": "Tanach",
+            "display_en_name": "riphath"
+        },
+        {
+            "key": "6a5fa62c011460404dfc3fb3",
+            "display_heb_name": "תגרמה",
+            "timePeriod": "Tanach",
+            "display_en_name": "togarmah"
+        },
+        {
+            "key": "6a5fa62c011460404dfc3fb4",
+            "display_heb_name": "אלישה",
+            "timePeriod": "Tanach",
+            "display_en_name": "elishah"
+        },
+        {
+            "key": "6a5fa62d011460404dfc3fb5",
+            "display_heb_name": "תרשיש",
+            "timePeriod": "Tanach",
+            "display_en_name": "tarshish"
+        },
+        {
+            "key": "6a5fa62d011460404dfc3fb6",
+            "display_heb_name": "כתים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "kittim"
+        },
+        {
+            "key": "6a5fa62d011460404dfc3fb7",
+            "display_heb_name": "דדנים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "dodanim"
+        },
+        {
+            "key": "6a5fa62d011460404dfc3fb8",
+            "display_heb_name": "כוש",
+            "timePeriod": "Tanach",
+            "display_en_name": "cush"
+        },
+        {
+            "key": "6a5fa62e011460404dfc3fb9",
+            "display_heb_name": "מצרים",
+            "timePeriod": "Tanach",
+            "display_en_name": "mizraim"
+        },
+        {
+            "key": "6a5fa62e011460404dfc3fba",
+            "display_heb_name": "פוט",
+            "timePeriod": "Tanach",
+            "display_en_name": "put"
+        },
+        {
+            "key": "6a5fa62e011460404dfc3fbb",
+            "display_heb_name": "סבא",
+            "timePeriod": "Tanach",
+            "display_en_name": "seba"
+        },
+        {
+            "key": "6a5fa62e011460404dfc3fbd",
+            "display_heb_name": "סבתה",
+            "timePeriod": "Tanach",
+            "display_en_name": "sabtah"
+        },
+        {
+            "key": "6a5fa62f011460404dfc3fbe",
+            "display_heb_name": "רעמה",
+            "timePeriod": "Tanach",
+            "display_en_name": "raamah"
+        },
+        {
+            "key": "6a5fa62f011460404dfc3fbf",
+            "display_heb_name": "סבתכא",
+            "timePeriod": "Tanach",
+            "display_en_name": "sabteca"
+        },
+        {
+            "key": "6a5fa62f011460404dfc3fc1",
+            "display_heb_name": "דדן",
+            "timePeriod": "Tanach",
+            "display_en_name": "dedan"
+        },
+        {
+            "key": "6a5fa630011460404dfc3fc2",
+            "display_heb_name": "נמרד",
+            "timePeriod": "Tanach",
+            "display_en_name": "nimrod"
+        },
+        {
+            "key": "6a5fa630011460404dfc3fc3",
+            "display_heb_name": "כתים",
+            "display_en_name": "kittim"
+        },
+        {
+            "key": "6a5fa630011460404dfc3fc4",
+            "display_heb_name": "דדנים",
+            "display_en_name": "dodanim"
+        },
+        {
+            "key": "6a5fa630011460404dfc3fc5",
+            "display_heb_name": "כוש",
+            "display_en_name": "cush"
+        },
+        {
+            "key": "6a5fa630011460404dfc3fc6",
+            "display_heb_name": "מצרים",
+            "display_en_name": "mizraim"
+        },
+        {
+            "key": "6a5fa631011460404dfc3fc7",
+            "display_heb_name": "פוט",
+            "display_en_name": "put"
+        },
+        {
+            "key": "6a5fa631011460404dfc3fc9",
+            "display_heb_name": "סבא",
+            "display_en_name": "seba"
+        },
+        {
+            "key": "6a5fa631011460404dfc3fca",
+            "display_heb_name": "חוילה",
+            "display_en_name": "havilah"
+        },
+        {
+            "key": "6a5fa632011460404dfc3fcb",
+            "display_heb_name": "סבתה",
+            "display_en_name": "sabtah"
+        },
+        {
+            "key": "6a5fa632011460404dfc3fcc",
+            "display_heb_name": "רעמה",
+            "display_en_name": "raamah"
+        },
+        {
+            "key": "6a5fa632011460404dfc3fcd",
+            "display_heb_name": "סבתכא",
+            "display_en_name": "sabteca"
+        },
+        {
+            "key": "6a5fa632011460404dfc3fce",
+            "display_heb_name": "שבא",
+            "display_en_name": "sheba"
+        },
+        {
+            "key": "6a5fa632011460404dfc3fcf",
+            "display_heb_name": "דדן",
+            "display_en_name": "dedan"
+        },
+        {
+            "key": "6a5fa633011460404dfc3fd0",
+            "display_heb_name": "שלש מאות וחמשים",
+            "heb_unit": "שנה",
+            "heb_context": "נח אחר המבול",
+            "display_en_name": "350"
+        },
+        {
+            "key": "6a5fa633011460404dfc3fd1",
+            "display_heb_name": "תשע מאות וחמשים",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי נח",
+            "display_en_name": "950"
+        }
+    ],
+    "key": "TN_Genesis_0_9:28-10:8"
+}

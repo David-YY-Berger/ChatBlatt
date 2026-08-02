@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2484 approx cost=$0.000304 (Prompt=1960, Completion=524)
+SOURCE:
+Bereishit (Torah) 41:47-53
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6db011460404dfc42a5","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"years of plenty"}
+{"key":"6a5fa6db011460404dfc42a6","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"joseph's children"}
+
+PASSAGE:
+ENGLISH:
+During the seven years of plenty, the land produced in abundance. And he gathered all the grain of the seven years that the land of Egypt was enjoying, and stored the grain in the cities; he put in each city the grain of the fields around it. So Joseph collected produce in very large quantity, like the sands of the sea, until he ceased to measure it, for it could not be measured. Before the years of famine came, Joseph became the father of two sons, whom Asenath daughter of Poti-phera, priest of On, bore to him. Joseph named the first-born Manasseh, meaning, God has made me forget, connected with Manasseh ( Menashsheh ). completely my hardship and my parental home. And the second he named Ephraim, meaning, God has made me fertile, connected with Ephraim. in the land of my affliction. The seven years of abundance that the land of Egypt enjoyed came to an end,
+
+HEBREW:
+ותעש הארץ בשבע שני השבע לקמצים: ויקבץ את כל אכל שבע שנים אשר היו בארץ מצרים ויתן אכל בערים אכל שדה העיר אשר סביבתיה נתן בתוכה: ויצבר יוסף בר כחול הים הרבה מאד עד כי חדל לספר כי אין מספר: וליוסף ילד שני בנים בטרם תבוא שנת הרעב אשר ילדה לו אסנת בת פוטי פרע * (בספרי תימן פוטיפרע בתיבה אחת) כהן און: ויקרא יוסף את שם הבכור מנשה כי נשני אלהים את כל עמלי ואת כל בית אבי: ואת שם השני קרא אפרים כי הפרני אלהים בארץ עניי: ותכלינה שבע שני השבע אשר היה בארץ מצרים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6db011460404dfc42a5",
+      "display_heb_name": "שבע",
+      "heb_unit": "שנה",
+      "heb_context": "שני השבע"
+    },
+    {
+      "key": "6a5fa6db011460404dfc42a6",
+      "display_heb_name": "שני",
+      "heb_unit": "בן",
+      "heb_context": "בנים"
+    }
+  ]
+}

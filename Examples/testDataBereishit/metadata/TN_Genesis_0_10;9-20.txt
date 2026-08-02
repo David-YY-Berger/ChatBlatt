@@ -1,0 +1,237 @@
+﻿COST: Tokens: Total=10406 approx cost=$0.002115 (Prompt=4473, Completion=5933)
+SOURCE:
+Bereishit (Torah) 10:9-20
+
+ENTITIES TO ENRICH (31):
+{"key":"6a5fa633011460404dfc3fd3","display_en_name":"sidon","display_heb_name":"","all_en_names":["Sidon"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa634011460404dfc3fd4","display_en_name":"heth","display_heb_name":"","all_en_names":["Heth"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa634011460404dfc3fd5","display_en_name":"jebusites","display_heb_name":"","all_en_names":["Jebusites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa634011460404dfc3fd6","display_en_name":"amorites","display_heb_name":"","all_en_names":["Amorites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa634011460404dfc3fd7","display_en_name":"girgashites","display_heb_name":"","all_en_names":["Girgashites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa635011460404dfc3fd8","display_en_name":"hivites","display_heb_name":"","all_en_names":["Hivites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa635011460404dfc3fd9","display_en_name":"arkites","display_heb_name":"","all_en_names":["Arkites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa635011460404dfc3fda","display_en_name":"sinites","display_heb_name":"","all_en_names":["Sinites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa635011460404dfc3fdb","display_en_name":"arvadites","display_heb_name":"","all_en_names":["Arvadites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa635011460404dfc3fdc","display_en_name":"zemarites","display_heb_name":"","all_en_names":["Zemarites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa636011460404dfc3fdd","display_en_name":"hamathites","display_heb_name":"","all_en_names":["Hamathites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa636011460404dfc3fde","display_en_name":"ludim","display_heb_name":"","all_en_names":["Ludim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa636011460404dfc3fdf","display_en_name":"anamim","display_heb_name":"","all_en_names":["Anamim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa636011460404dfc3fe0","display_en_name":"lehabim","display_heb_name":"","all_en_names":["Lehabim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa637011460404dfc3fe1","display_en_name":"naphtuhim","display_heb_name":"","all_en_names":["Naphtuhim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa637011460404dfc3fe2","display_en_name":"pathrusim","display_heb_name":"","all_en_names":["Pathrusim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa638011460404dfc3fe3","display_en_name":"casluhim","display_heb_name":"","all_en_names":["Casluhim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa638011460404dfc3fe4","display_en_name":"caphtorim","display_heb_name":"","all_en_names":["Caphtorim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa638011460404dfc3fe5","display_en_name":"philistines","display_heb_name":"","all_en_names":["Philistines"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa638011460404dfc3fe6","display_en_name":"babylon","display_heb_name":"","all_en_names":["Babylon"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa638011460404dfc3fe7","display_en_name":"erech","display_heb_name":"","all_en_names":["Erech"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa639011460404dfc3fe8","display_en_name":"accad","display_heb_name":"","all_en_names":["Accad"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa639011460404dfc3fe9","display_en_name":"calneh","display_heb_name":"","all_en_names":["Calneh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa639011460404dfc3feb","display_en_name":"nineveh","display_heb_name":"","all_en_names":["Nineveh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63a011460404dfc3fec","display_en_name":"rehoboth-ir","display_heb_name":"","all_en_names":["Rehoboth-Ir"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63a011460404dfc3fed","display_en_name":"calah","display_heb_name":"","all_en_names":["Calah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63a011460404dfc3fee","display_en_name":"resen","display_heb_name":"","all_en_names":["Resen"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63a011460404dfc3fef","display_en_name":"gerar","display_heb_name":"","all_en_names":["Gerar"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63a011460404dfc3ff0","display_en_name":"gaza","display_heb_name":"","all_en_names":["Gaza"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63c011460404dfc3ff5","display_en_name":"lasha","display_heb_name":"","all_en_names":["Lasha"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa63c011460404dfc3ff6","display_en_name":"philistia","display_heb_name":"","all_en_names":["Philistia"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+He was a mighty hunter by the grace of HASHEM; hence the saying, Like Nimrod a mighty hunter by the grace of HASHEM. The mainstays of his kingdom were Babylon, Erech, Accad, and Calneh, better vocalized we-khullanah all of them being. in the land of Shinar. From that land Asshur went forth and built Nineveh, Rehoboth-ir, Calah, and Resen between Nineveh and Calah, that is the great city. And Mizraim begot the Ludim, the Anamim, the Lehabim, the Naphtuhim, the Pathrusim, the Casluhim, and the Caphtorim, whence the Philistines came forth. Canaan begot Sidon, his first-born, and Heth; and the Jebusites, the Amorites, the Girgashites, the Hivites, the Arkites, the Sinites, the Arvadites, the Zemarites, and the Hamathites. Afterward the clans of the Canaanites spread out. (The [original] Canaanite territory extended from Sidon as far as Gerar, near Gaza, and as far as Sodom, Gomorrah, Admah, and Zeboiim, near Lasha.) These are the descendants of Ham, according to their clans and languages, by their lands and nations.
+
+HEBREW:
+הוא היה גבר ציד לפני יהוה על כן יאמר כנמרד גבור ציד לפני יהוה: ותהי ראשית ממלכתו בבל וארך ואכד וכלנה בארץ שנער: מן הארץ ההוא יצא אשור ויבן את נינוה ואת רחבת עיר ואת כלח: ואת רסן בין נינוה ובין כלח הוא העיר הגדלה: ומצרים ילד את לודים ואת ענמים ואת להבים ואת נפתחים: ואת פתרסים ואת כסלחים אשר יצאו משם פלשתים ואת כפתרים: וכנען ילד את צידן בכרו ואת חת: ואת היבוסי ואת האמרי ואת הגרגשי: ואת החוי ואת הערקי ואת הסיני: ואת הארודי ואת הצמרי ואת החמתי ואחר נפצו משפחות הכנעני: ויהי גבול הכנעני מצידן באכה גררה עד עזה באכה סדמה ועמרה ואדמה וצבים עד לשע: אלה בני חם למשפחתם ללשנתם בארצתם בגויהם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa633011460404dfc3fd3",
+      "display_heb_name": "צידן",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa634011460404dfc3fd4",
+      "display_heb_name": "חת",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa634011460404dfc3fd5",
+      "display_heb_name": "יבוסי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa634011460404dfc3fd6",
+      "display_heb_name": "אמרי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa634011460404dfc3fd7",
+      "display_heb_name": "גרגשי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa635011460404dfc3fd8",
+      "display_heb_name": "חוי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa635011460404dfc3fd9",
+      "display_heb_name": "ערקי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa635011460404dfc3fda",
+      "display_heb_name": "סיני",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa635011460404dfc3fdb",
+      "display_heb_name": "ארודי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa635011460404dfc3fdc",
+      "display_heb_name": "צמרי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa636011460404dfc3fdd",
+      "display_heb_name": "חמתי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa636011460404dfc3fde",
+      "display_heb_name": "לודים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa636011460404dfc3fdf",
+      "display_heb_name": "ענמים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa636011460404dfc3fe0",
+      "display_heb_name": "להבים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa637011460404dfc3fe1",
+      "display_heb_name": "נפתחים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa637011460404dfc3fe2",
+      "display_heb_name": "פתרסים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa638011460404dfc3fe3",
+      "display_heb_name": "כסלחים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa638011460404dfc3fe4",
+      "display_heb_name": "כפתרים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa638011460404dfc3fe5",
+      "display_heb_name": "פלשתים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa638011460404dfc3fe6",
+      "display_heb_name": "בבל",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa638011460404dfc3fe7",
+      "display_heb_name": "ארך",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa639011460404dfc3fe8",
+      "display_heb_name": "אכד",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa639011460404dfc3fe9",
+      "display_heb_name": "כלנה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa639011460404dfc3feb",
+      "display_heb_name": "נינוה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63a011460404dfc3fec",
+      "display_heb_name": "רחבת עיר",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63a011460404dfc3fed",
+      "display_heb_name": "כלח",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63a011460404dfc3fee",
+      "display_heb_name": "רסן",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63a011460404dfc3fef",
+      "display_heb_name": "גררה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63a011460404dfc3ff0",
+      "display_heb_name": "עזה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa63c011460404dfc3ff5",
+      "display_heb_name": "לשע",
+      "placeType": "City"
+    }
+  ]
+}

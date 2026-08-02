@@ -1,0 +1,44 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d7011460404dfc4296",
+            "display_heb_name": "עבדים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "courtiers"
+        },
+        {
+            "key": "6a5fa6d8011460404dfc4297",
+            "display_heb_name": "פרה טובה",
+            "symbolType": "Part of Nature",
+            "display_en_name": "healthy cow"
+        },
+        {
+            "key": "6a5fa6d8011460404dfc4298",
+            "display_heb_name": "שבולה טובה",
+            "symbolType": "Part of Nature",
+            "display_en_name": "healthy ear"
+        },
+        {
+            "key": "6a5fa6d8011460404dfc4299",
+            "display_heb_name": "פרה רקה ורעה",
+            "symbolType": "Part of Nature",
+            "display_en_name": "lean and ugly cow"
+        },
+        {
+            "key": "6a5fa6d8011460404dfc429a",
+            "display_heb_name": "שבולה רקה",
+            "symbolType": "Part of Nature",
+            "display_en_name": "empty ear"
+        },
+        {
+            "key": "6a5fa6d9011460404dfc429b",
+            "display_heb_name": "שבע",
+            "heb_unit": "שנה",
+            "heb_context": "שני שבע",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_41:25-39"
+}

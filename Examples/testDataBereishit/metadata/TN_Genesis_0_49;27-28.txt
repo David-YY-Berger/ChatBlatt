@@ -1,0 +1,26 @@
+﻿COST: Tokens: Total=2062 approx cost=$0.000243 (Prompt=1669, Completion=393)
+SOURCE:
+Bereishit (Torah) 49:27-28
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6f8011460404dfc431c","display_en_name":"12","display_heb_name":"","all_en_names":["12"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"tribe","en_context":"tribes of israel"}
+{"key":"6a5fa6f9011460404dfc431d","display_en_name":"wolf","display_heb_name":"","all_en_names":["Wolf"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Benjamin is a ravenous wolf; In the morning he consumes the foe, uncertain; others booty. And in the evening he divides the spoil. All these were the tribes of Israel, twelve in number, and this is what their father said to them as he bade them farewell, addressing to each a parting word appropriate to him.
+
+HEBREW:
+בנימין זאב יטרף בבקר יאכל עד ולערב יחלק שלל: כל אלה שבטי ישראל שנים עשר וזאת אשר דבר להם אביהם ויברך אותם איש אשר כברכתו ברך אתם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f8011460404dfc431c",
+      "display_heb_name": "שנים עשר",
+      "heb_unit": "שבט",
+      "heb_context": "שבטי ישראל"
+    }
+  ]
+}

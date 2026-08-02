@@ -1,0 +1,41 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa611011460404dfc3f3d",
+            "display_heb_name": "עירד",
+            "timePeriod": "Tanach",
+            "display_en_name": "irad"
+        },
+        {
+            "key": "6a5fa611011460404dfc3f3e",
+            "display_heb_name": "מחויאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "mehujael"
+        },
+        {
+            "key": "6a5fa611011460404dfc3f3f",
+            "display_heb_name": "מתושאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "methusael"
+        },
+        {
+            "key": "6a5fa612011460404dfc3f40",
+            "display_heb_name": "למך",
+            "timePeriod": "Tanach",
+            "display_en_name": "lamech"
+        },
+        {
+            "key": "6a5fa612011460404dfc3f41",
+            "display_heb_name": "עיר",
+            "placeType": "City",
+            "display_en_name": "city"
+        },
+        {
+            "key": "6a5fa612011460404dfc3f42",
+            "display_heb_name": "חנוך",
+            "placeType": "City",
+            "display_en_name": "enoch"
+        }
+    ],
+    "key": "TN_Genesis_0_4:17-18"
+}

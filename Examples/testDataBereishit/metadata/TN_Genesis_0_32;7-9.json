@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a5011460404dfc41c3",
+            "display_heb_name": "ארבע מאות",
+            "heb_unit": "איש",
+            "heb_context": "איש עמו",
+            "display_en_name": "400"
+        },
+        {
+            "key": "6a5fa6a6011460404dfc41c4",
+            "display_heb_name": "שני",
+            "heb_unit": "מחנה",
+            "heb_context": "מחנות",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_32:7-9"
+}

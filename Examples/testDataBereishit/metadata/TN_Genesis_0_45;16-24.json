@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e6011460404dfc42d2",
+            "display_heb_name": "שלש מאות",
+            "heb_unit": "כסף",
+            "heb_context": "מתנה לבנימן",
+            "display_en_name": "300"
+        },
+        {
+            "key": "6a5fa6e6011460404dfc42d3",
+            "display_heb_name": "עשרה",
+            "heb_unit": "חמור",
+            "heb_context": "מתנה לאביו",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_45:16-24"
+}

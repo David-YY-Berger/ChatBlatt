@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=4492 approx cost=$0.000820 (Prompt=2347, Completion=2145)
+SOURCE:
+Bereishit (Torah) 40:1-8
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa6d0011460404dfc427a","display_en_name":"the cupbearer","display_heb_name":"","all_en_names":["The Cupbearer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d1011460404dfc427b","display_en_name":"the baker","display_heb_name":"","all_en_names":["The Baker"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d1011460404dfc427c","display_en_name":"the prefect","display_heb_name":"","all_en_names":["The Prefect"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d1011460404dfc427d","display_en_name":"the house of the prefect","display_heb_name":"","all_en_names":["The House Of The Prefect"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d1011460404dfc427e","display_en_name":"the prison house","display_heb_name":"","all_en_names":["The Prison House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d2011460404dfc427f","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"courtier","en_context":"pharaoh's courtiers"}
+
+PASSAGE:
+ENGLISH:
+Some time later, the cupbearer and the baker of the king of Egypt gave offense to their lord the king of Egypt. Pharaoh was angry with his two courtiers, the chief cupbearer and the chief baker, and put them in custody, in the house of the prefect, in the same prison house where Joseph was confined. The prefect assigned Joseph to them, and he attended them. When they had been in custody for some time, both of them-the cupbearer and the baker of the king of Egypt, who were confined in the prison-dreamed in the same night, each his own dream and each dream with its own meaning. When Joseph came to them in the morning, he saw that they were distraught. He asked Pharaohs courtiers, who were with him in custody in his masters house, saying, Why do you appear downcast today? And they said to him, We had dreams, and there is no one to interpret them. So Joseph said to them, Surely God can interpret! Tell me [your dreams].
+
+HEBREW:
+ויהי אחר הדברים האלה חטאו משקה מלך מצרים והאפה לאדניהם למלך מצרים: ויקצף פרעה על שני סריסיו על שר המשקים ועל שר האופים: ויתן אתם במשמר בית שר הטבחים אל בית הסהר מקום אשר יוסף אסור שם: ויפקד שר הטבחים את יוסף אתם וישרת אתם ויהיו ימים במשמר: ויחלמו חלום שניהם איש חלמו בלילה אחד איש כפתרון חלמו המשקה והאפה אשר למלך מצרים אשר אסורים בבית הסהר: ויבא אליהם יוסף בבקר וירא אתם והנם זעפים: וישאל את סריסי פרעה אשר אתו במשמר בית אדניו לאמר מדוע פניכם רעים היום: ויאמרו אליו חלום חלמנו ופתר אין אתו ויאמר אלהם יוסף הלוא לאלהים פתרנים ספרו נא לי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d0011460404dfc427a",
+      "display_heb_name": "המשקה",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6d1011460404dfc427b",
+      "display_heb_name": "האפה",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6d1011460404dfc427c",
+      "display_heb_name": "שר הטבחים",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6d1011460404dfc427d",
+      "display_heb_name": "בית שר הטבחים",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6d1011460404dfc427e",
+      "display_heb_name": "בית הסהר",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6d2011460404dfc427f",
+      "heb_unit": "סריס",
+      "heb_context": "סריסי פרעה"
+    }
+  ]
+}

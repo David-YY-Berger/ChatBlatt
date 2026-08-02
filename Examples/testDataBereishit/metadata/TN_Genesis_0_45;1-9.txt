@@ -1,0 +1,45 @@
+﻿COST: Tokens: Total=3238 approx cost=$0.000449 (Prompt=2322, Completion=916)
+SOURCE:
+Bereishit (Torah) 45:1-9
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6e5011460404dfc42cd","display_en_name":"attendants","display_heb_name":"","all_en_names":["Attendants"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6e5011460404dfc42ce","display_en_name":"pharaoh's palace","display_heb_name":"","all_en_names":["Pharaoh's Palace"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e5011460404dfc42cf","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"famine duration"}
+{"key":"6a5fa6e5011460404dfc42d0","display_en_name":"5","display_heb_name":"","all_en_names":["5"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"famine remaining"}
+
+PASSAGE:
+ENGLISH:
+Joseph could no longer control himself before all his attendants, and he cried out, Have everyone withdraw from me! So there was no one else about when Joseph made himself known to his brothers. His sobs were so loud that the Egyptians could hear, and so the news reached Pharaohs palace. Joseph said to his brothers, I am Joseph. Is my father still well? But his brothers could not answer him, so dumbfounded were they on account of him. Then Joseph said to his brothers, Come forward to me. And when they came forward, he said, I am your brother Joseph, he whom you sold into Egypt. Now, do not be distressed or reproach yourselves because you sold me hither; it was to save life that God sent me ahead of you. It is now two years that there has been famine in the land, and there are still five years to come in which there shall be no yield from tilling. God has sent me ahead of you to ensure your survival on earth, and to save your lives in an extraordinary deliverance. So, it was not you who sent me here, but God-who has made me a father to Pharaoh,. lord of all his household, and ruler over the whole land of Egypt. Now, hurry back to my father and say to him: Thus says your son Joseph, God has made me lord of all Egypt; come down to me without delay.
+
+HEBREW:
+ולא יכל יוסף להתאפק לכל הנצבים עליו ויקרא הוציאו כל איש מעלי ולא עמד איש אתו בהתודע יוסף אל אחיו: ויתן את קלו בבכי וישמעו מצרים וישמע בית פרעה: ויאמר יוסף אל אחיו אני יוסף העוד אבי חי ולא יכלו אחיו לענות אתו כי נבהלו מפניו: ויאמר יוסף אל אחיו גשו נא אלי ויגשו ויאמר אני יוסף אחיכם אשר מכרתם אתי מצרימה: ועתה אל תעצבו ואל יחר בעיניכם כי מכרתם אתי הנה כי למחיה שלחני אלהים לפניכם: כי זה שנתים הרעב בקרב הארץ ועוד חמש שנים אשר אין חריש וקציר: וישלחני אלהים לפניכם לשום לכם שארית בארץ ולהחיות לכם לפליטה גדלה: ועתה לא אתם שלחתם אתי הנה כי האלהים וישימני לאב לפרעה ולאדון לכל ביתו ומשל בכל ארץ מצרים: מהרו ועלו אל אבי ואמרתם אליו כה אמר בנך יוסף שמני אלהים לאדון לכל מצרים רדה אלי אל תעמד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e5011460404dfc42cd",
+      "display_heb_name": "הנצבים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6e5011460404dfc42ce",
+      "display_heb_name": "בית פרעה",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6e5011460404dfc42cf",
+      "display_heb_name": "שנתים",
+      "heb_unit": "שנה",
+      "heb_context": "הרעב בקרב הארץ"
+    },
+    {
+      "key": "6a5fa6e5011460404dfc42d0",
+      "display_heb_name": "חמש",
+      "heb_unit": "שנה",
+      "heb_context": "שנים אשר אין חריש וקציר"
+    }
+  ]
+}

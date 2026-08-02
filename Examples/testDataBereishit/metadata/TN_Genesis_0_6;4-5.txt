@@ -1,0 +1,54 @@
+﻿COST: Tokens: Total=3432 approx cost=$0.000583 (Prompt=1984, Completion=1448)
+SOURCE:
+Bereishit (Torah) 6:4-5
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa61d011460404dfc3f71","display_en_name":"nephilim","display_heb_name":"","all_en_names":["Nephilim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61d011460404dfc3f72","display_en_name":"divine beings","display_heb_name":"","all_en_names":["Divine Beings"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61d011460404dfc3f73","display_en_name":"human women","display_heb_name":"","all_en_names":["Human Women"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61d011460404dfc3f74","display_en_name":"heroes of old","display_heb_name":"","all_en_names":["Heroes Of Old"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61e011460404dfc3f75","display_en_name":"men of renown","display_heb_name":"","all_en_names":["Men Of Renown"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+It was then, and later too, that the Nephilim appeared on earth-when divine beings cohabited with the human women, who bore them offspring. Such were the heroes of old, the men of renown. HASHEM saw how great was human wickedness on earth-how every plan devised by the human mind was nothing but evil all the time.
+
+HEBREW:
+הנפלים היו בארץ בימים ההם וגם אחרי כן אשר יבאו בני האלהים אל בנות האדם וילדו להם המה הגברים אשר מעולם אנשי השם: וירא יהוה כי רבה רעת האדם בארץ וכל יצר מחשבת לבו רק רע כל היום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa61d011460404dfc3f71",
+      "display_heb_name": "הנפלים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61d011460404dfc3f72",
+      "display_heb_name": "בני האלהים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61d011460404dfc3f73",
+      "display_heb_name": "בנות האדם",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61d011460404dfc3f74",
+      "display_heb_name": "הגברים אשר מעולם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61e011460404dfc3f75",
+      "display_heb_name": "אנשי השם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿COST: Tokens: Total=3507 approx cost=$0.000559 (Prompt=2192, Completion=1315)
+SOURCE:
+Bereishit (Torah) 26:1-10
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa63c011460404dfc3ff6","display_en_name":"philistia","display_heb_name":"","all_en_names":["Philistia"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+There was a famine in the land-aside from the previous famine that had occurred in the days of Abraham-and Isaac went to Abimelech, king of the Philistines, in Gerar. HASHEM had appeared to him and said, Do not go down to Egypt; stay in the land which I point out to you. Reside in this land, and I will be with you and bless you; I will assign all these lands to you and to your heirs, fulfilling the oath that I swore to your father Abraham. I will make your heirs as numerous as the stars of heaven, and assign to your heirs all these lands, so that all the nations of the earth shall bless themselves by your heirs- inasmuch as Abraham obeyed Me and kept My charge: My commandments, My laws, and My teachings. So Isaac stayed in Gerar. When the local leaders; NJPS the men of the place. Cf., e.g., Gen. 34.20; Judg. 8.15-17. See the Dictionary under ish . asked him about his wife, he said, She is my sister, for he was afraid to say my wife, thinking, The local leaders might kill me on account of Rebekah, for she is beautiful. When some time had passed, Abimelech king of the Philistines, looking out of the window, saw Isaac fondling his wife Rebekah. Abimelech sent for Isaac and said, So she is your wife! Why then did you say: She is my sister? Isaac said to him, Because I thought I might lose my life on account of her. Abimelech said, What have you done to us! One of the men. might have lain with your wife, and you would have brought guilt upon us.
+
+HEBREW:
+ויהי רעב בארץ מלבד הרעב הראשון אשר היה בימי אברהם וילך יצחק אל אבימלך מלך פלשתים גררה: וירא אליו יהוה ויאמר אל תרד מצרימה שכן בארץ אשר אמר אליך: גור בארץ הזאת ואהיה עמך ואברכך כי לך ולזרעך אתן את כל הארצת האל והקמתי את השבעה אשר נשבעתי לאברהם אביך: והרביתי את זרעך ככוכבי השמים ונתתי לזרעך את כל הארצת האל והתברכו בזרעך כל גויי הארץ: עקב אשר שמע אברהם בקלי וישמר משמרתי מצותי חקותי ותורתי: וישב יצחק בגרר: וישאלו אנשי המקום לאשתו ויאמר אחתי הוא כי ירא לאמר אשתי פן יהרגני אנשי המקום על רבקה כי טובת מראה הוא: ויהי כי ארכו לו שם הימים וישקף אבימלך מלך פלשתים בעד החלון וירא והנה יצחק מצחק את רבקה אשתו: ויקרא אבימלך ליצחק ויאמר אך הנה אשתך הוא ואיך אמרת אחתי הוא ויאמר אליו יצחק כי אמרתי פן אמות עליה: ויאמר אבימלך מה זאת עשית לנו כמעט שכב אחד העם את אשתך והבאת עלינו אשם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa63c011460404dfc3ff6",
+      "placeType": "Country or Region"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa663011460404dfc40a3",
+            "display_heb_name": "ברד",
+            "placeType": "City",
+            "display_en_name": "bered"
+        },
+        {
+            "key": "6a5fa663011460404dfc40a4",
+            "display_heb_name": "באר לחי ראי",
+            "placeType": "Body of Water",
+            "display_en_name": "beer-lahai-roi"
+        },
+        {
+            "key": "6a5fa664011460404dfc40a5",
+            "display_heb_name": "אל ראי",
+            "symbolType": "Not Physical",
+            "display_en_name": "el-roi"
+        },
+        {
+            "key": "6a5fa664011460404dfc40a6",
+            "display_heb_name": "שמנים ושש",
+            "heb_unit": "שנה",
+            "heb_context": "גיל אברם",
+            "display_en_name": "86"
+        }
+    ],
+    "key": "TN_Genesis_0_16:11-16"
+}

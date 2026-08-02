@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=4367 approx cost=$0.000720 (Prompt=2621, Completion=1746)
+SOURCE:
+Bereishit (Torah) 19:4-9
+
+ENTITIES TO ENRICH (9):
+{"key":"6a5fa66d011460404dfc40ce","display_en_name":"town council","display_heb_name":"","all_en_names":["Town Council"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66d011460404dfc40cf","display_en_name":"militia of sodom","display_heb_name":"","all_en_names":["Militia Of Sodom"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66e011460404dfc40d0","display_en_name":"townspeople","display_heb_name":"","all_en_names":["Townspeople"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66e011460404dfc40d1","display_en_name":"men of sodom","display_heb_name":"","all_en_names":["Men Of Sodom"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66e011460404dfc40d2","display_en_name":"daughters","display_heb_name":"","all_en_names":["Daughters"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66e011460404dfc40d3","display_en_name":"visitors","display_heb_name":"","all_en_names":["Visitors"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66e011460404dfc40d4","display_en_name":"house","display_heb_name":"","all_en_names":["House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa66f011460404dfc40d5","display_en_name":"entrance","display_heb_name":"","all_en_names":["Entrance"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa66f011460404dfc40d6","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"daughter","en_context":"lot's family"}
+
+PASSAGE:
+ENGLISH:
+They had not yet lain down, when the town council [and] the militia of Sodom; NJPS the townspeople, the men of Sodom, trad. the men of the city, the men of Sodom. -insignificant and influential alike,. See the Dictionary under naar and elders. the whole assembly without exception-gathered about the house. And they shouted to Lot and said to him, Where are the ones. who came to you tonight? Bring them out to us, that we may be intimate with them. So Lot went out to them to the entrance, shut the door behind him, and said, I beg you, my friends, do not commit such a wrong. Look, I have two daughters who have not known a man. Let me bring them out to you, and you may do to them as you please; but do not do anything to the others, since they have come under the shelter of my roof. But they said, Stand back! The fellow, they said, came here as an alien, and already he acts the ruler! Now we will deal worse with you than with them. And they pressed hard against that householder; NJPS against the person [of Lot], trad. upon the man. See the Dictionary under ish . -against Lot-and moved forward to break the door.
+
+HEBREW:
+טרם ישכבו ואנשי העיר אנשי סדם נסבו על הבית מנער ועד זקן כל העם מקצה: ויקראו אל לוט ויאמרו לו איה האנשים אשר באו אליך הלילה הוציאם אלינו ונדעה אתם: ויצא אלהם לוט הפתחה והדלת סגר אחריו: ויאמר אל נא אחי תרעו: הנה נא לי שתי בנות אשר לא ידעו איש אוציאה נא אתהן אליכם ועשו להן כטוב בעיניכם רק לאנשים האל אל תעשו דבר כי על כן באו בצל קרתי: ויאמרו גש הלאה ויאמרו האחד בא לגור וישפט שפוט עתה נרע לך מהם ויפצרו באיש בלוט מאד ויגשו לשבר הדלת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66d011460404dfc40ce",
+      "display_heb_name": "אנשי העיר",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66d011460404dfc40cf",
+      "display_heb_name": "אנשי סדם",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66e011460404dfc40d0",
+      "display_heb_name": "אנשי העיר",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66e011460404dfc40d1",
+      "display_heb_name": "אנשי סדם",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66e011460404dfc40d2",
+      "display_heb_name": "בנות",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66e011460404dfc40d3",
+      "display_heb_name": "האנשים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66e011460404dfc40d4",
+      "display_heb_name": "הבית",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa66f011460404dfc40d5",
+      "display_heb_name": "הפתחה",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa66f011460404dfc40d6",
+      "display_heb_name": "שתי",
+      "heb_unit": "בת",
+      "heb_context": "משפחת לוט"
+    }
+  ]
+}

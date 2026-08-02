@@ -1,0 +1,43 @@
+﻿COST: Tokens: Total=2861 approx cost=$0.000359 (Prompt=2218, Completion=643)
+SOURCE:
+Bereishit (Torah) 24:4-11
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa67c011460404dfc4112","display_en_name":"aram-naharaim","display_heb_name":"","all_en_names":["Aram-Naharaim"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67c011460404dfc4113","display_en_name":"nahor","display_heb_name":"","all_en_names":["Nahor"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67d011460404dfc4114","display_en_name":"well","display_heb_name":"","all_en_names":["Well"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67d011460404dfc4115","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"camel","en_context":"servant took camels"}
+
+PASSAGE:
+ENGLISH:
+but will go to the land of my birth and get a wife for my son Isaac. And the servant said to him, What if the woman does not consent to follow me to this land, shall I then take your son back to the land from which you came? Abraham answered him, On no account must you take my son back there! HASHEM, the God of heaven-who took me from my fathers house and from my native land, who promised me on oath, saying, I will assign this land to your offspring-will send a messenger before you, and you will get a wife for my son from there. And if the woman does not consent to follow you, you shall then be clear of this oath to me; but do not take my son back there. So the servant put his hand under the thigh of his master Abraham and swore to him as bidden. Then the servant took ten of his masters camels and set out, taking with him all the bounty of his master; and he made his way to Aram-naharaim, to the city of Nahor. He made the camels kneel down by the well outside the city, at evening time, the time when women come out to draw water.
+
+HEBREW:
+כי אל ארצי ואל מולדתי תלך ולקחת אשה לבני ליצחק: ויאמר אליו העבד אולי לא תאבה האשה ללכת אחרי אל הארץ הזאת ההשב אשיב את בנך אל הארץ אשר יצאת משם: ויאמר אליו אברהם השמר לך פן תשיב את בני שמה: יהוה אלהי השמים אשר לקחני מבית אבי ומארץ מולדתי ואשר דבר לי ואשר נשבע לי לאמר לזרעך אתן את הארץ הזאת הוא ישלח מלאכו לפניך ולקחת אשה לבני משם: ואם לא תאבה האשה ללכת אחריך ונקית משבעתי זאת רק את בני לא תשב שמה: וישם העבד את ידו תחת ירך אברהם אדניו וישבע לו על הדבר הזה: ויקח העבד עשרה גמלים מגמלי אדניו וילך וכל טוב אדניו בידו ויקם וילך אל ארם נהרים אל עיר נחור: ויברך הגמלים מחוץ לעיר אל באר המים לעת ערב לעת צאת השאבת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67c011460404dfc4112",
+      "display_heb_name": "ארם נהרים",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa67c011460404dfc4113",
+      "display_heb_name": "נחור",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa67d011460404dfc4114",
+      "display_heb_name": "באר המים",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa67d011460404dfc4115",
+      "display_heb_name": "עשרה",
+      "heb_unit": "גמל",
+      "heb_context": "העבד לקח גמלים"
+    }
+  ]
+}

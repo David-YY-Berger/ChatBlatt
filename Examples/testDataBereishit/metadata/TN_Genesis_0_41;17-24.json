@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d6011460404dfc4290",
+            "display_heb_name": "אחו",
+            "display_en_name": "reed grass"
+        },
+        {
+            "key": "6a5fa6d6011460404dfc4291",
+            "display_heb_name": "קנה",
+            "display_en_name": "stalk"
+        },
+        {
+            "key": "6a5fa6d7011460404dfc4294",
+            "display_heb_name": "חרטמים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "magician-priests"
+        },
+        {
+            "key": "6a5fa6d7011460404dfc4295",
+            "display_heb_name": "שבע",
+            "heb_unit": "פרה",
+            "heb_context": "חלום פרעה",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_41:17-24"
+}

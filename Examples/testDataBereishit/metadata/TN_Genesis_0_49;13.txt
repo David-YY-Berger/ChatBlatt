@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1693 approx cost=$0.000168 (Prompt=1510, Completion=183)
+SOURCE:
+Bereishit (Torah) 49:13
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f7011460404dfc4316","display_en_name":"sidon","display_heb_name":"","all_en_names":["Sidon"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Zebulun shall dwell by the seashore; He shall be a haven for ships, And his flank shall rest on Sidon.
+
+HEBREW:
+זבולן לחוף ימים ישכן והוא לחוף אנית וירכתו על צידן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f7011460404dfc4316",
+      "display_heb_name": "צידן",
+      "placeType": "City"
+    }
+  ]
+}

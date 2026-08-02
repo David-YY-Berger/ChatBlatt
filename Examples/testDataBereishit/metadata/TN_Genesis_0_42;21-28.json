@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6dc011460404dfc42ab",
+            "display_heb_name": "שבר",
+            "display_en_name": "ration"
+        },
+        {
+            "key": "6a5fa6dd011460404dfc42af",
+            "display_heb_name": "מלון",
+            "placeType": "Other",
+            "display_en_name": "night encampment"
+        },
+        {
+            "key": "6a5fa6de011460404dfc42b0",
+            "display_heb_name": "אחד",
+            "heb_unit": "איש",
+            "heb_context": "אחד מהאחים",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_42:21-28"
+}

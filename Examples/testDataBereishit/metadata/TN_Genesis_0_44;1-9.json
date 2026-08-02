@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e3011460404dfc42c5",
+            "display_heb_name": "הקטן",
+            "timePeriod": "Tanach",
+            "display_en_name": "youngest one"
+        },
+        {
+            "key": "6a5fa6e3011460404dfc42c6",
+            "display_heb_name": "ארץ כנען",
+            "placeType": "Country or Region",
+            "display_en_name": "land of canaan"
+        },
+        {
+            "key": "6a5fa6e3011460404dfc42c7",
+            "display_heb_name": "גביע הכסף",
+            "symbolType": "Holy Object",
+            "display_en_name": "silver goblet"
+        }
+    ],
+    "key": "TN_Genesis_0_44:1-9"
+}

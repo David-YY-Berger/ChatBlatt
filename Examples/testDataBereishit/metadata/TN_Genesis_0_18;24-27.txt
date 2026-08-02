@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=2398 approx cost=$0.000304 (Prompt=1848, Completion=550)
+SOURCE:
+Bereishit (Torah) 18:24-27
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa66b011460404dfc40c5","display_en_name":"judge of all the earth","display_heb_name":"","all_en_names":["Judge Of All The Earth"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66b011460404dfc40c6","display_en_name":"50","display_heb_name":"","all_en_names":["50"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"person","en_context":"sodom's innocent"}
+
+PASSAGE:
+ENGLISH:
+What if there should be fifty innocent within the city; will You then wipe out the place and not forgive it for the sake of the innocent fifty who are in it? Far be it from You to do such a thing, to bring death upon the innocent as well as the guilty, so that innocent and guilty fare alike. Far be it from You! Shall not the Judge of all the earth deal justly? And HASHEM answered, If I find within the city of Sodom fifty innocent ones, I will forgive the whole place for their sake. Abraham spoke up, saying, Here I venture to speak to my lord, I who am but dust and ashes:
+
+HEBREW:
+אולי יש חמשים צדיקם בתוך העיר האף תספה ולא תשא למקום למען חמשים הצדיקם אשר בקרבה: חללה לך מעשת כדבר הזה להמית צדיק עם רשע והיה כצדיק כרשע חללה לך השפט כל הארץ לא יעשה משפט: ויאמר יהוה אם אמצא בסדם חמשים צדיקם בתוך העיר ונשאתי לכל המקום בעבורם: ויען אברהם ויאמר הנה נא הואלתי לדבר אל אדני ואנכי עפר ואפר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66b011460404dfc40c5",
+      "display_heb_name": "השפט כל הארץ",
+      "timePeriod": "Tanach",
+      "roles": [
+        "Judge"
+      ]
+    },
+    {
+      "key": "6a5fa66b011460404dfc40c6",
+      "display_heb_name": "חמשים",
+      "heb_unit": "אדם",
+      "heb_context": "צדיקי סדם"
+    }
+  ]
+}

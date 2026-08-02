@@ -1,0 +1,26 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64b011460404dfc403a",
+            "display_heb_name": "מורה",
+            "placeType": "Other",
+            "display_en_name": "moreh"
+        },
+        {
+            "key": "6a5fa64b011460404dfc403b",
+            "display_heb_name": "שבעים וחמש",
+            "heb_unit": "שנה",
+            "heb_context": "גיל אברם",
+            "display_en_name": "75"
+        },
+        {
+            "key": "6a5fa64b011460404dfc4038",
+            "display_heb_name": "הכנעני",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "canaanites"
+        }
+    ],
+    "key": "TN_Genesis_0_12:4-6"
+}

@@ -1,0 +1,13 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f9011460404dfc4320",
+            "display_heb_name": "בית פרעה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "pharaoh's court"
+        }
+    ],
+    "key": "TN_Genesis_0_50:4-6"
+}

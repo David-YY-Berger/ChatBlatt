@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2495 approx cost=$0.000346 (Prompt=1788, Completion=707)
+SOURCE:
+Bereishit (Torah) 25:19-22
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa642011460404dfc4012","display_en_name":"aram","display_heb_name":"","all_en_names":["Aram"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa689011460404dfc4147","display_en_name":"40","display_heb_name":"","all_en_names":["40"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"isaac's age"}
+
+PASSAGE:
+ENGLISH:
+This is the story of Isaac, son of Abraham. Abraham begot Isaac. Isaac was forty years old when he took to wife Rebekah, daughter of Bethuel the Aramean of Paddan-aram, sister of Laban the Aramean. Isaac pleaded with HASHEM on behalf of his wife, because she was barren; and HASHEM responded to his plea, and his wife Rebekah conceived. But the children struggled in her womb, and she said, If so, why do I exist? She went to inquire of HASHEM,
+
+HEBREW:
+ואלה תולדת יצחק בן אברהם אברהם הוליד את יצחק: ויהי יצחק בן ארבעים שנה בקחתו את רבקה בת בתואל הארמי מפדן ארם אחות לבן הארמי לו לאשה: ויעתר יצחק ליהוה לנכח אשתו כי עקרה הוא ויעתר לו יהוה ותהר רבקה אשתו: ויתרצצו הבנים בקרבה ותאמר אם כן למה זה אנכי ותלך לדרש את יהוה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa642011460404dfc4012",
+      "display_heb_name": "ארם"
+    },
+    {
+      "key": "6a5fa689011460404dfc4147",
+      "display_heb_name": "ארבעים",
+      "heb_unit": "שנה",
+      "heb_context": "גיל יצחק"
+    }
+  ]
+}

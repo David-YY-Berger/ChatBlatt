@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa663011460404dfc40a0",
+            "display_heb_name": "מלאך יהוה",
+            "timePeriod": "Tanach",
+            "display_en_name": "messenger of hashem"
+        },
+        {
+            "key": "6a5fa663011460404dfc40a1",
+            "display_heb_name": "שור",
+            "placeType": "City",
+            "display_en_name": "shur"
+        }
+    ],
+    "key": "TN_Genesis_0_16:6-10"
+}

@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa643011460404dfc4015",
+            "display_heb_name": "בני האדם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "humanity"
+        },
+        {
+            "key": "6a5fa643011460404dfc4016",
+            "display_heb_name": "הארץ",
+            "placeType": "Country or Region",
+            "display_en_name": "world"
+        },
+        {
+            "key": "6a5fa643011460404dfc4017",
+            "display_heb_name": "מגדל",
+            "symbolType": "Other",
+            "display_en_name": "tower"
+        },
+        {
+            "key": "6a5fa643011460404dfc4018",
+            "heb_unit": "עם",
+            "heb_context": "עם אחד",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_11:4-6"
+}

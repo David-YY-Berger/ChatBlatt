@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2846 approx cost=$0.000356 (Prompt=2213, Completion=633)
+SOURCE:
+Bereishit (Torah) 47:13-19
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6dd011460404dfc42ae","display_en_name":"rations","display_heb_name":"","all_en_names":["Rations"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6f3011460404dfc4306","display_en_name":"horse","display_heb_name":"","all_en_names":["Horse"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa6f3011460404dfc4307","display_en_name":"seed","display_heb_name":"","all_en_names":["Seed"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Now there was no bread in all the world, for the famine was very severe; both the land of Egypt and the land of Canaan languished because of the famine. Joseph gathered in all the money that was to be found in the land of Egypt and in the land of Canaan, as payment for the rations that were being procured, and Joseph brought the money into Pharaohs palace. And when the money gave out in the land of Egypt and in the land of Canaan, all the Egyptians came to Joseph and said, Give us bread, lest we die before your very eyes; for the money is gone! And Joseph said, Bring your livestock, and I will sell to you against your livestock, if the money is gone. So they brought their livestock to Joseph, and Joseph gave them bread in exchange for the horses, for the stocks of sheep and cattle, and the asses; thus he provided them with bread that year in exchange for all their livestock. And when that year was ended, they came to him the next year and said to him, We cannot hide from my lord that, with all the money and animal stocks consigned to my lord, nothing is left at my lords disposal save our persons and our farmland. Let us not perish before your eyes, both we and our land. Take us and our land in exchange for bread, and we with our land will be serfs to Pharaoh; provide the seed, that we may live and not die, and that the land may not become a waste.
+
+HEBREW:
+ולחם אין בכל הארץ כי כבד הרעב מאד ותלה ארץ מצרים וארץ כנען מפני הרעב: וילקט יוסף את כל הכסף הנמצא בארץ מצרים ובארץ כנען בשבר אשר הם שברים ויבא יוסף את הכסף ביתה פרעה: ויתם הכסף מארץ מצרים ומארץ כנען ויבאו כל מצרים אל יוסף לאמר הבה לנו לחם ולמה נמות נגדך כי אפס כסף: ויאמר יוסף הבו מקניכם ואתנה לכם במקניכם אם אפס כסף: ויביאו את מקניהם אל יוסף ויתן להם יוסף לחם בסוסים ובמקנה הצאן ובמקנה הבקר ובחמרים וינהלם בלחם בכל מקנהם בשנה ההוא: ותתם השנה ההוא ויבאו אליו בשנה השנית ויאמרו לו לא נכחד מאדני כי אם תם הכסף ומקנה הבהמה אל אדני לא נשאר לפני אדני בלתי אם גויתנו ואדמתנו: למה נמות לעיניך גם אנחנו גם אדמתנו קנה אתנו ואת אדמתנו בלחם ונהיה אנחנו ואדמתנו עבדים לפרעה ותן זרע ונחיה ולא נמות והאדמה לא תשם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6dd011460404dfc42ae",
+      "display_heb_name": "שבר"
+    },
+    {
+      "key": "6a5fa6f3011460404dfc4306",
+      "display_heb_name": "סוס"
+    },
+    {
+      "key": "6a5fa6f3011460404dfc4307",
+      "display_heb_name": "זרע"
+    }
+  ]
+}

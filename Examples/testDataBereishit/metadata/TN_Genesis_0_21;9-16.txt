@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=3066 approx cost=$0.000452 (Prompt=2080, Completion=986)
+SOURCE:
+Bereishit (Torah) 21:9-16
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa673011460404dfc40ea","display_en_name":"beer-sheba","display_heb_name":"","all_en_names":["Beer-Sheba"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa674011460404dfc40eb","display_en_name":"water","display_heb_name":"","all_en_names":["Water"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa674011460404dfc40ec","display_en_name":"bush","display_heb_name":"","all_en_names":["Bush"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Sarah saw the son whom Hagar the Egyptian had borne to Abraham playing. She said to Abraham, Cast out that slave-woman and her son, for the son of that slave shall not share in the inheritance with my son Isaac. The matter distressed Abraham greatly, for it concerned a son of his. But God said to Abraham, Do not be distressed over the boy or your slave; whatever Sarah tells you, do as she says, for it is through Isaac that offspring shall be continued for you. As for the son of the slave-woman, I will make a nation of him, too, for he is your seed. Early next morning Abraham took some bread and a skin of water, and gave them to Hagar. He placed them over her shoulder, together with the child, and sent her away. And she wandered about in the wilderness of Beer-sheba. When the water was gone from the skin, she left the child under one of the bushes, and went and sat down at a distance, a bowshot away; for she thought, Let me not look on as the child dies. And sitting thus afar, she burst into tears.
+
+HEBREW:
+ותרא שרה את בן הגר המצרית אשר ילדה לאברהם מצחק: ותאמר לאברהם גרש האמה הזאת ואת בנה כי לא יירש בן האמה הזאת עם בני עם יצחק: וירע הדבר מאד בעיני אברהם על אודת בנו: ויאמר אלהים אל אברהם אל ירע בעיניך על הנער ועל אמתך כל אשר תאמר אליך שרה שמע בקלה כי ביצחק יקרא לך זרע: וגם את בן האמה לגוי אשימנו כי זרעך הוא: וישכם אברהםבבקר ויקח לחם וחמת מים ויתן אל הגר שם על שכמה ואת הילד וישלחה ותלך ותתע במדבר באר שבע: ויכלו המים מן החמת ותשלך את הילד תחת אחד השיחם: ותלך ותשב לה מנגד הרחק כמטחוי קשת כי אמרה אל אראה במות הילד ותשב מנגד ותשא את קלה ותבך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa673011460404dfc40ea",
+      "display_heb_name": "באר שבע",
+      "placeType": "Desert"
+    },
+    {
+      "key": "6a5fa674011460404dfc40eb",
+      "display_heb_name": "מים"
+    },
+    {
+      "key": "6a5fa674011460404dfc40ec",
+      "display_heb_name": "שיחם"
+    }
+  ]
+}

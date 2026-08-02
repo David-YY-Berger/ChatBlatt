@@ -1,0 +1,51 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6ac011460404dfc41e1",
+            "display_heb_name": "הנער",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "youth"
+        },
+        {
+            "key": "6a5fa6ac011460404dfc41e2",
+            "display_heb_name": "יצאי שער עירו",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "fellow townsmen"
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e3",
+            "display_heb_name": "אנשי עירם",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "men of their city"
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e4",
+            "display_heb_name": "עירם",
+            "placeType": "City",
+            "display_en_name": "town"
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e5",
+            "display_heb_name": "שער עירם",
+            "placeType": "Building or Structure",
+            "display_en_name": "public place"
+        },
+        {
+            "key": "6a5fa6ad011460404dfc41e6",
+            "display_heb_name": "אחד",
+            "heb_unit": "עם",
+            "heb_context": "להיות לעם אחד",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_34:13-24"
+}

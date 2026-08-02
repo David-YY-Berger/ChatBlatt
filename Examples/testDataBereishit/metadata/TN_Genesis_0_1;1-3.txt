@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=2153 approx cost=$0.000265 (Prompt=1695, Completion=458)
+SOURCE:
+Bereishit (Torah) 1:1-3
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa5fe011460404dfc3eeb","display_en_name":"heaven","display_heb_name":"","all_en_names":["Heaven"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa5ff011460404dfc3eed","display_en_name":"deep","display_heb_name":"","all_en_names":["Deep"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa5ff011460404dfc3eee","display_en_name":"light","display_heb_name":"","all_en_names":["Light"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When God began to create heaven and earth- the earth being unformed and void, with darkness over the surface of the deep and a wind from God sweeping over the water- God said, Let there be light; and there was light.
+
+HEBREW:
+ב ראשית ברא אלהים את השמים ואת הארץ: והארץ היתה תהו ובהו וחשך על פני תהום ורוח אלהים מרחפת על פני המים: ויאמר אלהים יהי אור ויהי אור:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa5fe011460404dfc3eeb",
+      "display_heb_name": "השמים",
+      "placeType": "Not Physical"
+    },
+    {
+      "key": "6a5fa5ff011460404dfc3eed",
+      "display_heb_name": "תהום",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa5ff011460404dfc3eee",
+      "display_heb_name": "אור",
+      "symbolType": "Not Physical"
+    }
+  ]
+}

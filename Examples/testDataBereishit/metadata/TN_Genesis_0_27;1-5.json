@@ -1,0 +1,16 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68f011460404dfc415f",
+            "display_heb_name": "תליך",
+            "symbolType": "Weapon",
+            "display_en_name": "quiver"
+        },
+        {
+            "key": "6a5fa68f011460404dfc4160",
+            "display_heb_name": "מטעמים",
+            "display_en_name": "dish"
+        }
+    ],
+    "key": "TN_Genesis_0_27:1-5"
+}

@@ -1,0 +1,54 @@
+﻿COST: Tokens: Total=4701 approx cost=$0.000842 (Prompt=2526, Completion=2175)
+SOURCE:
+Bereishit (Torah) 47:20-28
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa6f4011460404dfc4308","display_en_name":"priests","display_heb_name":"","all_en_names":["Priests"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6f4011460404dfc4309","display_en_name":"0.2","display_heb_name":"","all_en_names":["0.2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"share","en_context":"harvest tax to pharaoh"}
+{"key":"6a5fa6f4011460404dfc430a","display_en_name":"0.8","display_heb_name":"","all_en_names":["0.8"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"share","en_context":"farmer's share of harvest"}
+{"key":"6a5fa6f4011460404dfc430b","display_en_name":"17","display_heb_name":"","all_en_names":["17"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jacob lived in egypt"}
+{"key":"6a5fa6f5011460404dfc430c","display_en_name":"147","display_heb_name":"","all_en_names":["147"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jacob total lifespan"}
+{"key":"6a5fa6f5011460404dfc430d","display_en_name":"nourishment","display_heb_name":"","all_en_names":["Nourishment"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+So Joseph gained possession of all the farm land of Egypt for Pharaoh, all the Egyptians having sold their fields because the famine was too much for them; thus the land passed over to Pharaoh. And he removed the population town by town, uncertain. from one end of Egypts border to the other. Only the land of the priests he did not take over, for the priests had an allotment from Pharaoh, and they lived off the allotment which Pharaoh had made to them; therefore they did not sell their land. Then Joseph said to the people, Whereas I have this day acquired you and your land for Pharaoh, here is seed for you to sow the land. And when harvest comes, you shall give one-fifth to Pharaoh, and four-fifths shall be yours as seed for the fields and as food for you and those in your households, and as nourishment for your children. And they said, You have saved our lives! We are grateful to my lord, and we shall be serfs to Pharaoh. And Joseph made it into a land law in Egypt, which is still valid, that a fifth should be Pharaohs; only the land of the priests did not become Pharaohs. Thus Israel settled in the country of Egypt, in the region of Goshen; they acquired holdings in it, and were fertile and increased greatly. Jacob lived seventeen years in the land of Egypt, so that the span of Jacobs life came to one hundred and forty-seven years.
+
+HEBREW:
+ויקן יוסף את כל אדמת מצרים לפרעה כי מכרו מצרים איש שדהו כי חזק עלהם הרעב ותהי הארץ לפרעה: ואת העם העביר אתו לערים מקצה גבול מצרים ועד קצהו: רק אדמת הכהנים לא קנה כי חק לכהנים מאת פרעה ואכלו את חקם אשר נתן להם פרעה על כן לא מכרו את אדמתם: ויאמר יוסף אל העם הן קניתי אתכם היום ואת אדמתכם לפרעה הא לכם זרע וזרעתם את האדמה: והיה בתבואת ונתתם חמישית לפרעה וארבע הידת יהיה לכם לזרע השדה ולאכלכם ולאשר בבתיכם ולאכל לטפכם: ויאמרו החיתנו נמצא חן בעיני אדני והיינו עבדים לפרעה: וישם אתה יוסף לחק עד היום הזה על אדמת מצרים לפרעה לחמש רק אדמת הכהנים לבדם לא היתה לפרעה: וישב ישראל בארץ מצרים בארץ גשן ויאחזו בה ויפרו וירבו מאד: ויחי יעקב בארץ מצרים שבע עשרה שנה ויהי ימי יעקב שני חייו שבע שנים וארבעים ומאת שנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f4011460404dfc4308",
+      "display_heb_name": "כהנים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6f4011460404dfc4309",
+      "display_heb_name": "חמישית",
+      "heb_unit": "חלק",
+      "heb_context": "חמישית לפרעה"
+    },
+    {
+      "key": "6a5fa6f4011460404dfc430a",
+      "display_heb_name": "ארבע הידת",
+      "heb_unit": "חלק",
+      "heb_context": "חלק איכר מהתבואה"
+    },
+    {
+      "key": "6a5fa6f4011460404dfc430b",
+      "display_heb_name": "שבע עשרה",
+      "heb_unit": "שנה",
+      "heb_context": "יעקב חי במצרים"
+    },
+    {
+      "key": "6a5fa6f5011460404dfc430c",
+      "display_heb_name": "שבע שנים וארבעים ומאת שנה",
+      "heb_unit": "שנה",
+      "heb_context": "ימי חיי יעקב"
+    }
+  ]
+}

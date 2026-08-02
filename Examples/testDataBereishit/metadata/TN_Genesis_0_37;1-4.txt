@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=2644 approx cost=$0.000358 (Prompt=1932, Completion=712)
+SOURCE:
+Bereishit (Torah) 37:1-4
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6c3011460404dfc4249","display_en_name":"brothers","display_heb_name":"","all_en_names":["Brothers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c3011460404dfc424a","display_en_name":"ornamented tunic","display_heb_name":"","all_en_names":["Ornamented Tunic"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6c3011460404dfc424b","display_en_name":"17","display_heb_name":"","all_en_names":["17"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"joseph age"}
+
+PASSAGE:
+ENGLISH:
+Now Jacob was settled in the land where his father had sojourned, the land of Canaan. This, then, is the line of Jacob: At seventeen years of age, Joseph tended the flocks with his brothers, as a helper to the sons of his fathers wives Bilhah and Zilpah. And Joseph brought bad reports of them to their father. Now Israel loved Joseph best of all his sons-he was his child of old age; is used here as a category label; it seems to denote a special, favored status. Cf. 44.20. and he had made him an ornamented tunic. And when his brothers saw that their father loved him more than any of his brothers, they hated him so that they could not speak a friendly word to him.
+
+HEBREW:
+וישב יעקב בארץ מגורי אביו בארץ כנען: אלה תלדות יעקב יוסף בן שבע עשרה שנה היה רעה את אחיו בצאן והוא נער את בני בלהה ואת בני זלפה נשי אביו ויבא יוסף את דבתם רעה אל אביהם: וישראל אהב את יוסף מכל בניו כי בן זקנים הוא לו ועשה לו כתנת פסים: ויראו אחיו כי אתו אהב אביהם מכל אחיו וישנאו אתו ולא יכלו דברו לשלם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c3011460404dfc4249",
+      "display_heb_name": "אחיו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6c3011460404dfc424a",
+      "display_heb_name": "כתנת פסים",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa6c3011460404dfc424b",
+      "display_heb_name": "שבע עשרה",
+      "heb_unit": "שנה",
+      "heb_context": "גיל יוסף"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d3011460404dfc4287",
+            "display_heb_name": "שר האפים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "chief baker"
+        },
+        {
+            "key": "6a5fa6d4011460404dfc4288",
+            "display_heb_name": "סל",
+            "symbolType": "Other",
+            "display_en_name": "basket"
+        },
+        {
+            "key": "6a5fa6d4011460404dfc4289",
+            "display_heb_name": "עץ",
+            "symbolType": "Weapon",
+            "display_en_name": "pole"
+        },
+        {
+            "key": "6a5fa6d4011460404dfc428a",
+            "display_heb_name": "שלשה",
+            "heb_unit": "סל",
+            "heb_context": "חלום האפים",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_40:16-22"
+}

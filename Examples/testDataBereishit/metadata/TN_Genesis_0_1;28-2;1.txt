@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3718 approx cost=$0.000661 (Prompt=2021, Completion=1697)
+SOURCE:
+Bereishit (Torah) 1:28-2:1
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa606011460404dfc3f0b","display_en_name":"fish","display_heb_name":"","all_en_names":["Fish"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa606011460404dfc3f0c","display_en_name":"animal","display_heb_name":"","all_en_names":["Animal"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa606011460404dfc3f0d","display_en_name":"plant","display_heb_name":"","all_en_names":["Plant"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa606011460404dfc3f0e","display_en_name":"tree","display_heb_name":"","all_en_names":["Tree"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God blessed them and God said to them, Be fertile and increase, fill the earth and master it; and rule the fish of the sea, the birds of the sky, and all the living things that creep on earth. God said, See, I give you every seed-bearing plant that is upon all the earth, and every tree that has seed-bearing fruit; they shall be yours for food. And to all the animals on land, to all the birds of the sky, and to everything that creeps on earth, in which there is the breath of life, [I give] all the green plants for food. And it was so. And God saw all that had been made, and found it very good. And there was evening and there was morning, the sixth day.The heaven and the earth were finished, and all their array.
+
+HEBREW:
+ויברך אתם אלהים ויאמר להם אלהים פרו ורבו ומלאו את הארץ וכבשה ורדו בדגת הים ובעוף השמים ובכל חיה הרמשת על הארץ: ויאמר אלהים הנה נתתי לכם את כל עשב זרע זרע אשר על פני כל הארץ ואת כל העץ אשר בו פרי עץ זרע זרע לכם יהיה לאכלה: ולכל חית הארץ ולכל עוף השמים ולכל רומש על הארץ אשר בו נפש חיה את כל ירק עשב לאכלה ויהי כן: וירא אלהים את כל אשר עשה והנה טוב מאד ויהי ערב ויהי בקר יום הששי: ויכלו השמים והארץ וכל צבאם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa606011460404dfc3f0b",
+      "display_heb_name": "דגת"
+    },
+    {
+      "key": "6a5fa606011460404dfc3f0c",
+      "display_heb_name": "חיה"
+    },
+    {
+      "key": "6a5fa606011460404dfc3f0d",
+      "display_heb_name": "עשב"
+    },
+    {
+      "key": "6a5fa606011460404dfc3f0e",
+      "display_heb_name": "עץ"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64f011460404dfc4049",
+            "display_heb_name": "ירדן",
+            "placeType": "Body of Water",
+            "display_en_name": "jordan"
+        },
+        {
+            "key": "6a5fa64f011460404dfc404b",
+            "display_heb_name": "גן יהוה",
+            "placeType": "Not Physical",
+            "display_en_name": "garden of hashem"
+        },
+        {
+            "key": "6a5fa64f011460404dfc404c",
+            "display_heb_name": "פרזי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "perizzites"
+        }
+    ],
+    "key": "TN_Genesis_0_13:5-10"
+}

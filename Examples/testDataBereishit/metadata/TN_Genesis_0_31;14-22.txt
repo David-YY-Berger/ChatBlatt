@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2757 approx cost=$0.000363 (Prompt=2064, Completion=693)
+SOURCE:
+Bereishit (Torah) 31:14-22
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6a0011460404dfc41aa","display_en_name":"gilead","display_heb_name":"","all_en_names":["Gilead"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a0011460404dfc41ab","display_en_name":"household idols","display_heb_name":"","all_en_names":["Household Idols"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6a0011460404dfc41ac","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"laban told jacob fled"}
+
+PASSAGE:
+ENGLISH:
+Then Rachel and Leah answered him, saying, Have we still a share in the inheritance of our fathers house? Surely, he regards us as outsiders, now that he has sold us and has used up our purchase price. Truly, all the wealth that God has taken away from our father belongs to us and to our children. Now then, do just as God has told you. Thereupon Jacob put his children and wives on camels; and he drove off all his livestock and all the wealth that he had amassed, the livestock in his possession that he had acquired in Paddan-aram, to go to his father Isaac in the land of Canaan. Meanwhile Laban had gone to shear his sheep, and Rachel stole her fathers household idols. Jacob kept Laban the Aramean in the dark, not telling him that he was fleeing, and fled with all that he had. Soon he was across the Euphrates and heading toward the hill country of Gilead. On the third day, Laban was told that Jacob had fled.
+
+HEBREW:
+ותען רחל ולאה ותאמרנה לו העוד לנו חלק ונחלה בבית אבינו: הלוא נכריות נחשבנו לו כי מכרנו ויאכל גם אכול את כספנו: כי כל העשר אשר הציל אלהים מאבינו לנו הוא ולבנינו ועתה כל אשר אמר אלהים אליך עשה: ויקם יעקב וישא את בניו ואת נשיו על הגמלים: וינהג את כל מקנהו ואת כל רכשו אשר רכש מקנה קנינו אשר רכש בפדן ארם לבוא אל יצחק אביו ארצה כנען: ולבן הלך לגזז את צאנו ותגנב רחל את התרפים אשר לאביה: ויגנב יעקב את לב לבן הארמי על בלי הגיד לו כי ברח הוא: ויברח הוא וכל אשר לו ויקם ויעבר את הנהר וישם את פניו הר הגלעד: ויגד ללבן ביום השלישי כי ברח יעקב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a0011460404dfc41aa",
+      "display_heb_name": "הגלעד",
+      "placeType": "Mountain"
+    },
+    {
+      "key": "6a5fa6a0011460404dfc41ab",
+      "display_heb_name": "תרפים",
+      "symbolType": "Holy Object"
+    },
+    {
+      "key": "6a5fa6a0011460404dfc41ac",
+      "display_heb_name": "3",
+      "heb_unit": "יום",
+      "heb_context": "לבן הוגד שיעקב ברח"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=4669 approx cost=$0.001033 (Prompt=1635, Completion=3034)
+SOURCE:
+Bereishit (Torah) 6:1-3
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa61d011460404dfc3f70","display_en_name":"120","display_heb_name":"","all_en_names":["120"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"human lifespan limit"}
+
+PASSAGE:
+ENGLISH:
+When humankind began to increase on earth and daughters were born to them, the [males among the] divine beings saw how pleasing the human women were and took wives from among those who delighted them.- HASHEM said, My breath shall not abide in humankind forever, since it too is flesh; let the days allowed them be one hundred and twenty years.-
+
+HEBREW:
+ויהי כי החל האדם לרב על פני האדמה ובנות ילדו להם: ויראו בני האלהים את בנות האדם כי טבת הנה ויקחו להם נשים מכל אשר בחרו: ויאמר יהוה לא ידון רוחי באדם לעלם בשגם הוא בשר והיו ימיו מאה ועשרים שנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa61d011460404dfc3f70",
+      "display_heb_name": "מאה ועשרים",
+      "heb_unit": "שנה",
+      "heb_context": "מגבלת ימי אדם"
+    }
+  ]
+}

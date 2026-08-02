@@ -1,0 +1,11 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60b011460404dfc3f22",
+            "display_heb_name": "גן עדן",
+            "placeType": "Other",
+            "display_en_name": "garden of eden"
+        }
+    ],
+    "key": "TN_Genesis_0_2:15-17"
+}

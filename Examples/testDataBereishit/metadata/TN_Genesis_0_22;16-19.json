@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa677011460404dfc40f9",
+            "display_heb_name": "כוכבי השמים",
+            "symbolType": "Part of Nature",
+            "display_en_name": "stars of heaven"
+        },
+        {
+            "key": "6a5fa677011460404dfc40fa",
+            "display_heb_name": "חול אשר על שפת הים",
+            "symbolType": "Part of Nature",
+            "display_en_name": "sands on the seashore"
+        }
+    ],
+    "key": "TN_Genesis_0_22:16-19"
+}

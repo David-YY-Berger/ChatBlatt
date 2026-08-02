@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa674011460404dfc40ed",
+            "display_heb_name": "מלאך אלהים",
+            "timePeriod": "Tanach",
+            "display_en_name": "messenger of god"
+        },
+        {
+            "key": "6a5fa674011460404dfc40ee",
+            "display_heb_name": "פארן",
+            "placeType": "Desert",
+            "display_en_name": "paran"
+        }
+    ],
+    "key": "TN_Genesis_0_21:17-21"
+}

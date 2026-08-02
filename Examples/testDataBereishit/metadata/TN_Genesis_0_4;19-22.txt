@@ -1,0 +1,50 @@
+﻿COST: Tokens: Total=3267 approx cost=$0.000521 (Prompt=2042, Completion=1225)
+SOURCE:
+Bereishit (Torah) 4:19-22
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa613011460404dfc3f44","display_en_name":"zillah","display_heb_name":"","all_en_names":["Zillah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa613011460404dfc3f45","display_en_name":"jabal","display_heb_name":"","all_en_names":["Jabal"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa613011460404dfc3f46","display_en_name":"jubal","display_heb_name":"","all_en_names":["Jubal"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa613011460404dfc3f47","display_en_name":"tubal-cain","display_heb_name":"","all_en_names":["Tubal-Cain"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa613011460404dfc3f48","display_en_name":"naamah","display_heb_name":"","all_en_names":["Naamah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Lamech took to himself two wives: the name of the one was Adah, and the name of the other was Zillah. Adah bore Jabal; he was the ancestor of those who dwell in tents and amidst herds. And the name of his brother was Jubal; he was the ancestor of all who play the lyre and the pipe. As for Zillah, she bore Tubal-cain, who forged all implements of copper and iron. And the sister of Tubal-cain was Naamah.
+
+HEBREW:
+ויקח לו למך שתי נשים שם האחת עדה ושם השנית צלה: ותלד עדה את יבל הוא היה אבי ישב אהל ומקנה: ושם אחיו יובל הוא היה אבי כל תפש כנור ועוגב: וצלה גם הוא ילדה את תובל קין לטש כל חרש נחשת וברזל ואחות תובל קין נעמה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa613011460404dfc3f44",
+      "display_heb_name": "צלה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa613011460404dfc3f45",
+      "display_heb_name": "יבל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa613011460404dfc3f46",
+      "display_heb_name": "יובל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa613011460404dfc3f47",
+      "display_heb_name": "תובל קין",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa613011460404dfc3f48",
+      "display_heb_name": "נעמה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    }
+  ]
+}

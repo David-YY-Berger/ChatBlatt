@@ -1,0 +1,41 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa61d011460404dfc3f71",
+            "display_heb_name": "הנפלים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "nephilim"
+        },
+        {
+            "key": "6a5fa61d011460404dfc3f72",
+            "display_heb_name": "בני האלהים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "divine beings"
+        },
+        {
+            "key": "6a5fa61d011460404dfc3f73",
+            "display_heb_name": "בנות האדם",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "human women"
+        },
+        {
+            "key": "6a5fa61d011460404dfc3f74",
+            "display_heb_name": "הגברים אשר מעולם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "heroes of old"
+        },
+        {
+            "key": "6a5fa61e011460404dfc3f75",
+            "display_heb_name": "אנשי השם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "men of renown"
+        }
+    ],
+    "key": "TN_Genesis_0_6:4-5"
+}

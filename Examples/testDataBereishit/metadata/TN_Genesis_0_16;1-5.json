@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa662011460404dfc409e",
+            "display_heb_name": "הגר",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "hagar"
+        },
+        {
+            "key": "6a5fa662011460404dfc409f",
+            "display_heb_name": "עשר",
+            "heb_unit": "שנה",
+            "heb_context": "אברם בארץ כנען",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_16:1-5"
+}

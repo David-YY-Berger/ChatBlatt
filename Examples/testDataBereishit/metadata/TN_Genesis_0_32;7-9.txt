@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2419 approx cost=$0.000331 (Prompt=1753, Completion=666)
+SOURCE:
+Bereishit (Torah) 32:7-9
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6a5011460404dfc41c3","display_en_name":"400","display_heb_name":"","all_en_names":["400"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"person","en_context":"esau's retinue"}
+{"key":"6a5fa6a6011460404dfc41c4","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"camp","en_context":"jacob's division"}
+
+PASSAGE:
+ENGLISH:
+The messengers returned to Jacob, saying, We came to your brother Esau; he himself is coming to meet you, and his retinue. numbers four hundred. Jacob was greatly frightened; in his anxiety, he divided the people with him, and the flocks and herds and camels, into two camps, thinking, If Esau comes to the one camp and attacks it, the other camp may yet escape.
+
+HEBREW:
+וישבו המלאכים אל יעקב לאמר באנו אל אחיך אל עשו וגם הלך לקראתך וארבע מאות איש עמו: ויירא יעקב מאד ויצר לו ויחץ את העם אשר אתו ואת הצאן ואת הבקר והגמלים לשני מחנות: ויאמר אם יבוא עשו אל המחנה האחת והכהו והיה המחנה הנשאר לפליטה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a5011460404dfc41c3",
+      "display_heb_name": "ארבע מאות",
+      "heb_unit": "איש",
+      "heb_context": "איש עמו"
+    },
+    {
+      "key": "6a5fa6a6011460404dfc41c4",
+      "display_heb_name": "שני",
+      "heb_unit": "מחנה",
+      "heb_context": "מחנות"
+    }
+  ]
+}

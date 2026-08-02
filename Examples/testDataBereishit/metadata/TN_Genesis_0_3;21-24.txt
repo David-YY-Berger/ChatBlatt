@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=2547 approx cost=$0.000324 (Prompt=1957, Completion=590)
+SOURCE:
+Bereishit (Torah) 3:21-24
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa60e011460404dfc3f32","display_en_name":"cherubim","display_heb_name":"","all_en_names":["Cherubim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa60f011460404dfc3f33","display_en_name":"garments of skins","display_heb_name":"","all_en_names":["Garments Of Skins"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa60f011460404dfc3f34","display_en_name":"fiery ever-turning sword","display_heb_name":"","all_en_names":["Fiery Ever-Turning Sword"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa60f011460404dfc3f35","display_en_name":"tree of life","display_heb_name":"","all_en_names":["Tree Of Life"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And God HASHEM made garments of skins for Adam and his wife, and clothed them. And God HASHEM said, Now that humankind has become like any of us, knowing good and bad, what if one should stretch out a hand and take also from the tree of life and eat, and live forever! So God HASHEM banished humankind from the garden of Eden, to till the humus from which it was taken: it was driven out; and east of the garden of Eden were stationed the cherubim and the fiery ever-turning sword, to guard the way to the tree of life.
+
+HEBREW:
+ויעש יהוה אלהים לאדם ולאשתו כתנות עור וילבשם: ויאמר יהוה אלהים הן האדם היה כאחד ממנו לדעת טוב ורע ועתה פן ישלח ידו ולקח גם מעץ החיים ואכל וחי לעלם: וישלחהו יהוה אלהים מגן עדן לעבד את האדמה אשר לקח משם: ויגרש את האדם וישכן מקדם לגן עדן את הכרבים ואת להט החרב המתהפכת לשמר את דרך עץ החיים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60e011460404dfc3f32",
+      "display_heb_name": "כרבים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa60f011460404dfc3f33",
+      "display_heb_name": "כתנות עור",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa60f011460404dfc3f34",
+      "display_heb_name": "להט החרב המתהפכת",
+      "symbolType": "Weapon"
+    }
+  ]
+}

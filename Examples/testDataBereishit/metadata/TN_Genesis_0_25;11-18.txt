@@ -1,0 +1,120 @@
+﻿COST: Tokens: Total=4767 approx cost=$0.000765 (Prompt=2958, Completion=1809)
+SOURCE:
+Bereishit (Torah) 25:11-18
+
+ENTITIES TO ENRICH (13):
+{"key":"6a5fa685011460404dfc4139","display_en_name":"kedar","display_heb_name":"","all_en_names":["Kedar"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa686011460404dfc413a","display_en_name":"adbeel","display_heb_name":"","all_en_names":["Adbeel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa686011460404dfc413b","display_en_name":"mibsam","display_heb_name":"","all_en_names":["Mibsam"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa686011460404dfc413c","display_en_name":"mishma","display_heb_name":"","all_en_names":["Mishma"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa686011460404dfc413d","display_en_name":"dumah","display_heb_name":"","all_en_names":["Dumah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa687011460404dfc413e","display_en_name":"massa","display_heb_name":"","all_en_names":["Massa"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa687011460404dfc413f","display_en_name":"hadad","display_heb_name":"","all_en_names":["Hadad"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa687011460404dfc4140","display_en_name":"tema","display_heb_name":"","all_en_names":["Tema"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa687011460404dfc4141","display_en_name":"jetur","display_heb_name":"","all_en_names":["Jetur"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa687011460404dfc4142","display_en_name":"naphish","display_heb_name":"","all_en_names":["Naphish"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa688011460404dfc4143","display_en_name":"kedmah","display_heb_name":"","all_en_names":["Kedmah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa688011460404dfc4144","display_en_name":"12","display_heb_name":"","all_en_names":["12"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"chieftain","en_context":"ishmael's sons"}
+{"key":"6a5fa688011460404dfc4145","display_en_name":"137","display_heb_name":"","all_en_names":["137"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"ishmael lifespan"}
+
+PASSAGE:
+ENGLISH:
+After the death of Abraham, God blessed his son Isaac. And Isaac settled near Beer-lahai-roi. This is the line of Ishmael, Abrahams son, whom Hagar the Egyptian, Sarahs slave, bore to Abraham. These are the names of the sons of Ishmael, by their names, in the order of their birth: Nebaioth, the first-born of Ishmael, Kedar, Adbeel, Mibsam, Mishma, Dumah, Massa, Hadad, Tema, Jetur, Naphish, and Kedmah. These are the sons of Ishmael and these are their names by their villages and by their encampments: twelve chieftains of as many tribes.- These were the years of the life of Ishmael: one hundred and thirty-seven years; then he breathed his last and died, and was gathered to his kin.- They dwelt from Havilah, by Shur, which is close to Egypt, all the way to Asshur; they camped alongside all their kin.
+
+HEBREW:
+ויהי אחרי מות אברהם ויברך אלהים את יצחק בנו וישב יצחק עם באר לחי ראי: ואלה תלדת ישמעאל בן אברהם אשר ילדה הגר המצרית שפחת שרה לאברהם: ואלה שמות בני ישמעאל בשמתם לתולדתם בכר ישמעאל נבית וקדר ואדבאל ומבשם: ומשמע ודומה ומשא: חדד ותימא יטור נפיש וקדמה: אלה הם בני ישמעאל ואלה שמתם בחצריהם ובטירתם שנים עשר נשיאם לאמתם: ואלה שני חיי ישמעאל מאת שנה ושלשים שנה ושבע שנים ויגוע וימת ויאסף אל עמיו: וישכנו מחוילה עד שור אשר על פני מצרים באכה אשורה על פני כל אחיו נפל:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa685011460404dfc4139",
+      "display_heb_name": "קדר",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa686011460404dfc413a",
+      "display_heb_name": "אדבאל",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa686011460404dfc413b",
+      "display_heb_name": "מבשם",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa686011460404dfc413c",
+      "display_heb_name": "משמע",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa686011460404dfc413d",
+      "display_heb_name": "דומה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa687011460404dfc413e",
+      "display_heb_name": "משא",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa687011460404dfc413f",
+      "display_heb_name": "חדד",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa687011460404dfc4140",
+      "display_heb_name": "תימא",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa687011460404dfc4141",
+      "display_heb_name": "יטור",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa687011460404dfc4142",
+      "display_heb_name": "נפיש",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa688011460404dfc4143",
+      "display_heb_name": "קדמה",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa688011460404dfc4144",
+      "display_heb_name": "שנים עשר",
+      "heb_unit": "נשיא",
+      "heb_context": "בני ישמעאל"
+    },
+    {
+      "key": "6a5fa688011460404dfc4145",
+      "display_heb_name": "מאת שנה ושלשים שנה ושבע שנים",
+      "heb_unit": "שנה",
+      "heb_context": "שני חיי ישמעאל"
+    }
+  ]
+}

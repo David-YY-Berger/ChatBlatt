@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa5fe011460404dfc3eeb",
+            "display_heb_name": "השמים",
+            "placeType": "Not Physical",
+            "display_en_name": "heaven"
+        },
+        {
+            "key": "6a5fa5ff011460404dfc3eed",
+            "display_heb_name": "תהום",
+            "placeType": "Body of Water",
+            "display_en_name": "deep"
+        },
+        {
+            "key": "6a5fa5ff011460404dfc3eee",
+            "display_heb_name": "אור",
+            "symbolType": "Not Physical",
+            "display_en_name": "light"
+        }
+    ],
+    "key": "TN_Genesis_0_1:1-3"
+}

@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60e011460404dfc3f31",
+            "display_heb_name": "חוה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "eve"
+        }
+    ],
+    "key": "TN_Genesis_0_3:20"
+}

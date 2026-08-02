@@ -1,0 +1,79 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa677011460404dfc40fb",
+            "display_heb_name": "בוז",
+            "timePeriod": "Tanach",
+            "display_en_name": "buz"
+        },
+        {
+            "key": "6a5fa677011460404dfc40fc",
+            "display_heb_name": "קמואל",
+            "timePeriod": "Tanach",
+            "display_en_name": "kemuel"
+        },
+        {
+            "key": "6a5fa678011460404dfc40fd",
+            "display_heb_name": "כשד",
+            "timePeriod": "Tanach",
+            "display_en_name": "chesed"
+        },
+        {
+            "key": "6a5fa678011460404dfc40fe",
+            "display_heb_name": "חזו",
+            "timePeriod": "Tanach",
+            "display_en_name": "hazo"
+        },
+        {
+            "key": "6a5fa678011460404dfc40ff",
+            "display_heb_name": "פלדש",
+            "timePeriod": "Tanach",
+            "display_en_name": "pildash"
+        },
+        {
+            "key": "6a5fa678011460404dfc4100",
+            "display_heb_name": "ידלף",
+            "timePeriod": "Tanach",
+            "display_en_name": "jidlaph"
+        },
+        {
+            "key": "6a5fa678011460404dfc4101",
+            "display_heb_name": "בתואל",
+            "timePeriod": "Tanach",
+            "display_en_name": "bethuel"
+        },
+        {
+            "key": "6a5fa679011460404dfc4103",
+            "display_heb_name": "ראומה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "reumah"
+        },
+        {
+            "key": "6a5fa679011460404dfc4104",
+            "display_heb_name": "טבח",
+            "timePeriod": "Tanach",
+            "display_en_name": "tebah"
+        },
+        {
+            "key": "6a5fa679011460404dfc4105",
+            "display_heb_name": "גחם",
+            "timePeriod": "Tanach",
+            "display_en_name": "gaham"
+        },
+        {
+            "key": "6a5fa67a011460404dfc4106",
+            "display_heb_name": "תחש",
+            "timePeriod": "Tanach",
+            "display_en_name": "tahash"
+        },
+        {
+            "key": "6a5fa67a011460404dfc4107",
+            "display_heb_name": "מעכה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "maacah"
+        }
+    ],
+    "key": "TN_Genesis_0_22:20-24"
+}

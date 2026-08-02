@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa628011460404dfc3fa1",
+            "display_heb_name": "בניו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "sons"
+        },
+        {
+            "key": "6a5fa628011460404dfc3fa2",
+            "display_heb_name": "נשי בניו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "sons' wives"
+        },
+        {
+            "key": "6a5fa629011460404dfc3fa4",
+            "display_heb_name": "בשר",
+            "display_en_name": "flesh"
+        }
+    ],
+    "key": "TN_Genesis_0_8:16-9:4"
+}

@@ -1,0 +1,14 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa673011460404dfc40e7",
+            "display_heb_name": "אב",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "father"
+        }
+    ],
+    "key": "TN_Genesis_0_20:9-13"
+}

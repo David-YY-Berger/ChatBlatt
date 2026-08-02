@@ -1,0 +1,44 @@
+﻿COST: Tokens: Total=3673 approx cost=$0.000557 (Prompt=2422, Completion=1251)
+SOURCE:
+Bereishit (Torah) 24:50-61
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa680011460404dfc4124","display_en_name":"abraham's servant","display_heb_name":"","all_en_names":["Abraham's Servant"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa681011460404dfc4125","display_en_name":"rebekah's brother","display_heb_name":"","all_en_names":["Rebekah's Brother"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa681011460404dfc4126","display_en_name":"rebekah's mother","display_heb_name":"","all_en_names":["Rebekah's Mother"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa681011460404dfc4127","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"maiden stay"}
+
+PASSAGE:
+ENGLISH:
+Then Laban and Bethuel answered, The matter was decreed by HASHEM; we cannot speak to you bad or good. Here is Rebekah before you; take her and go, and let her be a wife to your masters son, as HASHEM has spoken. When Abrahams servant heard their words, he bowed low to the ground before HASHEM. The servant brought out objects of silver and gold, and garments, and gave them to Rebekah; and he gave presents to her brother and her mother. Then he and the entourage under him ate and drank, and they spent the night. When they arose next morning, he said, Give me leave to go to my master. But her brother and her mother said, Let the maiden remain with us some ten days; then you may go. He said to them, Do not delay me, now that HASHEM has made my errand successful. Give me leave that I may go to my master. And they said, Let us call the girl and ask for her reply. They called Rebekah and said to her, Will you go with this man? And she said, I will. So they sent off their sister Rebekah and her nurse along with Abrahams servant and his entourage. And they blessed Rebekah and said to her, O sister! May you grow Into thousands of myriads; May your descendants seize The gates of their foes. Then Rebekah and her maids arose, mounted the camels, and followed the man. So the servant took Rebekah and went his way.
+
+HEBREW:
+ויען לבן ובתואל ויאמרו מיהוה יצא הדבר לא נוכל דבר אליך רע או טוב: הנה רבקה לפניך קח ולך ותהי אשה לבן אדניך כאשר דבר יהוה: ויהי כאשר שמע עבד אברהם את דבריהם וישתחו ארצה ליהוה: ויוצא העבד כלי כסף וכלי זהב ובגדים ויתן לרבקה ומגדנת נתן לאחיה ולאמה: ויאכלו וישתו הוא והאנשים אשר עמו וילינו ויקומו בבקר ויאמר שלחני לאדני: ויאמר אחיה ואמה תשב הנער אתנו ימים או עשור אחר תלך: ויאמר אלהם אל תאחרו אתי ויהוה הצליח דרכי שלחוני ואלכה לאדני: ויאמרו נקרא לנער ונשאלה את פיה: ויקראו לרבקה ויאמרו אליה התלכי עם האיש הזה ותאמר אלך: וישלחו את רבקה אחתם ואת מנקתה ואת עבד אברהם ואת אנשיו: ויברכו את רבקה ויאמרו לה אחתנו את היי לאלפי רבבה ויירש זרעך את שער שנאיו: ותקם רבקה ונערתיה ותרכבנה על הגמלים ותלכנה אחרי האיש ויקח העבד את רבקה וילך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa680011460404dfc4124",
+      "display_heb_name": "עבד אברהם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa681011460404dfc4125",
+      "display_heb_name": "אחיה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa681011460404dfc4126",
+      "display_heb_name": "אמה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa681011460404dfc4127",
+      "display_heb_name": "עשור",
+      "heb_unit": "יום",
+      "heb_context": "שהות הנערה"
+    }
+  ]
+}

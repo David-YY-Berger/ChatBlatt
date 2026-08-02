@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=2783 approx cost=$0.000363 (Prompt=2097, Completion=686)
+SOURCE:
+Bereishit (Torah) 13:14-14:1
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa651011460404dfc4053","display_en_name":"mamre","display_heb_name":"","all_en_names":["Mamre"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa651011460404dfc4054","display_en_name":"hebron","display_heb_name":"","all_en_names":["Hebron"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa651011460404dfc4055","display_en_name":"ellasar","display_heb_name":"","all_en_names":["Ellasar"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa652011460404dfc4056","display_en_name":"elam","display_heb_name":"","all_en_names":["Elam"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa652011460404dfc4057","display_en_name":"goiim","display_heb_name":"","all_en_names":["Goiim"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And HASHEM said to Abram, after Lot had parted from him, Raise your eyes and look out from where you are, to the north and south, to the east and west, for I give all the land that you see to you and your offspring forever. I will make your offspring as the dust of the earth, so that if one can count the dust of the earth, then your offspring too can be counted. Up, walk about the land, through its length and its breadth, for I give it to you. And Abram moved his tent, and came to dwell at the terebinths of Mamre, which are in Hebron; and he built an altar there to HASHEM.Now, when King Amraphel of Shinar, King Arioch of Ellasar, King Chedorlaomer of Elam, and King Tidal of Goiim
+
+HEBREW:
+ויהוה אמר אל אברם אחרי הפרד לוט מעמו שא נא עיניך וראה מן המקום אשר אתה שם צפנה ונגבה וקדמה וימה: כי את כל הארץ אשר אתה ראה לך אתננה ולזרעך עד עולם: ושמתי את זרעך כעפר הארץ אשר אם יוכל איש למנות את עפר הארץ גם זרעך ימנה: קום התהלך בארץ לארכה ולרחבה כי לך אתננה: ויאהל אברם ויבא וישב באלני ממרא אשר בחברון ויבן שם מזבח ליהוה: ויהי בימי אמרפל מלך שנער אריוך מלך אלסר כדרלעמר מלך עילם ותדעל מלך גוים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa651011460404dfc4053",
+      "display_heb_name": "ממרא",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa651011460404dfc4054",
+      "display_heb_name": "חברון",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa651011460404dfc4055",
+      "display_heb_name": "אלסר",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa652011460404dfc4056",
+      "display_heb_name": "עילם",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa652011460404dfc4057",
+      "display_heb_name": "גוים",
+      "placeType": "Country or Region"
+    }
+  ]
+}

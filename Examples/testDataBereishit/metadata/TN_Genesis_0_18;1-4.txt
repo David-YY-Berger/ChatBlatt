@@ -1,0 +1,41 @@
+﻿COST: Tokens: Total=6512 approx cost=$0.001532 (Prompt=1873, Completion=4639)
+SOURCE:
+Bereishit (Torah) 18:1-4
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa64f011460404dfc4048","display_en_name":"agent","display_heb_name":"אנשים","all_en_names":["Agent"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":true,"roles":[]}
+{"key":"6a5fa667011460404dfc40b5","display_en_name":"three figures","display_heb_name":"","all_en_names":["Three Figures"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa668011460404dfc40b6","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"figure","en_context":"figures seen by agent"}
+
+PASSAGE:
+ENGLISH:
+HASHEM appeared to him by the terebinths of Mamre; he was sitting at the entrance of the tent as the day grew hot. Looking up, he saw three figures; Agent. standing near him. Perceiving this, he ran from the entrance of the tent to greet them and, bowing to the ground, he said, My lords! If it please you, do not go on past your servant. Let a little water be brought; bathe your feet and recline under the tree.
+
+HEBREW:
+וירא אליו יהוה באלני ממרא והוא ישב פתח האהל כחם היום: וישא עיניו וירא והנה שלשה אנשים נצבים עליו וירא וירץ לקראתם מפתח האהל וישתחו ארצה: ויאמר אדני אם נא מצאתי חן בעיניך אל נא תעבר מעל עבדך: יקח נא מעט מים ורחצו רגליכם והשענו תחת העץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64f011460404dfc4048",
+      "display_heb_name": "אנשים",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa667011460404dfc40b5",
+      "display_heb_name": "שלשה אנשים",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa668011460404dfc40b6",
+      "display_heb_name": "שלשה",
+      "heb_unit": "איש",
+      "heb_context": "אנשים נצבים עליו"
+    }
+  ]
+}

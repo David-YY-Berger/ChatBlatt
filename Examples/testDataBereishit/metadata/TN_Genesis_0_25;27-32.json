@@ -1,0 +1,15 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68a011460404dfc414d",
+            "display_heb_name": "נזיד",
+            "display_en_name": "stew"
+        },
+        {
+            "key": "6a5fa68b011460404dfc414e",
+            "display_heb_name": "ציד",
+            "display_en_name": "game"
+        }
+    ],
+    "key": "TN_Genesis_0_25:27-32"
+}

@@ -1,0 +1,37 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa66c011460404dfc40c8",
+            "display_heb_name": "מלאכים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "messengers"
+        },
+        {
+            "key": "6a5fa66c011460404dfc40c9",
+            "display_heb_name": "שער סדם",
+            "placeType": "Building or Structure",
+            "display_en_name": "gate of sodom"
+        },
+        {
+            "key": "6a5fa66c011460404dfc40ca",
+            "display_heb_name": "ביתו",
+            "placeType": "Building or Structure",
+            "display_en_name": "lot's house"
+        },
+        {
+            "key": "6a5fa66c011460404dfc40cb",
+            "display_heb_name": "רחוב",
+            "placeType": "City",
+            "display_en_name": "square"
+        },
+        {
+            "key": "6a5fa66d011460404dfc40cc",
+            "display_heb_name": "שני",
+            "heb_unit": "מלאך",
+            "heb_context": "ויבאו סדמה",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_19:1-3"
+}

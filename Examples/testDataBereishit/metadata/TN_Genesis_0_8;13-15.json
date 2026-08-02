@@ -1,0 +1,26 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa627011460404dfc3f9e",
+            "display_heb_name": "אחת ושש מאות",
+            "heb_unit": "שנה",
+            "heb_context": "ציר זמן המבול",
+            "display_en_name": "601"
+        },
+        {
+            "key": "6a5fa628011460404dfc3f9f",
+            "display_heb_name": "אחד",
+            "heb_unit": "חדש",
+            "heb_context": "ציר זמן המבול",
+            "display_en_name": "1"
+        },
+        {
+            "key": "6a5fa628011460404dfc3fa0",
+            "display_heb_name": "שבעה ועשרים",
+            "heb_unit": "יום",
+            "heb_context": "ציר זמן המבול",
+            "display_en_name": "27"
+        }
+    ],
+    "key": "TN_Genesis_0_8:13-15"
+}

@@ -1,0 +1,32 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa603011460404dfc3f00",
+            "display_heb_name": "מים",
+            "placeType": "Body of Water",
+            "display_en_name": "water"
+        },
+        {
+            "key": "6a5fa603011460404dfc3f01",
+            "display_heb_name": "ים",
+            "placeType": "Body of Water",
+            "display_en_name": "sea"
+        },
+        {
+            "key": "6a5fa604011460404dfc3f02",
+            "display_heb_name": "נפש חיה",
+            "display_en_name": "living creature"
+        },
+        {
+            "key": "6a5fa604011460404dfc3f03",
+            "display_heb_name": "עוף",
+            "display_en_name": "bird"
+        },
+        {
+            "key": "6a5fa604011460404dfc3f04",
+            "display_heb_name": "תנין",
+            "display_en_name": "sea monster"
+        }
+    ],
+    "key": "TN_Genesis_0_1:20-23"
+}

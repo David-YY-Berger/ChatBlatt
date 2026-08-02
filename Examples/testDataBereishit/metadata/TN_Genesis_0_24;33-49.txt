@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=3293 approx cost=$0.000380 (Prompt=2702, Completion=591)
+SOURCE:
+Bereishit (Torah) 24:33-49
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa680011460404dfc4121","display_en_name":"ring","display_heb_name":"","all_en_names":["Ring"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa680011460404dfc4122","display_en_name":"bands","display_heb_name":"","all_en_names":["Bands"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa680011460404dfc4123","display_en_name":"jar","display_heb_name":"","all_en_names":["Jar"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But when food was set before him, he said, I will not eat until I have told my tale. He said, Speak, then. I am Abrahams servant, he began. HASHEM has greatly blessed my master, who has become rich-giving him sheep and cattle, silver and gold, male and female slaves, camels and asses. And Sarah, my masters wife, bore my master a son in her old age, and he has assigned to him everything he owns. Now my master made me swear, saying, You shall not get a wife for my son from the daughters of the Canaanites in whose land I dwell; but you shall go to my fathers house, to my kindred, and get a wife for my son. And I said to my master, What if the woman does not follow me? He replied to me, HASHEM, whose ways I have followed, will send a messenger with you and make your errand successful; and you will get a wife for my son from my kindred, from my fathers house. Thus only shall you be freed from my adjuration: if, when you come to my kindred, they refuse you-only then shall you be freed from my adjuration. I came today to the spring, and I said: O HASHEM, God of my master Abrahams [house], if You would indeed grant success to the errand on which I am engaged! As I stand by the spring of water, let the young woman who comes out to draw and to whom I say, Please, let me drink a little water from your jar, and who answers, You may drink, and I will also draw for your camels-let her be the wife whom HASHEM has decreed for my masters son. I had scarcely finished praying in my heart, when Rebekah came out with her jar on her shoulder, and went down to the spring and drew. And I said to her, Please give me a drink. She quickly lowered her jar and said, Drink, and I will also water your camels. So I drank, and she also watered the camels. I inquired of her, Whose daughter are you? And she said, The daughter of Bethuel, son of Nahor, whom Milcah bore to him. And I put the ring on her nose and the bands on her arms. Then I bowed low in homage to HASHEM and blessed HASHEM, the God of my master Abrahams [house], who led me on the right way to get the daughter of my masters brother for his son. And now, if you mean to treat my master with true kindness, tell me; and if not, tell me also, that I may turn right or left.
+
+HEBREW:
+[ויושם] לפניו לאכל ויאמר לא אכל עד אם דברתי דברי ויאמר דבר: ויאמר עבד אברהם אנכי: ויהוה ברך את אדני מאד ויגדל ויתן לו צאן ובקר וכסף וזהב ועבדם ושפחת וגמלים וחמרים: ותלד שרה אשת אדני בן לאדני אחרי זקנתה ויתן לו את כל אשר לו: וישבעני אדני לאמר לא תקח אשה לבני מבנות הכנעני אשר אנכי ישב בארצו: אם לא אל בית אבי תלך ואל משפחתי ולקחת אשה לבני: ואמר אל אדני אלי לא תלך האשה אחרי: ויאמר אלי יהוה אשר התהלכתי לפניו ישלח מלאכו אתך והצליח דרכך ולקחת אשה לבני ממשפחתי ומבית אבי: אז תנקה מאלתי כי תבוא אל משפחתי ואם לא יתנו לך והיית נקי מאלתי: ואבא היום אל העין ואמר יהוה אלהי אדני אברהם אם ישך נא מצליח דרכי אשר אנכי הלך עליה: הנה אנכי נצב על עין המים והיה העלמה היצאת לשאב ואמרתי אליה השקיני נא מעט מים מכדך: ואמרה אלי גם אתה שתה וגם לגמליך אשאב הוא האשה אשר הכיח יהוה לבן אדני: אני טרם אכלה לדבר אל לבי והנה רבקה יצאת וכדה על שכמה ותרד העינה ותשאב ואמר אליה השקיני נא: ותמהר ותורד כדה מעליה ותאמר שתה וגם גמליך אשקה ואשת וגם הגמלים השקתה: ואשאל אתה ואמר בת מי את ותאמר בת בתואל בן נחור אשר ילדה לו מלכה ואשם הנזם על אפה והצמידים על ידיה: ואקד ואשתחוה ליהוה ואברך את יהוה אלהי אדני אברהם אשר הנחני בדרך אמת לקחת את בת אחי אדני לבנו: ועתה אם ישכם עשים חסד ואמת את אדני הגידו לי ואם לא הגידו לי ואפנה על ימין או על שמאל:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa680011460404dfc4121",
+      "display_heb_name": "נזם",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa680011460404dfc4122",
+      "display_heb_name": "צמידים",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa680011460404dfc4123",
+      "display_heb_name": "כד",
+      "symbolType": "Other"
+    }
+  ]
+}

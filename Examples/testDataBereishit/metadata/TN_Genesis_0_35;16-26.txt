@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=3430 approx cost=$0.000490 (Prompt=2397, Completion=1033)
+SOURCE:
+Bereishit (Torah) 35:16-26
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa6b0011460404dfc41f3","display_en_name":"midwife","display_heb_name":"","all_en_names":["Midwife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b0011460404dfc41f4","display_en_name":"ben-oni","display_heb_name":"","all_en_names":["Ben-Oni"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6b1011460404dfc41f6","display_en_name":"ephrath","display_heb_name":"","all_en_names":["Ephrath"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6b1011460404dfc41f7","display_en_name":"bethlehem","display_heb_name":"","all_en_names":["Bethlehem"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6b1011460404dfc41f8","display_en_name":"migdal-eder","display_heb_name":"","all_en_names":["Migdal-Eder"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6b2011460404dfc41fb","display_en_name":"12","display_heb_name":"","all_en_names":["12"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"jacobs sons"}
+
+PASSAGE:
+ENGLISH:
+They set out from Bethel; but when they were still some distance short of Ephrath, Rachel was in childbirth, and she had hard labor. When her labor was at its hardest, the midwife said to her, Have no fear, for it is another boy for you. But as she breathed her last-for she was dying-she named him Ben-oni; but his father called him Benjamin. Thus Rachel died. She was buried on the road to Ephrath-now Bethlehem. Over her grave Jacob set up a pillar; it is the pillar at Rachels grave to this day. Israel journeyed on, and pitched his tent beyond Migdal-eder. While Israel stayed in that land, Reuben went and lay with Bilhah, his fathers concubine; and Israel found out. Now the sons of Jacob were twelve in number. The sons of Leah: Reuben-Jacobs first-born-Simeon, Levi, Judah, Issachar, and Zebulun. The sons of Rachel: Joseph and Benjamin. The sons of Bilhah, Rachels maid: Dan and Naphtali. And the sons of Zilpah, Leahs maid: Gad and Asher. These are the sons of Jacob who were born to him in Paddan-aram.
+
+HEBREW:
+ויסעו מבית אל ויהי עוד כברת הארץ לבוא אפרתה ותלד רחל ותקש בלדתה: ויהי בהקשתה בלדתה ותאמר לה המילדת אל תיראי כי גם זה לך בן: ויהי בצאת נפשה כי מתה ותקרא שמו בן אוני ואביו קרא לו בנימין: ותמת רחל ותקבר בדרך אפרתה הוא בית לחם: ויצב יעקב מצבה על קברתה הוא מצבת קברת רחל עד היום: ויסע ישראל ויט אהלה מהלאה למגדל עדר: ויהי בשכן ישראל בארץ ההוא וילך ראובן וישכב את בלהה פילגש אביו וישמע ישרא͏ל: ויהיו בני יעקב שנים עשר: בני לאה בכור יעקב ראובן ושמעון ולוי ויהודה ויששכר וזבלון: בני רחל יוסף ובנימן: ובני בלהה שפחת רחל דן ונפתלי: ובני זלפה שפחת לאה גד ואשר אלה בני יעקב אשר ילד לו בפדן ארם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6b0011460404dfc41f3",
+      "display_heb_name": "המילדת",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa6b0011460404dfc41f4",
+      "display_heb_name": "בן אוני",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6b1011460404dfc41f6",
+      "display_heb_name": "אפרתה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6b1011460404dfc41f7",
+      "display_heb_name": "בית לחם",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6b1011460404dfc41f8",
+      "display_heb_name": "מגדל עדר",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6b2011460404dfc41fb",
+      "heb_unit": "בן",
+      "heb_context": "בני יעקב"
+    }
+  ]
+}

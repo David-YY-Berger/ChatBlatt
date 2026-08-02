@@ -1,0 +1,40 @@
+﻿COST: Tokens: Total=2781 approx cost=$0.000382 (Prompt=2011, Completion=770)
+SOURCE:
+Bereishit (Torah) 8:7-12
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa627011460404dfc3f9a","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"waiting for dove"}
+{"key":"6a5fa627011460404dfc3f9b","display_en_name":"raven","display_heb_name":"","all_en_names":["Raven"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa627011460404dfc3f9c","display_en_name":"dove","display_heb_name":"","all_en_names":["Dove"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa627011460404dfc3f9d","display_en_name":"olive","display_heb_name":"","all_en_names":["Olive"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+and sent out the raven; it went to and fro until the waters had dried up from the earth. Then he sent out the dove to see whether the waters had decreased from the surface of the ground. But the dove could not find a resting place for its foot, and returned to him to the ark, for there was water over all the earth. So putting out his hand, he took it into the ark with him. He waited another seven days, and again sent out the dove from the ark. The dove came back to him toward evening, and there in its bill was a plucked-off olive leaf! Then Noah knew that the waters had decreased on the earth. He waited still another seven days and sent the dove forth; and it did not return to him any more.
+
+HEBREW:
+וישלח את הערב ויצא יצוא ושוב עד יבשת המים מעל הארץ: וישלח את היונה מאתו לראות הקלו המים מעל פני האדמה: ולא מצאה היונה מנוח לכף רגלה ותשב אליו אל התבה כי מים על פני כל הארץ וישלח ידו ויקחה ויבא אתה אליו אל התבה: ויחל עוד שבעת ימים אחרים ויסף שלח את היונה מן התבה: ותבא אליו היונה לעת ערב והנה עלה זית טרף בפיה וידע נח כי קלו המים מעל הארץ: וייחל עוד שבעת ימים אחרים וישלח את היונה ולא יספה שוב אליו עוד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa627011460404dfc3f9a",
+      "display_heb_name": "שבעת",
+      "heb_unit": "יום",
+      "heb_context": "המתנה ליונה"
+    },
+    {
+      "key": "6a5fa627011460404dfc3f9b",
+      "display_heb_name": "הערב"
+    },
+    {
+      "key": "6a5fa627011460404dfc3f9c",
+      "display_heb_name": "היונה"
+    },
+    {
+      "key": "6a5fa627011460404dfc3f9d",
+      "display_heb_name": "זית"
+    }
+  ]
+}

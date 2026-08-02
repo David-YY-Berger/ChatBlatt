@@ -1,0 +1,27 @@
+﻿COST: Tokens: Total=3138 approx cost=$0.000535 (Prompt=1808, Completion=1330)
+SOURCE:
+Bereishit (Torah) 20:9-13
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa673011460404dfc40e7","display_en_name":"father","display_heb_name":"","all_en_names":["Father"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Then Abimelech summoned Abraham and said to him, What have you done to us? What wrong have I done that you should bring so great a guilt upon me and my kingdom? You have done to me things that ought not to be done. What, then, Abimelech demanded of Abraham, was your purpose in doing this thing? I thought, said Abraham, surely there is no fear of God in this place, and they will kill me because of my wife. And besides, she is in truth my sister, my fathers daughter though not my mothers; and she became my wife. So when God made me wander from my fathers house, I said to her, Let this be the kindness that you shall do me: whatever place we come to, say there of me: He is my brother.
+
+HEBREW:
+ויקרא אבימלך לאברהם ויאמר לו מה עשית לנו ומה חטאתי לך כי הבאת עלי ועל ממלכתי חטאה גדלה מעשים אשר לא יעשו עשית עמדי: ויאמר אבימלך אל אברהם מה ראית כי עשית את הדבר הזה: ויאמר אברהם כי אמרתי רק אין יראת אלהים במקום הזה והרגוני על דבר אשתי: וגם אמנה אחתי בת אבי הוא אך לא בת אמי ותהי לי לאשה: ויהי כאשר התעו אתי אלהים מבית אבי ואמר לה זה חסדך אשר תעשי עמדי אל כל המקום אשר נבוא שמה אמרי לי אחי הוא:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa673011460404dfc40e7",
+      "display_heb_name": "אב",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": false
+    }
+  ]
+}

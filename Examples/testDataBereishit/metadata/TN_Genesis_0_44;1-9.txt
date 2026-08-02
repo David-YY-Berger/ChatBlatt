@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2716 approx cost=$0.000314 (Prompt=2225, Completion=491)
+SOURCE:
+Bereishit (Torah) 44:1-9
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6e3011460404dfc42c5","display_en_name":"youngest one","display_heb_name":"","all_en_names":["Youngest One"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6e3011460404dfc42c6","display_en_name":"land of canaan","display_heb_name":"","all_en_names":["Land Of Canaan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e3011460404dfc42c7","display_en_name":"silver goblet","display_heb_name":"","all_en_names":["Silver Goblet"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6e3011460404dfc42c8","display_en_name":"pack animal","display_heb_name":"","all_en_names":["Pack Animal"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then he instructed his house steward as follows, Fill the mens bags with food, as much as they can carry, and put each ones money in the mouth of his bag. Put my silver goblet in the mouth of the bag of the youngest one, together with his money for the rations. And he did as Joseph told him. With the first light of morning, the men were sent off with their pack animals. They had just left the city and had not gone far, when Joseph said to his house steward, Up, go after those men! And when you overtake them, say to them, Why did you repay good with evil? It is the very one from which my master drinks and which he uses for divination. It was a wicked thing for you to do! He overtook them and spoke those words to them. And they said to him, Why does my lord say such things? Far be it from your servants to do anything of the kind! Here we brought back to you from the land of Canaan the money that we found in the mouths of our bags. How then could we have stolen any silver or gold from your masters house! Whichever of your servants it is found with shall die; the rest of us, moreover, shall become slaves to my lord.
+
+HEBREW:
+ויצו את אשר על ביתו לאמר מלא את אמתחת האנשים אכל כאשר יוכלון שאת ושים כסף איש בפי אמתחתו: ואת גביעי גביע הכסף תשים בפי אמתחת הקטן ואת כסף שברו ויעש כדבר יוסף אשר דבר: הבקר אור והאנשים שלחו המה וחמריהם: הם יצאו את העיר לא הרחיקו ויוסף אמר לאשר על ביתו קום רדף אחרי האנשים והשגתם ואמרת אלהם למה שלמתם רעה תחת טובה: הלוא זה אשר ישתה אדני בו והוא נחש ינחש בו הרעתם אשר עשיתם: וישגם וידבר אלהם את הדברים האלה: ויאמרו אליו למה ידבר אדני כדברים האלה חלילה לעבדיך מעשות כדבר הזה: הן כסף אשר מצאנו בפי אמתחתינו השיבנו אליך מארץ כנען ואיך נגנב מבית אדניך כסף או זהב: אשר ימצא אתו מעבדיך ומת וגם אנחנו נהיה לאדני לעבדים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e3011460404dfc42c5",
+      "display_heb_name": "הקטן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6e3011460404dfc42c6",
+      "display_heb_name": "ארץ כנען",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa6e3011460404dfc42c7",
+      "display_heb_name": "גביע הכסף",
+      "symbolType": "Holy Object"
+    }
+  ]
+}

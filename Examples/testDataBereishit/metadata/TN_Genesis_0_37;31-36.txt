@@ -1,0 +1,43 @@
+﻿COST: Tokens: Total=2845 approx cost=$0.000379 (Prompt=2111, Completion=734)
+SOURCE:
+Bereishit (Torah) 37:31-36
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6c7011460404dfc425b","display_en_name":"potiphar","display_heb_name":"","all_en_names":["Potiphar"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c7011460404dfc425c","display_en_name":"sheol","display_heb_name":"","all_en_names":["Sheol"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6c8011460404dfc425d","display_en_name":"tunic","display_heb_name":"","all_en_names":["Tunic"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6c8011460404dfc425e","display_en_name":"sackcloth","display_heb_name":"","all_en_names":["Sackcloth"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then they took Josephs tunic, slaughtered a kid, and dipped the tunic in the blood. They had the ornamented tunic taken to their father, and they said, We found this. Please examine it; is it your sons tunic or not? He recognized it, and said, My sons tunic! A savage beast devoured him! Joseph was torn by a beast! Jacob rent his clothes, put sackcloth on his loins, and observed mourning for his son many days. All his sons and daughters sought to comfort him; but he refused to be comforted, saying, No, I will go down mourning to my son in Sheol. Thus his father bewailed him. The Midianites, meanwhile, sold him in Egypt to Potiphar, a courtier of Pharaoh and his prefect. uncertain; cf. Jer. 52.12; 2 Kings 25.8ff. and Jer. 39-40; Gen. 39.20; 40.3. Apparently the office was obscure even to the texts original audience (cf. 39.1). NJPS chief steward, trad. captain of the guard.
+
+HEBREW:
+ויקחו את כתנת יוסף וישחטו שעיר עזים ויטבלו את הכתנת בדם: וישלחו את כתנת הפסים ויביאו אל אביהם ויאמרו זאת מצאנו הכר נא הכתנת בנך הוא אם לא: ויכירה ויאמר כתנת בני חיה רעה אכלתהו טרף טרף יוסף: ויקרע יעקב שמלתיו וישם שק במתניו ויתאבל על בנו ימים רבים: ויקמו כל בניו וכל בנתיו לנחמו וימאן להתנחם ויאמר כי ארד אל בני אבל שאלה ויבך אתו אביו: והמדנים מכרו אתו אל מצרים לפוטיפר סריס פרעה שר הטבחים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c7011460404dfc425b",
+      "display_heb_name": "פוטיפר",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6c7011460404dfc425c",
+      "display_heb_name": "שאלה",
+      "placeType": "Not Physical"
+    },
+    {
+      "key": "6a5fa6c8011460404dfc425d",
+      "display_heb_name": "כתנת",
+      "symbolType": "Clothing"
+    },
+    {
+      "key": "6a5fa6c8011460404dfc425e",
+      "display_heb_name": "שק",
+      "symbolType": "Clothing"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+﻿COST: Tokens: Total=9477 approx cost=$0.001751 (Prompt=4854, Completion=4623)
+SOURCE:
+Bereishit (Torah) 9:28-10:8
+
+ENTITIES TO ENRICH (37):
+{"key":"6a5fa62a011460404dfc3faa","display_en_name":"gomer","display_heb_name":"","all_en_names":["Gomer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62a011460404dfc3fab","display_en_name":"magog","display_heb_name":"","all_en_names":["Magog"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62b011460404dfc3fac","display_en_name":"madai","display_heb_name":"","all_en_names":["Madai"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62b011460404dfc3fad","display_en_name":"javan","display_heb_name":"","all_en_names":["Javan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62b011460404dfc3fae","display_en_name":"tubal","display_heb_name":"","all_en_names":["Tubal"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62b011460404dfc3faf","display_en_name":"meshech","display_heb_name":"","all_en_names":["Meshech"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62c011460404dfc3fb0","display_en_name":"tiras","display_heb_name":"","all_en_names":["Tiras"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62c011460404dfc3fb1","display_en_name":"ashkenaz","display_heb_name":"","all_en_names":["Ashkenaz"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62c011460404dfc3fb2","display_en_name":"riphath","display_heb_name":"","all_en_names":["Riphath"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62c011460404dfc3fb3","display_en_name":"togarmah","display_heb_name":"","all_en_names":["Togarmah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62c011460404dfc3fb4","display_en_name":"elishah","display_heb_name":"","all_en_names":["Elishah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62d011460404dfc3fb5","display_en_name":"tarshish","display_heb_name":"","all_en_names":["Tarshish"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62d011460404dfc3fb6","display_en_name":"kittim","display_heb_name":"","all_en_names":["Kittim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62d011460404dfc3fb7","display_en_name":"dodanim","display_heb_name":"","all_en_names":["Dodanim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62d011460404dfc3fb8","display_en_name":"cush","display_heb_name":"","all_en_names":["Cush"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62e011460404dfc3fb9","display_en_name":"mizraim","display_heb_name":"","all_en_names":["Mizraim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62e011460404dfc3fba","display_en_name":"put","display_heb_name":"","all_en_names":["Put"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62e011460404dfc3fbb","display_en_name":"seba","display_heb_name":"","all_en_names":["Seba"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62e011460404dfc3fbd","display_en_name":"sabtah","display_heb_name":"","all_en_names":["Sabtah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62f011460404dfc3fbe","display_en_name":"raamah","display_heb_name":"","all_en_names":["Raamah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62f011460404dfc3fbf","display_en_name":"sabteca","display_heb_name":"","all_en_names":["Sabteca"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa62f011460404dfc3fc1","display_en_name":"dedan","display_heb_name":"","all_en_names":["Dedan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa630011460404dfc3fc2","display_en_name":"nimrod","display_heb_name":"","all_en_names":["Nimrod"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa630011460404dfc3fc3","display_en_name":"kittim","display_heb_name":"","all_en_names":["Kittim"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa630011460404dfc3fc4","display_en_name":"dodanim","display_heb_name":"","all_en_names":["Dodanim"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa630011460404dfc3fc5","display_en_name":"cush","display_heb_name":"","all_en_names":["Cush"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa630011460404dfc3fc6","display_en_name":"mizraim","display_heb_name":"","all_en_names":["Mizraim"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa631011460404dfc3fc7","display_en_name":"put","display_heb_name":"","all_en_names":["Put"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa631011460404dfc3fc9","display_en_name":"seba","display_heb_name":"","all_en_names":["Seba"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa631011460404dfc3fca","display_en_name":"havilah","display_heb_name":"","all_en_names":["Havilah"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa632011460404dfc3fcb","display_en_name":"sabtah","display_heb_name":"","all_en_names":["Sabtah"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa632011460404dfc3fcc","display_en_name":"raamah","display_heb_name":"","all_en_names":["Raamah"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa632011460404dfc3fcd","display_en_name":"sabteca","display_heb_name":"","all_en_names":["Sabteca"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa632011460404dfc3fce","display_en_name":"sheba","display_heb_name":"","all_en_names":["Sheba"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa632011460404dfc3fcf","display_en_name":"dedan","display_heb_name":"","all_en_names":["Dedan"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa633011460404dfc3fd0","display_en_name":"350","display_heb_name":"","all_en_names":["350"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"noah after flood"}
+{"key":"6a5fa633011460404dfc3fd1","display_en_name":"950","display_heb_name":"","all_en_names":["950"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"noah lifespan"}
+
+PASSAGE:
+ENGLISH:
+Noah lived after the Flood 350 years. And all the days of Noah came to 950 years; then he died.These are the lines of Shem, Ham, and Japheth, the sons of Noah: sons were born to them after the Flood. The descendants of Japheth: Gomer, Magog, Madai, Javan, Tubal, Meshech, and Tiras. The descendants of Gomer: Ashkenaz, Riphath, and Togarmah. The descendants of Javan: Elishah and Tarshish, the Kittim and the Dodanim. From these the maritime nations branched out. [These are the descendants of Japheth] by their lands-each with its language-their clans and their nations. The descendants of Ham: Cush, Mizraim, Put, and Canaan. The descendants of Cush: Seba, Havilah, Sabtah, Raamah, and Sabteca. The descendants of Raamah: Sheba and Dedan. Cush also begot Nimrod, who was the first mighty figure on earth.
+
+HEBREW:
+ויחי נח אחר המבול שלש מאות שנה וחמשים שנה: ויהיו * (בספרי ספרד ואשכנז ויהי) כל ימי נח תשע מאות שנה וחמשים שנה וימת: ואלה תולדת בני נח שם חם ויפת ויולדו להם בנים אחר המבול: בני יפת גמר ומגוג ומדי ויון ותבל ומשך ותירס: ובני גמר אשכנז וריפת ותגרמה: ובני יון אלישה ותרשיש כתים ודדנים: מאלה נפרדו איי הגוים בארצתם איש ללשנו למשפחתם בגויהם: ובני חם כוש ומצרים ופוט וכנען: ובני כוש סבא וחוילה וסבתה ורעמה וסבתכא ובני רעמה שבא ודדן: וכוש ילד את נמרד הוא החל להיות גבר בארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa62a011460404dfc3faa",
+      "display_heb_name": "גמר",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62a011460404dfc3fab",
+      "display_heb_name": "מגוג",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62b011460404dfc3fac",
+      "display_heb_name": "מדי",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62b011460404dfc3fad",
+      "display_heb_name": "יון",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62b011460404dfc3fae",
+      "display_heb_name": "תבל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62b011460404dfc3faf",
+      "display_heb_name": "משך",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62c011460404dfc3fb0",
+      "display_heb_name": "תירס",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62c011460404dfc3fb1",
+      "display_heb_name": "אשכנז",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62c011460404dfc3fb2",
+      "display_heb_name": "ריפת",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62c011460404dfc3fb3",
+      "display_heb_name": "תגרמה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62c011460404dfc3fb4",
+      "display_heb_name": "אלישה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62d011460404dfc3fb5",
+      "display_heb_name": "תרשיש",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62d011460404dfc3fb6",
+      "display_heb_name": "כתים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa62d011460404dfc3fb7",
+      "display_heb_name": "דדנים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa62d011460404dfc3fb8",
+      "display_heb_name": "כוש",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62e011460404dfc3fb9",
+      "display_heb_name": "מצרים",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62e011460404dfc3fba",
+      "display_heb_name": "פוט",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62e011460404dfc3fbb",
+      "display_heb_name": "סבא",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62e011460404dfc3fbd",
+      "display_heb_name": "סבתה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62f011460404dfc3fbe",
+      "display_heb_name": "רעמה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62f011460404dfc3fbf",
+      "display_heb_name": "סבתכא",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa62f011460404dfc3fc1",
+      "display_heb_name": "דדן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa630011460404dfc3fc2",
+      "display_heb_name": "נמרד",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa630011460404dfc3fc3",
+      "display_heb_name": "כתים"
+    },
+    {
+      "key": "6a5fa630011460404dfc3fc4",
+      "display_heb_name": "דדנים"
+    },
+    {
+      "key": "6a5fa630011460404dfc3fc5",
+      "display_heb_name": "כוש"
+    },
+    {
+      "key": "6a5fa630011460404dfc3fc6",
+      "display_heb_name": "מצרים"
+    },
+    {
+      "key": "6a5fa631011460404dfc3fc7",
+      "display_heb_name": "פוט"
+    },
+    {
+      "key": "6a5fa631011460404dfc3fc9",
+      "display_heb_name": "סבא"
+    },
+    {
+      "key": "6a5fa631011460404dfc3fca",
+      "display_heb_name": "חוילה"
+    },
+    {
+      "key": "6a5fa632011460404dfc3fcb",
+      "display_heb_name": "סבתה"
+    },
+    {
+      "key": "6a5fa632011460404dfc3fcc",
+      "display_heb_name": "רעמה"
+    },
+    {
+      "key": "6a5fa632011460404dfc3fcd",
+      "display_heb_name": "סבתכא"
+    },
+    {
+      "key": "6a5fa632011460404dfc3fce",
+      "display_heb_name": "שבא"
+    },
+    {
+      "key": "6a5fa632011460404dfc3fcf",
+      "display_heb_name": "דדן"
+    },
+    {
+      "key": "6a5fa633011460404dfc3fd0",
+      "display_heb_name": "שלש מאות וחמשים",
+      "heb_unit": "שנה",
+      "heb_context": "נח אחר המבול"
+    },
+    {
+      "key": "6a5fa633011460404dfc3fd1",
+      "display_heb_name": "תשע מאות וחמשים",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי נח"
+    }
+  ]
+}

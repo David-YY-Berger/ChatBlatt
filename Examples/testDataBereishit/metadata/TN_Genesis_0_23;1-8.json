@@ -1,0 +1,33 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa67a011460404dfc4108",
+            "display_heb_name": "בני חת",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "hittites"
+        },
+        {
+            "key": "6a5fa67a011460404dfc4109",
+            "display_heb_name": "עפרון",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ephron"
+        },
+        {
+            "key": "6a5fa67b011460404dfc410b",
+            "display_heb_name": "קרית ארבע",
+            "placeType": "City",
+            "display_en_name": "kiriath-arba"
+        },
+        {
+            "key": "6a5fa67b011460404dfc410c",
+            "display_heb_name": "מאה שנה ועשרים שנה ושבע שנים",
+            "heb_unit": "שנה",
+            "heb_context": "חיי שרה",
+            "display_en_name": "127"
+        }
+    ],
+    "key": "TN_Genesis_0_23:1-8"
+}

@@ -1,0 +1,32 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e5011460404dfc42cd",
+            "display_heb_name": "הנצבים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "attendants"
+        },
+        {
+            "key": "6a5fa6e5011460404dfc42ce",
+            "display_heb_name": "בית פרעה",
+            "placeType": "Building or Structure",
+            "display_en_name": "pharaoh's palace"
+        },
+        {
+            "key": "6a5fa6e5011460404dfc42cf",
+            "display_heb_name": "שנתים",
+            "heb_unit": "שנה",
+            "heb_context": "הרעב בקרב הארץ",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa6e5011460404dfc42d0",
+            "display_heb_name": "חמש",
+            "heb_unit": "שנה",
+            "heb_context": "שנים אשר אין חריש וקציר",
+            "display_en_name": "5"
+        }
+    ],
+    "key": "TN_Genesis_0_45:1-9"
+}

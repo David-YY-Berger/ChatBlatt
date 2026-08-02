@@ -1,0 +1,73 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa668011460404dfc40b7",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "they"
+        },
+        {
+            "key": "6a5fa668011460404dfc40b8",
+            "display_heb_name": "נער",
+            "timePeriod": "Tanach",
+            "display_en_name": "servant-boy"
+        },
+        {
+            "key": "6a5fa668011460404dfc40b9",
+            "display_heb_name": "עבד",
+            "timePeriod": "Tanach",
+            "isGroup": false,
+            "display_en_name": "servants"
+        },
+        {
+            "key": "6a5fa669011460404dfc40ba",
+            "display_heb_name": "אהל",
+            "placeType": "Building or Structure",
+            "display_en_name": "tent"
+        },
+        {
+            "key": "6a5fa669011460404dfc40bb",
+            "display_heb_name": "תחת העץ",
+            "placeType": "Other",
+            "display_en_name": "under the tree"
+        },
+        {
+            "key": "6a5fa669011460404dfc40bc",
+            "display_heb_name": "שלש",
+            "heb_unit": "סאה",
+            "heb_context": "קמח סלת לעגות",
+            "display_en_name": "3"
+        },
+        {
+            "key": "6a5fa669011460404dfc40bd",
+            "display_heb_name": "בן בקר",
+            "display_en_name": "calf"
+        },
+        {
+            "key": "6a5fa66a011460404dfc40be",
+            "display_heb_name": "קמח",
+            "display_en_name": "flour"
+        },
+        {
+            "key": "6a5fa66a011460404dfc40bf",
+            "display_heb_name": "עגות",
+            "display_en_name": "cake"
+        },
+        {
+            "key": "6a5fa66a011460404dfc40c0",
+            "display_heb_name": "בן בקר",
+            "display_en_name": "calf"
+        },
+        {
+            "key": "6a5fa66a011460404dfc40c1",
+            "display_heb_name": "חמאה",
+            "display_en_name": "curd"
+        },
+        {
+            "key": "6a5fa66a011460404dfc40c2",
+            "display_heb_name": "חלב",
+            "display_en_name": "milk"
+        }
+    ],
+    "key": "TN_Genesis_0_18:5-9"
+}

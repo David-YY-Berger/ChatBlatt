@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2666 approx cost=$0.000362 (Prompt=1948, Completion=718)
+SOURCE:
+Bereishit (Torah) 19:24-29
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa670011460404dfc40dc","display_en_name":"lot's wife","display_heb_name":"","all_en_names":["Lot's Wife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa670011460404dfc40dd","display_en_name":"pillar of salt","display_heb_name":"","all_en_names":["Pillar Of Salt"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa671011460404dfc40de","display_en_name":"vegetation","display_heb_name":"","all_en_names":["Vegetation"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+HASHEM rained upon Sodom and Gomorrah sulfurous fire from HASHEM out of heaven- annihilating those cities and the entire Plain, and all the inhabitants of the cities and the vegetation of the ground. Lots wife looked back, and she thereupon turned into a pillar of salt. Next morning, Abraham hurried to the place where he had stood before HASHEM, and, looking down toward Sodom and Gomorrah and all the land of the Plain, he saw the smoke of the land rising like the smoke of a kiln. Thus it was that, when God destroyed the cities of the Plain and annihilated the cities where Lot dwelt, God was mindful of Abraham and removed Lot from the midst of the upheaval.
+
+HEBREW:
+ויהוה המטיר על סדם ועל עמרה גפרית ואש מאת יהוה מן השמים: ויהפך את הערים האל ואת כל הככר ואת כל ישבי הערים וצמח האדמה: ותבט אשתו מאחריו ותהי נציב מלח: וישכם אברהם בבקר אל המקום אשר עמד שם את פני יהוה: וישקף על פני סדם ועמרה ועל כל פני ארץ הככר וירא והנה עלה קיטר הארץ כקיטר הכבשן: ויהי בשחת אלהים את ערי הככר ויזכר אלהים את אברהם וישלח את לוט מתוך ההפכה בהפך את הערים אשר ישב בהן לוט:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa670011460404dfc40dc",
+      "display_heb_name": "אשתו",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa670011460404dfc40dd",
+      "display_heb_name": "נציב מלח",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa671011460404dfc40de",
+      "display_heb_name": "צמח"
+    }
+  ]
+}

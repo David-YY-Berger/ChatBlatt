@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa676011460404dfc40f5",
+            "display_heb_name": "המריה",
+            "placeType": "Country or Region",
+            "display_en_name": "moriah"
+        },
+        {
+            "key": "6a5fa676011460404dfc40f6",
+            "display_heb_name": "השלישי",
+            "heb_unit": "יום",
+            "heb_context": "מסע למוריה",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_22:1-6"
+}

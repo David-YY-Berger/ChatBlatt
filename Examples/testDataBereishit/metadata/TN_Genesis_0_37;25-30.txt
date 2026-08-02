@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=3198 approx cost=$0.000452 (Prompt=2255, Completion=943)
+SOURCE:
+Bereishit (Torah) 37:25-30
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa6c6011460404dfc4255","display_en_name":"ishmaelites","display_heb_name":"","all_en_names":["Ishmaelites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c6011460404dfc4256","display_en_name":"midianite traders","display_heb_name":"","all_en_names":["Midianite Traders"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c6011460404dfc4257","display_en_name":"20","display_heb_name":"","all_en_names":["20"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"silver","en_context":"joseph sale price"}
+{"key":"6a5fa6c6011460404dfc4258","display_en_name":"gum","display_heb_name":"","all_en_names":["Gum"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6c6011460404dfc4259","display_en_name":"balm","display_heb_name":"","all_en_names":["Balm"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6c7011460404dfc425a","display_en_name":"ladanum","display_heb_name":"","all_en_names":["Ladanum"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then they sat down to a meal. Looking up, they saw a caravan of Ishmaelites coming from Gilead, their camels bearing gum, balm, and ladanum to be taken to Egypt. Then Judah said to his brothers, What do we gain by killing our brother and covering up his blood? Come, let us sell him to the Ishmaelites, but let us not do away with him ourselves. After all, he is our brother, our own flesh. His brothers agreed. When Midianite traders passed by, they pulled Joseph up out of the pit. They sold Joseph for twenty pieces of silver to the Ishmaelites, who brought Joseph to Egypt. When Reuben returned to the pit and saw that Joseph was not in the pit, he rent his clothes. Returning to his brothers, he said, The boy is gone! Now, what am I to do?
+
+HEBREW:
+וישבו לאכל לחם וישאו עיניהם ויראו והנה ארחת ישמעאלים באה מגלעד וגמליהם נשאים נכאת וצרי ולט הולכים להוריד מצרימה: ויאמר יהודה אל אחיו מה בצע כי נהרג את אחינו וכסינו את דמו: לכו ונמכרנו לישמעאלים וידנו אל תהי בו כי אחינו בשרנו הוא וישמעו אחיו: ויעברו אנשים מדינים סחרים וימשכו ויעלו את יוסף מן הבור וימכרו את יוסף לישמעאלים בעשרים כסף ויביאו את יוסף מצרימה: וישב ראובן אל הבור והנה אין יוסף בבור ויקרע את בגדיו: וישב אל אחיו ויאמר הילד איננו ואני אנה אני בא:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c6011460404dfc4255",
+      "display_heb_name": "ישמעאלים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6c6011460404dfc4256",
+      "display_heb_name": "מדינים סחרים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6c6011460404dfc4257",
+      "display_heb_name": "עשרים",
+      "heb_unit": "כסף",
+      "heb_context": "מחיר מכירת יוסף"
+    },
+    {
+      "key": "6a5fa6c6011460404dfc4258",
+      "display_heb_name": "נכאת"
+    },
+    {
+      "key": "6a5fa6c6011460404dfc4259",
+      "display_heb_name": "צרי"
+    },
+    {
+      "key": "6a5fa6c7011460404dfc425a",
+      "display_heb_name": "לט"
+    }
+  ]
+}

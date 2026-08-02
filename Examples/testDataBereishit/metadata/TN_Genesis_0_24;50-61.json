@@ -1,0 +1,31 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa680011460404dfc4124",
+            "display_heb_name": "עבד אברהם",
+            "timePeriod": "Tanach",
+            "display_en_name": "abraham's servant"
+        },
+        {
+            "key": "6a5fa681011460404dfc4125",
+            "display_heb_name": "אחיה",
+            "timePeriod": "Tanach",
+            "display_en_name": "rebekah's brother"
+        },
+        {
+            "key": "6a5fa681011460404dfc4126",
+            "display_heb_name": "אמה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "rebekah's mother"
+        },
+        {
+            "key": "6a5fa681011460404dfc4127",
+            "display_heb_name": "עשור",
+            "heb_unit": "יום",
+            "heb_context": "שהות הנערה",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_24:50-61"
+}

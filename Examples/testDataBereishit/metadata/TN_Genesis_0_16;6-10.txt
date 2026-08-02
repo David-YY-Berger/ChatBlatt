@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2643 approx cost=$0.000379 (Prompt=1841, Completion=802)
+SOURCE:
+Bereishit (Torah) 16:6-10
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa663011460404dfc40a0","display_en_name":"messenger of hashem","display_heb_name":"","all_en_names":["Messenger Of Hashem"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa663011460404dfc40a1","display_en_name":"shur","display_heb_name":"","all_en_names":["Shur"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Abram said to Sarai, Your maid is in your hands. Deal with her as you think right. Then Sarai treated her harshly, and she ran away from her. A messenger of HASHEM found her by a spring of water in the wilderness, the spring on the road to Shur, and said, Hagar, slave of Sarai, where have you come from, and where are you going? And she said, I am running away from my mistress Sarai. And the messenger of HASHEM said to her, Go back to your mistress, and submit to her harsh treatment. And the messenger of HASHEM said to her, I will greatly increase your offspring, And they shall be too many to count.
+
+HEBREW:
+ויאמר אברם אל שרי הנה שפחתך בידך עשי לה הטוב בעיניך ותענה שרי ותברח מפניה: וימצאה מלאך יהוה על עין המים במדבר על העין בדרך שור: ויאמר הגר שפחת שרי אי מזה באת ואנה תלכי ותאמר מפני שרי גברתי אנכי ברחת: ויאמר לה מלאך יהוה שובי אל גברתך והתעני תחת ידיה: ויאמר לה מלאך יהוה הרבה ארבה את זרעך ולא יספר מרב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa663011460404dfc40a0",
+      "display_heb_name": "מלאך יהוה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa663011460404dfc40a1",
+      "display_heb_name": "שור",
+      "placeType": "City"
+    }
+  ]
+}

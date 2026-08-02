@@ -1,0 +1,51 @@
+﻿COST: Tokens: Total=3706 approx cost=$0.000639 (Prompt=2102, Completion=1604)
+SOURCE:
+Bereishit (Torah) 19:1-3
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa66c011460404dfc40c8","display_en_name":"messengers","display_heb_name":"","all_en_names":["Messengers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa66c011460404dfc40c9","display_en_name":"gate of sodom","display_heb_name":"","all_en_names":["Gate Of Sodom"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa66c011460404dfc40ca","display_en_name":"lot's house","display_heb_name":"","all_en_names":["Lot's House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa66c011460404dfc40cb","display_en_name":"square","display_heb_name":"","all_en_names":["Square"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa66d011460404dfc40cc","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"messenger","en_context":"arrived in sodom"}
+{"key":"6a5fa66d011460404dfc40cd","display_en_name":"unleavened bread","display_heb_name":"","all_en_names":["Unleavened Bread"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+The two messengers arrived in Sodom in the evening, as Lot was sitting in the gate of Sodom. When Lot saw them, he rose to greet them and, bowing low with his face to the ground, he said, Please, my lords, turn aside to your servants house to spend the night, and bathe your feet; then you may be on your way early. But they said, No, we will spend the night in the square. But he urged them strongly, so they turned his way and entered his house. He prepared a feast for them and baked unleavened bread, and they ate.
+
+HEBREW:
+ויבאו שני המלאכים סדמה בערב ולוט ישב בשער סדם וירא לוט ויקם לקראתם וישתחו אפים ארצה: ויאמר הנה נא אדני סורו נא אל בית עבדכם ולינו ורחצו רגליכם והשכמתם והלכתם לדרככם ויאמרו לא כי ברחוב נלין: ויפצר בם מאד ויסרו אליו ויבאו אל ביתו ויעש להם משתה ומצות אפה ויאכלו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66c011460404dfc40c8",
+      "display_heb_name": "מלאכים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa66c011460404dfc40c9",
+      "display_heb_name": "שער סדם",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa66c011460404dfc40ca",
+      "display_heb_name": "ביתו",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa66c011460404dfc40cb",
+      "display_heb_name": "רחוב",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa66d011460404dfc40cc",
+      "display_heb_name": "שני",
+      "heb_unit": "מלאך",
+      "heb_context": "ויבאו סדמה"
+    }
+  ]
+}

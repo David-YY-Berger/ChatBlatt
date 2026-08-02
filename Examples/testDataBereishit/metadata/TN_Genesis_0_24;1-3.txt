@@ -1,0 +1,23 @@
+﻿COST: Tokens: Total=1846 approx cost=$0.000181 (Prompt=1655, Completion=191)
+SOURCE:
+Bereishit (Torah) 24:1-3
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa67c011460404dfc4111","display_en_name":"son","display_heb_name":"","all_en_names":["Son"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Abraham was now old, advanced in years, and HASHEM had blessed Abraham in all things. And Abraham said to the senior servant of his household, who had charge of all that he owned, Put your hand under my thigh and I will make you swear by HASHEM, the God of heaven and the God of the earth, that you will not take a wife for my son from the daughters of the Canaanites among whom I dwell,
+
+HEBREW:
+ואברהם זקן בא בימים ויהוה ברך את אברהם בכל: ויאמר אברהם אל עבדו זקן ביתו המשל בכל אשר לו שים נא ידך תחת ירכי: ואשביעך ביהוה אלהי השמים ואלהי הארץ אשר לא תקח אשה לבני מבנות הכנעני אשר אנכי יושב בקרבו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67c011460404dfc4111",
+      "display_heb_name": "בן"
+    }
+  ]
+}

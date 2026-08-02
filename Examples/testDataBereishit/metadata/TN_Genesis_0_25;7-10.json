@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa685011460404dfc4137",
+            "display_heb_name": "מאת שנה ושבעים שנה וחמש שנים",
+            "heb_unit": "שנה",
+            "heb_context": "ימי שני חיי אברהם",
+            "display_en_name": "175"
+        }
+    ],
+    "key": "TN_Genesis_0_25:7-10"
+}

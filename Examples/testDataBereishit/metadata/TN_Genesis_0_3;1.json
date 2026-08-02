@@ -1,0 +1,15 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60c011460404dfc3f25",
+            "display_heb_name": "נחש",
+            "display_en_name": "serpent"
+        },
+        {
+            "key": "6a5fa60c011460404dfc3f26",
+            "display_heb_name": "עץ",
+            "display_en_name": "tree"
+        }
+    ],
+    "key": "TN_Genesis_0_3:1"
+}

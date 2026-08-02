@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2128 approx cost=$0.000239 (Prompt=1776, Completion=352)
+SOURCE:
+Bereishit (Torah) 37:5-8
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6c4011460404dfc424c","display_en_name":"joseph's brothers","display_heb_name":"","all_en_names":["Joseph's Brothers"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6c4011460404dfc424d","display_en_name":"sheaf","display_heb_name":"","all_en_names":["Sheaf"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Once Joseph had a dream which he told to his brothers; and they hated him even more. He said to them, Hear this dream which I have dreamed: There we were binding sheaves in the field, when suddenly my sheaf stood up and remained upright; then your sheaves gathered around and bowed low to my sheaf. His brothers answered, Do you mean to reign over us? Do you mean to rule over us? And they hated him even more for his talk about his dreams.
+
+HEBREW:
+ויחלם יוסף חלום ויגד לאחיו ויוספו עוד שנא אתו: ויאמר אליהם שמעו נא החלום הזה אשר חלמתי: והנה אנחנו מאלמים אלמים בתוך השדה והנה קמה אלמתי וגם נצבה והנה תסבינה אלמתיכם ותשתחוין לאלמתי: ויאמרו לו אחיו המלך תמלך עלינו אם משול תמשל בנו ויוספו עוד שנא אתו על חלמתיו ועל דבריו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c4011460404dfc424c",
+      "display_heb_name": "אחיו",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6c4011460404dfc424d",
+      "display_heb_name": "אלמה",
+      "symbolType": "Part of Nature"
+    }
+  ]
+}

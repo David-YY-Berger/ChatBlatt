@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=4256 approx cost=$0.000825 (Prompt=2009, Completion=2247)
+SOURCE:
+Bereishit (Torah) 29:23-31
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa696011460404dfc417f","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"service for wives"}
+{"key":"6a5fa697011460404dfc4180","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"week","en_context":"leah bridal week"}
+
+PASSAGE:
+ENGLISH:
+When evening came, he took his daughter Leah and brought her to him; and he cohabited with her.- Laban had given his maidservant Zilpah to his daughter Leah as her maid.- When morning came, there was Leah! So he said to Laban, What is this you have done to me? I was in your service for Rachel! Why did you deceive me? Laban said, It is not the practice in our place to marry off the younger before the older. Wait until the bridal week of this one is over and we will give you that one too, provided you serve me another seven years. Jacob did so; he waited out the bridal week of the one, and then he gave him his daughter Rachel as wife.- Laban had given his maidservant Bilhah to his daughter Rachel as her maid.- And Jacob cohabited with Rachel also; indeed, he loved Rachel more than Leah. And he served him another seven years. Seeing that Leah was unloved, HASHEM opened her womb; but Rachel was barren.
+
+HEBREW:
+ויהי בערב ויקח את לאה בתו ויבא אתה אליו ויבא אליה: ויתן לבן לה את זלפה שפחתו ללאה בתו שפחה: ויהי בבקר והנה הוא לאה ויאמר אל לבן מה זאת עשית לי הלא ברחל עבדתי עמך ולמה רמיתני: ויאמר לבן לא יעשה כן במקומנו לתת הצעירה לפני הבכירה: מלא שבע זאת ונתנה לך גם את זאת בעבדה אשר תעבד עמדי עוד שבע שנים אחרות: ויעש יעקב כן וימלא שבע זאת ויתן לו את רחל בתו לו לאשה: ויתן לבן לרחל בתו את בלהה שפחתו לה לשפחה: ויבא גם אל רחל ויאהב גם את רחל מלאה ויעבד עמו עוד שבע שנים אחרות: וירא יהוה כי שנואה לאה ויפתח את רחמה ורחל עקרה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa696011460404dfc417f",
+      "display_heb_name": "שבע",
+      "heb_unit": "שנה",
+      "heb_context": "שירות עבור נשים"
+    },
+    {
+      "key": "6a5fa697011460404dfc4180",
+      "heb_unit": "שבוע",
+      "heb_context": "שבוע כלולות לאה"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+﻿COST: Tokens: Total=2820 approx cost=$0.000368 (Prompt=2125, Completion=695)
+SOURCE:
+Bereishit (Torah) 15:1-8
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa64a011460404dfc4035","display_en_name":"chaldea","display_heb_name":"","all_en_names":["Chaldea"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa65d011460404dfc4087","display_en_name":"dammesek eliezer","display_heb_name":"","all_en_names":["Dammesek Eliezer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65d011460404dfc4088","display_en_name":"shield","display_heb_name":"","all_en_names":["Shield"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Some time later, the word of HASHEM came to Abram in a vision: Fear not, Abram, I am a shield to you; Your reward shall be very great. But Abram said, O lord HASHEM,, traditionally read aloud as adonai elohim (rather than adonai twice). NJPS Lord God. See also the Dictionary under male metaphors for God. what can You give me, seeing that I shall die childless, and the one in charge of my household is Dammesek Eliezer! Abram said further, Since You have granted me no offspring, my steward will be my heir. The word of HASHEM came to him in reply, That one shall not be your heir; none but your very own issue shall be your heir. [Then in the vision, God] took him outside and said, Look toward heaven and count the stars, if you are able to count them-continuing, So shall your offspring be. And he put his trust in HASHEM, who reckoned it to his merit. Then [God] said to him, I am HASHEM who brought you out from Ur of the Chaldeans to assign this land to you as a possession. And he said, O lord HASHEM, how shall I know that I am to possess it?
+
+HEBREW:
+אחר הדברים האלה היה דבר יהוה אל אברם במחזה לאמר אל תירא אברם אנכי מגן לך שכרך הרבה מאד: ויאמר אברם אדני יהוה מה תתן לי ואנכי הולך ערירי ובן משק ביתי הוא דמשק אליעזר: ויאמר אברם הן לי לא נתתה זרע והנה בן ביתי יורש אתי: והנה דבר יהוה אליו לאמר לא יירשך זה כי אם אשר יצא ממעיך הוא יירשך: ויוצא אתו החוצה ויאמר הבט נא השמימה וספר הכוכבים אם תוכל לספר אתם ויאמר לו כה יהיה זרעך: והאמן ביהוה ויחשבה לו צדקה: ויאמר אליו אני יהוה אשר הוצאתיך מאור כשדים לתת לך את הארץ הזאת לרשתה: ויאמר אדני יהוה במה אדע כי אירשנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64a011460404dfc4035",
+      "display_heb_name": "כשדים"
+    },
+    {
+      "key": "6a5fa65d011460404dfc4087",
+      "display_heb_name": "דמשק אליעזר",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa65d011460404dfc4088",
+      "display_heb_name": "מגן",
+      "symbolType": "Weapon"
+    }
+  ]
+}

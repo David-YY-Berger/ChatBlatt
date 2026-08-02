@@ -1,0 +1,63 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f9011460404dfc4321",
+            "display_heb_name": "עבדי פרעה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "officials of pharaoh"
+        },
+        {
+            "key": "6a5fa6fa011460404dfc4322",
+            "display_heb_name": "זקני ביתו",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "senior members of his court"
+        },
+        {
+            "key": "6a5fa6fa011460404dfc4323",
+            "display_heb_name": "זקני ארץ מצרים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "egypt's dignitaries"
+        },
+        {
+            "key": "6a5fa6fa011460404dfc4324",
+            "display_heb_name": "בית יוסף",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "joseph's household"
+        },
+        {
+            "key": "6a5fa6fa011460404dfc4325",
+            "display_heb_name": "עפרן החתי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ephron the hittite"
+        },
+        {
+            "key": "6a5fa6fb011460404dfc4326",
+            "display_heb_name": "יושב הארץ הכנעני",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "canaanite inhabitants"
+        },
+        {
+            "key": "6a5fa6fb011460404dfc4327",
+            "display_heb_name": "גרן האטד",
+            "placeType": "Building or Structure",
+            "display_en_name": "goren ha-atad"
+        },
+        {
+            "key": "6a5fa6fb011460404dfc4328",
+            "display_heb_name": "אבל מצרים",
+            "placeType": "Other",
+            "display_en_name": "abel-mizraim"
+        }
+    ],
+    "key": "TN_Genesis_0_50:7-14"
+}

@@ -1,0 +1,35 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa692011460404dfc416b",
+            "display_heb_name": "מלאכי אלהים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "messengers of god"
+        },
+        {
+            "key": "6a5fa692011460404dfc416d",
+            "display_heb_name": "בית אלהים",
+            "placeType": "Other",
+            "display_en_name": "abode of god"
+        },
+        {
+            "key": "6a5fa693011460404dfc416e",
+            "display_heb_name": "סלם",
+            "symbolType": "Other",
+            "display_en_name": "stairway"
+        },
+        {
+            "key": "6a5fa693011460404dfc416f",
+            "display_heb_name": "מצבה",
+            "symbolType": "Other",
+            "display_en_name": "pillar"
+        },
+        {
+            "key": "6a5fa693011460404dfc4170",
+            "display_heb_name": "שמן",
+            "display_en_name": "oil"
+        }
+    ],
+    "key": "TN_Genesis_0_28:11-19"
+}

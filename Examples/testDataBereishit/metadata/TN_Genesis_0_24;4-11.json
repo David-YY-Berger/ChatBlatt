@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa67c011460404dfc4112",
+            "display_heb_name": "ארם נהרים",
+            "placeType": "Country or Region",
+            "display_en_name": "aram-naharaim"
+        },
+        {
+            "key": "6a5fa67c011460404dfc4113",
+            "display_heb_name": "נחור",
+            "placeType": "City",
+            "display_en_name": "nahor"
+        },
+        {
+            "key": "6a5fa67d011460404dfc4114",
+            "display_heb_name": "באר המים",
+            "placeType": "Building or Structure",
+            "display_en_name": "well"
+        },
+        {
+            "key": "6a5fa67d011460404dfc4115",
+            "display_heb_name": "עשרה",
+            "heb_unit": "גמל",
+            "heb_context": "העבד לקח גמלים",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_24:4-11"
+}

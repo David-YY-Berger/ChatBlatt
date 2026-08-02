@@ -1,0 +1,23 @@
+﻿COST: Tokens: Total=2956 approx cost=$0.000289 (Prompt=2656, Completion=300)
+SOURCE:
+Bereishit (Torah) 36:1-19
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6b7011460404dfc4212","display_en_name":"ishmael","display_heb_name":"","all_en_names":["Ishmael"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+This is the line of Esau-that is, Edom. Esau took his wives from among the Canaanite women-Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah daughter of Zibeon the Hivite - and also Basemath daughter of Ishmael and sister of Nebaioth. Adah bore to Esau Eliphaz; Basemath bore Reuel; and Oholibamah bore Jeush, Jalam, and Korah. Those were the sons of Esau, who were born to him in the land of Canaan. Esau took his wives, his sons and daughters, and all the members of his household, his cattle and all his livestock, and all the property that he had acquired in the land of Canaan, and went to another land because of his brother Jacob. For their possessions were too many for them to dwell together, and the land where they sojourned could not support them because of their livestock. So Esau settled in the hill country of Seir-Esau being Edom. This, then, is the line of Esau, the ancestor of the Edomites, in the hill country of Seir. These are the names of Esaus sons: Eliphaz, the son of Esaus wife Adah; Reuel, the son of Esaus wife Basemath. The sons of Eliphaz were Teman, Omar, Zepho, Gatam, and Kenaz. Timna was a concubine of Esaus son Eliphaz; she bore Amalek to Eliphaz. Those were the descendants of Esaus wife Adah. And these were the sons of Reuel: Nahath, Zerah, Shammah, and Mizzah. Those were the descendants of Esaus wife Basemath. And these were the sons of Esaus wife Oholibamah, daughter of Anah daughter of Zibeon: she bore to Esau Jeush, Jalam, and Korah. These are the clans of the sons of Esau. The descendants of Esaus first-born Eliphaz: the clans Teman, Omar, Zepho, Kenaz, Korah, Gatam, and Amalek; these are the clans of Eliphaz in the land of Edom. Those are the descendants of Adah. And these are the descendants of Esaus son Reuel: the clans Nahath, Zerah, Shammah, and Mizzah; these are the clans of Reuel in the land of Edom. Those are the descendants of Esaus wife Basemath. And these are the descendants of Esaus wife Oholibamah: the clans Jeush, Jalam, and Korah; these are the clans of Esaus wife Oholibamah, the daughter of Anah. Those were the sons of Esau-that is, Edom-and those are their clans.
+
+HEBREW:
+ואלה תלדות עשו הוא אדום: עשו לקח את נשיו מבנות כנען את עדה בת אילון החתי ואת אהליבמה בת ענה בת צבעון החוי: ואת בשמת בת ישמעאל אחות נביות: ותלד עדה לעשו את אליפז ובשמת ילדה את רעואל: ואהליבמה ילדה את (יעיש) ואת יעלם ואת קרח אלה בני עשו אשר ילדו לו בארץ כנען: ויקח עשו את נשיו ואת בניו ואת בנתיו ואת כל נפשות ביתו ואת מקנהו ואת כל בהמתו ואת כל קנינו אשר רכש בארץ כנען וילך אל ארץ מפני יעקב אחיו: כי היה רכושם רב משבת יחדו ולא יכלה ארץ מגוריהם לשאת אתם מפני מקניהם: וישב עשו בהר שעיר עשו הוא אדום: ואלה תלדות עשו אבי אדום בהר שעיר: אלה שמות בני עשו אליפז בן עדה אשת עשו רעואל בן בשמת אשת עשו: ויהיו בני אליפז תימן אומר צפו וגעתם וקנז: ותמנע היתה פילגש לאליפז בן עשו ותלד לאליפז את עמלק אלה בני עדה אשת עשו: ואלה בני רעואל נחת וזרח שמה ומזה אלה היו בני בשמת אשת עשו: ואלה היו בני אהליבמה בת ענה בת צבעון אשת עשו ותלד לעשו את (יעיש) ואת יעלם ואת קרח: אלה אלופי בני עשו בני אליפז בכור עשו אלוף תימן אלוף אומר אלוף צפו אלוף קנז: אלוף קרח אלוף געתם אלוף עמלק אלה אלופי אליפז בארץ אדום אלה בני עדה: ואלה בני רעואל בן עשו אלוף נחת אלוף זרח אלוף שמה אלוף מזה אלה אלופי רעואל בארץ אדום אלה בני בשמת אשת עשו: ואלה בני אהליבמה אשת עשו אלוף יעוש אלוף יעלם אלוף קרח אלה אלופי אהליבמה בת ענה אשת עשו: אלה בני עשו ואלה אלופיהם הוא אדום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6b7011460404dfc4212",
+      "display_heb_name": "ישמעאל"
+    }
+  ]
+}

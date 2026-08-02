@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60f011460404dfc3f36",
+            "display_heb_name": "קין",
+            "timePeriod": "Tanach",
+            "display_en_name": "cain"
+        },
+        {
+            "key": "6a5fa610011460404dfc3f37",
+            "display_heb_name": "הבל",
+            "timePeriod": "Tanach",
+            "display_en_name": "abel"
+        },
+        {
+            "key": "6a5fa610011460404dfc3f38",
+            "display_heb_name": "יהוה",
+            "timePeriod": "Tanach",
+            "display_en_name": "hashem"
+        }
+    ],
+    "key": "TN_Genesis_0_4:1-2"
+}

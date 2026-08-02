@@ -1,0 +1,149 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa614011460404dfc3f4b",
+            "display_heb_name": "שת",
+            "timePeriod": "Tanach",
+            "display_en_name": "seth"
+        },
+        {
+            "key": "6a5fa614011460404dfc3f4c",
+            "display_heb_name": "אנוש",
+            "timePeriod": "Tanach",
+            "display_en_name": "enosh"
+        },
+        {
+            "key": "6a5fa615011460404dfc3f4d",
+            "display_heb_name": "קינן",
+            "timePeriod": "Tanach",
+            "display_en_name": "kenan"
+        },
+        {
+            "key": "6a5fa615011460404dfc3f4e",
+            "display_heb_name": "מהללאל",
+            "timePeriod": "Tanach",
+            "display_en_name": "mahalalel"
+        },
+        {
+            "key": "6a5fa615011460404dfc3f4f",
+            "display_heb_name": "ירד",
+            "timePeriod": "Tanach",
+            "display_en_name": "jared"
+        },
+        {
+            "key": "6a5fa615011460404dfc3f50",
+            "display_heb_name": "מתושלח",
+            "timePeriod": "Tanach",
+            "display_en_name": "methuselah"
+        },
+        {
+            "key": "6a5fa616011460404dfc3f51",
+            "display_heb_name": "יהוה",
+            "symbolType": "Not Physical",
+            "display_en_name": "hashem"
+        },
+        {
+            "key": "6a5fa616011460404dfc3f52",
+            "heb_unit": "שנה",
+            "heb_context": "אדם לפני שת",
+            "display_en_name": "130"
+        },
+        {
+            "key": "6a5fa616011460404dfc3f53",
+            "heb_unit": "שנה",
+            "heb_context": "אדם אחרי הולידו את שת",
+            "display_en_name": "800"
+        },
+        {
+            "key": "6a5fa616011460404dfc3f54",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי אדם",
+            "display_en_name": "930"
+        },
+        {
+            "key": "6a5fa616011460404dfc3f55",
+            "heb_unit": "שנה",
+            "heb_context": "שת לפני אנוש",
+            "display_en_name": "105"
+        },
+        {
+            "key": "6a5fa617011460404dfc3f56",
+            "heb_unit": "שנה",
+            "heb_context": "שת אחרי הולידו את אנוש",
+            "display_en_name": "807"
+        },
+        {
+            "key": "6a5fa617011460404dfc3f57",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי שת",
+            "display_en_name": "912"
+        },
+        {
+            "key": "6a5fa617011460404dfc3f58",
+            "heb_unit": "שנה",
+            "heb_context": "אנוש לפני קינן",
+            "display_en_name": "90"
+        },
+        {
+            "key": "6a5fa617011460404dfc3f59",
+            "heb_unit": "שנה",
+            "heb_context": "אנוש אחרי הולידו את קינן",
+            "display_en_name": "815"
+        },
+        {
+            "key": "6a5fa618011460404dfc3f5a",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי אנוש",
+            "display_en_name": "905"
+        },
+        {
+            "key": "6a5fa618011460404dfc3f5b",
+            "heb_unit": "שנה",
+            "heb_context": "קינן לפני מהללאל",
+            "display_en_name": "70"
+        },
+        {
+            "key": "6a5fa618011460404dfc3f5c",
+            "heb_unit": "שנה",
+            "heb_context": "קינן אחרי הולידו את מהללאל",
+            "display_en_name": "840"
+        },
+        {
+            "key": "6a5fa618011460404dfc3f5d",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי קינן",
+            "display_en_name": "910"
+        },
+        {
+            "key": "6a5fa618011460404dfc3f5e",
+            "heb_unit": "שנה",
+            "heb_context": "מהללאל לפני ירד",
+            "display_en_name": "65"
+        },
+        {
+            "key": "6a5fa619011460404dfc3f5f",
+            "heb_unit": "שנה",
+            "heb_context": "מהללאל אחרי הולידו את ירד",
+            "display_en_name": "830"
+        },
+        {
+            "key": "6a5fa619011460404dfc3f60",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי מהללאל",
+            "display_en_name": "895"
+        },
+        {
+            "key": "6a5fa619011460404dfc3f61",
+            "heb_unit": "שנה",
+            "heb_context": "ירד לפני חנוך",
+            "display_en_name": "162"
+        },
+        {
+            "key": "6a5fa619011460404dfc3f62",
+            "heb_unit": "שנה",
+            "heb_context": "כל ימי ירד",
+            "display_en_name": "962"
+        }
+    ],
+    "key": "TN_Genesis_0_4:25-5:21"
+}

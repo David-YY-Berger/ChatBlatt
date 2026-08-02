@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=3280 approx cost=$0.000476 (Prompt=2256, Completion=1024)
+SOURCE:
+Bereishit (Torah) 42:9-20
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6dd011460404dfc42ac","display_en_name":"guardhouse","display_heb_name":"","all_en_names":["Guardhouse"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6dd011460404dfc42ad","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"brothers' confinement"}
+{"key":"6a5fa6dd011460404dfc42ae","display_en_name":"rations","display_heb_name":"","all_en_names":["Rations"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Recalling the dreams that he had dreamed about them, Joseph said to them, You are spies, you have come to see the land in its nakedness. But they said to him, No, my lord! Truly, your servants have come to procure food. We are all of us sons of the same man; we are being honest; your servants have never been spies! And he said to them, No, you have come to see the land in its nakedness! And they replied, We your servants were twelve brothers, sons of a certain man in the land of Canaan; the youngest, however, is now with our father, and one is no more. But Joseph said to them, It is just as I have told you: You are spies! By this you shall be put to the test: unless your youngest brother comes here, by Pharaoh, you shall not depart from this place! Let one of you go and bring your brother, while the rest of you remain confined, that your words may be put to the test whether there is truth in you. Else, by Pharaoh, you are nothing but spies! And he confined them in the guardhouse for three days. On the third day Joseph said to them, Do this and you shall live, for I fear God. If you are being honest, let one of your brothers be held in your place of detention, while the rest of you go and take home rations for your starving households; but you must bring me your youngest brother, that your words may be verified and that you may not die. And they did accordingly.
+
+HEBREW:
+ויזכר יוסף את החלמות אשר חלם להם ויאמר אלהם מרגלים אתם לראות את ערות הארץ באתם: ויאמרו אליו לא אדני ועבדיך באו לשבר אכל: כלנו בני איש אחד נחנו כנים אנחנו לא היו עבדיך מרגלים: ויאמר אלהם לא כי ערות הארץ באתם לראות: ויאמרו שנים עשר עבדיך אחיםאנחנו בני איש אחד בארץ כנען והנה הקטן את אבינו היום והאחד איננו: ויאמר אלהם יוסף הוא אשר דברתי אלכם לאמר מרגלים אתם: בזאת תבחנו חי פרעה אם תצאו מזה כי אם בבוא אחיכם הקטן הנה: שלחו מכם אחד ויקח את אחיכם ואתם האסרו ויבחנו דבריכם האמת אתכם ואם לא חי פרעה כי מרגלים אתם: ויאסף אתם אל משמר שלשת ימים: ויאמר אלהם יוסף ביום השלישי זאת עשו וחיו את האלהים אני ירא: אם כנים אתם אחיכם אחד יאסר בבית משמרכם ואתם לכו הביאו שבר רעבון בתיכם: ואת אחיכם הקטן תביאו אלי ויאמנו דבריכם ולא תמותו ויעשו כן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6dd011460404dfc42ac",
+      "display_heb_name": "משמר",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6dd011460404dfc42ad",
+      "display_heb_name": "שלשת",
+      "heb_unit": "יום",
+      "heb_context": "כליאת אחים"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+﻿COST: Tokens: Total=4411 approx cost=$0.000693 (Prompt=2803, Completion=1608)
+SOURCE:
+Bereishit (Torah) 43:1-13
+
+ENTITIES TO ENRICH (9):
+{"key":"6a5fa6df011460404dfc42b4","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"trip","en_context":"travel time"}
+{"key":"6a5fa6df011460404dfc42b5","display_en_name":"honey","display_heb_name":"","all_en_names":["Honey"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6df011460404dfc42b6","display_en_name":"pistachio nut","display_heb_name":"","all_en_names":["Pistachio Nut"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6df011460404dfc42b7","display_en_name":"almond","display_heb_name":"","all_en_names":["Almond"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6df011460404dfc42b8","display_en_name":"balm","display_heb_name":"","all_en_names":["Balm"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6e0011460404dfc42b9","display_en_name":"honey","display_heb_name":"","all_en_names":["Honey"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6e0011460404dfc42ba","display_en_name":"gum","display_heb_name":"","all_en_names":["Gum"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6e0011460404dfc42bb","display_en_name":"ladanum","display_heb_name":"","all_en_names":["Ladanum"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6e0011460404dfc42bc","display_en_name":"pistachio nut","display_heb_name":"","all_en_names":["Pistachio Nut"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But the famine in the land was severe. And when they had eaten up the rations which they had brought from Egypt, their father said to them, Go again and procure some food for us. But Judah said to him, The man warned us, Do not let me see your faces unless your brother is with you. If you will let our brother go with us, we will go down and procure food for you; but if you will not let him go, we will not go down, for that man said to us, Do not let me see your faces unless your brother is with you. And Israel said, Why did you serve me so ill as to tell the man that you had another brother? They replied, But the man kept asking about us and our family, saying, Is your father still living? Have you another brother? And we answered him accordingly. How were we to know that he would say, Bring your brother here? Then Judah said to his father Israel, Send the boy in my care, and let us be on our way, that we may live and not die-you and we and our children. I myself will be surety for him; you may hold me responsible: if I do not bring him back to you and set him before you, I shall stand guilty before you forever. For we could have been there and back twice if we had not dawdled. Then their father Israel said to them, If it must be so, do this: take some of the choice products of the land in your baggage, and carry them down as a gift for the man-some balm and some honey, gum, ladanum, pistachio nuts, and almonds. And take with you double the money, carrying back with you the money that was replaced in the mouths of your bags; perhaps it was a mistake. Take your brother too; and go back at once to the man.
+
+HEBREW:
+והרעב כבד בארץ: ויהי כאשר כלו לאכל את השבר אשר הביאו ממצרים ויאמר אליהם אביהם שבו שברו לנו מעט אכל: ויאמר אליו יהודה לאמר העד העד בנו האיש לאמר לא תראו פני בלתי אחיכם אתכם: אם ישך משלח את אחינו אתנו נרדה ונשברה לך אכל: ואם אינך משלח לא נרד כי האיש אמר אלינו לא תראו פני בלתי אחיכם אתכם: ויאמר ישראל למה הרעתם לי להגיד לאיש העוד לכם אח: ויאמרו שאול שאל האיש לנו ולמולדתנו לאמר העוד אביכם חי היש לכם אח ונגד לו על פי הדברים האלה הידוע נדע כי יאמר הורידו את אחיכם: ויאמר יהודה אל ישראל אביו שלחה הנער אתי ונקומה ונלכה ונחיה ולא נמות גם אנחנו גם אתה גם טפנו: אנכי אערבנו מידי תבקשנו אם לא הביאתיו אליך והצגתיו לפניך וחטאתי לך כל הימים: כי לולא התמהמהנו כי עתה שבנו זה פעמים: ויאמר אלהם ישראל אביהם אם כןאפוא זאת עשו קחו מזמרת הארץ בכליכם והורידו לאיש מנחה מעט צרי ומעט דבש נכאת ולט בטנים ושקדים: וכסף משנה קחו בידכם ואת הכסף המושב בפי אמתחתיכם תשיבו בידכם אולי משגה הוא: ואת אחיכם קחו וקומו שובו אל האיש:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6df011460404dfc42b4",
+      "display_heb_name": "פעמים",
+      "heb_unit": "פעם",
+      "heb_context": "זמן נסיעה"
+    },
+    {
+      "key": "6a5fa6df011460404dfc42b5",
+      "display_heb_name": "דבש"
+    },
+    {
+      "key": "6a5fa6df011460404dfc42b6",
+      "display_heb_name": "בטנים"
+    },
+    {
+      "key": "6a5fa6df011460404dfc42b7",
+      "display_heb_name": "שקדים"
+    },
+    {
+      "key": "6a5fa6df011460404dfc42b8",
+      "display_heb_name": "צרי"
+    },
+    {
+      "key": "6a5fa6e0011460404dfc42b9",
+      "display_heb_name": "דבש"
+    },
+    {
+      "key": "6a5fa6e0011460404dfc42ba",
+      "display_heb_name": "נכאת"
+    },
+    {
+      "key": "6a5fa6e0011460404dfc42bb",
+      "display_heb_name": "לט"
+    },
+    {
+      "key": "6a5fa6e0011460404dfc42bc",
+      "display_heb_name": "בטנים"
+    }
+  ]
+}

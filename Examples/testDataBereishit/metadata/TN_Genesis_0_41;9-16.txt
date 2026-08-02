@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2344 approx cost=$0.000252 (Prompt=2006, Completion=338)
+SOURCE:
+Bereishit (Torah) 41:9-16
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6d6011460404dfc4292","display_en_name":"house of the prefect","display_heb_name":"","all_en_names":["House Of The Prefect"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d6011460404dfc4293","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"night","en_context":"dreams interpretation"}
+
+PASSAGE:
+ENGLISH:
+The chief cupbearer then spoke up and said to Pharaoh, I must make mention today of my offenses. Once Pharaoh was angry with his servants, and placed me in custody in the house of the prefect, together with the chief baker. We had dreams the same night, he and I, each of us a dream with a meaning of its own. A Hebrew youth was there with us, a servant of the prefect; and when we told him our dreams, he interpreted them for us, telling each of the meaning of his dream. And as he interpreted for us, so it came to pass: I was restored to my post, and the other was impaled. Thereupon Pharaoh sent for Joseph, and he was rushed from the dungeon. He had his hair cut and changed his clothes, and he appeared before Pharaoh. And Pharaoh said to Joseph, I have had a dream, but no one can interpret it. Now I have heard it said of you that for you to hear a dream is to tell its meaning. Joseph answered Pharaoh, saying, Not I! God will see to Pharaohs welfare.
+
+HEBREW:
+וידבר שר המשקים את פרעה לאמר את חטאי אני מזכיר היום: פרעה קצף על עבדיו ויתן אתי במשמר בית שר הטבחים אתי ואת שר האפים: ונחלמה חלום בלילה אחד אני והוא איש כפתרון חלמו חלמנו: ושם אתנו נער עברי עבד לשר הטבחים ונספר לו ויפתר לנו את חלמתינו איש כחלמו פתר: ויהי כאשר פתר לנו כן היה אתי השיב על כני ואתו תלה: וישלח פרעה ויקרא את יוסף ויריצהו מן הבור ויגלח ויחלף שמלתיו ויבא אל פרעה: ויאמר פרעה אל יוסף חלום חלמתי ופתר אין אתו ואני שמעתי עליך לאמר תשמע חלום לפתר אתו: ויען יוסף את פרעה לאמר בלעדי אלהים יענה את שלום פרעה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d6011460404dfc4292",
+      "display_heb_name": "בית שר הטבחים",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6d6011460404dfc4293",
+      "display_heb_name": "אחד",
+      "heb_unit": "לילה",
+      "heb_context": "פתרון חלומות"
+    }
+  ]
+}

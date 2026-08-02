@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c7011460404dfc425b",
+            "display_heb_name": "פוטיפר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "potiphar"
+        },
+        {
+            "key": "6a5fa6c7011460404dfc425c",
+            "display_heb_name": "שאלה",
+            "placeType": "Not Physical",
+            "display_en_name": "sheol"
+        },
+        {
+            "key": "6a5fa6c8011460404dfc425d",
+            "display_heb_name": "כתנת",
+            "symbolType": "Clothing",
+            "display_en_name": "tunic"
+        },
+        {
+            "key": "6a5fa6c8011460404dfc425e",
+            "display_heb_name": "שק",
+            "symbolType": "Clothing",
+            "display_en_name": "sackcloth"
+        }
+    ],
+    "key": "TN_Genesis_0_37:31-36"
+}

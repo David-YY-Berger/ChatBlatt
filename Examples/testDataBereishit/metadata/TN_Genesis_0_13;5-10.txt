@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=2844 approx cost=$0.000405 (Prompt=1992, Completion=852)
+SOURCE:
+Bereishit (Torah) 13:5-10
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa64f011460404dfc4049","display_en_name":"jordan","display_heb_name":"","all_en_names":["Jordan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64f011460404dfc404b","display_en_name":"garden of hashem","display_heb_name":"","all_en_names":["Garden Of Hashem"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64f011460404dfc404c","display_en_name":"perizzites","display_heb_name":"","all_en_names":["Perizzites"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Lot, who went with Abram, also had flocks and herds and tents, so that the land could not support them staying together; for their possessions were so great that they could not remain together. And there was quarreling between the herders of Abrams cattle and those of Lots cattle.-The Canaanites and Perizzites were then dwelling in the land.- Abram said to Lot, Let there be no strife between you and me, between my herders and yours, for we are kin. Is not the whole land before you? Let us separate: if you go north, I will go south; and if you go south, I will go north. Lot looked about him and saw how well watered was the whole plain of the Jordan, all of it-this was before HASHEM had destroyed Sodom and Gomorrah-all the way to Zoar, like the garden of HASHEM, like the land of Egypt.
+
+HEBREW:
+וגם ללוט ההלך את אברם היה צאן ובקר ואהלים: ולא נשא אתם הארץ לשבת יחדו כי היה רכושם רב ולא יכלו לשבת יחדו: ויהי ריב בין רעי מקנה אברם ובין רעי מקנה לוט והכנעני והפרזי אז ישב בארץ: ויאמר אברם אל לוט אל נא תהי מריבה ביני ובינך ובין רעי ובין רעיך כי אנשים אחים אנחנו: הלא כל הארץ לפניך הפרד נא מעלי אם השמאל ואימנה ואם הימין ואשמאילה: וישא לוט את עיניו וירא את כל ככר הירדן כי כלה משקה לפני שחת יהוה את סדם ואת עמרה כגן יהוה כארץ מצרים באכה צער:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64f011460404dfc4049",
+      "display_heb_name": "ירדן",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa64f011460404dfc404b",
+      "display_heb_name": "גן יהוה",
+      "placeType": "Not Physical"
+    },
+    {
+      "key": "6a5fa64f011460404dfc404c",
+      "display_heb_name": "פרזי",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    }
+  ]
+}

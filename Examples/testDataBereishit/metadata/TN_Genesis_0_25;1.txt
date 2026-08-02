@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=1818 approx cost=$0.000207 (Prompt=1505, Completion=313)
+SOURCE:
+Bereishit (Torah) 25:1
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa681011460404dfc4128","display_en_name":"keturah","display_heb_name":"","all_en_names":["Keturah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Abraham took another wife, whose name was Keturah.
+
+HEBREW:
+ויסף אברהם ויקח אשה ושמה קטורה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa681011460404dfc4128",
+      "display_heb_name": "קטורה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    }
+  ]
+}

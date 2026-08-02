@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa5ff011460404dfc3eef",
+            "display_heb_name": "חשך",
+            "symbolType": "Not Physical",
+            "display_en_name": "darkness"
+        },
+        {
+            "key": "6a5fa600011460404dfc3ef0",
+            "display_heb_name": "יום",
+            "symbolType": "Not Physical",
+            "display_en_name": "day"
+        },
+        {
+            "key": "6a5fa600011460404dfc3ef1",
+            "display_heb_name": "לילה",
+            "symbolType": "Not Physical",
+            "display_en_name": "night"
+        }
+    ],
+    "key": "TN_Genesis_0_1:4-5"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d0011460404dfc4277",
+            "display_heb_name": "אדני",
+            "timePeriod": "Tanach",
+            "display_en_name": "master"
+        },
+        {
+            "key": "6a5fa6d0011460404dfc4278",
+            "display_heb_name": "אשת אדניו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "master's wife"
+        }
+    ],
+    "key": "TN_Genesis_0_39:8-13"
+}

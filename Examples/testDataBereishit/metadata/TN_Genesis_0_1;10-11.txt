@@ -1,0 +1,39 @@
+﻿COST: Tokens: Total=2578 approx cost=$0.000371 (Prompt=1790, Completion=788)
+SOURCE:
+Bereishit (Torah) 1:10-11
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa601011460404dfc3ef5","display_en_name":"seas","display_heb_name":"","all_en_names":["Seas"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa601011460404dfc3ef6","display_en_name":"fruit","display_heb_name":"","all_en_names":["Fruit"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa601011460404dfc3ef7","display_en_name":"plant","display_heb_name":"","all_en_names":["Plant"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa601011460404dfc3ef8","display_en_name":"fruit tree","display_heb_name":"","all_en_names":["Fruit Tree"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God called the dry land Earth and called the gathering of waters Seas. And God saw that this was good. And God said, Let the earth sprout vegetation: seed-bearing plants, fruit trees of every kind on earth that bear fruit with the seed in it. And it was so.
+
+HEBREW:
+ויקרא אלהיםליבשה ארץ ולמקוה המים קרא ימים וירא אלהים כי טוב: ויאמר אלהים תדשא הארץ דשא עשב מזריע זרע עץ פרי עשה פרי למינו אשר זרעו בו על הארץ ויהי כן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa601011460404dfc3ef5",
+      "display_heb_name": "ימים",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa601011460404dfc3ef6",
+      "display_heb_name": "פרי"
+    },
+    {
+      "key": "6a5fa601011460404dfc3ef7",
+      "display_heb_name": "עשב"
+    },
+    {
+      "key": "6a5fa601011460404dfc3ef8",
+      "display_heb_name": "עץ פרי"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1875 approx cost=$0.000196 (Prompt=1629, Completion=246)
+SOURCE:
+Bereishit (Torah) 11:7-9
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa644011460404dfc4019","display_en_name":"babel","display_heb_name":"","all_en_names":["Babel"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Let us, then, go down and confound their speech there, so that they shall not understand one anothers speech. Thus HASHEM scattered them from there over the face of the whole earth; and they stopped building the city. That is why it was called Babel, because there HASHEM confounded confound, play on Babel. the speech of the whole earth; and from there HASHEM scattered them over the face of the whole earth.
+
+HEBREW:
+הבה נרדה ונבלה שם שפתם אשר לא ישמעו איש שפת רעהו: ויפץ יהוה אתם משם על פני כל הארץ ויחדלו לבנת העיר: על כן קרא שמה בבל כי שם בלל יהוה שפת כל הארץ ומשם הפיצם יהוה על פני כל הארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa644011460404dfc4019",
+      "display_heb_name": "בבל",
+      "placeType": "City"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2722 approx cost=$0.000382 (Prompt=1933, Completion=789)
+SOURCE:
+Bereishit (Torah) 21:1-8
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa665011460404dfc40aa","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abraham age","heb_unit":"שנה","heb_context":"גיל אברהם"}
+{"key":"6a5fa673011460404dfc40e9","display_en_name":"8","display_heb_name":"","all_en_names":["8"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"isaac circumcision"}
+
+PASSAGE:
+ENGLISH:
+HASHEM took note of Sarah as promised, and HASHEM did for Sarah what had been announced. Sarah conceived and bore a son to Abraham in his old age, at the set time of which God had spoken. Abraham gave his newborn son, whom Sarah had borne him, the name of Isaac. And when his son Isaac was eight days old, Abraham circumcised him, as God had commanded him. Now Abraham was a hundred years old when his son Isaac was born to him. Sarah said, God has brought me laughter; everyone who hears will laugh with me. And she added, Who would have said to Abraham That Sarah would suckle children! Yet I have borne a son in his old age. The child grew up and was weaned, and Abraham held a great feast on the day that Isaac was weaned.
+
+HEBREW:
+ויהוה פקד את שרה כאשר אמר ויעש יהוה לשרה כאשר דבר: ותהר ותלד שרה לאברהם בן לזקניו למועד אשר דבר אתו אלהים: ויקרא אברהם את שם בנו הנולד לו אשר ילדה לו שרה יצחק: וימל אברהם את יצחק בנו בן שמנת ימים כאשר צוה אתו אלהים: ואברהם בן מאת שנה בהולד לו את יצחק בנו: ותאמר שרה צחק עשה לי אלהים כל השמע יצחק לי: ותאמר מי מלל לאברהם היניקה בנים שרה כי ילדתי בן לזקניו: ויגדל הילד ויגמל ויעש אברהם משתה גדול ביום הגמל את יצחק:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa665011460404dfc40aa",
+      "display_heb_name": "מאת",
+      "heb_unit": "שנה",
+      "heb_context": "גיל אברהם"
+    },
+    {
+      "key": "6a5fa673011460404dfc40e9",
+      "display_heb_name": "שמנת",
+      "heb_unit": "יום",
+      "heb_context": "מילת יצחק"
+    }
+  ]
+}

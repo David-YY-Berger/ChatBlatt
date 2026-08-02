@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2153 approx cost=$0.000244 (Prompt=1785, Completion=368)
+SOURCE:
+Bereishit (Torah) 22:16-19
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa677011460404dfc40f9","display_en_name":"stars of heaven","display_heb_name":"","all_en_names":["Stars Of Heaven"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa677011460404dfc40fa","display_en_name":"sands on the seashore","display_heb_name":"","all_en_names":["Sands On The Seashore"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+and said, By Myself I swear, HASHEM declares: Because you have done this and have not withheld your son, your favored one, I will bestow My blessing upon you and make your descendants as numerous as the stars of heaven and the sands on the seashore; and your descendants shall seize the gates of their foes. All the nations of the earth shall bless themselves by your descendants, because you have obeyed My command. Abraham then returned to his servants, and they departed together for Beer-sheba; and Abraham stayed in Beer-sheba.
+
+HEBREW:
+ויאמר בי נשבעתי נאם יהוה כי יען אשר עשית את הדבר הזה ולא חשכת את בנך את יחידך: כי ברך אברכך והרבה ארבה את זרעך ככוכבי השמים וכחול אשר על שפת הים וירש זרעך את שער איביו: והתברכו בזרעך כל גויי הארץ עקב אשר שמעת בקלי: וישב אברהם אל נעריו ויקמו וילכו יחדו אל באר שבע וישב אברהם בבאר שבע:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa677011460404dfc40f9",
+      "display_heb_name": "כוכבי השמים",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa677011460404dfc40fa",
+      "display_heb_name": "חול אשר על שפת הים",
+      "symbolType": "Part of Nature"
+    }
+  ]
+}

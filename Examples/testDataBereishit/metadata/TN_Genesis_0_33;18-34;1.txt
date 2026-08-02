@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=2811 approx cost=$0.000426 (Prompt=1853, Completion=958)
+SOURCE:
+Bereishit (Torah) 33:18-34:1
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6ab011460404dfc41db","display_en_name":"hamor","display_heb_name":"","all_en_names":["Hamor"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ab011460404dfc41dc","display_en_name":"el-elohe-yisrael","display_heb_name":"","all_en_names":["El-Elohe-Yisrael"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6ab011460404dfc41dd","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"kesitah","en_context":"land purchase"}
+
+PASSAGE:
+ENGLISH:
+Jacob arrived safe in the city of Shechem which is in the land of Canaan-having come thus from Paddan-aram-and he encamped before the city. The parcel of land where he pitched his tent he purchased from the kin of Hamor, Shechems father, for a hundred kesitah s., a unit of unknown value. He set up an altar there, and called it El-elohe-yisrael.Now Dinah, the daughter whom Leah had borne to Jacob, went out to visit the daughters of the land.
+
+HEBREW:
+ויבא יעקב שלם עיר שכם אשר בארץ כנען בבאו מפדן ארם ויחן את פני העיר: ויקן את חלקת השדה אשר נטה שם אהלו מיד בני חמור אבי שכם במאה קשיטה: ויצב שם מזבח ויקרא לו אל אלהי ישראל: ותצא דינה בת לאה אשר ילדה ליעקב לראות בבנות הארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6ab011460404dfc41db",
+      "display_heb_name": "חמור",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ab011460404dfc41dc",
+      "display_heb_name": "אל אלהי ישראל",
+      "symbolType": "Holy Object"
+    },
+    {
+      "key": "6a5fa6ab011460404dfc41dd",
+      "display_heb_name": "מאה",
+      "heb_unit": "קשיטה",
+      "heb_context": "קנית אדמה"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2718 approx cost=$0.000348 (Prompt=2076, Completion=642)
+SOURCE:
+Bereishit (Torah) 27:6-17
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa68f011460404dfc4161","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"kid","en_context":"dish for father"}
+
+PASSAGE:
+ENGLISH:
+Rebekah said to her son Jacob, I overheard your father speaking to your brother Esau, saying, Bring me some game and prepare a dish for me to eat, that I may bless you, with HASHEMs approval, before I die. Now, my son, listen carefully as I instruct you. Go to the flock and fetch me two choice kids, and I will make of them a dish for your father, such as he likes. Then take it to your father to eat, in order that he may bless you before he dies. Jacob answered his mother Rebekah, But my brother Esau is a hairy man and I am smooth-skinned. If my father touches me, I shall appear to him as a trickster and bring upon myself a curse, not a blessing. But his mother said to him, Your curse, my son, be upon me! Just do as I say and go fetch them for me. He got them and brought them to his mother, and his mother prepared a dish such as his father liked. Rebekah then took the best clothes of her older son Esau, which were there, lit. with her. in the house, and had her younger son Jacob put them on; and she covered his hands and the hairless part of his neck with the skins of the kids. Then she put in the hands of her son Jacob the dish and the bread that she had prepared.
+
+HEBREW:
+ורבקה אמרה אל יעקב בנה לאמר הנה שמעתי את אביך מדבר אל עשו אחיך לאמר: הביאה לי ציד ועשה לי מטעמים ואכלה ואברככה לפני יהוה לפני מותי: ועתה בני שמע בקלי לאשר אני מצוה אתך: לך נא אל הצאן וקח לי משם שני גדיי עזים טבים ואעשה אתם מטעמים לאביך כאשר אהב: והבאת לאביך ואכל בעבר אשר יברכך לפני מותו: ויאמר יעקב אל רבקה אמו הן עשו אחי איש שער ואנכי איש חלק: אולי ימשני אבי והייתי בעיניו כמתעתע והבאתי עלי קללה ולא ברכה: ותאמר לו אמו עלי קללתך בני אך שמע בקלי ולך קח לי: וילך ויקח ויבא לאמו ותעש אמו מטעמים כאשר אהב אביו: ותקח רבקה את בגדי עשו בנה הגדל החמדת אשר אתה בבית ותלבש את יעקב בנה הקטן: ואת ערת גדיי העזים הלבישה על ידיו ועל חלקת צואריו: ותתן את המטעמים ואת הלחם אשר עשתה ביד יעקב בנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68f011460404dfc4161",
+      "display_heb_name": "2",
+      "heb_unit": "גדי",
+      "heb_context": "מטעמים לאביו"
+    }
+  ]
+}

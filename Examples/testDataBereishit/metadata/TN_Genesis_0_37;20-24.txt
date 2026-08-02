@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2028 approx cost=$0.000212 (Prompt=1762, Completion=266)
+SOURCE:
+Bereishit (Torah) 37:20-24
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6c5011460404dfc4254","display_en_name":"pit","display_heb_name":"","all_en_names":["Pit"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Come now, let us kill him and throw him into one of the pits; and we can say, A savage beast devoured him. We shall see what comes of his dreams! But when Reuben heard it, he tried to save him from them. He said, Let us not take his life. And Reuben went on, Shed no blood! Cast him into that pit out in the wilderness, but do not touch him yourselves-intending to save him from them and restore him to his father. When Joseph came up to his brothers, they stripped Joseph of his tunic, the ornamented tunic that he was wearing, and took him and cast him into the pit. The pit was empty; there was no water in it.
+
+HEBREW:
+ועתה לכו ונהרגהו ונשלכהו באחד הברות ואמרנו חיה רעה אכלתהו ונראה מה יהיו חלמתיו: וישמע ראובן ויצלהו מידם ויאמר לא נכנו נפש: ויאמר אלהםראובן אל תשפכו דם השליכו אתו אל הבור הזה אשר במדבר ויד אל תשלחו בו למען הציל אתו מידם להשיבו אל אביו: ויהי כאשר בא יוסף אל אחיו ויפשיטו את יוסף את כתנתו את כתנת הפסים אשר עליו: ויקחהו וישלכו אתו הברה והבור רק אין בו מים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c5011460404dfc4254",
+      "display_heb_name": "בור",
+      "placeType": "Other"
+    }
+  ]
+}

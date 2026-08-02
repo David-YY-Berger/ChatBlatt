@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=3507 approx cost=$0.000657 (Prompt=1756, Completion=1751)
+SOURCE:
+Bereishit (Torah) 2:22-25
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa60b011460404dfc3f24","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"person","en_context":"naked people"}
+
+PASSAGE:
+ENGLISH:
+And God HASHEM fashioned the side that had been taken from the Human into a woman, bringing her to the Human. Then the Human said, This one at last Is bone of my bones And flesh of my flesh. This one shall be called Woman,; so trad. More precisely in context, a (female) member of the human species. See next note and the Dictionary under ish . For from a Human. was she taken. Hence a man. Contrast the previous verse. leaves his father and mother and clings to his wife, (with possessive suffix). Cf. the previous note and contrast the previous verse. so that they become one flesh. The two of them were naked,, play on arum shrewd in 3.1. the Human; trad. the man. See note at v. 7. and his wife, yet they felt no shame.
+
+HEBREW:
+ויבן יהוה אלהיםאת הצלע אשר לקח מן האדם לאשה ויבאה אל האדם: ויאמר האדם זאת הפעם עצם מעצמי ובשר מבשרי לזאת יקרא אשה כי מאיש לקחה זאת: על כן יעזב איש את אביו ואת אמו ודבק באשתו והיו לבשר אחד: ויהיו שניהם ערומים האדם ואשתו ולא יתבששו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60b011460404dfc3f24",
+      "display_heb_name": "שניים",
+      "heb_unit": "אדם",
+      "heb_context": "ערומים אנשים"
+    }
+  ]
+}

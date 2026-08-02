@@ -1,0 +1,27 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68e011460404dfc415a",
+            "display_heb_name": "יהודית",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "judith"
+        },
+        {
+            "key": "6a5fa68e011460404dfc415b",
+            "display_heb_name": "בארי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "beeri"
+        },
+        {
+            "key": "6a5fa68f011460404dfc415e",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל עשו",
+            "display_en_name": "40"
+        }
+    ],
+    "key": "TN_Genesis_0_26:34-35"
+}

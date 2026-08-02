@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68d011460404dfc4158",
+            "display_heb_name": "אחזת",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ahuzzath"
+        },
+        {
+            "key": "6a5fa68e011460404dfc4159",
+            "display_heb_name": "שבעה",
+            "placeType": "City",
+            "display_en_name": "shibah"
+        }
+    ],
+    "key": "TN_Genesis_0_26:23-33"
+}

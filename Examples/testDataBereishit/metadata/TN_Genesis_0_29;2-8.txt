@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=3607 approx cost=$0.000632 (Prompt=2000, Completion=1607)
+SOURCE:
+Bereishit (Torah) 29:2-8
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa694011460404dfc4175","display_en_name":"shepherds","display_heb_name":"","all_en_names":["Shepherds"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa695011460404dfc4177","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"flock","en_context":"sheep at well"}
+
+PASSAGE:
+ENGLISH:
+There before his eyes was a well in the open. Three flocks of sheep were lying there beside it, for the flocks were watered from that well. The stone on the mouth of the well was large. When all the flocks were gathered there, the stone would be rolled from the mouth of the well and the sheep watered; then the stone would be put back in its place on the mouth of the well. Jacob said to them, My friends, where are you from? And they said, We are from Haran. He said to them, Do you know Laban the son of Nahor? And they said, Yes, we do. He continued, Is he well? They answered, Yes, he is; and there is his daughter Rachel, coming with the flock. He said, It is still broad daylight, too early to round up the animals; water the flock and take them to pasture. But they said, We cannot, until all the flocks are rounded up; then the stone is rolled off the mouth of the well and we water the sheep.
+
+HEBREW:
+וירא והנה באר בשדה והנה שם שלשה עדרי צאן רבצים עליה כי מן הבאר ההוא ישקו העדרים והאבן גדלה על פי הבאר: ונאספו שמה כל העדרים וגללו את האבן מעל פי הבאר והשקו את הצאן והשיבו את האבן על פי הבאר למקמה: ויאמר להם יעקב אחי מאין אתם ויאמרו מחרן אנחנו: ויאמר להם הידעתם את לבן בן נחור ויאמרו ידענו: ויאמר להם השלום לו ויאמרו שלום והנה רחל בתו באה עם הצאן: ויאמר הן עוד היום גדול לא עת האסף המקנה השקו הצאן ולכו רעו: ויאמרו לא נוכל עד אשר יאספו כל העדרים וגללו את האבן מעל פי הבאר והשקינו הצאן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa694011460404dfc4175",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa695011460404dfc4177",
+      "display_heb_name": "שלשה",
+      "heb_unit": "עדר",
+      "heb_context": "צאן רבצים עליה"
+    }
+  ]
+}

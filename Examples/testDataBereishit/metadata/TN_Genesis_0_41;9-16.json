@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d6011460404dfc4292",
+            "display_heb_name": "בית שר הטבחים",
+            "placeType": "Building or Structure",
+            "display_en_name": "house of the prefect"
+        },
+        {
+            "key": "6a5fa6d6011460404dfc4293",
+            "display_heb_name": "אחד",
+            "heb_unit": "לילה",
+            "heb_context": "פתרון חלומות",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_41:9-16"
+}

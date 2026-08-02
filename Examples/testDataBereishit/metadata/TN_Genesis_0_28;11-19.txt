@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=3709 approx cost=$0.000575 (Prompt=2392, Completion=1317)
+SOURCE:
+Bereishit (Torah) 28:11-19
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa692011460404dfc416b","display_en_name":"messengers of god","display_heb_name":"","all_en_names":["Messengers Of God"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa692011460404dfc416d","display_en_name":"abode of god","display_heb_name":"","all_en_names":["Abode Of God"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa693011460404dfc416e","display_en_name":"stairway","display_heb_name":"","all_en_names":["Stairway"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa693011460404dfc416f","display_en_name":"pillar","display_heb_name":"","all_en_names":["Pillar"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa693011460404dfc4170","display_en_name":"oil","display_heb_name":"","all_en_names":["Oil"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+He came upon a certain place and stopped there for the night, for the sun had set. Taking one of the stones of that place, he put it under his head and lay down in that place. He had a dream; a stairway. was set on the ground and its top reached to the sky, and messengers of God were going up and down on it. And standing beside him was HASHEM, who said, I am HASHEM, the God of your father Abrahams [house] and the God of Isaacs [house]: the ground on which you are lying I will assign to you and to your offspring. Your descendants shall be as the dust of the earth; you shall spread out to the west and to the east, to the north and to the south. All the families of the earth shall bless themselves by you and your descendants. Remember, I am with you: I will protect you wherever you go and will bring you back to this land. I will not leave you until I have done what I have promised you. Jacob awoke from his sleep and said, Surely HASHEM is present in this place, and I did not know it! Shaken, he said, How awesome is this place! This is none other than the abode of God, and that is the gateway to heaven. Early in the morning, Jacob took the stone that he had put under his head and set it up as a pillar and poured oil on the top of it. He named that site Bethel; but previously the name of the city had been Luz.
+
+HEBREW:
+ויפגע במקום וילן שם כי בא השמש ויקח מאבני המקום וישם מראשתיו וישכב במקום ההוא: ויחלם והנה סלם מצב ארצה וראשו מגיע השמימה והנה מלאכי אלהים עלים וירדים בו: והנה יהוה נצב עליו ויאמר אני יהוה אלהי אברהם אביך ואלהי יצחק הארץ אשר אתה שכב עליה לך אתננה ולזרעך: והיה זרעך כעפר הארץ ופרצת ימה וקדמה וצפנה ונגבה ונברכו בך כל משפחת האדמה ובזרעך: והנה אנכי עמך ושמרתיך בכל אשר תלך והשבתיך אל האדמה הזאת כי לא אעזבך עד אשר אם עשיתי את אשר דברתי לך: וייקץ יעקב משנתו ויאמר אכן יש יהוה במקום הזה ואנכי לא ידעתי: ויירא ויאמר מה נורא המקום הזה אין זה כי אם בית אלהים וזה שער השמים: וישכם יעקב בבקר ויקח את האבן אשר שם מראשתיו וישם אתה מצבה ויצק שמן על ראשה: ויקרא את שם המקום ההוא בית אל ואולם לוז שם העיר לראשנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa692011460404dfc416b",
+      "display_heb_name": "מלאכי אלהים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa692011460404dfc416d",
+      "display_heb_name": "בית אלהים",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa693011460404dfc416e",
+      "display_heb_name": "סלם",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa693011460404dfc416f",
+      "display_heb_name": "מצבה",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa693011460404dfc4170",
+      "display_heb_name": "שמן"
+    }
+  ]
+}

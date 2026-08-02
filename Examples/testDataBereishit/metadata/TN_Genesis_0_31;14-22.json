@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a0011460404dfc41aa",
+            "display_heb_name": "הגלעד",
+            "placeType": "Mountain",
+            "display_en_name": "gilead"
+        },
+        {
+            "key": "6a5fa6a0011460404dfc41ab",
+            "display_heb_name": "תרפים",
+            "symbolType": "Holy Object",
+            "display_en_name": "household idols"
+        },
+        {
+            "key": "6a5fa6a0011460404dfc41ac",
+            "display_heb_name": "3",
+            "heb_unit": "יום",
+            "heb_context": "לבן הוגד שיעקב ברח",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_31:14-22"
+}

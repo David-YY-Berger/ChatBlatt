@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2104 approx cost=$0.000204 (Prompt=1897, Completion=207)
+SOURCE:
+Bereishit (Torah) 9:5-12
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa629011460404dfc3fa5","display_en_name":"sign","display_heb_name":"","all_en_names":["Sign"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But for your own life-blood I will require a reckoning: I will require it of every beast; of humankind, too, will I require a reckoning for human life, of everyone for each other! Whoever sheds human blood, By human [hands] shall that ones blood be shed; For in the image of God Was humankind made. Be fertile, then, and increase; abound on the earth and increase on it. And God said to Noah and to his sons with him, I now establish My covenant with you and your offspring to come, and with every living thing that is with you-birds, cattle, and every wild beast as well-all that have come out of the ark, every living thing on earth. I will maintain My covenant with you: never again shall all flesh be cut off by the waters of a flood, and never again shall there be a flood to destroy the earth. God further said, This is the sign that I set for the covenant between Me and you, and every living creature with you, for all ages to come.
+
+HEBREW:
+ואך את דמכם לנפשתיכם אדרש מיד כל חיה אדרשנו ומיד האדם מיד איש אחיו אדרש את נפש האדם: שפך דם האדם באדם דמו ישפך כי בצלם אלהים עשה את האדם: ואתם פרו ורבו שרצו בארץ ורבו בה: ויאמר אלהים אל נח ואל בניו אתו לאמר: ואני הנני מקים את בריתי אתכם ואת זרעכם אחריכם: ואת כל נפש החיה אשר אתכם בעוף בבהמה ובכל חית הארץ אתכם מכל יצאי התבה לכל חית הארץ: והקמתי את בריתי אתכם ולא יכרת כל בשר עוד ממי המבול ולא יהיה עוד מבול לשחת הארץ: ויאמר אלהים זאת אות הברית אשר אני נתן ביני וביניכם ובין כל נפש חיה אשר אתכם לדרת עולם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa629011460404dfc3fa5",
+      "display_heb_name": "אות",
+      "symbolType": "Not Physical"
+    }
+  ]
+}

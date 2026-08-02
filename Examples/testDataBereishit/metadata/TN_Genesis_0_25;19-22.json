@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa642011460404dfc4012",
+            "display_heb_name": "ארם",
+            "display_en_name": "aram"
+        },
+        {
+            "key": "6a5fa689011460404dfc4147",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "שנה",
+            "heb_context": "גיל יצחק",
+            "display_en_name": "40"
+        }
+    ],
+    "key": "TN_Genesis_0_25:19-22"
+}

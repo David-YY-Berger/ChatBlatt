@@ -1,0 +1,71 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa66d011460404dfc40ce",
+            "display_heb_name": "אנשי העיר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "town council"
+        },
+        {
+            "key": "6a5fa66d011460404dfc40cf",
+            "display_heb_name": "אנשי סדם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "militia of sodom"
+        },
+        {
+            "key": "6a5fa66e011460404dfc40d0",
+            "display_heb_name": "אנשי העיר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "townspeople"
+        },
+        {
+            "key": "6a5fa66e011460404dfc40d1",
+            "display_heb_name": "אנשי סדם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "men of sodom"
+        },
+        {
+            "key": "6a5fa66e011460404dfc40d2",
+            "display_heb_name": "בנות",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "daughters"
+        },
+        {
+            "key": "6a5fa66e011460404dfc40d3",
+            "display_heb_name": "האנשים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "visitors"
+        },
+        {
+            "key": "6a5fa66e011460404dfc40d4",
+            "display_heb_name": "הבית",
+            "placeType": "Building or Structure",
+            "display_en_name": "house"
+        },
+        {
+            "key": "6a5fa66f011460404dfc40d5",
+            "display_heb_name": "הפתחה",
+            "placeType": "Building or Structure",
+            "display_en_name": "entrance"
+        },
+        {
+            "key": "6a5fa66f011460404dfc40d6",
+            "display_heb_name": "שתי",
+            "heb_unit": "בת",
+            "heb_context": "משפחת לוט",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_19:4-9"
+}

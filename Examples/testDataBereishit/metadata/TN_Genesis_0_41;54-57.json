@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6db011460404dfc42a7",
+            "display_heb_name": "כל הארץ",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "all the world"
+        },
+        {
+            "key": "6a5fa6dc011460404dfc42a8",
+            "heb_unit": "שנה",
+            "heb_context": "שני רעב",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_41:54-57"
+}

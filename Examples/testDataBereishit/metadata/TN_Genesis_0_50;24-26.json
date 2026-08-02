@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6fc011460404dfc432c",
+            "display_heb_name": "הארץ",
+            "placeType": "Country or Region",
+            "display_en_name": "the land"
+        },
+        {
+            "key": "6a5fa6fc011460404dfc432d",
+            "display_heb_name": "מאה ועשר",
+            "heb_unit": "שנה",
+            "heb_context": "שנות חיי יוסף",
+            "display_en_name": "110"
+        }
+    ],
+    "key": "TN_Genesis_0_50:24-26"
+}

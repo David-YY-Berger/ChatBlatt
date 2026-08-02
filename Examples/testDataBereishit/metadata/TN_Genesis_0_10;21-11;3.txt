@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2808 approx cost=$0.000339 (Prompt=2238, Completion=570)
+SOURCE:
+Bereishit (Torah) 10:21-11:3
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa642011460404dfc4011","display_en_name":"asshur","display_heb_name":"","all_en_names":["Asshur"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa642011460404dfc4012","display_en_name":"aram","display_heb_name":"","all_en_names":["Aram"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa642011460404dfc4013","display_en_name":"ophir","display_heb_name":"","all_en_names":["Ophir"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Sons were also born to Shem, ancestor of all the descendants of Eber and older brother of Japheth. The descendants of Shem: Elam, Asshur, Arpachshad, Lud, and Aram. The descendants of Aram: Uz, Hul, Gether, and Mash. Arpachshad begot Shelah, and Shelah begot Eber. Two sons were born to Eber: the name of the first was Peleg, for in his days the earth was divided;, play on Peleg. and the name of his brother was Joktan. Joktan begot Almodad, Sheleph, Hazarmaveth, Jerah, Hadoram, Uzal, Diklah, Obal, Abimael, Sheba, Ophir, Havilah, and Jobab; all these were the descendants of Joktan. Their settlements extended from Mesha as far as Sephar, the hill country to the east. These are the descendants of Shem according to their clans and languages, by their lands, according to their nations. These are the groupings of Noahs descendants, according to their origins, by their nations; and from these the nations branched out over the earth after the Flood.Everyone on earth had the same language and the same words. And as they migrated from the east, they came upon a valley in the land of Shinar and settled there. They said to one another, Come, let us make bricks and burn them hard.-Brick served them as stone, and bitumen served them as mortar.-
+
+HEBREW:
+ולשם ילד גם הוא אבי כל בני עבר אחי יפת הגדול: בני שם עילם ואשור וארפכשד ולוד וארם: ובני ארם עוץ וחול וגתר ומש: וארפכשד ילד את שלח ושלח ילד את עבר: ולעבר ילד שני בנים שם האחד פלג כי בימיו נפלגה הארץ ושם אחיו יקטן: ויקטן ילד את אלמודד ואת שלף ואת חצרמות ואת ירח: ואת הדורם ואת אוזל ואת דקלה: ואת עובל ואת אבימאל ואת שבא: ואת אופר ואת חוילה ואת יובב כל אלה בני יקטן: ויהי מושבם ממשא באכה ספרה הר הקדם: אלה בני שם למשפחתם ללשנתם בארצתם לגויהם: אלה משפחת בני נח לתולדתם בגויהם ומאלה נפרדו הגוים בארץ אחר המבול: ויהי כל הארץ שפה אחת ודברים אחדים: ויהי בנסעם מקדם וימצאו בקעה בארץ שנער וישבו שם: ויאמרו איש אל רעהו הבה נלבנה לבנים ונשרפה לשרפה ותהי להם הלבנה לאבן והחמר היה להם לחמר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa642011460404dfc4011",
+      "display_heb_name": "אשור"
+    },
+    {
+      "key": "6a5fa640211460404dfc4012",
+      "display_heb_name": "ארם"
+    },
+    {
+      "key": "6a5fa642011460404dfc4013",
+      "display_heb_name": "אופר"
+    }
+  ]
+}

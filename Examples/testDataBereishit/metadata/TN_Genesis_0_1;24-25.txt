@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2322 approx cost=$0.000306 (Prompt=1736, Completion=586)
+SOURCE:
+Bereishit (Torah) 1:24-25
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa604011460404dfc3f05","display_en_name":"cattle","display_heb_name":"","all_en_names":["Cattle"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa604011460404dfc3f06","display_en_name":"creeping thing","display_heb_name":"","all_en_names":["Creeping Thing"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa605011460404dfc3f07","display_en_name":"wild beast","display_heb_name":"","all_en_names":["Wild Beast"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God said, Let the earth bring forth every kind of living creature: cattle, creeping things, and wild beasts of every kind. And it was so. God made wild beasts of every kind and cattle of every kind, and all kinds of creeping things of the earth. And God saw that this was good.
+
+HEBREW:
+ויאמר אלהים תוצא הארץ נפש חיה למינה בהמה ורמש וחיתו ארץ למינה ויהי כן: ויעש אלהים את חית הארץ למינה ואת הבהמה למינה ואת כל רמש האדמה למינהו וירא אלהים כי טוב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa604011460404dfc3f05",
+      "display_heb_name": "בהמה"
+    },
+    {
+      "key": "6a5fa604011460404dfc3f06",
+      "display_heb_name": "רמש"
+    },
+    {
+      "key": "6a5fa605011460404dfc3f07",
+      "display_heb_name": "חית ארץ"
+    }
+  ]
+}

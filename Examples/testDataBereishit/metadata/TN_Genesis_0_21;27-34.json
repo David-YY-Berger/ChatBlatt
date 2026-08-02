@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa675011460404dfc40f1",
+            "display_heb_name": "ארץ פלשתים",
+            "placeType": "Country or Region",
+            "display_en_name": "land of the philistines"
+        },
+        {
+            "key": "6a5fa675011460404dfc40f2",
+            "display_heb_name": "שבע",
+            "heb_unit": "כבשה",
+            "heb_context": "הצעת ברית",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_21:27-34"
+}

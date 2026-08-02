@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa695011460404dfc417b",
+            "display_heb_name": "אנשי המקום",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "people of the place"
+        },
+        {
+            "key": "6a5fa696011460404dfc417c",
+            "display_heb_name": "שבע",
+            "heb_unit": "שנה",
+            "heb_context": "יעקב עבד ללבן",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_29:18-22"
+}

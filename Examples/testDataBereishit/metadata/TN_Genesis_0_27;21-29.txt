@@ -1,0 +1,29 @@
+﻿COST: Tokens: Total=2803 approx cost=$0.000367 (Prompt=2106, Completion=697)
+SOURCE:
+Bereishit (Torah) 27:21-29
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa690011460404dfc4164","display_en_name":"grain","display_heb_name":"","all_en_names":["Grain"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa690011460404dfc4165","display_en_name":"grape","display_heb_name":"","all_en_names":["Grape"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa691011460404dfc4166","display_en_name":"grain","display_heb_name":"","all_en_names":["Grain"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Isaac said to Jacob, Come closer that I may feel you, my son-whether you are really my son Esau or not. So Jacob drew close to his father Isaac, who felt him and wondered. The voice is the voice of Jacob, yet the hands are the hands of Esau. He did not recognize him, because his hands were hairy like those of his brother Esau; and so he blessed him. He asked, Are you really my son Esau? And when he said, I am, he said, Serve me and let me eat of my sons game that I may give you my innermost blessing. So he served him and he ate, and he brought him wine and he drank. Then his father Isaac said to him, Come close and kiss me, my son; and he went up and kissed him. And he smelled his clothes and he blessed him, saying, Ah, the smell of my son is like the smell of the fields that HASHEM has blessed. May God give you Of the dew of heaven and the fat of the earth, Abundance of new grain and wine. Let peoples serve you, And nations bow to you; Be master over your brothers, And let your mothers sons bow to you. Cursed be they who curse you, Blessed they who bless you.
+
+HEBREW:
+ויאמר יצחק אל יעקב גשה נא ואמשך בני האתה זה בני עשו אם לא: ויגש יעקב אל יצחק אביו וימשהו ויאמר הקל קול יעקב והידים ידי עשו: ולא הכירו כי היו ידיו כידי עשו אחיו שערת ויברכהו: ויאמר אתה זה בני עשו ויאמר אני: ויאמר הגשה לי ואכלה מציד בני למען תברכך נפשי ויגש לו ויאכל ויבא לו יין וישת: ויאמר אליו יצחק אביו גשה נא ושקה לי בני: ויגש וישק לו וירח את ריח בגדיו ויברכהו ויאמר ראה ריח בני כריח שדה אשר ברכו יהוה: ויתן לך האלהים מטל השמים ומשמני הארץ ורב דגן ותירש: יעבדוך עמים [וישתחוו] לך לאמים הוה גביר לאחיך וישתחוו לך בני אמך ארריך ארור ומברכיך ברוך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa690011460404dfc4164",
+      "display_heb_name": "דגן"
+    },
+    {
+      "key": "6a5fa691011460404dfc4166",
+      "display_heb_name": "דגן"
+    }
+  ]
+}

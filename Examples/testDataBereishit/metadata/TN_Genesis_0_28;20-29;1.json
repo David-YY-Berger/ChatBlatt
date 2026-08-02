@@ -1,0 +1,30 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa693011460404dfc4171",
+            "display_heb_name": "בית אבי",
+            "placeType": "Building or Structure",
+            "display_en_name": "father's house"
+        },
+        {
+            "key": "6a5fa693011460404dfc4172",
+            "display_heb_name": "ארצה בני קדם",
+            "placeType": "Country or Region",
+            "display_en_name": "land of the easterners"
+        },
+        {
+            "key": "6a5fa694011460404dfc4173",
+            "display_heb_name": "אבן",
+            "symbolType": "Holy Object",
+            "display_en_name": "stone"
+        },
+        {
+            "key": "6a5fa694011460404dfc4174",
+            "display_heb_name": "עשר",
+            "heb_unit": "אחוז",
+            "heb_context": "מנחת נדר יעקב",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_28:20-29:1"
+}

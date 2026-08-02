@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f6011460404dfc4312",
+            "display_heb_name": "שילה",
+            "placeType": "City",
+            "display_en_name": "shiloh"
+        },
+        {
+            "key": "6a5fa6f6011460404dfc4313",
+            "display_heb_name": "שבט",
+            "symbolType": "Other",
+            "display_en_name": "scepter"
+        },
+        {
+            "key": "6a5fa6f6011460404dfc4314",
+            "display_heb_name": "מחקק",
+            "symbolType": "Other",
+            "display_en_name": "ruler's staff"
+        }
+    ],
+    "key": "TN_Genesis_0_49:10-12"
+}

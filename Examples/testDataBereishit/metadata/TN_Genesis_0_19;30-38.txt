@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=4017 approx cost=$0.000645 (Prompt=2488, Completion=1529)
+SOURCE:
+Bereishit (Torah) 19:30-38
+
+ENTITIES TO ENRICH (7):
+{"key":"6a5fa671011460404dfc40df","display_en_name":"moab","display_heb_name":"","all_en_names":["Moab"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa671011460404dfc40e0","display_en_name":"ben-ammi","display_heb_name":"","all_en_names":["Ben-Ammi"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa671011460404dfc40e1","display_en_name":"hill country","display_heb_name":"","all_en_names":["Hill Country"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa672011460404dfc40e2","display_en_name":"cave","display_heb_name":"","all_en_names":["Cave"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa672011460404dfc40e3","display_en_name":"moab","display_heb_name":"","all_en_names":["Moab"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa672011460404dfc40e4","display_en_name":"ammon","display_heb_name":"","all_en_names":["Ammon"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa672011460404dfc40e5","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"daughter","en_context":"lot's daughters"}
+
+PASSAGE:
+ENGLISH:
+Lot went up from Zoar and settled in the hill country with his two daughters, for he was afraid to dwell in Zoar; and he and his two daughters lived in a cave. And the older one said to the younger, Our father is old, and there is not a man on earth to consort with us in the way of all the world. Come, let us make our father drink wine, and let us lie with him, that we may maintain life through our father. That night they made their father drink wine, and the older one went in and lay with her father; he did not know when she lay down or when she rose. The next day the older one said to the younger, See, I lay with Father last night; let us make him drink wine tonight also, and you go and lie with him, that we may maintain life through our father. That night also they made their father drink wine, and the younger one went and lay with him; he did not know when she lay down or when she rose. Thus the two daughters of Lot became pregnant by their father. The older one bore a son and named him Moab; from (my) father. he is the father of the Moabites of today. And the younger also bore a son, and she called him Ben-ammi;. he is the father of the Ammonites of today.
+
+HEBREW:
+ויעל לוט מצוער וישב בהר ושתי בנתיו עמו כי ירא לשבת בצוער וישב במערה הוא ושתי בנתיו: ותאמר הבכירה אל הצעירה אבינו זקן ואיש אין בארץ לבוא עלינו כדרך כל הארץ: לכה נשקה את אבינו יין ונשכבה עמו ונחיה מאבינו זרע: ותשקין את אביהן יין בלילה הוא ותבא הבכירה ותשכב את אביה ולא ידע בשכבה ובקומה: ויהי ממחרת ותאמר הבכירה אל הצעירה הן שכבתי אמש את אבי נשקנו יין גם הלילה ובאי שכבי עמו ונחיה מאבינו זרע: ותשקין גם בלילה ההוא את אביהן יין ותקם הצעירה ותשכב עמו ולא ידע בשכבה ובקמה: ותהרין שתי בנות לוט מאביהן: ותלד הבכירה בן ותקרא שמו מואב הוא אבי מואב עד היום: והצעירה גם הוא ילדה בן ותקרא שמו בן עמי הוא אבי בני עמון עד היום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa671011460404dfc40df",
+      "display_heb_name": "מואב",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa671011460404dfc40e0",
+      "display_heb_name": "בן עמי",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa671011460404dfc40e1",
+      "display_heb_name": "הר",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa672011460404dfc40e2",
+      "display_heb_name": "מערה",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa672011460404dfc40e5",
+      "display_heb_name": "שתי",
+      "heb_unit": "בת",
+      "heb_context": "בנות לוט"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa673011460404dfc40ea",
+            "display_heb_name": "באר שבע",
+            "placeType": "Desert",
+            "display_en_name": "beer-sheba"
+        },
+        {
+            "key": "6a5fa674011460404dfc40eb",
+            "display_heb_name": "מים",
+            "display_en_name": "water"
+        },
+        {
+            "key": "6a5fa674011460404dfc40ec",
+            "display_heb_name": "שיחם",
+            "display_en_name": "bush"
+        }
+    ],
+    "key": "TN_Genesis_0_21:9-16"
+}

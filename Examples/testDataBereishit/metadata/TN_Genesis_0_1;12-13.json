@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa602011460404dfc3ef9",
+            "display_heb_name": "שלישי",
+            "heb_unit": "יום",
+            "heb_context": "יום שלישי",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_1:12-13"
+}

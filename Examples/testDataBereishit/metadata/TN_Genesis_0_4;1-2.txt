@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2903 approx cost=$0.000443 (Prompt=1902, Completion=1001)
+SOURCE:
+Bereishit (Torah) 4:1-2
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa60f011460404dfc3f36","display_en_name":"cain","display_heb_name":"","all_en_names":["Cain"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa610011460404dfc3f37","display_en_name":"abel","display_heb_name":"","all_en_names":["Abel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa610011460404dfc3f38","display_en_name":"hashem","display_heb_name":"","all_en_names":["Hashem"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa610011460404dfc3f39","display_en_name":"sheep","display_heb_name":"","all_en_names":["Sheep"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Now the Human knew, often in a sexual sense. his wife Eve, and she conceived and bore Cain, saying, I have gained, connected with Cain; lit. created, acquired. a person can include infants in its denotative scope, as here and in Isa. 66.13. NJPS male child; trad. man. Cf. note at Num. 30.4 and see the Dictionary under ish . with the help of uncertain. HASHEM. She then bore his brother Abel. Abel became a keeper of sheep, and Cain became a tiller of the soil.
+
+HEBREW:
+והאדם ידע את חוה אשתו ותהר ותלד את קין ותאמר קניתי איש את יהוה: ותסף ללדת את אחיו את הבל ויהי הבל רעה צאן וקין היה עבד אדמה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60f011460404dfc3f36",
+      "display_heb_name": "קין",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa610011460404dfc3f37",
+      "display_heb_name": "הבל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa610011460404dfc3f38",
+      "display_heb_name": "יהוה",
+      "timePeriod": "Tanach"
+    }
+  ]
+}

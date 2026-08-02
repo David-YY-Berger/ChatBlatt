@@ -1,0 +1,36 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c4011460404dfc424e",
+            "timePeriod": "Tanach",
+            "display_en_name": "the dreamer"
+        },
+        {
+            "key": "6a5fa6c4011460404dfc424f",
+            "display_heb_name": "אמך",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "mother"
+        },
+        {
+            "key": "6a5fa6c4011460404dfc4250",
+            "display_heb_name": "השמש",
+            "symbolType": "Part of Nature",
+            "display_en_name": "sun"
+        },
+        {
+            "key": "6a5fa6c5011460404dfc4251",
+            "display_heb_name": "הירח",
+            "symbolType": "Part of Nature",
+            "display_en_name": "moon"
+        },
+        {
+            "key": "6a5fa6c5011460404dfc4252",
+            "display_heb_name": "אחד עשר",
+            "heb_unit": "כוכב",
+            "heb_context": "אחים משתחוים",
+            "display_en_name": "11"
+        }
+    ],
+    "key": "TN_Genesis_0_37:9-12"
+}

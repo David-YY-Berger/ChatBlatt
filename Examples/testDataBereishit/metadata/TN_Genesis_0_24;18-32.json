@@ -1,0 +1,47 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa67d011460404dfc4117",
+            "display_heb_name": "האיש",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "the man"
+        },
+        {
+            "key": "6a5fa67e011460404dfc4119",
+            "display_heb_name": "בית אמה",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "rebekah's mother's household"
+        },
+        {
+            "key": "6a5fa67e011460404dfc411a",
+            "display_heb_name": "האנשים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "the entourage"
+        },
+        {
+            "key": "6a5fa67e011460404dfc411b",
+            "display_heb_name": "השקת",
+            "placeType": "Building or Structure",
+            "display_en_name": "trough"
+        },
+        {
+            "key": "6a5fa67e011460404dfc411c",
+            "display_heb_name": "בקע",
+            "heb_unit": "שקל",
+            "heb_context": "משקל נזם זהב",
+            "display_en_name": "0.5"
+        },
+        {
+            "key": "6a5fa67f011460404dfc411d",
+            "display_heb_name": "עשרה",
+            "heb_unit": "שקל",
+            "heb_context": "משקל צמידי זהב",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_24:18-32"
+}

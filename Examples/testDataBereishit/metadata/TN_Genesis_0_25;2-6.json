@@ -1,0 +1,92 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa682011460404dfc4129",
+            "display_heb_name": "זמרן",
+            "timePeriod": "Tanach",
+            "display_en_name": "zimran"
+        },
+        {
+            "key": "6a5fa682011460404dfc412a",
+            "display_heb_name": "יקשן",
+            "timePeriod": "Tanach",
+            "display_en_name": "jokshan"
+        },
+        {
+            "key": "6a5fa682011460404dfc412b",
+            "display_heb_name": "מדן",
+            "timePeriod": "Tanach",
+            "display_en_name": "medan"
+        },
+        {
+            "key": "6a5fa682011460404dfc412c",
+            "display_heb_name": "מדין",
+            "timePeriod": "Tanach",
+            "display_en_name": "midian"
+        },
+        {
+            "key": "6a5fa683011460404dfc412d",
+            "display_heb_name": "ישבק",
+            "timePeriod": "Tanach",
+            "display_en_name": "ishbak"
+        },
+        {
+            "key": "6a5fa683011460404dfc412e",
+            "display_heb_name": "שוח",
+            "timePeriod": "Tanach",
+            "display_en_name": "shuah"
+        },
+        {
+            "key": "6a5fa683011460404dfc412f",
+            "display_heb_name": "אשורם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "asshurim"
+        },
+        {
+            "key": "6a5fa683011460404dfc4130",
+            "display_heb_name": "לטושם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "letushim"
+        },
+        {
+            "key": "6a5fa684011460404dfc4131",
+            "display_heb_name": "לאמים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "leummim"
+        },
+        {
+            "key": "6a5fa684011460404dfc4132",
+            "display_heb_name": "עיפה",
+            "timePeriod": "Tanach",
+            "display_en_name": "ephah"
+        },
+        {
+            "key": "6a5fa684011460404dfc4133",
+            "display_heb_name": "עפר",
+            "timePeriod": "Tanach",
+            "display_en_name": "epher"
+        },
+        {
+            "key": "6a5fa684011460404dfc4134",
+            "display_heb_name": "אבידע",
+            "timePeriod": "Tanach",
+            "display_en_name": "abida"
+        },
+        {
+            "key": "6a5fa684011460404dfc4135",
+            "display_heb_name": "אלדעה",
+            "timePeriod": "Tanach",
+            "display_en_name": "eldaah"
+        },
+        {
+            "key": "6a5fa685011460404dfc4136",
+            "display_heb_name": "ארץ קדם",
+            "placeType": "Country or Region",
+            "display_en_name": "land of the east"
+        }
+    ],
+    "key": "TN_Genesis_0_25:2-6"
+}

@@ -1,0 +1,18 @@
+﻿COST: Tokens: Total=1669 approx cost=$0.000146 (Prompt=1578, Completion=91)
+SOURCE:
+Bereishit (Torah) 25:33-34
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa68b011460404dfc414f","display_en_name":"lentil stew","display_heb_name":"","all_en_names":["Lentil Stew"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But Jacob said, Swear to me first. So he swore to him, and sold his birthright to Jacob. Jacob then gave Esau bread and lentil stew; he ate and drank, and he rose and went away. Thus did Esau spurn the birthright.
+
+HEBREW:
+ויאמר יעקב השבעה לי כיום וישבע לו וימכר את בכרתו ליעקב: ויעקב נתן לעשו לחם ונזיד עדשים ויאכל וישת ויקם וילך ויבז עשו את הבכרה:
+
+EXTRACTED (JSON):
+{
+  "entities": []
+}

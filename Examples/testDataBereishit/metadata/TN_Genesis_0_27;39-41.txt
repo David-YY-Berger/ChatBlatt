@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2110 approx cost=$0.000243 (Prompt=1733, Completion=377)
+SOURCE:
+Bereishit (Torah) 27:39-41
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa691011460404dfc4167","display_en_name":"sword","display_heb_name":"","all_en_names":["Sword"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa691011460404dfc4168","display_en_name":"yoke","display_heb_name":"","all_en_names":["Yoke"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And his father Isaac answered, saying to him, See, your abode shall enjoy the fat of the earth And the dew of heaven above. Yet by your sword you shall live, And you shall serve your brother; But when you grow restive, You shall break his yoke from your neck. Now Esau harbored a grudge against Jacob because of the blessing which his father had given him, and Esau said to himself, Let but the mourning period of my father come, and I will kill my brother Jacob.
+
+HEBREW:
+ויען יצחק אביו ויאמר אליו הנה משמני הארץ יהיה מושבך ומטל השמים מעל: ועל חרבך תחיה ואת אחיך תעבד והיה כאשר תריד ופרקת עלו מעל צוארך: וישטם עשו את יעקב על הברכה אשר ברכו אביו ויאמר עשו בלבו יקרבו ימי אבל אבי ואהרגה את יעקב אחי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa691011460404dfc4167",
+      "display_heb_name": "חרב",
+      "symbolType": "Weapon"
+    },
+    {
+      "key": "6a5fa691011460404dfc4168",
+      "display_heb_name": "על",
+      "symbolType": "Other"
+    }
+  ]
+}

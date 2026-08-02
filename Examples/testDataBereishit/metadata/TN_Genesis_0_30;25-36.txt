@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=3799 approx cost=$0.000600 (Prompt=2398, Completion=1401)
+SOURCE:
+Bereishit (Torah) 30:25-36
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa69d011460404dfc419f","display_en_name":"laban's sons","display_heb_name":"","all_en_names":["Laban's Sons"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa69e011460404dfc41a0","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"journey distance"}
+{"key":"6a5fa69e011460404dfc41a1","display_en_name":"goat","display_heb_name":"","all_en_names":["Goat"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+After Rachel had borne Joseph, Jacob said to Laban, Give me leave to go back to my own homeland. Give me my wives and my children, for whom I have served you, that I may go; for well you know what services I have rendered you. But Laban said to him, If you will indulge me, I have learned by divination that HASHEM has blessed me on your account. And he continued, Name the wages due from me, and I will pay you. But he said, You know well how I have served you and how your livestock has fared with me. For the little you had before I came has grown to much, since HASHEM has blessed you wherever I turned. And now, when shall I make provision for my own household? He said, What shall I pay you? And Jacob said, Pay me nothing! If you will do this thing for me, I will again pasture and keep your flocks: let me pass through your whole flock today, removing from there every speckled and spotted animal-every dark-colored sheep and every spotted and speckled goat. Such shall be my wages. In the future when you go over my wages, let my honesty toward you testify for me: if there are among my goats any that are not speckled or spotted or any sheep that are not dark-colored, they got there by theft. And Laban said, Very well, let it be as you say. But that same day he removed the streaked and spotted he-goats and all the speckled and spotted she-goats-every one that had white on it-and all the dark-colored sheep, and left them in the charge of his sons. And he put a distance of three days journey between himself and Jacob, while Jacob was pasturing the rest of Labans flock.
+
+HEBREW:
+ויהי כאשר ילדה רחל את יוסף ויאמר יעקב אל לבן שלחני ואלכה אל מקומי ולארצי: תנה את נשי ואת ילדי אשר עבדתי אתך בהן ואלכה כי אתה ידעת את עבדתי אשר עבדתיך: ויאמר אליו לבן אם נא מצאתי חן בעיניך נחשתי ויברכני יהוה בגללך: ויאמר נקבה שכרך עלי ואתנה: ויאמר אליו אתה ידעת את אשר עבדתיך ואת אשר היה מקנך אתי: כי מעט אשר היה לך לפני ויפרץ לרב ויברך יהוה אתך לרגלי ועתה מתי אעשה גם אנכי לביתי: ויאמר מה אתן לך ויאמר יעקב לא תתן לי מאומה אם תעשה לי הדבר הזה אשובה ארעה צאנך אשמר: אעבר בכל צאנך היום הסר משם כל שה נקד וטלוא וכל שה חום בכשבים וטלוא ונקד בעזים והיה שכרי: וענתה בי צדקתי ביום מחר כי תבוא על שכרי לפניך כל אשר איננו נקד וטלוא בעזים וחום בכשבים גנוב הוא אתי: ויאמר לבן הן לו יהי כדברך: ויסר ביום ההוא את התישים העקדים והטלאים ואת כל העזים הנקדות והטלאת כל אשר לבן בו וכל חום בכשבים ויתן ביד בניו: וישם דרך שלשת ימים בינו ובין יעקב ויעקב רעה את צאן לבן הנותרת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa69d011460404dfc419f",
+      "display_heb_name": "בניו",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa69e011460404dfc41a0",
+      "display_heb_name": "שלשת",
+      "heb_unit": "יום",
+      "heb_context": "מרחק דרך"
+    }
+  ]
+}

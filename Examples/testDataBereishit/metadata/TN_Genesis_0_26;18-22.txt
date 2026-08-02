@@ -1,0 +1,63 @@
+﻿COST: Tokens: Total=4829 approx cost=$0.000915 (Prompt=2374, Completion=2455)
+SOURCE:
+Bereishit (Torah) 26:18-22
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa63c011460404dfc3ff6","display_en_name":"philistia","display_heb_name":"","all_en_names":["Philistia"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa68c011460404dfc4151","display_en_name":"isaac's servants","display_heb_name":"","all_en_names":["Isaac's Servants"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68c011460404dfc4152","display_en_name":"herdsmen of gerar","display_heb_name":"","all_en_names":["Herdsmen Of Gerar"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68c011460404dfc4153","display_en_name":"isaac's herdsmen","display_heb_name":"","all_en_names":["Isaac's Herdsmen"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68c011460404dfc4154","display_en_name":"esek","display_heb_name":"","all_en_names":["Esek"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa68d011460404dfc4155","display_en_name":"sitnah","display_heb_name":"","all_en_names":["Sitnah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa68d011460404dfc4156","display_en_name":"rehoboth","display_heb_name":"","all_en_names":["Rehoboth"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa68d011460404dfc4157","display_en_name":"gerar","display_heb_name":"","all_en_names":["Gerar"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Isaac dug anew the wells which had been dug in the days of his father Abraham and which the Philistines had stopped up after Abrahams death; and he gave them the same names that his father had given them. But when Isaacs servants, digging in the wadi, found there a well of spring water, the herdsmen of Gerar quarreled with Isaacs herdsmen, saying, The water is ours. He named that well Esek, because they contended with him. And when they dug another well, they disputed over that one also; so he named it Sitnah. He moved from there and dug yet another well, and they did not quarrel over it; so he called it Rehoboth, saying, Now at last HASHEM has granted us ample space, connected with Rehoboth. to increase in the land.
+
+HEBREW:
+וישב יצחק ויחפר את בארת המים אשר חפרו בימי אברהם אביו ויסתמום פלשתים אחרי מות אברהם ויקרא להן שמות כשמת אשר קרא להן אביו: ויחפרו עבדי יצחק בנחל וימצאו שם באר מים חיים: ויריבו רעי גרר עם רעי יצחק לאמר לנו המים ויקרא שם הבאר עשק כי התעשקו עמו: ויחפרו באר אחרת ויריבו גם עליה ויקרא שמה שטנה: ויעתק משם ויחפר באר אחרת ולא רבו עליה ויקרא שמה רחבות ויאמר כי עתה הרחיב יהוה לנו ופרינו בארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68c011460404dfc4151",
+      "display_heb_name": "עבדי יצחק",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa68c011460404dfc4152",
+      "display_heb_name": "רעי גרר",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa68c011460404dfc4153",
+      "display_heb_name": "רעי יצחק",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa68c011460404dfc4154",
+      "display_heb_name": "עשק",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa68d011460404dfc4155",
+      "display_heb_name": "שטנה",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa68d011460404dfc4156",
+      "display_heb_name": "רחבות",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa68d011460404dfc4157",
+      "display_heb_name": "גרר"
+    }
+  ]
+}

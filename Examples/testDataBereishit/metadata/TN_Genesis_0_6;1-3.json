@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa61d011460404dfc3f70",
+            "display_heb_name": "מאה ועשרים",
+            "heb_unit": "שנה",
+            "heb_context": "מגבלת ימי אדם",
+            "display_en_name": "120"
+        }
+    ],
+    "key": "TN_Genesis_0_6:1-3"
+}

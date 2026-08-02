@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa681011460404dfc4128",
+            "display_heb_name": "קטורה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "keturah"
+        }
+    ],
+    "key": "TN_Genesis_0_25:1"
+}

@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa69d011460404dfc419f",
+            "display_heb_name": "בניו",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "laban's sons"
+        },
+        {
+            "key": "6a5fa69e011460404dfc41a0",
+            "display_heb_name": "שלשת",
+            "heb_unit": "יום",
+            "heb_context": "מרחק דרך",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_30:25-36"
+}

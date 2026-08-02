@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=4236 approx cost=$0.000690 (Prompt=2581, Completion=1655)
+SOURCE:
+Bereishit (Torah) 31:36-43
+
+ENTITIES TO ENRICH (7):
+{"key":"6a5fa675011460404dfc40f3","display_en_name":"ewe","display_heb_name":"","all_en_names":["Ewe"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa6a2011460404dfc41b2","display_en_name":"god of abraham","display_heb_name":"","all_en_names":["God Of Abraham"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a2011460404dfc41b3","display_en_name":"fear of isaac","display_heb_name":"","all_en_names":["Fear Of Isaac"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a2011460404dfc41b4","display_en_name":"20","display_heb_name":"","all_en_names":["20"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"service duration"}
+{"key":"6a5fa6a2011460404dfc41b5","display_en_name":"14","display_heb_name":"","all_en_names":["14"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"service for daughters"}
+{"key":"6a5fa6a3011460404dfc41b6","display_en_name":"6","display_heb_name":"","all_en_names":["6"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"service for flocks"}
+{"key":"6a5fa6a3011460404dfc41b7","display_en_name":"ram","display_heb_name":"","all_en_names":["Ram"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Now Jacob became incensed and took up his grievance with Laban. Jacob spoke up and said to Laban, What is my crime, what is my guilt that you should pursue me? You rummaged through all my things; what have you found of all your household objects? Set it here, before my kin and yours, and let them decide between us two. These twenty years I have spent in your service, your ewes and she-goats never miscarried, nor did I feast on rams from your flock. That which was torn by beasts I never brought to you; I myself made good the loss; you exacted it of me, whether snatched by day or snatched by night. Often, scorching heat ravaged me by day and frost by night; and sleep fled from my eyes. Of the twenty years that I spent in your household, I served you fourteen years for your two daughters, and six years for your flocks; and you changed my wages time and again. Had not the God of my fathers [house]-the God of Abraham and the Fear uncertain. of Isaac-been with me, you would have sent me away empty-handed. But it was my plight and the toil of my hands that God took notice of-and gave judgment on last night. Then Laban spoke up and said to Jacob, The daughters are my daughters, the children are my children, and the flocks are my flocks; all that you see is mine. Yet what can I do now about my daughters or the children they have borne?
+
+HEBREW:
+ויחר ליעקב וירב בלבן ויען יעקב ויאמר ללבן מה פשעי מה חטאתי כי דלקת אחרי: כי מששת את כל כלי מה מצאת מכל כלי ביתך שים כה נגד אחי ואחיך ויוכיחו בין שנינו: זה עשרים שנה אנכי עמך רחליך ועזיך לא שכלו ואילי צאנך לא אכלתי: טרפה לא הבאתי אליך אנכי אחטנה מידי תבקשנה גנבתי יום וגנבתי לילה: הייתי ביום אכלני חרב וקרח בלילה ותדד שנתי מעיני: זה לי עשרים שנה בביתך עבדתיך ארבע עשרה שנה בשתי בנתיך ושש שנים בצאנך ותחלף את משכרתי עשרת מנים: לולי אלהי אבי אלהי אברהם ופחד יצחק היה לי כי עתה ריקם שלחתני את עניי ואת יגיע כפי ראה אלהים ויוכח אמש: ויען לבן ויאמר אל יעקב הבנות בנתי והבנים בני והצאן צאני וכל אשר אתה ראה לי הוא ולבנתי מה אעשה לאלה היום או לבניהן אשר ילדו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a2011460404dfc41b2",
+      "display_heb_name": "אלהי אברהם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6a2011460404dfc41b3",
+      "display_heb_name": "פחד יצחק",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6a2011460404dfc41b4",
+      "display_heb_name": "עשרים",
+      "heb_unit": "שנה",
+      "heb_context": "שנות שירות"
+    },
+    {
+      "key": "6a5fa6a2011460404dfc41b5",
+      "display_heb_name": "ארבע עשרה",
+      "heb_unit": "שנה",
+      "heb_context": "שירות עבור בנות"
+    },
+    {
+      "key": "6a5fa6a3011460404dfc41b6",
+      "display_heb_name": "שש",
+      "heb_unit": "שנה",
+      "heb_context": "שירות עבור צאן"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=5028 approx cost=$0.000858 (Prompt=2890, Completion=2138)
+SOURCE:
+Bereishit (Torah) 25:2-6
+
+ENTITIES TO ENRICH (14):
+{"key":"6a5fa682011460404dfc4129","display_en_name":"zimran","display_heb_name":"","all_en_names":["Zimran"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa682011460404dfc412a","display_en_name":"jokshan","display_heb_name":"","all_en_names":["Jokshan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa682011460404dfc412b","display_en_name":"medan","display_heb_name":"","all_en_names":["Medan"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa682011460404dfc412c","display_en_name":"midian","display_heb_name":"","all_en_names":["Midian"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa683011460404dfc412d","display_en_name":"ishbak","display_heb_name":"","all_en_names":["Ishbak"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa683011460404dfc412e","display_en_name":"shuah","display_heb_name":"","all_en_names":["Shuah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa683011460404dfc412f","display_en_name":"asshurim","display_heb_name":"","all_en_names":["Asshurim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa683011460404dfc4130","display_en_name":"letushim","display_heb_name":"","all_en_names":["Letushim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa684011460404dfc4131","display_en_name":"leummim","display_heb_name":"","all_en_names":["Leummim"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa684011460404dfc4132","display_en_name":"ephah","display_heb_name":"","all_en_names":["Ephah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa684011460404dfc4133","display_en_name":"epher","display_heb_name":"","all_en_names":["Epher"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa684011460404dfc4134","display_en_name":"abida","display_heb_name":"","all_en_names":["Abida"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa684011460404dfc4135","display_en_name":"eldaah","display_heb_name":"","all_en_names":["Eldaah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa685011460404dfc4136","display_en_name":"land of the east","display_heb_name":"","all_en_names":["Land Of The East"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+She bore him Zimran, Jokshan, Medan, Midian, Ishbak, and Shuah. Jokshan begot Sheba and Dedan. The descendants of Dedan were the Asshurim, the Letushim, and the Leummim. The descendants of Midian were Ephah, Epher, Enoch, Abida, and Eldaah. All these were descendants of Keturah. Abraham willed all that he owned to Isaac; but to Abrahams sons by concubines Abraham gave gifts while he was still living, and he sent them away from his son Isaac eastward, to the land of the East.
+
+HEBREW:
+ותלד לו את זמרן ואת יקשן ואת מדן ואת מדין ואת ישבק ואת שוח: ויקשן ילד את שבא ואת דדן ובני דדן היו אשורם ולטושם ולאמים: ובני מדין עיפה ועפר וחנך ואבידע ואלדעה כל אלה בני קטורה: ויתן אברהם את כל אשר לו ליצחק: ולבני הפילגשים אשר לאברהם נתן אברהם מתנת וישלחם מעל יצחק בנו בעודנו חי קדמה אל ארץ קדם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa682011460404dfc4129",
+      "display_heb_name": "זמרן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa682011460404dfc412a",
+      "display_heb_name": "יקשן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa682011460404dfc412b",
+      "display_heb_name": "מדן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa682011460404dfc412c",
+      "display_heb_name": "מדין",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa683011460404dfc412d",
+      "display_heb_name": "ישבק",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa683011460404dfc412e",
+      "display_heb_name": "שוח",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa683011460404dfc412f",
+      "display_heb_name": "אשורם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa683011460404dfc4130",
+      "display_heb_name": "לטושם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa684011460404dfc4131",
+      "display_heb_name": "לאמים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa684011460404dfc4132",
+      "display_heb_name": "עיפה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa684011460404dfc4133",
+      "display_heb_name": "עפר",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa684011460404dfc4134",
+      "display_heb_name": "אבידע",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa684011460404dfc4135",
+      "display_heb_name": "אלדעה",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa685011460404dfc4136",
+      "display_heb_name": "ארץ קדם",
+      "placeType": "Country or Region"
+    }
+  ]
+}

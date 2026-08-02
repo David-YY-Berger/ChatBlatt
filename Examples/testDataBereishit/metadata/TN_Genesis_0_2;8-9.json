@@ -1,0 +1,33 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa608011460404dfc3f15",
+            "display_heb_name": "יהוה אלהים",
+            "timePeriod": "Tanach",
+            "display_en_name": "god hashem"
+        },
+        {
+            "key": "6a5fa608011460404dfc3f16",
+            "display_heb_name": "עדן",
+            "placeType": "Country or Region",
+            "display_en_name": "eden"
+        },
+        {
+            "key": "6a5fa608011460404dfc3f17",
+            "display_heb_name": "גן",
+            "placeType": "Other",
+            "display_en_name": "garden"
+        },
+        {
+            "key": "6a5fa609011460404dfc3f18",
+            "display_heb_name": "עץ החיים",
+            "display_en_name": "tree of life"
+        },
+        {
+            "key": "6a5fa609011460404dfc3f19",
+            "display_heb_name": "עץ הדעת טוב ורע",
+            "display_en_name": "tree of knowledge of good and bad"
+        }
+    ],
+    "key": "TN_Genesis_0_2:8-9"
+}

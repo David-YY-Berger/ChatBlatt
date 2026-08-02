@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1844 approx cost=$0.000207 (Prompt=1540, Completion=304)
+SOURCE:
+Bereishit (Torah) 23:9
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa67b011460404dfc410d","display_en_name":"machpelah","display_heb_name":"","all_en_names":["Machpelah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Let him sell me the cave of Machpelah that he owns, which is at the edge of his land. Let him sell it to me, at the full price, for a burial site in your midst.
+
+HEBREW:
+ויתן לי את מערת המכפלה אשר לו אשר בקצה שדהו בכסף מלא יתננה לי בתוככם לאחזת קבר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67b011460404dfc410d",
+      "display_heb_name": "המכפלה",
+      "placeType": "Building or Structure"
+    }
+  ]
+}

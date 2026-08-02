@@ -1,0 +1,21 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa66b011460404dfc40c5",
+            "display_heb_name": "השפט כל הארץ",
+            "timePeriod": "Tanach",
+            "roles": [
+                "Judge"
+            ],
+            "display_en_name": "judge of all the earth"
+        },
+        {
+            "key": "6a5fa66b011460404dfc40c6",
+            "display_heb_name": "חמשים",
+            "heb_unit": "אדם",
+            "heb_context": "צדיקי סדם",
+            "display_en_name": "50"
+        }
+    ],
+    "key": "TN_Genesis_0_18:24-27"
+}

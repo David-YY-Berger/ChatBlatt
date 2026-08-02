@@ -1,0 +1,39 @@
+﻿COST: Tokens: Total=2513 approx cost=$0.000332 (Prompt=1873, Completion=640)
+SOURCE:
+Bereishit (Torah) 12:4-6
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa64b011460404dfc4038","display_en_name":"canaanites","display_heb_name":"","all_en_names":["Canaanites"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa64b011460404dfc403a","display_en_name":"moreh","display_heb_name":"","all_en_names":["Moreh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64b011460404dfc403b","display_en_name":"75","display_heb_name":"","all_en_names":["75"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abram's age"}
+
+PASSAGE:
+ENGLISH:
+Abram went forth as HASHEM had commanded him, and Lot went with him. Abram was seventy-five years old when he left Haran. Abram took his wife Sarai and his brothers son Lot, and all the wealth that they had amassed, and the persons that they had acquired in Haran; and they set out for the land of Canaan. When they arrived in the land of Canaan, Abram passed through the land as far as the site of Shechem, at the terebinth of Moreh. The Canaanites were then in the land.
+
+HEBREW:
+וילך אברם כאשר דבר אליו יהוה וילך אתו לוט ואברם בן חמש שנים ושבעים שנה בצאתו מחרן: ויקח אברם את שרי אשתו ואת לוט בן אחיו ואת כל רכושם אשר רכשו ואת הנפש אשר עשו בחרן ויצאו ללכת ארצה כנען ויבאו ארצה כנען: ויעבר אברם בארץ עד מקום שכם עד אלון מורה והכנעני אז בארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64b011460404dfc403a",
+      "display_heb_name": "מורה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa64b011460404dfc403b",
+      "display_heb_name": "שבעים וחמש",
+      "heb_unit": "שנה",
+      "heb_context": "גיל אברם"
+    },
+    {
+      "key": "6a5fa64b011460404dfc4038",
+      "display_heb_name": "הכנעני",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+﻿COST: Tokens: Total=4393 approx cost=$0.000815 (Prompt=2233, Completion=2160)
+SOURCE:
+Bereishit (Torah) 30:9-16
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa69b011460404dfc4192","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"zilpah's children"}
+{"key":"6a5fa69b011460404dfc4193","display_en_name":"mandrakes","display_heb_name":"","all_en_names":["Mandrakes"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa69b011460404dfc4194","display_en_name":"wheat","display_heb_name":"","all_en_names":["Wheat"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa69b011460404dfc4195","display_en_name":"mandrakes","display_heb_name":"","all_en_names":["Mandrakes"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa69b011460404dfc4196","display_en_name":"wheat","display_heb_name":"","all_en_names":["Wheat"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When Leah saw that she had stopped bearing children, she took her maid Zilpah and gave her to Jacob as concubine. And when Leahs maid Zilpah bore Jacob a son, Leah said, What luck!, which reads begad ; the qere reads ba gad luck has come; connected with Gad. So she named him Gad. When Leahs maid Zilpah bore Jacob a second son, Leah declared, What fortune!, connected with Asher. meaning, Women will deem me fortunate. So she named him Asher. Once, at the time of the wheat harvest, Reuben came upon some mandrakes in the field and brought them to his mother Leah. Rachel said to Leah, Please give me some of your sons mandrakes. But she said to her, Was it not enough for you to take away my husband, that you would also take my sons mandrakes? Rachel replied, I promise, he shall lie with you tonight, in return for your sons mandrakes. When Jacob came home from the field in the evening, Leah went out to meet him and said, You are to sleep with me, for I have hired you with my sons mandrakes. And he lay with her that night.
+
+HEBREW:
+ותרא לאה כי עמדה מלדת ותקח את זלפה שפחתה ותתן אתה ליעקב לאשה: ותלד זלפה שפחת לאה ליעקב בן: ותאמר לאה [בא גד] ותקרא את שמו גד: ותלד זלפה שפחת לאה בן שני ליעקב: ותאמר לאה באשרי כי אשרוני בנות ותקרא את שמו אשר: וילך ראובן בימי קציר חטים וימצא דודאים בשדה ויבא אתם אל לאה אמו ותאמר רחל אל לאה תני נא לי מדודאי בנך: ותאמר לה המעט קחתך את אישי ולקחת גם את דודאי בני ותאמר רחל לכן ישכב עמך הלילה תחת דודאי בנך: ויבא יעקב מן השדה בערב ותצא לאה לקראתו ותאמר אלי תבוא כי שכר שכרתיך בדודאי בני וישכב עמה בלילה הוא:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa69b011460404dfc4192",
+      "display_heb_name": "שני",
+      "heb_unit": "בן",
+      "heb_context": "ילדי זלפה"
+    },
+    {
+      "key": "6a5fa69b011460404dfc4193",
+      "display_heb_name": "דודאים"
+    },
+    {
+      "key": "6a5fa69b011460404dfc4194",
+      "display_heb_name": "חטים"
+    },
+    {
+      "key": "6a5fa69b011460404dfc4195",
+      "display_heb_name": "דודאים"
+    },
+    {
+      "key": "6a5fa69b011460404dfc4196",
+      "display_heb_name": "חטים"
+    }
+  ]
+}

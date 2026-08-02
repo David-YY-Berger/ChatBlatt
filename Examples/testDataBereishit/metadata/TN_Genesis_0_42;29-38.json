@@ -1,0 +1,26 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6de011460404dfc42b1",
+            "display_heb_name": "שנים עשר",
+            "heb_unit": "אח",
+            "heb_context": "בני יעקב",
+            "display_en_name": "12"
+        },
+        {
+            "key": "6a5fa6de011460404dfc42b2",
+            "display_heb_name": "אחד",
+            "heb_unit": "אח",
+            "heb_context": "בן יעקב",
+            "display_en_name": "1"
+        },
+        {
+            "key": "6a5fa6de011460404dfc42b3",
+            "display_heb_name": "שני",
+            "heb_unit": "בן",
+            "heb_context": "בני ראובן",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_42:29-38"
+}

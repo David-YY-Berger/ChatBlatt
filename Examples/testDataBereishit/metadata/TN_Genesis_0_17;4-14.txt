@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=3210 approx cost=$0.000464 (Prompt=2220, Completion=990)
+SOURCE:
+Bereishit (Torah) 17:4-14
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa664011460404dfc40a7","display_en_name":"abraham","display_heb_name":"","all_en_names":["Abraham"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa664011460404dfc40a8","display_en_name":"8","display_heb_name":"","all_en_names":["8"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"circumcision age"}
+
+PASSAGE:
+ENGLISH:
+As for Me, this is My covenant with you: You shall be the father of a multitude of nations. And you shall no longer be called Abram, but your name shall be Abraham, for I make you the father of a multitude of nations. I will make you exceedingly fertile, and make nations of you; and kings shall come forth from you. I will maintain My covenant between Me and you, and your offspring to come, as an everlasting covenant throughout the ages, to be God to you and to your offspring to come. I assign the land you sojourn in to you and your offspring to come, all the land of Canaan, as an everlasting holding. I will be their God. God further said to Abraham, As for you, you and your offspring to come throughout the ages shall keep My covenant. Such shall be the covenant between Me and you and your offspring to follow which you shall keep: every male among you shall be circumcised. You shall circumcise the flesh of your foreskin, and that shall be the sign of the covenant between Me and you. And throughout the generations, every male among you shall be circumcised at the age of eight days. As for the homeborn slave and the one bought from an outsider who is not of your offspring, they must be circumcised, homeborn and purchased alike. Thus shall My covenant be marked in your flesh as an everlasting pact. And if any male who is uncircumcised fails to circumcise the flesh of his foreskin, that person shall be cut off from kin; he has broken My covenant.
+
+HEBREW:
+אני הנה בריתי אתך והיית לאב המון גוים: ולא יקרא עוד את שמך אברם והיה שמך אברהם כי אב המון גוים נתתיך: והפרתי אתך במאד מאד ונתתיך לגוים ומלכים ממך יצאו: והקמתי את בריתי ביני ובינך ובין זרעך אחריך לדרתם לברית עולם להיות לך לאלהים ולזרעך אחריך: ונתתי לך ולזרעך אחריך את ארץ מגריך את כל ארץ כנען לאחזת עולם והייתי להם לאלהים: ויאמר אלהים אל אברהם ואתה את בריתי תשמר אתה וזרעך אחריך לדרתם: זאת בריתי אשר תשמרו ביני וביניכם ובין זרעך אחריך המול לכם כל זכר: ונמלתם את בשר ערלתכם והיה לאות ברית ביני וביניכם: ובן שמנת ימים ימול לכם כל זכר לדרתיכם יליד בית ומקנת כסף מכל בן נכר אשר לא מזרעך הוא: המולימול יליד ביתך ומקנת כספך והיתה בריתי בבשרכם לברית עולם: וערל זכר אשר לא ימול את בשר ערלתו ונכרתה הנפש ההוא מעמיה את בריתי הפר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa664011460404dfc40a7",
+      "display_heb_name": "אברהם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa664011460404dfc40a8",
+      "heb_unit": "יום",
+      "heb_context": "גיל מילה"
+    }
+  ]
+}

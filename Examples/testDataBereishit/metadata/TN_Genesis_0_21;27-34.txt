@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=3883 approx cost=$0.000686 (Prompt=2130, Completion=1753)
+SOURCE:
+Bereishit (Torah) 21:27-34
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa63c011460404dfc3ff6","display_en_name":"philistia","display_heb_name":"","all_en_names":["Philistia"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa675011460404dfc40f1","display_en_name":"land of the philistines","display_heb_name":"","all_en_names":["Land Of The Philistines"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa675011460404dfc40f2","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Sacrifice","en_unit":"ewe","en_context":"pact offering"}
+{"key":"6a5fa675011460404dfc40f3","display_en_name":"ewe","display_heb_name":"","all_en_names":["Ewe"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa676011460404dfc40f4","display_en_name":"tamarisk","display_heb_name":"","all_en_names":["Tamarisk"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Abraham took sheep and oxen and gave them to Abimelech, and the two of them made a pact. Abraham then set seven ewes of the flock by themselves, and Abimelech said to Abraham, What mean these seven ewes which you have set apart? He replied, You are to accept these seven ewes from me as proof that I dug this well. Hence that place was called Beer-sheba, for there the two of them swore an oath. When they had concluded the pact at Beer-sheba, Abimelech and Phicol, chief of his troops, departed and returned to the land of the Philistines. [Abraham] planted a tamarisk at Beer-sheba, and invoked there the name of HASHEM, the Everlasting God. And Abraham resided in the land of the Philistines a long time.
+
+HEBREW:
+ויקח אברהם צאן ובקר ויתן לאבימלך ויכרתו שניהם ברית: ויצב אברהם את שבע כבשת הצאן לבדהן: ויאמר אבימלך אל אברהם מה הנה שבע כבשת האלה אשר הצבת לבדנה: ויאמר כי את שבע כבשת תקח מידי בעבור תהיה לי לעדה כי חפרתי את הבאר הזאת: על כן קרא למקום ההוא באר שבע כי שם נשבעו שניהם: ויכרתו ברית בבאר שבע ויקם אבימלך ופיכל שר צבאו וישבו אל ארץ פלשתים: ויטע אשל בבאר שבע ויקרא שם בשם יהוה אל עולם: ויגר אברהם בארץ פלשתים ימים רבים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa675011460404dfc40f1",
+      "display_heb_name": "ארץ פלשתים",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa675011460404dfc40f2",
+      "display_heb_name": "שבע",
+      "heb_unit": "כבשה",
+      "heb_context": "הצעת ברית"
+    }
+  ]
+}

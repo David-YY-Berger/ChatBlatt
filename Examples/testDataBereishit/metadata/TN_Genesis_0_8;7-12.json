@@ -1,0 +1,27 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa627011460404dfc3f9a",
+            "display_heb_name": "שבעת",
+            "heb_unit": "יום",
+            "heb_context": "המתנה ליונה",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa627011460404dfc3f9b",
+            "display_heb_name": "הערב",
+            "display_en_name": "raven"
+        },
+        {
+            "key": "6a5fa627011460404dfc3f9c",
+            "display_heb_name": "היונה",
+            "display_en_name": "dove"
+        },
+        {
+            "key": "6a5fa627011460404dfc3f9d",
+            "display_heb_name": "זית",
+            "display_en_name": "olive"
+        }
+    ],
+    "key": "TN_Genesis_0_8:7-12"
+}

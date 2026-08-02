@@ -1,0 +1,222 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa672011460404dfc40e3",
+            "display_heb_name": "מואב",
+            "placeType": "Country or Region",
+            "display_en_name": "moab"
+        },
+        {
+            "key": "6a5fa6bc011460404dfc422a",
+            "display_heb_name": "בלע",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "bela"
+        },
+        {
+            "key": "6a5fa6bc011460404dfc422b",
+            "display_heb_name": "בעור",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "beor"
+        },
+        {
+            "key": "6a5fa6bc011460404dfc422c",
+            "display_heb_name": "חשם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "husham"
+        },
+        {
+            "key": "6a5fa6bd011460404dfc422d",
+            "display_heb_name": "בדד",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "bedad"
+        },
+        {
+            "key": "6a5fa6bd011460404dfc422e",
+            "display_heb_name": "שמלה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "samlah"
+        },
+        {
+            "key": "6a5fa6bd011460404dfc4230",
+            "display_heb_name": "בעל חנן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "baal-hanan"
+        },
+        {
+            "key": "6a5fa6be011460404dfc4231",
+            "display_heb_name": "עכבור",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "achbor"
+        },
+        {
+            "key": "6a5fa6be011460404dfc4232",
+            "display_heb_name": "הדר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "hadar"
+        },
+        {
+            "key": "6a5fa6be011460404dfc4233",
+            "display_heb_name": "מהיטבאל",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "mehetabel"
+        },
+        {
+            "key": "6a5fa6be011460404dfc4234",
+            "display_heb_name": "מטרד",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isNonJew": true,
+            "display_en_name": "matred"
+        },
+        {
+            "key": "6a5fa6bf011460404dfc4235",
+            "display_heb_name": "מי זהב",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "me-zahab"
+        },
+        {
+            "key": "6a5fa6bf011460404dfc4237",
+            "display_heb_name": "מדין",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "midianites"
+        },
+        {
+            "key": "6a5fa6bf011460404dfc4238",
+            "display_heb_name": "עלוה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "alvah"
+        },
+        {
+            "key": "6a5fa6bf011460404dfc4239",
+            "display_heb_name": "יתת",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "jetheth"
+        },
+        {
+            "key": "6a5fa6c0011460404dfc423a",
+            "display_heb_name": "אלה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "elah"
+        },
+        {
+            "key": "6a5fa6c0011460404dfc423b",
+            "display_heb_name": "פינן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "pinon"
+        },
+        {
+            "key": "6a5fa6c0011460404dfc423c",
+            "display_heb_name": "מבצר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "mibzar"
+        },
+        {
+            "key": "6a5fa6c0011460404dfc423d",
+            "display_heb_name": "מגדיאל",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "magdiel"
+        },
+        {
+            "key": "6a5fa6c1011460404dfc423e",
+            "display_heb_name": "עירם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "iram"
+        },
+        {
+            "key": "6a5fa6c1011460404dfc423f",
+            "display_heb_name": "דנהבה",
+            "placeType": "City",
+            "display_en_name": "dinhabah"
+        },
+        {
+            "key": "6a5fa6c1011460404dfc4240",
+            "display_heb_name": "בצרה",
+            "placeType": "City",
+            "display_en_name": "bozrah"
+        },
+        {
+            "key": "6a5fa6c1011460404dfc4241",
+            "display_heb_name": "תימן",
+            "placeType": "Country or Region",
+            "display_en_name": "teman"
+        },
+        {
+            "key": "6a5fa6c1011460404dfc4242",
+            "display_heb_name": "מואב",
+            "placeType": "Country or Region",
+            "display_en_name": "moab"
+        },
+        {
+            "key": "6a5fa6c2011460404dfc4243",
+            "display_heb_name": "עוית",
+            "placeType": "City",
+            "display_en_name": "avith"
+        },
+        {
+            "key": "6a5fa6c2011460404dfc4244",
+            "display_heb_name": "משרקה",
+            "placeType": "City",
+            "display_en_name": "masrekah"
+        },
+        {
+            "key": "6a5fa6c2011460404dfc4245",
+            "display_heb_name": "רחבות הנהר",
+            "placeType": "City",
+            "display_en_name": "rehoboth-on-the-river"
+        },
+        {
+            "key": "6a5fa6c2011460404dfc4246",
+            "display_heb_name": "פעו",
+            "placeType": "City",
+            "display_en_name": "pau"
+        },
+        {
+            "key": "6a5fa6c2011460404dfc4247",
+            "display_heb_name": "מדין",
+            "placeType": "Country or Region",
+            "display_en_name": "midian"
+        },
+        {
+            "key": "6a5fa6c3011460404dfc4248",
+            "display_heb_name": "תימן",
+            "placeType": "Country or Region",
+            "display_en_name": "teman"
+        }
+    ],
+    "key": "TN_Genesis_0_36:31-43"
+}

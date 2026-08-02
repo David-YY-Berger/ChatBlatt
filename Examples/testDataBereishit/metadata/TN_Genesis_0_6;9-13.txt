@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2385 approx cost=$0.000328 (Prompt=1722, Completion=663)
+SOURCE:
+Bereishit (Torah) 6:9-13
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa61e011460404dfc3f77","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"noah's children"}
+
+PASSAGE:
+ENGLISH:
+This is the line of Noah.-Noah was a righteous man; he was blameless in his age; Noah walked with God.- Noah begot three sons: Shem, Ham, and Japheth. The earth became corrupt before God; the earth was filled with lawlessness. When God saw how corrupt the earth was, for all flesh had corrupted its ways on earth, God said to Noah, I have decided to put an end to all flesh, for the earth is filled with lawlessness because of them: I am about to destroy them with the earth.
+
+HEBREW:
+אלה תולדת נח נח איש צדיק תמים היה בדרתיו את האלהים התהלך נח: ויולד נח שלשה בנים את שם את חם ואת יפת: ותשחת הארץ לפני האלהים ותמלא הארץ חמס: וירא אלהים את הארץ והנה נשחתה כי השחית כל בשר את דרכו על הארץ: ויאמר אלהים לנח קץ כל בשר בא לפני כי מלאה הארץ חמס מפניהם והנני משחיתם את הארץ:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa61e011460404dfc3f77",
+      "display_heb_name": "שלשה",
+      "heb_unit": "בן",
+      "heb_context": "בני נח"
+    }
+  ]
+}

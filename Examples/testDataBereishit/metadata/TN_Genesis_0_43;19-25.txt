@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2256 approx cost=$0.000233 (Prompt=1974, Completion=282)
+SOURCE:
+Bereishit (Torah) 43:19-25
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6e1011460404dfc42c0","display_en_name":"josephs house","display_heb_name":"","all_en_names":["Josephs House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e2011460404dfc42c1","display_en_name":"entrance of the house","display_heb_name":"","all_en_names":["Entrance Of The House"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+So they went up to Josephs house steward and spoke to him at the entrance of the house. If you please, my lord, they said, we came down once before to procure food. But when we arrived at the night encampment and opened our bags, there was each ones money in the mouth of his bag, our money in full. So we have brought it back with us. And we have brought down with us other money to procure food. We do not know who put the money in our bags. He replied, All is well with you; do not be afraid. Your God, the God of your fathers [house], must have put treasure in your bags for you. I got your payment. And he brought out Simeon to them. Then the steward brought the men into Josephs house; he gave them water to bathe their feet, and he provided feed for their asses. They laid out their gifts to await Josephs arrival at noon, for they had heard that they were to dine there.
+
+HEBREW:
+ויגשו אל האיש אשר על בית יוסף וידברו אליו פתח הבית: ויאמרו בי אדני ירד ירדנו בתחלה לשבר אכל: ויהי כי באנו אל המלון ונפתחה את אמתחתינו והנה כסף איש בפי אמתחתו כספנו במשקלו ונשב אתו בידנו: וכסף אחר הורדנו בידנו לשבר אכל לא ידענו מי שם כספנו באמתחתינו: ויאמר שלום לכם אל תיראו אלהיכם ואלהי אביכם נתן לכם מטמון באמתחתיכם כספכם בא אלי ויוצא אלהם את שמעון: ויבא האיש את האנשים ביתה יוסף ויתן מים וירחצו רגליהם ויתן מספוא לחמריהם: ויכינו את המנחה עד בוא יוסף בצהרים כי שמעו כי שם יאכלו לחם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e1011460404dfc42c0",
+      "display_heb_name": "בית יוסף",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6e2011460404dfc42c1",
+      "display_heb_name": "פתח הבית",
+      "placeType": "Building or Structure"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2418 approx cost=$0.000277 (Prompt=1992, Completion=426)
+SOURCE:
+Bereishit (Torah) 38:7-12
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6ca011460404dfc4266","display_en_name":"shuas daughter","display_heb_name":"","all_en_names":["Shuas Daughter"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6cb011460404dfc4268","display_en_name":"adullam","display_heb_name":"","all_en_names":["Adullam"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But Er, Judahs first-born, was displeasing to HASHEM, and HASHEM took his life. Then Judah said to Onan, Join with your brothers wife and do your duty by her as a brother-in-law, and provide offspring for your brother. But Onan, knowing that the offspring would not count as his, let [the semen] go to waste; lit. spoil [it] groundward. NJPS let it go to waste, with offspring as the implausible co-referent of it. See the Dictionary under seed. whenever he joined with his brothers wife, so as not to provide offspring for his brother. What he did was displeasing to HASHEM, who took his life also. Then Judah said to his daughter-in-law Tamar, Stay as a widow in your fathers house until my son Shelah grows up-for he thought, He too might die like his brothers. So Tamar went to live in her fathers house. A long time afterward, Shuas daughter, the wife of Judah, died. When his period of mourning was over, Judah went up to Timnah to his sheepshearers, together with his friend Hirah the Adullamite.
+
+HEBREW:
+ויהי ער בכור יהודה רע בעיני יהוה וימתהו יהוה: ויאמר יהודה לאונן בא אל אשת אחיך ויבם אתה והקם זרע לאחיך: וידע אונן כי לא לו יהיה הזרע והיה אם בא אל אשת אחיו ושחת ארצה לבלתי נתן זרע לאחיו: וירע בעיני יהוה אשר עשה וימת גם אתו: ויאמר יהודה לתמר כלתו שבי אלמנה בית אביך עד יגדל שלה בני כי אמר פן ימות גם הוא כאחיו ותלך תמר ותשב בית אביה: וירבו הימים ותמת בת שוע אשת יהודה וינחם יהודה ויעל על גזזי צאנו הוא וחירה רעהו העדלמי תמנתה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6ca011460404dfc4266",
+      "display_heb_name": "בת שוע",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa6cb011460404dfc4268",
+      "display_heb_name": "עדלם",
+      "placeType": "City"
+    }
+  ]
+}

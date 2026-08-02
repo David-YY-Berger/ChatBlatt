@@ -1,0 +1,15 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa672011460404dfc40e6",
+            "display_heb_name": "אבימלך",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "abimelech"
+        }
+    ],
+    "key": "TN_Genesis_0_20:1-2"
+}

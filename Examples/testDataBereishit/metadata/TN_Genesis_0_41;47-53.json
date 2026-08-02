@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6db011460404dfc42a5",
+            "display_heb_name": "שבע",
+            "heb_unit": "שנה",
+            "heb_context": "שני השבע",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa6db011460404dfc42a6",
+            "display_heb_name": "שני",
+            "heb_unit": "בן",
+            "heb_context": "בנים",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_41:47-53"
+}

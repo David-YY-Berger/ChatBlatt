@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2582 approx cost=$0.000358 (Prompt=1852, Completion=730)
+SOURCE:
+Bereishit (Torah) 17:15-17
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa665011460404dfc40a9","display_en_name":"sarah","display_heb_name":"","all_en_names":["Sarah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa665011460404dfc40aa","display_en_name":"100","display_heb_name":"","all_en_names":["100"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abraham age"}
+{"key":"6a5fa665011460404dfc40ab","display_en_name":"90","display_heb_name":"","all_en_names":["90"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"sarah age"}
+
+PASSAGE:
+ENGLISH:
+And God said to Abraham, As for your wife Sarai, you shall not call her Sarai, but her name shall be Sarah. I will bless her; indeed, I will give you a son by her. I will bless her so that she shall give rise to nations; rulers of peoples shall issue from her. Abraham threw himself on his face and laughed, as he said to himself, Can a child be born to a man a hundred years old, or can Sarah bear a child at ninety?
+
+HEBREW:
+ויאמר אלהים אל אברהם שרי אשתך לא תקרא את שמה שרי כי שרה שמה: וברכתי אתה וגם נתתי ממנה לך בן וברכתיה והיתה לגוים מלכי עמים ממנה יהיו: ויפל אברהם על פניו ויצחק ויאמר בלבו הלבן מאה שנה יולד ואם שרה הבת תשעים שנה תלד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa665011460404dfc40a9",
+      "display_heb_name": "שרה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa665011460404dfc40aa",
+      "heb_unit": "שנה",
+      "heb_context": "גיל אברהם"
+    },
+    {
+      "key": "6a5fa665011460404dfc40ab",
+      "heb_unit": "שנה",
+      "heb_context": "גיל שרה"
+    }
+  ]
+}

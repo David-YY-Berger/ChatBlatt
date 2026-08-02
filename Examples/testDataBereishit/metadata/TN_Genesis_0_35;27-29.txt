@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=1845 approx cost=$0.000187 (Prompt=1630, Completion=215)
+SOURCE:
+Bereishit (Torah) 35:27-29
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6b2011460404dfc41fc","display_en_name":"180","display_heb_name":"","all_en_names":["180"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"isaac lifespan"}
+
+PASSAGE:
+ENGLISH:
+And Jacob came to his father Isaac at Mamre, at Kiriath-arba-now Hebron-where Abraham and Isaac had sojourned. Isaac was a hundred and eighty years old when he breathed his last and died. He was gathered to his kin in ripe old age; and he was buried by his sons Esau and Jacob.
+
+HEBREW:
+ויבא יעקב אל יצחק אביו ממרא קרית הארבע הוא חברון אשר גר שם אברהם ויצחק: ויהיו ימי יצחק מאת שנה ושמנים שנה: ויגוע יצחק וימת ויאסף אל עמיו זקן ושבע ימים ויקברו אתו עשו ויעקב בניו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6b2011460404dfc41fc",
+      "display_heb_name": "מאת שנה ושמנים שנה",
+      "heb_unit": "שנה",
+      "heb_context": "ימי יצחק"
+    }
+  ]
+}

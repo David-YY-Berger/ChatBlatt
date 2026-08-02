@@ -1,0 +1,38 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa66f011460404dfc40d7",
+            "display_heb_name": "חתניו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "sons-in-law"
+        },
+        {
+            "key": "6a5fa66f011460404dfc40d8",
+            "display_heb_name": "אשתו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "wife"
+        },
+        {
+            "key": "6a5fa670011460404dfc40d9",
+            "display_heb_name": "הככר",
+            "placeType": "Country or Region",
+            "display_en_name": "plain"
+        },
+        {
+            "key": "6a5fa670011460404dfc40da",
+            "display_heb_name": "ההרה",
+            "placeType": "Mountain",
+            "display_en_name": "hills"
+        },
+        {
+            "key": "6a5fa670011460404dfc40db",
+            "display_heb_name": "שתי",
+            "heb_unit": "בת",
+            "heb_context": "משפחתו הנותרת של לוט",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_19:10-18"
+}

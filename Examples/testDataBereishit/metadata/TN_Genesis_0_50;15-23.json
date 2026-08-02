@@ -1,0 +1,28 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6fb011460404dfc4329",
+            "display_heb_name": "מכיר",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "machir"
+        },
+        {
+            "key": "6a5fa6fc011460404dfc432a",
+            "display_heb_name": "מאה ועשר",
+            "heb_unit": "שנה",
+            "heb_context": "חיי יוסף",
+            "display_en_name": "110"
+        },
+        {
+            "key": "6a5fa6fc011460404dfc432b",
+            "display_heb_name": "שלשים",
+            "heb_unit": "דור",
+            "heb_context": "בני אפרים",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_50:15-23"
+}

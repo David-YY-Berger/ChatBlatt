@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6ab011460404dfc41db",
+            "display_heb_name": "חמור",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "hamor"
+        },
+        {
+            "key": "6a5fa6ab011460404dfc41dc",
+            "display_heb_name": "אל אלהי ישראל",
+            "symbolType": "Holy Object",
+            "display_en_name": "el-elohe-yisrael"
+        },
+        {
+            "key": "6a5fa6ab011460404dfc41dd",
+            "display_heb_name": "מאה",
+            "heb_unit": "קשיטה",
+            "heb_context": "קנית אדמה",
+            "display_en_name": "100"
+        }
+    ],
+    "key": "TN_Genesis_0_33:18-34:1"
+}

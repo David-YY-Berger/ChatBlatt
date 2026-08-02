@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2355 approx cost=$0.000285 (Prompt=1872, Completion=483)
+SOURCE:
+Bereishit (Torah) 18:28-33
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa66c011460404dfc40c7","display_en_name":"50","display_heb_name":"","all_en_names":["50"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"person","en_context":"innocent people"}
+
+PASSAGE:
+ENGLISH:
+What if the fifty innocent should lack five? Will You destroy the whole city for want of the five? I will not destroy if I find forty-five there. But he spoke up again, and said, What if forty should be found there? I will not do it, for the sake of the forty. And he said, Let not my lord be angry if I go on: What if thirty should be found there? I will not do it if I find thirty there. And he said, I venture again to speak to my lord: What if twenty should be found there? I will not destroy, for the sake of the twenty. And he said, Let not my lord be angry if I speak but this last time: What if ten should be found there? I will not destroy, for the sake of the ten. Having finished speaking to Abraham, HASHEM departed; and Abraham returned to his place.
+
+HEBREW:
+אולי יחסרון חמשים הצדיקם חמשה התשחית בחמשה את כל העיר ויאמר לא אשחית אם אמצא שם ארבעים וחמשה: ויסף עוד לדבר אליו ויאמר אולי ימצאון שם ארבעים ויאמר לא אעשה בעבור הארבעים: ויאמר אל נא יחר לאדני ואדברה אולי ימצאון שם שלשים ויאמר לא אעשה אם אמצא שם שלשים: ויאמר הנה נא הואלתי לדבר אל אדני אולי ימצאון שם עשרים ויאמר לא אשחית בעבור העשרים: ויאמר אל נא יחר לאדני ואדברה אך הפעם אולי ימצאון שם עשרה ויאמר לא אשחית בעבור העשרה: וילך יהוה כאשר כלה לדבר אל אברהם ואברהם שב למקמו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66c011460404dfc40c7",
+      "display_heb_name": "חמשים",
+      "heb_unit": "צדיק",
+      "heb_context": "צדיקם"
+    }
+  ]
+}

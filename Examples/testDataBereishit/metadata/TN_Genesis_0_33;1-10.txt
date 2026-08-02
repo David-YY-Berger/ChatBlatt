@@ -1,0 +1,34 @@
+﻿COST: Tokens: Total=3867 approx cost=$0.000658 (Prompt=2233, Completion=1634)
+SOURCE:
+Bereishit (Torah) 33:1-10
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa607011460404dfc3f11","display_en_name":"israel","display_heb_name":"","all_en_names":["Israel"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa6aa011460404dfc41d6","display_en_name":"maids","display_heb_name":"","all_en_names":["Maids"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6aa011460404dfc41d7","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"time","en_context":"jacob bowed"}
+
+PASSAGE:
+ENGLISH:
+Looking up, Jacob saw Esau coming, with a retinue of four hundred. He divided the children, referring here only to Jacobs sons (see 32.23) in anticipation of their becoming the progenitors of Israels tribes; and so through v. 14. among Leah, Rachel, and the two maids, putting the maids and their children first, Leah and her children next, and Rachel and Joseph last. He himself went on ahead and bowed low to the ground seven times until he was near his brother. Esau ran to greet him. He embraced him and, falling on his neck, he kissed him; and they wept. Looking about, he saw the women and the children. Who, he asked, are these with you? He answered, The children with whom God has favored your servant. Then the maids, with their children, came forward and bowed low; next Leah, with her children, came forward and bowed low; and last, Joseph and Rachel came forward and bowed low. And he asked, What do you mean by all this company which I have met? He answered, To gain my lords favor. Esau said, I have enough, my brother; let what you have remain yours. But Jacob said, No, I pray you; if you would do me this favor, accept from me this gift; for to see your face is like seeing the face of God, and you have received me favorably.
+
+HEBREW:
+וישא יעקב עיניו וירא והנה עשו בא ועמו ארבע מאות איש ויחץ את הילדים על לאה ועל רחל ועל שתי השפחות: וישם את השפחות ואת ילדיהן ראשנה ואת לאה וילדיה אחרנים ואת רחל ואת יוסף אחרנים: והוא עבר לפניהם וישתחו ארצה שבע פעמים עד גשתו עד אחיו: וירץ עשו לקראתו ויחבקהו ויפל על צוארו וישקהו ויבכו: וישא את עיניו וירא את הנשים ואת הילדים ויאמר מי אלה לך ויאמר הילדים אשר חנן אלהים את עבדך: ותגשן השפחות הנה וילדיהן ותשתחוין: ותגש גם לאה וילדיה וישתחוו ואחר נגש יוסף ורחל וישתחוו: ויאמר מי לך כל המחנה הזה אשר פגשתי ויאמר למצא חן בעיני אדני: ויאמר עשו יש לי רב אחי יהי לך אשר לך: ויאמר יעקב אל נא אם נא מצאתי חן בעיניך ולקחת מנחתי מידי כי על כן ראיתי פניך כראת פני אלהים ותרצני:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6aa011460404dfc41d6",
+      "display_heb_name": "השפחות",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6aa011460404dfc41d7",
+      "display_heb_name": "שבע",
+      "heb_unit": "פעמים",
+      "heb_context": "יעקב השתחווה"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa694011460404dfc4175",
+            "isGroup": true,
+            "display_en_name": "shepherds"
+        },
+        {
+            "key": "6a5fa695011460404dfc4177",
+            "display_heb_name": "שלשה",
+            "heb_unit": "עדר",
+            "heb_context": "צאן רבצים עליה",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_29:2-8"
+}

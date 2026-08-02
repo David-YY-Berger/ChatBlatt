@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2079 approx cost=$0.000230 (Prompt=1750, Completion=329)
+SOURCE:
+Bereishit (Torah) 28:6-10
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa692011460404dfc416a","display_en_name":"mahalath","display_heb_name":"","all_en_names":["Mahalath"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+When Esau saw that Isaac had blessed Jacob and sent him off to Paddan-aram to take a wife from there, charging him, as he blessed him, You shall not take a wife from among the Canaanite women, and that Jacob had obeyed his father and mother and gone to Paddan-aram, Esau realized that the Canaanite women displeased his father Isaac. So Esau went to Ishmael and took to wife, in addition to the wives he had, Mahalath the daughter of Ishmael son of Abraham, sister of Nebaioth. Jacob left Beer-sheba, and set out for Haran.
+
+HEBREW:
+וירא עשו כי ברך יצחק את יעקב ושלח אתו פדנה ארם לקחת לו משם אשה בברכו אתו ויצו עליו לאמר לא תקח אשה מבנות כנען: וישמע יעקב אל אביו ואל אמו וילך פדנה ארם: וירא עשו כי רעות בנות כנען בעיני יצחק אביו: וילך עשו אל ישמעאל ויקח את מחלת בת ישמעאל בן אברהם אחות נביות על נשיו לו לאשה: ויצא יעקב מבאר שבע וילך חרנה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa692011460404dfc416a",
+      "display_heb_name": "מחלת",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    }
+  ]
+}

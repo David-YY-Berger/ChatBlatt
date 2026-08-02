@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=2846 approx cost=$0.000449 (Prompt=1800, Completion=1046)
+SOURCE:
+Bereishit (Torah) 29:18-22
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa695011460404dfc417b","display_en_name":"people of the place","display_heb_name":"","all_en_names":["People Of The Place"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa696011460404dfc417c","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"jacob served laban"}
+
+PASSAGE:
+ENGLISH:
+Jacob loved Rachel; so he answered, I will serve you seven years for your younger daughter Rachel. Laban said, Better that I give her to you than that I should give her to an outsider. Stay with me. So Jacob served seven years for Rachel and they seemed to him but a few days because of his love for her. Then Jacob said to Laban, Give me my wife, for my time is fulfilled, that I may cohabit with her. And Laban gathered all the people of the place. See the Dictionary under ish . and made a feast.
+
+HEBREW:
+ויאהב יעקב את רחל ויאמר אעבדך שבע שנים ברחל בתך הקטנה: ויאמר לבן טוב תתי אתה לך מתתי אתה לאיש אחר שבה עמדי: ויעבד יעקב ברחל שבע שנים ויהיו בעיניו כימים אחדים באהבתו אתה: ויאמר יעקב אל לבן הבה את אשתי כי מלאו ימי ואבואה אליה: ויאסף לבן את כל אנשי המקום ויעש משתה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa695011460404dfc417b",
+      "display_heb_name": "אנשי המקום",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa696011460404dfc417c",
+      "display_heb_name": "שבע",
+      "heb_unit": "שנה",
+      "heb_context": "יעקב עבד ללבן"
+    }
+  ]
+}

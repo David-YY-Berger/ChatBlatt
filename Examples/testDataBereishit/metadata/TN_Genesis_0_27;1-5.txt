@@ -1,0 +1,29 @@
+﻿COST: Tokens: Total=2201 approx cost=$0.000252 (Prompt=1814, Completion=387)
+SOURCE:
+Bereishit (Torah) 27:1-5
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa68f011460404dfc415f","display_en_name":"quiver","display_heb_name":"","all_en_names":["Quiver"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa68f011460404dfc4160","display_en_name":"dish","display_heb_name":"","all_en_names":["Dish"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When Isaac was old and his eyes were too dim to see, he called his older son Esau and said to him, My son. He answered, Here I am. And he said, I am old now, and I do not know how soon I may die. Take your gear, your quiver and bow, and go out into the open and hunt me some game. Then prepare a dish for me such as I like, and bring it to me to eat, so that I may give you my innermost blessing before I die. Rebekah had been listening as Isaac spoke to his son Esau. When Esau had gone out into the open to hunt game to bring home,
+
+HEBREW:
+ויהי כי זקן יצחק ותכהין עיניו מראת ויקרא את עשו בנו הגדל ויאמר אליו בני ויאמר אליו הנני: ויאמר הנה נא זקנתי לא ידעתי יום מותי: ועתה שא נא כליך תליך וקשתך וצא השדה וצודה לי [ציד] : ועשה לי מטעמים כאשר אהבתי והביאה לי ואכלה בעבור תברכך נפשי בטרם אמות: ורבקה שמעת בדבר יצחק אל עשו בנו וילך עשו השדה לצוד ציד להביא:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68f011460404dfc415f",
+      "display_heb_name": "תליך",
+      "symbolType": "Weapon"
+    },
+    {
+      "key": "6a5fa68f011460404dfc4160",
+      "display_heb_name": "מטעמים"
+    }
+  ]
+}

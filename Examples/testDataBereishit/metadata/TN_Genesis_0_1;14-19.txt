@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=3565 approx cost=$0.000592 (Prompt=2124, Completion=1441)
+SOURCE:
+Bereishit (Torah) 1:14-19
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa602011460404dfc3efa","display_en_name":"expanse of the sky","display_heb_name":"","all_en_names":["Expanse Of The Sky"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa602011460404dfc3efb","display_en_name":"lights","display_heb_name":"","all_en_names":["Lights"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa602011460404dfc3efc","display_en_name":"greater light","display_heb_name":"","all_en_names":["Greater Light"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa603011460404dfc3efd","display_en_name":"lesser light","display_heb_name":"","all_en_names":["Lesser Light"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa603011460404dfc3efe","display_en_name":"stars","display_heb_name":"","all_en_names":["Stars"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa603011460404dfc3eff","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"light","en_context":"created great lights"}
+
+PASSAGE:
+ENGLISH:
+God said, Let there be lights in the expanse of the sky to separate day from night; they shall serve as signs for the set times-the days and the years; and they shall serve as lights in the expanse of the sky to shine upon the earth. And it was so. God made the two great lights, the greater light to dominate the day and the lesser light to dominate the night, and the stars. And God set them in the expanse of the sky to shine upon the earth, to dominate the day and the night, and to separate light from darkness. And God saw that this was good. And there was evening and there was morning, a fourth day.
+
+HEBREW:
+ויאמר אלהים יהי מארת ברקיע השמים להבדיל בין היום ובין הלילה והיו לאתת ולמועדים ולימים ושנים: והיו למאורת ברקיע השמים להאיר על הארץ ויהי כן: ויעש אלהים את שני המארת הגדלים את המאור הגדל לממשלת היום ואת המאור הקטן לממשלת הלילה ואת הכוכבים: ויתן אתם אלהים ברקיע השמים להאיר על הארץ: ולמשל ביום ובלילה ולהבדיל בין האור ובין החשך וירא אלהים כי טוב: ויהי ערב ויהי בקר יום רביעי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa602011460404dfc3efa",
+      "display_heb_name": "רקיע השמים",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa602011460404dfc3efb",
+      "display_heb_name": "מארת",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa602011460404dfc3efc",
+      "display_heb_name": "מאור הגדל",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa603011460404dfc3efd",
+      "display_heb_name": "מאור הקטן",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa603011460404dfc3efe",
+      "display_heb_name": "כוכבים",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa603011460404dfc3eff",
+      "display_heb_name": "שני",
+      "heb_unit": "מאור",
+      "heb_context": "מארת הגדלים"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1785 approx cost=$0.000176 (Prompt=1597, Completion=188)
+SOURCE:
+Bereishit (Torah) 3:9-11
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa60c011460404dfc3f28","display_en_name":"tree","display_heb_name":"","all_en_names":["Tree"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God HASHEM called out to the Human and said to him, Where are you? He replied, I heard the sound of You in the garden, and I was afraid because I was naked, so I hid. Who told you that you were naked? Did you eat of the tree from which I had forbidden you to eat?
+
+HEBREW:
+ויקרא יהוה אלהים אל האדם ויאמר לו איכה: ויאמר את קלך שמעתי בגן ואירא כי עירם אנכי ואחבא: ויאמר מי הגיד לך כי עירם אתה המן העץ אשר צויתיך לבלתי אכל ממנו אכלת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60c011460404dfc3f28",
+      "display_heb_name": "העץ",
+      "symbolType": "Part of Nature"
+    }
+  ]
+}

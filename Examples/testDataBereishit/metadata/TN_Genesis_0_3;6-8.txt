@@ -1,0 +1,23 @@
+﻿COST: Tokens: Total=1954 approx cost=$0.000202 (Prompt=1706, Completion=248)
+SOURCE:
+Bereishit (Torah) 3:6-8
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa60c011460404dfc3f27","display_en_name":"fig","display_heb_name":"","all_en_names":["Fig"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When the woman saw that the tree was good for eating and a delight to the eyes, and that the tree was desirable as a source of wisdom, she took of its fruit and ate. She also gave some to her husband, and he ate. Then the eyes of both of them were opened and they perceived that they were naked; and they sewed together fig leaves and made themselves loincloths. They heard the sound of God HASHEM moving about in the garden at the breezy time of day; and the Human and his wife hid from God HASHEM among the trees of the garden.
+
+HEBREW:
+ותרא האשה כי טוב העץ למאכל וכי תאוה הוא לעינים ונחמד העץ להשכיל ותקח מפריו ותאכל ותתן גם לאישה עמה ויאכל: ותפקחנה עיני שניהם וידעו כי עירמם הם ויתפרו עלה תאנה ויעשו להם חגרת: וישמעו את קול יהוה אלהים מתהלך בגן לרוח היום ויתחבא האדם ואשתו מפני יהוה אלהים בתוך עץ הגן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60c011460404dfc3f27",
+      "display_heb_name": "תאנה"
+    }
+  ]
+}

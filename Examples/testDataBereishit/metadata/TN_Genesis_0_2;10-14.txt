@@ -1,0 +1,67 @@
+﻿COST: Tokens: Total=3546 approx cost=$0.000569 (Prompt=2198, Completion=1348)
+SOURCE:
+Bereishit (Torah) 2:10-14
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa609011460404dfc3f1a","display_en_name":"pishon","display_heb_name":"","all_en_names":["Pishon"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa609011460404dfc3f1b","display_en_name":"havilah","display_heb_name":"","all_en_names":["Havilah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa609011460404dfc3f1c","display_en_name":"gihon","display_heb_name":"","all_en_names":["Gihon"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60a011460404dfc3f1d","display_en_name":"cush","display_heb_name":"","all_en_names":["Cush"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60a011460404dfc3f1e","display_en_name":"tigris","display_heb_name":"","all_en_names":["Tigris"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60a011460404dfc3f1f","display_en_name":"asshur","display_heb_name":"","all_en_names":["Asshur"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60a011460404dfc3f20","display_en_name":"euphrates","display_heb_name":"","all_en_names":["Euphrates"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa60b011460404dfc3f21","display_en_name":"4","display_heb_name":"","all_en_names":["4"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"branch","en_context":"river branches"}
+
+PASSAGE:
+ENGLISH:
+A river issues from Eden to water the garden, and it then divides and becomes four branches. The name of the first is Pishon, the one that winds through the whole land of Havilah, where the gold is. (The gold of that land is good; bdellium is there, and lapis lazuli. uncertain. ) The name of the second river is Gihon, the one that winds through the whole land of Cush. The name of the third river is Tigris, the one that flows east of Asshur. And the fourth river is the Euphrates.
+
+HEBREW:
+ונהר יצא מעדן להשקות את הגן ומשם יפרד והיה לארבעה ראשים: שם האחד פישון הוא הסבב את כל ארץ החוילה אשר שם הזהב: וזהב הארץ ההוא טוב שם הבדלח ואבן השהם: ושם הנהר השני גיחון הוא הסובב את כל ארץ כוש: ושם הנהר השלישי חדקל הוא ההלך קדמת אשור והנהר הרביעי הוא פרת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa609011460404dfc3f1a",
+      "display_heb_name": "פישון",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa609011460404dfc3f1b",
+      "display_heb_name": "חוילה",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa609011460404dfc3f1c",
+      "display_heb_name": "גיחון",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa60a011460404dfc3f1d",
+      "display_heb_name": "כוש",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa60a011460404dfc3f1e",
+      "display_heb_name": "חדקל",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa60a011460404dfc3f1f",
+      "display_heb_name": "אשור",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa60a011460404dfc3f20",
+      "display_heb_name": "פרת",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa60b011460404dfc3f21",
+      "display_heb_name": "ארבעה",
+      "heb_unit": "ראש",
+      "heb_context": "נהר ראשים"
+    }
+  ]
+}

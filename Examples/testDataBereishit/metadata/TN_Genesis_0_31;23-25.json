@@ -1,0 +1,26 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a1011460404dfc41ad",
+            "display_heb_name": "אחיו",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "kinsmen"
+        },
+        {
+            "key": "6a5fa6a1011460404dfc41ae",
+            "display_heb_name": "בהר",
+            "placeType": "Mountain",
+            "display_en_name": "the height"
+        },
+        {
+            "key": "6a5fa6a1011460404dfc41af",
+            "display_heb_name": "שבעת",
+            "heb_unit": "יום",
+            "heb_context": "לבן רדף יעקב",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_31:23-25"
+}

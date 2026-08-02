@@ -1,0 +1,29 @@
+﻿COST: Tokens: Total=2542 approx cost=$0.000304 (Prompt=2038, Completion=504)
+SOURCE:
+Bereishit (Torah) 39:1-7
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6cf011460404dfc4275","display_en_name":"potiphar's wife","display_heb_name":"","all_en_names":["Potiphar's Wife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6cf011460404dfc4276","display_en_name":"food","display_heb_name":"","all_en_names":["Food"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When Joseph was taken down to Egypt, Potiphar, a courtier of Pharaoh and his prefect -a [type of] Egyptian official. -bought him from the Ishmaelites who had brought him there. HASHEM was with Joseph, and he was a successful man; and he stayed in the house of his Egyptian master. And when his master saw that HASHEM was with him and that HASHEM lent success to everything he undertook, he took a liking to Joseph. He made him his personal attendant and put him in charge of his household, placing in his hands all that he owned. And from the time that the Egyptian put him in charge of his household and of all that he owned, HASHEM blessed his house for Josephs sake, so that the blessing of HASHEM was upon everything that he owned, in the house and outside. He left all that he had in Josephs hands and, with him there, he paid attention to nothing save the food that he ate. Now Joseph was well built and handsome. After a time, his masters wife cast her eyes upon Joseph and said, Lie with me.
+
+HEBREW:
+ויוסף הורד מצרימה ויקנהו פוטיפר סריס פרעה שר הטבחים איש מצרי מיד הישמעאלים אשר הורדהו שמה: ויהי יהוה את יוסף ויהי איש מצליח ויהי בבית אדניו המצרי: וירא אדניו כי יהוה אתו וכל אשר הוא עשה יהוה מצליח בידו: וימצא יוסף חן בעיניו וישרת אתו ויפקדהו על ביתו וכל יש לו נתן בידו: ויהי מאז הפקיד אתו בביתו ועל כל אשר יש לו ויברך יהוה את בית המצרי בגלל יוסף ויהי ברכת יהוה בכל אשר יש לו בבית ובשדה: ויעזב כל אשר לו ביד יוסף ולא ידע אתו מאומה כי אם הלחם אשר הוא אוכל ויהי יוסף יפה תאר ויפה מראה: ויהי אחר הדברים האלה ותשא אשת אדניו את עיניה אל יוסף ותאמר שכבה עמי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6cf011460404dfc4275",
+      "display_heb_name": "אשת אדניו",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa6cf011460404dfc4276",
+      "display_heb_name": "לחם"
+    }
+  ]
+}

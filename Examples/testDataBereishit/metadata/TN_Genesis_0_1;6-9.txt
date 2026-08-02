@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=2409 approx cost=$0.000312 (Prompt=1824, Completion=585)
+SOURCE:
+Bereishit (Torah) 1:6-9
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa600011460404dfc3ef2","display_en_name":"sky","display_heb_name":"","all_en_names":["Sky"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa600011460404dfc3ef3","display_en_name":"expanse","display_heb_name":"","all_en_names":["Expanse"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa600011460404dfc3ef4","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"area","en_context":"water gathered"}
+
+PASSAGE:
+ENGLISH:
+God said, Let there be an expanse in the midst of the water, that it may separate water from water. God made the expanse, and it separated the water which was below the expanse from the water which was above the expanse. And it was so. God called the expanse Sky. And there was evening and there was morning, a second day. God said, Let the water below the sky be gathered into one area, that the dry land may appear. And it was so.
+
+HEBREW:
+ויאמר אלהים יהי רקיע בתוך המים ויהי מבדיל בין מים למים: ויעש אלהים את הרקיע ויבדל בין המים אשר מתחת לרקיע ובין המים אשר מעל לרקיע ויהי כן: ויקרא אלהים לרקיע שמים ויהי ערב ויהי בקר יום שני: ויאמר אלהים יקוו המים מתחת השמים אל מקום אחד ותראה היבשה ויהי כן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa600011460404dfc3ef2",
+      "display_heb_name": "שמים",
+      "placeType": "Not Physical"
+    },
+    {
+      "key": "6a5fa600011460404dfc3ef3",
+      "display_heb_name": "רקיע",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa600011460404dfc3ef4",
+      "heb_unit": "מקום",
+      "heb_context": "מים יקוו"
+    }
+  ]
+}

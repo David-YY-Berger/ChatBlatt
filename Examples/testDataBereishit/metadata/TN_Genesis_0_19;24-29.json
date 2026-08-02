@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa670011460404dfc40dc",
+            "display_heb_name": "אשתו",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": false,
+            "display_en_name": "lot's wife"
+        },
+        {
+            "key": "6a5fa670011460404dfc40dd",
+            "display_heb_name": "נציב מלח",
+            "symbolType": "Other",
+            "display_en_name": "pillar of salt"
+        },
+        {
+            "key": "6a5fa671011460404dfc40de",
+            "display_heb_name": "צמח",
+            "display_en_name": "vegetation"
+        }
+    ],
+    "key": "TN_Genesis_0_19:24-29"
+}

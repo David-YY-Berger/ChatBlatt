@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa69d011460404dfc419c",
+            "heb_unit": "בן",
+            "heb_context": "ילד לאה",
+            "display_en_name": "5"
+        },
+        {
+            "key": "6a5fa69d011460404dfc419d",
+            "heb_unit": "בת",
+            "heb_context": "ילד לאה",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_30:17-22"
+}

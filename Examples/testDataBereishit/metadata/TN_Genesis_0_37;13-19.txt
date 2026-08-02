@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2083 approx cost=$0.000208 (Prompt=1851, Completion=232)
+SOURCE:
+Bereishit (Torah) 37:13-19
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6c5011460404dfc4253","display_en_name":"dothan","display_heb_name":"","all_en_names":["Dothan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Israel said to Joseph, Your brothers are pasturing at Shechem. Come, I will send you to them. He answered, I am ready. And he said to him, Go and see how your brothers are and how the flocks are faring, and bring me back word. So he sent him from the valley of Hebron. When he reached Shechem, a man came upon him; Agent. wandering in the fields. The man asked him, What are you looking for? He answered, I am looking for my brothers. Could you tell me where they are pasturing? The man said, They have gone from here, for I heard them say: Let us go to Dothan. So Joseph followed his brothers and found them at Dothan. They saw him from afar, and before he came close to them they conspired to kill him. They said to one another, Here comes that dreamer!
+
+HEBREW:
+ויאמר ישראל אל יוסף הלוא אחיך רעים בשכם לכה ואשלחך אליהם ויאמר לו הנני: ויאמר לו לך נא ראה את שלום אחיך ואת שלום הצאן והשבני דבר וישלחהו מעמק חברון ויבא שכמה: וימצאהו איש והנה תעה בשדה וישאלהו האיש לאמר מה תבקש: ויאמר את אחי אנכי מבקש הגידה נא לי איפה הם רעים: ויאמר האיש נסעו מזה כי שמעתי אמרים נלכה דתינה וילך יוסף אחר אחיו וימצאם בדתן: ויראו אתו מרחק ובטרם יקרב אליהם ויתנכלו אתו להמיתו: ויאמרו איש אל אחיו הנה בעל החלמות הלזה בא:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6c5011460404dfc4253",
+      "display_heb_name": "דתן",
+      "placeType": "City"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6c6011460404dfc4255",
+            "display_heb_name": "ישמעאלים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "ishmaelites"
+        },
+        {
+            "key": "6a5fa6c6011460404dfc4256",
+            "display_heb_name": "מדינים סחרים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "midianite traders"
+        },
+        {
+            "key": "6a5fa6c6011460404dfc4257",
+            "display_heb_name": "עשרים",
+            "heb_unit": "כסף",
+            "heb_context": "מחיר מכירת יוסף",
+            "display_en_name": "20"
+        },
+        {
+            "key": "6a5fa6c6011460404dfc4258",
+            "display_heb_name": "נכאת",
+            "display_en_name": "gum"
+        },
+        {
+            "key": "6a5fa6c6011460404dfc4259",
+            "display_heb_name": "צרי",
+            "display_en_name": "balm"
+        },
+        {
+            "key": "6a5fa6c7011460404dfc425a",
+            "display_heb_name": "לט",
+            "display_en_name": "ladanum"
+        }
+    ],
+    "key": "TN_Genesis_0_37:25-30"
+}

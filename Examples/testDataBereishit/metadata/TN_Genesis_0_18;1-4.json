@@ -1,0 +1,28 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64f011460404dfc4048",
+            "display_heb_name": "אנשים",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": true,
+            "display_en_name": "agent"
+        },
+        {
+            "key": "6a5fa667011460404dfc40b5",
+            "display_heb_name": "שלשה אנשים",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": true,
+            "display_en_name": "three figures"
+        },
+        {
+            "key": "6a5fa668011460404dfc40b6",
+            "display_heb_name": "שלשה",
+            "heb_unit": "איש",
+            "heb_context": "אנשים נצבים עליו",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_18:1-4"
+}

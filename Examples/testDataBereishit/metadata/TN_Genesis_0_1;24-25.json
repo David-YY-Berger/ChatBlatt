@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa604011460404dfc3f05",
+            "display_heb_name": "בהמה",
+            "display_en_name": "cattle"
+        },
+        {
+            "key": "6a5fa604011460404dfc3f06",
+            "display_heb_name": "רמש",
+            "display_en_name": "creeping thing"
+        },
+        {
+            "key": "6a5fa605011460404dfc3f07",
+            "display_heb_name": "חית ארץ",
+            "display_en_name": "wild beast"
+        }
+    ],
+    "key": "TN_Genesis_0_1:24-25"
+}

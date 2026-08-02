@@ -1,0 +1,15 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa65d011460404dfc4086",
+            "display_heb_name": "אלה",
+            "display_en_name": "terebinth"
+        },
+        {
+            "key": "6a5fa6af011460404dfc41ef",
+            "display_heb_name": "אלון",
+            "display_en_name": "oak"
+        }
+    ],
+    "key": "TN_Genesis_0_35:1-9"
+}

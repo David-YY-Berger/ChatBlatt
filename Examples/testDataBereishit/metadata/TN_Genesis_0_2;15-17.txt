@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1817 approx cost=$0.000182 (Prompt=1613, Completion=204)
+SOURCE:
+Bereishit (Torah) 2:15-17
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa60b011460404dfc3f22","display_en_name":"garden of eden","display_heb_name":"","all_en_names":["Garden Of Eden"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God HASHEM settled the Human in the garden of Eden, to till it and tend it. And God HASHEM commanded the Human, saying, Of every tree of the garden you are free to eat; but as for the tree of knowledge of good and bad, you must not eat of it; for as soon as you eat of it, you shall die.
+
+HEBREW:
+ויקח יהוה אלהים את האדם וינחהו בגן עדן לעבדה ולשמרה: ויצו יהוה אלהים על האדם לאמר מכל עץ הגן אכל תאכל: ומעץ הדעת טוב ורע לא תאכל ממנו כי ביום אכלך ממנו מות תמות:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60b011460404dfc3f22",
+      "display_heb_name": "גן עדן",
+      "placeType": "Other"
+    }
+  ]
+}

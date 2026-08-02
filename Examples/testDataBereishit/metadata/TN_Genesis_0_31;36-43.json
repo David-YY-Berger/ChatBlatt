@@ -1,0 +1,38 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a2011460404dfc41b2",
+            "display_heb_name": "אלהי אברהם",
+            "timePeriod": "Tanach",
+            "display_en_name": "god of abraham"
+        },
+        {
+            "key": "6a5fa6a2011460404dfc41b3",
+            "display_heb_name": "פחד יצחק",
+            "timePeriod": "Tanach",
+            "display_en_name": "fear of isaac"
+        },
+        {
+            "key": "6a5fa6a2011460404dfc41b4",
+            "display_heb_name": "עשרים",
+            "heb_unit": "שנה",
+            "heb_context": "שנות שירות",
+            "display_en_name": "20"
+        },
+        {
+            "key": "6a5fa6a2011460404dfc41b5",
+            "display_heb_name": "ארבע עשרה",
+            "heb_unit": "שנה",
+            "heb_context": "שירות עבור בנות",
+            "display_en_name": "14"
+        },
+        {
+            "key": "6a5fa6a3011460404dfc41b6",
+            "display_heb_name": "שש",
+            "heb_unit": "שנה",
+            "heb_context": "שירות עבור צאן",
+            "display_en_name": "6"
+        }
+    ],
+    "key": "TN_Genesis_0_31:36-43"
+}

@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6af011460404dfc41f0",
+            "display_heb_name": "מצבת אבן",
+            "symbolType": "Other",
+            "display_en_name": "pillar of stone"
+        },
+        {
+            "key": "6a5fa6b0011460404dfc41f1",
+            "display_heb_name": "נסך",
+            "symbolType": "Other",
+            "display_en_name": "libation"
+        },
+        {
+            "key": "6a5fa6b0011460404dfc41f2",
+            "display_heb_name": "שמן",
+            "symbolType": "Other",
+            "display_en_name": "oil"
+        }
+    ],
+    "key": "TN_Genesis_0_35:10-15"
+}

@@ -1,0 +1,16 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6cf011460404dfc4275",
+            "display_heb_name": "אשת אדניו",
+            "isWoman": true,
+            "display_en_name": "potiphar's wife"
+        },
+        {
+            "key": "6a5fa6cf011460404dfc4276",
+            "display_heb_name": "לחם",
+            "display_en_name": "food"
+        }
+    ],
+    "key": "TN_Genesis_0_39:1-7"
+}

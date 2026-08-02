@@ -1,0 +1,60 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa623011460404dfc3f8b",
+            "display_heb_name": "ההרים",
+            "placeType": "Mountain",
+            "display_en_name": "mountains"
+        },
+        {
+            "key": "6a5fa623011460404dfc3f8c",
+            "display_heb_name": "חרבה",
+            "placeType": "Other",
+            "display_en_name": "dry land"
+        },
+        {
+            "key": "6a5fa623011460404dfc3f8d",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "יום",
+            "heb_context": "משך גשם",
+            "display_en_name": "40"
+        },
+        {
+            "key": "6a5fa624011460404dfc3f8e",
+            "display_heb_name": "שנים",
+            "heb_unit": "שנים",
+            "heb_context": "כניסה לתיבה",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa624011460404dfc3f8f",
+            "display_heb_name": "חמש עשרה",
+            "heb_unit": "אמה",
+            "heb_context": "גובה מים",
+            "display_en_name": "15"
+        },
+        {
+            "key": "6a5fa624011460404dfc3f90",
+            "display_heb_name": "חמשים ומאת",
+            "heb_unit": "יום",
+            "heb_context": "משך התגברות המים",
+            "display_en_name": "150"
+        },
+        {
+            "key": "6a5fa624011460404dfc3f91",
+            "display_heb_name": "חיה",
+            "display_en_name": "creature"
+        },
+        {
+            "key": "6a5fa625011460404dfc3f92",
+            "display_heb_name": "כנף",
+            "display_en_name": "winged thing"
+        },
+        {
+            "key": "6a5fa625011460404dfc3f93",
+            "display_heb_name": "בשר",
+            "display_en_name": "flesh"
+        }
+    ],
+    "key": "TN_Genesis_0_7:12-8:3"
+}

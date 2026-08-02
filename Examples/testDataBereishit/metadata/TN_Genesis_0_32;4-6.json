@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a5011460404dfc41c0",
+            "display_heb_name": "עבד",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "male slaves"
+        },
+        {
+            "key": "6a5fa6a5011460404dfc41c1",
+            "display_heb_name": "שפחה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "isGroup": true,
+            "display_en_name": "female slaves"
+        }
+    ],
+    "key": "TN_Genesis_0_32:4-6"
+}

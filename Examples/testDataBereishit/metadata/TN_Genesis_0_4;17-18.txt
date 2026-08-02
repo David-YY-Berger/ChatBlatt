@@ -1,0 +1,54 @@
+﻿COST: Tokens: Total=2815 approx cost=$0.000388 (Prompt=2028, Completion=787)
+SOURCE:
+Bereishit (Torah) 4:17-18
+
+ENTITIES TO ENRICH (6):
+{"key":"6a5fa611011460404dfc3f3d","display_en_name":"irad","display_heb_name":"","all_en_names":["Irad"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa611011460404dfc3f3e","display_en_name":"mehujael","display_heb_name":"","all_en_names":["Mehujael"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa611011460404dfc3f3f","display_en_name":"methusael","display_heb_name":"","all_en_names":["Methusael"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa612011460404dfc3f40","display_en_name":"lamech","display_heb_name":"","all_en_names":["Lamech"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa612011460404dfc3f41","display_en_name":"city","display_heb_name":"","all_en_names":["City"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa612011460404dfc3f42","display_en_name":"enoch","display_heb_name":"","all_en_names":["Enoch"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Cain knew his wife, and she conceived and bore Enoch. And he then founded a city, and named the city after his son Enoch. To Enoch was born Irad, and Irad begot Mehujael, and Mehujael. begot Methusael, and Methusael begot Lamech.
+
+HEBREW:
+וידע קין את אשתו ותהר ותלד את חנוך ויהי בנה עיר ויקרא שם העיר כשם בנו חנוך: ויולד לחנוך את עירד ועירד ילד את מחויאל ומחייאל ילד את מתושאל ומתושאל ילד את למך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa611011460404dfc3f3d",
+      "display_heb_name": "עירד",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa611011460404dfc3f3e",
+      "display_heb_name": "מחויאל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa611011460404dfc3f3f",
+      "display_heb_name": "מתושאל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa612011460404dfc3f40",
+      "display_heb_name": "למך",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa612011460404dfc3f41",
+      "display_heb_name": "עיר",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa612011460404dfc3f42",
+      "display_heb_name": "חנוך",
+      "placeType": "City"
+    }
+  ]
+}

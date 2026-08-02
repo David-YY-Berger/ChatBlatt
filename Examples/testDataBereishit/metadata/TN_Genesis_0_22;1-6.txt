@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=3377 approx cost=$0.000567 (Prompt=1983, Completion=1394)
+SOURCE:
+Bereishit (Torah) 22:1-6
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa676011460404dfc40f5","display_en_name":"moriah","display_heb_name":"","all_en_names":["Moriah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa676011460404dfc40f6","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"journey to moriah"}
+
+PASSAGE:
+ENGLISH:
+Some time afterward, God put Abraham to the test, saying to him, Abraham. He answered, Here I am. Take your son, your favored one, Isaac, whom you love, and go to the land of Moriah, and offer him there as a burnt offering on one of the heights that I will point out to you. So early next morning, Abraham saddled his ass and took with him two of his servants and his son Isaac. He split the wood for the burnt offering, and he set out for the place of which God had told him. On the third day Abraham looked up and saw the place from afar. Then Abraham said to his servants, You stay here with the ass. The boy and I will go up there; we will worship and we will return to you. Abraham took the wood for the burnt offering and put it on his son Isaac. He himself took the firestone and the knife; and the two walked off together.
+
+HEBREW:
+ויהי אחר הדברים האלה והאלהים נסה את אברהם ויאמר אליו אברהם ויאמר הנני: ויאמר קח נא את בנך את יחידך אשר אהבת את יצחק ולך לך אל ארץ המריה והעלהו שם לעלה על אחד ההרים אשר אמר אליך: וישכם אברהם בבקר ויחבש את חמרו ויקח את שני נעריו אתו ואת יצחק בנו ויבקע עצי עלה ויקם וילך אל המקום אשר אמר לו האלהים: ביום השלישי וישא אברהם את עיניו וירא את המקום מרחק: ויאמר אברהם אל נעריו שבו לכם פה עם החמור ואני והנער נלכה עד כה ונשתחוה ונשובה אליכם: ויקח אברהם את עצי העלה וישם על יצחק בנו ויקח בידו את האש ואת המאכלת וילכו שניהם יחדו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa676011460404dfc40f5",
+      "display_heb_name": "המריה",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa676011460404dfc40f6",
+      "display_heb_name": "השלישי",
+      "heb_unit": "יום",
+      "heb_context": "מסע למוריה"
+    }
+  ]
+}

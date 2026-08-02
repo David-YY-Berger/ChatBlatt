@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1992 approx cost=$0.000250 (Prompt=1547, Completion=445)
+SOURCE:
+Bereishit (Torah) 33:16-17
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6ab011460404dfc41da","display_en_name":"succoth","display_heb_name":"","all_en_names":["Succoth"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+So Esau started back that day on his way to Seir. But Jacob journeyed on to Succoth, and built a house for himself and made stalls for his cattle; that is why the place was called Succoth.
+
+HEBREW:
+וישב ביום ההוא עשו לדרכו שעירה: ויעקב נסע סכתה ויבן לו בית ולמקנהו עשה סכת על כן קרא שם המקום סכות:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6ab011460404dfc41da",
+      "display_heb_name": "סכות",
+      "placeType": "City"
+    }
+  ]
+}

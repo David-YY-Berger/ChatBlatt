@@ -1,0 +1,56 @@
+﻿COST: Tokens: Total=4026 approx cost=$0.000667 (Prompt=2405, Completion=1621)
+SOURCE:
+Bereishit (Torah) 41:1-8
+
+ENTITIES TO ENRICH (7):
+{"key":"6a5fa6d4011460404dfc428b","display_en_name":"magician-priests of egypt","display_heb_name":"","all_en_names":["Magician-Priests Of Egypt"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d5011460404dfc428c","display_en_name":"sages","display_heb_name":"","all_en_names":["Sages"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d5011460404dfc428d","display_en_name":"nile","display_heb_name":"","all_en_names":["Nile"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d5011460404dfc428e","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"pharaoh's dream"}
+{"key":"6a5fa6d5011460404dfc428f","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"cow","en_context":"pharaoh's dream"}
+{"key":"6a5fa6d6011460404dfc4290","display_en_name":"reed grass","display_heb_name":"","all_en_names":["Reed Grass"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6d6011460404dfc4291","display_en_name":"stalk","display_heb_name":"","all_en_names":["Stalk"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+After two years time, Pharaoh dreamed that he was standing by the Nile, when out of the Nile there came up seven cows, handsome and sturdy, and they grazed in the reed grass. But presently, seven other cows came up from the Nile close behind them, ugly and gaunt, and stood beside the cows on the bank of the Nile; and the ugly gaunt cows ate up the seven handsome sturdy cows. And Pharaoh awoke. He fell asleep and dreamed a second time: Seven ears of grain, solid and healthy, grew on a single stalk. But close behind them sprouted seven ears, thin and scorched by the east wind. And the thin ears swallowed up the seven solid and full ears. Then Pharaoh awoke: it was a dream! Next morning, his spirit was agitated, and he sent for all the magician-priests of Egypt, and all its sages; and Pharaoh told them his dreams, but none could interpret them for Pharaoh.
+
+HEBREW:
+ויהי מקץ שנתים ימים ופרעה חלם והנה עמד על היאר: והנה מן היאר עלת שבע פרות יפות מראה ובריאת בשר ותרעינה באחו: והנה שבע פרות אחרות עלות אחריהן מן היאר רעות מראה ודקות בשר ותעמדנה אצל הפרות על שפת היאר: ותאכלנה הפרות רעות המראה ודקת הבשר את שבע הפרות יפת המראה והבריאת וייקץ פרעה: ויישן ויחלם שנית והנה שבע שבלים עלות בקנה אחד בריאות וטבות: והנה שבע שבלים דקות ושדופת קדים צמחות אחריהן: ותבלענה השבלים הדקות את שבע השבלים הבריאות והמלאות וייקץ פרעה והנה חלום: ויהי בבקר ותפעם רוחו וישלח ויקרא את כל חרטמי מצרים ואת כל חכמיה ויספר פרעה להם את חלמו ואין פותר אותם לפרעה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d4011460404dfc428b",
+      "display_heb_name": "חרטמי מצרים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6d5011460404dfc428c",
+      "display_heb_name": "חכמים",
+      "timePeriod": "Tanach",
+      "isNonJew": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6d5011460404dfc428d",
+      "display_heb_name": "היאר",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa6d5011460404dfc428e",
+      "display_heb_name": "שנתים",
+      "heb_unit": "שנה",
+      "heb_context": "חלום פרעה"
+    },
+    {
+      "key": "6a5fa6d5011460404dfc428f",
+      "display_heb_name": "שבע",
+      "heb_unit": "פרה",
+      "heb_context": "חלום פרעה"
+    }
+  ]
+}

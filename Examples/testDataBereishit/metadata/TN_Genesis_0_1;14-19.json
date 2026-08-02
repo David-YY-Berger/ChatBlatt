@@ -1,0 +1,42 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa602011460404dfc3efa",
+            "display_heb_name": "רקיע השמים",
+            "placeType": "Other",
+            "display_en_name": "expanse of the sky"
+        },
+        {
+            "key": "6a5fa602011460404dfc3efb",
+            "display_heb_name": "מארת",
+            "symbolType": "Other",
+            "display_en_name": "lights"
+        },
+        {
+            "key": "6a5fa602011460404dfc3efc",
+            "display_heb_name": "מאור הגדל",
+            "symbolType": "Other",
+            "display_en_name": "greater light"
+        },
+        {
+            "key": "6a5fa603011460404dfc3efd",
+            "display_heb_name": "מאור הקטן",
+            "symbolType": "Other",
+            "display_en_name": "lesser light"
+        },
+        {
+            "key": "6a5fa603011460404dfc3efe",
+            "display_heb_name": "כוכבים",
+            "symbolType": "Part of Nature",
+            "display_en_name": "stars"
+        },
+        {
+            "key": "6a5fa603011460404dfc3eff",
+            "display_heb_name": "שני",
+            "heb_unit": "מאור",
+            "heb_context": "מארת הגדלים",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_1:14-19"
+}

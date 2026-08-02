@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa600011460404dfc3ef2",
+            "display_heb_name": "שמים",
+            "placeType": "Not Physical",
+            "display_en_name": "sky"
+        },
+        {
+            "key": "6a5fa600011460404dfc3ef3",
+            "display_heb_name": "רקיע",
+            "symbolType": "Not Physical",
+            "display_en_name": "expanse"
+        },
+        {
+            "key": "6a5fa600011460404dfc3ef4",
+            "heb_unit": "מקום",
+            "heb_context": "מים יקוו",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_1:6-9"
+}

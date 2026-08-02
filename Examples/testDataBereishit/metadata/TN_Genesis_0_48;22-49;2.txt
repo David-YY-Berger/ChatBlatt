@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2051 approx cost=$0.000249 (Prompt=1630, Completion=421)
+SOURCE:
+Bereishit (Torah) 48:22-49:2
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f6011460404dfc4310","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"portion","en_context":"assigned portion"}
+
+PASSAGE:
+ENGLISH:
+And now, I assign to you one portion uncertain; others mountain slope. more than to your brothers, which I wrested from the Amorites with my sword and bow.And Jacob called his sons and said, Come together that I may tell you what is to befall you in days to come. Assemble and hearken, O sons of Jacob; Hearken to Israel your father:
+
+HEBREW:
+ואני נתתי לך שכם אחד על אחיך אשר לקחתי מיד האמרי בחרבי ובקשתי: ויקרא יעקב אל בניו ויאמר האספו ואגידה לכם את אשר יקרא אתכם באחרית הימים: הקבצו ושמעו בני יעקב ושמעו אל ישראל אביכם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f6011460404dfc4310",
+      "display_heb_name": "1",
+      "heb_unit": "שכם",
+      "heb_context": "נתתי לך שכם"
+    }
+  ]
+}

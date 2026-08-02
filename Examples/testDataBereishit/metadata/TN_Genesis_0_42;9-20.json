@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6dd011460404dfc42ac",
+            "display_heb_name": "משמר",
+            "placeType": "Building or Structure",
+            "display_en_name": "guardhouse"
+        },
+        {
+            "key": "6a5fa6dd011460404dfc42ad",
+            "display_heb_name": "שלשת",
+            "heb_unit": "יום",
+            "heb_context": "כליאת אחים",
+            "display_en_name": "3"
+        }
+    ],
+    "key": "TN_Genesis_0_42:9-20"
+}

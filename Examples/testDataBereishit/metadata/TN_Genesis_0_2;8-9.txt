@@ -1,0 +1,46 @@
+﻿COST: Tokens: Total=2535 approx cost=$0.000333 (Prompt=1901, Completion=634)
+SOURCE:
+Bereishit (Torah) 2:8-9
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa608011460404dfc3f15","display_en_name":"god hashem","display_heb_name":"","all_en_names":["God Hashem"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa608011460404dfc3f16","display_en_name":"eden","display_heb_name":"","all_en_names":["Eden"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa608011460404dfc3f17","display_en_name":"garden","display_heb_name":"","all_en_names":["Garden"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa609011460404dfc3f18","display_en_name":"tree of life","display_heb_name":"","all_en_names":["Tree Of Life"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa609011460404dfc3f19","display_en_name":"tree of knowledge of good and bad","display_heb_name":"","all_en_names":["Tree Of Knowledge Of Good And Bad"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God HASHEM planted a garden in Eden, in the east, and placed there the Human who had been fashioned. And from the ground God HASHEM caused to grow every tree that was pleasing to the sight and good for food, with the tree of life in the middle of the garden, and the tree of knowledge of good and bad.
+
+HEBREW:
+ויטע יהוה אלהים גן בעדן מקדם וישם שם את האדם אשר יצר: ויצמח יהוה אלהים מן האדמה כל עץ נחמד למראה וטוב למאכל ועץ החיים בתוך הגן ועץ הדעת טוב ורע:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa608011460404dfc3f15",
+      "display_heb_name": "יהוה אלהים",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa608011460404dfc3f16",
+      "display_heb_name": "עדן",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa608011460404dfc3f17",
+      "display_heb_name": "גן",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa609011460404dfc3f18",
+      "display_heb_name": "עץ החיים"
+    },
+    {
+      "key": "6a5fa609011460404dfc3f19",
+      "display_heb_name": "עץ הדעת טוב ורע"
+    }
+  ]
+}

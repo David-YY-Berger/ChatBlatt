@@ -1,0 +1,25 @@
+﻿COST: Tokens: Total=2228 approx cost=$0.000251 (Prompt=1856, Completion=372)
+SOURCE:
+Bereishit (Torah) 18:16-22
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa66b011460404dfc40c4","display_en_name":"agents","display_heb_name":"","all_en_names":["Agents"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+The agents set out from there and looked down toward Sodom, Abraham walking with them to see them off. Now HASHEM had said, Shall I hide from Abraham what I am about to do, since Abraham is to become a great and populous nation and all the nations of the earth are to bless themselves by him? For I have singled him out, that he may instruct his children and his posterity to keep the way of HASHEM by doing what is just and right, in order that HASHEM may bring about for Abraham what has been promised him. Then HASHEM said, The outrage of Sodom and Gomorrah is so great, and their sin so grave! I will go down to see whether they have acted altogether according to the outcry that has reached Me; if not, I will take note. The agents went on from there to Sodom, while Abraham remained standing before HASHEM.
+
+HEBREW:
+ויקמו משם האנשים וישקפו על פני סדם ואברהם הלך עמם לשלחם: ויהוה אמר המכסה אני מאברהם אשר אני עשה: ואברהם היו יהיה לגוי גדול ועצום ונברכו בו כל גויי הארץ: כי ידעתיו למען אשר יצוה את בניו ואת ביתו אחריו ושמרו דרך יהוה לעשות צדקה ומשפט למען הביא יהוה על אברהם את אשר דבר עליו: ויאמר יהוה זעקת סדם ועמרה כי רבה וחטאתם כי כבדה מאד: ארדה נא ואראה הכצעקתה הבאה אלי עשוכלה ואם לא אדעה: ויפנו משם האנשים וילכו סדמה ואברהם עודנו עמד לפני יהוה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa66b011460404dfc40c4",
+      "display_heb_name": "האנשים",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    }
+  ]
+}

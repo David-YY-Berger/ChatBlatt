@@ -1,0 +1,42 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6b0011460404dfc41f3",
+            "display_heb_name": "המילדת",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "midwife"
+        },
+        {
+            "key": "6a5fa6b0011460404dfc41f4",
+            "display_heb_name": "בן אוני",
+            "timePeriod": "Tanach",
+            "display_en_name": "ben-oni"
+        },
+        {
+            "key": "6a5fa6b1011460404dfc41f6",
+            "display_heb_name": "אפרתה",
+            "placeType": "City",
+            "display_en_name": "ephrath"
+        },
+        {
+            "key": "6a5fa6b1011460404dfc41f7",
+            "display_heb_name": "בית לחם",
+            "placeType": "City",
+            "display_en_name": "bethlehem"
+        },
+        {
+            "key": "6a5fa6b1011460404dfc41f8",
+            "display_heb_name": "מגדל עדר",
+            "placeType": "Building or Structure",
+            "display_en_name": "migdal-eder"
+        },
+        {
+            "key": "6a5fa6b2011460404dfc41fb",
+            "heb_unit": "בן",
+            "heb_context": "בני יעקב",
+            "display_en_name": "12"
+        }
+    ],
+    "key": "TN_Genesis_0_35:16-26"
+}

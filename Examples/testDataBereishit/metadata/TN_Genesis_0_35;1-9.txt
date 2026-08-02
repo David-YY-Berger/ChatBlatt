@@ -1,0 +1,28 @@
+﻿COST: Tokens: Total=2432 approx cost=$0.000257 (Prompt=2101, Completion=331)
+SOURCE:
+Bereishit (Torah) 35:1-9
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa65d011460404dfc4086","display_en_name":"terebinth","display_heb_name":"","all_en_names":["Terebinth"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6af011460404dfc41ef","display_en_name":"oak","display_heb_name":"","all_en_names":["Oak"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God said to Jacob, Arise, go up to Bethel and remain there; and build an altar there to the God who appeared to you when you were fleeing from your brother Esau. So Jacob said to his household and to all who were with him, Rid yourselves of the alien gods in your midst, purify yourselves, and change your clothes. Come, let us go up to Bethel, and I will build an altar there to the God who answered me when I was in distress and who has been with me wherever I have gone. They gave to Jacob all the alien gods that they had, and the rings that were in their ears, and Jacob buried them under the terebinth that was near Shechem. As they set out, a terror from God fell on the cities round about, so that they did not pursue the sons of Jacob. Thus Jacob came to Luz-that is, Bethel-in the land of Canaan, he and all the people who were with him. There he built an altar and named the site El-bethel, for it was there that God had been revealed to him when he was fleeing from his brother. Deborah, Rebekahs nurse, died, and was buried under the oak below Bethel; so it was named Allon-bacuth. God appeared again to Jacob on his arrival from Paddan-aram. God blessed him,
+
+HEBREW:
+ויאמר אלהים אל יעקב קום עלה בית אל ושב שם ועשה שם מזבח לאל הנראה אליך בברחך מפני עשו אחיך: ויאמר יעקב אל ביתו ואל כל אשר עמו הסרו את אלהי הנכר אשר בתככם והטהרו והחליפו שמלתיכם: ונקומה ונעלה בית אל ואעשה שם מזבח לאל הענה אתי ביום צרתי ויהי עמדי בדרך אשר הלכתי: ויתנו אל יעקב את כל אלהי הנכר אשר בידם ואת הנזמים אשר באזניהם ויטמן אתם יעקב תחת האלה אשר עם שכם: ויסעו ויהי חתת אלהים על הערים אשר סביבותיהם ולא רדפו אחרי בני יעקב: ויבא יעקב לוזה אשר בארץ כנען הוא בית אל הוא וכל העם אשר עמו: ויבן שם מזבח ויקרא למקום אל בית אל כי שם נגלו אליו האלהים בברחו מפני אחיו: ותמת דברה מינקת רבקה ותקבר מתחת לבית אל תחת האלון ויקרא שמו אלון בכות: וירא אלהים אל יעקב עוד בבאו מפדן ארם ויברך אתו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa65d011460404dfc4086",
+      "display_heb_name": "אלה"
+    },
+    {
+      "key": "6a5fa6af011460404dfc41ef",
+      "display_heb_name": "אלון"
+    }
+  ]
+}

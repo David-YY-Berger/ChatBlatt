@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa696011460404dfc417f",
+            "display_heb_name": "שבע",
+            "heb_unit": "שנה",
+            "heb_context": "שירות עבור נשים",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa697011460404dfc4180",
+            "heb_unit": "שבוע",
+            "heb_context": "שבוע כלולות לאה",
+            "display_en_name": "1"
+        }
+    ],
+    "key": "TN_Genesis_0_29:23-31"
+}

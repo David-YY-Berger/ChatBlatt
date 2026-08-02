@@ -1,0 +1,223 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa633011460404dfc3fd3",
+            "display_heb_name": "צידן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "sidon"
+        },
+        {
+            "key": "6a5fa634011460404dfc3fd4",
+            "display_heb_name": "חת",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": false,
+            "display_en_name": "heth"
+        },
+        {
+            "key": "6a5fa634011460404dfc3fd5",
+            "display_heb_name": "יבוסי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "jebusites"
+        },
+        {
+            "key": "6a5fa634011460404dfc3fd6",
+            "display_heb_name": "אמרי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "amorites"
+        },
+        {
+            "key": "6a5fa634011460404dfc3fd7",
+            "display_heb_name": "גרגשי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "girgashites"
+        },
+        {
+            "key": "6a5fa635011460404dfc3fd8",
+            "display_heb_name": "חוי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "hivites"
+        },
+        {
+            "key": "6a5fa635011460404dfc3fd9",
+            "display_heb_name": "ערקי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "arkites"
+        },
+        {
+            "key": "6a5fa635011460404dfc3fda",
+            "display_heb_name": "סיני",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "sinites"
+        },
+        {
+            "key": "6a5fa635011460404dfc3fdb",
+            "display_heb_name": "ארודי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "arvadites"
+        },
+        {
+            "key": "6a5fa635011460404dfc3fdc",
+            "display_heb_name": "צמרי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "zemarites"
+        },
+        {
+            "key": "6a5fa636011460404dfc3fdd",
+            "display_heb_name": "חמתי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "hamathites"
+        },
+        {
+            "key": "6a5fa636011460404dfc3fde",
+            "display_heb_name": "לודים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "ludim"
+        },
+        {
+            "key": "6a5fa636011460404dfc3fdf",
+            "display_heb_name": "ענמים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "anamim"
+        },
+        {
+            "key": "6a5fa636011460404dfc3fe0",
+            "display_heb_name": "להבים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "lehabim"
+        },
+        {
+            "key": "6a5fa637011460404dfc3fe1",
+            "display_heb_name": "נפתחים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "naphtuhim"
+        },
+        {
+            "key": "6a5fa637011460404dfc3fe2",
+            "display_heb_name": "פתרסים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "pathrusim"
+        },
+        {
+            "key": "6a5fa638011460404dfc3fe3",
+            "display_heb_name": "כסלחים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "casluhim"
+        },
+        {
+            "key": "6a5fa638011460404dfc3fe4",
+            "display_heb_name": "כפתרים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "caphtorim"
+        },
+        {
+            "key": "6a5fa638011460404dfc3fe5",
+            "display_heb_name": "פלשתים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "philistines"
+        },
+        {
+            "key": "6a5fa638011460404dfc3fe6",
+            "display_heb_name": "בבל",
+            "placeType": "City",
+            "display_en_name": "babylon"
+        },
+        {
+            "key": "6a5fa638011460404dfc3fe7",
+            "display_heb_name": "ארך",
+            "placeType": "City",
+            "display_en_name": "erech"
+        },
+        {
+            "key": "6a5fa639011460404dfc3fe8",
+            "display_heb_name": "אכד",
+            "placeType": "City",
+            "display_en_name": "accad"
+        },
+        {
+            "key": "6a5fa639011460404dfc3fe9",
+            "display_heb_name": "כלנה",
+            "placeType": "City",
+            "display_en_name": "calneh"
+        },
+        {
+            "key": "6a5fa639011460404dfc3feb",
+            "display_heb_name": "נינוה",
+            "placeType": "City",
+            "display_en_name": "nineveh"
+        },
+        {
+            "key": "6a5fa63a011460404dfc3fec",
+            "display_heb_name": "רחבת עיר",
+            "placeType": "City",
+            "display_en_name": "rehoboth-ir"
+        },
+        {
+            "key": "6a5fa63a011460404dfc3fed",
+            "display_heb_name": "כלח",
+            "placeType": "City",
+            "display_en_name": "calah"
+        },
+        {
+            "key": "6a5fa63a011460404dfc3fee",
+            "display_heb_name": "רסן",
+            "placeType": "City",
+            "display_en_name": "resen"
+        },
+        {
+            "key": "6a5fa63a011460404dfc3fef",
+            "display_heb_name": "גררה",
+            "placeType": "City",
+            "display_en_name": "gerar"
+        },
+        {
+            "key": "6a5fa63a011460404dfc3ff0",
+            "display_heb_name": "עזה",
+            "placeType": "City",
+            "display_en_name": "gaza"
+        },
+        {
+            "key": "6a5fa63c011460404dfc3ff5",
+            "display_heb_name": "לשע",
+            "placeType": "City",
+            "display_en_name": "lasha"
+        }
+    ],
+    "key": "TN_Genesis_0_10:9-20"
+}

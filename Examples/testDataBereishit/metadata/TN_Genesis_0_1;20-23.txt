@@ -1,0 +1,45 @@
+﻿COST: Tokens: Total=3125 approx cost=$0.000493 (Prompt=1974, Completion=1151)
+SOURCE:
+Bereishit (Torah) 1:20-23
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa603011460404dfc3f00","display_en_name":"water","display_heb_name":"","all_en_names":["Water"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa603011460404dfc3f01","display_en_name":"sea","display_heb_name":"","all_en_names":["Sea"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa604011460404dfc3f02","display_en_name":"living creature","display_heb_name":"","all_en_names":["Living Creature"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa604011460404dfc3f03","display_en_name":"bird","display_heb_name":"","all_en_names":["Bird"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa604011460404dfc3f04","display_en_name":"sea monster","display_heb_name":"","all_en_names":["Sea Monster"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God said, Let the waters bring forth swarms of living creatures, and birds that fly above the earth across the expanse of the sky. God created the great sea monsters, and all the living creatures of every kind that creep, which the waters brought forth in swarms, and all the winged birds of every kind. And God saw that this was good. God blessed them, saying, Be fertile and increase, fill the waters in the seas, and let the birds increase on the earth. And there was evening and there was morning, a fifth day.
+
+HEBREW:
+ויאמר אלהים ישרצו המים שרץ נפש חיה ועוף יעופף על הארץ על פני רקיע השמים: ויברא אלהים את התנינם הגדלים ואת כל נפש החיההרמשת אשר שרצו המים למינהם ואת כל עוף כנף למינהו וירא אלהים כי טוב: ויברך אתם אלהים לאמר פרו ורבו ומלאו את המים בימים והעוף ירב בארץ: ויהי ערב ויהי בקר יום חמישי:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa603011460404dfc3f00",
+      "display_heb_name": "מים",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa603011460404dfc3f01",
+      "display_heb_name": "ים",
+      "placeType": "Body of Water"
+    },
+    {
+      "key": "6a5fa604011460404dfc3f02",
+      "display_heb_name": "נפש חיה"
+    },
+    {
+      "key": "6a5fa604011460404dfc3f03",
+      "display_heb_name": "עוף"
+    },
+    {
+      "key": "6a5fa604011460404dfc3f04",
+      "display_heb_name": "תנין"
+    }
+  ]
+}

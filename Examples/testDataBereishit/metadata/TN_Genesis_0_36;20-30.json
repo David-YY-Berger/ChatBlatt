@@ -1,0 +1,159 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6b7011460404dfc4213",
+            "display_heb_name": "שעיר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "seir"
+        },
+        {
+            "key": "6a5fa6b7011460404dfc4214",
+            "display_heb_name": "לוטן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "lotan"
+        },
+        {
+            "key": "6a5fa6b7011460404dfc4215",
+            "display_heb_name": "שובל",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "shobal"
+        },
+        {
+            "key": "6a5fa6b8011460404dfc4216",
+            "display_heb_name": "דשון",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "dishon"
+        },
+        {
+            "key": "6a5fa6b8011460404dfc4217",
+            "display_heb_name": "אצר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ezer"
+        },
+        {
+            "key": "6a5fa6b8011460404dfc4218",
+            "display_heb_name": "דישן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "dishan"
+        },
+        {
+            "key": "6a5fa6b8011460404dfc4219",
+            "display_heb_name": "חרי",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "hori"
+        },
+        {
+            "key": "6a5fa6b8011460404dfc421a",
+            "display_heb_name": "הימם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "hemam"
+        },
+        {
+            "key": "6a5fa6b9011460404dfc421b",
+            "display_heb_name": "עלון",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "alvan"
+        },
+        {
+            "key": "6a5fa6b9011460404dfc421c",
+            "display_heb_name": "מנחת",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "manahath"
+        },
+        {
+            "key": "6a5fa6b9011460404dfc421d",
+            "display_heb_name": "עיבל",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ebal"
+        },
+        {
+            "key": "6a5fa6b9011460404dfc421e",
+            "display_heb_name": "שפו",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "shepho"
+        },
+        {
+            "key": "6a5fa6ba011460404dfc421f",
+            "display_heb_name": "אונם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "onam"
+        },
+        {
+            "key": "6a5fa6ba011460404dfc4220",
+            "display_heb_name": "איה",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "aiah"
+        },
+        {
+            "key": "6a5fa6ba011460404dfc4221",
+            "display_heb_name": "חמדן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "hemdan"
+        },
+        {
+            "key": "6a5fa6ba011460404dfc4222",
+            "display_heb_name": "אשבן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "eshban"
+        },
+        {
+            "key": "6a5fa6ba011460404dfc4223",
+            "display_heb_name": "יתרן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "ithran"
+        },
+        {
+            "key": "6a5fa6bb011460404dfc4224",
+            "display_heb_name": "כרן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "cheran"
+        },
+        {
+            "key": "6a5fa6bb011460404dfc4225",
+            "display_heb_name": "בלהן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "bilhan"
+        },
+        {
+            "key": "6a5fa6bb011460404dfc4226",
+            "display_heb_name": "זעון",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "zaavan"
+        },
+        {
+            "key": "6a5fa6bb011460404dfc4227",
+            "display_heb_name": "עקן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "akan"
+        },
+        {
+            "key": "6a5fa6bc011460404dfc4228",
+            "display_heb_name": "ארן",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "aran"
+        }
+    ],
+    "key": "TN_Genesis_0_36:20-30"
+}

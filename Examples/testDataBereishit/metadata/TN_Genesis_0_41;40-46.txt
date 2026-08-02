@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2744 approx cost=$0.000356 (Prompt=2077, Completion=667)
+SOURCE:
+Bereishit (Torah) 41:40-46
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6d9011460404dfc429e","display_en_name":"zaphenath-paneah","display_heb_name":"","all_en_names":["Zaphenath-Paneah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6da011460404dfc42a0","display_en_name":"30","display_heb_name":"","all_en_names":["30"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"josephs age"}
+
+PASSAGE:
+ENGLISH:
+You shall be in charge of my court, and by your command shall all my people be directed; uncertain. only with respect to the throne shall I be superior to you. Pharaoh further said to Joseph, See, I put you in charge of all the land of Egypt. And removing his signet ring from his hand, Pharaoh put it on Josephs hand; and he had him dressed in robes of fine linen, and put a gold chain about his neck. He had him ride in the chariot of his second-in-command, and they cried before him, Abrek! to kneel; perhaps from an Egyptian word of unknown meaning. Thus he placed him over all the land of Egypt. Pharaoh said to Joseph, I am Pharaoh; yet without you, no one shall lift up hand or foot in all the land of Egypt. Pharaoh then gave Joseph the name Zaphenath-paneah; and he gave him for a wife Asenath daughter of Poti-phera, priest of On. Thus Joseph emerged in charge of the land of Egypt.- Joseph was thirty years old when he entered the service of Pharaoh king of Egypt.-Leaving Pharaohs presence, Joseph traveled through all the land of Egypt.
+
+HEBREW:
+אתה תהיה על ביתי ועל פיך ישק כל עמי רק הכסא אגדל ממך: ויאמר פרעה אל יוסף ראה נתתי אתך על כל ארץ מצרים: ויסר פרעה את טבעתו מעל ידו ויתן אתה על יד יוסף וילבש אתו בגדי שש וישם רבד הזהב על צוארו: וירכב אתו במרכבת המשנה אשר לו ויקראו לפניו אברך ונתון אתו על כל ארץ מצרים: ויאמר פרעה אל יוסף אני פרעה ובלעדיך לא ירים איש את ידו ואת רגלו בכל ארץ מצרים: ויקרא פרעה שם יוסף צפנת פענח ויתן לו את אסנת בת פוטי פרע * (בספרי תימן פוטיפרע בתיבה אחת) כהן אן לאשה ויצא יוסף על ארץ מצרים: ויוסף בן שלשים שנה בעמדו לפני פרעה מלך מצרים ויצא יוסף מלפני פרעה ויעבר בכל ארץ מצרים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d9011460404dfc429e",
+      "display_heb_name": "צפנת פענח",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6da011460404dfc42a0",
+      "heb_unit": "שנה",
+      "heb_context": "גיל יוסף"
+    }
+  ]
+}

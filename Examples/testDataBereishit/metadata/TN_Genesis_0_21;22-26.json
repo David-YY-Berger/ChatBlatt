@@ -1,0 +1,20 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa674011460404dfc40ef",
+            "display_heb_name": "פיכל",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "phicol"
+        },
+        {
+            "key": "6a5fa675011460404dfc40f0",
+            "display_heb_name": "עבדי אבימלך",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "servants of abimelech"
+        }
+    ],
+    "key": "TN_Genesis_0_21:22-26"
+}

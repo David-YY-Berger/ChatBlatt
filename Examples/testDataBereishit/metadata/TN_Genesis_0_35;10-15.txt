@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=2648 approx cost=$0.000359 (Prompt=1934, Completion=714)
+SOURCE:
+Bereishit (Torah) 35:10-15
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6af011460404dfc41f0","display_en_name":"pillar of stone","display_heb_name":"","all_en_names":["Pillar Of Stone"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6b0011460404dfc41f1","display_en_name":"libation","display_heb_name":"","all_en_names":["Libation"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6b0011460404dfc41f2","display_en_name":"oil","display_heb_name":"","all_en_names":["Oil"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+saying to him, You whose name is Jacob, You shall be called Jacob no more, But Israel shall be your name. Thus he was named Israel. And God said to him, I am El Shaddai. Be fertile and increase; A nation, yea an assembly of nations, Shall descend from you. Kings shall issue from your loins. The land that I assigned to Abraham and Isaac I assign to you; And to your offspring to come Will I assign the land. God parted from him at the spot where [God] had spoken to him; and Jacob set up a pillar at the site where [God] had spoken to him, a pillar of stone, and he offered a libation on it and poured oil upon it. Jacob gave the site, where God had spoken to him, the name of Bethel.
+
+HEBREW:
+ויאמר לו אלהים שמך יעקב לא יקרא שמך עוד יעקב כי אם ישראל יהיה שמך ויקרא את שמו ישראל: ויאמר לו אלהים אני אל שדי פרה ורבה גוי וקהל גוים יהיה ממך ומלכים מחלציך יצאו: ואת הארץ אשר נתתי לאברהם וליצחק לך אתננה ולזרעך אחריך אתן את הארץ: ויעל מעליו אלהים במקום אשר דבר אתו: ויצב יעקב מצבה במקום אשר דבר אתו מצבת אבן ויסך עליה נסך ויצק עליה שמן: ויקרא יעקב את שם המקום אשר דבר אתו שם אלהים בית אל:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6af011460404dfc41f0",
+      "display_heb_name": "מצבת אבן",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6b0011460404dfc41f1",
+      "display_heb_name": "נסך",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6b0011460404dfc41f2",
+      "display_heb_name": "שמן",
+      "symbolType": "Other"
+    }
+  ]
+}

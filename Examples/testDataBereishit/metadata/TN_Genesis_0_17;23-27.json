@@ -1,0 +1,48 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa666011460404dfc40af",
+            "display_heb_name": "ילידי ביתו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "homeborn slaves"
+        },
+        {
+            "key": "6a5fa666011460404dfc40b0",
+            "display_heb_name": "מקנת כספו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "those he had bought"
+        },
+        {
+            "key": "6a5fa666011460404dfc40b1",
+            "display_heb_name": "כל זכר באנשי בית אברהם",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "every male in abrahams household"
+        },
+        {
+            "key": "6a5fa667011460404dfc40b2",
+            "display_heb_name": "אנשי ביתו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "men of his household"
+        },
+        {
+            "key": "6a5fa667011460404dfc40b3",
+            "display_heb_name": "בן נכר",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "outsiders"
+        },
+        {
+            "key": "6a5fa667011460404dfc40b4",
+            "display_heb_name": "שלש עשרה",
+            "heb_unit": "שנה",
+            "heb_context": "גיל ישמעאל",
+            "display_en_name": "13"
+        }
+    ],
+    "key": "TN_Genesis_0_17:23-27"
+}

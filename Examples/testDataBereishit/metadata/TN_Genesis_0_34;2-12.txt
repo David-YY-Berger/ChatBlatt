@@ -1,0 +1,42 @@
+﻿COST: Tokens: Total=3551 approx cost=$0.000536 (Prompt=2352, Completion=1199)
+SOURCE:
+Bereishit (Torah) 34:2-12
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa607011460404dfc3f11","display_en_name":"israel","display_heb_name":"","all_en_names":["Israel"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa6ab011460404dfc41de","display_en_name":"shechem","display_heb_name":"","all_en_names":["Shechem"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ac011460404dfc41df","display_en_name":"jacob's sons","display_heb_name":"","all_en_names":["Jacob's Sons"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6ac011460404dfc41e0","display_en_name":"hivi","display_heb_name":"","all_en_names":["Hivi"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Shechem son of Hamor the Hivite, chief of the country, saw her, and took her and lay with her and disgraced her., lit. and violated her. NJPS by force, but whether Dinah consented is not stated, and is not at issue; regardless, by the norms of the ancient Near East, she was disgraced. OJPS and humbled her. Being strongly drawn to Dinah daughter of Jacob, and in love with the maiden, he spoke to the maiden tenderly. So Shechem said to his father Hamor, Get me this girl as a wife. Jacob heard that he had defiled his daughter Dinah; but since his sons were in the field with his cattle, Jacob kept silent until they came home. Then Shechems father Hamor came out to Jacob to speak to him. Meanwhile Jacobs sons, having heard the news, came in from the field. The men. were distressed and very angry, because he had committed an outrage in Israel by lying with Jacobs daughter-a thing not to be done. And Hamor spoke with them, saying, My son Shechem longs for your daughter. Please give her to him in marriage. Intermarry with us: give your daughters to us, and take our daughters for yourselves: You will dwell among us, and the land will be open before you; settle, move about, and acquire holdings in it. Then Shechem said to her father and brothers, Do me this favor, and I will pay whatever you tell me. Ask of me a bride-price ever so high, as well as gifts, and I will pay what you tell me; only give me the maiden for a wife.
+
+HEBREW:
+וירא אתה שכם בן חמור החוי נשיא הארץ ויקח אתה וישכב אתה ויענה: ותדבק נפשו בדינה בת יעקב ויאהב את הנער וידבר על לב הנער: ויאמר שכם אל חמור אביו לאמר קח לי את הילדה הזאת לאשה: ויעקב שמע כי טמא את דינה בתו ובניו היו את מקנהו בשדה והחרש יעקב עד באם: ויצא חמור אבי שכם אל יעקב לדבר אתו: ובני יעקב באו מן השדה כשמעם ויתעצבו האנשים ויחר להם מאד כי נבלה עשה בישראל לשכב את בת יעקב וכן לא יעשה: וידבר חמור אתם לאמר שכם בני חשקה נפשו בבתכם תנו נא אתה לו לאשה: והתחתנו אתנו בנתיכם תתנו לנו ואת בנתינו תקחו לכם: ואתנו תשבו והארץ תהיה לפניכם שבו וסחרוה והאחזו בה: ויאמר שכם אל אביה ואל אחיה אמצא חן בעיניכם ואשר תאמרו אלי אתן: הרבו עלי מאד מהר ומתן ואתנה כאשר תאמרו אלי ותנו לי את הנער לאשה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa607011460404dfc3f11",
+      "display_heb_name": "ישראל"
+    },
+    {
+      "key": "6a5fa6ab011460404dfc41de",
+      "display_heb_name": "שכם",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ac011460404dfc41df",
+      "display_heb_name": "בני יעקב",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6ac011460404dfc41e0",
+      "display_heb_name": "חוי"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+﻿COST: Tokens: Total=3966 approx cost=$0.000648 (Prompt=2406, Completion=1560)
+SOURCE:
+Bereishit (Torah) 40:9-15
+
+ENTITIES TO ENRICH (8):
+{"key":"6a5fa690011460404dfc4165","display_en_name":"grape","display_heb_name":"","all_en_names":["Grape"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+{"key":"6a5fa6d2011460404dfc4280","display_en_name":"chief cupbearer","display_heb_name":"","all_en_names":["Chief Cupbearer"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d2011460404dfc4281","display_en_name":"land of the hebrews","display_heb_name":"","all_en_names":["Land Of The Hebrews"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d2011460404dfc4282","display_en_name":"dungeon","display_heb_name":"","all_en_names":["Dungeon"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6d3011460404dfc4283","display_en_name":"hebrews","display_heb_name":"","all_en_names":["Hebrews"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa6d3011460404dfc4284","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"branch","en_context":"dream interpretation"}
+{"key":"6a5fa6d3011460404dfc4285","display_en_name":"grape","display_heb_name":"","all_en_names":["Grape"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa6d3011460404dfc4286","display_en_name":"vine","display_heb_name":"","all_en_names":["Vine"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then the chief cupbearer told his dream to Joseph. He said to him, In my dream, there was a vine in front of me. On the vine were three branches. It had barely budded, when out came its blossoms and its clusters ripened into grapes. Pharaohs cup was in my hand, and I took the grapes, pressed them into Pharaohs cup, and placed the cup in Pharaohs hand. Joseph said to him, This is its interpretation: The three branches are three days. In three days Pharaoh will pardon you and restore you to your post; you will place Pharaohs cup in his hand, as was your custom formerly when you were his cupbearer. But think of me when all is well with you again, and do me the kindness of mentioning me to Pharaoh, so as to free me from this place. For in truth, I was kidnapped from the land of the Hebrews; nor have I done anything here that they should have put me in the dungeon.
+
+HEBREW:
+ויספר שר המשקים את חלמו ליוסף ויאמר לו בחלומי והנה גפן לפני: ובגפן שלשה שריגם והוא כפרחת עלתה נצה הבשילו אשכלתיה ענבים: וכוס פרעה בידי ואקח את הענבים ואשחט אתם אל כוס פרעה ואתן את הכוס על כף פרעה: ויאמר לו יוסף זה פתרנו שלשת השרגים שלשת ימים הם: בעוד שלשת ימים ישא פרעה את ראשך והשיבך על כנך ונתת כוס פרעה בידו כמשפט הראשון אשר היית משקהו: כי אם זכרתני אתך כאשר ייטב לך ועשית נא עמדי חסד והזכרתני אל פרעה והוצאתני מן הבית הזה: כי גנב גנבתי מארץ העברים וגם פה לא עשיתי מאומה כי שמו אתי בבור:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa690011460404dfc4165",
+      "display_heb_name": "ענבים"
+    },
+    {
+      "key": "6a5fa6d2011460404dfc4280",
+      "display_heb_name": "שר המשקים",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6d2011460404dfc4281",
+      "display_heb_name": "ארץ העברים",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa6d2011460404dfc4282",
+      "display_heb_name": "בור",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6d3011460404dfc4283",
+      "display_heb_name": "העברים"
+    },
+    {
+      "key": "6a5fa6d3011460404dfc4284",
+      "display_heb_name": "שלשה",
+      "heb_unit": "שרג",
+      "heb_context": "פתרון חלום"
+    },
+    {
+      "key": "6a5fa6d3011460404dfc4285",
+      "display_heb_name": "ענבים"
+    },
+    {
+      "key": "6a5fa6d3011460404dfc4286",
+      "display_heb_name": "גפן"
+    }
+  ]
+}

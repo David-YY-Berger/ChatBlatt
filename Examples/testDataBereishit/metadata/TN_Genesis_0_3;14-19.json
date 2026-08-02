@@ -1,0 +1,48 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60c011460404dfc3f29",
+            "display_heb_name": "אדם",
+            "timePeriod": "Tanach",
+            "display_en_name": "adam"
+        },
+        {
+            "key": "6a5fa60d011460404dfc3f2a",
+            "display_heb_name": "אדמה",
+            "placeType": "Other",
+            "display_en_name": "ground"
+        },
+        {
+            "key": "6a5fa60d011460404dfc3f2b",
+            "display_heb_name": "שדה",
+            "placeType": "Other",
+            "display_en_name": "field"
+        },
+        {
+            "key": "6a5fa60d011460404dfc3f2c",
+            "display_heb_name": "עפר",
+            "display_en_name": "dirt"
+        },
+        {
+            "key": "6a5fa60d011460404dfc3f2d",
+            "display_heb_name": "עשב",
+            "display_en_name": "grass"
+        },
+        {
+            "key": "6a5fa60e011460404dfc3f2e",
+            "display_heb_name": "לחם",
+            "display_en_name": "bread"
+        },
+        {
+            "key": "6a5fa60e011460404dfc3f2f",
+            "display_heb_name": "קוץ",
+            "display_en_name": "thorn"
+        },
+        {
+            "key": "6a5fa60e011460404dfc3f30",
+            "display_heb_name": "דרדר",
+            "display_en_name": "thistle"
+        }
+    ],
+    "key": "TN_Genesis_0_3:14-19"
+}

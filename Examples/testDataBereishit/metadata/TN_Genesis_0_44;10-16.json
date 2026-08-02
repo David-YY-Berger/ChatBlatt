@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e3011460404dfc42c9",
+            "display_heb_name": "ביתה יוסף",
+            "placeType": "Building or Structure",
+            "display_en_name": "house of joseph"
+        },
+        {
+            "key": "6a5fa6e4011460404dfc42ca",
+            "display_heb_name": "הגביע",
+            "symbolType": "Other",
+            "display_en_name": "goblet"
+        }
+    ],
+    "key": "TN_Genesis_0_44:10-16"
+}

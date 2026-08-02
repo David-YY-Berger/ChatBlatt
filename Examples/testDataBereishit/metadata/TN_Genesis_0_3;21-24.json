@@ -1,0 +1,24 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa60e011460404dfc3f32",
+            "display_heb_name": "כרבים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "cherubim"
+        },
+        {
+            "key": "6a5fa60f011460404dfc3f33",
+            "display_heb_name": "כתנות עור",
+            "symbolType": "Clothing",
+            "display_en_name": "garments of skins"
+        },
+        {
+            "key": "6a5fa60f011460404dfc3f34",
+            "display_heb_name": "להט החרב המתהפכת",
+            "symbolType": "Weapon",
+            "display_en_name": "fiery ever-turning sword"
+        }
+    ],
+    "key": "TN_Genesis_0_3:21-24"
+}

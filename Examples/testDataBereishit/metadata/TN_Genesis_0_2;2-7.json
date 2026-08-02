@@ -1,0 +1,29 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa607011460404dfc3f0f",
+            "display_heb_name": "האדם",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isGroup": false,
+            "display_en_name": "human"
+        },
+        {
+            "key": "6a5fa607011460404dfc3f12",
+            "display_heb_name": "נשמת חיים",
+            "symbolType": "Not Physical",
+            "display_en_name": "breath of life"
+        },
+        {
+            "key": "6a5fa607011460404dfc3f13",
+            "display_heb_name": "שיח",
+            "display_en_name": "shrub"
+        },
+        {
+            "key": "6a5fa608011460404dfc3f14",
+            "display_heb_name": "עשב",
+            "display_en_name": "grass"
+        }
+    ],
+    "key": "TN_Genesis_0_2:2-7"
+}

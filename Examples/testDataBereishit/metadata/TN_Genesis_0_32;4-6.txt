@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2549 approx cost=$0.000372 (Prompt=1745, Completion=804)
+SOURCE:
+Bereishit (Torah) 32:4-6
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6a5011460404dfc41c0","display_en_name":"male slaves","display_heb_name":"","all_en_names":["Male Slaves"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a5011460404dfc41c1","display_en_name":"female slaves","display_heb_name":"","all_en_names":["Female Slaves"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Jacob sent messengers ahead to his brother Esau in the land of Seir, the country of Edom, and instructed them as follows, Thus shall you say, To my lord Esau, thus says your servant Jacob: I stayed with Laban and remained until now; I have acquired cattle, asses, sheep, and male and female slaves; and I send this message to my lord in the hope of gaining your favor.
+
+HEBREW:
+וישלח יעקב מלאכים לפניו אל עשו אחיו ארצה שעיר שדה אדום: ויצו אתם לאמר כה תאמרון לאדני לעשו כה אמר עבדך יעקב עם לבן גרתי ואחר עד עתה: ויהי לי שור וחמור צאן ועבד ושפחה ואשלחה להגיד לאדני למצא חן בעיניך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a5011460404dfc41c0",
+      "display_heb_name": "עבד",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6a5011460404dfc41c1",
+      "display_heb_name": "שפחה",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+﻿COST: Tokens: Total=6248 approx cost=$0.001077 (Prompt=3546, Completion=2702)
+SOURCE:
+Bereishit (Torah) 14:12-24
+
+ENTITIES TO ENRICH (17):
+{"key":"6a5fa62a011460404dfc3fa9","display_en_name":"wine","display_heb_name":"","all_en_names":["Wine"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa659011460404dfc4077","display_en_name":"king of sodom","display_heb_name":"","all_en_names":["King Of Sodom"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65a011460404dfc4078","display_en_name":"melchizedek","display_heb_name":"","all_en_names":["Melchizedek"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65a011460404dfc4079","display_en_name":"eshkol","display_heb_name":"","all_en_names":["Eshkol"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65a011460404dfc407a","display_en_name":"aner","display_heb_name":"","all_en_names":["Aner"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65a011460404dfc407b","display_en_name":"mamre","display_heb_name":"","all_en_names":["Mamre"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65a011460404dfc407c","display_en_name":"god most high","display_heb_name":"","all_en_names":["God Most High"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa65b011460404dfc407d","display_en_name":"dan","display_heb_name":"","all_en_names":["Dan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65b011460404dfc407e","display_en_name":"hobah","display_heb_name":"","all_en_names":["Hobah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65b011460404dfc407f","display_en_name":"damascus","display_heb_name":"","all_en_names":["Damascus"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65b011460404dfc4080","display_en_name":"valley of shaveh","display_heb_name":"","all_en_names":["Valley Of Shaveh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65c011460404dfc4081","display_en_name":"valley of the king","display_heb_name":"","all_en_names":["Valley Of The King"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65c011460404dfc4082","display_en_name":"salem","display_heb_name":"","all_en_names":["Salem"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa65c011460404dfc4083","display_en_name":"amorite","display_heb_name":"","all_en_names":["Amorite"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa65c011460404dfc4084","display_en_name":"318","display_heb_name":"","all_en_names":["318"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"man","en_context":"abrams retainers"}
+{"key":"6a5fa65c011460404dfc4085","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"percent","en_context":"abram gave tithe"}
+{"key":"6a5fa65d011460404dfc4086","display_en_name":"terebinth","display_heb_name":"","all_en_names":["Terebinth"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+They also took Lot, the son of Abrams brother, and his possessions, and departed; for he had settled in Sodom. A fugitive brought the news to Abram the Hebrew, who was dwelling at the terebinths of Mamre the Amorite, kinsman of Eshkol and Aner, these being Abrams allies. When Abram heard that his kinsmans [household] had been taken captive, he mustered his retainers, uncertain. born into his household, numbering three hundred and eighteen, and went in pursuit as far as Dan. At night, he and his servants deployed against them and defeated them; and he pursued them as far as Hobah, which is north of Damascus. He brought back all the possessions; he also brought back his kinsman Lot and his possessions, and the women and the rest of the people. When he returned from defeating Chedorlaomer and the kings with him, the king of Sodom came out to meet him in the Valley of Shaveh, which is the Valley of the King. And King Melchizedek of Salem brought out bread and wine; he was a priest of God Most High.. He blessed him, saying, Blessed be Abram of God Most High, Creator of heaven and earth. And blessed be God Most High, Who has delivered your foes into your hand. And [Abram] gave him a tenth of everything. Then the king of Sodom said to Abram, Give me the persons, and take the possessions for yourself. But Abram said to the king of Sodom, I swear to HASHEM, God Most High, Creator of heaven and earth: I will not take so much as a thread or a sandal strap of what is yours; you shall not say, It is I who made Abram rich. For me, nothing but what my servants have used up; as for the share of the parties who went with me-Aner, Eshkol, and Mamre-let them take their share.
+
+HEBREW:
+ויקחו את לוט ואת רכשו בן אחי אברם וילכו והוא ישב בסדם: ויבא הפליט ויגד לאברם העברי והוא שכן באלני ממרא האמרי אחי אשכל ואחי ענר והם בעלי ברית אברם: וישמע אברם כי נשבה אחיו וירק את חניכיו ילידי ביתו שמנה עשר ושלש מאות וירדף עד דן: ויחלק עליהםלילה הוא ועבדיו ויכם וירדפם עד חובה אשר משמאל לדמשק: וישב את כל הרכש וגם את לוט אחיו ורכשו השיב וגם את הנשים ואת העם: ויצא מלך סדם לקראתו אחרי שובו מהכות את כדרלעמר ואת המלכים אשר אתו אל עמק שוה הוא עמק המלך: ומלכי צדק מלך שלם הוציא לחם ויין והוא כהן לאל עליון: ויברכהו ויאמר ברוך אברם לאל עליון קנה שמים וארץ: וברוך אל עליון אשר מגן צריך בידך ויתן לו מעשר מכל: ויאמר מלך סדם אל אברם תן לי הנפש והרכש קח לך: ויאמר אברם אל מלך סדם הרמתי ידי אל יהוה אל עליון קנה שמים וארץ: אם מחוט ועד שרוך נעל ואם אקח מכל אשר לך ולא תאמר אני העשרתי את אברם: בלעדי רק אשר אכלו הנערים וחלק האנשים אשר הלכו אתי ענר אשכל וממרא הם יקחו חלקם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa62a011460404dfc3fa9",
+      "display_heb_name": "יין"
+    },
+    {
+      "key": "6a5fa659011460404dfc4077",
+      "display_heb_name": "מלך סדם",
+      "timePeriod": "Tanach",
+      "roles": [
+        "King"
+      ]
+    },
+    {
+      "key": "6a5fa65a011460404dfc4078",
+      "display_heb_name": "מלכי צדק",
+      "timePeriod": "Tanach",
+      "roles": [
+        "King",
+        "Kohen"
+      ]
+    },
+    {
+      "key": "6a5fa65a011460404dfc4079",
+      "display_heb_name": "אשכל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa65a011460404dfc407a",
+      "display_heb_name": "ענר",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa65a011460404dfc407b",
+      "display_heb_name": "ממרא",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa65a011460404dfc407c",
+      "display_heb_name": "אל עליון",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa65b011460404dfc407d",
+      "display_heb_name": "דן",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa65b011460404dfc407e",
+      "display_heb_name": "חובה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa65b011460404dfc407f",
+      "display_heb_name": "דמשק",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa65b011460404dfc4080",
+      "display_heb_name": "עמק שוה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa65c011460404dfc4081",
+      "display_heb_name": "עמק המלך",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa65c011460404dfc4082",
+      "display_heb_name": "שלם",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa65c011460404dfc4084",
+      "display_heb_name": "שמנה עשר ושלש מאות",
+      "heb_unit": "איש",
+      "heb_context": "חניכי אברם"
+    },
+    {
+      "key": "6a5fa65c011460404dfc4085",
+      "display_heb_name": "עשר",
+      "heb_unit": "אחוז",
+      "heb_context": "אברם נתן מעשר"
+    }
+  ]
+}

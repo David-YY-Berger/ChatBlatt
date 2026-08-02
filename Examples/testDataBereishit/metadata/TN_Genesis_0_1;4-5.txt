@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=2097 approx cost=$0.000250 (Prompt=1685, Completion=412)
+SOURCE:
+Bereishit (Torah) 1:4-5
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa5ff011460404dfc3eef","display_en_name":"darkness","display_heb_name":"","all_en_names":["Darkness"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa600011460404dfc3ef0","display_en_name":"day","display_heb_name":"","all_en_names":["Day"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa600011460404dfc3ef1","display_en_name":"night","display_heb_name":"","all_en_names":["Night"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God saw that the light was good, and God separated the light from the darkness. God called the light Day and called the darkness Night. And there was evening and there was morning, a first day.
+
+HEBREW:
+וירא אלהים את האור כי טוב ויבדל אלהים בין האור ובין החשך: ויקרא אלהיםלאור יום ולחשך קרא לילה ויהי ערב ויהי בקר יום אחד:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa5ff011460404dfc3eef",
+      "display_heb_name": "חשך",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa600011460404dfc3ef0",
+      "display_heb_name": "יום",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa600011460404dfc3ef1",
+      "display_heb_name": "לילה",
+      "symbolType": "Not Physical"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2757 approx cost=$0.000390 (Prompt=1941, Completion=816)
+SOURCE:
+Bereishit (Torah) 16:1-5
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa662011460404dfc409e","display_en_name":"hagar","display_heb_name":"","all_en_names":["Hagar"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa662011460404dfc409f","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"abram dwelt in canaan"}
+
+PASSAGE:
+ENGLISH:
+Sarai, Abrams wife, had borne him no children. She had an Egyptian maidservant whose name was Hagar. And Sarai said to Abram, Look, HASHEM has kept me from bearing. Consort with my maid; perhaps I shall have a child child and banah build up. See the Dictionary under ben . through her. And Abram heeded Sarais request. So Sarai, Abrams wife, took her maid, Hagar the Egyptian-after Abram had dwelt in the land of Canaan ten years-and gave her to her husband Abram as concubine. He cohabited with Hagar and she conceived; and when she saw that she had conceived, her mistress was lowered in her esteem. And Sarai said to Abram, The wrong done me is your fault! I myself put my maid in your bosom; now that she sees that she is pregnant, I am lowered in her esteem. HASHEM decide between you and me!
+
+HEBREW:
+ושרי אשת אברם לא ילדה לו ולה שפחה מצרית ושמה הגר: ותאמר שרי אל אברם הנה נא עצרני יהוה מלדת בא נא אל שפחתי אולי אבנה ממנה וישמע אברם לקול שרי: ותקח שרי אשת אברם את הגר המצרית שפחתה מקץ עשר שנים לשבת אברם בארץ כנען ותתן אתה לאברם אישה לו לאשה: ויבא אל הגר ותהר ותרא כי הרתה ותקל גברתה בעיניה: ותאמר שרי אל אברם חמסי עליך אנכי נתתי שפחתי בחיקך ותרא כי הרתה ואקל בעיניה ישפט יהוה ביני וביניך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa662011460404dfc409e",
+      "display_heb_name": "הגר",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa662011460404dfc409f",
+      "display_heb_name": "עשר",
+      "heb_unit": "שנה",
+      "heb_context": "אברם בארץ כנען"
+    }
+  ]
+}

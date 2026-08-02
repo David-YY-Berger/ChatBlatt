@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e4011460404dfc42cb",
+            "display_heb_name": "אחיו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "the brothers"
+        },
+        {
+            "key": "6a5fa6e4011460404dfc42cc",
+            "display_heb_name": "2",
+            "heb_unit": "בן",
+            "heb_context": "בנים",
+            "display_en_name": "2"
+        }
+    ],
+    "key": "TN_Genesis_0_44:18-34"
+}

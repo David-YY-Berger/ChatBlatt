@@ -1,0 +1,98 @@
+﻿COST: Tokens: Total=4930 approx cost=$0.000870 (Prompt=2708, Completion=2222)
+SOURCE:
+Bereishit (Torah) 6:14-18
+
+ENTITIES TO ENRICH (12):
+{"key":"6a5fa61e011460404dfc3f78","display_en_name":"noah's sons","display_heb_name":"","all_en_names":["Noah's Sons"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61f011460404dfc3f79","display_en_name":"noah's wife","display_heb_name":"","all_en_names":["Noah's Wife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61f011460404dfc3f7a","display_en_name":"noah's sons' wives","display_heb_name":"","all_en_names":["Noah's Sons' Wives"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61f011460404dfc3f7b","display_en_name":"ark","display_heb_name":"","all_en_names":["Ark"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa61f011460404dfc3f7c","display_en_name":"covenant","display_heb_name":"","all_en_names":["Covenant"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa620011460404dfc3f7d","display_en_name":"flood","display_heb_name":"","all_en_names":["Flood"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa620011460404dfc3f7e","display_en_name":"300","display_heb_name":"","all_en_names":["300"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"cubit","en_context":"ark length"}
+{"key":"6a5fa620011460404dfc3f7f","display_en_name":"50","display_heb_name":"","all_en_names":["50"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"cubit","en_context":"ark width"}
+{"key":"6a5fa620011460404dfc3f80","display_en_name":"30","display_heb_name":"","all_en_names":["30"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"cubit","en_context":"ark height"}
+{"key":"6a5fa620011460404dfc3f81","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"cubit","en_context":"ark opening"}
+{"key":"6a5fa621011460404dfc3f82","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"deck","en_context":"ark decks"}
+{"key":"6a5fa621011460404dfc3f83","display_en_name":"gopher wood","display_heb_name":"","all_en_names":["Gopher Wood"],"all_heb_names":[],"entityType":"Plant","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Make yourself an ark of gopher wood; make it an ark with compartments, and cover it inside and out with pitch. This is how you shall make it: the length of the ark shall be three hundred cubits, its width fifty cubits, and its height thirty cubits. Make an opening for daylight in the ark, and terminate it within a cubit of the top. Put the entrance to the ark in its side; make it with bottom, second, and third decks. For My part, I am about to bring the Flood-waters upon the earth-to destroy all flesh under the sky in which there is breath of life; everything on earth shall perish. But I will establish My covenant with you, and you shall enter the ark, with your sons, your wife, and your sons wives.
+
+HEBREW:
+עשה לך תבת עצי גפר קנים תעשה את התבה וכפרת אתה מבית ומחוץ בכפר: וזה אשר תעשה אתה שלש מאות אמה ארך התבה חמשים אמה רחבה ושלשים אמה קומתה: צהר תעשה לתבה ואל אמה תכלנה מלמעלה ופתח התבה בצדה תשים תחתים שנים ושלשים תעשה: ואני הנני מביא את המבול מים על הארץ לשחת כל בשר אשר בו רוח חיים מתחת השמים כל אשר בארץ יגוע: והקמתי את בריתי אתך ובאת אל התבה אתה ובניך ואשתך ונשי בניך אתך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa61e011460404dfc3f78",
+      "display_heb_name": "בניך",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61f011460404dfc3f79",
+      "display_heb_name": "אשתך",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa61f011460404dfc3f7a",
+      "display_heb_name": "נשי בניך",
+      "timePeriod": "Tanach",
+      "isWoman": true,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa61f011460404dfc3f7b",
+      "display_heb_name": "תבה",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa61f011460404dfc3f7c",
+      "display_heb_name": "ברית",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa620011460404dfc3f7d",
+      "display_heb_name": "מבול",
+      "symbolType": "Part of Nature"
+    },
+    {
+      "key": "6a5fa620011460404dfc3f7e",
+      "display_heb_name": "שלש מאות",
+      "heb_unit": "אמה",
+      "heb_context": "ארך התבה"
+    },
+    {
+      "key": "6a5fa620011460404dfc3f7f",
+      "display_heb_name": "חמשים",
+      "heb_unit": "אמה",
+      "heb_context": "רחבה"
+    },
+    {
+      "key": "6a5fa620011460404dfc3f80",
+      "display_heb_name": "שלשים",
+      "heb_unit": "אמה",
+      "heb_context": "קומתה"
+    },
+    {
+      "key": "6a5fa620011460404dfc3f81",
+      "display_heb_name": "אמה",
+      "heb_unit": "אמה",
+      "heb_context": "אמה תכלנה מלמעלה"
+    },
+    {
+      "key": "6a5fa621011460404dfc3f82",
+      "display_heb_name": "שלשים",
+      "heb_unit": "תחתית",
+      "heb_context": "תחתים שנים ושלשים"
+    },
+    {
+      "key": "6a5fa621011460404dfc3f83",
+      "display_heb_name": "עצי גפר"
+    }
+  ]
+}

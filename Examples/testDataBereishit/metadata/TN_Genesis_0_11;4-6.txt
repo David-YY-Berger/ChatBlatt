@@ -1,0 +1,43 @@
+﻿COST: Tokens: Total=2889 approx cost=$0.000440 (Prompt=1895, Completion=994)
+SOURCE:
+Bereishit (Torah) 11:4-6
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa643011460404dfc4015","display_en_name":"humanity","display_heb_name":"","all_en_names":["Humanity"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa643011460404dfc4016","display_en_name":"world","display_heb_name":"","all_en_names":["World"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa643011460404dfc4017","display_en_name":"tower","display_heb_name":"","all_en_names":["Tower"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa643011460404dfc4018","display_en_name":"1","display_heb_name":"","all_en_names":["1"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"people","en_context":"humanity's en_unity"}
+
+PASSAGE:
+ENGLISH:
+And they said, Come, let us build us a city, and a tower with its top in the sky, to make a name for ourselves; else we shall be scattered all over the world. HASHEM came down to look at the city and tower that humanity had built, and HASHEM said, If, as one people with one language for all, this is how they have begun to act, then nothing that they may propose to do will be out of their reach.
+
+HEBREW:
+ויאמרו הבה נבנה לנו עיר ומגדל וראשו בשמים ונעשה לנו שם פן נפוץ על פני כל הארץ: וירד יהוה לראת את העיר ואת המגדל אשר בנו בני האדם: ויאמר יהוה הן עם אחד ושפה אחת לכלם וזה החלם לעשות ועתה לא יבצר מהם כל אשר יזמו לעשות:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa643011460404dfc4015",
+      "display_heb_name": "בני האדם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa643011460404dfc4016",
+      "display_heb_name": "הארץ",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa643011460404dfc4017",
+      "display_heb_name": "מגדל",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa643011460404dfc4018",
+      "heb_unit": "עם",
+      "heb_context": "עם אחד"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa62a011460404dfc3fa9",
+            "display_heb_name": "יין",
+            "display_en_name": "wine"
+        },
+        {
+            "key": "6a5fa659011460404dfc4077",
+            "display_heb_name": "מלך סדם",
+            "timePeriod": "Tanach",
+            "roles": [
+                "King"
+            ],
+            "display_en_name": "king of sodom"
+        },
+        {
+            "key": "6a5fa65a011460404dfc4078",
+            "display_heb_name": "מלכי צדק",
+            "timePeriod": "Tanach",
+            "roles": [
+                "King",
+                "Kohen"
+            ],
+            "display_en_name": "melchizedek"
+        },
+        {
+            "key": "6a5fa65a011460404dfc4079",
+            "display_heb_name": "אשכל",
+            "timePeriod": "Tanach",
+            "display_en_name": "eshkol"
+        },
+        {
+            "key": "6a5fa65a011460404dfc407a",
+            "display_heb_name": "ענר",
+            "timePeriod": "Tanach",
+            "display_en_name": "aner"
+        },
+        {
+            "key": "6a5fa65a011460404dfc407b",
+            "display_heb_name": "ממרא",
+            "timePeriod": "Tanach",
+            "display_en_name": "mamre"
+        },
+        {
+            "key": "6a5fa65a011460404dfc407c",
+            "display_heb_name": "אל עליון",
+            "timePeriod": "Tanach",
+            "display_en_name": "god most high"
+        },
+        {
+            "key": "6a5fa65b011460404dfc407d",
+            "display_heb_name": "דן",
+            "placeType": "City",
+            "display_en_name": "dan"
+        },
+        {
+            "key": "6a5fa65b011460404dfc407e",
+            "display_heb_name": "חובה",
+            "placeType": "City",
+            "display_en_name": "hobah"
+        },
+        {
+            "key": "6a5fa65b011460404dfc407f",
+            "display_heb_name": "דמשק",
+            "placeType": "City",
+            "display_en_name": "damascus"
+        },
+        {
+            "key": "6a5fa65b011460404dfc4080",
+            "display_heb_name": "עמק שוה",
+            "placeType": "Other",
+            "display_en_name": "valley of shaveh"
+        },
+        {
+            "key": "6a5fa65c011460404dfc4081",
+            "display_heb_name": "עמק המלך",
+            "placeType": "Other",
+            "display_en_name": "valley of the king"
+        },
+        {
+            "key": "6a5fa65c011460404dfc4082",
+            "display_heb_name": "שלם",
+            "placeType": "City",
+            "display_en_name": "salem"
+        },
+        {
+            "key": "6a5fa65c011460404dfc4084",
+            "display_heb_name": "שמנה עשר ושלש מאות",
+            "heb_unit": "איש",
+            "heb_context": "חניכי אברם",
+            "display_en_name": "318"
+        },
+        {
+            "key": "6a5fa65c011460404dfc4085",
+            "display_heb_name": "עשר",
+            "heb_unit": "אחוז",
+            "heb_context": "אברם נתן מעשר",
+            "display_en_name": "10"
+        }
+    ],
+    "key": "TN_Genesis_0_14:12-24"
+}

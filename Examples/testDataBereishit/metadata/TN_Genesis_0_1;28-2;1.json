@@ -1,0 +1,25 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa606011460404dfc3f0b",
+            "display_heb_name": "דגת",
+            "display_en_name": "fish"
+        },
+        {
+            "key": "6a5fa606011460404dfc3f0c",
+            "display_heb_name": "חיה",
+            "display_en_name": "animal"
+        },
+        {
+            "key": "6a5fa606011460404dfc3f0d",
+            "display_heb_name": "עשב",
+            "display_en_name": "plant"
+        },
+        {
+            "key": "6a5fa606011460404dfc3f0e",
+            "display_heb_name": "עץ",
+            "display_en_name": "tree"
+        }
+    ],
+    "key": "TN_Genesis_0_1:28-2:1"
+}

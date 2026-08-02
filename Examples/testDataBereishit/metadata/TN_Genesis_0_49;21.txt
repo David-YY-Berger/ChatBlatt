@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2003 approx cost=$0.000251 (Prompt=1555, Completion=448)
+SOURCE:
+Bereishit (Torah) 49:21
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6f8011460404dfc4319","display_en_name":"hind","display_heb_name":"","all_en_names":["Hind"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa6f8011460404dfc431a","display_en_name":"fawn","display_heb_name":"","all_en_names":["Fawn"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Naphtali is a hind let loose, Which yields lovely fawns.
+
+HEBREW:
+נפתלי אילה שלחה הנתן אמרי שפר:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f8011460404dfc4319",
+      "display_heb_name": "אילה"
+    }
+  ]
+}

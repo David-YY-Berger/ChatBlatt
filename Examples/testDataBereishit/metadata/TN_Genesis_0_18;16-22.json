@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa66b011460404dfc40c4",
+            "display_heb_name": "האנשים",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "agents"
+        }
+    ],
+    "key": "TN_Genesis_0_18:16-22"
+}

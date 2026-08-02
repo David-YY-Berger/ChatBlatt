@@ -1,0 +1,19 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa642011460404dfc4011",
+            "display_heb_name": "אשור",
+            "display_en_name": "asshur"
+        },
+        {
+            "key": "6a5fa640211460404dfc4012",
+            "display_heb_name": "ארם"
+        },
+        {
+            "key": "6a5fa642011460404dfc4013",
+            "display_heb_name": "אופר",
+            "display_en_name": "ophir"
+        }
+    ],
+    "key": "TN_Genesis_0_10:21-11:3"
+}

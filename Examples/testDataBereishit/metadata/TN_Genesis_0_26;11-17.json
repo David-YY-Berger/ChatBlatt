@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa68b011460404dfc4150",
+            "display_heb_name": "מאה",
+            "heb_unit": "שערים",
+            "heb_context": "תנובת קציר",
+            "display_en_name": "100"
+        }
+    ],
+    "key": "TN_Genesis_0_26:11-17"
+}

@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2777 approx cost=$0.000431 (Prompt=1789, Completion=988)
+SOURCE:
+Bereishit (Torah) 4:13-16
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa610011460404dfc3f3a","display_en_name":"nod","display_heb_name":"","all_en_names":["Nod"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa610011460404dfc3f3b","display_en_name":"7","display_heb_name":"","all_en_names":["7"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Misc","en_unit":"vengeance","en_context":"cain's punishment"}
+
+PASSAGE:
+ENGLISH:
+Cain said to HASHEM, My punishment is too great to bear! Since You have banished me this day from the soil, and I must avoid Your presence and become a restless wanderer on earth-anyone who meets me may kill me! HASHEM said to him, I promise, if anyone kills Cain, sevenfold vengeance shall be exacted. And HASHEM put a mark on Cain, lest anyone who met him should kill him. Cain left the presence of HASHEM and settled in the land of Nod, east of Eden.
+
+HEBREW:
+ויאמר קין אל יהוה גדול עוני מנשא * (בספרי ספרד ואשכנז מנשוא) : הן גרשת אתי היום מעל פני האדמה ומפניך אסתר והייתי נע ונד בארץ והיה כל מצאי יהרגני: ויאמר לו יהוה לכן כל הרג קין שבעתים יקם וישם יהוה לקין אות לבלתי הכות אתו כל מצאו: ויצא קין מלפני יהוה וישב בארץ נוד קדמת עדן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa610011460404dfc3f3a",
+      "display_heb_name": "נוד",
+      "placeType": "Country or Region"
+    },
+    {
+      "key": "6a5fa610011460404dfc3f3b",
+      "display_heb_name": "שבעתים",
+      "heb_unit": "נקמה",
+      "heb_context": "עונש קין"
+    }
+  ]
+}

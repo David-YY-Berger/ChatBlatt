@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=3149 approx cost=$0.000533 (Prompt=1829, Completion=1320)
+SOURCE:
+Bereishit (Torah) 1:26-27
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa605011460404dfc3f08","display_en_name":"humankind","display_heb_name":"","all_en_names":["Humankind"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa605011460404dfc3f09","display_en_name":"image","display_heb_name":"","all_en_names":["Image"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa605011460404dfc3f0a","display_en_name":"likeness","display_heb_name":"","all_en_names":["Likeness"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa606011460404dfc3f0b","display_en_name":"fish","display_heb_name":"","all_en_names":["Fish"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And God said, Let us make humankind in our image, after our likeness. They shall rule the fish of the sea, the birds of the sky, the cattle, the whole earth, and all the creeping things that creep on earth. And God created humankind in the divine image, creating it in the image of God- creating them male and female.
+
+HEBREW:
+ויאמר אלהים נעשה אדם בצלמנו כדמותנו וירדו בדגת הים ובעוף השמים ובבהמה ובכל הארץ ובכל הרמש הרמש על הארץ: ויברא אלהיםאת האדם בצלמו בצלם אלהים ברא אתו זכר ונקבה ברא אתם:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa605011460404dfc3f08",
+      "display_heb_name": "אדם",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa605011460404dfc3f09",
+      "display_heb_name": "צלם",
+      "symbolType": "Not Physical"
+    },
+    {
+      "key": "6a5fa605011460404dfc3f0a",
+      "display_heb_name": "דמות",
+      "symbolType": "Not Physical"
+    }
+  ]
+}

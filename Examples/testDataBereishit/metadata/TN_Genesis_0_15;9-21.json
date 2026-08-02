@@ -1,0 +1,119 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa65c011460404dfc4083",
+            "display_heb_name": "אמרי",
+            "display_en_name": "amorite"
+        },
+        {
+            "key": "6a5fa65d011460404dfc4089",
+            "display_heb_name": "זרע",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "offspring"
+        },
+        {
+            "key": "6a5fa65e011460404dfc408a",
+            "display_heb_name": "אבות",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "ancestors"
+        },
+        {
+            "key": "6a5fa65e011460404dfc408b",
+            "display_heb_name": "ארץ",
+            "placeType": "Country or Region",
+            "display_en_name": "land"
+        },
+        {
+            "key": "6a5fa65e011460404dfc408c",
+            "display_heb_name": "נהר מצרים",
+            "placeType": "Body of Water",
+            "display_en_name": "river of egypt"
+        },
+        {
+            "key": "6a5fa65f011460404dfc408e",
+            "display_heb_name": "קנזי",
+            "display_en_name": "kenizzite"
+        },
+        {
+            "key": "6a5fa65f011460404dfc408f",
+            "display_heb_name": "קדמני",
+            "display_en_name": "kadmonite"
+        },
+        {
+            "key": "6a5fa65f011460404dfc4091",
+            "display_heb_name": "רפאים",
+            "display_en_name": "rephaite"
+        },
+        {
+            "key": "6a5fa65f011460404dfc4092",
+            "display_heb_name": "גרגשי",
+            "display_en_name": "girgashites"
+        },
+        {
+            "key": "6a5fa660011460404dfc4093",
+            "display_heb_name": "יבוסי",
+            "display_en_name": "jebusites"
+        },
+        {
+            "key": "6a5fa660011460404dfc4094",
+            "display_heb_name": "תנור עשן",
+            "symbolType": "Other",
+            "display_en_name": "smoking oven"
+        },
+        {
+            "key": "6a5fa660011460404dfc4095",
+            "display_heb_name": "לפיד אש",
+            "symbolType": "Other",
+            "display_en_name": "flaming torch"
+        },
+        {
+            "key": "6a5fa660011460404dfc4096",
+            "display_heb_name": "שלש",
+            "heb_unit": "שנה",
+            "heb_context": "הקרבת בהמה",
+            "display_en_name": "3"
+        },
+        {
+            "key": "6a5fa661011460404dfc4097",
+            "display_heb_name": "ארבע מאות",
+            "heb_unit": "שנה",
+            "heb_context": "משך שעבוד",
+            "display_en_name": "400"
+        },
+        {
+            "key": "6a5fa661011460404dfc4098",
+            "display_heb_name": "ארבע",
+            "heb_unit": "דור",
+            "heb_context": "חזרה לארץ",
+            "display_en_name": "4"
+        },
+        {
+            "key": "6a5fa661011460404dfc4099",
+            "display_heb_name": "עגלה",
+            "display_en_name": "heifer"
+        },
+        {
+            "key": "6a5fa661011460404dfc409a",
+            "display_heb_name": "עז",
+            "display_en_name": "she-goat"
+        },
+        {
+            "key": "6a5fa661011460404dfc409b",
+            "display_heb_name": "איל",
+            "display_en_name": "ram"
+        },
+        {
+            "key": "6a5fa662011460404dfc409c",
+            "display_heb_name": "תר",
+            "display_en_name": "turtledove"
+        },
+        {
+            "key": "6a5fa662011460404dfc409d",
+            "display_heb_name": "עיט",
+            "display_en_name": "bird of prey"
+        }
+    ],
+    "key": "TN_Genesis_0_15:9-21"
+}

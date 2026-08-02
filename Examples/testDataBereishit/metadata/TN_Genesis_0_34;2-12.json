@@ -1,0 +1,29 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa607011460404dfc3f11",
+            "display_heb_name": "ישראל",
+            "display_en_name": "israel"
+        },
+        {
+            "key": "6a5fa6ab011460404dfc41de",
+            "display_heb_name": "שכם",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "display_en_name": "shechem"
+        },
+        {
+            "key": "6a5fa6ac011460404dfc41df",
+            "display_heb_name": "בני יעקב",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "jacob's sons"
+        },
+        {
+            "key": "6a5fa6ac011460404dfc41e0",
+            "display_heb_name": "חוי",
+            "display_en_name": "hivi"
+        }
+    ],
+    "key": "TN_Genesis_0_34:2-12"
+}

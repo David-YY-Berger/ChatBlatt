@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa692011460404dfc416a",
+            "display_heb_name": "מחלת",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "mahalath"
+        }
+    ],
+    "key": "TN_Genesis_0_28:6-10"
+}

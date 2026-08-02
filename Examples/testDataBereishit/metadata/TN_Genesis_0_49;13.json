@@ -1,0 +1,11 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f7011460404dfc4316",
+            "display_heb_name": "צידן",
+            "placeType": "City",
+            "display_en_name": "sidon"
+        }
+    ],
+    "key": "TN_Genesis_0_49:13"
+}

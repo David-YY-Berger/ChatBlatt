@@ -1,0 +1,78 @@
+﻿COST: Tokens: Total=4403 approx cost=$0.000684 (Prompt=2831, Completion=1572)
+SOURCE:
+Bereishit (Torah) 5:22-32
+
+ENTITIES TO ENRICH (10):
+{"key":"6a5fa61a011460404dfc3f65","display_en_name":"ham","display_heb_name":"","all_en_names":["Ham"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa61b011460404dfc3f67","display_en_name":"300","display_heb_name":"","all_en_names":["300"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"enoch walked with god"}
+{"key":"6a5fa61b011460404dfc3f68","display_en_name":"365","display_heb_name":"","all_en_names":["365"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"enoch lifespan"}
+{"key":"6a5fa61b011460404dfc3f69","display_en_name":"187","display_heb_name":"","all_en_names":["187"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"methuselah lived before lamech"}
+{"key":"6a5fa61b011460404dfc3f6a","display_en_name":"782","display_heb_name":"","all_en_names":["782"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"methuselah lived after lamech"}
+{"key":"6a5fa61b011460404dfc3f6b","display_en_name":"969","display_heb_name":"","all_en_names":["969"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"methuselah lifespan"}
+{"key":"6a5fa61c011460404dfc3f6c","display_en_name":"182","display_heb_name":"","all_en_names":["182"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"lamech lived before noah"}
+{"key":"6a5fa61c011460404dfc3f6d","display_en_name":"595","display_heb_name":"","all_en_names":["595"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"lamech lived after noah"}
+{"key":"6a5fa61c011460404dfc3f6e","display_en_name":"777","display_heb_name":"","all_en_names":["777"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"lamech lifespan"}
+{"key":"6a5fa61c011460404dfc3f6f","display_en_name":"500","display_heb_name":"","all_en_names":["500"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"noah lived before sons"}
+
+PASSAGE:
+ENGLISH:
+After the birth of Methuselah, Enoch walked with God 300 years; and he begot sons and daughters. All the days of Enoch came to 365 years. Enoch walked with God; then he was no more, for God took him. When Methuselah had lived 187 years, he begot Lamech. After the birth of Lamech, Methuselah lived 782 years and begot sons and daughters. All the days of Methuselah came to 969 years; then he died. When Lamech had lived 182 years, he begot a son. And he named him Noah, saying, This one will provide us relief to comfort; cf. 9.20ff. from our work and from the toil of our hands, out of the very soil which HASHEM placed under a curse. After the birth of Noah, Lamech lived 595 years and begot sons and daughters. All the days of Lamech came to 777 years; then he died. When Noah had lived 500 years, Noah begot Shem, Ham, and Japheth.
+
+HEBREW:
+ויתהלך חנוך את האלהים אחרי הולידו את מתושלח שלש מאות שנה ויולד בנים ובנות: ויהי כל ימי חנוך חמש וששים שנה ושלש מאות שנה: ויתהלך חנוך את האלהים ואיננו כי לקח אתו אלהים: ויחי מתושלח שבע ושמנים שנה ומאת שנה ויולד את למך: ויחי מתושלח אחרי הולידו את למך שתים ושמונים שנה ושבע מאות שנה ויולד בנים ובנות: ויהיו כל ימי מתושלח תשע וששים שנה ותשע מאות שנה וימת: ויחי למך שתים ושמנים שנה ומאת שנה ויולד בן: ויקרא את שמו נח לאמר זה ינחמנו ממעשנו ומעצבון ידינו מן האדמה אשר אררה יהוה: ויחי למך אחרי הולידו את נח חמש ותשעים שנה וחמש מאת שנה ויולד בנים ובנות: ויהי כל ימי למך שבע ושבעים שנה ושבע מאות שנה וימת: ויהי נח בן חמש מאות שנה ויולד נח את שם את חם ואת יפת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa61a011460404dfc3f65",
+      "display_heb_name": "חם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa61b011460404dfc3f67",
+      "heb_unit": "שנה",
+      "heb_context": "חנוך התהלך עם אלהים"
+    },
+    {
+      "key": "6a5fa61b011460404dfc3f68",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי חנוך"
+    },
+    {
+      "key": "6a5fa61b011460404dfc3f69",
+      "heb_unit": "שנה",
+      "heb_context": "מתושלח חי לפני הולדת למך"
+    },
+    {
+      "key": "6a5fa61b011460404dfc3f6a",
+      "heb_unit": "שנה",
+      "heb_context": "מתושלח חי אחרי הולדת למך"
+    },
+    {
+      "key": "6a5fa61b011460404dfc3f6b",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי מתושלח"
+    },
+    {
+      "key": "6a5fa61c011460404dfc3f6c",
+      "heb_unit": "שנה",
+      "heb_context": "למך חי לפני הולדת נח"
+    },
+    {
+      "key": "6a5fa61c011460404dfc3f6d",
+      "heb_unit": "שנה",
+      "heb_context": "למך חי אחרי הולדת נח"
+    },
+    {
+      "key": "6a5fa61c011460404dfc3f6e",
+      "heb_unit": "שנה",
+      "heb_context": "כל ימי למך"
+    },
+    {
+      "key": "6a5fa61c011460404dfc3f6f",
+      "heb_unit": "שנה",
+      "heb_context": "נח חי לפני הולדת בניו"
+    }
+  ]
+}

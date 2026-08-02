@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2905 approx cost=$0.000374 (Prompt=2211, Completion=694)
+SOURCE:
+Bereishit (Torah) 26:23-33
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa68d011460404dfc4158","display_en_name":"ahuzzath","display_heb_name":"","all_en_names":["Ahuzzath"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa68e011460404dfc4159","display_en_name":"shibah","display_heb_name":"","all_en_names":["Shibah"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+From there he went up to Beer-sheba. That night HASHEM appeared to him and said, I am the God of your father Abrahams [house]. Fear not, for I am with you, and I will bless you and increase your offspring for the sake of My servant Abraham. So he built an altar there and invoked HASHEM by name. Isaac pitched his tent there and his servants started digging a well. And Abimelech came to him from Gerar, with Ahuzzath his councilor and Phicol chief of his troops. Isaac said to them, Why have you come to me, seeing that you have been hostile to me and have driven me away from you? And they said, We now see plainly that HASHEM has been with you, and we thought: Let there be a sworn treaty between our two parties, between you and us. Let us make a pact with you that you will not do us harm, just as we have not molested you but have always dealt kindly with you and sent you away in peace. From now on, be you blessed of HASHEM! Then he made for them a feast, and they ate and drank. Early in the morning, they exchanged oaths. Isaac then bade them farewell, and they departed from him in peace. That same day Isaacs servants came and told him about the well they had dug, and said to him, We have found water! He named it Shibah; therefore the name of the city is Beer-sheba to this day.
+
+HEBREW:
+ויעל משם באר שבע: וירא אליו יהוה בלילה ההוא ויאמר אנכי אלהי אברהם אביך אל תירא כי אתך אנכי וברכתיך והרביתי את זרעך בעבור אברהם עבדי: ויבן שם מזבח ויקרא בשם יהוה ויט שם אהלו ויכרו שם עבדי יצחק באר: ואבימלך הלך אליו מגרר ואחזת מרעהו ופיכל שר צבאו: ויאמר אלהם יצחק מדוע באתם אלי ואתם שנאתם אתי ותשלחוני מאתכם: ויאמרו ראו ראינו כי היה יהוהעמך ונאמר תהי נא אלה בינותינו בינינו ובינך ונכרתה ברית עמך: אם תעשה עמנו רעה כאשר לא נגענוך וכאשר עשינו עמך רק טוב ונשלחך בשלום אתה עתה ברוך יהוה: ויעש להם משתה ויאכלו וישתו: וישכימו בבקר וישבעו איש לאחיו וישלחם יצחק וילכו מאתו בשלום: ויהי ביום ההוא ויבאו עבדי יצחק ויגדו לו על אדות הבאר אשר חפרו ויאמרו לו מצאנו מים: ויקרא אתה שבעה על כן שם העיר באר שבע עד היום הזה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68d011460404dfc4158",
+      "display_heb_name": "אחזת",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa68e011460404dfc4159",
+      "display_heb_name": "שבעה",
+      "placeType": "City"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2074 approx cost=$0.000199 (Prompt=1879, Completion=195)
+SOURCE:
+Bereishit (Torah) 12:17-13:4
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa64f011460404dfc4048","display_en_name":"agent","display_heb_name":"","all_en_names":["Agent"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+But HASHEM afflicted Pharaoh and his household with mighty plagues on account of Sarai, the wife of Abram. Pharaoh sent for Abram and said, What is this you have done to me! Why did you not tell me that she was your wife? Why did you say, She is my sister, so that I took her as my wife? Now, here is your wife; take her and begone! And Pharaoh put agents; Agent. in charge of him, and they sent him off with his wife and all that he possessed.From Egypt, Abram went up into the Negeb, with his wife and all that he possessed, together with Lot. Now Abram was very rich in cattle, silver, and gold. And he proceeded by stages from the Negeb as far as Bethel, to the place where his tent had been formerly, between Bethel and Ai, the site of the altar that he had built there at first; and there Abram invoked HASHEM by name.
+
+HEBREW:
+וינגע יהוהאת פרעה נגעים גדלים ואת ביתו על דבר שרי אשת אברם: ויקרא פרעה לאברם ויאמר מה זאת עשית לי למה לא הגדת לי כי אשתך הוא: למה אמרת אחתי הוא ואקח אתה לי לאשה ועתה הנה אשתך קח ולך: ויצו עליו פרעה אנשים וישלחו אתו ואת אשתו ואת כל אשר לו:ויעל אברם ממצרים הוא ואשתו וכל אשר לו ולוט עמו הנגבה: ואברם כבד מאד במקנה בכסף ובזהב: וילך למסעיו מנגב ועד בית אל עד המקום אשר היה שם אהלה בתחלה בין בית אל ובין העי: אל מקום המזבח אשר עשה שם בראשנה ויקרא שם אברם בשם יהוה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa64f011460404dfc4048",
+      "display_heb_name": "אנשים",
+      "isGroup": true
+    }
+  ]
+}

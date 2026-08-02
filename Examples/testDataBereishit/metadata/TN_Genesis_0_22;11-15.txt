@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2295 approx cost=$0.000266 (Prompt=1876, Completion=419)
+SOURCE:
+Bereishit (Torah) 22:11-15
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa676011460404dfc40f7","display_en_name":"adonai-yireh","display_heb_name":"","all_en_names":["Adonai-Yireh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa676011460404dfc40f8","display_en_name":"mount of hashem","display_heb_name":"","all_en_names":["Mount Of Hashem"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then a messenger of HASHEM called to him from heaven: Abraham! Abraham! And he answered, Here I am. Do not raise your hand against the boy, or do anything to him. For now I know that you fear God, since you have not withheld your son, your favored one, from Me. When Abraham looked up, his eye fell upon a with many Heb. mss. and ancient versions; text ahar after. ram, caught in the thicket by its horns. So Abraham went and took the ram and offered it up as a burnt offering in place of his son. And Abraham named that site Adonai-yireh, whence the present saying, On the mount of HASHEM there is vision.. The messenger of HASHEM called to Abraham a second time from heaven,
+
+HEBREW:
+ויקרא אליו מלאך יהוה מן השמים ויאמר אברהםאברהם ויאמר הנני: ויאמר אל תשלח ידך אל הנער ואל תעש לו מאומה כי עתה ידעתי כי ירא אלהים אתה ולא חשכת את בנך את יחידך ממני: וישא אברהם את עיניו וירא והנה איל אחר נאחז בסבך בקרניו וילך אברהם ויקח את האיל ויעלהו לעלה תחת בנו: ויקרא אברהם שם המקום ההוא יהוהיראה אשר יאמר היום בהר יהוה יראה: ויקרא מלאך יהוה אל אברהם שנית מן השמים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa676011460404dfc40f7",
+      "display_heb_name": "יהוהיראה",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa676011460404dfc40f8",
+      "display_heb_name": "הר יהוה",
+      "placeType": "Mountain"
+    }
+  ]
+}

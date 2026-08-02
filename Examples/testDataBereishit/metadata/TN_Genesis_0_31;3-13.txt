@@ -1,0 +1,28 @@
+﻿COST: Tokens: Total=2510 approx cost=$0.000263 (Prompt=2176, Completion=334)
+SOURCE:
+Bereishit (Torah) 31:3-13
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6a0011460404dfc41a8","display_en_name":"he-goat","display_heb_name":"","all_en_names":["He-Goat"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa6a0011460404dfc41a9","display_en_name":"flock","display_heb_name":"","all_en_names":["Flock"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Then HASHEM said to Jacob, Return to your ancestors land-where you were born-and I will be with you. Jacob had Rachel and Leah called to the field, where his flock was, and said to them, I see that your fathers manner toward me is not as it has been in the past. But the God of my fathers [house] has been with me. As you know, I have served your father with all my might; but your father has cheated me, changing my wages time and again. God, however, would not let him do me harm. If he said thus, The speckled shall be your wages, then all the flocks would drop speckled young; and if he said thus, The streaked shall be your wages, then all the flocks would drop streaked young. God has taken away your fathers livestock and given it to me. Once, at the mating time of the flocks, I had a dream in which I saw that the he-goats mating with the flock were streaked, speckled, and mottled. And in the dream a messenger of God said to me, Jacob! Here, I answered. And the messenger said, Note well that all the he-goats which are mating with the flock are streaked, speckled, and mottled; for I have noted all that Laban has been doing to you. I am the God of Bethel, where you anointed a pillar and where you made a vow to Me. Now, arise and leave this land and return to your native land.
+
+HEBREW:
+ויאמר יהוה אל יעקב שוב אל ארץ אבותיך ולמולדתך ואהיה עמך: וישלח יעקב ויקרא לרחל וללאה השדה אל צאנו: ויאמר להן ראה אנכי את פני אביכן כי איננו אלי כתמל שלשם ואלהי אבי היה עמדי: ואתנה ידעתן כי בכל כחי עבדתי את אביכן: ואביכן התל בי והחלף את משכרתי עשרת מנים ולא נתנו אלהים להרע עמדי: אם כה יאמר נקדים יהיה שכרך וילדו כל הצאן נקדים ואם כה יאמר עקדים יהיה שכרך וילדו כל הצאן עקדים: ויצל אלהים את מקנה אביכם ויתן לי: ויהי בעת יחם הצאן ואשא עיני וארא בחלום והנה העתדים העלים על הצאן עקדים נקדים וברדים: ויאמר אלי מלאך האלהים בחלום יעקב ואמר הנני: ויאמר שא נא עיניך וראה כל העתדים העלים על הצאן עקדים נקדים וברדים כי ראיתי את כל אשר לבן עשה לך: אנכי האל בית אל אשר משחת שם מצבה אשר נדרת לי שם נדר עתה קום צא מן הארץ הזאת ושוב אל ארץ מולדתך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a0011460404dfc41a8",
+      "display_heb_name": "העתדים"
+    },
+    {
+      "key": "6a5fa6a0011460404dfc41a9",
+      "display_heb_name": "צאן"
+    }
+  ]
+}

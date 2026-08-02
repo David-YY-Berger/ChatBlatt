@@ -1,0 +1,37 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa613011460404dfc3f44",
+            "display_heb_name": "צלה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "zillah"
+        },
+        {
+            "key": "6a5fa613011460404dfc3f45",
+            "display_heb_name": "יבל",
+            "timePeriod": "Tanach",
+            "display_en_name": "jabal"
+        },
+        {
+            "key": "6a5fa613011460404dfc3f46",
+            "display_heb_name": "יובל",
+            "timePeriod": "Tanach",
+            "display_en_name": "jubal"
+        },
+        {
+            "key": "6a5fa613011460404dfc3f47",
+            "display_heb_name": "תובל קין",
+            "timePeriod": "Tanach",
+            "display_en_name": "tubal-cain"
+        },
+        {
+            "key": "6a5fa613011460404dfc3f48",
+            "display_heb_name": "נעמה",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "naamah"
+        }
+    ],
+    "key": "TN_Genesis_0_4:19-22"
+}

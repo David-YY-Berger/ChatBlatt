@@ -1,0 +1,23 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa680011460404dfc4121",
+            "display_heb_name": "נזם",
+            "symbolType": "Clothing",
+            "display_en_name": "ring"
+        },
+        {
+            "key": "6a5fa680011460404dfc4122",
+            "display_heb_name": "צמידים",
+            "symbolType": "Clothing",
+            "display_en_name": "bands"
+        },
+        {
+            "key": "6a5fa680011460404dfc4123",
+            "display_heb_name": "כד",
+            "symbolType": "Other",
+            "display_en_name": "jar"
+        }
+    ],
+    "key": "TN_Genesis_0_24:33-49"
+}

@@ -1,0 +1,29 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6aa011460404dfc41d9",
+            "display_heb_name": "בקר",
+            "display_en_name": "herd"
+        },
+        {
+            "key": "6a5fa6f2011460404dfc4300",
+            "display_heb_name": "בית אביו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "father's household"
+        },
+        {
+            "key": "6a5fa6f2011460404dfc4301",
+            "display_heb_name": "אבתינו",
+            "timePeriod": "Tanach",
+            "isGroup": true,
+            "display_en_name": "fathers"
+        },
+        {
+            "key": "6a5fa6f2011460404dfc4302",
+            "display_heb_name": "מקנה",
+            "display_en_name": "livestock"
+        }
+    ],
+    "key": "TN_Genesis_0_46:29-34"
+}

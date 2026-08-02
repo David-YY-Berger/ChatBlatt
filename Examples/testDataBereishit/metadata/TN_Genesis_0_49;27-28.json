@@ -1,0 +1,12 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6f8011460404dfc431c",
+            "display_heb_name": "שנים עשר",
+            "heb_unit": "שבט",
+            "heb_context": "שבטי ישראל",
+            "display_en_name": "12"
+        }
+    ],
+    "key": "TN_Genesis_0_49:27-28"
+}

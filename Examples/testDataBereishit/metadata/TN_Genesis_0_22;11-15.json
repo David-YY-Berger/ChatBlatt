@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa676011460404dfc40f7",
+            "display_heb_name": "יהוהיראה",
+            "placeType": "Other",
+            "display_en_name": "adonai-yireh"
+        },
+        {
+            "key": "6a5fa676011460404dfc40f8",
+            "display_heb_name": "הר יהוה",
+            "placeType": "Mountain",
+            "display_en_name": "mount of hashem"
+        }
+    ],
+    "key": "TN_Genesis_0_22:11-15"
+}

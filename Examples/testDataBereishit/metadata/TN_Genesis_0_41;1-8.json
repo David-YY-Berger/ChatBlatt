@@ -1,0 +1,41 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6d4011460404dfc428b",
+            "display_heb_name": "חרטמי מצרים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "magician-priests of egypt"
+        },
+        {
+            "key": "6a5fa6d5011460404dfc428c",
+            "display_heb_name": "חכמים",
+            "timePeriod": "Tanach",
+            "isNonJew": true,
+            "isGroup": true,
+            "display_en_name": "sages"
+        },
+        {
+            "key": "6a5fa6d5011460404dfc428d",
+            "display_heb_name": "היאר",
+            "placeType": "Body of Water",
+            "display_en_name": "nile"
+        },
+        {
+            "key": "6a5fa6d5011460404dfc428e",
+            "display_heb_name": "שנתים",
+            "heb_unit": "שנה",
+            "heb_context": "חלום פרעה",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa6d5011460404dfc428f",
+            "display_heb_name": "שבע",
+            "heb_unit": "פרה",
+            "heb_context": "חלום פרעה",
+            "display_en_name": "7"
+        }
+    ],
+    "key": "TN_Genesis_0_41:1-8"
+}

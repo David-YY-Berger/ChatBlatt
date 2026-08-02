@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=4718 approx cost=$0.000797 (Prompt=2747, Completion=1971)
+SOURCE:
+Bereishit (Torah) 11:26-32
+
+ENTITIES TO ENRICH (11):
+{"key":"6a5fa648011460404dfc402c","display_en_name":"abram","display_heb_name":"","all_en_names":["Abram"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa648011460404dfc402d","display_en_name":"haran","display_heb_name":"","all_en_names":["Haran"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa648011460404dfc402e","display_en_name":"lot","display_heb_name":"","all_en_names":["Lot"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa649011460404dfc402f","display_en_name":"sarai","display_heb_name":"","all_en_names":["Sarai"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa649011460404dfc4030","display_en_name":"milcah","display_heb_name":"","all_en_names":["Milcah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa649011460404dfc4031","display_en_name":"iscah","display_heb_name":"","all_en_names":["Iscah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa649011460404dfc4032","display_en_name":"ur of the chaldeans","display_heb_name":"","all_en_names":["Ur Of The Chaldeans"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64a011460404dfc4034","display_en_name":"haran","display_heb_name":"","all_en_names":["Haran"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa64a011460404dfc4035","display_en_name":"chaldea","display_heb_name":"","all_en_names":["Chaldea"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa64a011460404dfc4036","display_en_name":"70","display_heb_name":"","all_en_names":["70"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"terah fatherhood"}
+{"key":"6a5fa64b011460404dfc4037","display_en_name":"205","display_heb_name":"","all_en_names":["205"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"year","en_context":"terah lifespan"}
+
+PASSAGE:
+ENGLISH:
+When Terah had lived 70 years, he begot Abram, Nahor, and Haran. Now this is the line of Terah: Terah begot Abram, Nahor, and Haran; and Haran begot Lot. Haran died in the lifetime of his father Terah, in his native land, Ur of the Chaldeans. Abram and Nahor took wives for themselves, the name of Abrams wife being Sarai and that of Nahors wife Milcah, the daughter of Haran, the father of Milcah and Iscah. Now Sarai was barren, she had no child. Terah took his son Abram, his grandson Lot the son of Haran, and his daughter-in-law Sarai, the wife of his son Abram, and they set out together from Ur of the Chaldeans for the land of Canaan; but when they had come as far as Haran, they settled there. The days of Terah came to 205 years; and Terah died in Haran.
+
+HEBREW:
+ויחי תרח שבעים שנה ויולד את אברם את נחור ואת הרן: ואלה תולדת תרח תרח הוליד את אברם את נחור ואת הרן והרן הוליד את לוט: וימת הרן על פני תרח אביו בארץ מולדתו באור כשדים: ויקח אברם ונחור להם נשים שם אשת אברם שרי ושם אשת נחור מלכה בת הרן אבי מלכה ואבי יסכה: ותהי שרי עקרה אין לה ולד: ויקח תרח את אברם בנו ואת לוט בן הרן בן בנו ואת שרי כלתו אשת אברם בנו ויצאו אתם מאור כשדים ללכת ארצה כנען ויבאו עד חרן וישבו שם: ויהיו ימי תרח חמש שנים ומאתים שנה וימת תרח בחרן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa648011460404dfc402c",
+      "display_heb_name": "אברם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa648011460404dfc402d",
+      "display_heb_name": "הרן",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa648011460404dfc402e",
+      "display_heb_name": "לוט",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa649011460404dfc402f",
+      "display_heb_name": "שרי",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa649011460404dfc4030",
+      "display_heb_name": "מלכה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa649011460404dfc4031",
+      "display_heb_name": "יסכה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa649011460404dfc4032",
+      "display_heb_name": "אור כשדים",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa64a011460404dfc4034",
+      "display_heb_name": "חרן",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa64a011460404dfc4036",
+      "display_heb_name": "שבעים",
+      "heb_unit": "שנה",
+      "heb_context": "אבהות תרח"
+    },
+    {
+      "key": "6a5fa64b011460404dfc4037",
+      "display_heb_name": "חמש שנים ומאתים",
+      "heb_unit": "שנה",
+      "heb_context": "חיי תרח"
+    }
+  ]
+}

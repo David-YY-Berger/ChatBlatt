@@ -1,0 +1,37 @@
+﻿COST: Tokens: Total=2662 approx cost=$0.000378 (Prompt=1869, Completion=793)
+SOURCE:
+Bereishit (Torah) 49:10-12
+
+ENTITIES TO ENRICH (4):
+{"key":"6a5fa6f6011460404dfc4312","display_en_name":"shiloh","display_heb_name":"","all_en_names":["Shiloh"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6f6011460404dfc4313","display_en_name":"scepter","display_heb_name":"","all_en_names":["Scepter"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6f6011460404dfc4314","display_en_name":"ruler's staff","display_heb_name":"","all_en_names":["Ruler's Staff"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+{"key":"6a5fa6f7011460404dfc4315","display_en_name":"ass's foal","display_heb_name":"","all_en_names":["Ass's Foal"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+The scepter shall not depart from Judah, Nor the rulers staff from between his feet; So that tribute shall come to him as shai loh tribute to him, following the Midrash; cf. Isa. 18.7. Meaning of Heb. uncertain; lit. Until he comes to Shiloh. And the homage of peoples be his. He tethers his ass to a vine, His asss foal to a choice vine; He washes his garment in wine, His robe in blood of grapes. His eyes are darker than wine; His teeth are whiter than milk.
+
+HEBREW:
+לא יסור שבט מיהודה ומחקק מבין רגליו עד כי יבא שילה ולו יקהת עמים: אסרי לגפן עירה ולשרקה בני אתנו כבס ביין לבשו ובדם ענבים סותה : חכלילי עינים מיין ולבן שנים מחלב:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f6011460404dfc4312",
+      "display_heb_name": "שילה",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6f6011460404dfc4313",
+      "display_heb_name": "שבט",
+      "symbolType": "Other"
+    },
+    {
+      "key": "6a5fa6f6011460404dfc4314",
+      "display_heb_name": "מחקק",
+      "symbolType": "Other"
+    }
+  ]
+}

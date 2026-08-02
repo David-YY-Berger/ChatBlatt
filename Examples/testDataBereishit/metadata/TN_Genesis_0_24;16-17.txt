@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=1864 approx cost=$0.000208 (Prompt=1562, Completion=302)
+SOURCE:
+Bereishit (Torah) 24:16-17
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa67d011460404dfc4116","display_en_name":"spring","display_heb_name":"","all_en_names":["Spring"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+The maiden was very beautiful-[and] a virgin, no man having known her. She went down to the spring, filled her jar, and came up. The servant ran toward her and said, Please, let me sip a little water from your jar.
+
+HEBREW:
+והנער טבת מראה מאד בתולה ואיש לא ידעה ותרד העינה ותמלא כדה ותעל: וירץ העבד לקראתה ויאמר הגמיאיני נא מעט מים מכדך:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67d011460404dfc4116",
+      "display_heb_name": "עין",
+      "placeType": "Body of Water"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2225 approx cost=$0.000253 (Prompt=1844, Completion=381)
+SOURCE:
+Bereishit (Torah) 21:17-21
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa674011460404dfc40ed","display_en_name":"messenger of god","display_heb_name":"","all_en_names":["Messenger Of God"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa674011460404dfc40ee","display_en_name":"paran","display_heb_name":"","all_en_names":["Paran"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+God heard the cry of the boy, and a messenger of God called to Hagar from heaven and said to her, What troubles you, Hagar? Fear not, for God has heeded the cry of the boy where he is. Come, lift up the boy and hold him by the hand, for I will make a great nation of him. Then God opened her eyes and she saw a well of water. She went and filled the skin with water, and let the boy drink. God was with the boy and he grew up; he dwelt in the wilderness and became skilled with a bow. He lived in the wilderness of Paran; and his mother got a wife for him from the land of Egypt.
+
+HEBREW:
+וישמע אלהים את קול הנער ויקרא מלאך אלהיםאל הגר מן השמים ויאמר לה מה לך הגר אל תיראי כי שמע אלהים אל קול הנער באשר הוא שם: קומי שאי את הנער והחזיקי את ידך בו כי לגוי גדול אשימנו: ויפקח אלהים את עיניה ותרא באר מים ותלך ותמלא את החמת מים ותשק את הנער: ויהי אלהים את הנער ויגדל וישב במדבר ויהי רבה קשת: וישב במדבר פארן ותקח לו אמו אשה מארץ מצרים:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa674011460404dfc40ed",
+      "display_heb_name": "מלאך אלהים",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa674011460404dfc40ee",
+      "display_heb_name": "פארן",
+      "placeType": "Desert"
+    }
+  ]
+}

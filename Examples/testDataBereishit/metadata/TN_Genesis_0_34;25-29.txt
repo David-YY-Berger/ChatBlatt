@@ -1,0 +1,67 @@
+﻿COST: Tokens: Total=2774 approx cost=$0.000417 (Prompt=1844, Completion=930)
+SOURCE:
+Bereishit (Torah) 34:25-29
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6ad011460404dfc41e7","display_en_name":"the city","display_heb_name":"","all_en_names":["The City"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6ae011460404dfc41e8","display_en_name":"2","display_heb_name":"","all_en_names":["2"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"son","en_context":"jacob's sons avenged dinah"}
+
+PASSAGE:
+ENGLISH:
+On the third day, when they were in pain, Simeon and Levi, two of Jacobs sons, brothers of Dinah, took each his sword, came upon the city unmolested, and slew all the males. They put Hamor and his son Shechem to the sword, took Dinah out of Shechems house, and went away. The other sons of Jacob came upon the slain and plundered the town, because their sister had been defiled. They seized their flocks and herds and asses, all that was inside the town and outside; all their wealth, all their children, and their wives, all that was in the houses, they took as captives and booty.
+
+HEBREW:
+ויהי ביום השלישי בהיותם כאבים ויקחו שני בני יעקב שמעון ולוי אחי דינה איש חרבו ויבאו על העיר בטח ויהרגו כל זכר: ואת חמור ואת שכם בנו הרגו לפי חרב ויקחו את דינה מבית שכם ויצאו: בני יעקב באו על החללים ויבזו העיר אשר טמאו אחותם: את צאנם ואת בקרם ואת חמריהם ואת אשר בעיר ואת אשר בשדה לקחו: ואת כל חילם ואת כל טפם ואת נשיהם שבו ויבזו ואת כל אשר בבית:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6ad011460404dfc41e4",
+      "display_heb_name": "שמעון",
+      "timePeriod": "Tanach",
+      "roles": []
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41e5",
+      "display_heb_name": "לוי",
+      "timePeriod": "Tanach",
+      "roles": []
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41e6",
+      "display_heb_name": "דינה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41e7",
+      "display_heb_name": "העיר",
+      "placeType": "City"
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41e9",
+      "display_heb_name": "חמור",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41ea",
+      "display_heb_name": "שכם",
+      "timePeriod": "Tanach",
+      "isNonJew": true
+    },
+    {
+      "key": "6a5fa6ad011460404dfc41eb",
+      "display_heb_name": "בני יעקב",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6ae011460404dfc41e8",
+      "display_heb_name": "שני",
+      "heb_unit": "בן",
+      "heb_context": "בני יעקב נקמו דינה"
+    }
+  ]
+}

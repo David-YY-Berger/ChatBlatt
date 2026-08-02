@@ -1,0 +1,30 @@
+﻿COST: Tokens: Total=2242 approx cost=$0.000234 (Prompt=1948, Completion=294)
+SOURCE:
+Bereishit (Torah) 44:10-16
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6e3011460404dfc42c9","display_en_name":"house of joseph","display_heb_name":"","all_en_names":["House Of Joseph"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6e4011460404dfc42ca","display_en_name":"goblet","display_heb_name":"","all_en_names":["Goblet"],"all_heb_names":[],"entityType":"Symbol","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+He replied, Although what you are proposing is right, only the one with whom it is found shall be my slave; but the rest of you shall go free. So each one hastened to lower his bag to the ground, and each one opened his bag. He searched, beginning with the oldest and ending with the youngest; and the goblet turned up in Benjamins bag. At this they rent their clothes. Each reloaded his pack animal, and they returned to the city. When Judah and his brothers reentered the house of Joseph, who was still there, they threw themselves on the ground before him. Joseph said to them, What is this deed that you have done? Do you not know that a man like me practices divination? Judah replied, What can we say to my lord? How can we plead, how can we prove our innocence? God has uncovered the crime of your servants. Here we are, then, slaves of my lord, the rest of us as much as he in whose possession the goblet was found.
+
+HEBREW:
+ויאמר גם עתה כדבריכם כן הוא אשר ימצא אתו יהיה לי עבד ואתם תהיו נקים: וימהרו ויורדו איש את אמתחתו ארצה ויפתחו איש אמתחתו: ויחפש בגדול החל ובקטן כלה וימצא הגביע באמתחת בנימן: ויקרעו שמלתם ויעמס איש על חמרו וישבו העירה: ויבא יהודה ואחיו ביתה יוסף והוא עודנו שם ויפלו לפניו ארצה: ויאמר להם יוסף מה המעשה הזה אשר עשיתם הלוא ידעתם כי נחש ינחש איש אשר כמני: ויאמר יהודה מה נאמר לאדני מה נדבר ומה נצטדק האלהים מצא את עון עבדיך הננו עבדים לאדני גם אנחנו גם אשר נמצא הגביע בידו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6e3011460404dfc42c9",
+      "display_heb_name": "ביתה יוסף",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa6e4011460404dfc42ca",
+      "display_heb_name": "הגביע",
+      "symbolType": "Other"
+    }
+  ]
+}

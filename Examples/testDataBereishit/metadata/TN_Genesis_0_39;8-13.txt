@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=2302 approx cost=$0.000255 (Prompt=1935, Completion=367)
+SOURCE:
+Bereishit (Torah) 39:8-13
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6d0011460404dfc4277","display_en_name":"master","display_heb_name":"","all_en_names":["Master"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6d0011460404dfc4278","display_en_name":"master's wife","display_heb_name":"","all_en_names":["Master's Wife"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+But he refused. He said to his masters wife, Look, with me here, my master gives no thought to anything in this house, and all that he owns he has placed in my hands. He wields no more authority in this house than I, and he has withheld nothing from me except yourself, since you are his wife. How then could I do this most wicked thing, and sin before God? And much as she coaxed Joseph day after day, he did not yield to her request to lie beside her, to be with her. One such day, he came into the house to do his work. None of the household being there inside, she caught hold of him by his garment and said, Lie with me! But he left his garment in her hand and got away and fled outside. When she saw that he had left it in her hand and had fled outside,
+
+HEBREW:
+וימאן ויאמר אל אשת אדניו הן אדני לא ידע אתי מה בבית וכל אשר יש לו נתן בידי: איננו גדול בבית הזה ממני ולא חשך ממני מאומה כי אם אותך באשר את אשתו ואיך אעשה הרעה הגדלה הזאת וחטאתי לאלהים: ויהי כדברה אל יוסף יוםיום ולא שמע אליה לשכב אצלה להיות עמה: ויהי כהיום הזה ויבא הביתה לעשות מלאכתו ואין איש מאנשי הבית שם בבית: ותתפשהו בבגדו לאמר שכבה עמי ויעזב בגדו בידה וינס ויצא החוצה: ויהי כראותה כי עזב בגדו בידה וינס החוצה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6d0011460404dfc4277",
+      "display_heb_name": "אדני",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa6d0011460404dfc4278",
+      "display_heb_name": "אשת אדניו",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    }
+  ]
+}

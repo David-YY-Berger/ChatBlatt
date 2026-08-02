@@ -1,0 +1,46 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa625011460404dfc3f94",
+            "display_heb_name": "אררט",
+            "placeType": "Mountain",
+            "display_en_name": "ararat"
+        },
+        {
+            "key": "6a5fa625011460404dfc3f95",
+            "display_heb_name": "שביעי",
+            "heb_unit": "חדש",
+            "heb_context": "התבה נחה",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa626011460404dfc3f96",
+            "display_heb_name": "שבעה עשר",
+            "heb_unit": "יום",
+            "heb_context": "התבה נחה",
+            "display_en_name": "17"
+        },
+        {
+            "key": "6a5fa626011460404dfc3f97",
+            "display_heb_name": "עשירי",
+            "heb_unit": "חדש",
+            "heb_context": "המים חסרו",
+            "display_en_name": "10"
+        },
+        {
+            "key": "6a5fa626011460404dfc3f98",
+            "display_heb_name": "אחד",
+            "heb_unit": "יום",
+            "heb_context": "ההרים נראו",
+            "display_en_name": "1"
+        },
+        {
+            "key": "6a5fa626011460404dfc3f99",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "יום",
+            "heb_context": "נח פתח חלון",
+            "display_en_name": "40"
+        }
+    ],
+    "key": "TN_Genesis_0_8:4-6"
+}

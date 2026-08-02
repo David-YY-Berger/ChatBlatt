@@ -1,0 +1,24 @@
+﻿COST: Tokens: Total=2172 approx cost=$0.000212 (Prompt=1952, Completion=220)
+SOURCE:
+Bereishit (Torah) 48:6-13
+
+ENTITIES TO ENRICH (1):
+{"key":"6a5fa6f5011460404dfc430f","display_en_name":"paddan","display_heb_name":"","all_en_names":["Paddan"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+But progeny born to you after them shall be yours; they shall be recorded instead of their brothers in their inheritance. I [do this because], when I was returning from Paddan, Rachel died, to my sorrow, while I was journeying in the land of Canaan, when still some distance short of Ephrath; and I buried her there on the road to Ephrath-now Bethlehem. Noticing Josephs sons, Israel asked, Who are these? And Joseph said to his father, They are my sons, whom God has given me here. Bring them up to me, he said, that I may bless them. Now Israels eyes were dim with age; he could not see. So [Joseph] brought them close to him, and he kissed them and embraced them. And Israel said to Joseph, I never expected to see you again, and here God has let me see your children as well. Joseph then removed them from his knees, and bowed low with his face to the ground. Joseph took the two of them, Ephraim with his right hand-to Israels left-and Manasseh with his left hand-to Israels right-and brought them close to him.
+
+HEBREW:
+ומולדתך אשר הולדת אחריהם לך יהיו על שם אחיהם יקראו בנחלתם: ואני בבאי מפדן מתה עלי רחל בארץ כנען בדרך בעוד כברת ארץ לבא אפרתה ואקברה שם בדרך אפרת הוא בית לחם: וירא ישראל את בני יוסף ויאמר מי אלה: ויאמר יוסף אל אביו בני הם אשר נתן לי אלהים בזה ויאמר קחם נא אלי ואברכם: ועיני ישראל כבדו מזקן לא יוכל לראות ויגש אתם אליו וישק להם ויחבק להם: ויאמר ישראל אל יוסף ראה פניך לא פללתי והנה הראה אתי אלהים גם את זרעך: ויוצא יוסף אתם מעם ברכיו וישתחו לאפיו ארצה: ויקח יוסף את שניהם את אפרים בימינו משמאל ישראל ואת מנשה בשמאלו מימין ישראל ויגש אליו:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f5011460404dfc430f",
+      "display_heb_name": "פדן",
+      "placeType": "Country or Region"
+    }
+  ]
+}

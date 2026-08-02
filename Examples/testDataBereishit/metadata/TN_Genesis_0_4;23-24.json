@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa614011460404dfc3f49",
+            "display_heb_name": "שבעתים",
+            "heb_context": "יקם קין",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa614011460404dfc3f4a",
+            "display_heb_name": "שבעים ושבעה",
+            "heb_context": "למך",
+            "display_en_name": "77"
+        }
+    ],
+    "key": "TN_Genesis_0_4:23-24"
+}

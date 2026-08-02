@@ -1,0 +1,36 @@
+﻿COST: Tokens: Total=3271 approx cost=$0.000469 (Prompt=2278, Completion=993)
+SOURCE:
+Bereishit (Torah) 23:10-20
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa67b011460404dfc410e","display_en_name":"towns gate","display_heb_name":"","all_en_names":["Towns Gate"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa67c011460404dfc410f","display_en_name":"heth","display_heb_name":"","all_en_names":["Heth"],"all_heb_names":[],"entityType":"Nation","alias_keys":[]}
+{"key":"6a5fa67c011460404dfc4110","display_en_name":"400","display_heb_name":"","all_en_names":["400"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Money","en_unit":"shekel","en_context":"land price"}
+
+PASSAGE:
+ENGLISH:
+Ephron was present among the Hittites; so Ephron the Hittite answered Abraham in the hearing of the Hittites, the assembly in his towns gate, saying, No, my lord, hear me: I give you the field and I give you the cave that is in it; I give it to you in the presence of my people. Bury your dead. Then Abraham bowed low before the landowning citizens, and spoke to Ephron in the hearing of the landowning citizens, saying, If only you would hear me out! Let me pay the price of the land; accept it from me, that I may bury my dead there. And Ephron replied to Abraham, saying to him, My lord, do hear me! A piece of land worth four hundred shekels of silver-what is that between you and me? Go and bury your dead. Abraham accepted Ephrons terms. Abraham paid out to Ephron the money that he had named in the hearing of the Hittites-four hundred shekels of silver at the going merchants rate. So Ephrons land in Machpelah, near Mamre-the field with its cave and all the trees anywhere within the confines of that field-passed to Abraham as his possession, in the presence of the Hittites, of the assembly in his towns gate. And then Abraham buried his wife Sarah in the cave of the field of Machpelah, facing Mamre-now Hebron-in the land of Canaan. Thus the field with its cave passed from the Hittites to Abraham, as a burial site.
+
+HEBREW:
+ועפרון ישב בתוך בני חת ויען עפרון החתי את אברהם באזני בני חת לכל באי שער עירו לאמר: לא אדני שמעני השדה נתתי לך והמערה אשר בו לך נתתיה לעיני בני עמי נתתיה לך קבר מתך: וישתחו אברהם לפני עם הארץ: וידבר אל עפרון באזני עם הארץ לאמר אך אם אתה לו שמעני נתתי כסף השדה קח ממני ואקברה את מתי שמה: ויען עפרון את אברהם לאמר לו: אדני שמעני ארץ ארבע מאת שקל כסף ביני ובינך מה הוא ואת מתך קבר: וישמע אברהם אל עפרון וישקל אברהם לעפרן את הכסף אשר דבר באזני בני חת ארבע מאות שקל כסף עבר לסחר: ויקם שדה עפרון אשר במכפלה אשר לפני ממרא השדה והמערה אשר בו וכל העץ אשר בשדה אשר בכל גבלו סביב: לאברהם למקנה לעיני בני חת בכל באי שער עירו: ואחרי כן קבר אברהם את שרה אשתו אל מערת שדה המכפלה על פני ממרא הוא חברון בארץ כנען: ויקם השדה והמערה אשר בו לאברהם לאחזת קבר מאת בני חת:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa67b011460404dfc410e",
+      "display_heb_name": "שער עירו",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa67c011460404dfc410f",
+      "display_heb_name": "חת"
+    },
+    {
+      "key": "6a5fa67c011460404dfc4110",
+      "display_heb_name": "ארבע מאות",
+      "heb_unit": "שקל",
+      "heb_context": "כסף השדה"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa621011460404dfc3f84",
+            "display_heb_name": "שנים",
+            "heb_unit": "זוג",
+            "heb_context": "כל החי",
+            "display_en_name": "2"
+        },
+        {
+            "key": "6a5fa621011460404dfc3f85",
+            "display_heb_name": "שבעה",
+            "heb_unit": "איש ואשתו",
+            "heb_context": "בהמה טהורה",
+            "display_en_name": "7"
+        },
+        {
+            "key": "6a5fa622011460404dfc3f86",
+            "display_heb_name": "ארבעים",
+            "heb_unit": "יום",
+            "heb_context": "משך מבול",
+            "display_en_name": "40"
+        }
+    ],
+    "key": "TN_Genesis_0_6:19-7:4"
+}

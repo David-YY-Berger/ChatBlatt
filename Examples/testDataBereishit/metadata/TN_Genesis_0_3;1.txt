@@ -1,0 +1,28 @@
+﻿COST: Tokens: Total=2039 approx cost=$0.000249 (Prompt=1611, Completion=428)
+SOURCE:
+Bereishit (Torah) 3:1
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa60c011460404dfc3f25","display_en_name":"serpent","display_heb_name":"","all_en_names":["Serpent"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa60c011460404dfc3f26","display_en_name":"tree","display_heb_name":"","all_en_names":["Tree"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Now the serpent was the shrewdest of all the wild beasts that God HASHEM had made. It said to the woman, Did God really say: You shall not eat of any tree of the garden?
+
+HEBREW:
+והנחש היה ערום מכל חית השדה אשר עשה יהוה אלהים ויאמר אל האשה אף כי אמר אלהים לא תאכלו מכל עץ הגן:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa60c011460404dfc3f25",
+      "display_heb_name": "נחש"
+    },
+    {
+      "key": "6a5fa60c011460404dfc3f26",
+      "display_heb_name": "עץ"
+    }
+  ]
+}

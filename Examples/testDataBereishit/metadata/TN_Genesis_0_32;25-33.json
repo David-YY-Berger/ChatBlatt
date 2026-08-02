@@ -1,0 +1,40 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a9011460404dfc41d1",
+            "display_heb_name": "ישראל",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": false,
+            "display_en_name": "israel"
+        },
+        {
+            "key": "6a5fa6a9011460404dfc41d2",
+            "display_heb_name": "בני ישראל",
+            "timePeriod": "Tanach",
+            "isWoman": false,
+            "isNonJew": false,
+            "isGroup": true,
+            "display_en_name": "children of israel"
+        },
+        {
+            "key": "6a5fa6a9011460404dfc41d3",
+            "display_heb_name": "פניאל",
+            "placeType": "Other",
+            "display_en_name": "peniel"
+        },
+        {
+            "key": "6a5fa6a9011460404dfc41d4",
+            "display_heb_name": "פנואל",
+            "placeType": "Other",
+            "display_en_name": "penuel"
+        },
+        {
+            "key": "6a5fa6a9011460404dfc41d5",
+            "display_heb_name": "גיד הנשה",
+            "display_en_name": "thigh muscle"
+        }
+    ],
+    "key": "TN_Genesis_0_32:25-33"
+}

@@ -1,0 +1,86 @@
+﻿COST: Tokens: Total=7073 approx cost=$0.001539 (Prompt=2592, Completion=4481)
+SOURCE:
+Bereishit (Torah) 18:5-9
+
+ENTITIES TO ENRICH (12):
+{"key":"6a5fa668011460404dfc40b7","display_en_name":"they","display_heb_name":"","all_en_names":["They"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa668011460404dfc40b8","display_en_name":"servant-boy","display_heb_name":"","all_en_names":["Servant-Boy"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa668011460404dfc40b9","display_en_name":"servants","display_heb_name":"","all_en_names":["Servants"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa669011460404dfc40ba","display_en_name":"tent","display_heb_name":"","all_en_names":["Tent"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa669011460404dfc40bb","display_en_name":"under the tree","display_heb_name":"","all_en_names":["Under The Tree"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa669011460404dfc40bc","display_en_name":"3","display_heb_name":"","all_en_names":["3"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Measurement","en_unit":"seah","en_context":"flour for cakes"}
+{"key":"6a5fa669011460404dfc40bd","display_en_name":"calf","display_heb_name":"","all_en_names":["Calf"],"all_heb_names":[],"entityType":"Animal","alias_keys":[]}
+{"key":"6a5fa66a011460404dfc40be","display_en_name":"flour","display_heb_name":"","all_en_names":["Flour"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa66a011460404dfc40bf","display_en_name":"cake","display_heb_name":"","all_en_names":["Cake"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa66a011460404dfc40c0","display_en_name":"calf","display_heb_name":"","all_en_names":["Calf"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa66a011460404dfc40c1","display_en_name":"curd","display_heb_name":"","all_en_names":["Curd"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa66a011460404dfc40c2","display_en_name":"milk","display_heb_name":"","all_en_names":["Milk"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+And let me fetch a morsel of bread that you may refresh yourselves; then go on-seeing that you have come your servants way. They replied, Do as you have said. Abraham hastened into the tent to Sarah, and said, Quick, three seah s of choice flour! Knead and make cakes! Then Abraham ran to the herd, took a calf, tender and choice, and gave it to a servant-boy, who hastened to prepare it. He took curds and milk and the calf that had been prepared and set these before them; and he waited on them under the tree as they ate. They said to him, Where is your wife Sarah? And he replied, There, in the tent.
+
+HEBREW:
+ואקחה פת לחם וסעדו לבכם אחר תעברו כי על כן עברתם על עבדכם ויאמרו כן תעשה כאשר דברת: וימהר אברהם האהלה אל שרה ויאמר מהרי שלש סאים קמח סלת לושי ועשי עגות: ואל הבקר רץ אברהם ויקח בן בקר רך וטוב ויתן אל הנער וימהר לעשות אתו: ויקח חמאה וחלב ובן הבקר אשר עשה ויתן לפניהם והוא עמד עליהם תחת העץ ויאכלו: ויאמרו אליו איה שרה אשתך ויאמר הנה באהל:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa668011460404dfc40b7",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa668011460404dfc40b8",
+      "display_heb_name": "נער",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa668011460404dfc40b9",
+      "display_heb_name": "עבד",
+      "timePeriod": "Tanach",
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa669011460404dfc40ba",
+      "display_heb_name": "אהל",
+      "placeType": "Building or Structure"
+    },
+    {
+      "key": "6a5fa669011460404dfc40bb",
+      "display_heb_name": "תחת העץ",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa669011460404dfc40bc",
+      "display_heb_name": "שלש",
+      "heb_unit": "סאה",
+      "heb_context": "קמח סלת לעגות"
+    },
+    {
+      "key": "6a5fa669011460404dfc40bd",
+      "display_heb_name": "בן בקר"
+    },
+    {
+      "key": "6a5fa66a011460404dfc40be",
+      "display_heb_name": "קמח"
+    },
+    {
+      "key": "6a5fa66a011460404dfc40bf",
+      "display_heb_name": "עגות"
+    },
+    {
+      "key": "6a5fa66a011460404dfc40c0",
+      "display_heb_name": "בן בקר"
+    },
+    {
+      "key": "6a5fa66a011460404dfc40c1",
+      "display_heb_name": "חמאה"
+    },
+    {
+      "key": "6a5fa66a011460404dfc40c2",
+      "display_heb_name": "חלב"
+    }
+  ]
+}

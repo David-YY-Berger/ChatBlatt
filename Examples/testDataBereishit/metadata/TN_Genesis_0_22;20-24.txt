@@ -1,0 +1,92 @@
+﻿COST: Tokens: Total=4303 approx cost=$0.000682 (Prompt=2706, Completion=1597)
+SOURCE:
+Bereishit (Torah) 22:20-24
+
+ENTITIES TO ENRICH (12):
+{"key":"6a5fa677011460404dfc40fb","display_en_name":"buz","display_heb_name":"","all_en_names":["Buz"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa677011460404dfc40fc","display_en_name":"kemuel","display_heb_name":"","all_en_names":["Kemuel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa678011460404dfc40fd","display_en_name":"chesed","display_heb_name":"","all_en_names":["Chesed"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa678011460404dfc40fe","display_en_name":"hazo","display_heb_name":"","all_en_names":["Hazo"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa678011460404dfc40ff","display_en_name":"pildash","display_heb_name":"","all_en_names":["Pildash"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa678011460404dfc4100","display_en_name":"jidlaph","display_heb_name":"","all_en_names":["Jidlaph"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa678011460404dfc4101","display_en_name":"bethuel","display_heb_name":"","all_en_names":["Bethuel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa679011460404dfc4103","display_en_name":"reumah","display_heb_name":"","all_en_names":["Reumah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa679011460404dfc4104","display_en_name":"tebah","display_heb_name":"","all_en_names":["Tebah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa679011460404dfc4105","display_en_name":"gaham","display_heb_name":"","all_en_names":["Gaham"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67a011460404dfc4106","display_en_name":"tahash","display_heb_name":"","all_en_names":["Tahash"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa67a011460404dfc4107","display_en_name":"maacah","display_heb_name":"","all_en_names":["Maacah"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+
+PASSAGE:
+ENGLISH:
+Some time later, Abraham was told, Milcah too has borne sons to your brother Nahor: Uz the first-born, and Buz his brother, and Kemuel the father of Aram; and Chesed, Hazo, Pildash, Jidlaph, and Bethuel- Bethuel being the father of Rebekah. These eight Milcah bore to Nahor, Abrahams brother. And his concubine, whose name was Reumah, also bore [sons]-Tebah, Gaham, and Tahash-and [a daughter,] Maacah.
+
+HEBREW:
+ויהי אחרי הדברים האלה ויגד לאברהם לאמר הנה ילדה מלכה גם הוא בנים לנחור אחיך: את עוץ בכרו ואת בוז אחיו ואת קמואל אבי ארם: ואת כשד ואת חזו ואת פלדש ואת ידלף ואת בתואל: ובתואל ילד את רבקה שמנה אלה ילדה מלכה לנחור אחי אברהם: ופילגשו ושמה ראומה ותלד גם הוא את טבח ואת גחם ואת תחש ואת מעכה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa677011460404dfc40fb",
+      "display_heb_name": "בוז",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa677011460404dfc40fc",
+      "display_heb_name": "קמואל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa678011460404dfc40fd",
+      "display_heb_name": "כשד",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa678011460404dfc40fe",
+      "display_heb_name": "חזו",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa678011460404dfc40ff",
+      "display_heb_name": "פלדש",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa678011460404dfc4100",
+      "display_heb_name": "ידלף",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa678011460404dfc4101",
+      "display_heb_name": "בתואל",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa679011460404dfc4103",
+      "display_heb_name": "ראומה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    },
+    {
+      "key": "6a5fa679011460404dfc4104",
+      "display_heb_name": "טבח",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa679011460404dfc4105",
+      "display_heb_name": "גחם",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa67a011460404dfc4106",
+      "display_heb_name": "תחש",
+      "timePeriod": "Tanach"
+    },
+    {
+      "key": "6a5fa67a011460404dfc4107",
+      "display_heb_name": "מעכה",
+      "timePeriod": "Tanach",
+      "isWoman": true
+    }
+  ]
+}

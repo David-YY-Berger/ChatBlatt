@@ -1,0 +1,32 @@
+﻿COST: Tokens: Total=3725 approx cost=$0.000661 (Prompt=2027, Completion=1698)
+SOURCE:
+Bereishit (Torah) 49:29-50:3
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa6f9011460404dfc431e","display_en_name":"40","display_heb_name":"","all_en_names":["40"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"embalming period"}
+{"key":"6a5fa6f9011460404dfc431f","display_en_name":"70","display_heb_name":"","all_en_names":["70"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"Time","en_unit":"day","en_context":"mourning period"}
+
+PASSAGE:
+ENGLISH:
+Then he instructed them, saying to them, I am about to be gathered to my kin. Bury me with my ancestors; trad. fathers. See the Dictionary under predecessors. in the cave which is in the field of Ephron the Hittite, the cave which is in the field of Machpelah, facing Mamre, in the land of Canaan, the field that Abraham bought from Ephron the Hittite for a burial site- there Abraham and his wife Sarah were buried; there Isaac and his wife Rebekah were buried; and there I buried Leah- the field and the cave in it, bought from the Hittites. When Jacob finished his instructions to his sons, he drew his feet into the bed and, breathing his last, he was gathered to his kin.Joseph flung himself upon his fathers face and wept over him and kissed him. Then Joseph ordered the physicians in his service to embalm his father, and the physicians embalmed Israel. It required forty days, for such is the full period of embalming. The Egyptians bewailed him seventy days;
+
+HEBREW:
+ויצו אותם ויאמר אלהם אני נאסף אל עמי קברו אתי אל אבתי אל המערה אשר בשדה עפרון החתי: במערה אשר בשדה המכפלה אשר על פני ממרא בארץ כנען אשר קנה אברהם את השדה מאת עפרן החתי לאחזת קבר: שמה קברו את אברהם ואת שרה אשתו שמה קברו את יצחק ואת רבקה אשתו ושמה קברתי את לאה: מקנה השדה והמערה אשר בו מאת בני חת: ויכל יעקב לצות את בניו ויאסף רגליו אל המטה ויגוע ויאסף אל עמיו:ויפל יוסף על פני אביו ויבך עליו וישק לו: ויצו יוסף את עבדיו את הרפאים לחנט את אביו ויחנטו הרפאים את ישראל: וימלאו לו ארבעים יום כי כן ימלאו ימי החנטים ויבכו אתו מצרים שבעים יום:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6f9011460404dfc431e",
+      "display_heb_name": "ארבעים",
+      "heb_unit": "יום",
+      "heb_context": "ימי החנטים"
+    },
+    {
+      "key": "6a5fa6f9011460404dfc431f",
+      "display_heb_name": "שבעים",
+      "heb_unit": "יום",
+      "heb_context": "ימי אבל"
+    }
+  ]
+}

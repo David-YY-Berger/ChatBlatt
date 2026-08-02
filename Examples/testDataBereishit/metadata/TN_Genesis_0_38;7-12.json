@@ -1,0 +1,18 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6ca011460404dfc4266",
+            "display_heb_name": "בת שוע",
+            "timePeriod": "Tanach",
+            "isWoman": true,
+            "display_en_name": "shuas daughter"
+        },
+        {
+            "key": "6a5fa6cb011460404dfc4268",
+            "display_heb_name": "עדלם",
+            "placeType": "City",
+            "display_en_name": "adullam"
+        }
+    ],
+    "key": "TN_Genesis_0_38:7-12"
+}

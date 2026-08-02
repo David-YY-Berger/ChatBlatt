@@ -1,0 +1,28 @@
+﻿COST: Tokens: Total=2222 approx cost=$0.000253 (Prompt=1838, Completion=384)
+SOURCE:
+Bereishit (Torah) 25:27-32
+
+ENTITIES TO ENRICH (2):
+{"key":"6a5fa68a011460404dfc414d","display_en_name":"stew","display_heb_name":"","all_en_names":["Stew"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+{"key":"6a5fa68b011460404dfc414e","display_en_name":"game","display_heb_name":"","all_en_names":["Game"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When the boys grew up, Esau became a skillful hunter, a man of the outdoors; but Jacob became a mild man, raising livestock.; NJPS who stayed in camp, lit. a sitter in tents. The idiom for a pastoralist; cf. 4.20. Isaac favored Esau because he had a taste for game; but Rebekah favored Jacob. Once when Jacob was cooking a stew, Esau came in from the open, famished. And Esau said to Jacob, Give me some of that red stuff to gulp down, for I am famished-which is why he was named Edom. red. Jacob said, First sell me your birthright. And Esau said, I am at the point of death, so of what use is my birthright to me?
+
+HEBREW:
+ויגדלו הנערים ויהי עשו איש ידע ציד איש שדה ויעקב איש תם ישב אהלים: ויאהב יצחק את עשו כי ציד בפיו ורבקה אהבת את יעקב: ויזד יעקב נזיד ויבא עשו מן השדה והוא עיף: ויאמר עשו אל יעקב הלעיטני נא מן האדם האדם הזה כי עיף אנכי על כן קרא שמו אדום: ויאמר יעקב מכרה כיום את בכרתך לי: ויאמר עשו הנה אנכי הולך למות ולמה זה לי בכרה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa68a011460404dfc414d",
+      "display_heb_name": "נזיד"
+    },
+    {
+      "key": "6a5fa68b011460404dfc414e",
+      "display_heb_name": "ציד"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6a3011460404dfc41b8",
+            "display_heb_name": "יגר שהדותא",
+            "placeType": "Building or Structure",
+            "display_en_name": "yegar-sahadutha"
+        },
+        {
+            "key": "6a5fa6a3011460404dfc41b9",
+            "display_heb_name": "גלעד",
+            "placeType": "Building or Structure",
+            "display_en_name": "gal-ed"
+        },
+        {
+            "key": "6a5fa6a4011460404dfc41ba",
+            "display_heb_name": "מצפה",
+            "placeType": "Other",
+            "display_en_name": "mizpah"
+        },
+        {
+            "key": "6a5fa6a4011460404dfc41bb",
+            "display_heb_name": "הר",
+            "placeType": "Mountain",
+            "display_en_name": "height"
+        },
+        {
+            "key": "6a5fa6a4011460404dfc41bc",
+            "display_heb_name": "מחנים",
+            "placeType": "City",
+            "display_en_name": "mahanaim"
+        },
+        {
+            "key": "6a5fa6a4011460404dfc41bd",
+            "display_heb_name": "גל",
+            "symbolType": "Other",
+            "display_en_name": "mound"
+        }
+    ],
+    "key": "TN_Genesis_0_31:44-32:3"
+}

@@ -1,0 +1,33 @@
+﻿COST: Tokens: Total=2480 approx cost=$0.000304 (Prompt=1957, Completion=523)
+SOURCE:
+Bereishit (Torah) 42:1-6
+
+ENTITIES TO ENRICH (3):
+{"key":"6a5fa6dc011460404dfc42a9","display_en_name":"sons of israel","display_heb_name":"","all_en_names":["Sons Of Israel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6dc011460404dfc42aa","display_en_name":"10","display_heb_name":"","all_en_names":["10"],"all_heb_names":[],"entityType":"Number","alias_keys":[],"numberCategory":"People","en_unit":"brother","en_context":"joseph's brothers"}
+{"key":"6a5fa6dc011460404dfc42ab","display_en_name":"ration","display_heb_name":"","all_en_names":["Ration"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+When Jacob saw that there were food rations to be had in Egypt, he said to his sons, Why do you keep looking at one another? Now I hear, he went on, that there are rations to be had in Egypt. Go down and procure rations for us there, that we may live and not die. So ten of Josephs brothers went down to get grain rations in Egypt; for Jacob did not send Josephs brother Benjamin with his brothers, since he feared that he might meet with disaster. Thus the sons of Israel were among those who came to procure rations, for the famine extended to the land of Canaan. Now Joseph was the vizier of the land; it was he who dispensed rations to all the people of the land. And Josephs brothers came and bowed low to him, with their faces to the ground.
+
+HEBREW:
+וירא יעקב כי יש שבר במצרים ויאמר יעקב לבניו למה תתראו: ויאמר הנה שמעתי כי יש שבר במצרים רדו שמה ושברו לנו משם ונחיה ולא נמות: וירדו אחי יוסף עשרה לשבר בר ממצרים: ואת בנימין אחי יוסף לא שלח יעקב את אחיו כי אמר פן יקראנו אסון: ויבאו בני ישראל לשבר בתוך הבאים כי היה הרעב בארץ כנען: ויוסף הוא השליט על הארץ הוא המשביר לכל עם הארץ ויבאו אחי יוסף וישתחוו לו אפים ארצה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6dc011460404dfc42a9",
+      "display_heb_name": "בני ישראל",
+      "timePeriod": "Tanach",
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6dc011460404dfc42aa",
+      "display_heb_name": "עשרה",
+      "heb_unit": "אח",
+      "heb_context": "אחי יוסף"
+    }
+  ]
+}

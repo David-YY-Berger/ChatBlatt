@@ -1,0 +1,11 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64f011460404dfc4048",
+            "display_heb_name": "אנשים",
+            "isGroup": true,
+            "display_en_name": "agent"
+        }
+    ],
+    "key": "TN_Genesis_0_12:17-13:4"
+}

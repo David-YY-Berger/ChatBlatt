@@ -1,0 +1,22 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa64a011460404dfc4035",
+            "display_heb_name": "כשדים",
+            "display_en_name": "chaldea"
+        },
+        {
+            "key": "6a5fa65d011460404dfc4087",
+            "display_heb_name": "דמשק אליעזר",
+            "timePeriod": "Tanach",
+            "display_en_name": "dammesek eliezer"
+        },
+        {
+            "key": "6a5fa65d011460404dfc4088",
+            "display_heb_name": "מגן",
+            "symbolType": "Weapon",
+            "display_en_name": "shield"
+        }
+    ],
+    "key": "TN_Genesis_0_15:1-8"
+}

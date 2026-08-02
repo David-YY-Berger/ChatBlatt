@@ -1,0 +1,17 @@
+﻿{
+    "entities": [
+        {
+            "key": "6a5fa6e1011460404dfc42c0",
+            "display_heb_name": "בית יוסף",
+            "placeType": "Building or Structure",
+            "display_en_name": "josephs house"
+        },
+        {
+            "key": "6a5fa6e2011460404dfc42c1",
+            "display_heb_name": "פתח הבית",
+            "placeType": "Building or Structure",
+            "display_en_name": "entrance of the house"
+        }
+    ],
+    "key": "TN_Genesis_0_43:19-25"
+}

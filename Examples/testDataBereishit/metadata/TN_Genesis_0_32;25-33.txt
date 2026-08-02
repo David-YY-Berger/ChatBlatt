@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=3419 approx cost=$0.000515 (Prompt=2271, Completion=1148)
+SOURCE:
+Bereishit (Torah) 32:25-33
+
+ENTITIES TO ENRICH (5):
+{"key":"6a5fa6a9011460404dfc41d1","display_en_name":"israel","display_heb_name":"","all_en_names":["Israel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a9011460404dfc41d2","display_en_name":"children of israel","display_heb_name":"","all_en_names":["Children Of Israel"],"all_heb_names":[],"entityType":"Person","alias_keys":[],"isWoman":false,"isNonJew":false,"isGroup":false,"roles":[]}
+{"key":"6a5fa6a9011460404dfc41d3","display_en_name":"peniel","display_heb_name":"","all_en_names":["Peniel"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a9011460404dfc41d4","display_en_name":"penuel","display_heb_name":"","all_en_names":["Penuel"],"all_heb_names":[],"entityType":"Place","alias_keys":[]}
+{"key":"6a5fa6a9011460404dfc41d5","display_en_name":"thigh muscle","display_heb_name":"","all_en_names":["Thigh Muscle"],"all_heb_names":[],"entityType":"Food","alias_keys":[]}
+
+PASSAGE:
+ENGLISH:
+Jacob was left alone. And a figure; Agent. wrestled with him until the break of dawn. When he saw that he had not prevailed against him, he wrenched Jacobs hip at its socket, so that the socket of his hip was strained as he wrestled with him. Then he said, Let me go, for dawn is breaking. But he answered, I will not let you go, unless you bless me. Said the other, What is your name? He replied, Jacob. Said he, Your name shall no longer be Jacob, but Israel, for you have striven, connected with first part of Israel. with beings divine and human,, connected with second part of Israel) and human beings. and have prevailed. Jacob asked, Pray tell me your name. But he said, You must not ask my name! And he took leave of him there. So Jacob named the place Peniel, meaning, I have seen a divine being face to face, yet my life has been preserved. The sun rose upon him as he passed Penuel, limping on his hip. That is why the children of Israel to this day do not eat the thigh muscle that is on the socket of the hip, since Jacobs hip socket was wrenched at the thigh muscle.
+
+HEBREW:
+ויותר יעקב לבדו ויאבק איש עמו עד עלות השחר: וירא כי לא יכל לו ויגע בכף ירכו ותקע כף ירך יעקב בהאבקו עמו: ויאמר שלחני כי עלה השחר ויאמר לא אשלחך כי אם ברכתני: ויאמר אליו מה שמך ויאמר יעקב: ויאמר לא יעקב יאמר עוד שמך כי אם ישראל כי שרית עם אלהים ועם אנשים ותוכל: וישאל יעקב ויאמר הגידה נא שמך ויאמר למה זה תשאל לשמי ויברך אתו שם: ויקרא יעקב שם המקום פניאל כי ראיתי אלהים פנים אל פנים ותנצל נפשי: ויזרח לו השמש כאשר עבר את פנואל והוא צלע על ירכו: על כן לא יאכלו בני ישראל את גיד הנשה אשר על כף הירך עד היום הזה כי נגע בכף ירך יעקב בגיד הנשה:
+
+EXTRACTED (JSON):
+{
+  "entities": [
+    {
+      "key": "6a5fa6a9011460404dfc41d1",
+      "display_heb_name": "ישראל",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": false
+    },
+    {
+      "key": "6a5fa6a9011460404dfc41d2",
+      "display_heb_name": "בני ישראל",
+      "timePeriod": "Tanach",
+      "isWoman": false,
+      "isNonJew": false,
+      "isGroup": true
+    },
+    {
+      "key": "6a5fa6a9011460404dfc41d3",
+      "display_heb_name": "פניאל",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa6a9011460404dfc41d4",
+      "display_heb_name": "פנואל",
+      "placeType": "Other"
+    },
+    {
+      "key": "6a5fa6a9011460404dfc41d5",
+      "display_heb_name": "גיד הנשה"
+    }
+  ]
+}
