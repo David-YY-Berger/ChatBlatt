@@ -60,8 +60,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- DBPopulateLlmBase abstract method implementations --------------------
 
     def _get_output_dir(self) -> str:
-        # return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
-        return r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\entityEnrichment examples"
+        return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
+    #     be careful to put anything here! will be deleted...
 
     async def _extract_from_passage(self, passage: str, entity_json_list: Optional[List[str]] = None):
         """
@@ -202,8 +202,9 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- Phase 1 override: custom source list + entity filtering --------------
 
     def test_run(self) -> None:
-        # self.test_run_extraction()
-        self.test_populate_from_jsons()
+        self.test_run_extraction()
+        # self.test_populate_from_jsons()
+
 
     async def _extract_all_to_json(self) -> None:
         """
