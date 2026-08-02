@@ -94,6 +94,13 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         num_updated = num_missing = num_unchanged = 0
 
         for source_key, data in json_entries:
+            if not isinstance(data, dict):
+                print(
+                    f"  WARNING [{source_key}]: expected a dict with an 'entities' key but got "
+                    f"{type(data).__name__}, skipping. (Is a non-enrichment JSON file sitting in "
+                    f"{self._get_output_dir()}?)"
+                )
+                continue
             entity_dicts = data.get("entities") or []
             for entity_dict in entity_dicts:
                 key = entity_dict.get(DBFields.KEY) or entity_dict.get("key")
@@ -282,7 +289,19 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             )
             LocalPrinter.print_to_file(result_dict, FileTypeEnum.FileType.JSON, out_path)
             LocalPrinter.print_to_file(output_text, FileTypeEnum.FileType.TXT, out_path)
-            entity_list_out_path = f"{out_path}_entity_json_list"
+
+            # Debug-only dump of the (pre-enrichment) entity JSON list. This MUST NOT
+            # live directly in _get_output_dir(): Phase 2 (test_populate_from_jsons)
+            # scans every *.json file in that directory and expects each one to be a
+            # dict shaped like {"entities": [...], "key": ...}. This dump is a plain
+            # list of JSON strings, so writing it there previously caused
+            # "'list' object has no attribute 'get'" once at least one source had
+            # entities to enrich. Keep it in a subdirectory that Phase 2 never scans.
+            debug_dir = os.path.join(self._get_output_dir(), "entity_lists_debug")
+            os.makedirs(debug_dir, exist_ok=True)
+            entity_list_out_path = os.path.join(
+                debug_dir, f"{src_content.key.replace(':', ';')}_entity_json_list"
+            )
             LocalPrinter.print_to_file(entity_json_list, FileTypeEnum.FileType.JSON, entity_list_out_path)
             LocalPrinter.print_to_file(entities_block, FileTypeEnum.FileType.TXT, entity_list_out_path)
 
