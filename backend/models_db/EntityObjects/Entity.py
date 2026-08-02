@@ -140,7 +140,7 @@ class Entity(BaseModel):
         Uses exclude_defaults=True so fields that equal their default value
         (e.g. display_heb_name="") are omitted from $set, preventing them
         from silently overwriting enriched values already in the DB."""
-        return self.model_dump(exclude_none=True, exclude_defaults=True)
+        return self.model_dump(exclude_none=True, exclude_defaults=True, mode="json")
 
     def to_full_dict(self) -> Dict[str, Any]:
         """Returns all fields including transient ones."""

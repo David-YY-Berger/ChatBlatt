@@ -17,6 +17,7 @@ Phase 2 resolves each entry back to a DB entity by key and patches its fields.
 import json
 import os
 from typing import List, Optional, Tuple
+from types import SimpleNamespace
 
 from backend.common import Paths
 from backend.db.DBConstants import DBFields
@@ -59,7 +60,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- DBPopulateLlmBase abstract method implementations --------------------
 
     def _get_output_dir(self) -> str:
-        return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
+        # return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
+        return r"C:\Users\U6072661\PycharmProjects\ChatBlatt\Examples\entityEnrichment examples"
 
     async def _extract_from_passage(self, passage: str, entity_json_list: Optional[List[str]] = None):
         """
@@ -200,7 +202,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- Phase 1 override: custom source list + entity filtering --------------
 
     def test_run(self) -> None:
-        self.test_run_extraction()
+        # self.test_run_extraction()
+        self.test_populate_from_jsons()
 
     async def _extract_all_to_json(self) -> None:
         """
@@ -228,7 +231,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             entity_json_list = [e.model_dump_json(exclude_none=True) for e in entities]
             passage = self._build_bilingual_passage(src_content)
 
-            json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            # json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            cost_usd, json_str, usage = await self.temp_read_json_from_file()
 
             total_cost_usd += cost_usd
             total_tokens += usage.total_tokens
@@ -238,11 +242,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
             result_dict = json.loads(json_str)
             result_dict[DBFields.KEY] = src_content.key
-            entity_display_en_names_by_key = {entity.key: entity.display_en_name for entity in entities}
-            for entity_dict in result_dict.get("entities") or []:
-                entity_key = entity_dict.get(DBFields.KEY) or entity_dict.get("key")
-                if entity_key in entity_display_en_names_by_key:
-                    entity_dict[DBFields.DISPLAY_EN_NAME] = entity_display_en_names_by_key[entity_key]
+            await self.add_display_en_name(entities, result_dict)
 
             out_path = os.path.join(
                 self._get_output_dir(), src_content.key.replace(":", ";")
@@ -271,6 +271,25 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         )
         print(f"Results saved to: {self._get_output_dir()}")
         print(f"{'='*60}")
+
+    async def add_display_en_name(self, entities, result_dict):
+        entity_display_en_names_by_key = {entity.key: entity.display_en_name for entity in entities}
+        for entity_dict in result_dict.get("entities") or []:
+            entity_key = entity_dict.get(DBFields.KEY) or entity_dict.get("key")
+            if entity_key in entity_display_en_names_by_key:
+                entity_dict[DBFields.DISPLAY_EN_NAME] = entity_display_en_names_by_key[entity_key]
+
+    async def temp_read_json_from_file(self):
+        example_json_path = os.path.join(
+            Paths.EXAMPLES_DIR,
+            "entityEnrichment examples",
+            "TN_Genesis_0_30;3-8.json",
+        )
+        with open(example_json_path, "r", encoding="utf-8-sig") as json_file:
+            json_str = json_file.read()
+        usage = SimpleNamespace(total_tokens=0, input_tokens=0, output_tokens=0)
+        cost_usd = 0.0
+        return cost_usd, json_str, usage
 
     # --- Enrichment helpers ---------------------------------------------------
 
