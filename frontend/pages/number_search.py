@@ -167,16 +167,13 @@ def _occurrences_table(
     )
 
     _IFRAME_DARK_CSS = """<style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-  @media (prefers-color-scheme: dark) {
-    body { background-color: #0e1117; color: #e2e8f0; }
-    .summary-cell { color: #94a3b8; }
+  :root { color-scheme: dark; }
+  body {
+    background-color: #0e1117;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
-  @media (prefers-color-scheme: light) {
-    body { background-color: #ffffff; color: #1e293b; }
-    .summary-cell { color: #475569; }
-  }
+  .summary-cell { color: #94a3b8; }
 </style>"""
 
     full_html = (

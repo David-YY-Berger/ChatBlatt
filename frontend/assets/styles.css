@@ -1,7 +1,7 @@
 :root {
     --primary: #0b7285;
     --accent: #1864ab;
-    --bg: #f8f9fa;
+    --bg: #0f1b2c;
 }
 
 body {
@@ -11,21 +11,20 @@ body {
 
 .app-header {
     padding: 1rem 0 1.5rem 0;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #24354e;
 }
 
 .app-title {
     margin: 0.1rem 0;
-    color: #0f1b2c;
+    color: #f8f9fa;
 }
 
 .app-subtitle {
     font-size: 1.05rem;
-    color: #36454f;
+    color: #cbd5e1;
 }
 
 .app-dedication {
     font-size: 0.9rem;
-    color: #5c636a;
+    color: #94a3b8;
 }
-

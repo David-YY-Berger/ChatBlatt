@@ -23,23 +23,13 @@ def apply_layout(lang: str) -> None:
     direction = "rtl" if rtl else "ltr"
     base_css = _load_css()
 
-    # Palette for dark theme
-    bg_dark = "#0f1b2c"
-    panel_dark = "#152a42"
-    card_dark = "#1f2f4a"
-    text_light = "#f8f9fa"
+    bg = "#0f1b2c"
+    panel = "#152a42"
+    card = "#1f2f4a"
+    text = "#f8f9fa"
     accent = "#1f6feb"
     accent_alt = "#2ea3f2"
-    border_dark = "#24354e"
-
-    # Palette for light theme - warmer, more readable
-    bg_light = "#f1f5f9"
-    panel_light = "#ffffff"
-    card_light = "#f8fafc"
-    text_dark = "#1e293b"
-    accent_light = "#2563eb"
-    accent_alt_light = "#3b82f6"
-    border_light = "#e2e8f0"
+    border = "#24354e"
 
     rtl_css = ""
     if rtl:
@@ -72,30 +62,16 @@ def apply_layout(lang: str) -> None:
         <style>
         {base_css}
         :root {{
-            --bg: {bg_dark};
+            --bg: {bg};
             --bg-gradient-mid: #1b2f4d;
-            --panel: {panel_dark};
-            --card: {card_dark};
-            --text: {text_light};
+            --panel: {panel};
+            --card: {card};
+            --text: {text};
             --accent: {accent};
             --accent-alt: {accent_alt};
-            --border: {border_dark};
+            --border: {border};
             --muted: #94a3b8;
             --shadow: rgba(0, 0, 0, 0.35);
-        }}
-        @media (prefers-color-scheme: light) {{
-            :root {{
-                --bg: {bg_light};
-                --bg-gradient-mid: #dbe4f0;
-                --panel: {panel_light};
-                --card: {card_light};
-                --text: {text_dark};
-                --accent: {accent_light};
-                --accent-alt: {accent_alt_light};
-                --border: {border_light};
-                --muted: #64748b;
-                --shadow: rgba(0, 0, 0, 0.08);
-            }}
         }}
         html, body {{
             direction: {direction};
