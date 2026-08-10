@@ -172,27 +172,36 @@ def render_entity_facets() -> None:
 
 
 def _render_entity_select_panel(ent: dict) -> None:
-    """Render the specific-entity picker panel for one active entity-type tab."""
-    st.markdown('<div class="facet-section entity-select-section">', unsafe_allow_html=True)
-    st.markdown(f"<div class='entity-select-label'>{ent['label']}</div>", unsafe_allow_html=True)
+    """Render the specific-entity picker panel for one active entity-type tab.
 
-    if ent["implemented"]:
-        options = _load_entity_select_options(ent["entity_tab"])
-        if options:
-            labels = [_format_entity_option_label(o) for o in options]
-            st.multiselect(
-                f"Select {ent['label'].lower()}(s)",
-                options=labels,
-                key=f"entity_filter_selected_{ent['key']}",
-                label_visibility="collapsed",
-                placeholder=f"Search {ent['label'].lower()}s…",
-            )
-            # Selections are kept in session_state for now; wiring them into
-            # the actual SourceSearchQuery is deferred (front-end only task).
+    Label sits to the left, with the combobox occupying the remaining space
+    to its right (single row), instead of stacking label above combobox.
+    """
+    st.markdown('<div class="facet-section entity-select-section">', unsafe_allow_html=True)
+
+    label_col, combo_col = st.columns([1, 4], vertical_alignment="center")
+    with label_col:
+        st.markdown(f"<div class='entity-select-label'>{ent['label']}</div>", unsafe_allow_html=True)
+
+    with combo_col:
+        if ent["implemented"]:
+            options = _load_entity_select_options(ent["entity_tab"])
+            if options:
+                labels = [_format_entity_option_label(o) for o in options]
+                st.multiselect(
+                    f"Select {ent['label'].lower()}(s)",
+                    options=labels,
+                    key=f"entity_filter_selected_{ent['key']}",
+                    label_visibility="collapsed",
+                    placeholder=f"Search {ent['label'].lower()}s…",
+                )
+                # Selections are kept in session_state for now; wiring them
+                # into the actual SourceSearchQuery is deferred (front-end
+                # only task).
+            else:
+                st.caption("No entities found.")
         else:
-            st.caption("No entities found.")
-    else:
-        st.caption("Coming soon — this entity type isn't searchable yet.")
+            st.caption("Coming soon — this entity type isn't searchable yet.")
 
     st.markdown("</div>", unsafe_allow_html=True)
 

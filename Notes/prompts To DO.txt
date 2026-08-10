@@ -2,19 +2,23 @@
 todo 
 
 
-filter entity search by metadata {{
-on entity search page (People, Place, nation, etc) - currently we load all relevant entities into the combobox.
-Now - add check filters (do so in a nice intuitive UI) to filter by other metadata populated fields
-Person - Jewish / non jewish, women / men/ both (default), individual/group/both (defualt), role (add checkbox for each role type, add an 'all' option (default - all option).
-Place  - checkbox for each place type, with an 'all' option (default)
-Symbol - checkbox for each symbol_type, with an 'all' option (default)
-}}
-
 fix up searching an entity {{
 
-using streamlit. help me design a beautfil UI. dont write the code for me, just give me a good layout given streamlit's abilities. later, i will impl with my copilot
-i have a free text search bar and search button. i want to add filters on the left side of the screen.
-i have 2 filters - 
+FINISHED: {{
+on source search page - remove the front end layout of the filter by entity section. instead, look for we have entity selection for the entity search page (person, nation, symbol, etc).
+
+using similar front end logic , design an intuitive way to filter by entity on the source search page (dont do the backend yet). 
+
+this must work for these entities (also - fix to THIS ORDER): 
+person, place, tribe of israel, nation, number, animal, food, plant, symbol, . 
+}}
+
+--------------
+------------------
+remove all these filters on the left pane. get rid of that frontend code. but dont break anything else.
+instead of the current design, implement this design:
+
+There are 2 source-filters on the left hand side:
 (1) Passage type ('law', 'philosophical', 'story',  a few others)
 (2) Sources - this is a staggered list:
 Source type -> Book Category -> Book
@@ -22,23 +26,40 @@ Source type -> Book Category -> Book
 
 I would like there to be checkboxs (user can select exactly which he wants, allows mulitple..) There should also be intuitive 'select all', 'unselect all' at the top of every section (selecting all 'Tanach' includes all lower level selections...).
 
-------------------
-remove all these filters on the left pane. get rid of that frontend code. but dont break anything else.
-instead of the current design, implement this design:
-
-
+important:
+- Hierarchy through nesting, not just indentation
+- collapsed by default
+- dont try to fake an 'indeterminate' state of a checkbox. instead, just show a '_/_ selected" next to each parent
+- add Active filter chips above the results - based on whats selected. these should include an 'x' to remove them...
+- instead of trying to force complex checkbox wite 'select all' or none - just add an 'all/remove' button, 
+...
 
 }}
 
 easy fixes {{
+
 make a filter for 'unit' on the number search page. 
 there should be a combobox, populated by the units found, and the user can select a unit by which to filter the rows
 -------------------------
+
 add this banner nicely at the top, next to the main title of MapaLi. should be in the header, visible on every page
 
 <a href="https://www.sefaria.org">
 <img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
 </a>
+
+------------------------
+when generating a source section, add a nice colorful way to show what passage type this source is. You can save this color in backend.models_db.Enums.PassageType. a source can have multiple passage types. 
+
+-------------------
+on source search page, Add a placeholder for the text similarity search: 'this will bring sources similar to this phrase to the top. it will not filter out sources' 
+
+-------------------
+source search - right below the text similarity text input area, add in 'Looking for a really great semantic search engine? Check out Dicta's _Talmud_ and _Tanach_ search engine . 
+in Talmud, should have this link: https://talmudsearch.dicta.org.il/he
+in Tanach, should have this link: https://search.dicta.org.il/
+
+make sure to add both english and hebrew labels
 
 }}
 
@@ -80,20 +101,14 @@ pydantic creating graph, remove entitys with display name like (.lower() (not co
 }}
 
 
+fix up identifying ambigious entityes {{ 
 
 
-
-
-
-
-
-
-
-
-
-pop metadata {{ 
 
 }}
+
+
+
 
 old prompts {{
 

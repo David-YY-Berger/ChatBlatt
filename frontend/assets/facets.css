@@ -128,6 +128,7 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
     font-size: 0.8rem;
     font-weight: 700;
     color: #cdd6f4;
-    margin-bottom: 2px;
+    padding-right: 6px;
+    white-space: nowrap;
 }
 
