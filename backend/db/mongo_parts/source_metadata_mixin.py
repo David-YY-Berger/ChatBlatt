@@ -48,6 +48,17 @@ class SourceMetadataMongoMixin:
         )
         return [self._doc_to_src_metadata(doc) for doc in docs]
 
+    def get_source_metadata_by_rel_key(self, rel_key: str) -> List[SourceMetadata]:
+        """
+        Return all SourceMetadata documents whose rel_keys array contains
+        the given rel_key. Used to re-point/clean up source metadata when a
+        relationship is remapped or removed (e.g. during entity merges).
+        """
+        docs = self.get_collection(CollectionObjs.SRC_METADATA).find(
+            {DBFields.REL_KEYS: rel_key}
+        )
+        return [self._doc_to_src_metadata(doc) for doc in docs]
+
     def _src_metadata_to_doc(self, src_metadata: SourceMetadata) -> Dict[str, Any]:
         return {
             DBFields.KEY: src_metadata.key,

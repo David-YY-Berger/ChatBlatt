@@ -39,3 +39,11 @@ class SourceMetadataInterfaceMixin(ABC):
         """
         pass
 
+    @abstractmethod
+    def get_source_metadata_by_rel_key(self, rel_key: str) -> List[SourceMetadata]:
+        """
+        Return all SourceMetadata documents whose rel_keys array contains
+        the given rel_key.
+        """
+        pass
+

@@ -194,6 +194,11 @@ class RelationshipMongoMixin:
         result = self.get_collection(CollectionObjs.RELATIONS).delete_many({})
         return result.deleted_count
 
+    def delete_rel_by_key(self, key: str) -> int:
+        """Delete a single relationship document by its key. Returns the number of deleted documents (0 or 1)."""
+        result = self.get_collection(CollectionObjs.RELATIONS).delete_one({DBFields.KEY: key})
+        return result.deleted_count
+
     def _doc_to_rel(self, doc: Dict[str, Any]) -> Rel:
         from backend.models_db.Enums import RelType
 

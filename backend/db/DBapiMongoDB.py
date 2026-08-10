@@ -76,6 +76,9 @@ class DBapiMongoDB(
           - Multikey (entity_keys): MongoDB indexes each array element individually,
             making "find all SourceMetadata containing entity key X" an index scan
             instead of a full collection scan.
+          - Multikey (rel_keys): same benefit, for "find all SourceMetadata
+            containing relationship key X" (used e.g. when re-pointing/cleaning up
+            relationships during entity merges).
         """
         from pymongo import ASCENDING
 
@@ -95,6 +98,10 @@ class DBapiMongoDB(
         src_metadata.create_index(
             [(DBFields.ENTITY_KEYS, ASCENDING)],
             name="idx_src_metadata_entity_keys",
+        )
+        src_metadata.create_index(
+            [(DBFields.REL_KEYS, ASCENDING)],
+            name="idx_src_metadata_rel_keys",
         )
 
     @override

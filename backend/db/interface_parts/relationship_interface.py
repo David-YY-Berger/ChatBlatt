@@ -60,3 +60,8 @@ class RelationshipInterfaceMixin(ABC):
         """Delete all relationship documents. Returns the count of deleted documents."""
         pass
 
+    @abstractmethod
+    def delete_rel_by_key(self, key: str) -> int:
+        """Delete a single relationship document by its key. Returns the number of deleted documents (0 or 1)."""
+        pass
+

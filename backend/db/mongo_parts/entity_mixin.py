@@ -264,6 +264,24 @@ class EntityMongoMixin:
         docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
         return [self._doc_to_entity(doc) for doc in docs]
 
+    def get_entities_by_display_en_name(self, display_en_name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
+        """
+        Return all entities whose display_en_name exactly matches the given name
+        (case-insensitive; display_en_name is always stored lowercase). Optionally
+        restrict to a specific entity_type. Used to find candidate duplicate
+        entities that share a display name (e.g. for merge/dedup workflows).
+        """
+        query: Dict[str, Any] = {DBFields.DISPLAY_EN_NAME: display_en_name.strip().lower()}
+        if entity_type is not None:
+            query[DBFields.ENTITY_TYPE] = entity_type.value
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
+        return [self._doc_to_entity(doc) for doc in docs]
+
+    def delete_entity_by_key(self, key: str) -> int:
+        """Delete a single entity document by its key. Returns the number of deleted documents (0 or 1)."""
+        result = self.get_collection(CollectionObjs.ENTITIES).delete_one({DBFields.KEY: key})
+        return result.deleted_count
+
     def _doc_to_entity(self, doc: Dict[str, Any]) -> Entity:
         from backend.models_db.EntityObjects.EAnimal import EAnimal
         from backend.models_db.EntityObjects.EFood import EFood

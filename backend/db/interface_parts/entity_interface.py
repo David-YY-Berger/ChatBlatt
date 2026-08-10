@@ -77,3 +77,18 @@ class EntityInterfaceMixin(ABC):
         """
         pass
 
+    @abstractmethod
+    def get_entities_by_display_en_name(self, display_en_name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
+        """
+        Return all entities whose display_en_name exactly matches the given name
+        (case-insensitive). Optionally restrict to a specific entity_type.
+        Used to find candidate duplicate entities that share a display name
+        (e.g. for merge/dedup workflows).
+        """
+        pass
+
+    @abstractmethod
+    def delete_entity_by_key(self, key: str) -> int:
+        """Delete a single entity document by its key. Returns the number of deleted documents (0 or 1)."""
+        pass
+
