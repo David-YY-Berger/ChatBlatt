@@ -75,10 +75,7 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    # Build option list: index 0 is the placeholder
-    display_labels = [placeholder] + [
-        _format_option_label(opt, rtl) for opt in options
-    ]
+    display_labels = [_format_option_label(opt, rtl) for opt in options]
     key_map = {_format_option_label(opt, rtl): opt.key for opt in options}
 
     # ---- Layout: combobox + go button ----
@@ -88,12 +85,13 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
         chosen_label = st.selectbox(
             get_text("entity_search_ui.select_entity", lang),
             options=display_labels,
-            index=0,
+            index=None,
+            placeholder=placeholder,
             key=f"entity_combo_{entity_tab}",
             label_visibility="collapsed",
         )
 
-    has_selection = chosen_label != placeholder
+    has_selection = chosen_label is not None
     entity_key = key_map.get(chosen_label, "") if has_selection else ""
 
     with col_btn:

@@ -59,7 +59,7 @@ def render_person_selector(
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [placeholder] + [_format_label(opt, rtl) for opt in options]
+    display_labels = [_format_label(opt, rtl) for opt in options]
     key_map = {_format_label(opt, rtl): opt.key for opt in options}
 
     col_combo, col_btn = st.columns([4, 1])
@@ -68,12 +68,13 @@ def render_person_selector(
         chosen_label = st.selectbox(
             get_text("entity_search_ui.select_entity", lang),
             options=display_labels,
-            index=0,
+            index=None,
+            placeholder=placeholder,
             key=f"person_selector_combo_{state_key}",
             label_visibility="collapsed",
         )
 
-    has_selection = chosen_label != placeholder
+    has_selection = chosen_label is not None
     entity_key = key_map.get(chosen_label, "") if has_selection else ""
 
     with col_btn:
