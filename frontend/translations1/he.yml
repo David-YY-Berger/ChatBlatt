@@ -108,6 +108,30 @@ entity_fields:
   inNation: "עם"
   # TribeOfIsrael fields
   membersOfTribeIsrael: "בני השבט"
+  # Symbol fields
+  symbolType: "סוג סמל"
+
+entity_filters:
+  section_title: "מסננים"
+  no_matches: "לא נמצאו ישויות התואמות את המסננים שנבחרו."
+  religion_label: "דת"
+  religion_all: "הכל"
+  religion_jewish: "יהודי"
+  religion_non_jewish: "לא יהודי"
+  gender_label: "מגדר"
+  gender_all: "הכל"
+  gender_women: "נשים"
+  gender_men: "גברים"
+  group_label: "יחיד / קבוצה"
+  group_all: "הכל"
+  group_individual: "יחיד"
+  group_group: "קבוצה"
+  roles_label: "תפקיד"
+  roles_all: "כל התפקידים"
+  place_type_label: "סוג מקום"
+  place_type_all: "כל הסוגים"
+  symbol_type_label: "סוג סמל"
+  symbol_type_all: "כל הסוגים"
 
 page_titles:
   home: "ברוכים הבאים למפה-לי"

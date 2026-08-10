@@ -5,10 +5,12 @@ Entity Search Page.
 
 Abstract rendering pattern:
   - render() dispatches to the correct entity tab (people, places, nations, etc.)
-  - _render_entity_search_tab() is the shared template: combobox + Go button + detail view
+  - _render_entity_search_tab() is the shared template: filters + combobox + Go button + detail view
   - Each entity type plugs in via its BaseEntitySearchHandler from the backend
+  - Metadata filters (checkboxes / segmented controls) narrow the combobox options
+    client-side, using metadata already carried on the cached select-options.
 
-Currently implemented: Person (people tab).
+Currently implemented: Person (people tab), Place, Symbol filters. Nations/Tribes have no filters yet.
 """
 
 from __future__ import annotations
@@ -53,9 +55,10 @@ def render(lang: str, selected: str | None = None) -> None:
 def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     """
     Renders the shared entity-search UI for any entity type:
-      1. Combobox to pick an entity
-      2. Go button (disabled until selection)
-      3. Detail view with DB fields + transient relationship lists
+      1. Metadata filters (entity-type-specific), narrowing the combobox options
+      2. Combobox to pick an entity
+      3. Go button (disabled until selection)
+      4. Detail view with DB fields + transient relationship lists
     """
     from backend.app.controllers.entity_search.entity_search_controller import get_entity_search_handler
 
@@ -71,12 +74,26 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
         st.info(get_text("entity_search_ui.no_entities", lang))
         return
 
+    # ---- Metadata filters (entity-type-specific) ----
+    filtered_options = _render_filters(entity_tab, options, lang)
+
+    # ---- Reset the combobox selection whenever the filtered set changes ----
+    # (avoids referencing a previously-chosen label that's no longer in `options`)
+    filter_signature = tuple(sorted(opt.key for opt in filtered_options))
+    signature_state_key = f"_entity_filter_sig_{entity_tab}"
+    if st.session_state.get(signature_state_key) != filter_signature:
+        st.session_state.pop(f"entity_combo_{entity_tab}", None)
+        st.session_state[signature_state_key] = filter_signature
+
+    if not filtered_options:
+        st.warning(get_text("entity_filters.no_matches", lang))
+
     # ---- Build display labels for combobox ----
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_option_label(opt, rtl) for opt in options]
-    key_map = {_format_option_label(opt, rtl): opt.key for opt in options}
+    display_labels = [_format_option_label(opt, rtl) for opt in filtered_options]
+    key_map = {_format_option_label(opt, rtl): opt.key for opt in filtered_options}
 
     # ---- Layout: combobox + go button ----
     col_combo, col_btn = st.columns([4, 1])
@@ -114,6 +131,190 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     # ---- Fetch & display entity detail ----
     st.divider()
     _render_entity_detail(handler, selected_key, lang)
+
+
+# =============================================================================
+#  Metadata filters
+# =============================================================================
+
+def _render_filters(entity_tab: str, options: list, lang: str) -> list:
+    """
+    Render entity-type-specific metadata filters and return the filtered
+    subset of `options`. Filters are read from/written to st.session_state so
+    they persist across reruns. Tabs without filters (nations, tribes) return
+    `options` unchanged.
+    """
+    if entity_tab == PAGE_PEOPLE:
+        return _render_person_filters(options, lang)
+    if entity_tab == PAGE_PLACES:
+        from backend.models_db.Enums import PlaceType
+        return _render_type_filter(
+            options, lang, attr="placeType", enum_cls=PlaceType,
+            label_key="entity_filters.place_type_label",
+            all_key="entity_filters.place_type_all",
+            state_prefix="filter_place_type",
+        )
+    if entity_tab == PAGE_SYMBOLS:
+        from backend.models_db.Enums import SymbolType
+        return _render_type_filter(
+            options, lang, attr="symbolType", enum_cls=SymbolType,
+            label_key="entity_filters.symbol_type_label",
+            all_key="entity_filters.symbol_type_all",
+            state_prefix="filter_symbol_type",
+        )
+    return options
+
+
+def _render_person_filters(options: list, lang: str) -> list:
+    """Person filters: faith (Jewish/Non-Jewish/All), gender (Women/Men/All),
+    individual-vs-group (All default), and role checkboxes (All default)."""
+    from backend.models_db.Enums import RoleType
+
+    with st.container(border=True):
+        st.markdown(f"**{get_text('entity_filters.section_title', lang)}**")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            religion = _render_tri_state_filter(
+                state_key="filter_person_religion",
+                label_key="entity_filters.religion_label",
+                all_key="entity_filters.religion_all",
+                option_a=("jewish", "entity_filters.religion_jewish"),
+                option_b=("non_jewish", "entity_filters.religion_non_jewish"),
+                lang=lang,
+            )
+        with col2:
+            gender = _render_tri_state_filter(
+                state_key="filter_person_gender",
+                label_key="entity_filters.gender_label",
+                all_key="entity_filters.gender_all",
+                option_a=("women", "entity_filters.gender_women"),
+                option_b=("men", "entity_filters.gender_men"),
+                lang=lang,
+            )
+        with col3:
+            grouping = _render_tri_state_filter(
+                state_key="filter_person_group",
+                label_key="entity_filters.group_label",
+                all_key="entity_filters.group_all",
+                option_a=("individual", "entity_filters.group_individual"),
+                option_b=("group", "entity_filters.group_group"),
+                lang=lang,
+            )
+
+        selected_roles = _render_multi_checkbox_filter(
+            enum_cls=RoleType,
+            label_key="entity_filters.roles_label",
+            all_key="entity_filters.roles_all",
+            state_prefix="filter_person_role",
+            lang=lang,
+        )
+
+    filtered = []
+    for opt in options:
+        if religion == "jewish" and opt.isNonJew:
+            continue
+        if religion == "non_jewish" and not opt.isNonJew:
+            continue
+        if gender == "women" and not opt.isWoman:
+            continue
+        if gender == "men" and opt.isWoman:
+            continue
+        if grouping == "individual" and opt.isGroup:
+            continue
+        if grouping == "group" and not opt.isGroup:
+            continue
+        if selected_roles is not None and not (set(opt.roles) & selected_roles):
+            continue
+        filtered.append(opt)
+    return filtered
+
+
+def _render_type_filter(
+    options: list,
+    lang: str,
+    attr: str,
+    enum_cls,
+    label_key: str,
+    all_key: str,
+    state_prefix: str,
+) -> list:
+    """Generic 'checkbox per enum member + All' filter for a single entity attribute
+    (e.g. Place.placeType, Symbol.symbolType)."""
+    with st.container(border=True):
+        st.markdown(f"**{get_text('entity_filters.section_title', lang)}**")
+        selected = _render_multi_checkbox_filter(
+            enum_cls=enum_cls,
+            label_key=label_key,
+            all_key=all_key,
+            state_prefix=state_prefix,
+            lang=lang,
+        )
+
+    if selected is None:
+        return options
+    return [opt for opt in options if getattr(opt, attr, None) in selected]
+
+
+def _render_tri_state_filter(
+    state_key: str,
+    label_key: str,
+    all_key: str,
+    option_a: tuple[str, str],
+    option_b: tuple[str, str],
+    lang: str,
+) -> str:
+    """
+    Render a 3-way segmented control (All / option_a / option_b) and return the
+    selected code ("all", option_a's code, or option_b's code). Uses stable
+    English codes as the underlying widget values (via format_func) so the
+    selection survives language switches.
+    """
+    a_code, a_label_key = option_a
+    b_code, b_label_key = option_b
+    codes = ["all", a_code, b_code]
+    labels = {
+        "all": get_text(all_key, lang),
+        a_code: get_text(a_label_key, lang),
+        b_code: get_text(b_label_key, lang),
+    }
+    chosen = st.segmented_control(
+        get_text(label_key, lang),
+        options=codes,
+        format_func=lambda c: labels.get(c, c),
+        default="all",
+        key=state_key,
+    )
+    return chosen if chosen is not None else "all"
+
+
+def _render_multi_checkbox_filter(
+    enum_cls,
+    label_key: str,
+    all_key: str,
+    state_prefix: str,
+    lang: str,
+) -> set | None:
+    """
+    Render an 'All' checkbox (default checked) plus one checkbox per enum
+    member. Returns None when 'All' is checked (meaning: no filtering), else
+    the set of individually-checked enum members (may be empty).
+    """
+    st.markdown(f"**{get_text(label_key, lang)}**")
+
+    all_state_key = f"{state_prefix}_all"
+    all_checked = st.checkbox(get_text(all_key, lang), value=True, key=all_state_key)
+
+    selected: set = set()
+    if not all_checked:
+        members = list(enum_cls)
+        num_cols = min(len(members), 4) or 1
+        cols = st.columns(num_cols)
+        for i, member in enumerate(members):
+            with cols[i % num_cols]:
+                if st.checkbox(member.value, key=f"{state_prefix}_{member.name}"):
+                    selected.add(member)
+
+    return None if all_checked else selected
 
 
 # =============================================================================

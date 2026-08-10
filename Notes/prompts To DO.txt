@@ -1,120 +1,48 @@
 
 todo 
 
-currently, in my graph, if i select 1 degree of closeness, it does not display siblings. 
-When, on the UI, the user says 1 - populate all family relevant transient fields of that Person object (including siblings)
 
-also, on the UI, display the selected entity in the center.
+filter entity search by metadata {{
+on entity search page (People, Place, nation, etc) - currently we load all relevant entities into the combobox.
+Now - add check filters (do so in a nice intuitive UI) to filter by other metadata populated fields
+Person - Jewish / non jewish, women / men/ both (default), individual/group/both (defualt), role (add checkbox for each role type, add an 'all' option (default - all option).
+Place  - checkbox for each place type, with an 'all' option (default)
+Symbol - checkbox for each symbol_type, with an 'all' option (default)
+}}
 
-Merge/Join Entitys s {{
+fix up searching an entity {{
 
-heres what an entity looks in our mongo db:
+using streamlit. help me design a beautfil UI. dont write the code for me, just give me a good layout given streamlit's abilities. later, i will impl with my copilot
+i have a free text search bar and search button. i want to add filters on the left side of the screen.
+i have 2 filters - 
+(1) Passage type ('law', 'philosophical', 'story',  a few others)
+(2) Sources - this is a staggered list:
+Source type -> Book Category -> Book
+(eg. Tanach -> Neviim -> Yonah, or Bablylonian Talmud -> Zeraim -> berakhot).
 
-{
-  "_id": {
-    "$oid": "6a5fa5fe011460404dfc3eea"
-  },
-  "display_en_name": "god",
-  "display_heb_name": "אלהים",
-  "all_en_names": [
-    "God"
-  ],
-  "all_heb_names": [],
-  "entityType": "Person",
-  "alias_keys": [],
-  "isWoman": false,
-  "isNonJew": false,
-  "isGroup": false,
-  "roles": [],
-  "key": "6a5fa5fe011460404dfc3eea",
-  "timePeriod": "Tanach"
-}
+I would like there to be checkboxs (user can select exactly which he wants, allows mulitple..) There should also be intuitive 'select all', 'unselect all' at the top of every section (selecting all 'Tanach' includes all lower level selections...).
 
-or:
-{
-  "_id": {
-    "$oid": "6a5fa608011460404dfc3f15"
-  },
-  "display_en_name": "god hashem",
-  "display_heb_name": "יהוה אלהים",
-  "all_en_names": [
-    "God Hashem"
-  ],
-  "all_heb_names": [],
-  "entityType": "Person",
-  "alias_keys": [],
-  "isWoman": false,
-  "isNonJew": false,
-  "isGroup": false,
-  "roles": [],
-  "key": "6a5fa608011460404dfc3f15",
-  "timePeriod": "Tanach"
-}
-}
-or:
-
-{
-  "_id": {
-    "$oid": "6a5fa5fe011460404dfc3eeb"
-  },
-  "display_en_name": "heaven",
-  "display_heb_name": "השמים",
-  "all_en_names": [
-    "Heaven"
-  ],
-  "all_heb_names": [],
-  "entityType": "Place",
-  "alias_keys": [],
-  "key": "6a5fa5fe011460404dfc3eeb",
-  "placeType": "Not Physical"
-}
-}
+------------------
+remove all these filters on the left pane. get rid of that frontend code. but dont break anything else.
+instead of the current design, implement this design:
 
 
-display_en_name is usually unique, but not always
-
-also, a Source metadata obj contains the key of entity and relationships:
-{
-  "_id": {
-    "$oid": "6a0c50d5de1e737ec5e1ea1f"
-  },
-  "key": "TN_Genesis_0_1:1-3",
-  "source_type": "Tanach",
-  "summary_en": "God created heaven, earth, and light.",
-  "summary_heb": "אלוהים ברא שמיים, ארץ, ואור.",
-  "passage_types": [
-    "Story"
-  ],
-  "entity_keys": [
-    "6a5fa5ff011460404dfc3eee",
-    "6a5fa5ff011460404dfc3eec",
-    "6a5fa5fe011460404dfc3eeb",
-    "6a5fa5ff011460404dfc3eed",
-    "6a5fa5fe011460404dfc3eea"
-  ],
-  "rel_keys": [
-    "6a5fa6fd011460404dfc432f",
-    "6a5fa6fc011460404dfc432e"
-  ]
-}
-
-
-I need a new dbpopulater script, (make new Dbpopulator called 'MergeEntities') that will properly merge 2 different entities. 
-It will read this csv (C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\populator_scripts\entitys_to_merge.csv):
-final_display_name,display_names_to_join,merged
-God,god|god hashem|god most high|god of abraham|hashem,0
-
-
-find the entitys with this display name, and combine them to one. after the script runs, there will now only be 1 obj in the db to represent this entity, with all relevent relationships, and Source metadata objs, updated to only point to that obj. 
-
-in the event that we find more than 1 entity for that display_name, than clearly log it, and skip that line. 
-after running the whole csv, the program should mark merged or not. 
-if there was an error while running, the file should mark 'merged' for whatever it was successful with.
-
-obviously, before running on that line, the script will look and see if merged.
-EVEN IF NOT MERGED (merged = 0), then the script will first see if there are really 2 entities with that display name or not. if not, then the script can safely skip that entity
 
 }}
+
+easy fixes {{
+make a filter for 'unit' on the number search page. 
+there should be a combobox, populated by the units found, and the user can select a unit by which to filter the rows
+-------------------------
+add this banner nicely at the top, next to the main title of MapaLi. should be in the header, visible on every page
+
+<a href="https://www.sefaria.org">
+<img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
+</a>
+
+}}
+
+
 
 
 fix entity rel population (pydantic){{
@@ -147,7 +75,7 @@ pydantic creating graph, remove entitys with display name like (.lower() (not co
 	
 	
 	
-	Place - house, city, plain, hills, entrace, gate, door, Field, (see enum!!)
+	Place - house, city, plain, hills, entrace, room, gate, door, Field, (see enum!!)
 
 }}
 

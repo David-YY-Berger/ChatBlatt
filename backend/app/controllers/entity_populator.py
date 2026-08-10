@@ -234,6 +234,19 @@ class NationPopulator(BaseEntityPopulator):
         }
 
 
+class SymbolPopulator(BaseEntityPopulator):
+    """Populates transient fields for ESymbol entities."""
+
+    def get_rel_field_map(self) -> Dict[Tuple[RelType, str], str]:
+        return {
+            (RelType.symbolAssociatedWithPlace, AS_TERM1): "associatedWithPlace",
+            (RelType.comparedTo, AS_TERM1): "comparedTo",
+            (RelType.comparedTo, AS_TERM2): "comparedTo",
+            (RelType.contrastedWith, AS_TERM1): "contrastedWith",
+            (RelType.contrastedWith, AS_TERM2): "contrastedWith",
+        }
+
+
 class TribeOfIsraelPopulator(BaseEntityPopulator):
     """Populates transient fields for ETribeOfIsrael entities. (Stub for future use.)"""
 
@@ -256,6 +269,7 @@ POPULATOR_REGISTRY: Dict[EntityType, BaseEntityPopulator] = {
     EntityType.EPlace: PlacePopulator(),
     EntityType.ENation: NationPopulator(),
     EntityType.ETribeOfIsrael: TribeOfIsraelPopulator(),
+    EntityType.ESymbol: SymbolPopulator(),
 }
 
 

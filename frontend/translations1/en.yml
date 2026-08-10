@@ -108,6 +108,30 @@ entity_fields:
   inNation: "Nation"
   # TribeOfIsrael fields
   membersOfTribeIsrael: "Tribe Members"
+  # Symbol fields
+  symbolType: "Symbol Type"
+
+entity_filters:
+  section_title: "Filters"
+  no_matches: "No entities match the selected filters."
+  religion_label: "Faith"
+  religion_all: "All"
+  religion_jewish: "Jewish"
+  religion_non_jewish: "Non-Jewish"
+  gender_label: "Gender"
+  gender_all: "All"
+  gender_women: "Women"
+  gender_men: "Men"
+  group_label: "Individual / Group"
+  group_all: "All"
+  group_individual: "Individual"
+  group_group: "Group"
+  roles_label: "Role"
+  roles_all: "All Roles"
+  place_type_label: "Place Type"
+  place_type_all: "All Types"
+  symbol_type_label: "Symbol Type"
+  symbol_type_all: "All Types"
 
 page_titles:
   home: "Welcome to MapaLi"
