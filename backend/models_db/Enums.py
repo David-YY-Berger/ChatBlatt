@@ -44,9 +44,6 @@ class RoleType(Enum):
     Kohen = "Kohen"
     Tanna = "Tanna"
     Amora = "Amora"
-    Geon = "Geon"
-    Rishon = "Rishon"
-    Acharon = "Acharon"
 
 class NumberCategory(Enum):
     Sacrifice = "Sacrifice"       # Offerings: animals, flour, oil, incense
