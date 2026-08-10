@@ -172,7 +172,9 @@ def _render_person_filters(options: list, lang: str) -> list:
 
     with st.container(border=True):
         st.markdown(f"**{get_text('entity_filters.section_title', lang)}**")
-        col1, col2, col3 = st.columns(3)
+        # Faith / gender / individual-group stacked horizontally, with the
+        # (vertically-stacked) role checkboxes pushed all the way to the right.
+        col1, col2, col3, col4 = st.columns(4)
         with col1:
             religion = _render_tri_state_filter(
                 state_key="filter_person_religion",
@@ -200,14 +202,14 @@ def _render_person_filters(options: list, lang: str) -> list:
                 option_b=("group", "entity_filters.group_group"),
                 lang=lang,
             )
-
-        selected_roles = _render_multi_checkbox_filter(
-            enum_cls=RoleType,
-            label_key="entity_filters.roles_label",
-            all_key="entity_filters.roles_all",
-            state_prefix="filter_person_role",
-            lang=lang,
-        )
+        with col4:
+            selected_roles = _render_multi_checkbox_filter(
+                enum_cls=RoleType,
+                label_key="entity_filters.roles_label",
+                all_key="entity_filters.roles_all",
+                state_prefix="filter_person_role",
+                lang=lang,
+            )
 
     filtered = []
     for opt in options:
@@ -242,13 +244,17 @@ def _render_type_filter(
     (e.g. Place.placeType, Symbol.symbolType)."""
     with st.container(border=True):
         st.markdown(f"**{get_text('entity_filters.section_title', lang)}**")
-        selected = _render_multi_checkbox_filter(
-            enum_cls=enum_cls,
-            label_key=label_key,
-            all_key=all_key,
-            state_prefix=state_prefix,
-            lang=lang,
-        )
+        # Keep the vertically-stacked checkbox list narrow/compact rather than
+        # spanning the full container width (wasted space to the right is OK).
+        narrow_col, _ = st.columns([1, 3])
+        with narrow_col:
+            selected = _render_multi_checkbox_filter(
+                enum_cls=enum_cls,
+                label_key=label_key,
+                all_key=all_key,
+                state_prefix=state_prefix,
+                lang=lang,
+            )
 
     if selected is None:
         return options
@@ -296,8 +302,11 @@ def _render_multi_checkbox_filter(
 ) -> set | None:
     """
     Render an 'All' checkbox (default checked) plus one checkbox per enum
-    member. Returns None when 'All' is checked (meaning: no filtering), else
-    the set of individually-checked enum members (may be empty).
+    member, always visible and stacked vertically (compact — one per line).
+    While 'All' is checked, every member checkbox is shown checked-and-locked
+    to indicate all options are included; uncheck 'All' to pick individually.
+    Returns None when 'All' is checked (meaning: no filtering), else the set
+    of individually-checked enum members (may be empty).
     """
     st.markdown(f"**{get_text(label_key, lang)}**")
 
@@ -305,14 +314,14 @@ def _render_multi_checkbox_filter(
     all_checked = st.checkbox(get_text(all_key, lang), value=True, key=all_state_key)
 
     selected: set = set()
-    if not all_checked:
-        members = list(enum_cls)
-        num_cols = min(len(members), 4) or 1
-        cols = st.columns(num_cols)
-        for i, member in enumerate(members):
-            with cols[i % num_cols]:
-                if st.checkbox(member.value, key=f"{state_prefix}_{member.name}"):
-                    selected.add(member)
+    for member in enum_cls:
+        member_key = f"{state_prefix}_{member.name}"
+        if all_checked:
+            # Locked/checked display only — uncheck 'All' to customize.
+            st.checkbox(member.value, value=True, key=f"{member_key}_locked", disabled=True)
+        else:
+            if st.checkbox(member.value, key=member_key):
+                selected.add(member)
 
     return None if all_checked else selected
 
