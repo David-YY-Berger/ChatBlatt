@@ -44,6 +44,16 @@ class HtmlWriter:
 .no-content { color:#7f8c8d; font-style:italic; padding:10px; text-align:center; font-size:0.9em; }"""
 
     @staticmethod
+    def get_container_css() -> str:
+        """CSS for the white rounded content container that hosts source
+        sections. Shared with the frontend popup component — edit here to
+        update both. ``color`` is set explicitly so the container always
+        renders readable dark text, regardless of the host page's own
+        (possibly dark-themed) body color."""
+        return """\
+.container { max-width:1000px; margin:0 auto; background:white; color:#1a1a1a; padding:10px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }"""
+
+    @staticmethod
     def get_source_section_js() -> str:
         """JavaScript for toggling source sections and collapsible content.
         Shared with the frontend popup component — edit here to update both."""
@@ -149,7 +159,9 @@ function toggleCollapsible(contentId) {
 <title>Answer Details</title>
 <style>
 body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; background:#f5f5f5; direction:ltr; text-align:left; }
-.container { max-width:1000px; margin:0 auto; background:white; padding:10px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+"""
+            + HtmlWriter.get_container_css()
+            + """
 .header { background:#2c3e50; color:white; padding:10px 12px; border-radius:5px; margin-bottom:8px; }
 .question-label { font-size:0.8em; color:#bdc3c7; margin-bottom:2px; font-weight:normal; }
 .question-content { font-size:1.2em; margin:0 0 4px 0; font-weight:bold; }

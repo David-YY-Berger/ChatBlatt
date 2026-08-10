@@ -51,10 +51,8 @@ def source_popup_css_js() -> str:
 }
 .sp-overlay.sp-open { display:flex; }
 .sp-box {
-    background:white; border-radius:8px;
     width:min(820px,92vw); max-height:88vh;
     overflow-y:auto;
-    box-shadow:0 8px 32px rgba(0,0,0,0.3);
     font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 .sp-close-bar {
@@ -79,6 +77,7 @@ function spClose(id) {
     return (
         "<style>\n"
         + popup_css + "\n"
+        + HtmlWriter.get_container_css() + "\n"
         + HtmlWriter.get_source_section_css()
         + "\n</style>\n"
         "<script>\n"
@@ -137,7 +136,7 @@ def source_popup_html(
     return (
         f'<div class="sp-overlay" id="sp-{pid}"'
         f' onclick="if(event.target===this)spClose(\'{pid}\')">'
-        f'<div class="sp-box">'
+        f'<div class="sp-box container">'
         f'<div class="sp-close-bar">'
         f'<button class="sp-close-btn" onclick="spClose(\'{pid}\')">&#x2715;</button>'
         f'</div>'

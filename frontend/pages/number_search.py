@@ -287,6 +287,16 @@ def _validate_number(value: str) -> str | None:
 # Search bar
 # ---------------------------------------------------------------------------
 
+def _on_search_submit(lang: str) -> None:
+    """Callback for the search input's on_change — runs the search when the
+    user presses Enter (text_input fires on_change on Enter or blur)."""
+    value = st.session_state.get("number_input", "")
+    if not value.strip():
+        return
+    if _validate_number(value) is None:
+        _run_search(value.strip(), lang)
+
+
 def _render_search_bar(lang: str) -> None:
     """Render the inline search bar: input | search button.
 
@@ -302,6 +312,10 @@ def _render_search_bar(lang: str) -> None:
             placeholder=get_text("number_search_ui.placeholder", lang),
             help=get_text("number_search_ui.format_hint", lang),
             key="number_input",
+            # on_change fires when the user presses Enter (or the field loses
+            # focus after an edit), so Enter triggers a search just like the button.
+            on_change=_on_search_submit,
+            args=(lang,),
         )
 
     with btn_col:
