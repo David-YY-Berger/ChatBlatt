@@ -15,7 +15,8 @@ div[data-testid="stVerticalBlock"] {
 /* The open/close `<div class="facet-section">` markdown tags render as empty
    elements – collapse them so they contribute no height. */
 div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.facet-section:empty),
-div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.entity-section:empty),
+div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.entity-tab-row:empty),
+div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"] > div.entity-select-panels:empty),
 div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[data-testid="stMarkdownContainer"]:empty) {
     display: none !important;
 }
@@ -73,10 +74,11 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
 }
 
 /* =========================================================
-   Entity panel – vertical collapsibles in the right column
+   Entity panel – tab-style toggle row + per-active-type
+   selection panels, in the right column
    ========================================================= */
 
-/* Outer container grouping all entity sections */
+/* Outer container grouping the entity tab row + selection panels */
 .entity-panel {
     border: 1px solid #24354e;
     border-radius: 8px;
@@ -94,8 +96,38 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
     letter-spacing: 0.02em;
 }
 
-/* Individual entity rows – reuse .facet-section base, tighten spacing */
-.entity-panel .entity-section {
-    margin-bottom: 1px;
+/* ── Entity-type tab row: compact pill-style toggle buttons ── */
+.entity-tab-row > div[data-testid="stHorizontalBlock"] {
+    gap: 6px !important;
+    margin-bottom: 4px !important;
+}
+
+.entity-tab-row [data-testid="stButton"] > button {
+    padding: 3px 8px !important;
+    font-size: 0.75rem !important;
+    min-height: 28px !important;
+    height: 28px !important;
+    line-height: 1 !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+}
+
+/* ── Per-active-type selection panels (rendered below the tab row) ── */
+.entity-select-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.entity-select-section {
+    padding: 4px 8px 6px 8px !important;
+}
+
+.entity-select-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #cdd6f4;
+    margin-bottom: 2px;
 }
 

@@ -15,7 +15,7 @@ by other pages::
 """
 
 from .renderers import (
-    ENTITY_OPTIONS,
+    ENTITY_TYPES,
     inject_facet_css,
     render_book_facet,
     render_entity_facets,
@@ -37,6 +37,6 @@ __all__ = [
     # Generic section widget (reusable on any page)
     "facet_section_header",
     # Constants
-    "ENTITY_OPTIONS",
+    "ENTITY_TYPES",
 ]
 

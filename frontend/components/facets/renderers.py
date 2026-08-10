@@ -17,23 +17,33 @@ import streamlit as st
 
 from backend.db.data_names.Books import Books
 from backend.models_db.Enums import BookCategoryName, PassageType, SourceType
+from system_common.Constants import (
+    PAGE_NATIONS, PAGE_PEOPLE, PAGE_PLACES, PAGE_SYMBOLS, PAGE_TRIBES,
+)
 
 from .section import facet_section_header
 
 # ---------------------------------------------------------------------------
 # Entities known to the facet filter
+#
+# ``entity_tab`` maps to the entity-search handler registry key (see
+# ``backend.app.controllers.entity_search.entity_search_controller``) for
+# types that already support real entity lookup; ``None`` for types that
+# don't have a search handler yet (front-end placeholder only).
+#
+# Order is fixed per product requirement (not alphabetical).
 # ---------------------------------------------------------------------------
 
-ENTITY_OPTIONS: list[tuple[str, str]] = [
-    ("Animal", "Animal"),
-    ("Food", "Food"),
-    ("Nation", "Nation"),
-    ("Number", "Number"),
-    ("Person", "Person"),
-    ("Place", "Place"),
-    ("Plant", "Plant"),
-    ("Symbol", "Symbol"),
-    ("TribeOfIsrael", "Tribe Of Israel"),
+ENTITY_TYPES: list[dict] = [
+    {"key": "person", "label": "Person", "entity_tab": PAGE_PEOPLE, "implemented": True},
+    {"key": "place", "label": "Place", "entity_tab": PAGE_PLACES, "implemented": True},
+    {"key": "tribe_of_israel", "label": "Tribe Of Israel", "entity_tab": PAGE_TRIBES, "implemented": True},
+    {"key": "nation", "label": "Nation", "entity_tab": PAGE_NATIONS, "implemented": True},
+    {"key": "number", "label": "Number", "entity_tab": None, "implemented": False},
+    {"key": "animal", "label": "Animal", "entity_tab": None, "implemented": False},
+    {"key": "food", "label": "Food", "entity_tab": None, "implemented": False},
+    {"key": "plant", "label": "Plant", "entity_tab": None, "implemented": False},
+    {"key": "symbol", "label": "Symbol", "entity_tab": PAGE_SYMBOLS, "implemented": True},
 ]
 
 # ---------------------------------------------------------------------------
@@ -118,18 +128,95 @@ def render_passage_type_facet() -> None:
 
 
 def render_entity_facets() -> None:
-    """Entity-type filter – compact vertical collapsibles, one per entity type."""
+    """Entity-type filter – a tab-style toggle row (one pill per entity type,
+    fixed order) with a specific-entity picker panel for each active type.
+
+    Modeled on the entity-type tab selector used on the Entity Search page:
+    ``st.button`` with ``type="primary"`` when active / ``"secondary"`` when
+    inactive. Unlike page navigation, several entity-type tabs may be active
+    at once since this is a filter, not a page switch.
+    """
     st.markdown('<div class="entity-panel">', unsafe_allow_html=True)
     st.markdown(
         "<div class='entity-panel-title'>🏷️ Filter by Entity</div>",
         unsafe_allow_html=True,
     )
-    for ent_key, ent_label in ENTITY_OPTIONS:
-        st.markdown('<div class="facet-section entity-section">', unsafe_allow_html=True)
-        if facet_section_header(ent_label, f"ent_{ent_key}"):
-            st.button("Select", key=f"select_ent_{ent_key}")
-        st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown('<div class="entity-tab-row">', unsafe_allow_html=True)
+    cols = st.columns(len(ENTITY_TYPES))
+    for col, ent in zip(cols, ENTITY_TYPES):
+        active_key = f"entity_filter_active_{ent['key']}"
+        is_active = st.session_state.get(active_key, False)
+        with col:
+            if st.button(
+                ent["label"],
+                key=f"entity_tab_btn_{ent['key']}",
+                use_container_width=True,
+                type="primary" if is_active else "secondary",
+            ):
+                st.session_state[active_key] = not is_active
+                st.rerun()
     st.markdown("</div>", unsafe_allow_html=True)
+
+    active_entities = [
+        ent for ent in ENTITY_TYPES
+        if st.session_state.get(f"entity_filter_active_{ent['key']}", False)
+    ]
+    if active_entities:
+        st.markdown('<div class="entity-select-panels">', unsafe_allow_html=True)
+        for ent in active_entities:
+            _render_entity_select_panel(ent)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def _render_entity_select_panel(ent: dict) -> None:
+    """Render the specific-entity picker panel for one active entity-type tab."""
+    st.markdown('<div class="facet-section entity-select-section">', unsafe_allow_html=True)
+    st.markdown(f"<div class='entity-select-label'>{ent['label']}</div>", unsafe_allow_html=True)
+
+    if ent["implemented"]:
+        options = _load_entity_select_options(ent["entity_tab"])
+        if options:
+            labels = [_format_entity_option_label(o) for o in options]
+            st.multiselect(
+                f"Select {ent['label'].lower()}(s)",
+                options=labels,
+                key=f"entity_filter_selected_{ent['key']}",
+                label_visibility="collapsed",
+                placeholder=f"Search {ent['label'].lower()}s…",
+            )
+            # Selections are kept in session_state for now; wiring them into
+            # the actual SourceSearchQuery is deferred (front-end only task).
+        else:
+            st.caption("No entities found.")
+    else:
+        st.caption("Coming soon — this entity type isn't searchable yet.")
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def _load_entity_select_options(entity_tab: str) -> list:
+    """Fetch & cache (per Streamlit session) the select options for an
+    entity-search tab, reusing the same handler registry as the Entity
+    Search page."""
+    cache_key = f"_entity_filter_options_cache_{entity_tab}"
+    if cache_key not in st.session_state:
+        from backend.app.controllers.entity_search.entity_search_controller import (
+            get_entity_search_handler,
+        )
+
+        handler = get_entity_search_handler(entity_tab)
+        st.session_state[cache_key] = handler.get_select_options() if handler else []
+    return st.session_state[cache_key]
+
+
+def _format_entity_option_label(opt) -> str:
+    """Format an EntitySelectOption for display in the multiselect."""
+    if opt.display_heb_name:
+        return f"{opt.display_en_name} ({opt.display_heb_name})"
+    return opt.display_en_name
 
 
 # ---------------------------------------------------------------------------
