@@ -3,7 +3,10 @@
 DBPopulateMergeEntities - Merge duplicate entities that represent the same
 real-world concept into a single canonical entity.
 
-Driven by a CSV file (entitys_to_merge.csv, sitting alongside this script) with columns:
+Driven by a directory of per-entity-type CSV files (entitys_to_merge/, sitting
+alongside this script), one file per EntityType, named "<entityType>_to_merge.csv"
+(e.g. person_to_merge.csv, place_to_merge.csv -- entityType.value.lower()). Each file
+has columns:
     final_display_name, display_names_to_join, merged
 
   - final_display_name:     the canonical display name the merged entity should end up
@@ -14,26 +17,29 @@ Driven by a CSV file (entitys_to_merge.csv, sitting alongside this script) with 
                             means not yet merged. This column is re-written after every
                             row so an interrupted run never re-does already-completed work.
 
+A type with nothing to merge yet simply doesn't need a CSV file -- missing files are
+skipped silently; unrecognized files (not matching any EntityType) are logged and skipped.
+
 Per row (skipped entirely if already marked merged):
   1. Every name in display_names_to_join is looked up (exact, case-insensitive match on
-     display_en_name). If any single name matches MORE THAN ONE entity, the name is
-     ambiguous (display_en_name is not always unique) -- the row is logged and skipped so
-     it can be resolved by hand; nothing is changed.
+     display_en_name, restricted to the file's entityType). If any single name matches
+     MORE THAN ONE entity, the name is ambiguous (display_en_name is not always unique
+     even within one type) -- the row is logged and skipped so it can be resolved by
+     hand; nothing is changed.
   2. If, across all names, fewer than 2 distinct entities were found there is nothing to
      merge (already a single entity, or nothing ingested yet) -- the row is skipped, and
      'merged' is left as-is so a future run (after more data is ingested) can re-check it.
-  3. All matched entities must share the same entityType; a mix is logged and skipped.
-  4. One matched entity becomes the surviving "target" (whichever already has
+  3. One matched entity becomes the surviving "target" (whichever already has
      display_en_name == final_display_name, else the first match in column order). Every
      other matched entity is a "duplicate" that gets merged into the target and removed.
-  5. Duplicates are merged into the target ONE AT A TIME (see _merge_duplicate_into_target):
+  4. Duplicates are merged into the target ONE AT A TIME (see _merge_duplicate_into_target):
      fold the duplicate's fields into the target and persist it, re-point every
      relationship and SourceMetadata reference from the duplicate's key to the target's
      key (dropping relationships that would become self-loops, de-duplicating against any
      relationship the target already has), then delete the duplicate entity. Because each
      duplicate is fully retired before the next one starts, an interrupted run never
      leaves a half-merged entity -- re-running the script simply picks up where it left off.
-  6. The row is marked merged=1 and the CSV is re-written immediately.
+  5. The row is marked merged=1 and the CSV is re-written immediately.
 
 Entry point: test_merge_entities (unittest-style, matching sibling populator scripts).
 """
@@ -44,16 +50,19 @@ from enum import Enum
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import EntityType
 from backend.models_db.Rel import Rel
 from backend_pipeline.data_pipeline.DBScriptParentClass import DBParentClass
 
-CSV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entitys_to_merge.csv")
+MERGE_CSV_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entitys_to_merge")
+CSV_FILENAME_SUFFIX = "_to_merge.csv"
 
 FINAL_DISPLAY_NAME_COL = "final_display_name"
 DISPLAY_NAMES_TO_JOIN_COL = "display_names_to_join"
 MERGED_COL = "merged"
 NAME_DELIMITER = "|"
 MERGED_TRUE_VALUES = {"1", "true", "yes"}
+_EMPTY_TALLIES = {"merged": 0, "already_merged": 0, "nothing_to_merge": 0, "ambiguous": 0, "error": 0}
 
 # Entity fields whose merge logic is special-cased in _fold_fields_into_target (name/alias
 # bookkeeping); every other persisted field is merged generically via reflection.
@@ -89,7 +98,7 @@ def _merge_lists(*lists) -> list:
 
 
 class DBPopulateMergeEntities(DBParentClass):
-    """Populator script that merges duplicate entities per entitys_to_merge.csv."""
+    """Populator script that merges duplicate entities per entitys_to_merge/<entityType>_to_merge.csv."""
 
     def setUp(self):
         super().setUp()
@@ -100,13 +109,59 @@ class DBPopulateMergeEntities(DBParentClass):
     # ─── Entry point ───────────────────────────────────────────────────────────
 
     def test_merge_entities(self) -> None:
-        """Read entitys_to_merge.csv and merge each not-yet-merged row's entities."""
-        rows, fieldnames = self._read_csv_rows(CSV_PATH)
-        if not rows:
-            print(f"No rows found in {CSV_PATH}.")
+        """
+        For every EntityType, look for entitys_to_merge/<entityType>_to_merge.csv
+        (e.g. person_to_merge.csv, place_to_merge.csv) and merge each not-yet-merged
+        row's entities. A type with nothing to merge yet simply doesn't need a file.
+        """
+        if not os.path.isdir(MERGE_CSV_DIR):
+            print(f"No merge CSV directory found at {MERGE_CSV_DIR}.")
             return
 
-        tallies = {"merged": 0, "already_merged": 0, "nothing_to_merge": 0, "ambiguous": 0, "error": 0}
+        filename_to_type = {self._csv_filename_for_type(et): et for et in EntityType}
+        grand_tallies = dict(_EMPTY_TALLIES)
+        any_file_found = False
+
+        for filename in sorted(os.listdir(MERGE_CSV_DIR)):
+            file_path = os.path.join(MERGE_CSV_DIR, filename)
+            if not os.path.isfile(file_path):
+                continue
+
+            entity_type = filename_to_type.get(filename.lower())
+            if entity_type is None:
+                print(f"[WARNING] '{filename}' does not match any '<entityType>_to_merge.csv' name, skipping.")
+                continue
+
+            any_file_found = True
+            file_tallies = self._process_csv_file(file_path, entity_type)
+            for status, count in file_tallies.items():
+                grand_tallies[status] += count
+
+        if not any_file_found:
+            print(f"No '<entityType>_to_merge.csv' files found in {MERGE_CSV_DIR}.")
+            return
+
+        print(f"\n{'=' * 60}")
+        print(
+            f"MERGE SUMMARY (all types): merged={grand_tallies['merged']}, "
+            f"already_merged={grand_tallies['already_merged']}, "
+            f"nothing_to_merge={grand_tallies['nothing_to_merge']}, "
+            f"ambiguous={grand_tallies['ambiguous']}, errors={grand_tallies['error']}"
+        )
+        print(f"{'=' * 60}")
+
+    @staticmethod
+    def _csv_filename_for_type(entity_type: EntityType) -> str:
+        return f"{entity_type.value.lower()}{CSV_FILENAME_SUFFIX}"
+
+    def _process_csv_file(self, csv_path: str, entity_type: EntityType) -> Dict[str, int]:
+        """Process a single per-entity-type CSV file end-to-end; returns tallies for this file."""
+        print(f"\n--- Processing {os.path.basename(csv_path)} (entityType={entity_type.value}) ---")
+        rows, fieldnames = self._read_csv_rows(csv_path)
+        tallies = dict(_EMPTY_TALLIES)
+        if not rows:
+            print(f"No rows found in {csv_path}.")
+            return tallies
 
         for row in rows:
             final_display_name = (row.get(FINAL_DISPLAY_NAME_COL) or "").strip()
@@ -122,7 +177,7 @@ class DBPopulateMergeEntities(DBParentClass):
                 continue
 
             try:
-                status = self._process_row(final_display_name, row.get(DISPLAY_NAMES_TO_JOIN_COL) or "")
+                status = self._process_row(final_display_name, row.get(DISPLAY_NAMES_TO_JOIN_COL) or "", entity_type)
             except Exception as e:
                 print(f"[ERROR] '{final_display_name}': merge failed with an exception: {e}")
                 status = "error"
@@ -133,22 +188,22 @@ class DBPopulateMergeEntities(DBParentClass):
 
             # Re-write progress after every row so an interrupted run never loses
             # already-merged rows (they stay marked merged=1 on disk).
-            self._write_csv_rows(CSV_PATH, fieldnames, rows)
+            self._write_csv_rows(csv_path, fieldnames, rows)
 
-        print(f"\n{'=' * 60}")
         print(
-            f"MERGE SUMMARY: merged={tallies['merged']}, already_merged={tallies['already_merged']}, "
-            f"nothing_to_merge={tallies['nothing_to_merge']}, ambiguous={tallies['ambiguous']}, "
-            f"errors={tallies['error']}"
+            f"{os.path.basename(csv_path)} SUMMARY: merged={tallies['merged']}, "
+            f"already_merged={tallies['already_merged']}, nothing_to_merge={tallies['nothing_to_merge']}, "
+            f"ambiguous={tallies['ambiguous']}, errors={tallies['error']}"
         )
-        print(f"{'=' * 60}")
+        return tallies
 
     # ─── Row-level merge logic ──────────────────────────────────────────────────
 
-    def _process_row(self, final_display_name: str, names_field: str) -> str:
+    def _process_row(self, final_display_name: str, names_field: str, entity_type: EntityType) -> str:
         """
-        Attempt to merge one CSV row. Returns one of:
-          "merged", "ambiguous", "nothing_to_merge", "type_mismatch".
+        Attempt to merge one CSV row, with all lookups restricted to `entity_type`
+        (the type implied by the file this row came from). Returns one of:
+          "merged", "ambiguous", "nothing_to_merge".
         Unexpected DB errors propagate to the caller, which marks the row as "error".
         """
         names = self._parse_names(names_field)
@@ -158,11 +213,11 @@ class DBPopulateMergeEntities(DBParentClass):
 
         found_by_name: Dict[str, Entity] = {}
         for name in names:
-            matches = self.db_api.get_entities_by_display_en_name(name)
+            matches = self.db_api.get_entities_by_display_en_name(name, entity_type=entity_type)
             if len(matches) > 1:
                 print(
-                    f"[AMBIGUOUS] '{final_display_name}': name '{name}' matches {len(matches)} "
-                    f"entities (keys={[m.key for m in matches]}); skipping this row for manual review."
+                    f"[AMBIGUOUS] '{final_display_name}' ({entity_type.value}): name '{name}' matches "
+                    f"{len(matches)} entities (keys={[m.key for m in matches]}); skipping this row for manual review."
                 )
                 return "ambiguous"
             if len(matches) == 1:
@@ -174,18 +229,10 @@ class DBPopulateMergeEntities(DBParentClass):
 
         if len(entities) < 2:
             print(
-                f"[SKIP] '{final_display_name}': only {len(entities)} distinct entity(ies) found "
-                f"for {names}; nothing to merge."
+                f"[SKIP] '{final_display_name}' ({entity_type.value}): only {len(entities)} distinct "
+                f"entity(ies) found for {names}; nothing to merge."
             )
             return "nothing_to_merge"
-
-        types = {e.entityType for e in entities}
-        if len(types) > 1:
-            print(
-                f"[ERROR] '{final_display_name}': matched entities span multiple entity types "
-                f"({sorted(t.value for t in types)}); skipping (cannot merge across types)."
-            )
-            return "type_mismatch"
 
         canonical_name = final_display_name.strip().lower()
         target = found_by_name.get(canonical_name)
@@ -203,7 +250,7 @@ class DBPopulateMergeEntities(DBParentClass):
             self._merge_duplicate_into_target(target, dup, canonical_name, final_display_name)
 
         print(
-            f"[MERGED] '{final_display_name}': merged {len(duplicates)} duplicate(s) "
+            f"[MERGED] '{final_display_name}' ({entity_type.value}): merged {len(duplicates)} duplicate(s) "
             f"{[d.key for d in duplicates]} into target key={target.key}."
         )
         return "merged"
@@ -317,12 +364,35 @@ class DBPopulateMergeEntities(DBParentClass):
 
     @staticmethod
     def _read_csv_rows(path: str) -> Tuple[List[Dict[str, str]], List[str]]:
+        """
+        Read a merge CSV. If the file doesn't start with the expected header (first
+        column == 'final_display_name'), it's treated as headerless and that column
+        order is assumed instead (with a warning), so an accidentally omitted header
+        row doesn't silently swallow real data. Fully-blank rows (e.g. a trailing
+        newline at EOF) are dropped. The file is rewritten with a proper header the
+        next time _write_csv_rows runs.
+        """
+        default_fieldnames = [FINAL_DISPLAY_NAME_COL, DISPLAY_NAMES_TO_JOIN_COL, MERGED_COL]
+
         with open(path, "r", encoding="utf-8-sig", newline="") as f:
-            reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames or [FINAL_DISPLAY_NAME_COL, DISPLAY_NAMES_TO_JOIN_COL, MERGED_COL]
+            first_line = next(csv.reader(f), None)
+        has_header = bool(first_line) and first_line[0].strip().lower() == FINAL_DISPLAY_NAME_COL
+
+        with open(path, "r", encoding="utf-8-sig", newline="") as f:
+            if has_header:
+                reader = csv.DictReader(f)
+                fieldnames = list(reader.fieldnames or default_fieldnames)
+            else:
+                print(
+                    f"[WARNING] '{os.path.basename(path)}': no header row detected (expected first "
+                    f"column '{FINAL_DISPLAY_NAME_COL}'); assuming column order ({', '.join(default_fieldnames)})."
+                )
+                reader = csv.DictReader(f, fieldnames=default_fieldnames)
+                fieldnames = default_fieldnames
             # Drop fully-blank rows (e.g. a trailing newline at EOF).
             rows = [dict(row) for row in reader if any((v or "").strip() for v in row.values())]
-        return rows, list(fieldnames)
+
+        return rows, fieldnames
 
     @staticmethod
     def _write_csv_rows(path: str, fieldnames: List[str], rows: List[Dict[str, str]]) -> None:

@@ -1,182 +1,168 @@
 
-todo {{
-
-in this func backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment._get_unenriched_entities_for_source
-
-we retrieve Entitys. 
-but, even though in my DB, the entity with key X has indeed metadata, the entity obj that my code pulls from the DB does NOT has metadata. for example - it does not have Person does not have Person.display_heb_name populated. why not?
-
-backend.db.mongo_parts.entity_mixin.EntityMongoMixin.get_entities_by_keys
-backend.models_db.EntityObjects.EPerson.EPerson
--------
-
-make read from json str and just debug the code...
+todo 
 
 
-}}
+remove the frontend radio button of whole number vs fraction. make it clear in either the placeholder, or somewhere else on the UI what the options are. ensure to adjust the logic.
 
-
-
-#################################################################################
-########################## populate metadata ############################
-#################################################################################
-
-finished - entity enrichemnt add to db {{ 
-
-see backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment._extract_all_to_json
-
-here - json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list) we have the json string of entities. it can look like this:
-{
-    "entities": [
-        {
-            "key": "6a5fa5fe011460404dfc3eea",
-            "display_heb_name": "אלהים",
-            "timePeriod": "Tanach"
-        },
-        {
-            "key": "6a5fa694011460404dfc4176",
-            "display_heb_name": "רחל",
-            "timePeriod": "Tanach",
-            "isWoman": true
-        },
- 
-    ],
-    "key": "TN_Genesis_0_30:3-8"
-}
-
-now, i want you to reinsert those entities into the DB. 
-(1) make sure to verify the Enum values with the actual values.
-(2) notice - there can be fields missing
-(3) we already have this func - backend.db.mongo_parts.entity_mixin.EntityMongoMixin.update_entity - just make sure that it makes sense. 
- }}
- 
-FINISHED impl populate entity metadata {{
-
-----
-implement: backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase.DBPopulateLlmBase._extract_from_passage 
-
-for 
-backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityEnrichment.DBPopulateEntityEnrichment
-
-see how we did it in backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
-
-but this time:
-the 'passage' will include both the clean english, and clean hebrew text (no vowels), and in addition to the package, we will send a list of entities (in json format) that we will get from the DB. DONT WORRY ABOUT:
-- the runner code/loop
-- which entities we'll eventually get
-
-JUST FOCUS ON THE PYDANTIC CALLING CODE.
-
-We must add an optional param to this func, the func should be a list of Strings 'entity_json_list'
-
-we will be sending the passage (eng + heb), and a list of Entitys associated with that Passage (derived from Source Metadata) that have not yet been enriched with metadata (if an entity has already been enriched, it will not be sent). 
-
-
-how the prompt to pydantic should look:
-We want pydantic to essentially fill in the fields that the db didnt. so:
-for every Entity: display_heb_name. This should be taken almost exactly from the hebrew text sent in passage in prompt, but should be normalized. no vowels.
-Person: timePeriod (send backend.models_db.Enums.TimePeriod enum), isWoman (bool), isNonJew (bool), isGroup (bool), roles (send backend.models_db.Enums.RoleType)
-Number: heb_unit, heb_context. No Vowels, same direction as english unit and context.
-Place: PlaceType (send enum backend.models_db.Enums.PlaceType)
-Symbol: SymbolType (send enum backend.models_db.Enums.SymbolType)
-
-validate - if a value received for Person.timePeriod, Person.roleType, place.placeType, symbol.SymbolType does not exist in the original enum - then simply filter it out of the final json response (log it, like that way we long in populate Entity Rel Graph)
-
--------
- implement
-backend_pipeline/data_pipeline/populator_scripts/DBPopulateEntityEnrichment.py  : 
-
-i will describe everything which must happen, some of the code might already be written in base files / pydanticCaller, etc. 
-if doesnt exist there, you will probably find similar code in backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateLmmData
-
-1. iterate over sources, for now from get_examples_src_contents
-2. for every source, query the db and get the list of Entitys linked to that source. 
-3. if an Entity already has metadata - remove it from the list (ie we dont want to touch it). use Entity.has_metadata
-
-4. send to the pydantic caller both the clean english and clean hebrew text, with entity list.
-5. just like we do in DBPopulateEntityRelGraph, print the output as txt files nad jsons.. in a nice dir. if we dont already have a good dir, feel free to create one.
-
-
-}}
 
 Merge/Join Entitys s {{
 
-heres what an entity looks in our db:
+heres what an entity looks in our mongo db:
 
 {
   "_id": {
-    "$oid": "6a467c2701fbb1a2983bf4fb"
+    "$oid": "6a5fa5fe011460404dfc3eea"
   },
   "display_en_name": "god",
-  "display_heb_name": "",
+  "display_heb_name": "אלהים",
   "all_en_names": [
     "God"
   ],
   "all_heb_names": [],
   "entityType": "Person",
   "alias_keys": [],
-  "key": "6a467c2701fbb1a2983bf4fb"
+  "isWoman": false,
+  "isNonJew": false,
+  "isGroup": false,
+  "roles": [],
+  "key": "6a5fa5fe011460404dfc3eea",
+  "timePeriod": "Tanach"
 }
 
+or:
+{
+  "_id": {
+    "$oid": "6a5fa608011460404dfc3f15"
+  },
+  "display_en_name": "god hashem",
+  "display_heb_name": "יהוה אלהים",
+  "all_en_names": [
+    "God Hashem"
+  ],
+  "all_heb_names": [],
+  "entityType": "Person",
+  "alias_keys": [],
+  "isWoman": false,
+  "isNonJew": false,
+  "isGroup": false,
+  "roles": [],
+  "key": "6a5fa608011460404dfc3f15",
+  "timePeriod": "Tanach"
+}
+}
 or:
 
 {
   "_id": {
-    "$oid": "6a467c2701fbb1a2983bf4fc"
+    "$oid": "6a5fa5fe011460404dfc3eeb"
   },
   "display_en_name": "heaven",
-  "display_heb_name": "",
+  "display_heb_name": "השמים",
   "all_en_names": [
     "Heaven"
   ],
   "all_heb_names": [],
   "entityType": "Place",
   "alias_keys": [],
-  "key": "6a467c2701fbb1a2983bf4fc"
+  "key": "6a5fa5fe011460404dfc3eeb",
+  "placeType": "Not Physical"
+}
 }
 
 
-display_en_name is usually unique
+display_en_name is usually unique, but not always
 
-look at relationship:
+also, a Source metadata obj contains the key of entity and relationships:
 {
   "_id": {
-    "$oid": "6a467d1801fbb1a2983bf93f"
+    "$oid": "6a0c50d5de1e737ec5e1ea1f"
   },
-  "term1": "6a467c2701fbb1a2983bf4fb",
-  "term2": "6a467c2701fbb1a2983bf4fc",
-  "rel_type": "associatedWithPlace",
-  "key": "6a467d1801fbb1a2983bf93f"
+  "key": "TN_Genesis_0_1:1-3",
+  "source_type": "Tanach",
+  "summary_en": "God created heaven, earth, and light.",
+  "summary_heb": "אלוהים ברא שמיים, ארץ, ואור.",
+  "passage_types": [
+    "Story"
+  ],
+  "entity_keys": [
+    "6a5fa5ff011460404dfc3eee",
+    "6a5fa5ff011460404dfc3eec",
+    "6a5fa5fe011460404dfc3eeb",
+    "6a5fa5ff011460404dfc3eed",
+    "6a5fa5fe011460404dfc3eea"
+  ],
+  "rel_keys": [
+    "6a5fa6fd011460404dfc432f",
+    "6a5fa6fc011460404dfc432e"
+  ]
 }
 
-also, a Source metadata obj contains the entity key:
 
-
-I need a new dbpopulater script, (make new Dbpopulator called 'DAta Correction') that will properly unify 2 different entities. 
-It will read this csv:
+I need a new dbpopulater script, (make new Dbpopulator called 'MergeEntities') that will properly merge 2 different entities. 
+It will read this csv (C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\populator_scripts\entitys_to_merge.csv):
 final_display_name,display_names_to_join,merged
-God,god|god hashem|god most high|god of abraham|hashem,
+God,god|god hashem|god most high|god of abraham|hashem,0
 
 
-find the entitys with this display name, and combine them to one. there will now only be 1 obj in the db to represent this entity, with all relevent relationships, and Source metadata objs, updated to only point to that obj. 
+find the entitys with this display name, and combine them to one. after the script runs, there will now only be 1 obj in the db to represent this entity, with all relevent relationships, and Source metadata objs, updated to only point to that obj. 
 
 in the event that we find more than 1 entity for that display_name, than clearly log it, and skip that line. 
 after running the whole csv, the program should mark merged or not. 
 if there was an error while running, the file should mark 'merged' for whatever it was successful with.
 
-
+obviously, before running on that line, the script will look and see if merged.
+EVEN IF NOT MERGED (merged = 0), then the script will first see if there are really 2 entities with that display name or not. if not, then the script can safely skip that entity
 
 }}
 
+
 fix entity rel population (pydantic){{
+
+dont do this until we are ready to test it.. 
+use this to test: 
+
+
+as part of this populater script - backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateEntityRelGraph
+
 pydantic creating graph, remove entitys with display name like (.lower() (not contained, exactly equal..)
 
-	in the prompt, give it the enums to guide it.. should be alphabetized !
+	
+	
+	building a pipeline to extract meaningful proper nouns from text using pydantic. going over the Tanach and babylonian talmud
+	i need hardcode list of words to ignore
 
-	Person -all family relationship general words - get a huge list.
-			son, sons, daughter, daughters, wife, wives, husband, husbands, -
-			king
-	Place - house, city, plain, hills, entrace, gate, door, Field,
+	giving me common noun words, that an LLM would take as 'Person', to ignore. This list must be (1) alphabet order (2) include singular, plural, possesive, etc of each word, (3) be a long as possible.
+	
+	here are some example categorys:
+	Person -all family relationship general words (son, sons, daughter, daughters, wife, wives, husband, husbands, etc)
+			- royalty (king, queen, servant, master, maidservant)
+			- student teacher (rabbi, student, teacher, guide, colleague, )
+			- community leader (judge, leader, etc)
+	
+	YOU MUST GIVE ME A COPIABLE BLOCK OF TEXT, EACH WORD IS ON A NEW LINE.
+	
+	
+	
+	
+	
+	
+	Place - house, city, plain, hills, entrace, gate, door, Field, (see enum!!)
+
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+pop metadata {{ 
 
 }}
 
