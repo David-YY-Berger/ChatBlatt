@@ -10,12 +10,11 @@ from system_common.Constants import LANG_EN
 
 @dataclass
 class NumberSearchRequest:
-    number_type: str  # "whole" or "fraction"
-    value: str
+    value: str  # whole number (e.g. "7") or fraction (e.g. "1/3"); type is auto-detected
     lang: str = LANG_EN  # UI language — "en" or "he"
 
     def __str__(self) -> str:
-        return f"NumberSearchRequest(type={self.number_type}, value={self.value!r}, lang={self.lang!r})"
+        return f"NumberSearchRequest(value={self.value!r}, lang={self.lang!r})"
 
 
 @dataclass

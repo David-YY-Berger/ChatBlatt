@@ -1,9 +1,10 @@
 
 todo 
 
+currently, in my graph, if i select 1 degree of closeness, it does not display siblings. 
+When, on the UI, the user says 1 - populate all family relevant transient fields of that Person object (including siblings)
 
-remove the frontend radio button of whole number vs fraction. make it clear in either the placeholder, or somewhere else on the UI what the options are. ensure to adjust the logic.
-
+also, on the UI, display the selected entity in the center.
 
 Merge/Join Entitys s {{
 

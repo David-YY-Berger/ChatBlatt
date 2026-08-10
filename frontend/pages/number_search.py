@@ -3,7 +3,8 @@
 Number-search page.
 
 UI responsibilities only:
-  - search bar (type selector, input box, search button) laid out in one row
+  - search bar (single free-form input box + search button) laid out in one row
+  - number type (whole vs. fraction) is auto-detected from the input, not user-selected
   - live input validation with specific, descriptive error messages
   - result display: big number header → coloured category tabs → sorted table
 
@@ -227,21 +228,35 @@ def _fetch_source_contents(result: NumberSearchResult) -> dict:
 
 
 
-def _validate_number(value: str, number_type: str) -> str | None:
-    """Return a descriptive error message, or None when the input is valid."""
+def _detect_number_type(value: str) -> str:
+    """Auto-detect whether *value* is meant to be a whole number or a fraction.
+
+    A single '/' indicates a fraction (e.g. "1/3"); anything else is treated
+    as a whole number. This keeps the UI to a single free-form input while
+    still allowing type-specific validation messages.
+    """
+    return NUMBER_TYPE_FRACTION if "/" in value else NUMBER_TYPE_WHOLE
+
+
+def _validate_number(value: str) -> str | None:
+    """Return a descriptive error message, or None when the input is valid.
+
+    The number type (whole vs. fraction) is auto-detected from *value* —
+    there is no separate type selector in the UI.
+    """
     s = value.strip()
     if not s:
         return None  # Empty — silently ignored until Search is clicked
 
+    number_type = _detect_number_type(s)
+
     if number_type == NUMBER_TYPE_WHOLE:
-        if "/" in s:
-            return "❌ Whole numbers cannot contain '/' — did you mean to select 'Fraction'?"
         if "." in s:
-            return "❌ Whole numbers cannot contain decimal points"
+            return "❌ Decimal points aren't supported — enter a whole number (e.g. 7) or a fraction (e.g. 1/3)"
         if "-" in s:
             return "❌ Negative numbers are not allowed"
         if not s.isdigit():
-            return "❌ Only digits (0–9) are allowed for whole numbers"
+            return "❌ Only digits (0–9) are allowed, or a fraction like 1/3"
         if int(s) == 0:
             return "❌ Number must be greater than 0 (0 is not allowed)"
 
@@ -251,8 +266,6 @@ def _validate_number(value: str, number_type: str) -> str | None:
         if "." in s:
             return "❌ Fractions cannot contain decimal points"
         slash_count = s.count("/")
-        if slash_count == 0:
-            return "❌ Fractions must include '/' — e.g. 1/3"
         if slash_count > 1:
             return "❌ Too many '/' — fractions have exactly one slash (e.g. 1/4)"
         if not all(c in "0123456789/" for c in s):
@@ -275,31 +288,19 @@ def _validate_number(value: str, number_type: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 def _render_search_bar(lang: str) -> None:
-    """Render the inline search bar: type selector | input | search button."""
-    type_col, input_col, btn_col = st.columns([3, 5, 1], vertical_alignment="bottom")
+    """Render the inline search bar: input | search button.
 
-    with type_col:
-        number_type = st.radio(
-            get_text("number_search_ui.type_label", lang),
-            options=[NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION],
-            format_func=lambda x: (
-                get_text("number_search_ui.type_whole", lang)
-                if x == NUMBER_TYPE_WHOLE
-                else get_text("number_search_ui.type_fraction", lang)
-            ),
-            key="number_type",
-            horizontal=True,
-        )
+    A single free-form input accepts either a whole number (e.g. "7") or a
+    fraction (e.g. "1/3"); the placeholder and helper caption make both
+    supported formats clear since there's no separate type selector.
+    """
+    input_col, btn_col = st.columns([8, 1], vertical_alignment="bottom")
 
     with input_col:
-        placeholder = (
-            get_text("number_search_ui.placeholder_whole", lang)
-            if number_type == NUMBER_TYPE_WHOLE
-            else get_text("number_search_ui.placeholder_fraction", lang)
-        )
         value = st.text_input(
             get_text("number_search_ui.input_label", lang),
-            placeholder=placeholder,
+            placeholder=get_text("number_search_ui.placeholder", lang),
+            help=get_text("number_search_ui.format_hint", lang),
             key="number_input",
         )
 
@@ -312,13 +313,13 @@ def _render_search_bar(lang: str) -> None:
         )
 
     # Live validation — runs on every rerender (i.e. every keystroke / widget change)
-    error = _validate_number(value, number_type)
+    error = _validate_number(value)
 
     if search_clicked:
         if not value.strip():
             error = get_text("number_search_ui.error_empty", lang)
         if not error:
-            _run_search(number_type, value.strip(), lang)
+            _run_search(value.strip(), lang)
 
     if error:
         st.markdown(
@@ -331,10 +332,10 @@ def _render_search_bar(lang: str) -> None:
 # Search execution
 # ---------------------------------------------------------------------------
 
-def _run_search(number_type: str, value: str, lang: str) -> None:
+def _run_search(value: str, lang: str) -> None:
     """Pass the validated input to the controller and store the response in session state."""
     controller = NumberSearchController()
-    request = NumberSearchRequest(number_type=number_type, value=value, lang=lang)
+    request = NumberSearchRequest(value=value, lang=lang)
     response = controller.handle(request)
     if _DEBUG_FE:
         _debug_log_result(request, response)
@@ -352,7 +353,7 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
     """When PRINT_DEBUG_LOGS_FE=true, prints the search request and full result to the console."""
     sep = "=" * 60
     print(f"\n{sep}")
-    print(f"[DEBUG FE] Number search: type={request.number_type}  value={request.value}  lang={request.lang}")
+    print(f"[DEBUG FE] Number search: value={request.value}  lang={request.lang}")
     print(sep)
 
     if not response.success or response.error:
