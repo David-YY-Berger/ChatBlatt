@@ -171,11 +171,12 @@ def _compute_layout(graph_data):
     for key in all_keys:
         by_level[level[key]].append(key)
 
-    # ---- 2. X position for level 0: chain out from the centre -----------
+    # ---- 2. X position for level 0: centre person fixed at x=0, with -----
+    # siblings/spouse alternating left/right around it (closest relations,
+    # per BFS discovery order, land nearest the centre on either side).
     x_pos: dict[str, float] = {}
     ordered0 = _order_same_level(center_key, by_level.get(0, []), same_level_links)
-    for i, key in enumerate(ordered0):
-        x_pos[key] = (i - (len(ordered0) - 1) / 2) * _X_SPACING
+    _assign_x_centered_on(center_key, ordered0, x_pos)
 
     # ---- 3. X position for other levels: average of already-placed kin --
     for lvl in sorted([l for l in by_level if l < 0], reverse=True):
@@ -230,6 +231,25 @@ def _order_same_level(center_key: str, level_keys: list, same_level_links: dict)
         if key not in visited:
             ordered.append(key)
     return ordered
+
+
+def _assign_x_centered_on(center_key: str, ordered0: list, x_pos: dict) -> None:
+    """Places `center_key` at x=0 (the selected entity always renders in the
+    visual centre of the graph) and fans its same-level neighbours
+    (siblings/spouse) out alternately to the right and left, in the order
+    they were discovered, so the centre never drifts to one side no matter
+    how many siblings/spouses are added."""
+    if center_key not in ordered0:
+        for i, key in enumerate(ordered0):
+            x_pos[key] = (i - (len(ordered0) - 1) / 2) * _X_SPACING
+        return
+
+    x_pos[center_key] = 0.0
+    neighbours = [key for key in ordered0 if key != center_key]
+    for i, key in enumerate(neighbours):
+        rank = i // 2 + 1
+        side = 1 if i % 2 == 0 else -1
+        x_pos[key] = side * rank * _X_SPACING
 
 
 def _assign_x_from_relation(level_keys: list, relation_map: dict, x_pos: dict) -> None:

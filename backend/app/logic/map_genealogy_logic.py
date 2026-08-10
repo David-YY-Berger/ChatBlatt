@@ -151,6 +151,15 @@ class MapGenealogyLogic:
             # already-known nodes were expanded in an earlier hop already.
             frontier = new_frontier
 
+        # The center person's transient family fields (childOfFather,
+        # childOfMother, children, siblings, spouseOf) should always be
+        # fully populated regardless of `depth` — including at depth=1,
+        # where the center's parents become nodes but are never themselves
+        # queried (that only happens on hop 2+). Without an extra query here,
+        # the center's siblings (other children of the same parent) would
+        # never be discovered at depth=1.
+        self._complete_center_siblings(center_key, parent_children, nodes, edges)
+
         # Add sibling edges between children sharing a parent
         self._add_sibling_edges(parent_children, nodes, edges)
 
@@ -163,6 +172,59 @@ class MapGenealogyLogic:
     # ------------------------------------------------------------------
     # Private helpers
     # ------------------------------------------------------------------
+
+    def _complete_center_siblings(
+        self,
+        center_key: str,
+        parent_children: Dict[str, Set[str]],
+        nodes: Dict[str, GenealogyNode],
+        edges: Dict[Tuple, GenealogyEdge],
+    ) -> None:
+        """
+        Ensures the center person's siblings (other children of the center's
+        own parents) are present in the graph, even when the center's parents
+        were never themselves expanded (i.e. depth=1, where parents are added
+        as nodes but their own family rels are only fetched on hop 2+).
+
+        Fetches, in one batched query, the family rels for the center's
+        parents and merges any newly-discovered co-children into
+        `parent_children` / `nodes` so `_add_sibling_edges` picks them up.
+        """
+        center_parent_keys = {
+            parent_key
+            for parent_key, child_keys in parent_children.items()
+            if center_key in child_keys
+        }
+        if not center_parent_keys:
+            return
+
+        rels = self.db.get_family_rels_for_entities(list(center_parent_keys))
+        rels = [
+            r
+            for r in rels
+            if r.rel_type in (RelType.childOfFather, RelType.childOfMother)
+            and r.term2 in center_parent_keys
+        ]
+        if not rels:
+            return
+
+        unknown_keys = [r.term1 for r in rels if r.term1 not in nodes]
+        entity_map: Dict[str, Entity] = self.db.get_entities_by_keys_map(unknown_keys)
+
+        for rel in rels:
+            parent_key, child_key = rel.term2, rel.term1
+            if child_key not in nodes:
+                entity = entity_map.get(child_key)
+                if entity is None:
+                    continue  # can't resolve this sibling; skip
+                nodes[child_key] = _make_node(entity)
+            parent_children.setdefault(parent_key, set()).add(child_key)
+
+            edge = _make_edge(rel)
+            edge_key = (edge.from_key, edge.to_key, edge.rel_type)
+            rev_edge_key = (edge.to_key, edge.from_key, edge.rel_type)
+            if edge_key not in edges and rev_edge_key not in edges:
+                edges[edge_key] = edge
 
     def _add_sibling_edges(
         self,
