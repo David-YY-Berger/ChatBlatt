@@ -122,13 +122,19 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
 
 .entity-select-section {
     padding: 4px 8px 6px 8px !important;
+    border-top: none !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
 }
 
 .entity-select-label {
-    font-size: 0.8rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #cdd6f4;
     padding-right: 6px;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
