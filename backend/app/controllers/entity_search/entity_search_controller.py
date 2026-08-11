@@ -67,6 +67,28 @@ class BaseEntitySearchHandler(ABC):
         """
         ...
 
+    def get_metadata_badges(self, entity: Entity) -> List[Dict]:
+        """
+        Returns ordered list of badge dicts for a compact, colorful metadata
+        display, each shaped as:
+            {
+                "icon": str,            # emoji shown before the text
+                "text": Optional[str],  # raw display text (language-agnostic, e.g. an enum value)
+                "label_key": Optional[str],  # translation key used when "text" is not set
+                "color": str,           # hex color driving the badge's border/text/tint
+            }
+        Default implementation wraps get_db_field_display() as plain gray
+        badges so every entity type gets *some* badge rendering for free.
+        Subclasses (Person/Place/Symbol) override this for richer, per-field
+        icons/colors (booleans, enums, role lists, etc.).
+        """
+        badges: List[Dict] = []
+        for label_key, value in self.get_db_field_display(entity):
+            if not value or value == "—":
+                continue
+            badges.append({"icon": "", "text": value, "label_key": None, "color": "#6b7280"})
+        return badges
+
     def get_full_entity(self, entity_key: str) -> Optional[Entity]:
         """
         Fetch entity by key, then populate all transient fields from rels.

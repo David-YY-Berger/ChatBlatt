@@ -8,7 +8,7 @@ Concrete implementation of BaseEntitySearchHandler for Symbol entities.
 
 from __future__ import annotations
 
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 from backend.app.controllers.entity_search.entity_search_controller import BaseEntitySearchHandler
 from backend.models_db.EntityObjects.ESymbol import ESymbol
@@ -44,3 +44,16 @@ class SymbolSearchHandler(BaseEntitySearchHandler):
         if entity.symbolType:
             fields.append(("entity_fields.symbolType", entity.symbolType.value))
         return fields
+
+    def get_metadata_badges(self, entity: Entity) -> List[Dict]:
+        """Colorful, icon-based badge for Symbol metadata: symbol type.
+        Icon/color come directly from the SymbolType enum member."""
+        if not isinstance(entity, ESymbol) or not entity.symbolType:
+            return []
+
+        return [{
+            "icon": entity.symbolType.icon,
+            "text": entity.symbolType.value,
+            "label_key": None,
+            "color": entity.symbolType.color,
+        }]

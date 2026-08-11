@@ -357,21 +357,46 @@ def _render_entity_detail(handler, entity_key: str, lang: str) -> None:
     if all_names and len(all_names) > 1:
         st.markdown(f"**{get_text('entity_fields.also_known_as', lang)}:** {', '.join(all_names)}")
 
-    # ---- DB fields (entity-type-specific) ----
-    db_fields = handler.get_db_field_display(entity)
-    if db_fields:
-        cols = st.columns(min(len(db_fields), 4))
-        for i, (label_key, value) in enumerate(db_fields):
-            with cols[i % len(cols)]:
-                label = get_text(label_key, lang)
-                st.markdown(f"**{label}**")
-                st.markdown(value if value else "—")
+    # ---- Metadata badges (entity-type-specific): compact, colorful chips ----
+    badges = handler.get_metadata_badges(entity)
+    _render_metadata_badges(badges, lang)
 
     st.divider()
 
     # ---- Transient relationship fields ----
     transient_labels = handler.get_transient_field_labels()
     _render_relationship_fields(entity, transient_labels, lang)
+
+
+def _render_metadata_badges(badges: list[dict], lang: str) -> None:
+    """
+    Render entity metadata (time period, gender, faith, group/individual,
+    roles, place type, symbol type, etc.) as a compact, colorful, wrapping
+    row of pill-shaped badges instead of a plain key/value grid.
+
+    Each badge dict has: icon, text (raw, language-agnostic) OR label_key
+    (translated), and color (hex, drives tint/border/text color).
+    """
+    if not badges:
+        return
+
+    chips = []
+    for badge in badges:
+        text = badge.get("text") or get_text(badge.get("label_key") or "", lang)
+        icon = badge.get("icon", "")
+        color = badge.get("color", "#6b7280")
+        chips.append(
+            "<span style='display:inline-flex; align-items:center; gap:0.35rem; "
+            f"background:{color}1f; border:1px solid {color}; color:{color}; "
+            "padding:0.28rem 0.7rem; border-radius:999px; font-size:0.85rem; "
+            f"font-weight:600; white-space:nowrap;'>{icon} {text}</span>"
+        )
+
+    st.markdown(
+        "<div style='display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.6rem;'>"
+        + "".join(chips) + "</div>",
+        unsafe_allow_html=True,
+    )
 
 
 def _render_relationship_fields(entity, transient_labels: list, lang: str) -> None:

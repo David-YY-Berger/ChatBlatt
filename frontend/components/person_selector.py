@@ -26,6 +26,7 @@ from translations1 import get_text, is_rtl
 def render_person_selector(
     lang: str,
     state_key: str = "selected_person_key",
+    override_key: Optional[str] = None,
 ) -> Optional[str]:
     """
     Render a person combobox + Go button.
@@ -34,10 +35,14 @@ def render_person_selector(
     On "Go", persists the selected entity key under `state_key` in session state.
 
     Args:
-        lang:      Current UI language code.
-        state_key: Session-state key used to store the confirmed selection.
-                   Callers with multiple selectors on one page should use
-                   distinct keys to avoid collisions.
+        lang:         Current UI language code.
+        state_key:    Session-state key used to store the confirmed selection.
+                      Callers with multiple selectors on one page should use
+                      distinct keys to avoid collisions.
+        override_key: If provided, force the selection to this entity key
+                      (e.g. a person picked by clicking a node on a graph)
+                      before the widgets are rendered, so both the confirmed
+                      selection and the combobox display stay in sync.
 
     Returns:
         The entity key string of the confirmed selection, or None.
@@ -61,6 +66,14 @@ def render_person_selector(
 
     display_labels = [_format_label(opt, rtl) for opt in options]
     key_map = {_format_label(opt, rtl): opt.key for opt in options}
+
+    combo_state_key = f"person_selector_combo_{state_key}"
+    if override_key:
+        st.session_state[state_key] = override_key
+        for label, key in key_map.items():
+            if key == override_key:
+                st.session_state[combo_state_key] = label
+                break
 
     col_combo, col_btn = st.columns([4, 1])
 

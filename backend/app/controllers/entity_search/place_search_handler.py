@@ -8,7 +8,7 @@ Concrete implementation of BaseEntitySearchHandler for Place entities.
 
 from __future__ import annotations
 
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 from backend.app.controllers.entity_search.entity_search_controller import BaseEntitySearchHandler
 from backend.models_db.EntityObjects.EPlace import EPlace
@@ -44,4 +44,17 @@ class PlaceSearchHandler(BaseEntitySearchHandler):
         if entity.placeType:
             fields.append(("entity_fields.placeType", entity.placeType.value))
         return fields
+
+    def get_metadata_badges(self, entity: Entity) -> List[Dict]:
+        """Colorful, icon-based badge for Place metadata: place type.
+        Icon/color come directly from the PlaceType enum member."""
+        if not isinstance(entity, EPlace) or not entity.placeType:
+            return []
+
+        return [{
+            "icon": entity.placeType.icon,
+            "text": entity.placeType.value,
+            "label_key": None,
+            "color": entity.placeType.color,
+        }]
 

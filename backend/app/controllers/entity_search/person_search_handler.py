@@ -8,7 +8,7 @@ Concrete implementation of BaseEntitySearchHandler for Person entities.
 
 from __future__ import annotations
 
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 from backend.app.controllers.entity_search.entity_search_controller import BaseEntitySearchHandler
 from backend.models_db.EntityObjects.Entity import Entity
@@ -51,4 +51,46 @@ class PersonSearchHandler(BaseEntitySearchHandler):
         if entity.roles:
             fields.append(("entity_fields.roles", ", ".join(r.value for r in entity.roles)))
         return fields
+
+    def get_metadata_badges(self, entity: Entity) -> List[Dict]:
+        """Colorful, icon-based badges for Person metadata: time period, gender,
+        faith, individual/group, and one badge per role."""
+        if not isinstance(entity, EPerson):
+            return []
+
+        badges: List[Dict] = []
+
+        if entity.timePeriod:
+            badges.append({
+                "icon": entity.timePeriod.icon,
+                "text": entity.timePeriod.value,
+                "label_key": None,
+                "color": entity.timePeriod.color,
+            })
+
+        badges.append({
+            "icon": "🚺" if entity.isWoman else "🚹",
+            "text": None,
+            "label_key": "entity_fields.isWoman" if entity.isWoman else "entity_fields.isMan",
+            "color": "#db2777" if entity.isWoman else "#2563eb",
+        })
+
+        badges.append({
+            "icon": "🌐" if entity.isNonJew else "✡️",
+            "text": None,
+            "label_key": "entity_fields.isNonJew" if entity.isNonJew else "entity_fields.isJewish",
+            "color": "#0891b2" if entity.isNonJew else "#b45309",
+        })
+
+        badges.append({
+            "icon": "👥" if entity.isGroup else "🧍",
+            "text": None,
+            "label_key": "entity_fields.isGroup" if entity.isGroup else "entity_fields.isIndividual",
+            "color": "#7c3aed" if entity.isGroup else "#059669",
+        })
+
+        for role in entity.roles or []:
+            badges.append({"icon": role.icon, "text": role.value, "label_key": None, "color": role.color})
+
+        return badges
 
