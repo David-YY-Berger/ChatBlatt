@@ -183,6 +183,16 @@ class FaissEngine:
         elapsed = time.time() - start_time
         print(f"[FaissEngine] Done. {total} documents indexed in {elapsed / 60:.1f} min.")
 
+    def clear_index(self):
+        """
+        Totally wipes the FAISS index: resets the in-memory index/metadata
+        and deletes the persisted copy in the db (via dbapi), so a fresh,
+        empty index is used from here on.
+        """
+        self._index = faiss.IndexFlatL2(self.dim)
+        self.metadata = []
+        self.dbapi.clear_faiss_index()
+
     def get_new_docs(self, docs):
         existing_keys = set(self.metadata)
 

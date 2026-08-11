@@ -11,3 +11,7 @@ class FaissInterfaceMixin(ABC):
     def load_faiss_index(self) -> Optional[Tuple[bytes, bytes]]:
         pass
 
+    @abstractmethod
+    def clear_faiss_index(self) -> None:
+        pass
+

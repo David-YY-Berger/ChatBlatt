@@ -38,4 +38,8 @@ class FaissMongoMixin:
 
         return index_bytes, metadata_bytes
 
+    def clear_faiss_index(self) -> None:
+        """Remove all persisted FAISS index/metadata documents from the FS collection."""
+        self.get_collection(CollectionObjs.FS).delete_many({})
+
 
