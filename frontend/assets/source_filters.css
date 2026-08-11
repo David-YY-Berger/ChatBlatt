@@ -1,0 +1,106 @@
+/* ── Source-filters component: self-contained styling ──
+   Nesting is achieved with real st.container(border=True) blocks, so each
+   selector below just needs to color/pad the matching container – the
+   browser DOM nesting already gives us the visual hierarchy. */
+
+/* Compact checkboxes inside this component */
+[class*="st-key-sf_passage_box_"] div[data-testid="stCheckbox"],
+[class*="st-key-sf_sources_box_"] div[data-testid="stCheckbox"] {
+    margin-bottom: -8px;
+}
+
+/* ── Level 0: outer Passage Type / Sources boxes ── */
+[class*="st-key-sf_passage_box_"],
+[class*="st-key-sf_sources_box_"] {
+    background-color: #1a2b44 !important;
+    border-color: #24354e !important;
+    padding: 8px 12px !important;
+    margin-bottom: 12px;
+}
+
+/* ── Level 1: Source Type node (Tanach, Babylonian Talmud, ...) ── */
+[class*="st-key-sf_srctype_"] {
+    background-color: #152a42 !important;
+    border-color: #1e3352 !important;
+    padding: 4px 10px !important;
+    margin-bottom: 6px;
+}
+
+/* ── Level 2: Book Category node (Torah, Neviim, Zeraim, ...) ── */
+[class*="st-key-sf_cat_"] {
+    background-color: #0f1e30 !important;
+    border-color: #18304d !important;
+    padding: 4px 10px !important;
+    margin-bottom: 5px;
+}
+
+/* ── Section / node titles ── */
+.sf-node-title {
+    padding-top: 3px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #cdd6f4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── "x/y selected" count label next to a parent ── */
+.sf-count {
+    padding-top: 4px;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+/* ── Compact All/None + collapse-arrow buttons everywhere in this component ── */
+[class*="st-key-sf_passage_box_"] [data-testid="stButton"] > button,
+[class*="st-key-sf_sources_box_"] [data-testid="stButton"] > button {
+    padding: 0px 6px !important;
+    font-size: 0.72rem !important;
+    min-height: 22px !important;
+    height: 22px !important;
+    line-height: 1 !important;
+    border-radius: 4px !important;
+    width: 100%;
+}
+
+/* Kill Streamlit's default vertical gap so the tree reads as compact */
+[class*="st-key-sf_passage_box_"] div[data-testid="stVerticalBlock"],
+[class*="st-key-sf_sources_box_"] div[data-testid="stVerticalBlock"] {
+    gap: 0.2rem !important;
+}
+
+/* =========================================================
+   Active filter chips bar (rendered above the results)
+   ========================================================= */
+
+.sf-chips-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #93c5fd;
+    margin-bottom: 2px;
+    letter-spacing: 0.02em;
+}
+
+[class*="st-key-sf_chips_bar_"] [data-testid="stButton"] > button {
+    padding: 2px 10px !important;
+    font-size: 0.78rem !important;
+    min-height: 24px !important;
+    height: 24px !important;
+    line-height: 1 !important;
+    border-radius: 999px !important;
+    background-color: #24354e !important;
+    border: 1px solid #3a4f6e !important;
+    color: #f8f9fa !important;
+    width: auto !important;
+}
+
+[class*="st-key-sf_chips_bar_"] [data-testid="stButton"] > button:hover {
+    background-color: #3a5a8a !important;
+    border-color: #4f7ab8 !important;
+}
+
+[class*="st-key-sf_chips_bar_"] div[data-testid="stHorizontalBlock"] {
+    gap: 0.4rem !important;
+}

@@ -13,30 +13,24 @@ import streamlit as st
 
 from backend.app.SearchHandler import SearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
-from backend.db.data_names.Books import Books
-from backend.models_db.Enums import PassageType, SourceType
+from components.source_filters import get_selected_books, get_selected_passage_types
 from system_common.SystemFunctions import get_ts_datetime
 
 logger = logging.getLogger(__name__)
 
 
 def collect_search_query() -> SourceSearchQuery:
-    """Read current session-state checkbox values and build a :class:`SourceSearchQuery`."""
+    """Read the current source-filters selections and free-text box to build
+    a :class:`SourceSearchQuery`."""
     free_text = st.session_state.get("free_text_query", "")
 
-    selected_src_types = [
-        stype for stype in SourceType
-        if st.session_state.get(f"facet_src_type_{stype.name}", False)
-    ]
-    selected_passage_types = [
-        p for p in PassageType
-        if st.session_state.get(f"facet_passage_{p.name}", False)
-    ]
-    # Book selection – passed to SearchHandler for server-side filtering.
-    selected_books = [  # noqa: F841
-        b for b in Books.sorted_all()
-        if st.session_state.get(f"facet_book_{b.database_name}", False)
-    ]
+    selected_passage_types = get_selected_passage_types()
+    # Book-level selection – captured for the future; not yet wired into
+    # server-side filtering (backend support is out of scope for now).
+    selected_books = get_selected_books()  # noqa: F841
+    selected_src_types = sorted(
+        {b.source_type for b in selected_books}, key=lambda st_: st_.value,
+    )
 
     return SourceSearchQuery(
         free_text_similarity=free_text,

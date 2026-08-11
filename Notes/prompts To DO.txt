@@ -11,6 +11,7 @@ hebrew working
 
 fix up searching an entity {{
 
+finished {{
 
 i want to redo the left side filters for books, source type, book category, passage type.
 
@@ -37,13 +38,30 @@ important:
 ONLY DO FRONT END LOGIC, do not need to implement the backend behaviour at all.
 
 also, make this its own component, in the future, i will be adding this to other pages (just the left side source filterer)
-
+}}
 ---------------
+now {{
 see my front end for filtering, both by source (source type, passage type, book category, book), and by entity.
 
 now, make sure the code through the backend works, properly implmenenting and populating the db querys to bring the relevant sources.
 of course, make sure to use interfaces when relevant
+}}
 
+next {{
+when i click on Maps or Entity Search tab, i get a dropdown, and then select from there what i want. when it takes me to the new page - currently it does not close that tab's dropdown. Make sure to close the dropdown after selecting an option so that it wont block the UI.
+
+}}
+
+graph {{
+
+on geneology map, if i click on a node, add an option to view that (ie that will be the center) and reload the map.
+}}
+
+entity_Search {{
+on entity_Search page, for metadata (People - is woman, is non jewish, group vs individual, time period, etc), show the data in a more intuitive, colorful, compact way.
+do so for Place (place type), Symbol (symbol type) also
+
+}}
 }}
 
 easy fixes {{
@@ -56,6 +74,9 @@ add this banner nicely at the top, next to the main title of MapaLi. should be i
 <img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
 </a>
 
+------------------------
+on number search page - when displaying results, first show in this order (left to right):
+Time, People, Measurement, Sacrifice, Money, misc
 ------------------------
 when generating a source section, add a nice colorful way to show what passage type this source is. You can save this color in backend.models_db.Enums.PassageType. a source can have multiple passage types. 
 

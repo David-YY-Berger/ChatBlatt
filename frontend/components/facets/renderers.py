@@ -1,30 +1,25 @@
 # bs"d - lehagdil torah velahadir
 """
-Per-type facet renderers for the source-search panel.
+Entity-type facet renderer for the source-search panel.
 
-Each public ``render_*_facet`` function is self-contained and may be called
-individually from any page that needs a particular filter.
-``render_facets_panel`` assembles all of them under a single Streamlit
-sub-header and injects the required CSS once.
+Note: the source-type/book-category/book and passage-type filters that used
+to live here have moved to the standalone, reusable
+``components.source_filters`` package (see that package's docstring). This
+module now only deals with the entity-type picker panel.
 """
 
 from __future__ import annotations
 
 import concurrent.futures
 import logging
-from collections import defaultdict
 from pathlib import Path
 
 import streamlit as st
 
-from backend.db.data_names.Books import Books
-from backend.models_db.Enums import BookCategoryName, PassageType, SourceType
 from system_common.Constants import (
     PAGE_ANIMALS, PAGE_FOODS, PAGE_NATIONS, PAGE_NUMBERS, PAGE_PEOPLE,
     PAGE_PLACES, PAGE_PLANTS, PAGE_SYMBOLS, PAGE_TRIBES,
 )
-
-from .section import facet_section_header
 
 logger = logging.getLogger(__name__)
 
@@ -125,73 +120,6 @@ def inject_facet_css() -> None:
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------------------------
-# Book-grouping helpers
-# ---------------------------------------------------------------------------
-
-def _group_books_by_source_then_category() -> dict[SourceType, dict[BookCategoryName, list]]:
-    """Return ``{SourceType: {BookCategoryName: [Book, ...]}}`` in sorted order."""
-    result: dict[SourceType, dict[BookCategoryName, list]] = {}
-    for b in Books.sorted_all():
-        result.setdefault(b.source_type, {})
-        result[b.source_type].setdefault(b.category, [])
-        result[b.source_type][b.category].append(b)
-    return result
-
-
-# ---------------------------------------------------------------------------
-# Individual facet renderers
-# ---------------------------------------------------------------------------
-
-def render_source_type_facet() -> None:
-    """Checkbox filter for :class:`SourceType` values."""
-    all_keys = [f"facet_src_type_{stype.name}" for stype in SourceType]
-    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
-    if facet_section_header("📄 Source Type", "src_type", all_keys):
-        for stype in SourceType:
-            st.checkbox(stype.value, key=f"facet_src_type_{stype.name}", value=True)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-def render_book_facet() -> None:
-    """Three-level collapsible book filter: Source Type → Category → Book."""
-    all_book_keys = [f"facet_book_{b.database_name}" for b in Books.sorted_all()]
-    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
-    if facet_section_header("📚 Book", "book_all", all_book_keys):
-        books_by_src = _group_books_by_source_then_category()
-        for src_type, cats in books_by_src.items():
-            src_book_keys = [
-                f"facet_book_{b.database_name}"
-                for cat_books in cats.values()
-                for b in cat_books
-            ]
-            st.markdown('<div class="facet-section" style="margin-left:8px;margin-top:4px;">', unsafe_allow_html=True)
-            if facet_section_header(f"📖 {src_type.value}", f"book_src_{src_type.name}", src_book_keys):
-                for cat, cat_books in cats.items():
-                    cat_keys = [f"facet_book_{b.database_name}" for b in cat_books]
-                    st.markdown('<div class="facet-section" style="margin-left:16px;margin-top:4px;">', unsafe_allow_html=True)
-                    if facet_section_header(cat.value, f"book_cat_{src_type.name}_{cat.name}", cat_keys):
-                        for b in cat_books:
-                            st.checkbox(
-                                f"{b.en_display_name} ({b.heb_display_name})",
-                                key=f"facet_book_{b.database_name}",
-                                value=True,
-                            )
-                    st.markdown("</div>", unsafe_allow_html=True)
-            st.markdown("</div>", unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-def render_passage_type_facet() -> None:
-    """Checkbox filter for :class:`PassageType` values."""
-    all_keys = [f"facet_passage_{p.name}" for p in PassageType]
-    st.markdown('<div class="facet-section">', unsafe_allow_html=True)
-    if facet_section_header("🔖 Passage Type", "passage_type", all_keys):
-        for p in PassageType:
-            st.checkbox(p.value, key=f"facet_passage_{p.name}", value=True)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
 def render_entity_facets() -> None:
     """Entity-type filter – a specific-entity picker panel for every entity
     type, always shown (no tab toggles). Types without a search handler yet
@@ -283,20 +211,4 @@ def _format_entity_option_label(opt) -> str:
     if opt.display_heb_name:
         return f"{opt.display_en_name} ({opt.display_heb_name})"
     return opt.display_en_name
-
-
-# ---------------------------------------------------------------------------
-# Top-level panel assembly
-# ---------------------------------------------------------------------------
-
-def render_facets_panel() -> None:
-    """Render the left-column facets panel (source type, book, passage type).
-
-    Entity facets are rendered separately at the top of the page via
-    :func:`render_entity_facets`.  CSS injection is handled by the caller.
-    """
-    st.subheader("Facets")
-    render_source_type_facet()
-    render_book_facet()
-    render_passage_type_facet()
 

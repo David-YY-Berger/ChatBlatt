@@ -8,7 +8,9 @@ UI responsibilities only:
   - result display
 
 All search logic lives in :mod:`pages.source_search_logic`.
-All facet widgets live in :mod:`components.facets`.
+Entity-type filter widgets live in :mod:`components.facets`.
+Source-filter widgets (Passage Type + Sources tree) live in
+:mod:`components.source_filters`.
 """
 
 from __future__ import annotations
@@ -24,7 +26,11 @@ from components.facets import (
     inject_facet_css,
     preload_all_entity_options,
     render_entity_facets,
-    render_facets_panel,
+)
+from components.source_filters import (
+    inject_source_filters_css,
+    render_active_filter_chips,
+    render_source_filters,
 )
 from .source_search_logic import collect_search_query, run_search
 
@@ -100,13 +106,17 @@ def render(lang: str) -> None:
     preload_all_entity_options()
 
     inject_facet_css()
+    inject_source_filters_css()
 
     left_col, main_col = st.columns([2, 6])
     with left_col:
-        render_facets_panel()
+        render_source_filters()
     with main_col:
         # Entity facets at the top of the right area
         render_entity_facets()
         # Free-text similarity search below entity filters
         st.text_input("Text similarity search", key="free_text_query")
+        # Active filter chips – reflect current source-filter selections,
+        # shown directly above the results.
+        render_active_filter_chips()
         _render_search_panel()
