@@ -192,16 +192,12 @@ def render_passage_type_facet() -> None:
 
 
 def render_entity_facets() -> None:
-    """Entity-type filter – a tab-style toggle row (one pill per entity type,
-    fixed order) with a specific-entity picker panel for each active type.
-
-    Modeled on the entity-type tab selector used on the Entity Search page:
-    ``st.button`` with ``type="primary"`` when active / ``"secondary"`` when
-    inactive. Unlike page navigation, several entity-type tabs may be active
-    at once since this is a filter, not a page switch.
+    """Entity-type filter – a specific-entity picker panel for every entity
+    type, always shown (no tab toggles). Types without a search handler yet
+    show a "coming soon" placeholder instead of a picker.
     """
     # Fire off background fetches for all entity lists up front (no-op after
-    # the first call this session) so clicking a tab below never has to wait
+    # the first call this session) so rendering below never has to wait
     # on a DB round-trip.
     preload_all_entity_options()
 
@@ -211,31 +207,10 @@ def render_entity_facets() -> None:
         unsafe_allow_html=True,
     )
 
-    st.markdown('<div class="entity-tab-row">', unsafe_allow_html=True)
-    cols = st.columns(len(ENTITY_TYPES))
-    for col, ent in zip(cols, ENTITY_TYPES):
-        active_key = f"entity_filter_active_{ent['key']}"
-        is_active = st.session_state.get(active_key, False)
-        with col:
-            if st.button(
-                ent["label"],
-                key=f"entity_tab_btn_{ent['key']}",
-                use_container_width=True,
-                type="primary" if is_active else "secondary",
-            ):
-                st.session_state[active_key] = not is_active
-                st.rerun()
+    st.markdown('<div class="entity-select-panels">', unsafe_allow_html=True)
+    for ent in ENTITY_TYPES:
+        _render_entity_select_panel(ent)
     st.markdown("</div>", unsafe_allow_html=True)
-
-    active_entities = [
-        ent for ent in ENTITY_TYPES
-        if st.session_state.get(f"entity_filter_active_{ent['key']}", False)
-    ]
-    if active_entities:
-        st.markdown('<div class="entity-select-panels">', unsafe_allow_html=True)
-        for ent in active_entities:
-            _render_entity_select_panel(ent)
-        st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
