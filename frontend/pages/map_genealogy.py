@@ -33,23 +33,20 @@ _EDGE_COLOURS: dict[str, str] = {
 }
 
 # -------------------------------------------------------------------
-# Two-channel node colour trick:
-#   fill (background)  → family ROLE relative to the centre person
-#   border              → GENDER
-# pyvis/vis.js circles can't show multiple flags at once, so we encode
-# "who they are to the centre" via fill, and "male/female" via border.
+# Node colour: one meaning per channel.
+#   fill    → GENDER only (this is the only thing colour encodes on nodes)
+#   border  → SELECTED / not-selected (a highlight ring, not a new colour
+#             family). Generation is conveyed by vertical position (row),
+#             never by colour — see _compute_layout().
 # -------------------------------------------------------------------
-_ROLE_FILL: dict[str, str] = {
-    "center":      "#FFD700",   # gold
-    "spouse":      "#CE93D8",   # purple
-    "sibling":     "#FFCC80",   # orange
-    "parent":      "#A5D6A7",   # green
-    "grandparent": "#66BB6A",   # darker green
-    "child":       "#80DEEA",   # cyan
-    "grandchild":  "#B2EBF2",   # light cyan
-}
-_BORDER_MAN   = "#2196F3"   # blue border  – male
-_BORDER_WOMAN = "#E91E63"   # pink border  – female
+_FILL_MAN     = "#42A5F5"   # blue – male
+_FILL_WOMAN   = "#F06292"   # rose – female
+_SELECTED_RING = "#FFD700"  # gold ring – marks the selected/centre person
+_DEFAULT_BORDER = "#3a3a4a"  # subtle border for everyone else
+
+# All nodes render at the same size; selection is shown via the ring
+# above, not by making the node bigger.
+_NODE_SIZE = 22
 
 # Layout spacing (fixed grid, no physics)
 _X_SPACING = 160
@@ -303,52 +300,68 @@ def _render_pyvis_graph(graph_data, lang: str) -> None:
 
     positions, roles = _compute_layout(graph_data)
 
-    # Add nodes
+    # Add nodes. Fill = gender only; selection is a ring (border), not a
+    # different fill colour or a bigger size — see colour palette above.
     for node in graph_data.nodes:
-        role = roles.get(node.key, "sibling")
-        fill = _ROLE_FILL.get(role, "#B0BEC5")
-        border = _BORDER_WOMAN if node.is_woman else _BORDER_MAN
-        size = 30 if node.is_center else 20
+        role = roles.get(node.key, "")
+        fill = _FILL_WOMAN if node.is_woman else _FILL_MAN
+        is_selected = node.is_center
+        border = _SELECTED_RING if is_selected else _DEFAULT_BORDER
+        border_width = 4 if is_selected else 2
         x, y = positions.get(node.key, (0.0, 0.0))
 
         label = node.display_name
+        tooltip = label
+        if role:
+            tooltip += f" ({role})"
+        if is_selected:
+            tooltip += " — selected"
+
         net.add_node(
             node.key,
             label=label,
             shape="dot",
             color={"background": fill, "border": border, "highlight": {"background": fill, "border": border}},
-            borderWidth=3,
-            size=size,
+            borderWidth=border_width,
+            size=_NODE_SIZE,
             font={"size": 13, "color": "#ffffff"},
-            title=f"{label} ({role})",
+            title=tooltip,
             x=x,
             y=y,
             fixed={"x": True, "y": True},
             physics=False,
         )
 
-    # Add edges
+    # Add edges. Relationship TYPE is encoded purely by line style so it
+    # reads as one consistent rule, not text clutter:
+    #   solid + arrow   → parent → child (childOfFather/childOfMother)
+    #   solid, no arrow → spouse
+    #   dotted, no arrow→ sibling (same dash pattern for every sibling edge)
+    # Father vs mother is encoded by arrow colour (see _EDGE_COLOURS), not
+    # text. The actual relationship label only appears in the hover
+    # tooltip (title=...), never as permanent on-canvas text.
     for edge in graph_data.edges:
         colour = _EDGE_COLOURS.get(edge.rel_type, "#aaaaaa")
+        is_sibling = edge.rel_type == "sibling"
         is_symmetric = edge.rel_type in ("spouseOf", "sibling")
         net.add_edge(
             edge.from_key,
             edge.to_key,
-            label=edge.label,
             color=colour,
             arrows="to" if not is_symmetric else "",
-            dashes=(edge.rel_type == "sibling"),
+            dashes=[2, 6] if is_sibling else False,
             smooth=False,
-            font={"size": 10, "color": "#dddddd"},
             title=edge.label,
         )
 
-    # Global options: physics fully disabled, edges drawn as straight lines
-    # so the fixed generation rows stay visually clean.
+    # Global options: physics fully disabled (fixed hierarchical rows,
+    # not force-directed), edges drawn as straight lines, and hover
+    # tooltips enabled so relationship labels show on demand only.
     net.set_options("""
     var options = {
       "physics": { "enabled": false },
-      "edges": { "smooth": false }
+      "edges": { "smooth": false },
+      "interaction": { "hover": true, "tooltipDelay": 100 }
     }
     """)
 
@@ -369,55 +382,49 @@ def _render_pyvis_graph(graph_data, lang: str) -> None:
 
 
 def _render_legend(lang: str) -> None:
-    """Render compact colour legends: edges, node fill (role), node border (gender)."""
+    """
+    Render compact legends for the two things colour/line-style actually
+    encode on this graph:
+      - edges:  relationship TYPE, via line style (solid+arrow / solid /
+                dotted) plus colour (father vs mother arrow colour)
+      - nodes:  GENDER only, via fill colour; selection is shown separately
+                as a ring, never as a different fill colour or size
+    Relationship labels themselves ("Father", "Sibling", ...) only ever
+    appear as hover tooltips on the graph, not as permanent legend/canvas
+    text duplicating the colour.
+    """
     edge_items = [
-        (_EDGE_COLOURS["childOfFather"], get_text("entity_fields.childOfFather", lang)),
-        (_EDGE_COLOURS["childOfMother"], get_text("entity_fields.childOfMother", lang)),
-        (_EDGE_COLOURS["spouseOf"],      get_text("entity_fields.spouseOf", lang)),
-        (_EDGE_COLOURS["sibling"],       get_text("entity_fields.siblings", lang)),
+        (_EDGE_COLOURS["childOfFather"], "solid-arrow", get_text("entity_fields.childOfFather", lang)),
+        (_EDGE_COLOURS["childOfMother"], "solid-arrow", get_text("entity_fields.childOfMother", lang)),
+        (_EDGE_COLOURS["spouseOf"],      "solid",       get_text("entity_fields.spouseOf", lang)),
+        (_EDGE_COLOURS["sibling"],       "dotted",      get_text("entity_fields.siblings", lang)),
     ]
     cols = st.columns(len(edge_items))
-    for col, (colour, label) in zip(cols, edge_items):
+    for col, (colour, style, label) in zip(cols, edge_items):
         with col:
+            border_style = "dotted" if style == "dotted" else "solid"
+            arrow = "&nbsp;&#8594;" if style == "solid-arrow" else ""
             st.markdown(
-                f'<span style="display:inline-block;width:14px;height:14px;'
-                f'background:{colour};border-radius:3px;margin-right:6px;'
-                f'vertical-align:middle;"></span>'
+                f'<span style="display:inline-block;width:20px;border-top:3px {border_style} {colour};'
+                f'margin-right:6px;vertical-align:middle;"></span>'
+                f'<span style="font-size:0.85rem;color:{colour};">{arrow}</span> '
                 f'<span style="font-size:0.85rem;">{label}</span>',
                 unsafe_allow_html=True,
             )
 
-    # Node legend: fill = family role, border = gender (two-channel trick).
-    role_items = [
-        (_ROLE_FILL["grandparent"], get_text("genealogy_ui.role_grandparent", lang)),
-        (_ROLE_FILL["parent"],      get_text("genealogy_ui.role_parent", lang)),
-        (_ROLE_FILL["sibling"],     get_text("genealogy_ui.role_sibling", lang)),
-        (_ROLE_FILL["center"],     get_text("genealogy_ui.role_center", lang)),
-        (_ROLE_FILL["spouse"],      get_text("genealogy_ui.role_spouse", lang)),
-        (_ROLE_FILL["child"],       get_text("genealogy_ui.role_child", lang)),
-        (_ROLE_FILL["grandchild"],  get_text("genealogy_ui.role_grandchild", lang)),
+    # Node legend: fill = gender only. Selection is a ring, not a colour.
+    node_items = [
+        (_FILL_MAN, False, get_text("genealogy_ui.gender_man", lang)),
+        (_FILL_WOMAN, False, get_text("genealogy_ui.gender_woman", lang)),
+        (_FILL_MAN, True, get_text("genealogy_ui.role_center", lang)),
     ]
-    cols = st.columns(len(role_items))
-    for col, (colour, label) in zip(cols, role_items):
+    cols = st.columns(len(node_items))
+    for col, (colour, selected, label) in zip(cols, node_items):
         with col:
+            border = f"3px solid {_SELECTED_RING}" if selected else f"1px solid {_DEFAULT_BORDER}"
             st.markdown(
                 f'<span style="display:inline-block;width:14px;height:14px;'
-                f'background:{colour};border-radius:50%;margin-right:6px;'
-                f'vertical-align:middle;"></span>'
-                f'<span style="font-size:0.85rem;">{label}</span>',
-                unsafe_allow_html=True,
-            )
-
-    gender_items = [
-        (_BORDER_MAN, get_text("genealogy_ui.gender_man", lang)),
-        (_BORDER_WOMAN, get_text("genealogy_ui.gender_woman", lang)),
-    ]
-    cols = st.columns(len(gender_items))
-    for col, (colour, label) in zip(cols, gender_items):
-        with col:
-            st.markdown(
-                f'<span style="display:inline-block;width:14px;height:14px;'
-                f'background:#3a3a4a;border:3px solid {colour};border-radius:50%;'
+                f'background:{colour};border:{border};border-radius:50%;'
                 f'margin-right:6px;vertical-align:middle;"></span>'
                 f'<span style="font-size:0.85rem;">{label}</span>',
                 unsafe_allow_html=True,
