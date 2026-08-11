@@ -16,6 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 from components.header import render_header
 from components.layout import apply_layout, language_selector
@@ -40,6 +41,39 @@ def _init_state() -> None:
         st.session_state["lang"] = DEFAULT_LANG
     if "active_page" not in st.session_state:
         st.session_state["active_page"] = PAGE_HOME
+    if "_close_nav_popover" not in st.session_state:
+        st.session_state["_close_nav_popover"] = False
+
+
+def _force_close_nav_popover() -> None:
+    """Force any open nav popover (Maps / Entity Search dropdown) to close.
+
+    Streamlit's popover keeps its open/closed state on the client side, so it
+    does not close itself just because the Python script reran after a child
+    item was selected. We simulate the same "click outside" interaction that
+    already closes it manually, by dispatching outside click/Escape events
+    from a tiny invisible component embedded on the page.
+    """
+    components.html(
+        """
+        <script>
+        (function() {
+            try {
+                var doc = window.parent.document;
+                var opts = {bubbles: true, cancelable: true, view: window.parent};
+                doc.body.dispatchEvent(new MouseEvent('mousedown', opts));
+                doc.body.dispatchEvent(new MouseEvent('mouseup', opts));
+                doc.body.dispatchEvent(new MouseEvent('click', opts));
+                doc.dispatchEvent(new KeyboardEvent('keydown', {
+                    key: 'Escape', code: 'Escape', keyCode: 27, which: 27, bubbles: true
+                }));
+            } catch (e) {}
+        })();
+        </script>
+        """,
+        height=0,
+        width=0,
+    )
 
 
 def _nav_items(lang: str) -> list[dict]:
@@ -95,11 +129,13 @@ def _render_nav(nav_items: list[dict], lang: str) -> str:
                         child_type = "primary" if child_active else "secondary"
                         if st.button(child_label, key=f"sub_{child['key']}_{lang}", use_container_width=True, type=child_type):
                             st.session_state["active_page"] = child["key"]
+                            st.session_state["_close_nav_popover"] = True
                             st.rerun()
             else:
                 # Simple nav item
                 if st.button(label, key=f"nav_{item['key']}_{lang}", use_container_width=True, type=btn_type):
                     st.session_state["active_page"] = item["key"]
+                    st.session_state["_close_nav_popover"] = True
                     st.rerun()
 
     return st.session_state.get("active_page", PAGE_HOME)
@@ -142,6 +178,11 @@ def main() -> None:
 
     nav_items = _nav_items(lang)
     active_page = _render_nav(nav_items, lang)
+
+    if st.session_state.get("_close_nav_popover"):
+        st.session_state["_close_nav_popover"] = False
+        _force_close_nav_popover()
+
     _render_page(active_page, lang)
 
 
