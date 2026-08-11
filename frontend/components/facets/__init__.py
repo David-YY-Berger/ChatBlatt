@@ -12,6 +12,7 @@ reusable component. Import from there instead::
 
 from .renderers import (
     ENTITY_TYPES,
+    get_selected_entity_ids,
     inject_facet_css,
     preload_all_entity_options,
     render_entity_facets,
@@ -24,6 +25,9 @@ __all__ = [
     # ready before render_entity_facets runs, e.g. to preload while other
     # parts of the page render)
     "preload_all_entity_options",
+    # Read the entity-type panels' current selections (as entity keys), for
+    # building a SourceSearchQuery.
+    "get_selected_entity_ids",
     # Constants
     "ENTITY_TYPES",
 ]

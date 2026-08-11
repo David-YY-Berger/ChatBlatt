@@ -168,9 +168,9 @@ def _render_entity_select_panel(ent: dict) -> None:
                     label_visibility="collapsed",
                     placeholder=f"Search {ent['label'].lower()}s…",
                 )
-                # Selections are kept in session_state for now; wiring them
-                # into the actual SourceSearchQuery is deferred (front-end
-                # only task).
+                # Selections live in session_state under this widget's key;
+                # get_selected_entity_ids() resolves them (across every
+                # entity-type panel) back to entity keys for the query.
             else:
                 st.caption("No entities found.")
         else:
@@ -211,4 +211,28 @@ def _format_entity_option_label(opt) -> str:
     if opt.display_heb_name:
         return f"{opt.display_en_name} ({opt.display_heb_name})"
     return opt.display_en_name
+
+
+def get_selected_entity_ids() -> list[str]:
+    """Flatten every entity-type panel's current multiselect selections into
+    a single list of entity keys, for use as ``SourceSearchQuery.entity_ids``.
+
+    Each panel's multiselect stores selected *display labels* (not keys) in
+    ``st.session_state[f"entity_filter_selected_{ent['key']}"]``; this
+    resolves each label back to its key using that entity type's
+    (already-loaded/cached) select options.
+    """
+    entity_ids: list[str] = []
+    for ent in ENTITY_TYPES:
+        if not ent["implemented"]:
+            continue
+        selected_labels = st.session_state.get(f"entity_filter_selected_{ent['key']}")
+        if not selected_labels:
+            continue
+        options = _load_entity_select_options(ent["entity_tab"])
+        label_to_key = {_format_entity_option_label(o): o.key for o in options}
+        entity_ids.extend(
+            label_to_key[label] for label in selected_labels if label in label_to_key
+        )
+    return entity_ids
 

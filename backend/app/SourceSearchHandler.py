@@ -44,14 +44,8 @@ class SourceSearchHandler:
     def create_answer_obj(self, query:SourceSearchQuery, src_metadata_lst) -> Answer:
 
         # this code is possibly temporary.. the final front end might expect to be packaged differently..
-        entities_from_q = [
-            e for ent_id in query.entity_ids
-            if (e := self.entity_rel_manager.get_entity_from_id(ent_id)) is not None
-        ]
-        rels_from_q = [
-            n for rel_id in query.rel_ids
-            if (n := self.entity_rel_manager.get_rel_from_id(rel_id)) is not None
-        ]
+        entities_from_q = self.db_api.get_entities_by_keys(query.entity_ids) if query.entity_ids else []
+        rels_from_q = self.db_api.get_rels_by_keys(query.rel_ids) if query.rel_ids else []
         # Create Answer object
         return Answer(
             free_text_input=query.free_text_similarity,
@@ -95,6 +89,25 @@ class SourceSearchHandler:
         # todo from enetity ids, get the values (name, hebrew name, etc..)
         return src_metadata_lst
 
-    def filter_by_entity_rel(self, query, src_metadata_lst):
-        # todo from rel ids, get the values (name, hebrew name, etc..)
-        return src_metadata_lst
+    def filter_by_entity_rel(self, query: SourceSearchQuery, src_metadata_lst):
+        """
+        Narrow src_metadata_lst down to sources that reference the selected
+        entities/relationships. Each dimension is OR'd internally (matching
+        any one of the selected entity_ids, or any one of the selected
+        rel_ids, is enough) while the two dimensions are AND'd together.
+        A dimension with no selections is not filtered on at all.
+        """
+        if not query.entity_ids and not query.rel_ids:
+            return src_metadata_lst
+
+        entity_ids = set(query.entity_ids)
+        rel_ids = set(query.rel_ids)
+
+        filtered = []
+        for src in src_metadata_lst:
+            if entity_ids and not (src.entity_keys & entity_ids):
+                continue
+            if rel_ids and not (src.rel_keys & rel_ids):
+                continue
+            filtered.append(src)
+        return filtered

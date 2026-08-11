@@ -13,6 +13,7 @@ import streamlit as st
 
 from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
+from components.facets import get_selected_entity_ids
 from components.source_filters import get_selected_books, get_selected_passage_types
 from system_common.SystemFunctions import get_ts_datetime
 
@@ -37,7 +38,7 @@ def collect_search_query() -> SourceSearchQuery:
         max_sources=50,
         src_types=selected_src_types,
         passage_types=selected_passage_types,
-        entity_ids=[],
+        entity_ids=get_selected_entity_ids(),
         rel_ids=[],
     )
 
