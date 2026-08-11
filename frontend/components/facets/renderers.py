@@ -219,8 +219,15 @@ def get_selected_entity_ids() -> list[str]:
 
     Each panel's multiselect stores selected *display labels* (not keys) in
     ``st.session_state[f"entity_filter_selected_{ent['key']}"]``; this
-    resolves each label back to its key using that entity type's
+    resolves each label back to its key(s) using that entity type's
     (already-loaded/cached) select options.
+
+    Some option types (e.g. ``NumberSelectOption``) group several underlying
+    entities under a single displayed label — e.g. many ENumber entities can
+    share ``display_en_name == "7"``. For those, ``entity_keys`` carries every
+    underlying entity key that shares the label, and *all* of them must be
+    included so the search matches any source referencing any of them, not
+    just the first one chosen as the option's ``key``.
     """
     entity_ids: list[str] = []
     for ent in ENTITY_TYPES:
@@ -230,9 +237,12 @@ def get_selected_entity_ids() -> list[str]:
         if not selected_labels:
             continue
         options = _load_entity_select_options(ent["entity_tab"])
-        label_to_key = {_format_entity_option_label(o): o.key for o in options}
-        entity_ids.extend(
-            label_to_key[label] for label in selected_labels if label in label_to_key
-        )
+        label_to_keys = {
+            _format_entity_option_label(o): (getattr(o, "entity_keys", None) or [o.key])
+            for o in options
+        }
+        for label in selected_labels:
+            if label in label_to_keys:
+                entity_ids.extend(label_to_keys[label])
     return entity_ids
 
