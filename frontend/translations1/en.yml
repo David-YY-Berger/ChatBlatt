@@ -161,6 +161,8 @@ number_search_ui:
   results_count: "occurrences found"
   no_category: "Uncategorized"
   no_unit: "No unit"
+  unit_filter_label: "Filter by unit"
+  all_units: "All units"
   context_label: "Context"
   sources_label: "Sources"
   no_sources: "No source passages recorded"

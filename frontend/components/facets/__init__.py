@@ -17,6 +17,7 @@ by other pages::
 from .renderers import (
     ENTITY_TYPES,
     inject_facet_css,
+    preload_all_entity_options,
     render_book_facet,
     render_entity_facets,
     render_facets_panel,
@@ -34,6 +35,10 @@ __all__ = [
     "render_book_facet",
     "render_passage_type_facet",
     "render_entity_facets",
+    # Background preloading (call early on page load if you need the lists
+    # ready before render_entity_facets runs, e.g. to preload while other
+    # parts of the page render)
+    "preload_all_entity_options",
     # Generic section widget (reusable on any page)
     "facet_section_header",
     # Constants

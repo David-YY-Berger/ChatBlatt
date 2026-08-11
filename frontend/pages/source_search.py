@@ -20,7 +20,12 @@ import streamlit.components.v1 as components
 
 from translations1 import get_text, is_rtl
 from backend.file_utils.HtmlWriter import HtmlWriter
-from components.facets import inject_facet_css, render_entity_facets, render_facets_panel
+from components.facets import (
+    inject_facet_css,
+    preload_all_entity_options,
+    render_entity_facets,
+    render_facets_panel,
+)
 from .source_search_logic import collect_search_query, run_search
 
 logger = logging.getLogger(__name__)
@@ -87,6 +92,12 @@ def render(lang: str) -> None:
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
     _rtl = is_rtl(lang)  # available for future RTL layout adjustments
+
+    # Kick off background fetching of every entity type's select-options list
+    # as early as possible (before the rest of the page is built), so the
+    # DB round-trips run in parallel with page rendering instead of at
+    # click-time. render_entity_facets() below is a no-op if this already ran.
+    preload_all_entity_options()
 
     inject_facet_css()
 

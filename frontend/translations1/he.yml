@@ -161,6 +161,8 @@ number_search_ui:
   results_count: "מופעים נמצאו"
   no_category: "ללא קטגוריה"
   no_unit: "ללא יחידה"
+  unit_filter_label: "סנן לפי יחידה"
+  all_units: "כל היחידות"
   context_label: "הקשר"
   sources_label: "מקורות"
   no_sources: "אין קטעי מקור מתועדים"

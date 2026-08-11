@@ -52,6 +52,11 @@ _CATEGORY_CONFIG: dict = {
 }
 _NONE_CAT_CONFIG = {"emoji": "❓", "color": "#94a3b8"}
 
+# Sentinel used internally to represent "occurrences with no unit" in the
+# unit filter combobox (kept distinct from the "All units" / no-filter case,
+# which is represented by ``None``).
+_NO_UNIT_SENTINEL = object()
+
 
 def _hex_rgba(hex_color: str, alpha: float) -> str:
     h = hex_color.lstrip("#")
@@ -357,6 +362,9 @@ def _run_search(value: str, lang: str) -> None:
     st.session_state["number_search_value"] = value
     # Clear cached source contents so they're re-fetched for the new result
     st.session_state.pop("number_search_source_contents", None)
+    # Reset the per-category unit filter comboboxes since available units may change
+    for key in [k for k in st.session_state if k.startswith("number_search_unit_filter__")]:
+        st.session_state.pop(key, None)
 
 
 # ---------------------------------------------------------------------------
@@ -396,6 +404,74 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
 
 
 # ---------------------------------------------------------------------------
+# Unit filter
+#
+# Note: the results table is rendered as static HTML inside an iframe
+# (st.components.v1.html), so a real, interactive combobox cannot be embedded
+# into its "Unit" column header — that would require a full custom
+# bidirectional Streamlit component (JS <-> Python message bridge) just for
+# this one control. Instead the filter is rendered as an ordinary Streamlit
+# widget placed on its own horizontal line directly below the category tab
+# bar and above that tab's results, scoped to the units present in that
+# specific category (each category tends to have its own unit vocabulary,
+# e.g. Money vs. Time vs. Measurement).
+# ---------------------------------------------------------------------------
+
+def _collect_units(occurrences: list[NumberOccurrenceDTO]) -> tuple[list[str], bool]:
+    """Return (sorted unique units, whether any occurrence has no unit)."""
+    units: set[str] = set()
+    has_no_unit = False
+    for occ in occurrences:
+        if occ.en_unit:
+            units.add(occ.en_unit)
+        else:
+            has_no_unit = True
+    return sorted(units, key=str.lower), has_no_unit
+
+
+def _render_unit_filter(occurrences: list[NumberOccurrenceDTO], lang: str, widget_key: str):
+    """Render the 'filter by unit' combobox for one category's occurrences and
+    return the selected filter value: ``None`` for "all units",
+    ``_NO_UNIT_SENTINEL`` for "no unit", or a unit string.
+    """
+    units, has_no_unit = _collect_units(occurrences)
+    if not units and not has_no_unit:
+        return None  # Nothing to filter on for this category
+
+    all_label = get_text("number_search_ui.all_units", lang)
+    no_unit_label = get_text("number_search_ui.no_unit", lang)
+
+    labels = [all_label] + units + ([no_unit_label] if has_no_unit else [])
+    label_to_value: dict = {all_label: None}
+    for u in units:
+        label_to_value[u] = u
+    if has_no_unit:
+        label_to_value[no_unit_label] = _NO_UNIT_SENTINEL
+
+    filter_col, _ = st.columns([3, 9])
+    with filter_col:
+        selected_label = st.selectbox(
+            get_text("number_search_ui.unit_filter_label", lang),
+            options=labels,
+            key=widget_key,
+        )
+
+    return label_to_value.get(selected_label)
+
+
+def _apply_unit_filter(
+    occurrences: list[NumberOccurrenceDTO], selected_value
+) -> list[NumberOccurrenceDTO]:
+    """Return the subset of *occurrences* matching the selected unit filter.
+    ``selected_value is None`` means no filtering."""
+    if selected_value is None:
+        return occurrences
+    if selected_value is _NO_UNIT_SENTINEL:
+        return [o for o in occurrences if not o.en_unit]
+    return [o for o in occurrences if o.en_unit == selected_value]
+
+
+# ---------------------------------------------------------------------------
 # Results rendering
 # ---------------------------------------------------------------------------
 
@@ -419,6 +495,8 @@ def _render_results(lang: str) -> None:
     # Fetch source content for popup support (cached in session_state)
     source_contents = _fetch_source_contents(result)
 
+    by_cat = result.by_category
+
     # ── Big number header ──────────────────────────────────────────────────
     plural = "s" if result.total_count != 1 else ""
     st.markdown(
@@ -435,7 +513,6 @@ def _render_results(lang: str) -> None:
     )
 
     # ── Build ordered tab entries (all NumberCategory values + None if present) ──
-    by_cat = result.by_category
     tab_entries: list[tuple] = []  # (cat, color, label)
     for cat in NumberCategory:
         cfg = _CATEGORY_CONFIG[cat]
@@ -467,14 +544,31 @@ def _render_results(lang: str) -> None:
                 )
                 continue
 
-            count = len(occurrences)
+            # ── Unit filter — its own horizontal line, below the tab bar
+            # and above this tab's results ───────────────────────────────
+            cat_key = cat.value if cat else "other"
+            selected_unit = _render_unit_filter(
+                occurrences, lang, widget_key=f"number_search_unit_filter__{cat_key}"
+            )
+            filtered_occurrences = _apply_unit_filter(occurrences, selected_unit)
+
+            count = len(filtered_occurrences)
             plural = "s" if count != 1 else ""
             st.markdown(
                 f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
                 f"{count} occurrence{plural}</p>",
                 unsafe_allow_html=True,
             )
-            table_html, iframe_height = _occurrences_table(occurrences, color, source_contents)
+
+            if not filtered_occurrences:
+                st.markdown(
+                    '<p style="color:#94a3b8; padding:0.75rem 0; font-style:italic;">'
+                    "No occurrences match this unit filter.</p>",
+                    unsafe_allow_html=True,
+                )
+                continue
+
+            table_html, iframe_height = _occurrences_table(filtered_occurrences, color, source_contents)
             st_components.html(table_html, height=iframe_height, scrolling=False)
 
 

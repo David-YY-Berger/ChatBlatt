@@ -1,6 +1,13 @@
 
 todo 
 
+fix faiss
+search sources must be halak
+
+hebrew working
+
+
+
 
 fix up searching an entity {{
 
@@ -52,7 +59,12 @@ add this banner nicely at the top, next to the main title of MapaLi. should be i
 when generating a source section, add a nice colorful way to show what passage type this source is. You can save this color in backend.models_db.Enums.PassageType. a source can have multiple passage types. 
 
 -------------------
-on source search page, Add a placeholder for the text similarity search: 'this will bring sources similar to this phrase to the top. it will not filter out sources' 
+change 'text similarity search' to 'Text Similarity Sort'
+on source search page, Add a placeholder for the text similarity search: 'Sort sources by similarity to a word or phrase' 
+
+--------------
+on source search page, the button of 'Find Sources' should be the same line as the text similarity search, to the right side. make the text similarity input box a bit smaller to make room on the right for the button.
+Also, put the lable of 'Text similarity Search' 
 
 -------------------
 source search - right below the text similarity text input area, add in 'Looking for a really great semantic search engine? Check out Dicta's _Talmud_ and _Tanach_ search engine . 

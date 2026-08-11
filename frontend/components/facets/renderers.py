@@ -10,6 +10,8 @@ sub-header and injects the required CSS once.
 
 from __future__ import annotations
 
+import concurrent.futures
+import logging
 from collections import defaultdict
 from pathlib import Path
 
@@ -22,6 +24,8 @@ from system_common.Constants import (
 )
 
 from .section import facet_section_header
+
+logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
 # Entities known to the facet filter
@@ -45,6 +49,66 @@ ENTITY_TYPES: list[dict] = [
     {"key": "plant", "label": "Plant", "entity_tab": None, "implemented": False},
     {"key": "symbol", "label": "Symbol", "entity_tab": PAGE_SYMBOLS, "implemented": True},
 ]
+
+# ---------------------------------------------------------------------------
+# Background preloading of entity select-options
+#
+# Fetching each entity type's select options is a DB round-trip. Previously
+# this happened lazily the first time a user clicked an entity-type tab,
+# which meant a visible stall on that click. Instead, we kick off all
+# fetches in parallel (thread pool) as soon as the page first renders, and
+# resolve/cache the results the first time they're actually needed. Because
+# the fetches start well before the user clicks anything, by the time a tab
+# is activated the data is normally already sitting in the cache — so
+# rendering the panel is just a session_state lookup, no DB latency.
+#
+# The executor is a module-level singleton so it's shared across Streamlit
+# sessions/reruns rather than re-created on every script run.
+# ---------------------------------------------------------------------------
+
+_ENTITY_OPTIONS_EXECUTOR = concurrent.futures.ThreadPoolExecutor(
+    max_workers=8, thread_name_prefix="entity-options-preload",
+)
+
+
+def _entity_options_cache_key(entity_tab: str) -> str:
+    return f"_entity_filter_options_cache_{entity_tab}"
+
+
+def _fetch_entity_options(entity_tab: str) -> list:
+    """Blocking DB fetch of select options for one entity tab (runs on a
+    background thread, or synchronously as a fallback)."""
+    from backend.app.controllers.entity_search.entity_search_controller import (
+        get_entity_search_handler,
+    )
+
+    handler = get_entity_search_handler(entity_tab)
+    return handler.get_select_options() if handler else []
+
+
+def preload_all_entity_options() -> None:
+    """Kick off background fetches for every implemented entity type's
+    select options, without blocking page rendering.
+
+    Safe to call on every rerun: it only submits work once per session
+    (guarded by a session_state flag), so subsequent calls are no-ops.
+    """
+    if st.session_state.get("_entity_options_preload_started"):
+        return
+    st.session_state["_entity_options_preload_started"] = True
+
+    for ent in ENTITY_TYPES:
+        if not ent["implemented"]:
+            continue
+        entity_tab = ent["entity_tab"]
+        if _entity_options_cache_key(entity_tab) in st.session_state:
+            continue
+        future_key = f"_entity_options_future_{entity_tab}"
+        if future_key in st.session_state:
+            continue
+        st.session_state[future_key] = _ENTITY_OPTIONS_EXECUTOR.submit(
+            _fetch_entity_options, entity_tab,
+        )
 
 # ---------------------------------------------------------------------------
 # CSS injection (loads from assets/facets.css – one call per page render)
@@ -136,6 +200,11 @@ def render_entity_facets() -> None:
     inactive. Unlike page navigation, several entity-type tabs may be active
     at once since this is a filter, not a page switch.
     """
+    # Fire off background fetches for all entity lists up front (no-op after
+    # the first call this session) so clicking a tab below never has to wait
+    # on a DB round-trip.
+    preload_all_entity_options()
+
     st.markdown('<div class="entity-panel">', unsafe_allow_html=True)
     st.markdown(
         "<div class='entity-panel-title'>🏷️ Filter by Entity</div>",
@@ -207,18 +276,30 @@ def _render_entity_select_panel(ent: dict) -> None:
 
 
 def _load_entity_select_options(entity_tab: str) -> list:
-    """Fetch & cache (per Streamlit session) the select options for an
-    entity-search tab, reusing the same handler registry as the Entity
-    Search page."""
-    cache_key = f"_entity_filter_options_cache_{entity_tab}"
-    if cache_key not in st.session_state:
-        from backend.app.controllers.entity_search.entity_search_controller import (
-            get_entity_search_handler,
-        )
+    """Return the (already-preloading) select options for an entity-search
+    tab, resolving the background future started in
+    :func:`preload_all_entity_options` on first access.
 
-        handler = get_entity_search_handler(entity_tab)
-        st.session_state[cache_key] = handler.get_select_options() if handler else []
-    return st.session_state[cache_key]
+    Normally a plain session_state cache hit — the background fetch,
+    started when the page first rendered, has already completed by the
+    time a user activates a tab. If it hasn't (e.g. a very fast click),
+    this blocks only long enough for that one fetch to finish, instead of
+    the old behavior of starting the DB call at click time.
+    """
+    cache_key = _entity_options_cache_key(entity_tab)
+    if cache_key in st.session_state:
+        return st.session_state[cache_key]
+
+    future_key = f"_entity_options_future_{entity_tab}"
+    future = st.session_state.pop(future_key, None)
+    try:
+        options = future.result() if future is not None else _fetch_entity_options(entity_tab)
+    except Exception:
+        logger.exception("Failed to load entity select options for %s", entity_tab)
+        options = []
+
+    st.session_state[cache_key] = options
+    return options
 
 
 def _format_entity_option_label(opt) -> str:
