@@ -1,6 +1,6 @@
 # bs"d - lehagdil torah velahadir
 
-from typing import Any, Dict, Optional, TYPE_CHECKING
+from typing import Any, ClassVar, Dict, Optional, TYPE_CHECKING
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.Enums import EntityType, NumberCategory
 
@@ -9,6 +9,12 @@ if TYPE_CHECKING:
 
 
 class ENumber(Entity):
+    # Ordered tuple of transient field names used for UI display.
+    TRANSIENT_DISPLAY_FIELDS: ClassVar[tuple] = (
+        "comparedTo",
+        "contrastedWith",
+    )
+
     entityType: EntityType = EntityType.ENumber
     numberCategory: Optional[NumberCategory] = None
     en_unit: Optional[str] = None                # Normalized singular noun — what the number counts/measures (e.g., "bull", "year", "silver")

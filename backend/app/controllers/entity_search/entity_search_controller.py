@@ -95,6 +95,10 @@ from backend.app.controllers.entity_search.nation_search_handler import NationSe
 from backend.app.controllers.entity_search.place_search_handler import PlaceSearchHandler          # noqa: E402
 from backend.app.controllers.entity_search.symbol_search_handler import SymbolSearchHandler        # noqa: E402
 from backend.app.controllers.entity_search.tribe_of_israel_search_handler import TribeOfIsraelSearchHandler  # noqa: E402
+from backend.app.controllers.entity_search.number_search_handler import NumberSearchHandler        # noqa: E402
+from backend.app.controllers.entity_search.animal_search_handler import AnimalSearchHandler        # noqa: E402
+from backend.app.controllers.entity_search.food_search_handler import FoodSearchHandler            # noqa: E402
+from backend.app.controllers.entity_search.plant_search_handler import PlantSearchHandler          # noqa: E402
 
 _HANDLER_REGISTRY: Dict[str, Type[BaseEntitySearchHandler]] = {
     "people": PersonSearchHandler,
@@ -102,6 +106,10 @@ _HANDLER_REGISTRY: Dict[str, Type[BaseEntitySearchHandler]] = {
     "nations": NationSearchHandler,
     "tribes": TribeOfIsraelSearchHandler,
     "symbols": SymbolSearchHandler,
+    "numbers": NumberSearchHandler,
+    "animals": AnimalSearchHandler,
+    "foods": FoodSearchHandler,
+    "plants": PlantSearchHandler,
 }
 
 

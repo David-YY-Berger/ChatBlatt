@@ -11,18 +11,11 @@ hebrew working
 
 fix up searching an entity {{
 
-FINISHED: {{
-on source search page - remove the front end layout of the filter by entity section. instead, look for we have entity selection for the entity search page (person, nation, symbol, etc).
 
-using similar front end logic , design an intuitive way to filter by entity on the source search page (dont do the backend yet). 
+i want to redo the left side filters for books, source type, book category, passage type.
 
-this must work for these entities (also - fix to THIS ORDER): 
-person, place, tribe of israel, nation, number, animal, food, plant, symbol, . 
-}}
+remove all these filters for books/sourcetype, book category, on the left pane. get rid of that frontend code. but dont break anything else. DO NOT BREAK ANYTHING WITH THE ENTITY filters
 
---------------
-------------------
-remove all these filters on the left pane. get rid of that frontend code. but dont break anything else.
 instead of the current design, implement this design:
 
 There are 2 source-filters on the left hand side:
@@ -41,12 +34,20 @@ important:
 - instead of trying to force complex checkbox wite 'select all' or none - just add an 'all/remove' button, 
 ...
 
+ONLY DO FRONT END LOGIC, do not need to implement the backend behaviour at all.
+
+also, make this its own component, in the future, i will be adding this to other pages (just the left side source filterer)
+
+---------------
+see my front end for filtering, both by source (source type, passage type, book category, book), and by entity.
+
+now, make sure the code through the backend works, properly implmenenting and populating the db querys to bring the relevant sources.
+of course, make sure to use interfaces when relevant
+
 }}
 
 easy fixes {{
 
-make a filter for 'unit' on the number search page. 
-there should be a combobox, populated by the units found, and the user can select a unit by which to filter the rows
 -------------------------
 
 add this banner nicely at the top, next to the main title of MapaLi. should be in the header, visible on every page
@@ -72,7 +73,9 @@ in Talmud, should have this link: https://talmudsearch.dicta.org.il/he
 in Tanach, should have this link: https://search.dicta.org.il/
 
 make sure to add both english and hebrew labels
+------------------
 
+entity metadata population - adjust our pydantic prompt code so that numbers should not get any value of heb_display_name. also, when adding to the DB, just put the value of the en_display_name in the heb_display_name.
 }}
 
 

@@ -1,6 +1,7 @@
 # bs"d - lehagdil torah velahadir
 from backend.models_db.Enums import EntityType
 from backend.models_db.EntityObjects.Entity import Entity
+from typing import ClassVar
 
 
 class EFood(Entity):
@@ -11,6 +12,12 @@ class EFood(Entity):
         Use the most normalized (singular), specific form.
         Represents a Food entity - edible items that act as food in the context of the passage.
         """
+
+    # Ordered tuple of transient field names used for UI display.
+    TRANSIENT_DISPLAY_FIELDS: ClassVar[tuple] = (
+        "comparedTo",
+        "contrastedWith",
+    )
 
     # db fields
     entityType: EntityType = EntityType.EFood

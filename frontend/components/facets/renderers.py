@@ -20,7 +20,8 @@ import streamlit as st
 from backend.db.data_names.Books import Books
 from backend.models_db.Enums import BookCategoryName, PassageType, SourceType
 from system_common.Constants import (
-    PAGE_NATIONS, PAGE_PEOPLE, PAGE_PLACES, PAGE_SYMBOLS, PAGE_TRIBES,
+    PAGE_ANIMALS, PAGE_FOODS, PAGE_NATIONS, PAGE_NUMBERS, PAGE_PEOPLE,
+    PAGE_PLACES, PAGE_PLANTS, PAGE_SYMBOLS, PAGE_TRIBES,
 )
 
 from .section import facet_section_header
@@ -43,10 +44,10 @@ ENTITY_TYPES: list[dict] = [
     {"key": "place", "label": "Place", "entity_tab": PAGE_PLACES, "implemented": True},
     {"key": "tribe_of_israel", "label": "Tribe Of Israel", "entity_tab": PAGE_TRIBES, "implemented": True},
     {"key": "nation", "label": "Nation", "entity_tab": PAGE_NATIONS, "implemented": True},
-    {"key": "number", "label": "Number", "entity_tab": None, "implemented": False},
-    {"key": "animal", "label": "Animal", "entity_tab": None, "implemented": False},
-    {"key": "food", "label": "Food", "entity_tab": None, "implemented": False},
-    {"key": "plant", "label": "Plant", "entity_tab": None, "implemented": False},
+    {"key": "number", "label": "Number", "entity_tab": PAGE_NUMBERS, "implemented": True},
+    {"key": "animal", "label": "Animal", "entity_tab": PAGE_ANIMALS, "implemented": True},
+    {"key": "food", "label": "Food", "entity_tab": PAGE_FOODS, "implemented": True},
+    {"key": "plant", "label": "Plant", "entity_tab": PAGE_PLANTS, "implemented": True},
     {"key": "symbol", "label": "Symbol", "entity_tab": PAGE_SYMBOLS, "implemented": True},
 ]
 

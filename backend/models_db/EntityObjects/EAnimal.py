@@ -2,7 +2,7 @@
 
 from backend.models_db.EntityObjects.Entity import Entity, TransientField
 from backend.models_db.Enums import EntityType
-from typing import List
+from typing import ClassVar, List
 
 
 class EAnimal(Entity):
@@ -11,6 +11,13 @@ class EAnimal(Entity):
     Examples: Lion, Eagle, Serpent, Leviathan, Balaam's Donkey.
     Includes talking animals that were previously under Person.
     """
+    # Ordered tuple of transient field names used for UI display.
+    TRANSIENT_DISPLAY_FIELDS: ClassVar[tuple] = (
+        "spokeWith",
+        "comparedTo",
+        "contrastedWith",
+    )
+
     # db fields
     entityType: EntityType = EntityType.EAnimal
 

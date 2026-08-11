@@ -5,9 +5,13 @@ from typing import Callable, Dict, List, Optional
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields
 from backend.models_db.Enums import EntityType
+from backend.models_dto.AnimalSelectOption import AnimalSelectOption
+from backend.models_dto.FoodSelectOption import FoodSelectOption
 from backend.models_dto.NationSelectOption import NationSelectOption
+from backend.models_dto.NumberSelectOption import NumberSelectOption
 from backend.models_dto.PersonSelectOption import PersonSelectOption
 from backend.models_dto.PlaceSelectOption import PlaceSelectOption
+from backend.models_dto.PlantSelectOption import PlantSelectOption
 from backend.models_dto.SymbolSelectOption import SymbolSelectOption
 from backend.models_dto.TribeOfIsraelSelectOption import TribeOfIsraelSelectOption
 
@@ -90,4 +94,57 @@ class SelectOptionMongoMixin:
             {DBFields.ENTITY_TYPE: EntityType.ETribeOfIsrael.value}
         )
         return self._docs_to_select_options(docs, TribeOfIsraelSelectOption)
+
+    def getNumberSelectOptions(self) -> List[NumberSelectOption]:
+        """Query all Number entities and collapse them into one select option
+        per distinct display_en_name (e.g. many "7" entities — "7 bulls",
+        "7 years", etc. — become a single "7" chip). `entity_keys` on each
+        returned option lists every underlying ENumber entity key sharing
+        that display name. Hebrew names are intentionally omitted so numbers
+        show only their English display name in the combobox.
+        """
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(
+            {DBFields.ENTITY_TYPE: EntityType.ENumber.value}
+        )
+        grouped_keys: Dict[str, List[str]] = {}
+        for doc in docs:
+            display_name = doc.get(DBFields.DISPLAY_EN_NAME, "")
+            entity_key = doc.get(DBFields.KEY, str(doc.get("_id", "")))
+            grouped_keys.setdefault(display_name, []).append(entity_key)
+
+        def _sort_key(name: str):
+            try:
+                return (0, float(name))
+            except (TypeError, ValueError):
+                return (1, name)
+
+        return [
+            NumberSelectOption(
+                key=keys[0],
+                display_en_name=display_name,
+                entity_keys=keys,
+            )
+            for display_name, keys in sorted(grouped_keys.items(), key=lambda item: _sort_key(item[0]))
+        ]
+
+    def getAnimalSelectOptions(self) -> List[AnimalSelectOption]:
+        """Query all Animal entities and return as AnimalSelectOption list."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(
+            {DBFields.ENTITY_TYPE: EntityType.EAnimal.value}
+        )
+        return self._docs_to_select_options(docs, AnimalSelectOption)
+
+    def getFoodSelectOptions(self) -> List[FoodSelectOption]:
+        """Query all Food entities and return as FoodSelectOption list."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(
+            {DBFields.ENTITY_TYPE: EntityType.EFood.value}
+        )
+        return self._docs_to_select_options(docs, FoodSelectOption)
+
+    def getPlantSelectOptions(self) -> List[PlantSelectOption]:
+        """Query all Plant entities and return as PlantSelectOption list."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(
+            {DBFields.ENTITY_TYPE: EntityType.EPlant.value}
+        )
+        return self._docs_to_select_options(docs, PlantSelectOption)
 
