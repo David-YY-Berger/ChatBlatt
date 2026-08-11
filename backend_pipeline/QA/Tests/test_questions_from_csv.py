@@ -10,7 +10,7 @@ from backend_pipeline.file_utils_pipeline import LocalPrinter
 from backend.file_utils.FileTypeEnum import FileType
 
 from backend_pipeline.QA.Objects.QueryRow import QueryRow
-from backend.app.SearchHandler import SearchHandler
+from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.models_db.Enums import SourceType
 
 
@@ -19,7 +19,7 @@ class QuerysFromCSVTests(unittest.TestCase):
     def setUp(self):
         super().setUp()
         OsFunctions.clear_create_directory(Paths.QUESTIONS_OUTPUT_DIR)
-        self.qaHandler = SearchHandler()
+        self.qaHandler = SourceSearchHandler()
         self.htmlWriter = HtmlWriter()
         # self.logger = Logger.Logger()
 

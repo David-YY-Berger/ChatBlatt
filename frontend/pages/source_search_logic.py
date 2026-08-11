@@ -11,7 +11,7 @@ from __future__ import annotations
 import logging
 import streamlit as st
 
-from backend.app.SearchHandler import SearchHandler
+from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
 from components.source_filters import get_selected_books, get_selected_passage_types
 from system_common.SystemFunctions import get_ts_datetime
@@ -44,7 +44,7 @@ def collect_search_query() -> SourceSearchQuery:
 
 def run_search(query_obj: SourceSearchQuery):
     """Execute the search and return ``(answer, elapsed_str)``."""
-    handler = SearchHandler()
+    handler = SourceSearchHandler()
     time_begin = get_ts_datetime()
     logger.info("Starting search with SearchHandler.get_full_answer. search start time: %s", time_begin)
 

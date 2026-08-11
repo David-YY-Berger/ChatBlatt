@@ -11,7 +11,7 @@ from backend.app.SourceSearchQuery import SourceSearchQuery
 from typing import Optional, List
 
 
-class SearchHandler:
+class SourceSearchHandler:
     def __init__(self):
         """Initialize the handler: load environment variables and set up db + FAISS."""
         self.db_api: Optional[DBapiMongoDB] = None
