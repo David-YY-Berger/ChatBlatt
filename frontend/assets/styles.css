@@ -28,3 +28,40 @@ body {
     font-size: 0.9rem;
     color: #94a3b8;
 }
+
+.app-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.app-header-titles {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.app-sefaria-banner {
+    flex: 0 0 auto;
+    display: inline-block;
+    line-height: 0;
+}
+
+.app-sefaria-banner img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+    .app-header-row {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .app-sefaria-banner img {
+        max-width: 140px;
+    }
+}
