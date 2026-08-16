@@ -92,12 +92,24 @@ class RoleType(ColoredEnum):
     Amora = ("Amora", "📚", Color.INDIGO)
 
 class NumberCategory(Enum):
-    Sacrifice = "Sacrifice"       # Offerings: animals, flour, oil, incense
-    Time = "Time"                 # Duration, age, dates, periods
-    Money = "Money"               # Currency, payment, value
-    People = "People"             # Counts of persons, armies, tribes
-    Measurement = "Measurement"   # Distance, weight, volume, area
-    Misc = "Misc"                 # Anything not covered above
+    """
+    Each member carries (value, ordinal) so the intended left-to-right
+    display order is explicit and stored on the enum itself — reordering
+    the UI means editing ``ordinal`` here instead of maintaining a separate
+    order list elsewhere that could fall out of sync.
+    """
+    Time = ("Time", 1)                 # Duration, age, dates, periods
+    People = ("People", 2)             # Counts of persons, armies, tribes
+    Measurement = ("Measurement", 3)   # Distance, weight, volume, area
+    Sacrifice = ("Sacrifice", 4)       # Offerings: animals, flour, oil, incense
+    Money = ("Money", 5)               # Currency, payment, value
+    Misc = ("Misc", 6)                 # Anything not covered above
+
+    def __new__(cls, value: str, ordinal: int):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.ordinal = ordinal
+        return obj
 
 class PassageType(ColoredEnum):
     """See ColoredEnum for why (value, icon, color) are defined together.

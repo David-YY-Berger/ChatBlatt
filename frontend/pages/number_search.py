@@ -514,7 +514,7 @@ def _render_results(lang: str) -> None:
 
     # ── Build ordered tab entries (all NumberCategory values + None if present) ──
     tab_entries: list[tuple] = []  # (cat, color, label)
-    for cat in NumberCategory:
+    for cat in sorted(NumberCategory, key=lambda c: c.ordinal):
         cfg = _CATEGORY_CONFIG[cat]
         count = len(by_cat.get(cat, []))
         label = f"{cfg['emoji']} {cat.value}  ({count})"
