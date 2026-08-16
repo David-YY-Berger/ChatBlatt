@@ -9,56 +9,15 @@ hebrew working
 
 
 
-fix up searching an entity {{
-
----------------
-now {{
-see my front end for filtering, both by source (source type, passage type, book category, book), and by entity.
-
-now, make sure the code through the backend works, properly implmenenting and populating the db querys to bring the relevant sources.
-of course, make sure to use interfaces when relevant
-}}
-
-next {{
-when i click on Maps or Entity Search tab, i get a dropdown, and then select from there what i want. when it takes me to the new page - currently it does not close that tab's dropdown. Make sure to close the dropdown after selecting an option so that it wont block the UI.
-
-}}
-
-graph {{
-
-on geneology map, if i click on a node, add an option to view that (ie that will be the center) and reload the map.
-}}
-
-entity_Search {{
-on entity_Search page, for metadata (People - is woman, is non jewish, group vs individual, time period, etc), show the data in a more intuitive, colorful, compact way.
-do so for Place (place type), Symbol (symbol type) also
-
-}}
-}}
 
 easy fixes {{
 
--------------------------
 
-add this banner nicely at the top, next to the main title of MapaLi. should be in the header, visible on every page
-
-<a href="https://www.sefaria.org">
-<img width="462" height="240" alt="Powered by Sefaria" src="https://github.com/user-attachments/assets/0495eb35-9ce9-40d7-9424-8a1f8910ca6b" />
-</a>
-
-------------------------
-on number search page - when displaying results, first show in this order (left to right):
-Time, People, Measurement, Sacrifice, Money, misc
-------------------------
-when generating a source section, add a nice colorful way to show what passage type this source is. You can save this color in backend.models_db.Enums.PassageType. a source can have multiple passage types. 
-
--------------------
-change 'text similarity search' to 'Text Similarity Sort'
-on source search page, Add a placeholder for the text similarity search: 'Sort sources by similarity to a word or phrase' 
+change 'text similarity search' to 'Sort by Text Similarity'
+on source search page, Add a placeholder for the text similarity search: 'Sort sources by similarity to a word or phrase' . make sure to update any lables on the UI accordinly
 
 --------------
 on source search page, the button of 'Find Sources' should be the same line as the text similarity search, to the right side. make the text similarity input box a bit smaller to make room on the right for the button.
-Also, put the lable of 'Text similarity Search' 
 
 -------------------
 source search - right below the text similarity text input area, add in 'Looking for a really great semantic search engine? Check out Dicta's _Talmud_ and _Tanach_ search engine . 

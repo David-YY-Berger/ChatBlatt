@@ -151,6 +151,12 @@ page_titles:
   genology: "מפת גנולוגיה"
   studied_from: "מפת מקורות לימוד"
 
+source_search_ui:
+  text_similarity_label: "מיין לפי דמיון טקסטואלי"
+  text_similarity_placeholder: "מיין מקורות לפי דמיון למילה או ביטוי"
+  find_sources_button: "חפש מקורות"
+  dicta_promo: "מחפשים מנוע חיפוש סמנטי ממש טוב? בדקו את מנוע החיפוש של דיקטא ל[תלמוד]({talmud_link}) ול[תנ\"ך]({tanach_link})."
+
 number_search_ui:
   input_label: "הכנס מספר"
   placeholder: "לדוגמה: 7 או 1/3"

@@ -151,6 +151,12 @@ page_titles:
   genology: "Genology Map"
   studied_from: "Studied From Map"
 
+source_search_ui:
+  text_similarity_label: "Sort by Text Similarity"
+  text_similarity_placeholder: "Sort sources by similarity to a word or phrase"
+  find_sources_button: "Find Sources"
+  dicta_promo: "Looking for a really great semantic search engine? Check out Dicta's [Talmud]({talmud_link}) and [Tanach]({tanach_link}) search engine."
+
 number_search_ui:
   input_label: "Enter a number"
   placeholder: "e.g. 7 or 1/3"

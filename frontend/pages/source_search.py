@@ -41,10 +41,21 @@ logger = logging.getLogger(__name__)
 # Main search panel
 # ---------------------------------------------------------------------------
 
-def _render_search_panel() -> None:
-    btn_col, msg_col = st.columns([1, 4])
+def _render_search_input_row(lang: str) -> None:
+    """Free-text similarity search box, with the Find Sources button on the
+    same line, to its right."""
+    input_col, btn_col = st.columns([3, 1])
+    with input_col:
+        st.text_input(
+            get_text("source_search_ui.text_similarity_label", lang),
+            key="free_text_query",
+            placeholder=get_text("source_search_ui.text_similarity_placeholder", lang),
+        )
     with btn_col:
-        if st.button("Find Sources"):
+        # Spacer so the button lines up with the input box, which has a
+        # label rendered above it.
+        st.markdown("<div style='height: 1.9rem;'></div>", unsafe_allow_html=True)
+        if st.button(get_text("source_search_ui.find_sources_button", lang)):
             try:
                 query_obj = collect_search_query()
                 ans, elapsed = run_search(query_obj)
@@ -56,13 +67,24 @@ def _render_search_panel() -> None:
                 st.session_state["_search_error"] = str(e)
                 st.session_state.pop("_search_ans", None)
 
-    with msg_col:
-        if st.session_state.get("_search_error"):
-            st.error(st.session_state["_search_error"])
-        elif "_search_ans" in st.session_state:
-            found_count = len(getattr(st.session_state["_search_ans"], "src_metadata_lst", []))
-            elapsed = st.session_state.get("_search_elapsed", "")
-            st.success(f"Found {found_count} sources in {elapsed}")
+
+def _render_dicta_promo(lang: str) -> None:
+    """Note pointing users to Dicta's Talmud/Tanach semantic search engines,
+    shown directly below the text-similarity input box."""
+    promo = get_text("source_search_ui.dicta_promo", lang).format(
+        talmud_link="https://talmudsearch.dicta.org.il/he",
+        tanach_link="https://search.dicta.org.il/",
+    )
+    st.markdown(promo, unsafe_allow_html=False)
+
+
+def _render_search_panel() -> None:
+    if st.session_state.get("_search_error"):
+        st.error(st.session_state["_search_error"])
+    elif "_search_ans" in st.session_state:
+        found_count = len(getattr(st.session_state["_search_ans"], "src_metadata_lst", []))
+        elapsed = st.session_state.get("_search_elapsed", "")
+        st.success(f"Found {found_count} sources in {elapsed}")
 
     if "_search_ans" in st.session_state:
         _render_results_body(
@@ -114,8 +136,10 @@ def render(lang: str) -> None:
     with main_col:
         # Entity facets at the top of the right area
         render_entity_facets()
-        # Free-text similarity search below entity filters
-        st.text_input("Text similarity search", key="free_text_query")
+        # Free-text similarity search below entity filters, with the Find
+        # Sources button on the same line, and a Dicta promo note beneath it.
+        _render_search_input_row(lang)
+        _render_dicta_promo(lang)
         # Active filter chips – reflect current source-filter selections,
         # shown directly above the results.
         render_active_filter_chips()
