@@ -1,8 +1,9 @@
 from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.Enums import PassageType
 from system_common import SystemFunctions
 from backend.models_db.Answer import Answer
-from typing import List
+from typing import List, Optional
 
 class HtmlWriter:
 
@@ -28,6 +29,9 @@ class HtmlWriter:
 .source-summary-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
 .source-summary-en { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; flex:1; text-align:left; }
 .source-summary-heb { font-size:0.8em; color:#bdc3c7; font-weight:normal; font-style:italic; direction:rtl; text-align:right; flex:1; }
+/* --- Passage-type badges --- */
+.source-passage-badges { display:flex; flex-wrap:wrap; gap:0.35rem; }
+.passage-badge { display:inline-flex; align-items:center; gap:0.3rem; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.75em; font-weight:600; white-space:nowrap; }
 /* --- Source body --- */
 .source-body { display:none; padding:8px 10px; background:white; }
 .source-body.open { display:block; }
@@ -72,6 +76,23 @@ function toggleCollapsible(contentId) {
 }"""
 
     @staticmethod
+    def build_passage_badges_html(passage_types: Optional[List[PassageType]]) -> str:
+        """Build the colorful row of passage-type badges (e.g. Law, Story,
+        Prophecy) shown on a source's header. Each :class:`PassageType`
+        member supplies its own icon + color, so a source with multiple
+        passage types simply gets one badge per type.
+        Shared with the frontend popup component."""
+        if not passage_types:
+            return ""
+        badges = "".join(
+            f'<span class="passage-badge" style="background:{pt.color}1f; '
+            f'border:1px solid {pt.color}; color:{pt.color};">'
+            f'{pt.icon} {HtmlWriter._escape_html(pt.value)}</span>'
+            for pt in passage_types
+        )
+        return f'<div class="source-passage-badges">{badges}</div>'
+
+    @staticmethod
     def build_source_section(
         body_id: str,
         header_id: str,
@@ -81,6 +102,7 @@ function toggleCollapsible(contentId) {
         summary_en: str = "",
         summary_heb: str = "",
         start_open: bool = False,
+        passage_types: Optional[List[PassageType]] = None,
     ) -> str:
         """Build a source section div (collapsible header + body).
         Shared with the frontend popup component."""
@@ -98,6 +120,8 @@ function toggleCollapsible(contentId) {
                 f'</div>'
             )
 
+        badges_row = HtmlWriter.build_passage_badges_html(passage_types)
+
         open_cls = " open" if start_open else ""
         return (
             f'<div class="source-section">'
@@ -109,6 +133,7 @@ function toggleCollapsible(contentId) {
             f'<span class="source-title-heb">{t_heb}</span>'
             f'<span class="source-arrow">▶</span>'
             f'</div></div>'
+            f'{badges_row}'
             f'{summary_row}'
             f'</div>'
             f'<div class="source-body{open_cls}" id="{body_id}">'
@@ -231,6 +256,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
             inner_content_html=inner_html,
             summary_en=summary_en,
             summary_heb=summary_heb,
+            passage_types=getattr(src_metadata, 'passage_types', None),
         )
 
     def _get_source_content(self, source, index: int) -> str:

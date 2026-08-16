@@ -19,8 +19,10 @@ from __future__ import annotations
 
 import html as _html
 import re
+from typing import List, Optional
 
 from backend.file_utils.HtmlWriter import HtmlWriter
+from backend.models_db.Enums import PassageType
 
 
 # ---------------------------------------------------------------------------
@@ -99,6 +101,7 @@ def source_popup_html(
     heb_content: str,
     summary_en: str = "",
     summary_heb: str = "",
+    passage_types: Optional[List[PassageType]] = None,
 ) -> str:
     """
     Returns the full overlay <div> for one source popup.
@@ -108,13 +111,14 @@ def source_popup_html(
 
     Parameters
     ----------
-    source_key  Unique key that identifies this source (used as HTML ID).
-    title_en    English display title (plain text — will be escaped).
-    title_heb   Hebrew display title  (plain text — will be escaped).
-    en_content  English body HTML (already HTML — NOT escaped).
-    heb_content Hebrew body HTML  (already HTML — NOT escaped).
-    summary_en  Optional English summary line (plain text).
-    summary_heb Optional Hebrew summary line  (plain text).
+    source_key    Unique key that identifies this source (used as HTML ID).
+    title_en      English display title (plain text — will be escaped).
+    title_heb     Hebrew display title  (plain text — will be escaped).
+    en_content    English body HTML (already HTML — NOT escaped).
+    heb_content   Hebrew body HTML  (already HTML — NOT escaped).
+    summary_en    Optional English summary line (plain text).
+    summary_heb   Optional Hebrew summary line  (plain text).
+    passage_types Optional list of PassageType — rendered as colorful badges.
     """
     pid = _safe_id(source_key)
     body_id   = f"src-body-{pid}"
@@ -131,6 +135,7 @@ def source_popup_html(
         summary_en=summary_en,
         summary_heb=summary_heb,
         start_open=True,
+        passage_types=passage_types,
     )
 
     return (

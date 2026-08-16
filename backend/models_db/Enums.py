@@ -3,6 +3,48 @@
 from enum import Enum
 
 
+class Color:
+    """
+    Named color palette (hex) shared by all :class:`ColoredEnum` subclasses.
+    Enum members reference these constants (e.g. ``Color.BLUE``) instead of
+    hardcoding raw hex strings, so the palette stays curated and consistent
+    across the app.
+    """
+    RED = "#dc2626"
+    ORANGE = "#d97706"
+    AMBER = "#b45309"
+    GOLD = "#ca8a04"
+    GREEN = "#059669"
+    EMERALD = "#15803d"
+    TEAL = "#0f766e"
+    CYAN = "#0891b2"
+    BLUE = "#2563eb"
+    ROYAL_BLUE = "#1d4ed8"
+    INDIGO = "#4338ca"
+    VIOLET = "#7c3aed"
+    PURPLE = "#9333ea"
+    PINK = "#db2777"
+    ROSE = "#be185d"
+    BROWN = "#78716c"
+    GRAY = "#6b7280"
+
+
+class ColoredEnum(Enum):
+    """
+    Base class for enums that carry (value, icon, color) so that UI badge
+    styling lives directly on the enum member — adding/renaming a member
+    forces you to supply its style right here instead of relying on a
+    separate hardcoded lookup that could silently fall out of sync.
+    Colors should reference the named constants on :class:`Color`.
+    """
+    def __new__(cls, value: str, icon: str, color: str):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.icon = icon
+        obj.color = color
+        return obj
+
+
 class SourceType(Enum):
     BT = "Babylonian Talmud"
     JT = "Jerusalem Talmud"
@@ -10,77 +52,44 @@ class SourceType(Enum):
     TN = "Tanach"
     MS = "Mishna"
 
-class TimePeriod(Enum):
-    """
-    Each member carries (value, icon, color) so that UI badge styling lives
-    directly on the enum — adding/renaming a member forces you to supply its
-    style right here instead of relying on a separate hardcoded lookup that
-    could silently fall out of sync.
-    """
-    Tanach = ("Tanach", "🕰️", "#b45309")
-    Tanaim = ("Tanaim", "🕰️", "#15803d")
-    Amoraim = ("Amoraim", "🕰️", "#1d4ed8")
-    NoTimePeriod = ("No Time Period", "🕰️", "#6b7280")
+class TimePeriod(ColoredEnum):
+    """See ColoredEnum for why (value, icon, color) are defined together."""
+    Tanach = ("Tanach", "🕰️", Color.AMBER)
+    Tanaim = ("Tanaim", "🕰️", Color.EMERALD)
+    Amoraim = ("Amoraim", "🕰️", Color.ROYAL_BLUE)
+    NoTimePeriod = ("No Time Period", "🕰️", Color.GRAY)
 
-    def __new__(cls, value: str, icon: str, color: str):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.icon = icon
-        obj.color = color
-        return obj
-
-class SymbolType(Enum):
-    """See TimePeriod for why (value, icon, color) are defined together."""
-    Clothing = ("Clothing", "👕", "#db2777")
-    HolyObject = ("Holy Object", "🕎", "#2563eb")
-    BodyPart = ("Body Part", "🖐️", "#d97706")
-    NotPhysical = ("Not Physical", "💭", "#6b7280")
-    PartOfNature = ("Part of Nature", "🌿", "#059669")
-    Weapon = ("Weapon", "⚔️", "#dc2626")
-    Other = ("Other", "🔹", "#7c3aed")
+class SymbolType(ColoredEnum):
+    """See ColoredEnum for why (value, icon, color) are defined together."""
+    Clothing = ("Clothing", "👕", Color.PINK)
+    HolyObject = ("Holy Object", "🕎", Color.BLUE)
+    BodyPart = ("Body Part", "🖐️", Color.ORANGE)
+    NotPhysical = ("Not Physical", "💭", Color.GRAY)
+    PartOfNature = ("Part of Nature", "🌿", Color.GREEN)
+    Weapon = ("Weapon", "⚔️", Color.RED)
+    Other = ("Other", "🔹", Color.VIOLET)
     #     todo think of others!
 
-    def __new__(cls, value: str, icon: str, color: str):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.icon = icon
-        obj.color = color
-        return obj
-
-class PlaceType(Enum):
-    """See TimePeriod for why (value, icon, color) are defined together."""
-    City = ("City", "🏙️", "#2563eb")
-    CountryOrRegion = ("Country or Region", "🗺️", "#059669")
-    BuildingOrStructure = ("Building or Structure", "🏛️", "#7c3aed")
-    BodyOfWater = ("Body of Water", "🌊", "#0891b2")
-    Mountain = ("Mountain", "⛰️", "#78716c")
-    Desert = ("Desert", "🏜️", "#d97706")
-    NotPhysical = ("Not Physical", "💭", "#6b7280")
-    Other = ("Other", "📍", "#db2777")
+class PlaceType(ColoredEnum):
+    """See ColoredEnum for why (value, icon, color) are defined together."""
+    City = ("City", "🏙️", Color.BLUE)
+    CountryOrRegion = ("Country or Region", "🗺️", Color.GREEN)
+    BuildingOrStructure = ("Building or Structure", "🏛️", Color.VIOLET)
+    BodyOfWater = ("Body of Water", "🌊", Color.CYAN)
+    Mountain = ("Mountain", "⛰️", Color.BROWN)
+    Desert = ("Desert", "🏜️", Color.ORANGE)
+    NotPhysical = ("Not Physical", "💭", Color.GRAY)
+    Other = ("Other", "📍", Color.PINK)
     #     todo think of others!
 
-    def __new__(cls, value: str, icon: str, color: str):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.icon = icon
-        obj.color = color
-        return obj
-
-class RoleType(Enum):
-    """See TimePeriod for why (value, icon, color) are defined together."""
-    Prophet = ("Prophet", "📜", "#7c3aed")
-    King = ("King", "👑", "#b45309")
-    Judge = ("Judge", "⚖️", "#0f766e")
-    Kohen = ("Kohen", "🕎", "#1d4ed8")
-    Tanna = ("Tanna", "📖", "#be185d")
-    Amora = ("Amora", "📚", "#4338ca")
-
-    def __new__(cls, value: str, icon: str, color: str):
-        obj = object.__new__(cls)
-        obj._value_ = value
-        obj.icon = icon
-        obj.color = color
-        return obj
+class RoleType(ColoredEnum):
+    """See ColoredEnum for why (value, icon, color) are defined together."""
+    Prophet = ("Prophet", "📜", Color.VIOLET)
+    King = ("King", "👑", Color.AMBER)
+    Judge = ("Judge", "⚖️", Color.TEAL)
+    Kohen = ("Kohen", "🕎", Color.ROYAL_BLUE)
+    Tanna = ("Tanna", "📖", Color.ROSE)
+    Amora = ("Amora", "📚", Color.INDIGO)
 
 class NumberCategory(Enum):
     Sacrifice = "Sacrifice"       # Offerings: animals, flour, oil, incense
@@ -90,12 +99,15 @@ class NumberCategory(Enum):
     Measurement = "Measurement"   # Distance, weight, volume, area
     Misc = "Misc"                 # Anything not covered above
 
-class PassageType(Enum):
-    LAW = "Law"
-    STORY = "Story"
-    PHILOSOPHIC = "Philosophic"
-    GENEALOGY = "Genealogy"
-    PROPHECY = "Prophecy"
+class PassageType(ColoredEnum):
+    """See ColoredEnum for why (value, icon, color) are defined together.
+    No relationship to TimePeriod — this describes the nature of a passage
+    (law, story, etc.), not when it was authored."""
+    LAW = ("Law", "⚖️", Color.BLUE)
+    STORY = ("Story", "📖", Color.AMBER)
+    PHILOSOPHIC = ("Philosophic", "💭", Color.VIOLET)
+    GENEALOGY = ("Genealogy", "🌳", Color.EMERALD)
+    PROPHECY = ("Prophecy", "🔮", Color.ROSE)
 
 class EntityType(Enum):
     EPerson = "Person"          # Includes individuals AND groups (e.g., "the 70 elders")
