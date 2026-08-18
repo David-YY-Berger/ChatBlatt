@@ -69,6 +69,10 @@ class SourceSearchHandler:
 
         return ans
 
+    def populate_entity_rel(self, src_metadata_lst):
+        # todo from enetity ids, get the values (name, hebrew name, etc..)
+        return src_metadata_lst
+
     def order_by_faiss_similarity(
         self, free_text_similarity_text: str, src_metadata_lst: List
     ) -> List:
