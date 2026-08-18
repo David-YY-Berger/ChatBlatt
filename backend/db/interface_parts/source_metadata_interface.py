@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
+from backend.models_db.Enums import PassageType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 
 
@@ -44,6 +45,21 @@ class SourceMetadataInterfaceMixin(ABC):
         """
         Return all SourceMetadata documents whose rel_keys array contains
         the given rel_key.
+        """
+        pass
+
+    @abstractmethod
+    def get_source_metadata_filtered(
+        self,
+        passage_types: Optional[List[PassageType]] = None,
+        entity_ids: Optional[List[str]] = None,
+        rel_ids: Optional[List[str]] = None,
+    ) -> List[SourceMetadata]:
+        """
+        Return every SourceMetadata document matching the given filters in a
+        single query. Each dimension is OR'd internally (any one of its
+        selected values is a match) while the dimensions are AND'd together.
+        A dimension left empty/None is not filtered on.
         """
         pass
 

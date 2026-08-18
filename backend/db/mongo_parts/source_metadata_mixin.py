@@ -59,6 +59,31 @@ class SourceMetadataMongoMixin:
         )
         return [self._doc_to_src_metadata(doc) for doc in docs]
 
+    def get_source_metadata_filtered(
+        self,
+        passage_types: Optional[List[PassageType]] = None,
+        entity_ids: Optional[List[str]] = None,
+        rel_ids: Optional[List[str]] = None,
+    ) -> List[SourceMetadata]:
+        """
+        Fetch every SourceMetadata document matching the given filters in a
+        single query. Each dimension is OR'd internally (matching any one of
+        its selected values is enough) while the dimensions themselves are
+        AND'd together. A dimension left empty/None is not filtered on at all.
+        """
+        conditions: List[Dict[str, Any]] = []
+
+        if passage_types:
+            conditions.append({DBFields.PASSAGE_TYPES: {DBOperators.IN: [pt.value for pt in passage_types]}})
+        if entity_ids:
+            conditions.append({DBFields.ENTITY_KEYS: {DBOperators.IN: list(entity_ids)}})
+        if rel_ids:
+            conditions.append({DBFields.REL_KEYS: {DBOperators.IN: list(rel_ids)}})
+
+        query: Dict[str, Any] = {DBOperators.AND: conditions} if conditions else {}
+        docs = self.get_collection(CollectionObjs.SRC_METADATA).find(query)
+        return [self._doc_to_src_metadata(doc) for doc in docs]
+
     def _src_metadata_to_doc(self, src_metadata: SourceMetadata) -> Dict[str, Any]:
         return {
             DBFields.KEY: src_metadata.key,

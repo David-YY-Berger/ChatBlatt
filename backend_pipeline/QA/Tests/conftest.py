@@ -41,7 +41,14 @@ class FakeCollection:
                     if not val["$exists"] and exists:
                         return False
                 if "$in" in val:
-                    if doc.get(key) not in val["$in"]:
+                    field_val = doc.get(key)
+                    # Mirror real MongoDB semantics: if the field is itself an
+                    # array (e.g. entity_keys/passage_types), $in matches when
+                    # ANY element of that array is one of the given values.
+                    if isinstance(field_val, (list, set, tuple)):
+                        if not any(v in val["$in"] for v in field_val):
+                            return False
+                    elif field_val not in val["$in"]:
                         return False
                 if "$regex" in val:
                     import re

@@ -27,16 +27,22 @@ class SourceSearchHandler:
 
     def get_answer_w_source_metadata(self, query: SourceSearchQuery) -> Answer:
 
+        # Step 1: one DB query for every source that matches the *structural*
+        # filters (passage type / entity / relationship selections). This
+        # replaces per-item DB round-trips with a single round-trip.
+        src_metadata_lst = self.db_api.get_source_metadata_filtered(
+            passage_types=query.passage_types,
+            entity_ids=query.entity_ids,
+            rel_ids=query.rel_ids,
+        )
+
+        # Step 2: if free text was given, ask FAISS for the similarity
+        # ranking of *keys* and use it purely to re-order the already
+        # filtered list above - no per-source DB lookups involved.
         if query.free_text_similarity:
-            ref_list = self.ordered_ref_from_faiss(query.free_text_similarity)
-            src_metadata_lst = self.create_src_metadata_objs(ref_list)
-        else:
-            src_metadata_lst = self.db_api.get_all_source_metadata()
+            src_metadata_lst = self.order_by_faiss_similarity(query.free_text_similarity, src_metadata_lst)
 
-        src_metadata_lst = self.filter_by_book(src_metadata_lst, query)
         src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
-        src_metadata_lst = self.filter_by_entity_rel(query, src_metadata_lst)
-
         src_metadata_lst = src_metadata_lst[:query.max_sources]
 
         return self.create_answer_obj(query, src_metadata_lst)
@@ -63,51 +69,25 @@ class SourceSearchHandler:
 
         return ans
 
-    def ordered_ref_from_faiss(self, text_similarity_text: str,) -> List[str]:
-
-        ref_list = self.faiss.search(text_similarity_text) # can be huge list...
-        # Example ref list
-        # ref_list = [
-        #     "BT_Bava Batra_0_3b:4-7",
-        #     "BT_Bava Batra_0_7b:6-7",
-        #     "BT_Bava Batra_0_13b:9-14a:4"
-        # ]
-        return ref_list
-
-    def create_src_metadata_objs(self, ref_list):
-        src_metadata_lst = []
-        for ref in ref_list:
-            src_metadata_lst.append(self.db_api.get_source_metadata_by_key(ref))
-
-        return src_metadata_lst
-
-    def filter_by_book(self, src_metadata_lst, query):
-        # todo
-        return src_metadata_lst
-
-    def populate_entity_rel(self, src_metadata_lst):
-        # todo from enetity ids, get the values (name, hebrew name, etc..)
-        return src_metadata_lst
-
-    def filter_by_entity_rel(self, query: SourceSearchQuery, src_metadata_lst):
+    def order_by_faiss_similarity(
+        self, free_text_similarity_text: str, src_metadata_lst: List
+    ) -> List:
         """
-        Narrow src_metadata_lst down to sources that reference the selected
-        entities/relationships. Each dimension is OR'd internally (matching
-        any one of the selected entity_ids, or any one of the selected
-        rel_ids, is enough) while the two dimensions are AND'd together.
-        A dimension with no selections is not filtered on at all.
+        Re-rank an already-filtered metadata list by FAISS text-similarity
+        order, without any further DB access.
+
+        FAISS ranks the *entire* index in one cheap, vectorized call and
+        returns it as a list of keys, ordered nearest-first. We walk that
+        ranking and pull matching entries out of ``src_metadata_lst`` (kept
+        as a key -> metadata map for O(1) lookup/removal), so the result is
+        the intersection of "structurally filtered" and "text-similar",
+        ordered by similarity. Anything FAISS didn't rank (e.g. the index is
+        stale/incomplete) is appended at the end rather than silently
+        dropped, so results never disappear because of a lookup mismatch.
         """
-        if not query.entity_ids and not query.rel_ids:
-            return src_metadata_lst
+        by_key = {src.key: src for src in src_metadata_lst}
+        ranked_keys = self.faiss.search(free_text_similarity_text)
 
-        entity_ids = set(query.entity_ids)
-        rel_ids = set(query.rel_ids)
-
-        filtered = []
-        for src in src_metadata_lst:
-            if entity_ids and not (src.entity_keys & entity_ids):
-                continue
-            if rel_ids and not (src.rel_keys & rel_ids):
-                continue
-            filtered.append(src)
-        return filtered
+        ordered = [by_key.pop(key) for key in ranked_keys if key in by_key]
+        ordered.extend(by_key.values())
+        return ordered

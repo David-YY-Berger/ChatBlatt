@@ -13,28 +13,18 @@ hebrew working
 easy fixes {{
 
 
-change 'text similarity search' to 'Sort by Text Similarity'
-on source search page, Add a placeholder for the text similarity search: 'Sort sources by similarity to a word or phrase' . make sure to update any lables on the UI accordinly
-
---------------
-on source search page, the button of 'Find Sources' should be the same line as the text similarity search, to the right side. make the text similarity input box a bit smaller to make room on the right for the button.
-
--------------------
-source search - right below the text similarity text input area, add in 'Looking for a really great semantic search engine? Check out Dicta's _Talmud_ and _Tanach_ search engine . 
-in Talmud, should have this link: https://talmudsearch.dicta.org.il/he
-in Tanach, should have this link: https://search.dicta.org.il/
-
-make sure to add both english and hebrew labels
 ------------------
 
-entity metadata population - adjust our pydantic prompt code so that numbers should not get any value of heb_display_name. also, when adding to the DB, just put the value of the en_display_name in the heb_display_name.
+
 }}
 
 
 
 
 fix entity rel population (pydantic){{
-
+-----------
+entity metadata population - adjust our pydantic prompt code so that numbers should not get any value of heb_display_name. also, when adding to the DB, just put the value of the en_display_name in the heb_display_name.
+-------
 
 dont do this until we are ready to test it.. 
 use this to test: 
