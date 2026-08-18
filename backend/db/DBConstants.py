@@ -31,10 +31,6 @@ class DBFields:
     ENTITY_KEYS = "entity_keys"
     REL_KEYS = "rel_keys"
 
-    # FAISS fields
-    FAISS_INDEX = "faiss_index"
-    METADATA = "metadata"
-
 
 class DBOperators:
     """MongoDB query operators."""
