@@ -152,8 +152,11 @@ class FaissEngine:
         """
         Serialize the current FAISS index and metadata, then save them to the database via dbapi.
         """
-        # Serialize the FAISS index to bytes using faiss helper
-        index_bytes = faiss.serialize_index(self.index)
+        # Serialize the FAISS index to bytes using faiss helper.
+        # faiss.serialize_index() returns a numpy uint8 ndarray, not a
+        # bytes object, so it must be converted before handing it to
+        # GridFS (which only accepts bytes/str/file-like objects).
+        index_bytes = faiss.serialize_index(self.index).tobytes()
 
         # Serialize the Python metadata list to bytes using pickle
         metadata_bytes = pickle.dumps(self.metadata)
