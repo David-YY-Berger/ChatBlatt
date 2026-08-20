@@ -20,7 +20,9 @@ class DBPopulateFaiss(DBParentClass):
         self.faiss.clear_index()  # start from a totally clean FAISS index
 
         # all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.TN)
-        all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
+        # all_srcs = self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
+        all_srcs = (self.db_api.get_all_src_contents_of_collection(CollectionObjs.BT)
+                    + self.db_api.get_all_src_contents_of_collection(CollectionObjs.TN))
         print(f"{len(all_srcs)} sources found")
 
         docs = [
