@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional, Tuple
 
 import gridfs
@@ -48,5 +49,14 @@ class FaissMongoMixin:
         fs = self._get_faiss_gridfs()
         for grid_out in fs.find():
             fs.delete(grid_out._id)
+
+    def get_faiss_index_upload_date(self) -> Optional[datetime]:
+        """Cheap freshness check: return just the uploadDate of the latest
+        persisted index file (no bytes downloaded), so callers can tell
+        whether an in-memory cache is stale without paying the cost of a
+        full reload."""
+        fs = self._get_faiss_gridfs()
+        index_file = fs.find_one({"filename": _FAISS_INDEX_FILENAME}, sort=[("uploadDate", -1)])
+        return index_file.uploadDate if index_file is not None else None
 
 
