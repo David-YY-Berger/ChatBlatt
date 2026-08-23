@@ -53,9 +53,9 @@ class EPerson(Entity):
     # db fields
     entityType: EntityType = EntityType.EPerson
     timePeriod: Optional[TimePeriod] = None
-    isWoman: bool = False
-    isNonJew: bool = False
-    isGroup: bool = False  # True for groups like "the 70 elders", "children of Israel"
+    isWoman: Optional[bool] = None
+    isNonJew: Optional[bool] = None
+    isGroup: Optional[bool] = None  # True for groups like "the 70 elders", "children of Israel"
     roles: List[RoleType] = []
 
     # transient fields - Person/Group → Person/Group
