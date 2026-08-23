@@ -1,0 +1,85 @@
+﻿{
+    "res": {
+        "en_summary": "Esau sells birthright to Jacob for stew.",
+        "heb_summary": "עשיו מוכר בכורה ליעקב תמורת נזיד.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Rebekah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Edom"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Stew"
+                },
+                {
+                    "en_name": "Game"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Esau",
+                    "term2": "Rebekah"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Edom"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:27-32"
+}

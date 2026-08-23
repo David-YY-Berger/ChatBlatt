@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=7069 approx cost usd = $0.000669 (Prompt=6450, Completion=619)
+SOURCE:
+Genesis 1:24-25  (TN_Genesis_0_1:24-25)
+
+HEBREW:
+וַיֹּ֣אמֶר אֱלֹהִ֗ים תּוֹצֵ֨א הָאָ֜רֶץ נֶ֤פֶשׁ חַיָּה֙ לְמִינָ֔הּ בְּהֵמָ֥ה וָרֶ֛מֶשׂ וְחַֽיְתוֹ־אֶ֖רֶץ לְמִינָ֑הּ וַֽיְהִי־כֵֽן׃ וַיַּ֣עַשׂ אֱלֹהִים֩ אֶת־חַיַּ֨ת הָאָ֜רֶץ לְמִינָ֗הּ וְאֶת־הַבְּהֵמָה֙ לְמִינָ֔הּ וְאֵ֛ת כׇּל־רֶ֥מֶשׂ הָֽאֲדָמָ֖ה לְמִינֵ֑הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃
+
+ENGLISH:
+God said, Let the earth bring forth every kind of living creature: cattle, creeping things, and wild beasts of every kind. And it was so. God made wild beasts of every kind and cattle of every kind, and all kinds of creeping things of the earth. And God saw that this was good.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates animals on the earth",
+    "heb_summary": "אלוהים בורא חיות על הארץ",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Creeping Thing"
+        },
+        {
+          "en_name": "Wild Beast"
+        }
+      ]
+    }
+  }
+}

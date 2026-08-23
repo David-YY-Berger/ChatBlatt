@@ -1,0 +1,98 @@
+﻿COST: Tokens: Total=8605 approx cost usd = $0.001121 (Prompt=6490, Completion=2115)
+SOURCE:
+Genesis 49:5-7  (TN_Genesis_0_49:5-7)
+
+HEBREW:
+שִׁמְע֥וֹן וְלֵוִ֖י אַחִ֑ים כְּלֵ֥י חָמָ֖ס מְכֵרֹתֵיהֶֽם׃ בְּסֹדָם֙ אַל־תָּבֹ֣א נַפְשִׁ֔י בִּקְהָלָ֖ם אַל־תֵּחַ֣ד כְּבֹדִ֑י כִּ֤י בְאַפָּם֙ הָ֣רְגוּ אִ֔ישׁ וּבִרְצֹנָ֖ם עִקְּרוּ־שֽׁוֹר׃ אָר֤וּר אַפָּם֙ כִּ֣י עָ֔ז וְעֶבְרָתָ֖ם כִּ֣י קָשָׁ֑תָה אֲחַלְּקֵ֣ם בְּיַעֲקֹ֔ב וַאֲפִיצֵ֖ם בְּיִשְׂרָאֵֽל׃
+
+ENGLISH:
+Simeon and Levi are a pair; Their weapons are tools of lawlessness. Let not my person be included in their council, Let not my being be counted in their assembly. For when angry they slay a man, as a collective: slay men. See next note and Dictionary under ish . And when pleased they maim an ox. as a collective: maimed oxen. Cursed be their anger so fierce, And their wrath so relentless. I will divide them in Jacob, Scatter them in Israel.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Simeon and Levi's violent actions cursed by Jacob.",
+    "heb_summary": "שמעון ולוי מקוללים על מעשיהם האלימים.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Simeon"
+        },
+        {
+          "en_name": "Levi"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ox"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Simeon",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Levi",
+          "term2": "Jacob"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Simeon"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Levi"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Jacob",
+          "term2": "Simeon"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Levi"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Simeon"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Levi"
+        }
+      ]
+    }
+  }
+}

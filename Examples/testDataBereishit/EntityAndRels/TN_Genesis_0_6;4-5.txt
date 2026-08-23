@@ -1,0 +1,95 @@
+﻿COST: Tokens: Total=8315 approx cost usd = $0.001041 (Prompt=6461, Completion=1854)
+SOURCE:
+Genesis 6:4-5  (TN_Genesis_0_6:4-5)
+
+HEBREW:
+הַנְּפִלִ֞ים הָי֣וּ בָאָ֘רֶץ֮ בַּיָּמִ֣ים הָהֵם֒ וְגַ֣ם אַֽחֲרֵי־כֵ֗ן אֲשֶׁ֨ר יָבֹ֜אוּ בְּנֵ֤י הָֽאֱלֹהִים֙ אֶל־בְּנ֣וֹת הָֽאָדָ֔ם וְיָלְד֖וּ לָהֶ֑ם הֵ֧מָּה הַגִּבֹּרִ֛ים אֲשֶׁ֥ר מֵעוֹלָ֖ם אַנְשֵׁ֥י הַשֵּֽׁם׃ וַיַּ֣רְא יְהֹוָ֔ה כִּ֥י רַבָּ֛ה רָעַ֥ת הָאָדָ֖ם בָּאָ֑רֶץ וְכׇל־יֵ֙צֶר֙ מַחְשְׁבֹ֣ת לִבּ֔וֹ רַ֥ק רַ֖ע כׇּל־הַיּֽוֹם׃
+
+ENGLISH:
+It was then, and later too, that the Nephilim appeared on earth-when divine beings cohabited with the human women, who bore them offspring. Such were the heroes of old, the men of renown. HASHEM saw how great was human wickedness on earth-how every plan devised by the human mind was nothing but evil all the time.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Divine beings and human women bore heroes.",
+    "heb_summary": "יצורי אל ונשים הולידו גיבורים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Nephilim"
+        },
+        {
+          "en_name": "Divine Beings"
+        },
+        {
+          "en_name": "Human Women"
+        },
+        {
+          "en_name": "Heroes Of Old"
+        },
+        {
+          "en_name": "Men Of Renown"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Heroes Of Old",
+          "term2": "Divine Beings"
+        },
+        {
+          "term1": "Men Of Renown",
+          "term2": "Divine Beings"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Heroes Of Old",
+          "term2": "Human Women"
+        },
+        {
+          "term1": "Men Of Renown",
+          "term2": "Human Women"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Nephilim",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Divine Beings",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Human Women",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Heroes Of Old",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Men Of Renown",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+﻿COST: Tokens: Total=7883 approx cost usd = $0.000913 (Prompt=6455, Completion=1428)
+SOURCE:
+Genesis 3:9-11  (TN_Genesis_0_3:9-11)
+
+HEBREW:
+וַיִּקְרָ֛א יְהֹוָ֥ה אֱלֹהִ֖ים אֶל־הָֽאָדָ֑ם וַיֹּ֥אמֶר ל֖וֹ אַיֶּֽכָּה׃ וַיֹּ֕אמֶר אֶת־קֹלְךָ֥ שָׁמַ֖עְתִּי בַּגָּ֑ן וָאִירָ֛א כִּֽי־עֵירֹ֥ם אָנֹ֖כִי וָאֵחָבֵֽא׃ וַיֹּ֕אמֶר מִ֚י הִגִּ֣יד לְךָ֔ כִּ֥י עֵירֹ֖ם אָ֑תָּה הֲמִן־הָעֵ֗ץ אֲשֶׁ֧ר צִוִּיתִ֛יךָ לְבִלְתִּ֥י אֲכׇל־מִמֶּ֖נּוּ אָכָֽלְתָּ׃
+
+ENGLISH:
+God HASHEM called out to the Human and said to him, Where are you? He replied, I heard the sound of You in the garden, and I was afraid because I was naked, so I hid. Who told you that you were naked? Did you eat of the tree from which I had forbidden you to eat?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God questions Human hiding naked in garden.",
+    "heb_summary": "אלוהים שואל אדם מתחבא בגן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Human"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Garden"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Tree"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Human"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "God Hashem",
+          "term2": "Garden"
+        },
+        {
+          "term1": "Human",
+          "term2": "Garden"
+        }
+      ]
+    }
+  }
+}

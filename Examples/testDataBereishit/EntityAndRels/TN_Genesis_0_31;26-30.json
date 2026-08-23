@@ -1,0 +1,40 @@
+﻿{
+    "res": {
+        "en_summary": "Laban confronts Jacob; God warns Laban",
+        "heb_summary": "לבן מתעמת עם יעקב; אלוהים מזהיר את לבן",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Gods"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Laban",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Laban"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_31:26-30"
+}

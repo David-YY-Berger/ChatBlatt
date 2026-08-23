@@ -1,0 +1,50 @@
+﻿COST: Tokens: Total=6889 approx cost usd = $0.000619 (Prompt=6434, Completion=455)
+SOURCE:
+Genesis 33:16-17  (TN_Genesis_0_33:16-17)
+
+HEBREW:
+וַיָּ֩שׇׁב֩ בַּיּ֨וֹם הַה֥וּא עֵשָׂ֛ו לְדַרְכּ֖וֹ שֵׂעִֽירָה׃ וְיַעֲקֹב֙ נָסַ֣ע סֻכֹּ֔תָה וַיִּ֥בֶן ל֖וֹ בָּ֑יִת וּלְמִקְנֵ֙הוּ֙ עָשָׂ֣ה סֻכֹּ֔ת עַל־כֵּ֛ן קָרָ֥א שֵׁם־הַמָּק֖וֹם סֻכּֽוֹת׃
+
+ENGLISH:
+So Esau started back that day on his way to Seir. But Jacob journeyed on to Succoth, and built a house for himself and made stalls for his cattle; that is why the place was called Succoth.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Esau went to Seir; Jacob built in Succoth.",
+    "heb_summary": "עשו הלך לשעיר; יעקב בנה בסוכות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Seir"
+        },
+        {
+          "en_name": "Succoth"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Esau",
+          "term2": "Seir"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Succoth"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+﻿COST: Tokens: Total=7095 approx cost usd = $0.000685 (Prompt=6415, Completion=680)
+SOURCE:
+Genesis 49:13  (TN_Genesis_0_49:13)
+
+HEBREW:
+זְבוּלֻ֕ן לְח֥וֹף יַמִּ֖ים יִשְׁכֹּ֑ן וְהוּא֙ לְח֣וֹף אֳנִיֹּ֔ת וְיַרְכָת֖וֹ עַל־צִידֹֽן׃
+
+ENGLISH:
+Zebulun shall dwell by the seashore; He shall be a haven for ships, And his flank shall rest on Sidon.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Zebulun dwells by sea, near Sidon.",
+    "heb_summary": "זבולון שוכן ליד הים וצידון.",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Zebulun"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sidon"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Zebulun"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "Zebulun",
+          "term2": "Sidon"
+        }
+      ]
+    }
+  }
+}

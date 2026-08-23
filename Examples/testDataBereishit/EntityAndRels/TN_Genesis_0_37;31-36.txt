@@ -1,0 +1,102 @@
+﻿COST: Tokens: Total=9295 approx cost usd = $0.001297 (Prompt=6629, Completion=2666)
+SOURCE:
+Genesis 37:31-36  (TN_Genesis_0_37:31-36)
+
+HEBREW:
+וַיִּקְח֖וּ אֶת־כְּתֹ֣נֶת יוֹסֵ֑ף וַֽיִּשְׁחֲטוּ֙ שְׂעִ֣יר עִזִּ֔ים וַיִּטְבְּל֥וּ אֶת־הַכֻּתֹּ֖נֶת בַּדָּֽם׃ וַֽיְשַׁלְּח֞וּ אֶת־כְּתֹ֣נֶת הַפַּסִּ֗ים וַיָּבִ֙יאוּ֙ אֶל־אֲבִיהֶ֔ם וַיֹּאמְר֖וּ זֹ֣את מָצָ֑אנוּ הַכֶּר־נָ֗א הַכְּתֹ֧נֶת בִּנְךָ֛ הִ֖וא אִם־לֹֽא׃ וַיַּכִּירָ֤הּ וַיֹּ֙אמֶר֙ כְּתֹ֣נֶת בְּנִ֔י חַיָּ֥ה רָעָ֖ה אֲכָלָ֑תְהוּ טָרֹ֥ף טֹרַ֖ף יוֹסֵֽף׃ וַיִּקְרַ֤ע יַעֲקֹב֙ שִׂמְלֹתָ֔יו וַיָּ֥שֶׂם שַׂ֖ק בְּמׇתְנָ֑יו וַיִּתְאַבֵּ֥ל עַל־בְּנ֖וֹ יָמִ֥ים רַבִּֽים׃ וַיָּקֻ֩מוּ֩ כׇל־בָּנָ֨יו וְכׇל־בְּנֹתָ֜יו לְנַחֲמ֗וֹ וַיְמָאֵן֙ לְהִתְנַחֵ֔ם וַיֹּ֕אמֶר כִּֽי־אֵרֵ֧ד אֶל־בְּנִ֛י אָבֵ֖ל שְׁאֹ֑לָה וַיֵּ֥בְךְּ אֹת֖וֹ אָבִֽיו׃ וְהַ֨מְּדָנִ֔ים מָכְר֥וּ אֹת֖וֹ אֶל־מִצְרָ֑יִם לְפֽוֹטִיפַר֙ סְרִ֣יס פַּרְעֹ֔ה שַׂ֖ר הַטַּבָּחִֽים׃
+
+ENGLISH:
+Then they took Josephs tunic, slaughtered a kid, and dipped the tunic in the blood. They had the ornamented tunic taken to their father, and they said, We found this. Please examine it; is it your sons tunic or not? He recognized it, and said, My sons tunic! A savage beast devoured him! Joseph was torn by a beast! Jacob rent his clothes, put sackcloth on his loins, and observed mourning for his son many days. All his sons and daughters sought to comfort him; but he refused to be comforted, saying, No, I will go down mourning to my son in Sheol. Thus his father bewailed him. The Midianites, meanwhile, sold him in Egypt to Potiphar, a courtier of Pharaoh and his prefect. uncertain; cf. Jer. 52.12; 2 Kings 25.8ff. and Jer. 39-40; Gen. 39.20; 40.3. Apparently the office was obscure even to the texts original audience (cf. 39.1). NJPS chief steward, trad. captain of the guard.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph sold to Potiphar in Egypt.",
+    "heb_summary": "יוסף נמכר לפוטיפר במצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Potiphar"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Midianites"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sheol"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Midian"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Tunic"
+        },
+        {
+          "en_name": "Sackcloth"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Kid"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Midianites",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Sheol"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Potiphar",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

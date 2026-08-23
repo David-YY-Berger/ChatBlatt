@@ -1,0 +1,50 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph imprisoned; God's kindness, success.",
+        "heb_summary": "יוסף נכלא; חסד והצלחת ה'.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Prison"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Prison"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Israel"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_39:14-23"
+}

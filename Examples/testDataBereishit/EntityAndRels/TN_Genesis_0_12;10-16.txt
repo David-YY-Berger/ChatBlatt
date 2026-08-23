@@ -1,0 +1,104 @@
+﻿COST: Tokens: Total=7530 approx cost usd = $0.000777 (Prompt=6588, Completion=942)
+SOURCE:
+Genesis 12:10-16  (TN_Genesis_0_12:10-16)
+
+HEBREW:
+וַיְהִ֥י רָעָ֖ב בָּאָ֑רֶץ וַיֵּ֨רֶד אַבְרָ֤ם מִצְרַ֙יְמָה֙ לָג֣וּר שָׁ֔ם כִּֽי־כָבֵ֥ד הָרָעָ֖ב בָּאָֽרֶץ׃ וַיְהִ֕י כַּאֲשֶׁ֥ר הִקְרִ֖יב לָב֣וֹא מִצְרָ֑יְמָה וַיֹּ֙אמֶר֙ אֶל־שָׂרַ֣י אִשְׁתּ֔וֹ הִנֵּה־נָ֣א יָדַ֔עְתִּי כִּ֛י אִשָּׁ֥ה יְפַת־מַרְאֶ֖ה אָֽתְּ׃ וְהָיָ֗ה כִּֽי־יִרְא֤וּ אֹתָךְ֙ הַמִּצְרִ֔ים וְאָמְר֖וּ אִשְׁתּ֣וֹ זֹ֑את וְהָרְג֥וּ אֹתִ֖י וְאֹתָ֥ךְ יְחַיּֽוּ׃ אִמְרִי־נָ֖א אֲחֹ֣תִי אָ֑תְּ לְמַ֙עַן֙ יִֽיטַב־לִ֣י בַעֲבוּרֵ֔ךְ וְחָיְתָ֥ה נַפְשִׁ֖י בִּגְלָלֵֽךְ׃ וַיְהִ֕י כְּב֥וֹא אַבְרָ֖ם מִצְרָ֑יְמָה וַיִּרְא֤וּ הַמִּצְרִים֙ אֶת־הָ֣אִשָּׁ֔ה כִּֽי־יָפָ֥ה הִ֖וא מְאֹֽד׃ וַיִּרְא֤וּ אֹתָהּ֙ שָׂרֵ֣י פַרְעֹ֔ה וַיְהַֽלְל֥וּ אֹתָ֖הּ אֶל־פַּרְעֹ֑ה וַתֻּקַּ֥ח הָאִשָּׁ֖ה בֵּ֥ית פַּרְעֹֽה׃ וּלְאַבְרָ֥ם הֵיטִ֖יב בַּעֲבוּרָ֑הּ וַֽיְהִי־ל֤וֹ צֹאן־וּבָקָר֙ וַחֲמֹרִ֔ים וַעֲבָדִים֙ וּשְׁפָחֹ֔ת וַאֲתֹנֹ֖ת וּגְמַלִּֽים׃
+
+ENGLISH:
+There was a famine in the land, and Abram went down to Egypt to sojourn there, for the famine was severe in the land. As he was about to enter Egypt, he said to his wife Sarai, I in Judg. 5.7; Jer. 2.20; Mic. 4.13, etc. know what a beautiful woman you are. If the Egyptians see you, and think, She is his wife, they will kill me and let you live. Please say that you are my sister, that it may go well with me because of you, and that I may remain alive thanks to you. When Abram entered Egypt, the Egyptians saw how very beautiful the woman was. Pharaohs courtiers saw her and praised her to Pharaoh, and the woman was taken into Pharaohs palace. And because of her, it went well with Abram; he acquired sheep, oxen, asses, male and female slaves, she-asses, and camels.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abram and Sarai go to Egypt.",
+    "heb_summary": "אברם ושרה יורדים למצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Egyptians"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Pharaohs Courtiers"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Pharaohs Palace"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        },
+        {
+          "en_name": "Ox"
+        },
+        {
+          "en_name": "Ass"
+        },
+        {
+          "en_name": "Camel"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "Sarai"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abram",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Sarai",
+          "term2": "Pharaohs Palace"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Pharaohs Palace"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaohs Courtiers",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

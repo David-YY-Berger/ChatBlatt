@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=7762 approx cost usd = $0.000873 (Prompt=6470, Completion=1292)
+SOURCE:
+Genesis 9:25-27  (TN_Genesis_0_9:25-27)
+
+HEBREW:
+וַיֹּ֖אמֶר אָר֣וּר כְּנָ֑עַן עֶ֥בֶד עֲבָדִ֖ים יִֽהְיֶ֥ה לְאֶחָֽיו׃ וַיֹּ֕אמֶר בָּר֥וּךְ יְהֹוָ֖ה אֱלֹ֣הֵי שֵׁ֑ם וִיהִ֥י כְנַ֖עַן עֶ֥בֶד לָֽמוֹ׃ יַ֤פְתְּ אֱלֹהִים֙ לְיֶ֔פֶת וְיִשְׁכֹּ֖ן בְּאׇֽהֳלֵי־שֵׁ֑ם וִיהִ֥י כְנַ֖עַן עֶ֥בֶד לָֽמוֹ׃
+
+ENGLISH:
+he said, Cursed be Canaan; The lowest of slaves Shall he be to his brothers. And he said, Blessed be HASHEM, The God of Shem; Let Canaan be a slave to them. May God enlarge, play on Heb. yepheth Japheth. Japheth, And let him dwell in the tents of Shem; And let Canaan be a slave to them.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Canaan cursed, Shem and Japheth blessed.",
+    "heb_summary": "קללת כנען, ברכת שם ויפת.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Shem"
+        },
+        {
+          "en_name": "Japheth"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ]
+    },
+    "Rel": {
+      "EnemyOf": [
+        {
+          "term1": "Canaan",
+          "term2": "Shem"
+        },
+        {
+          "term1": "Canaan",
+          "term2": "Japheth"
+        }
+      ]
+    }
+  }
+}

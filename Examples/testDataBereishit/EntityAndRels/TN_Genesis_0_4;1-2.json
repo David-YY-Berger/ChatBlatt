@@ -1,0 +1,68 @@
+﻿{
+    "res": {
+        "en_summary": "Eve bears Cain and Abel; Cain tills, Abel keeps.",
+        "heb_summary": "חוה יולדת קין והבל; קין עובד, הבל רועה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Human"
+                },
+                {
+                    "en_name": "Eve"
+                },
+                {
+                    "en_name": "Cain"
+                },
+                {
+                    "en_name": "Abel"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Cain",
+                    "term2": "Human"
+                },
+                {
+                    "term1": "Abel",
+                    "term2": "Human"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Cain",
+                    "term2": "Eve"
+                },
+                {
+                    "term1": "Abel",
+                    "term2": "Eve"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Human",
+                    "term2": "Eve"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Eve",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:1-2"
+}

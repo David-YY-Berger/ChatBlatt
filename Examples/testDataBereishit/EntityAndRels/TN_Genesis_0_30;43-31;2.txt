@@ -1,0 +1,59 @@
+﻿COST: Tokens: Total=7581 approx cost usd = $0.000819 (Prompt=6469, Completion=1112)
+SOURCE:
+Genesis 30:43-31:2  (TN_Genesis_0_30:43-31:2)
+
+HEBREW:
+וַיִּפְרֹ֥ץ הָאִ֖ישׁ מְאֹ֣ד מְאֹ֑ד וַֽיְהִי־לוֹ֙ צֹ֣אן רַבּ֔וֹת וּשְׁפָחוֹת֙ וַעֲבָדִ֔ים וּגְמַלִּ֖ים וַחֲמֹרִֽים׃וַיִּשְׁמַ֗ע אֶת־דִּבְרֵ֤י בְנֵֽי־לָבָן֙ לֵאמֹ֔ר לָקַ֣ח יַעֲקֹ֔ב אֵ֖ת כׇּל־אֲשֶׁ֣ר לְאָבִ֑ינוּ וּמֵאֲשֶׁ֣ר לְאָבִ֔ינוּ עָשָׂ֕ה אֵ֥ת כׇּל־הַכָּבֹ֖ד הַזֶּֽה׃ וַיַּ֥רְא יַעֲקֹ֖ב אֶת־פְּנֵ֣י לָבָ֑ן וְהִנֵּ֥ה אֵינֶ֛נּוּ עִמּ֖וֹ כִּתְמ֥וֹל שִׁלְשֽׁוֹם׃
+
+ENGLISH:
+So the man grew exceedingly prosperous, and came to own large flocks, maidservants and menservants, camels and asses.Now he heard the things that Labans sons were saying: Jacob has taken all that was our fathers, and from that which was our fathers he has built up all this wealth. Jacob also saw that Labans manner toward him was not as it had been in the past.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob prospered; Laban's sons and Laban resented him.",
+    "heb_summary": "יעקב התעשר; בני לבן ולבן התנגדו לו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban's Sons"
+        },
+        {
+          "en_name": "Laban"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Camel"
+        },
+        {
+          "en_name": "Ass"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Laban's Sons",
+          "term2": "Laban"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Laban's Sons",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

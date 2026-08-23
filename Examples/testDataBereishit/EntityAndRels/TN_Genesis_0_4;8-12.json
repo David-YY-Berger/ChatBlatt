@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "Cain killed Abel; God cursed Cain.",
+        "heb_summary": "קין הרג את הבל; אלוהים קילל את קין.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Cain"
+                },
+                {
+                    "en_name": "Abel"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Field"
+                },
+                {
+                    "en_name": "Ground"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Cain",
+                    "term2": "Abel"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Cain"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Abel",
+                    "term2": "Field"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Cain",
+                    "term2": "Field"
+                },
+                {
+                    "term1": "Abel",
+                    "term2": "Field"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Cain",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Abel",
+                    "term2": "Ground"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Cain",
+                    "term2": "Abel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:8-12"
+}

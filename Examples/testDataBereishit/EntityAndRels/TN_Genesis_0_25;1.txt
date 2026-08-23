@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=6679 approx cost usd = $0.000564 (Prompt=6400, Completion=279)
+SOURCE:
+Genesis 25:1  (TN_Genesis_0_25:1)
+
+HEBREW:
+וַיֹּ֧סֶף אַבְרָהָ֛ם וַיִּקַּ֥ח אִשָּׁ֖ה וּשְׁמָ֥הּ קְטוּרָֽה׃
+
+ENGLISH:
+Abraham took another wife, whose name was Keturah.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham took Keturah as his wife",
+    "heb_summary": "אברהם נשא את קטורה לאישה",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Keturah"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abraham",
+          "term2": "Keturah"
+        }
+      ]
+    }
+  }
+}

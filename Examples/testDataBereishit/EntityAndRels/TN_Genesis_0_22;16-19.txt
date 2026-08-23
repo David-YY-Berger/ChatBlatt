@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=9171 approx cost usd = $0.001289 (Prompt=6499, Completion=2672)
+SOURCE:
+Genesis 22:16-19  (TN_Genesis_0_22:16-19)
+
+HEBREW:
+וַיֹּ֕אמֶר בִּ֥י נִשְׁבַּ֖עְתִּי נְאֻם־יְהֹוָ֑ה כִּ֗י יַ֚עַן אֲשֶׁ֤ר עָשִׂ֙יתָ֙ אֶת־הַדָּבָ֣ר הַזֶּ֔ה וְלֹ֥א חָשַׂ֖כְתָּ אֶת־בִּנְךָ֥ אֶת־יְחִידֶֽךָ׃ כִּֽי־בָרֵ֣ךְ אֲבָרֶכְךָ֗ וְהַרְבָּ֨ה אַרְבֶּ֤ה אֶֽת־זַרְעֲךָ֙ כְּכוֹכְבֵ֣י הַשָּׁמַ֔יִם וְכַח֕וֹל אֲשֶׁ֖ר עַל־שְׂפַ֣ת הַיָּ֑ם וְיִרַ֣שׁ זַרְעֲךָ֔ אֵ֖ת שַׁ֥עַר אֹיְבָֽיו׃ וְהִתְבָּרְכ֣וּ בְזַרְעֲךָ֔ כֹּ֖ל גּוֹיֵ֣י הָאָ֑רֶץ עֵ֕קֶב אֲשֶׁ֥ר שָׁמַ֖עְתָּ בְּקֹלִֽי׃ וַיָּ֤שׇׁב אַבְרָהָם֙ אֶל־נְעָרָ֔יו וַיָּקֻ֛מוּ וַיֵּלְכ֥וּ יַחְדָּ֖ו אֶל־בְּאֵ֣ר שָׁ֑בַע וַיֵּ֥שֶׁב אַבְרָהָ֖ם בִּבְאֵ֥ר שָֽׁבַע׃
+
+ENGLISH:
+and said, By Myself I swear, HASHEM declares: Because you have done this and have not withheld your son, your favored one, I will bestow My blessing upon you and make your descendants as numerous as the stars of heaven and the sands on the seashore; and your descendants shall seize the gates of their foes. All the nations of the earth shall bless themselves by your descendants, because you have obeyed My command. Abraham then returned to his servants, and they departed together for Beer-sheba; and Abraham stayed in Beer-sheba.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God blesses Abraham; descendants like stars.",
+    "heb_summary": "אלוהים מברך את אברהם; צאצאיו ככוכבים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Abraham"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Beer-Sheba"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Stars Of Heaven"
+        },
+        {
+          "en_name": "Sands On The Seashore"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Beer-Sheba"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+﻿{
+    "res": {
+        "en_summary": "God planted Eden garden with special trees.",
+        "heb_summary": "אלוהים נטע גן עדן עם עצים מיוחדים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Human"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Eden"
+                },
+                {
+                    "en_name": "Garden"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree Of Life"
+                },
+                {
+                    "en_name": "Tree Of Knowledge Of Good And Bad"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Human",
+                    "term2": "Garden"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Eden"
+                },
+                {
+                    "term1": "God Hashem",
+                    "term2": "Garden"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_2:8-9"
+}

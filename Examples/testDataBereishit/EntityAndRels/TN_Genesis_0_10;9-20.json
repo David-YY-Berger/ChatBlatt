@@ -1,0 +1,385 @@
+﻿{
+    "res": {
+        "en_summary": "Nimrod, Asshur, Mizraim, Canaan's descendants and territories.",
+        "heb_summary": "צאצאי נמרוד, אשור, מצרים וכנען ושטחיהם.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Nimrod"
+                },
+                {
+                    "en_name": "Asshur"
+                },
+                {
+                    "en_name": "Mizraim"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Sidon"
+                },
+                {
+                    "en_name": "Heth"
+                },
+                {
+                    "en_name": "Jebusites"
+                },
+                {
+                    "en_name": "Amorites"
+                },
+                {
+                    "en_name": "Girgashites"
+                },
+                {
+                    "en_name": "Hivites"
+                },
+                {
+                    "en_name": "Arkites"
+                },
+                {
+                    "en_name": "Sinites"
+                },
+                {
+                    "en_name": "Arvadites"
+                },
+                {
+                    "en_name": "Zemarites"
+                },
+                {
+                    "en_name": "Hamathites"
+                },
+                {
+                    "en_name": "Ludim"
+                },
+                {
+                    "en_name": "Anamim"
+                },
+                {
+                    "en_name": "Lehabim"
+                },
+                {
+                    "en_name": "Naphtuhim"
+                },
+                {
+                    "en_name": "Pathrusim"
+                },
+                {
+                    "en_name": "Casluhim"
+                },
+                {
+                    "en_name": "Caphtorim"
+                },
+                {
+                    "en_name": "Philistines"
+                },
+                {
+                    "en_name": "Ham"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Babylon"
+                },
+                {
+                    "en_name": "Erech"
+                },
+                {
+                    "en_name": "Accad"
+                },
+                {
+                    "en_name": "Calneh"
+                },
+                {
+                    "en_name": "Shinar"
+                },
+                {
+                    "en_name": "Nineveh"
+                },
+                {
+                    "en_name": "Rehoboth-Ir"
+                },
+                {
+                    "en_name": "Calah"
+                },
+                {
+                    "en_name": "Resen"
+                },
+                {
+                    "en_name": "Gerar"
+                },
+                {
+                    "en_name": "Gaza"
+                },
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                },
+                {
+                    "en_name": "Admah"
+                },
+                {
+                    "en_name": "Zeboiim"
+                },
+                {
+                    "en_name": "Lasha"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Sidon",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Heth",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Jebusites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Amorites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Girgashites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Hivites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Arkites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Sinites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Arvadites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Zemarites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Hamathites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Ludim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Anamim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Lehabim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Naphtuhim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Pathrusim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Casluhim",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Caphtorim",
+                    "term2": "Mizraim"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Philistines",
+                    "term2": "Mizraim"
+                },
+                {
+                    "term1": "Sidon",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Heth",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Jebusites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Amorites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Girgashites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Hivites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Arkites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Sinites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Arvadites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Zemarites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Hamathites",
+                    "term2": "Ham"
+                },
+                {
+                    "term1": "Canaan",
+                    "term2": "Ham"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Nimrod",
+                    "term2": "Babylon"
+                },
+                {
+                    "term1": "Nimrod",
+                    "term2": "Erech"
+                },
+                {
+                    "term1": "Nimrod",
+                    "term2": "Accad"
+                },
+                {
+                    "term1": "Nimrod",
+                    "term2": "Calneh"
+                },
+                {
+                    "term1": "Nimrod",
+                    "term2": "Shinar"
+                },
+                {
+                    "term1": "Asshur",
+                    "term2": "Nineveh"
+                },
+                {
+                    "term1": "Asshur",
+                    "term2": "Rehoboth-Ir"
+                },
+                {
+                    "term1": "Asshur",
+                    "term2": "Calah"
+                },
+                {
+                    "term1": "Asshur",
+                    "term2": "Resen"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jebusites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Amorites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Girgashites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Hivites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Arkites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Sinites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Arvadites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Zemarites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Hamathites",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Philistines",
+                    "term2": "Philistia"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Gerar",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Gaza",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Sodom",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Gomorrah",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Admah",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Zeboiim",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Lasha",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_10:9-20"
+}

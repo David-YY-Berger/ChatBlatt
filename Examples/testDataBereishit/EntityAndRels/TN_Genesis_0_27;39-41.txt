@@ -1,0 +1,65 @@
+﻿COST: Tokens: Total=8340 approx cost usd = $0.001041 (Prompt=6492, Completion=1848)
+SOURCE:
+Genesis 27:39-41  (TN_Genesis_0_27:39-41)
+
+HEBREW:
+וַיַּ֛עַן יִצְחָ֥ק אָבִ֖יו וַיֹּ֣אמֶר אֵלָ֑יו הִנֵּ֞ה מִשְׁמַנֵּ֤י הָאָ֙רֶץ֙ יִהְיֶ֣ה מֽוֹשָׁבֶ֔ךָ וּמִטַּ֥ל הַשָּׁמַ֖יִם מֵעָֽל׃ וְעַל־חַרְבְּךָ֣ תִֽחְיֶ֔ה וְאֶת־אָחִ֖יךָ תַּעֲבֹ֑ד וְהָיָה֙ כַּאֲשֶׁ֣ר תָּרִ֔יד וּפָרַקְתָּ֥ עֻלּ֖וֹ מֵעַ֥ל צַוָּארֶֽךָ׃ וַיִּשְׂטֹ֤ם עֵשָׂו֙ אֶֽת־יַעֲקֹ֔ב עַ֨ל־הַבְּרָכָ֔ה אֲשֶׁ֥ר בֵּרְכ֖וֹ אָבִ֑יו וַיֹּ֨אמֶר עֵשָׂ֜ו בְּלִבּ֗וֹ יִקְרְבוּ֙ יְמֵי֙ אֵ֣בֶל אָבִ֔י וְאַֽהַרְגָ֖ה אֶת־יַעֲקֹ֥ב אָחִֽי׃
+
+ENGLISH:
+And his father Isaac answered, saying to him, See, your abode shall enjoy the fat of the earth And the dew of heaven above. Yet by your sword you shall live, And you shall serve your brother; But when you grow restive, You shall break his yoke from your neck. Now Esau harbored a grudge against Jacob because of the blessing which his father had given him, and Esau said to himself, Let but the mourning period of my father come, and I will kill my brother Jacob.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac blesses Esau; Esau plans to kill Jacob.",
+    "heb_summary": "יצחק מברך עשו; עשו רוצה להרוג יעקב.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Jacob"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Sword"
+        },
+        {
+          "en_name": "Yoke"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Isaac",
+          "term2": "Esau"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ]
+    }
+  }
+}

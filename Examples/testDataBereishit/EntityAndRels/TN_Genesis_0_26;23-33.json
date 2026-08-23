@@ -1,0 +1,128 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac settles Beer-sheba, makes treaty with Abimelech.",
+        "heb_summary": "יצחק מתיישב בבאר שבע, כורת ברית עם אבימלך.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Ahuzzath"
+                },
+                {
+                    "en_name": "Phicol"
+                },
+                {
+                    "en_name": "Isaac's Servants"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Sheba"
+                },
+                {
+                    "en_name": "Gerar"
+                },
+                {
+                    "en_name": "Shibah"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abimelech"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Ahuzzath"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Phicol"
+                },
+                {
+                    "term1": "Isaac's Servants",
+                    "term2": "Isaac"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Ahuzzath",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Phicol",
+                    "term2": "Isaac"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Ahuzzath",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Phicol",
+                    "term2": "Isaac"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Isaac"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Shibah",
+                    "term2": "Beer-Sheba"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_26:23-33"
+}

@@ -1,0 +1,57 @@
+﻿{
+    "res": {
+        "en_summary": "God helps Hagar and her son.",
+        "heb_summary": "אלוהים עוזר להגר ולבנה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Messenger Of God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Heaven"
+                },
+                {
+                    "en_name": "Wilderness"
+                },
+                {
+                    "en_name": "Paran"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Messenger Of God",
+                    "term2": "Hagar"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Messenger Of God",
+                    "term2": "Heaven"
+                },
+                {
+                    "term1": "Hagar",
+                    "term2": "Wilderness"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_21:17-21"
+}

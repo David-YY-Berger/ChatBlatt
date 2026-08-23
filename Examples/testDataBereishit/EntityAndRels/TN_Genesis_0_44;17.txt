@@ -1,0 +1,27 @@
+﻿COST: Tokens: Total=7038 approx cost usd = $0.000665 (Prompt=6428, Completion=610)
+SOURCE:
+Genesis 44:17  (TN_Genesis_0_44:17)
+
+HEBREW:
+וַיֹּ֕אמֶר חָלִ֣ילָה לִּ֔י מֵעֲשׂ֖וֹת זֹ֑את הָאִ֡ישׁ אֲשֶׁר֩ נִמְצָ֨א הַגָּבִ֜יעַ בְּיָד֗וֹ ה֚וּא יִהְיֶה־לִּ֣י עָ֔בֶד וְאַתֶּ֕ם עֲל֥וּ לְשָׁל֖וֹם אֶל־אֲבִיכֶֽם׃
+
+ENGLISH:
+But he replied, Far be it from me to act thus! Only the one in whose possession the goblet was found shall be my slave; the rest of you go back in peace to your father.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Goblet found, one will be slave.",
+    "heb_summary": "הגביע נמצא, אחד יהיה עבד.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Symbol": [
+        {
+          "en_name": "Goblet"
+        }
+      ]
+    }
+  }
+}

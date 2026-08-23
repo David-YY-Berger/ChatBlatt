@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Judah marries, has sons Er, Onan, Shelah.",
+        "heb_summary": "יהודה מתחתן, נולדים לו ער, אונן, שלה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Hirah"
+                },
+                {
+                    "en_name": "Shua"
+                },
+                {
+                    "en_name": "Er"
+                },
+                {
+                    "en_name": "Onan"
+                },
+                {
+                    "en_name": "Shelah"
+                },
+                {
+                    "en_name": "Tamar"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Chezib"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Adullam"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Er",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Onan",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Shelah",
+                    "term2": "Judah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Er",
+                    "term2": "Tamar"
+                }
+            ],
+            "bornIn": [
+                {
+                    "term1": "Shelah",
+                    "term2": "Chezib"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hirah",
+                    "term2": "Adullam"
+                },
+                {
+                    "term1": "Shua",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_38:1-6"
+}

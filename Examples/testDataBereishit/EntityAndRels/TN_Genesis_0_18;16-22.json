@@ -1,0 +1,59 @@
+﻿{
+    "res": {
+        "en_summary": "God informs Abraham about Sodom's fate.",
+        "heb_summary": "ה' מודיע לאברהם על סדום ועמורה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Agents"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Agents",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Sodom"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Gomorrah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_18:16-22"
+}

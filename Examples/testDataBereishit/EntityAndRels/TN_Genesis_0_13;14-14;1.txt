@@ -1,0 +1,121 @@
+﻿COST: Tokens: Total=8453 approx cost usd = $0.001059 (Prompt=6564, Completion=1889)
+SOURCE:
+Genesis 13:14-14:1  (TN_Genesis_0_13:14-14:1)
+
+HEBREW:
+וַֽיהֹוָ֞ה אָמַ֣ר אֶל־אַבְרָ֗ם אַחֲרֵי֙ הִפָּֽרֶד־ל֣וֹט מֵֽעִמּ֔וֹ שָׂ֣א נָ֤א עֵינֶ֙יךָ֙ וּרְאֵ֔ה מִן־הַמָּק֖וֹם אֲשֶׁר־אַתָּ֣ה שָׁ֑ם צָפֹ֥נָה וָנֶ֖גְבָּה וָקֵ֥דְמָה וָיָֽמָּה׃ כִּ֧י אֶת־כׇּל־הָאָ֛רֶץ אֲשֶׁר־אַתָּ֥ה רֹאֶ֖ה לְךָ֣ אֶתְּנֶ֑נָּה וּֽלְזַרְעֲךָ֖ עַד־עוֹלָֽם׃ וְשַׂמְתִּ֥י אֶֽת־זַרְעֲךָ֖ כַּעֲפַ֣ר הָאָ֑רֶץ אֲשֶׁ֣ר׀ אִם־יוּכַ֣ל אִ֗ישׁ לִמְנוֹת֙ אֶת־עֲפַ֣ר הָאָ֔רֶץ גַּֽם־זַרְעֲךָ֖ יִמָּנֶֽה׃ ק֚וּם הִתְהַלֵּ֣ךְ בָּאָ֔רֶץ לְאׇרְכָּ֖הּ וּלְרׇחְבָּ֑הּ כִּ֥י לְךָ֖ אֶתְּנֶֽנָּה׃ וַיֶּאֱהַ֣ל אַבְרָ֗ם וַיָּבֹ֛א וַיֵּ֛שֶׁב בְּאֵלֹנֵ֥י מַמְרֵ֖א אֲשֶׁ֣ר בְּחֶבְר֑וֹן וַיִּֽבֶן־שָׁ֥ם מִזְבֵּ֖חַ לַֽיהֹוָֽה׃ וַיְהִ֗י בִּימֵי֙ אַמְרָפֶ֣ל מֶֽלֶךְ־שִׁנְעָ֔ר אַרְי֖וֹךְ מֶ֣לֶךְ אֶלָּסָ֑ר כְּדׇרְלָעֹ֙מֶר֙ מֶ֣לֶךְ עֵילָ֔ם וְתִדְעָ֖ל מֶ֥לֶךְ גּוֹיִֽם׃
+
+ENGLISH:
+And HASHEM said to Abram, after Lot had parted from him, Raise your eyes and look out from where you are, to the north and south, to the east and west, for I give all the land that you see to you and your offspring forever. I will make your offspring as the dust of the earth, so that if one can count the dust of the earth, then your offspring too can be counted. Up, walk about the land, through its length and its breadth, for I give it to you. And Abram moved his tent, and came to dwell at the terebinths of Mamre, which are in Hebron; and he built an altar there to HASHEM.Now, when King Amraphel of Shinar, King Arioch of Ellasar, King Chedorlaomer of Elam, and King Tidal of Goiim
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "HASHEM promises land to Abram's offspring.",
+    "heb_summary": "ה' מבטיח לאברם צאצאים וארץ.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Amraphel"
+        },
+        {
+          "en_name": "Arioch"
+        },
+        {
+          "en_name": "Chedorlaomer"
+        },
+        {
+          "en_name": "Tidal"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mamre"
+        },
+        {
+          "en_name": "Hebron"
+        },
+        {
+          "en_name": "Shinar"
+        },
+        {
+          "en_name": "Ellasar"
+        },
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Goiim"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Shinar"
+        },
+        {
+          "en_name": "Ellasar"
+        },
+        {
+          "en_name": "Elam"
+        },
+        {
+          "en_name": "Goiim"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Abram"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abram",
+          "term2": "Mamre"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Hebron"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Abram",
+          "term2": "Hebron"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Amraphel",
+          "term2": "Shinar"
+        },
+        {
+          "term1": "Arioch",
+          "term2": "Ellasar"
+        },
+        {
+          "term1": "Chedorlaomer",
+          "term2": "Elam"
+        },
+        {
+          "term1": "Tidal",
+          "term2": "Goiim"
+        }
+      ]
+    }
+  }
+}

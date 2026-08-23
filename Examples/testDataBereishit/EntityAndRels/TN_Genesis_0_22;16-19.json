@@ -1,0 +1,47 @@
+﻿{
+    "res": {
+        "en_summary": "God blesses Abraham; descendants like stars.",
+        "heb_summary": "אלוהים מברך את אברהם; צאצאיו ככוכבים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abraham"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Sheba"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Stars Of Heaven"
+                },
+                {
+                    "en_name": "Sands On The Seashore"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Beer-Sheba"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_22:16-19"
+}

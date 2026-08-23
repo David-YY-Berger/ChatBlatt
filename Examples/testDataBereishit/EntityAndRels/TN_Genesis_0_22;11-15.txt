@@ -1,0 +1,67 @@
+﻿COST: Tokens: Total=8418 approx cost usd = $0.001051 (Prompt=6554, Completion=1864)
+SOURCE:
+Genesis 22:11-15  (TN_Genesis_0_22:11-15)
+
+HEBREW:
+וַיִּקְרָ֨א אֵלָ֜יו מַלְאַ֤ךְ יְהֹוָה֙ מִן־הַשָּׁמַ֔יִם וַיֹּ֖אמֶר אַבְרָהָ֣ם׀אַבְרָהָ֑ם וַיֹּ֖אמֶר הִנֵּֽנִי׃ וַיֹּ֗אמֶר אַל־תִּשְׁלַ֤ח יָֽדְךָ֙ אֶל־הַנַּ֔עַר וְאַל־תַּ֥עַשׂ ל֖וֹ מְא֑וּמָה כִּ֣י׀ עַתָּ֣ה יָדַ֗עְתִּי כִּֽי־יְרֵ֤א אֱלֹהִים֙ אַ֔תָּה וְלֹ֥א חָשַׂ֛כְתָּ אֶת־בִּנְךָ֥ אֶת־יְחִידְךָ֖ מִמֶּֽנִּי׃ וַיִּשָּׂ֨א אַבְרָהָ֜ם אֶת־עֵינָ֗יו וַיַּרְא֙ וְהִנֵּה־אַ֔יִל אַחַ֕ר נֶאֱחַ֥ז בַּסְּבַ֖ךְ בְּקַרְנָ֑יו וַיֵּ֤לֶךְ אַבְרָהָם֙ וַיִּקַּ֣ח אֶת־הָאַ֔יִל וַיַּעֲלֵ֥הוּ לְעֹלָ֖ה תַּ֥חַת בְּנֽוֹ׃ וַיִּקְרָ֧א אַבְרָהָ֛ם שֵֽׁם־הַמָּק֥וֹם הַה֖וּא יְהֹוָ֣ה׀יִרְאֶ֑ה אֲשֶׁר֙ יֵאָמֵ֣ר הַיּ֔וֹם בְּהַ֥ר יְהֹוָ֖ה יֵרָאֶֽה׃ וַיִּקְרָ֛א מַלְאַ֥ךְ יְהֹוָ֖ה אֶל־אַבְרָהָ֑ם שֵׁנִ֖ית מִן־הַשָּׁמָֽיִם׃
+
+ENGLISH:
+Then a messenger of HASHEM called to him from heaven: Abraham! Abraham! And he answered, Here I am. Do not raise your hand against the boy, or do anything to him. For now I know that you fear God, since you have not withheld your son, your favored one, from Me. When Abraham looked up, his eye fell upon a with many Heb. mss. and ancient versions; text ahar after. ram, caught in the thicket by its horns. So Abraham went and took the ram and offered it up as a burnt offering in place of his son. And Abraham named that site Adonai-yireh, whence the present saying, On the mount of HASHEM there is vision.. The messenger of HASHEM called to Abraham a second time from heaven,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham offers ram, God provides.",
+    "heb_summary": "אברהם מקריב איל, אלוהים מספק.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Messenger Of Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Heaven"
+        },
+        {
+          "en_name": "Adonai-Yireh"
+        },
+        {
+          "en_name": "Mount Of Hashem"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Ram"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Messenger Of Hashem",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Adonai-Yireh"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Mount Of Hashem"
+        }
+      ]
+    }
+  }
+}

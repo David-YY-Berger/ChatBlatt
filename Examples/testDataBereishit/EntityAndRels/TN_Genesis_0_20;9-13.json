@@ -1,0 +1,63 @@
+﻿{
+    "res": {
+        "en_summary": "Abimelech confronts Abraham about his wife",
+        "heb_summary": "אבימלך מתעמת עם אברהם על אשתו",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Wife"
+                },
+                {
+                    "en_name": "Father"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Wife",
+                    "term2": "Father"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Father"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Wife",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Wife"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_20:9-13"
+}

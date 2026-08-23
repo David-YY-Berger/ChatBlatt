@@ -1,0 +1,107 @@
+﻿COST: Tokens: Total=8219 approx cost usd = $0.001004 (Prompt=6495, Completion=1724)
+SOURCE:
+Genesis 45:25-28  (TN_Genesis_0_45:25-28)
+
+HEBREW:
+וַֽיַּעֲל֖וּ מִמִּצְרָ֑יִם וַיָּבֹ֙אוּ֙ אֶ֣רֶץ כְּנַ֔עַן אֶֽל־יַעֲקֹ֖ב אֲבִיהֶֽם׃ וַיַּגִּ֨דוּ ל֜וֹ לֵאמֹ֗ר ע֚וֹד יוֹסֵ֣ף חַ֔י וְכִֽי־ה֥וּא מֹשֵׁ֖ל בְּכׇל־אֶ֣רֶץ מִצְרָ֑יִם וַיָּ֣פׇג לִבּ֔וֹ כִּ֥י לֹא־הֶאֱמִ֖ין לָהֶֽם׃ וַיְדַבְּר֣וּ אֵלָ֗יו אֵ֣ת כׇּל־דִּבְרֵ֤י יוֹסֵף֙ אֲשֶׁ֣ר דִּבֶּ֣ר אֲלֵהֶ֔ם וַיַּרְא֙ אֶת־הָ֣עֲגָל֔וֹת אֲשֶׁר־שָׁלַ֥ח יוֹסֵ֖ף לָשֵׂ֣את אֹת֑וֹ וַתְּחִ֕י ר֖וּחַ יַעֲקֹ֥ב אֲבִיהֶֽם׃ וַיֹּ֙אמֶר֙ יִשְׂרָאֵ֔ל רַ֛ב עוֹד־יוֹסֵ֥ף בְּנִ֖י חָ֑י אֵֽלְכָ֥ה וְאֶרְאֶ֖נּוּ בְּטֶ֥רֶם אָמֽוּת׃
+
+ENGLISH:
+They went up from Egypt and came to their father Jacob in the land of Canaan. And they told him, Joseph is still alive; yes, he is ruler over the whole land of Egypt. His heart went numb, for he did not believe them. But when they recounted all that Joseph had said to them, and when he saw the wagons that Joseph had sent to transport him, the spirit of their father Jacob revived. Enough! said Israel. My son Joseph is still alive! I must go and see him before I die.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob learns Joseph is alive, plans to visit.",
+    "heb_summary": "יעקב שומע יוסף חי, מתכנן לבקר.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Children Of Israel"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Children Of Israel",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Children Of Israel",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Children Of Israel"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Children Of Israel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Children Of Israel",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Children Of Israel",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

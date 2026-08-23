@@ -1,0 +1,45 @@
+﻿{
+    "res": {
+        "en_summary": "Israel asks Joseph to bury him outside Egypt.",
+        "heb_summary": "ישראל מבקש מיוסף לקבור אותו מחוץ למצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Joseph"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Israel",
+                    "term2": "Joseph"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_47:29-31"
+}

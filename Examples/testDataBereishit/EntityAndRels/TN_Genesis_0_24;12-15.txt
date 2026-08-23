@@ -1,0 +1,89 @@
+﻿COST: Tokens: Total=8883 approx cost usd = $0.001193 (Prompt=6542, Completion=2341)
+SOURCE:
+Genesis 24:12-15  (TN_Genesis_0_24:12-15)
+
+HEBREW:
+וַיֹּאמַ֓ר׀ יְהֹוָ֗ה אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם הַקְרֵה־נָ֥א לְפָנַ֖י הַיּ֑וֹם וַעֲשֵׂה־חֶ֕סֶד עִ֖ם אֲדֹנִ֥י אַבְרָהָֽם׃ הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל־עֵ֣ין הַמָּ֑יִם וּבְנוֹת֙ אַנְשֵׁ֣י הָעִ֔יר יֹצְאֹ֖ת לִשְׁאֹ֥ב מָֽיִם׃ וְהָיָ֣ה הַֽנַּעֲרָ֗ אֲשֶׁ֨ר אֹמַ֤ר אֵלֶ֙יהָ֙ הַטִּי־נָ֤א כַדֵּךְ֙ וְאֶשְׁתֶּ֔ה וְאָמְרָ֣ה שְׁתֵ֔ה וְגַם־גְּמַלֶּ֖יךָ אַשְׁקֶ֑ה אֹתָ֤הּ הֹכַ֙חְתָּ֙ לְעַבְדְּךָ֣ לְיִצְחָ֔ק וּבָ֣הּ אֵדַ֔ע כִּי־עָשִׂ֥יתָ חֶ֖סֶד עִם־אֲדֹנִֽי׃ וַֽיְהִי־ה֗וּא טֶ֘רֶם֮ כִּלָּ֣ה לְדַבֵּר֒ וְהִנֵּ֧ה רִבְקָ֣ה יֹצֵ֗את אֲשֶׁ֤ר יֻלְּדָה֙ לִבְתוּאֵ֣ל בֶּן־מִלְכָּ֔ה אֵ֥שֶׁת נָח֖וֹר אֲחִ֣י אַבְרָהָ֑ם וְכַדָּ֖הּ עַל־שִׁכְמָֽהּ׃
+
+ENGLISH:
+And he said, O HASHEM, God of my master Abrahams [house], grant me good fortune this day, and deal graciously with my master Abraham: Here I stand by the spring as the daughters of the townspeople come out to draw water; let the maiden to whom I say, Please, lower your jar that I may drink, and who replies, Drink, and I will also water your camels-let her be the one whom You have decreed for Your servant Isaac. Thereby shall I know that You have dealt graciously with my master. He had scarcely finished speaking, when Rebekah, who was born to Bethuel, the son of Milcah the wife of Abrahams brother Nahor, came out with her jar on her shoulder.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Servant prays for Isaac's wife",
+    "heb_summary": "עבד מתפלל על אשת יצחק",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "Milcah"
+        },
+        {
+          "en_name": "Nahor"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Bethuel",
+          "term2": "Nahor"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Bethuel",
+          "term2": "Milcah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Milcah",
+          "term2": "Nahor"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Rebekah",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Milcah"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Hashem",
+          "term2": "Abraham"
+        }
+      ]
+    }
+  }
+}

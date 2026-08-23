@@ -1,0 +1,47 @@
+﻿{
+    "res": {
+        "en_summary": "Abimelech and Phicol swear oath with Abraham.",
+        "heb_summary": "אבימלך ופיכל נשבעים ברית עם אברהם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abimelech"
+                },
+                {
+                    "en_name": "Phicol"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Servants Of Abimelech"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Phicol",
+                    "term2": "Abraham"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_21:22-26"
+}

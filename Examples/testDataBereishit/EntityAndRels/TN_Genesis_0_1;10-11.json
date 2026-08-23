@@ -1,0 +1,50 @@
+﻿{
+    "res": {
+        "en_summary": "God creates Earth, Seas, and vegetation.",
+        "heb_summary": "אלוהים בורא יבשה, ימים וצמחייה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Seas"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Fruit"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Plant"
+                },
+                {
+                    "en_name": "Fruit Tree"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Seas"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:10-11"
+}

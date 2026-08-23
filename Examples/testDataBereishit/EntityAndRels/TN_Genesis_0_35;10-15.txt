@@ -1,0 +1,93 @@
+﻿COST: Tokens: Total=9214 approx cost usd = $0.001289 (Prompt=6556, Completion=2658)
+SOURCE:
+Genesis 35:10-15  (TN_Genesis_0_35:10-15)
+
+HEBREW:
+וַיֹּֽאמֶר־ל֥וֹ אֱלֹהִ֖ים שִׁמְךָ֣ יַעֲקֹ֑ב לֹֽא־יִקָּרֵא֩ שִׁמְךָ֨ ע֜וֹד יַעֲקֹ֗ב כִּ֤י אִם־יִשְׂרָאֵל֙ יִהְיֶ֣ה שְׁמֶ֔ךָ וַיִּקְרָ֥א אֶת־שְׁמ֖וֹ יִשְׂרָאֵֽל׃ וַיֹּ֩אמֶר֩ ל֨וֹ אֱלֹהִ֜ים אֲנִ֨י אֵ֤ל שַׁדַּי֙ פְּרֵ֣ה וּרְבֵ֔ה גּ֛וֹי וּקְהַ֥ל גּוֹיִ֖ם יִהְיֶ֣ה מִמֶּ֑ךָּ וּמְלָכִ֖ים מֵחֲלָצֶ֥יךָ יֵצֵֽאוּ׃ וְאֶת־הָאָ֗רֶץ אֲשֶׁ֥ר נָתַ֛תִּי לְאַבְרָהָ֥ם וּלְיִצְחָ֖ק לְךָ֣ אֶתְּנֶ֑נָּה וּֽלְזַרְעֲךָ֥ אַחֲרֶ֖יךָ אֶתֵּ֥ן אֶת־הָאָֽרֶץ׃ וַיַּ֥עַל מֵעָלָ֖יו אֱלֹהִ֑ים בַּמָּק֖וֹם אֲשֶׁר־דִּבֶּ֥ר אִתּֽוֹ׃ וַיַּצֵּ֨ב יַעֲקֹ֜ב מַצֵּבָ֗ה בַּמָּק֛וֹם אֲשֶׁר־דִּבֶּ֥ר אִתּ֖וֹ מַצֶּ֣בֶת אָ֑בֶן וַיַּסֵּ֤ךְ עָלֶ֙יהָ֙ נֶ֔סֶךְ וַיִּצֹ֥ק עָלֶ֖יהָ שָֽׁמֶן׃ וַיִּקְרָ֨א יַעֲקֹ֜ב אֶת־שֵׁ֣ם הַמָּק֗וֹם אֲשֶׁר֩ דִּבֶּ֨ר אִתּ֥וֹ שָׁ֛ם אֱלֹהִ֖ים בֵּֽית־אֵֽל׃
+
+ENGLISH:
+saying to him, You whose name is Jacob, You shall be called Jacob no more, But Israel shall be your name. Thus he was named Israel. And God said to him, I am El Shaddai. Be fertile and increase; A nation, yea an assembly of nations, Shall descend from you. Kings shall issue from your loins. The land that I assigned to Abraham and Isaac I assign to you; And to your offspring to come Will I assign the land. God parted from him at the spot where [God] had spoken to him; and Jacob set up a pillar at the site where [God] had spoken to him, a pillar of stone, and he offered a libation on it and poured oil upon it. Jacob gave the site, where God had spoken to him, the name of Bethel.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God renames Jacob Israel and blesses him.",
+    "heb_summary": "אלוהים משנה את יעקב לישראל ומברך אותו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "El Shaddai"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Bethel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Pillar"
+        },
+        {
+          "en_name": "Pillar Of Stone"
+        },
+        {
+          "en_name": "Libation"
+        },
+        {
+          "en_name": "Oil"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "God",
+          "term2": "Bethel"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        },
+        {
+          "term1": "God",
+          "term2": "El Shaddai"
+        },
+        {
+          "term1": "Pillar",
+          "term2": "Pillar Of Stone"
+        }
+      ]
+    }
+  }
+}

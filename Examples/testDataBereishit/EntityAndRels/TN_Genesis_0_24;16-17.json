@@ -1,0 +1,17 @@
+﻿{
+    "res": {
+        "en_summary": "Maiden draws water; servant requests drink.",
+        "heb_summary": "עלמה שואבת מים; עבד מבקש לשתות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Place": [
+                {
+                    "en_name": "Spring"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:16-17"
+}

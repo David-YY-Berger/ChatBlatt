@@ -1,0 +1,112 @@
+﻿{
+    "res": {
+        "en_summary": "Judah's sons displease God, Tamar's plight.",
+        "heb_summary": "בני יהודה מאכזבים את ה', תמר אלמנה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Er"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Onan"
+                },
+                {
+                    "en_name": "Tamar"
+                },
+                {
+                    "en_name": "Shelah"
+                },
+                {
+                    "en_name": "Hirah"
+                },
+                {
+                    "en_name": "Shua"
+                },
+                {
+                    "en_name": "Shuas Daughter"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Timnah"
+                },
+                {
+                    "en_name": "Adullam"
+                },
+                {
+                    "en_name": "Father's House"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Er",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Shelah",
+                    "term2": "Judah"
+                },
+                {
+                    "term1": "Shuas Daughter",
+                    "term2": "Shua"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Er",
+                    "term2": "Tamar"
+                },
+                {
+                    "term1": "Onan",
+                    "term2": "Tamar"
+                },
+                {
+                    "term1": "Shuas Daughter",
+                    "term2": "Judah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Judah",
+                    "term2": "Onan"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Tamar"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "Hirah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Judah",
+                    "term2": "Timnah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Tamar",
+                    "term2": "Father's House"
+                },
+                {
+                    "term1": "Hirah",
+                    "term2": "Adullam"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_38:7-12"
+}

@@ -1,0 +1,134 @@
+﻿COST: Tokens: Total=11154 approx cost usd = $0.001836 (Prompt=6712, Completion=4442)
+SOURCE:
+Genesis 8:16-9:4  (TN_Genesis_0_8:16-9:4)
+
+HEBREW:
+צֵ֖א מִן־הַתֵּבָ֑ה אַתָּ֕ה וְאִשְׁתְּךָ֛ וּבָנֶ֥יךָ וּנְשֵֽׁי־בָנֶ֖יךָ אִתָּֽךְ׃ כׇּל־הַחַיָּ֨ה אֲשֶֽׁר־אִתְּךָ֜ מִכׇּל־בָּשָׂ֗ר בָּע֧וֹף וּבַבְּהֵמָ֛ה וּבְכׇל־הָרֶ֛מֶשׂ הָרֹמֵ֥שׂ עַל־הָאָ֖רֶץ [הַיְצֵ֣א] אִתָּ֑ךְ וְשָֽׁרְצ֣וּ בָאָ֔רֶץ וּפָר֥וּ וְרָב֖וּ עַל־הָאָֽרֶץ׃ וַיֵּ֖צֵא־נֹ֑חַ וּבָנָ֛יו וְאִשְׁתּ֥וֹ וּנְשֵֽׁי־בָנָ֖יו אִתּֽוֹ׃ כׇּל־הַֽחַיָּ֗ה כׇּל־הָרֶ֙מֶשׂ֙ וְכׇל־הָע֔וֹף כֹּ֖ל רוֹמֵ֣שׂ עַל־הָאָ֑רֶץ לְמִשְׁפְּחֹ֣תֵיהֶ֔ם יָצְא֖וּ מִן־הַתֵּבָֽה׃ וַיִּ֥בֶן נֹ֛חַ מִזְבֵּ֖חַ לַֽיהֹוָ֑ה וַיִּקַּ֞ח מִכֹּ֣ל׀ הַבְּהֵמָ֣ה הַטְּהֹרָ֗ה וּמִכֹּל֙ הָע֣וֹף הַטָּה֔וֹר וַיַּ֥עַל עֹלֹ֖ת בַּמִּזְבֵּֽחַ׃ וַיָּ֣רַח יְהֹוָה֮ אֶת־רֵ֣יחַ הַנִּיחֹ֒חַ֒ וַיֹּ֨אמֶר יְהֹוָ֜ה אֶל־לִבּ֗וֹ לֹֽא־אֹ֠סִ֠ף לְקַלֵּ֨ל ע֤וֹד אֶת־הָֽאֲדָמָה֙ בַּעֲב֣וּר הָֽאָדָ֔ם כִּ֠י יֵ֣צֶר לֵ֧ב הָאָדָ֛ם רַ֖ע מִנְּעֻרָ֑יו וְלֹֽא־אֹסִ֥ף ע֛וֹד לְהַכּ֥וֹת אֶת־כׇּל־חַ֖י כַּֽאֲשֶׁ֥ר עָשִֽׂיתִי׃ עֹ֖ד כׇּל־יְמֵ֣י הָאָ֑רֶץ זֶ֡רַע וְ֠קָצִ֠יר וְקֹ֨ר וָחֹ֜ם וְקַ֧יִץ וָחֹ֛רֶף וְי֥וֹם וָלַ֖יְלָה לֹ֥א יִשְׁבֹּֽתוּ׃וַיְבָ֣רֶךְ אֱלֹהִ֔ים אֶת־נֹ֖חַ וְאֶת־בָּנָ֑יו וַיֹּ֧אמֶר לָהֶ֛ם פְּר֥וּ וּרְב֖וּ וּמִלְא֥וּ אֶת־הָאָֽרֶץ׃ וּמוֹרַאֲכֶ֤ם וְחִתְּכֶם֙ יִֽהְיֶ֔ה עַ֚ל כׇּל־חַיַּ֣ת הָאָ֔רֶץ וְעַ֖ל כׇּל־ע֣וֹף הַשָּׁמָ֑יִם בְּכֹל֩ אֲשֶׁ֨ר תִּרְמֹ֧שׂ הָֽאֲדָמָ֛ה וּֽבְכׇל־דְּגֵ֥י הַיָּ֖ם בְּיֶדְכֶ֥ם נִתָּֽנוּ׃ כׇּל־רֶ֙מֶשׂ֙ אֲשֶׁ֣ר הוּא־חַ֔י לָכֶ֥ם יִהְיֶ֖ה לְאׇכְלָ֑ה כְּיֶ֣רֶק עֵ֔שֶׂב נָתַ֥תִּי לָכֶ֖ם אֶת־כֹּֽל׃ אַךְ־בָּשָׂ֕ר בְּנַפְשׁ֥וֹ דָמ֖וֹ לֹ֥א תֹאכֵֽלוּ׃
+
+ENGLISH:
+Come out of the ark, together with your wife, your sons, and your sons wives. Bring out with you every living thing of all flesh that is with you: birds, animals, and everything that creeps on earth; and let them swarm on the earth and be fertile and increase on earth. So Noah came out, together with his sons, his wife, and his sons wives. Every animal, every creeping thing, and every bird, everything that stirs on earth came out of the ark by families. Then Noah built an altar to HASHEM and, taking of every pure animal and of every pure bird, he offered burnt offerings on the altar. HASHEM smelled the pleasing odor, and HASHEM resolved: Never again will I doom the earth because of humankind, since the devisings of the human mind are evil from youth; nor will I ever again destroy every living being, as I have done. So long as the earth endures, Seedtime and harvest, Cold and heat, Summer and winter, Day and night Shall not cease.God blessed Noah and his sons, and said to them, Be fertile and increase, and fill the earth. The fear and the dread of you shall be upon all the beasts of the earth and upon all the birds of the sky-everything with which the earth is astir-and upon all the fish of the sea; they are given into your hand. Every creature that lives shall be yours to eat; as with the green grasses, I give you all these. You must not, however, eat flesh with its life-blood in it.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Noah, family, animals leave ark; God promises no more flood.",
+    "heb_summary": "נוח, משפחתו, וחיות עוזבים תיבה; אלוהים מבטיח ללא מבול.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Noah"
+        },
+        {
+          "en_name": "Noah's Wife"
+        },
+        {
+          "en_name": "Sons"
+        },
+        {
+          "en_name": "Sons' Wives"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Ark"
+        },
+        {
+          "en_name": "Altar"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Animal"
+        },
+        {
+          "en_name": "Creeping Thing"
+        },
+        {
+          "en_name": "Beast"
+        },
+        {
+          "en_name": "Fish"
+        },
+        {
+          "en_name": "Creature"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Flesh"
+        },
+        {
+          "en_name": "Grass"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Grass"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Sons",
+          "term2": "Noah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Noah",
+          "term2": "Noah's Wife"
+        },
+        {
+          "term1": "Sons",
+          "term2": "Sons' Wives"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Noah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Noah",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Noah's Wife",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Sons",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Sons' Wives",
+          "term2": "Earth"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Hashem",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

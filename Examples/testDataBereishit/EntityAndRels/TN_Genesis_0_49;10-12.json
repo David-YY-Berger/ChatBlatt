@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Judah's prophecy: power, abundance, future homage.",
+        "heb_summary": "נבואת יהודה: כוח, שפע, עתיד עמים.",
+        "passage_types": [
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shiloh"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Scepter"
+                },
+                {
+                    "en_name": "Ruler's Staff"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                },
+                {
+                    "en_name": "Ass's Foal"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Wine"
+                },
+                {
+                    "en_name": "Milk"
+                },
+                {
+                    "en_name": "Grape"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Vine"
+                },
+                {
+                    "en_name": "Grape"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Judah",
+                    "term2": "Shiloh"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:10-12"
+}

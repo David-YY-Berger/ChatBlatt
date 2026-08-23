@@ -1,0 +1,70 @@
+﻿COST: Tokens: Total=9177 approx cost usd = $0.001255 (Prompt=6657, Completion=2520)
+SOURCE:
+Genesis 15:1-8  (TN_Genesis_0_15:1-8)
+
+HEBREW:
+אַחַ֣ר׀ הַדְּבָרִ֣ים הָאֵ֗לֶּה הָיָ֤ה דְבַר־יְהֹוָה֙ אֶל־אַבְרָ֔ם בַּֽמַּחֲזֶ֖ה לֵאמֹ֑ר אַל־תִּירָ֣א אַבְרָ֗ם אָנֹכִי֙ מָגֵ֣ן לָ֔ךְ שְׂכָרְךָ֖ הַרְבֵּ֥ה מְאֹֽד׃ וַיֹּ֣אמֶר אַבְרָ֗ם אֲדֹנָ֤י יֱהֹוִה֙ מַה־תִּתֶּן־לִ֔י וְאָנֹכִ֖י הוֹלֵ֣ךְ עֲרִירִ֑י וּבֶן־מֶ֣שֶׁק בֵּיתִ֔י ה֖וּא דַּמֶּ֥שֶׂק אֱלִיעֶֽזֶר׃ וַיֹּ֣אמֶר אַבְרָ֔ם הֵ֣ן לִ֔י לֹ֥א נָתַ֖תָּה זָ֑רַע וְהִנֵּ֥ה בֶן־בֵּיתִ֖י יוֹרֵ֥שׁ אֹתִֽי׃ וְהִנֵּ֨ה דְבַר־יְהֹוָ֤ה אֵלָיו֙ לֵאמֹ֔ר לֹ֥א יִֽירָשְׁךָ֖ זֶ֑ה כִּי־אִם֙ אֲשֶׁ֣ר יֵצֵ֣א מִמֵּעֶ֔יךָ ה֖וּא יִֽירָשֶֽׁךָ׃ וַיּוֹצֵ֨א אֹת֜וֹ הַח֗וּצָה וַיֹּ֙אמֶר֙ הַבֶּט־נָ֣א הַשָּׁמַ֗יְמָה וּסְפֹר֙ הַכּ֣וֹכָבִ֔ים אִם־תּוּכַ֖ל לִסְפֹּ֣ר אֹתָ֑ם וַיֹּ֣אמֶר ל֔וֹ כֹּ֥ה יִהְיֶ֖ה זַרְעֶֽךָ׃ וְהֶאֱמִ֖ן בַּֽיהֹוָ֑ה וַיַּחְשְׁבֶ֥הָ לּ֖וֹ צְדָקָֽה׃ וַיֹּ֖אמֶר אֵלָ֑יו אֲנִ֣י יְהֹוָ֗ה אֲשֶׁ֤ר הוֹצֵאתִ֙יךָ֙ מֵא֣וּר כַּשְׂדִּ֔ים לָ֧תֶת לְךָ֛ אֶת־הָאָ֥רֶץ הַזֹּ֖את לְרִשְׁתָּֽהּ׃ וַיֹּאמַ֑ר אֲדֹנָ֣י יֱהֹוִ֔ה בַּמָּ֥ה אֵדַ֖ע כִּ֥י אִֽירָשֶֽׁנָּה׃
+
+ENGLISH:
+Some time later, the word of HASHEM came to Abram in a vision: Fear not, Abram, I am a shield to you; Your reward shall be very great. But Abram said, O lord HASHEM,, traditionally read aloud as adonai elohim (rather than adonai twice). NJPS Lord God. See also the Dictionary under male metaphors for God. what can You give me, seeing that I shall die childless, and the one in charge of my household is Dammesek Eliezer! Abram said further, Since You have granted me no offspring, my steward will be my heir. The word of HASHEM came to him in reply, That one shall not be your heir; none but your very own issue shall be your heir. [Then in the vision, God] took him outside and said, Look toward heaven and count the stars, if you are able to count them-continuing, So shall your offspring be. And he put his trust in HASHEM, who reckoned it to his merit. Then [God] said to him, I am HASHEM who brought you out from Ur of the Chaldeans to assign this land to you as a possession. And he said, O lord HASHEM, how shall I know that I am to possess it?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God promises Abram land and many descendants.",
+    "heb_summary": "אלוהים מבטיח לאברם צאצאים רבים וארץ.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Dammesek Eliezer"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Ur Of The Chaldeans"
+        },
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Chaldea"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shield"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "Hashem"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abram",
+          "term2": "Ur Of The Chaldeans"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Heaven"
+        }
+      ]
+    }
+  }
+}

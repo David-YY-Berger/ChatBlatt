@@ -1,0 +1,55 @@
+﻿COST: Tokens: Total=8410 approx cost usd = $0.001076 (Prompt=6430, Completion=1980)
+SOURCE:
+Genesis 3:1  (TN_Genesis_0_3:1)
+
+HEBREW:
+וְהַנָּחָשׁ֙ הָיָ֣ה עָר֔וּם מִכֹּל֙ חַיַּ֣ת הַשָּׂדֶ֔ה אֲשֶׁ֥ר עָשָׂ֖ה יְהֹוָ֣ה אֱלֹהִ֑ים וַיֹּ֙אמֶר֙ אֶל־הָ֣אִשָּׁ֔ה אַ֚ף כִּֽי־אָמַ֣ר אֱלֹהִ֔ים לֹ֣א תֹֽאכְל֔וּ מִכֹּ֖ל עֵ֥ץ הַגָּֽן׃
+
+ENGLISH:
+Now the serpent was the shrewdest of all the wild beasts that God HASHEM had made. It said to the woman, Did God really say: You shall not eat of any tree of the garden?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Serpent tempts woman about garden tree.",
+    "heb_summary": "הנחש מפתה את האישה בגן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Garden"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Serpent"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Tree"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "God Hashem",
+          "term2": "Garden"
+        }
+      ]
+    }
+  }
+}

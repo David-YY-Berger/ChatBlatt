@@ -1,0 +1,106 @@
+﻿{
+    "res": {
+        "en_summary": "Sarah, Hagar, Abraham, Isaac; divine promise.",
+        "heb_summary": "שרה מגרשת הגר ובנה; הבטחה אלוהית.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Sheba"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Water"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Bush"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Sarah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Egypt"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Hagar"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_21:9-16"
+}

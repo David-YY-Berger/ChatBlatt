@@ -1,0 +1,108 @@
+﻿COST: Tokens: Total=8360 approx cost usd = $0.001003 (Prompt=6691, Completion=1669)
+SOURCE:
+Genesis 47:13-19  (TN_Genesis_0_47:13-19)
+
+HEBREW:
+וְלֶ֤חֶם אֵין֙ בְּכׇל־הָאָ֔רֶץ כִּֽי־כָבֵ֥ד הָרָעָ֖ב מְאֹ֑ד וַתֵּ֜לַהּ אֶ֤רֶץ מִצְרַ֙יִם֙ וְאֶ֣רֶץ כְּנַ֔עַן מִפְּנֵ֖י הָרָעָֽב׃ וַיְלַקֵּ֣ט יוֹסֵ֗ף אֶת־כׇּל־הַכֶּ֙סֶף֙ הַנִּמְצָ֤א בְאֶֽרֶץ־מִצְרַ֙יִם֙ וּבְאֶ֣רֶץ כְּנַ֔עַן בַּשֶּׁ֖בֶר אֲשֶׁר־הֵ֣ם שֹׁבְרִ֑ים וַיָּבֵ֥א יוֹסֵ֛ף אֶת־הַכֶּ֖סֶף בֵּ֥יתָה פַרְעֹֽה׃ וַיִּתֹּ֣ם הַכֶּ֗סֶף מֵאֶ֣רֶץ מִצְרַ֘יִם֮ וּמֵאֶ֣רֶץ כְּנַ֒עַן֒ וַיָּבֹ֩אוּ֩ כׇל־מִצְרַ֨יִם אֶל־יוֹסֵ֤ף לֵאמֹר֙ הָֽבָה־לָּ֣נוּ לֶ֔חֶם וְלָ֥מָּה נָמ֖וּת נֶגְדֶּ֑ךָ כִּ֥י אָפֵ֖ס כָּֽסֶף׃ וַיֹּ֤אמֶר יוֹסֵף֙ הָב֣וּ מִקְנֵיכֶ֔ם וְאֶתְּנָ֥ה לָכֶ֖ם בְּמִקְנֵיכֶ֑ם אִם־אָפֵ֖ס כָּֽסֶף׃ וַיָּבִ֣יאוּ אֶת־מִקְנֵיהֶם֮ אֶל־יוֹסֵף֒ וַיִּתֵּ֣ן לָהֶם֩ יוֹסֵ֨ף לֶ֜חֶם בַּסּוּסִ֗ים וּבְמִקְנֵ֥ה הַצֹּ֛אן וּבְמִקְנֵ֥ה הַבָּקָ֖ר וּבַחֲמֹרִ֑ים וַיְנַהֲלֵ֤ם בַּלֶּ֙חֶם֙ בְּכׇל־מִקְנֵהֶ֔ם בַּשָּׁנָ֖ה הַהִֽוא׃ וַתִּתֹּם֮ הַשָּׁנָ֣ה הַהִוא֒ וַיָּבֹ֨אוּ אֵלָ֜יו בַּשָּׁנָ֣ה הַשֵּׁנִ֗ית וַיֹּ֤אמְרוּ לוֹ֙ לֹֽא־נְכַחֵ֣ד מֵֽאֲדֹנִ֔י כִּ֚י אִם־תַּ֣ם הַכֶּ֔סֶף וּמִקְנֵ֥ה הַבְּהֵמָ֖ה אֶל־אֲדֹנִ֑י לֹ֤א נִשְׁאַר֙ לִפְנֵ֣י אֲדֹנִ֔י בִּלְתִּ֥י אִם־גְּוִיָּתֵ֖נוּ וְאַדְמָתֵֽנוּ׃ לָ֧מָּה נָמ֣וּת לְעֵינֶ֗יךָ גַּם־אֲנַ֙חְנוּ֙ גַּ֣ם אַדְמָתֵ֔נוּ קְנֵֽה־אֹתָ֥נוּ וְאֶת־אַדְמָתֵ֖נוּ בַּלָּ֑חֶם וְנִֽהְיֶ֞ה אֲנַ֤חְנוּ וְאַדְמָתֵ֙נוּ֙ עֲבָדִ֣ים לְפַרְעֹ֔ה וְתֶן־זֶ֗רַע וְנִֽחְיֶה֙ וְלֹ֣א נָמ֔וּת וְהָאֲדָמָ֖ה לֹ֥א תֵשָֽׁם׃
+
+ENGLISH:
+Now there was no bread in all the world, for the famine was very severe; both the land of Egypt and the land of Canaan languished because of the famine. Joseph gathered in all the money that was to be found in the land of Egypt and in the land of Canaan, as payment for the rations that were being procured, and Joseph brought the money into Pharaohs palace. And when the money gave out in the land of Egypt and in the land of Canaan, all the Egyptians came to Joseph and said, Give us bread, lest we die before your very eyes; for the money is gone! And Joseph said, Bring your livestock, and I will sell to you against your livestock, if the money is gone. So they brought their livestock to Joseph, and Joseph gave them bread in exchange for the horses, for the stocks of sheep and cattle, and the asses; thus he provided them with bread that year in exchange for all their livestock. And when that year was ended, they came to him the next year and said to him, We cannot hide from my lord that, with all the money and animal stocks consigned to my lord, nothing is left at my lords disposal save our persons and our farmland. Let us not perish before your eyes, both we and our land. Take us and our land in exchange for bread, and we with our land will be serfs to Pharaoh; provide the seed, that we may live and not die, and that the land may not become a waste.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph manages famine in Egypt and Canaan",
+    "heb_summary": "יוסף מנהל רעב במצרים ובכנען",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Egyptians"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Livestock"
+        },
+        {
+          "en_name": "Horse"
+        },
+        {
+          "en_name": "Sheep"
+        },
+        {
+          "en_name": "Cattle"
+        },
+        {
+          "en_name": "Ass"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Rations"
+        },
+        {
+          "en_name": "Seed"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "Egyptians"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Joseph",
+          "term2": "Pharaoh"
+        }
+      ]
+    }
+  }
+}

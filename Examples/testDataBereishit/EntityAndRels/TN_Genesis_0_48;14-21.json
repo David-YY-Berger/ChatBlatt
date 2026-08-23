@@ -1,0 +1,124 @@
+﻿{
+    "res": {
+        "en_summary": "Israel blesses Joseph's sons, Ephraim and Manasseh.",
+        "heb_summary": "ישראל מברך את בני יוסף, אפרים ומנשה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Manasseh"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Ephraim"
+                },
+                {
+                    "en_name": "Manasseh"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Ephraim",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Joseph"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Ephraim",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Ephraim",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Manasseh",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Israel",
+                    "term2": "Joseph"
+                }
+            ],
+            "personToTribeOfIsrael": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Ephraim"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Manasseh"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Israel",
+                    "term2": "Manasseh"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Ephraim"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_48:14-21"
+}

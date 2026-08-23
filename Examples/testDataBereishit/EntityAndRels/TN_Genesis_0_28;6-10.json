@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Esau marries Ishmael's daughter; Jacob leaves Beer-sheba.",
+        "heb_summary": "עשו נשא לאישה בת ישמעאל; יעקב עזב באר שבע.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Mahalath"
+                },
+                {
+                    "en_name": "Ishmael"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Nebaioth"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Paddan-Aram"
+                },
+                {
+                    "en_name": "Beer-Sheba"
+                },
+                {
+                    "en_name": "Haran"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Mahalath",
+                    "term2": "Ishmael"
+                },
+                {
+                    "term1": "Ishmael",
+                    "term2": "Abraham"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Mahalath"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Paddan-Aram"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Haran"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Beer-Sheba"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_28:6-10"
+}

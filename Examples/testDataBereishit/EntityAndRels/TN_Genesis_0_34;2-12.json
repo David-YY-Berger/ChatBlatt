@@ -1,0 +1,97 @@
+﻿{
+    "res": {
+        "en_summary": "Shechem defiles Dinah; Hamor seeks marriage.",
+        "heb_summary": "שכם חילל דינה; חמור מבקש נישואין.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Hamor"
+                },
+                {
+                    "en_name": "Dinah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Jacob's Sons"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Hivi"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Shechem",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Shechem",
+                    "term2": "Dinah"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Hamor"
+                },
+                {
+                    "term1": "Hamor",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Hamor",
+                    "term2": "Jacob's Sons"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Jacob's Sons"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Hamor",
+                    "term2": "Hivi"
+                },
+                {
+                    "term1": "Shechem",
+                    "term2": "Hivi"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Dinah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Jacob's Sons",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_34:2-12"
+}

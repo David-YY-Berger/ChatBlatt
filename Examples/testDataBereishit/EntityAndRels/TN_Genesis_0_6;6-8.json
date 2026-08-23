@@ -1,0 +1,65 @@
+﻿{
+    "res": {
+        "en_summary": "HASHEM regrets creating humans and animals, but Noah.",
+        "heb_summary": "ה' מתחרט על בריאת האדם והחי, אך נוח.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Humankind"
+                },
+                {
+                    "en_name": "Noah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Beast"
+                },
+                {
+                    "en_name": "Creeping Thing"
+                },
+                {
+                    "en_name": "Bird"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "Humankind",
+                    "term2": "Earth"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Humankind"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Noah",
+                    "term2": "Hashem"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Humankind",
+                    "term2": "Noah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_6:6-8"
+}

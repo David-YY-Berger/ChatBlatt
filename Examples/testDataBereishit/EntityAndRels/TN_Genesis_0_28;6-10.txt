@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=8162 approx cost usd = $0.000982 (Prompt=6516, Completion=1646)
+SOURCE:
+Genesis 28:6-10  (TN_Genesis_0_28:6-10)
+
+HEBREW:
+וַיַּ֣רְא עֵשָׂ֗ו כִּֽי־בֵרַ֣ךְ יִצְחָק֮ אֶֽת־יַעֲקֹב֒ וְשִׁלַּ֤ח אֹתוֹ֙ פַּדֶּ֣נָֽה אֲרָ֔ם לָקַֽחַת־ל֥וֹ מִשָּׁ֖ם אִשָּׁ֑ה בְּבָרְכ֣וֹ אֹת֔וֹ וַיְצַ֤ו עָלָיו֙ לֵאמֹ֔ר לֹֽא־תִקַּ֥ח אִשָּׁ֖ה מִבְּנ֥וֹת כְּנָֽעַן׃ וַיִּשְׁמַ֣ע יַעֲקֹ֔ב אֶל־אָבִ֖יו וְאֶל־אִמּ֑וֹ וַיֵּ֖לֶךְ פַּדֶּ֥נָֽה אֲרָֽם׃ וַיַּ֣רְא עֵשָׂ֔ו כִּ֥י רָע֖וֹת בְּנ֣וֹת כְּנָ֑עַן בְּעֵינֵ֖י יִצְחָ֥ק אָבִֽיו׃ וַיֵּ֥לֶךְ עֵשָׂ֖ו אֶל־יִשְׁמָעֵ֑אל וַיִּקַּ֡ח אֶֽת־מָחֲלַ֣ת׀ בַּת־יִשְׁמָעֵ֨אל בֶּן־אַבְרָהָ֜ם אֲח֧וֹת נְבָי֛וֹת עַל־נָשָׁ֖יו ל֥וֹ לְאִשָּֽׁה׃ וַיֵּצֵ֥א יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע וַיֵּ֖לֶךְ חָרָֽנָה׃
+
+ENGLISH:
+When Esau saw that Isaac had blessed Jacob and sent him off to Paddan-aram to take a wife from there, charging him, as he blessed him, You shall not take a wife from among the Canaanite women, and that Jacob had obeyed his father and mother and gone to Paddan-aram, Esau realized that the Canaanite women displeased his father Isaac. So Esau went to Ishmael and took to wife, in addition to the wives he had, Mahalath the daughter of Ishmael son of Abraham, sister of Nebaioth. Jacob left Beer-sheba, and set out for Haran.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Esau marries Ishmael's daughter; Jacob leaves Beer-sheba.",
+    "heb_summary": "עשו נשא לאישה בת ישמעאל; יעקב עזב באר שבע.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Mahalath"
+        },
+        {
+          "en_name": "Ishmael"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Nebaioth"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Paddan-Aram"
+        },
+        {
+          "en_name": "Beer-Sheba"
+        },
+        {
+          "en_name": "Haran"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Canaan"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Mahalath",
+          "term2": "Ishmael"
+        },
+        {
+          "term1": "Ishmael",
+          "term2": "Abraham"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Esau",
+          "term2": "Mahalath"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Beer-Sheba"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+﻿COST: Tokens: Total=7415 approx cost usd = $0.000774 (Prompt=6445, Completion=970)
+SOURCE:
+Genesis 20:1-2  (TN_Genesis_0_20:1-2)
+
+HEBREW:
+וַיִּסַּ֨ע מִשָּׁ֤ם אַבְרָהָם֙ אַ֣רְצָה הַנֶּ֔גֶב וַיֵּ֥שֶׁב בֵּין־קָדֵ֖שׁ וּבֵ֣ין שׁ֑וּר וַיָּ֖גׇר בִּגְרָֽר׃ וַיֹּ֧אמֶר אַבְרָהָ֛ם אֶל־שָׂרָ֥ה אִשְׁתּ֖וֹ אֲחֹ֣תִי הִ֑וא וַיִּשְׁלַ֗ח אֲבִימֶ֙לֶךְ֙ מֶ֣לֶךְ גְּרָ֔ר וַיִּקַּ֖ח אֶת־שָׂרָֽה׃
+
+ENGLISH:
+Abraham journeyed from there to the region of the Negeb and settled between Kadesh and Shur. While he was sojourning in Gerar, Abraham said of Sarah his wife, She is my sister. So King Abimelech of Gerar had Sarah brought to him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abraham journeys, settles, lies about Sarah.",
+    "heb_summary": "אברהם נוסע, מתיישב, משקר על שרה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Abimelech"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Negeb"
+        },
+        {
+          "en_name": "Kadesh"
+        },
+        {
+          "en_name": "Shur"
+        },
+        {
+          "en_name": "Gerar"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Sarah",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Negeb"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Kadesh"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Shur"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Gerar"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abimelech",
+          "term2": "Gerar"
+        }
+      ]
+    }
+  }
+}

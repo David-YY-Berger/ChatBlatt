@@ -1,0 +1,27 @@
+﻿COST: Tokens: Total=8287 approx cost usd = $0.001037 (Prompt=6440, Completion=1847)
+SOURCE:
+Genesis 24:16-17  (TN_Genesis_0_24:16-17)
+
+HEBREW:
+וְהַֽנַּעֲרָ֗ טֹבַ֤ת מַרְאֶה֙ מְאֹ֔ד בְּתוּלָ֕ה וְאִ֖ישׁ לֹ֣א יְדָעָ֑הּ וַתֵּ֣רֶד הָעַ֔יְנָה וַתְּמַלֵּ֥א כַדָּ֖הּ וַתָּֽעַל׃ וַיָּ֥רׇץ הָעֶ֖בֶד לִקְרָאתָ֑הּ וַיֹּ֕אמֶר הַגְמִיאִ֥ינִי נָ֛א מְעַט־מַ֖יִם מִכַּדֵּֽךְ׃
+
+ENGLISH:
+The maiden was very beautiful-[and] a virgin, no man having known her. She went down to the spring, filled her jar, and came up. The servant ran toward her and said, Please, let me sip a little water from your jar.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Maiden draws water; servant requests drink.",
+    "heb_summary": "עלמה שואבת מים; עבד מבקש לשתות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Place": [
+        {
+          "en_name": "Spring"
+        }
+      ]
+    }
+  }
+}

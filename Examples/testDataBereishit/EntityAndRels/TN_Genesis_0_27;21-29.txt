@@ -1,0 +1,107 @@
+﻿COST: Tokens: Total=8174 approx cost usd = $0.000955 (Prompt=6653, Completion=1521)
+SOURCE:
+Genesis 27:21-29  (TN_Genesis_0_27:21-29)
+
+HEBREW:
+וַיֹּ֤אמֶר יִצְחָק֙ אֶֽל־יַעֲקֹ֔ב גְּשָׁה־נָּ֥א וַאֲמֻֽשְׁךָ֖ בְּנִ֑י הַֽאַתָּ֥ה זֶ֛ה בְּנִ֥י עֵשָׂ֖ו אִם־לֹֽא׃ וַיִּגַּ֧שׁ יַעֲקֹ֛ב אֶל־יִצְחָ֥ק אָבִ֖יו וַיְמֻשֵּׁ֑הוּ וַיֹּ֗אמֶר הַקֹּל֙ ק֣וֹל יַעֲקֹ֔ב וְהַיָּדַ֖יִם יְדֵ֥י עֵשָֽׂו׃ וְלֹ֣א הִכִּיר֔וֹ כִּֽי־הָי֣וּ יָדָ֗יו כִּידֵ֛י עֵשָׂ֥ו אָחִ֖יו שְׂעִרֹ֑ת וַֽיְבָרְכֵֽהוּ׃ וַיֹּ֕אמֶר אַתָּ֥ה זֶ֖ה בְּנִ֣י עֵשָׂ֑ו וַיֹּ֖אמֶר אָֽנִי׃ וַיֹּ֗אמֶר הַגִּ֤שָׁה לִּי֙ וְאֹֽכְלָה֙ מִצֵּ֣יד בְּנִ֔י לְמַ֥עַן תְּבָֽרֶכְךָ֖ נַפְשִׁ֑י וַיַּגֶּשׁ־לוֹ֙ וַיֹּאכַ֔ל וַיָּ֧בֵא ל֦וֹ יַ֖יִן וַיֵּֽשְׁתְּ׃ וַיֹּ֥אמֶר אֵלָ֖יו יִצְחָ֣ק אָבִ֑יו גְּשָׁה־נָּ֥א וּשְׁקָה־לִּ֖י בְּנִֽי׃ וַיִּגַּשׁ֙ וַיִּשַּׁק־ל֔וֹ וַיָּ֛רַח אֶת־רֵ֥יחַ בְּגָדָ֖יו וַֽיְבָרְכֵ֑הוּ וַיֹּ֗אמֶר רְאֵה֙ רֵ֣יחַ בְּנִ֔י כְּרֵ֣יחַ שָׂדֶ֔ה אֲשֶׁ֥ר בֵּרְכ֖וֹ יְהֹוָֽה׃ וְיִֽתֶּן־לְךָ֙ הָאֱלֹהִ֔ים מִטַּל֙ הַשָּׁמַ֔יִם וּמִשְׁמַנֵּ֖י הָאָ֑רֶץ וְרֹ֥ב דָּגָ֖ן וְתִירֹֽשׁ׃ יַֽעַבְד֣וּךָ עַמִּ֗ים [וְיִֽשְׁתַּחֲו֤וּ] לְךָ֙ לְאֻמִּ֔ים הֱוֵ֤ה גְבִיר֙ לְאַחֶ֔יךָ וְיִשְׁתַּחֲו֥וּ לְךָ֖ בְּנֵ֣י אִמֶּ֑ךָ אֹרְרֶ֣יךָ אָר֔וּר וּֽמְבָרְכֶ֖יךָ בָּרֽוּךְ׃
+
+ENGLISH:
+Isaac said to Jacob, Come closer that I may feel you, my son-whether you are really my son Esau or not. So Jacob drew close to his father Isaac, who felt him and wondered. The voice is the voice of Jacob, yet the hands are the hands of Esau. He did not recognize him, because his hands were hairy like those of his brother Esau; and so he blessed him. He asked, Are you really my son Esau? And when he said, I am, he said, Serve me and let me eat of my sons game that I may give you my innermost blessing. So he served him and he ate, and he brought him wine and he drank. Then his father Isaac said to him, Come close and kiss me, my son; and he went up and kissed him. And he smelled his clothes and he blessed him, saying, Ah, the smell of my son is like the smell of the fields that HASHEM has blessed. May God give you Of the dew of heaven and the fat of the earth, Abundance of new grain and wine. Let peoples serve you, And nations bow to you; Be master over your brothers, And let your mothers sons bow to you. Cursed be they who curse you, Blessed they who bless you.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac blesses Jacob, mistaking him for Esau.",
+    "heb_summary": "יצחק מברך יעקב, טועה בו לאסו.",
+    "passage_types": [
+      "STORY",
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Heaven"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Game"
+        },
+        {
+          "en_name": "Wine"
+        },
+        {
+          "en_name": "Grain"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Grape"
+        },
+        {
+          "en_name": "Grain"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Isaac",
+          "term2": "Jacob"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Isaac",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Heaven"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Earth"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Grain"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Wine"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Jacob",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

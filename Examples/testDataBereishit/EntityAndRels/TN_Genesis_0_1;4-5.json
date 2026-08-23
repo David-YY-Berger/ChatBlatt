@@ -1,0 +1,43 @@
+﻿{
+    "res": {
+        "en_summary": "God creates light, darkness, day, night.",
+        "heb_summary": "אלוהים ברא אור, חושך, יום ולילה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Light"
+                },
+                {
+                    "en_name": "Darkness"
+                },
+                {
+                    "en_name": "Day"
+                },
+                {
+                    "en_name": "Night"
+                }
+            ]
+        },
+        "Rel": {
+            "AliasOf": [
+                {
+                    "term1": "Day",
+                    "term2": "Light"
+                },
+                {
+                    "term1": "Night",
+                    "term2": "Darkness"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_1:4-5"
+}

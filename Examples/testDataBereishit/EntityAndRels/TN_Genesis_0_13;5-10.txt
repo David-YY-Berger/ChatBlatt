@@ -1,0 +1,97 @@
+﻿COST: Tokens: Total=8551 approx cost usd = $0.001085 (Prompt=6577, Completion=1974)
+SOURCE:
+Genesis 13:5-10  (TN_Genesis_0_13:5-10)
+
+HEBREW:
+וְגַ֨ם־לְל֔וֹט הַהֹלֵ֖ךְ אֶת־אַבְרָ֑ם הָיָ֥ה צֹאן־וּבָקָ֖ר וְאֹהָלִֽים׃ וְלֹא־נָשָׂ֥א אֹתָ֛ם הָאָ֖רֶץ לָשֶׁ֣בֶת יַחְדָּ֑ו כִּֽי־הָיָ֤ה רְכוּשָׁם֙ רָ֔ב וְלֹ֥א יָֽכְל֖וּ לָשֶׁ֥בֶת יַחְדָּֽו׃ וַֽיְהִי־רִ֗יב בֵּ֚ין רֹעֵ֣י מִקְנֵֽה־אַבְרָ֔ם וּבֵ֖ין רֹעֵ֣י מִקְנֵה־ל֑וֹט וְהַֽכְּנַעֲנִי֙ וְהַפְּרִזִּ֔י אָ֖ז יֹשֵׁ֥ב בָּאָֽרֶץ׃ וַיֹּ֨אמֶר אַבְרָ֜ם אֶל־ל֗וֹט אַל־נָ֨א תְהִ֤י מְרִיבָה֙ בֵּינִ֣י וּבֵינֶ֔ךָ וּבֵ֥ין רֹעַ֖י וּבֵ֣ין רֹעֶ֑יךָ כִּֽי־אֲנָשִׁ֥ים אַחִ֖ים אֲנָֽחְנוּ׃ הֲלֹ֤א כׇל־הָאָ֙רֶץ֙ לְפָנֶ֔יךָ הִפָּ֥רֶד נָ֖א מֵעָלָ֑י אִם־הַשְּׂמֹ֣אל וְאֵימִ֔נָה וְאִם־הַיָּמִ֖ין וְאַשְׂמְאִֽילָה׃ וַיִּשָּׂא־ל֣וֹט אֶת־עֵינָ֗יו וַיַּרְא֙ אֶת־כׇּל־כִּכַּ֣ר הַיַּרְדֵּ֔ן כִּ֥י כֻלָּ֖הּ מַשְׁקֶ֑ה לִפְנֵ֣י׀ שַׁחֵ֣ת יְהֹוָ֗ה אֶת־סְדֹם֙ וְאֶת־עֲמֹרָ֔ה כְּגַן־יְהֹוָה֙ כְּאֶ֣רֶץ מִצְרַ֔יִם בֹּאֲכָ֖ה צֹֽעַר׃
+
+ENGLISH:
+Lot, who went with Abram, also had flocks and herds and tents, so that the land could not support them staying together; for their possessions were so great that they could not remain together. And there was quarreling between the herders of Abrams cattle and those of Lots cattle.-The Canaanites and Perizzites were then dwelling in the land.- Abram said to Lot, Let there be no strife between you and me, between my herders and yours, for we are kin. Is not the whole land before you? Let us separate: if you go north, I will go south; and if you go south, I will go north. Lot looked about him and saw how well watered was the whole plain of the Jordan, all of it-this was before HASHEM had destroyed Sodom and Gomorrah-all the way to Zoar, like the garden of HASHEM, like the land of Egypt.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Abram and Lot separate, Lot chooses Jordan.",
+    "heb_summary": "אברם ולוט נפרדים, לוט בוחר בירדן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Abram"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jordan"
+        },
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "Gomorrah"
+        },
+        {
+          "en_name": "Zoar"
+        },
+        {
+          "en_name": "Garden Of Hashem"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Perizzites"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abram",
+          "term2": "Lot"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Lot",
+          "term2": "Jordan"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Gomorrah"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Zoar"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Jordan",
+          "term2": "Garden Of Hashem"
+        },
+        {
+          "term1": "Jordan",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

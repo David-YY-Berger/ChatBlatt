@@ -1,0 +1,40 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph refuses Master's wife's advances.",
+        "heb_summary": "יוסף מסרב לאשת אדונו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Master"
+                },
+                {
+                    "en_name": "Master's Wife"
+                },
+                {
+                    "en_name": "God"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Master",
+                    "term2": "Master's Wife"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Master's Wife"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_39:8-13"
+}

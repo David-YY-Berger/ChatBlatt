@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=7285 approx cost usd = $0.000742 (Prompt=6414, Completion=871)
+SOURCE:
+Genesis 2:18  (TN_Genesis_0_2:18)
+
+HEBREW:
+וַיֹּ֙אמֶר֙ יְהֹוָ֣ה אֱלֹהִ֔ים לֹא־ט֛וֹב הֱי֥וֹת הָֽאָדָ֖ם לְבַדּ֑וֹ אֶֽעֱשֶׂה־לּ֥וֹ עֵ֖זֶר כְּנֶגְדּֽוֹ׃
+
+ENGLISH:
+God HASHEM said, It is not good for the Human to be alone; I will make a fitting counterpart for him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates companion for Human",
+    "heb_summary": "אלוהים בורא עזר לאדם",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Human"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Human"
+        }
+      ]
+    }
+  }
+}

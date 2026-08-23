@@ -1,0 +1,74 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph's steward accuses men of stealing goblet.",
+        "heb_summary": "משרת יוסף מאשים אנשים בגניבת גביע.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "House Steward"
+                },
+                {
+                    "en_name": "Youngest One"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "City"
+                },
+                {
+                    "en_name": "Land Of Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Silver Goblet"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Pack Animal"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Food"
+                },
+                {
+                    "en_name": "Ration"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "House Steward"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "City"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Land Of Canaan",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_44:1-9"
+}

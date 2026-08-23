@@ -1,0 +1,131 @@
+﻿COST: Tokens: Total=8461 approx cost usd = $0.001056 (Prompt=6586, Completion=1875)
+SOURCE:
+Genesis 12:17-13:4  (TN_Genesis_0_12:17-13:4)
+
+HEBREW:
+וַיְנַגַּ֨ע יְהֹוָ֧ה׀אֶת־פַּרְעֹ֛ה נְגָעִ֥ים גְּדֹלִ֖ים וְאֶת־בֵּית֑וֹ עַל־דְּבַ֥ר שָׂרַ֖י אֵ֥שֶׁת אַבְרָֽם׃ וַיִּקְרָ֤א פַרְעֹה֙ לְאַבְרָ֔ם וַיֹּ֕אמֶר מַה־זֹּ֖את עָשִׂ֣יתָ לִּ֑י לָ֚מָּה לֹא־הִגַּ֣דְתָּ לִּ֔י כִּ֥י אִשְׁתְּךָ֖ הִֽוא׃ לָמָ֤ה אָמַ֙רְתָּ֙ אֲחֹ֣תִי הִ֔וא וָאֶקַּ֥ח אֹתָ֛הּ לִ֖י לְאִשָּׁ֑ה וְעַתָּ֕ה הִנֵּ֥ה אִשְׁתְּךָ֖ קַ֥ח וָלֵֽךְ׃ וַיְצַ֥ו עָלָ֛יו פַּרְעֹ֖ה אֲנָשִׁ֑ים וַֽיְשַׁלְּח֥וּ אֹת֛וֹ וְאֶת־אִשְׁתּ֖וֹ וְאֶת־כׇּל־אֲשֶׁר־לֽוֹ׃וַיַּ֩עַל֩ אַבְרָ֨ם מִמִּצְרַ֜יִם ה֠וּא וְאִשְׁתּ֧וֹ וְכׇל־אֲשֶׁר־ל֛וֹ וְל֥וֹט עִמּ֖וֹ הַנֶּֽגְבָּה׃ וְאַבְרָ֖ם כָּבֵ֣ד מְאֹ֑ד בַּמִּקְנֶ֕ה בַּכֶּ֖סֶף וּבַזָּהָֽב׃ וַיֵּ֙לֶךְ֙ לְמַסָּעָ֔יו מִנֶּ֖גֶב וְעַד־בֵּֽית־אֵ֑ל עַד־הַמָּק֗וֹם אֲשֶׁר־הָ֨יָה שָׁ֤ם אׇֽהֳלֹה֙ בַּתְּחִלָּ֔ה בֵּ֥ין בֵּֽית־אֵ֖ל וּבֵ֥ין הָעָֽי׃ אֶל־מְקוֹם֙ הַמִּזְבֵּ֔חַ אֲשֶׁר־עָ֥שָׂה שָׁ֖ם בָּרִאשֹׁנָ֑ה וַיִּקְרָ֥א שָׁ֛ם אַבְרָ֖ם בְּשֵׁ֥ם יְהֹוָֽה׃
+
+ENGLISH:
+But HASHEM afflicted Pharaoh and his household with mighty plagues on account of Sarai, the wife of Abram. Pharaoh sent for Abram and said, What is this you have done to me! Why did you not tell me that she was your wife? Why did you say, She is my sister, so that I took her as my wife? Now, here is your wife; take her and begone! And Pharaoh put agents; Agent. in charge of him, and they sent him off with his wife and all that he possessed.From Egypt, Abram went up into the Negeb, with his wife and all that he possessed, together with Lot. Now Abram was very rich in cattle, silver, and gold. And he proceeded by stages from the Negeb as far as Bethel, to the place where his tent had been formerly, between Bethel and Ai, the site of the altar that he had built there at first; and there Abram invoked HASHEM by name.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Pharaoh afflicted Abram's household for Sarai",
+    "heb_summary": "פרעה הכה את ביתו בגלל שרה אשת אברם",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Sarai"
+        },
+        {
+          "en_name": "Abram"
+        },
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "Agent"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Negeb"
+        },
+        {
+          "en_name": "Bethel"
+        },
+        {
+          "en_name": "Ai"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Abram",
+          "term2": "Sarai"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Abram"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abram",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Negeb"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "Abram",
+          "term2": "Ai"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Negeb"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "Sarai",
+          "term2": "Ai"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Negeb"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Bethel"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Ai"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Abram",
+          "term2": "Bethel"
+        }
+      ]
+    }
+  }
+}

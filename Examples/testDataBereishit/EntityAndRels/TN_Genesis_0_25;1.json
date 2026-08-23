@@ -1,0 +1,28 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham took Keturah as his wife",
+        "heb_summary": "אברהם נשא את קטורה לאישה",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Keturah"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Keturah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_25:1"
+}

@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=7657 approx cost usd = $0.000851 (Prompt=6429, Completion=1228)
+SOURCE:
+Genesis 1:4-5  (TN_Genesis_0_1:4-5)
+
+HEBREW:
+וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃ וַיִּקְרָ֨א אֱלֹהִ֤ים׀לָאוֹר֙ י֔וֹם וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם אֶחָֽד׃
+
+ENGLISH:
+God saw that the light was good, and God separated the light from the darkness. God called the light Day and called the darkness Night. And there was evening and there was morning, a first day.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates light, darkness, day, night.",
+    "heb_summary": "אלוהים ברא אור, חושך, יום ולילה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Light"
+        },
+        {
+          "en_name": "Darkness"
+        },
+        {
+          "en_name": "Day"
+        },
+        {
+          "en_name": "Night"
+        }
+      ]
+    },
+    "Rel": {
+      "AliasOf": [
+        {
+          "term1": "Day",
+          "term2": "Light"
+        },
+        {
+          "term1": "Night",
+          "term2": "Darkness"
+        }
+      ]
+    }
+  }
+}

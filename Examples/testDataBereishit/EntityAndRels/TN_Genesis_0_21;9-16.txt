@@ -1,0 +1,116 @@
+﻿COST: Tokens: Total=8929 approx cost usd = $0.001189 (Prompt=6622, Completion=2307)
+SOURCE:
+Genesis 21:9-16  (TN_Genesis_0_21:9-16)
+
+HEBREW:
+וַתֵּ֨רֶא שָׂרָ֜ה אֶֽת־בֶּן־הָגָ֧ר הַמִּצְרִ֛ית אֲשֶׁר־יָלְדָ֥ה לְאַבְרָהָ֖ם מְצַחֵֽק׃ וַתֹּ֙אמֶר֙ לְאַבְרָהָ֔ם גָּרֵ֛שׁ הָאָמָ֥ה הַזֹּ֖את וְאֶת־בְּנָ֑הּ כִּ֣י לֹ֤א יִירַשׁ֙ בֶּן־הָאָמָ֣ה הַזֹּ֔את עִם־בְּנִ֖י עִם־יִצְחָֽק׃ וַיֵּ֧רַע הַדָּבָ֛ר מְאֹ֖ד בְּעֵינֵ֣י אַבְרָהָ֑ם עַ֖ל אוֹדֹ֥ת בְּנֽוֹ׃ וַיֹּ֨אמֶר אֱלֹהִ֜ים אֶל־אַבְרָהָ֗ם אַל־יֵרַ֤ע בְּעֵינֶ֙יךָ֙ עַל־הַנַּ֣עַר וְעַל־אֲמָתֶ֔ךָ כֹּל֩ אֲשֶׁ֨ר תֹּאמַ֥ר אֵלֶ֛יךָ שָׂרָ֖ה שְׁמַ֣ע בְּקֹלָ֑הּ כִּ֣י בְיִצְחָ֔ק יִקָּרֵ֥א לְךָ֖ זָֽרַע׃ וְגַ֥ם אֶת־בֶּן־הָאָמָ֖ה לְג֣וֹי אֲשִׂימֶ֑נּוּ כִּ֥י זַרְעֲךָ֖ הֽוּא׃ וַיַּשְׁכֵּ֣ם אַבְרָהָ֣ם׀בַּבֹּ֡קֶר וַיִּֽקַּֽח־לֶ֩חֶם֩ וְחֵ֨מַת מַ֜יִם וַיִּתֵּ֣ן אֶל־הָ֠גָ֠ר שָׂ֧ם עַל־שִׁכְמָ֛הּ וְאֶת־הַיֶּ֖לֶד וַֽיְשַׁלְּחֶ֑הָ וַתֵּ֣לֶךְ וַתֵּ֔תַע בְּמִדְבַּ֖ר בְּאֵ֥ר שָֽׁבַע׃ וַיִּכְל֥וּ הַמַּ֖יִם מִן־הַחֵ֑מֶת וַתַּשְׁלֵ֣ךְ אֶת־הַיֶּ֔לֶד תַּ֖חַת אַחַ֥ד הַשִּׂיחִֽם׃ וַתֵּ֩לֶךְ֩ וַתֵּ֨שֶׁב לָ֜הּ מִנֶּ֗גֶד הַרְחֵק֙ כִּמְטַחֲוֵ֣י קֶ֔שֶׁת כִּ֣י אָֽמְרָ֔ה אַל־אֶרְאֶ֖ה בְּמ֣וֹת הַיָּ֑לֶד וַתֵּ֣שֶׁב מִנֶּ֔גֶד וַתִּשָּׂ֥א אֶת־קֹלָ֖הּ וַתֵּֽבְךְּ׃
+
+ENGLISH:
+Sarah saw the son whom Hagar the Egyptian had borne to Abraham playing. She said to Abraham, Cast out that slave-woman and her son, for the son of that slave shall not share in the inheritance with my son Isaac. The matter distressed Abraham greatly, for it concerned a son of his. But God said to Abraham, Do not be distressed over the boy or your slave; whatever Sarah tells you, do as she says, for it is through Isaac that offspring shall be continued for you. As for the son of the slave-woman, I will make a nation of him, too, for he is your seed. Early next morning Abraham took some bread and a skin of water, and gave them to Hagar. He placed them over her shoulder, together with the child, and sent her away. And she wandered about in the wilderness of Beer-sheba. When the water was gone from the skin, she left the child under one of the bushes, and went and sat down at a distance, a bowshot away; for she thought, Let me not look on as the child dies. And sitting thus afar, she burst into tears.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Sarah, Hagar, Abraham, Isaac; divine promise.",
+    "heb_summary": "שרה מגרשת הגר ובנה; הבטחה אלוהית.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sarah"
+        },
+        {
+          "en_name": "Hagar"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Beer-Sheba"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Water"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Bush"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Isaac",
+          "term2": "Sarah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Sarah",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sarah",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "God",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Hagar",
+          "term2": "Beer-Sheba"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "Beer-Sheba"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Hagar",
+          "term2": "Egypt"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Sarah",
+          "term2": "Hagar"
+        }
+      ]
+    }
+  }
+}

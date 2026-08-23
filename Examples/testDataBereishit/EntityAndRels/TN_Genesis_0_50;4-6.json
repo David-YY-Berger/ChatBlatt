@@ -1,0 +1,61 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph asks Pharaoh to bury his father.",
+        "heb_summary": "יוסף מבקש מפרעה לקבור את אביו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh's Court"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Pharaoh's Court"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Pharaoh"
+                }
+            ],
+            "diedIn": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_50:4-6"
+}

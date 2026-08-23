@@ -1,0 +1,49 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob prospered; Laban's sons and Laban resented him.",
+        "heb_summary": "יעקב התעשר; בני לבן ולבן התנגדו לו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban's Sons"
+                },
+                {
+                    "en_name": "Laban"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Camel"
+                },
+                {
+                    "en_name": "Ass"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Laban's Sons",
+                    "term2": "Laban"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Laban's Sons",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Laban",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:43-31:2"
+}

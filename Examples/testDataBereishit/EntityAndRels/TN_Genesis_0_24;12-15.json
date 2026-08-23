@@ -1,0 +1,79 @@
+﻿{
+    "res": {
+        "en_summary": "Servant prays for Isaac's wife",
+        "heb_summary": "עבד מתפלל על אשת יצחק",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Milcah"
+                },
+                {
+                    "en_name": "Nahor"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Bethuel",
+                    "term2": "Nahor"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Bethuel",
+                    "term2": "Milcah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Milcah",
+                    "term2": "Nahor"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Rebekah",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Milcah"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_24:12-15"
+}

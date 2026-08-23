@@ -1,0 +1,58 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob deceives Isaac; Esau loses blessing.",
+        "heb_summary": "יעקב מרמה את יצחק; עשו מאבד ברכה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Esau"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Game"
+                },
+                {
+                    "en_name": "Grain"
+                },
+                {
+                    "en_name": "Wine"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:30-38"
+}

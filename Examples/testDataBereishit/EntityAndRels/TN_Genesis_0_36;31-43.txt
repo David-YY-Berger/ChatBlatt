@@ -1,0 +1,404 @@
+﻿COST: Tokens: Total=12288 approx cost usd = $0.002178 (Prompt=6703, Completion=5585)
+SOURCE:
+Genesis 36:31-43  (TN_Genesis_0_36:31-43)
+
+HEBREW:
+וְאֵ֙לֶּה֙ הַמְּלָכִ֔ים אֲשֶׁ֥ר מָלְכ֖וּ בְּאֶ֣רֶץ אֱד֑וֹם לִפְנֵ֥י מְלׇךְ־מֶ֖לֶךְ לִבְנֵ֥י יִשְׂרָאֵֽל׃ וַיִּמְלֹ֣ךְ בֶּאֱד֔וֹם בֶּ֖לַע בֶּן־בְּע֑וֹר וְשֵׁ֥ם עִיר֖וֹ דִּנְהָֽבָה׃ וַיָּ֖מׇת בָּ֑לַע וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו יוֹבָ֥ב בֶּן־זֶ֖רַח מִבׇּצְרָֽה׃ וַיָּ֖מׇת יוֹבָ֑ב וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו חֻשָׁ֖ם מֵאֶ֥רֶץ הַתֵּימָנִֽי׃ וַיָּ֖מׇת חֻשָׁ֑ם וַיִּמְלֹ֨ךְ תַּחְתָּ֜יו הֲדַ֣ד בֶּן־בְּדַ֗ד הַמַּכֶּ֤ה אֶת־מִדְיָן֙ בִּשְׂדֵ֣ה מוֹאָ֔ב וְשֵׁ֥ם עִיר֖וֹ עֲוִֽית׃ וַיָּ֖מׇת הֲדָ֑ד וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו שַׂמְלָ֖ה מִמַּשְׂרֵקָֽה׃ וַיָּ֖מׇת שַׂמְלָ֑ה וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו שָׁא֖וּל מֵרְחֹב֥וֹת הַנָּהָֽר׃ וַיָּ֖מׇת שָׁא֑וּל וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו בַּ֥עַל חָנָ֖ן בֶּן־עַכְבּֽוֹר׃ וַיָּ֘מׇת֮ בַּ֣עַל חָנָ֣ן בֶּן־עַכְבּוֹר֒ וַיִּמְלֹ֤ךְ תַּחְתָּיו֙ הֲדַ֔ר וְשֵׁ֥ם עִיר֖וֹ פָּ֑עוּ וְשֵׁ֨ם אִשְׁתּ֤וֹ מְהֵֽיטַבְאֵל֙ בַּת־מַטְרֵ֔ד בַּ֖ת מֵ֥י זָהָֽב׃ וְ֠אֵ֠לֶּה שְׁמ֞וֹת אַלּוּפֵ֤י עֵשָׂו֙ לְמִשְׁפְּחֹתָ֔ם לִמְקֹמֹתָ֖ם בִּשְׁמֹתָ֑ם אַלּ֥וּף תִּמְנָ֛ע אַלּ֥וּף עַֽלְוָ֖ה אַלּ֥וּף יְתֵֽת׃ אַלּ֧וּף אׇהֳלִיבָמָ֛ה אַלּ֥וּף אֵלָ֖ה אַלּ֥וּף פִּינֹֽן׃ אַלּ֥וּף קְנַ֛ז אַלּ֥וּף תֵּימָ֖ן אַלּ֥וּף מִבְצָֽר׃ אַלּ֥וּף מַגְדִּיאֵ֖ל אַלּ֣וּף עִירָ֑ם אֵ֣לֶּה׀ אַלּוּפֵ֣י אֱד֗וֹם לְמֹֽשְׁבֹתָם֙ בְּאֶ֣רֶץ אֲחֻזָּתָ֔ם ה֥וּא עֵשָׂ֖ו אֲבִ֥י אֱדֽוֹם׃
+
+ENGLISH:
+These are the kings who reigned in the land of Edom before any king reigned over the Israelites. Bela son of Beor reigned in Edom, and the name of his city was Dinhabah. When Bela died, Jobab son of Zerah, from Bozrah, succeeded him as king. When Jobab died, Husham of the land of the Temanites succeeded him as king. When Husham died, Hadad son of Bedad, who defeated the Midianites in the country of Moab, succeeded him as king; the name of his city was Avith. When Hadad died, Samlah of Masrekah succeeded him as king. When Samlah died, Saul of Rehoboth-on-the-river succeeded him as king. When Saul died, Baal-hanan son of Achbor succeeded him as king. And when Baal-hanan son of Achbor died, Hadar succeeded him as king; the name of his city was Pau, and his wifes name was Mehetabel daughter of Matred daughter of Me-zahab. These are the names of the clans of Esau, each with its families and locality, name by name: the clans Timna, Alvah, Jetheth, Oholibamah, Elah, Pinon, Kenaz, Teman, Mibzar, Magdiel, and Iram. Those are the clans of Edom-that is, of Esau, father of the Edomites-by their settlements in the land which they hold.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Edomite kings and Esau's clans are listed.",
+    "heb_summary": "מלכי אדום ומשפחות עשו מתוארים.",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Bela"
+        },
+        {
+          "en_name": "Beor"
+        },
+        {
+          "en_name": "Jobab"
+        },
+        {
+          "en_name": "Zerah"
+        },
+        {
+          "en_name": "Husham"
+        },
+        {
+          "en_name": "Hadad"
+        },
+        {
+          "en_name": "Bedad"
+        },
+        {
+          "en_name": "Samlah"
+        },
+        {
+          "en_name": "Saul"
+        },
+        {
+          "en_name": "Baal-Hanan"
+        },
+        {
+          "en_name": "Achbor"
+        },
+        {
+          "en_name": "Hadar"
+        },
+        {
+          "en_name": "Mehetabel"
+        },
+        {
+          "en_name": "Matred"
+        },
+        {
+          "en_name": "Me-Zahab"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Israelites"
+        },
+        {
+          "en_name": "Midianites"
+        },
+        {
+          "en_name": "Timna"
+        },
+        {
+          "en_name": "Alvah"
+        },
+        {
+          "en_name": "Jetheth"
+        },
+        {
+          "en_name": "Oholibamah"
+        },
+        {
+          "en_name": "Elah"
+        },
+        {
+          "en_name": "Pinon"
+        },
+        {
+          "en_name": "Kenaz"
+        },
+        {
+          "en_name": "Teman"
+        },
+        {
+          "en_name": "Mibzar"
+        },
+        {
+          "en_name": "Magdiel"
+        },
+        {
+          "en_name": "Iram"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Dinhabah"
+        },
+        {
+          "en_name": "Bozrah"
+        },
+        {
+          "en_name": "Teman"
+        },
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Avith"
+        },
+        {
+          "en_name": "Masrekah"
+        },
+        {
+          "en_name": "Rehoboth-On-The-River"
+        },
+        {
+          "en_name": "Pau"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Edom"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Midian"
+        },
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Teman"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Bela",
+          "term2": "Beor"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Zerah"
+        },
+        {
+          "term1": "Hadad",
+          "term2": "Bedad"
+        },
+        {
+          "term1": "Baal-Hanan",
+          "term2": "Achbor"
+        },
+        {
+          "term1": "Mehetabel",
+          "term2": "Matred"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Matred",
+          "term2": "Me-Zahab"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Hadar",
+          "term2": "Mehetabel"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Bela",
+          "term2": "Dinhabah"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Bozrah"
+        },
+        {
+          "term1": "Husham",
+          "term2": "Teman"
+        },
+        {
+          "term1": "Hadad",
+          "term2": "Avith"
+        },
+        {
+          "term1": "Samlah",
+          "term2": "Masrekah"
+        },
+        {
+          "term1": "Saul",
+          "term2": "Rehoboth-On-The-River"
+        },
+        {
+          "term1": "Hadar",
+          "term2": "Pau"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Timna",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Alvah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Jetheth",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Elah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Pinon",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Kenaz",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Teman",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Mibzar",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Magdiel",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Iram",
+          "term2": "Edom"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Bela",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Jobab",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Husham",
+          "term2": "Teman"
+        },
+        {
+          "term1": "Hadad",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Samlah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Saul",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Baal-Hanan",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Hadar",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Israelites",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Midianites",
+          "term2": "Midian"
+        },
+        {
+          "term1": "Timna",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Alvah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Jetheth",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Oholibamah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Elah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Pinon",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Kenaz",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Teman",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Mibzar",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Magdiel",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Iram",
+          "term2": "Edom"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Hadad",
+          "term2": "Midian"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Dinhabah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Bozrah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Teman",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Avith",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Masrekah",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Rehoboth-On-The-River",
+          "term2": "Edom"
+        },
+        {
+          "term1": "Pau",
+          "term2": "Edom"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Edom",
+          "term2": "Esau"
+        }
+      ]
+    }
+  }
+}

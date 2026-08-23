@@ -1,0 +1,29 @@
+﻿{
+    "res": {
+        "en_summary": "God promises Abram land, nation, blessing.",
+        "heb_summary": "ה' מבטיח לאברם ארץ, אומה, ברכה.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abram"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abram"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_12:1-3"
+}

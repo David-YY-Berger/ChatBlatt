@@ -1,0 +1,196 @@
+﻿COST: Tokens: Total=9970 approx cost usd = $0.001462 (Prompt=6794, Completion=3176)
+SOURCE:
+Genesis 31:44-32:3  (TN_Genesis_0_31:44-32:3)
+
+HEBREW:
+וְעַתָּ֗ה לְכָ֛ה נִכְרְתָ֥ה בְרִ֖ית אֲנִ֣י וָאָ֑תָּה וְהָיָ֥ה לְעֵ֖ד בֵּינִ֥י וּבֵינֶֽךָ׃ וַיִּקַּ֥ח יַעֲקֹ֖ב אָ֑בֶן וַיְרִימֶ֖הָ מַצֵּבָֽה׃ וַיֹּ֨אמֶר יַעֲקֹ֤ב לְאֶחָיו֙ לִקְט֣וּ אֲבָנִ֔ים וַיִּקְח֥וּ אֲבָנִ֖ים וַיַּֽעֲשׂוּ־גָ֑ל וַיֹּ֥אכְלוּ שָׁ֖ם עַל־הַגָּֽל׃ וַיִּקְרָא־ל֣וֹ לָבָ֔ן יְגַ֖ר שָׂהֲדוּתָ֑א וְיַֽעֲקֹ֔ב קָ֥רָא ל֖וֹ גַּלְעֵֽד׃ וַיֹּ֣אמֶר לָבָ֔ן הַגַּ֨ל הַזֶּ֥ה עֵ֛ד בֵּינִ֥י וּבֵינְךָ֖ הַיּ֑וֹם עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ גַּלְעֵֽד׃ וְהַמִּצְפָּה֙ אֲשֶׁ֣ר אָמַ֔ר יִ֥צֶף יְהֹוָ֖ה בֵּינִ֣י וּבֵינֶ֑ךָ כִּ֥י נִסָּתֵ֖ר אִ֥ישׁ מֵרֵעֵֽהוּ׃ אִם־תְּעַנֶּ֣ה אֶת־בְּנֹתַ֗י וְאִם־תִּקַּ֤ח נָשִׁים֙ עַל־בְּנֹתַ֔י אֵ֥ין אִ֖ישׁ עִמָּ֑נוּ רְאֵ֕ה אֱלֹהִ֥ים עֵ֖ד בֵּינִ֥י וּבֵינֶֽךָ׃ וַיֹּ֥אמֶר לָבָ֖ן לְיַעֲקֹ֑ב הִנֵּ֣ה׀ הַגַּ֣ל הַזֶּ֗ה וְהִנֵּה֙ הַמַּצֵּבָ֔ה אֲשֶׁ֥ר יָרִ֖יתִי בֵּינִ֥י וּבֵינֶֽךָ׃ עֵ֚ד הַגַּ֣ל הַזֶּ֔ה וְעֵדָ֖ה הַמַּצֵּבָ֑ה אִם־אָ֗נִי לֹֽא־אֶעֱבֹ֤ר אֵלֶ֙יךָ֙ אֶת־הַגַּ֣ל הַזֶּ֔ה וְאִם־אַ֠תָּ֠ה לֹא־תַעֲבֹ֨ר אֵלַ֜י אֶת־הַגַּ֥ל הַזֶּ֛ה וְאֶת־הַמַּצֵּבָ֥ה הַזֹּ֖את לְרָעָֽה׃ אֱלֹהֵ֨י אַבְרָהָ֜ם וֵֽאלֹהֵ֤י נָחוֹר֙ יִשְׁפְּט֣וּ בֵינֵ֔ינוּ אֱלֹהֵ֖י אֲבִיהֶ֑ם וַיִּשָּׁבַ֣ע יַעֲקֹ֔ב בְּפַ֖חַד אָבִ֥יו יִצְחָֽק׃ וַיִּזְבַּ֨ח יַעֲקֹ֥ב זֶ֙בַח֙ בָּהָ֔ר וַיִּקְרָ֥א לְאֶחָ֖יו לֶאֱכׇל־לָ֑חֶם וַיֹּ֣אכְלוּ לֶ֔חֶם וַיָּלִ֖ינוּ בָּהָֽר׃וַיַּשְׁכֵּ֨ם לָבָ֜ן בַּבֹּ֗קֶר וַיְנַשֵּׁ֧ק לְבָנָ֛יו וְלִבְנוֹתָ֖יו וַיְבָ֣רֶךְ אֶתְהֶ֑ם וַיֵּ֛לֶךְ וַיָּ֥שׇׁב לָבָ֖ן לִמְקֹמֽוֹ׃ וְיַעֲקֹ֖ב הָלַ֣ךְ לְדַרְכּ֑וֹ וַיִּפְגְּעוּ־ב֖וֹ מַלְאֲכֵ֥י אֱלֹהִֽים׃ וַיֹּ֤אמֶר יַעֲקֹב֙ כַּאֲשֶׁ֣ר רָאָ֔ם מַחֲנֵ֥ה אֱלֹהִ֖ים זֶ֑ה וַיִּקְרָ֛א שֵֽׁם־הַמָּק֥וֹם הַה֖וּא מַֽחֲנָֽיִם׃
+
+ENGLISH:
+Come, then, let us make a pact, you and I, that there may be a witness between you and me. Thereupon Jacob took a stone and set it up as a pillar. And Jacob said to his kinsmen, Gather stones. So they took stones and made a mound; and they partook of a meal there by the mound. Laban named it Yegar-sahadutha, but Jacob named it Gal-ed. And Laban declared, This mound is a witness between you and me this day. That is why it was named Gal-ed; and [it was called] Mizpah, because he said, May HASHEM watch, associated with Mizpah . between you and me, when we are out of sight of each other. If you ill-treat my daughters or take other wives besides my daughters-though no one else. be about, remember, it is God who will be witness between you and me. And Laban said to Jacob, Here is this mound and here the pillar which I have set up between you and me: this mound shall be witness and this pillar shall be witness that I am not to cross to you past this mound, and that you are not to cross to me past this mound and this pillar, with hostile intent. May the God of Abrahams [house] and the god of Nahors [house]-their ancestral deities-judge between us. And Jacob swore by the Fear uncertain. of his father Isaacs [house]. Jacob then offered up a sacrifice on the Height, and invited his kinsmen to partake of the meal. After the meal, they spent the night on the Height.Early in the morning, Laban kissed his sons and daughters and bade them good-by; then Laban left on his journey homeward. Jacob went on his way, and messengers of God encountered him. When he saw them, Jacob said, This is Gods camp. So he named that place Mahanaim. camp.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob and Laban make pact at Gal-ed.",
+    "heb_summary": "יעקב ולבן כורתים ברית בגלעד.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Nahor"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Kinsmen"
+        },
+        {
+          "en_name": "Daughters"
+        },
+        {
+          "en_name": "Sons"
+        },
+        {
+          "en_name": "Messengers Of God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Yegar-Sahadutha"
+        },
+        {
+          "en_name": "Gal-Ed"
+        },
+        {
+          "en_name": "Mizpah"
+        },
+        {
+          "en_name": "Height"
+        },
+        {
+          "en_name": "Mahanaim"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Stone"
+        },
+        {
+          "en_name": "Pillar"
+        },
+        {
+          "en_name": "Mound"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Meal"
+        },
+        {
+          "en_name": "Sacrifice"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Nahor"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Daughters"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Sons"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Messengers Of God"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Gal-Ed"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Gal-Ed"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Mizpah"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Mizpah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Height"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Height"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Mahanaim"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Jacob",
+          "term2": "Height"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Mizpah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Daughters",
+          "term2": "Height"
+        },
+        {
+          "term1": "Sons",
+          "term2": "Height"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Yegar-Sahadutha",
+          "term2": "Gal-Ed"
+        },
+        {
+          "term1": "Gal-Ed",
+          "term2": "Mound"
+        }
+      ]
+    }
+  }
+}

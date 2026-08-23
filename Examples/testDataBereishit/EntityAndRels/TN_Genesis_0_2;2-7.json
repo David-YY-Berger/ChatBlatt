@@ -1,0 +1,71 @@
+﻿{
+    "res": {
+        "en_summary": "God created earth, heaven, and human",
+        "heb_summary": "אלוהים ברא שמיים, ארץ, ואדם",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Human"
+                },
+                {
+                    "en_name": "Ancient Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Breath Of Life"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Shrub"
+                },
+                {
+                    "en_name": "Grass"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Heaven"
+                },
+                {
+                    "term1": "Human",
+                    "term2": "Earth"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Ancient Israel",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_2:2-7"
+}
