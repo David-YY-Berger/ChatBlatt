@@ -331,9 +331,10 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
             #
             #     # plant , carob ( = food), sycamore (not food)
             #     "BT_Bava Batra_0_70a:2-7",
-        }
+        },
 
     #     number - no hebrew display name populated...
+        "BT_Sanhedrin_0_18a:11-18b:4", #number not yet popualted - 71..
 
     ]
     res = [db_api.find_one_source_content(k) for k in key_strs]

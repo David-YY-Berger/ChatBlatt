@@ -51,6 +51,7 @@ genealogy_ui:
   role_grandchild: "Grandchild"
   gender_man: "Man"
   gender_woman: "Woman"
+  gender_unknown: "Unknown"
 
 entity_search_ui:
   select_tab_prompt: "Please select an entity type from the menu above."

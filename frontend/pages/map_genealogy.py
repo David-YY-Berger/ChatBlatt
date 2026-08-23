@@ -41,6 +41,7 @@ _EDGE_COLOURS: dict[str, str] = {
 # -------------------------------------------------------------------
 _FILL_MAN     = "#42A5F5"   # blue – male
 _FILL_WOMAN   = "#F06292"   # rose – female
+_FILL_UNKNOWN = "#9E9E9E"   # grey – gender unknown/not yet enriched
 _SELECTED_RING = "#FFD700"  # gold ring – marks the selected/centre person
 _DEFAULT_BORDER = "#3a3a4a"  # subtle border for everyone else
 
@@ -304,7 +305,14 @@ def _render_pyvis_graph(graph_data, lang: str) -> None:
     # different fill colour or a bigger size — see colour palette above.
     for node in graph_data.nodes:
         role = roles.get(node.key, "")
-        fill = _FILL_WOMAN if node.is_woman else _FILL_MAN
+        # is_woman may be None (unknown/not yet enriched) - render as
+        # neutral grey rather than assuming "man".
+        if node.is_woman is True:
+            fill = _FILL_WOMAN
+        elif node.is_woman is False:
+            fill = _FILL_MAN
+        else:
+            fill = _FILL_UNKNOWN
         is_selected = node.is_center
         border = _SELECTED_RING if is_selected else _DEFAULT_BORDER
         border_width = 4 if is_selected else 2
@@ -416,6 +424,7 @@ def _render_legend(lang: str) -> None:
     node_items = [
         (_FILL_MAN, False, get_text("genealogy_ui.gender_man", lang)),
         (_FILL_WOMAN, False, get_text("genealogy_ui.gender_woman", lang)),
+        (_FILL_UNKNOWN, False, get_text("genealogy_ui.gender_unknown", lang)),
         (_FILL_MAN, True, get_text("genealogy_ui.role_center", lang)),
     ]
     cols = st.columns(len(node_items))

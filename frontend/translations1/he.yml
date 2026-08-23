@@ -51,6 +51,7 @@ genealogy_ui:
   role_grandchild: "נכד/ה"
   gender_man: "גבר"
   gender_woman: "אישה"
+  gender_unknown: "לא ידוע"
 
 entity_search_ui:
   select_tab_prompt: "אנא בחרו סוג ישות מהתפריט למעלה."

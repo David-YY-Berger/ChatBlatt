@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -12,7 +12,7 @@ class GenealogyNode(BaseModel):
     key: str
     display_name: str
     is_center: bool = False
-    is_woman: bool = False
+    is_woman: Optional[bool] = None  # None = unknown gender (not yet enriched)
 
 
 class GenealogyEdge(BaseModel):

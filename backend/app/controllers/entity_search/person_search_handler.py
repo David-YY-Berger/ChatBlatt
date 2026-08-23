@@ -38,23 +38,30 @@ class PersonSearchHandler(BaseEntitySearchHandler):
         ]
 
     def get_db_field_display(self, entity: Entity) -> List[Tuple[str, str]]:
-        """Display the Person-specific DB fields."""
+        """Display the Person-specific DB fields. isWoman/isNonJew/isGroup
+        are omitted entirely when None (unknown/not yet enriched) rather
+        than shown as a false "✗"."""
         if not isinstance(entity, EPerson):
             return []
 
         fields = [
             ("entity_fields.timePeriod", entity.timePeriod.value if entity.timePeriod else ""),
-            ("entity_fields.isWoman", "✓" if entity.isWoman else "✗"),
-            ("entity_fields.isNonJew", "✓" if entity.isNonJew else "✗"),
-            ("entity_fields.isGroup", "✓" if entity.isGroup else "✗"),
         ]
+        if entity.isWoman is not None:
+            fields.append(("entity_fields.isWoman", "✓" if entity.isWoman else "✗"))
+        if entity.isNonJew is not None:
+            fields.append(("entity_fields.isNonJew", "✓" if entity.isNonJew else "✗"))
+        if entity.isGroup is not None:
+            fields.append(("entity_fields.isGroup", "✓" if entity.isGroup else "✗"))
         if entity.roles:
             fields.append(("entity_fields.roles", ", ".join(r.value for r in entity.roles)))
         return fields
 
     def get_metadata_badges(self, entity: Entity) -> List[Dict]:
         """Colorful, icon-based badges for Person metadata: time period, gender,
-        faith, individual/group, and one badge per role."""
+        faith, individual/group, and one badge per role. isWoman/isNonJew/
+        isGroup badges are omitted entirely when the field is None (unknown) -
+        we only show a badge once we actually know the value."""
         if not isinstance(entity, EPerson):
             return []
 
@@ -68,26 +75,29 @@ class PersonSearchHandler(BaseEntitySearchHandler):
                 "color": entity.timePeriod.color,
             })
 
-        badges.append({
-            "icon": "🚺" if entity.isWoman else "🚹",
-            "text": None,
-            "label_key": "entity_fields.isWoman" if entity.isWoman else "entity_fields.isMan",
-            "color": "#db2777" if entity.isWoman else "#2563eb",
-        })
+        if entity.isWoman is not None:
+            badges.append({
+                "icon": "🚺" if entity.isWoman else "🚹",
+                "text": None,
+                "label_key": "entity_fields.isWoman" if entity.isWoman else "entity_fields.isMan",
+                "color": "#db2777" if entity.isWoman else "#2563eb",
+            })
 
-        badges.append({
-            "icon": "🌐" if entity.isNonJew else "✡️",
-            "text": None,
-            "label_key": "entity_fields.isNonJew" if entity.isNonJew else "entity_fields.isJewish",
-            "color": "#0891b2" if entity.isNonJew else "#b45309",
-        })
+        if entity.isNonJew is not None:
+            badges.append({
+                "icon": "🌐" if entity.isNonJew else "✡️",
+                "text": None,
+                "label_key": "entity_fields.isNonJew" if entity.isNonJew else "entity_fields.isJewish",
+                "color": "#0891b2" if entity.isNonJew else "#b45309",
+            })
 
-        badges.append({
-            "icon": "👥" if entity.isGroup else "🧍",
-            "text": None,
-            "label_key": "entity_fields.isGroup" if entity.isGroup else "entity_fields.isIndividual",
-            "color": "#7c3aed" if entity.isGroup else "#059669",
-        })
+        if entity.isGroup is not None:
+            badges.append({
+                "icon": "👥" if entity.isGroup else "🧍",
+                "text": None,
+                "label_key": "entity_fields.isGroup" if entity.isGroup else "entity_fields.isIndividual",
+                "color": "#7c3aed" if entity.isGroup else "#059669",
+            })
 
         for role in entity.roles or []:
             badges.append({"icon": role.icon, "text": role.value, "label_key": None, "color": role.color})

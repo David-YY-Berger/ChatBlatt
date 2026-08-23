@@ -213,17 +213,22 @@ def _render_person_filters(options: list, lang: str) -> list:
 
     filtered = []
     for opt in options:
-        if religion == "jewish" and opt.isNonJew:
+        # isWoman/isNonJew/isGroup may be None (unknown - not yet enriched).
+        # Use explicit `is True`/`is False` checks rather than truthiness so
+        # unknown entities are excluded from *both* sides of a filter (they
+        # only show up when "All" is selected), instead of silently being
+        # treated as a known man/Jewish/individual.
+        if religion == "jewish" and opt.isNonJew is not False:
             continue
-        if religion == "non_jewish" and not opt.isNonJew:
+        if religion == "non_jewish" and opt.isNonJew is not True:
             continue
-        if gender == "women" and not opt.isWoman:
+        if gender == "women" and opt.isWoman is not True:
             continue
-        if gender == "men" and opt.isWoman:
+        if gender == "men" and opt.isWoman is not False:
             continue
-        if grouping == "individual" and opt.isGroup:
+        if grouping == "individual" and opt.isGroup is not False:
             continue
-        if grouping == "group" and not opt.isGroup:
+        if grouping == "group" and opt.isGroup is not True:
             continue
         if selected_roles is not None and not (set(opt.roles) & selected_roles):
             continue

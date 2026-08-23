@@ -45,10 +45,13 @@ class SelectOptionMongoMixin:
 
     @staticmethod
     def _person_extra_fields(doc: dict) -> dict:
+        # isWoman/isNonJew/isGroup default to None (unknown) rather than
+        # False when absent from the doc - a missing/unenriched value must
+        # not be mistaken for a known "man"/"Jewish"/"individual".
         return {
-            "isWoman": doc.get("isWoman", False),
-            "isNonJew": doc.get("isNonJew", False),
-            "isGroup": doc.get("isGroup", False),
+            "isWoman": doc.get("isWoman"),
+            "isNonJew": doc.get("isNonJew"),
+            "isGroup": doc.get("isGroup"),
             "roles": doc.get("roles", []),
         }
 

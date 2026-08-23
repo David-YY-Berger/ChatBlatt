@@ -262,7 +262,10 @@ class MapGenealogyLogic:
 
 def _make_node(entity: Entity, is_center: bool = False) -> GenealogyNode:
     """Create a GenealogyNode from an Entity."""
-    is_woman = getattr(entity, "isWoman", False)
+    # isWoman may be None (unknown/not yet enriched) - pass it through as-is
+    # instead of defaulting to False, so the UI can render a neutral state
+    # instead of assuming "man".
+    is_woman = getattr(entity, "isWoman", None)
     return GenealogyNode(
         key=entity.key,
         display_name=entity.display_en_name,
