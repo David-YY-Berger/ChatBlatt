@@ -136,10 +136,14 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         """
         changed = False
 
-        heb_name = (entity_dict.get("display_heb_name") or "").strip()
-        if heb_name and heb_name != entity.display_heb_name:
-            entity.display_heb_name = heb_name
-            changed = True
+        # Numbers have no Hebrew display name — heb_unit/heb_context are used instead,
+        # so display_heb_name must remain unset (null) for ENumber entities regardless
+        # of whatever the LLM returned.
+        if not isinstance(entity, ENumber):
+            heb_name = (entity_dict.get("display_heb_name") or "").strip()
+            if heb_name and heb_name != entity.display_heb_name:
+                entity.display_heb_name = heb_name
+                changed = True
 
         if isinstance(entity, EPerson):
             changed = cls._apply_person_fields(entity, entity_dict, source_key) or changed

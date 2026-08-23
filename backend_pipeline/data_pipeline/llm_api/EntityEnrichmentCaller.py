@@ -83,9 +83,10 @@ class EntityEnrichment(BaseModel):
     display_heb_name: Optional[str] = Field(
         default=None,
         description=(
-            "ALL entity types. The normalized Hebrew display name for this entity, "
-            "taken almost verbatim from the Hebrew text of the passage. "
-            "Must NOT contain niqqud (vowel points)."
+            "ALL entity types EXCEPT Number. The normalized Hebrew display name for this "
+            "entity, taken almost verbatim from the Hebrew text of the passage. "
+            "Must NOT contain niqqud (vowel points). Number entities must NEVER receive a "
+            "display_heb_name — leave this unset for them (use heb_unit/heb_context instead)."
         ),
     )
 
@@ -219,11 +220,13 @@ class EntityEnrichmentCaller:
                 "(same string) from the matching input entity. Only set the fields relevant "
                 "to that entity's entityType; leave every other field unset.\n\n"
 
-                "=== FOR EVERY ENTITY (any entityType) ===\n"
+                "=== FOR EVERY ENTITY EXCEPT entityType == 'Number' ===\n"
                 "- display_heb_name: the Hebrew name for this entity, taken almost verbatim "
                 "from the Hebrew text in the passage (correct for grammatical prefixes like "
                 "ה/ו/ב/ל/מ only if they are not part of the proper name). NEVER include niqqud "
-                "(vowel points) — strip all vowel diacritics.\n\n"
+                "(vowel points) — strip all vowel diacritics.\n"
+                "- NEVER set display_heb_name for an entity whose entityType is 'Number' — "
+                "numbers have no Hebrew display name; use heb_unit/heb_context for them instead.\n\n"
 
                 "=== IF entityType == 'Person' ===\n"
                 f"- timePeriod: one of: {', '.join(_TIME_PERIOD_VALUES)}.\n"
