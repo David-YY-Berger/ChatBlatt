@@ -111,9 +111,32 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
                 entity = self.db_api.get_entity_by_key(key)
                 if entity is None:
-                    print(f"  WARNING [{source_key}]: no DB entity found for key '{key}', skipping.")
-                    num_missing += 1
-                    continue
+                    # Keys can go stale (e.g. DB was re-seeded since the JSON was
+                    # generated, so the old key no longer exists). Fall back to
+                    # looking the entity up by its display_en_name, which is stable
+                    # across re-seeding as long as the name itself hasn't changed.
+                    display_en_name = entity_dict.get(DBFields.DISPLAY_EN_NAME) or entity_dict.get("display_en_name")
+                    candidates = self.db_api.get_entities_by_display_en_name(display_en_name) if display_en_name else []
+                    if len(candidates) == 1:
+                        entity = candidates[0]
+                        print(
+                            f"  INFO [{source_key}]: key '{key}' not found, resolved via "
+                            f"display_en_name '{display_en_name}' to entity key '{entity.key}'."
+                        )
+                    elif len(candidates) > 1:
+                        print(
+                            f"  WARNING [{source_key}]: key '{key}' not found and display_en_name "
+                            f"'{display_en_name}' is ambiguous ({len(candidates)} matches), skipping."
+                        )
+                        num_missing += 1
+                        continue
+                    else:
+                        print(
+                            f"  WARNING [{source_key}]: no DB entity found for key '{key}' "
+                            f"(nor by display_en_name '{display_en_name}'), skipping."
+                        )
+                        num_missing += 1
+                        continue
 
                 if self._apply_enrichment(entity, entity_dict, source_key):
                     self.db_api.update_entity(entity)
