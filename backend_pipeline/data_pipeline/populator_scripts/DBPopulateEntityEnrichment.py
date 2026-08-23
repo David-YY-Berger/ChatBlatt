@@ -248,8 +248,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         total_tokens = total_input_tokens = total_output_tokens = 0
         num_processed = num_skipped = num_populate_failed = 0
 
-        contents = get_examples_src_contents(self.db_api)
-        # contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
+        # contents = get_examples_src_contents(self.db_api)
+        contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
@@ -260,8 +260,13 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             entity_json_list = [e.model_dump_json(exclude_none=True) for e in entities]
             passage = self._build_bilingual_passage(src_content)
 
-            json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
-            # cost_usd, json_str, usage = await self.temp_read_json_from_file() TEMP TESTING...
+            # json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            try:
+                cost_usd, json_str, usage = await self.temp_read_json_from_file(src_content.key)
+            except FileNotFoundError:
+                print(f"  Skipping {src_content.key}: no saved metadata JSON found to restore from.")
+                num_skipped += 1
+                continue
 
             total_cost_usd += cost_usd
             total_tokens += usage.total_tokens
@@ -330,12 +335,16 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             if entity_key in entity_display_en_names_by_key:
                 entity_dict[DBFields.DISPLAY_EN_NAME] = entity_display_en_names_by_key[entity_key]
 
-    async def temp_read_json_from_file(self):
-        example_json_path = os.path.join(
-            Paths.EXAMPLES_DIR,
-            "entityEnrichment examples",
-            "TN_Genesis_0_30;3-8.json",
-        )
+    async def temp_read_json_from_file(self, source_key: str):
+        """
+        Restore a previously-saved enrichment response for *source_key* instead of
+        calling the LLM. Files are saved (see _extract_all_to_json's out_path) as
+        "<key with ':' replaced by ';'>.json" under TEST_DATA_BEREISHIT_METADATA_DIR,
+        e.g. source_key 'TN_Genesis_0_1:1-3' -> 'TN_Genesis_0_1;1-3.json'.
+        Raises FileNotFoundError if no such file exists (caller decides how to handle).
+        """
+        filename = f"{source_key.replace(':', ';')}.json"
+        example_json_path = os.path.join(Paths.TEST_DATA_BEREISHIT_METADATA_DIR, filename)
         with open(example_json_path, "r", encoding="utf-8-sig") as json_file:
             json_str = json_file.read()
         usage = SimpleNamespace(total_tokens=0, input_tokens=0, output_tokens=0)

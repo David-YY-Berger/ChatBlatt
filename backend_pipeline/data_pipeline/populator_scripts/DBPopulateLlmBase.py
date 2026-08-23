@@ -78,7 +78,7 @@ class DBPopulateLlmBase(DBParentClass):
         written to JSON/TXT files under _get_output_dir()), then load those JSON
         files back and populate the DB (phase 2).
         """
-        OsFunctions.clear_create_directory(self._get_output_dir())
+        # OsFunctions.clear_create_directory(self._get_output_dir())
         asyncio.run(self._extract_all_to_json())
         self.test_populate_from_jsons()
 
