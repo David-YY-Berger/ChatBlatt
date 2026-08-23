@@ -230,7 +230,8 @@ class DBPopulateLlmBase(DBParentClass):
 
     def test_populate_from_jsons(self) -> None:
         """Entry point: load JSON files from output dir and populate the DB."""
-        json_entries = JsonUtils.read_jsons_from_dir_with_keys(self._get_output_dir())
+        # json_entries = JsonUtils.read_jsons_from_dir_with_keys(self._get_output_dir())
+        json_entries = JsonUtils.read_jsons_from_dir_with_keys(Paths.TEST_DATA_BEREISHIT_METADATA_DIR)
         if not json_entries:
             print("No JSON files found in directory.")
             return
