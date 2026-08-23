@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob breeds flocks, outsmarts Laban.",
+        "heb_summary": "יעקב מרבה צאן, עורמה כלפי לבן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Laban"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Troughs"
+                },
+                {
+                    "en_name": "Water Receptacles"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Rod"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Goat"
+                },
+                {
+                    "en_name": "Sheep"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Poplar"
+                },
+                {
+                    "en_name": "Almond"
+                },
+                {
+                    "en_name": "Plane"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Troughs"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Water Receptacles"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:37-42"
+}

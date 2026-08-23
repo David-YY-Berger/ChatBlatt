@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=9710 approx cost usd = $0.001448 (Prompt=6511, Completion=3199)
+SOURCE:
+Genesis 3:21-24  (TN_Genesis_0_3:21-24)
+
+HEBREW:
+וַיַּ֩עַשׂ֩ יְהֹוָ֨ה אֱלֹהִ֜ים לְאָדָ֧ם וּלְאִשְׁתּ֛וֹ כׇּתְנ֥וֹת ע֖וֹר וַיַּלְבִּשֵֽׁם׃ וַיֹּ֣אמֶר׀ יְהֹוָ֣ה אֱלֹהִ֗ים הֵ֤ן הָֽאָדָם֙ הָיָה֙ כְּאַחַ֣ד מִמֶּ֔נּוּ לָדַ֖עַת ט֣וֹב וָרָ֑ע וְעַתָּ֣ה׀ פֶּן־יִשְׁלַ֣ח יָד֗וֹ וְלָקַח֙ גַּ֚ם מֵעֵ֣ץ הַֽחַיִּ֔ים וְאָכַ֖ל וָחַ֥י לְעֹלָֽם׃ וַֽיְשַׁלְּחֵ֛הוּ יְהֹוָ֥ה אֱלֹהִ֖ים מִגַּן־עֵ֑דֶן לַֽעֲבֹד֙ אֶת־הָ֣אֲדָמָ֔ה אֲשֶׁ֥ר לֻקַּ֖ח מִשָּֽׁם׃ וַיְגָ֖רֶשׁ אֶת־הָֽאָדָ֑ם וַיַּשְׁכֵּן֩ מִקֶּ֨דֶם לְגַן־עֵ֜דֶן אֶת־הַכְּרֻבִ֗ים וְאֵ֨ת לַ֤הַט הַחֶ֙רֶב֙ הַמִּתְהַפֶּ֔כֶת לִשְׁמֹ֕ר אֶת־דֶּ֖רֶךְ עֵ֥ץ הַֽחַיִּֽים׃
+
+ENGLISH:
+And God HASHEM made garments of skins for Adam and his wife, and clothed them. And God HASHEM said, Now that humankind has become like any of us, knowing good and bad, what if one should stretch out a hand and take also from the tree of life and eat, and live forever! So God HASHEM banished humankind from the garden of Eden, to till the humus from which it was taken: it was driven out; and east of the garden of Eden were stationed the cherubim and the fiery ever-turning sword, to guard the way to the tree of life.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God banished Adam and Eve from Eden.",
+    "heb_summary": "אלוהים גירש אדם וחוה מגן עדן.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Adam"
+        },
+        {
+          "en_name": "Cherubim"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Garden Of Eden"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Garments Of Skins"
+        },
+        {
+          "en_name": "Fiery Ever-Turning Sword"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Tree Of Life"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree Of Life"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Adam"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "God Hashem",
+          "term2": "Garden Of Eden"
+        },
+        {
+          "term1": "Adam",
+          "term2": "Garden Of Eden"
+        },
+        {
+          "term1": "Cherubim",
+          "term2": "Garden Of Eden"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Adam",
+          "term2": "God Hashem"
+        }
+      ]
+    }
+  }
+}

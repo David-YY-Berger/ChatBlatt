@@ -1,0 +1,78 @@
+﻿COST: Tokens: Total=7172 approx cost usd = $0.000687 (Prompt=6511, Completion=661)
+SOURCE:
+Genesis 4:1-2  (TN_Genesis_0_4:1-2)
+
+HEBREW:
+וְהָ֣אָדָ֔ם יָדַ֖ע אֶת־חַוָּ֣ה אִשְׁתּ֑וֹ וַתַּ֙הַר֙ וַתֵּ֣לֶד אֶת־קַ֔יִן וַתֹּ֕אמֶר קָנִ֥יתִי אִ֖ישׁ אֶת־יְהֹוָֽה׃ וַתֹּ֣סֶף לָלֶ֔דֶת אֶת־אָחִ֖יו אֶת־הָ֑בֶל וַֽיְהִי־הֶ֙בֶל֙ רֹ֣עֵה צֹ֔אן וְקַ֕יִן הָיָ֖ה עֹבֵ֥ד אֲדָמָֽה׃
+
+ENGLISH:
+Now the Human knew, often in a sexual sense. his wife Eve, and she conceived and bore Cain, saying, I have gained, connected with Cain; lit. created, acquired. a person can include infants in its denotative scope, as here and in Isa. 66.13. NJPS male child; trad. man. Cf. note at Num. 30.4 and see the Dictionary under ish . with the help of uncertain. HASHEM. She then bore his brother Abel. Abel became a keeper of sheep, and Cain became a tiller of the soil.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Eve bears Cain and Abel; Cain tills, Abel keeps.",
+    "heb_summary": "חוה יולדת קין והבל; קין עובד, הבל רועה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Human"
+        },
+        {
+          "en_name": "Eve"
+        },
+        {
+          "en_name": "Cain"
+        },
+        {
+          "en_name": "Abel"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Sheep"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Cain",
+          "term2": "Human"
+        },
+        {
+          "term1": "Abel",
+          "term2": "Human"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Cain",
+          "term2": "Eve"
+        },
+        {
+          "term1": "Abel",
+          "term2": "Eve"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Human",
+          "term2": "Eve"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Eve",
+          "term2": "Hashem"
+        }
+      ]
+    }
+  }
+}

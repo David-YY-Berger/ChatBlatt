@@ -1,0 +1,23 @@
+﻿{
+    "res": {
+        "en_summary": "Reuben's birthright revoked due to transgression.",
+        "heb_summary": "בכורתו של ראובן נשללה עקב חטא.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Reuben"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                }
+            ]
+        },
+        "Rel": {}
+    },
+    "key": "TN_Genesis_0_49:3-4"
+}

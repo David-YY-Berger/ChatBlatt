@@ -1,0 +1,68 @@
+﻿{
+    "res": {
+        "en_summary": "Abram, Sarai, Hagar, messenger, wilderness",
+        "heb_summary": "אברם, שרה, הגר, מלאך, מדבר",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Hagar"
+                },
+                {
+                    "en_name": "Messenger Of Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Wilderness"
+                },
+                {
+                    "en_name": "Shur"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                },
+                {
+                    "term1": "Messenger Of Hashem",
+                    "term2": "Hagar"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Hagar",
+                    "term2": "Wilderness"
+                },
+                {
+                    "term1": "Hagar",
+                    "term2": "Shur"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Messenger Of Hashem",
+                    "term2": "Hagar"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_16:6-10"
+}

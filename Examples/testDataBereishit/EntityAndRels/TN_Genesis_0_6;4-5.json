@@ -1,0 +1,85 @@
+﻿{
+    "res": {
+        "en_summary": "Divine beings and human women bore heroes.",
+        "heb_summary": "יצורי אל ונשים הולידו גיבורים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Nephilim"
+                },
+                {
+                    "en_name": "Divine Beings"
+                },
+                {
+                    "en_name": "Human Women"
+                },
+                {
+                    "en_name": "Heroes Of Old"
+                },
+                {
+                    "en_name": "Men Of Renown"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Heroes Of Old",
+                    "term2": "Divine Beings"
+                },
+                {
+                    "term1": "Men Of Renown",
+                    "term2": "Divine Beings"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Heroes Of Old",
+                    "term2": "Human Women"
+                },
+                {
+                    "term1": "Men Of Renown",
+                    "term2": "Human Women"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Nephilim",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Divine Beings",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Human Women",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Heroes Of Old",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Men Of Renown",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "Hashem",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_6:4-5"
+}

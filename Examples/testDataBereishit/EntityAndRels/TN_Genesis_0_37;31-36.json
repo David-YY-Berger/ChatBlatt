@@ -1,0 +1,92 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph sold to Potiphar in Egypt.",
+        "heb_summary": "יוסף נמכר לפוטיפר במצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Potiphar"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Midianites"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sheol"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Midian"
+                },
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Tunic"
+                },
+                {
+                    "en_name": "Sackcloth"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Kid"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Midianites",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Sheol"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Potiphar",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:31-36"
+}

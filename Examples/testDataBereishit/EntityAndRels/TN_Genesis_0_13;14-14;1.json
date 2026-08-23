@@ -1,0 +1,111 @@
+﻿{
+    "res": {
+        "en_summary": "HASHEM promises land to Abram's offspring.",
+        "heb_summary": "ה' מבטיח לאברם צאצאים וארץ.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Amraphel"
+                },
+                {
+                    "en_name": "Arioch"
+                },
+                {
+                    "en_name": "Chedorlaomer"
+                },
+                {
+                    "en_name": "Tidal"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Mamre"
+                },
+                {
+                    "en_name": "Hebron"
+                },
+                {
+                    "en_name": "Shinar"
+                },
+                {
+                    "en_name": "Ellasar"
+                },
+                {
+                    "en_name": "Elam"
+                },
+                {
+                    "en_name": "Goiim"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Shinar"
+                },
+                {
+                    "en_name": "Ellasar"
+                },
+                {
+                    "en_name": "Elam"
+                },
+                {
+                    "en_name": "Goiim"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Abram"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Mamre"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Hebron"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Abram",
+                    "term2": "Hebron"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Amraphel",
+                    "term2": "Shinar"
+                },
+                {
+                    "term1": "Arioch",
+                    "term2": "Ellasar"
+                },
+                {
+                    "term1": "Chedorlaomer",
+                    "term2": "Elam"
+                },
+                {
+                    "term1": "Tidal",
+                    "term2": "Goiim"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_13:14-14:1"
+}

@@ -1,0 +1,46 @@
+﻿COST: Tokens: Total=7065 approx cost usd = $0.000675 (Prompt=6420, Completion=645)
+SOURCE:
+Genesis 49:19-20  (TN_Genesis_0_49:19-20)
+
+HEBREW:
+גָּ֖ד גְּד֣וּד יְגוּדֶ֑נּוּ וְה֖וּא יָגֻ֥ד עָקֵֽב׃ מֵאָשֵׁ֖ר שְׁמֵנָ֣ה לַחְמ֑וֹ וְה֥וּא יִתֵּ֖ן מַֽעֲדַנֵּי־מֶֽלֶךְ׃
+
+ENGLISH:
+Gad shall be raided by raiders, But he shall raid at their heels. Ashers bread shall be rich, And he shall yield royal dainties.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Gad and Asher's tribal blessings.",
+    "heb_summary": "ברכות שבטי גד ואשר.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Gad"
+        },
+        {
+          "en_name": "Asher"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Dainty"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,83 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph's brothers plot, Reuben saves him.",
+        "heb_summary": "אחי יוסף זוממים, ראובן מציל אותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Pit"
+                },
+                {
+                    "en_name": "Wilderness"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Joseph"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ornamented Tunic"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Joseph's Brothers"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Pit"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Wilderness"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Joseph"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:20-24"
+}

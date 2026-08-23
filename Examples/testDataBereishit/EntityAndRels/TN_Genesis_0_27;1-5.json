@@ -1,0 +1,73 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac, Esau, Rebekah: blessing, hunting, listening.",
+        "heb_summary": "יצחק, עשו, רבקה: ברכה, ציד, האזנה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Rebekah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Quiver"
+                },
+                {
+                    "en_name": "Bow"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Dish"
+                },
+                {
+                    "en_name": "Game"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Esau",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Rebekah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Esau"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_27:1-5"
+}

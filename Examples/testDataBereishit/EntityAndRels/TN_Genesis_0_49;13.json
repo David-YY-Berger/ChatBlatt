@@ -1,0 +1,35 @@
+﻿{
+    "res": {
+        "en_summary": "Zebulun dwells by sea, near Sidon.",
+        "heb_summary": "זבולון שוכן ליד הים וצידון.",
+        "passage_types": [
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Zebulun"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sidon"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Zebulun"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "Zebulun",
+                    "term2": "Sidon"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:13"
+}

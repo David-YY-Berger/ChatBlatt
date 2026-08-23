@@ -1,0 +1,69 @@
+﻿COST: Tokens: Total=9256 approx cost usd = $0.001298 (Prompt=6574, Completion=2682)
+SOURCE:
+Genesis 18:16-22  (TN_Genesis_0_18:16-22)
+
+HEBREW:
+וַיָּקֻ֤מוּ מִשָּׁם֙ הָֽאֲנָשִׁ֔ים וַיַּשְׁקִ֖פוּ עַל־פְּנֵ֣י סְדֹ֑ם וְאַ֨בְרָהָ֔ם הֹלֵ֥ךְ עִמָּ֖ם לְשַׁלְּחָֽם׃ וַֽיהֹוָ֖ה אָמָ֑ר הַֽמְכַסֶּ֤ה אֲנִי֙ מֵֽאַבְרָהָ֔ם אֲשֶׁ֖ר אֲנִ֥י עֹשֶֽׂה׃ וְאַ֨בְרָהָ֔ם הָי֧וֹ יִֽהְיֶ֛ה לְג֥וֹי גָּד֖וֹל וְעָצ֑וּם וְנִ֨בְרְכוּ־ב֔וֹ כֹּ֖ל גּוֹיֵ֥י הָאָֽרֶץ׃ כִּ֣י יְדַעְתִּ֗יו לְמַ֩עַן֩ אֲשֶׁ֨ר יְצַוֶּ֜ה אֶת־בָּנָ֤יו וְאֶת־בֵּיתוֹ֙ אַחֲרָ֔יו וְשָֽׁמְרוּ֙ דֶּ֣רֶךְ יְהֹוָ֔ה לַעֲשׂ֥וֹת צְדָקָ֖ה וּמִשְׁפָּ֑ט לְמַ֗עַן הָבִ֤יא יְהֹוָה֙ עַל־אַבְרָהָ֔ם אֵ֥ת אֲשֶׁר־דִּבֶּ֖ר עָלָֽיו׃ וַיֹּ֣אמֶר יְהֹוָ֔ה זַעֲקַ֛ת סְדֹ֥ם וַעֲמֹרָ֖ה כִּי־רָ֑בָּה וְחַ֨טָּאתָ֔ם כִּ֥י כָבְדָ֖ה מְאֹֽד׃ אֵֽרְדָה־נָּ֣א וְאֶרְאֶ֔ה הַכְּצַעֲקָתָ֛הּ הַבָּ֥אָה אֵלַ֖י עָשׂ֣וּ׀כָּלָ֑ה וְאִם־לֹ֖א אֵדָֽעָה׃ וַיִּפְנ֤וּ מִשָּׁם֙ הָֽאֲנָשִׁ֔ים וַיֵּלְכ֖וּ סְדֹ֑מָה וְאַ֨בְרָהָ֔ם עוֹדֶ֥נּוּ עֹמֵ֖ד לִפְנֵ֥י יְהֹוָֽה׃
+
+ENGLISH:
+The agents set out from there and looked down toward Sodom, Abraham walking with them to see them off. Now HASHEM had said, Shall I hide from Abraham what I am about to do, since Abraham is to become a great and populous nation and all the nations of the earth are to bless themselves by him? For I have singled him out, that he may instruct his children and his posterity to keep the way of HASHEM by doing what is just and right, in order that HASHEM may bring about for Abraham what has been promised him. Then HASHEM said, The outrage of Sodom and Gomorrah is so great, and their sin so grave! I will go down to see whether they have acted altogether according to the outcry that has reached Me; if not, I will take note. The agents went on from there to Sodom, while Abraham remained standing before HASHEM.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God informs Abraham about Sodom's fate.",
+    "heb_summary": "ה' מודיע לאברהם על סדום ועמורה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Agents"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "Gomorrah"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Abraham"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Agents",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Sodom"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Hashem",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Gomorrah"
+        }
+      ]
+    }
+  }
+}

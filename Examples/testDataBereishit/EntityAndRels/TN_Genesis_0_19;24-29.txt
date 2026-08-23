@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=8402 approx cost usd = $0.001050 (Prompt=6535, Completion=1867)
+SOURCE:
+Genesis 19:24-29  (TN_Genesis_0_19:24-29)
+
+HEBREW:
+וַֽיהֹוָ֗ה הִמְטִ֧יר עַל־סְדֹ֛ם וְעַל־עֲמֹרָ֖ה גׇּפְרִ֣ית וָאֵ֑שׁ מֵאֵ֥ת יְהֹוָ֖ה מִן־הַשָּׁמָֽיִם׃ וַֽיַּהֲפֹךְ֙ אֶת־הֶעָרִ֣ים הָאֵ֔ל וְאֵ֖ת כׇּל־הַכִּכָּ֑ר וְאֵת֙ כׇּל־יֹשְׁבֵ֣י הֶעָרִ֔ים וְצֶ֖מַח הָאֲדָמָֽה׃ וַתַּבֵּ֥ט אִשְׁתּ֖וֹ מֵאַחֲרָ֑יו וַתְּהִ֖י נְצִ֥יב מֶֽלַח׃ וַיַּשְׁכֵּ֥ם אַבְרָהָ֖ם בַּבֹּ֑קֶר אֶ֨ל־הַמָּק֔וֹם אֲשֶׁר־עָ֥מַד שָׁ֖ם אֶת־פְּנֵ֥י יְהֹוָֽה׃ וַיַּשְׁקֵ֗ף עַל־פְּנֵ֤י סְדֹם֙ וַעֲמֹרָ֔ה וְעַֽל־כׇּל־פְּנֵ֖י אֶ֣רֶץ הַכִּכָּ֑ר וַיַּ֗רְא וְהִנֵּ֤ה עָלָה֙ קִיטֹ֣ר הָאָ֔רֶץ כְּקִיטֹ֖ר הַכִּבְשָֽׁן׃ וַיְהִ֗י בְּשַׁחֵ֤ת אֱלֹהִים֙ אֶת־עָרֵ֣י הַכִּכָּ֔ר וַיִּזְכֹּ֥ר אֱלֹהִ֖ים אֶת־אַבְרָהָ֑ם וַיְשַׁלַּ֤ח אֶת־לוֹט֙ מִתּ֣וֹךְ הַהֲפֵכָ֔ה בַּהֲפֹךְ֙ אֶת־הֶ֣עָרִ֔ים אֲשֶׁר־יָשַׁ֥ב בָּהֵ֖ן לֽוֹט׃
+
+ENGLISH:
+HASHEM rained upon Sodom and Gomorrah sulfurous fire from HASHEM out of heaven- annihilating those cities and the entire Plain, and all the inhabitants of the cities and the vegetation of the ground. Lots wife looked back, and she thereupon turned into a pillar of salt. Next morning, Abraham hurried to the place where he had stood before HASHEM, and, looking down toward Sodom and Gomorrah and all the land of the Plain, he saw the smoke of the land rising like the smoke of a kiln. Thus it was that, when God destroyed the cities of the Plain and annihilated the cities where Lot dwelt, God was mindful of Abraham and removed Lot from the midst of the upheaval.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God destroyed Sodom, Gomorrah; Lot's wife became salt.",
+    "heb_summary": "ה' השמיד סדום ועמורה; אשת לוט הפכה למלח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Lot's Wife"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Lot"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sodom"
+        },
+        {
+          "en_name": "Gomorrah"
+        },
+        {
+          "en_name": "Plain"
+        },
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Pillar Of Salt"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Vegetation"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "Hashem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Abraham",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Gomorrah"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Plain"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Lot",
+          "term2": "Sodom"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Gomorrah"
+        },
+        {
+          "term1": "Lot",
+          "term2": "Plain"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Hashem",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

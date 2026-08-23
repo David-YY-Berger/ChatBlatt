@@ -1,0 +1,60 @@
+﻿COST: Tokens: Total=7846 approx cost usd = $0.000900 (Prompt=6463, Completion=1383)
+SOURCE:
+Genesis 2:15-17  (TN_Genesis_0_2:15-17)
+
+HEBREW:
+וַיִּקַּ֛ח יְהֹוָ֥ה אֱלֹהִ֖ים אֶת־הָֽאָדָ֑ם וַיַּנִּחֵ֣הוּ בְגַן־עֵ֔דֶן לְעׇבְדָ֖הּ וּלְשׇׁמְרָֽהּ׃ וַיְצַו֙ יְהֹוָ֣ה אֱלֹהִ֔ים עַל־הָֽאָדָ֖ם לֵאמֹ֑ר מִכֹּ֥ל עֵֽץ־הַגָּ֖ן אָכֹ֥ל תֹּאכֵֽל׃ וּמֵעֵ֗ץ הַדַּ֙עַת֙ ט֣וֹב וָרָ֔ע לֹ֥א תֹאכַ֖ל מִמֶּ֑נּוּ כִּ֗י בְּי֛וֹם אֲכׇלְךָ֥ מִמֶּ֖נּוּ מ֥וֹת תָּמֽוּת׃
+
+ENGLISH:
+God HASHEM settled the Human in the garden of Eden, to till it and tend it. And God HASHEM commanded the Human, saying, Of every tree of the garden you are free to eat; but as for the tree of knowledge of good and bad, you must not eat of it; for as soon as you eat of it, you shall die.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God commands Human regarding Eden's forbidden tree.",
+    "heb_summary": "אלוהים מצווה את האדם על עץ הדעת.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God Hashem"
+        },
+        {
+          "en_name": "Human"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Garden Of Eden"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree Of Knowledge Of Good And Bad"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God Hashem",
+          "term2": "Human"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Human",
+          "term2": "Garden Of Eden"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "God Hashem",
+          "term2": "Garden Of Eden"
+        }
+      ]
+    }
+  }
+}

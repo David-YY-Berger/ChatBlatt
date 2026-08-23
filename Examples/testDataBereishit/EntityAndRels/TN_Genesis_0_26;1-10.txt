@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=9906 approx cost usd = $0.001451 (Prompt=6757, Completion=3149)
+SOURCE:
+Genesis 26:1-10  (TN_Genesis_0_26:1-10)
+
+HEBREW:
+וַיְהִ֤י רָעָב֙ בָּאָ֔רֶץ מִלְּבַד֙ הָרָעָ֣ב הָרִאשׁ֔וֹן אֲשֶׁ֥ר הָיָ֖ה בִּימֵ֣י אַבְרָהָ֑ם וַיֵּ֧לֶךְ יִצְחָ֛ק אֶל־אֲבִימֶ֥לֶךְ מֶֽלֶךְ־פְּלִשְׁתִּ֖ים גְּרָֽרָה׃ וַיֵּרָ֤א אֵלָיו֙ יְהֹוָ֔ה וַיֹּ֖אמֶר אַל־תֵּרֵ֣ד מִצְרָ֑יְמָה שְׁכֹ֣ן בָּאָ֔רֶץ אֲשֶׁ֖ר אֹמַ֥ר אֵלֶֽיךָ׃ גּ֚וּר בָּאָ֣רֶץ הַזֹּ֔את וְאֶֽהְיֶ֥ה עִמְּךָ֖ וַאֲבָרְכֶ֑ךָּ כִּֽי־לְךָ֣ וּֽלְזַרְעֲךָ֗ אֶתֵּן֙ אֶת־כׇּל־הָֽאֲרָצֹ֣ת הָאֵ֔ל וַהֲקִֽמֹתִי֙ אֶת־הַשְּׁבֻעָ֔ה אֲשֶׁ֥ר נִשְׁבַּ֖עְתִּי לְאַבְרָהָ֥ם אָבִֽיךָ׃ וְהִרְבֵּיתִ֤י אֶֽת־זַרְעֲךָ֙ כְּכוֹכְבֵ֣י הַשָּׁמַ֔יִם וְנָתַתִּ֣י לְזַרְעֲךָ֔ אֵ֥ת כׇּל־הָאֲרָצֹ֖ת הָאֵ֑ל וְהִתְבָּרְכ֣וּ בְזַרְעֲךָ֔ כֹּ֖ל גּוֹיֵ֥י הָאָֽרֶץ׃ עֵ֕קֶב אֲשֶׁר־שָׁמַ֥ע אַבְרָהָ֖ם בְּקֹלִ֑י וַיִּשְׁמֹר֙ מִשְׁמַרְתִּ֔י מִצְוֺתַ֖י חֻקּוֹתַ֥י וְתוֹרֹתָֽי׃ וַיֵּ֥שֶׁב יִצְחָ֖ק בִּגְרָֽר׃ וַֽיִּשְׁאֲל֞וּ אַנְשֵׁ֤י הַמָּקוֹם֙ לְאִשְׁתּ֔וֹ וַיֹּ֖אמֶר אֲחֹ֣תִי הִ֑וא כִּ֤י יָרֵא֙ לֵאמֹ֣ר אִשְׁתִּ֔י פֶּן־יַֽהַרְגֻ֜נִי אַנְשֵׁ֤י הַמָּקוֹם֙ עַל־רִבְקָ֔ה כִּֽי־טוֹבַ֥ת מַרְאֶ֖ה הִֽוא׃ וַיְהִ֗י כִּ֣י אָֽרְכוּ־ל֥וֹ שָׁם֙ הַיָּמִ֔ים וַיַּשְׁקֵ֗ף אֲבִימֶ֙לֶךְ֙ מֶ֣לֶךְ פְּלִשְׁתִּ֔ים בְּעַ֖ד הַֽחַלּ֑וֹן וַיַּ֗רְא וְהִנֵּ֤ה יִצְחָק֙ מְצַחֵ֔ק אֵ֖ת רִבְקָ֥ה אִשְׁתּֽוֹ׃ וַיִּקְרָ֨א אֲבִימֶ֜לֶךְ לְיִצְחָ֗ק וַיֹּ֙אמֶר֙ אַ֣ךְ הִנֵּ֤ה אִשְׁתְּךָ֙ הִ֔וא וְאֵ֥יךְ אָמַ֖רְתָּ אֲחֹ֣תִי הִ֑וא וַיֹּ֤אמֶר אֵלָיו֙ יִצְחָ֔ק כִּ֣י אָמַ֔רְתִּי פֶּן־אָמ֖וּת עָלֶֽיהָ׃ וַיֹּ֣אמֶר אֲבִימֶ֔לֶךְ מַה־זֹּ֖את עָשִׂ֣יתָ לָּ֑נוּ כִּ֠מְעַ֠ט שָׁכַ֞ב אַחַ֤ד הָעָם֙ אֶת־אִשְׁתֶּ֔ךָ וְהֵבֵאתָ֥ עָלֵ֖ינוּ אָשָֽׁם׃
+
+ENGLISH:
+There was a famine in the land-aside from the previous famine that had occurred in the days of Abraham-and Isaac went to Abimelech, king of the Philistines, in Gerar. HASHEM had appeared to him and said, Do not go down to Egypt; stay in the land which I point out to you. Reside in this land, and I will be with you and bless you; I will assign all these lands to you and to your heirs, fulfilling the oath that I swore to your father Abraham. I will make your heirs as numerous as the stars of heaven, and assign to your heirs all these lands, so that all the nations of the earth shall bless themselves by your heirs- inasmuch as Abraham obeyed Me and kept My charge: My commandments, My laws, and My teachings. So Isaac stayed in Gerar. When the local leaders; NJPS the men of the place. Cf., e.g., Gen. 34.20; Judg. 8.15-17. See the Dictionary under ish . asked him about his wife, he said, She is my sister, for he was afraid to say my wife, thinking, The local leaders might kill me on account of Rebekah, for she is beautiful. When some time had passed, Abimelech king of the Philistines, looking out of the window, saw Isaac fondling his wife Rebekah. Abimelech sent for Isaac and said, So she is your wife! Why then did you say: She is my sister? Isaac said to him, Because I thought I might lose my life on account of her. Abimelech said, What have you done to us! One of the men. might have lain with your wife, and you would have brought guilt upon us.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Isaac in Gerar, God's promise, Rebekah deception",
+    "heb_summary": "יצחק בגרר, הבטחת ה', רבקה ואבימלך",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Abimelech"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Rebekah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gerar"
+        },
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Philistia"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Isaac",
+          "term2": "Rebekah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Hashem",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Abimelech",
+          "term2": "Isaac"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Isaac",
+          "term2": "Gerar"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Abimelech",
+          "term2": "Philistia"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Gerar",
+          "term2": "Philistia"
+        }
+      ]
+    }
+  }
+}

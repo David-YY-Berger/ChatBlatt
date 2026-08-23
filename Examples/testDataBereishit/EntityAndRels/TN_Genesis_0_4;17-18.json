@@ -1,0 +1,75 @@
+﻿{
+    "res": {
+        "en_summary": "Cain's lineage and founding of Enoch City.",
+        "heb_summary": "יוחסין של קין וייסוד עיר חנוך.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Cain"
+                },
+                {
+                    "en_name": "Enoch"
+                },
+                {
+                    "en_name": "Irad"
+                },
+                {
+                    "en_name": "Mehujael"
+                },
+                {
+                    "en_name": "Methusael"
+                },
+                {
+                    "en_name": "Lamech"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "City"
+                },
+                {
+                    "en_name": "Enoch"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Enoch",
+                    "term2": "Cain"
+                },
+                {
+                    "term1": "Irad",
+                    "term2": "Enoch"
+                },
+                {
+                    "term1": "Mehujael",
+                    "term2": "Irad"
+                },
+                {
+                    "term1": "Methusael",
+                    "term2": "Mehujael"
+                },
+                {
+                    "term1": "Lamech",
+                    "term2": "Methusael"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Cain",
+                    "term2": "City"
+                },
+                {
+                    "term1": "Enoch",
+                    "term2": "City"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_4:17-18"
+}

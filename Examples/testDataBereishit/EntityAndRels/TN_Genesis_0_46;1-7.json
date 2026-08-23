@@ -1,0 +1,135 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob goes to Beer-sheba, then Egypt.",
+        "heb_summary": "יעקב הולך לבאר שבע, ואז למצרים.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Sons Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Beer-Sheba"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Canaan"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Jacob"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Israel",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sons Of Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Israel",
+                    "term2": "Beer-Sheba"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Beer-Sheba"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God",
+                    "term2": "Israel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Israel",
+                    "term2": "Jacob"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_46:1-7"
+}

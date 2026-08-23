@@ -1,0 +1,50 @@
+﻿COST: Tokens: Total=9147 approx cost usd = $0.001285 (Prompt=6485, Completion=2662)
+SOURCE:
+Genesis 3:2-5  (TN_Genesis_0_3:2-5)
+
+HEBREW:
+וַתֹּ֥אמֶר הָֽאִשָּׁ֖ה אֶל־הַנָּחָ֑שׁ מִפְּרִ֥י עֵֽץ־הַגָּ֖ן נֹאכֵֽל׃ וּמִפְּרִ֣י הָעֵץ֮ אֲשֶׁ֣ר בְּתוֹךְ־הַגָּן֒ אָמַ֣ר אֱלֹהִ֗ים לֹ֤א תֹֽאכְלוּ֙ מִמֶּ֔נּוּ וְלֹ֥א תִגְּע֖וּ בּ֑וֹ פֶּן־תְּמֻתֽוּן׃ וַיֹּ֥אמֶר הַנָּחָ֖שׁ אֶל־הָֽאִשָּׁ֑ה לֹֽא־מ֖וֹת תְּמֻתֽוּן׃ כִּ֚י יֹדֵ֣עַ אֱלֹהִ֔ים כִּ֗י בְּיוֹם֙ אֲכׇלְכֶ֣ם מִמֶּ֔נּוּ וְנִפְקְח֖וּ עֵֽינֵיכֶ֑ם וִהְיִיתֶם֙ כֵּֽאלֹהִ֔ים יֹדְעֵ֖י ט֥וֹב וָרָֽע׃
+
+ENGLISH:
+The woman replied to the serpent, We may eat of the fruit of the other trees of the garden. It is only about fruit of the tree in the middle of the garden that God said: You shall not eat of it or touch it, lest you die. And the serpent said to the woman, You are not going to die, but God knows that as soon as you eat of it your eyes will be opened and you will be like divine beings who know good and bad.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Serpent contradicts God about fruit and tree.",
+    "heb_summary": "נחש סותר את אלוהים על פרי ועץ.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Serpent"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Fruit"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Tree"
+        }
+      ]
+    },
+    "Rel": {
+      "contrastedWith": [
+        {
+          "term1": "God",
+          "term2": "Serpent"
+        }
+      ]
+    }
+  }
+}

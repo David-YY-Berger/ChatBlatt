@@ -1,0 +1,145 @@
+﻿COST: Tokens: Total=8243 approx cost usd = $0.001009 (Prompt=6508, Completion=1735)
+SOURCE:
+Genesis 22:20-24  (TN_Genesis_0_22:20-24)
+
+HEBREW:
+וַיְהִ֗י אַחֲרֵי֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וַיֻּגַּ֥ד לְאַבְרָהָ֖ם לֵאמֹ֑ר הִ֠נֵּ֠ה יָלְדָ֨ה מִלְכָּ֥ה גַם־הִ֛וא בָּנִ֖ים לְנָח֥וֹר אָחִֽיךָ׃ אֶת־ע֥וּץ בְּכֹר֖וֹ וְאֶת־בּ֣וּז אָחִ֑יו וְאֶת־קְמוּאֵ֖ל אֲבִ֥י אֲרָֽם׃ וְאֶת־כֶּ֣שֶׂד וְאֶת־חֲז֔וֹ וְאֶת־פִּלְדָּ֖שׁ וְאֶת־יִדְלָ֑ף וְאֵ֖ת בְּתוּאֵֽל׃ וּבְתוּאֵ֖ל יָלַ֣ד אֶת־רִבְקָ֑ה שְׁמֹנָ֥ה אֵ֙לֶּה֙ יָלְדָ֣ה מִלְכָּ֔ה לְנָח֖וֹר אֲחִ֥י אַבְרָהָֽם׃ וּפִֽילַגְשׁ֖וֹ וּשְׁמָ֣הּ רְאוּמָ֑ה וַתֵּ֤לֶד גַּם־הִוא֙ אֶת־טֶ֣בַח וְאֶת־גַּ֔חַם וְאֶת־תַּ֖חַשׁ וְאֶֽת־מַעֲכָֽה׃
+
+ENGLISH:
+Some time later, Abraham was told, Milcah too has borne sons to your brother Nahor: Uz the first-born, and Buz his brother, and Kemuel the father of Aram; and Chesed, Hazo, Pildash, Jidlaph, and Bethuel- Bethuel being the father of Rebekah. These eight Milcah bore to Nahor, Abrahams brother. And his concubine, whose name was Reumah, also bore [sons]-Tebah, Gaham, and Tahash-and [a daughter,] Maacah.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Nahor's sons born to Milcah and Reumah.",
+    "heb_summary": "בני נחור נולדו למילכה ולראומה.",
+    "passage_types": [
+      "GENEALOGY",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Milcah"
+        },
+        {
+          "en_name": "Nahor"
+        },
+        {
+          "en_name": "Uz"
+        },
+        {
+          "en_name": "Buz"
+        },
+        {
+          "en_name": "Kemuel"
+        },
+        {
+          "en_name": "Aram"
+        },
+        {
+          "en_name": "Chesed"
+        },
+        {
+          "en_name": "Hazo"
+        },
+        {
+          "en_name": "Pildash"
+        },
+        {
+          "en_name": "Jidlaph"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Reumah"
+        },
+        {
+          "en_name": "Tebah"
+        },
+        {
+          "en_name": "Gaham"
+        },
+        {
+          "en_name": "Tahash"
+        },
+        {
+          "en_name": "Maacah"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Uz",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Buz",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Kemuel",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Chesed",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Hazo",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Pildash",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Jidlaph",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Bethuel",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Aram",
+          "term2": "Kemuel"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Tebah",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Gaham",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Tahash",
+          "term2": "Nahor"
+        },
+        {
+          "term1": "Maacah",
+          "term2": "Nahor"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Milcah",
+          "term2": "Nahor"
+        }
+      ]
+    }
+  }
+}

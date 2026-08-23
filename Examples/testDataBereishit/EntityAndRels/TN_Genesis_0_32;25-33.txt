@@ -1,0 +1,79 @@
+﻿COST: Tokens: Total=8897 approx cost usd = $0.001174 (Prompt=6643, Completion=2254)
+SOURCE:
+Genesis 32:25-33  (TN_Genesis_0_32:25-33)
+
+HEBREW:
+וַיִּוָּתֵ֥ר יַעֲקֹ֖ב לְבַדּ֑וֹ וַיֵּאָבֵ֥ק אִישׁ֙ עִמּ֔וֹ עַ֖ד עֲל֥וֹת הַשָּֽׁחַר׃ וַיַּ֗רְא כִּ֣י לֹ֤א יָכֹל֙ ל֔וֹ וַיִּגַּ֖ע בְּכַף־יְרֵכ֑וֹ וַתֵּ֙קַע֙ כַּף־יֶ֣רֶךְ יַעֲקֹ֔ב בְּהֵאָֽבְק֖וֹ עִמּֽוֹ׃ וַיֹּ֣אמֶר שַׁלְּחֵ֔נִי כִּ֥י עָלָ֖ה הַשָּׁ֑חַר וַיֹּ֙אמֶר֙ לֹ֣א אֲשַֽׁלֵּחֲךָ֔ כִּ֖י אִם־בֵּרַכְתָּֽנִי׃ וַיֹּ֥אמֶר אֵלָ֖יו מַה־שְּׁמֶ֑ךָ וַיֹּ֖אמֶר יַעֲקֹֽב׃ וַיֹּ֗אמֶר לֹ֤א יַעֲקֹב֙ יֵאָמֵ֥ר עוֹד֙ שִׁמְךָ֔ כִּ֖י אִם־יִשְׂרָאֵ֑ל כִּֽי־שָׂרִ֧יתָ עִם־אֱלֹהִ֛ים וְעִם־אֲנָשִׁ֖ים וַתּוּכָֽל׃ וַיִּשְׁאַ֣ל יַעֲקֹ֗ב וַיֹּ֙אמֶר֙ הַגִּֽידָה־נָּ֣א שְׁמֶ֔ךָ וַיֹּ֕אמֶר לָ֥מָּה זֶּ֖ה תִּשְׁאַ֣ל לִשְׁמִ֑י וַיְבָ֥רֶךְ אֹת֖וֹ שָֽׁם׃ וַיִּקְרָ֧א יַעֲקֹ֛ב שֵׁ֥ם הַמָּק֖וֹם פְּנִיאֵ֑ל כִּֽי־רָאִ֤יתִי אֱלֹהִים֙ פָּנִ֣ים אֶל־פָּנִ֔ים וַתִּנָּצֵ֖ל נַפְשִֽׁי׃ וַיִּֽזְרַֽח־ל֣וֹ הַשֶּׁ֔מֶשׁ כַּאֲשֶׁ֥ר עָבַ֖ר אֶת־פְּנוּאֵ֑ל וְה֥וּא צֹלֵ֖עַ עַל־יְרֵכֽוֹ׃ עַל־כֵּ֡ן לֹֽא־יֹאכְל֨וּ בְנֵֽי־יִשְׂרָאֵ֜ל אֶת־גִּ֣יד הַנָּשֶׁ֗ה אֲשֶׁר֙ עַל־כַּ֣ף הַיָּרֵ֔ךְ עַ֖ד הַיּ֣וֹם הַזֶּ֑ה כִּ֤י נָגַע֙ בְּכַף־יֶ֣רֶךְ יַעֲקֹ֔ב בְּגִ֖יד הַנָּשֶֽׁה׃
+
+ENGLISH:
+Jacob was left alone. And a figure; Agent. wrestled with him until the break of dawn. When he saw that he had not prevailed against him, he wrenched Jacobs hip at its socket, so that the socket of his hip was strained as he wrestled with him. Then he said, Let me go, for dawn is breaking. But he answered, I will not let you go, unless you bless me. Said the other, What is your name? He replied, Jacob. Said he, Your name shall no longer be Jacob, but Israel, for you have striven, connected with first part of Israel. with beings divine and human,, connected with second part of Israel) and human beings. and have prevailed. Jacob asked, Pray tell me your name. But he said, You must not ask my name! And he took leave of him there. So Jacob named the place Peniel, meaning, I have seen a divine being face to face, yet my life has been preserved. The sun rose upon him as he passed Penuel, limping on his hip. That is why the children of Israel to this day do not eat the thigh muscle that is on the socket of the hip, since Jacobs hip socket was wrenched at the thigh muscle.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob wrestled, got new name Israel.",
+    "heb_summary": "יעקב נאבק, קיבל שם חדש ישראל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Agent"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Children Of Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Peniel"
+        },
+        {
+          "en_name": "Penuel"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Thigh Muscle"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Agent"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Peniel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Penuel"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Agent"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

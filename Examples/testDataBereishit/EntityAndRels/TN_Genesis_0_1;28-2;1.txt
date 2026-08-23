@@ -1,0 +1,71 @@
+﻿COST: Tokens: Total=9540 approx cost usd = $0.001386 (Prompt=6560, Completion=2980)
+SOURCE:
+Genesis 1:28-2:1  (TN_Genesis_0_1:28-2:1)
+
+HEBREW:
+וַיְבָ֣רֶךְ אֹתָם֮ אֱלֹהִים֒ וַיֹּ֨אמֶר לָהֶ֜ם אֱלֹהִ֗ים פְּר֥וּ וּרְב֛וּ וּמִלְא֥וּ אֶת־הָאָ֖רֶץ וְכִבְשֻׁ֑הָ וּרְד֞וּ בִּדְגַ֤ת הַיָּם֙ וּבְע֣וֹף הַשָּׁמַ֔יִם וּבְכׇל־חַיָּ֖ה הָֽרֹמֶ֥שֶׂת עַל־הָאָֽרֶץ׃ וַיֹּ֣אמֶר אֱלֹהִ֗ים הִנֵּה֩ נָתַ֨תִּי לָכֶ֜ם אֶת־כׇּל־עֵ֣שֶׂב׀ זֹרֵ֣עַ זֶ֗רַע אֲשֶׁר֙ עַל־פְּנֵ֣י כׇל־הָאָ֔רֶץ וְאֶת־כׇּל־הָעֵ֛ץ אֲשֶׁר־בּ֥וֹ פְרִי־עֵ֖ץ זֹרֵ֣עַ זָ֑רַע לָכֶ֥ם יִֽהְיֶ֖ה לְאׇכְלָֽה׃ וּֽלְכׇל־חַיַּ֣ת הָ֠אָ֠רֶץ וּלְכׇל־ע֨וֹף הַשָּׁמַ֜יִם וּלְכֹ֣ל׀ רוֹמֵ֣שׂ עַל־הָאָ֗רֶץ אֲשֶׁר־בּוֹ֙ נֶ֣פֶשׁ חַיָּ֔ה אֶת־כׇּל־יֶ֥רֶק עֵ֖שֶׂב לְאׇכְלָ֑ה וַֽיְהִי־כֵֽן׃ וַיַּ֤רְא אֱלֹהִים֙ אֶת־כׇּל־אֲשֶׁ֣ר עָשָׂ֔ה וְהִנֵּה־ט֖וֹב מְאֹ֑ד וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם הַשִּׁשִּֽׁי׃ וַיְכֻלּ֛וּ הַשָּׁמַ֥יִם וְהָאָ֖רֶץ וְכׇל־צְבָאָֽם׃
+
+ENGLISH:
+God blessed them and God said to them, Be fertile and increase, fill the earth and master it; and rule the fish of the sea, the birds of the sky, and all the living things that creep on earth. God said, See, I give you every seed-bearing plant that is upon all the earth, and every tree that has seed-bearing fruit; they shall be yours for food. And to all the animals on land, to all the birds of the sky, and to everything that creeps on earth, in which there is the breath of life, [I give] all the green plants for food. And it was so. And God saw all that had been made, and found it very good. And there was evening and there was morning, the sixth day.The heaven and the earth were finished, and all their array.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "God creates earth, life, gives commands.",
+    "heb_summary": "אלוהים ברא עולם, ציווה למלאו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        },
+        {
+          "en_name": "Sea"
+        },
+        {
+          "en_name": "Sky"
+        },
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Fish"
+        },
+        {
+          "en_name": "Bird"
+        },
+        {
+          "en_name": "Animal"
+        },
+        {
+          "en_name": "Creeping Thing"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Plant"
+        },
+        {
+          "en_name": "Fruit"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Plant"
+        },
+        {
+          "en_name": "Tree"
+        }
+      ]
+    }
+  }
+}

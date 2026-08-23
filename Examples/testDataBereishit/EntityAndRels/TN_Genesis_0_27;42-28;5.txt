@@ -1,0 +1,185 @@
+﻿COST: Tokens: Total=9593 approx cost usd = $0.001369 (Prompt=6705, Completion=2888)
+SOURCE:
+Genesis 27:42-28:5  (TN_Genesis_0_27:42-28:5)
+
+HEBREW:
+וַיֻּגַּ֣ד לְרִבְקָ֔ה אֶת־דִּבְרֵ֥י עֵשָׂ֖ו בְּנָ֣הּ הַגָּדֹ֑ל וַתִּשְׁלַ֞ח וַתִּקְרָ֤א לְיַעֲקֹב֙ בְּנָ֣הּ הַקָּטָ֔ן וַתֹּ֣אמֶר אֵלָ֔יו הִנֵּה֙ עֵשָׂ֣ו אָחִ֔יךָ מִתְנַחֵ֥ם לְךָ֖ לְהׇרְגֶֽךָ׃ וְעַתָּ֥ה בְנִ֖י שְׁמַ֣ע בְּקֹלִ֑י וְק֧וּם בְּרַח־לְךָ֛ אֶל־לָבָ֥ן אָחִ֖י חָרָֽנָה׃ וְיָשַׁבְתָּ֥ עִמּ֖וֹ יָמִ֣ים אֲחָדִ֑ים עַ֥ד אֲשֶׁר־תָּשׁ֖וּב חֲמַ֥ת אָחִֽיךָ׃ עַד־שׁ֨וּב אַף־אָחִ֜יךָ מִמְּךָ֗ וְשָׁכַח֙ אֵ֣ת אֲשֶׁר־עָשִׂ֣יתָ לּ֔וֹ וְשָׁלַחְתִּ֖י וּלְקַחְתִּ֣יךָ מִשָּׁ֑ם לָמָ֥ה אֶשְׁכַּ֛ל גַּם־שְׁנֵיכֶ֖ם י֥וֹם אֶחָֽד׃ וַתֹּ֤אמֶר רִבְקָה֙ אֶל־יִצְחָ֔ק קַ֣צְתִּי בְחַיַּ֔י מִפְּנֵ֖י בְּנ֣וֹת חֵ֑ת אִם־לֹקֵ֣חַ יַ֠עֲקֹ֠ב אִשָּׁ֨ה מִבְּנֽוֹת־חֵ֤ת כָּאֵ֙לֶּה֙ מִבְּנ֣וֹת הָאָ֔רֶץ לָ֥מָּה לִּ֖י חַיִּֽים׃וַיִּקְרָ֥א יִצְחָ֛ק אֶֽל־יַעֲקֹ֖ב וַיְבָ֣רֶךְ אֹת֑וֹ וַיְצַוֵּ֙הוּ֙ וַיֹּ֣אמֶר ל֔וֹ לֹֽא־תִקַּ֥ח אִשָּׁ֖ה מִבְּנ֥וֹת כְּנָֽעַן׃ ק֥וּם לֵךְ֙ פַּדֶּ֣נָֽה אֲרָ֔ם בֵּ֥יתָה בְתוּאֵ֖ל אֲבִ֣י אִמֶּ֑ךָ וְקַח־לְךָ֤ מִשָּׁם֙ אִשָּׁ֔ה מִבְּנ֥וֹת לָבָ֖ן אֲחִ֥י אִמֶּֽךָ׃ וְאֵ֤ל שַׁדַּי֙ יְבָרֵ֣ךְ אֹֽתְךָ֔ וְיַפְרְךָ֖ וְיַרְבֶּ֑ךָ וְהָיִ֖יתָ לִקְהַ֥ל עַמִּֽים׃ וְיִֽתֶּן־לְךָ֙ אֶת־בִּרְכַּ֣ת אַבְרָהָ֔ם לְךָ֖ וּלְזַרְעֲךָ֣ אִתָּ֑ךְ לְרִשְׁתְּךָ֙ אֶת־אֶ֣רֶץ מְגֻרֶ֔יךָ אֲשֶׁר־נָתַ֥ן אֱלֹהִ֖ים לְאַבְרָהָֽם׃ וַיִּשְׁלַ֤ח יִצְחָק֙ אֶֽת־יַעֲקֹ֔ב וַיֵּ֖לֶךְ פַּדֶּ֣נָֽה אֲרָ֑ם אֶל־לָבָ֤ן בֶּן־בְּתוּאֵל֙ הָֽאֲרַמִּ֔י אֲחִ֣י רִבְקָ֔ה אֵ֥ם יַעֲקֹ֖ב וְעֵשָֽׂו׃
+
+ENGLISH:
+When the words of her older son Esau were reported to Rebekah, she sent for her younger son Jacob and said to him, Your brother Esau is consoling himself by planning to kill you. Now, my son, listen to me. Flee at once to Haran, to my brother Laban. Stay with him a while, until your brothers fury subsides- until your brothers anger against you subsides-and he forgets what you have done to him. Then I will fetch you from there. Let me not lose you both in one day! Rebekah said to Isaac, I am disgusted with my life because of the Hittite women. If Jacob marries a Hittite woman like these, from among the native women, what good will life be to me?So Isaac sent for Jacob and blessed him. He instructed him, saying, You shall not take a wife from among the Canaanite women. Up, go to Paddan-aram, to the house of Bethuel, your mothers father, and take a wife there from among the daughters of Laban, your mothers brother. May El Shaddai bless you, make you fertile and numerous, so that you become an assembly of peoples. May you and your offspring be granted the blessing of Abraham, that you may possess the land where you are sojourning, which God assigned to Abraham. Then Isaac sent Jacob off, and he went to Paddan-aram, to Laban the son of Bethuel the Aramean, the brother of Rebekah, mother of Jacob and Esau.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Rebekah sends Jacob to Laban to escape Esau.",
+    "heb_summary": "רבקה שולחת את יעקב ללבן לברוח מעשו.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Rebekah"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Bethuel"
+        },
+        {
+          "en_name": "El Shaddai"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Haran"
+        },
+        {
+          "en_name": "Paddan-Aram"
+        },
+        {
+          "en_name": "Land"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Hittites"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Aram"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rebekah",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Bethuel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Jacob",
+          "term2": "Rebekah"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Rebekah"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Rebekah",
+          "term2": "Isaac"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Abraham"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rebekah",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Rebekah",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Jacob"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Paddan-Aram"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Laban",
+          "term2": "Haran"
+        },
+        {
+          "term1": "Bethuel",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Laban",
+          "term2": "Paddan-Aram"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Land"
+        },
+        {
+          "term1": "God",
+          "term2": "Land"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Laban",
+          "term2": "Aram"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Isaac",
+          "term2": "Jacob"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

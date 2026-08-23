@@ -1,0 +1,135 @@
+﻿{
+    "res": {
+        "en_summary": "Nahor's sons born to Milcah and Reumah.",
+        "heb_summary": "בני נחור נולדו למילכה ולראומה.",
+        "passage_types": [
+            "GENEALOGY",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Milcah"
+                },
+                {
+                    "en_name": "Nahor"
+                },
+                {
+                    "en_name": "Uz"
+                },
+                {
+                    "en_name": "Buz"
+                },
+                {
+                    "en_name": "Kemuel"
+                },
+                {
+                    "en_name": "Aram"
+                },
+                {
+                    "en_name": "Chesed"
+                },
+                {
+                    "en_name": "Hazo"
+                },
+                {
+                    "en_name": "Pildash"
+                },
+                {
+                    "en_name": "Jidlaph"
+                },
+                {
+                    "en_name": "Bethuel"
+                },
+                {
+                    "en_name": "Rebekah"
+                },
+                {
+                    "en_name": "Reumah"
+                },
+                {
+                    "en_name": "Tebah"
+                },
+                {
+                    "en_name": "Gaham"
+                },
+                {
+                    "en_name": "Tahash"
+                },
+                {
+                    "en_name": "Maacah"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Uz",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Buz",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Kemuel",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Chesed",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Hazo",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Pildash",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Jidlaph",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Bethuel",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Aram",
+                    "term2": "Kemuel"
+                },
+                {
+                    "term1": "Rebekah",
+                    "term2": "Bethuel"
+                },
+                {
+                    "term1": "Tebah",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Gaham",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Tahash",
+                    "term2": "Nahor"
+                },
+                {
+                    "term1": "Maacah",
+                    "term2": "Nahor"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Milcah",
+                    "term2": "Nahor"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_22:20-24"
+}

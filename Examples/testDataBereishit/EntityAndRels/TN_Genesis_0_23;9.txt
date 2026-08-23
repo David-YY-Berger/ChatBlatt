@@ -1,0 +1,27 @@
+﻿COST: Tokens: Total=6978 approx cost usd = $0.000646 (Prompt=6431, Completion=547)
+SOURCE:
+Genesis 23:9  (TN_Genesis_0_23:9)
+
+HEBREW:
+וְיִתֶּן־לִ֗י אֶת־מְעָרַ֤ת הַמַּכְפֵּלָה֙ אֲשֶׁר־ל֔וֹ אֲשֶׁ֖ר בִּקְצֵ֣ה שָׂדֵ֑הוּ בְּכֶ֨סֶף מָלֵ֜א יִתְּנֶ֥נָּה לִּ֛י בְּתוֹכְכֶ֖ם לַאֲחֻזַּת־קָֽבֶר׃
+
+ENGLISH:
+Let him sell me the cave of Machpelah that he owns, which is at the edge of his land. Let him sell it to me, at the full price, for a burial site in your midst.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Request to buy Machpelah cave for burial.",
+    "heb_summary": "בקשה לקנות מערת המכפלה לקבורה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Place": [
+        {
+          "en_name": "Machpelah"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+﻿COST: Tokens: Total=8474 approx cost usd = $0.001047 (Prompt=6644, Completion=1830)
+SOURCE:
+Genesis 44:1-9  (TN_Genesis_0_44:1-9)
+
+HEBREW:
+וַיְצַ֞ו אֶת־אֲשֶׁ֣ר עַל־בֵּיתוֹ֮ לֵאמֹר֒ מַלֵּ֞א אֶת־אַמְתְּחֹ֤ת הָֽאֲנָשִׁים֙ אֹ֔כֶל כַּאֲשֶׁ֥ר יוּכְל֖וּן שְׂאֵ֑ת וְשִׂ֥ים כֶּֽסֶף־אִ֖ישׁ בְּפִ֥י אַמְתַּחְתּֽוֹ׃ וְאֶת־גְּבִיעִ֞י גְּבִ֣יעַ הַכֶּ֗סֶף תָּשִׂים֙ בְּפִי֙ אַמְתַּ֣חַת הַקָּטֹ֔ן וְאֵ֖ת כֶּ֣סֶף שִׁבְר֑וֹ וַיַּ֕עַשׂ כִּדְבַ֥ר יוֹסֵ֖ף אֲשֶׁ֥ר דִּבֵּֽר׃ הַבֹּ֖קֶר א֑וֹר וְהָאֲנָשִׁ֣ים שֻׁלְּח֔וּ הֵ֖מָּה וַחֲמֹרֵיהֶֽם׃ הֵ֠ם יָֽצְא֣וּ אֶת־הָעִיר֮ לֹ֣א הִרְחִ֒יקוּ֒ וְיוֹסֵ֤ף אָמַר֙ לַֽאֲשֶׁ֣ר עַל־בֵּית֔וֹ ק֥וּם רְדֹ֖ף אַחֲרֵ֣י הָֽאֲנָשִׁ֑ים וְהִשַּׂגְתָּם֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם לָ֛מָּה שִׁלַּמְתֶּ֥ם רָעָ֖ה תַּ֥חַת טוֹבָֽה׃ הֲל֣וֹא זֶ֗ה אֲשֶׁ֨ר יִשְׁתֶּ֤ה אֲדֹנִי֙ בּ֔וֹ וְה֕וּא נַחֵ֥שׁ יְנַחֵ֖שׁ בּ֑וֹ הֲרֵעֹתֶ֖ם אֲשֶׁ֥ר עֲשִׂיתֶֽם׃ וַֽיַּשִּׂגֵ֑ם וַיְדַבֵּ֣ר אֲלֵהֶ֔ם אֶת־הַדְּבָרִ֖ים הָאֵֽלֶּה׃ וַיֹּאמְר֣וּ אֵלָ֔יו לָ֚מָּה יְדַבֵּ֣ר אֲדֹנִ֔י כַּדְּבָרִ֖ים הָאֵ֑לֶּה חָלִ֙ילָה֙ לַעֲבָדֶ֔יךָ מֵעֲשׂ֖וֹת כַּדָּבָ֥ר הַזֶּֽה׃ הֵ֣ן כֶּ֗סֶף אֲשֶׁ֤ר מָצָ֙אנוּ֙ בְּפִ֣י אַמְתְּחֹתֵ֔ינוּ הֱשִׁיבֹ֥נוּ אֵלֶ֖יךָ מֵאֶ֣רֶץ כְּנָ֑עַן וְאֵ֗יךְ נִגְנֹב֙ מִבֵּ֣ית אֲדֹנֶ֔יךָ כֶּ֖סֶף א֥וֹ זָהָֽב׃ אֲשֶׁ֨ר יִמָּצֵ֥א אִתּ֛וֹ מֵעֲבָדֶ֖יךָ וָמֵ֑ת וְגַם־אֲנַ֕חְנוּ נִֽהְיֶ֥ה לַֽאדֹנִ֖י לַעֲבָדִֽים׃
+
+ENGLISH:
+Then he instructed his house steward as follows, Fill the mens bags with food, as much as they can carry, and put each ones money in the mouth of his bag. Put my silver goblet in the mouth of the bag of the youngest one, together with his money for the rations. And he did as Joseph told him. With the first light of morning, the men were sent off with their pack animals. They had just left the city and had not gone far, when Joseph said to his house steward, Up, go after those men! And when you overtake them, say to them, Why did you repay good with evil? It is the very one from which my master drinks and which he uses for divination. It was a wicked thing for you to do! He overtook them and spoke those words to them. And they said to him, Why does my lord say such things? Far be it from your servants to do anything of the kind! Here we brought back to you from the land of Canaan the money that we found in the mouths of our bags. How then could we have stolen any silver or gold from your masters house! Whichever of your servants it is found with shall die; the rest of us, moreover, shall become slaves to my lord.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph's steward accuses men of stealing goblet.",
+    "heb_summary": "משרת יוסף מאשים אנשים בגניבת גביע.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "House Steward"
+        },
+        {
+          "en_name": "Youngest One"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "City"
+        },
+        {
+          "en_name": "Land Of Canaan"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Canaan"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Silver Goblet"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Pack Animal"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Food"
+        },
+        {
+          "en_name": "Ration"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Joseph",
+          "term2": "House Steward"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Joseph",
+          "term2": "City"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Land Of Canaan",
+          "term2": "Canaan"
+        }
+      ]
+    }
+  }
+}

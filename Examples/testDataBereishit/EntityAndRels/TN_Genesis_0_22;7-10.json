@@ -1,0 +1,47 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham prepares to sacrifice Isaac; God provides.",
+        "heb_summary": "אברהם עקד את יצחק; אלוהים יספק.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Altar"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_22:7-10"
+}

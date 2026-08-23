@@ -1,0 +1,96 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph sold to Potiphar in Egypt.",
+        "heb_summary": "יוסף נמכר לפוטיפר במצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Potiphar"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Ishmaelites"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Potiphar's Wife"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Ishmael"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Food"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Potiphar's Wife",
+                    "term2": "Potiphar"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Potiphar's Wife",
+                    "term2": "Joseph"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Ishmaelites",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Potiphar's Wife",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Potiphar",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_39:1-7"
+}

@@ -1,0 +1,83 @@
+﻿{
+    "res": {
+        "en_summary": "God renames Jacob Israel and blesses him.",
+        "heb_summary": "אלוהים משנה את יעקב לישראל ומברך אותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "El Shaddai"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Pillar"
+                },
+                {
+                    "en_name": "Pillar Of Stone"
+                },
+                {
+                    "en_name": "Libation"
+                },
+                {
+                    "en_name": "Oil"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Bethel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "God",
+                    "term2": "El Shaddai"
+                },
+                {
+                    "term1": "Pillar",
+                    "term2": "Pillar Of Stone"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_35:10-15"
+}

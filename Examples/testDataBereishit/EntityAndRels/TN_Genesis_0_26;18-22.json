@@ -1,0 +1,93 @@
+﻿{
+    "res": {
+        "en_summary": "Isaac reopens wells, quarrels, finds peace.",
+        "heb_summary": "יצחק חופר בארות, מריבות, מוצא מרחב.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Philistines"
+                },
+                {
+                    "en_name": "Isaac's Servants"
+                },
+                {
+                    "en_name": "Herdsmen Of Gerar"
+                },
+                {
+                    "en_name": "Isaac's Herdsmen"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gerar"
+                },
+                {
+                    "en_name": "Esek"
+                },
+                {
+                    "en_name": "Sitnah"
+                },
+                {
+                    "en_name": "Rehoboth"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Philistia"
+                },
+                {
+                    "en_name": "Gerar"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Esek"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Sitnah"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Rehoboth"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Gerar"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Philistines",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Herdsmen Of Gerar",
+                    "term2": "Isaac's Herdsmen"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_26:18-22"
+}

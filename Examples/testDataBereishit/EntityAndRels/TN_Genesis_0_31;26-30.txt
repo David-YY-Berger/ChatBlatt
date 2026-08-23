@@ -1,0 +1,50 @@
+﻿COST: Tokens: Total=8129 approx cost usd = $0.000959 (Prompt=6576, Completion=1553)
+SOURCE:
+Genesis 31:26-30  (TN_Genesis_0_31:26-30)
+
+HEBREW:
+וַיֹּ֤אמֶר לָבָן֙ לְיַעֲקֹ֔ב מֶ֣ה עָשִׂ֔יתָ וַתִּגְנֹ֖ב אֶת־לְבָבִ֑י וַתְּנַהֵג֙ אֶת־בְּנֹתַ֔י כִּשְׁבֻי֖וֹת חָֽרֶב׃ לָ֤מָּה נַחְבֵּ֙אתָ֙ לִבְרֹ֔חַ וַתִּגְנֹ֖ב אֹתִ֑י וְלֹא־הִגַּ֣דְתָּ לִּ֔י וָֽאֲשַׁלֵּחֲךָ֛ בְּשִׂמְחָ֥ה וּבְשִׁרִ֖ים בְּתֹ֥ף וּבְכִנּֽוֹר׃ וְלֹ֣א נְטַשְׁתַּ֔נִי לְנַשֵּׁ֥ק לְבָנַ֖י וְלִבְנֹתָ֑י עַתָּ֖ה הִסְכַּ֥לְתָּֽ עֲשֽׂוֹ׃ יֶשׁ־לְאֵ֣ל יָדִ֔י לַעֲשׂ֥וֹת עִמָּכֶ֖ם רָ֑ע וֵֽאלֹהֵ֨י אֲבִיכֶ֜ם אֶ֣מֶשׁ׀ אָמַ֧ר אֵלַ֣י לֵאמֹ֗ר הִשָּׁ֧מֶר לְךָ֛ מִדַּבֵּ֥ר עִֽם־יַעֲקֹ֖ב מִטּ֥וֹב עַד־רָֽע׃ וְעַתָּה֙ הָלֹ֣ךְ הָלַ֔כְתָּ כִּֽי־נִכְסֹ֥ף נִכְסַ֖פְתָּה לְבֵ֣ית אָבִ֑יךָ לָ֥מָּה גָנַ֖בְתָּ אֶת־אֱלֹהָֽי׃
+
+ENGLISH:
+And Laban said to Jacob, What did you mean by keeping me in the dark and carrying off my daughters like captives of the sword? Why did you flee in secrecy and mislead me and not tell me? I would have sent you off with festive music, with timbrel and lyre. You did not even let me kiss my sons and daughters, a stock phrase (see, e.g., 46.15; 1 Sam. 30.6; Neh. 5.5) that means progeny, thus including grandchildren. good-by! It was a foolish thing for you to do. I have it in my power to do you harm; but the God of your fathers [house] said to me last night, Beware of attempting anything with Jacob, good or bad. Very well, you had to leave because you were longing for your fathers house; but why did you steal my gods?
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Laban confronts Jacob; God warns Laban",
+    "heb_summary": "לבן מתעמת עם יעקב; אלוהים מזהיר את לבן",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Gods"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Laban",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "God",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

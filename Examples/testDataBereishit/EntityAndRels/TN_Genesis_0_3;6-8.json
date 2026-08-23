@@ -1,0 +1,43 @@
+﻿{
+    "res": {
+        "en_summary": "God visits Garden; forbidden fruit eaten.",
+        "heb_summary": "אלוהים מבקר בגן; פרי אסור נאכל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Garden Of Eden"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Fruit"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree"
+                },
+                {
+                    "en_name": "Fig"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "God",
+                    "term2": "Garden Of Eden"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:6-8"
+}

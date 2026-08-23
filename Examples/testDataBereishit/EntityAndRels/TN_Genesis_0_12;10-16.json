@@ -1,0 +1,94 @@
+﻿{
+    "res": {
+        "en_summary": "Abram and Sarai go to Egypt.",
+        "heb_summary": "אברם ושרה יורדים למצרים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Egyptians"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Pharaohs Courtiers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Pharaohs Palace"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Sheep"
+                },
+                {
+                    "en_name": "Ox"
+                },
+                {
+                    "en_name": "Ass"
+                },
+                {
+                    "en_name": "Camel"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Egypt"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Sarai",
+                    "term2": "Pharaohs Palace"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Pharaohs Palace"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Egyptians",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Pharaohs Courtiers",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_12:10-16"
+}

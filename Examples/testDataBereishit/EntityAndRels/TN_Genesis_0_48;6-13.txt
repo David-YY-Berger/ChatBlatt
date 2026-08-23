@@ -1,0 +1,103 @@
+﻿COST: Tokens: Total=8288 approx cost usd = $0.000995 (Prompt=6630, Completion=1658)
+SOURCE:
+Genesis 48:6-13  (TN_Genesis_0_48:6-13)
+
+HEBREW:
+וּמוֹלַדְתְּךָ֛ אֲשֶׁר־הוֹלַ֥דְתָּ אַחֲרֵיהֶ֖ם לְךָ֣ יִהְי֑וּ עַ֣ל שֵׁ֧ם אֲחֵיהֶ֛ם יִקָּרְא֖וּ בְּנַחֲלָתָֽם׃ וַאֲנִ֣י׀ בְּבֹאִ֣י מִפַּדָּ֗ן מֵ֩תָה֩ עָלַ֨י רָחֵ֜ל בְּאֶ֤רֶץ כְּנַ֙עַן֙ בַּדֶּ֔רֶךְ בְּע֥וֹד כִּבְרַת־אֶ֖רֶץ לָבֹ֣א אֶפְרָ֑תָה וָאֶקְבְּרֶ֤הָ שָּׁם֙ בְּדֶ֣רֶךְ אֶפְרָ֔ת הִ֖וא בֵּ֥ית לָֽחֶם׃ וַיַּ֥רְא יִשְׂרָאֵ֖ל אֶת־בְּנֵ֣י יוֹסֵ֑ף וַיֹּ֖אמֶר מִי־אֵֽלֶּה׃ וַיֹּ֤אמֶר יוֹסֵף֙ אֶל־אָבִ֔יו בָּנַ֣י הֵ֔ם אֲשֶׁר־נָֽתַן־לִ֥י אֱלֹהִ֖ים בָּזֶ֑ה וַיֹּאמַ֕ר קָֽחֶם־נָ֥א אֵלַ֖י וַאֲבָרְכֵֽם׃ וְעֵינֵ֤י יִשְׂרָאֵל֙ כָּבְד֣וּ מִזֹּ֔קֶן לֹ֥א יוּכַ֖ל לִרְא֑וֹת וַיַּגֵּ֤שׁ אֹתָם֙ אֵלָ֔יו וַיִּשַּׁ֥ק לָהֶ֖ם וַיְחַבֵּ֥ק לָהֶֽם׃ וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל־יוֹסֵ֔ף רְאֹ֥ה פָנֶ֖יךָ לֹ֣א פִלָּ֑לְתִּי וְהִנֵּ֨ה הֶרְאָ֥ה אֹתִ֛י אֱלֹהִ֖ים גַּ֥ם אֶת־זַרְעֶֽךָ׃ וַיּוֹצֵ֥א יוֹסֵ֛ף אֹתָ֖ם מֵעִ֣ם בִּרְכָּ֑יו וַיִּשְׁתַּ֥חוּ לְאַפָּ֖יו אָֽרְצָה׃ וַיִּקַּ֣ח יוֹסֵף֮ אֶת־שְׁנֵיהֶם֒ אֶת־אֶפְרַ֤יִם בִּֽימִינוֹ֙ מִשְּׂמֹ֣אל יִשְׂרָאֵ֔ל וְאֶת־מְנַשֶּׁ֥ה בִשְׂמֹאל֖וֹ מִימִ֣ין יִשְׂרָאֵ֑ל וַיַּגֵּ֖שׁ אֵלָֽיו׃
+
+ENGLISH:
+But progeny born to you after them shall be yours; they shall be recorded instead of their brothers in their inheritance. I [do this because], when I was returning from Paddan, Rachel died, to my sorrow, while I was journeying in the land of Canaan, when still some distance short of Ephrath; and I buried her there on the road to Ephrath-now Bethlehem. Noticing Josephs sons, Israel asked, Who are these? And Joseph said to his father, They are my sons, whom God has given me here. Bring them up to me, he said, that I may bless them. Now Israels eyes were dim with age; he could not see. So [Joseph] brought them close to him, and he kissed them and embraced them. And Israel said to Joseph, I never expected to see you again, and here God has let me see your children as well. Joseph then removed them from his knees, and bowed low with his face to the ground. Joseph took the two of them, Ephraim with his right hand-to Israels left-and Manasseh with his left hand-to Israels right-and brought them close to him.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Israel blesses Joseph's sons; Rachel dies.",
+    "heb_summary": "ישראל מברך בני יוסף; רחל מתה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Ephraim"
+        },
+        {
+          "en_name": "Manasseh"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Paddan"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Ephrath"
+        },
+        {
+          "en_name": "Bethlehem"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Ephraim"
+        },
+        {
+          "en_name": "Manasseh"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Joseph",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Ephraim",
+          "term2": "Joseph"
+        },
+        {
+          "term1": "Manasseh",
+          "term2": "Joseph"
+        }
+      ],
+      "diedIn": [
+        {
+          "term1": "Rachel",
+          "term2": "Bethlehem"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Israel",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Bethlehem"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Canaan"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Ephrath",
+          "term2": "Bethlehem"
+        }
+      ]
+    }
+  }
+}

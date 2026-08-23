@@ -1,0 +1,38 @@
+﻿COST: Tokens: Total=6811 approx cost usd = $0.000602 (Prompt=6405, Completion=406)
+SOURCE:
+Genesis 3:20  (TN_Genesis_0_3:20)
+
+HEBREW:
+וַיִּקְרָ֧א הָֽאָדָ֛ם שֵׁ֥ם אִשְׁתּ֖וֹ חַוָּ֑ה כִּ֛י הִ֥וא הָֽיְתָ֖ה אֵ֥ם כׇּל־חָֽי׃
+
+ENGLISH:
+The Human named his wife Eve,. because she was the mother of all the living..
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Human named his wife Eve.",
+    "heb_summary": "האדם קרא לאשתו חוה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Human"
+        },
+        {
+          "en_name": "Eve"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Human",
+          "term2": "Eve"
+        }
+      ]
+    }
+  }
+}

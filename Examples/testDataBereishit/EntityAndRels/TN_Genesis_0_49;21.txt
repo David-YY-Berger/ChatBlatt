@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=6976 approx cost usd = $0.000652 (Prompt=6404, Completion=572)
+SOURCE:
+Genesis 49:21  (TN_Genesis_0_49:21)
+
+HEBREW:
+נַפְתָּלִ֖י אַיָּלָ֣ה שְׁלֻחָ֑ה הַנֹּתֵ֖ן אִמְרֵי־שָֽׁפֶר׃
+
+ENGLISH:
+Naphtali is a hind let loose, Which yields lovely fawns.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Naphtali compared to a hind and fawns",
+    "heb_summary": "נפתלי נמשל לאיילה ולעופרים",
+    "passage_types": [
+      "PROPHECY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Naphtali"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Naphtali"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Hind"
+        },
+        {
+          "en_name": "Fawn"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Naphtali",
+          "term2": "Hind"
+        }
+      ]
+    }
+  }
+}

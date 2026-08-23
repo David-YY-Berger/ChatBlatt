@@ -1,0 +1,60 @@
+﻿{
+    "res": {
+        "en_summary": "God promises Abram land and many descendants.",
+        "heb_summary": "אלוהים מבטיח לאברם צאצאים רבים וארץ.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Dammesek Eliezer"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Ur Of The Chaldeans"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Chaldea"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shield"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abram",
+                    "term2": "Hashem"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abram",
+                    "term2": "Ur Of The Chaldeans"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Heaven"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_15:1-8"
+}

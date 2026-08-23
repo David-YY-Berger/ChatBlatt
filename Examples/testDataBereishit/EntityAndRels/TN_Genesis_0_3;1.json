@@ -1,0 +1,45 @@
+﻿{
+    "res": {
+        "en_summary": "Serpent tempts woman about garden tree.",
+        "heb_summary": "הנחש מפתה את האישה בגן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Garden"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Serpent"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Tree"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree"
+                }
+            ]
+        },
+        "Rel": {
+            "associatedWithPlace": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Garden"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:1"
+}

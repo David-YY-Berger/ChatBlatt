@@ -1,0 +1,86 @@
+﻿{
+    "res": {
+        "en_summary": "God establishes covenant with Noah and humankind.",
+        "heb_summary": "אלוהים כורת ברית עם נח ובני אדם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Noah"
+                },
+                {
+                    "en_name": "Humankind"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Covenant"
+                },
+                {
+                    "en_name": "Sign"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Bird"
+                },
+                {
+                    "en_name": "Cattle"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Humankind",
+                    "term2": "Earth"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "God",
+                    "term2": "Noah"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God",
+                    "term2": "Covenant"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Bird"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Cattle"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Earth"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Humankind"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_9:5-12"
+}

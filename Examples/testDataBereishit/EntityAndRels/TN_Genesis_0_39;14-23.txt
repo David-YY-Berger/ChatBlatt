@@ -1,0 +1,60 @@
+﻿COST: Tokens: Total=8675 approx cost usd = $0.001105 (Prompt=6655, Completion=2020)
+SOURCE:
+Genesis 39:14-23  (TN_Genesis_0_39:14-23)
+
+HEBREW:
+וַתִּקְרָ֞א לְאַנְשֵׁ֣י בֵיתָ֗הּ וַתֹּ֤אמֶר לָהֶם֙ לֵאמֹ֔ר רְא֗וּ הֵ֥בִיא לָ֛נוּ אִ֥ישׁ עִבְרִ֖י לְצַ֣חֶק בָּ֑נוּ בָּ֤א אֵלַי֙ לִשְׁכַּ֣ב עִמִּ֔י וָאֶקְרָ֖א בְּק֥וֹל גָּדֽוֹל׃ וַיְהִ֣י כְשׇׁמְע֔וֹ כִּֽי־הֲרִימֹ֥תִי קוֹלִ֖י וָאֶקְרָ֑א וַיַּעֲזֹ֤ב בִּגְדוֹ֙ אֶצְלִ֔י וַיָּ֖נׇס וַיֵּצֵ֥א הַחֽוּצָה׃ וַתַּנַּ֥ח בִּגְד֖וֹ אֶצְלָ֑הּ עַד־בּ֥וֹא אֲדֹנָ֖יו אֶל־בֵּיתֽוֹ׃ וַתְּדַבֵּ֣ר אֵלָ֔יו כַּדְּבָרִ֥ים הָאֵ֖לֶּה לֵאמֹ֑ר בָּֽא־אֵלַ֞י הָעֶ֧בֶד הָֽעִבְרִ֛י אֲשֶׁר־הֵבֵ֥אתָ לָּ֖נוּ לְצַ֥חֶק בִּֽי׃ וַיְהִ֕י כַּהֲרִימִ֥י קוֹלִ֖י וָאֶקְרָ֑א וַיַּעֲזֹ֥ב בִּגְד֛וֹ אֶצְלִ֖י וַיָּ֥נׇס הַחֽוּצָה׃ וַיְהִי֩ כִשְׁמֹ֨עַ אֲדֹנָ֜יו אֶת־דִּבְרֵ֣י אִשְׁתּ֗וֹ אֲשֶׁ֨ר דִּבְּרָ֤ה אֵלָיו֙ לֵאמֹ֔ר כַּדְּבָרִ֣ים הָאֵ֔לֶּה עָ֥שָׂה לִ֖י עַבְדֶּ֑ךָ וַיִּ֖חַר אַפּֽוֹ׃ וַיִּקַּח֩ אֲדֹנֵ֨י יוֹסֵ֜ף אֹת֗וֹ וַֽיִּתְּנֵ֙הוּ֙ אֶל־בֵּ֣ית הַסֹּ֔הַר מְק֕וֹם אֲשֶׁר־ (אסורי) הַמֶּ֖לֶךְ אֲסוּרִ֑ים וַֽיְהִי־שָׁ֖ם בְּבֵ֥ית הַסֹּֽהַר׃ וַיְהִ֤י יְהֹוָה֙ אֶת־יוֹסֵ֔ף וַיֵּ֥ט אֵלָ֖יו חָ֑סֶד וַיִּתֵּ֣ן חִנּ֔וֹ בְּעֵינֵ֖י שַׂ֥ר בֵּית־הַסֹּֽהַר׃ וַיִּתֵּ֞ן שַׂ֤ר בֵּית־הַסֹּ֙הַר֙ בְּיַד־יוֹסֵ֔ף אֵ֚ת כׇּל־הָ֣אֲסִירִ֔ם אֲשֶׁ֖ר בְּבֵ֣ית הַסֹּ֑הַר וְאֵ֨ת כׇּל־אֲשֶׁ֤ר עֹשִׂים֙ שָׁ֔ם ה֖וּא הָיָ֥ה עֹשֶֽׂה׃ אֵ֣ין׀ שַׂ֣ר בֵּית־הַסֹּ֗הַר רֹאֶ֤ה אֶֽת־כׇּל־מְא֙וּמָה֙ בְּיָד֔וֹ בַּאֲשֶׁ֥ר יְהֹוָ֖ה אִתּ֑וֹ וַֽאֲשֶׁר־ה֥וּא עֹשֶׂ֖ה יְהֹוָ֥ה מַצְלִֽיחַ׃
+
+ENGLISH:
+she called out to her servants and said to them, Look, he had to bring us a Hebrew to dally with us! This one came to lie with me; but I screamed loud. And when he heard me screaming at the top of my voice, he left his garment with me and got away and fled outside. She kept his garment beside her, until his master came home. Then she told him the same story, saying, The Hebrew slave whom you brought into our house came to me to dally with me; but when I screamed at the top of my voice, he left his garment with me and fled outside. When his master heard the story that his wife told him, namely, Thus and so your slave did to me, he was furious. So Josephs master had him put in prison, where the kings prisoners were confined. But even while he was there in prison, HASHEM was with Joseph-extending kindness to him and disposing the chief jailer favorably toward him. The chief jailer put in Josephs charge all the prisoners who were in that prison, and he was the one to carry out everything that was done there. The chief jailer did not supervise anything that was in Josephs charge, because HASHEM was with him, and whatever he did HASHEM made successful.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph imprisoned; God's kindness, success.",
+    "heb_summary": "יוסף נכלא; חסד והצלחת ה'.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Prison"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Joseph",
+          "term2": "Prison"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Joseph",
+          "term2": "Israel"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Hashem",
+          "term2": "Joseph"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph blessed by God; compared to wild ass.",
+        "heb_summary": "יוסף מקבל ברכות; נמשל לאתון פראית.",
+        "passage_types": [
+            "STORY",
+            "PROPHECY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Joseph"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Ass"
+                },
+                {
+                    "en_name": "Colt"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Joseph"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Ass"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Colt"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_49:22-26"
+}

@@ -1,0 +1,40 @@
+﻿{
+    "res": {
+        "en_summary": "Esau went to Seir; Jacob built in Succoth.",
+        "heb_summary": "עשו הלך לשעיר; יעקב בנה בסוכות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Jacob"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Seir"
+                },
+                {
+                    "en_name": "Succoth"
+                }
+            ]
+        },
+        "Rel": {
+            "visited": [
+                {
+                    "term1": "Esau",
+                    "term2": "Seir"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Succoth"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_33:16-17"
+}

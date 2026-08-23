@@ -1,0 +1,78 @@
+﻿{
+    "res": {
+        "en_summary": "Rachel, Bilhah, Jacob have sons Dan, Naphtali.",
+        "heb_summary": "רחל, בלהה ויעקב הולידו בנים דן ונפתלי.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Bilhah"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Rachel"
+                },
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Dan"
+                },
+                {
+                    "en_name": "Naphtali"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Dan",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Naphtali",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Dan",
+                    "term2": "Bilhah"
+                },
+                {
+                    "term1": "Naphtali",
+                    "term2": "Bilhah"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bilhah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rachel",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Rachel",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:3-8"
+}

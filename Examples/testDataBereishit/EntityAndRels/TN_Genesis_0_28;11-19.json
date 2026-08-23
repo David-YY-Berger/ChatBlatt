@@ -1,0 +1,103 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob dreams of a ladder at Bethel.",
+        "heb_summary": "יעקב חולם על סולם בבית אל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Messengers Of God"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Luz"
+                },
+                {
+                    "en_name": "Abode Of God"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Stairway"
+                },
+                {
+                    "en_name": "Pillar"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Oil"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Jacob"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Bethel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hashem",
+                    "term2": "Jacob"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Bethel",
+                    "term2": "Luz"
+                },
+                {
+                    "term1": "Bethel",
+                    "term2": "Abode Of God"
+                },
+                {
+                    "term1": "Bethel",
+                    "term2": "Heaven"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_28:11-19"
+}

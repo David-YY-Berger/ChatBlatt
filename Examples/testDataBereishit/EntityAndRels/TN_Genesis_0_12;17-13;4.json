@@ -1,0 +1,121 @@
+﻿{
+    "res": {
+        "en_summary": "Pharaoh afflicted Abram's household for Sarai",
+        "heb_summary": "פרעה הכה את ביתו בגלל שרה אשת אברם",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Sarai"
+                },
+                {
+                    "en_name": "Abram"
+                },
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "Agent"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Negeb"
+                },
+                {
+                    "en_name": "Bethel"
+                },
+                {
+                    "en_name": "Ai"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Abram",
+                    "term2": "Sarai"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Abram"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abram",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Negeb"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Abram",
+                    "term2": "Ai"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Negeb"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Sarai",
+                    "term2": "Ai"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Negeb"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Bethel"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Ai"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Abram",
+                    "term2": "Bethel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_12:17-13:4"
+}

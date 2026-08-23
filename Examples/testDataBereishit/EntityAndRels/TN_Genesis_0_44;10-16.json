@@ -1,0 +1,66 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph finds goblet in Benjamin's bag. Judah pleads.",
+        "heb_summary": "יוסף מוצא גביע בתיק בנימין. יהודה מתחנן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "House Of Joseph"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Benjamin"
+                },
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Goblet"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Judah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph",
+                    "term2": "House Of Joseph"
+                },
+                {
+                    "term1": "Judah",
+                    "term2": "House Of Joseph"
+                },
+                {
+                    "term1": "Benjamin",
+                    "term2": "House Of Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_44:10-16"
+}

@@ -1,0 +1,78 @@
+﻿COST: Tokens: Total=8111 approx cost usd = $0.000955 (Prompt=6571, Completion=1540)
+SOURCE:
+Genesis 31:31-35  (TN_Genesis_0_31:31-35)
+
+HEBREW:
+וַיַּ֥עַן יַעֲקֹ֖ב וַיֹּ֣אמֶר לְלָבָ֑ן כִּ֣י יָרֵ֔אתִי כִּ֣י אָמַ֔רְתִּי פֶּן־תִּגְזֹ֥ל אֶת־בְּנוֹתֶ֖יךָ מֵעִמִּֽי׃ עִ֠ם אֲשֶׁ֨ר תִּמְצָ֣א אֶת־אֱלֹהֶ֘יךָ֮ לֹ֣א יִֽחְיֶה֒ נֶ֣גֶד אַחֵ֧ינוּ הַֽכֶּר־לְךָ֛ מָ֥ה עִמָּדִ֖י וְקַֽח־לָ֑ךְ וְלֹֽא־יָדַ֣ע יַעֲקֹ֔ב כִּ֥י רָחֵ֖ל גְּנָבָֽתַם׃ וַיָּבֹ֨א לָבָ֜ן בְּאֹ֥הֶל יַעֲקֹ֣ב׀ וּבְאֹ֣הֶל לֵאָ֗ה וּבְאֹ֛הֶל שְׁתֵּ֥י הָאֲמָהֹ֖ת וְלֹ֣א מָצָ֑א וַיֵּצֵא֙ מֵאֹ֣הֶל לֵאָ֔ה וַיָּבֹ֖א בְּאֹ֥הֶל רָחֵֽל׃ וְרָחֵ֞ל לָקְחָ֣ה אֶת־הַתְּרָפִ֗ים וַתְּשִׂמֵ֛ם בְּכַ֥ר הַגָּמָ֖ל וַתֵּ֣שֶׁב עֲלֵיהֶ֑ם וַיְמַשֵּׁ֥שׁ לָבָ֛ן אֶת־כׇּל־הָאֹ֖הֶל וְלֹ֥א מָצָֽא׃ וַתֹּ֣אמֶר אֶל־אָבִ֗יהָ אַל־יִ֙חַר֙ בְּעֵינֵ֣י אֲדֹנִ֔י כִּ֣י ל֤וֹא אוּכַל֙ לָק֣וּם מִפָּנֶ֔יךָ כִּי־דֶ֥רֶךְ נָשִׁ֖ים לִ֑י וַיְחַפֵּ֕שׂ וְלֹ֥א מָצָ֖א אֶת־הַתְּרָפִֽים׃
+
+ENGLISH:
+Jacob answered Laban, saying, I was afraid because I thought you would take your daughters from me by force. But anyone with whom you find your gods shall not remain alive! In the presence of our kin, point out what I have of yours and take it. Jacob, of course, did not know that Rachel had stolen them. So Laban went into Jacobs tent and Leahs tent and the tents of the two maidservants; but he did not find them. Leaving Leahs tent, he entered Rachels tent. Rachel, meanwhile, had taken the idols and placed them in the camel cushion and sat on them; and Laban rummaged through the tent without finding them. For she said to her father, Let not my lord take it amiss that I cannot rise before you, for I am in a womanly way. Thus he searched, but could not find the household idols.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Jacob, Laban, Rachel, Leah, and stolen idols.",
+    "heb_summary": "יעקב, לבן, רחל, לאה, ופסלים גנובים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Laban"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Leah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Idols"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Camel"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Laban"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Laban"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Laban"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob sends messengers to brother Esau",
+        "heb_summary": "יעקב שולח מלאכים לאחיו עשו",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Laban"
+                },
+                {
+                    "en_name": "Messengers"
+                },
+                {
+                    "en_name": "Male Slaves"
+                },
+                {
+                    "en_name": "Female Slaves"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Seir"
+                },
+                {
+                    "en_name": "Edom"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Edom"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Cattle"
+                },
+                {
+                    "en_name": "Ass"
+                },
+                {
+                    "en_name": "Sheep"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Messengers"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Esau"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Laban"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Esau",
+                    "term2": "Seir"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Edom"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Esau",
+                    "term2": "Edom"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Seir",
+                    "term2": "Edom"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_32:4-6"
+}

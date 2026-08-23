@@ -1,0 +1,95 @@
+﻿{
+    "res": {
+        "en_summary": "God destroyed Sodom, Gomorrah; Lot's wife became salt.",
+        "heb_summary": "ה' השמיד סדום ועמורה; אשת לוט הפכה למלח.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hashem"
+                },
+                {
+                    "en_name": "Lot's Wife"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Lot"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sodom"
+                },
+                {
+                    "en_name": "Gomorrah"
+                },
+                {
+                    "en_name": "Plain"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Pillar Of Salt"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Vegetation"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Hashem"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Gomorrah"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Plain"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Lot",
+                    "term2": "Sodom"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Gomorrah"
+                },
+                {
+                    "term1": "Lot",
+                    "term2": "Plain"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Hashem",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_19:24-29"
+}

@@ -1,0 +1,106 @@
+﻿COST: Tokens: Total=9263 approx cost usd = $0.001290 (Prompt=6619, Completion=2644)
+SOURCE:
+Genesis 39:1-7  (TN_Genesis_0_39:1-7)
+
+HEBREW:
+וְיוֹסֵ֖ף הוּרַ֣ד מִצְרָ֑יְמָה וַיִּקְנֵ֡הוּ פּוֹטִיפַר֩ סְרִ֨יס פַּרְעֹ֜ה שַׂ֤ר הַטַּבָּחִים֙ אִ֣ישׁ מִצְרִ֔י מִיַּד֙ הַיִּשְׁמְעֵאלִ֔ים אֲשֶׁ֥ר הוֹרִדֻ֖הוּ שָֽׁמָּה׃ וַיְהִ֤י יְהֹוָה֙ אֶת־יוֹסֵ֔ף וַיְהִ֖י אִ֣ישׁ מַצְלִ֑יחַ וַיְהִ֕י בְּבֵ֖ית אֲדֹנָ֥יו הַמִּצְרִֽי׃ וַיַּ֣רְא אֲדֹנָ֔יו כִּ֥י יְהֹוָ֖ה אִתּ֑וֹ וְכֹל֙ אֲשֶׁר־ה֣וּא עֹשֶׂ֔ה יְהֹוָ֖ה מַצְלִ֥יחַ בְּיָדֽוֹ׃ וַיִּמְצָ֨א יוֹסֵ֥ף חֵ֛ן בְּעֵינָ֖יו וַיְשָׁ֣רֶת אֹת֑וֹ וַיַּפְקִדֵ֙הוּ֙ עַל־בֵּית֔וֹ וְכׇל־יֶשׁ־ל֖וֹ נָתַ֥ן בְּיָדֽוֹ׃ וַיְהִ֡י מֵאָז֩ הִפְקִ֨יד אֹת֜וֹ בְּבֵית֗וֹ וְעַל֙ כׇּל־אֲשֶׁ֣ר יֶשׁ־ל֔וֹ וַיְבָ֧רֶךְ יְהֹוָ֛ה אֶת־בֵּ֥ית הַמִּצְרִ֖י בִּגְלַ֣ל יוֹסֵ֑ף וַיְהִ֞י בִּרְכַּ֤ת יְהֹוָה֙ בְּכׇל־אֲשֶׁ֣ר יֶשׁ־ל֔וֹ בַּבַּ֖יִת וּבַשָּׂדֶֽה׃ וַיַּעֲזֹ֣ב כׇּל־אֲשֶׁר־לוֹ֮ בְּיַד־יוֹסֵף֒ וְלֹא־יָדַ֤ע אִתּוֹ֙ מְא֔וּמָה כִּ֥י אִם־הַלֶּ֖חֶם אֲשֶׁר־ה֣וּא אוֹכֵ֑ל וַיְהִ֣י יוֹסֵ֔ף יְפֵה־תֹ֖אַר וִיפֵ֥ה מַרְאֶֽה׃ וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וַתִּשָּׂ֧א אֵֽשֶׁת־אֲדֹנָ֛יו אֶת־עֵינֶ֖יהָ אֶל־יוֹסֵ֑ף וַתֹּ֖אמֶר שִׁכְבָ֥ה עִמִּֽי׃
+
+ENGLISH:
+When Joseph was taken down to Egypt, Potiphar, a courtier of Pharaoh and his prefect -a [type of] Egyptian official. -bought him from the Ishmaelites who had brought him there. HASHEM was with Joseph, and he was a successful man; and he stayed in the house of his Egyptian master. And when his master saw that HASHEM was with him and that HASHEM lent success to everything he undertook, he took a liking to Joseph. He made him his personal attendant and put him in charge of his household, placing in his hands all that he owned. And from the time that the Egyptian put him in charge of his household and of all that he owned, HASHEM blessed his house for Josephs sake, so that the blessing of HASHEM was upon everything that he owned, in the house and outside. He left all that he had in Josephs hands and, with him there, he paid attention to nothing save the food that he ate. Now Joseph was well built and handsome. After a time, his masters wife cast her eyes upon Joseph and said, Lie with me.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Joseph sold to Potiphar in Egypt.",
+    "heb_summary": "יוסף נמכר לפוטיפר במצרים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Potiphar"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Ishmaelites"
+        },
+        {
+          "en_name": "Hashem"
+        },
+        {
+          "en_name": "Potiphar's Wife"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Ishmael"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Food"
+        }
+      ]
+    },
+    "Rel": {
+      "spouseOf": [
+        {
+          "term1": "Potiphar's Wife",
+          "term2": "Potiphar"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Potiphar's Wife",
+          "term2": "Joseph"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Joseph",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Ishmaelites",
+          "term2": "Egypt"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Potiphar's Wife",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Potiphar",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ],
+      "AllyOf": [
+        {
+          "term1": "Hashem",
+          "term2": "Joseph"
+        }
+      ]
+    }
+  }
+}

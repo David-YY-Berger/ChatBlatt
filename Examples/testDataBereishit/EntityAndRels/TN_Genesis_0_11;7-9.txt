@@ -1,0 +1,47 @@
+﻿COST: Tokens: Total=7171 approx cost usd = $0.000694 (Prompt=6478, Completion=693)
+SOURCE:
+Genesis 11:7-9  (TN_Genesis_0_11:7-9)
+
+HEBREW:
+הָ֚בָה נֵֽרְדָ֔ה וְנָבְלָ֥ה שָׁ֖ם שְׂפָתָ֑ם אֲשֶׁר֙ לֹ֣א יִשְׁמְע֔וּ אִ֖ישׁ שְׂפַ֥ת רֵעֵֽהוּ׃ וַיָּ֨פֶץ יְהֹוָ֥ה אֹתָ֛ם מִשָּׁ֖ם עַל־פְּנֵ֣י כׇל־הָאָ֑רֶץ וַֽיַּחְדְּל֖וּ לִבְנֹ֥ת הָעִֽיר׃ עַל־כֵּ֞ן קָרָ֤א שְׁמָהּ֙ בָּבֶ֔ל כִּי־שָׁ֛ם בָּלַ֥ל יְהֹוָ֖ה שְׂפַ֣ת כׇּל־הָאָ֑רֶץ וּמִשָּׁם֙ הֱפִיצָ֣ם יְהֹוָ֔ה עַל־פְּנֵ֖י כׇּל־הָאָֽרֶץ׃
+
+ENGLISH:
+Let us, then, go down and confound their speech there, so that they shall not understand one anothers speech. Thus HASHEM scattered them from there over the face of the whole earth; and they stopped building the city. That is why it was called Babel, because there HASHEM confounded confound, play on Babel. the speech of the whole earth; and from there HASHEM scattered them over the face of the whole earth.
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "HASHEM confounded speech, scattered people from Babel.",
+    "heb_summary": "ה' בלבל שפה, הפיץ אנשים מבבל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hashem"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Babel"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ]
+    },
+    "Rel": {
+      "associatedWithPlace": [
+        {
+          "term1": "Hashem",
+          "term2": "Babel"
+        },
+        {
+          "term1": "Hashem",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

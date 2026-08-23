@@ -1,0 +1,69 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham journeys, settles, lies about Sarah.",
+        "heb_summary": "אברהם נוסע, מתיישב, משקר על שרה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Sarah"
+                },
+                {
+                    "en_name": "Abimelech"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Negeb"
+                },
+                {
+                    "en_name": "Kadesh"
+                },
+                {
+                    "en_name": "Shur"
+                },
+                {
+                    "en_name": "Gerar"
+                }
+            ]
+        },
+        "Rel": {
+            "spouseOf": [
+                {
+                    "term1": "Sarah",
+                    "term2": "Abraham"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Negeb"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Kadesh"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Shur"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Gerar"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abimelech",
+                    "term2": "Gerar"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_20:1-2"
+}

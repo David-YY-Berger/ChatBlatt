@@ -1,0 +1,74 @@
+﻿{
+    "res": {
+        "en_summary": "God banished Adam and Eve from Eden.",
+        "heb_summary": "אלוהים גירש אדם וחוה מגן עדן.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "God Hashem"
+                },
+                {
+                    "en_name": "Adam"
+                },
+                {
+                    "en_name": "Cherubim"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Garden Of Eden"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Garments Of Skins"
+                },
+                {
+                    "en_name": "Fiery Ever-Turning Sword"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Tree Of Life"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Tree Of Life"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Adam"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God Hashem",
+                    "term2": "Garden Of Eden"
+                },
+                {
+                    "term1": "Adam",
+                    "term2": "Garden Of Eden"
+                },
+                {
+                    "term1": "Cherubim",
+                    "term2": "Garden Of Eden"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Adam",
+                    "term2": "God Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_3:21-24"
+}

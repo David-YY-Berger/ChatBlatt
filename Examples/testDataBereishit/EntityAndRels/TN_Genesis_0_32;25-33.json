@@ -1,0 +1,69 @@
+﻿{
+    "res": {
+        "en_summary": "Jacob wrestled, got new name Israel.",
+        "heb_summary": "יעקב נאבק, קיבל שם חדש ישראל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Agent"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Peniel"
+                },
+                {
+                    "en_name": "Penuel"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Thigh Muscle"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Agent"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Peniel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Penuel"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Agent"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_32:25-33"
+}

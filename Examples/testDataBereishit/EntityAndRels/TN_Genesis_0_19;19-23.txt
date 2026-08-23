@@ -1,0 +1,46 @@
+﻿COST: Tokens: Total=7940 approx cost usd = $0.000910 (Prompt=6543, Completion=1397)
+SOURCE:
+Genesis 19:19-23  (TN_Genesis_0_19:19-23)
+
+HEBREW:
+הִנֵּה־נָ֠א מָצָ֨א עַבְדְּךָ֣ חֵן֮ בְּעֵינֶ֒יךָ֒ וַתַּגְדֵּ֣ל חַסְדְּךָ֗ אֲשֶׁ֤ר עָשִׂ֙יתָ֙ עִמָּדִ֔י לְהַחֲי֖וֹת אֶת־נַפְשִׁ֑י וְאָנֹכִ֗י לֹ֤א אוּכַל֙ לְהִמָּלֵ֣ט הָהָ֔רָה פֶּן־תִּדְבָּקַ֥נִי הָרָעָ֖ה וָמַֽתִּי׃ הִנֵּה־נָ֠א הָעִ֨יר הַזֹּ֧את קְרֹבָ֛ה לָנ֥וּס שָׁ֖מָּה וְהִ֣וא מִצְעָ֑ר אִמָּלְטָ֨ה נָּ֜א שָׁ֗מָּה הֲלֹ֥א מִצְעָ֛ר הִ֖וא וּתְחִ֥י נַפְשִֽׁי׃ וַיֹּ֣אמֶר אֵלָ֔יו הִנֵּה֙ נָשָׂ֣אתִי פָנֶ֔יךָ גַּ֖ם לַדָּבָ֣ר הַזֶּ֑ה לְבִלְתִּ֛י הׇפְכִּ֥י אֶת־הָעִ֖יר אֲשֶׁ֥ר דִּבַּֽרְתָּ׃ מַהֵר֙ הִמָּלֵ֣ט שָׁ֔מָּה כִּ֣י לֹ֤א אוּכַל֙ לַעֲשׂ֣וֹת דָּבָ֔ר עַד־בֹּאֲךָ֖ שָׁ֑מָּה עַל־כֵּ֛ן קָרָ֥א שֵׁם־הָעִ֖יר צֽוֹעַר׃ הַשֶּׁ֖מֶשׁ יָצָ֣א עַל־הָאָ֑רֶץ וְל֖וֹט בָּ֥א צֹֽעֲרָה׃
+
+ENGLISH:
+You have been so gracious to your servant, and have already shown me so much kindness in order to save my life; but I cannot flee to the hills, lest the disaster overtake me and I die. Look, that town there is near enough to flee to; it is such a little place! Let me flee there-it is such a little place-and let my life be saved. He replied, Very well, I will grant you this favor too, and I will not annihilate the town of which you have spoken. Hurry, flee there, for I cannot do anything until you arrive there. Hence the town came to be called Zoar. a little place, v. 20. As the sun rose upon the earth and Lot entered Zoar,
+
+EXTRACTED GRAPH (JSON):
+{
+  "res": {
+    "en_summary": "Lot flees to Zoar, saved by grace.",
+    "heb_summary": "לוט בורח לצֹעַר, ניצל בחסד.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Lot"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Hills"
+        },
+        {
+          "en_name": "Zoar"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ]
+    },
+    "Rel": {
+      "visited": [
+        {
+          "term1": "Lot",
+          "term2": "Zoar"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+﻿{
+    "res": {
+        "en_summary": "Chief cupbearer forgot Joseph",
+        "heb_summary": "שר המשקים שכח את יוסף",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Chief Cupbearer"
+                },
+                {
+                    "en_name": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_40:23"
+}

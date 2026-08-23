@@ -1,0 +1,82 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph seeks brothers, finds them, they conspire.",
+        "heb_summary": "יוסף מחפש אחים, מוצא, הם קושרים קשר.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Brothers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shechem"
+                },
+                {
+                    "en_name": "Hebron"
+                },
+                {
+                    "en_name": "Dothan"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Israel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Israel",
+                    "term2": "Joseph"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Dothan"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Shechem"
+                },
+                {
+                    "term1": "Brothers",
+                    "term2": "Dothan"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Israel",
+                    "term2": "Hebron"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Brothers",
+                    "term2": "Joseph"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_37:13-19"
+}

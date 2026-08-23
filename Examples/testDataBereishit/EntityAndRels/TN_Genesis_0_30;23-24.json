@@ -1,0 +1,31 @@
+﻿{
+    "res": {
+        "en_summary": "Woman names son Joseph, God adds.",
+        "heb_summary": "אישה קראה לבנה יוסף, ה' הוסיף.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Hashem"
+                }
+            ]
+        },
+        "Rel": {
+            "AliasOf": [
+                {
+                    "term1": "God",
+                    "term2": "Hashem"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_30:23-24"
+}

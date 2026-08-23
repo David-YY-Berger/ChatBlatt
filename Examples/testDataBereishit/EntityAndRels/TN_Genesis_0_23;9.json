@@ -1,0 +1,17 @@
+﻿{
+    "res": {
+        "en_summary": "Request to buy Machpelah cave for burial.",
+        "heb_summary": "בקשה לקנות מערת המכפלה לקבורה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Place": [
+                {
+                    "en_name": "Machpelah"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_23:9"
+}

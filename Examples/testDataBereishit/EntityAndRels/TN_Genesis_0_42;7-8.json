@@ -1,0 +1,39 @@
+﻿{
+    "res": {
+        "en_summary": "Joseph recognized his brothers; they didn't recognize him.",
+        "heb_summary": "יוסף זיהה את אחיו; הם לא זיהו אותו.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Joseph's Brothers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Canaan"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Joseph",
+                    "term2": "Joseph's Brothers"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Joseph's Brothers",
+                    "term2": "Canaan"
+                }
+            ]
+        }
+    },
+    "key": "TN_Genesis_0_42:7-8"
+}
