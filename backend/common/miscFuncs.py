@@ -5,6 +5,44 @@ import re
 import unicodedata
 
 
+class MixedLanguageQueryError(ValueError):
+    """Raised when free-text search input mixes Hebrew and English letters,
+    since a single query can only be searched against one language's FAISS
+    index at a time."""
+    pass
+
+
+def contains_hebrew_chars(text: str) -> bool:
+    return bool(re.search(r'[\u0590-\u05FF]', text or ""))
+
+
+def contains_english_chars(text: str) -> bool:
+    return bool(re.search(r'[A-Za-z]', text or ""))
+
+
+def detect_query_language(text: str) -> str:
+    """
+    Detect which language-specific FAISS index a free-text query should be
+    searched against.
+
+    Returns "heb" if the text contains Hebrew letters (and no English
+    letters), or "en" if it contains English letters (and no Hebrew
+    letters) - or neither (e.g. digits/punctuation only), defaulting to
+    English in that case.
+
+    Raises MixedLanguageQueryError if the text contains *both* Hebrew and
+    English letters, since there is no single FAISS index that covers both
+    languages at once.
+    """
+    has_heb = contains_hebrew_chars(text)
+    has_en = contains_english_chars(text)
+    if has_heb and has_en:
+        raise MixedLanguageQueryError(
+            "Free-text search can't mix Hebrew and English in the same query — please use only one language."
+        )
+    return "heb" if has_heb else "en"
+
+
 def clean_en_text_from_html_tags(html_content) -> str:
 
     # 0. Replace the tetragrammaton before processing

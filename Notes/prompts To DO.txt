@@ -10,7 +10,6 @@ hebrew working
 easy fixes {{
 put sefaria logo on same level as 'Mapali' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
 ------------------
-source search - when input is given for faiss to sort and entity filters, it does not proper filter by entity, it only orders by faiss and shows all the sources. fix it
 ------------------
 remove all the UI front end code on the left side with checkboxes, logic, etc with Passage type, and filtering by source. instead, on the left side, there should be
 1. a simple, COMPACT section to select Passage Type (no 'all' or 'none' buttons), just those 5 checkboxes, by defualt they should all be checked.
@@ -22,10 +21,11 @@ add hebrew to faiss...
 
 fix entity rel population (pydantic){{
 -----------
-entity metadata population - adjust our pydantic prompt code so that numbers should not get any value of heb_display_name. when adding to the DB, heb_display_name should remain null.
 
-when retrieving a number object, 
 -------
+every forefather of jewish people - should be called 'jewish', from Abraham and on (Abraham, isaac, jacob, jacob's children, etc)
+
+
 
 dont do this until we are ready to test it.. 
 use this to test: 

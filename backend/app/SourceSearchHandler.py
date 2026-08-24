@@ -3,10 +3,11 @@
 from backend.db.DBFactory import DBFactory
 from backend.db.DBapiMongoDB import DBapiMongoDB
 from backend.db.EntityRelManager import EntityRelManager
-from backend.faiss_api.FaissEngine import FaissEngine
+from backend.faiss_api.FaissEngine import FaissEngine, LANG_EN
 
 from backend.models_db.Answer import Answer
 from backend.app.SourceSearchQuery import SourceSearchQuery
+from backend.common.miscFuncs import detect_query_language
 
 from typing import Optional, List
 
@@ -39,8 +40,15 @@ class SourceSearchHandler:
         # Step 2: if free text was given, ask FAISS for the similarity
         # ranking of *keys* and use it purely to re-order the already
         # filtered list above - no per-source DB lookups involved.
+        #
+        # The query's language (English or Hebrew) determines which
+        # language-specific FAISS index to search; a query mixing both
+        # languages is rejected since there's no single index for both.
         if query.free_text_similarity:
-            src_metadata_lst = self.order_by_faiss_similarity(query.free_text_similarity, src_metadata_lst)
+            lang = detect_query_language(query.free_text_similarity)
+            src_metadata_lst = self.order_by_faiss_similarity(
+                query.free_text_similarity, src_metadata_lst, lang=lang
+            )
 
         src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
         src_metadata_lst = src_metadata_lst[:query.max_sources]
@@ -74,23 +82,24 @@ class SourceSearchHandler:
         return src_metadata_lst
 
     def order_by_faiss_similarity(
-        self, free_text_similarity_text: str, src_metadata_lst: List
+        self, free_text_similarity_text: str, src_metadata_lst: List, lang: str = LANG_EN
     ) -> List:
         """
         Re-rank an already-filtered metadata list by FAISS text-similarity
         order, without any further DB access.
 
-        FAISS ranks the *entire* index in one cheap, vectorized call and
-        returns it as a list of keys, ordered nearest-first. We walk that
-        ranking and pull matching entries out of ``src_metadata_lst`` (kept
-        as a key -> metadata map for O(1) lookup/removal), so the result is
-        the intersection of "structurally filtered" and "text-similar",
-        ordered by similarity. Anything FAISS didn't rank (e.g. the index is
-        stale/incomplete) is appended at the end rather than silently
-        dropped, so results never disappear because of a lookup mismatch.
+        FAISS ranks the *entire* index (for the given `lang`) in one cheap,
+        vectorized call and returns it as a list of keys, ordered
+        nearest-first. We walk that ranking and pull matching entries out of
+        ``src_metadata_lst`` (kept as a key -> metadata map for O(1)
+        lookup/removal), so the result is the intersection of "structurally
+        filtered" and "text-similar", ordered by similarity. Anything FAISS
+        didn't rank (e.g. the index is stale/incomplete) is appended at the
+        end rather than silently dropped, so results never disappear because
+        of a lookup mismatch.
         """
         by_key = {src.key: src for src in src_metadata_lst}
-        ranked_keys = self.faiss.search(free_text_similarity_text)
+        ranked_keys = self.faiss.search(free_text_similarity_text, lang=lang)
 
         ordered = [by_key.pop(key) for key in ranked_keys if key in by_key]
         ordered.extend(by_key.values())
