@@ -19,6 +19,12 @@ class CollectionObjs:
     # FAISS
     FS = Collection(name="faiss_data", db_name="Faiss")
 
+    # BM25 (keyword/lexical similarity index, complementing FAISS's semantic
+    # similarity). Lives in the same "Faiss" search-index database, but its
+    # own GridFS bucket, so it is populated/cleared fully independently of
+    # the FAISS index.
+    BM25 = Collection(name="bm25_data", db_name="Faiss")
+
     # Graphes
     SRC_METADATA = Collection(name="src_metadata", db_name="Graphs")
     ENTITIES = Collection(name="entities", db_name="Graphs")
@@ -34,6 +40,7 @@ class CollectionObjs:
             cls.MS,
 
             cls.FS,
+            cls.BM25,
 
             cls.SRC_METADATA,
             cls.ENTITIES,

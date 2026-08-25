@@ -11,6 +11,7 @@ from backend.common.Decorators import singleton
 from backend.db.Collections import CollectionObjs, Collection
 from backend.db.DBConstants import DBFields
 from backend.db.DBapiInterface import DBapiInterface
+from backend.db.mongo_parts.bm25_mixin import BM25MongoMixin
 from backend.db.mongo_parts.entity_mixin import EntityMongoMixin
 from backend.db.mongo_parts.faiss_mixin import FaissMongoMixin
 from backend.db.mongo_parts.genealogy_mixin import GenealogyMongoMixin
@@ -24,6 +25,7 @@ from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixi
 class DBapiMongoDB(
     SourceContentMongoMixin,
     FaissMongoMixin,
+    BM25MongoMixin,
     EntityMongoMixin,
     RelationshipMongoMixin,
     SourceMetadataMongoMixin,
