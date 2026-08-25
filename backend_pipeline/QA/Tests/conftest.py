@@ -154,13 +154,11 @@ class FakeDBapi:
         from backend.db.mongo_parts.relationship_mixin import RelationshipMongoMixin
         from backend.db.mongo_parts.source_content_mixin import SourceContentMongoMixin
         from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixin
-        from backend.db.mongo_parts.faiss_mixin import FaissMongoMixin
 
         collections = defaultdict(FakeCollection)
 
         class _TestDB(
             SourceContentMongoMixin,
-            FaissMongoMixin,
             EntityMongoMixin,
             RelationshipMongoMixin,
             SourceMetadataMongoMixin,

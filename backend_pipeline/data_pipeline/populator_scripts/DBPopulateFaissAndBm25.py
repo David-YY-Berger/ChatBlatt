@@ -5,7 +5,7 @@ from backend.faiss_api import FaissEngine
 from backend.bm25_api import BM25Engine
 
 
-class DBPopulateFaiss(DBParentClass):
+class DBPopulateFaissAndBm25(DBParentClass):
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""
@@ -18,7 +18,7 @@ class DBPopulateFaiss(DBParentClass):
 
         ############################################## Populating FAISS ###############################################
 
-    def test_populate_faiss_index(self):
+    def test_populate_faiss_bm25_index(self):
         self.faiss.clear_index()  # start from a totally clean FAISS index (both languages)
         self.bm25.clear_index()  # start from a totally clean BM25 index (both languages) - fully independent of FAISS
 
