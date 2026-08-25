@@ -2,19 +2,17 @@ from abc import ABC, abstractmethod
 from typing import Any, Dict
 
 from backend.db.Collections import Collection
-from backend.db.interface_parts.bm25_interface import BM25InterfaceMixin
 from backend.db.interface_parts.entity_interface import EntityInterfaceMixin
-from backend.db.interface_parts.faiss_interface import FaissInterfaceMixin
 from backend.db.interface_parts.genealogy_interface import GenealogyInterfaceMixin
 from backend.db.interface_parts.relationship_interface import RelationshipInterfaceMixin
+from backend.db.interface_parts.similarity_index_interface import SimilarityIndexInterfaceMixin
 from backend.db.interface_parts.source_content_interface import SourceContentInterfaceMixin
 from backend.db.interface_parts.source_metadata_interface import SourceMetadataInterfaceMixin
 
 
 class DBapiInterface(
     SourceContentInterfaceMixin,
-    FaissInterfaceMixin,
-    BM25InterfaceMixin,
+    SimilarityIndexInterfaceMixin,
     EntityInterfaceMixin,
     RelationshipInterfaceMixin,
     SourceMetadataInterfaceMixin,

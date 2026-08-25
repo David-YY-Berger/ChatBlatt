@@ -11,12 +11,11 @@ from backend.common.Decorators import singleton
 from backend.db.Collections import CollectionObjs, Collection
 from backend.db.DBConstants import DBFields
 from backend.db.DBapiInterface import DBapiInterface
-from backend.db.mongo_parts.bm25_mixin import BM25MongoMixin
 from backend.db.mongo_parts.entity_mixin import EntityMongoMixin
-from backend.db.mongo_parts.faiss_mixin import FaissMongoMixin
 from backend.db.mongo_parts.genealogy_mixin import GenealogyMongoMixin
 from backend.db.mongo_parts.relationship_mixin import RelationshipMongoMixin
 from backend.db.mongo_parts.select_option_mixin import SelectOptionMongoMixin
+from backend.db.mongo_parts.similarity_index_mixin import SimilarityIndexMongoMixin
 from backend.db.mongo_parts.source_content_mixin import SourceContentMongoMixin
 from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixin
 
@@ -24,8 +23,7 @@ from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixi
 @singleton
 class DBapiMongoDB(
     SourceContentMongoMixin,
-    FaissMongoMixin,
-    BM25MongoMixin,
+    SimilarityIndexMongoMixin,
     EntityMongoMixin,
     RelationshipMongoMixin,
     SourceMetadataMongoMixin,
