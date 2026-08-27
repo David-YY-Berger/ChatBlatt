@@ -99,7 +99,13 @@ class EntityEnrichment(BaseModel):
         default=None, description="Person only. True if the person is clearly female."
     )
     isNonJew: Optional[bool] = Field(
-        default=None, description="Person only. True if the person is explicitly non-Jewish."
+        default=None,
+        description=(
+            "Person only. True if the person is explicitly non-Jewish. Every forefather of "
+            "the Jewish people — from Abraham onward (Abraham, Isaac, Jacob, and Jacob's "
+            "children/the twelve tribes, etc.) — must be considered Jewish (isNonJew=False), "
+            "even though they lived before the giving of the Torah."
+        ),
     )
     isGroup: Optional[bool] = Field(
         default=None, description="Person only. True if the name refers to a group rather than an individual."
@@ -233,7 +239,10 @@ class EntityEnrichmentCaller:
                 "    Tanach = biblical period; Tanaim = Mishnaic sages (≈10–220 CE); "
                 "Amoraim = Talmudic sages (≈220–500 CE). Omit if genuinely uncertain.\n"
                 "- isWoman: true only if the person is clearly female.\n"
-                "- isNonJew: true only if the person is explicitly non-Jewish.\n"
+                "- isNonJew: true only if the person is explicitly non-Jewish. Every forefather "
+                "of the Jewish people, from Abraham and on (Abraham, Isaac, Jacob, Jacob's "
+                "children/the twelve tribes, and their descendants), must be treated as Jewish "
+                "(isNonJew=false) even though this precedes the giving of the Torah. If not clear, omit the field.\n"
                 "- isGroup: true only if the name refers to a group (e.g. 'Children of Israel', "
                 "'The Sanhedrin').\n"
                 f"- roles: applicable roles from: {', '.join(_ROLE_VALUES)}. "
