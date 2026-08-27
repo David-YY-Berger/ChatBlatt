@@ -68,12 +68,13 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         Transactional: reads JSON files from a directory, extracts entities and relationships,
         inserts them into the DB. If any part fails, all inserts are rolled back.
         """
-        dir_path = Paths.TEST_DATA_BEREISHIT_ENTITY_REL_DIR
+        # dir_path = Paths.TEST_DATA_BEREISHIT_ENTITY_REL_DIR
+        dir_path = Paths.LMM_RESPONSES_OUTPUT_DIR
 
         # 1. Read JSONs with source keys derived from filenames
         json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
         if not json_entries:
-            print("No JSON files found in directory.")
+            print(f"No JSON files found in directory - {dir_path}")
             return
 
         # 2. Sort by source key using SourceClass sorting logic

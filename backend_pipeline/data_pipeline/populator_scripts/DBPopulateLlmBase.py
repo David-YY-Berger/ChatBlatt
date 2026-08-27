@@ -78,7 +78,7 @@ class DBPopulateLlmBase(DBParentClass):
         written to JSON/TXT files under _get_output_dir()), then load those JSON
         files back and populate the DB (phase 2).
         """
-        # OsFunctions.clear_create_directory(self._get_output_dir())
+        OsFunctions.clear_create_directory(self._get_output_dir())
         asyncio.run(self._extract_all_to_json())
         self.test_populate_from_jsons()
 
@@ -190,7 +190,8 @@ class DBPopulateLlmBase(DBParentClass):
         total_cost_usd = 0.0
         total_tokens = total_input_tokens = total_output_tokens = 0
 
-        contents = self.db_api.get_all_src_contents_by_book(book)
+        # contents = self.db_api.get_all_src_contents_by_book(book)
+        contents = get_examples_src_contents(self.db_api)
         for src_content in contents:
             passage = src_content.get_clean_en_text()
             json_str, usage, cost_usd = await self._extract_from_passage(passage)
@@ -230,10 +231,11 @@ class DBPopulateLlmBase(DBParentClass):
 
     def test_populate_from_jsons(self) -> None:
         """Entry point: load JSON files from output dir and populate the DB."""
-        # json_entries = JsonUtils.read_jsons_from_dir_with_keys(self._get_output_dir())
-        json_entries = JsonUtils.read_jsons_from_dir_with_keys(Paths.TEST_DATA_BEREISHIT_METADATA_DIR)
+        dir_path = self._get_output_dir()
+        # dir_path = Paths.TEST_DATA_BEREISHIT_METADATA_DIR
+        json_entries = JsonUtils.read_jsons_from_dir_with_keys(dir_path)
         if not json_entries:
-            print("No JSON files found in directory.")
+            print(f"No JSON files found in directory - {dir_path}")
             return
         json_entries.sort(key=source_entry_sort_key)
         print(f"Loaded {len(json_entries)} JSON files, sorted by source key.")
