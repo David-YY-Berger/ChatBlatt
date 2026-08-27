@@ -116,7 +116,7 @@ class EntityEnrichment(BaseModel):
         description=(
             "Person only. True if the person is explicitly non-Jewish. Every forefather of "
             "the Jewish people — from Abraham onward (Abraham, Isaac, Jacob, and Jacob's "
-            "children/the twelve tribes, etc.) — must be considered Jewish (isNonJew=False), "
+            "children/the twelve tribes, or any of their wives/Matriarchs (Sara, Rebecca, etc.) — must be considered Jewish (isNonJew=False), "
             "even though they lived before the giving of the Torah."
         ),
     )
