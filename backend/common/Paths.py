@@ -24,6 +24,10 @@ TEST_DATA_BEREISHIT_DIR = os.path.join(EXAMPLES_DIR, "testDataBereishit")
 TEST_DATA_BEREISHIT_ENTITY_REL_DIR = os.path.join(TEST_DATA_BEREISHIT_DIR, "EntityAndRels")
 TEST_DATA_BEREISHIT_METADATA_DIR = os.path.join(TEST_DATA_BEREISHIT_DIR, "metadata")
 
+ENTITIES_TO_IGNORE_DIR = os.path.join(
+    PROJECT_ROOT_DIR, "backend_pipeline", "data_pipeline", "PydanticModels", "entities_to_ignore"
+)
+
 QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")
 DATA_CLEANUP_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_cleanup_mongo_queries.json")
 DATA_ANALYSIS_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_analysis_mongo_queries.json")

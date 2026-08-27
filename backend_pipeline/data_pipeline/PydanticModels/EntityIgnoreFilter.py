@@ -3,29 +3,38 @@
 EntityIgnoreFilter - filters out non-proper-noun Person/Place entities returned by the LLM.
 
 Sometimes the LLM extracts generic nouns instead of proper nouns (e.g. "the advisor",
-"the wilderness"). This module discards any Person/Place entity whose name CONTAINS
-(as a substring, not only a full match, case-insensitively) one of the generic terms
-listed in entities_to_ignore/Person and entities_to_ignore/Place.
+"the wilderness"). This module discards:
+  - Person entities whose name CONTAINS (as a substring, case-insensitively) one of the
+    generic terms listed in entities_to_ignore/Person.
+  - Place entities whose name EXACTLY MATCHES (case-insensitively) one of the generic
+    terms listed in entities_to_ignore/Place. Place names that merely contain such a term
+    (e.g. "Wilderness of Sin") are kept, since they are still proper nouns.
 
-Matching uses an Aho-Corasick automaton, built once per entity type and cached, so
-checking a name against the full ignore list (hundreds of terms) costs O(len(name))
-instead of O(len(name) * num_terms) as a naive per-term substring loop would.
+Person matching uses an Aho-Corasick automaton, built once and cached, so checking a name
+against the full ignore list (hundreds of terms) costs O(len(name)) instead of
+O(len(name) * num_terms) as a naive per-term substring loop would. Place matching uses a
+simple cached set lookup since it only needs exact-match comparisons.
 """
 
 import os
 from collections import deque
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Set
 
+from backend.common import Paths
 from backend.models_db.Enums import EntityType
 
-_IGNORE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entities_to_ignore")
-
-# Maps EntityType -> ignore-list filename under entities_to_ignore/.
+# Maps EntityType -> ignore-list filename under Paths.ENTITIES_TO_IGNORE_DIR/.
 # Only entity types listed here are subject to filtering.
 _ENTITY_TYPE_TO_IGNORE_FILE: Dict[EntityType, str] = {
     EntityType.EPerson: "Person",
     EntityType.EPlace: "Place",
 }
+
+# Entity types filtered via substring (CONTAINS) matching, using the Aho-Corasick automaton.
+_SUBSTRING_MATCH_TYPES = {EntityType.EPerson}
+
+# Entity types filtered via exact-match comparison only.
+_EXACT_MATCH_TYPES = {EntityType.EPlace}
 
 
 class _AhoCorasick:
@@ -84,14 +93,15 @@ class _AhoCorasick:
 
 
 # Lazily built + cached per entity type so the ignore files are read and the
-# automaton is constructed only once per process, regardless of how many
+# automaton/set is constructed only once per process, regardless of how many
 # entities are checked.
 _automaton_cache: Dict[EntityType, Optional[_AhoCorasick]] = {}
+_exact_terms_cache: Dict[EntityType, Set[str]] = {}
 
 
 def _load_ignore_terms(entity_type: EntityType) -> List[str]:
     filename = _ENTITY_TYPE_TO_IGNORE_FILE[entity_type]
-    path = os.path.join(_IGNORE_DIR, filename)
+    path = os.path.join(Paths.ENTITIES_TO_IGNORE_DIR, filename)
     with open(path, "r", encoding="utf-8") as f:
         return [line.strip().lower() for line in f if line.strip()]
 
@@ -106,19 +116,42 @@ def _get_automaton(entity_type: EntityType) -> Optional[_AhoCorasick]:
     return _automaton_cache[entity_type]
 
 
+def _get_exact_terms(entity_type: EntityType) -> Set[str]:
+    if entity_type not in _exact_terms_cache:
+        if entity_type in _ENTITY_TYPE_TO_IGNORE_FILE:
+            _exact_terms_cache[entity_type] = set(_load_ignore_terms(entity_type))
+        else:
+            _exact_terms_cache[entity_type] = set()
+    return _exact_terms_cache[entity_type]
+
+
 def is_ignored_entity_name(name: str, entity_type: EntityType) -> bool:
     """
-    Return True if *name* should be discarded because it contains (as a substring,
-    case-insensitively) one of the generic, non-proper-noun terms configured for
-    *entity_type* under entities_to_ignore/. Entity types without an ignore list
-    (i.e. anything other than Person/Place) always return False.
+    Return True if *name* should be discarded as a generic, non-proper-noun term
+    configured for *entity_type* under Paths.ENTITIES_TO_IGNORE_DIR/.
+
+    - Person: discarded if *name* CONTAINS (as a substring, case-insensitively) one
+      of the configured terms.
+    - Place: discarded only if *name* EXACTLY MATCHES (case-insensitively) one of the
+      configured terms. A place name that merely contains a term (e.g. "Wilderness of
+      Sin") is kept, since it is still a proper noun.
+
+    Entity types without an ignore list (i.e. anything other than Person/Place) always
+    return False.
     """
     if not name:
         return False
-    automaton = _get_automaton(entity_type)
-    if automaton is None:
-        return False
-    return automaton.contains_any(name.lower())
+
+    if entity_type in _EXACT_MATCH_TYPES:
+        return name.lower() in _get_exact_terms(entity_type)
+
+    if entity_type in _SUBSTRING_MATCH_TYPES:
+        automaton = _get_automaton(entity_type)
+        if automaton is None:
+            return False
+        return automaton.contains_any(name.lower())
+
+    return False
 
 
 __all__ = ["is_ignored_entity_name"]

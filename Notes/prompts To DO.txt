@@ -1,6 +1,8 @@
 
 todo {{
+
 populate BT
+write ton of easy prompts to commit while working...
 	
 search sources must be halak
 hebrew working
@@ -9,6 +11,7 @@ hebrew working
 }}
 
 easy fixes {{
+-------
 put sefaria logo on same level as 'Mapali' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
 ------------------
 ------------------
@@ -20,54 +23,32 @@ add hebrew to faiss...
 }}
 
 
-fix entity rel population (pydantic){{
------------
-
--------
-every forefather of jewish people - should be called 'jewish', from Abraham and on (Abraham, isaac, jacob, jacob's children, etc)
-
-
-
-dont do this until we are ready to test it.. 
-use this to test: 
-
-
-as part of this populater script - backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateEntityRelGraph
-
-pydantic creating graph, remove entitys with display name like (.lower() (not contained, exactly equal..)
-
-	
-	
-	building a pipeline to extract meaningful proper nouns from text using pydantic. going over the Tanach and babylonian talmud
-	i need hardcode list of words to ignore
-
-	giving me common noun words, that an LLM would take as 'Person', to ignore. This list must be (1) alphabet order (2) include singular, plural, possesive, etc of each word, (3) be a long as possible.
-	
-	here are some example categorys:
-	Person -all family relationship general words (son, sons, daughter, daughters, wife, wives, husband, husbands, etc)
-			- royalty (king, queen, servant, master, maidservant)
-			- student teacher (rabbi, student, teacher, guide, colleague, )
-			- community leader (judge, leader, etc)
-	
-	YOU MUST GIVE ME A COPIABLE BLOCK OF TEXT, EACH WORD IS ON A NEW LINE.
-	
-	
-	
-	
-	
-	
-	Place - house, city, plain, hills, entrace, room, gate, door, Field, (see enum!!)
-
-}}
-
-
 fix up identifying ambigious entityes {{ 
 
+in this backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph.DBPopulateEntityRelGraph populator, i have this problem:
+There can be 2 or more different people throughout my corpus (TN, BT) with the same exact display_en_name derived with the LLM. But I must register them differently. 
+Before I say the algo how to solve this, tell me exactly what my current program does about this.
 
+Algo:
+if no other entity with this entity_type and display_en_name : create_new_entity
+else :
+		if 1 other entity with this entity_type and display_en_name : 
+			if in this passage, the new entity has father, mother:
+				if it contradicts the existing entity: create_new_entity
+				else: add_to_existing_entity.
+			else:
+				if new entity has other person relationship (sibling, child, studied from, ):
+					if any are the same as the existing entity: add_to_existing_entity
+					else: 
+					
+			
+		eles
+		
 
 }}
 
-
+house
+gate
 
 
 old prompts {{
