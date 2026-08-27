@@ -334,8 +334,13 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
         },
 
     #     number - no hebrew display name populated...
-        "BT_Sanhedrin_0_18a:11-18b:4", #number not yet popualted - 71..
+    #     "BT_Sanhedrin_0_18a:11-18b:4", #number not yet popualted - 71..
 
+        # improving entity metadata, heb display names
+        {
+            # why did Shinar not popuate hebrew display name?
+            "TN_Genesis_0_13:14-14:1"
+        }
     ]
     res = [db_api.find_one_source_content(k) for k in key_strs]
     return res
