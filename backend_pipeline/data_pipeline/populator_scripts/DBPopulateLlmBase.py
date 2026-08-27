@@ -340,9 +340,11 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
 
         # improving entity metadata, heb display names
 
-        # why did Shinar not popuate hebrew display name?
+        # why did Shinar not populate hebrew display name?
         "TN_Genesis_0_13:14-14:1"
 
+    #     why does laban not populate hebrew display name?
+    #     "TN_Genesis_0_25:19-22"
     ]
     res = [db_api.find_one_source_content(k) for k in key_strs]
     return res

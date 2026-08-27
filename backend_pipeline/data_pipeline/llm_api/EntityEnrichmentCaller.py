@@ -28,7 +28,7 @@ Usage:
 import logging
 from typing import List, Optional, Tuple
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from pydantic_ai import Agent, ModelSettings
 from pydantic_ai.usage import RunUsage
 
@@ -41,6 +41,15 @@ _ROLE_VALUES = [r.value for r in RoleType]
 _TIME_PERIOD_VALUES = [t.value for t in TimePeriod]
 _PLACE_TYPE_VALUES = [p.value for p in PlaceType]
 _SYMBOL_TYPE_VALUES = [s.value for s in SymbolType]
+
+# Legal type-specific fields per entityType; unlisted types get none.
+_TYPE_SPECIFIC_FIELDS_BY_ENTITY_TYPE = {
+    "Person": {"timePeriod", "isWoman", "isNonJew", "isGroup", "roles"},
+    "Number": {"heb_unit", "heb_context"},
+    "Place": {"placeType"},
+    "Symbol": {"symbolType"},
+}
+_ALL_TYPE_SPECIFIC_FIELDS = set().union(*_TYPE_SPECIFIC_FIELDS_BY_ENTITY_TYPE.values())
 
 
 def _match_enum_value(raw: Optional[str], enum_cls, field_name: str) -> Optional[str]:
@@ -78,6 +87,10 @@ class EntityEnrichment(BaseModel):
     key: str = Field(
         min_length=1,
         description="Exact 'key' value copied from the corresponding input entity JSON.",
+    )
+
+    entityType: str = Field(
+        description="Exact 'entityType' value copied from the corresponding input entity JSON.",
     )
 
     display_heb_name: Optional[str] = Field(
@@ -170,6 +183,25 @@ class EntityEnrichment(BaseModel):
         ]
         return filtered or None
 
+    @model_validator(mode="after")
+    def _drop_fields_not_valid_for_entity_type(self) -> "EntityEnrichment":
+        """
+        Guard against the LLM attaching another entityType's fields to this entity
+        (e.g. setting placeType on a 'Nation' entity just because it shares a name
+        with a 'Place' entity, as with "Shinar"). Any type-specific field not valid
+        for self.entityType is forced back to None/empty, with a warning logged.
+        """
+        allowed_fields = _TYPE_SPECIFIC_FIELDS_BY_ENTITY_TYPE.get(self.entityType, set())
+        for field_name in _ALL_TYPE_SPECIFIC_FIELDS - allowed_fields:
+            if getattr(self, field_name, None) not in (None, []):
+                logger.warning(
+                    f"Entity '{self.key}' has entityType '{self.entityType}' but the LLM set "
+                    f"'{field_name}' (only valid for {', '.join(sorted(t for t, fs in _TYPE_SPECIFIC_FIELDS_BY_ENTITY_TYPE.items() if field_name in fs))}) — dropping."
+                )
+                print(f"  WARNING: entity '{self.key}' ({self.entityType}) had invalid field '{field_name}' dropped.")
+                setattr(self, field_name, None)
+        return self
+
 
 class EnrichmentResponse(BaseModel):
     """Top-level output type returned by the LLM for entity enrichment."""
@@ -222,9 +254,10 @@ class EntityEnrichmentCaller:
                 "and possibly other types that need no enrichment here).\n\n"
 
                 "=== OUTPUT FORMAT ===\n"
-                "Return one entry per entity you can enrich, with 'key' copied EXACTLY "
-                "(same string) from the matching input entity. Only set the fields relevant "
-                "to that entity's entityType; leave every other field unset.\n\n"
+                "Return one entry per entity you can enrich, with 'key' AND 'entityType' both "
+                "copied EXACTLY from the matching input entity. Only set fields relevant to "
+                "that entity's OWN entityType; never set a field belonging to a different "
+                "entityType.\n\n"
 
                 "=== FOR EVERY ENTITY EXCEPT entityType == 'Number' ===\n"
                 "- display_heb_name: the Hebrew name for this entity, taken almost verbatim "
@@ -260,6 +293,9 @@ class EntityEnrichmentCaller:
 
                 "=== IF entityType == 'Symbol' ===\n"
                 f"- symbolType: one of: {', '.join(_SYMBOL_TYPE_VALUES)}.\n\n"
+
+                "=== ANY OTHER entityType ===\n"
+                "- Only display_heb_name applies; no other field.\n\n"
 
                 "=== RULES ===\n"
                 "- Only enrich entities that appear in the ENTITIES list you were given.\n"

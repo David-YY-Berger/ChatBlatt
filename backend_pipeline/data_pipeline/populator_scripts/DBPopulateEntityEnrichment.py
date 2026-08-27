@@ -271,8 +271,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         total_tokens = total_input_tokens = total_output_tokens = 0
         num_processed = num_skipped = num_populate_failed = 0
 
-        # contents = get_examples_src_contents(self.db_api)
-        contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
+        contents = get_examples_src_contents(self.db_api)
+        # contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
@@ -283,13 +283,13 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             entity_json_list = [e.model_dump_json(exclude_none=True) for e in entities]
             passage = self._build_bilingual_passage(src_content)
 
-            # json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
-            try:
-                cost_usd, json_str, usage = await self.temp_read_json_from_file(src_content.key)
-            except FileNotFoundError:
-                print(f"  Skipping {src_content.key}: no saved metadata JSON found to restore from.")
-                num_skipped += 1
-                continue
+            json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            # try:
+            #     cost_usd, json_str, usage = await self.temp_read_json_from_file(src_content.key)
+            # except FileNotFoundError:
+            #     print(f"  Skipping {src_content.key}: no saved metadata JSON found to restore from.")
+            #     num_skipped += 1
+            #     continue
 
             total_cost_usd += cost_usd
             total_tokens += usage.total_tokens
