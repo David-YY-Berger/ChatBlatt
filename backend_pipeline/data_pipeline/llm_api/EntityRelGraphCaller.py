@@ -1,16 +1,16 @@
 # bs"d
 """
-PydanticCaller - Extracts structured data from passages using LLMs.
+EntityRelGraphCaller - Extracts structured data from passages using LLMs.
 
 Usage:
-    from backend.data_pipeline.llm_api.PydanticCaller import PydanticCaller
+    from backend.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
     from backend.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 
     # Optional: Switch to OpenAI (default is Gemini)
     ModelConfig.set_provider(ModelProvider.OPENAI)
 
     # Create caller (uses current ModelConfig settings)
-    caller = PydanticCaller()
+    caller = EntityRelGraphCaller()
 
     # Extract graph from passage
     json_str, usage, cost = await caller.extract_graph_from_passage(passage)
@@ -51,7 +51,7 @@ class EntityRelGraphCaller:
 
         model_str = ModelConfig.get_pydantic_model()
         is_thinking = ModelConfig.is_thinking_enabled()
-        logger.info(f"Initializing PydanticCaller with model: {model_str}, thinking={is_thinking}")
+        logger.info(f"Initializing EntityRelGraphCaller with model: {model_str}, thinking={is_thinking}")
 
         # Configure model settings based on thinking mode
         if is_thinking:
