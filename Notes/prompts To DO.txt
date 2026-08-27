@@ -30,19 +30,20 @@ There can be 2 or more different people throughout my corpus (TN, BT) with the s
 Before I say the algo how to solve this, tell me exactly what my current program does about this.
 
 Algo:
-if no other entity with this entity_type and display_en_name : create_new_entity
+(Before doing this, must preload sources per entity - 
+
+
+if 0 other entity with this entity_type and display_en_name : create_new_entity
 else :
-		if 1 other entity with this entity_type and display_en_name : 
-			if in this passage, the new entity has father, mother:
-				if it contradicts the existing entity: create_new_entity
-				else: add_to_existing_entity.
-			else:
-				if new entity has other person relationship (sibling, child, studied from, ):
-					if any are the same as the existing entity: add_to_existing_entity
-					else: 
-					
+	if 1 other entity with this entity_type and display_en_name : 
+		if in C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\PydanticModels\ambigous_entities\Person: decide_entity
+		if in this passage, the new entity has father, mother:
+			if it contradicts the existing entity: create_new_entity
+			else: add_to_existing_entity.
+		else:
+			add_to_existing_entity
 			
-		eles
+	eles
 		
 
 }}

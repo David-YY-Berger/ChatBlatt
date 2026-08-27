@@ -3,12 +3,9 @@
 from __future__ import annotations
 
 from pydantic import BaseModel, Field, field_validator
-from typing import Any, Dict, List, Optional, Tuple, Type, TYPE_CHECKING
+from typing import Any, Dict, List, Tuple, Type
 
 from backend.models_db.Enums import EntityType
-
-if TYPE_CHECKING:
-    from backend.models_db.EntityObjects.EntityIdentity import EntityIdentityContext
 
 
 # Helper function for transient fields (excluded from serialization/db)
@@ -43,7 +40,7 @@ class Entity(BaseModel):
 
     # ========================= Identity / Equality =========================
 
-    def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
+    def get_identity_tuple(self) -> tuple:
         """
         Returns a hashable tuple that uniquely identifies this entity for dedup purposes.
         Two entities with the same identity tuple are considered 'the same entity'.
@@ -53,7 +50,7 @@ class Entity(BaseModel):
         """
         return (self.display_en_name.lower(), self.entityType)
 
-    def build_existence_query(self, context: Optional["EntityIdentityContext"] = None) -> Dict[str, Any]:
+    def build_existence_query(self) -> Dict[str, Any]:
         """
         Returns a MongoDB query dict to find an existing entity that is 'equal' to this one.
         Used by the DB layer for dedup on insert.

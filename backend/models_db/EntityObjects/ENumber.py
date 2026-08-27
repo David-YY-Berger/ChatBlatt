@@ -1,11 +1,8 @@
 # bs"d - lehagdil torah velahadir
 
-from typing import Any, ClassVar, Dict, Optional, TYPE_CHECKING
+from typing import Any, ClassVar, Dict, Optional
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.Enums import EntityType, NumberCategory
-
-if TYPE_CHECKING:
-    from backend.models_db.EntityObjects.EntityIdentity import EntityIdentityContext
 
 
 class ENumber(Entity):
@@ -33,7 +30,7 @@ class ENumber(Entity):
 
     # ========================= Identity / Equality =========================
 
-    def get_identity_tuple(self, context: Optional["EntityIdentityContext"] = None) -> tuple:
+    def get_identity_tuple(self) -> tuple:
         """
         Number equality is determined by the combination of numberCategory, unit, and context —
         not by display_en_name, since many numbers share the same numeric value.
@@ -51,7 +48,7 @@ class ENumber(Entity):
             data["numberCategory"] = data["numberCategory"].value
         return data
 
-    def build_existence_query(self, context: Optional["EntityIdentityContext"] = None) -> Dict[str, Any]:
+    def build_existence_query(self) -> Dict[str, Any]:
         """
         Query DB for a Number with the same numberCategory, unit (case-insensitive),
         and context (case-insensitive).
