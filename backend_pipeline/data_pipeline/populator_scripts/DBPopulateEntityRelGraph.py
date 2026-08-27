@@ -12,6 +12,7 @@ from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import D
 from backend.db.EntityRelManager import EntityRelManager
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend_pipeline.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
+from backend_pipeline.data_pipeline.PydanticModels.EntityIgnoreFilter import is_ignored_entity_name
 from backend_pipeline.file_utils_pipeline.JsonUtils import JsonUtils
 from backend.common import Paths
 
@@ -111,23 +112,26 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         and the DB is queried directly to check for existing matches.
         Returns (all_entities, all_rels) with keys populated.
         """
-        all_entities, entity_key_map = self._insert_entities_from_entries(json_entries)
-        all_rels, source_rel_keys = self._insert_rels_from_entries(json_entries, entity_key_map)
+        all_entities, entity_key_map, ignored_entity_keys = self._insert_entities_from_entries(json_entries)
+        all_rels, source_rel_keys = self._insert_rels_from_entries(json_entries, entity_key_map, ignored_entity_keys)
         self._upsert_source_metadata_for_entries(json_entries, entity_key_map, source_rel_keys)
         return all_entities, all_rels
 
     def _insert_entities_from_entries(
         self, json_entries: List[Tuple[str, dict]]
-    ) -> Tuple[List[Entity], Dict[tuple, str]]:
+    ) -> Tuple[List[Entity], Dict[tuple, str], Set[tuple]]:
         """
         Pass 1: iterate all JSON entries, insert each unique entity into the DB.
         For Person entities, extracts family context from the current JSON entry's rels
         and passes it to the DB layer for dedup against existing DB records.
-        Returns (all_entities, entity_key_map) where entity_key_map maps
-        (name_lower, entity_type) -> db key.
+        Returns (all_entities, entity_key_map, ignored_entity_keys) where entity_key_map maps
+        (name_lower, entity_type) -> db key, and ignored_entity_keys holds the identity
+        tuples of Person/Place entities dropped by the non-proper-noun filter (so that
+        Pass 2 can also skip any relationships referencing them).
         """
         all_entities: List[Entity] = []
         entity_key_map: Dict[tuple, str] = {}
+        ignored_entity_keys: Set[tuple] = set()
 
         for source_key, data in json_entries:
             res = self._get_res(data)
@@ -137,17 +141,20 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
             for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
                 for entity_data in entities_dict.get(category_name) or []:
                     entity, was_new = self._try_insert_entity(
-                        entity_data, entity_type, entity_key_map, rels_dict
+                        entity_data, entity_type, entity_key_map, rels_dict, ignored_entity_keys
                     )
                     if was_new:
                         all_entities.append(entity)
 
         print(f"  Entities pass complete: {len(all_entities)} unique entities.")
-        return all_entities, entity_key_map
+        if ignored_entity_keys:
+            print(f"  Ignored {len(ignored_entity_keys)} non-proper-noun Person/Place entities.")
+        return all_entities, entity_key_map, ignored_entity_keys
 
     def _try_insert_entity(self, entity_data: dict, entity_type: EntityType,
                            entity_key_map: Dict[tuple, str],
                            rels_dict: dict,
+                           ignored_entity_keys: Set[tuple],
     ) -> Tuple[Optional[Entity], bool]:
         """
         Insert a single entity into the DB if it hasn't been seen yet.
@@ -162,6 +169,15 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         entity_class = Entity.get_class_for_type(entity_type)
         entity = entity_class.create_from_entity_data(entity_data, entity_type)
         lookup_key = entity.get_identity_tuple()
+
+        # Deterministic post-processing filter: the LLM sometimes returns generic
+        # nouns instead of proper nouns for Person/Place. Drop any entity whose
+        # name contains (as a substring) a known non-proper-noun term, and record
+        # its identity so relationships referencing it are skipped too (Pass 2).
+        if is_ignored_entity_name(en_name, entity_type):
+            ignored_entity_keys.add(lookup_key)
+            print(f"  Skipping non-proper-noun {entity_type.value} entity: '{en_name}'")
+            return None, False
 
         if lookup_key in entity_key_map:
             return None, False  # already processed in this batch
@@ -211,10 +227,13 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         self,
         json_entries: List[Tuple[str, dict]],
         entity_key_map: Dict[tuple, str],
+        ignored_entity_keys: Set[tuple],
     ) -> Tuple[List[Rel], Dict[str, Set[str]]]:
         """
         Pass 2: iterate all JSON entries, insert each relationship into the DB.
         Relies on entity_key_map built in Pass 1 to resolve entity names to keys.
+        Any relationship referencing an entity in ignored_entity_keys (dropped by the
+        non-proper-noun filter in Pass 1) is skipped as well.
         Returns (all_rels, source_rel_keys) where source_rel_keys maps source_key -> set of rel keys.
         """
         all_rels: List[Rel] = []
@@ -236,7 +255,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
                 for relation_data in rel_list:
                     rel = self._try_insert_rel(
                         relation_data, rel_type, rel_field_name, source_key,
-                        entities_dict, entity_key_map
+                        entities_dict, entity_key_map, ignored_entity_keys
                     )
                     if rel is not None:
                         all_rels.append(rel)
@@ -315,22 +334,31 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         source_key: str,
         entities_dict: dict,
         entity_key_map: Dict[tuple, str],
+        ignored_entity_keys: Set[tuple],
     ) -> Optional[Rel]:
         """
         Insert a single relationship into the DB.
-        Returns the Rel on success, or None if entity names could not be resolved.
+        Returns the Rel on success, or None if entity names could not be resolved
+        (or one of the terms refers to an entity that was deliberately filtered out
+        by the non-proper-noun ignore list, in which case the relationship is
+        silently dropped rather than treated as a resolution error).
         """
         term1_name = relation_data.get("term1", "").strip()
         term2_name = relation_data.get("term2", "").strip()
         if not term1_name or not term2_name:
             return None
 
-        term1_key = self._resolve_entity_key(term1_name, entities_dict, entity_key_map)
-        term2_key = self._resolve_entity_key(term2_name, entities_dict, entity_key_map)
+        term1_key, term1_ignored = self._resolve_entity_key(term1_name, entities_dict, entity_key_map, ignored_entity_keys)
+        term2_key, term2_ignored = self._resolve_entity_key(term2_name, entities_dict, entity_key_map, ignored_entity_keys)
 
         if not term1_key or not term2_key:
-            print(f"  WARNING: Could not resolve entities for rel "
-                  f"'{term1_name}' --[{rel_field_name}]--> '{term2_name}' in {source_key}")
+            if term1_ignored or term2_ignored:
+                ignored_term = term1_name if term1_ignored else term2_name
+                print(f"  Skipping relationship '{term1_name}' --[{rel_field_name}]--> '{term2_name}' "
+                      f"in {source_key}: '{ignored_term}' was filtered as a non-proper-noun entity.")
+            else:
+                print(f"  WARNING: Could not resolve entities for rel "
+                      f"'{term1_name}' --[{rel_field_name}]--> '{term2_name}' in {source_key}")
             return None
 
         rel = Rel.create(rel_type=rel_type, term1=term1_key, term2=term2_key)
@@ -360,13 +388,19 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         return rel_type
 
     def _resolve_entity_key(self, en_name: str, entities_dict: dict,
-        entity_key_map: Dict[tuple, str]) -> Optional[str]:
+        entity_key_map: Dict[tuple, str],
+        ignored_entity_keys: Set[tuple]) -> Tuple[Optional[str], bool]:
         """
         Resolve an entity name to its key by checking which category it belongs to
         in the entities_dict, then looking up in entity_key_map.
         Each entity type uses its own identity tuple via create_from_entity_data + get_identity_tuple.
+
+        Returns (key, was_ignored). was_ignored=True means the name matched an entity
+        that was deliberately dropped by the non-proper-noun ignore filter (as opposed
+        to a genuinely unresolvable name), so key is None but no warning should be logged.
         """
         name_lower = en_name.lower()
+        matched_ignored = False
 
         # Primary: find this entity in the entities_dict so we can build its exact identity tuple
         for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
@@ -378,19 +412,23 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
                     entity_class = Entity.get_class_for_type(entity_type)
                     lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
                     if lookup in entity_key_map:
-                        return entity_key_map[lookup]
+                        return entity_key_map[lookup], False
+                    if lookup in ignored_entity_keys:
+                        matched_ignored = True
 
         # Fallback: try all types by default name-based key
         for entity_type in EntityType:
             lookup = (name_lower, entity_type)
             if lookup in entity_key_map:
-                return entity_key_map[lookup]
+                return entity_key_map[lookup], False
+            if lookup in ignored_entity_keys:
+                matched_ignored = True
         # Fallback: scan all keys for matching name
         for key_tuple, db_key in entity_key_map.items():
             if key_tuple[0] == name_lower:
-                return db_key
+                return db_key, False
 
-        return None
+        return None, matched_ignored
 
 
 
