@@ -17,7 +17,7 @@ Quick Start:
 """
 
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
-from backend_pipeline.data_pipeline.llm_api.PydanticCaller import PydanticCaller
+from backend_pipeline.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
 
-__all__ = ['ModelConfig', 'ModelProvider', 'PydanticCaller']
+__all__ = ['ModelConfig', 'ModelProvider', 'EntityRelGraphCaller']
 

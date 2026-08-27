@@ -11,7 +11,7 @@ from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
 from backend.db.EntityRelManager import EntityRelManager
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
-from backend_pipeline.data_pipeline.llm_api.PydanticCaller import PydanticCaller
+from backend_pipeline.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
 from backend_pipeline.file_utils_pipeline.JsonUtils import JsonUtils
 from backend.common import Paths
 
@@ -42,7 +42,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # ModelConfig.set_provider(ModelProvider.GEMINI_PAID_THINKING)   # Flash + thinking (paid tier)
         # ===============================
 
-        self.pydantic_caller = PydanticCaller()
+        self.pydantic_caller = EntityRelGraphCaller()
         self.entity_rel_mngr = EntityRelManager()
 
     def tearDown(self):

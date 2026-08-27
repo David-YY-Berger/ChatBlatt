@@ -37,7 +37,7 @@ TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 NUMBER_CATEGORIES_STR = ', '.join(e.value for e in NumberCategory)
 
 
-class PydanticCaller:
+class EntityRelGraphCaller:
     """
     Extracts structured entity/relationship graphs from text passages using LLMs.
 

@@ -1,6 +1,7 @@
 
 todo {{
-fix faiss
+populate BT
+	
 search sources must be halak
 hebrew working
 
