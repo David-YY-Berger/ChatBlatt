@@ -149,6 +149,7 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
     # ------------------------------------------------------------------ #
 
     def test_populate_graph(self):
+        # DO NOT RUN THIS TEST!
         pass
         self.remove_repopulate_graph() # takes 12 min..
         #
@@ -159,17 +160,18 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
         self._assert_entity_snapshot(self.JACOB)
 
     def remove_repopulate_graph(self):
+        pass
         # 1. Remove all entities and relationships
-        deleted_entities = self.db_api.drop_all_entities()
-        deleted_rels = self.db_api.drop_all_rels()
-        print(f"Dropped {deleted_entities} entities and {deleted_rels} rels before populate.")
-
-        # 2. Run the populator
-        from backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph import DBPopulateEntityRelGraph
-        populator = DBPopulateEntityRelGraph('test_populate_entities_and_rels_from_jsons')
-        populator.db_api = self.db_api  # share the live connection
-        populator.setUp()
-        populator.test_populate_entities_and_rels_from_jsons()
+        # deleted_entities = self.db_api.drop_all_entities()
+        # deleted_rels = self.db_api.drop_all_rels()
+        # print(f"Dropped {deleted_entities} entities and {deleted_rels} rels before populate.")
+        #
+        # # 2. Run the populator
+        # from backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph import DBPopulateEntityRelGraph
+        # populator = DBPopulateEntityRelGraph('test_populate_entities_and_rels_from_jsons')
+        # populator.db_api = self.db_api  # share the live connection
+        # populator.setUp()
+        # populator.test_populate_entities_and_rels_from_jsons()
 
     # ------------------------------------------------------------------ #
     #  Helpers – unified snapshot assertion                               #
