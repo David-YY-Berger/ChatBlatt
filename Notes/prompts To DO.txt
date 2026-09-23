@@ -5,7 +5,10 @@ to Number,Category add a bunch of things (gematria, etc)
 
 populate BT:
 	- keep getting lists of duplicate names, began with claude's.... also in gemara, also in tanach + gemara (Shmuel, rachel, hillel)
-	- keep going with copilot, impl this algo (xhigh)
+	- 
+	Also, the "transaction" in test_populate_entities_and_rels_from_jsons doesn't actually roll anything back, because the session isn't passed to the DB calls. That was already the case before my change, so a crash still leaves partial writes.
+	
+	
 	- work on prepopulate script, getting data into readable json, and ensuring spelling is exact btw claude + current db
 	- insert_entity, make sure to check also display_en_name
 
@@ -21,11 +24,20 @@ easy fixes {{
 -------
 put sefaria logo on same level as 'Mapali' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
 ------------------
+(do ctrl+f search first) 
+in all places, both hebrew and enlgish, replace mapaLi with 'Eitz Habinah' עץ הבינה.
 ------------------
+source search:
 remove all the UI front end code on the left side with checkboxes, logic, etc with Passage type, and filtering by source. instead, on the left side, there should be
-1. a simple, COMPACT section to select Passage Type (no 'all' or 'none' buttons), just those 5 checkboxes, by defualt they should all be checked.
+1. a simple, COMPACT section to select Passage Type (no 'all' or 'none' buttons), just those 5 checkboxes. remove the '0/5 selected' label, make this more slimly compact in width
+2. a simple drop down, call 'Books'. This dropdown with look more or less like the entity dropdowns, but will filter by source's book instead.
+
+Review the relevant backend searching code, ensure that this 2 filters work smoothly.
 -------
-add hebrew to faiss...
+safetly remove this class backend.db.EntityRelManager.EntityRelManager
+------ 
+add to backend.models_db.Enums.NumberCategory (make sure to update all usages!!! inlcuding C:\Users\U6072661\PycharmProjects\ChatBlatt\frontend\pages\number_search.py, backend, frontend, )
+these categorys: Gematria (numeric value of a word), Obligation, Punishment
 
 }}
 
@@ -65,7 +77,26 @@ ADD CONTEXT: example json response, Books, Source Content, etc.
 
 implement decide_entity. see this information list. note - at this point in the code, we have NO metadata at all for the current new entity we discovered, we only have: (1) relationships inside that passage (2) other entitys mentioned in that passage (3) that passage book, etc - we have SourceContent, but not Source Metadata. 
 
-see this example json ____
+this is my algo. you can change or fix parts of it. It will likely necesitate lots of db calls; if there are simple ways for you to make this more efficient (maybe by caching some values?) , do it. but DO NOT CHANGE ANY DB SCHEMAS, DONT ADD ANYTHING TO THE DB, AND DONT BREAK ANYTHING ELSE. this pipeline is not time sensitive.
+
+
+algo:
+if this new entity has any relationships: iterate over exisiting entitys, and see which existing entity has the most 'common' relationships with this entity.
+	if it's not a tie: add to entity with most number of common relationships
+	else (it's a tie): prefer relationships of People, then Place, then any other relationship
+if this new entity has no common relationships with either exisiting entity:
+	cur_src_entities = get list of entities of this current source
+	iterate over exisiting entitys, see which have most common related entities which appear in cur_src_entities.
+		if it's not a tie: add to entity with most number of common 
+		else: move on to next logic...
+		
+(could not determine based on related entitys nor other entities in this sources context):
+	see current source's Book. if Tanach:
+		map_exisiting_entitys_books = map of exisiting entitys to books that mention them
+		if current source is only in one of map_exisiting_entitys_books: add this new entity to that entity
+
+else { copilot, think of some last fallback logic}
+	
 		
 
 }}

@@ -1,12 +1,9 @@
-from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
+from typing import Any, Dict, List, Optional, Tuple
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.Enums import EntityType
-
-if TYPE_CHECKING:
-    from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 
 
 class EntityMongoMixin:
@@ -15,144 +12,28 @@ class EntityMongoMixin:
 
     # ========================= Primary insert method =========================
 
-    def try_insert_entity(self, entity: Entity, person_family_names: Optional["PersonFamilyContext"] = None) -> str:
+    def try_insert_entity(self, entity: Entity) -> str:
         """
-        Inserts an Entity if it does not already exist.
-        For Person entities: queries all persons with the same name from the DB,
-        then checks their family relationships (from the rels collection) to
-        determine if any existing person matches the one being inserted.
-        For other entity types: uses name + type equality.
+        Inserts an Entity unless an 'equal' one already exists (by default same
+        display_en_name + entityType - see Entity.build_existence_query).
         Returns the key (str of ObjectId) whether newly inserted or already existing.
+
+        NOTE: Person mentions extracted from sources should NOT come through here -
+        several different people can share a display_en_name, so the populator
+        resolves them via PersonDisambiguator and calls insert_entity for new ones.
         """
-        existing_key = self._find_existing_entity_key(entity, person_family_names)
+        existing_key = self._find_existing_entity_key(entity)
         if existing_key:
             return existing_key
+        return self.insert_entity(entity)
 
-        data = entity.to_db_dict()
-        data[DBFields.ENTITY_TYPE] = entity.entityType.value
-        # Remove empty key so Mongo generates _id
-        data.pop(DBFields.KEY, None)
-
-        result = self.get_collection(CollectionObjs.ENTITIES).insert_one(data)
-        generated_key = str(result.inserted_id)
-
-        # Persist the key back into the document
-        self.get_collection(CollectionObjs.ENTITIES).update_one(
-            {"_id": result.inserted_id},
-            {DBOperators.SET: {DBFields.KEY: generated_key}},
-        )
-        return generated_key
-
-    def _find_existing_entity_key(self, entity: Entity, person_family_names: Optional["PersonFamilyContext"] = None) -> Optional[str]:
-        """
-        Check if an entity already exists in the DB.
-        For Person entities with family context: finds all persons with the same name,
-        then compares their DB relationships against the provided family context.
-        For other types: simple name + type match.
-        Returns its key if found, else None.
-        """
-        from backend.models_db.Enums import EntityType
-
-        if entity.entityType == EntityType.EPerson and person_family_names is not None:
-            return self._find_existing_person_by_family(entity, person_family_names)
-
-        # Default: simple name + type query
+    def _find_existing_entity_key(self, entity: Entity) -> Optional[str]:
+        """Returns the key of an existing entity 'equal' to this one (see Entity.build_existence_query), else None."""
         query = entity.build_existence_query()
         doc = self.get_collection(CollectionObjs.ENTITIES).find_one(query)
         if doc is None:
             return None
         return doc.get(DBFields.KEY) or str(doc["_id"])
-
-    def _find_existing_person_by_family(self, entity: Entity, new_family: "PersonFamilyContext") -> Optional[str]:
-        """
-        Find an existing Person in the DB that matches the given entity by name
-        AND family relationships.
-
-        Logic:
-        1. Get all persons with same display_en_name (case-insensitive).
-        2. For each, query the rels collection for childOfFather/childOfMother/spouseOf.
-        3. If the new person has no family context, return the first name match.
-        4. If a DB person shares a father, mother, or spouse -> same person.
-        5. If no DB person matches family context -> not found (will be inserted as new).
-        """
-        from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
-
-        # Find all persons with same name
-        query = entity.build_existence_query()
-        docs = list(self.get_collection(CollectionObjs.ENTITIES).find(query))
-        if not docs:
-            return None
-
-        # If new person has no family info at all, any name match is sufficient
-        has_family_info = bool(new_family.fathers or new_family.mothers or new_family.spouses)
-        if not has_family_info:
-            doc = docs[0]
-            return doc.get(DBFields.KEY) or str(doc["_id"])
-
-        # Check each existing person's family rels from the DB
-        for doc in docs:
-            existing_key = doc.get(DBFields.KEY) or str(doc["_id"])
-            db_family = self.get_family_context_for_entity(existing_key)
-
-            # DB person also has no family info -> treat as same (ambiguous)
-            if not db_family.fathers and not db_family.mothers and not db_family.spouses:
-                return existing_key
-
-            # Same father
-            if new_family.fathers and db_family.fathers:
-                if new_family.fathers & db_family.fathers:
-                    return existing_key
-
-            # Same mother
-            if new_family.mothers and db_family.mothers:
-                if new_family.mothers & db_family.mothers:
-                    return existing_key
-
-            # Same spouse
-            if new_family.spouses and db_family.spouses:
-                if new_family.spouses & db_family.spouses:
-                    return existing_key
-
-            # Cross-check: new person's father is spouse of DB person's mother (or vice versa)
-            for father in new_family.fathers:
-                for mother in db_family.mothers:
-                    if self._are_spouses_in_db(father, mother):
-                        return existing_key
-            for father in db_family.fathers:
-                for mother in new_family.mothers:
-                    if self._are_spouses_in_db(father, mother):
-                        return existing_key
-
-        # No match found
-        return None
-
-    def _are_spouses_in_db(self, name1: str, name2: str) -> bool:
-        """
-        Check if two people (by lowercased name) are spouses according to DB rels.
-        Finds entity keys for both names, then checks for a spouseOf rel between them.
-        """
-        from backend.models_db.Enums import RelType
-
-        # Find entities by name
-        doc1 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: name1.lower()})
-        if not doc1:
-            return False
-        key1 = doc1.get(DBFields.KEY) or str(doc1["_id"])
-
-        doc2 = self.get_collection(CollectionObjs.ENTITIES).find_one({DBFields.DISPLAY_EN_NAME: name2.lower()})
-        if not doc2:
-            return False
-        key2 = doc2.get(DBFields.KEY) or str(doc2["_id"])
-
-        # Check spouseOf in either direction
-        spouse_rel = self.get_collection(CollectionObjs.RELATIONS).find_one({
-            DBFields.REL_TYPE: RelType.spouseOf.value,
-            DBOperators.OR: [
-                {DBFields.TERM1: key1, DBFields.TERM2: key2},
-                {DBFields.TERM1: key2, DBFields.TERM2: key1},
-            ]
-        })
-        return spouse_rel is not None
 
     def insert_entity(self, entity: Entity) -> str:
         """

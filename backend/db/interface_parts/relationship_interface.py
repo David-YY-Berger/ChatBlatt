@@ -44,6 +44,11 @@ class RelationshipInterfaceMixin(ABC):
         pass
 
     @abstractmethod
+    def get_rels_for_entities(self, entity_keys: List[str]) -> List[Rel]:
+        """All relationships in which ANY of the given entities is term1 or term2, in a single round-trip."""
+        pass
+
+    @abstractmethod
     def get_all_rels(self) -> List[Rel]:
         pass
 

@@ -4,12 +4,13 @@ from typing import Dict, List, Optional, Set, Tuple
 from backend.db.data_names.Books import Books
 from backend.models_db.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models_db.EntityObjects.Entity import Entity
-from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
+from backend.models_db.EntityObjects.EntityIdentity import PassageRelation, PersonSourceContext
 from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
 from backend.db.EntityRelManager import EntityRelManager
+from backend_pipeline.data_pipeline.entity_resolution.PersonDisambiguator import PersonDisambiguator
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend_pipeline.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
 from backend_pipeline.data_pipeline.PydanticModels.EntityIgnoreFilter import is_ignored_entity_name
@@ -22,6 +23,17 @@ _CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in Entity
 
 # Mapping from JSON rel field name -> RelType enum
 _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
+
+
+def _lookup_rel_type(rel_field_name: str) -> Optional[RelType]:
+    """RelType for a JSON rel field name (exact match first, then case-insensitive), or None."""
+    rel_type = _REL_NAME_TO_REL_TYPE.get(rel_field_name)
+    if rel_type is None:
+        rel_type = next(
+            (rt for name, rt in _REL_NAME_TO_REL_TYPE.items() if name.lower() == rel_field_name.lower()),
+            None,
+        )
+    return rel_type
 
 
 class DBPopulateEntityRelGraph(DBPopulateLlmBase):
@@ -45,6 +57,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
         self.pydantic_caller = EntityRelGraphCaller()
         self.entity_rel_mngr = EntityRelManager()
+        self.person_disambiguator = PersonDisambiguator(self.db_api)
 
     def tearDown(self):
         super().tearDown()
@@ -108,64 +121,75 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
         """
-        Process all JSON entries: insert entities, then relationships, then source metadata.
-        For Person entities, family context is extracted per-entry from the JSON
-        and the DB is queried directly to check for existing matches.
-        Returns (all_entities, all_rels) with keys populated.
-        """
-        all_entities, entity_key_map, ignored_entity_keys = self._insert_entities_from_entries(json_entries)
-        all_rels, source_rel_keys = self._insert_rels_from_entries(json_entries, entity_key_map, ignored_entity_keys)
-        self._upsert_source_metadata_for_entries(json_entries, entity_key_map, source_rel_keys)
-        return all_entities, all_rels
-
-    def _insert_entities_from_entries(
-        self, json_entries: List[Tuple[str, dict]]
-    ) -> Tuple[List[Entity], Dict[tuple, str], Set[tuple]]:
-        """
-        Pass 1: iterate all JSON entries, insert each unique entity into the DB.
-        For Person entities, extracts family context from the current JSON entry's rels
-        and passes it to the DB layer for dedup against existing DB records.
-        Returns (all_entities, entity_key_map, ignored_entity_keys) where entity_key_map maps
-        (name_lower, entity_type) -> db key, and ignored_entity_keys holds the identity
-        tuples of Person/Place entities dropped by the non-proper-noun filter (so that
-        Pass 2 can also skip any relationships referencing them).
+        Processes the sources ONE AT A TIME, each one fully - entities, then relationships,
+        then source metadata - before moving on to the next. Person disambiguation compares a
+        mention with what the DB knows about each same-named candidate (its relationships and
+        the sources mentioning it), so each source must see everything earlier sources wrote:
+        e.g. a Person created by source 3 must already have its relationships in the DB when
+        source 9 mentions someone with the same name.
+        Returns (all_entities, all_rels) with keys populated; all_entities lists each resolved
+        DB entity once.
         """
         all_entities: List[Entity] = []
-        entity_key_map: Dict[tuple, str] = {}
+        all_rels: List[Rel] = []
         ignored_entity_keys: Set[tuple] = set()
+        seen_entity_db_keys: Set[str] = set()
 
         for source_key, data in json_entries:
             res = self._get_res(data)
-            entities_dict = res.get("Entities", {})
-            rels_dict = res.get("Rel", {})
+            source_entity_map, source_entities = self._insert_entities_for_source(source_key, res, ignored_entity_keys)
+            source_rels = self._insert_rels_for_source(source_key, res, source_entity_map, ignored_entity_keys)
+            self._upsert_source_metadata_for_source(source_key, res, source_entity_map, {rel.key for rel in source_rels})
 
-            for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
-                for entity_data in entities_dict.get(category_name) or []:
-                    entity, was_new = self._try_insert_entity(
-                        entity_data, entity_type, entity_key_map, rels_dict, ignored_entity_keys
-                    )
-                    if was_new:
-                        all_entities.append(entity)
+            for entity in source_entities:
+                if entity.key not in seen_entity_db_keys:
+                    seen_entity_db_keys.add(entity.key)
+                    all_entities.append(entity)
+            all_rels.extend(source_rels)
 
-        print(f"  Entities pass complete: {len(all_entities)} unique entities.")
+        print(f"  Processed {len(json_entries)} sources: {len(all_entities)} unique entities, "
+              f"{len(all_rels)} relationships, {len(json_entries)} source metadata entries upserted.")
         if ignored_entity_keys:
             print(f"  Ignored {len(ignored_entity_keys)} non-proper-noun Person/Place entities.")
-        return all_entities, entity_key_map, ignored_entity_keys
+        return all_entities, all_rels
 
-    def _try_insert_entity(self, entity_data: dict, entity_type: EntityType,
-                           entity_key_map: Dict[tuple, str],
-                           rels_dict: dict,
-                           ignored_entity_keys: Set[tuple],
-    ) -> Tuple[Optional[Entity], bool]:
+    def _insert_entities_for_source(
+        self, source_key: str, res: dict, ignored_entity_keys: Set[tuple]
+    ) -> Tuple[Dict[tuple, str], List[Entity]]:
         """
-        Insert a single entity into the DB if it hasn't been seen yet.
-        For Person entities, extracts family context from rels_dict and passes it
-        to the DB layer so it can check against existing DB records.
-        Returns (entity, was_new). was_new=False means it was already in entity_key_map.
+        Inserts (or finds) every entity mentioned in one source.
+        Returns (source_entity_map, entities). source_entity_map maps each entity's identity
+        tuple (name_lower, entity_type) -> DB key for THIS source only - the same name can
+        resolve to different DB entities in different sources - and is what this source's
+        relationships and metadata are resolved with. Entities dropped by the non-proper-noun
+        filter are added to ignored_entity_keys, so relationships referencing them are skipped.
+        """
+        source_entity_map: Dict[tuple, str] = {}
+        entities: List[Entity] = []
+        entities_dict = res.get("Entities") or {}
+        for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+            for entity_data in entities_dict.get(category_name) or []:
+                entity = self._try_insert_entity(
+                    source_key, res, entity_data, entity_type, source_entity_map, ignored_entity_keys
+                )
+                if entity is not None:
+                    entities.append(entity)
+        return source_entity_map, entities
+
+    def _try_insert_entity(self, source_key: str, res: dict, entity_data: dict, entity_type: EntityType,
+                           source_entity_map: Dict[tuple, str],
+                           ignored_entity_keys: Set[tuple],
+    ) -> Optional[Entity]:
+        """
+        Resolves one entity of this source to a DB key - inserting it if needed - and records
+        it in source_entity_map. Person mentions go through PersonDisambiguator (different
+        people can share a name); every other type is matched by name + type.
+        Returns the entity (with its key), or None if skipped (no name, filtered out as a
+        non-proper noun, or already resolved earlier in this source).
         """
         en_name = entity_data.get("en_name", "").strip()
         if not en_name:
-            return None, False
+            return None
 
         entity_class = Entity.get_class_for_type(entity_type)
         entity = entity_class.create_from_entity_data(entity_data, entity_type)
@@ -174,138 +198,98 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # Deterministic post-processing filter: the LLM sometimes returns generic
         # nouns instead of proper nouns for Person/Place. Drop any entity whose
         # name contains (as a substring) a known non-proper-noun term, and record
-        # its identity so relationships referencing it are skipped too (Pass 2).
+        # its identity so relationships referencing it are skipped too.
         if is_ignored_entity_name(en_name, entity_type):
             ignored_entity_keys.add(lookup_key)
             print(f"  Skipping non-proper-noun {entity_type.value} entity: '{en_name}'")
-            return None, False
+            return None
 
-        if lookup_key in entity_key_map:
-            return None, False  # already processed in this batch
+        if lookup_key in source_entity_map:
+            return None  # already resolved earlier in this same source
 
-        # For Person entities, build family context from the JSON rels
-        person_family = None
         if entity_type == EntityType.EPerson:
-            person_family = self._extract_person_family_from_rels(en_name, rels_dict)
+            person_ctx = self._build_person_source_context(source_key, en_name, res)
+            existing_key = self.person_disambiguator.find_existing_person_key(entity, person_ctx)
+            entity.key = existing_key or self.db_api.insert_entity(entity)
+        else:
+            entity.key = self.db_api.try_insert_entity(entity)
 
-        entity.key = self.db_api.try_insert_entity(entity, person_family)
-        entity_key_map[lookup_key] = entity.key
-        return entity, True
+        source_entity_map[lookup_key] = entity.key
+        return entity
 
     @staticmethod
-    def _extract_person_family_from_rels(person_name: str, rels_dict: dict) -> PersonFamilyContext:
+    def _build_person_source_context(source_key: str, person_name: str, res: dict) -> PersonSourceContext:
         """
-        Extract family context (fathers, mothers, spouses) for a specific person
-        from the current JSON entry's relationship data.
+        Collects what this source says about one Person mention: its relationships (type,
+        direction, other term) and the names of the other entities the source mentions.
+        Entities dropped by the non-proper-noun filter are left out of both.
         """
-        ctx = PersonFamilyContext()
-        name_lower = person_name.lower()
+        person = person_name.lower()
 
-        for rel_field_name, rel_list in rels_dict.items():
-            if not rel_list:
+        kept_names: Set[str] = set()
+        dropped_names: Set[str] = set()
+        for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
+            for entity_data in (res.get("Entities") or {}).get(category_name) or []:
+                name = entity_data.get("en_name", "").strip()
+                if name:
+                    (dropped_names if is_ignored_entity_name(name, entity_type) else kept_names).add(name.lower())
+        dropped_names -= kept_names
+
+        relations: List[PassageRelation] = []
+        for rel_field_name, rel_list in (res.get("Rel") or {}).items():
+            rel_type = _lookup_rel_type(rel_field_name)
+            if rel_type is None:
                 continue
-            field_lower = rel_field_name.lower()
+            for relation_data in rel_list or []:
+                term1 = relation_data.get("term1", "").strip().lower()
+                term2 = relation_data.get("term2", "").strip().lower()
+                if term1 == person and term2 and term2 != person and term2 not in dropped_names:
+                    relations.append(PassageRelation(rel_type, True, term2))
+                elif term2 == person and term1 and term1 != person and term1 not in dropped_names:
+                    relations.append(PassageRelation(rel_type, False, term1))
+
+        return PersonSourceContext(
+            source_key=source_key,
+            relations=list(dict.fromkeys(relations)),
+            source_entity_names=kept_names - {person},
+        )
+
+    def _insert_rels_for_source(self, source_key: str, res: dict, source_entity_map: Dict[tuple, str],
+                                ignored_entity_keys: Set[tuple]) -> List[Rel]:
+        """
+        Inserts every relationship of one source, resolving entity names with this source's
+        own entity map. Relationships referencing an entity dropped by the non-proper-noun
+        filter are skipped.
+        """
+        rels: List[Rel] = []
+        entities_dict = res.get("Entities") or {}
+        for rel_field_name, rel_list in (res.get("Rel") or {}).items():
+            rel_type = self._resolve_rel_type(rel_field_name, source_key)
+            if rel_type is None or not rel_list:
+                continue
 
             for relation_data in rel_list:
-                term1 = relation_data.get("term1", "").strip()
-                term2 = relation_data.get("term2", "").strip()
-                if not term1 or not term2:
-                    continue
+                rel = self._try_insert_rel(
+                    relation_data, rel_type, rel_field_name, source_key,
+                    entities_dict, source_entity_map, ignored_entity_keys
+                )
+                if rel is not None:
+                    rels.append(rel)
+        return rels
 
-                if field_lower == "childoffather" and term1.lower() == name_lower:
-                    ctx.fathers.add(term2.lower())
-                elif field_lower == "childofmother" and term1.lower() == name_lower:
-                    ctx.mothers.add(term2.lower())
-                elif field_lower == "spouseof":
-                    if term1.lower() == name_lower:
-                        ctx.spouses.add(term2.lower())
-                    elif term2.lower() == name_lower:
-                        ctx.spouses.add(term1.lower())
-
-        return ctx
-
-    def _insert_rels_from_entries(
-        self,
-        json_entries: List[Tuple[str, dict]],
-        entity_key_map: Dict[tuple, str],
-        ignored_entity_keys: Set[tuple],
-    ) -> Tuple[List[Rel], Dict[str, Set[str]]]:
+    def _upsert_source_metadata_for_source(self, source_key: str, res: dict, source_entity_map: Dict[tuple, str],
+                                           rel_keys: Set[str]) -> None:
         """
-        Pass 2: iterate all JSON entries, insert each relationship into the DB.
-        Relies on entity_key_map built in Pass 1 to resolve entity names to keys.
-        Any relationship referencing an entity in ignored_entity_keys (dropped by the
-        non-proper-noun filter in Pass 1) is skipped as well.
-        Returns (all_rels, source_rel_keys) where source_rel_keys maps source_key -> set of rel keys.
+        Builds this source's SourceMetadata (key, source_type, summary_en, summary_heb,
+        passage_types, entity_keys, rel_keys) and upserts it into the DB.
         """
-        all_rels: List[Rel] = []
-        source_rel_keys: Dict[str, Set[str]] = {}
-
-        for source_key, data in json_entries:
-            source_rel_keys[source_key] = set()
-            res = self._get_res(data)
-            rels_dict = res.get("Rel", {})
-            if not rels_dict:
-                continue
-            entities_dict = res.get("Entities", {})
-
-            for rel_field_name, rel_list in rels_dict.items():
-                rel_type = self._resolve_rel_type(rel_field_name, source_key)
-                if rel_type is None or not rel_list:
-                    continue
-
-                for relation_data in rel_list:
-                    rel = self._try_insert_rel(
-                        relation_data, rel_type, rel_field_name, source_key,
-                        entities_dict, entity_key_map, ignored_entity_keys
-                    )
-                    if rel is not None:
-                        all_rels.append(rel)
-                        source_rel_keys[source_key].add(rel.key)
-
-        print(f"  Relationships pass complete: {len(all_rels)} relationships.")
-        return all_rels, source_rel_keys
-
-    def _upsert_source_metadata_for_entries(
-        self,
-        json_entries: List[Tuple[str, dict]],
-        entity_key_map: Dict[tuple, str],
-        source_rel_keys: Dict[str, Set[str]],
-    ) -> None:
-        """
-        Pass 3: for each source entry, build a fully-populated SourceMetadata object
-        (key, source_type, summary_en, summary_heb, passage_types, entity_keys, rel_keys)
-        and upsert it into the DB.
-        """
-        upserted = 0
-        for source_key, data in json_entries:
-            res = self._get_res(data)
-
-            # Collect entity keys that appear in this source
-            entities_dict = res.get("Entities", {})
-            entity_keys: Set[str] = set()
-            for category_name, entity_type in _CATEGORY_TO_ENTITY_TYPE.items():
-                for entity_data in entities_dict.get(category_name) or []:
-                    en_name = entity_data.get("en_name", "").strip()
-                    if en_name:
-                        entity_class = Entity.get_class_for_type(entity_type)
-                        lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
-                        if lookup in entity_key_map:
-                            entity_keys.add(entity_key_map[lookup])
-
-            # Parse passage types from LLM output
-            passage_types = self._parse_passage_types(res.get("passage_types", []))
-
-            src_metadata = SourceMetadata(key=source_key)
-            src_metadata.summary_en = res.get("en_summary")
-            src_metadata.summary_heb = res.get("heb_summary")
-            src_metadata.passage_types = passage_types
-            src_metadata.entity_keys = entity_keys
-            src_metadata.rel_keys = source_rel_keys.get(source_key, set())
-
-            self.db_api.upsert_source_metadata(src_metadata)
-            upserted += 1
-
-        print(f"  Source metadata pass complete: {upserted} entries upserted.")
+        src_metadata = SourceMetadata(key=source_key)
+        src_metadata.summary_en = res.get("en_summary")
+        src_metadata.summary_heb = res.get("heb_summary")
+        src_metadata.passage_types = self._parse_passage_types(res.get("passage_types") or [])
+        src_metadata.entity_keys = set(source_entity_map.values())
+        src_metadata.rel_keys = rel_keys
+        self.db_api.upsert_source_metadata(src_metadata)
 
     @staticmethod
     def _parse_passage_types(passage_type_strs: List[str]) -> List[PassageType]:
@@ -334,7 +318,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         rel_field_name: str,
         source_key: str,
         entities_dict: dict,
-        entity_key_map: Dict[tuple, str],
+        source_entity_map: Dict[tuple, str],
         ignored_entity_keys: Set[tuple],
     ) -> Optional[Rel]:
         """
@@ -349,8 +333,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         if not term1_name or not term2_name:
             return None
 
-        term1_key, term1_ignored = self._resolve_entity_key(term1_name, entities_dict, entity_key_map, ignored_entity_keys)
-        term2_key, term2_ignored = self._resolve_entity_key(term2_name, entities_dict, entity_key_map, ignored_entity_keys)
+        term1_key, term1_ignored = self._resolve_entity_key(term1_name, entities_dict, source_entity_map, ignored_entity_keys)
+        term2_key, term2_ignored = self._resolve_entity_key(term2_name, entities_dict, source_entity_map, ignored_entity_keys)
 
         if not term1_key or not term2_key:
             if term1_ignored or term2_ignored:
@@ -377,23 +361,18 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         Look up RelType by field name (exact match first, then case-insensitive).
         Prints a warning and returns None if the name is unrecognised.
         """
-        rel_type = _REL_NAME_TO_REL_TYPE.get(rel_field_name)
-        if rel_type is None:
-            rel_type = next(
-                (rt for name, rt in _REL_NAME_TO_REL_TYPE.items()
-                 if name.lower() == rel_field_name.lower()),
-                None,
-            )
+        rel_type = _lookup_rel_type(rel_field_name)
         if rel_type is None:
             print(f"  WARNING: Unknown rel type '{rel_field_name}' in source {source_key}, skipping.")
         return rel_type
 
     def _resolve_entity_key(self, en_name: str, entities_dict: dict,
-        entity_key_map: Dict[tuple, str],
+        source_entity_map: Dict[tuple, str],
         ignored_entity_keys: Set[tuple]) -> Tuple[Optional[str], bool]:
         """
         Resolve an entity name to its key by checking which category it belongs to
-        in the entities_dict, then looking up in entity_key_map.
+        in the entities_dict, then looking up in this source's entity map
+        (built for the same source in Pass 1).
         Each entity type uses its own identity tuple via create_from_entity_data + get_identity_tuple.
 
         Returns (key, was_ignored). was_ignored=True means the name matched an entity
@@ -412,20 +391,20 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
                 if entity_data.get("en_name", "").strip().lower() == name_lower:
                     entity_class = Entity.get_class_for_type(entity_type)
                     lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
-                    if lookup in entity_key_map:
-                        return entity_key_map[lookup], False
+                    if lookup in source_entity_map:
+                        return source_entity_map[lookup], False
                     if lookup in ignored_entity_keys:
                         matched_ignored = True
 
         # Fallback: try all types by default name-based key
         for entity_type in EntityType:
             lookup = (name_lower, entity_type)
-            if lookup in entity_key_map:
-                return entity_key_map[lookup], False
+            if lookup in source_entity_map:
+                return source_entity_map[lookup], False
             if lookup in ignored_entity_keys:
                 matched_ignored = True
         # Fallback: scan all keys for matching name
-        for key_tuple, db_key in entity_key_map.items():
+        for key_tuple, db_key in source_entity_map.items():
             if key_tuple[0] == name_lower:
                 return db_key, False
 

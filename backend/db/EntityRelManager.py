@@ -6,6 +6,7 @@ from backend.models_db.Rel import Rel
 from backend.db.DBFactory import DBFactory
 from backend.common.Decorators import singleton
 
+#  todo must safely remove this class...
 
 @singleton
 class EntityRelManager:

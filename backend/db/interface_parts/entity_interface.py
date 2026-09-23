@@ -1,11 +1,8 @@
 from abc import ABC, abstractmethod
-from typing import List, Optional, Tuple, TYPE_CHECKING
+from typing import List, Optional, Tuple
 
 from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.Enums import EntityType
-
-if TYPE_CHECKING:
-    from backend.models_db.EntityObjects.EntityIdentity import PersonFamilyContext
 
 
 class EntityInterfaceMixin(ABC):
@@ -18,11 +15,12 @@ class EntityInterfaceMixin(ABC):
         pass
 
     @abstractmethod
-    def try_insert_entity(self, entity: Entity, person_family_names: Optional["PersonFamilyContext"] = None) -> str:
+    def try_insert_entity(self, entity: Entity) -> str:
         """
-        Inserts an Entity if it does not already exist (dedup check).
-        For Person entities: uses family context to distinguish same-name persons.
-        Returns the key whether newly inserted or already existing.
+        Inserts an Entity unless an 'equal' one already exists (by default same
+        display_en_name + entityType). Returns the key whether newly inserted or
+        already existing. (Same-named Person mentions are resolved by the
+        pipeline's PersonDisambiguator instead.)
         """
         pass
 

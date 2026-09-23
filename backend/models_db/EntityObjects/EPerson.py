@@ -98,21 +98,20 @@ class EPerson(Entity):
         """
         Person equality (per this tuple alone): same display_en_name + same entityType.
 
-        NOTE: This is only a name-based dedup key used for in-batch bookkeeping
-        (e.g. entity_key_map in the populator). It intentionally does NOT
-        disambiguate two different people who share a display_en_name — that
-        disambiguation happens at DB-insert time via PersonFamilyContext
-        (see EntityMongoMixin._find_existing_person_by_family), which compares
-        father/mother/spouse relationships pulled from the DB.
+        NOTE: This is only a name-based dedup key used for per-source bookkeeping
+        in the populator (each source gets its own name -> db_key map, since the
+        same name can resolve to different DB entities in different sources).
+        It intentionally does NOT disambiguate two different people who share a
+        display_en_name — the populator resolves every Person mention via
+        PersonDisambiguator (backend_pipeline/data_pipeline/entity_resolution),
+        using what the mention's source says about it (PersonSourceContext).
         """
-        return (self.display_en_name.lower(), self.entityType)
+        return self.display_en_name.lower(), self.entityType
 
     def build_existence_query(self) -> Dict[str, Any]:
         """
-        Person existence query: base lookup by name + type.
-        Used to fetch all same-named candidates from the DB; the actual
-        family-based disambiguation among candidates is done separately
-        (see EntityMongoMixin._find_existing_person_by_family).
+        Person existence query: base lookup by name + type, i.e. ALL same-named
+        persons. Choosing among them is PersonDisambiguator's job.
         """
         from backend.db.DBConstants import DBFields
 
