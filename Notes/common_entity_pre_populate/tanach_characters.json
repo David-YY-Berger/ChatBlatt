@@ -1,0 +1,1354 @@
+[
+  {
+    "id": "abigail_wife_of_nabal",
+    "name": "Abigail",
+    "description": "Wife of Nabal, then David",
+    "isWoman": true,
+    "spouseOf": ["Nabal", "David"],
+    "children": ["Chileab / Daniel"],
+    "associatedWithPlace": ["Carmel", "Maon", "Hebron"]
+  },
+  {
+    "id": "abigail_sister_of_david",
+    "name": "Abigail",
+    "description": "David's sister, mother of Amasa",
+    "isWoman": true,
+    "childOfFather": ["Jesse", "Nahash (textual variant)"],
+    "siblings": ["Zeruiah", "David", "Eliab", "Abinadab", "Shammah"],
+    "spouseOf": ["Jether / Ithra the Ishmaelite"],
+    "children": ["Amasa"],
+    "associatedWithPlace": ["Bethlehem"]
+  },
+  {
+    "id": "abijah_king_of_judah",
+    "name": "Abijah",
+    "description": "King of Judah, son of Rehoboam",
+    "childOfFather": ["Rehoboam"],
+    "childOfMother": ["Maacah daughter of Absalom"],
+    "children": ["Asa"],
+    "associatedWithPlace": ["Jerusalem", "Mount Zemaraim"]
+  },
+  {
+    "id": "abijah_son_of_jeroboam",
+    "name": "Abijah",
+    "description": "Son of Jeroboam I, died young",
+    "childOfFather": ["Jeroboam I"],
+    "associatedWithPlace": ["Tirzah"]
+  },
+  {
+    "id": "abijah_son_of_samuel",
+    "name": "Abijah",
+    "description": "Son of Samuel",
+    "childOfFather": ["Samuel"],
+    "siblings": ["Joel"],
+    "associatedWithPlace": ["Beersheba"]
+  },
+  {
+    "id": "abijah_mother_of_hezekiah",
+    "name": "Abijah",
+    "description": "Hezekiah's mother",
+    "isWoman": true,
+    "childOfFather": ["Zechariah"],
+    "spouseOf": ["King Ahaz"],
+    "children": ["Hezekiah"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "abimelech_king_gerar_abraham",
+    "name": "Abimelech",
+    "description": "King of Gerar in Abraham's time",
+    "isNonJew": true,
+    "associatedWithPlace": ["Gerar"]
+  },
+  {
+    "id": "abimelech_king_gerar_isaac",
+    "name": "Abimelech",
+    "description": "King of Gerar in Isaac's time",
+    "isNonJew": true,
+    "associatedWithPlace": ["Gerar"]
+  },
+  {
+    "id": "abimelech_son_of_gideon",
+    "name": "Abimelech",
+    "description": "Son of Gideon who seized kingship",
+    "childOfFather": ["Gideon / Jerubbaal"],
+    "siblings": ["Jotham and 69 other half-brothers"],
+    "associatedWithPlace": ["Shechem", "Thebez"]
+  },
+  {
+    "id": "abinadab_keeper_of_ark",
+    "name": "Abinadab",
+    "description": "Man in whose house the Ark rested",
+    "children": ["Eleazar", "Uzzah", "Ahio"],
+    "associatedWithPlace": ["Kiriath-jearim"]
+  },
+  {
+    "id": "abinadab_brother_of_david",
+    "name": "Abinadab",
+    "description": "David's brother",
+    "childOfFather": ["Jesse"],
+    "siblings": ["Eliab", "Shammah", "David"],
+    "associatedWithPlace": ["Bethlehem"]
+  },
+  {
+    "id": "abinadab_son_of_saul",
+    "name": "Abinadab",
+    "description": "Saul's son, killed at Gilboa",
+    "childOfFather": ["Saul"],
+    "childOfMother": ["Ahinoam"],
+    "siblings": ["Jonathan", "Malchishua", "Ish-bosheth", "Merab", "Michal"],
+    "diedIn": ["Mount Gilboa"],
+    "associatedWithPlace": ["Gibeah", "Mount Gilboa"]
+  },
+  {
+    "id": "ahaziah_king_of_israel",
+    "name": "Ahaziah",
+    "description": "King of Israel, son of Ahab",
+    "childOfFather": ["Ahab"],
+    "childOfMother": ["Jezebel"],
+    "siblings": ["Joram", "Athaliah"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "ahaziah_king_of_judah",
+    "name": "Ahaziah",
+    "description": "King of Judah, son of Jehoram",
+    "childOfFather": ["Jehoram of Judah"],
+    "childOfMother": ["Athaliah"],
+    "children": ["Joash of Judah"],
+    "diedIn": ["Megiddo"],
+    "associatedWithPlace": ["Jerusalem", "Megiddo"]
+  },
+  {
+    "id": "ahimelech_priest_of_nob",
+    "name": "Ahimelech",
+    "description": "Priest at Nob",
+    "childOfFather": ["Ahitub"],
+    "children": ["Abiathar"],
+    "associatedWithPlace": ["Nob"]
+  },
+  {
+    "id": "ahimelech_the_hittite",
+    "name": "Ahimelech",
+    "description": "Ahimelech the Hittite, one of David's men",
+    "isNonJew": true,
+    "associatedWithPlace": ["Judean wilderness"]
+  },
+  {
+    "id": "ahinoam_wife_of_saul",
+    "name": "Ahinoam",
+    "description": "Saul's wife",
+    "isWoman": true,
+    "childOfFather": ["Ahimaaz"],
+    "spouseOf": ["Saul"],
+    "children": ["Jonathan", "Ish-bosheth", "Malchishua", "Abinadab", "Merab", "Michal"],
+    "associatedWithPlace": ["Gibeah"]
+  },
+  {
+    "id": "ahinoam_wife_of_david",
+    "name": "Ahinoam",
+    "description": "David's wife, of Jezreel",
+    "isWoman": true,
+    "spouseOf": ["David"],
+    "children": ["Amnon"],
+    "associatedWithPlace": ["Jezreel", "Hebron"]
+  },
+  {
+    "id": "amasa_absaloms_commander",
+    "name": "Amasa",
+    "description": "Absalom's and David's commander",
+    "childOfFather": ["Jether / Ithra the Ishmaelite"],
+    "childOfMother": ["Abigail (David's sister)"],
+    "diedIn": ["Gibeon"],
+    "associatedWithPlace": ["Gibeon"]
+  },
+  {
+    "id": "amasa_ephraimite_chief",
+    "name": "Amasa",
+    "description": "Ephraimite chief",
+    "childOfFather": ["Hadlai"],
+    "tribeOfIsrael": ["Ephraim"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "amaziah_king_of_judah",
+    "name": "Amaziah",
+    "description": "King of Judah",
+    "childOfFather": ["Joash of Judah"],
+    "childOfMother": ["Jehoaddin of Jerusalem"],
+    "children": ["Azariah / Uzziah"],
+    "diedIn": ["Lachish"],
+    "associatedWithPlace": ["Jerusalem", "Valley of Salt", "Lachish"]
+  },
+  {
+    "id": "amaziah_priest_of_bethel",
+    "name": "Amaziah",
+    "description": "Priest of Bethel under Jeroboam II",
+    "associatedWithPlace": ["Bethel"]
+  },
+  {
+    "id": "amram_father_of_moses",
+    "name": "Amram",
+    "description": "Father of Moses, Aaron, Miriam",
+    "childOfFather": ["Kohath"],
+    "siblings": ["Izhar", "Hebron", "Uzziel"],
+    "spouseOf": ["Jochebed"],
+    "children": ["Aaron", "Moses", "Miriam"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "amram_ezra",
+    "name": "Amram",
+    "description": "Man with a foreign wife in Ezra's time",
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "asa_king_of_judah",
+    "name": "Asa",
+    "description": "King of Judah",
+    "childOfFather": ["Abijah"],
+    "children": ["Jehoshaphat"],
+    "associatedWithPlace": ["Jerusalem", "Mareshah"]
+  },
+  {
+    "id": "asa_levite",
+    "name": "Asa",
+    "description": "A Levite",
+    "childOfFather": ["Elkanah"],
+    "children": ["Berechiah"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["villages of the Netophathites"]
+  },
+  {
+    "id": "azariah_king_uzziah",
+    "name": "Azariah / Uzziah",
+    "description": "King of Judah, also called Uzziah",
+    "childOfFather": ["Amaziah"],
+    "childOfMother": ["Jecoliah of Jerusalem"],
+    "children": ["Jotham"],
+    "associatedWithPlace": ["Jerusalem", "Temple"]
+  },
+  {
+    "id": "azariah_abednego",
+    "name": "Azariah / Abednego",
+    "description": "Hebrew name of Abednego, Daniel's companion",
+    "associatedWithPlace": ["Babylon", "fiery furnace"]
+  },
+  {
+    "id": "azariah_prophet_son_of_oded",
+    "name": "Azariah",
+    "description": "Prophet, son of Oded",
+    "childOfFather": ["Oded"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "baruch_scribe",
+    "name": "Baruch",
+    "description": "Jeremiah's scribe",
+    "childOfFather": ["Neriah"],
+    "siblings": ["Seraiah"],
+    "associatedWithPlace": ["Jerusalem", "Egypt"]
+  },
+  {
+    "id": "baruch_wall_repairer",
+    "name": "Baruch",
+    "description": "Wall-repairer under Nehemiah",
+    "childOfFather": ["Zabbai"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "boaz",
+    "name": "Boaz",
+    "description": "Ruth's husband",
+    "childOfFather": ["Salmon"],
+    "childOfMother": ["Rahab"],
+    "spouseOf": ["Ruth"],
+    "children": ["Obed"],
+    "associatedWithPlace": ["Bethlehem"]
+  },
+  {
+    "id": "caleb_son_of_jephunneh",
+    "name": "Caleb",
+    "description": "Son of Jephunneh, the spy",
+    "childOfFather": ["Jephunneh the Kenizzite"],
+    "spouseOf": ["Azubah", "Ephrath"],
+    "children": ["Iru", "Elah", "Naam", "Hur", "Achsah"],
+    "associatedWithPlace": ["Hebron", "Kiriath-arba"]
+  },
+  {
+    "id": "caleb_son_of_hezron",
+    "name": "Caleb",
+    "description": "Son of Hezron",
+    "childOfFather": ["Hezron"],
+    "siblings": ["Jerahmeel", "Ram"],
+    "spouseOf": ["Azubah", "Ephrath"],
+    "tribeOfIsrael": ["Judah"]
+  },
+  {
+    "id": "carmi_son_of_reuben",
+    "name": "Carmi",
+    "description": "Son of Reuben",
+    "childOfFather": ["Reuben"],
+    "siblings": ["Hanoch", "Pallu", "Hezron"],
+    "tribeOfIsrael": ["Reuben"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "carmi_father_of_achan",
+    "name": "Carmi",
+    "description": "Father of Achan",
+    "childOfFather": ["Zabdi"],
+    "children": ["Achan"],
+    "associatedWithPlace": ["Valley of Achor"]
+  },
+  {
+    "id": "deborah_nurse",
+    "name": "Deborah",
+    "description": "Rebekah's nurse",
+    "isWoman": true,
+    "diedIn": ["Allon-bacuth (near Bethel)"],
+    "associatedWithPlace": ["Bethel"]
+  },
+  {
+    "id": "deborah_judge",
+    "name": "Deborah",
+    "description": "Prophetess and judge",
+    "isWoman": true,
+    "spouseOf": ["Lappidoth"],
+    "tribeOfIsrael": ["Ephraim"],
+    "associatedWithPlace": ["between Ramah and Bethel", "Mount Tabor"]
+  },
+  {
+    "id": "ehud_judge",
+    "name": "Ehud",
+    "description": "The judge who killed Eglon",
+    "childOfFather": ["Gera"],
+    "tribeOfIsrael": ["Benjamin"],
+    "associatedWithPlace": ["Gilgal", "Moab", "Mount Ephraim"]
+  },
+  {
+    "id": "ehud_benjamite",
+    "name": "Ehud",
+    "description": "Benjamite in genealogies",
+    "childOfFather": ["Bilhan"],
+    "tribeOfIsrael": ["Benjamin"],
+    "associatedWithPlace": ["Geba"]
+  },
+  {
+    "id": "eleazar_son_of_aaron",
+    "name": "Eleazar",
+    "description": "Son of Aaron, high priest",
+    "childOfFather": ["Aaron"],
+    "childOfMother": ["Elisheba"],
+    "siblings": ["Nadab", "Abihu", "Ithamar"],
+    "spouseOf": ["daughter of Putiel"],
+    "children": ["Phinehas"],
+    "tribeOfIsrael": ["Levi"],
+    "diedIn": ["Gibeah in Ephraim"],
+    "associatedWithPlace": ["Mount Hor", "Gibeah in Ephraim"]
+  },
+  {
+    "id": "eleazar_son_of_abinadab",
+    "name": "Eleazar",
+    "description": "Son of Abinadab, kept the Ark",
+    "childOfFather": ["Abinadab"],
+    "siblings": ["Uzzah", "Ahio"],
+    "associatedWithPlace": ["Kiriath-jearim"]
+  },
+  {
+    "id": "eleazar_mighty_man",
+    "name": "Eleazar",
+    "description": "One of David's mighty men",
+    "childOfFather": ["Dodo the Ahohite"],
+    "associatedWithPlace": ["Pas-dammim"]
+  },
+  {
+    "id": "eliab_brother_of_david",
+    "name": "Eliab",
+    "description": "David's oldest brother",
+    "childOfFather": ["Jesse"],
+    "siblings": ["Abinadab", "Shammah", "David", "Zeruiah", "Abigail"],
+    "children": ["Abihail (daughter)"],
+    "associatedWithPlace": ["Bethlehem", "Elah Valley"]
+  },
+  {
+    "id": "eliab_leader_of_zebulun",
+    "name": "Eliab",
+    "description": "Leader of Zebulun in the wilderness",
+    "childOfFather": ["Helon"],
+    "tribeOfIsrael": ["Zebulun"],
+    "associatedWithPlace": ["wilderness camp"]
+  },
+  {
+    "id": "eliab_levite_musician",
+    "name": "Eliab",
+    "description": "Levite musician",
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "eliakim_administrator",
+    "name": "Eliakim",
+    "description": "Hezekiah's palace administrator",
+    "childOfFather": ["Hilkiah"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "eliakim_son_of_josiah",
+    "name": "Eliakim / Jehoiakim",
+    "description": "Josiah's son, renamed Jehoiakim",
+    "childOfFather": ["Josiah"],
+    "childOfMother": ["Zebidah"],
+    "siblings": ["Jehoahaz", "Zedekiah", "Shallum"],
+    "children": ["Jehoiachin"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "eliezer_abrahams_servant",
+    "name": "Eliezer",
+    "description": "Abraham's servant",
+    "associatedWithPlace": ["Damascus", "Canaan"]
+  },
+  {
+    "id": "eliezer_son_of_moses",
+    "name": "Eliezer",
+    "description": "Moses' son",
+    "childOfFather": ["Moses"],
+    "childOfMother": ["Zipporah"],
+    "siblings": ["Gershom"],
+    "associatedWithPlace": ["Midian"]
+  },
+  {
+    "id": "eliezer_prophet",
+    "name": "Eliezer",
+    "description": "Prophet, son of Dodavahu",
+    "childOfFather": ["Dodavahu of Mareshah"],
+    "associatedWithPlace": ["Mareshah"]
+  },
+  {
+    "id": "eliphaz_son_of_esau",
+    "name": "Eliphaz",
+    "description": "Esau's son",
+    "childOfFather": ["Esau"],
+    "childOfMother": ["Adah"],
+    "siblings": ["Reuel", "Jeush", "Jalam", "Korah"],
+    "children": ["Teman", "Omar", "Zepho", "Gatam", "Kenaz", "Amalek"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "eliphaz_jobs_friend",
+    "name": "Eliphaz",
+    "description": "Job's friend, the Temanite",
+    "associatedWithPlace": ["Teman"]
+  },
+  {
+    "id": "elkanah_father_of_samuel",
+    "name": "Elkanah",
+    "description": "Samuel's father",
+    "childOfFather": ["Jeroham"],
+    "spouseOf": ["Hannah", "Peninnah"],
+    "children": ["Samuel"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Ramathaim-zophim / Ramah", "Shiloh"]
+  },
+  {
+    "id": "elon_son_of_zebulun",
+    "name": "Elon",
+    "description": "Son of Zebulun",
+    "childOfFather": ["Jacob"],
+    "childOfMother": ["Leah (via Zebulun)"],
+    "tribeOfIsrael": ["Zebulun"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "elon_judge",
+    "name": "Elon",
+    "description": "Judge of Israel",
+    "tribeOfIsrael": ["Zebulun"],
+    "diedIn": ["Aijalon in Zebulun"],
+    "associatedWithPlace": ["Aijalon in Zebulun"]
+  },
+  {
+    "id": "elon_father_of_bashemath",
+    "name": "Elon",
+    "description": "Esau's Hittite father-in-law",
+    "isNonJew": true,
+    "children": ["Basemath"],
+    "associatedWithPlace": ["Canaan"]
+  },
+  {
+    "id": "enoch_son_of_cain",
+    "name": "Enoch",
+    "description": "Cain's son",
+    "childOfFather": ["Cain"],
+    "children": ["Irad"],
+    "associatedWithPlace": ["city of Enoch"]
+  },
+  {
+    "id": "enoch_son_of_jared",
+    "name": "Enoch",
+    "description": "Seth's descendant who walked with God",
+    "childOfFather": ["Jared"],
+    "children": ["Methuselah"]
+  },
+  {
+    "id": "enoch_son_of_reuben",
+    "name": "Enoch / Hanoch",
+    "description": "Reuben's son",
+    "childOfFather": ["Reuben"],
+    "siblings": ["Pallu", "Hezron", "Carmi"],
+    "tribeOfIsrael": ["Reuben"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "er_son_of_judah",
+    "name": "Er",
+    "description": "Judah's son",
+    "childOfFather": ["Judah"],
+    "childOfMother": ["Bath-shua"],
+    "siblings": ["Onan", "Shelah"],
+    "spouseOf": ["Tamar"],
+    "associatedWithPlace": ["Canaan"]
+  },
+  {
+    "id": "gad_son_of_jacob",
+    "name": "Gad",
+    "description": "Jacob's son, tribal ancestor",
+    "childOfFather": ["Jacob"],
+    "childOfMother": ["Zilpah"],
+    "siblings": ["Asher"],
+    "children": ["Ziphion", "Haggi", "Shuni", "Ezbon", "Eri", "Arodi", "Areli"],
+    "tribeOfIsrael": ["Gad"],
+    "associatedWithPlace": ["territory east of the Jordan"]
+  },
+  {
+    "id": "gad_prophet",
+    "name": "Gad",
+    "description": "David's prophet/seer",
+    "associatedWithPlace": ["Moab", "Jerusalem"]
+  },
+  {
+    "id": "gedaliah_governor",
+    "name": "Gedaliah",
+    "description": "Governor after Jerusalem's fall",
+    "childOfFather": ["Ahikam"],
+    "diedIn": ["Mizpah"],
+    "associatedWithPlace": ["Mizpah"]
+  },
+  {
+    "id": "gedaliah_father_of_zephaniah",
+    "name": "Gedaliah",
+    "description": "Father of the prophet Zephaniah",
+    "children": ["Zephaniah"]
+  },
+  {
+    "id": "gedaliah_musician",
+    "name": "Gedaliah",
+    "description": "A musician",
+    "childOfFather": ["Jeduthun"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem Temple"]
+  },
+  {
+    "id": "hananiah_false_prophet",
+    "name": "Hananiah",
+    "description": "False prophet",
+    "childOfFather": ["Azzur"],
+    "associatedWithPlace": ["Gibeon", "Jerusalem Temple"]
+  },
+  {
+    "id": "hananiah_shadrach",
+    "name": "Hananiah / Shadrach",
+    "description": "Hebrew name of Shadrach, Daniel's companion",
+    "associatedWithPlace": ["Babylon", "fiery furnace"]
+  },
+  {
+    "id": "hezron_son_of_perez",
+    "name": "Hezron",
+    "description": "Son of Perez",
+    "childOfFather": ["Perez"],
+    "siblings": ["Hamul"],
+    "children": ["Jerahmeel", "Ram", "Caleb"],
+    "tribeOfIsrael": ["Judah"]
+  },
+  {
+    "id": "hezron_son_of_reuben",
+    "name": "Hezron",
+    "description": "Son of Reuben",
+    "childOfFather": ["Reuben"],
+    "siblings": ["Hanoch", "Pallu", "Carmi"],
+    "tribeOfIsrael": ["Reuben"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "hilkiah_high_priest",
+    "name": "Hilkiah",
+    "description": "High priest under Josiah",
+    "associatedWithPlace": ["Jerusalem Temple"]
+  },
+  {
+    "id": "hilkiah_father_of_jeremiah",
+    "name": "Hilkiah",
+    "description": "Jeremiah's father",
+    "children": ["Jeremiah"],
+    "associatedWithPlace": ["Anathoth"]
+  },
+  {
+    "id": "hilkiah_father_of_eliakim",
+    "name": "Hilkiah",
+    "description": "Eliakim's father",
+    "children": ["Eliakim"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "hosea_prophet",
+    "name": "Hosea",
+    "description": "The prophet",
+    "childOfFather": ["Beeri"],
+    "spouseOf": ["Gomer"],
+    "children": ["Jezreel", "Lo-ruhamah", "Lo-ammi"],
+    "associatedWithPlace": ["northern kingdom of Israel"]
+  },
+  {
+    "id": "hoshea_last_king_of_israel",
+    "name": "Hoshea",
+    "description": "Last king of Israel",
+    "childOfFather": ["Elah"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "hoshea_original_name_of_joshua",
+    "name": "Hoshea / Joshua",
+    "description": "Joshua's original name before Moses renamed him",
+    "childOfFather": ["Nun"],
+    "tribeOfIsrael": ["Ephraim"],
+    "associatedWithPlace": ["wilderness", "Canaan"]
+  },
+  {
+    "id": "jair_conqueror_gilead",
+    "name": "Jair",
+    "description": "Conqueror of towns in Gilead",
+    "tribeOfIsrael": ["Manasseh"],
+    "associatedWithPlace": ["Havvoth-jair in Gilead"]
+  },
+  {
+    "id": "jair_judge",
+    "name": "Jair",
+    "description": "A judge",
+    "children": ["30 sons, each ruling a town"],
+    "diedIn": ["Kamon"],
+    "associatedWithPlace": ["Gilead", "Kamon"]
+  },
+  {
+    "id": "jair_father_of_mordecai",
+    "name": "Jair",
+    "description": "Mordecai's father",
+    "children": ["Mordecai"],
+    "associatedWithPlace": ["Susa"]
+  },
+  {
+    "id": "jehoahaz_king_of_judah",
+    "name": "Jehoahaz / Shallum",
+    "description": "King of Judah, son of Josiah",
+    "childOfFather": ["Josiah"],
+    "childOfMother": ["Hamutal"],
+    "siblings": ["Jehoiakim", "Zedekiah"],
+    "associatedWithPlace": ["Jerusalem", "Egypt"]
+  },
+  {
+    "id": "jehoahaz_king_of_israel",
+    "name": "Jehoahaz",
+    "description": "King of Israel, son of Jehu",
+    "childOfFather": ["Jehu"],
+    "children": ["Jehoash"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "jeremiah_prophet",
+    "name": "Jeremiah",
+    "description": "The prophet",
+    "childOfFather": ["Hilkiah"],
+    "associatedWithPlace": ["Anathoth", "Jerusalem", "Egypt"]
+  },
+  {
+    "id": "jeremiah_father_of_hamutal",
+    "name": "Jeremiah",
+    "description": "Father of Hamutal, Josiah's wife",
+    "children": ["Hamutal"],
+    "associatedWithPlace": ["Libnah"]
+  },
+  {
+    "id": "jeremiah_rechabite",
+    "name": "Jeremiah",
+    "description": "A Rechabite",
+    "children": ["Jaazaniah"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "joash_king_of_judah",
+    "name": "Joash",
+    "description": "King of Judah",
+    "childOfFather": ["Ahaziah of Judah"],
+    "childOfMother": ["Zibiah of Beersheba"],
+    "children": ["Amaziah"],
+    "associatedWithPlace": ["Jerusalem", "Temple"]
+  },
+  {
+    "id": "joash_king_of_israel",
+    "name": "Joash / Jehoash",
+    "description": "King of Israel",
+    "childOfFather": ["Jehoahaz"],
+    "children": ["Jeroboam II"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "joash_father_of_gideon",
+    "name": "Joash",
+    "description": "Gideon's father",
+    "children": ["Gideon"],
+    "associatedWithPlace": ["Ophrah"]
+  },
+  {
+    "id": "joash_son_of_ahab",
+    "name": "Joash",
+    "description": "Ahab's son",
+    "childOfFather": ["Ahab"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "joel_prophet",
+    "name": "Joel",
+    "description": "The prophet",
+    "childOfFather": ["Pethuel"],
+    "associatedWithPlace": ["Judah", "Jerusalem"]
+  },
+  {
+    "id": "joel_son_of_samuel",
+    "name": "Joel",
+    "description": "Samuel's son",
+    "childOfFather": ["Samuel"],
+    "siblings": ["Abijah"],
+    "associatedWithPlace": ["Beersheba"]
+  },
+  {
+    "id": "jonathan_son_of_saul",
+    "name": "Jonathan",
+    "description": "Saul's son",
+    "childOfFather": ["Saul"],
+    "childOfMother": ["Ahinoam"],
+    "siblings": ["Ish-bosheth", "Malchishua", "Abinadab", "Merab", "Michal"],
+    "children": ["Mephibosheth"],
+    "diedIn": ["Mount Gilboa"],
+    "associatedWithPlace": ["Gibeah", "Mount Gilboa"]
+  },
+  {
+    "id": "jonathan_son_of_abiathar",
+    "name": "Jonathan",
+    "description": "Abiathar's son",
+    "childOfFather": ["Abiathar"],
+    "associatedWithPlace": ["En-rogel", "Jerusalem"]
+  },
+  {
+    "id": "jonathan_mighty_man",
+    "name": "Jonathan",
+    "description": "One of David's mighty men",
+    "childOfFather": ["Shimei / Shimeah (David's brother)"],
+    "associatedWithPlace": ["Gath"]
+  },
+  {
+    "id": "jonathan_scribe",
+    "name": "Jonathan",
+    "description": "Scribe in whose house Jeremiah was imprisoned",
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "joseph_son_of_jacob",
+    "name": "Joseph",
+    "description": "Jacob's son",
+    "childOfFather": ["Jacob"],
+    "childOfMother": ["Rachel"],
+    "siblings": ["Benjamin"],
+    "spouseOf": ["Asenath"],
+    "children": ["Manasseh", "Ephraim"],
+    "tribeOfIsrael": ["Joseph"],
+    "associatedWithPlace": ["Canaan", "Egypt"]
+  },
+  {
+    "id": "joseph_spy_of_issachar",
+    "name": "Joseph",
+    "description": "Spy from Issachar's tribe",
+    "childOfFather": ["Igal"],
+    "tribeOfIsrael": ["Issachar"],
+    "associatedWithPlace": ["wilderness", "Canaan"]
+  },
+  {
+    "id": "joseph_levite_musician",
+    "name": "Joseph",
+    "description": "Levite musician",
+    "childOfFather": ["Asaph"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem Temple"]
+  },
+  {
+    "id": "josiah_king_of_judah",
+    "name": "Josiah",
+    "description": "King of Judah",
+    "childOfFather": ["Amon"],
+    "childOfMother": ["Jedidah"],
+    "spouseOf": ["Hamutal", "Zebidah"],
+    "children": ["Jehoahaz", "Jehoiakim", "Zedekiah", "Johanan"],
+    "diedIn": ["Megiddo"],
+    "associatedWithPlace": ["Jerusalem", "Megiddo"]
+  },
+  {
+    "id": "josiah_son_of_zephaniah",
+    "name": "Josiah",
+    "description": "Man in whose house Zechariah performed a symbolic act",
+    "childOfFather": ["Zephaniah"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "judah_son_of_jacob",
+    "name": "Judah",
+    "description": "Jacob's son, tribal ancestor",
+    "childOfFather": ["Jacob"],
+    "childOfMother": ["Leah"],
+    "siblings": ["Reuben", "Simeon", "Levi", "Issachar", "Zebulun", "Dinah"],
+    "spouseOf": ["Bath-shua", "Tamar (by deception)"],
+    "children": ["Er", "Onan", "Shelah", "Perez", "Zerah"],
+    "tribeOfIsrael": ["Judah"],
+    "associatedWithPlace": ["Canaan", "Egypt"]
+  },
+  {
+    "id": "judah_levite_ezra",
+    "name": "Judah",
+    "description": "Levite in Ezra/Nehemiah",
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "kenaz_edomite_chief",
+    "name": "Kenaz",
+    "description": "Esau's grandson, Edomite chief",
+    "childOfFather": ["Eliphaz"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "kenaz_father_of_othniel",
+    "name": "Kenaz",
+    "description": "Othniel's father",
+    "children": ["Othniel"],
+    "associatedWithPlace": ["Kiriath-sepher / Debir"]
+  },
+  {
+    "id": "kenaz_grandson_of_caleb",
+    "name": "Kenaz",
+    "description": "Caleb's grandson",
+    "childOfFather": ["Elah (son of Caleb)"],
+    "tribeOfIsrael": ["Judah"]
+  },
+  {
+    "id": "korah_son_of_esau",
+    "name": "Korah",
+    "description": "Esau's son",
+    "childOfFather": ["Esau"],
+    "childOfMother": ["Oholibamah"],
+    "siblings": ["Jeush", "Jalam"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "korah_levite_rebel",
+    "name": "Korah",
+    "description": "The Levite rebel",
+    "childOfFather": ["Izhar"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["wilderness"]
+  },
+  {
+    "id": "korah_son_of_hebron",
+    "name": "Korah",
+    "description": "Son of Hebron",
+    "childOfFather": ["Hebron"],
+    "tribeOfIsrael": ["Judah"]
+  },
+  {
+    "id": "manasseh_son_of_joseph",
+    "name": "Manasseh",
+    "description": "Joseph's son, tribal ancestor",
+    "childOfFather": ["Joseph"],
+    "childOfMother": ["Asenath"],
+    "siblings": ["Ephraim"],
+    "children": ["Machir"],
+    "tribeOfIsrael": ["Manasseh"],
+    "associatedWithPlace": ["Egypt", "Gilead", "Bashan"]
+  },
+  {
+    "id": "manasseh_king_of_judah",
+    "name": "Manasseh",
+    "description": "King of Judah",
+    "childOfFather": ["Hezekiah"],
+    "childOfMother": ["Hephzibah"],
+    "children": ["Amon"],
+    "associatedWithPlace": ["Jerusalem", "Babylon"]
+  },
+  {
+    "id": "mephibosheth_son_of_jonathan",
+    "name": "Mephibosheth",
+    "description": "Jonathan's son",
+    "childOfFather": ["Jonathan"],
+    "children": ["Mica"],
+    "associatedWithPlace": ["Lo-debar", "Jerusalem"]
+  },
+  {
+    "id": "mephibosheth_son_of_saul",
+    "name": "Mephibosheth",
+    "description": "Saul's son by Rizpah",
+    "childOfFather": ["Saul"],
+    "childOfMother": ["Rizpah"],
+    "siblings": ["Armoni"],
+    "associatedWithPlace": ["Gibeon"]
+  },
+  {
+    "id": "micah_man_with_idol",
+    "name": "Micah",
+    "description": "Man with the idol shrine in Ephraim",
+    "tribeOfIsrael": ["Ephraim"],
+    "associatedWithPlace": ["hill country of Ephraim"]
+  },
+  {
+    "id": "micah_prophet",
+    "name": "Micah",
+    "description": "The prophet",
+    "associatedWithPlace": ["Moresheth", "Samaria", "Jerusalem"]
+  },
+  {
+    "id": "nadab_son_of_aaron",
+    "name": "Nadab",
+    "description": "Aaron's son",
+    "childOfFather": ["Aaron"],
+    "childOfMother": ["Elisheba"],
+    "siblings": ["Abihu", "Eleazar", "Ithamar"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["wilderness"]
+  },
+  {
+    "id": "nadab_king_of_israel",
+    "name": "Nadab",
+    "description": "King of Israel, son of Jeroboam",
+    "childOfFather": ["Jeroboam I"],
+    "diedIn": ["Gibbethon"],
+    "associatedWithPlace": ["Gibbethon"]
+  },
+  {
+    "id": "nadab_descendant_of_jerahmeel",
+    "name": "Nadab",
+    "description": "Descendant of Jerahmeel",
+    "childOfFather": ["Shammai"],
+    "children": ["Seled", "Appaim"],
+    "tribeOfIsrael": ["Judah"]
+  },
+  {
+    "id": "nathan_prophet",
+    "name": "Nathan",
+    "description": "The prophet",
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "nathan_son_of_david",
+    "name": "Nathan",
+    "description": "David's son",
+    "childOfFather": ["David"],
+    "childOfMother": ["Bathsheba"],
+    "siblings": ["Solomon", "Shammua", "Shobab"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "nathan_father_of_igal",
+    "name": "Nathan",
+    "description": "Father of one of David's mighty men",
+    "children": ["Igal"],
+    "associatedWithPlace": ["Zobah"]
+  },
+  {
+    "id": "obadiah_prophet",
+    "name": "Obadiah",
+    "description": "The prophet",
+    "associatedWithPlace": ["Edom (subject of prophecy)"]
+  },
+  {
+    "id": "obadiah_ahabs_steward",
+    "name": "Obadiah",
+    "description": "Ahab's steward",
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "obadiah_official_under_josiah",
+    "name": "Obadiah",
+    "description": "Official under Josiah",
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "obed_son_of_boaz",
+    "name": "Obed",
+    "description": "Son of Boaz and Ruth",
+    "childOfFather": ["Boaz"],
+    "childOfMother": ["Ruth"],
+    "children": ["Jesse"],
+    "associatedWithPlace": ["Bethlehem"]
+  },
+  {
+    "id": "obed_mighty_man",
+    "name": "Obed",
+    "description": "One of David's mighty men",
+    "associatedWithPlace": ["David's camp"]
+  },
+  {
+    "id": "obed_gatekeeper",
+    "name": "Obed",
+    "description": "A gatekeeper",
+    "childOfFather": ["Shemaiah"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem Temple gates"]
+  },
+  {
+    "id": "phinehas_son_of_eleazar",
+    "name": "Phinehas",
+    "description": "Aaron's zealous grandson",
+    "childOfFather": ["Eleazar"],
+    "children": ["Abishua"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Shittim", "Midian"]
+  },
+  {
+    "id": "phinehas_son_of_eli",
+    "name": "Phinehas",
+    "description": "Eli's wicked son",
+    "childOfFather": ["Eli"],
+    "siblings": ["Hophni"],
+    "children": ["Ichabod"],
+    "tribeOfIsrael": ["Levi"],
+    "diedIn": ["battle against the Philistines"],
+    "associatedWithPlace": ["Shiloh"]
+  },
+  {
+    "id": "reuel_father_in_law_of_moses",
+    "name": "Reuel / Jethro",
+    "description": "Moses' father-in-law",
+    "children": ["Zipporah", "and six other daughters"],
+    "associatedWithPlace": ["Midian"]
+  },
+  {
+    "id": "reuel_son_of_esau",
+    "name": "Reuel",
+    "description": "Esau's son",
+    "childOfFather": ["Esau"],
+    "childOfMother": ["Basemath"],
+    "children": ["Nahath", "Zerah", "Shammah", "Mizzah"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "saul_king_of_israel",
+    "name": "Saul",
+    "description": "Israel's first king",
+    "childOfFather": ["Kish"],
+    "spouseOf": ["Ahinoam", "Rizpah (concubine)"],
+    "children": ["Jonathan", "Ish-bosheth", "Malchishua", "Abinadab", "Merab", "Michal", "Armoni"],
+    "tribeOfIsrael": ["Benjamin"],
+    "diedIn": ["Mount Gilboa"],
+    "associatedWithPlace": ["Gibeah", "Mount Gilboa"]
+  },
+  {
+    "id": "shaul_edomite_king",
+    "name": "Shaul",
+    "description": "Edomite king",
+    "isNonJew": true,
+    "associatedWithPlace": ["Rehoboth by the River", "Edom"]
+  },
+  {
+    "id": "shaul_son_of_simeon",
+    "name": "Shaul",
+    "description": "Simeon's son",
+    "childOfFather": ["Jacob"],
+    "childOfMother": ["Simeon's Canaanite wife"],
+    "tribeOfIsrael": ["Simeon"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "shallum_king_of_israel",
+    "name": "Shallum",
+    "description": "King of Israel",
+    "childOfFather": ["Jabesh"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "shallum_husband_of_huldah",
+    "name": "Shallum",
+    "description": "Huldah's husband",
+    "spouseOf": ["Huldah the prophetess"],
+    "associatedWithPlace": ["Jerusalem", "Second Quarter"]
+  },
+  {
+    "id": "shallum_jehoahaz",
+    "name": "Shallum / Jehoahaz",
+    "description": "Alternate name for King Jehoahaz of Judah",
+    "childOfFather": ["Josiah"],
+    "childOfMother": ["Hamutal"],
+    "associatedWithPlace": ["Jerusalem", "Egypt"]
+  },
+  {
+    "id": "shammah_brother_of_david",
+    "name": "Shammah",
+    "description": "David's brother",
+    "childOfFather": ["Jesse"],
+    "siblings": ["Eliab", "Abinadab", "David"],
+    "associatedWithPlace": ["Bethlehem", "Elah Valley"]
+  },
+  {
+    "id": "shammah_mighty_man",
+    "name": "Shammah",
+    "description": "One of David's mighty men",
+    "childOfFather": ["Agee the Hararite"],
+    "associatedWithPlace": ["field of lentils against Philistines"]
+  },
+  {
+    "id": "shammah_edomite_chief",
+    "name": "Shammah",
+    "description": "Edomite chief",
+    "childOfFather": ["Reuel"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "shelah_son_of_judah",
+    "name": "Shelah",
+    "description": "Judah's son",
+    "childOfFather": ["Judah"],
+    "childOfMother": ["Bath-shua"],
+    "siblings": ["Er", "Onan"],
+    "associatedWithPlace": ["Chezib"]
+  },
+  {
+    "id": "shelah_ancestor",
+    "name": "Shelah",
+    "description": "Ancestor from Noah to Abraham",
+    "childOfFather": ["Arpachshad"],
+    "children": ["Eber"]
+  },
+  {
+    "id": "shimei_cursed_david",
+    "name": "Shimei",
+    "description": "The man who cursed David",
+    "childOfFather": ["Gera"],
+    "tribeOfIsrael": ["Benjamin"],
+    "diedIn": ["Jerusalem"],
+    "associatedWithPlace": ["Bahurim", "Jerusalem"]
+  },
+  {
+    "id": "shimei_son_of_gershon",
+    "name": "Shimei",
+    "description": "Levite, Gershon's son",
+    "childOfFather": ["Gershon"],
+    "tribeOfIsrael": ["Levi"]
+  },
+  {
+    "id": "shimei_solomons_officer",
+    "name": "Shimei",
+    "description": "Solomon's officer in Benjamin",
+    "tribeOfIsrael": ["Benjamin"]
+  },
+  {
+    "id": "shimei_descendant_of_david",
+    "name": "Shimei",
+    "description": "Descendant of David",
+    "childOfFather": ["Pedaiah"],
+    "associatedWithPlace": ["post-exilic Davidic line"]
+  },
+  {
+    "id": "tamar_daughter_in_law_of_judah",
+    "name": "Tamar",
+    "description": "Judah's daughter-in-law",
+    "isWoman": true,
+    "spouseOf": ["Er", "Onan"],
+    "children": ["Perez", "Zerah"],
+    "associatedWithPlace": ["Timnah", "Enaim"]
+  },
+  {
+    "id": "tamar_daughter_of_david",
+    "name": "Tamar",
+    "description": "David's daughter, Absalom's sister",
+    "isWoman": true,
+    "childOfFather": ["David"],
+    "childOfMother": ["Maacah"],
+    "siblings": ["Absalom"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "tamar_daughter_of_absalom",
+    "name": "Tamar",
+    "description": "Absalom's daughter",
+    "isWoman": true,
+    "childOfFather": ["Absalom"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "tola_son_of_issachar",
+    "name": "Tola",
+    "description": "Issachar's son",
+    "childOfFather": ["Jacob (via Issachar)"],
+    "siblings": ["Puah", "Jashub", "Shimron"],
+    "tribeOfIsrael": ["Issachar"],
+    "associatedWithPlace": ["Egypt"]
+  },
+  {
+    "id": "tola_judge",
+    "name": "Tola",
+    "description": "A judge",
+    "childOfFather": ["Puah"],
+    "tribeOfIsrael": ["Issachar"],
+    "diedIn": ["Shamir"],
+    "associatedWithPlace": ["Shamir", "hill country of Ephraim"]
+  },
+  {
+    "id": "uriah_the_hittite",
+    "name": "Uriah",
+    "description": "The Hittite, Bathsheba's husband",
+    "isNonJew": true,
+    "spouseOf": ["Bathsheba"],
+    "children": ["infant son (died)"],
+    "diedIn": ["Rabbah"],
+    "associatedWithPlace": ["Rabbah"]
+  },
+  {
+    "id": "uriah_priest_under_ahaz",
+    "name": "Uriah",
+    "description": "Priest under Ahaz",
+    "associatedWithPlace": ["Jerusalem Temple"]
+  },
+  {
+    "id": "uriah_prophet",
+    "name": "Uriah",
+    "description": "Prophet killed by Jehoiakim",
+    "childOfFather": ["Shemaiah"],
+    "diedIn": ["Jerusalem"],
+    "associatedWithPlace": ["Jerusalem", "Egypt"]
+  },
+  {
+    "id": "uzziah_king_of_judah",
+    "name": "Uzziah / Azariah",
+    "description": "King of Judah",
+    "childOfFather": ["Amaziah"],
+    "childOfMother": ["Jecoliah"],
+    "children": ["Jotham"],
+    "associatedWithPlace": ["Jerusalem", "Temple"]
+  },
+  {
+    "id": "uzziah_mighty_man",
+    "name": "Uzziah",
+    "description": "One of David's mighty men",
+    "associatedWithPlace": ["David's army"]
+  },
+  {
+    "id": "uzziah_priest_ezra",
+    "name": "Uzziah",
+    "description": "Priest in Ezra's time",
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "zechariah_prophet",
+    "name": "Zechariah",
+    "description": "The prophet",
+    "childOfFather": ["Berechiah"],
+    "tribeOfIsrael": ["Levi"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "zechariah_king_of_israel",
+    "name": "Zechariah",
+    "description": "King of Israel, Jeroboam II's son",
+    "childOfFather": ["Jeroboam II"],
+    "diedIn": ["Samaria"],
+    "associatedWithPlace": ["Samaria"]
+  },
+  {
+    "id": "zechariah_priest_son_of_jehoiada",
+    "name": "Zechariah",
+    "description": "Priest, son of Jehoiada, stoned in the Temple",
+    "childOfFather": ["Jehoiada the priest"],
+    "tribeOfIsrael": ["Levi"],
+    "diedIn": ["Temple court, Jerusalem"],
+    "associatedWithPlace": ["Jerusalem Temple"]
+  },
+  {
+    "id": "zechariah_grandfather_of_hezekiah",
+    "name": "Zechariah",
+    "description": "Hezekiah's grandfather",
+    "children": ["Abijah (Hezekiah's mother)"],
+    "associatedWithPlace": ["Jerusalem"]
+  },
+  {
+    "id": "zedekiah_last_king_of_judah",
+    "name": "Zedekiah / Mattaniah",
+    "description": "Last king of Judah",
+    "childOfFather": ["Josiah"],
+    "childOfMother": ["Hamutal"],
+    "siblings": ["Jehoahaz", "Jehoiakim"],
+    "associatedWithPlace": ["Jerusalem", "Riblah", "Babylon"]
+  },
+  {
+    "id": "zedekiah_false_prophet_ahab",
+    "name": "Zedekiah",
+    "description": "False prophet urging attack on Ramoth-gilead",
+    "childOfFather": ["Chenaanah"],
+    "associatedWithPlace": ["Samaria", "Ramoth-gilead"]
+  },
+  {
+    "id": "zedekiah_false_prophet_babylon",
+    "name": "Zedekiah",
+    "description": "False prophet condemned by Jeremiah in Babylon",
+    "childOfFather": ["Maaseiah"],
+    "associatedWithPlace": ["Babylon"]
+  },
+  {
+    "id": "zerah_son_of_judah",
+    "name": "Zerah",
+    "description": "Judah's son, Perez's twin",
+    "childOfFather": ["Judah"],
+    "childOfMother": ["Tamar"],
+    "siblings": ["Perez"],
+    "tribeOfIsrael": ["Judah"],
+    "associatedWithPlace": ["Canaan"]
+  },
+  {
+    "id": "zerah_edomite_chief",
+    "name": "Zerah",
+    "description": "Edomite chief",
+    "childOfFather": ["Reuel"],
+    "associatedWithPlace": ["Edom"]
+  },
+  {
+    "id": "zerah_cushite_king",
+    "name": "Zerah",
+    "description": "Cushite king defeated by Asa",
+    "isNonJew": true,
+    "diedIn": ["Mareshah (defeated)"],
+    "associatedWithPlace": ["Mareshah"]
+  },
+  {
+    "id": "zimri_simeonite_prince",
+    "name": "Zimri",
+    "description": "Simeonite prince killed by Phinehas",
+    "childOfFather": ["Salu"],
+    "tribeOfIsrael": ["Simeon"],
+    "diedIn": ["entrance of the Tent of Meeting"],
+    "associatedWithPlace": ["Tent of Meeting, wilderness"]
+  },
+  {
+    "id": "zimri_king_of_israel",
+    "name": "Zimri",
+    "description": "King of Israel, 7-day reign",
+    "diedIn": ["Tirzah"],
+    "associatedWithPlace": ["Tirzah"]
+  }
+]

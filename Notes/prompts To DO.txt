@@ -1,7 +1,14 @@
 
 todo {{
 
-populate BT
+to Number,Category add a bunch of things (gematria, etc)
+
+populate BT:
+	- keep getting lists of duplicate names, began with claude's.... also in gemara, also in tanach + gemara (Shmuel, rachel, hillel)
+	- keep going with copilot, impl this algo (xhigh)
+	- work on prepopulate script, getting data into readable json, and ensuring spelling is exact btw claude + current db
+	- insert_entity, make sure to check also display_en_name
+
 write ton of easy prompts to commit while working...
 	
 search sources must be halak
@@ -29,21 +36,36 @@ in this backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGrap
 There can be 2 or more different people throughout my corpus (TN, BT) with the same exact display_en_name derived with the LLM. But I must register them differently. 
 Before I say the algo how to solve this, tell me exactly what my current program does about this.
 
+[pre populate -C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\PydanticModels\ambigous_entities\Person: decide_entity
+
+
+i'm giving you my desired algorithim for disambiguation. Note - in practice, before i actually run this population on any real sources, i plan to perform a pre population of a lot of different major people in Tanach and Talmud that are known and have same name. So for many major ambigous entities, there will be already 2+ existing entitys in the db.
+
 Algo:
-(Before doing this, must preload sources per entity - 
+(remember, we are iterating over the entitys/relationships taken from a given source, and trying to correctly populate these to our exisiting db):
+for entity (and this current source):
 
-
-if 0 other entity with this entity_type and display_en_name : create_new_entity
+if 0 other exisiting entity with this entity_type and display_en_name in our db: create_new_entity
 else :
-	if 1 other entity with this entity_type and display_en_name : 
-		if in C:\Users\U6072661\PycharmProjects\ChatBlatt\backend_pipeline\data_pipeline\PydanticModels\ambigous_entities\Person: decide_entity
-		if in this passage, the new entity has father, mother:
+	if 1 other entity with this entity_type and display_en_name in our db: 
+		if in this current passage, our new entity has father, mother:
 			if it contradicts the existing entity: create_new_entity
-			else: add_to_existing_entity.
-		else:
-			add_to_existing_entity
+			else: add_to_existing_entity
+		# assuming there is no ambigious entity with same father/mother as it's partner ambigious entity
+		else: add_to_existing_entity # bec we have no clear indiciation that this new entity is different than the current. the other relationships of person are not unique. 
 			
-	eles
+	else (2+ entitys with this entity_type and display_en_name): decide_entity
+	
+carefully lear garbage code or other things that will get in the way of this
+implement this code clear and properly. do not yet implement 'decide_entity', but make that function in the correct place, i will soon tell you to implement that.
+		
+----------------
+
+ADD CONTEXT: example json response, Books, Source Content, etc.
+
+implement decide_entity. see this information list. note - at this point in the code, we have NO metadata at all for the current new entity we discovered, we only have: (1) relationships inside that passage (2) other entitys mentioned in that passage (3) that passage book, etc - we have SourceContent, but not Source Metadata. 
+
+see this example json ____
 		
 
 }}
