@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any, Dict
+from typing import Any, Callable, Dict, TypeVar
 
 from backend.db.Collections import Collection
 from backend.db.interface_parts.entity_interface import EntityInterfaceMixin
@@ -8,6 +8,8 @@ from backend.db.interface_parts.relationship_interface import RelationshipInterf
 from backend.db.interface_parts.similarity_index_interface import SimilarityIndexInterfaceMixin
 from backend.db.interface_parts.source_content_interface import SourceContentInterfaceMixin
 from backend.db.interface_parts.source_metadata_interface import SourceMetadataInterfaceMixin
+
+T = TypeVar("T")
 
 
 class DBapiInterface(
@@ -27,6 +29,14 @@ class DBapiInterface(
 
     @abstractmethod
     def disconnect(self) -> None:
+        pass
+
+    @abstractmethod
+    def run_in_transaction(self, callback: Callable[[], T]) -> T:
+        """
+        Runs callback() as one transaction: all DB writes it makes are committed together
+        when it returns, or none of them if it raises. Returns callback's result.
+        """
         pass
 
     @abstractmethod

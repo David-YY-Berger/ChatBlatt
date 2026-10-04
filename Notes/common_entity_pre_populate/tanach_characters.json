@@ -692,7 +692,8 @@
     "childOfFather": ["Ahaziah of Judah"],
     "childOfMother": ["Zibiah of Beersheba"],
     "children": ["Amaziah"],
-    "associatedWithPlace": ["Jerusalem", "Temple"]
+    "associatedWithPlace": ["Jerusalem", "Temple"],
+    "bookReferences": ["Numbers"]
   },
   {
     "id": "joash_king_of_israel",

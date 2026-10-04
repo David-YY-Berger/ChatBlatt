@@ -1,4 +1,5 @@
 # bs'd
+import functools
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.db.data_names.Books import Books
@@ -78,8 +79,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     def test_populate_entities_and_rels_from_jsons(self):
         """
-        Transactional: reads JSON files from a directory, extracts entities and relationships,
-        inserts them into the DB. If any part fails, all inserts are rolled back.
+        Reads the LLM JSON files from a directory and writes their entities, relationships and
+        source metadata to the DB - each source in its own transaction (see _process_json_entries).
         """
         # dir_path = Paths.TEST_DATA_BEREISHIT_ENTITY_REL_DIR
         dir_path = Paths.LMM_RESPONSES_OUTPUT_DIR
@@ -94,30 +95,21 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         json_entries.sort(key=source_entry_sort_key)
         print(f"Loaded {len(json_entries)} JSON files, sorted by source key.")
 
-        # 3. Transactional: use a MongoDB session with transaction
-        session = self.db_api.client.start_session()
-        try:
-            with session.start_transaction():
-                all_entities, all_rels = self._process_json_entries(json_entries)
+        # 3. Populate
+        all_entities, all_rels = self._process_json_entries(json_entries)
 
-            # Print results
-            print(f"\n{'='*60}")
-            print(f"ENTITIES INSERTED/FOUND: {len(all_entities)}")
-            print(f"{'='*60}")
-            for ent in all_entities:
-                print(f"  [{ent.entityType.value}] {ent.display_en_name} (key={ent.key})")
+        # Print results
+        print(f"\n{'='*60}")
+        print(f"ENTITIES INSERTED/FOUND: {len(all_entities)}")
+        print(f"{'='*60}")
+        for ent in all_entities:
+            print(f"  [{ent.entityType.value}] {ent.display_en_name} (key={ent.key})")
 
-            print(f"\n{'='*60}")
-            print(f"RELATIONSHIPS INSERTED/FOUND: {len(all_rels)}")
-            print(f"{'='*60}")
-            for rel in all_rels:
-                print(f"  {rel.term1} --[{rel.rel_type.value}]--> {rel.term2} (key={rel.key})")
-
-        except Exception as e:
-            print(f"TRANSACTION FAILED - all changes rolled back: {e}")
-            raise
-        finally:
-            session.end_session()
+        print(f"\n{'='*60}")
+        print(f"RELATIONSHIPS INSERTED/FOUND: {len(all_rels)}")
+        print(f"{'='*60}")
+        for rel in all_rels:
+            print(f"  {rel.term1} --[{rel.rel_type.value}]--> {rel.term2} (key={rel.key})")
 
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> Tuple[List[Entity], List[Rel]]:
         """
@@ -127,6 +119,13 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         the sources mentioning it), so each source must see everything earlier sources wrote:
         e.g. a Person created by source 3 must already have its relationships in the DB when
         source 9 mentions someone with the same name.
+
+        Each source is written in its own transaction: all of its writes are committed together,
+        or - if processing it fails - none of them, and the run stops. Sources before it stay
+        committed: a whole run can't be one transaction, since MongoDB aborts transactions that
+        run longer than 60 seconds. Re-running after a failure is safe - what earlier sources
+        wrote is found again rather than duplicated.
+
         Returns (all_entities, all_rels) with keys populated; all_entities lists each resolved
         DB entity once.
         """
@@ -135,11 +134,14 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         ignored_entity_keys: Set[tuple] = set()
         seen_entity_db_keys: Set[str] = set()
 
-        for source_key, data in json_entries:
-            res = self._get_res(data)
-            source_entity_map, source_entities = self._insert_entities_for_source(source_key, res, ignored_entity_keys)
-            source_rels = self._insert_rels_for_source(source_key, res, source_entity_map, ignored_entity_keys)
-            self._upsert_source_metadata_for_source(source_key, res, source_entity_map, {rel.key for rel in source_rels})
+        for index, (source_key, data) in enumerate(json_entries):
+            process_source = functools.partial(self._process_source, source_key, self._get_res(data), ignored_entity_keys)
+            try:
+                source_entities, source_rels = self.db_api.run_in_transaction(process_source)
+            except Exception:
+                print(f"  FAILED on source {source_key} ({index + 1}/{len(json_entries)}): none of its writes were "
+                      f"committed. The {index} sources before it were committed.")
+                raise
 
             for entity in source_entities:
                 if entity.key not in seen_entity_db_keys:
@@ -152,6 +154,20 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         if ignored_entity_keys:
             print(f"  Ignored {len(ignored_entity_keys)} non-proper-noun Person/Place entities.")
         return all_entities, all_rels
+
+    def _process_source(self, source_key: str, res: dict,
+                        ignored_entity_keys: Set[tuple]) -> Tuple[List[Entity], List[Rel]]:
+        """
+        Writes one source's entities, relationships and source metadata; returns its
+        (entities, relationships). Runs inside the source's transaction, which re-runs it from
+        scratch after a transient DB error - so besides the DB it may only change state that is
+        safe to repeat: ignored_entity_keys (re-adding the same keys) and the disambiguator's
+        name cache (which only ever holds entities committed before this source started).
+        """
+        source_entity_map, source_entities = self._insert_entities_for_source(source_key, res, ignored_entity_keys)
+        source_rels = self._insert_rels_for_source(source_key, res, source_entity_map, ignored_entity_keys)
+        self._upsert_source_metadata_for_source(source_key, res, source_entity_map, {rel.key for rel in source_rels})
+        return source_entities, source_rels
 
     def _insert_entities_for_source(
         self, source_key: str, res: dict, ignored_entity_keys: Set[tuple]

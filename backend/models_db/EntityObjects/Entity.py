@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 from pydantic import BaseModel, Field, field_validator
-from typing import Any, Dict, List, Tuple, Type
+from typing import Any, Dict, List, Optional, Tuple, Type
 
+from backend.db.data_names.Books import Books
 from backend.models_db.Enums import EntityType
 
 
@@ -25,6 +26,10 @@ class Entity(BaseModel):
     all_heb_names: List[str] = Field(default_factory=list)
     entityType: EntityType
     alias_keys: List[str] = Field(default_factory=list)
+    # Books this entity is known to appear in, as Book.database_name (e.g. "Numbers", "II Kings",
+    # "Berakhot"). Set only by the initial pre-population of well-known entities - None for
+    # everything created from sources. Helps tell apart different people sharing a name.
+    book_references: Optional[List[str]] = None
 
     # transient fields
     comparedTo: List[str] = TransientField(default_factory=list)
@@ -37,6 +42,21 @@ class Entity(BaseModel):
     @classmethod
     def _lowercase_display_en_name(cls, v: str) -> str:
         return v.lower() if isinstance(v, str) else v
+
+    @field_validator("book_references")
+    @classmethod
+    def _canonical_book_references(cls, v: Optional[List[str]]) -> Optional[List[str]]:
+        """Each name must be a Book.database_name (any case); stored canonically, without duplicates. Empty -> None."""
+        if not v:
+            return None
+        canonical: List[str] = []
+        for name in v:
+            book = Books.get_by_db_name_ignore_case(name)
+            if book is None:
+                raise ValueError(f"Unknown book {name!r} in book_references - expected a Book.database_name (see Books)")
+            if book.database_name not in canonical:
+                canonical.append(book.database_name)
+        return canonical
 
     # ========================= Identity / Equality =========================
 

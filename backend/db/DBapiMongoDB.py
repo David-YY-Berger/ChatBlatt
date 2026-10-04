@@ -1,6 +1,8 @@
+import functools
 import gzip
+import threading
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional, TypeVar
 
 import bson
 from pymongo.mongo_client import MongoClient
@@ -18,6 +20,29 @@ from backend.db.mongo_parts.select_option_mixin import SelectOptionMongoMixin
 from backend.db.mongo_parts.similarity_index_mixin import SimilarityIndexMongoMixin
 from backend.db.mongo_parts.source_content_mixin import SourceContentMongoMixin
 from backend.db.mongo_parts.source_metadata_mixin import SourceMetadataMongoMixin
+
+T = TypeVar("T")
+
+# pymongo Collection operations that take a `session` and may run inside a transaction.
+_TRANSACTIONAL_COLLECTION_METHODS = frozenset({
+    "find", "find_one", "find_one_and_delete", "find_one_and_replace", "find_one_and_update",
+    "insert_one", "insert_many", "update_one", "update_many", "replace_one",
+    "delete_one", "delete_many", "bulk_write", "count_documents", "distinct", "aggregate",
+})
+
+
+class _SessionBoundCollection:
+    """A pymongo Collection whose operations all run in the given session - and so in its transaction."""
+
+    def __init__(self, collection, session):
+        self._collection = collection
+        self._session = session
+
+    def __getattr__(self, name):
+        attr = getattr(self._collection, name)
+        if name in _TRANSACTIONAL_COLLECTION_METHODS:
+            return functools.partial(attr, session=self._session)
+        return attr
 
 
 @singleton
@@ -37,6 +62,7 @@ class DBapiMongoDB(
         self.client: MongoClient | None = None
         self.dbs: Dict[str, Any] = {}
         self.connection_string = connection_string
+        self._transaction = threading.local()  # .session: the session of this thread's active transaction
 
         if connection_string:
             self.connect(connection_string)
@@ -45,7 +71,34 @@ class DBapiMongoDB(
         db = self.dbs.get(collection.db_name)
         if db is None:
             raise ValueError(f"Database {collection.db_name} not found")
-        return db[collection.name]
+        mongo_collection = db[collection.name]
+        session = getattr(self._transaction, "session", None)
+        return mongo_collection if session is None else _SessionBoundCollection(mongo_collection, session)
+
+    @override
+    def run_in_transaction(self, callback: Callable[[], T]) -> T:
+        """
+        Runs callback() in one MongoDB transaction and returns its result. Every DB operation
+        made through this object during the call (from this thread, reads included) joins the
+        transaction - reads see its uncommitted writes - and all its writes are committed
+        together when callback returns, or rolled back if it raises.
+        On a transient error (e.g. a write conflict) pymongo rolls back and re-runs callback,
+        so callback must be safe to repeat.
+        MongoDB aborts transactions running longer than transactionLifetimeLimitSeconds
+        (60 seconds by default), so keep each one short.
+        """
+        if getattr(self._transaction, "session", None) is not None:
+            raise RuntimeError("A transaction is already running - nested transactions are not supported.")
+
+        def run_bound_to(session):
+            self._transaction.session = session
+            try:
+                return callback()
+            finally:
+                self._transaction.session = None
+
+        with self.client.start_session() as session:
+            return session.with_transaction(run_bound_to)
 
     @override
     def connect(self, connection_string: str) -> None:

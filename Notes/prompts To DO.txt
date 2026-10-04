@@ -1,5 +1,13 @@
 
+
+before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
+
 todo {{
+
+when populating number, 
+currently, if 2 number objcs have same categroy and unit but a different context, they are registered as 2 different objects. from now own, change the number object so that context is a list of Context objects (create a new object called NumberContext, it will have 2 fields - en_context and heb_context, both are stings). so that if we have 2 number objects with same category and same unit, we should just add to that context.
+the UI's table must be adapted accordingly - use your creativity and come up with a succinct way to present it
+
 
 to Number,Category add a bunch of things (gematria, etc)
 
@@ -13,9 +21,6 @@ populate BT:
 	- insert_entity, make sure to check also display_en_name
 
 write ton of easy prompts to commit while working...
-	
-search sources must be halak
-hebrew working
 
 
 }}

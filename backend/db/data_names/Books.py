@@ -32,6 +32,11 @@ class BookRegistry:
         return next((b for b in cls.all() if b.database_name == db_name), None)
 
     @classmethod
+    def get_by_db_name_ignore_case(cls, db_name: str) -> 'Book | None':
+        name = db_name.strip().lower()
+        return next((b for b in cls.all() if b.database_name.lower() == name), None)
+
+    @classmethod
     def sorted_all(cls) -> list['Book']:
         """Returns all books sorted by source type, then by canonical order."""
         return sorted(cls.all(), key=lambda b: (b.source_type.value, b.order))
