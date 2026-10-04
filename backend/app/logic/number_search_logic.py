@@ -11,11 +11,11 @@ from system_common.Constants import LANG_EN, LANG_HE
 @dataclass
 class NumberOccurrenceDTO:
     """
-    One (ENumber × SourceMetadata) occurrence enriched with display strings.
+    One (ENumber context × SourceMetadata) occurrence enriched with display strings.
     All fields come directly from the ENumber entity and its SourceMetadata.
     """
     en_unit: Optional[str]       # number.en_unit
-    en_context: Optional[str]    # number.en_context
+    en_context: Optional[str]    # en_context of the number's context in this source
     source_str: str           # SourceClass.__str__() or to_heb_str() depending on lang
     summary: Optional[str]    # SourceMetadata.summary_en or summary_heb depending on lang
     source_key: str           # SourceMetadata.key
@@ -43,7 +43,7 @@ class NumberSearchResult:
     by_category: Dict[Optional[NumberCategory], List[NumberOccurrenceDTO]] = field(
         default_factory=dict
     )
-    total_count: int = 0  # total (ENumber × source) occurrence pairs found
+    total_count: int = 0  # total (ENumber context × source) occurrence pairs found
 
     def __str__(self) -> str:
         categories = [cat.value if cat else "None" for cat in self.by_category]
@@ -58,8 +58,10 @@ class NumberSearchLogic:
     def execute(self, value: str, lang: str = LANG_EN) -> Optional[NumberSearchResult]:
         """
         Find all ENumber entities matching *value* and build a map of
-        NumberCategory → [NumberOccurrenceDTO], where each DTO holds the five
-        relevant display fields for one (ENumber × SourceMetadata) occurrence.
+        NumberCategory → [NumberOccurrenceDTO], where each DTO holds the
+        relevant display fields for one occurrence: a source the number appears
+        in, together with the context it appears in there (an ENumber holds all
+        its contexts, each tagged with its sources - one row per context × source).
 
         Sources are sorted canonically (TN < MS < BT < ...) via SourceClass.__lt__.
         Returns None when no matching numbers exist in the DB.
@@ -84,19 +86,21 @@ class NumberSearchLogic:
             for src in sources_sorted:
                 source_str = src.to_heb_str() if lang == LANG_HE else str(src)
                 summary = src.summary_heb if lang == LANG_HE else src.summary_en
+                en_contexts = [context.en_context for context in number.get_contexts_for_source(src.key)] or [None]
 
-                by_category[cat].append(
-                    NumberOccurrenceDTO(
-                        en_unit=number.en_unit,
-                        en_context=number.en_context,
-                        source_str=source_str,
-                        summary=summary,
-                        source_key=src.key,
-                        source_str_en=str(src),
-                        source_str_heb=src.to_heb_str(),
+                for en_context in en_contexts:
+                    by_category[cat].append(
+                        NumberOccurrenceDTO(
+                            en_unit=number.en_unit,
+                            en_context=en_context,
+                            source_str=source_str,
+                            summary=summary,
+                            source_key=src.key,
+                            source_str_en=str(src),
+                            source_str_heb=src.to_heb_str(),
+                        )
                     )
-                )
-                total_count += 1
+                    total_count += 1
 
         if total_count == 0:
             return None

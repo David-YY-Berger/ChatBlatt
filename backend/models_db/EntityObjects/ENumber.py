@@ -1,7 +1,12 @@
 # bs"d - lehagdil torah velahadir
 
-from typing import Any, ClassVar, Dict, Optional
+import re
+from typing import Any, ClassVar, Dict, List, Optional
+
+from pydantic import Field
+
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.EntityObjects.NumberContext import NumberContext
 from backend.models_db.Enums import EntityType, NumberCategory
 
 
@@ -15,31 +20,64 @@ class ENumber(Entity):
     entityType: EntityType = EntityType.ENumber
     numberCategory: Optional[NumberCategory] = None
     en_unit: Optional[str] = None                # Normalized singular noun — what the number counts/measures (e.g., "bull", "year", "silver")
-    en_context: Optional[str] = None             # 1-6 word topic summary so the number is understandable out of context
     heb_unit: Optional[str] = None
-    heb_context: Optional[str] = None
+    # Every context this number (same value + category + unit) was mentioned in
+    contexts: List[NumberContext] = Field(default_factory=list)
 
     def has_metadata(self) -> bool:
+        # Numbers never get a display_heb_name (heb_unit/heb_context replace it), so the
+        # base display-name check is deliberately not applied here.
         return (
-            super().has_metadata()
-            and self.heb_unit is not None
+            self.heb_unit is not None
             and bool(self.heb_unit.strip())
-            and self.heb_context is not None
-            and bool(self.heb_context.strip())
+            and all(context.heb_context and context.heb_context.strip() for context in self.contexts)
         )
+
+    # ========================= Contexts =========================
+
+    def get_context(self, en_context: str) -> Optional[NumberContext]:
+        """The context matching en_context (case-insensitive), or None."""
+        return next((context for context in self.contexts if context.matches(en_context)), None)
+
+    def get_contexts_for_source(self, source_key: str) -> List[NumberContext]:
+        """The contexts this number was mentioned in within the given source."""
+        return [context for context in self.contexts if source_key in context.source_keys]
+
+    def tag_contexts_with_source(self, source_key: str) -> None:
+        """Record that every context of this (freshly extracted) number came from source_key."""
+        for context in self.contexts:
+            if source_key not in context.source_keys:
+                context.source_keys.append(source_key)
+
+    def merge_contexts(self, contexts: List[NumberContext]) -> bool:
+        """
+        Add the given contexts to this number: a context matching an existing one
+        (case-insensitive en_context) is merged into it, any other is appended.
+        Returns True if anything changed.
+        """
+        changed = False
+        for context in contexts:
+            existing = self.get_context(context.en_context)
+            if existing is None:
+                self.contexts.append(context.model_copy(deep=True))
+                changed = True
+            elif existing.merge(context):
+                changed = True
+        return changed
 
     # ========================= Identity / Equality =========================
 
     def get_identity_tuple(self) -> tuple:
         """
-        Number equality is determined by the combination of numberCategory, unit, and context —
-        not by display_en_name, since many numbers share the same numeric value.
+        Number equality is determined by the combination of value (display_en_name),
+        numberCategory and unit — NOT by context: the same number in another context is
+        the same entity, with that context added to its contexts list.
         """
         return (
             self.entityType,
+            self.display_en_name,
             self.numberCategory,
             self.en_unit.lower() if self.en_unit else None,
-            self.en_context.lower() if self.en_context else None,
         )
 
     def to_db_dict(self) -> Dict[str, Any]:
@@ -50,17 +88,19 @@ class ENumber(Entity):
 
     def build_existence_query(self) -> Dict[str, Any]:
         """
-        Query DB for a Number with the same numberCategory, unit (case-insensitive),
-        and context (case-insensitive).
+        Query DB for a Number with the same value (display_en_name), numberCategory and
+        unit (case-insensitive) - matching get_identity_tuple.
         """
         from backend.db.DBConstants import DBFields, DBOperators
-        query: Dict[str, Any] = {DBFields.ENTITY_TYPE: self.entityType.value}
-        if self.numberCategory is not None:
-            query["numberCategory"] = self.numberCategory.value
+        query: Dict[str, Any] = {
+            DBFields.ENTITY_TYPE: self.entityType.value,
+            DBFields.DISPLAY_EN_NAME: self.display_en_name,  # already lowercase
+            "numberCategory": self.numberCategory.value if self.numberCategory is not None else None,
+        }
         if self.en_unit is not None:
-            query["en_unit"] = {DBOperators.REGEX: f"^{self.en_unit}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
-        if self.en_context is not None:
-            query["en_context"] = {DBOperators.REGEX: f"^{self.en_context}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
+            query["en_unit"] = {DBOperators.REGEX: f"^{re.escape(self.en_unit)}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE}
+        else:
+            query["en_unit"] = None  # matches documents with no unit
         return query
 
     # ========================= Factory =========================
@@ -71,8 +111,8 @@ class ENumber(Entity):
             parts.append(f"[{self.numberCategory.value}]")
         if self.en_unit:
             parts.append(self.en_unit)
-        if self.en_context:
-            parts.append(f"({self.en_context})")
+        if self.contexts:
+            parts.append(f"({'; '.join(context.en_context for context in self.contexts)})")
         return " ".join(parts)
 
     @classmethod
@@ -95,17 +135,15 @@ class ENumber(Entity):
         en_unit = unit_raw.lower() if unit_raw else None
 
         context_raw = (entity_data.get("en_context") or "").strip()
-        context = context_raw.lower() if context_raw else None
-
         heb_unit = (entity_data.get("heb_unit") or "").strip() or None
         heb_context = (entity_data.get("heb_context") or "").strip() or None
+        contexts = [NumberContext(en_context=context_raw.lower(), heb_context=heb_context)] if context_raw else []
 
         return cls(
             display_en_name=en_name,
             all_en_names=[en_name],
             numberCategory=number_category,
             en_unit=en_unit,
-            en_context=context,
             heb_unit=heb_unit,
-            heb_context=heb_context,
+            contexts=contexts,
         )

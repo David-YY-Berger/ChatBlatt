@@ -19,7 +19,7 @@ For each source, the LLM is given a passage (clean English + clean Hebrew, no vo
 plus the JSON of any associated entities (Person/Number/Place/Symbol, ...) that have not
 yet been enriched. Each JSON file contains an EnrichmentResponse (entities: [...]) keyed
 by entity 'key', filling in fields like display_heb_name, Person.timePeriod/isWoman/
-isNonJew/isGroup/roles, Number.heb_unit/heb_context, Place.placeType, Symbol.symbolType.
+isNonJew/isGroup/roles, Number.heb_unit/contexts[].heb_context, Place.placeType, Symbol.symbolType.
 Each entry is resolved back to a DB entity by key and patches its fields.
 """
 
@@ -159,7 +159,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         """
         changed = False
 
-        # Numbers have no Hebrew display name — heb_unit/heb_context are used instead,
+        # Numbers have no Hebrew display name — heb_unit/contexts[].heb_context are used instead,
         # so display_heb_name must remain unset (null) for ENumber entities regardless
         # of whatever the LLM returned.
         if not isinstance(entity, ENumber):
@@ -171,7 +171,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         if isinstance(entity, EPerson):
             changed = cls._apply_person_fields(entity, entity_dict, source_key) or changed
         if isinstance(entity, ENumber):
-            changed = cls._apply_number_fields(entity, entity_dict) or changed
+            changed = cls._apply_number_fields(entity, entity_dict, source_key) or changed
         if isinstance(entity, EPlace):
             changed = cls._apply_place_fields(entity, entity_dict, source_key) or changed
         if isinstance(entity, ESymbol):
@@ -212,12 +212,23 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         return changed
 
     @staticmethod
-    def _apply_number_fields(entity: ENumber, entity_dict: dict) -> bool:
+    def _apply_number_fields(entity: ENumber, entity_dict: dict, source_key: str) -> bool:
         changed = False
-        for field in ("heb_unit", "heb_context"):
-            raw_value = (entity_dict.get(field) or "").strip()
-            if raw_value and raw_value != getattr(entity, field):
-                setattr(entity, field, raw_value)
+        heb_unit = (entity_dict.get("heb_unit") or "").strip()
+        if heb_unit and heb_unit != entity.heb_unit:
+            entity.heb_unit = heb_unit
+            changed = True
+
+        for context_dict in entity_dict.get("contexts") or []:
+            en_context = (context_dict.get("en_context") or "").strip()
+            heb_context = (context_dict.get("heb_context") or "").strip()
+            if not en_context or not heb_context:
+                continue
+            context = entity.get_context(en_context)
+            if context is None:
+                print(f"  WARNING [{source_key}]: number '{entity.key}' has no context '{en_context}', skipping its heb_context.")
+            elif heb_context != context.heb_context:
+                context.heb_context = heb_context
                 changed = True
         return changed
 

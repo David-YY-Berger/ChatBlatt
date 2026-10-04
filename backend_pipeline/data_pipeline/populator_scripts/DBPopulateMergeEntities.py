@@ -50,6 +50,7 @@ from enum import Enum
 from typing import Dict, List, Optional, Set, Tuple
 
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.Enums import EntityType
 from backend.models_db.Rel import Rel
 from backend_pipeline.data_pipeline.DBScriptParentClass import DBParentClass
@@ -65,10 +66,10 @@ MERGED_TRUE_VALUES = {"1", "true", "yes"}
 _EMPTY_TALLIES = {"merged": 0, "already_merged": 0, "nothing_to_merge": 0, "ambiguous": 0, "error": 0}
 
 # Entity fields whose merge logic is special-cased in _fold_fields_into_target (name/alias
-# bookkeeping); every other persisted field is merged generically via reflection.
+# bookkeeping, ENumber.contexts); every other persisted field is merged generically via reflection.
 _SPECIAL_CASED_FIELDS = {
     "key", "entityType", "display_en_name", "display_heb_name",
-    "all_en_names", "all_heb_names", "alias_keys",
+    "all_en_names", "all_heb_names", "alias_keys", "contexts",
 }
 
 
@@ -292,6 +293,8 @@ class DBPopulateMergeEntities(DBParentClass):
         target.all_en_names = _merge_lists(target.all_en_names, dup.all_en_names, [original_display_name])
         target.all_heb_names = _merge_lists(target.all_heb_names, dup.all_heb_names)
         target.alias_keys = _merge_lists(target.alias_keys, dup.alias_keys, [dup.key])
+        if isinstance(target, ENumber) and isinstance(dup, ENumber):
+            target.merge_contexts(dup.contexts)
 
         for field_name in type(target).get_db_field_names():
             if field_name in _SPECIAL_CASED_FIELDS:

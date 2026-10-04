@@ -25,6 +25,15 @@ class EntityInterfaceMixin(ABC):
         pass
 
     @abstractmethod
+    def try_insert_number(self, number) -> str:
+        """
+        Inserts an ENumber unless one with the same value, category and unit already
+        exists - in which case the new number's contexts are merged into the existing
+        one's. Returns the key whether newly inserted or already existing.
+        """
+        pass
+
+    @abstractmethod
     def update_entity(self, entity: Entity) -> int:
         pass
 

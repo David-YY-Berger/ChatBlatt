@@ -5,6 +5,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from backend.db.data_names.Books import Books
 from backend.models_db.SourceClasses.SectionSorting import source_entry_sort_key
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.EntityObjects.EntityIdentity import PassageRelation, PersonSourceContext
 from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType
@@ -221,17 +222,31 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
             return None
 
         if lookup_key in source_entity_map:
+            if isinstance(entity, ENumber):
+                # Same Number mentioned again in this source - possibly in another context, so record it
+                self._insert_number(entity, source_key)
             return None  # already resolved earlier in this same source
 
         if entity_type == EntityType.EPerson:
             person_ctx = self._build_person_source_context(source_key, en_name, res)
             existing_key = self.person_disambiguator.find_existing_person_key(entity, person_ctx)
             entity.key = existing_key or self.db_api.insert_entity(entity)
+        elif isinstance(entity, ENumber):
+            entity.key = self._insert_number(entity, source_key)
         else:
             entity.key = self.db_api.try_insert_entity(entity)
 
         source_entity_map[lookup_key] = entity.key
         return entity
+
+    def _insert_number(self, number: ENumber, source_key: str) -> str:
+        """
+        Numbers with the same value, category and unit are a single entity: this mention's
+        context (tagged with source_key) is added to the existing Number's contexts, or a
+        new Number is inserted. Returns the Number's key.
+        """
+        number.tag_contexts_with_source(source_key)
+        return self.db_api.try_insert_number(number)
 
     @staticmethod
     def _build_person_source_context(source_key: str, person_name: str, res: dict) -> PersonSourceContext:

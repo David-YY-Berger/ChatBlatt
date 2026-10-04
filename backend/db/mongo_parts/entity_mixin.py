@@ -35,6 +35,22 @@ class EntityMongoMixin:
             return None
         return doc.get(DBFields.KEY) or str(doc["_id"])
 
+    def try_insert_number(self, number: "ENumber") -> str:
+        """
+        Inserts an ENumber unless one with the same value, category and unit already exists
+        (see ENumber.build_existence_query) - in which case the new number's contexts are
+        merged into the existing one's (see ENumber.merge_contexts) instead of storing
+        another entity. Returns the key whether newly inserted or already existing.
+        """
+        existing_key = self._find_existing_entity_key(number)
+        if not existing_key:
+            return self.insert_entity(number)
+
+        existing = self.get_entity_by_key(existing_key)
+        if existing.merge_contexts(number.contexts):
+            self.update_entity(existing)
+        return existing_key
+
     def insert_entity(self, entity: Entity) -> str:
         """
         Plain insert (no dedup check). Satisfies the EntityInterfaceMixin contract.

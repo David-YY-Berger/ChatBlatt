@@ -45,6 +45,6 @@ class NumberSearchHandler(BaseEntitySearchHandler):
             fields.append(("entity_fields.numberCategory", entity.numberCategory.value))
         if entity.en_unit:
             fields.append(("entity_fields.en_unit", entity.en_unit))
-        if entity.en_context:
-            fields.append(("entity_fields.en_context", entity.en_context))
+        if entity.contexts:
+            fields.append(("entity_fields.en_context", "; ".join(context.en_context for context in entity.contexts)))
         return fields

@@ -10,8 +10,8 @@ DB layer could not derive on its own:
   - ALL entity types : display_heb_name — normalized, vowel-less Hebrew display name,
                         taken almost verbatim from the Hebrew text in the passage.
   - Person            : timePeriod, isWoman, isNonJew, isGroup, roles.
-  - Number            : heb_unit, heb_context — vowel-less Hebrew, same word order/
-                        direction as the corresponding English en_unit / en_context.
+  - Number            : heb_unit, contexts[].heb_context — vowel-less Hebrew, same word
+                        order/direction as the corresponding English en_unit / en_context.
   - Place             : placeType.
   - Symbol            : symbolType.
 
@@ -45,7 +45,7 @@ _SYMBOL_TYPE_VALUES = [s.value for s in SymbolType]
 # Legal type-specific fields per entityType; unlisted types get none.
 _TYPE_SPECIFIC_FIELDS_BY_ENTITY_TYPE = {
     "Person": {"timePeriod", "isWoman", "isNonJew", "isGroup", "roles"},
-    "Number": {"heb_unit", "heb_context"},
+    "Number": {"heb_unit", "contexts"},
     "Place": {"placeType"},
     "Symbol": {"symbolType"},
 }
@@ -74,6 +74,22 @@ def _match_enum_value(raw: Optional[str], enum_cls, field_name: str) -> Optional
 
 # ─── Pydantic output models ───────────────────────────────────────────────────
 
+class NumberContextEnrichment(BaseModel):
+    """Hebrew translation of one of a Number entity's existing contexts."""
+
+    en_context: str = Field(
+        min_length=1,
+        description="Exact 'en_context' value copied from one of the input Number entity's 'contexts'.",
+    )
+    heb_context: str = Field(
+        min_length=1,
+        description=(
+            "Hebrew translation of that en_context — no niqqud, same word order/direction "
+            "as the English context."
+        ),
+    )
+
+
 class EntityEnrichment(BaseModel):
     """
     Enrichment fields for a single entity extracted from a passage.
@@ -99,7 +115,7 @@ class EntityEnrichment(BaseModel):
             "ALL entity types EXCEPT Number. The normalized Hebrew display name for this "
             "entity, taken almost verbatim from the Hebrew text of the passage. "
             "Must NOT contain niqqud (vowel points). Number entities must NEVER receive a "
-            "display_heb_name — leave this unset for them (use heb_unit/heb_context instead)."
+            "display_heb_name — leave this unset for them (use heb_unit/contexts instead)."
         ),
     )
 
@@ -136,11 +152,11 @@ class EntityEnrichment(BaseModel):
             "normalized, singular, no niqqud, same word order/direction as the English unit."
         ),
     )
-    heb_context: Optional[str] = Field(
+    contexts: Optional[List[NumberContextEnrichment]] = Field(
         default=None,
         description=(
-            "Number only. Hebrew translation of the entity's existing en_context — "
-            "no niqqud, same word order/direction as the English context."
+            "Number only. One entry per item of the entity's existing 'contexts' list that has "
+            "no heb_context yet: its en_context (copied exactly) and its Hebrew translation."
         ),
     )
 
@@ -265,7 +281,7 @@ class EntityEnrichmentCaller:
                 "ה/ו/ב/ל/מ only if they are not part of the proper name). NEVER include niqqud "
                 "(vowel points) — strip all vowel diacritics.\n"
                 "- NEVER set display_heb_name for an entity whose entityType is 'Number' — "
-                "numbers have no Hebrew display name; use heb_unit/heb_context for them instead.\n\n"
+                "numbers have no Hebrew display name; use heb_unit/contexts for them instead.\n\n"
 
                 "=== IF entityType == 'Person' ===\n"
                 f"- timePeriod: one of: {', '.join(_TIME_PERIOD_VALUES)}.\n"
@@ -285,8 +301,10 @@ class EntityEnrichmentCaller:
                 "- heb_unit: Hebrew translation of the entity's existing 'en_unit' value — "
                 "a normalized singular noun, no niqqud, written in the SAME word order/direction "
                 "as the English unit (do not reverse word order just because Hebrew is RTL).\n"
-                "- heb_context: Hebrew translation of the entity's existing 'en_context' value — "
-                "no niqqud, same word order/direction as the English context.\n\n"
+                "- contexts: the entity has a 'contexts' list; for EACH item that has no "
+                "'heb_context' yet, return {en_context, heb_context}: 'en_context' copied EXACTLY "
+                "from that item, and 'heb_context' its Hebrew translation — no niqqud, same word "
+                "order/direction as the English context.\n\n"
 
                 "=== IF entityType == 'Place' ===\n"
                 f"- placeType: one of: {', '.join(_PLACE_TYPE_VALUES)}.\n\n"
