@@ -6,19 +6,17 @@ todo {{
 
 when populating number, 
 currently, if 2 number objcs have same categroy and unit but a different context, they are registered as 2 different objects. from now own, change the number object so that context is a list of Context objects (create a new object called NumberContext, it will have 2 fields - en_context and heb_context, both are stings). so that if we have 2 number objects with same category and same unit, we should just add to that context.
-the UI's table must be adapted accordingly - use your creativity and come up with a succinct way to present it
+the UI's table does not need to change - adapt the logic so that we still present to the front end the same thing. the different is only in the backend
 
 
-to Number,Category add a bunch of things (gematria, etc)
-
-populate BT:
-	- keep getting lists of duplicate names, began with claude's.... also in gemara, also in tanach + gemara (Shmuel, rachel, hillel)
-	- 
-	Also, the "transaction" in test_populate_entities_and_rels_from_jsons doesn't actually roll anything back, because the session isn't passed to the DB calls. That was already the case before my change, so a crash still leaves partial writes.
+pre populate script {{
+	under this Dir, make a name script file called 'DBPrePopulateAmbiguosEntitys' (extends DBParentClass)
+	this script must read tanach_characters.json, and populate them to the DB. 
+	1 func - validate all names, that appear in all fields of each objects, except for 'description' and 'id'. if you find a field which seems strange to validate - tell me.
 	
-	
-	- work on prepopulate script, getting data into readable json, and ensuring spelling is exact btw claude + current db
-	- insert_entity, make sure to check also display_en_name
+	For each name, first ensure that it appears (in exact spelling) currently somewhere
+}}
+
 
 write ton of easy prompts to commit while working...
 
