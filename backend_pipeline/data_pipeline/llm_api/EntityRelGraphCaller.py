@@ -151,9 +151,12 @@ class EntityRelGraphCaller:
                 
                 f"  1) number_category — MUST be exactly one of these values: {NUMBER_CATEGORIES_STR}.\n"
                 "     Use 'Misc' ONLY if no other category fits.\n"
+                "     Gematria is ONLY for the numeric value of an ENTIRE word/name (e.g. 'the gematria of\n"
+                "     [word] is 358'), NOT for a number attached to an individual letter.\n"
                 "     Examples:\n"
                 "       '7 bulls' → Sacrifice | '40 years' → Time | '100 silver' → Money\n"
-                "       '600,000 men' → People | '10 cubits' → Measurement\n\n"
+                "       '600,000 men' → People | '10 cubits' → Measurement\n"
+                "       '613 mitzvot' → Obligation | 'gematria of 358' → Gematria\n\n"
                 
                 "  2) en_unit — a NORMALIZED, SINGULAR, LOWERCASE noun describing what the number counts or measures.\n"
                 "     This must be ONE word, always singular, always lowercase, always English.\n"
@@ -164,6 +167,8 @@ class EntityRelGraphCaller:
                 "       Money: shekel, silver, gold, talent, gerah\n"
                 "       People: man, woman, person, soldier, elder, priest\n"
                 "       Measurement: cubit, span, bath, hin, ephah, kor, seah\n"
+                "       Obligation: mitzvah, commandment, prohibition\n"
+                "       Gematria: word (always 'word' — the value of the entire word/name, never a single letter)\n"
                 "     WRONG: 'bulls' (plural), 'years old' (phrase), 'Silver Shekels' (capitalized/multi-word).\n\n"
                 
                 "  3) en_context — a 1-6 word lowercase topic summary so this number is understandable outside the original passage.\n"
@@ -177,7 +182,7 @@ class EntityRelGraphCaller:
                 "       '600,000 men' → en_context: 'census in wilderness'\n"
                 "       '120 years old' → en_context: 'moshe lifespan'\n"
                 "       '10 generations' → en_context: 'genealogy adam to noah'\n"
-                "       '39 lashes' → en_context: 'punishment for transgression'.\n\n"
+                "       'gematria of 358 for mashiach' → en_context: 'gematria of mashiach'.\n\n"
                 
                 "=== ENTITY PRIORITY RULES ===\n"
                 "- If entity is both Person AND TribeOfIsrael → include in BOTH lists.\n"

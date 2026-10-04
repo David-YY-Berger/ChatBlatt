@@ -48,6 +48,8 @@ _CATEGORY_CONFIG: dict = {
     NumberCategory.Money:        {"emoji": "💰", "color": "#b8860b"},
     NumberCategory.People:       {"emoji": "👥", "color": "#2d6a4f"},
     NumberCategory.Measurement:  {"emoji": "📏", "color": "#6d28d9"},
+    NumberCategory.Obligation:   {"emoji": "📜", "color": "#0f766e"},
+    NumberCategory.Gematria:     {"emoji": "🔢", "color": "#7c2d12"},
     NumberCategory.Misc:         {"emoji": "📦", "color": "#475569"},
 }
 _NONE_CAT_CONFIG = {"emoji": "❓", "color": "#94a3b8"}

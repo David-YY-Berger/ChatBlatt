@@ -103,7 +103,9 @@ class NumberCategory(Enum):
     Measurement = ("Measurement", 3)   # Distance, weight, volume, area
     Sacrifice = ("Sacrifice", 4)       # Offerings: animals, flour, oil, incense
     Money = ("Money", 5)               # Currency, payment, value
-    Misc = ("Misc", 6)                 # Anything not covered above
+    Obligation = ("Obligation", 6)     # Required counts: mitzvot, repetitions, obligations
+    Gematria = ("Gematria", 7)         # Numerical value of an entire word or name
+    Misc = ("Misc", 8)                 # Anything not covered above
 
     def __new__(cls, value: str, ordinal: int):
         obj = object.__new__(cls)
