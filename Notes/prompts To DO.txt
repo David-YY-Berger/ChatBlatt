@@ -4,21 +4,36 @@ before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
 
 todo {{
 
-when populating number, 
-currently, if 2 number objcs have same categroy and unit but a different context, they are registered as 2 different objects. from now own, change the number object so that context is a list of Context objects (create a new object called NumberContext, it will have 2 fields - en_context and heb_context, both are stings). so that if we have 2 number objects with same category and same unit, we should just add to that context.
-the UI's table does not need to change - adapt the logic so that we still present to the front end the same thing. the different is only in the backend
-
-
 pre populate script {{
-	under this Dir, make a name script file called 'DBPrePopulateAmbiguosEntitys' (extends DBParentClass)
-	this script must read tanach_characters.json, and populate them to the DB. 
-	1 func - validate all names, that appear in all fields of each objects, except for 'description' and 'id'. if you find a field which seems strange to validate - tell me.
+	under this Dir, make a name script file called 'DBPrePopulateAmbiguosEntitys' (extends DBParentClass).
 	
-	For each name, first ensure that it appears (in exact spelling) currently somewhere
+	this script must read tanach_characters.json, and populate them to the DB. 
+	Soon, ill tell you more about this, but for the meantime:
+	1 func - validate all names, that appear in all fields of each objects, except for 'description' and 'id'. if script finds a field which is missing, or is invalid, etc - should log it. 
+	
+	For each name, first ensure that it appears (in exact spelling) currently somewhere in this file, in the obj of content[0] : backend/common/Paths.py:31 . note that this is simply a json copy of all src contents. if it's easier, you can just do a query to DB, load all source contents, combine all the clean english content to one object, and check if that contains the exact spelling of that name of place.
+	
+	this func is standalone, it should complete running with clear log that it succeed. every name which is validated, it should print to the log. but i dont want it to print all the time, that will be too slow, so make a buffer of 100 names or something like that.
+	
+	----
+	See this DBPrePopulateAmbiguosEntitys
+	i already ran the validation func. 
+	now, i need you to implement the pre population. I have already cleared the DB of entities and relationships and source metadata - the only thing is the source content (and FAISS/Bm25). 
+	see the guide here (written by AI - you can check things..) : C:\Users\U6072661\PycharmProjects\ChatBlatt\Notes\entity_prepopulation_guide.md
+	
+	note, i've changed ambigious tanach characters json a little bit. here are details:
+	"Merged 2 duplicate name-swapped entries and reformatted 10 "A / B" style names into a single name (display) + all_en_names (all forms) structure, reducing the file from 167 to 165 entries."
+	
+	write me func to pre population my entitys and relationships here. 
+	see the code, anaylze, think - before you write any code, gather your questions and doublecheck with me decisions
+	
 }}
 
-
-write ton of easy prompts to commit while working...
+[small side task - create separate Repo for eitz_habina_data]
+-----
+run again population, this time only berakhot. the data will be strange, and we will eventually erase it (bec tanach must be run first) but it will help me see how it populates rabbi names.
+----
+After basic testing, seeing that berakhot population went ok - take deep breath, daven, run all of tanach, and then all of gemara.
 
 
 }}

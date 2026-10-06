@@ -28,6 +28,15 @@ ENTITIES_TO_IGNORE_DIR = os.path.join(
     PROJECT_ROOT_DIR, "backend_pipeline", "data_pipeline", "PydanticModels", "entities_to_ignore"
 )
 
+COMMON_ENTITY_PRE_POPULATE_DIR = os.path.join(
+    PROJECT_ROOT_DIR, "backend_pipeline", "data_pipeline", "common_entity_pre_populate"
+)
+AMBIGUOUS_TANACH_CHARACTERS_JSON = os.path.join(
+    COMMON_ENTITY_PRE_POPULATE_DIR, "ambiguous_tanach_characters.json"
+)
+
+BACKUP_OF_SRC_CONTENT = os.path.join(BASE_DIR, r"\DB_backups\backup_of_src_contents_TN_BT.json")
+
 QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")
 DATA_CLEANUP_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_cleanup_mongo_queries.json")
 DATA_ANALYSIS_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "data_analysis_mongo_queries.json")

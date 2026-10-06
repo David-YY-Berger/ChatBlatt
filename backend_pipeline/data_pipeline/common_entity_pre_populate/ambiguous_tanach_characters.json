@@ -29,7 +29,7 @@
     "isWoman": true,
     "childOfFather": [
       "Jesse",
-      "Nahash (textual variant)"
+      "Nahash"
     ],
     "siblings": [
       "Zeruiah",
@@ -160,7 +160,7 @@
       "Gideon / Jerubbaal"
     ],
     "siblings": [
-      "Jotham and 69 other half-brothers"
+      "Jotham"
     ],
     "associatedWithPlace": [
       "Shechem",
@@ -368,7 +368,7 @@
       "Jether / Ithra the Ishmaelite"
     ],
     "childOfMother": [
-      "Abigail (David's sister)"
+      "Abigail"
     ],
     "diedIn": [
       "Gibeon"
@@ -519,31 +519,12 @@
     ]
   },
   {
-    "id": "azariah_king_uzziah",
-    "name": "Azariah / Uzziah",
-    "description": "King of Judah, also called Uzziah",
-    "childOfFather": [
-      "Amaziah"
-    ],
-    "childOfMother": [
-      "Jecoliah of Jerusalem"
-    ],
-    "children": [
-      "Jotham"
-    ],
-    "associatedWithPlace": [
-      "Jerusalem",
-      "Temple"
-    ],
-    "bookReferences": [
-      "II Kings",
-      "II Chronicles",
-      "Isaiah"
-    ]
-  },
-  {
     "id": "azariah_abednego",
-    "name": "Azariah / Abednego",
+    "name": "Azariah",
+    "all_en_names": [
+      "Azariah",
+      "Abednego"
+    ],
     "description": "Hebrew name of Abednego, Daniel's companion",
     "associatedWithPlace": [
       "Babylon",
@@ -811,11 +792,11 @@
       "Levi"
     ],
     "diedIn": [
-      "Gibeah in Ephraim"
+      "Gibeah"
     ],
     "associatedWithPlace": [
       "Mount Hor",
-      "Gibeah in Ephraim"
+      "Gibeah"
     ],
     "bookReferences": [
       "Exodus",
@@ -871,7 +852,7 @@
       "Abigail"
     ],
     "children": [
-      "Abihail (daughter)"
+      "Abihail"
     ],
     "associatedWithPlace": [
       "Bethlehem",
@@ -891,9 +872,6 @@
     ],
     "tribeOfIsrael": [
       "Zebulun"
-    ],
-    "associatedWithPlace": [
-      "wilderness camp"
     ],
     "bookReferences": [
       "Numbers"
@@ -930,7 +908,11 @@
   },
   {
     "id": "eliakim_son_of_josiah",
-    "name": "Eliakim / Jehoiakim",
+    "name": "Eliakim",
+    "all_en_names": [
+      "Eliakim",
+      "Jehoiakim"
+    ],
     "description": "Josiah's son, renamed Jehoiakim",
     "childOfFather": [
       "Josiah"
@@ -1077,7 +1059,7 @@
       "Jacob"
     ],
     "childOfMother": [
-      "Leah (via Zebulun)"
+      "Leah"
     ],
     "tribeOfIsrael": [
       "Zebulun"
@@ -1098,10 +1080,10 @@
       "Zebulun"
     ],
     "diedIn": [
-      "Aijalon in Zebulun"
+      "Aijalon"
     ],
     "associatedWithPlace": [
-      "Aijalon in Zebulun"
+      "Aijalon"
     ],
     "bookReferences": [
       "Judges"
@@ -1156,7 +1138,11 @@
   },
   {
     "id": "enoch_son_of_reuben",
-    "name": "Enoch / Hanoch",
+    "name": "Enoch",
+    "all_en_names": [
+      "Enoch",
+      "Hanoch"
+    ],
     "description": "Reuben's son",
     "childOfFather": [
       "Reuben"
@@ -1227,9 +1213,6 @@
     "tribeOfIsrael": [
       "Gad"
     ],
-    "associatedWithPlace": [
-      "territory east of the Jordan"
-    ],
     "bookReferences": [
       "Genesis",
       "Numbers"
@@ -1289,7 +1272,8 @@
       "Levi"
     ],
     "associatedWithPlace": [
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "I Chronicles"
@@ -1304,7 +1288,8 @@
     ],
     "associatedWithPlace": [
       "Gibeon",
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "Jeremiah"
@@ -1312,7 +1297,11 @@
   },
   {
     "id": "hananiah_shadrach",
-    "name": "Hananiah / Shadrach",
+    "name": "Hananiah",
+    "all_en_names": [
+      "Hananiah",
+      "Shadrach"
+    ],
     "description": "Hebrew name of Shadrach, Daniel's companion",
     "associatedWithPlace": [
       "Babylon",
@@ -1374,7 +1363,8 @@
     "name": "Hilkiah",
     "description": "High priest under Josiah",
     "associatedWithPlace": [
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "II Kings",
@@ -1448,7 +1438,11 @@
   },
   {
     "id": "hoshea_original_name_of_joshua",
-    "name": "Hoshea / Joshua",
+    "name": "Hoshea",
+    "all_en_names": [
+      "Hoshea",
+      "Joshua"
+    ],
     "description": "Joshua's original name before Moses renamed him",
     "childOfFather": [
       "Nun"
@@ -1473,7 +1467,7 @@
       "Manasseh"
     ],
     "associatedWithPlace": [
-      "Havvoth-jair in Gilead"
+      "Havvoth-jair"
     ],
     "bookReferences": [
       "Numbers",
@@ -1484,9 +1478,6 @@
     "id": "jair_judge",
     "name": "Jair",
     "description": "A judge",
-    "children": [
-      "30 sons, each ruling a town"
-    ],
     "diedIn": [
       "Kamon"
     ],
@@ -1514,8 +1505,12 @@
   },
   {
     "id": "jehoahaz_king_of_judah",
-    "name": "Jehoahaz / Shallum",
-    "description": "King of Judah, son of Josiah",
+    "name": "Jehoahaz",
+    "all_en_names": [
+      "Jehoahaz",
+      "Shallum"
+    ],
+    "description": "King of Judah, son of Josiah, also called Shallum",
     "childOfFather": [
       "Josiah"
     ],
@@ -1532,7 +1527,9 @@
     ],
     "bookReferences": [
       "II Kings",
-      "II Chronicles"
+      "II Chronicles",
+      "Jeremiah",
+      "I Chronicles"
     ]
   },
   {
@@ -1622,7 +1619,11 @@
   },
   {
     "id": "joash_king_of_israel",
-    "name": "Joash / Jehoash",
+    "name": "Joash",
+    "all_en_names": [
+      "Joash",
+      "Jehoash"
+    ],
     "description": "King of Israel",
     "childOfFather": [
       "Jehoahaz"
@@ -1753,7 +1754,7 @@
     "name": "Jonathan",
     "description": "One of David's mighty men",
     "childOfFather": [
-      "Shimei / Shimeah (David's brother)"
+      "Shimei / Shimeah"
     ],
     "associatedWithPlace": [
       "Gath"
@@ -1835,7 +1836,8 @@
       "Levi"
     ],
     "associatedWithPlace": [
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "I Chronicles"
@@ -1978,7 +1980,7 @@
     "name": "Kenaz",
     "description": "Caleb's grandson",
     "childOfFather": [
-      "Elah (son of Caleb)"
+      "Elah"
     ],
     "tribeOfIsrael": [
       "Judah"
@@ -2274,7 +2276,7 @@
     "name": "Obadiah",
     "description": "The prophet",
     "associatedWithPlace": [
-      "Edom (subject of prophecy)"
+      "Edom"
     ],
     "bookReferences": [
       "Obadiah"
@@ -2330,9 +2332,6 @@
     "id": "obed_mighty_man",
     "name": "Obed",
     "description": "One of David's mighty men",
-    "associatedWithPlace": [
-      "David's camp"
-    ],
     "bookReferences": [
       "I Chronicles"
     ]
@@ -2348,7 +2347,8 @@
       "Levi"
     ],
     "associatedWithPlace": [
-      "Jerusalem Temple gates"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "I Chronicles"
@@ -2405,11 +2405,14 @@
   },
   {
     "id": "reuel_father_in_law_of_moses",
-    "name": "Reuel / Jethro",
+    "name": "Reuel",
+    "all_en_names": [
+      "Reuel",
+      "Jethro"
+    ],
     "description": "Moses' father-in-law",
     "children": [
-      "Zipporah",
-      "and six other daughters"
+      "Zipporah"
     ],
     "associatedWithPlace": [
       "Midian"
@@ -2451,7 +2454,7 @@
     ],
     "spouseOf": [
       "Ahinoam",
-      "Rizpah (concubine)"
+      "Rizpah"
     ],
     "children": [
       "Jonathan",
@@ -2483,7 +2486,7 @@
     "description": "Edomite king",
     "isNonJew": true,
     "associatedWithPlace": [
-      "Rehoboth by the River",
+      "Rehoboth",
       "Edom"
     ],
     "bookReferences": [
@@ -2497,9 +2500,6 @@
     "description": "Simeon's son",
     "childOfFather": [
       "Jacob"
-    ],
-    "childOfMother": [
-      "Simeon's Canaanite wife"
     ],
     "tribeOfIsrael": [
       "Simeon"
@@ -2543,25 +2543,6 @@
     ]
   },
   {
-    "id": "shallum_jehoahaz",
-    "name": "Shallum / Jehoahaz",
-    "description": "Alternate name for King Jehoahaz of Judah",
-    "childOfFather": [
-      "Josiah"
-    ],
-    "childOfMother": [
-      "Hamutal"
-    ],
-    "associatedWithPlace": [
-      "Jerusalem",
-      "Egypt"
-    ],
-    "bookReferences": [
-      "Jeremiah",
-      "I Chronicles"
-    ]
-  },
-  {
     "id": "shammah_brother_of_david",
     "name": "Shammah",
     "description": "David's brother",
@@ -2587,9 +2568,6 @@
     "description": "One of David's mighty men",
     "childOfFather": [
       "Agee the Hararite"
-    ],
-    "associatedWithPlace": [
-      "field of lentils against Philistines"
     ],
     "bookReferences": [
       "II Samuel"
@@ -2702,9 +2680,6 @@
     "childOfFather": [
       "Pedaiah"
     ],
-    "associatedWithPlace": [
-      "post-exilic Davidic line"
-    ],
     "bookReferences": [
       "Zechariah"
     ]
@@ -2771,7 +2746,7 @@
     "name": "Tola",
     "description": "Issachar's son",
     "childOfFather": [
-      "Jacob (via Issachar)"
+      "Jacob"
     ],
     "siblings": [
       "Puah",
@@ -2818,9 +2793,6 @@
     "spouseOf": [
       "Bathsheba"
     ],
-    "children": [
-      "infant son (died)"
-    ],
     "diedIn": [
       "Rabbah"
     ],
@@ -2836,7 +2808,8 @@
     "name": "Uriah",
     "description": "Priest under Ahaz",
     "associatedWithPlace": [
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "II Kings",
@@ -2863,13 +2836,17 @@
   },
   {
     "id": "uzziah_king_of_judah",
-    "name": "Uzziah / Azariah",
-    "description": "King of Judah",
+    "name": "Uzziah",
+    "all_en_names": [
+      "Uzziah",
+      "Azariah"
+    ],
+    "description": "King of Judah, also called Azariah",
     "childOfFather": [
       "Amaziah"
     ],
     "childOfMother": [
-      "Jecoliah"
+      "Jecoliah of Jerusalem"
     ],
     "children": [
       "Jotham"
@@ -2888,9 +2865,6 @@
     "id": "uzziah_mighty_man",
     "name": "Uzziah",
     "description": "One of David's mighty men",
-    "associatedWithPlace": [
-      "David's army"
-    ],
     "bookReferences": [
       "I Chronicles"
     ]
@@ -2955,10 +2929,12 @@
       "Levi"
     ],
     "diedIn": [
-      "Temple court, Jerusalem"
+      "Temple court",
+      "Jerusalem"
     ],
     "associatedWithPlace": [
-      "Jerusalem Temple"
+      "Jerusalem",
+      "Temple"
     ],
     "bookReferences": [
       "II Chronicles"
@@ -2969,7 +2945,7 @@
     "name": "Zechariah",
     "description": "Hezekiah's grandfather",
     "children": [
-      "Abijah (Hezekiah's mother)"
+      "Abijah"
     ],
     "associatedWithPlace": [
       "Jerusalem"
@@ -2981,7 +2957,11 @@
   },
   {
     "id": "zedekiah_last_king_of_judah",
-    "name": "Zedekiah / Mattaniah",
+    "name": "Zedekiah",
+    "all_en_names": [
+      "Zedekiah",
+      "Mattaniah"
+    ],
     "description": "Last king of Judah",
     "childOfFather": [
       "Josiah"
@@ -3079,7 +3059,7 @@
     "description": "Cushite king defeated by Asa",
     "isNonJew": true,
     "diedIn": [
-      "Mareshah (defeated)"
+      "Mareshah"
     ],
     "associatedWithPlace": [
       "Mareshah"
@@ -3102,7 +3082,8 @@
       "entrance of the Tent of Meeting"
     ],
     "associatedWithPlace": [
-      "Tent of Meeting, wilderness"
+      "Tent of Meeting",
+      "wilderness"
     ],
     "bookReferences": [
       "Numbers"
