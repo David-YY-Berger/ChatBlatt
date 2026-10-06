@@ -39,7 +39,7 @@
       "Shammah"
     ],
     "spouseOf": [
-      "Jether / Ithra the Ishmaelite"
+      "Jether / Ithra"
     ],
     "children": [
       "Amasa"
@@ -81,6 +81,9 @@
     "childOfFather": [
       "Jeroboam I"
     ],
+    "refIds": {
+      "Jeroboam I": "jeroboam_i_king_of_israel"
+    },
     "associatedWithPlace": [
       "Tirzah"
     ],
@@ -306,9 +309,6 @@
     "name": "Ahimelech",
     "description": "Ahimelech the Hittite, one of David's men",
     "isNonJew": true,
-    "associatedWithPlace": [
-      "Judean wilderness"
-    ],
     "bookReferences": [
       "I Samuel"
     ]
@@ -365,7 +365,7 @@
     "name": "Amasa",
     "description": "Absalom's and David's commander",
     "childOfFather": [
-      "Jether / Ithra the Ishmaelite"
+      "Jether / Ithra"
     ],
     "childOfMother": [
       "Abigail"
@@ -407,7 +407,7 @@
       "Joash of Judah"
     ],
     "childOfMother": [
-      "Jehoaddin of Jerusalem"
+      "Jehoaddin"
     ],
     "children": [
       "Azariah / Uzziah"
@@ -663,7 +663,7 @@
       "Reuben"
     ],
     "siblings": [
-      "Hanoch",
+      "Enoch",
       "Pallu",
       "Hezron"
     ],
@@ -827,7 +827,7 @@
     "name": "Eleazar",
     "description": "One of David's mighty men",
     "childOfFather": [
-      "Dodo the Ahohite"
+      "Dodo"
     ],
     "associatedWithPlace": [
       "Pas-dammim"
@@ -1141,7 +1141,7 @@
     "name": "Enoch",
     "all_en_names": [
       "Enoch",
-      "Hanoch"
+      "Enoch"
     ],
     "description": "Reuben's son",
     "childOfFather": [
@@ -1343,7 +1343,7 @@
       "Reuben"
     ],
     "siblings": [
-      "Hanoch",
+      "Enoch",
       "Pallu",
       "Carmi"
     ],
@@ -1596,14 +1596,63 @@
     ]
   },
   {
+    "id": "jeroboam_i_king_of_israel",
+    "name": "Jeroboam",
+    "all_en_names": [
+      "Jeroboam",
+      "Jeroboam I"
+    ],
+    "description": "First king of the northern Kingdom of Israel, son of Nebat",
+    "childOfFather": [
+      "Nebat"
+    ],
+    "children": [
+      "Nadab",
+      "Abijah"
+    ],
+    "associatedWithPlace": [
+      "Shechem",
+      "Bethel",
+      "Dan",
+      "Tirzah"
+    ],
+    "bookReferences": [
+      "I Kings",
+      "II Chronicles"
+    ]
+  },
+  {
+    "id": "jeroboam_ii_king_of_israel",
+    "name": "Jeroboam",
+    "all_en_names": [
+      "Jeroboam",
+      "Jeroboam II"
+    ],
+    "description": "King of Israel, son of Joash, greatly expanded Israel's territory",
+    "childOfFather": [
+      "Joash"
+    ],
+    "children": [
+      "Zechariah"
+    ],
+    "associatedWithPlace": [
+      "Samaria"
+    ],
+    "bookReferences": [
+      "II Kings",
+      "Amos",
+      "Hosea"
+    ]
+  },
+  {
     "id": "joash_king_of_judah",
     "name": "Joash",
     "description": "King of Judah",
     "childOfFather": [
-      "Ahaziah of Judah"
+      "Ahaziah"
     ],
     "childOfMother": [
-      "Zibiah of Beersheba"
+      "Zibiah"
     ],
     "children": [
       "Amaziah"
@@ -1631,6 +1680,9 @@
     "children": [
       "Jeroboam II"
     ],
+    "refIds": {
+      "Jeroboam II": "jeroboam_ii_king_of_israel"
+    },
     "associatedWithPlace": [
       "Samaria"
     ],
@@ -1909,7 +1961,7 @@
     ],
     "spouseOf": [
       "Bath-shua",
-      "Tamar (by deception)"
+      "Tamar"
     ],
     "children": [
       "Er",
@@ -2193,6 +2245,9 @@
     "childOfFather": [
       "Jeroboam I"
     ],
+    "refIds": {
+      "Jeroboam I": "jeroboam_i_king_of_israel"
+    },
     "diedIn": [
       "Gibbethon"
     ],
@@ -2531,11 +2586,10 @@
     "name": "Shallum",
     "description": "Huldah's husband",
     "spouseOf": [
-      "Huldah the prophetess"
+      "Huldah"
     ],
     "associatedWithPlace": [
-      "Jerusalem",
-      "Second Quarter"
+      "Jerusalem"
     ],
     "bookReferences": [
       "II Kings",
@@ -2908,6 +2962,9 @@
     "childOfFather": [
       "Jeroboam II"
     ],
+    "refIds": {
+      "Jeroboam II": "jeroboam_ii_king_of_israel"
+    },
     "diedIn": [
       "Samaria"
     ],
