@@ -27,6 +27,15 @@ NAME_FIELDS: List[str] = [
 # (printing one line per name would be far too slow over hundreds/thousands of names).
 LOG_BUFFER_SIZE = 100
 
+# Names that are known-valid but intentionally not expected to appear verbatim in the
+# source corpus (e.g. regnal-number disambiguators like "Jeroboam II" that distinguish
+# entries sharing a name but are never written that way in the text itself). Skipped
+# during the "not found in corpus" check.
+IGNORED_NAMES: List[str] = [
+    "Jeroboam I",
+    "Jeroboam II",
+]
+
 
 class DBPrePopulateAmbiguosEntitys(DBParentClass):
     """
@@ -103,11 +112,14 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
 
                     for alt_name in self._split_alt_names(name):
                         names_checked += 1
+                        if alt_name in IGNORED_NAMES:
+                            names_valid += 1
+                            continue
                         if alt_name in corpus:
                             names_valid += 1
-                            log_buffer.append(
-                                f"[OK] id='{entry_id}' field='{field}' name='{alt_name}' -> found in corpus"
-                            )
+                            # log_buffer.append(
+                            #     f"[OK] id='{entry_id}' field='{field}' name='{alt_name}' -> found in corpus"
+                            # )
                             if len(log_buffer) >= LOG_BUFFER_SIZE:
                                 print("\n".join(log_buffer))
                                 log_buffer.clear()

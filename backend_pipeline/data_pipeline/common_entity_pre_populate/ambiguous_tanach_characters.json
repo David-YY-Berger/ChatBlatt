@@ -222,7 +222,7 @@
     ],
     "siblings": [
       "Jonathan",
-      "Malchishua",
+      "Malchi-shua",
       "Ish-bosheth",
       "Merab",
       "Michal"
@@ -327,7 +327,7 @@
     "children": [
       "Jonathan",
       "Ish-bosheth",
-      "Malchishua",
+      "Malchi-shua",
       "Abinadab",
       "Merab",
       "Michal"
@@ -407,7 +407,7 @@
       "Joash of Judah"
     ],
     "childOfMother": [
-      "Jehoaddin"
+      "Jehoaddan"
     ],
     "children": [
       "Azariah / Uzziah"
@@ -523,7 +523,7 @@
     "name": "Azariah",
     "all_en_names": [
       "Azariah",
-      "Abednego"
+      "Abed-nego"
     ],
     "description": "Hebrew name of Abednego, Daniel's companion",
     "associatedWithPlace": [
@@ -703,7 +703,7 @@
     "description": "Rebekah's nurse",
     "isWoman": true,
     "diedIn": [
-      "Allon-bacuth (near Bethel)"
+      "Allon-bacuth"
     ],
     "associatedWithPlace": [
       "Bethel"
@@ -782,9 +782,6 @@
       "Abihu",
       "Ithamar"
     ],
-    "spouseOf": [
-      "daughter of Putiel"
-    ],
     "children": [
       "Phinehas"
     ],
@@ -830,7 +827,7 @@
       "Dodo"
     ],
     "associatedWithPlace": [
-      "Pas-dammim"
+      "Ephes-dammim"
     ],
     "bookReferences": [
       "II Samuel",
@@ -856,7 +853,7 @@
     ],
     "associatedWithPlace": [
       "Bethlehem",
-      "Elah Valley"
+      "Elah"
     ],
     "bookReferences": [
       "I Samuel",
@@ -918,7 +915,7 @@
       "Josiah"
     ],
     "childOfMother": [
-      "Zebidah"
+      "Zebadiah"
     ],
     "siblings": [
       "Jehoahaz",
@@ -1113,9 +1110,6 @@
     ],
     "children": [
       "Irad"
-    ],
-    "associatedWithPlace": [
-      "city of Enoch"
     ],
     "bookReferences": [
       "Genesis"
@@ -1765,7 +1759,7 @@
     ],
     "siblings": [
       "Ish-bosheth",
-      "Malchishua",
+      "Malchi-shua",
       "Abinadab",
       "Merab",
       "Michal"
@@ -1907,7 +1901,7 @@
     ],
     "spouseOf": [
       "Hamutal",
-      "Zebidah"
+      "Zebadiah"
     ],
     "children": [
       "Jehoahaz",
@@ -2514,7 +2508,7 @@
     "children": [
       "Jonathan",
       "Ish-bosheth",
-      "Malchishua",
+      "Malchi-shua",
       "Abinadab",
       "Merab",
       "Michal",
@@ -2610,7 +2604,7 @@
     ],
     "associatedWithPlace": [
       "Bethlehem",
-      "Elah Valley"
+      "Elah"
     ],
     "bookReferences": [
       "I Samuel"
@@ -2621,7 +2615,7 @@
     "name": "Shammah",
     "description": "One of David's mighty men",
     "childOfFather": [
-      "Agee the Hararite"
+      "Age the Ararite"
     ],
     "bookReferences": [
       "II Samuel"
