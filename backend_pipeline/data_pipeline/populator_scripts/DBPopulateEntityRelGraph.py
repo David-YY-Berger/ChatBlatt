@@ -39,6 +39,7 @@ def _lookup_rel_type(rel_field_name: str) -> Optional[RelType]:
 
 
 class DBPopulateEntityRelGraph(DBPopulateLlmBase):
+    __test__ = True  # concrete populator - re-enable pytest collection (base class opts out)
 
     def setUp(self):
         """Runs before every test to set up directories and lazy init Faiss."""

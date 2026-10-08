@@ -20,6 +20,18 @@ Don't re-derive context from scratch that's already written down there.
    `control_docs/README.md`); only split/reorganize when a doc has grown unfocused. Docs
    should stay succinct, non-repetitive, and easy to find. Treat this as part of finishing
    the change, not a separate optional step.
+3. **Check the whole inheritance chain before changing a shared method/attribute.** Before
+   and after editing anything that's part of a class hierarchy — a base/abstract class
+   method, a class-level attribute, a method with subclass overrides — search for every
+   superclass *and* every subclass/implementer that touches it, not just the one file you
+   started in. A change to a shared default, signature, or class attribute propagates via
+   MRO/inheritance and can silently break a sibling subclass that relies on the old
+   behavior (e.g. a class attribute one subclass needs re-set because a base class now sets
+   it differently; an abstract method a sibling override implements with a different
+   signature than the one you just assumed). If this search turns up an existing disparity
+   — a subclass already out of sync with its base, a stub that silently no-ops instead of
+   failing loudly, inconsistent overrides — mention it to the user, same as rule 1: don't
+   silently fix it (unless it's the bug you were asked to fix) or silently ignore it.
 
 ## Project-specific safety note
 

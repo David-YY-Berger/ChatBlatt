@@ -38,6 +38,15 @@ class DBPopulateLlmBase(DBParentClass):
             self.my_caller = MyCaller()
     """
 
+    # NOT a true ABC (DBParentClass -> unittest.TestCase, and ABCMeta/TestCase metaclasses
+    # don't mix cleanly) - @abstractmethod below is enforced by NotImplementedError in the
+    # method bodies, not by the interpreter blocking instantiation. __test__ = False tells
+    # pytest-based runners not to collect/run this class's own test_* methods directly
+    # (only a concrete subclass like DBPopulateEntityRelGraph should ever be run) - without
+    # it, a directory/file-level test discovery could run e.g. test_run_extraction_and_population
+    # on THIS class, hitting these un-overridden stubs with a confusing low-level error.
+    __test__ = False
+
     def setUp(self):
         super().setUp()
 
@@ -49,7 +58,7 @@ class DBPopulateLlmBase(DBParentClass):
     @abstractmethod
     def _get_output_dir(self) -> str:
         """Return the directory where extracted JSON files are written and read from."""
-        ...
+        raise NotImplementedError("Subclasses must implement _get_output_dir()")
 
     @abstractmethod
     async def _extract_from_passage(
@@ -63,14 +72,15 @@ class DBPopulateLlmBase(DBParentClass):
         already found for this passage that still need metadata enrichment.
         Single attempt — no retries.
         """
-        ...
+        raise NotImplementedError("Subclasses must implement _extract_from_passage()")
 
     @abstractmethod
     def _process_json_entries(self, json_entries: List[Tuple[str, dict]]) -> None:
         """Parse loaded JSON entries [(source_key, data), ...] and write results to the DB."""
-        ...
+        raise NotImplementedError("Subclasses must implement _process_json_entries()")
 
     # ─── Phase 1: LLM extraction → JSON files ─────────────────────────────────
+
 
     def test_run_extraction_and_population(self) -> None:
         """

@@ -26,6 +26,13 @@ other test). `DBParentClass.setUpClass` connects via `DBFactory.get_prod_db_mong
 Steps 3–4 share a two-phase scaffold (`DBPopulateLlmBase`); step 2 and 5 are direct
 JSON/CSV-driven DB writes; step 6 reads already-populated source content.
 
+`DBPopulateLlmBase` itself is never meant to run — its `_get_output_dir`/`_extract_from_passage`/
+`_process_json_entries` are unimplemented (`@abstractmethod`, raising `NotImplementedError`),
+but since `DBParentClass` is a `unittest.TestCase` (not a true `ABC`), nothing stops it from
+being instantiated directly. It sets `__test__ = False` so pytest-based runners won't collect
+its own `test_*` methods; each concrete subclass re-enables collection with `__test__ = True`.
+If you add a new `DBPopulateLlmBase` subclass, don't forget that line or it silently won't run.
+
 ## Two-phase LLM scaffold (`DBPopulateLlmBase`)
 
 - **Phase 1** (`_extract_from_passage`, implemented per subclass): iterate sources, call the

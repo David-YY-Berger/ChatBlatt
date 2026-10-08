@@ -52,6 +52,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
     Inherits the two-phase scaffold from DBPopulateLlmBase.
     """
+    __test__ = True  # concrete populator - re-enable pytest collection (base class opts out)
 
     def setUp(self):
         super().setUp()
