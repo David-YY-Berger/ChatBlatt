@@ -264,8 +264,8 @@ def _validate_number(value: str) -> str | None:
             return "❌ Negative numbers are not allowed"
         if not s.isdigit():
             return "❌ Only digits (0–9) are allowed, or a fraction like 1/3"
-        if int(s) == 0:
-            return "❌ Number must be greater than 0 (0 is not allowed)"
+        if int(s) in (0, 1):
+            return "❌ Number must be greater than 1 (0 and 1 are not allowed)"
 
     else:  # fraction
         if "-" in s:
@@ -286,6 +286,8 @@ def _validate_number(value: str) -> str | None:
             return "❌ Numerator must be greater than 0"
         if int(den_s) == 0:
             return "❌ Denominator cannot be zero"
+        if int(num_s) == int(den_s):
+            return "❌ A fraction equal to 1 is not allowed (0 and 1 are not allowed)"
 
     return None  # Input is valid
 

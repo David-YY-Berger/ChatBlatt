@@ -12,38 +12,38 @@ Directory already exists: C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Re
 Filtered invalid Number entity: '6:7'
 Filtered invalid Number entity: '6:2'
 Filtered invalid Number entity: '7:15'
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;1-5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;1-5.txt
+\BT_Berakhot_0_2a;1-5.json
+\BT_Berakhot_0_2a;1-5.txt
 Filtered invalid 'studiedFrom' relationship: Tanna -> Written Torah ('Tanna' -> 'Written Torah' does not match any allowed type pair: (Person -> Person))
 Filtered invalid 'contrastedWith' relationship: Evening Shema -> Morning Shema (term1 'Evening Shema' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;6-11.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;6-11.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;12-13.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;12-13.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;14-2b;4.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2a;14-2b;4.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2b;5-16.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2b;5-16.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2b;17-3a;3.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_2b;17-3a;3.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;4-11.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;4-11.txt
+\BT_Berakhot_0_2a;6-11.json
+\BT_Berakhot_0_2a;6-11.txt
+\BT_Berakhot_0_2a;12-13.json
+\BT_Berakhot_0_2a;12-13.txt
+\BT_Berakhot_0_2a;14-2b;4.json
+\BT_Berakhot_0_2a;14-2b;4.txt
+\BT_Berakhot_0_2b;5-16.json
+\BT_Berakhot_0_2b;5-16.txt
+\BT_Berakhot_0_2b;17-3a;3.json
+\BT_Berakhot_0_2b;17-3a;3.txt
+\BT_Berakhot_0_3a;4-11.json
+\BT_Berakhot_0_3a;4-11.txt
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;12-14.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;12-14.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;15-3b;9.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3a;15-3b;9.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;10-16.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;10-16.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;17-19.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;17-19.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;20-22.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;20-22.txt
+\BT_Berakhot_0_3a;12-14.json
+\BT_Berakhot_0_3a;12-14.txt
+\BT_Berakhot_0_3a;15-3b;9.json
+\BT_Berakhot_0_3a;15-3b;9.txt
+\BT_Berakhot_0_3b;10-16.json
+\BT_Berakhot_0_3b;10-16.txt
+\BT_Berakhot_0_3b;17-19.json
+\BT_Berakhot_0_3b;17-19.txt
+\BT_Berakhot_0_3b;20-22.json
+\BT_Berakhot_0_3b;20-22.txt
 Extraction failed: Exceeded maximum retries (0) for output validation
 EXTRACTION ERROR: Exceeded maximum retries (0) for output validation
   FAILED extracting BT_Berakhot_0_3b:23-26, skipping for now: Exceeded maximum retries (0) for output validation
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;27-4a;7.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_3b;27-4a;7.txt
+\BT_Berakhot_0_3b;27-4a;7.json
+\BT_Berakhot_0_3b;27-4a;7.txt
 Filtered invalid Number entity: '86:1-2'
 Filtered invalid Number entity: '119:62'
 Filtered invalid Number entity: '15:19-30'
@@ -58,135 +58,135 @@ Filtered invalid 'personBelongsToNation' relationship: Mefivoshet -> Israel (ter
 Filtered invalid 'personBelongsToNation' relationship: Kilav -> Israel (term2 'Israel' not in entities)
 Filtered invalid 'personBelongsToNation' relationship: Daniel -> Israel (term2 'Israel' not in entities)
 Filtered invalid 'personBelongsToNation' relationship: Solomon -> Israel (term2 'Israel' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;8-13.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;8-13.txt
+\BT_Berakhot_0_4a;8-13.json
+\BT_Berakhot_0_4a;8-13.txt
 Filtered invalid 'associatedWithPlace' relationship: Israel -> Babylonia ('Israel' -> 'Babylonia' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;14-18.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;14-18.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;19-4b;5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4a;19-4b;5.txt
+\BT_Berakhot_0_4a;14-18.json
+\BT_Berakhot_0_4a;14-18.txt
+\BT_Berakhot_0_4a;19-4b;5.json
+\BT_Berakhot_0_4a;19-4b;5.txt
 Filtered invalid 'comparedTo' relationship: Shema -> Shema (Self-relationship: Shema)
 Filtered invalid 'contrastedWith' relationship: Redemption -> Redemption (Self-relationship: Redemption)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;6-15.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;6-15.txt
+\BT_Berakhot_0_4b;6-15.json
+\BT_Berakhot_0_4b;6-15.txt
 Filtered invalid 'associatedWithPlace' relationship: Israel -> Eretz Yisrael ('Israel' -> 'Eretz Yisrael' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;16-22.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;16-22.txt
+\BT_Berakhot_0_4b;16-22.json
+\BT_Berakhot_0_4b;16-22.txt
 Filtered invalid 'spokeWith' relationship: Michael -> Isaiah (term2 'Isaiah' not in entities)
 Filtered invalid 'spokeWith' relationship: Gabriel -> Daniel (term2 'Daniel' not in entities)
 Filtered invalid 'contrastedWith' relationship: Angel Of Death -> Angel Of Death (Self-relationship: Angel Of Death)
 Filtered invalid 'AliasOf' relationship: Michael -> One Of The Seraphim (term2 'One Of The Seraphim' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;23-26.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;23-26.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;27-5a;1.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_4b;27-5a;1.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;2.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;2.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;3.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;3.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;4-5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;4-5.txt
+\BT_Berakhot_0_4b;23-26.json
+\BT_Berakhot_0_4b;23-26.txt
+\BT_Berakhot_0_4b;27-5a;1.json
+\BT_Berakhot_0_4b;27-5a;1.txt
+\BT_Berakhot_0_5a;2.json
+\BT_Berakhot_0_5a;2.txt
+\BT_Berakhot_0_5a;3.json
+\BT_Berakhot_0_5a;3.txt
+\BT_Berakhot_0_5a;4-5.json
+\BT_Berakhot_0_5a;4-5.txt
 Filtered invalid 'placeToNation' relationship: Egypt -> Egypt (Self-relationship: Egypt)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;6-8.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;6-8.txt
+\BT_Berakhot_0_5a;6-8.json
+\BT_Berakhot_0_5a;6-8.txt
 Filtered invalid 'AliasOf' relationship: Lord -> God (term1 'Lord' not in entities)
 Filtered invalid 'AliasOf' relationship: Holy One, Blessed Be He -> God (term1 'Holy One, Blessed Be He' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;9-13.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;9-13.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;14-19.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;14-19.txt
+\BT_Berakhot_0_5a;9-13.json
+\BT_Berakhot_0_5a;9-13.txt
+\BT_Berakhot_0_5a;14-19.json
+\BT_Berakhot_0_5a;14-19.txt
 Filtered invalid 'placeToNation' relationship: Babylonia -> Babylonia (Self-relationship: Babylonia)
 Filtered invalid 'placeToNation' relationship: Eretz Yisrael -> Eretz Yisrael (Self-relationship: Eretz Yisrael)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;20-5b;9.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5a;20-5b;9.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;10-16.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;10-16.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;17-20.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;17-20.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;21-24.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;21-24.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;25-6a;1.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_5b;25-6a;1.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;2-6.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;2-6.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;7-16.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;7-16.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;17-6b;1.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6a;17-6b;1.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;2-4.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;2-4.txt
+\BT_Berakhot_0_5a;20-5b;9.json
+\BT_Berakhot_0_5a;20-5b;9.txt
+\BT_Berakhot_0_5b;10-16.json
+\BT_Berakhot_0_5b;10-16.txt
+\BT_Berakhot_0_5b;17-20.json
+\BT_Berakhot_0_5b;17-20.txt
+\BT_Berakhot_0_5b;21-24.json
+\BT_Berakhot_0_5b;21-24.txt
+\BT_Berakhot_0_5b;25-6a;1.json
+\BT_Berakhot_0_5b;25-6a;1.txt
+\BT_Berakhot_0_6a;2-6.json
+\BT_Berakhot_0_6a;2-6.txt
+\BT_Berakhot_0_6a;7-16.json
+\BT_Berakhot_0_6a;7-16.txt
+\BT_Berakhot_0_6a;17-6b;1.json
+\BT_Berakhot_0_6a;17-6b;1.txt
+\BT_Berakhot_0_6b;2-4.json
+\BT_Berakhot_0_6b;2-4.txt
 Filtered invalid 'comparedTo' relationship: Prayer -> Temple Service (term1 'Prayer' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;5-8.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;5-8.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;9-10.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;9-10.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;11-17.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;11-17.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;18-20.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;18-20.txt
+\BT_Berakhot_0_6b;5-8.json
+\BT_Berakhot_0_6b;5-8.txt
+\BT_Berakhot_0_6b;9-10.json
+\BT_Berakhot_0_6b;9-10.txt
+\BT_Berakhot_0_6b;11-17.json
+\BT_Berakhot_0_6b;11-17.txt
+\BT_Berakhot_0_6b;18-20.json
+\BT_Berakhot_0_6b;18-20.txt
 Filtered invalid 'associatedWithPlace' relationship: Kerum -> Cities By The Sea ('Kerum' -> 'Cities By The Sea' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;21-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;21-25.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;26-28.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;26-28.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;29-33.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;29-33.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;34-36.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;34-36.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;37.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_6b;37.txt
+\BT_Berakhot_0_6b;21-25.json
+\BT_Berakhot_0_6b;21-25.txt
+\BT_Berakhot_0_6b;26-28.json
+\BT_Berakhot_0_6b;26-28.txt
+\BT_Berakhot_0_6b;29-33.json
+\BT_Berakhot_0_6b;29-33.txt
+\BT_Berakhot_0_6b;34-36.json
+\BT_Berakhot_0_6b;34-36.txt
+\BT_Berakhot_0_6b;37.json
+\BT_Berakhot_0_6b;37.txt
 Filtered invalid 'AliasOf' relationship: God -> Akatriel Ya (term2 'Akatriel Ya' not in entities)
 Filtered invalid 'AliasOf' relationship: Yishmael Ben Elisha -> Yishmael (term2 'Yishmael' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;1-4.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;1-4.txt
+\BT_Berakhot_0_7a;1-4.json
+\BT_Berakhot_0_7a;1-4.txt
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
 Filtered invalid 'AliasOf' relationship: The Holy One, Blessed Be He -> God (term1 'The Holy One, Blessed Be He' not in entities)
 Filtered invalid 'AliasOf' relationship: Most High -> God (term1 'Most High' not in entities)
 Filtered invalid 'AliasOf' relationship: Lord -> God (term1 'Lord' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;5-15.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;5-15.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;16-21.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;16-21.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;22.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;22.txt
+\BT_Berakhot_0_7a;5-15.json
+\BT_Berakhot_0_7a;5-15.txt
+\BT_Berakhot_0_7a;16-21.json
+\BT_Berakhot_0_7a;16-21.txt
+\BT_Berakhot_0_7a;22.json
+\BT_Berakhot_0_7a;22.txt
 Filtered invalid 'childOfFather' relationship: Righteous Person -> Righteous Person (Self-relationship: Righteous Person)
 Filtered invalid 'childOfFather' relationship: Wicked Person -> Wicked Person (Self-relationship: Wicked Person)
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;23-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;23-25.txt
+\BT_Berakhot_0_7a;23-25.json
+\BT_Berakhot_0_7a;23-25.txt
 Filtered invalid 'associatedWithPlace' relationship: Divine Presence -> Israel ('Divine Presence' -> 'Israel' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'associatedWithPlace' relationship: Moses -> Burning Bush ('Moses' -> 'Burning Bush' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;26-33.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;26-33.txt
+\BT_Berakhot_0_7a;26-33.json
+\BT_Berakhot_0_7a;26-33.txt
 Filtered invalid tribe: 'Levites' (not in known tribes list)
 Filtered invalid 'personToTribeOfIsrael' relationship: Gershom -> Levites (term2 'Levites' not in entities)
 Filtered invalid 'personToTribeOfIsrael' relationship: Eliezer -> Levites (term2 'Levites' not in entities)
 Filtered invalid 'personToTribeOfIsrael' relationship: Rehaviya -> Levites (term2 'Levites' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;34-36.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7a;34-36.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;1-5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;1-5.txt
+\BT_Berakhot_0_7a;34-36.json
+\BT_Berakhot_0_7a;34-36.txt
+\BT_Berakhot_0_7b;1-5.json
+\BT_Berakhot_0_7b;1-5.txt
 Filtered invalid 'personToTribeOfIsrael' relationship: Judah -> Judah (Self-relationship: Judah)
 Filtered invalid 'personToTribeOfIsrael' relationship: Reuben -> Reuben (Self-relationship: Reuben)
 Filtered invalid 'personToTribeOfIsrael' relationship: Joseph -> Joseph (Self-relationship: Joseph)
 Filtered invalid 'comparedTo' relationship: Ruth -> Riva (term2 'Riva' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;6-10.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;6-10.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;11-14.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;11-14.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;15-22.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;15-22.txt
+\BT_Berakhot_0_7b;6-10.json
+\BT_Berakhot_0_7b;6-10.txt
+\BT_Berakhot_0_7b;11-14.json
+\BT_Berakhot_0_7b;11-14.txt
+\BT_Berakhot_0_7b;15-22.json
+\BT_Berakhot_0_7b;15-22.txt
 Filtered invalid 'associatedWithPlace' relationship: Israel -> Israel (Self-relationship: Israel)
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
 Filtered invalid 'placeToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;23-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;23-25.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;26.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;26.txt
+\BT_Berakhot_0_7b;23-25.json
+\BT_Berakhot_0_7b;23-25.txt
+\BT_Berakhot_0_7b;26.json
+\BT_Berakhot_0_7b;26.txt
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;27-8a;4.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_7b;27-8a;4.txt
+\BT_Berakhot_0_7b;27-8a;4.json
+\BT_Berakhot_0_7b;27-8a;4.txt
 Filtered invalid 'associatedWithPlace' relationship: Reish Lakish -> Synagogue ('Reish Lakish' -> 'Synagogue' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'associatedWithPlace' relationship: Rabbi Yehoshua Ben Levi -> Synagogue ('Rabbi Yehoshua Ben Levi' -> 'Synagogue' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'associatedWithPlace' relationship: Rabbi Aha -> Synagogue ('Rabbi Aha' -> 'Synagogue' does not match any allowed type pair: (Person -> Place))
@@ -194,69 +194,69 @@ Filtered invalid 'associatedWithPlace' relationship: Rav Hisda -> Synagogue ('Ra
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
 Filtered invalid 'personBelongsToNation' relationship: Judah -> Judah (Self-relationship: Judah)
 Filtered invalid 'placeToNation' relationship: Babylonia -> Babylonia (Self-relationship: Babylonia)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;5-8.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;5-8.txt
+\BT_Berakhot_0_8a;5-8.json
+\BT_Berakhot_0_8a;5-8.txt
 Filtered invalid 'comparedTo' relationship: Croup -> Thorn (term2 'Thorn' not in entities)
 Filtered invalid 'comparedTo' relationship: Croup -> Rope (term2 'Rope' not in entities)
 Filtered invalid 'comparedTo' relationship: Kiss Of Death -> Hair (term2 'Hair' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;9-15.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;9-15.txt
+\BT_Berakhot_0_8a;9-15.json
+\BT_Berakhot_0_8a;9-15.txt
 Filtered invalid 'associatedWithPlace' relationship: Divine Presence -> Temple ('Divine Presence' -> 'Temple' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'associatedWithPlace' relationship: Holy One, Blessed Be He -> Four Cubits (term2 'Four Cubits' not in entities)
 Filtered invalid 'comparedTo' relationship: Four Cubits -> Temple (term1 'Four Cubits' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;16-20.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;16-20.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;21-29.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;21-29.txt
+\BT_Berakhot_0_8a;16-20.json
+\BT_Berakhot_0_8a;16-20.txt
+\BT_Berakhot_0_8a;21-29.json
+\BT_Berakhot_0_8a;21-29.txt
 Filtered invalid 'associatedWithPlace' relationship: Tablets Of The Covenant -> Temple ('Tablets Of The Covenant' -> 'Temple' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'associatedWithPlace' relationship: Ark Of The Covenant -> Temple ('Ark Of The Covenant' -> 'Temple' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;30-8b;7.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8a;30-8b;7.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;8-12.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;8-12.txt
+\BT_Berakhot_0_8a;30-8b;7.json
+\BT_Berakhot_0_8a;30-8b;7.txt
+\BT_Berakhot_0_8b;8-12.json
+\BT_Berakhot_0_8b;8-12.txt
 Filtered invalid 'associatedWithPlace' relationship: Persia -> Gehenna ('Persia' -> 'Gehenna' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;13-16.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;13-16.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;17-9a;4.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_8b;17-9a;4.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;5-7.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;5-7.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;8-10.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;8-10.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;11-28.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;11-28.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;29-9b;2.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9a;29-9b;2.txt
+\BT_Berakhot_0_8b;13-16.json
+\BT_Berakhot_0_8b;13-16.txt
+\BT_Berakhot_0_8b;17-9a;4.json
+\BT_Berakhot_0_8b;17-9a;4.txt
+\BT_Berakhot_0_9a;5-7.json
+\BT_Berakhot_0_9a;5-7.txt
+\BT_Berakhot_0_9a;8-10.json
+\BT_Berakhot_0_9a;8-10.txt
+\BT_Berakhot_0_9a;11-28.json
+\BT_Berakhot_0_9a;11-28.txt
+\BT_Berakhot_0_9a;29-9b;2.json
+\BT_Berakhot_0_9a;29-9b;2.txt
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
 Filtered invalid 'placeToNation' relationship: Egypt -> Egypt (Self-relationship: Egypt)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;3-5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;3-5.txt
+\BT_Berakhot_0_9b;3-5.json
+\BT_Berakhot_0_9b;3-5.txt
 Filtered invalid 'spokeWith' relationship: Elijah -> Holy One, Blessed Be He (term2 'Holy One, Blessed Be He' not in entities)
 Filtered invalid 'associatedWithPlace' relationship: God -> Burning Bush ('God' -> 'Burning Bush' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'AliasOf' relationship: God -> Holy One, Blessed Be He (term2 'Holy One, Blessed Be He' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;6-8.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;6-8.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;9-10.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;9-10.txt
+\BT_Berakhot_0_9b;6-8.json
+\BT_Berakhot_0_9b;6-8.txt
+\BT_Berakhot_0_9b;9-10.json
+\BT_Berakhot_0_9b;9-10.txt
 Filtered invalid 'contrastedWith' relationship: Sky-Blue -> White (term1 'Sky-Blue' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;11-15.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;11-15.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;16-18.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;16-18.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;19-24.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;19-24.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;25-10a;1.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_9b;25-10a;1.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;2-7.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;2-7.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;8-11.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;8-11.txt
+\BT_Berakhot_0_9b;11-15.json
+\BT_Berakhot_0_9b;11-15.txt
+\BT_Berakhot_0_9b;16-18.json
+\BT_Berakhot_0_9b;16-18.txt
+\BT_Berakhot_0_9b;19-24.json
+\BT_Berakhot_0_9b;19-24.txt
+\BT_Berakhot_0_9b;25-10a;1.json
+\BT_Berakhot_0_9b;25-10a;1.txt
+\BT_Berakhot_0_10a;2-7.json
+\BT_Berakhot_0_10a;2-7.txt
+\BT_Berakhot_0_10a;8-11.json
+\BT_Berakhot_0_10a;8-11.txt
 Filtered invalid 'comparedTo' relationship: Gemulav -> Gemulei Mehalav (term1 'Gemulav' not in entities)
 Filtered invalid 'contrastedWith' relationship: Breasts -> Animals (term1 'Breasts' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;12-20.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;12-20.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;21-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;21-25.txt
+\BT_Berakhot_0_10a;12-20.json
+\BT_Berakhot_0_10a;12-20.txt
+\BT_Berakhot_0_10a;21-25.json
+\BT_Berakhot_0_10a;21-25.txt
 Filtered invalid 'visited' relationship: Elijah -> Ahab ('Elijah' -> 'Ahab' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'visited' relationship: Yehoram -> Elisha ('Yehoram' -> 'Elisha' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'visited' relationship: Isaiah -> Hezekiah ('Isaiah' -> 'Hezekiah' does not match any allowed type pair: (Person -> Place))
@@ -265,50 +265,50 @@ Filtered invalid 'comparedTo' relationship: Wall -> Chambers Of Heart (term2 'Ch
 Filtered invalid 'contrastedWith' relationship: This World -> World-To-Come (term1 'This World' not in entities)
 Filtered invalid 'contrastedWith' relationship: Prophet's Emissary Role -> Prophet's Personal Opinion (term1 'Prophet's Emissary Role' not in entities)
 Filtered invalid 'contrastedWith' relationship: Dreams And Vanities -> Fear God (term1 'Dreams And Vanities' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;26-10b;5.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10a;26-10b;5.txt
+\BT_Berakhot_0_10a;26-10b;5.json
+\BT_Berakhot_0_10a;26-10b;5.txt
 Filtered invalid 'personBelongsToNation' relationship: Hezekiah -> Israel ('Hezekiah' -> 'Israel' does not match any allowed type pair: (Person -> Nation))
 Filtered invalid 'personBelongsToNation' relationship: Ahaz -> Israel ('Ahaz' -> 'Israel' does not match any allowed type pair: (Person -> Nation))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;6-10.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;6-10.txt
+\BT_Berakhot_0_10b;6-10.json
+\BT_Berakhot_0_10b;6-10.txt
 Filtered invalid 'personBelongsToNation' relationship: Israel -> Israel (Self-relationship: Israel)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;11-13.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;11-13.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;14-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;14-25.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;26-30.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;26-30.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;31-36.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;31-36.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;37-41.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_10b;37-41.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;1-14.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;1-14.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;15-18.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;15-18.txt
+\BT_Berakhot_0_10b;11-13.json
+\BT_Berakhot_0_10b;11-13.txt
+\BT_Berakhot_0_10b;14-25.json
+\BT_Berakhot_0_10b;14-25.txt
+\BT_Berakhot_0_10b;26-30.json
+\BT_Berakhot_0_10b;26-30.txt
+\BT_Berakhot_0_10b;31-36.json
+\BT_Berakhot_0_10b;31-36.txt
+\BT_Berakhot_0_10b;37-41.json
+\BT_Berakhot_0_10b;37-41.txt
+\BT_Berakhot_0_11a;1-14.json
+\BT_Berakhot_0_11a;1-14.txt
+\BT_Berakhot_0_11a;15-18.json
+\BT_Berakhot_0_11a;15-18.txt
 Filtered invalid 'disagreedWith' relationship: Nahman Bar Yitzhak -> Yehezkel (term1 'Nahman Bar Yitzhak' not in entities)
 Filtered invalid 'visited' relationship: Beit Shammai -> Yohanan Ben Hahoranit ('Beit Shammai' -> 'Yohanan Ben Hahoranit' does not match any allowed type pair: (Person -> Place))
 Filtered invalid 'visited' relationship: Beit Hillel -> Yohanan Ben Hahoranit ('Beit Hillel' -> 'Yohanan Ben Hahoranit' does not match any allowed type pair: (Person -> Place))
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;19-23.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;19-23.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;24-25.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;24-25.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;26-11b;7.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11a;26-11b;7.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;8-9.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;8-9.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;10-19.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;10-19.txt
+\BT_Berakhot_0_11a;19-23.json
+\BT_Berakhot_0_11a;19-23.txt
+\BT_Berakhot_0_11a;24-25.json
+\BT_Berakhot_0_11a;24-25.txt
+\BT_Berakhot_0_11a;26-11b;7.json
+\BT_Berakhot_0_11a;26-11b;7.txt
+\BT_Berakhot_0_11b;8-9.json
+\BT_Berakhot_0_11b;8-9.txt
+\BT_Berakhot_0_11b;10-19.json
+\BT_Berakhot_0_11b;10-19.txt
 Filtered invalid 'spokeWith' relationship: People -> Rabbi Abba (term1 'People' not in entities)
 Filtered invalid 'spokeWith' relationship: People -> Rabbi Yosei Bar Abba (term1 'People' not in entities)
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;20-12a;3.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_11b;20-12a;3.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;4-9.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;4-9.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;10-22.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;10-22.txt
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;23-12b;1.json
-Content successfully written to C:\Users\U6072661\AppData\Local\Chatblatt\Tests\LMM Responses\BT_Berakhot_0_12a;23-12b;1.txt
+\BT_Berakhot_0_11b;20-12a;3.json
+\BT_Berakhot_0_11b;20-12a;3.txt
+\BT_Berakhot_0_12a;4-9.json
+\BT_Berakhot_0_12a;4-9.txt
+\BT_Berakhot_0_12a;10-22.json
+\BT_Berakhot_0_12a;10-22.txt
+\BT_Berakhot_0_12a;23-12b;1.json
+\BT_Berakhot_0_12a;23-12b;1.txt
 
 ============================================================
 TOTAL: 1003783 tokens (prompt=712223, completion=291560), $0.140885 USD

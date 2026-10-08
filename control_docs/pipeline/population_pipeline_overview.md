@@ -86,7 +86,8 @@ of Berakhot) for a cheap/quick test before committing to the whole book.
   is safe — nothing already written is duplicated.
 - Per source: (1) insert/resolve entities (Person → `PersonDisambiguator`, see
   `person_disambiguation.md`; everything else → `try_insert_entity`) — names matching the
-  ignore filter are skipped (see `entity_ignore_filter.md`); (2) insert relationships,
+  ignore filter are skipped (see `entity_ignore_filter.md`), and Numbers with a disallowed
+  unit/value are skipped (see `data_model/entities/number.md`); (2) insert relationships,
   resolved through that source's own name→key map; (3) upsert `SourceMetadata`.
 - **The populator never modifies existing entity documents** — names, `book_references`,
   etc. are never touched once written.

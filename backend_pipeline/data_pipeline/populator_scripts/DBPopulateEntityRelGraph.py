@@ -30,14 +30,22 @@ _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 # rather than a true countable quantity - these are deterministically dropped.
 _NUMBER_UNITS_TO_IGNORE: Set[str] = {"verse"}
 
+# Values that are never a meaningful standalone quantity, regardless of unit:
+# 0 (nothing counted) and 1 (equivalent to "a"/"an" - no plurality worth recording).
+# display_en_name already holds the normalized numeric string (e.g. "1", not "1.0").
+_NUMBER_VALUES_TO_IGNORE: Set[str] = {"0", "1"}
 
-def _is_ignored_number_unit(entity: Entity) -> bool:
-    """True if entity is a Number whose en_unit marks it as a verse/citation reference."""
-    return (
-        isinstance(entity, ENumber)
-        and entity.en_unit is not None
-        and entity.en_unit.strip().lower() in _NUMBER_UNITS_TO_IGNORE
-    )
+
+def _is_ignored_number(entity: Entity) -> bool:
+    """
+    True if entity is a Number that must never be stored or searchable:
+    a verse/citation-unit Number, or one whose value is 0 or 1.
+    """
+    if not isinstance(entity, ENumber):
+        return False
+    if entity.en_unit is not None and entity.en_unit.strip().lower() in _NUMBER_UNITS_TO_IGNORE:
+        return True
+    return entity.display_en_name in _NUMBER_VALUES_TO_IGNORE
 
 
 def _lookup_rel_type(rel_field_name: str) -> Optional[RelType]:
@@ -234,7 +242,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         it in source_entity_map. Person mentions go through PersonDisambiguator (different
         people can share a name); every other type is matched by name + type.
         Returns the entity (with its key), or None if skipped (no name, filtered out as a
-        non-proper noun or verse-unit Number, or already resolved earlier in this source).
+        non-proper noun or disallowed Number (verse-unit, or value 0/1), or already
+        resolved earlier in this source).
         """
         en_name = entity_data.get("en_name", "").strip()
         if not en_name:
@@ -249,10 +258,11 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # name contains (as a substring) a known non-proper-noun term, and record
         # its identity so relationships referencing it are skipped too.
         # Numbers whose unit is "verse" (e.g. "see verse 5") are a citation/cross-reference,
-        # not a true countable quantity, so they are dropped the same way.
-        if is_ignored_entity_name(en_name, entity_type) or _is_ignored_number_unit(entity):
+        # not a true countable quantity, and numbers with value 0 or 1 are never a
+        # meaningful standalone quantity - both are dropped the same way.
+        if is_ignored_entity_name(en_name, entity_type) or _is_ignored_number(entity):
             ignored_entity_keys.add(lookup_key)
-            print(f"  Skipping non-proper-noun/verse-unit {entity_type.value} entity: '{en_name}'")
+            print(f"  Skipping non-proper-noun/disallowed-Number {entity_type.value} entity: '{en_name}'")
             return None
 
         if lookup_key in source_entity_map:

@@ -8,7 +8,16 @@ govern how these docs get used and maintained.
 ## Data model
 | Doc | Covers |
 |---|---|
-| [`data_model/entities_and_relationships.md`](data_model/entities_and_relationships.md) | Entity/EPerson/EPlace/... schema, transient fields, RelType directions, identity/dedup rules |
+| [`data_model/entities_and_relationships.md`](data_model/entities_and_relationships.md) | Entity base schema, transient fields, RelType directions, identity/dedup philosophy, DB write helpers. Indexes the per-entity docs below. |
+| [`data_model/entities/person.md`](data_model/entities/person.md) | `EPerson` fields, identity (no disambiguation at the Entity layer), `insert_entity` rule |
+| [`data_model/entities/place.md`](data_model/entities/place.md) | `EPlace` fields, extraction-time exact-match filter |
+| [`data_model/entities/tribe_of_israel.md`](data_model/entities/tribe_of_israel.md) | `ETribeOfIsrael` fixed 13-tribe list, auto-overlap with Person |
+| [`data_model/entities/nation.md`](data_model/entities/nation.md) | `ENation` demonym conversion, generic-word filter |
+| [`data_model/entities/symbol.md`](data_model/entities/symbol.md) | `ESymbol` fields, mutual exclusion with Animal/Food/Plant |
+| [`data_model/entities/number.md`](data_model/entities/number.md) | `ENumber` fields, identity (value+category+unit), deterministic exclusions (verse-unit, value 0/1) |
+| [`data_model/entities/animal.md`](data_model/entities/animal.md) | `EAnimal` fields, `spokeWith`-only relationship |
+| [`data_model/entities/food.md`](data_model/entities/food.md) | `EFood` fields, overlap with Animal/Plant |
+| [`data_model/entities/plant.md`](data_model/entities/plant.md) | `EPlant` fields, overlap with Food |
 | [`data_model/db_and_collections.md`](data_model/db_and_collections.md) | Mongo collections, `DBapiMongoDB` mixins, transactions, key API methods |
 
 ## Population pipeline

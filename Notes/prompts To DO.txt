@@ -8,17 +8,6 @@ whilte this pre populate is running, make the repo of just data backup files....
 [small side task - create separate Repo for eitz_habina_data]
 
 pre populate script {{
-
-	
-	See this DBPrePopulateAmbiguosEntitys
-	i already ran the validation func, all the names there are valid and match the spelling of the names in the source contents.
-	now, i need you to implement the pre population. I have already cleared the DB of entities and relationships and source metadata - the only thing is the source content (and FAISS/Bm25). 
-	see the guide here (written by AI - you can check things..) : C:\Users\U6072661\PycharmProjects\ChatBlatt\Notes\entity_prepopulation_guide.md
-	
-	note, i've changed ambigious tanach characters json a little bit. you can take another look there to make sure you understand the guide.
-	
-	write me func to pre population my entitys and relationships here. 
-	see the code, anaylze, think - before you write any code, gather your questions and doublecheck with me decisions
 	
 }}
 
@@ -30,6 +19,19 @@ get metadata to get alternate display names?
 
 see if theres a diff cheaper LLM which will be good too..
 
+{{ 
+add to ignore list for Person entity: 
+amora 
+amoraim
+tanna
+tannaim
+}}
+{{
+at end of logs print, re print the sources that we failed extraction for
+}}
+
+
+fin
 }}
 
 easy fixes {{

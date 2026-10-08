@@ -33,6 +33,12 @@ from `en_name` ("King Ahaz" → "Ahaz") — this reduces how often the Person fi
 even needs to trigger, and keeps `en_name` consistent with how pre-population expects bare
 names (`entity_prepopulation.md` §Names).
 
+## Related but separate: Number exclusions
+
+`ENumber` entities are filtered by a different, dedicated check
+(`DBPopulateEntityRelGraph._is_ignored_number`) — a verse/citation unit, or value 0/1. Not
+part of `EntityIgnoreFilter.py` and not file-list-driven. See `data_model/entities/number.md`.
+
 ## Consequence for pre-population
 
 An entity whose own name (or whose referenced name) collides with the filter is still
