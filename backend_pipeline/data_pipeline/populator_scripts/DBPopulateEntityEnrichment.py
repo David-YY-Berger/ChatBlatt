@@ -58,8 +58,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         super().setUp()
 
         # ====== SWITCH MODEL HERE ======
-        ModelConfig.set_provider(ModelProvider.GEMINI_FREE)
-        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)
+        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)
         # ModelConfig.set_provider(ModelProvider.OPENAI)
         # ===============================
 
@@ -283,8 +283,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         total_tokens = total_input_tokens = total_output_tokens = 0
         num_processed = num_skipped = num_populate_failed = 0
 
-        contents = get_examples_src_contents(self.db_api)
-        # contents = self.db_api.get_all_src_contents_by_book(Books.GENESIS)
+        # contents = get_examples_src_contents(self.db_api)
+        contents = self.db_api.get_all_src_contents_by_book(Books.BERAKHOT)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
