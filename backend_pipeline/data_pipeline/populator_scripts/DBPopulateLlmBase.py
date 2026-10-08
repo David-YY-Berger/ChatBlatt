@@ -74,13 +74,23 @@ class DBPopulateLlmBase(DBParentClass):
 
     def test_run_extraction_and_population(self) -> None:
         """
-        Entry point: clear output dir, run LLM extraction for all sources (phase 1,
-        written to JSON/TXT files under _get_output_dir()), then load those JSON
-        files back and populate the DB (phase 2).
+        Entry point: run LLM extraction for all sources (phase 1, written to JSON/TXT
+        files under _get_output_dir()), then load those JSON files back and populate
+        the DB (phase 2).
+
+        The output dir is NOT cleared first: a source whose JSON file already exists
+        is skipped (no LLM call) - see _extract_contents_to_json - so a run that was
+        interrupted (e.g. by exhausted rate-limit retries) can simply be re-invoked to
+        pick up where it left off. Call test_force_clear_output_dir() first if you
+        deliberately want to redo every source from scratch (e.g. after a prompt change).
         """
-        OsFunctions.clear_create_directory(self._get_output_dir())
+        OsFunctions.create_dir_if_not_exists(self._get_output_dir())
         asyncio.run(self._extract_all_to_json())
         self.test_populate_from_jsons()
+
+    def test_force_clear_output_dir(self) -> None:
+        """Deliberately wipe _get_output_dir() - use before a run that must redo every source."""
+        OsFunctions.clear_create_directory(self._get_output_dir())
 
     def test_print_examples_src_contents_to_html(self) -> None:
         """Print example source contents to HTML and TXT files for inspection."""
@@ -182,19 +192,51 @@ class DBPopulateLlmBase(DBParentClass):
             f"{src.get_clean_en_text()}"
         )
 
-    async def _extract_all_to_json(self, book=Books.GENESIS) -> None:
+    async def _extract_all_to_json(self, book: Optional[Books] = None) -> None:
         """
-        Iterate all sources for *book*, call the LLM once per source,
-        save JSON and TXT files under _get_output_dir().
+        Iterate all sources for *book* (every source of that book from the DB), or -
+        if no book is given - the hardcoded debug/example sources (get_examples_src_contents).
+        Calls the LLM once per source, saves JSON and TXT output files under _get_output_dir().
+
+        Subclasses that always want a specific book (rather than this debug default)
+        should override this method - see DBPopulateEntityRelGraph._extract_all_to_json -
+        rather than relying on a shared mutable default here, so other subclasses
+        (e.g. DBPopulateEntityEnrichment, which has its own full override) are unaffected.
+        """
+        contents = self.db_api.get_all_src_contents_by_book(book) if book is not None \
+            else get_examples_src_contents(self.db_api)
+        await self._extract_contents_to_json(contents)
+
+    async def _extract_contents_to_json(self, contents: List[SourceContent]) -> None:
+        """
+        Shared loop: call the LLM once per source in *contents*, save JSON + TXT output
+        files. A source whose JSON output file already exists is skipped (no LLM call) -
+        this makes a large run resumable: re-invoking after a mid-run failure only
+        (re-)processes the sources that don't have output yet. A source that still fails
+        after EntityRelGraphCaller's own rate-limit retries is logged and skipped rather
+        than aborting the whole batch; failed keys are listed at the end so just those
+        can be investigated/retried (e.g. by deleting their output files and re-running).
         """
         total_cost_usd = 0.0
         total_tokens = total_input_tokens = total_output_tokens = 0
+        num_skipped_existing = 0
+        failed_keys: List[str] = []
 
-        # contents = self.db_api.get_all_src_contents_by_book(book)
-        contents = get_examples_src_contents(self.db_api)
         for src_content in contents:
+            out_path = os.path.join(
+                self._get_output_dir(), src_content.key.replace(":", ";")
+            )
+            if os.path.exists(out_path + ".json"):
+                num_skipped_existing += 1
+                continue
+
             passage = src_content.get_clean_en_text()
-            json_str, usage, cost_usd = await self._extract_from_passage(passage)
+            try:
+                json_str, usage, cost_usd = await self._extract_from_passage(passage)
+            except Exception as e:
+                print(f"  FAILED extracting {src_content.key}, skipping for now: {e}")
+                failed_keys.append(src_content.key)
+                continue
 
             total_cost_usd += cost_usd
             total_tokens += usage.total_tokens
@@ -204,9 +246,6 @@ class DBPopulateLlmBase(DBParentClass):
             result_dict = json.loads(json_str)
             result_dict[DBFields.KEY] = src_content.key
 
-            out_path = os.path.join(
-                self._get_output_dir(), src_content.key.replace(":", ";")
-            )
             output_text = (
                 f"COST: Tokens: Total={usage.total_tokens} approx cost=${cost_usd:.6f} "
                 f"(Prompt={usage.input_tokens}, Completion={usage.output_tokens})\n"
@@ -224,6 +263,10 @@ class DBPopulateLlmBase(DBParentClass):
             f"(prompt={total_input_tokens}, completion={total_output_tokens}), "
             f"${total_cost_usd:.6f} USD"
         )
+        if num_skipped_existing:
+            print(f"Skipped {num_skipped_existing} sources that already had output (resume).")
+        if failed_keys:
+            print(f"FAILED {len(failed_keys)} sources (re-run this test to retry just these): {failed_keys}")
         print(f"Results saved to: {self._get_output_dir()}")
         print(f"{'='*60}")
 

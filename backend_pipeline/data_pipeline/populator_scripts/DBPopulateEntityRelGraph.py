@@ -48,13 +48,17 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # Uncomment ONE of these lines to choose your model:
 
         # Standard modes (no extended thinking):
-        ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
-        # ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
+        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
 
         # Thinking modes (deeper reasoning, better for complex passages):
         # ModelConfig.set_provider(ModelProvider.GEMINI_FREE_THINKING)   # Flash + thinking (free tier)
         # ModelConfig.set_provider(ModelProvider.GEMINI_PAID_THINKING)   # Flash + thinking (paid tier)
+        # ===============================
+
+        # ====== SWITCH BOOK HERE ======
+        self.book_to_extract = Books.BERAKHOT
         # ===============================
 
         self.pydantic_caller = EntityRelGraphCaller()
@@ -71,6 +75,13 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     async def _extract_from_passage(self, passage: str):
         return await self.pydantic_caller.extract_graph_from_passage(passage)
+
+    async def _extract_all_to_json(self) -> None:
+        """
+        Override: process every source of self.book_to_extract, not DBPopulateLlmBase's
+        shared debug/example sources (which DBPopulateEntityEnrichment still uses).
+        """
+        await self._extract_contents_to_json(self.db_api.get_all_src_contents_by_book(self.book_to_extract))
 
     # ─── Entry points ─────────────────────────────────────────────────────────
 

@@ -12,11 +12,14 @@ Don't re-derive context from scratch that's already written down there.
    open questions — then confirm with the user in a focused way (one question at a time,
    concrete choices when possible) *before* writing code. If you notice an unrelated issue
    along the way, mention it rather than silently fixing or silently ignoring it.
-2. **Keep `control_docs/` current.** After a code change, check whether an existing doc
-   covers the area you touched and update it in place — fix/restructure the existing content,
-   don't just append more bullet points. Only add a new doc file when nothing existing fits
-   (and list it in `control_docs/README.md`); only split/reorganize when a doc has grown
-   unfocused. Docs should stay succinct, non-repetitive, and easy to find.
+2. **Keep `control_docs/` current — always, not just when asked.** After *any* code change
+   (including a "just fix it" / bug-fix / review-driven change mid-task, not only
+   feature work), check whether an existing doc covers the area you touched and update it
+   in place — fix/restructure the existing content, don't just append more bullet points.
+   Only add a new doc file when nothing existing fits (and list it in
+   `control_docs/README.md`); only split/reorganize when a doc has grown unfocused. Docs
+   should stay succinct, non-repetitive, and easy to find. Treat this as part of finishing
+   the change, not a separate optional step.
 
 ## Project-specific safety note
 

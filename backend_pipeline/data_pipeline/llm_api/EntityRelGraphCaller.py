@@ -16,9 +16,12 @@ Usage:
     json_str, usage, cost = await caller.extract_graph_from_passage(passage)
 """
 
+import asyncio
 import logging
+import random
 from typing import Tuple
 from pydantic_ai import Agent, ModelSettings
+from pydantic_ai.exceptions import ModelHTTPError
 from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
 
@@ -32,6 +35,13 @@ from backend_pipeline.data_pipeline.PydanticModels.PydanticClasses import (
 )
 
 logger = logging.getLogger(__name__)
+
+# Retried ONLY for transient rate-limit/server errors (429/500/503) - not for
+# ValidationError, where a retry would just burn tokens on output the model already
+# got wrong once. Backoff is deliberately long (rate-limit windows are per-minute).
+_RATE_LIMIT_RETRYABLE_STATUS_CODES = {429, 500, 503}
+_RATE_LIMIT_MAX_ATTEMPTS = 6
+_RATE_LIMIT_BASE_DELAY_SECONDS = 10.0
 
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 NUMBER_CATEGORIES_STR = ', '.join(e.value for e in NumberCategory)
@@ -266,19 +276,34 @@ class EntityRelGraphCaller:
         )
 
     async def _extract(self, passage: str):
-        """Internal async call with single attempt."""
-        try:
-            # Single extraction attempt - no retries
-            result = await self.agent.run(passage)
-            return result
-        except ValidationError as e:
-            # Log validation error but don't retry
-            print(f"Validation failed on first attempt: {e}")
-            raise  # Re-raise to handle in calling code
-        except Exception as e:
-            # Any other error - don't retry
-            print(f"Extraction failed: {e}")
-            raise
+        """
+        Internal async call. Rate-limit/server errors (HTTP 429/500/503) are retried
+        with exponential backoff - these are transient and cost nothing extra to retry.
+        ValidationError and any other error are NOT retried (single attempt), since
+        retrying a bad output just burns tokens for the same mistake.
+        """
+        attempt = 0
+        while True:
+            try:
+                result = await self.agent.run(passage)
+                return result
+            except ValidationError as e:
+                # Log validation error but don't retry
+                print(f"Validation failed on first attempt: {e}")
+                raise  # Re-raise to handle in calling code
+            except ModelHTTPError as e:
+                attempt += 1
+                if e.status_code not in _RATE_LIMIT_RETRYABLE_STATUS_CODES or attempt >= _RATE_LIMIT_MAX_ATTEMPTS:
+                    print(f"Extraction failed (HTTP {e.status_code}), giving up after {attempt} attempt(s): {e}")
+                    raise
+                delay = _RATE_LIMIT_BASE_DELAY_SECONDS * (2 ** (attempt - 1)) + random.uniform(0, 5)
+                print(f"Rate/server limited (HTTP {e.status_code}), attempt {attempt}/{_RATE_LIMIT_MAX_ATTEMPTS}, "
+                      f"retrying in {delay:.1f}s...")
+                await asyncio.sleep(delay)
+            except Exception as e:
+                # Any other error - don't retry
+                print(f"Extraction failed: {e}")
+                raise
 
     def _calculate_cost(self, usage: RunUsage) -> float:
         """Estimates cost in USD based on current provider's pricing."""

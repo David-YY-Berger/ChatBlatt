@@ -29,10 +29,41 @@ JSON/CSV-driven DB writes; step 6 reads already-populated source content.
 ## Two-phase LLM scaffold (`DBPopulateLlmBase`)
 
 - **Phase 1** (`_extract_from_passage`, implemented per subclass): iterate sources, call the
-  LLM once per source (no retries), write one JSON file per source to `_get_output_dir()`
-  (filename = source key with `:` → `;`).
+  LLM once per source, write one JSON file per source to `_get_output_dir()` (filename =
+  source key with `:` → `;`). Resumable and failure-tolerant (see below).
 - **Phase 2** (`_process_json_entries`, implemented per subclass): read those JSON files
   back and write their contents to the DB.
+- `test_run_extraction_and_population` (the usual entry point) chains both phases in one
+  call and does **not** clear `_get_output_dir()` first — a re-invocation resumes rather than
+  redoing everything. Call `test_force_clear_output_dir` first if you deliberately want every
+  source redone (e.g. after a prompt change).
+
+### Which sources phase 1 iterates
+
+`DBPopulateLlmBase._extract_all_to_json(book=None)` defaults to a small hardcoded
+debug/example source list (`get_examples_src_contents`) when no book is given — this is
+fine for ad hoc prompt debugging but **not** a real run. A subclass that always wants a
+specific book overrides `_extract_all_to_json` itself and reads an explicit instance
+attribute set in `setUp` under a `# ====== SWITCH BOOK HERE ======` comment (same pattern as
+the model-provider switch) — see `DBPopulateEntityRelGraph.book_to_extract`. Don't change
+the shared base's default/signature to thread a book through — `DBPopulateEntityEnrichment`
+has its own full override of `_extract_all_to_json` with a different signature (no `book`
+param) and would break.
+
+### Phase 1 resumability & retries
+
+- The shared loop (`DBPopulateLlmBase._extract_contents_to_json`) skips any source whose
+  JSON output file already exists — no LLM call — so re-running after a partial failure only
+  processes what's missing.
+- A source that still fails is logged and skipped (not an aborted batch); failed keys are
+  printed at the end of the run so just those can be investigated/retried (delete their
+  output files, then re-run).
+- Transient rate-limit/server errors (HTTP 429/500/503) are retried with exponential
+  backoff **inside the LLM caller itself** (`EntityRelGraphCaller._extract`, up to 6
+  attempts, ~10s–320s + jitter) — this is where `google-gla` 429s from Gemini get absorbed,
+  before a source is ever counted as failed. A genuine bad/invalid model output
+  (`ValidationError`) is still never retried — re-asking would just burn tokens repeating
+  the same mistake.
 
 ### `DBPopulateEntityRelGraph` phase 2 specifics
 
@@ -50,6 +81,9 @@ JSON/CSV-driven DB writes; step 6 reads already-populated source content.
 
 ## Idempotency & transaction conventions (apply to any new populator)
 
+- Phase 1 (LLM extraction) resumability/retry is handled once in `DBPopulateLlmBase` (see
+  above) — a new populator gets it for free by using the shared scaffold, no need to
+  reimplement skip-if-exists or backoff per subclass.
 - Keep each transaction small (one source / one entry / a small batch) — Atlas aborts
   transactions over 60s.
 - A transaction callback **must be safe to re-run from scratch** (pymongo retries it on

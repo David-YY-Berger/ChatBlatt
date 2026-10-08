@@ -32,6 +32,8 @@ govern how these docs get used and maintained.
 | [`app/controllers.md`](app/controllers.md) | Backend controllers that serve the frontend |
 
 ## Maintenance rule
-After a code change, check this index for a doc that covers the touched area and update it
-in place (fix/restructure existing content rather than appending). Only add a new file when
-nothing existing fits, and list it here. If a doc grows unfocused, split or re-outline it.
+After *any* code change — including ad hoc fixes made mid-task, not just planned feature
+work — check this index for a doc that covers the touched area and update it in place
+(fix/restructure existing content rather than appending). This is part of finishing the
+change, not an optional follow-up. Only add a new file when nothing existing fits, and list
+it here. If a doc grows unfocused, split or re-outline it.
