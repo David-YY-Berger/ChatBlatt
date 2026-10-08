@@ -85,5 +85,9 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
   tell them apart at pre-population time.
 - Entities whose name collides with the ignore filter (see `entity_ignore_filter.md`) are
   still created but unreachable from future source mentions — reported, not blocking.
-- Enrichment can still overwrite a pre-populated entity's `isWoman`/`timePeriod`/etc. if it
-  never gets a `display_heb_name` (no Hebrew names in this input file yet).
+- A pre-populated entity never gets a `display_heb_name` (no Hebrew names in this input file
+  yet), so it stays enrichment-eligible forever (`has_metadata()` never true) — that's
+  intended, it's how `display_heb_name` eventually gets filled in from a source mention.
+  `DBPopulateEntityEnrichment` only *fills* `timePeriod`/`isWoman`/`isNonJew`/`isGroup` when
+  still unset; it never overwrites an already-curated value, so repeated enrichment passes
+  can't clobber this file's data.

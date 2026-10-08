@@ -96,7 +96,9 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
     # ─── DBPopulateLlmBase abstract method implementations ────────────────────
 
     def _get_output_dir(self) -> str:
-        return Paths.LMM_RESPONSES_OUTPUT_DIR
+        # Per-book dir (see Paths.get_entity_rel_graph_output_dir) - keeps a run of one book's
+        # JSON/TXT output from ever being mixed with another book's leftover files.
+        return Paths.get_entity_rel_graph_output_dir(self.book_to_extract.database_name)
 
     async def _extract_from_passage(self, passage: str):
         return await self.pydantic_caller.extract_graph_from_passage(passage)
@@ -125,7 +127,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         source metadata to the DB - each source in its own transaction (see _process_json_entries).
         """
         # dir_path = Paths.TEST_DATA_BEREISHIT_ENTITY_REL_DIR
-        dir_path = Paths.LMM_RESPONSES_OUTPUT_DIR
+        dir_path = self._get_output_dir()
 
         # 1. Read JSONs with source keys derived from filenames
         json_entries: List[Tuple[str, dict]] = JsonUtils.read_jsons_from_dir_with_keys(dir_path)

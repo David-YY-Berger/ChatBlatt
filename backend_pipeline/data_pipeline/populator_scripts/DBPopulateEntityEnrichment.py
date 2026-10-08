@@ -63,6 +63,10 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         # ModelConfig.set_provider(ModelProvider.OPENAI)
         # ===============================
 
+        # ====== SWITCH BOOK HERE ======
+        self.book_to_enrich = Books.BERAKHOT
+        # ===============================
+
         self.enrichment_caller = EntityEnrichmentCaller()
 
     def tearDown(self):
@@ -71,8 +75,10 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     # --- DBPopulateLlmBase abstract method implementations --------------------
 
     def _get_output_dir(self) -> str:
-        return Paths.ENRICHMENT_RESPONSES_OUTPUT_DIR
-    #     be careful to put anything here! will be deleted...
+        # Per-book dir (see Paths.get_entity_enrichment_output_dir) - keeps a run of one book's
+        # JSON/TXT output from ever being mixed with another book's leftover files (test_populate_from_jsons
+        # reprocesses every *.json file sitting in this directory, not just this run's output).
+        return Paths.get_entity_enrichment_output_dir(self.book_to_enrich.database_name)
 
     async def _extract_from_passage(self, passage: str, entity_json_list: Optional[List[str]] = None):
         """
@@ -182,18 +188,27 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
     @staticmethod
     def _apply_person_fields(entity: EPerson, entity_dict: dict, source_key: str) -> bool:
+        """
+        timePeriod/isWoman/isNonJew/isGroup are fill-only: only ever set when currently
+        unset (None), never overwritten once a value exists. This matters for pre-populated
+        entities (DBPrePopulateAmbiguosEntitys) - they never get a display_heb_name, so they
+        stay enrichment-eligible (has_metadata() == False) despite already carrying curated
+        values for these fields; without this guard, a single incidental passage mention
+        could silently clobber a correct curated value with the LLM's (possibly wrong,
+        single-passage) read.
+        """
         changed = False
 
         raw_time_period = entity_dict.get("timePeriod")
-        if raw_time_period:
+        if raw_time_period and entity.timePeriod is None:
             matched = _match_enum_value(raw_time_period, TimePeriod, f"timePeriod ({source_key})")
-            if matched and entity.timePeriod != TimePeriod(matched):
+            if matched:
                 entity.timePeriod = TimePeriod(matched)
                 changed = True
 
         for bool_field in ("isWoman", "isNonJew", "isGroup"):
             raw_value = entity_dict.get(bool_field)
-            if isinstance(raw_value, bool) and getattr(entity, bool_field) != raw_value:
+            if isinstance(raw_value, bool) and getattr(entity, bool_field) is None:
                 setattr(entity, bool_field, raw_value)
                 changed = True
 
@@ -260,7 +275,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
     def test_run(self) -> None:
         self.test_run_extraction_and_population()
 
-    async def _extract_all_to_json(self) -> None:
+    async def _extract_all_to_json(self) -> List[str]:
         """
         Iterate the example sources (get_examples_src_contents), and for each one:
           - look up its SourceMetadata to find linked entity keys
@@ -278,13 +293,20 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
         Saves JSON and TXT output files under _get_output_dir(), mirroring
         DBPopulateEntityRelGraph's Phase 1 output style.
+
+        EntityEnrichmentCaller does a single attempt per passage (no retries), so the
+        extraction call itself is wrapped in try/except here (mirroring
+        DBPopulateLlmBase._extract_contents_to_json's shared loop) - a single source's
+        failure (incl. a transient rate-limit error) is logged and skipped rather than
+        aborting the whole run. Returns the list of source keys that failed extraction.
         """
         total_cost_usd = 0.0
         total_tokens = total_input_tokens = total_output_tokens = 0
         num_processed = num_skipped = num_populate_failed = 0
+        failed_keys: List[str] = []
 
         # contents = get_examples_src_contents(self.db_api)
-        contents = self.db_api.get_all_src_contents_by_book(Books.BERAKHOT)
+        contents = self.db_api.get_all_src_contents_by_book(self.book_to_enrich)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
@@ -295,7 +317,12 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             entity_json_list = [e.model_dump_json(exclude_none=True) for e in entities]
             passage = self._build_bilingual_passage(src_content)
 
-            json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            try:
+                json_str, usage, cost_usd = await self._extract_from_passage(passage, entity_json_list)
+            except Exception as e:
+                print(f"  FAILED extracting {src_content.key}, skipping for now: {e}")
+                failed_keys.append(src_content.key)
+                continue
             # try:
             #     cost_usd, json_str, usage = await self.temp_read_json_from_file(src_content.key)
             # except FileNotFoundError:
@@ -353,7 +380,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         print(f"\n{'='*60}")
         print(
             f"PROCESSED: {num_processed} sources, SKIPPED (no entities to enrich): {num_skipped}, "
-            f"DB POPULATE FAILURES: {num_populate_failed}"
+            f"EXTRACTION FAILURES: {len(failed_keys)}, DB POPULATE FAILURES: {num_populate_failed}"
         )
         print(
             f"TOTAL: {total_tokens} tokens "
@@ -361,7 +388,10 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             f"${total_cost_usd:.6f} USD"
         )
         print(f"Results saved to: {self._get_output_dir()}")
+        if failed_keys:
+            print(f"FAILED {len(failed_keys)} sources (re-run this test to retry just these): {failed_keys}")
         print(f"{'='*60}")
+        return failed_keys
 
     async def add_display_en_name(self, entities, result_dict):
         entity_display_en_names_by_key = {entity.key: entity.display_en_name for entity in entities}

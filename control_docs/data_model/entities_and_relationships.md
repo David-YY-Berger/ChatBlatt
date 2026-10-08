@@ -54,9 +54,9 @@ Subclass lookup: `Entity.get_class_for_type(EntityType)`.
   set. Subclasses extend it with their own required fields (see each entity's doc). Gates
   whether `DBPopulateEntityEnrichment` sends the entity to the LLM again — an entity with
   full metadata is never re-enriched, so pre-populated entities should eventually get a
-  `display_heb_name` too or they stay enrichment-eligible forever (enrichment **can
-  overwrite** pre-populated metadata if the entity lacks full metadata — known limitation,
-  see `pipeline/entity_prepopulation.md` §open items).
+  `display_heb_name` too or they stay enrichment-eligible forever (harmless for `EPerson`'s
+  other fields — enrichment only *fills* them when unset, never overwrites an already-curated
+  value, see `pipeline/entity_prepopulation.md`).
 
 ## Rel — `Rel.py`
 

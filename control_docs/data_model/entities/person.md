@@ -16,6 +16,11 @@ Donkey) are `EAnimal`, not `EPerson`.
 
 `has_metadata()`: true once the base metadata (`display_heb_name`) **and** `timePeriod`,
 `isWoman`, `isNonJew`, `isGroup`, `roles` are all set — gates re-enrichment eligibility.
+`DBPopulateEntityEnrichment` only *fills* `timePeriod`/`isWoman`/`isNonJew`/`isGroup` when
+currently `None` — it never overwrites an already-set value (protects curated
+pre-population data, see `pipeline/entity_prepopulation.md`). `roles` only ever grows (union
+of existing + newly-matched roles); `display_heb_name` is overwritten whenever the LLM
+returns a non-empty value different from the current one.
 
 Transient relationship fields (not persisted, filled in for the UI by the entity populator):
 `childOfFather`, `childOfMother`, `children`, `siblings`, `spouseOf`, `descendantOf`,

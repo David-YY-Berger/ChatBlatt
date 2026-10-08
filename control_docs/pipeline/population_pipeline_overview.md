@@ -18,7 +18,10 @@ other test). `DBParentClass.setUpClass` connects via `DBFactory.get_prod_db_mong
    resolve Person mentions through `PersonDisambiguator`, write to `Graphs.*`.
 4. **`DBPopulateEntityEnrichment`** — fills entity metadata (`display_heb_name`,
    `timePeriod`/`isWoman`/`isNonJew`/`isGroup`/`roles` for `EPerson`, etc.) for entities that
-   fail `has_metadata()`.
+   fail `has_metadata()`. For `EPerson`, `timePeriod`/`isWoman`/`isNonJew`/`isGroup` are
+   fill-only (set when currently `None`, never overwritten once set) — protects curated
+   pre-population values (see `entity_prepopulation.md`) from being clobbered by a single
+   incidental passage mention.
 5. **`DBPopulateMergeEntities`** — CSV-driven merge of duplicate entities (as needed, not
    every run).
 6. **`DBPopulateFaissAndBm25`** — builds the FAISS + BM25 search indexes from source content.
@@ -52,15 +55,39 @@ debug/example source list (`get_examples_src_contents`) when no book is given �
 fine for ad hoc prompt debugging but **not** a real run. A subclass that always wants a
 specific book overrides `_extract_all_to_json` itself and reads an explicit instance
 attribute set in `setUp` under a `# ====== SWITCH BOOK HERE ======` comment (same pattern as
-the model-provider switch) — see `DBPopulateEntityRelGraph.book_to_extract`. Don't change
-the shared base's default/signature to thread a book through — `DBPopulateEntityEnrichment`
-has its own full override of `_extract_all_to_json` with a different signature (no `book`
-param) and would break.
+the model-provider switch) — see `DBPopulateEntityRelGraph.book_to_extract` and
+`DBPopulateEntityEnrichment.book_to_enrich`. Don't change the shared base's default/signature
+to thread a book through — `DBPopulateEntityEnrichment` has its own full override of
+`_extract_all_to_json` with a different signature (no `book` param) and would break.
 
 `DBPopulateEntityRelGraph` also has an optional `self.max_sources_to_extract` (`setUp`,
 `# ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======`), `None` by default — set it to an int
 to cap the run to the first N sources of `book_to_extract` (book order, e.g. the first 100
 of Berakhot) for a cheap/quick test before committing to the whole book.
+`DBPopulateEntityEnrichment` has no such cap — it's naturally bounded already, since it only
+ever calls the LLM for sources whose `SourceMetadata.entity_keys` has an unenriched entity
+(i.e. sources `DBPopulateEntityRelGraph` already processed); iterating the rest of the book
+costs a cheap metadata lookup per source but no LLM call.
+
+### Output directories (`Paths.get_entity_rel_graph_output_dir` / `get_entity_enrichment_output_dir`)
+
+Both populators' phase 1/2 JSON+TXT output lives under a single central root,
+`Paths.REAL_DATA_DIR` (a sibling folder to the repo, `ChatBlatt_data_files/real_data`, not
+under version control) — **one book, one subfolder**
+(`.../entity_rels/<book>` / `.../enrichment/<book>`, lowercased `Book.database_name`), via
+`Paths.get_entity_rel_graph_output_dir(book_database_name)` /
+`Paths.get_entity_enrichment_output_dir(book_database_name)`. Don't reintroduce a fixed
+per-script constant (e.g. a single shared dir for every book) — see why below.
+
+**Gotcha:** phase 2 (`test_populate_from_jsons` / `test_populate_entities_and_rels_from_jsons`)
+reprocesses **every** `*.json` file sitting in `_get_output_dir()`, not just the file(s) this
+run produced. Per-book dirs prevent *cross-book* contamination (a leftover Genesis JSON file
+no longer sits in the same folder a Berakhot run reads from), but **not** staleness *within*
+the same book — if the DB is ever wiped/reset and a book is re-run, that book's output dir
+still has the old run's JSON files and phase 2 will re-apply them (resolved by key, falling
+back to `display_en_name` if the key no longer exists — see `DBPopulateEntityEnrichment
+._process_json_entries`). Clear the relevant per-book dir (`test_force_clear_output_dir`) any
+time the DB has been reset since that book was last populated.
 
 ### Phase 1 resumability & retries
 
@@ -77,6 +104,13 @@ of Berakhot) for a cheap/quick test before committing to the whole book.
   before a source is ever counted as failed. A genuine bad/invalid model output
   (`ValidationError`) is still never retried — re-asking would just burn tokens repeating
   the same mistake.
+- `DBPopulateEntityEnrichment` has its own full override of `_extract_all_to_json` (different
+  source list/filtering, no file-existence skip — see its "Phase 1 override" below), but
+  mirrors the shared loop's catch-and-skip: the extraction call is wrapped in try/except, a
+  failed source is logged and added to `failed_keys` (returned, same `REMINDER` behavior),
+  and the run continues. Unlike `EntityRelGraphCaller`, `EntityEnrichmentCaller` has **no**
+  internal retry/backoff (`retries=0`, single attempt) — a transient 429 there is a plain
+  failed source, not absorbed before counting.
 
 ### `DBPopulateEntityRelGraph` phase 2 specifics
 

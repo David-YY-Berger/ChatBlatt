@@ -6,8 +6,6 @@ BASE_DIR = os.path.join(os.environ.get("LOCALAPPDATA", ""), "Chatblatt")
 LOGS_DIR = os.path.join(BASE_DIR, "Logs")
 TESTS_DIR = os.path.join(BASE_DIR, "Tests")
 QUESTIONS_OUTPUT_DIR = os.path.join(TESTS_DIR, "Questions")
-LMM_RESPONSES_OUTPUT_DIR = os.path.join(TESTS_DIR, "LMM Responses")
-ENRICHMENT_RESPONSES_OUTPUT_DIR = os.path.join(TESTS_DIR, "Enrichment Responses")
 
 
 ############################################## local paths for this project #######################################
@@ -34,6 +32,26 @@ COMMON_ENTITY_PRE_POPULATE_DIR = os.path.join(
 AMBIGUOUS_TANACH_CHARACTERS_JSON = os.path.join(
     COMMON_ENTITY_PRE_POPULATE_DIR, "ambiguous_tanach_characters.json"
 )
+
+############################################## real-data populator output (per-book) #######################################
+# Single central root for every LLM-populator script's JSON/TXT output, so changing where this
+# data lives is a one-line edit here instead of hunting down hardcoded paths in each script.
+# Sibling folder to the repo (not under version control) - distinct from TESTS_DIR above, which
+# is for throwaway/debug output (e.g. get_examples_src_contents runs), not real population runs.
+REAL_DATA_DIR = os.path.join(os.path.dirname(PROJECT_ROOT_DIR), "ChatBlatt_data_files", "real_data")
+ENTITY_REL_GRAPH_REAL_DATA_DIR = os.path.join(REAL_DATA_DIR, "entity_rels")
+ENTITY_ENRICHMENT_REAL_DATA_DIR = os.path.join(REAL_DATA_DIR, "enrichment")
+
+
+def get_entity_rel_graph_output_dir(book_database_name: str) -> str:
+    """Per-book output dir for DBPopulateEntityRelGraph's phase 1/2 JSON+TXT files."""
+    return os.path.join(ENTITY_REL_GRAPH_REAL_DATA_DIR, book_database_name.lower())
+
+
+def get_entity_enrichment_output_dir(book_database_name: str) -> str:
+    """Per-book output dir for DBPopulateEntityEnrichment's phase 1/2 JSON+TXT files."""
+    return os.path.join(ENTITY_ENRICHMENT_REAL_DATA_DIR, book_database_name.lower())
+
 
 BACKUP_OF_SRC_CONTENT = os.path.join(BASE_DIR, r"\DB_backups\backup_of_src_contents_TN_BT.json")
 
