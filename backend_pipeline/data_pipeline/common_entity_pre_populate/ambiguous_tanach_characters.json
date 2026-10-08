@@ -4,6 +4,8 @@
     "name": "Abigail",
     "description": "Wife of Nabal, then David",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "spouseOf": [
       "Nabal",
       "David"
@@ -27,6 +29,8 @@
     "name": "Abigail",
     "description": "David's sister, mother of Amasa",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jesse",
       "Nahash"
@@ -56,6 +60,9 @@
     "id": "abijah_king_of_judah",
     "name": "Abijah",
     "description": "King of Judah, son of Rehoboam",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Rehoboam"
     ],
@@ -78,6 +85,9 @@
     "id": "abijah_son_of_jeroboam",
     "name": "Abijah",
     "description": "Son of Jeroboam I, died young",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jeroboam I"
     ],
@@ -95,6 +105,9 @@
     "id": "abijah_son_of_samuel",
     "name": "Abijah",
     "description": "Son of Samuel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Samuel"
     ],
@@ -114,11 +127,13 @@
     "name": "Abijah",
     "description": "Hezekiah's mother",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Zechariah"
     ],
     "spouseOf": [
-      "King Ahaz"
+      "Ahaz"
     ],
     "children": [
       "Hezekiah"
@@ -135,7 +150,9 @@
     "id": "abimelech_king_gerar_abraham",
     "name": "Abimelech",
     "description": "King of Gerar in Abraham's time",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "associatedWithPlace": [
       "Gerar"
     ],
@@ -147,7 +164,9 @@
     "id": "abimelech_king_gerar_isaac",
     "name": "Abimelech",
     "description": "King of Gerar in Isaac's time",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "associatedWithPlace": [
       "Gerar"
     ],
@@ -159,6 +178,9 @@
     "id": "abimelech_son_of_gideon",
     "name": "Abimelech",
     "description": "Son of Gideon who seized kingship",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Gideon / Jerubbaal"
     ],
@@ -177,6 +199,9 @@
     "id": "abinadab_keeper_of_ark",
     "name": "Abinadab",
     "description": "Man in whose house the Ark rested",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Eleazar",
       "Uzzah",
@@ -194,6 +219,9 @@
     "id": "abinadab_brother_of_david",
     "name": "Abinadab",
     "description": "David's brother",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jesse"
     ],
@@ -214,6 +242,9 @@
     "id": "abinadab_son_of_saul",
     "name": "Abinadab",
     "description": "Saul's son, killed at Gilboa",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Saul"
     ],
@@ -243,6 +274,9 @@
     "id": "ahaziah_king_of_israel",
     "name": "Ahaziah",
     "description": "King of Israel, son of Ahab",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahab"
     ],
@@ -266,6 +300,9 @@
     "id": "ahaziah_king_of_judah",
     "name": "Ahaziah",
     "description": "King of Judah, son of Jehoram",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jehoram of Judah"
     ],
@@ -291,6 +328,9 @@
     "id": "ahimelech_priest_of_nob",
     "name": "Ahimelech",
     "description": "Priest at Nob",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahitub"
     ],
@@ -308,7 +348,9 @@
     "id": "ahimelech_the_hittite",
     "name": "Ahimelech",
     "description": "Ahimelech the Hittite, one of David's men",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "bookReferences": [
       "I Samuel"
     ]
@@ -318,6 +360,8 @@
     "name": "Ahinoam",
     "description": "Saul's wife",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahimaaz"
     ],
@@ -344,6 +388,8 @@
     "name": "Ahinoam",
     "description": "David's wife, of Jezreel",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "spouseOf": [
       "David"
     ],
@@ -364,6 +410,9 @@
     "id": "amasa_absaloms_commander",
     "name": "Amasa",
     "description": "Absalom's and David's commander",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jether / Ithra"
     ],
@@ -386,6 +435,9 @@
     "id": "amasa_ephraimite_chief",
     "name": "Amasa",
     "description": "Ephraimite chief",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hadlai"
     ],
@@ -403,6 +455,9 @@
     "id": "amaziah_king_of_judah",
     "name": "Amaziah",
     "description": "King of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Joash of Judah"
     ],
@@ -429,6 +484,9 @@
     "id": "amaziah_priest_of_bethel",
     "name": "Amaziah",
     "description": "Priest of Bethel under Jeroboam II",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Bethel"
     ],
@@ -440,6 +498,9 @@
     "id": "amram_father_of_moses",
     "name": "Amram",
     "description": "Father of Moses, Aaron, Miriam",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Kohath"
     ],
@@ -472,6 +533,9 @@
     "id": "amram_ezra",
     "name": "Amram",
     "description": "Man with a foreign wife in Ezra's time",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Jerusalem"
     ],
@@ -483,6 +547,9 @@
     "id": "asa_king_of_judah",
     "name": "Asa",
     "description": "King of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Abijah"
     ],
@@ -502,6 +569,9 @@
     "id": "asa_levite",
     "name": "Asa",
     "description": "A Levite",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Elkanah"
     ],
@@ -526,6 +596,9 @@
       "Abed-nego"
     ],
     "description": "Hebrew name of Abednego, Daniel's companion",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Babylon",
       "fiery furnace"
@@ -538,6 +611,9 @@
     "id": "azariah_prophet_son_of_oded",
     "name": "Azariah",
     "description": "Prophet, son of Oded",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Oded"
     ],
@@ -552,6 +628,9 @@
     "id": "baruch_scribe",
     "name": "Baruch",
     "description": "Jeremiah's scribe",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Neriah"
     ],
@@ -570,6 +649,9 @@
     "id": "baruch_wall_repairer",
     "name": "Baruch",
     "description": "Wall-repairer under Nehemiah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Zabbai"
     ],
@@ -584,6 +666,9 @@
     "id": "boaz",
     "name": "Boaz",
     "description": "Ruth's husband",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Salmon"
     ],
@@ -608,6 +693,9 @@
     "id": "caleb_son_of_jephunneh",
     "name": "Caleb",
     "description": "Son of Jephunneh, the spy",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jephunneh the Kenizzite"
     ],
@@ -637,6 +725,9 @@
     "id": "caleb_son_of_hezron",
     "name": "Caleb",
     "description": "Son of Hezron",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hezron"
     ],
@@ -659,6 +750,9 @@
     "id": "carmi_son_of_reuben",
     "name": "Carmi",
     "description": "Son of Reuben",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Reuben"
     ],
@@ -683,6 +777,9 @@
     "id": "carmi_father_of_achan",
     "name": "Carmi",
     "description": "Father of Achan",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Zabdi"
     ],
@@ -702,6 +799,7 @@
     "name": "Deborah",
     "description": "Rebekah's nurse",
     "isWoman": true,
+    "isGroup": false,
     "diedIn": [
       "Allon-bacuth"
     ],
@@ -717,6 +815,8 @@
     "name": "Deborah",
     "description": "Prophetess and judge",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "spouseOf": [
       "Lappidoth"
     ],
@@ -735,6 +835,9 @@
     "id": "ehud_judge",
     "name": "Ehud",
     "description": "The judge who killed Eglon",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Gera"
     ],
@@ -754,6 +857,9 @@
     "id": "ehud_benjamite",
     "name": "Ehud",
     "description": "Benjamite in genealogies",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Bilhan"
     ],
@@ -771,6 +877,9 @@
     "id": "eleazar_son_of_aaron",
     "name": "Eleazar",
     "description": "Son of Aaron, high priest",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Aaron"
     ],
@@ -805,6 +914,9 @@
     "id": "eleazar_son_of_abinadab",
     "name": "Eleazar",
     "description": "Son of Abinadab, kept the Ark",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Abinadab"
     ],
@@ -823,6 +935,9 @@
     "id": "eleazar_mighty_man",
     "name": "Eleazar",
     "description": "One of David's mighty men",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Dodo"
     ],
@@ -838,6 +953,9 @@
     "id": "eliab_brother_of_david",
     "name": "Eliab",
     "description": "David's oldest brother",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jesse"
     ],
@@ -864,6 +982,9 @@
     "id": "eliab_leader_of_zebulun",
     "name": "Eliab",
     "description": "Leader of Zebulun in the wilderness",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Helon"
     ],
@@ -878,6 +999,9 @@
     "id": "eliab_levite_musician",
     "name": "Eliab",
     "description": "Levite musician",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Levi"
     ],
@@ -892,6 +1016,9 @@
     "id": "eliakim_administrator",
     "name": "Eliakim",
     "description": "Hezekiah's palace administrator",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hilkiah"
     ],
@@ -911,6 +1038,9 @@
       "Jehoiakim"
     ],
     "description": "Josiah's son, renamed Jehoiakim",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Josiah"
     ],
@@ -937,6 +1067,8 @@
     "id": "eliezer_abrahams_servant",
     "name": "Eliezer",
     "description": "Abraham's servant",
+    "isWoman": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Damascus",
       "Canaan"
@@ -949,6 +1081,9 @@
     "id": "eliezer_son_of_moses",
     "name": "Eliezer",
     "description": "Moses' son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Moses"
     ],
@@ -970,6 +1105,9 @@
     "id": "eliezer_prophet",
     "name": "Eliezer",
     "description": "Prophet, son of Dodavahu",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Dodavahu of Mareshah"
     ],
@@ -984,6 +1122,9 @@
     "id": "eliphaz_son_of_esau",
     "name": "Eliphaz",
     "description": "Esau's son",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Esau"
     ],
@@ -1016,6 +1157,9 @@
     "id": "eliphaz_jobs_friend",
     "name": "Eliphaz",
     "description": "Job's friend, the Temanite",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "associatedWithPlace": [
       "Teman"
     ],
@@ -1027,6 +1171,9 @@
     "id": "elkanah_father_of_samuel",
     "name": "Elkanah",
     "description": "Samuel's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jeroham"
     ],
@@ -1052,6 +1199,9 @@
     "id": "elon_son_of_zebulun",
     "name": "Elon",
     "description": "Son of Zebulun",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -1073,6 +1223,9 @@
     "id": "elon_judge",
     "name": "Elon",
     "description": "Judge of Israel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Zebulun"
     ],
@@ -1090,7 +1243,9 @@
     "id": "elon_father_of_bashemath",
     "name": "Elon",
     "description": "Esau's Hittite father-in-law",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "children": [
       "Basemath"
     ],
@@ -1105,6 +1260,8 @@
     "id": "enoch_son_of_cain",
     "name": "Enoch",
     "description": "Cain's son",
+    "isWoman": false,
+    "isGroup": false,
     "childOfFather": [
       "Cain"
     ],
@@ -1119,6 +1276,8 @@
     "id": "enoch_son_of_jared",
     "name": "Enoch",
     "description": "Seth's descendant who walked with God",
+    "isWoman": false,
+    "isGroup": false,
     "childOfFather": [
       "Jared"
     ],
@@ -1138,6 +1297,9 @@
       "Enoch"
     ],
     "description": "Reuben's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Reuben"
     ],
@@ -1161,6 +1323,9 @@
     "id": "er_son_of_judah",
     "name": "Er",
     "description": "Judah's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Judah"
     ],
@@ -1186,6 +1351,9 @@
     "id": "gad_son_of_jacob",
     "name": "Gad",
     "description": "Jacob's son, tribal ancestor",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -1216,6 +1384,9 @@
     "id": "gad_prophet",
     "name": "Gad",
     "description": "David's prophet/seer",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Moab",
       "Jerusalem"
@@ -1230,6 +1401,9 @@
     "id": "gedaliah_governor",
     "name": "Gedaliah",
     "description": "Governor after Jerusalem's fall",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahikam"
     ],
@@ -1248,6 +1422,9 @@
     "id": "gedaliah_father_of_zephaniah",
     "name": "Gedaliah",
     "description": "Father of the prophet Zephaniah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Zephaniah"
     ],
@@ -1259,6 +1436,9 @@
     "id": "gedaliah_musician",
     "name": "Gedaliah",
     "description": "A musician",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jeduthun"
     ],
@@ -1277,6 +1457,9 @@
     "id": "hananiah_false_prophet",
     "name": "Hananiah",
     "description": "False prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Azzur"
     ],
@@ -1297,6 +1480,9 @@
       "Shadrach"
     ],
     "description": "Hebrew name of Shadrach, Daniel's companion",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Babylon",
       "fiery furnace"
@@ -1309,6 +1495,9 @@
     "id": "hezron_son_of_perez",
     "name": "Hezron",
     "description": "Son of Perez",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Perez"
     ],
@@ -1333,6 +1522,9 @@
     "id": "hezron_son_of_reuben",
     "name": "Hezron",
     "description": "Son of Reuben",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Reuben"
     ],
@@ -1356,6 +1548,9 @@
     "id": "hilkiah_high_priest",
     "name": "Hilkiah",
     "description": "High priest under Josiah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Jerusalem",
       "Temple"
@@ -1369,6 +1564,9 @@
     "id": "hilkiah_father_of_jeremiah",
     "name": "Hilkiah",
     "description": "Jeremiah's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Jeremiah"
     ],
@@ -1383,6 +1581,9 @@
     "id": "hilkiah_father_of_eliakim",
     "name": "Hilkiah",
     "description": "Eliakim's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Eliakim"
     ],
@@ -1398,6 +1599,9 @@
     "id": "hosea_prophet",
     "name": "Hosea",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Beeri"
     ],
@@ -1420,6 +1624,9 @@
     "id": "hoshea_last_king_of_israel",
     "name": "Hoshea",
     "description": "Last king of Israel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Elah"
     ],
@@ -1438,6 +1645,9 @@
       "Joshua"
     ],
     "description": "Joshua's original name before Moses renamed him",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Nun"
     ],
@@ -1457,6 +1667,9 @@
     "id": "jair_conqueror_gilead",
     "name": "Jair",
     "description": "Conqueror of towns in Gilead",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Manasseh"
     ],
@@ -1472,6 +1685,9 @@
     "id": "jair_judge",
     "name": "Jair",
     "description": "A judge",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "diedIn": [
       "Kamon"
     ],
@@ -1487,6 +1703,9 @@
     "id": "jair_father_of_mordecai",
     "name": "Jair",
     "description": "Mordecai's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Mordecai"
     ],
@@ -1505,6 +1724,9 @@
       "Shallum"
     ],
     "description": "King of Judah, son of Josiah, also called Shallum",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Josiah"
     ],
@@ -1530,6 +1752,9 @@
     "id": "jehoahaz_king_of_israel",
     "name": "Jehoahaz",
     "description": "King of Israel, son of Jehu",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jehu"
     ],
@@ -1547,6 +1772,9 @@
     "id": "jeremiah_prophet",
     "name": "Jeremiah",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hilkiah"
     ],
@@ -1565,6 +1793,9 @@
     "id": "jeremiah_father_of_hamutal",
     "name": "Jeremiah",
     "description": "Father of Hamutal, Josiah's wife",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Hamutal"
     ],
@@ -1579,6 +1810,8 @@
     "id": "jeremiah_rechabite",
     "name": "Jeremiah",
     "description": "A Rechabite",
+    "isWoman": false,
+    "isGroup": false,
     "children": [
       "Jaazaniah"
     ],
@@ -1597,6 +1830,9 @@
       "Jeroboam I"
     ],
     "description": "First king of the northern Kingdom of Israel, son of Nebat",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Nebat"
     ],
@@ -1623,6 +1859,9 @@
       "Jeroboam II"
     ],
     "description": "King of Israel, son of Joash, greatly expanded Israel's territory",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Joash"
     ],
@@ -1642,6 +1881,9 @@
     "id": "joash_king_of_judah",
     "name": "Joash",
     "description": "King of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahaziah"
     ],
@@ -1668,6 +1910,9 @@
       "Jehoash"
     ],
     "description": "King of Israel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jehoahaz"
     ],
@@ -1689,6 +1934,9 @@
     "id": "joash_father_of_gideon",
     "name": "Joash",
     "description": "Gideon's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Gideon"
     ],
@@ -1703,6 +1951,9 @@
     "id": "joash_son_of_ahab",
     "name": "Joash",
     "description": "Ahab's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Ahab"
     ],
@@ -1718,6 +1969,9 @@
     "id": "joel_prophet",
     "name": "Joel",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Pethuel"
     ],
@@ -1733,6 +1987,9 @@
     "id": "joel_son_of_samuel",
     "name": "Joel",
     "description": "Samuel's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Samuel"
     ],
@@ -1751,6 +2008,9 @@
     "id": "jonathan_son_of_saul",
     "name": "Jonathan",
     "description": "Saul's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Saul"
     ],
@@ -1783,6 +2043,9 @@
     "id": "jonathan_son_of_abiathar",
     "name": "Jonathan",
     "description": "Abiathar's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Abiathar"
     ],
@@ -1799,6 +2062,8 @@
     "id": "jonathan_mighty_man",
     "name": "Jonathan",
     "description": "One of David's mighty men",
+    "isWoman": false,
+    "isGroup": false,
     "childOfFather": [
       "Shimei / Shimeah"
     ],
@@ -1814,6 +2079,9 @@
     "id": "jonathan_scribe",
     "name": "Jonathan",
     "description": "Scribe in whose house Jeremiah was imprisoned",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Jerusalem"
     ],
@@ -1825,6 +2093,9 @@
     "id": "joseph_son_of_jacob",
     "name": "Joseph",
     "description": "Jacob's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -1857,6 +2128,9 @@
     "id": "joseph_spy_of_issachar",
     "name": "Joseph",
     "description": "Spy from Issachar's tribe",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Igal"
     ],
@@ -1875,6 +2149,9 @@
     "id": "joseph_levite_musician",
     "name": "Joseph",
     "description": "Levite musician",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Asaph"
     ],
@@ -1893,6 +2170,9 @@
     "id": "josiah_king_of_judah",
     "name": "Josiah",
     "description": "King of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Amon"
     ],
@@ -1925,6 +2205,9 @@
     "id": "josiah_son_of_zephaniah",
     "name": "Josiah",
     "description": "Man in whose house Zechariah performed a symbolic act",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Zephaniah"
     ],
@@ -1939,6 +2222,9 @@
     "id": "judah_son_of_jacob",
     "name": "Judah",
     "description": "Jacob's son, tribal ancestor",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -1980,6 +2266,9 @@
     "id": "judah_levite_ezra",
     "name": "Judah",
     "description": "Levite in Ezra/Nehemiah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Levi"
     ],
@@ -1995,6 +2284,9 @@
     "id": "kenaz_edomite_chief",
     "name": "Kenaz",
     "description": "Esau's grandson, Edomite chief",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Eliphaz"
     ],
@@ -2010,6 +2302,9 @@
     "id": "kenaz_father_of_othniel",
     "name": "Kenaz",
     "description": "Othniel's father",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Othniel"
     ],
@@ -2025,6 +2320,9 @@
     "id": "kenaz_grandson_of_caleb",
     "name": "Kenaz",
     "description": "Caleb's grandson",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Elah"
     ],
@@ -2039,6 +2337,9 @@
     "id": "korah_son_of_esau",
     "name": "Korah",
     "description": "Esau's son",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Esau"
     ],
@@ -2061,6 +2362,9 @@
     "id": "korah_levite_rebel",
     "name": "Korah",
     "description": "The Levite rebel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Izhar"
     ],
@@ -2078,6 +2382,9 @@
     "id": "korah_son_of_hebron",
     "name": "Korah",
     "description": "Son of Hebron",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hebron"
     ],
@@ -2092,6 +2399,9 @@
     "id": "manasseh_son_of_joseph",
     "name": "Manasseh",
     "description": "Joseph's son, tribal ancestor",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Joseph"
     ],
@@ -2121,6 +2431,9 @@
     "id": "manasseh_king_of_judah",
     "name": "Manasseh",
     "description": "King of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Hezekiah"
     ],
@@ -2143,6 +2456,9 @@
     "id": "mephibosheth_son_of_jonathan",
     "name": "Mephibosheth",
     "description": "Jonathan's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jonathan"
     ],
@@ -2161,6 +2477,9 @@
     "id": "mephibosheth_son_of_saul",
     "name": "Mephibosheth",
     "description": "Saul's son by Rizpah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Saul"
     ],
@@ -2181,6 +2500,9 @@
     "id": "micah_man_with_idol",
     "name": "Micah",
     "description": "Man with the idol shrine in Ephraim",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Ephraim"
     ],
@@ -2195,6 +2517,9 @@
     "id": "micah_prophet",
     "name": "Micah",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Moresheth",
       "Samaria",
@@ -2209,6 +2534,9 @@
     "id": "nadab_son_of_aaron",
     "name": "Nadab",
     "description": "Aaron's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Aaron"
     ],
@@ -2236,6 +2564,9 @@
     "id": "nadab_king_of_israel",
     "name": "Nadab",
     "description": "King of Israel, son of Jeroboam",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jeroboam I"
     ],
@@ -2256,6 +2587,9 @@
     "id": "nadab_descendant_of_jerahmeel",
     "name": "Nadab",
     "description": "Descendant of Jerahmeel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Shammai"
     ],
@@ -2274,6 +2608,9 @@
     "id": "nathan_prophet",
     "name": "Nathan",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Jerusalem"
     ],
@@ -2287,6 +2624,9 @@
     "id": "nathan_son_of_david",
     "name": "Nathan",
     "description": "David's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "David"
     ],
@@ -2310,6 +2650,8 @@
     "id": "nathan_father_of_igal",
     "name": "Nathan",
     "description": "Father of one of David's mighty men",
+    "isWoman": false,
+    "isGroup": false,
     "children": [
       "Igal"
     ],
@@ -2324,6 +2666,9 @@
     "id": "obadiah_prophet",
     "name": "Obadiah",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Edom"
     ],
@@ -2335,6 +2680,9 @@
     "id": "obadiah_ahabs_steward",
     "name": "Obadiah",
     "description": "Ahab's steward",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Samaria"
     ],
@@ -2346,6 +2694,9 @@
     "id": "obadiah_official_under_josiah",
     "name": "Obadiah",
     "description": "Official under Josiah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Levi"
     ],
@@ -2360,6 +2711,9 @@
     "id": "obed_son_of_boaz",
     "name": "Obed",
     "description": "Son of Boaz and Ruth",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Boaz"
     ],
@@ -2381,6 +2735,8 @@
     "id": "obed_mighty_man",
     "name": "Obed",
     "description": "One of David's mighty men",
+    "isWoman": false,
+    "isGroup": false,
     "bookReferences": [
       "I Chronicles"
     ]
@@ -2389,6 +2745,9 @@
     "id": "obed_gatekeeper",
     "name": "Obed",
     "description": "A gatekeeper",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Shemaiah"
     ],
@@ -2407,6 +2766,9 @@
     "id": "phinehas_son_of_eleazar",
     "name": "Phinehas",
     "description": "Aaron's zealous grandson",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Eleazar"
     ],
@@ -2430,6 +2792,9 @@
     "id": "phinehas_son_of_eli",
     "name": "Phinehas",
     "description": "Eli's wicked son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Eli"
     ],
@@ -2460,6 +2825,9 @@
       "Jethro"
     ],
     "description": "Moses' father-in-law",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "children": [
       "Zipporah"
     ],
@@ -2474,6 +2842,9 @@
     "id": "reuel_son_of_esau",
     "name": "Reuel",
     "description": "Esau's son",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Esau"
     ],
@@ -2498,6 +2869,9 @@
     "id": "saul_king_of_israel",
     "name": "Saul",
     "description": "Israel's first king",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Kish"
     ],
@@ -2533,7 +2907,9 @@
     "id": "shaul_edomite_king",
     "name": "Shaul",
     "description": "Edomite king",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "associatedWithPlace": [
       "Rehoboth",
       "Edom"
@@ -2547,6 +2923,9 @@
     "id": "shaul_son_of_simeon",
     "name": "Shaul",
     "description": "Simeon's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -2565,6 +2944,9 @@
     "id": "shallum_king_of_israel",
     "name": "Shallum",
     "description": "King of Israel",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jabesh"
     ],
@@ -2579,6 +2961,9 @@
     "id": "shallum_husband_of_huldah",
     "name": "Shallum",
     "description": "Huldah's husband",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "spouseOf": [
       "Huldah"
     ],
@@ -2594,6 +2979,9 @@
     "id": "shammah_brother_of_david",
     "name": "Shammah",
     "description": "David's brother",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jesse"
     ],
@@ -2614,6 +3002,8 @@
     "id": "shammah_mighty_man",
     "name": "Shammah",
     "description": "One of David's mighty men",
+    "isWoman": false,
+    "isGroup": false,
     "childOfFather": [
       "Age the Ararite"
     ],
@@ -2625,6 +3015,9 @@
     "id": "shammah_edomite_chief",
     "name": "Shammah",
     "description": "Edomite chief",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Reuel"
     ],
@@ -2640,6 +3033,9 @@
     "id": "shelah_son_of_judah",
     "name": "Shelah",
     "description": "Judah's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Judah"
     ],
@@ -2662,6 +3058,8 @@
     "id": "shelah_ancestor",
     "name": "Shelah",
     "description": "Ancestor from Noah to Abraham",
+    "isWoman": false,
+    "isGroup": false,
     "childOfFather": [
       "Arpachshad"
     ],
@@ -2677,6 +3075,9 @@
     "id": "shimei_cursed_david",
     "name": "Shimei",
     "description": "The man who cursed David",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Gera"
     ],
@@ -2699,6 +3100,9 @@
     "id": "shimei_son_of_gershon",
     "name": "Shimei",
     "description": "Levite, Gershon's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Gershon"
     ],
@@ -2714,6 +3118,9 @@
     "id": "shimei_solomons_officer",
     "name": "Shimei",
     "description": "Solomon's officer in Benjamin",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Benjamin"
     ],
@@ -2725,6 +3132,9 @@
     "id": "shimei_descendant_of_david",
     "name": "Shimei",
     "description": "Descendant of David",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Pedaiah"
     ],
@@ -2737,6 +3147,7 @@
     "name": "Tamar",
     "description": "Judah's daughter-in-law",
     "isWoman": true,
+    "isGroup": false,
     "spouseOf": [
       "Er",
       "Onan"
@@ -2758,6 +3169,8 @@
     "name": "Tamar",
     "description": "David's daughter, Absalom's sister",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "David"
     ],
@@ -2779,6 +3192,8 @@
     "name": "Tamar",
     "description": "Absalom's daughter",
     "isWoman": true,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Absalom"
     ],
@@ -2793,6 +3208,9 @@
     "id": "tola_son_of_issachar",
     "name": "Tola",
     "description": "Issachar's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jacob"
     ],
@@ -2816,6 +3234,9 @@
     "id": "tola_judge",
     "name": "Tola",
     "description": "A judge",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Puah"
     ],
@@ -2837,7 +3258,9 @@
     "id": "uriah_the_hittite",
     "name": "Uriah",
     "description": "The Hittite, Bathsheba's husband",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "spouseOf": [
       "Bathsheba"
     ],
@@ -2855,6 +3278,9 @@
     "id": "uriah_priest_under_ahaz",
     "name": "Uriah",
     "description": "Priest under Ahaz",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "associatedWithPlace": [
       "Jerusalem",
       "Temple"
@@ -2868,6 +3294,9 @@
     "id": "uriah_prophet",
     "name": "Uriah",
     "description": "Prophet killed by Jehoiakim",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Shemaiah"
     ],
@@ -2890,6 +3319,9 @@
       "Azariah"
     ],
     "description": "King of Judah, also called Azariah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Amaziah"
     ],
@@ -2913,6 +3345,8 @@
     "id": "uzziah_mighty_man",
     "name": "Uzziah",
     "description": "One of David's mighty men",
+    "isWoman": false,
+    "isGroup": false,
     "bookReferences": [
       "I Chronicles"
     ]
@@ -2921,6 +3355,9 @@
     "id": "uzziah_priest_ezra",
     "name": "Uzziah",
     "description": "Priest in Ezra's time",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "tribeOfIsrael": [
       "Levi"
     ],
@@ -2935,6 +3372,9 @@
     "id": "zechariah_prophet",
     "name": "Zechariah",
     "description": "The prophet",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Berechiah"
     ],
@@ -2953,6 +3393,9 @@
     "id": "zechariah_king_of_israel",
     "name": "Zechariah",
     "description": "King of Israel, Jeroboam II's son",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jeroboam II"
     ],
@@ -2973,6 +3416,9 @@
     "id": "zechariah_priest_son_of_jehoiada",
     "name": "Zechariah",
     "description": "Priest, son of Jehoiada, stoned in the Temple",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Jehoiada the priest"
     ],
@@ -2995,6 +3441,9 @@
     "id": "zechariah_grandfather_of_hezekiah",
     "name": "Zechariah",
     "description": "Hezekiah's grandfather",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "children": [
       "Abijah"
     ],
@@ -3014,6 +3463,9 @@
       "Mattaniah"
     ],
     "description": "Last king of Judah",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Josiah"
     ],
@@ -3039,6 +3491,9 @@
     "id": "zedekiah_false_prophet_ahab",
     "name": "Zedekiah",
     "description": "False prophet urging attack on Ramoth-gilead",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Chenaanah"
     ],
@@ -3055,6 +3510,9 @@
     "id": "zedekiah_false_prophet_babylon",
     "name": "Zedekiah",
     "description": "False prophet condemned by Jeremiah in Babylon",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Maaseiah"
     ],
@@ -3069,6 +3527,9 @@
     "id": "zerah_son_of_judah",
     "name": "Zerah",
     "description": "Judah's son, Perez's twin",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Judah"
     ],
@@ -3093,6 +3554,9 @@
     "id": "zerah_edomite_chief",
     "name": "Zerah",
     "description": "Edomite chief",
+    "isWoman": false,
+    "isNonJew": true,
+    "isGroup": false,
     "childOfFather": [
       "Reuel"
     ],
@@ -3108,7 +3572,9 @@
     "id": "zerah_cushite_king",
     "name": "Zerah",
     "description": "Cushite king defeated by Asa",
+    "isWoman": false,
     "isNonJew": true,
+    "isGroup": false,
     "diedIn": [
       "Mareshah"
     ],
@@ -3123,6 +3589,9 @@
     "id": "zimri_simeonite_prince",
     "name": "Zimri",
     "description": "Simeonite prince killed by Phinehas",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "childOfFather": [
       "Salu"
     ],
@@ -3144,6 +3613,9 @@
     "id": "zimri_king_of_israel",
     "name": "Zimri",
     "description": "King of Israel, 7-day reign",
+    "isWoman": false,
+    "isNonJew": false,
+    "isGroup": false,
     "diedIn": [
       "Tirzah"
     ],
