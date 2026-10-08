@@ -77,7 +77,7 @@ function toggleCollapsible(contentId) {
 
     @staticmethod
     def build_passage_badges_html(passage_types: Optional[List[PassageType]]) -> str:
-        """Build the colorful row of passage-type badges (e.g. Law, Story,
+        """Build the colorful row of passage-type badges (e.g. Law, Story of Tanach,
         Prophecy) shown on a source's header. Each :class:`PassageType`
         member supplies its own icon + color, so a source with multiple
         passage types simply gets one badge per type.

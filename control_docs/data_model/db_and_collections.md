@@ -70,3 +70,11 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 `passage_types: List[PassageType]`, `entity_keys: Set[str]` (every entity the source
 mentions), `rel_keys: Set[str]`. Used by `PersonDisambiguator` to know which books/source
 types a candidate person is mentioned in (see `pipeline/person_disambiguation.md`).
+
+`PassageType.STORY_TANACH` vs `STORY_SAGES` (`backend/models_db/Enums.py`): a narrative
+about Tanach-era people/events is `STORY_TANACH`; a narrative about the Mishnaic/Talmudic
+sages themselves is `STORY_SAGES`. A Tanach source (`source_type == TN`) can only ever be
+`STORY_TANACH` — `DBPopulateEntityRelGraph._parse_passage_types` enforces this deterministically
+(overriding any `STORY_SAGES` the LLM assigns to a TN passage) rather than trusting the LLM's
+call on that point; a Talmudic source is free to be either, decided by the LLM from passage
+content (see `pipeline/population_pipeline_overview.md`).

@@ -116,9 +116,16 @@ class NumberCategory(Enum):
 class PassageType(ColoredEnum):
     """See ColoredEnum for why (value, icon, color) are defined together.
     No relationship to TimePeriod — this describes the nature of a passage
-    (law, story, etc.), not when it was authored."""
+    (law, story, etc.), not when it was authored.
+
+    STORY_TANACH vs STORY_SAGES: a Tanach-sourced passage is always
+    STORY_TANACH (Mishnaic/Talmudic sages didn't exist yet). A Talmudic
+    passage can be either — a story about the sages themselves (Mishna/
+    Talmud) is STORY_SAGES, while a story about Tanach-era people/events
+    (even retold in the Talmud) is still STORY_TANACH."""
     LAW = ("Law", "⚖️", Color.BLUE)
-    STORY = ("Story", "📖", Color.AMBER)
+    STORY_TANACH = ("Story of Tanach", "📖", Color.AMBER)
+    STORY_SAGES = ("Story of the Sages", "📚", Color.GOLD)
     PHILOSOPHIC = ("Philosophic", "💭", Color.VIOLET)
     GENEALOGY = ("Genealogy", "🌳", Color.EMERALD)
     PROPHECY = ("Prophecy", "🔮", Color.ROSE)

@@ -24,9 +24,16 @@ class ExtractionResult(BaseModel):
         min_length=1,
         description=f"Hebrew summary in exactly {min_len_summary}-{max_len_summary} words",
     )
-    passage_types: List[Literal["LAW", "STORY", "PHILOSOPHIC", "GENEALOGY", "PROPHECY"]] = Field(
+    passage_types: List[
+        Literal["LAW", "STORY_TANACH", "STORY_SAGES", "PHILOSOPHIC", "GENEALOGY", "PROPHECY"]
+    ] = Field(
         min_length=1,
-        description="At least one passage type required",
+        description=(
+            "At least one passage type required. STORY_TANACH vs STORY_SAGES: a passage "
+            "narrating Tanach-era people/events is STORY_TANACH (this is ALWAYS the case "
+            "for a passage from Tanach itself); a passage narrating the Mishnaic/Talmudic "
+            "sages themselves is STORY_SAGES."
+        ),
     )
     Entities: Entities
     Rel: Optional[Relationships] = Field(default_factory=Relationships)

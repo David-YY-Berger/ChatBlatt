@@ -8,7 +8,7 @@ from backend.models_db.EntityObjects.Entity import Entity
 from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.EntityObjects.EntityIdentity import PassageRelation, PersonSourceContext
 from backend.models_db.Rel import Rel
-from backend.models_db.Enums import EntityType, RelType, PassageType
+from backend.models_db.Enums import EntityType, RelType, PassageType, SourceType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
 from backend.db.EntityRelManager import EntityRelManager
@@ -364,16 +364,20 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         src_metadata = SourceMetadata(key=source_key)
         src_metadata.summary_en = res.get("en_summary")
         src_metadata.summary_heb = res.get("heb_summary")
-        src_metadata.passage_types = self._parse_passage_types(res.get("passage_types") or [])
+        src_metadata.passage_types = self._parse_passage_types(res.get("passage_types") or [], src_metadata.source_type)
         src_metadata.entity_keys = set(source_entity_map.values())
         src_metadata.rel_keys = rel_keys
         self.db_api.upsert_source_metadata(src_metadata)
 
     @staticmethod
-    def _parse_passage_types(passage_type_strs: List[str]) -> List[PassageType]:
+    def _parse_passage_types(passage_type_strs: List[str], source_type: SourceType) -> List[PassageType]:
         """
-        Convert LLM passage-type strings (e.g. "LAW", "STORY") to PassageType enum values.
-        Matching is case-insensitive against both enum name and description.
+        Convert LLM passage-type strings (e.g. "LAW", "STORY_TANACH") to PassageType enum
+        values. Matching is case-insensitive against both enum name and description.
+
+        Deterministic safety net: Tanach text can never reference Mishnaic/Talmudic sages,
+        so any STORY_SAGES the LLM assigns to a Tanach (source_type == TN) passage is
+        corrected to STORY_TANACH rather than trusting the LLM's call on this point.
         """
         _pt_map: Dict[str, PassageType] = {}
         for pt in PassageType:
@@ -383,10 +387,14 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         result: List[PassageType] = []
         for pt_str in passage_type_strs:
             pt = _pt_map.get(pt_str.upper())
-            if pt is not None:
-                result.append(pt)
-            else:
+            if pt is None:
                 print(f"  WARNING: Unknown passage type '{pt_str}', skipping.")
+                continue
+            if pt == PassageType.STORY_SAGES and source_type == SourceType.TN:
+                print(f"  INFO: Overriding STORY_SAGES -> STORY_TANACH for Tanach source.")
+                pt = PassageType.STORY_TANACH
+            if pt not in result:
+                result.append(pt)
         return result
 
     def _try_insert_rel(

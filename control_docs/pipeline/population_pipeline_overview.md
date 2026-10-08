@@ -125,7 +125,10 @@ time the DB has been reset since that book was last populated.
   `person_disambiguation.md`; everything else → `try_insert_entity`) — names matching the
   ignore filter are skipped (see `entity_ignore_filter.md`), and Numbers with a disallowed
   unit/value are skipped (see `data_model/entities/number.md`); (2) insert relationships,
-  resolved through that source's own name→key map; (3) upsert `SourceMetadata`.
+  resolved through that source's own name→key map; (3) upsert `SourceMetadata` — including
+  `passage_types`, where `_parse_passage_types` deterministically forces any LLM-assigned
+  `STORY_SAGES` down to `STORY_TANACH` for a `TN` source (see `data_model/db_and_collections.md`
+  SourceMetadata section for the `STORY_TANACH`/`STORY_SAGES` rule).
 - **The populator never modifies existing entity documents** — names, `book_references`,
   etc. are never touched once written.
 
