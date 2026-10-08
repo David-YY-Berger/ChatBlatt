@@ -5,6 +5,7 @@ before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
 todo {{
 
 whilte this pre populate is running, make the repo of just data backup files....
+[small side task - create separate Repo for eitz_habina_data]
 
 pre populate script {{
 
@@ -21,12 +22,13 @@ pre populate script {{
 	
 }}
 
-[small side task - create separate Repo for eitz_habina_data]
 -----
-run again population, this time only berakhot. the data will be strange, and we will eventually erase it (bec tanach must be run first) but it will help me see how it populates rabbi names.
-----
-After basic testing, seeing that berakhot population went ok - take deep breath, daven, run all of tanach, and then all of gemara.
 
+check berakhot: carefully review log of what we rejected..
+review UI results (should not get numbers of verses...)
+get metadata to get alternate display names?
+
+see if theres a diff cheaper LLM which will be good too..
 
 }}
 

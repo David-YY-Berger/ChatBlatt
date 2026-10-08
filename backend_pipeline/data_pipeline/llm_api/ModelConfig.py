@@ -89,12 +89,17 @@ class ModelConfig:
         ModelProvider.GEMINI_PAID_THINKING,
     }
 
-    # Cost per million tokens (approximate, for logging)
+    # Cost per million tokens (official pricing, for logging)
+    # Gemini 2.5 Flash paid tier: $0.30/1M input, $2.50/1M output (output price
+    # includes thinking tokens) - see https://ai.google.dev/gemini-api/docs/pricing
+    # and Google's own rate card on https://github.com/BerriAI/litellm (provider: "gemini").
+    # NOTE: previously this used stale Gemini 1.5 Flash rates (0.075 / 0.30),
+    # which understated real Gemini 2.5 Flash paid-tier costs by ~6-8x.
     COST_PER_MILLION = {
         ModelProvider.GEMINI_FREE: {"input": 0.0, "output": 0.0},              # Free!
         ModelProvider.GEMINI_FREE_THINKING: {"input": 0.0, "output": 0.0},     # Free! (thinking tokens also free)
-        ModelProvider.GEMINI_PAID: {"input": 0.075, "output": 0.30},           # Gemini 2.5 Flash
-        ModelProvider.GEMINI_PAID_THINKING: {"input": 0.075, "output": 0.30},  # Flash + thinking
+        ModelProvider.GEMINI_PAID: {"input": 0.30, "output": 2.50},           # Gemini 2.5 Flash
+        ModelProvider.GEMINI_PAID_THINKING: {"input": 0.30, "output": 2.50},  # Flash + thinking
         ModelProvider.OPENAI: {"input": 0.15, "output": 0.60},                 # GPT-4o-mini
     }
 
