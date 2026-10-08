@@ -50,6 +50,11 @@ the shared base's default/signature to thread a book through — `DBPopulateEnti
 has its own full override of `_extract_all_to_json` with a different signature (no `book`
 param) and would break.
 
+`DBPopulateEntityRelGraph` also has an optional `self.max_sources_to_extract` (`setUp`,
+`# ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======`), `None` by default — set it to an int
+to cap the run to the first N sources of `book_to_extract` (book order, e.g. the first 100
+of Berakhot) for a cheap/quick test before committing to the whole book.
+
 ### Phase 1 resumability & retries
 
 - The shared loop (`DBPopulateLlmBase._extract_contents_to_json`) skips any source whose

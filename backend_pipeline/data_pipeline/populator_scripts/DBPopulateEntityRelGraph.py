@@ -57,8 +57,11 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # ModelConfig.set_provider(ModelProvider.GEMINI_PAID_THINKING)   # Flash + thinking (paid tier)
         # ===============================
 
-        # ====== SWITCH BOOK HERE ======
+        # ====== PARAMS ======
         self.book_to_extract = Books.BERAKHOT
+        # Leave as None to process the whole book.
+        # self.max_sources_to_extract: Optional[int] = None
+        self.max_sources_to_extract: Optional[int] = 100
         # ===============================
 
         self.pydantic_caller = EntityRelGraphCaller()
@@ -78,10 +81,14 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
     async def _extract_all_to_json(self) -> None:
         """
-        Override: process every source of self.book_to_extract, not DBPopulateLlmBase's
-        shared debug/example sources (which DBPopulateEntityEnrichment still uses).
+        Override: process every source of self.book_to_extract (optionally capped at
+        self.max_sources_to_extract), not DBPopulateLlmBase's shared debug/example
+        sources (which DBPopulateEntityEnrichment still uses).
         """
-        await self._extract_contents_to_json(self.db_api.get_all_src_contents_by_book(self.book_to_extract))
+        contents = self.db_api.get_all_src_contents_by_book(self.book_to_extract)
+        if self.max_sources_to_extract is not None:
+            contents = contents[:self.max_sources_to_extract]
+        await self._extract_contents_to_json(contents)
 
     # ─── Entry points ─────────────────────────────────────────────────────────
 
