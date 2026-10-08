@@ -95,8 +95,16 @@ class DBPopulateLlmBase(DBParentClass):
         deliberately want to redo every source from scratch (e.g. after a prompt change).
         """
         OsFunctions.create_dir_if_not_exists(self._get_output_dir())
-        asyncio.run(self._extract_all_to_json())
+        failed_keys = asyncio.run(self._extract_all_to_json())
         self.test_populate_from_jsons()
+
+        # Phase 2's own (much longer) output buries phase 1's failed-extraction summary -
+        # repeat it here so it's the last thing printed and easy to spot/act on.
+        if failed_keys:
+            print(f"\n{'='*60}")
+            print(f"REMINDER: {len(failed_keys)} source(s) FAILED extraction (re-run this test to retry "
+                  f"just these): {failed_keys}")
+            print(f"{'='*60}")
 
     def test_force_clear_output_dir(self) -> None:
         """Deliberately wipe _get_output_dir() - use before a run that must redo every source."""
@@ -202,11 +210,12 @@ class DBPopulateLlmBase(DBParentClass):
             f"{src.get_clean_en_text()}"
         )
 
-    async def _extract_all_to_json(self, book: Optional[Books] = None) -> None:
+    async def _extract_all_to_json(self, book: Optional[Books] = None) -> List[str]:
         """
         Iterate all sources for *book* (every source of that book from the DB), or -
         if no book is given - the hardcoded debug/example sources (get_examples_src_contents).
         Calls the LLM once per source, saves JSON and TXT output files under _get_output_dir().
+        Returns the list of source keys that failed extraction (see _extract_contents_to_json).
 
         Subclasses that always want a specific book (rather than this debug default)
         should override this method - see DBPopulateEntityRelGraph._extract_all_to_json -
@@ -215,9 +224,9 @@ class DBPopulateLlmBase(DBParentClass):
         """
         contents = self.db_api.get_all_src_contents_by_book(book) if book is not None \
             else get_examples_src_contents(self.db_api)
-        await self._extract_contents_to_json(contents)
+        return await self._extract_contents_to_json(contents)
 
-    async def _extract_contents_to_json(self, contents: List[SourceContent]) -> None:
+    async def _extract_contents_to_json(self, contents: List[SourceContent]) -> List[str]:
         """
         Shared loop: call the LLM once per source in *contents*, save JSON + TXT output
         files. A source whose JSON output file already exists is skipped (no LLM call) -
@@ -226,6 +235,9 @@ class DBPopulateLlmBase(DBParentClass):
         after EntityRelGraphCaller's own rate-limit retries is logged and skipped rather
         than aborting the whole batch; failed keys are listed at the end so just those
         can be investigated/retried (e.g. by deleting their output files and re-running).
+
+        Returns the list of source keys that failed extraction, so the caller
+        (test_run_extraction_and_population) can re-print them after phase 2's output.
         """
         total_cost_usd = 0.0
         total_tokens = total_input_tokens = total_output_tokens = 0
@@ -279,6 +291,7 @@ class DBPopulateLlmBase(DBParentClass):
             print(f"FAILED {len(failed_keys)} sources (re-run this test to retry just these): {failed_keys}")
         print(f"Results saved to: {self._get_output_dir()}")
         print(f"{'='*60}")
+        return failed_keys
 
     # ─── Phase 2: JSON files → DB ─────────────────────────────────────────────
 

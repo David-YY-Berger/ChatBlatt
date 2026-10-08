@@ -19,16 +19,7 @@ get metadata to get alternate display names?
 
 see if theres a diff cheaper LLM which will be good too..
 
-{{ 
-add to ignore list for Person entity: 
-amora 
-amoraim
-tanna
-tannaim
-}}
-{{
-at end of logs print, re print the sources that we failed extraction for
-}}
+
 
 
 fin

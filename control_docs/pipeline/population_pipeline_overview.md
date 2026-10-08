@@ -67,9 +67,10 @@ of Berakhot) for a cheap/quick test before committing to the whole book.
 - The shared loop (`DBPopulateLlmBase._extract_contents_to_json`) skips any source whose
   JSON output file already exists — no LLM call — so re-running after a partial failure only
   processes what's missing.
-- A source that still fails is logged and skipped (not an aborted batch); failed keys are
-  printed at the end of the run so just those can be investigated/retried (delete their
-  output files, then re-run).
+- A source that still fails is logged and skipped (not an aborted batch); `_extract_contents_to_json`
+  returns the failed keys, which are printed once at the end of phase 1, and `test_run_extraction_and_population`
+  prints them again as a final `REMINDER` block after phase 2's (longer) output so they aren't
+  buried and are easy to find/retry (delete their output files, then re-run).
 - Transient rate-limit/server errors (HTTP 429/500/503) are retried with exponential
   backoff **inside the LLM caller itself** (`EntityRelGraphCaller._extract`, up to 6
   attempts, ~10s–320s + jitter) — this is where `google-gla` 429s from Gemini get absorbed,

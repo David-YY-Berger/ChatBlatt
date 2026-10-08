@@ -101,16 +101,17 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
     async def _extract_from_passage(self, passage: str):
         return await self.pydantic_caller.extract_graph_from_passage(passage)
 
-    async def _extract_all_to_json(self) -> None:
+    async def _extract_all_to_json(self) -> List[str]:
         """
         Override: process every source of self.book_to_extract (optionally capped at
         self.max_sources_to_extract), not DBPopulateLlmBase's shared debug/example
         sources (which DBPopulateEntityEnrichment still uses).
+        Returns the list of source keys that failed extraction.
         """
         contents = self.db_api.get_all_src_contents_by_book(self.book_to_extract)
         if self.max_sources_to_extract is not None:
             contents = contents[:self.max_sources_to_extract]
-        await self._extract_contents_to_json(contents)
+        return await self._extract_contents_to_json(contents)
 
     # ─── Entry points ─────────────────────────────────────────────────────────
 
