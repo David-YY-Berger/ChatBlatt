@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=8161 approx cost=$0.000893 (Prompt=6913, Completion=1248)
+SOURCE:
+Berakhot (Zeraim) 3b:17-19
+
+HEBREW:
+ואמר רבי זריקא, אמר רבי אמי, אמר רבי יהושע בן לוי: אין אומרין בפני המת אלא דבריו של מת.אמר רבי אבא בר כהנא: לא אמרן אלא בדברי תורה, אבל מילי דעלמא לית לן בה.ואיכא דאמרי: אמר רבי אבא בר כהנא לא אמרן אלא [אפילו] בדברי תורה וכל שכן מילי דעלמא.
+
+ENGLISH:
+Following this discussion, another halakha that Rabbi Zerika said that Rabbi Ami said that Rabbi Yehoshua ben Levi said is cited: Before the dead, one may speak only of matters relating to the dead, as speaking of other matters appears to be contemptuous of the deceased, underscoring that he is unable to talk while those around him can. Therefore, one must remain fully engaged in matters relating to him.Two traditions exist with regard to the details of this halakha in the name of Rabbi Abba bar Kahana. According to one version, Rabbi Abba bar Kahana said: This halakha was only said with regard to matters of Torah. Speaking of other matters, however, is not prohibited, since no contempt is expressed for the deceased by the fact that he is unable to speak of such topics. Others say another version of this halakha in the name of Rabbi Abba bar Kahana: This halakha was said even with regard to matters of Torah, and all the more so with regard to other matters. If one must refrain from speaking of matters of Torah, regarding which one is commanded to speak, and limit himself to matters concerning the deceased, all the more so should he refrain from speaking of other matters, regarding which one is not commanded to speak.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Halakha on speaking before the dead.",
+    "heb_summary": "הלכה על דיבור לפני המת.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Zerika"
+        },
+        {
+          "en_name": "Ami"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Abba Bar Kahana"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Zerika",
+          "term2": "Ami"
+        },
+        {
+          "term1": "Ami",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ]
+    }
+  }
+}

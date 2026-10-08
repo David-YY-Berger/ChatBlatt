@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis discuss rewards for religious actions.",
+        "heb_summary": "רבנים דנים בשכר מצוות שונות.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Zeira"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Pappa"
+                },
+                {
+                    "en_name": "Zutra"
+                },
+                {
+                    "en_name": "Sheshet"
+                },
+                {
+                    "en_name": "Ashi"
+                },
+                {
+                    "en_name": "Isaiah"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:11-17"
+}

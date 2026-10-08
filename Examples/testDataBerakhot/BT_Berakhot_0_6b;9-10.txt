@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=8958 approx cost=$0.001128 (Prompt=6931, Completion=2027)
+SOURCE:
+Berakhot (Zeraim) 6b:9-10
+
+HEBREW:
+אמר רבי חלבו, אמר רב הונא: היוצא מבית הכנסת אל יפסיע פסיעה גסה. אמר אביי: לא אמרן, אלא למיפק. אבל למיעל — מצוה למרהט, שנאמר: ״נרדפה לדעת את ה׳״.אמר רבי זירא: מריש כי הוה חזינא להו לרבנן דקא רהטי לפרקא בשבתא, אמינא: ״קא מחליין רבנן שבתא״. כיון דשמענא להא דרבי תנחום אמר רבי יהושע בן לוי: לעולם ירוץ אדם לדבר הלכה ואפילו בשבת, שנאמר: ״אחרי ה׳ ילכו כאריה ישאג״ וגו׳, אנא נמי רהיטנא.
+
+ENGLISH:
+Rabbi Helbo said that Rav Huna said: One who leaves the synagogue should not take large strides because it creates the impression that he is eager to leave. Abaye explained Rav Hunas statement and said: This halakha was only said with regard to leaving the synagogue, where large strides seem particularly disrespectful. However, with regard to entering a synagogue, it is a mitzva to run and one is permitted to rush and take large strides (Rabbi Yoshiyahu Pinto). As it is said: And let us know, eagerly strive to know the Lord (Hosea 6:3). One who eagerly enters a synagogue displays his enthusiasm to follow the path of God. Rabbi Zeira said: Initially, when I saw the Sages running to the Rabbis lecture on Shabbat, I said: These Sages are desecrating Shabbat. One is prohibited from running on Shabbat in deference to the sanctity of the day. Once I heard that which Rabbi Tanhum said that Rabbi Yehoshua ben Levi said: One should always run for a matter of halakha , even on Shabbat, as it is stated: They shall walk after the Lord, who will roar like a lion (Hosea 11:10). In other words, one should rush as though he were chased by a lion ( Birkat Hashem ), I too run.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages discuss synagogue entry, Shabbat running.",
+    "heb_summary": "חכמים דנים כניסה לבית כנסת, ריצה בשבת.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Helbo"
+        },
+        {
+          "en_name": "Huna"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Zeira"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Tanhum"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Lord"
+        },
+        {
+          "en_name": "Hosea"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Lion"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Helbo",
+          "term2": "Huna"
+        },
+        {
+          "term1": "Tanhum",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abaye",
+          "term2": "Huna"
+        },
+        {
+          "term1": "Zeira",
+          "term2": "Tanhum"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Hosea",
+          "term2": "Lord"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Lord",
+          "term2": "Lion"
+        }
+      ]
+    }
+  }
+}

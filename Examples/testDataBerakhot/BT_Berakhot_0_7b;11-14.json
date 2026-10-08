@@ -1,0 +1,134 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Yohanan discusses David's troubles with Absalom.",
+        "heb_summary": "רבי יוחנן דן בצרות דוד עם אבשלום.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Gog"
+                },
+                {
+                    "en_name": "Magog"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Absalom"
+                },
+                {
+                    "en_name": "Natan"
+                },
+                {
+                    "en_name": "Bathsheba"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Avishalom"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm chapter"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalm verse"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm chapter"
+                },
+                {
+                    "en_name": "4",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalm verse"
+                },
+                {
+                    "en_name": "12",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "samuel chapter"
+                },
+                {
+                    "en_name": "11",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "samuel verse"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Shimon Ben Yohai"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Absalom",
+                    "term2": "David"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "David",
+                    "term2": "Bathsheba"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Natan",
+                    "term2": "David"
+                },
+                {
+                    "term1": "God",
+                    "term2": "David"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Absalom",
+                    "term2": "David"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Natan",
+                    "term2": "David"
+                },
+                {
+                    "term1": "Natan",
+                    "term2": "Absalom"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:11-14"
+}

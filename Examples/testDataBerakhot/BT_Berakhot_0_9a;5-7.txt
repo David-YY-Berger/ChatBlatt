@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=7874 approx cost=$0.000793 (Prompt=6972, Completion=902)
+SOURCE:
+Berakhot (Zeraim) 9a:5-7
+
+HEBREW:
+מעשה שבאו בניו וכו׳:ועד השתא לא שמיע להו הא דרבן גמליאל?!הכי קאמרי ליה: רבנן פליגי עילווך, ויחיד ורבים, הלכה כרבים, או דלמא רבנן כוותך סבירא להו, והאי דקאמרי ״עד חצות״ — כדי להרחיק אדם מן העבירה. אמר להו: רבנן כוותי סבירא להו, וחייבין אתם. והאי דקאמרי ״עד חצות״ — כדי להרחיק אדם מן העבירה.
+
+ENGLISH:
+The mishna relates that there was an incident where Rabban Gamliels sons returned very late from a wedding hall and they asked their father if they were permitted to recite Shema after midnight.The Gemara asks: And until now, had they not heard this halakha of Rabban Gamliel? Were they unaware that he held that one is permitted to recite the evening Shema after midnight?The Gemara answers that Rabban Gamliels sons did not ask him his opinion. Rather, they said to him as follows: Do the Rabbis fundamentally disagree with you concerning this halakha , holding that Shema may be recited only until midnight? If so, when there is a disagreement between an individual Sage and many Sages, the halakha is in accordance with the opinion of the many, in which case we must, in practice, follow the opinion of the Rabbis. Or perhaps, do the Rabbis hold in accordance with your opinion that the time of the evening Shema extends throughout the night, and that which they say that it may only be recited until midnight is in order to distance a person from transgression? If the latter is true, then, when there are extenuating circumstances, one may recite the evening Shema after midnight. Rabban Gamliel replied to his sons: The Rabbis agree with me and you are still obligated to recite Shema . The Rabbis say that Shema may only be recited until midnight in order to distance a person from transgression, but, after the fact, even the Rabbis permit recitation after midnight.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabban Gamliel's sons asked about Shema.",
+    "heb_summary": "בני רבן גמליאל שאלו על קריאת שמע.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabban Gamliel"
+        },
+        {
+          "en_name": "Rabban Gamliel's Sons"
+        },
+        {
+          "en_name": "Rabbis"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rabban Gamliel's Sons",
+          "term2": "Rabban Gamliel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rabban Gamliel's Sons",
+          "term2": "Rabban Gamliel"
+        }
+      ]
+    }
+  }
+}

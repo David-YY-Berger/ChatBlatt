@@ -1,0 +1,99 @@
+﻿{
+    "res": {
+        "en_summary": "Communal prayer brings divine favor and salvation.",
+        "heb_summary": "תפילת ציבור מביאה חסד וישועה אלוהית.",
+        "passage_types": [
+            "PHILOSOPHIC",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rabbi Aha"
+                },
+                {
+                    "en_name": "Rabbi Natan"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Congregation"
+                },
+                {
+                    "en_name": "Masses"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Nations Of The World"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah Study"
+                },
+                {
+                    "en_name": "Peace"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rabbi Yosei",
+                    "term2": "Rabbi Hanina"
+                },
+                {
+                    "term1": "Rabbi Aha",
+                    "term2": "Rabbi Hanina"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "Nations Of The World"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Nations Of The World"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Torah Study",
+                    "term2": "Peace"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Congregation",
+                    "term2": "Masses"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:27-8a:4"
+}

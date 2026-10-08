@@ -1,0 +1,93 @@
+﻿COST: Tokens: Total=9611 approx cost=$0.001294 (Prompt=7063, Completion=2548)
+SOURCE:
+Berakhot (Zeraim) 9b:19-24
+
+HEBREW:
+היכי מצי סמיך? והא אמר רבי יוחנן: בתחלה הוא אומר: ״ה׳ שפתי תפתח״, ולבסוף הוא אומר: ״יהיו לרצון אמרי פי וגו׳״!אמר רבי אלעזר: תהא בתפלה של ערבית.והא אמר רבי יוחנן: איזהו בן העולם הבא — זהו הסומך גאולה של ערבית לתפלה של ערבית!אלא אמר רבי אלעזר: תהא בתפלת המנחה.רב אשי אמר: אפילו תימא אכולהו, וכיון דקבעוה רבנן בתפלה — כתפלה אריכתא דמיא.דאי לא תימא הכי, ערבית היכי מצי סמיך, והא בעי למימר ״השכיבנו״! אלא כיון דתקינו רבנן השכיבנו — כגאולה אריכתא דמיא. הכי נמי כיון דקבעוה רבנן בתפלה — כתפלה אריכתא דמיא.
+
+ENGLISH:
+In practice, the Gemara asks: How is one able to juxtapose redemption and prayer? Didnt Rabbi Yohanan say: At the beginning of prayer, one says: Lord, open my lips, that my mouth may declare Your glory (Psalms 51:17), and at the end of prayer one says: May the words of my mouth and the meditation of my heart be acceptable before You, Lord, my Rock, and my Redeemer (Psalms 19:15). If so, the first verse is an interruption between redemption and prayer. Rabbi Elazar said: Let this verse, Lord, open my lips, be recited only in the evening prayer but not in the morning prayer.The Gemara asks: Didnt Rabbi Yohanan say: Who is worthy of a place in the World-to-Come? He who juxtaposes redemption of the evening prayer to the evening prayer. Therefore, this verse from Psalms should not be recited before the evening prayer either. Rather, Rabbi Elazar said: Let this verse: Lord, open my lips, be recited only before the afternoon prayer. Rav Ashi said another explanation: Even if you say that Rabbi Yohanan holds that Lord, open my lips is recited before all prayers, including the morning and the evening prayers. Since the Sages instituted this verse, it is considered as an extended prayer; it is an inseparable part of the prayers, and if redemption is juxtaposed to this verse, it is no different than if redemption was juxtaposed to prayer directly.Rabbi Ashi supports his claim: As if you do not say so, how does one juxtapose redemption of the evening prayer to the evening prayer? Mustnt one recite: Help us lie down [ hashkivenu ] after redemption? Rather, since the Sages instituted the recitation of: Help us lie down, it is considered as an extended blessing of redemption. So, too, since the Sages instituted this verse in prayer, it is considered as an extended prayer.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages discuss prayer, redemption juxtaposition, Psalm verses.",
+    "heb_summary": "חכמים דנים תפילה, גאולה, פסוקי תהילים.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Gemara"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Elazar"
+        },
+        {
+          "en_name": "Ashi"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World-To-Come"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Lord, Open My Lips"
+        },
+        {
+          "en_name": "May The Words Of My Mouth And The Meditation Of My Heart Be Acceptable Before You, Lord, My Rock, And My Redeemer"
+        },
+        {
+          "en_name": "Help Us Lie Down [Hashkivenu]"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Elazar",
+          "term2": "Yohanan"
+        },
+        {
+          "term1": "Ashi",
+          "term2": "Yohanan"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Elazar",
+          "term2": "Gemara"
+        },
+        {
+          "term1": "Ashi",
+          "term2": "Gemara"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Elazar",
+          "term2": "Yohanan"
+        },
+        {
+          "term1": "Ashi",
+          "term2": "Elazar"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Yohanan",
+          "term2": "World-To-Come"
+        }
+      ]
+    }
+  }
+}

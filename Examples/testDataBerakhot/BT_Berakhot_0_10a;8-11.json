@@ -1,0 +1,146 @@
+﻿{
+    "res": {
+        "en_summary": "Heretic questions Psalms order; Sages explain juxtaposition.",
+        "heb_summary": "כופר שואל על סדר תהילים; חכמים מסבירים סמיכות.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Abbahu"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Absalom"
+                },
+                {
+                    "en_name": "Saul"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Heretic"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Gog"
+                },
+                {
+                    "en_name": "Magog"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Psalms"
+                },
+                {
+                    "en_name": "Commandment"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "57",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "111",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "7",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "8",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalm reference"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalm reference"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Absalom",
+                    "term2": "David"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Abbahu",
+                    "term2": "Heretic"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Absalom",
+                    "term2": "David"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Saul"
+                }
+            ],
+            "AllyOf": [
+                {
+                    "term1": "Gog",
+                    "term2": "Magog"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "David",
+                    "term2": "Gog"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Magog"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Gog",
+                    "term2": "Absalom"
+                },
+                {
+                    "term1": "Magog",
+                    "term2": "Absalom"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10a:8-11"
+}

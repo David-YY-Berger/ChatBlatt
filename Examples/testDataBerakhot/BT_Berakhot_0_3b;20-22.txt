@@ -1,0 +1,70 @@
+﻿COST: Tokens: Total=7911 approx cost=$0.000802 (Prompt=6983, Completion=928)
+SOURCE:
+Berakhot (Zeraim) 3b:20-22
+
+HEBREW:
+ודוד בפלגא דליליא הוה קאי? מאורתא הוה קאי! דכתיב: ״קדמתי בנשף ואשועה״, וממאי דהאי ״נשף״ אורתא הוא? — דכתיב: ״בנשף בערב יום באישון לילה ואפלה״!אמר רב אושעיא, אמר רבי אחא: הכי קאמר (דוד): מעולם לא עבר עלי חצות לילה בשינה.רבי זירא אמר: עד חצות לילה היה מתנמנם כסוס, מכאן ואילך היה מתגבר כארי. רב אשי אמר: עד חצות לילה היה עוסק בדברי תורה, מכאן ואילך בשירות ותשבחות.
+
+ENGLISH:
+Incidental to the Gemaras mention of King David, other sources are cited that describe his actions. Regarding that which was cited above, that he would rise in the middle of the night in order to serve his Creator, the Gemara asks: Did David rise at midnight? He rose in the evening. As it is written: I rose with the neshef and cried, I hoped for Your word (Psalms 119:147). And how do we know that this neshef is the evening? As it is written: In the neshef , in the evening of the day, in the blackness of night and the darkness (Proverbs 7:9). Apparently, King David did indeed rise when it was still evening.The Gemara suggests several ways to resolve this contradiction. Rabbi Oshaya said that Rabbi Aha said: David said as follows: Midnight never passed me by in my sleep. Sometimes I fulfilled the verse, I rose with the neshef and cried, but I always, at least, fulfilled the verse, At midnight I rise to give thanks for Your righteous laws. Rabbi Zeira said: Until midnight, David would doze like a horse, as a horse dozes, but never sleeps deeply. From midnight on, he would gain the strength of a lion. Rav Ashi said: Until midnight, he would study Torah, as it is written: I rose with the neshef and cried, I hoped for Your word, and from midnight on, he would engage in songs and praise, as it is written: At midnight I rise to give thanks.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "David's night routine, study, prayer, and strength.",
+    "heb_summary": "שגרת הלילה של דוד, לימוד, תפילה וכוח.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Rabbi Oshaya"
+        },
+        {
+          "en_name": "Rabbi Aha"
+        },
+        {
+          "en_name": "Rabbi Zeira"
+        },
+        {
+          "en_name": "Rav Ashi"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Horse"
+        },
+        {
+          "en_name": "Lion"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Oshaya",
+          "term2": "Rabbi Aha"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "David",
+          "term2": "Horse"
+        },
+        {
+          "term1": "David",
+          "term2": "Lion"
+        }
+      ]
+    }
+  }
+}

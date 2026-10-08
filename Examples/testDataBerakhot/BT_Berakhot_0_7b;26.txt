@@ -1,0 +1,53 @@
+﻿COST: Tokens: Total=7803 approx cost=$0.000807 (Prompt=6816, Completion=987)
+SOURCE:
+Berakhot (Zeraim) 7b:26
+
+HEBREW:
+ואמר רבי יוחנן משום רבי שמעון בן יוחי: גדולה שמושה של תורה יותר מלמודה, שנאמר: ״פה אלישע בן שפט אשר יצק מים על ידי אליהו״. ״למד״ לא נאמר, אלא ״יצק״ — מלמד שגדולה שמושה יותר מלמודה.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: Service of Torah is greater than its study, i.e., serving a Torah scholar and spending time in his company is greater than learning Torah from him. Torah study is one component of a Torah life, but one who serves a Torah scholar learns about every aspect of life from his actions. This is derived from the verse that speaks in praise of Elisha, as it is stated: Here is Elisha son of Shafat, who poured water over Elijahs hands (II Kings 3:11). The verse does not say that he learned from Elijah, rather that he poured water, which teaches that the service of Torah represented by Elisha pouring water over Elijahs hands is greater than its study.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Yohanan: Torah service greater than study.",
+    "heb_summary": "רב יוחנן: שירות תורה גדול מלימודה.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Elisha"
+        },
+        {
+          "en_name": "Shafat"
+        },
+        {
+          "en_name": "Elijah"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Shimon Ben Yohai"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Elisha",
+          "term2": "Shafat"
+        }
+      ]
+    }
+  }
+}

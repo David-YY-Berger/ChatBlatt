@@ -1,0 +1,72 @@
+﻿{
+    "res": {
+        "en_summary": "Rav Huna's wine fermented, then restored.",
+        "heb_summary": "יין רב הונא החמיץ, ואז שוקם.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Rav Sala"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Adda Bar Ahava"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "400",
+                    "number_category": "Misc",
+                    "en_unit": "barrel",
+                    "en_context": "rav huna's wine"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Wine"
+                },
+                {
+                    "en_name": "Vinegar"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Grapevine"
+                },
+                {
+                    "en_name": "Grape"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Rav Huna"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Rav Huna"
+                },
+                {
+                    "term1": "Adda Bar Ahava",
+                    "term2": "Rav Huna"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5b:17-20"
+}

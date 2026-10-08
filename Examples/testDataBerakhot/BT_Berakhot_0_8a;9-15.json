@@ -1,0 +1,151 @@
+﻿{
+    "res": {
+        "en_summary": "Sages debate meaning of \"time of finding\".",
+        "heb_summary": "חכמים דנים משמעות \"עת מצא\".",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rabbi Natan"
+                },
+                {
+                    "en_name": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabba Bar Rav Sheila"
+                },
+                {
+                    "en_name": "Mar Zutra"
+                },
+                {
+                    "en_name": "Rabbi Abraham Moshe Horovitz"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Eretz Yisrael"
+                },
+                {
+                    "en_name": "West"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Life"
+                },
+                {
+                    "en_name": "Death"
+                },
+                {
+                    "en_name": "Grave"
+                },
+                {
+                    "en_name": "Lavatory"
+                },
+                {
+                    "en_name": "Matza"
+                },
+                {
+                    "en_name": "Motzeh"
+                },
+                {
+                    "en_name": "Croup"
+                },
+                {
+                    "en_name": "Kiss Of Death"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "903",
+                    "number_category": "Misc",
+                    "en_unit": "type",
+                    "en_context": "death in world"
+                }
+            ]
+        },
+        "Rel": {
+            "disagreedWith": [
+                {
+                    "term1": "Rabbi Hanina",
+                    "term2": "Rabbi Natan"
+                },
+                {
+                    "term1": "Rabbi Hanina",
+                    "term2": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "term1": "Rabbi Hanina",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rabbi Hanina",
+                    "term2": "Mar Zutra"
+                },
+                {
+                    "term1": "Rabbi Natan",
+                    "term2": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "term1": "Rabbi Natan",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rabbi Natan",
+                    "term2": "Mar Zutra"
+                },
+                {
+                    "term1": "Rav Nahman Bar Yitzhak",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rav Nahman Bar Yitzhak",
+                    "term2": "Mar Zutra"
+                },
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Mar Zutra"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Mar Zutra",
+                    "term2": "Eretz Yisrael"
+                },
+                {
+                    "term1": "Rabbi Abraham Moshe Horovitz",
+                    "term2": "Eretz Yisrael"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Matza",
+                    "term2": "Motzeh"
+                },
+                {
+                    "term1": "Croup",
+                    "term2": "Kiss Of Death"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "West",
+                    "term2": "Eretz Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8a:9-15"
+}

@@ -1,0 +1,75 @@
+﻿COST: Tokens: Total=9224 approx cost=$0.001129 (Prompt=7280, Completion=1944)
+SOURCE:
+Berakhot (Zeraim) 11a:15-18
+
+HEBREW:
+תנו רבנן, בית הלל אומרים: עומדין וקורין, יושבין וקורין, ומטין וקורין, הולכין בדרך וקורין, עושין במלאכתן וקורין. ומעשה ברבי ישמעאל ורבי אלעזר בן עזריה, שהיו מסובין במקום אחד, והיה רבי ישמעאל מוטה, ורבי אלעזר בן עזריה זקוף. כיון שהגיע זמן קריאת שמע, הטה רבי אלעזר וזקף רבי ישמעאל. אמר לו רבי אלעזר בן עזריה לרבי ישמעאל: ישמעאל אחי, אמשול לך משל למה הדבר דומה — משל לאחד שאומרים לו זקנך מגודל! אמר להם: יהיה כנגד המשחיתים. אף כך אתה, כל זמן שאני זקוף — אתה מוטה, עכשיו כשאני הטתי אתה זקפת.אמר לו: אני עשיתי כדברי בית הלל, ואתה עשית כדברי בית שמאי. ולא עוד אלא שמא יראו התלמידים ויקבעו הלכה לדורות.מאי ״ולא עוד״?וכי תימא: בית הלל נמי אית להו מטין, הני מילי דמטה ואתא מעיקרא. אבל הכא, כיון דעד השתא הוית זקוף והשתא מוטה, אמרי: שמע מינה כבית שמאי סבירא להו, שמא יראו התלמידים ויקבעו הלכה לדורות.
+
+ENGLISH:
+The Sages taught in a baraita that Beit Hillel say: One may recite Shema in any situation: Standing and reciting, sitting and reciting, reclining and reciting, walking and reciting and even working and reciting. And in the Tosefta an incident is related where two tannaim , Rabbi Yishmael and Rabbi Elazar ben Azarya, who were both disciples of Beit Hillel, were reclining at a meal in one place together with their students, and Rabbi Yishmael was reclined as was the customary dining position, and Rabbi Elazar ben Azarya was upright. When the time to recite the evening Shema arrived, Rabbi Elazar reclined to recite Shema in accordance with the opinion of Beit Shammai, while Rabbi Yishmael sat upright to recite Shema . Rabbi Elazar ben Azarya appeared to take offense, and said to Rabbi Yishmael: Yishmael, my brother, I will tell you a parable to which this is similar. It is comparable to a situation where one to whom people say as a compliment: Your beard is full and suits you. That man says to them: May it be against those who shave and destroy their beards, i.e., the only reason I grow my beard is to irritate those who cut their own (Rashba). You are the same. As long as I am upright, you are reclined, and now when I reclined lauding your conduct and emulating you, you sat upright as if to demonstrate that whatever I do, you do the opposite.Rabbi Yishmael said to him: I acted in accordance with the opinion of Beit Hillel, according to whom one may recite Shema in any position, while you acted in accordance with the opinion of Beit Shammai. I am the one who acted in accordance with the halakha . And furthermore, I was concerned lest the students see your conduct and establish the halakha for generations accordingly. It was therefore necessary for me to demonstrate that there is no obligation to do so.The Gemara asks: What is the meaning of: And furthermore? Why was it necessary for Rabbi Yishmael to add additional justification for his actions when the reason that he acted in accordance with the opinion of Beit Hillel was sufficient?The Gemara answers: It was necessary for him to add this reason, as if you say: Beit Hillel also hold that one is permitted to recite Shema while reclining and Rabbi Yishmael could have remained reclining even in accordance with the opinion of Beit Hillel, but this only applies when one had already been reclining originally, in which case it is like any other position. However, here, since until now he had been upright, and now he is reclined, the students will say: Conclude from this, that they hold in accordance with the opinion of Beit Shammai. Due to the concern that the students might see and establish the halakha for generations in accordance with the opinion of Beit Shammai, it was necessary for Rabbi Yishmael to sit upright.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Hillel, Shammai, Yishmael, Elazar Shema dispute.",
+    "heb_summary": "מחלוקת הלל, שמאי, ישמעאל, אלעזר על קריאת שמע.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Beit Hillel"
+        },
+        {
+          "en_name": "Beit Shammai"
+        },
+        {
+          "en_name": "Rabbi Yishmael"
+        },
+        {
+          "en_name": "Rabbi Elazar Ben Azarya"
+        },
+        {
+          "en_name": "Students"
+        },
+        {
+          "en_name": "Rashba"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "en_unit": "tannai",
+          "en_context": "tannaim at meal"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yishmael",
+          "term2": "Beit Hillel"
+        },
+        {
+          "term1": "Rabbi Elazar Ben Azarya",
+          "term2": "Beit Hillel"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Beit Hillel",
+          "term2": "Beit Shammai"
+        },
+        {
+          "term1": "Rabbi Yishmael",
+          "term2": "Rabbi Elazar Ben Azarya"
+        }
+      ]
+    }
+  }
+}

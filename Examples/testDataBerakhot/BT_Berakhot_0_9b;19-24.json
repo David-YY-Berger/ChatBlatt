@@ -1,0 +1,83 @@
+﻿{
+    "res": {
+        "en_summary": "Sages discuss prayer, redemption juxtaposition, Psalm verses.",
+        "heb_summary": "חכמים דנים תפילה, גאולה, פסוקי תהילים.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Gemara"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Elazar"
+                },
+                {
+                    "en_name": "Ashi"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Lord, Open My Lips"
+                },
+                {
+                    "en_name": "May The Words Of My Mouth And The Meditation Of My Heart Be Acceptable Before You, Lord, My Rock, And My Redeemer"
+                },
+                {
+                    "en_name": "Help Us Lie Down [Hashkivenu]"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Elazar",
+                    "term2": "Yohanan"
+                },
+                {
+                    "term1": "Ashi",
+                    "term2": "Yohanan"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Elazar",
+                    "term2": "Gemara"
+                },
+                {
+                    "term1": "Ashi",
+                    "term2": "Gemara"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Elazar",
+                    "term2": "Yohanan"
+                },
+                {
+                    "term1": "Ashi",
+                    "term2": "Elazar"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "World-To-Come"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:19-24"
+}

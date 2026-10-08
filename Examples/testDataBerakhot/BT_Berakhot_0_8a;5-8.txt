@@ -1,0 +1,148 @@
+﻿COST: Tokens: Total=12028 approx cost=$0.001988 (Prompt=7200, Completion=4828)
+SOURCE:
+Berakhot (Zeraim) 8a:5-8
+
+HEBREW:
+אמר ריש לקיש: כל מי שיש לו בית הכנסת בעירו, ואינו נכנס שם להתפלל, נקרא ״שכן רע״, שנאמר: ״כה אמר ה׳ על כל שכני הרעים הנגעים בנחלה אשר הנחלתי את עמי את ישראל״. ולא עוד אלא שגורם גלות לו ולבניו, שנאמר: ״הנני נתשם מעל אדמתם ואת בית יהודה אתוש מתוכם״.אמרו ליה לרבי יוחנן: איכא סבי בבבל. תמה ואמר: ״למען ירבו ימיכם וימי בניכם על האדמה״ כתיב, אבל בחוצה לארץ — לא? כיון דאמרי ליה מקדמי ומחשכי לבי כנישתא, אמר: היינו דאהני להו.דאמר רבי יהושע בן לוי לבניה: קדימו וחשיכו ועיילו לבי כנישתא, כי היכי דתורכו חיי. אמר רבי אחא ברבי חנינא: מאי קרא — ״אשרי אדם שמע לי לשקד על דלתתי יום יום לשמור מזוזת פתחי״, וכתיב בתריה: ״כי מצאי מצא חיים״.אמר רב חסדא: לעולם יכנס אדם שני פתחים בבית הכנסת. שני פתחים סלקא דעתך?! אלא אימא, שיעור שני פתחים, ואחר כך יתפלל.
+
+ENGLISH:
+Continuing to extol communal prayer, Reish Lakish said: One who has a synagogue nearby in his city but does not enter to pray there is called an evil neighbor, as it is stated: Thus said the Lord: As for all My evil neighbors who touch My inheritance which I have caused My people Israel to inherit, behold, I will pluck them up from off their land, and will pluck the house of Judah up from among them (Jeremiah 12:14). One who only touches, but does not enter the place of prayer, My inheritance, is considered an evil neighbor. And furthermore, he is punished in that he causes himself and his children to go into exile, as it is stated: Behold, I will pluck them up from off their land, and will pluck the house of Judah up from among them. The Gemara relates that when the Sages told Rabbi Yohanan that there are elders in Babylonia, he was confounded and said: It is written: So that your days will be lengthened and the days of your children upon the land the Lord swore to your forefathers to give to them like the days of heaven on the earth (Deuteronomy 11:21); lengthened in Eretz Yisrael but not outside of the Land. Why then, do the residents of Babylonia live long lives? When they told him that the people in Babylonia go early in the morning and go late in the evening to the synagogue, he said: That is what was effective for them in extending their lives. As Rabbi Yehoshua ben Levi said to his sons: Go early and go late and enter the synagogue, so that your lives will be extended. And Rabbi Aha, son of Rabbi Hanina, said: Upon what verse is this based? As it is stated: Happy is the man who listens to Me, watching daily at My gates, guarding at My door posts (Proverbs 8:34). And the reward for doing so is written thereafter: For whoso finds Me finds life and obtains the favor of the Lord (Proverbs 8:35).Based on this verse, Rav Hisda said: A person should always enter two doorways into the synagogue. This statement is unclear. Immediately, the Gemara asks: Does it enter your mind that Rav Hisda meant that one should enter two doorways literally? What if a synagogue only has a single doorway? Rather, emend his statement and say that Rav Hisda meant that one should enter a distance of two doorways into the synagogue and then pray. In entering a distance of two doorways, one fulfills the verse: Guarding at My door posts, in the plural.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Communal prayer extends life, avoids exile.",
+    "heb_summary": "תפילה בציבור מאריכה חיים ומונעת גלות.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Reish Lakish"
+        },
+        {
+          "en_name": "Lord"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Sons"
+        },
+        {
+          "en_name": "Rabbi Aha"
+        },
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Rav Hisda"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Inheritance"
+        },
+        {
+          "en_name": "Door Post"
+        },
+        {
+          "en_name": "Synagogue"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Measurement",
+          "en_unit": "doorway",
+          "en_context": "synagogue entry"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Measurement",
+          "en_unit": "doorway",
+          "en_context": "synagogue entry"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Rabbi Aha",
+          "term2": "Rabbi Hanina"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sages",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rabbi Yehoshua Ben Levi",
+          "term2": "Sons"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Eretz Yisrael"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Babylonia"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Eretz Yisrael",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Synagogue",
+          "term2": "Inheritance"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Eretz Yisrael",
+          "term2": "Babylonia"
+        }
+      ]
+    }
+  }
+}

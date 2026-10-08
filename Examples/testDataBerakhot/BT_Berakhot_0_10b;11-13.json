@@ -1,0 +1,118 @@
+﻿{
+    "res": {
+        "en_summary": "Prayer based on merit, God's response.",
+        "heb_summary": "תפילה על בסיס זכות, תגובת האל.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yosei Ben Zimra"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Golden Calf"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yosei Ben Zimra"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "God"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Moses",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Abraham",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Isaac",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Israel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "God",
+                    "term2": "Holy One, Blessed Be He"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:11-13"
+}

@@ -1,0 +1,104 @@
+﻿COST: Tokens: Total=9801 approx cost=$0.001328 (Prompt=7164, Completion=2637)
+SOURCE:
+Berakhot (Zeraim) 10a:2-7
+
+HEBREW:
+הנהו בריוני דהוו בשבבותיה דרבי מאיר והוו קא מצערו ליה טובא. הוה קא בעי רבי מאיר רחמי עלויהו כי היכי דלימותו. אמרה ליה ברוריא דביתהו: מאי דעתך — משום דכתיב ״יתמו חטאים״, מי כתיב ״חוטאים״? ״חטאים״ כתיב.ועוד, שפיל לסיפיה דקרא ״ורשעים עוד אינם״, כיון ד״יתמו חטאים״ ״ורשעים עוד אינם״? אלא בעי רחמי עלויהו דלהדרו בתשובה, ״ורשעים עוד אינם״.בעא רחמי עלויהו, והדרו בתשובה.אמר לה ההוא מינא לברוריא: כתיב ״רני עקרה לא ילדה״, משום דלא ילדה — רני?אמרה ליה: שטיא, שפיל לסיפיה דקרא, דכתיב: ״כי רבים בני שוממה מבני בעולה אמר ה׳״.אלא מאי ״עקרה לא ילדה״ — רני כנסת ישראל שדומה לאשה עקרה שלא ילדה בנים לגיהנם כותייכו.
+
+ENGLISH:
+With regard to the statement of Rabbi Yehuda, son of Rabbi Shimon ben Pazi, that David did not say Halleluya until he saw the downfall of the wicked, the Gemara relates: There were these hooligans in Rabbi Meirs neighborhood who caused him a great deal of anguish. Rabbi Meir prayed for God to have mercy on them, that they should die. Rabbi Meirs wife, Berurya, said to him: What is your thinking? On what basis do you pray for the death of these hooligans? Do you base yourself on the verse, as it is written: Let sins cease from the land (Psalms 104:35), which you interpret to mean that the world would be better if the wicked were destroyed? But is it written, let sinners cease? Let sins cease, is written. One should pray for an end to their transgressions, not for the demise of the transgressors themselves. Moreover, go to the end of the verse, where it says: And the wicked will be no more. If, as you suggest, transgressions shall cease refers to the demise of the evildoers, how is it possible that the wicked will be no more, i.e., that they will no longer be evil? Rather, pray for God to have mercy on them, that they should repent, as if they repent, then the wicked will be no more, as they will have repented.Rabbi Meir saw that Berurya was correct and he prayed for God to have mercy on them, and they repented. The Gemara relates an additional example of Beruryas incisive insight: A certain heretic said to Berurya: It is written: Sing, barren woman who has not given birth, open forth in song and cry, you did not travail, for more are the children of the desolate than the children of the married wife, said the Lord (Isaiah 54:1). Because she has not given birth, she should sing and rejoice?Berurya responded to this heretics mockery and said: Fool! Go to the end of the verse, where it is written: For the children of the desolate shall be more numerous than the children of the married wife, said the Lord. Rather, what is the meaning of: Sing, barren woman who has not given birth? It means: Sing congregation of Israel, which is like a barren woman who did not give birth to children who are destined for Gehenna like you.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Berurya teaches Rabbi Meir and a heretic.",
+    "heb_summary": "ברוריה מלמדת את רבי מאיר וכופר.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yehuda"
+        },
+        {
+          "en_name": "Shimon Ben Pazi"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Rabbi Meir"
+        },
+        {
+          "en_name": "Berurya"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Heretic"
+        },
+        {
+          "en_name": "Congregation Of Israel"
+        },
+        {
+          "en_name": "Isaiah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gehenna"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yehuda",
+          "term2": "Shimon Ben Pazi"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Yehuda",
+          "term2": "Shimon Ben Pazi"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "Rabbi Meir",
+          "term2": "Berurya"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rabbi Meir",
+          "term2": "Berurya"
+        },
+        {
+          "term1": "Heretic",
+          "term2": "Berurya"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Congregation Of Israel",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Isaiah",
+          "term2": "Congregation Of Israel"
+        }
+      ]
+    }
+  }
+}

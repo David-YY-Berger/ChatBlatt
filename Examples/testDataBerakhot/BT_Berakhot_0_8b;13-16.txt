@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=8748 approx cost=$0.001044 (Prompt=7025, Completion=1723)
+SOURCE:
+Berakhot (Zeraim) 8b:13-16
+
+HEBREW:
+תניא, אמר רבי עקיבא: בשלשה דברים אוהב אני את המדיים, כשחותכין את הבשר — אין חותכין אלא על גבי השולחן, כשנושקין — אין נושקין אלא על גב היד, וכשיועצין — אין יועצין אלא בשדה.אמר רב אדא בר אהבה: מאי קראה ״וישלח יעקב ויקרא לרחל וללאה השדה אל צאנו״.תניא אמר רבן גמליאל: בשלשה דברים אוהב אני את הפרסיים: הן צנועין באכילתן, וצנועין בבית הכסא, וצנועין בדבר אחר.״אני צויתי למקדשי״, תני רב יוסף: אלו הפרסיים המקודשין ומזומנין לגיהנם.
+
+ENGLISH:
+The Gemara cites a statement from a baraita , along the lines of Ravas advice to refrain from cutting meat on ones hands: Rabbi Akiva said: In three aspects of their conduct, I like the Medes, and we should learn from their practices. When they cut meat, they cut it only on the table and not on their hands; when they kiss, either as a show of affection or honor, they kiss only the back of the hand and do not give the person being kissed an unpleasant feeling; and when they hold counsel, they only hold counsel in the field so others will not hear their secrets. Rav Adda bar Ahava said: From what verse is this derived? From the verse, And Jacob sent and he called Rachel and Leah to the field to his flock (Genesis 31:4); it was only there in the field that he held counsel with them. It was taught in a baraita , Rabban Gamliel said: In three aspects of their conduct, I like the Persians: They are a modest people; they are modest in their eating, they are modest in the lavatory, and they are modest in another matter, i.e., sexual relations.While they have been praised here regarding certain specific aspects of their conduct, the Gemara proceeds to offer another perspective on the Persians based on a verse describing the destruction of Babylonia at the hands of the Persian and Median armies: I have commanded My consecrated ones; I have also called My mighty ones for My anger, even My proudly exulting ones (Isaiah 13:3). Rav Yosef taught a baraita : These are the Persians who are consecrated and designated for Gehenna, for they have been sent by God to carry out his mission of anger, and they will be sent to Gehenna.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Medes, Persians, conduct, and Gehenna",
+    "heb_summary": "מדות, פרסים, התנהגות, וגיהנום",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Akiva"
+        },
+        {
+          "en_name": "Rav Adda Bar Ahava"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Rachel"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Rabban Gamliel"
+        },
+        {
+          "en_name": "Rav Yosef"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Field"
+        },
+        {
+          "en_name": "Gehenna"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Media"
+        },
+        {
+          "en_name": "Persia"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Jacob",
+          "term2": "Rachel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Leah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Jacob",
+          "term2": "Field"
+        },
+        {
+          "term1": "Rachel",
+          "term2": "Field"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Field"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Persia",
+          "term2": "Babylonia"
+        },
+        {
+          "term1": "Media",
+          "term2": "Babylonia"
+        }
+      ]
+    }
+  }
+}

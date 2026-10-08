@@ -1,0 +1,47 @@
+﻿COST: Tokens: Total=7349 approx cost=$0.000698 (Prompt=6697, Completion=652)
+SOURCE:
+Berakhot (Zeraim) 6a:17-6b:1
+
+HEBREW:
+וכולהו כתיבי באדרעיה.
+
+ENGLISH:
+in the phylacteries of the head, where there are four separate compartments. And all of the verses are written together on one parchment in the phylacteries of the arm, which has only one compartment.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Phylacteries have different compartment counts.",
+    "heb_summary": "תפילין של ראש ויד, מספר תאים.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Symbol": [
+        {
+          "en_name": "Phylactery Of The Head"
+        },
+        {
+          "en_name": "Phylactery Of The Arm"
+        },
+        {
+          "en_name": "Parchment"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "4",
+          "number_category": "Misc",
+          "en_unit": "compartment",
+          "en_context": "phylactery of head"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "parchment",
+          "en_context": "phylactery of arm"
+        }
+      ]
+    }
+  }
+}

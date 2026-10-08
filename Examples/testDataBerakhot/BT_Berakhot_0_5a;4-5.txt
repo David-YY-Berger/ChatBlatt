@@ -1,0 +1,58 @@
+﻿COST: Tokens: Total=10632 approx cost=$0.001597 (Prompt=7076, Completion=3556)
+SOURCE:
+Berakhot (Zeraim) 5a:4-5
+
+HEBREW:
+אמר רבי יצחק: כל הקורא קריאת שמע על מטתו, כאלו אוחז חרב של שתי פיות בידו. שנאמר: ״רוממות אל בגרונם וחרב פיפיות בידם״, מאי משמע? אמר מר זוטרא ואיתימא רב אשי: מרישא דענינא, דכתיב: ״יעלזו חסידים בכבוד ירננו על משכבותם״. וכתיב בתריה: ״רוממות אל בגרונם וחרב פיפיות בידם״.ואמר רבי יצחק: כל הקורא קריאת שמע על מטתו — מזיקין בדילין הימנו. שנאמר: ״ובני רשף יגביהו עוף״, ואין ״עוף״ אלא תורה, שנאמר: ״התעיף עיניך בו ואיננו״. ואין ״רשף״ אלא מזיקין, שנאמר: ״מזי רעב ולחמי רשף וקטב מרירי״.
+
+ENGLISH:
+The Gemara continues its treatment of the recitation of Shema upon ones bed. Rabbi Yitzhak said: Anyone who recites Shema on his bed, it is as if he holds a double-edged sword, guarding him from all evil, as it is stated: High praises of God in their mouths, and a double-edged sword in their hands (Psalms 149:6). The Gemara asks: From where is it inferred that this verse from Psalms refers to the recitation of Shema ? Mar Zutra, and some say Rav Ashi, said: We derive it from the preceding verse, as it is written: Let the pious exult in glory; let them joyously sing upon their beds. The praise of God from ones bed is the recitation of Shema . And it is written thereafter: High praises of God in their mouths, and a double-edged sword in their hands. And Rabbi Yitzhak said: Anyone who recites Shema upon his bed, demons stay away from him. This is alluded to, as it is stated: But man is born into trouble, and the sparks [ reshef ] fly [ uf ] upward (Job 5:7). The verse is explained: The word fly [ uf ] means nothing other than Torah, as Torah is difficult to grasp and easy to lose, like something that floats away, as it is stated: Will you set your eyes upon it? It is gone; for riches certainly make themselves wings, like an eagle that flies into the heavens (Proverbs 23:5). The word sparks means nothing other than demons, as it is stated: Wasting of hunger, and the devouring of the sparks [ reshef ] and bitter destruction [ ketev meriri ], and the teeth of beasts I will send upon them, with the venom of crawling things of the dust (Deuteronomy 32:24). Here we see reshef listed along with ketev meriri , both of which are understood by the Sages to be names of demons.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Shema recitation protects, Torah compared to eagle.",
+    "heb_summary": "קריאת שמע מגינה, תורה כנשר.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yitzhak"
+        },
+        {
+          "en_name": "Mar Zutra"
+        },
+        {
+          "en_name": "Rav Ashi"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Double-Edged Sword"
+        },
+        {
+          "en_name": "Torah"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Eagle"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Torah",
+          "term2": "Eagle"
+        }
+      ]
+    }
+  }
+}

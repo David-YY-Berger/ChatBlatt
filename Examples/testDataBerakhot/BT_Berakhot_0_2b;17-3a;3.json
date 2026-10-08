@@ -1,0 +1,39 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbinic opinions on Shema recitation time.",
+        "heb_summary": "דעות רבניות על זמן קריאת שמע.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "Priests"
+                },
+                {
+                    "en_name": "Tannaim"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Tannaim",
+                    "term2": "Rabbi Meir"
+                },
+                {
+                    "term1": "Tannaim",
+                    "term2": "Rabbi Eliezer"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2b:17-3a:3"
+}

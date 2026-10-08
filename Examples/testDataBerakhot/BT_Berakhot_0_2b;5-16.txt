@@ -1,0 +1,170 @@
+﻿COST: Tokens: Total=15350 approx cost=$0.002769 (Prompt=8158, Completion=7192)
+SOURCE:
+Berakhot (Zeraim) 2b:5-16
+
+HEBREW:
+אמר מר משעה שהכהנים נכנסין לאכול בתרומתן. ורמינהו: מאימתי קורין את שמע בערבין — משהעני נכנס לאכול פתו במלח, עד שעה שעומד ליפטר מתוך סעודתו.סיפא, ודאי פליגא אמתניתין. רישא, מי לימא פליגי אמתניתין?לא, עני וכהן חד שיעורא הוא.ורמינהו: מאימתי מתחילין לקרות קריאת שמע בערבית — משעה שבני אדם נכנסין לאכול פתן בערבי שבתות, דברי רבי מאיר. וחכמים אומרים: משעה שהכהנים זכאין לאכול בתרומתן. סימן לדבר: צאת הכוכבים. ואף על פי שאין ראיה לדבר, זכר לדבר, שנאמר: ״ואנחנו עשים במלאכה וחצים מחזיקים ברמחים מעלות השחר עד צאת הכוכבים״, ואומר: ״והיו לנו הלילה משמר והיום מלאכה״.מאי ״ואומר״?וכי תימא מכי ערבא שמשא, ליליא הוא, ואינהו דמחשכי ומקדמי, תא שמע ״והיו לנו הלילה משמר והיום מלאכה״.קא סלקא דעתך דעני ובני אדם חד שעורא הוא. ואי אמרת עני וכהן חד שעורא הוא, חכמים היינו רבי מאיר?אלא, שמע מינה עני שעורא לחוד וכהן שעורא לחוד. לא, עני וכהן חד שעורא הוא, ועני ובני אדם לאו חד שעורא הוא.ועני וכהן חד שעורא הוא? ורמינהו: מאימתי מתחילין לקרות שמע בערבין — משעה שקדש היום בערבי שבתות, דברי רבי אליעזר. רבי יהושע אומר: משעה שהכהנים מטוהרים לאכול בתרומתן. רבי מאיר אומר, משעה שהכהנים טובלין לאכול בתרומתן. אמר לו רבי יהודה: והלא כהנים מבעוד יום הם טובלים? רבי חנינא אומר משעה שעני נכנס לאכול פתו במלח. רבי אחאי ואמרי לה רבי אחא אומר: משעה שרוב בני אדם נכנסין להסב.ואי אמרת עני וכהן חד שעורא הוא, רבי חנינא היינו רבי יהושע!אלא לאו שמע מינה שעורא דעני לחוד ושעורא דכהן לחוד, שמע מינה.הי מינייהו מאוחר? מסתברא דעני מאוחר דאי אמרת דעני מוקדם רבי חנינא היינו רבי אליעזר. אלא לאו שמע מינה דעני מאוחר. שמע מינה.
+
+ENGLISH:
+In our mishna, the Master said: The beginning of the time for the recitation of the evening Shema is: From the time when the priests enter to partake of their teruma . The Gemara raises a contradiction to this opinion from a baraita that states that the time for the recitation of the evening Shema is: From when a poor person enters to eat his bread with salt until he rises from his meal. The Gemara begins its analysis by clarifying whether there is an actual contradiction here, or whether different expressions are being employed to describe the same time. The latter clause of the baraita , which established that the time for the recitation of the evening Shema ends when a poor person rises from his meal, certainly disagrees with our mishna. Since the poor person clearly does not continue eating until the end of the first watch, this baraita certainly contradicts our mishna. With regard to the first clause of the baraita , however, which establishes the beginning of the time for the recitation of the evening Shema , shall we say that it disagrees with our mishna? The Gemara immediately rejects this idea: No, the time when the poor person eats and the time when the priest is purified and permitted to partake of his teruma are one and the same time. The Gemara raises a contradiction from the Tosefta : From when does one begin to recite Shema in the evening? From the time when people enter to eat their bread on Shabbat eve. This is the statement of Rabbi Meir. As they do in our mishna, the Rabbis say: From the time when the priests are eligible to partake of their teruma , a sign for which is the emergence of the stars. And although there is no explicit proof that the emergence of the stars is when one may begin to recite the evening Shema , there is an allusion in the book of Nehemiah to the fact that the emergence of the stars is generally considered the beginning of the night. As it is stated with regard to the building of the walls of Jerusalem: And we perform the work, and half of them grasp their spears from dawn until the emergence of the stars (Nehemiah 4:15). And it says: That in the night they may be a guard to us, and may labor in the day (Nehemiah 4:16). From here we ascertain that the day ends with the emergence of the stars.Even before analyzing these sources, the Gemara seeks to clarify a confusing element in the Tosefta . In their biblical proof, the Rabbis do not suffice with one verse, but rather they say: And it says...and they cite an additional verse. What is added by this use of: And it says? It seems superfluous, as the entire proof appears in the first verse.The Gemara answers that the first verse was not sufficient. As, if you say that night begins when the sun sets, but the workers stayed late and arrived early; i.e., due to the importance of their task they worked even into the night. In anticipation of this objection, the second verse was cited to teach: Come and hear, as it is stated: That in the night they may be a guard to us, and may labor in the day, the time between dawn and the emergence of the stars is explicitly referred to as day, proving that night begins with the emergence of the stars.In analyzing the three opinions regarding the beginning of the period for the recitation of the evening Shema , the Gemara begins with the supposition: It might enter your mind to say that the time when the poor person typically eats his meal and the time when ordinary people eat their Shabbat evening meal are one and the same time, since in both cases those eating would seek to begin their meals as early as possible, as, for different reasons, they are unable to kindle additional lights to illuminate their meal. And, if you say that the time of the poor persons meal and the time when the priest is purified and permitted to partake of his teruma are one and the same time, then the opinion of the Rabbis is identical to that of Rabbi Meir. What is their disagreement? Rather, what we said previously must be rejected, and instead learn from this that there is a separate time for the poor person and a separate time for the priest. However, this conclusion is based on the assumption that the time of the poor person and the time of people are the same. That too can be rejected with the assertion that, no, the time of the poor person and the priest are one and the same time, and the time of the poor person and people are not the same. Accordingly, the opinion expressed by the tanna in our baraita is identical to that of the other tannaim , and only Rabbi Meir disagrees with them. And is the time of the poor person and the priest the same? The Gemara raises a contradiction to this approach from another baraita , in which other opinions regarding the time for the recitation of the evening Shema are cited: From when does one begin to recite the evening Shema ? From the time when the day becomes sanctified on the eve of Shabbat, this is the statement of Rabbi Eliezer, who established an earlier time for Shema . Rabbi Yehoshua, like our mishna, says: From the time when the priests are eligible to partake of their teruma . Rabbi Meir says: The time for the recitation of Shema begins before the priests were purified, from when the priests immerse themselves in order to partake of their teruma . Rabbi Yehuda said to Rabbi Meir: How is it possible that the time for the recitation of the evening Shema corresponds to the time of the priests immersion? Do the priests not immerse themselves during the day, so that with nightfall and the onset of a new day they will be purified? If so, how can that time be called night? Rabbi Hanina says that the time for the recitation of the evening Shema begins when the poor person enters to eat his bread with salt. But Rabbi Ahai, and some say Rabbi Aha, says: From the time when most people enter to recline at their meal during the week.The preceding was the text of the baraita . Returning to our question, if you say that the time of the poor person and the priest are one and the same time, then the opinion of Rabbi Hanina is identical to that of Rabbi Yehoshua. However, the fact that they are cited together indicates that they are not, in fact, the same. Rather, must one not conclude from this the time for the poor person is separate and the time for the priest is separate? Since no objection is raised, the Gemara concedes: Indeed, conclude from this. Having established that the time of the poor person and that of the priest are different, the Gemara seeks to determine: which one is later? The Gemara suggests that it is reasonable to conclude that the time of the poor person is later. As if you say that the poor person is earlier, it would be impossible to establish a time earlier than that established by Rabbi Yehoshua, unless we hold that night begins with sunset, in which case the opinion of Rabbi Hanina is identical to that of Rabbi Eliezer. Rather, must one not conclude from this that the poor person is later? The Gemara notes: Indeed, conclude from this.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbinic dispute on evening Shema recitation time.",
+    "heb_summary": "מחלוקת רבנים על זמן קריאת שמע ערבית.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Master"
+        },
+        {
+          "en_name": "Meir"
+        },
+        {
+          "en_name": "Rabbis"
+        },
+        {
+          "en_name": "Nehemiah"
+        },
+        {
+          "en_name": "Eliezer"
+        },
+        {
+          "en_name": "Yehoshua"
+        },
+        {
+          "en_name": "Yehuda"
+        },
+        {
+          "en_name": "Hanina"
+        },
+        {
+          "en_name": "Ahai"
+        },
+        {
+          "en_name": "Aha"
+        },
+        {
+          "en_name": "Workers"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jerusalem"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Stars"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "0.5",
+          "number_category": "People",
+          "en_unit": "worker",
+          "en_context": "building jerusalem walls"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Salt"
+        },
+        {
+          "en_name": "Teruma"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Yehuda",
+          "term2": "Meir"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Meir",
+          "term2": "Rabbis"
+        },
+        {
+          "term1": "Eliezer",
+          "term2": "Yehoshua"
+        },
+        {
+          "term1": "Eliezer",
+          "term2": "Meir"
+        },
+        {
+          "term1": "Eliezer",
+          "term2": "Hanina"
+        },
+        {
+          "term1": "Eliezer",
+          "term2": "Ahai"
+        },
+        {
+          "term1": "Yehoshua",
+          "term2": "Meir"
+        },
+        {
+          "term1": "Yehoshua",
+          "term2": "Hanina"
+        },
+        {
+          "term1": "Yehoshua",
+          "term2": "Ahai"
+        },
+        {
+          "term1": "Meir",
+          "term2": "Hanina"
+        },
+        {
+          "term1": "Meir",
+          "term2": "Ahai"
+        },
+        {
+          "term1": "Hanina",
+          "term2": "Ahai"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Nehemiah",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Workers",
+          "term2": "Jerusalem"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Rabbis",
+          "term2": "Master"
+        },
+        {
+          "term1": "Yehoshua",
+          "term2": "Master"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Ahai",
+          "term2": "Aha"
+        }
+      ]
+    }
+  }
+}

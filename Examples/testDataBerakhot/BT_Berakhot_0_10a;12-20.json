@@ -1,0 +1,172 @@
+﻿{
+    "res": {
+        "en_summary": "David praised God in five life stages.",
+        "heb_summary": "דוד שיבח את אלוהים בחמישה שלבי חיים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Angels"
+                },
+                {
+                    "en_name": "Abbahu"
+                },
+                {
+                    "en_name": "Yehuda"
+                },
+                {
+                    "en_name": "Mattana"
+                },
+                {
+                    "en_name": "Rabba Bar Rav Sheila"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Mother's Womb"
+                },
+                {
+                    "en_name": "Atmosphere Of The World"
+                },
+                {
+                    "en_name": "Mother's Breast"
+                },
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "Misc",
+                    "en_unit": "world",
+                    "en_context": "david's life stages"
+                },
+                {
+                    "en_name": "103",
+                    "number_category": "Misc",
+                    "en_unit": "psalm",
+                    "en_context": "david's psalm"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 103"
+                },
+                {
+                    "en_name": "20",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 103"
+                },
+                {
+                    "en_name": "23",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 103"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 103"
+                },
+                {
+                    "en_name": "28",
+                    "number_category": "Misc",
+                    "en_unit": "isaiah",
+                    "en_context": "isaiah reference"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "isaiah 28"
+                },
+                {
+                    "en_name": "104",
+                    "number_category": "Misc",
+                    "en_unit": "psalm",
+                    "en_context": "david's psalm"
+                },
+                {
+                    "en_name": "35",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 104"
+                },
+                {
+                    "en_name": "29",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms 104"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Milk"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Shimon Ben Yohai"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Solomon",
+                    "term2": "David"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "David",
+                    "term2": "Mother's Womb"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Atmosphere Of The World"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Mother's Breast"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Earth"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10a:12-20"
+}

@@ -1,0 +1,111 @@
+﻿COST: Tokens: Total=9577 approx cost=$0.001241 (Prompt=7252, Completion=2325)
+SOURCE:
+Berakhot (Zeraim) 5b:21-24
+
+HEBREW:
+תניא אבא בנימין אומר: על שני דברים הייתי מצטער כל ימי — על תפלתי שתהא לפני מטתי, ועל מטתי שתהא נתונה בין צפון לדרום. ״על תפלתי שתהא לפני מטתי״, מאי ״לפני מטתי״? אילימא ״לפני מטתי״ ממש, והאמר רב יהודה, אמר רב, ואיתימא רבי יהושע בן לוי: מנין למתפלל שלא יהא דבר חוצץ בינו לבין הקיר — שנאמר: ״ויסב חזקיהו פניו אל הקיר ויתפלל״? לא תימא, ״לפני מטתי״, אלא אימא ״סמוך למטתי״.״ועל מטתי שתהא נתונה בין צפון לדרום״.דאמר רבי חמא ברבי חנינא, אמר רבי יצחק: כל הנותן מטתו בין צפון לדרום הויין ליה בנים זכרים, שנאמר: ״וצפונך תמלא בטנם ישבעו בנים״.רב נחמן בר יצחק אמר: אף אין אשתו מפלת נפלים. כתיב הכא: ״וצפונך תמלא בטנם״, וכתיב התם: ״וימלאו ימיה ללדת והנה תומים בבטנה״.
+
+ENGLISH:
+The Gemara returns to the topic of prayer. It was taught in a baraita that the tanna Abba Binyamin would say: All of my life I have taken great pains with regard to two things: That my prayer should be before my bed and that my bed should be placed north to south. Abba Binyamins statement requires explanation. With regard to his statement: That my prayer should be before my bed, the Gemara asks, what does before my bed mean? If you say that it literally means that he would stand before his bed and pray, it is difficult, as Rav Yehuda said that Rav said, and some say that Rabbi Yehoshua ben Levi said: From where is it derived that one who prays should have nothing separating between him and the wall? As it is stated: And Hezekiah turned to face the wall and prayed (Isaiah 38:2), in order to facilitate his concentration during prayer. That being said, why would Abba Binyamin pray before his bed? Rather, do not say that before my bed refers to where he stood during prayer, but rather, say that he prayed adjacent to the time that he would retire to bed; he was careful to recite Shema and recite the evening prayer just before going to sleep (Rabbeinu Hananel).Abba Binyamins statement: And my bed should be placed north to south was in deference to the Divine Presence, which rests between east and west, the direction of the Temple; as the Holy of Holies was to the west, while the main entrance was to the east. Therefore, the Sages were careful not to perform actions inconsistent with that sanctity while facing east to west; and, therefore, Abba Binyamin was careful not to sleep in a bed that faced east to west.In praise of that stringency, the Sages added that Rabbi Hama said that Rabbi Hanina said that Rabbi Yitzhak said: One who places his bed facing north to south will be rewarded with male children, as it is stated: And whose belly You fill with Your treasure [ utzfunekha ], who have sons in plenty and leave their abundance to their babies (Psalms 17:14). This verse indicates that one who sets his bed facing north will be rewarded with sons in plenty, as north [ tzafon ] is etymologically similar to Your treasure [ tzfunekha ]. Rav Nahman bar Yitzhak said: Moreover, his wife will not miscarry. From where do we derive this? It is written here: And whose belly You fill [ temaleh ] with Your treasure, and it is written there, concerning Rebeccas pregnancy: And her time to give birth was fulfilled [ vayimleu ] and there were twins in her belly (Genesis 25:24), consequently: You fill with Your treasure refers to a pregnancy that proceeds without complication.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Abba Binyamin's prayer and bed orientation teachings.",
+    "heb_summary": "תפילה ומיטת אבא בנימין, הטיית מיטה.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abba Binyamin"
+        },
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Hezekiah"
+        },
+        {
+          "en_name": "Rabbi Hama"
+        },
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Rabbi Yitzhak"
+        },
+        {
+          "en_name": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "Rebecca"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Rabbeinu Hananel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Holy Of Holies"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Divine Presence"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "en_unit": "child",
+          "en_context": "rebecca pregnancy"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Rav"
+        },
+        {
+          "term1": "Rabbi Yehoshua Ben Levi",
+          "term2": "Rav"
+        },
+        {
+          "term1": "Rabbi Hama",
+          "term2": "Rabbi Hanina"
+        },
+        {
+          "term1": "Rabbi Hanina",
+          "term2": "Rabbi Yitzhak"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abba Binyamin",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Abba Binyamin",
+          "term2": "Holy Of Holies"
+        }
+      ]
+    }
+  }
+}

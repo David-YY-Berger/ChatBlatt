@@ -1,0 +1,128 @@
+﻿COST: Tokens: Total=9644 approx cost=$0.001289 (Prompt=7128, Completion=2516)
+SOURCE:
+Berakhot (Zeraim) 10b:11-13
+
+HEBREW:
+אמר רבי יוחנן משום רבי יוסי בן זמרא: כל התולה בזכות עצמו — תולין לו בזכות אחרים. וכל התולה בזכות אחרים — תולין לו בזכות עצמו.משה תלה בזכות אחרים, שנאמר: ״זכר לאברהם ליצחק ולישראל עבדיך״. תלו לו בזכות עצמו, שנאמר: ״ויאמר להשמידם לולי משה בחירו עמד בפרץ לפניו להשיב חמתו מהשחית״.חזקיהו תלה בזכות עצמו, דכתיב: ״זכר נא את אשר התהלכתי לפניך״, תלו לו בזכות אחרים, שנאמר: ״וגנותי אל העיר הזאת להושיעה למעני ולמען דוד עבדי״. והיינו דרבי יהושע בן לוי. דאמר רבי יהושע בן לוי: מאי דכתיב ״הנה לשלום מר לי מר״ — אפילו בשעה ששיגר לו הקדוש ברוך הוא שלום, מר הוא לו.
+
+ENGLISH:
+Stemming from the analysis of Hezekiahs prayer, Rabbi Yohanan said in the name of Rabbi Yosei ben Zimra: Anyone who bases his prayer or request upon his own merit, when God answers his prayer, it is based upon the merit of others. And anyone who modestly bases his prayer or request upon the merit of others, when God answers his prayer, it is based upon his own merit. The Gemara cites proof from Moses. When he prayed to God for forgiveness after the incident of the Golden Calf, he based his request upon the merit of others, as it is stated: Remember Abraham, Isaac and Israel your servants, to whom You swore upon Yourself, and told them: I will increase your descendants like the stars of the heavens, and all of this land of which I have spoken, I will give to your descendants and they will inherit it forever (Exodus 32:13). Yet when this story is related, Gods forgiveness of Israel is based upon Moses own merit, as it is stated: And He said He would destroy them, had Moses, His chosen, not stood before Him in the breach to turn back His destructive fury, lest He should destroy them (Psalms 106:23). Hezekiah, however, based his request upon his own merit, as it is written: Please, remember that I walked before You (Isaiah 38:3). When God answered his prayers, it was based upon the merit of others with no mention made of Hezekiahs own merit, as it is stated: And I will protect this city to save it, for My sake and for the sake of David, My servant (II Kings 19:34). And that is what Rabbi Yehoshua ben Levi said. As Rabbi Yehoshua ben Levi said: What is the meaning of that which is written: Behold, for my peace I had great bitterness; but You have, in love to my soul, delivered it from the pit of corruption; for You have thrown all my sins behind Your back (Isaiah 38:17)? This verse teaches that even when the Holy One, Blessed be He, sent him peace and told him that he would recover from his illness, it was bitter for him, because God did not take his merit into consideration.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Prayer based on merit, God's response.",
+    "heb_summary": "תפילה על בסיס זכות, תגובת האל.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hezekiah"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yosei Ben Zimra"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Golden Calf"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Yosei Ben Zimra"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Isaac"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Moses",
+          "term2": "God"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "God"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Moses",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Abraham",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Isaac",
+          "term2": "Israel"
+        },
+        {
+          "term1": "David",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "Israel"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "God",
+          "term2": "Holy One, Blessed Be He"
+        }
+      ]
+    }
+  }
+}

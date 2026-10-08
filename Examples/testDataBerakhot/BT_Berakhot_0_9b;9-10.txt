@@ -1,0 +1,46 @@
+﻿COST: Tokens: Total=9234 approx cost=$0.001229 (Prompt=6848, Completion=2386)
+SOURCE:
+Berakhot (Zeraim) 9b:9-10
+
+HEBREW:
+מתני׳ מאימתי קורין את שמע בשחרית? משיכיר בין תכלת ללבן. רבי אליעזר אומר: בין תכלת לכרתי. וגומרה, עד הנץ החמה, רבי יהושע אומר עד שלש שעות, שכן דרך מלכים לעמוד בשלש שעות.הקורא מכאן ואילך — לא הפסיד, כאדם הקורא בתורה.
+
+ENGLISH:
+MISHNA: From when does one recite Shema in the morning ? From when a person can distinguish between sky-blue [ tekhelet ] and white. Rabbi Eliezer says: From when one can distinguish between sky-blue and leek-green. And one must finish reciting Shema until the end of the period when you rise, i.e., sunrise, when the sun begins to shine. Rabbi Yehoshua says: One may recite the morning Shema until three hours of the day, which this is still considered when you rise, as that is the habit of kings to rise from their sleep at three hours of the day.While there is a set time frame for the recitation of Shema , one who recites Shema from that time onward loses nothing. Although he does not fulfill the mitzva of reciting of Shema at its appointed time, he is nevertheless considered like one who reads the Torah, and is rewarded accordingly.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Shema recitation times; Rabbinic disagreement.",
+    "heb_summary": "זמני קריאת שמע; מחלוקת רבנים.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Eliezer"
+        },
+        {
+          "en_name": "Rabbi Yehoshua"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Torah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "kings rise"
+        }
+      ]
+    }
+  }
+}

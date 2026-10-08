@@ -1,0 +1,73 @@
+﻿COST: Tokens: Total=8206 approx cost=$0.000903 (Prompt=6929, Completion=1277)
+SOURCE:
+Berakhot (Zeraim) 11a:24-25
+
+HEBREW:
+מתני׳ בשחר מברך שתים לפניה ואחת לאחריה. ובערב מברך שתים לפניה ושתים לאחריה. אחת ארוכה ואחת קצרה.מקום שאמרו להאריך — אינו רשאי לקצר, לקצר — אינו רשאי להאריך. לחתום — אינו רשאי שלא לחתום, שלא לחתום — אינו רשאי לחתום.
+
+ENGLISH:
+MISHNA: From the laws of the recitation of Shema itself, the mishna proceeds to discuss the blessings recited in conjunction with Shema . Here, the order is established: In the morning when reciting Shema , one recites two blessings beforehand, the first on the radiant lights and the second the blessing on the love of Torah, and one thereafter, which begins with: True and Firm [ emet veyatziv ]. And in the evening one recites two blessings beforehand, on the radiant lights and on the love of God, and two thereafter, the blessing of redemption: True and Faithful [ emet veemuna ], and the blessing: Help us lie down. With regard to the blessing: True and Faithful, whether one recites it in its long formula and whether one recites it in its short formula, he fulfills his obligation ( Tosafot ).However, the general principle is: Where the Sages said to recite a long blessing, one may not shorten it, and so too, wherever they said to recite a short blessing, one may not lengthen it. Where the Sages said that a blessing must conclude with a second blessing at the end, he may not fail to conclude with that blessing. Similarly, if the Sages said that a blessing must not conclude with a second blessing, one may not conclude with a blessing.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Mishna discusses Shema blessings and Sages' rules.",
+    "heb_summary": "המשנה דנה בברכות קריאת שמע וחוקי חכמים.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Radiant Lights"
+        },
+        {
+          "en_name": "Love Of Torah"
+        },
+        {
+          "en_name": "True And Firm"
+        },
+        {
+          "en_name": "Love Of God"
+        },
+        {
+          "en_name": "Redemption"
+        },
+        {
+          "en_name": "True And Faithful"
+        },
+        {
+          "en_name": "Help Us Lie Down"
+        },
+        {
+          "en_name": "Long Formula"
+        },
+        {
+          "en_name": "Short Formula"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "morning shema beforehand"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "morning shema thereafter"
+        }
+      ]
+    }
+  }
+}

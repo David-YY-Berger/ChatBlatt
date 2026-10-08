@@ -1,0 +1,97 @@
+﻿COST: Tokens: Total=10561 approx cost=$0.001541 (Prompt=7232, Completion=3329)
+SOURCE:
+Berakhot (Zeraim) 5a:14-19
+
+HEBREW:
+פליגי בה רבי יעקב בר אידי ורבי אחא בר חנינא. חד אמר: אלו הם יסורין של אהבה — כל שאין בהן בטול תורה, שנאמר: ״אשרי הגבר אשר תיסרנו יה ומתורתך תלמדנו״.וחד אמר: אלו הן יסורין של אהבה — כל שאין בהן בטול תפלה, שנאמר: ״ברוך אלהים אשר לא הסיר תפלתי וחסדו מאתי״.אמר להו רבי אבא בריה דרבי חייא בר אבא, הכי אמר רבי חייא בר אבא, אמר רבי יוחנן: אלו ואלו יסורין של אהבה הן, שנאמר ״כי את אשר יאהב ה׳ יוכיח״.אלא מה תלמוד לומר ״ומתורתך תלמדנו״ — אל תקרי ״תלמדנו״, אלא תלמדנו. דבר זה — מתורתך תלמדנו.קל וחומר משן ועין. מה שן ועין שהן אחד מאבריו של אדם — עבד יוצא בהן לחרות, יסורין שממרקין כל גופו של אדם — על אחת כמה וכמה.והיינו דרבי שמעון בן לקיש, דאמר רבי שמעון בן לקיש: נאמר ״ברית״ במלח, ונאמר ״ברית״ ביסורין, נאמר ״ברית״ במלח, דכתיב: ״ולא תשבית מלח ברית״ ונאמר ״ברית״ ביסורין, דכתיב: ״אלה דברי הברית״, מה ״ברית״ האמור במלח — מלח ממתקת את הבשר, אף ״ברית״ האמור ביסורין — יסורין ממרקין כל עונותיו של אדם.
+
+ENGLISH:
+With regard to the acceptance of affliction with love and what exactly this entails, Rabbi Yaakov bar Idi and Rabbi Aha bar Hanina disagree. One of them said: Afflictions of love are any that do not cause dereliction in the study of Torah, i.e., any which do not afflict his body to the extent that he is unable to study Torah, as it is stated: Happy is the man whom You afflict, Lord, and teach from Your Torah. Afflictions of love are when You teach from Your Torah. And one said: Afflictions of love are any that do not cause dereliction in the recitation of prayer, as it is stated: Blessed is God Who did not turn away my prayer (Psalms 66:20). Despite his suffering, the afflicted is still capable of praying to God. Rabbi Abba, son of Rabbi Hiyya bar Abba, said: My father, Rabbi Hiyya bar Abba, said that Rabbi Yohanan said as follows: Both, even afflictions that cause dereliction in the study of Torah and those that cause dereliction in the recitation of prayer, are afflictions of love, as with regard to one who suffers without transgression it is stated: For whom He loves, He rebukes, and inability to study Torah and to pray are among his afflictions. What then, is the meaning when the verse states: And teach him from Your Torah? Do not read and teach to mean and teach him , rather, and teach us . You teach us the value of this affliction from Your Torah. This is taught through an a fortiori inference from the law concerning the tooth and eye of a slave: The tooth and eye are each a single limb of a person and if his master damages either, the slave thereby obtains his freedom; suffering that cleanses a persons entire body all the more so that one attains freedom, atonement, from his sins. And that is the statement of Rabbi Shimon ben Lakish, as Rabbi Shimon ben Lakish said: The word covenant is used with regard to salt, and the word covenant is used with regard to afflictions. The word covenant is used with regard to salt, as it is written: The salt of the covenant with your God should not be excluded from your meal-offering; with all your sacrifices you must offer salt (Leviticus 2:13). And the word covenant is used with regard to afflictions, as it is written: These are the words of the covenant (Deuteronomy 28:69). Just as, in the covenant mentioned with regard to salt, the salt sweetens the taste of the meat and renders it edible, so too in the covenant mentioned with regard to suffering, the suffering cleanses a persons transgressions, purifying him for a more sublime existence.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis disagree on afflictions, Torah, and prayer.",
+    "heb_summary": "רבנים חלוקים על ייסורים, תורה ותפילה.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yaakov Bar Idi"
+        },
+        {
+          "en_name": "Aha Bar Hanina"
+        },
+        {
+          "en_name": "Abba"
+        },
+        {
+          "en_name": "Hiyya Bar Abba"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Ben Lakish"
+        },
+        {
+          "en_name": "Lord"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Prayer"
+        },
+        {
+          "en_name": "Covenant"
+        },
+        {
+          "en_name": "Meal-Offering"
+        },
+        {
+          "en_name": "Sacrifice"
+        },
+        {
+          "en_name": "Tooth"
+        },
+        {
+          "en_name": "Eye"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Salt"
+        },
+        {
+          "en_name": "Meat"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Abba",
+          "term2": "Hiyya Bar Abba"
+        },
+        {
+          "term1": "Hiyya Bar Abba",
+          "term2": "Yohanan"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yaakov Bar Idi",
+          "term2": "Aha Bar Hanina"
+        }
+      ]
+    }
+  }
+}

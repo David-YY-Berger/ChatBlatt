@@ -1,0 +1,175 @@
+﻿COST: Tokens: Total=10982 approx cost=$0.001664 (Prompt=7249, Completion=3733)
+SOURCE:
+Berakhot (Zeraim) 10b:6-10
+
+HEBREW:
+תנו רבנן: ששה דברים עשה חזקיהו המלך, על שלשה הודו לו, ועל שלשה לא הודו לו.על שלשה הודו לו: גנז ספר רפואות — והודו לו. כתת נחש הנחשת — והודו לו. גירר עצמות אביו על מטה של חבלים — והודו לו.ועל שלשה לא הודו לו: סתם מי גיחון — ולא הודו לו. קצץ דלתות היכל ושגרם למלך אשור — ולא הודו לו. עבר ניסן בניסן — ולא הודו לו.ומי לית ליה לחזקיהו, ״החדש הזה לכם ראש חדשים״: זה ניסן ואין אחר ניסן?!אלא, טעה בדשמואל דאמר שמואל, אין מעברין את השנה ביום שלשים של אדר, הואיל וראוי לקובעו ניסן. סבר: ״הואיל וראוי״ — לא אמרינן.
+
+ENGLISH:
+The Sages taught: King Hezekiah performed six innovative actions. With regard to three the Sages agreed with him, and with regard to three they did not agree with him. With regard to three actions the Sages agreed with him: He suppressed the Book of Remedies, and they agreed with him. He ground the copper snake through which miracles were performed for Israel (Numbers 21:9), destroying it because it had been used in idol worship (II Kings 18:4), and they agreed with him. He dragged the bones of his evil father, King Ahaz, on a bed of ropes; meaning he did not accord his father a funeral fit for a king (II Chronicles 28:27), and they agreed with him. Yet, with regard to three other innovations, the Sages of his generation did not agree with him: He stopped up the waters of the Gihon, the Pool of Siloam, diverting its water into the city by means of a tunnel (II Chronicles 32:30), and they did not agree with him. He cut off the doors of the Sanctuary and sent them to the king of Assyria (II Kings 18:16), and they did not agree with him. He intercalated Nisan in Nisan, creating a leap year by adding an extra month during the month of Nisan. That intercalation must be performed before the end of Adar (II Chronicles 30:2).With regard to his intercalation of Nisan, the Gemara asks: Did Hezekiah not accept the halakha : This month will be for you the first of the months; it shall be the first for you of the months of the year (Exodus 12:2)? By inference, this first month is Nisan, and no other month is Nisan. How could Hezekiah add an additional Nisan in violation of Torah law?The Gemara answers that the scenario was different. Rather, Hezekiah erred with regard to the halakhic opinion ascribed in later generations to Shmuel, as Shmuel said: One may not intercalate the year on the thirtieth day of Adar, since it is fit to establish it as the New Moon of Nisan. On the thirtieth day of each month, those who witnessed the new moon would come and testify before the court, which, based on their testimony, would declare that day the first day of the next month. Therefore, one may not declare a leap year on the thirtieth day of Adar, as it could potentially become the first of Nisan. Therefore, the Sages of Hezekiahs generation did not agree with his decision to intercalate the year on the thirtieth of Adar. Hezekiah held that we do not say: Since that day is fit to establish it as the New Moon is reason enough to refrain from intercalation of the year.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Hezekiah's six innovations; Sages agreed/disagreed.",
+    "heb_summary": "חדשנות חזקיהו, הסכמת וחוסר הסכמת חכמים.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hezekiah"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Ahaz"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Shmuel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Gihon"
+        },
+        {
+          "en_name": "Pool Of Siloam"
+        },
+        {
+          "en_name": "Sanctuary"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Assyria"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Book Of Remedies"
+        },
+        {
+          "en_name": "Copper Snake"
+        },
+        {
+          "en_name": "Doors"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "6",
+          "number_category": "Misc",
+          "en_unit": "action",
+          "en_context": "hezekiah's innovations"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "action",
+          "en_context": "sages agreed"
+        },
+        {
+          "en_name": "21",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "numbers verse"
+        },
+        {
+          "en_name": "9",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "numbers verse"
+        },
+        {
+          "en_name": "18",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "kings verse"
+        },
+        {
+          "en_name": "4",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "kings verse"
+        },
+        {
+          "en_name": "28",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "chronicles verse"
+        },
+        {
+          "en_name": "27",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "chronicles verse"
+        },
+        {
+          "en_name": "32",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "chronicles verse"
+        },
+        {
+          "en_name": "30",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "chronicles verse"
+        },
+        {
+          "en_name": "16",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "kings verse"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "chronicles verse"
+        },
+        {
+          "en_name": "12",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "exodus verse"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Hezekiah",
+          "term2": "Ahaz"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Sages",
+          "term2": "Hezekiah"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Hezekiah",
+          "term2": "Gihon"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "Pool Of Siloam"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "Sanctuary"
+        }
+      ]
+    }
+  }
+}

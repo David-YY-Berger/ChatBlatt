@@ -1,0 +1,188 @@
+﻿{
+    "res": {
+        "en_summary": "God's anger is brief, Balaam's curses fail.",
+        "heb_summary": "כעס ה' רגע, קללות בלעם בטלות.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Balaam"
+                },
+                {
+                    "en_name": "Balak"
+                },
+                {
+                    "en_name": "Rabbi Elazar"
+                },
+                {
+                    "en_name": "Rabbi Avin"
+                },
+                {
+                    "en_name": "Rabbi Avina"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Beor"
+                },
+                {
+                    "en_name": "Micah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shittim"
+                },
+                {
+                    "en_name": "Gilgal"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Moab"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Golden Calf"
+                },
+                {
+                    "en_name": "Divine Presence"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1.7e-05",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "duration of god's anger"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Donkey"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yosei"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Balaam",
+                    "term2": "Beor"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Balaam",
+                    "term2": "Balak"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Balaam",
+                    "term2": "Donkey"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Israel",
+                    "term2": "Shittim"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Gilgal"
+                },
+                {
+                    "term1": "Balaam",
+                    "term2": "Shittim"
+                },
+                {
+                    "term1": "Balaam",
+                    "term2": "Gilgal"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Balak",
+                    "term2": "Moab"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Balaam",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Balak",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Moab",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Balaam",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Balak"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Balaam"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Shittim"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "Gilgal"
+                },
+                {
+                    "term1": "Micah",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:5-15"
+}

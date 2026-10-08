@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=11357 approx cost=$0.001751 (Prompt=7360, Completion=3997)
+SOURCE:
+Berakhot (Zeraim) 10a:21-25
+
+HEBREW:
+רב שימי בר עוקבא ואמרי לה מר עוקבא, הוה שכיח קמיה דרבי שמעון בן פזי, והוה מסדר אגדתא קמיה דרבי יהושע בן לוי. אמר ליה: מאי דכתיב, ״ברכי נפשי את ה׳ וכל קרבי את שם קדשו״? אמר ליה: בא וראה שלא כמדת הקדוש ברוך הוא מדת בשר ודם. מדת בשר ודם צר צורה על גבי הכותל, ואינו יכול להטיל בה רוח ונשמה קרבים ובני מעים. והקדוש ברוך הוא אינו כן, צר צורה בתוך צורה ומטיל בה רוח ונשמה קרבים ובני מעים. והיינו דאמרה חנה: ״אין קדוש כה׳ כי אין בלתך ואין צור כאלהינו״.מאי ״אין צור כאלהינו״ — אין צייר כאלהינו.מאי ״כי אין בלתך״? אמר רבי יהודה בר מנסיא: אל תקרי ״כי אין בלתך״, אלא ״אין לבלותך״. שלא כמדת הקדוש ברוך הוא מדת בשר ודם: מדת בשר ודם — מעשה ידיו מבלין אותו, והקדוש ברוך הוא מבלה מעשיו.אמר ליה, אנא הכי קא אמינא לך: הני חמשה ״ברכי נפשי״ כנגד מי אמרן דוד? לא אמרן אלא כנגד הקדוש ברוך הוא וכנגד נשמה.מה הקדוש ברוך הוא מלא כל העולם — אף נשמה מלאה את כל הגוף. מה הקדוש ברוך הוא רואה ואינו נראה — אף נשמה רואה ואינה נראית. מה הקדוש ברוך הוא זן את כל העולם כלו — אף נשמה זנה את כל הגוף. מה הקדוש ברוך הוא טהור — אף נשמה טהורה. מה הקדוש ברוך הוא יושב בחדרי חדרים — אף נשמה יושבת בחדרי חדרים. יבא מי שיש בו חמשה דברים הללו וישבח למי שיש בו חמשה דברים הללו.
+
+ENGLISH:
+Other interpretations of this verse exist. The Gemara relates how Rav Shimi bar Ukva, and some say Mar Ukva, would regularly study before Rabbi Shimon ben Pazi, who was well versed in aggada and would arrange the aggada before Rabbi Yehoshua ben Levi. Once, Rabbi Shimon ben Pazi said to him: What is the meaning of that which is written: Bless the Lord, my soul, and all that is within me bless His Holy name? Rav Shimi bar Ukva said to Rabbi Shimon ben Pazi: Come and see that the attribute of the Holy One, Blessed be He, is not like the attribute of flesh and blood, as this verse praises the formation of man in his mothers womb. The attribute of flesh and blood is such that he shapes a form on the wall for all to see, yet he cannot instill it with a spirit and soul, bowels and intestines. While the Holy One, Blessed be He, is not so, as God shapes one form within another form, a child in its mothers womb, and instills it with spirit and soul, bowels and intestines. And this is the explanation of what Hannah said with regard to the birth of Samuel: There is none holy like the Lord, for there is none like You, and there is no Rock like our God (I Samuel 2:2). What is the meaning of there is no rock [ tzur ] like our God? There is no artist [ tzayyar ] like our God. The Gemara continues to interpret the rest of that verse homiletically: What is the meaning of there is none like You? Rabbi Yehuda ben Menasya said: Do not read the verse to mean there is none like You [ biltekha ]; rather, read it to mean none can outlast You [ levalotkha ], as the attribute of the Holy One, Blessed be He, is not like the attribute of flesh and blood: The attribute of flesh and blood is such that his creations outlast him, but the Holy One, Blessed be He, outlasts His actions. This did not satisfy Rav Shimi bar Ukva, who said to Rabbi Shimon ben Pazi: I meant to say to you as follows: Corresponding to whom did David say these five instance of Bless the Lord, O my soul? He answered him: He said them about none other than the Holy One, Blessed be He, and corresponding to the soul, as the verse refers to the relationship between mans soul and God. The five instances of Bless the Lord, O my soul correspond to the five parallels between the soul in mans body and Gods power in His world. Just as the Holy One, Blessed be He, fills the entire world, so too the soul fills the entire body. Just as the Holy One, Blessed be He, sees but is not seen, so too does the soul see, but is not seen. Just as the Holy One, Blessed be He, sustains the entire world, so too the soul sustains the entire body. Just as the Holy One, Blessed be He, is pure, so too is the soul pure. Just as the Holy One, Blessed be He, resides in a chamber within a chamber, in His inner sanctum, so too the soul resides in a chamber within a chamber, in the innermost recesses of the body. Therefore, that which has these five characteristics, the soul, should come and praise He Who has these five characteristics.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss soul and God's attributes.",
+    "heb_summary": "רבנים דנים בנשמה ובתכונות האל.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Shimi Bar Ukva"
+        },
+        {
+          "en_name": "Mar Ukva"
+        },
+        {
+          "en_name": "Shimon Ben Pazi"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Hannah"
+        },
+        {
+          "en_name": "Samuel"
+        },
+        {
+          "en_name": "Yehuda Ben Menasya"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Soul"
+        },
+        {
+          "en_name": "Rock"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "5",
+          "number_category": "Misc",
+          "en_unit": "instance",
+          "en_context": "david praises god"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Shimi Bar Ukva",
+          "term2": "Shimon Ben Pazi"
+        },
+        {
+          "term1": "Mar Ukva",
+          "term2": "Shimon Ben Pazi"
+        },
+        {
+          "term1": "Shimon Ben Pazi",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Samuel",
+          "term2": "Hannah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Shimon Ben Pazi",
+          "term2": "Rav Shimi Bar Ukva"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Soul",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

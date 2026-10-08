@@ -1,0 +1,145 @@
+﻿{
+    "res": {
+        "en_summary": "David's piety, humility, and commitment to Torah.",
+        "heb_summary": "חסידות דוד, ענווה, ומחויבות לתורה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Levi"
+                },
+                {
+                    "en_name": "Yitzhak"
+                },
+                {
+                    "en_name": "Holy One"
+                },
+                {
+                    "en_name": "Yoshiyahu Pinto"
+                },
+                {
+                    "en_name": "Mefivoshet"
+                },
+                {
+                    "en_name": "Jonathan"
+                },
+                {
+                    "en_name": "Saul"
+                },
+                {
+                    "en_name": "Yehoshua"
+                },
+                {
+                    "en_name": "Idi"
+                },
+                {
+                    "en_name": "Ish Boshet"
+                },
+                {
+                    "en_name": "Kilav"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Daniel"
+                },
+                {
+                    "en_name": "Solomon"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Psalms"
+                },
+                {
+                    "en_name": "Leviticus"
+                },
+                {
+                    "en_name": "Tosefta"
+                },
+                {
+                    "en_name": "Proverbs"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "kings sleep"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "David",
+                    "term2": "Mefivoshet"
+                },
+                {
+                    "term1": "Kilav",
+                    "term2": "Mefivoshet"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Jonathan",
+                    "term2": "Saul"
+                },
+                {
+                    "term1": "Mefivoshet",
+                    "term2": "Jonathan"
+                },
+                {
+                    "term1": "Kilav",
+                    "term2": "David"
+                },
+                {
+                    "term1": "Daniel",
+                    "term2": "David"
+                },
+                {
+                    "term1": "Solomon",
+                    "term2": "David"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "David",
+                    "term2": "Holy One"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Mefivoshet"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Levi",
+                    "term2": "Yitzhak"
+                },
+                {
+                    "term1": "Kilav",
+                    "term2": "Mefivoshet"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Mefivoshet",
+                    "term2": "Ish Boshet"
+                },
+                {
+                    "term1": "Kilav",
+                    "term2": "Daniel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4a:8-13"
+}

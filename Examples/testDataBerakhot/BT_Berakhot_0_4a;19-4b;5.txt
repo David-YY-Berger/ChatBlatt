@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=9062 approx cost=$0.001089 (Prompt=7244, Completion=1818)
+SOURCE:
+Berakhot (Zeraim) 4a:19-4b:5
+
+HEBREW:
+ואי כרבן גמליאל סבירא להו — לימרו כרבן גמליאל.לעולם כרבן גמליאל סבירא להו, והא דקא אמרי ״עד חצות״, כדי להרחיק את האדם מן העבירה. כדתניא, חכמים עשו סייג לדבריהם, כדי שלא יהא אדם בא מן השדה בערב, ואומר: ״אלך לביתי ואוכל קימעא ואשתה קימעא, ואישן קימעא, ואחר כך אקרא קריאת שמע ואתפלל״, וחוטפתו שינה ונמצא ישן כל הלילה. אבל אדם בא מן השדה בערב, נכנס לבית הכנסת, אם רגיל לקרות — קורא. ואם רגיל לשנות — שונה, וקורא קריאת שמע ומתפלל, ואוכל פתו ומברך.וכל העובר על דברי חכמים חייב מיתה.מאי שנא בכל דוכתא דלא קתני ״חייב מיתה״, ומאי שנא הכא דקתני ״חייב מיתה״?איבעית אימא משום דאיכא אונס שינה. ואיבעית אימא: לאפוקי ממאן דאמר ״תפלת ערבית רשות״, קא משמע לן דחובה.
+
+ENGLISH:
+And if they explain this verse in accordance with the opinion of Rabban Gamliel who says that when you lie down refers to the entire night, then let the Rabbis also say that one may recite the evening Shema until dawn, in accordance with the opinion of Rabban Gamliel. The Gemara answers: Actually, the Rabbis hold in accordance with the opinion of Rabban Gamliel, and the fact that they say until midnight is in order to distance a person from transgression. As it was taught in a baraita , the Rabbis created a fence for their pronouncements with regard to the recitation of Shema in order to prevent a situation where a person comes home from the field in the evening, tired from his days work, and knowing that he is permitted to recite Shema until dawn says to himself: I will go home, eat a little, drink a little, sleep a little and then I will recite Shema and recite the evening prayer. In the meantime, he is overcome by sleep and ends up sleeping all night. However, since one is concerned lest he fall asleep and fail to wake up before midnight in order to recite Shema at the appropriate time, he will come from the field in the evening, enter the synagogue, and until it is time to pray, he will immerse himself in Torah. If he is accustomed to reading the Bible, he reads. If he is accustomed to learning mishnayot , a more advanced level of study, he learns. And then he recites Shema and prays as he should. When he arrives home, he eats his meal with a contented heart and recites a blessing. The baraita concludes with a warning: Anyone who transgresses the pronouncements of the Sages is liable to receive the death penalty.This is a startling conclusion. What is different in all other places that it is not taught that one is liable to receive the death penalty and what is different here that it is taught that he is liable to receive the death penalty? There is no unique stringency apparent in the rabbinic restriction on the recitation of Shema .The Gemara offers two answers, explaining that the conclusion of the baraita essentially stems not from the magnitude of the transgression, but rather from concern that the fence created around this particular mitzva may be neglected. If you wish, say that one returning from work is quite anxious to go to sleep, and due to the risk that he will be overcome by sleep, he must be particularly vigilant in the recitation of Shema . And if you wish, say instead that strong language is employed here in order to exclude the opinion of he who says that although the morning prayer and the afternoon prayer are mandatory, the evening prayer is optional. Therefore, it teaches us that the evening prayer is mandatory, and anyone who transgresses the pronouncement of the Sages in this regard is liable to receive the death penalty.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis follow Gamliel, decree Shema by midnight.",
+    "heb_summary": "חכמים כרבן גמליאל, גזרו שמע עד חצות.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Gamliel"
+        },
+        {
+          "en_name": "Rabbis"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "answer",
+          "en_context": "gemara offers explanation"
+        }
+      ]
+    },
+    "Rel": {
+      "AliasOf": [
+        {
+          "term1": "Rabbis",
+          "term2": "Sages"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,160 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbinic dispute on evening Shema recitation time.",
+        "heb_summary": "מחלוקת רבנים על זמן קריאת שמע ערבית.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Master"
+                },
+                {
+                    "en_name": "Meir"
+                },
+                {
+                    "en_name": "Rabbis"
+                },
+                {
+                    "en_name": "Nehemiah"
+                },
+                {
+                    "en_name": "Eliezer"
+                },
+                {
+                    "en_name": "Yehoshua"
+                },
+                {
+                    "en_name": "Yehuda"
+                },
+                {
+                    "en_name": "Hanina"
+                },
+                {
+                    "en_name": "Ahai"
+                },
+                {
+                    "en_name": "Aha"
+                },
+                {
+                    "en_name": "Workers"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Stars"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "0.5",
+                    "number_category": "People",
+                    "en_unit": "worker",
+                    "en_context": "building jerusalem walls"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Salt"
+                },
+                {
+                    "en_name": "Teruma"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Yehuda",
+                    "term2": "Meir"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Meir",
+                    "term2": "Rabbis"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Yehoshua"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Meir"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Hanina"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Ahai"
+                },
+                {
+                    "term1": "Yehoshua",
+                    "term2": "Meir"
+                },
+                {
+                    "term1": "Yehoshua",
+                    "term2": "Hanina"
+                },
+                {
+                    "term1": "Yehoshua",
+                    "term2": "Ahai"
+                },
+                {
+                    "term1": "Meir",
+                    "term2": "Hanina"
+                },
+                {
+                    "term1": "Meir",
+                    "term2": "Ahai"
+                },
+                {
+                    "term1": "Hanina",
+                    "term2": "Ahai"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Nehemiah",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Workers",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Rabbis",
+                    "term2": "Master"
+                },
+                {
+                    "term1": "Yehoshua",
+                    "term2": "Master"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Ahai",
+                    "term2": "Aha"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2b:5-16"
+}

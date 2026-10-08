@@ -1,0 +1,85 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis debate Torah study and suffering.",
+        "heb_summary": "רבנים דנים לימוד תורה וסבל.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Shimon Ben Lakish"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Holy One"
+                },
+                {
+                    "en_name": "Zeira"
+                },
+                {
+                    "en_name": "Hanina Bar Pappa"
+                },
+                {
+                    "en_name": "Yoshiyahu Pinto"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Sparks"
+                },
+                {
+                    "en_name": "Good"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Shimon Ben Lakish"
+                },
+                {
+                    "term1": "Holy One",
+                    "term2": "Israel"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Holy One",
+                    "term2": "Egypt"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Good",
+                    "term2": "Torah"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:6-8"
+}

@@ -1,0 +1,72 @@
+﻿{
+    "res": {
+        "en_summary": "Labor, fear of God, teacher's presence.",
+        "heb_summary": "עמל, יראת שמיים, נוכחות רב, תורה.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hiyya Bar Ami"
+                },
+                {
+                    "en_name": "Ulla"
+                },
+                {
+                    "en_name": "Shimi Ben Gera"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Huna Bar Yehuda"
+                },
+                {
+                    "en_name": "Menahem"
+                },
+                {
+                    "en_name": "Ami"
+                },
+                {
+                    "en_name": "Abbahu"
+                },
+                {
+                    "en_name": "Pappa"
+                },
+                {
+                    "en_name": "Sheshet"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah Scroll"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Hiyya Bar Ami",
+                    "term2": "Ulla"
+                },
+                {
+                    "term1": "Huna Bar Yehuda",
+                    "term2": "Menahem"
+                },
+                {
+                    "term1": "Menahem",
+                    "term2": "Ami"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8a:21-29"
+}

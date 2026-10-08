@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis discuss soul and God's attributes.",
+        "heb_summary": "רבנים דנים בנשמה ובתכונות האל.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Shimi Bar Ukva"
+                },
+                {
+                    "en_name": "Mar Ukva"
+                },
+                {
+                    "en_name": "Shimon Ben Pazi"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Hannah"
+                },
+                {
+                    "en_name": "Samuel"
+                },
+                {
+                    "en_name": "Yehuda Ben Menasya"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Soul"
+                },
+                {
+                    "en_name": "Rock"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "Misc",
+                    "en_unit": "instance",
+                    "en_context": "david praises god"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Shimi Bar Ukva",
+                    "term2": "Shimon Ben Pazi"
+                },
+                {
+                    "term1": "Mar Ukva",
+                    "term2": "Shimon Ben Pazi"
+                },
+                {
+                    "term1": "Shimon Ben Pazi",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Samuel",
+                    "term2": "Hannah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Shimon Ben Pazi",
+                    "term2": "Rav Shimi Bar Ukva"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Soul",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10a:21-25"
+}

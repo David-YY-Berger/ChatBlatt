@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=10371 approx cost=$0.001519 (Prompt=7075, Completion=3296)
+SOURCE:
+Berakhot (Zeraim) 7a:23-25
+
+HEBREW:
+ואמר רבי יוחנן משום רבי יוסי: שלשה דברים בקש משה מלפני הקדוש ברוך הוא, ונתן לו. בקש שתשרה שכינה על ישראל, ונתן לו, שנאמר: ״הלוא בלכתך עמנו״.בקש שלא תשרה שכינה על עובדי כוכבים, ונתן לו, שנאמר: ״ונפלינו אני ועמך״.בקש להודיעו דרכיו של הקדוש ברוך הוא, ונתן לו, שנאמר: ״הודיעני נא את דרכיך״, אמר לפניו: רבונו של עולם! מפני מה יש צדיק וטוב לו, ויש צדיק ורע לו, יש רשע וטוב לו, ויש רשע ורע לו? אמר לו: משה, צדיק וטוב לו — צדיק בן צדיק. צדיק ורע לו — צדיק בן רשע. רשע וטוב לו — רשע בן צדיק. רשע ורע לו — רשע בן רשע.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Yosei regarding Moses request that the Divine Presence rest upon Israel as it once had: Moses requested three things from the Holy One, Blessed be He, at that time, all of which were granted him. He requested that the Divine Presence rest upon Israel and not leave, and He granted it to him, as it is stated: For how can it be known that I have found grace in Your sight, I and Your people? Is it not in that You go with us, so that we are distinguished, I and Your people, from all the people that are on the face of the earth? (Exodus 33:16). The request: Is it not in that You go with us, refers to the resting of the Divine Presence upon Israel.Moses requested that the Divine Presence not rest upon the nations of the world, and He granted it to him, as it is stated: So that we are distinguished, I and Your people, from all the people on the face of the earth (Exodus 33:16).Lastly, Moses requested that the ways in which God conducts the world be revealed to him, and He granted it to him, as it is stated: Show me Your ways and I will know You (Exodus 33:13). Moses said before God: Master of the Universe. Why is it that the righteous prosper, the righteous suffer, the wicked prosper, the wicked suffer? God said to him: Moses, the righteous person who prospers is a righteous person, the son of a righteous person, who is rewarded for the actions of his ancestors. The righteous person who suffers is a righteous person, the son of a wicked person, who is punished for the transgressions of his ancestors. The wicked person who prospers is a wicked person, the son of a righteous person, who is rewarded for the actions of his ancestors. The wicked person who suffers is a wicked person, the son of a wicked person, who is punished for the transgressions of his ancestors.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Moses' three requests granted by God.",
+    "heb_summary": "משה מבקש שלוש בקשות מאת ה'.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Yosei"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Righteous Person"
+        },
+        {
+          "en_name": "Wicked Person"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Divine Presence"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "thing",
+          "en_context": "moses requests granted"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Yosei"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Righteous Person",
+          "term2": "Wicked Person"
+        },
+        {
+          "term1": "Wicked Person",
+          "term2": "Righteous Person"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Moses",
+          "term2": "God"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Moses",
+          "term2": "Divine Presence"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Israel"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Righteous Person",
+          "term2": "Wicked Person"
+        }
+      ]
+    }
+  }
+}

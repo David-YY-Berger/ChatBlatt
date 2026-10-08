@@ -1,0 +1,42 @@
+﻿{
+    "res": {
+        "en_summary": "Incite good inclination, study Torah, recite Shema.",
+        "heb_summary": "להכניע יצר הרע, ללמוד תורה, לקרוא שמע.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Levi Bar Hama"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Lakish"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Good Inclination"
+                },
+                {
+                    "en_name": "Evil Inclination"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Shema"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Levi Bar Hama",
+                    "term2": "Rabbi Shimon Ben Lakish"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:2"
+}

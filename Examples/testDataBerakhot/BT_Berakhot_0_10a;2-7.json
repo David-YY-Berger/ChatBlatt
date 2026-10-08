@@ -1,0 +1,94 @@
+﻿{
+    "res": {
+        "en_summary": "Berurya teaches Rabbi Meir and a heretic.",
+        "heb_summary": "ברוריה מלמדת את רבי מאיר וכופר.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yehuda"
+                },
+                {
+                    "en_name": "Shimon Ben Pazi"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "Berurya"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Heretic"
+                },
+                {
+                    "en_name": "Congregation Of Israel"
+                },
+                {
+                    "en_name": "Isaiah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gehenna"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yehuda",
+                    "term2": "Shimon Ben Pazi"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Yehuda",
+                    "term2": "Shimon Ben Pazi"
+                }
+            ],
+            "spouseOf": [
+                {
+                    "term1": "Rabbi Meir",
+                    "term2": "Berurya"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Meir",
+                    "term2": "Berurya"
+                },
+                {
+                    "term1": "Heretic",
+                    "term2": "Berurya"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Congregation Of Israel",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "Congregation Of Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10a:2-7"
+}

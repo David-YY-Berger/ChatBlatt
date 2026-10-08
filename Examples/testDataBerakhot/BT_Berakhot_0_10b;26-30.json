@@ -1,0 +1,82 @@
+﻿{
+    "res": {
+        "en_summary": "Prayer posture, humility, eating before prayer.",
+        "heb_summary": "תפילה, ענווה, אכילה לפני תפילה.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "Hanina"
+                },
+                {
+                    "en_name": "Eliezer Ben Yaakov"
+                },
+                {
+                    "en_name": "Yitzhak"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Angels"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Maharsha"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Kingdom Of Heaven"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "foot",
+                    "en_context": "angel feet alignment"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Eliezer Ben Yaakov"
+                },
+                {
+                    "term1": "Yitzhak",
+                    "term2": "Yohanan"
+                },
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yosei"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Hanina"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "God",
+                    "term2": "Holy One, Blessed Be He"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:26-30"
+}

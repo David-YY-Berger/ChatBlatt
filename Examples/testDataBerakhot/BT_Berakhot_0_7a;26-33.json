@@ -1,0 +1,132 @@
+﻿{
+    "res": {
+        "en_summary": "Gemara discusses righteous, wicked, God's ways, Moses' requests.",
+        "heb_summary": "הגמרא דנה בצדיקים, רשעים, דרכי ה', בקשות משה.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Master"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Maharsha"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Korha"
+                },
+                {
+                    "en_name": "Rabbi Shmuel Bar Nahmani"
+                },
+                {
+                    "en_name": "Rabbi Yonatan"
+                },
+                {
+                    "en_name": "Rav Hana Bar Bizna"
+                },
+                {
+                    "en_name": "Rabbi Shimon Hasida"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Divine Presence"
+                },
+                {
+                    "en_name": "Burning Bush"
+                },
+                {
+                    "en_name": "Phylactery"
+                },
+                {
+                    "en_name": "Knot"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "generation",
+                    "en_context": "punishment for ancestors"
+                },
+                {
+                    "en_name": "4",
+                    "number_category": "Time",
+                    "en_unit": "generation",
+                    "en_context": "punishment for ancestors"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "request",
+                    "en_context": "moses requests granted"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "request",
+                    "en_context": "moses requests granted"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Shmuel Bar Nahmani",
+                    "term2": "Rabbi Yonatan"
+                },
+                {
+                    "term1": "Rav Hana Bar Bizna",
+                    "term2": "Rabbi Shimon Hasida"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Moses"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Meir"
+                },
+                {
+                    "term1": "Rabbi Yehoshua Ben Korha",
+                    "term2": "Rabbi Shmuel Bar Nahmani"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Moses",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:26-33"
+}

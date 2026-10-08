@@ -1,0 +1,123 @@
+﻿COST: Tokens: Total=10352 approx cost=$0.001498 (Prompt=7145, Completion=3207)
+SOURCE:
+Berakhot (Zeraim) 12a:23-12b:1
+
+HEBREW:
+אמר רבה בר חיננא סבא משמיה דרב: כל שלא אמר ״אמת ויציב״ שחרית, ו״אמת ואמונה״ ערבית — לא יצא ידי חובתו, שנאמר: ״להגיד בבקר חסדך ואמונתך בלילות״.ואמר רבה בר חיננא [סבא] משמיה דרב: המתפלל, כשהוא כורע כורע בברוך, וכשהוא זוקף — זוקף בשםאמר שמואל: מאי טעמא דרב — דכתיב: ״ה׳ זוקף כפופים״.מתיבי: ״מפני שמי נחת הוא״.מי כתיב ״בשמי״? ״מפני שמי״ כתיב.אמר ליה שמואל לחייא בר רב: בר אוריאן, תא ואימא לך מלתא מעלייתא דאמר אבוך. הכי אמר אבוך: כשהוא כורע — כורע ב״ברוך״, כשהוא זוקף — זוקף בשם.רב ששת, כי כרע — כרע כחיזרא. כי קא זקיף — זקיף כחיויא.
+
+ENGLISH:
+Rabba bar Hinnana Sava said in the name of Rav: One who did not recite: True and Firm [ emet veyatziv ] at the beginning of the blessing of redemption that follows Shema in the morning prayer, and: True and Trustworthy [ emet veemuna ] in the evening prayer, he did not fulfill his obligation. An allusion to the difference in formulation between morning and evening is, as it is stated: To declare Your kindness in the morning and Your faith in the nights (Psalms 92:3). In the morning, one must mention Gods loving-kindness, while in the evening one is required to emphasize the aspect of faith. And Rabba bar Hinnana Sava said in the name of Rav: One who is praying, when he bows in the appropriate places, he bows when he says: Blessed, and when he subsequently stands upright, he stands upright when he says Gods name. Shmuel, who was Ravs colleague and significantly outlived him, said: What is Ravs reason for saying that one should stand upright at the mention of Gods name? As it is written: The Lord, who raises the bowed (Psalms 146:8); one stands upright at the mention of Gods name to recall that it is God who raises the bowed.The Gemara raises an objection based on what we learned in praise of a priest: And he was afraid before My name (Malachi 2:5), indicating that one must be humbled and not upright before Gods name.The Gemara responds: Is it written: At My name? Before My name, is written, meaning that one is humbled and bows prior to the mention of Gods name, when he says: Blessed.The Gemara relates: Shmuel said to Hiyya bar Rav: Son of Torah, come and I will tell you a great saying that your father said. Your father said the following: When one bows, he bows when he says: Blessed, and when he stands upright, he stands upright when he says Gods name. With regard to bowing, the Gemara relates: When Rav Sheshet bowed he bowed all at once, like a cane, without delay. When he stood upright he stood upright like a snake, lifting himself slowly, demonstrating that the awe of God was upon him in the manner that he bowed and stood upright ( HaBoneh ).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss prayer, bowing, and redemption blessings.",
+    "heb_summary": "רבנים דנים בתפילה, קידה, וברכות גאולה.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabba Bar Hinnana Sava"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Hiyya Bar Rav"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Rav Sheshet"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "True And Firm"
+        },
+        {
+          "en_name": "True And Trustworthy"
+        },
+        {
+          "en_name": "God's Name"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "92",
+          "number_category": "Misc",
+          "en_unit": "psalm",
+          "en_context": "biblical citation"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "biblical citation"
+        },
+        {
+          "en_name": "146",
+          "number_category": "Misc",
+          "en_unit": "psalm",
+          "en_context": "biblical citation"
+        },
+        {
+          "en_name": "8",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "biblical citation"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "biblical citation"
+        },
+        {
+          "en_name": "5",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "biblical citation"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Snake"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabba Bar Hinnana Sava",
+          "term2": "Rav"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Hiyya Bar Rav",
+          "term2": "Rav"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Shmuel",
+          "term2": "Hiyya Bar Rav"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Rav Sheshet",
+          "term2": "Snake"
+        }
+      ]
+    }
+  }
+}

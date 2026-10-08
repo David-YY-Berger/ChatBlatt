@@ -1,0 +1,165 @@
+﻿{
+    "res": {
+        "en_summary": "Hezekiah's six innovations; Sages agreed/disagreed.",
+        "heb_summary": "חדשנות חזקיהו, הסכמת וחוסר הסכמת חכמים.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Ahaz"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Shmuel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Gihon"
+                },
+                {
+                    "en_name": "Pool Of Siloam"
+                },
+                {
+                    "en_name": "Sanctuary"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Assyria"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Book Of Remedies"
+                },
+                {
+                    "en_name": "Copper Snake"
+                },
+                {
+                    "en_name": "Doors"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "6",
+                    "number_category": "Misc",
+                    "en_unit": "action",
+                    "en_context": "hezekiah's innovations"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "action",
+                    "en_context": "sages agreed"
+                },
+                {
+                    "en_name": "21",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "numbers verse"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "numbers verse"
+                },
+                {
+                    "en_name": "18",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "kings verse"
+                },
+                {
+                    "en_name": "4",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "kings verse"
+                },
+                {
+                    "en_name": "28",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "chronicles verse"
+                },
+                {
+                    "en_name": "27",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "chronicles verse"
+                },
+                {
+                    "en_name": "32",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "chronicles verse"
+                },
+                {
+                    "en_name": "30",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "chronicles verse"
+                },
+                {
+                    "en_name": "16",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "kings verse"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "chronicles verse"
+                },
+                {
+                    "en_name": "12",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "exodus verse"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Ahaz"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Sages",
+                    "term2": "Hezekiah"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Gihon"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Pool Of Siloam"
+                },
+                {
+                    "term1": "Hezekiah",
+                    "term2": "Sanctuary"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:6-10"
+}

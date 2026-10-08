@@ -1,0 +1,67 @@
+﻿COST: Tokens: Total=10290 approx cost=$0.001248 (Prompt=8175, Completion=2115)
+SOURCE:
+Berakhot (Zeraim) 12a:10-22
+
+HEBREW:
+מקום שאמרו להאריך. פשיטא היכא דקא נקיט כסא דחמרא בידיה וקסבר דשכרא הוא, ופתח ומברך אדעתא דשכרא, וסיים בדחמרא — יצא. דאי נמי אם אמר ״שהכל נהיה בדברו״ — יצא. דהא תנן: על כולם אם אמר ״שהכל נהיה בדברו״ — יצא.אלא היכא דקא נקיט כסא דשכרא בידיה וקסבר דחמרא הוא, פתח ובריך אדעתא דחמרא, וסיים בדשכרא, מאי?בתר עיקר ברכה אזלינן, או בתר חתימה אזלינן?תא שמע: שחרית, פתח ב״יוצר אור״ וסיים ב״מעריב ערבים״ — לא יצא. פתח ב״מעריב ערבים״ וסיים ב״יוצר אור״ — יצא.ערבית, פתח ב״מעריב ערבים״ וסיים ב״יוצר אור״ — לא יצא. פתח ב״יוצר אור״ וסיים ב״מעריב ערבים״ — יצא.כללו של דבר: הכל הולך אחר החתום.שאני התם דקאמר ״ברוך יוצר המאורות״.הניחא לרב דאמר כל ברכה שאין בה הזכרת השם אינה ברכה — שפיר. אלא לרבי יוחנן דאמר כל ברכה שאין בה מלכות אינה ברכה, מאי איכא למימר?אלא כיון דאמר רבה בר עולא: כדי להזכיר מדת יום בלילה ומדת לילה ביום, כי קאמר ברכה ומלכות מעיקרא — אתרוייהו קאמר.תא שמע מסיפא: ״כללו של דבר: הכל הולך אחר החתום״. כללו של דבר לאתויי מאי? לאו לאתויי הא דאמרן?לא, לאתויי נהמא ותמרי. היכי דמי? אילימא דאכל נהמא, וקסבר דתמרי אכל, ופתח אדעתא דתמרי וסיים בדנהמא — היינו בעיין!לא צריכא: כגון דאכל תמרי, וקסבר נהמא אכל, ופתח בדנהמא, וסיים בדתמרי [— יצא]. דאפילו סיים בדנהמא — נמי יצא.מאי טעמא — דתמרי נמי מיזן זייני.
+
+ENGLISH:
+We learned in the mishna: Where the Sages said to recite a long blessing, one may not shorten it, and vice-versa. The Gemara proceeds to address a particular problem arising from conclusions drawn from this mishna. Before addressing the primary problem, however, a simpler, secondary issue is raised: Obviously, in a case where one took a cup of wine in his hand and thought it was beer, and began reciting the blessing thinking it was beer, i.e., he intended to recite the appropriate blessing on beer: By Whose word all things came to be, and upon realizing that it was wine, he concluded the blessing with that which is recited over wine: Who creates the fruit of the vine, he fulfilled his obligation. In that case, even had he recited: By Whose word all things came to be, as he originally intended, he would have fulfilled his obligation, as we learned in a mishna: If one recited the general blessing: By Whose word all things came to be, over all food items, he fulfilled his obligation after the fact, even if ab initio another blessing was instituted to recite before eating that food. Therefore, if he reconsidered and concluded the blessing with the ending of the blessing over wine, he fulfilled his obligation. However in a case where one took a cup of beer in his hand and thought it was wine, and began reciting the blessing thinking it was wine, meaning he intended to recite: Who creates the fruit of the vine, and upon realizing that it was beer he concluded the blessing with that which is recited over beer: By Whose word all things came to be, what is the halakha ?Ostensibly, this blessing is comprised of two sections. The first section, during which he intended to recite: Who creates the fruit of the vine, cannot fulfill his obligation as it is an inappropriate blessing to recite over beer. However, in the second section he recited: By Whose word all things came to be, the appropriate blessing. The dilemma, then, is: Do we follow the essence of the blessing, the first section, or do we follow the conclusion of the blessing? Come and hear a proof from what was taught in a baraita with regard to a similar case: If, in the morning prayer , one began the blessings prior to the recitation of Shema appropriately with: Who creates light, and concluded with the formula of the evening prayer: Who brings on evenings, he did not fulfill his obligation. However, if one did the opposite, and commenced with: Who brings on evenings, and concluded with: Who creates light, he fulfilled his obligation.Similarly, if, in the evening prayer , one commenced the recitation of Shema with: Who brings on evenings and concluded with: Who creates light, he did not fulfill his obligation. If one commenced with: Who creates light and concluded with: Who brings on evenings, he fulfilled his obligation.The baraita summarizes that the general principle is: Everything follows the conclusion of the blessing. Based on this principle, the question with regard to a blessing recited over food and drink posed above can be resolved.This proof is rejected: There, in the case of the blessing recited over the radiant lights, it is different, as one recites: Blessed ...Who forms the radiant lights, and similarly, in the evening one recites: Blessed...Who brings on evenings. Since these are long blessings that conclude with a second blessing summarizing their content, one could assert that everything follows the conclusion. However, in the case of short blessings, such as: By Whose word all things came to be, or: Who creates the fruit of the vine, ostensibly, if there is a problem with the first part of the blessing, the entire blessing is nullified.The distinction between the blessing recited over the radiant lights and the blessings recited over food and drink stems from the assumption that the conclusion: Blessed...Who fashions the radiant lights, is a complete, independent blessing. However, this is not necessarily so. This works out well according to Rav, who said: Any blessing that does not include mention of Gods name is not considered a blessing, and since: Who creates light, includes Gods name, it constitutes a complete, independent blessing. However, according to Rabbi Yohanan, who said: Any blessing that does not include mention of Gods sovereignty, i.e., our God, King of the universe, is not considered a blessing, what can be said to distinguish between the conclusion of the blessings over food and drink and the blessing over the radiant lights? Since the conclusion: Who creates light, does not mention Gods sovereignty, it does not constitute a complete, independent blessing.The Gemara responds: Rather, Rabbi Yohanan also holds that the blessing over the radiant lights is a complete blessing. Since Rabba bar Ulla said: Who creates darkness, is mentioned during the day and: Rolling away the light before the darkness, is mentioned at night in order to mention the attribute of day at night and the attribute of night in the day, the beginning of the blessing in which Gods sovereignty is mentioned day and night is appropriate to both day and night, and when one recites the blessing with Gods name and mentions Gods sovereignty at the beginning of the blessing, it refers to both day and night. Therefore, no proof can be cited from the blessing over the radiant lights to the blessings recited over food and drink.The Gemara attempts to cite an additional proof: Come and hear another solution based on what we learned in the latter clause of the baraita cited above: The general principle is: Everything follows the conclusion of the blessing. What does the phrase: The general principle is, come to include beyond the detailed example cited in the baraita ? Does it not come to include the case that we stated, that both in the case of a long blessing and the case of a short blessing, the conclusion of the blessing is the determining factor?The Gemara rejects this: No, the principle is cited to include a case of bread and dates. The Gemara clarifies: What are the circumstances of the dilemma with regard to the blessings on these food items? If you say that it is a case where one ate bread and thought that he ate dates, and commenced reciting the blessing thinking it was dates; then, upon realizing that it was bread, he concluded the blessing with that which is recited over bread, isnt that our dilemma, as this case is identical to the one involving wine and beer?The Gemara answers: No; this general principle is only necessary to teach a special case , where one ate dates and thought that he ate bread, and commenced reciting the blessing thinking they were bread. Upon realizing that they were dates, he concluded the blessing with that which is recited over dates. In that case he fulfilled his obligation, as even had he concluded the blessing with that which is recited over bread, he would have fulfilled his obligation. What is the reason that had he concluded with the blessing recited over bread he would have fulfilled his obligation to recite a blessing over dates? This is because dates also provide a person sustenance. While ab initio one should not recite the blessing for bread over dates, after the fact, if one did so, he fulfilled his obligation. It is with regard to this particular situation that the baraita established the principle: Everything follows the conclusion of the blessing. Ultimately, the dilemma regarding a blessing with an inappropriate opening and an appropriate conclusion remains unresolved. The Gemara proceeds to discuss the formula for the blessings recited along with Shema .
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Blessing validity dilemma: conclusion versus essence.",
+    "heb_summary": "דילמת ברכות: סיום מול מהות הקדמה.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabba Bar Ulla"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Gods Name"
+        },
+        {
+          "en_name": "Gods Sovereignty"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Wine"
+        },
+        {
+          "en_name": "Beer"
+        },
+        {
+          "en_name": "Bread"
+        },
+        {
+          "en_name": "Date"
+        }
+      ]
+    },
+    "Rel": {
+      "disagreedWith": [
+        {
+          "term1": "Rav",
+          "term2": "Rabbi Yohanan"
+        }
+      ]
+    }
+  }
+}

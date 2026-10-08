@@ -1,0 +1,99 @@
+﻿{
+    "res": {
+        "en_summary": "Moses' three requests granted by God.",
+        "heb_summary": "משה מבקש שלוש בקשות מאת ה'.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Righteous Person"
+                },
+                {
+                    "en_name": "Wicked Person"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Earth"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Divine Presence"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "thing",
+                    "en_context": "moses requests granted"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yosei"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Righteous Person",
+                    "term2": "Wicked Person"
+                },
+                {
+                    "term1": "Wicked Person",
+                    "term2": "Righteous Person"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "God"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Moses",
+                    "term2": "Divine Presence"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Israel"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Righteous Person",
+                    "term2": "Wicked Person"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:23-25"
+}

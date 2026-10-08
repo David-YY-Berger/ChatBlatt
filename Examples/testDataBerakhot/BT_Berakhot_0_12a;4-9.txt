@@ -1,0 +1,143 @@
+﻿COST: Tokens: Total=9163 approx cost=$0.001161 (Prompt=7058, Completion=2105)
+SOURCE:
+Berakhot (Zeraim) 12a:4-9
+
+HEBREW:
+וקורין עשרת הדברות ״שמע״, ״והיה אם שמוע״, ״ויאמר״, ״אמת ויציב״, ועבודה, וברכת כהנים.אמר רב יהודה אמר שמואל: אף בגבולין בקשו לקרות כן, אלא שכבר בטלום מפני תרעומת המינין.תניא נמי הכי, רבי נתן אומר: בגבולין בקשו לקרות כן, אלא שכבר בטלום מפני תרעומת המינין.רבה בר בר חנה סבר למקבעינהו בסורא, אמר ליה רב חסדא: כבר בטלום מפני תרעומת המינין.אמימר סבר למקבעינהו בנהרדעא, אמר ליה רב אשי: כבר בטלום מפני תרעומת המינין.ובשבת מוסיפין ברכה אחת למשמר היוצא. מאי ברכה אחת? אמר רבי חלבו: משמר היוצא אומר למשמר הנכנס: ״מי ששכן את שמו בבית הזה, הוא ישכין ביניכם אהבה ואחוה ושלום וריעות״.
+
+ENGLISH:
+The Gemara related above that the priests in the Temple read the Ten Commandments, along with the sections of Shema , VeHaya im Shamoa , VaYomer , True and Firm, Avoda, and the priestly benediction. Rav Yehuda said that Shmuel said: Even in the outlying areas, outside the Temple, they sought to recite the Ten Commandments in this manner every day, as they are the basis of the Torah (Rambam), but they had already abolished recitation of the Ten Commandments due to the grievance of the heretics, who argued that the entire Torah, with the exception of the Ten Commandments, did not emanate from God (Jerusalem Talmud). If the Ten Commandments were recited daily, that would lend credence to their claim, so their recitation was expunged from the daily prayers. That was also taught in a baraita that Rabbi Natan says: In the outlying areas, they sought to recite the Ten Commandments in this manner, but they had already abolished their recitation due to the grievance of the heretics. The Gemara relates that several Sages sought to reinstitute recitation of the Ten Commandments, as Rabba bar bar Hana thought to institute this in the city of Sura, but Rav Hisda said to him: They already abolished them due to the grievance of the heretics. So too, Ameimar thought to institute this in the city of Nehardea. Rav Ashi, the most prominent of the Sages in that generation, said to him: They already abolished them due to the grievance of the heretics. We learned in a mishna in tractate Tamid that on Shabbat a single blessing is added to bless the outgoing priestly watch. The Gemara asks: What is that single blessing? Rabbi Helbo said: As they finished their service, the outgoing priestly watch would say to the incoming priestly watch: May He who caused His Name to dwell in this house cause love and brotherhood, peace and camaraderie to dwell among you.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages debated reciting Ten Commandments daily.",
+    "heb_summary": "חכמים דנו באמירת עשרת הדיברות יומית.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Priests"
+        },
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Rambam"
+        },
+        {
+          "en_name": "Heretics"
+        },
+        {
+          "en_name": "Rabbi Natan"
+        },
+        {
+          "en_name": "Rabba Bar Bar Hana"
+        },
+        {
+          "en_name": "Rav Hisda"
+        },
+        {
+          "en_name": "Ameimar"
+        },
+        {
+          "en_name": "Rav Ashi"
+        },
+        {
+          "en_name": "Outgoing Priestly Watch"
+        },
+        {
+          "en_name": "Incoming Priestly Watch"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Sura"
+        },
+        {
+          "en_name": "Nehardea"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Ten Commandments"
+        },
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Vehaya Im Shamoa"
+        },
+        {
+          "en_name": "Vayomer"
+        },
+        {
+          "en_name": "True And Firm"
+        },
+        {
+          "en_name": "Avoda"
+        },
+        {
+          "en_name": "Priestly Benediction"
+        },
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Name"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rav Hisda",
+          "term2": "Rabba Bar Bar Hana"
+        },
+        {
+          "term1": "Rav Ashi",
+          "term2": "Ameimar"
+        },
+        {
+          "term1": "Outgoing Priestly Watch",
+          "term2": "Incoming Priestly Watch"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Heretics",
+          "term2": "Priests"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Priests",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Rabba Bar Bar Hana",
+          "term2": "Sura"
+        },
+        {
+          "term1": "Ameimar",
+          "term2": "Nehardea"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,87 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis disagree on afflictions, Torah, and prayer.",
+        "heb_summary": "רבנים חלוקים על ייסורים, תורה ותפילה.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yaakov Bar Idi"
+                },
+                {
+                    "en_name": "Aha Bar Hanina"
+                },
+                {
+                    "en_name": "Abba"
+                },
+                {
+                    "en_name": "Hiyya Bar Abba"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Ben Lakish"
+                },
+                {
+                    "en_name": "Lord"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Prayer"
+                },
+                {
+                    "en_name": "Covenant"
+                },
+                {
+                    "en_name": "Meal-Offering"
+                },
+                {
+                    "en_name": "Sacrifice"
+                },
+                {
+                    "en_name": "Tooth"
+                },
+                {
+                    "en_name": "Eye"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Salt"
+                },
+                {
+                    "en_name": "Meat"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Abba",
+                    "term2": "Hiyya Bar Abba"
+                },
+                {
+                    "term1": "Hiyya Bar Abba",
+                    "term2": "Yohanan"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yaakov Bar Idi",
+                    "term2": "Aha Bar Hanina"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:14-19"
+}

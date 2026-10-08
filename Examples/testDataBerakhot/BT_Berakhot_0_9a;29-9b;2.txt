@@ -1,0 +1,74 @@
+﻿COST: Tokens: Total=9325 approx cost=$0.001254 (Prompt=6860, Completion=2465)
+SOURCE:
+Berakhot (Zeraim) 9a:29-9b:2
+
+HEBREW:
+אותו צדיק, ״ועבדום וענו אתם״ — קיים בהם, ״ואחרי כן יצאו ברכש גדול״ — לא קיים בהם.אמרו לו: ולואי שנצא בעצמנו! משל: לאדם שהיה חבוש בבית האסורים והיו אומרים לו בני אדם: מוציאין אותך למחר מבית האסורין, ונותנין לך ממון הרבה, ואומר להם: בבקשה מכם, הוציאוני היום, ואיני מבקש כלום.
+
+ENGLISH:
+that righteous person, Abraham, will not say: God fulfilled His pronouncement: And they will be enslaved and afflicted, but God did not fulfill His pronouncement: And afterward, they will leave with great possessions. As God said to Abraham: Surely you shall know that your descendants will be foreigners in a land that is not theirs, and they will be enslaved and afflicted for four hundred years. And also that nation who enslaves them will I judge. And afterward, they will leave with great possessions (Genesis 15:13-14).The school of Rabbi Yannai continues: Israel said to Moses: If only we could get out ourselves. The Gemara offers a parable to one who was incarcerated in prison, and people would say to him: We promise, we will release you tomorrow and give you much money. He says to them: I beseech you, release me today and I ask for nothing. So too, Israel preferred leaving immediately empty handed rather than leaving later with great riches.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "God's promise to Abraham fulfilled.",
+    "heb_summary": "הבטחת ה' לאברהם התקיימה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Rabbi Yannai"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Moses"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "400",
+          "number_category": "Time",
+          "en_unit": "year",
+          "en_context": "enslavement in foreign land"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Moses"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Abraham",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

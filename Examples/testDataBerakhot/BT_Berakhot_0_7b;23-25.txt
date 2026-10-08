@@ -1,0 +1,89 @@
+﻿COST: Tokens: Total=8730 approx cost=$0.001076 (Prompt=6856, Completion=1874)
+SOURCE:
+Berakhot (Zeraim) 7b:23-25
+
+HEBREW:
+ואמר רבי יוחנן משום רבי שמעון בן יוחי: כל הקובע מקום לתפלתו אויביו נופלים תחתיו. שנאמר: ״ושמתי מקום לעמי לישראל ונטעתיו ושכן תחתיו ולא ירגז עוד ולא יסיפו בני עולה לענותו כאשר בראשונה״.רב הונא רמי כתיב ״לענותו״, וכתיב: ״לכלותו״.בתחילה — לענותו, ולבסוף — לכלותו.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: Setting a fixed place for prayer is so important that one who sets a fixed place for his prayer, his enemies fall beneath him, as it is said: And I will appoint a place for My nation, Israel, and I will plant them, that they may dwell in their own place. Through setting aside a place for prayer, they will merit to be disturbed no more; neither shall the children of wickedness afflict them anymore, as in the beginning (II Samuel 7:10).This verse, cited by the Gemara, leads to an additional point. Rav Huna raised a contradiction: In the book of Samuel, in this verse it is written : To afflict them, while in the parallel verse in I Chronicles (17:9) it is written : To destroy them. The Gemara resolves this contradiction: The enemies of Israel intend first to afflict them, and, ultimately, to destroy them entirely.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss fixed prayer place, Israel's enemies.",
+    "heb_summary": "רבנים דנים בתפילה קבועה, אויבי ישראל.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Huna"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Children Of Wickedness"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "7",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "ii samuel reference"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "ii samuel reference"
+        },
+        {
+          "en_name": "17",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "i chronicles reference"
+        },
+        {
+          "en_name": "9",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "i chronicles reference"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Shimon Ben Yohai"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Children Of Wickedness",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

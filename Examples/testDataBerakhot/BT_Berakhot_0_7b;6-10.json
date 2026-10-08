@@ -1,0 +1,144 @@
+﻿{
+    "res": {
+        "en_summary": "Names, prophecy, birthright, jealousy, and lineage.",
+        "heb_summary": "שמות, נבואה, בכורה, קנאה, ושושלת.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Rabbi Elazar"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Joseph"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Ruth"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "TribeOfIsrael": [
+                {
+                    "en_name": "Judah"
+                },
+                {
+                    "en_name": "Reuben"
+                },
+                {
+                    "en_name": "Joseph"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Judah",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Jacob"
+                },
+                {
+                    "term1": "Esau",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Isaac"
+                },
+                {
+                    "term1": "Joseph",
+                    "term2": "Jacob"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Judah",
+                    "term2": "Leah"
+                },
+                {
+                    "term1": "Reuben",
+                    "term2": "Leah"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "David",
+                    "term2": "Ruth"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Esau",
+                    "term2": "Jacob"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Leah",
+                    "term2": "Reuben"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Esau"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Reuben",
+                    "term2": "Esau"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:6-10"
+}

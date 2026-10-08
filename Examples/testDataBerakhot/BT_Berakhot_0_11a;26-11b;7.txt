@@ -1,0 +1,61 @@
+﻿COST: Tokens: Total=9468 approx cost=$0.001260 (Prompt=7022, Completion=2446)
+SOURCE:
+Berakhot (Zeraim) 11a:26-11b:7
+
+HEBREW:
+גמ׳ מאי מברך?אמר רבי יעקב אמר רבי אושעיא:״יוצר אור ובורא חשך״.לימא: ״יוצר אור ובורא נוגה״!כדכתיב קאמרינן.אלא מעתה ״עשה שלום ובורא רע״, מי קא אמרינן כדכתיב?! אלא כתיב ״רע״ וקרינן ״הכל״ לישנא מעליא, הכא נמי לימא ״נוגה״, לישנא מעליא!אלא אמר רבא: כדי להזכיר מדת יום בלילה ומדת לילה ביום.בשלמא מדת לילה ביום כדאמרינן: ״יוצר אור ובורא חשך״, אלא מדת יום בלילה, היכי משכחת לה?אמר אביי: ״גולל אור מפני חשך וחשך מפני אור״.
+
+ENGLISH:
+GEMARA: The Gemara begins by determining the formula of the two blessings preceding the morning Shema . The Gemara asks: What blessing does one recite? Rabbi Yaakov said in the name of Rabbi Oshaya: The blessing focuses on the verse: Who forms light and creates darkness, Who makes peace and creates evil, I am the Lord Who does all these things (Isaiah 45:7).With regard to this formula of the blessing, the Gemara asks: Let him say the following formula instead: Who forms light and creates brightness, so as not to mention darkness, which has negative connotations.The Gemara answers: We say the blessing as the verse is written in the Bible and do not alter the formula that appears in the verse.The Gemara strongly objects: But if so, what about the continuation of the verse: Who makes peace and creates evil? Do we say this blessing as it is written in the Bible? Rather, it is written evil and we euphemistically recite the blessing all things to avoid mention of evil. Here, too, let us euphemistically say brightness instead of darkness. Rather, Rava said: The reason we recite: Who creates darkness is in order to mention the attribute of day at night and the attribute of night during the day, and thereby unify day and night as different parts of a single entity.The Gemara continues and asks: Granted, the attribute of night is mentioned during the day, as we say: Who forms light and creates darkness, but where do you find the attribute of day mentioned at night? In the blessing over the radiant lights recited at night there is no mention of Who forms light. Abaye said: Nevertheless, the attribute of day is mentioned at night in the words: Rolling away light before the darkness and darkness before the light.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Gemara discusses Shema blessings, light, darkness, evil.",
+    "heb_summary": "הגמרא דנה בברכות שמע, אור, חושך, רע.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yaakov"
+        },
+        {
+          "en_name": "Oshaya"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Isaiah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Bible"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yaakov",
+          "term2": "Oshaya"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rava",
+          "term2": "Abaye"
+        }
+      ]
+    }
+  }
+}

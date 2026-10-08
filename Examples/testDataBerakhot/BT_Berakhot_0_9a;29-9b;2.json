@@ -1,0 +1,64 @@
+﻿{
+    "res": {
+        "en_summary": "God's promise to Abraham fulfilled.",
+        "heb_summary": "הבטחת ה' לאברהם התקיימה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Rabbi Yannai"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Moses"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "400",
+                    "number_category": "Time",
+                    "en_unit": "year",
+                    "en_context": "enslavement in foreign land"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Moses"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9a:29-9b:2"
+}

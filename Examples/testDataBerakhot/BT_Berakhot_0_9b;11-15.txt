@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=9635 approx cost=$0.001280 (Prompt=7157, Completion=2478)
+SOURCE:
+Berakhot (Zeraim) 9b:11-15
+
+HEBREW:
+גמ׳ מאי בין תכלת ללבן? אילימא בין גבבא דעמרא חיורא לגבבא דעמרא דתכלתא — הא בליליא נמי מידע ידעי. אלא, בין תכלת שבה ללבן שבה.תניא: רבי מאיר אומר: משיכיר בין זאב לכלב. רבי עקיבא אומר: בין חמור לערוד. ואחרים אומרים: משיראה את חברו רחוק ארבע אמות, ויכירנו.אמר רב הונא: הלכה כאחרים. אמר אביי: לתפילין כאחרים. לקריאת שמע כותיקין. דאמר רבי יוחנן ותיקין היו גומרין אותה עם הנץ החמה.תניא נמי הכי: ותיקין היו גומרין אותה עם הנץ החמה, כדי שיסמוך גאולה לתפלה, ונמצא מתפלל ביום.אמר רבי זירא: מאי קראה — ״ייראוך עם שמש ולפני ירח דור דורים״.
+
+ENGLISH:
+GEMARA: The mishna stated that the time for the recitation of the morning Shema begins when one can distinguish between sky-blue and white. The Gemara asks: To what is between sky-blue and white referring? If you say that it means distinguishing between a pile of white wool and a pile of sky-blue wool, wouldnt one know the difference at night, as well? Rather, it must be a reference to ritual fringes made with sky-blue strings (see Numbers 15:38) along with white strings, and one must be able to distinguish between the sky-blue strings in the ritual fringes and the white strings in the ritual fringes. With regard to the beginning of the time for the recitation of the morning Shema , a baraita cites additional opinions not cited in the mishna. It was taught in a baraita : Rabbi Meir says that the day begins when one can distinguish between two similar animals, e.g., a wolf and a dog. Rabbi Akiva provides a different sign, and says that the day begins when there is sufficient light to distinguish between a donkey and a wild donkey. And Aherim say: When one can see another person, who is merely an acquaintance (Jerusalem Talmud) from a distance of four cubits and recognize him. Rav Huna said: The halakha is in accordance with Aherim . Abaye said: Regarding the time from which one may don phylacteries, a mitzva incumbent only by day, the halakha is in accordance with Aherim . But with regard to the recitation of Shema , one should conduct himself in accordance with the custom of the vatikin , pious individuals who were scrupulous in their performance of mitzvot. As Rabbi Yohanan said: The vatikin would conclude the recitation of Shema with sunrise, and one should act accordingly. It was also taught in a baraita : The vatikin would conclude the recitation of Shema with sunrise in order to juxtapose the blessing of redemption, which immediately follows the recitation of Shema, with prayer, and pray during the day. Regarding this custom of the vatikin , Rabbi Zeira said: What verse is the source for this tradition? They shall fear You with the sun, and before the moon for all generations (Psalms 72:5). This verse indicates that one should express ones awe of Heaven, they shall fear You, immediately before sunrise, with the sun.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Shema recitation time, distinguishing colors and animals.",
+    "heb_summary": "זמן קריאת שמע, הבחנה בין צבעים וחיות.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Meir"
+        },
+        {
+          "en_name": "Rabbi Akiva"
+        },
+        {
+          "en_name": "Aherim"
+        },
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Vatikin"
+        },
+        {
+          "en_name": "Rabbi Zeira"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Ritual Fringes"
+        },
+        {
+          "en_name": "Phylactery"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "4",
+          "number_category": "Measurement",
+          "en_unit": "cubit",
+          "en_context": "recognize acquaintance distance"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Wolf"
+        },
+        {
+          "en_name": "Dog"
+        },
+        {
+          "en_name": "Donkey"
+        },
+        {
+          "en_name": "Wild Donkey"
+        }
+      ]
+    },
+    "Rel": {
+      "disagreedWith": [
+        {
+          "term1": "Rabbi Meir",
+          "term2": "Rabbi Akiva"
+        },
+        {
+          "term1": "Rabbi Meir",
+          "term2": "Aherim"
+        },
+        {
+          "term1": "Rabbi Akiva",
+          "term2": "Aherim"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Wolf",
+          "term2": "Dog"
+        },
+        {
+          "term1": "Donkey",
+          "term2": "Wild Donkey"
+        }
+      ]
+    }
+  }
+}

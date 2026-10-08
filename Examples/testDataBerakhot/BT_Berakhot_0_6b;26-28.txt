@@ -1,0 +1,95 @@
+﻿COST: Tokens: Total=10618 approx cost=$0.001613 (Prompt=6989, Completion=3629)
+SOURCE:
+Berakhot (Zeraim) 6b:26-28
+
+HEBREW:
+ואמר רבי חלבו, אמר רב הונא: לעולם יהא אדם זהיר בתפלת המנחה, שהרי אליהו לא נענה אלא בתפלת המנחה, שנאמר: ״ויהי בעלות המנחה ויגש אליהו הנביא ויאמר וגו׳ ענני ה׳ ענני״.״ענני״ — שתרד אש מן השמים, ו״ענני״ — שלא יאמרו מעשה כשפים הם.רבי יוחנן אמר: אף בתפלת ערבית, שנאמר: ״תכון תפלתי קטרת לפניך משאת כפי מנחת ערב״. רב נחמן בר יצחק אמר: אף תפלת שחרית, שנאמר: ״ה׳ בקר תשמע קולי, בקר אערך לך ואצפה״.
+
+ENGLISH:
+And Rabbi Helbo said that Rav Huna said: One must always be vigilant with regard to the afternoon prayer, as Elijahs prayer was only answered in the afternoon prayer, as it is stated: And it was at the time of the afternoon offering that Elijah the Prophet came near, and he said: Lord, God of Abraham, Isaac and Israel, let it be known on this day that You are God in Israel, and that I am Your servant, and that I have done all these things at Your word. Answer me, Lord, answer me, that this people will know that You, Lord, are God (I Kings 18:36-37). Because Elijah was answered in the afternoon prayer, it has particular significance.In passing, the Gemara explains why it was necessary for Elijah to repeat, answer me, Lord, answer me: The first answer me was the request that fire descend from the heavens, while the second answer me was the request that Israel should accept complete faith in God and not say that the fire descending from the heavens was an act of sorcery. Rabbi Yohanan said: One must be vigilant with regard to the evening prayer as well, as it is stated: Let my prayer come forth as incense before You, the lifting of my hands as the evening offering (Psalms 141:2). Rav Nahman bar Yitzhak said: One must be vigilant with regard to the morning prayer as well, as it is stated: Lord, in the morning You shall hear my voice; in the morning I will order my prayer unto You and will look forward (Psalms 5:4).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Prayer vigilance: afternoon, evening, morning. Elijah's answered prayer.",
+    "heb_summary": "תפילה: ערבית, שחרית, מנחה. תפילת אליהו נענתה.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Helbo"
+        },
+        {
+          "en_name": "Huna"
+        },
+        {
+          "en_name": "Elijah"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Fire"
+        },
+        {
+          "en_name": "Incense"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Helbo",
+          "term2": "Huna"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Isaac",
+          "term2": "Abraham"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Isaac"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Elijah",
+          "term2": "God"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Elijah",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

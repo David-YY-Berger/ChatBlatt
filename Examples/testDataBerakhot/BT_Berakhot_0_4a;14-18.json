@@ -1,0 +1,202 @@
+﻿{
+    "res": {
+        "en_summary": "David's piety, Jacob's fear, Israel's transgressions.",
+        "heb_summary": "חסידות דוד, פחד יעקב, עבירות ישראל.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Esau"
+                },
+                {
+                    "en_name": "Joshua"
+                },
+                {
+                    "en_name": "Ezra"
+                },
+                {
+                    "en_name": "Joshua Bin Nun"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Land Of The Living"
+                },
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Canaan"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Babylonia"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Goodness Of The Lord"
+                },
+                {
+                    "en_name": "Ladder"
+                },
+                {
+                    "en_name": "Song Of The Sea"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "27",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "13",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "34",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "avot reference"
+                },
+                {
+                    "en_name": "28",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "genesis reference"
+                },
+                {
+                    "en_name": "15",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "genesis reference"
+                },
+                {
+                    "en_name": "32",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "genesis reference"
+                },
+                {
+                    "en_name": "8",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "genesis reference"
+                },
+                {
+                    "en_name": "16",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "exodus reference"
+                },
+                {
+                    "en_name": "17",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "exodus reference"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "David",
+                    "term2": "Holy One, Blessed Be He"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Holy One, Blessed Be He"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "David",
+                    "term2": "Land Of The Living"
+                },
+                {
+                    "term1": "David",
+                    "term2": "World-To-Come"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Canaan"
+                },
+                {
+                    "term1": "Joshua",
+                    "term2": "Eretz Yisrael"
+                },
+                {
+                    "term1": "Ezra",
+                    "term2": "Eretz Yisrael"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Eretz Yisrael"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "David",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Joshua",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Ezra",
+                    "term2": "Israel"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Eretz Yisrael",
+                    "term2": "Israel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Joshua",
+                    "term2": "Joshua Bin Nun"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4a:14-18"
+}

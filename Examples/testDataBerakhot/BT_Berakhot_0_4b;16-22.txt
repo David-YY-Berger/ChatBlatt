@@ -1,0 +1,163 @@
+﻿COST: Tokens: Total=11132 approx cost=$0.001705 (Prompt=7265, Completion=3867)
+SOURCE:
+Berakhot (Zeraim) 4b:16-22
+
+HEBREW:
+אמר רבי אלעזר, אמר רבי אבינא: כל האומר ״תהלה לדוד״ בכל יום שלש פעמים — מובטח לו שהוא בן העולם הבא.מאי טעמא?אילימא משום דאתיא באלף בית, נימא ״אשרי תמימי דרך״ דאתיא בתמניא אפין.אלא משום דאית ביה ״פותח את ידך״, נימא ״הלל הגדול״ דכתיב ביה ״נתן לחם לכל בשר״.אלא משום דאית ביה תרתי.אמר רבי יוחנן: מפני מה לא נאמר נון ב״אשרי״ — מפני שיש בה מפלתן של שונאי ישראל, דכתיב: ״נפלה לא תוסיף קום בתולת ישראל״.במערבא מתרצי לה הכי: ״נפלה ולא תוסיף לנפול עוד, קום בתולת ישראל״. אמר רב נחמן בר יצחק: אפילו הכי, חזר דוד וסמכן ברוח הקדש, שנאמר ״סומך ה׳ לכל הנפלים״.
+
+ENGLISH:
+Tangential to Rabbi Yohanans statement that one who juxtaposes redemption and prayer is assured of a place in the World-to-Come, a similar statement is cited. Rabbi Elazar said that Rabbi Avina said: Anyone who recites: A Psalm of David (Psalms 145) three times every day is assured of a place in the World-to-Come. This statement extolling the significance of this particular chapter of Psalms, usually referred to as ashrei because its recitation is preceded by recitation of the verse, Happy [ ashrei ] are those who dwell in Your House, they praise You Selah (Psalms 84:5), raises the question: What is the reason that such significance is ascribed to this particular chapter? If you say that it is because it is arranged alphabetically, then let us say: Happy are they who are upright in the way (Psalms 119) where the alphabetical arrangement appears eight times . Rather, if you suggest that this particular chapter is recited because it contains praise for Gods provision of sustenance to all of creation: You open Your hand and satisfy every living thing with favor (Psalms 145:16), then let him recite the great hallel (Psalms 136), in which numerous praises are written, including: Who provides food to all flesh, Whose kindness endures forever (Psalms 136:25). Rather, the reason why tehilla leDavid is accorded preference is because it contains both an alphabetic acrostic as well as mention of Gods provision of sustenance to all creation.Additionally, with regard to this psalm, Rabbi Yohanan said: Why is there no verse beginning with the letter nun in ashrei ? Because it contains an allusion to the downfall of the enemies of Israel, a euphemism for Israel itself. As it is written: The virgin of Israel has fallen and she will rise no more; abandoned in her land, none will raise her up (Amos 5:2), which begins with the letter nun . Due to this verse, ashrei does not include a verse beginning with the letter nun .In order to ease the harsh meaning of this verse, in the West, in Eretz Yisrael, they interpreted it with a slight adjustment: She has fallen but she shall fall no more; rise, virgin of Israel. Rav Nahman bar Yitzhak adds: Even so, David went and provided support, through divine inspiration. Although King David did not include a verse beginning with the letter nun alluding to Israels downfall, he foresaw the verse that would be written by Amos through divine inspiration; and the very next verse, which begins with the letter samekh , reads: The Lord upholds the fallen and raises up those who are bowed down (Psalms 145:14). Therefore, through divine inspiration, David offered hope and encouragement; although the virgin of Israel may have fallen, the Lord upholds the fallen.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss Psalm 145's significance and meaning.",
+    "heb_summary": "רבנים דנים במשמעות תהילים קמה.",
+    "passage_types": [
+      "PHILOSOPHIC",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Rabbi Avina"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "Amos"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World-To-Come"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "West"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "A Psalm Of David (Psalms 145)"
+        },
+        {
+          "en_name": "Psalms 119"
+        },
+        {
+          "en_name": "Psalms 136"
+        },
+        {
+          "en_name": "Psalms 84:5"
+        },
+        {
+          "en_name": "Psalms 145:16"
+        },
+        {
+          "en_name": "Psalms 136:25"
+        },
+        {
+          "en_name": "Psalms 145:14"
+        },
+        {
+          "en_name": "Amos 5:2"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "time",
+          "en_context": "daily recitation"
+        },
+        {
+          "en_name": "8",
+          "number_category": "Misc",
+          "en_unit": "time",
+          "en_context": "alphabetical arrangement"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "Rabbi Avina"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "World-To-Come"
+        },
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "World-To-Come"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Amos",
+          "term2": "Israel"
+        },
+        {
+          "term1": "David",
+          "term2": "Israel"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Eretz Yisrael",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Amos",
+          "term2": "Israel"
+        },
+        {
+          "term1": "David",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "A Psalm Of David (Psalms 145)",
+          "term2": "Psalms 119"
+        },
+        {
+          "term1": "A Psalm Of David (Psalms 145)",
+          "term2": "Psalms 136"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "A Psalm Of David (Psalms 145)",
+          "term2": "Psalms 119"
+        },
+        {
+          "term1": "A Psalm Of David (Psalms 145)",
+          "term2": "Psalms 136"
+        }
+      ]
+    }
+  }
+}

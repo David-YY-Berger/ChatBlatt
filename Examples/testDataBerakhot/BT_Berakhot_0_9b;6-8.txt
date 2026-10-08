@@ -1,0 +1,85 @@
+﻿COST: Tokens: Total=9833 approx cost=$0.001367 (Prompt=7037, Completion=2796)
+SOURCE:
+Berakhot (Zeraim) 9b:6-8
+
+HEBREW:
+״אהיה אשר אהיה״, אמר לו הקדוש ברוך הוא למשה, לך אמור להם לישראל: אני הייתי עמכם בשעבוד זה, ואני אהיה עמכם בשעבוד מלכיות.אמר לפניו: רבונו של עולם, דיה לצרה בשעתה. אמר לו הקדוש ברוך הוא: לך אמור להם ״אהיה שלחני אליכם״.״ענני ה׳ ענני״. אמר רבי אבהו: למה אמר אליהו ענני שתי פעמים? מלמד שאמר אליהו לפני הקדוש ברוך הוא: רבונו של עולם, ״ענני״ — שתרד אש מן השמים ותאכל כל אשר על המזבח, ו״ענני״ — שתסיח דעתם, כדי שלא יאמרו מעשה כשפים הם. שנאמר: ״ואתה הסבת את לבם אחורנית״:
+
+ENGLISH:
+The Gemara proceeds to discuss the promise of redemption from Egypt that God made to Moses at the burning bush. When Moses asked God what to say when Israel asks him Gods name, and God said to Moses: I will be that I will be, and He said: Thus you will say unto the children of Israel: I will be has sent me to you (Exodus 3:14). The Holy One, Blessed be He, told Moses to go and tell Israel: I was with you in this enslavement, and in this redemption, and I will be with you in the enslavement of the kingdoms in the future.Moses said before Him: Master of the Universe, it is enough for them to endure. Let the future suffering be endured at its appointed time. There is no need to mention their future enslavement. The Holy One, Blessed be He, agreed with Moses and said to him: Go and tell the children of Israel only that, I will be has sent me to you. Having explained the use of the double language of I will be that I will be, the Gemara proceeds to explain the double language employed by Elijah on Mount Carmel: Answer me, Lord, answer me, that this people will know that You are the Lord, God, and You have turned their hearts backward (I Kings 18:37). Rabbi Abbahu said: Why did Elijah say answer me twice? This repetition teaches that Elijah said before the Holy One, Blessed be He: Master of the Universe, answer me that fire will descend from heaven and consume everything that is on the altar, and answer me that You will divert their mind from devising alternative explanations for what they witnessed so that they will not say that they were acts of sorcery. As it is stated that Elijah said: And You have turned their hearts backward, God can restore them to the proper path as well.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "God promises redemption, Elijah's double prayer.",
+    "heb_summary": "אלוהים מבטיח גאולה, תפילת אליהו הכפולה.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Children Of Israel"
+        },
+        {
+          "en_name": "Elijah"
+        },
+        {
+          "en_name": "Abbahu"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Mount Carmel"
+        },
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Burning Bush"
+        },
+        {
+          "en_name": "Altar"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Moses",
+          "term2": "God"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Elijah",
+          "term2": "Mount Carmel"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Elijah",
+          "term2": "Mount Carmel"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Moses",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

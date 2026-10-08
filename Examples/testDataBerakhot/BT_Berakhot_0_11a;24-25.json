@@ -1,0 +1,63 @@
+﻿{
+    "res": {
+        "en_summary": "Mishna discusses Shema blessings and Sages' rules.",
+        "heb_summary": "המשנה דנה בברכות קריאת שמע וחוקי חכמים.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Radiant Lights"
+                },
+                {
+                    "en_name": "Love Of Torah"
+                },
+                {
+                    "en_name": "True And Firm"
+                },
+                {
+                    "en_name": "Love Of God"
+                },
+                {
+                    "en_name": "Redemption"
+                },
+                {
+                    "en_name": "True And Faithful"
+                },
+                {
+                    "en_name": "Help Us Lie Down"
+                },
+                {
+                    "en_name": "Long Formula"
+                },
+                {
+                    "en_name": "Short Formula"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "morning shema beforehand"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "morning shema thereafter"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11a:24-25"
+}

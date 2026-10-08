@@ -1,0 +1,155 @@
+﻿COST: Tokens: Total=11306 approx cost=$0.001691 (Prompt=7557, Completion=3749)
+SOURCE:
+Berakhot (Zeraim) 4a:8-13
+
+HEBREW:
+״לדוד, שמרה נפשי כי חסיד אני״. לוי ורבי יצחק. חד אמר: כך אמר דוד לפני הקדוש ברוך הוא: רבונו של עולם, לא חסיד אני? שכל מלכי מזרח ומערב ישנים עד שלש שעות, ואני ״חצות לילה אקום להודות לך״.ואידך, כך אמר דוד לפני הקדוש ברוך הוא: רבונו של עולם, לא חסיד אני? שכל מלכי מזרח ומערב יושבים אגודות אגודות בכבודם, ואני ידי מלוכלכות בדם ובשפיר ובשליא כדי לטהר אשה לבעלה. ולא עוד, אלא כל מה שאני עושה, אני נמלך במפיבשת רבי, ואומר לו: ״מפיבשת רבי, יפה דנתי? יפה חייבתי? יפה זכיתי? יפה טהרתי? יפה טמאתי?״, ולא בושתי.אמר רבי יהושע בריה דרב אידי: מאי קרא — ״ואדברה בעדתיך נגד מלכים ולא אבוש״.תנא: לא ״מפיבשת״ שמו, אלא ״איש בשת״ שמו, ולמה נקרא שמו מפיבשת? שהיה מבייש פני דוד בהלכה, לפיכך זכה דוד ויצא ממנו כלאב.ואמר רבי יוחנן: לא ״כלאב״ שמו אלא ״דניאל״ שמו, ולמה נקרא שמו ״כלאב״ — שהיה מכלים פני מפיבשת בהלכה.ועליו אמר שלמה בחכמתו ״בני אם חכם לבך ישמח לבי גם אני״, ואומר: ״חכם בני ושמח לבי ואשיבה חרפי דבר״.
+
+ENGLISH:
+The Gemara further explores King Davids character. It is said: A prayer of David...Keep my soul, for I am pious (Psalms 86:1-2). Levi and Rabbi Yitzhak debated the meaning of this verse and how Davids piety is manifest in the fact that he went beyond his fundamental obligations. One said: Davids declaration of piety referred to his awakening during the night to pray, and so said David before the Holy One, Blessed be He: Master of the Universe, am I not pious? As all of the kings of the East and the West sleep until the third hour of the day, but although I am a king like them, At midnight I rise to give thanks (Psalms 119:62). And the other Sage said: David said the following before the Holy One, Blessed be He: Master of the Universe, am I not pious? For all of the kings of the East and the West sit in groups befitting their honored status, but I sit as a judge who issues rulings for the people. Women come with questions of ritual impurity and my hands become soiled with their blood as I labor to determine whether or not it is blood of impurity and she has menstruating woman status, and with a fetus that miscarried at a stage of development before it was clear whether or not it is considered a birth, and with placenta, which women sometimes discharge unrelated to the birth of a child (see Leviticus 15:19-30 with regard to blood, and 12:1-8 with regard to miscarriage and placenta). King David went to all this trouble in order to render a woman ritually pure and consequently permitted to her husband. If, after examination, a Sage declares the woman ritually pure, she is permitted to be with her husband, which leads to increased love and affection, and ultimately to procreation (Rabbi Yoshiyahu Pinto). And not only do I engage in activity considered to be beneath the station of a king, but I consult my teacher, Mefivoshet, son of King Sauls son, Jonathan, with regard to everything that I do. I say to him: Mefivoshet, my teacher, did I decide properly? Did I convict properly? Did I acquit properly? Did I rule ritually pure properly? Did I rule ritually impure properly? And I was not embarrassed. Forgoing royal dignity should make me worthy to be called pious. Rav Yehoshua, son of Rav Idi, said: What verse alludes to this? And I speak Your testimonies before kings and I will not be ashamed (Psalms 119:46). This verse alludes both to Davids commitment to Torah, in contrast to the kings of the East and the West, as well as to the fact that he was not ashamed to discuss matters of Torah with Mefivoshet, a descendant of kings. David was not afraid to have his mistakes corrected by Mefivoshet. It was taught in a Tosefta from a tannaitic tradition: His name was not Mefivoshet, but rather Ish Boshet was his name. Why was Ish Boshet referred to as Mefivoshet? Because he would embarrass [ mevayesh ] David in matters of halakha . According to this approach, Mefivoshet is an abbreviation of boshet panim , embarrassment. Because David was not embarrassed to admit his errors, he merited that Kilav, who, according to tradition, was exceedingly wise, would descend from him. Rabbi Yohanan said: His name was not Kilav; rather, his name was Daniel, as it appears in a different list of Davids descendants. Why was he called Kilav? Because he would embarrass [ makhlim ] Mefivoshet, the teacher or authority figure [av] in matters of halakha. In his book of wisdom, Solomon said about this wise son: My son, if your heart is wise, my heart will be glad, even mine (Proverbs 23:15), as David enjoyed witnessing his son Kilav develop into a Torah luminary to the extent that Kilav was able to respond to Mefivoshet. And Solomon says about Kilav: Be wise, my son, and make my heart glad, that I may respond to those who taunt me (Proverbs 27:11).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "David's piety, humility, and commitment to Torah.",
+    "heb_summary": "חסידות דוד, ענווה, ומחויבות לתורה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Yitzhak"
+        },
+        {
+          "en_name": "Holy One"
+        },
+        {
+          "en_name": "Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Mefivoshet"
+        },
+        {
+          "en_name": "Jonathan"
+        },
+        {
+          "en_name": "Saul"
+        },
+        {
+          "en_name": "Yehoshua"
+        },
+        {
+          "en_name": "Idi"
+        },
+        {
+          "en_name": "Ish Boshet"
+        },
+        {
+          "en_name": "Kilav"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Daniel"
+        },
+        {
+          "en_name": "Solomon"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Psalms"
+        },
+        {
+          "en_name": "Leviticus"
+        },
+        {
+          "en_name": "Tosefta"
+        },
+        {
+          "en_name": "Proverbs"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "kings sleep"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "David",
+          "term2": "Mefivoshet"
+        },
+        {
+          "term1": "Kilav",
+          "term2": "Mefivoshet"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Jonathan",
+          "term2": "Saul"
+        },
+        {
+          "term1": "Mefivoshet",
+          "term2": "Jonathan"
+        },
+        {
+          "term1": "Kilav",
+          "term2": "David"
+        },
+        {
+          "term1": "Daniel",
+          "term2": "David"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "David"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "David",
+          "term2": "Holy One"
+        },
+        {
+          "term1": "David",
+          "term2": "Mefivoshet"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Levi",
+          "term2": "Yitzhak"
+        },
+        {
+          "term1": "Kilav",
+          "term2": "Mefivoshet"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Mefivoshet",
+          "term2": "Ish Boshet"
+        },
+        {
+          "term1": "Kilav",
+          "term2": "Daniel"
+        }
+      ]
+    }
+  }
+}

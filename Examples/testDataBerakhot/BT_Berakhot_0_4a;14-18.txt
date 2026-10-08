@@ -1,0 +1,212 @@
+﻿COST: Tokens: Total=11489 approx cost=$0.001793 (Prompt=7351, Completion=4138)
+SOURCE:
+Berakhot (Zeraim) 4a:14-18
+
+HEBREW:
+ודוד מי קרי לנפשיה ״חסיד״? והכתיב ״לולא האמנתי לראות בטוב ה׳ בארץ חיים״, ותנא משמיה דרבי יוסי: למה נקוד על ״לולא״? — אמר דוד לפני הקדוש ברוך הוא: רבונו של עולם, מובטח אני בך שאתה משלם שכר טוב לצדיקים לעתיד לבוא, אבל איני יודע אם יש לי חלק ביניהם אם לאו?!שמא יגרום החטא.כדרבי יעקב בר אידי, דרבי יעקב בר אידי רמי, כתיב: ״והנה אנכי עמך ושמרתיך בכל אשר תלך״, וכתיב: ״ויירא יעקב מאד״ אמר: שמא יגרום החטא.כדתניא ״עד יעבר עמך ה׳, עד יעבר עם זו קנית״.״עד יעבר עמך ה׳״ — זו ביאה ראשונה, ״עד יעבר עם זו קנית״ — זו ביאה שניה. מכאן אמרו חכמים: ראוים היו ישראל ליעשות להם נס בימי עזרא כדרך שנעשה להם בימי יהושע בן נון. אלא שגרם החטא.
+
+ENGLISH:
+With regard to Davids statement, Keep my soul, for I am pious, the Gemara asks: Did David call himself pious? Isnt it written: If I had not [ luleh ] believed to look upon the goodness of the Lord in the land of the living (Psalms 27:13). The dots that appear over the word luleh in the text indicate doubt and uncertainty of his piety, and whether he was deserving of a place in the land of the living (see Avot DeRabbi Natan 34). In the name of Rabbi Yosei, it was taught in a Tosefta : Why do dots appear over the word luleh , as if there are some reservations? Because David said before the Holy One, Blessed be He: Master of the Universe. I have every confidence in You that You grant an excellent reward to the righteous in the World-to-Come since Gods ultimate goodness is manifest in the land of eternal life, but I still harbor uncertainty with regard to myself, and I do not know whether or not I definitely have a portion among them. In any case, apparently David was uncertain whether or not he deserved to receive a portion of Gods reward for the righteous; how, then, could he characterize himself as pious?The Gemara responds: His concern does not prove anything, as King David knew that he was pious. He was simply concerned lest a transgression that he might commit in the future will cause him to lose his opportunity to look upon the goodness of the Lord in the land of the living.The Gemara cites a proof that there is room for one to fear lest he commit a transgression in the future in accordance with the opinion of Rabbi Yaakov bar Idi, as Rabbi Yaakov bar Idi raised a contradiction between two verses. It is written that God told Jacob in his vision of the ladder: Behold, I am with you and I guard you wherever you go (Genesis 28:15), yet when Jacob returned to Canaan and realized that Esau was coming to greet him, it is written: And Jacob became very afraid, and he was pained (Genesis 32:8). Why did Jacob not rely on Gods promise? Jacob had concerns and said to himself: Lest a transgression that I might have committed after God made His promise to me will cause God to revoke His promise of protection.Apparently, at times, transgression does cause Gods promise to go unfulfilled, as it was taught explicitly in a baraita with regard to the ostensibly redundant language in a verse in the Song of the Sea: Until Your people will cross, Lord, until the people You have acquired will cross. You bring them in and plant them in the mountain of Your inheritance, the place, Lord, which You made for Your dwelling (Exodus 15:16-17).The Gemara interprets homiletically that until Your people will cross refers to the first entry into Eretz Yisrael during the time of Joshua, while until the people You have acquired pass over refers to the second entry following the exile in Babylonia. Based on the juxtaposition of these two entries in this single verse, the Sages said: Israel was worthy of having a miracle performed on its behalf in the time of Ezra the scribe, just as one was performed on their behalf in the time of Joshua bin Nun. However, transgression caused the absence of a miracle.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "David's piety, Jacob's fear, Israel's transgressions.",
+    "heb_summary": "חסידות דוד, פחד יעקב, עבירות ישראל.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Rabbi Yosei"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Joshua"
+        },
+        {
+          "en_name": "Ezra"
+        },
+        {
+          "en_name": "Joshua Bin Nun"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Land Of The Living"
+        },
+        {
+          "en_name": "World-To-Come"
+        },
+        {
+          "en_name": "Canaan"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Goodness Of The Lord"
+        },
+        {
+          "en_name": "Ladder"
+        },
+        {
+          "en_name": "Song Of The Sea"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "27",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "13",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "34",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "avot reference"
+        },
+        {
+          "en_name": "28",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "genesis reference"
+        },
+        {
+          "en_name": "15",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "genesis reference"
+        },
+        {
+          "en_name": "32",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "genesis reference"
+        },
+        {
+          "en_name": "8",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "genesis reference"
+        },
+        {
+          "en_name": "16",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "exodus reference"
+        },
+        {
+          "en_name": "17",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "exodus reference"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "David",
+          "term2": "Holy One, Blessed Be He"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Holy One, Blessed Be He"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "David",
+          "term2": "Land Of The Living"
+        },
+        {
+          "term1": "David",
+          "term2": "World-To-Come"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Canaan"
+        },
+        {
+          "term1": "Joshua",
+          "term2": "Eretz Yisrael"
+        },
+        {
+          "term1": "Ezra",
+          "term2": "Eretz Yisrael"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Eretz Yisrael"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "David",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Joshua",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Ezra",
+          "term2": "Israel"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Eretz Yisrael",
+          "term2": "Israel"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Joshua",
+          "term2": "Joshua Bin Nun"
+        }
+      ]
+    }
+  }
+}

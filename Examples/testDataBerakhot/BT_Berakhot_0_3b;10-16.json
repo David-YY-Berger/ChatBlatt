@@ -1,0 +1,101 @@
+﻿{
+    "res": {
+        "en_summary": "Sages debate night watches, David's rising.",
+        "heb_summary": "חכמים דנים משמרות לילה, עליית דוד.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yehuda Hanasi"
+                },
+                {
+                    "en_name": "Natan"
+                },
+                {
+                    "en_name": "Gideon"
+                },
+                {
+                    "en_name": "One Hundred Men"
+                },
+                {
+                    "en_name": "Zerika"
+                },
+                {
+                    "en_name": "Ami"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Yehoshua"
+                },
+                {
+                    "en_name": "Ashi"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Time",
+                    "en_unit": "watch",
+                    "en_context": "night watches"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "watch",
+                    "en_context": "night watches"
+                },
+                {
+                    "en_name": "100",
+                    "number_category": "People",
+                    "en_unit": "man",
+                    "en_context": "gideons army"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Time",
+                    "en_unit": "watch",
+                    "en_context": "middle watches argument"
+                },
+                {
+                    "en_name": "6",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "david awake"
+                },
+                {
+                    "en_name": "1.5",
+                    "number_category": "Time",
+                    "en_unit": "watch",
+                    "en_context": "watches plural"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Zerika",
+                    "term2": "Ami"
+                },
+                {
+                    "term1": "Ami",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yehuda Hanasi",
+                    "term2": "Natan"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_3b:10-16"
+}

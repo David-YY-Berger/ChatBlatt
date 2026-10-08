@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=8282 approx cost=$0.000924 (Prompt=6935, Completion=1347)
+SOURCE:
+Berakhot (Zeraim) 9b:3-5
+
+HEBREW:
+״וישאלום״, אמר רבי אמי: מלמד שהשאילום בעל כרחם. איכא דאמרי בעל כרחם דמצרים, ואיכא דאמרי בעל כרחם דישראל.מאן דאמר בעל כרחם דמצרים — דכתיב: ״ונות בית תחלק שלל״. מאן דאמר בעל כרחם דישראל — משום משוי.״וינצלו את מצרים״. אמר רבי אמי מלמד שעשאוה כמצודה שאין בה דגן, וריש לקיש אמר, עשאוה כמצולה שאין בה דגים.
+
+ENGLISH:
+With regard to the spoils taken from Egypt described in the verse: And the Lord gave the nation grace in the eyes of Egypt, and they gave them what they requested and they emptied Egypt (Exodus 12:36), Rabbi Ami said: This teaches that the Egyptians gave them what they requested against their will. There is a dispute with regard to the question: Against whose will? Some say it was given against the will of the Egyptians, and some say it was given against the will of Israel. The proponent of each position cites support for his opinion. The one who said that it was given against the will of the Egyptians cites the verse describing Israels exit from Egypt, as it is written: And she who tarries at home divides the spoils (Psalms 68:13). That which the woman in the verse requested from her counterpart was actually spoils taken against the will of an enemy. The one who said that it was given against the will of Israel, claims that they did not want the vessels because of the burden of carrying a heavy load on a long journey.With regard to the continuation of the verse: And they emptied Egypt, Rabbi Ami said: This indicates that they made Egypt like a trap in which there is no grain that serves as bait to attract birds. Reish Lakish said: They made Egypt like an abyss in the sea without fish.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Egypt emptied by Israel's requested spoils.",
+    "heb_summary": "מצרים התרוקנה משלל ישראל המבוקש.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Ami"
+        },
+        {
+          "en_name": "Reish Lakish"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ]
+    },
+    "Rel": {}
+  }
+}

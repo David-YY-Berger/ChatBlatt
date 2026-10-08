@@ -1,0 +1,94 @@
+﻿COST: Tokens: Total=9994 approx cost=$0.001358 (Prompt=7291, Completion=2703)
+SOURCE:
+Berakhot (Zeraim) 2a:6-11
+
+HEBREW:
+גמ׳ תנא היכא קאי דקתני ״מאימתי״?ותו: מאי שנא דתני בערבית ברישא? לתני דשחרית ברישא!תנא אקרא קאי, דכתיב: ״בשכבך ובקומך״. והכי קתני: זמן קריאת שמע דשכיבה אימת? — משעה שהכהנים נכנסין לאכול בתרומתן.ואי בעית אימא: יליף מברייתו של עולם, דכתיב: ״ויהי ערב ויהי בקר יום אחד״.אי הכי, סיפא דקתני ״בשחר מברך שתים לפניה ואחת לאחריה, בערב מברך שתים לפניה ושתים לאחריה״, לתני דערבית ברישא!תנא פתח בערבית, והדר תני בשחרית, עד דקאי בשחרית, פריש מילי דשחרית, והדר פריש מילי דערבית.
+
+ENGLISH:
+GEMARA: The Mishna opens with the laws concerning the appropriate time to recite Shema with the question: From when does one recite Shema in the evening? With regard to this question, the Gemara asks: On the basis of what prior knowledge does the tanna of our mishna ask: From when? It would seem from his question that the obligation to recite Shema in the evening was already established, and that the tanna seeks only to clarify details that relate to it. But our mishna is the very first mishna in the Talmud.The Gemara asks: And furthermore, what distinguishes the evening Shema , that it was taught first? Let the tanna teach regarding the recitation of the morning Shema first. Since most mitzvot apply during the day, the tanna should discuss the morning Shema before discussing the evening Shema , just as the daily morning offering is discussed before the evening offering ( Tosefot HaRosh ).The Gemara offers a single response to both questions: The tanna bases himself on the verse as it is written: You will talk of them when you sit in your home, and when you walk along the way, when you lie down, and when you arise (Deuteronomy 6:7). By teaching the laws of the evening Shema first, the tanna has established that the teachings of the Oral Torah correspond to that which is taught in the Written Torah. And based on the Written Torah, the tanna teaches the oral law: When is the time for the recitation of Shema of lying down as commanded in the Torah? From when the priests enter to partake of their teruma . Just as the Written Torah begins with the evening Shema , so too must the Oral Torah.However, there is another possible explanation for why the mishna opens with the evening Shema rather than with the morning Shema . If you wish, you could say instead that the tanna derives the precedence of the evening Shema from the order of the creation of the world. As it is written in the story of creation: And there was evening, and there was morning, one day (Genesis 1:5). According to this verse, day begins with the evening and not the morning. For both of these reasons it was appropriate to open the discussion of the laws of the recitation of Shema with the evening Shema .The Gemara asks: If so, why does the latter clause of the mishna, which appears later in the chapter, teach: In the morning one recites two blessings before Shema and one blessing afterward, and in the evening one recites two blessings before Shema and two afterward? Based upon the above reasoning, the mishna should have taught the blessing recited before and after the evening Shema first. The Gemara answers: Indeed, the tanna began by discussing the laws regarding the recitation of the evening Shema , and then taught the laws regarding the recitation of the morning Shema . Once he was already dealing with the morning Shema , he explained the matters of the morning Shema , and then explained the matters of the evening Shema .
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Mishna's Shema order: evening first, then morning.",
+    "heb_summary": "סדר קריאת שמע: ערב קודם בוקר.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Tanna"
+        },
+        {
+          "en_name": "Priests"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Mishna"
+        },
+        {
+          "en_name": "Gemara"
+        },
+        {
+          "en_name": "Talmud"
+        },
+        {
+          "en_name": "Oral Torah"
+        },
+        {
+          "en_name": "Written Torah"
+        },
+        {
+          "en_name": "Morning Offering"
+        },
+        {
+          "en_name": "Evening Offering"
+        },
+        {
+          "en_name": "Creation Of The World"
+        },
+        {
+          "en_name": "Blessing"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "morning shema before"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "morning shema after"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Teruma"
+        }
+      ]
+    },
+    "Rel": {
+      "comparedTo": [
+        {
+          "term1": "Oral Torah",
+          "term2": "Written Torah"
+        },
+        {
+          "term1": "Morning Offering",
+          "term2": "Evening Offering"
+        }
+      ]
+    }
+  }
+}

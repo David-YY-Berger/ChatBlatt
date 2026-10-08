@@ -1,0 +1,101 @@
+﻿{
+    "res": {
+        "en_summary": "Halakha on Shema before sunrise, differing opinions.",
+        "heb_summary": "הלכה קריאת שמע לפני זריחה, דעות חלוקות.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Aha"
+                },
+                {
+                    "en_name": "Hanina"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Shimon"
+                },
+                {
+                    "en_name": "Akiva"
+                },
+                {
+                    "en_name": "Zeira"
+                },
+                {
+                    "en_name": "Yitzhak Bar Yosef"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Eretz Yisrael"
+                },
+                {
+                    "en_name": "Babylonia"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Hashkivenu"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Aha",
+                    "term2": "Yehoshua Ben Levi"
+                },
+                {
+                    "term1": "Yehoshua Ben Levi",
+                    "term2": "Shimon"
+                },
+                {
+                    "term1": "Shimon",
+                    "term2": "Akiva"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Aha",
+                    "term2": "Hanina"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Sages",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yehoshua Ben Levi",
+                    "term2": "Shimon"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Yitzhak Bar Yosef",
+                    "term2": "Babylonia"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Yehoshua Ben Levi",
+                    "term2": "Eretz Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8b:17-9a:4"
+}

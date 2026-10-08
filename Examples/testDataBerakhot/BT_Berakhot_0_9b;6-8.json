@@ -1,0 +1,75 @@
+﻿{
+    "res": {
+        "en_summary": "God promises redemption, Elijah's double prayer.",
+        "heb_summary": "אלוהים מבטיח גאולה, תפילת אליהו הכפולה.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                },
+                {
+                    "en_name": "Elijah"
+                },
+                {
+                    "en_name": "Abbahu"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Mount Carmel"
+                },
+                {
+                    "en_name": "Heaven"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Burning Bush"
+                },
+                {
+                    "en_name": "Altar"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "God"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Elijah",
+                    "term2": "Mount Carmel"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Elijah",
+                    "term2": "Mount Carmel"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Moses",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:6-8"
+}

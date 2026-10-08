@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Praying behind synagogue is wicked, Elijah kills.",
+        "heb_summary": "תפילה מאחורי בית כנסת רשע, אליהו הורג.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Elijah"
+                },
+                {
+                    "en_name": "Individual"
+                },
+                {
+                    "en_name": "Congregation"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Synagogue"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Arab"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Sword"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "12",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Elijah",
+                    "term2": "Individual"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rav Huna",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Individual",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Congregation",
+                    "term2": "Synagogue"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Elijah",
+                    "term2": "Individual"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:18-20"
+}

@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Egypt emptied by Israel's requested spoils.",
+        "heb_summary": "מצרים התרוקנה משלל ישראל המבוקש.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Ami"
+                },
+                {
+                    "en_name": "Reish Lakish"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ]
+        },
+        "Rel": {}
+    },
+    "key": "BT_Berakhot_0_9b:3-5"
+}

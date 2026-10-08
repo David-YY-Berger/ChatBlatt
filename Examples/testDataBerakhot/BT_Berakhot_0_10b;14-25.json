@@ -1,0 +1,142 @@
+﻿{
+    "res": {
+        "en_summary": "Elisha's chamber, hospitality, holiness, and gifts.",
+        "heb_summary": "חדר אלישע, אירוח, קדושה, ומתנות.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Elisha"
+                },
+                {
+                    "en_name": "Woman From Shunem"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Yitzhak"
+                },
+                {
+                    "en_name": "Samuel"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "Hanina"
+                },
+                {
+                    "en_name": "Eliezer"
+                },
+                {
+                    "en_name": "Yaakov"
+                },
+                {
+                    "en_name": "Geihazi"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Shunem"
+                },
+                {
+                    "en_name": "Rama"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Bed"
+                },
+                {
+                    "en_name": "Table"
+                },
+                {
+                    "en_name": "Stool"
+                },
+                {
+                    "en_name": "Candlestick"
+                },
+                {
+                    "en_name": "Daily Offering"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Fly"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Eliezer"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Hanina"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Yaakov"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Woman From Shunem",
+                    "term2": "Geihazi"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rav",
+                    "term2": "Shmuel"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Elisha",
+                    "term2": "Shunem"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Samuel",
+                    "term2": "Rama"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Samuel",
+                    "term2": "Israel"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Elisha",
+                    "term2": "Samuel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:14-25"
+}

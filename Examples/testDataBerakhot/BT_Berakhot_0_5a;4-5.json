@@ -1,0 +1,48 @@
+﻿{
+    "res": {
+        "en_summary": "Shema recitation protects, Torah compared to eagle.",
+        "heb_summary": "קריאת שמע מגינה, תורה כנשר.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yitzhak"
+                },
+                {
+                    "en_name": "Mar Zutra"
+                },
+                {
+                    "en_name": "Rav Ashi"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Double-Edged Sword"
+                },
+                {
+                    "en_name": "Torah"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Eagle"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Torah",
+                    "term2": "Eagle"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:4-5"
+}

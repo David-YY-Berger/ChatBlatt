@@ -1,0 +1,111 @@
+﻿COST: Tokens: Total=9554 approx cost=$0.001273 (Prompt=7079, Completion=2475)
+SOURCE:
+Berakhot (Zeraim) 8b:17-9a:4
+
+HEBREW:
+לא, לעולם יממא הוא, והאי דקרו ליה ״ליליא״ — דאיכא אינשי דגנו בההיא שעתא.אמר רבי אחא ברבי חנינא, אמר רבי יהושע בן לוי: הלכה כרבי שמעון שאמר משום רבי עקיבא. אמר רבי זירא: ובלבד שלא יאמר ״השכיבנו״.כי אתא רב יצחק בר יוסף, אמר: הא דרבי אחא ברבי חנינא אמר רבי יהושע בן לוי, לאו בפירוש איתמר, אלא מכללא איתמר.דההוא זוגא דרבנן דאשתכור בהלולא דבריה דרבי יהושע בן לוי. אתו לקמיה דרבי יהושע בן לוי, אמר: כדאי הוא רבי שמעון לסמוך עליו בשעת הדחק.
+
+ENGLISH:
+The Gemara answers: No, there is no contradiction. Actually, the time just before sunrise is considered day and the fact that it is referred to here as night is because there are people who are still asleep at that time and, if the need arises, it can be characterized as beshokhbekha [when you lie down] despite the fact that it is already day. Rabbi Aha, son of Rabbi Hanina, said that Rabbi Yehoshua ben Levi said: The halakha is in accordance with the opinion of Rabbi Shimon who said it in the name of Rabbi Akiva. Rabbi Zeira said: As long as he will not recite: Help us lie down [ hashkivenu ] as well, after reciting the evening Shema before sunrise, as the blessing: Help us lie down, is a prayer that we sleep in peace, which is inappropriate in the morning.That is how the halakha was taught in the study hall. However, when Rav Yitzhak bar Yosef came to Babylonia from Eretz Yisrael, where Rabbi Yehoshua ben Levi lived, he said that this ruling that Rabbi Aha, son of Rabbi Hanina, said that Rabbi Yehoshua ben Levi said, was not said explicitly by Rabbi Yehoshua ben Levi. Rather, it was stated that he held that the halakha is in accordance with the opinion of Rabbi Shimon who said it in the name of Rabbi Akiva based on inference. The incident was as follows: This pair of Sages got drunk at the wedding of Rabbi Yehoshua ben Levis son and fell asleep before reciting the evening Shema . By the time they awoke, dawn had already passed. They came before Rabbi Yehoshua ben Levi and asked him if they could still recite the evening Shema . He said to them: Rabbi Shimon is worthy to rely upon in exigent circumstances. Rabbi Yehoshua ben Levi did not rule in accordance with the opinion of Rabbi Shimon, and, in a case where there are no exigent circumstances, one may not rely on this ruling.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Halakha on Shema before sunrise, differing opinions.",
+    "heb_summary": "הלכה קריאת שמע לפני זריחה, דעות חלוקות.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Aha"
+        },
+        {
+          "en_name": "Hanina"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Shimon"
+        },
+        {
+          "en_name": "Akiva"
+        },
+        {
+          "en_name": "Zeira"
+        },
+        {
+          "en_name": "Yitzhak Bar Yosef"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Hashkivenu"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Aha",
+          "term2": "Yehoshua Ben Levi"
+        },
+        {
+          "term1": "Yehoshua Ben Levi",
+          "term2": "Shimon"
+        },
+        {
+          "term1": "Shimon",
+          "term2": "Akiva"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Aha",
+          "term2": "Hanina"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sages",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yehoshua Ben Levi",
+          "term2": "Shimon"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Yitzhak Bar Yosef",
+          "term2": "Babylonia"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Yehoshua Ben Levi",
+          "term2": "Eretz Yisrael"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,161 @@
+﻿COST: Tokens: Total=11514 approx cost=$0.001710 (Prompt=7750, Completion=3764)
+SOURCE:
+Berakhot (Zeraim) 11b:20-12a:3
+
+HEBREW:
+תנן התם: אמר להם הממונה: ״ברכו ברכה אחת!״. והם ברכו. וקראו עשרת הדברות, ״שמע״, ״והיה אם שמוע״, ״ויאמר״. וברכו את העם שלש ברכות, ״אמת ויציב״, ועבודה, וברכת כהנים. ובשבת מוסיפין ברכה אחת למשמר היוצא.מאי ״ברכה אחת״? כי הא דרבי אבא ורבי יוסי בר אבא אקלעו לההוא אתרא, בעו מנייהו: מאי ״ברכה אחת״? לא הוה בידייהו. ואתו שיילוהו לרב מתנה לא הוה בידיה. אתו שיילוהו לרב יהודה. אמר להו: הכי אמר שמואל, ״אהבה רבה״.ואמר רבי זריקא, אמר רבי אמי, אמר רבי שמעון בן לקיש: ״יוצר אור״. כי אתא רב יצחק בר יוסף, אמר, הא דרבי זריקא לאו בפירוש אתמר אלא מכללא אתמר. דאמר רבי זריקא אמר רבי אמי, אמר רבי שמעון בן לקיש: זאת אומרת ברכות אין מעכבות זו את זו.אי אמרת בשלמא ״יוצר אור״ הוו אמרי, היינו דברכות אין מעכבות זו את זו, דלא קא אמרי ״אהבה רבה״.אלא, אי אמרת ״אהבה רבה״ הוו אמרי, מאי ברכות אין מעכבות זו את זו? דלמא האי דלא אמרי ״יוצר אור״ משום דלא מטא זמן ״יוצר אור״, וכי מטא זמן ״יוצר אור״ הוו אמרי.ואי מכללא מאי?דאי מכללא, לעולם ״אהבה רבה״ הוו אמרי. וכי מטא זמן ״יוצר אור״ הוו אמרי ליה. ומאי ״ברכות אין מעכבות זו את זו״ — סדר ברכות.
+
+ENGLISH:
+The Gemara returns to dealing with the blessings that accompany Shema , and describes the practice in the Temple. We learned there, in a mishna in tractate Tamid : In the morning the deputy High Priest appointed to oversee activity in the Temple, said to the priests who were members of the priestly watch [ mishmar ] on duty that week: Recite a single blessing. The members of the priestly watch recited a blessing, and read the Ten Commandments, Shema , VeHaya im Shamoa and VaYomer , the standard recitation of Shema . Additionally, they blessed the people with three blessings. These blessings were: True and Firm, the blessing of redemption recited after Shema ; Avoda , service, the special blessing recited over Gods acceptance of the sacrifices with favor, similar to the blessing of Temple Service recited in the Amida prayer; and the priestly benediction, recited in the form of a prayer without the outstretched hands that usually accompany that blessing ( Tosafot ). And on Shabbat one blessing is added to bless the outgoing priestly watch, as the watch serving in the Temple was replaced on Shabbat.Certain details in this mishna are not sufficiently clear. First, what is the single blessing that the deputy High Priest instructed the guards to recite? The Gemara relates: It is like the incident where Rabbi Abba and Rabbi Yosei bar Abba happened to visit a certain unnamed place, and the people there asked them: What is the single blessing mentioned in the mishna? They did not have an answer readily available. So they came and asked Rav Mattana, and he too did not have an answer readily available. They came and asked Rav Yehuda, and he told them: Shmuel said as follows: An abounding love is the single blessing recited by the priestly watch. Rabbi Zerika said that Rabbi Ami said that Rabbi Shimon ben Lakish said a different answer: This single blessing is: Who creates light. That was how Rabbi Shimon ben Lakishs statement was received in Babylonia, yet when Rav Yitzhak bar Yosef came from Eretz Yisrael to Babylonia, he said that this halakha was not a direct quote of a statement by Rabbi Shimon ben Lakish. That which Rabbi Zerika said was not stated explicitly by Rabbi Shimon ben Lakish, but rather it was inferred from another statement. As Rabbi Zerika said that Rabbi Ami said that Rabbi Shimon ben Lakish said: From the expression: Recite a single blessing, in the mishna in tractate Tamid , it follows that failure to recite one of the blessings recited before Shema does not prevent one from reciting the other. This means that if only one of the blessings was recited, the obligation to recite that blessing was fulfilled, as the two blessings are not mutually dependent.The conclusion was drawn from Rabbi Shimon ben Lakishs statement that he held that the single blessing recited was: Who creates light. The considerations that led the Sages to that conclusion were: Granted, if you say that they would recite: Who creates light, then the conclusion of Reish Lakish, that failure to recite one of the blessings recited before Shema does not prevent one from reciting the other, is understandable, as they recited: Who creates light, and did not recite: An abounding love, and they nonetheless fulfilled their obligation. However, if you say that they would omit: Who creates light, and would recite: An abounding love, on what basis would you conclude that failure to recite one of the blessings recited before Shema does not prevent one from reciting the other? In that case, one could offer another reason why only a single blessing is recited. Perhaps the fact that they did not recite: Who creates light was because the time for the recitation of: Who creates light, had not yet arrived, as the sun had yet to rise. The blessings of the priestly watch are recited in the early morning hours, long before sunrise. However, afterward, when the time to recite: Who creates light arrived, they would recite it. From the conclusion drawn by Rabbi Shimon ben Lakish, that failure to recite one of the blessings recited before Shema does not prevent one from reciting the other, it is clear that the blessing recited by the members of the priestly watch was: Who creates light.As this deductive reasoning seems coherent and convincing, the Gemara asks: And if this halakha is based on inference, and not on an explicit statement, what of it? There seems to be no other way to interpret Rabbi Shimon ben Lakishs statement.The Gemara answers: If this conclusion were based on an inference, one could say that actually they recited: An abounding love, and when the time to recite: Who creates light arrived, they would recite it. In that case, what is the meaning of: Failure to recite one of the blessings recited before Shema does not prevent one from reciting the other? Rabbi Shimon ben Lakish meant that failure to recite the correct order of the blessings does not prevent one from fulfilling his obligation. Even if one recites: An abounding love before: Who creates light, he fulfills his obligation. Rabbi Shimon ben Lakish did not refer to a case where only one of the blessings was recited. Consequently, one cannot infer from his statement his opinion regarding the identity of the single blessing.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Temple blessings, rabbinic discussion, Shema recitation.",
+    "heb_summary": "ברכות שמע במקדש, דיון רבני הלכתי.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Deputy High Priest"
+        },
+        {
+          "en_name": "Priests"
+        },
+        {
+          "en_name": "Priestly Watch"
+        },
+        {
+          "en_name": "Rabbi Abba"
+        },
+        {
+          "en_name": "Rabbi Yosei Bar Abba"
+        },
+        {
+          "en_name": "Rav Mattana"
+        },
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Rabbi Zerika"
+        },
+        {
+          "en_name": "Rabbi Ami"
+        },
+        {
+          "en_name": "Rabbi Shimon Ben Lakish"
+        },
+        {
+          "en_name": "Rav Yitzhak Bar Yosef"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Babylonia"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "priestly watch blessing"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Obligation",
+          "en_unit": "commandment",
+          "en_context": "shema recitation"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "priestly watch blessings"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        },
+        {
+          "term1": "Rabbi Zerika",
+          "term2": "Rabbi Ami"
+        },
+        {
+          "term1": "Rabbi Ami",
+          "term2": "Rabbi Shimon Ben Lakish"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Deputy High Priest",
+          "term2": "Priests"
+        },
+        {
+          "term1": "Deputy High Priest",
+          "term2": "Priestly Watch"
+        },
+        {
+          "term1": "Rabbi Abba",
+          "term2": "Rav Mattana"
+        },
+        {
+          "term1": "Rabbi Abba",
+          "term2": "Rav Yehuda"
+        },
+        {
+          "term1": "Rabbi Yosei Bar Abba",
+          "term2": "Rav Mattana"
+        },
+        {
+          "term1": "Rabbi Yosei Bar Abba",
+          "term2": "Rav Yehuda"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Rav Yitzhak Bar Yosef",
+          "term2": "Babylonia"
+        },
+        {
+          "term1": "Rav Yitzhak Bar Yosef",
+          "term2": "Eretz Yisrael"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Priests",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Priestly Watch",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Rabbi Shimon Ben Lakish",
+          "term2": "Eretz Yisrael"
+        }
+      ]
+    }
+  }
+}

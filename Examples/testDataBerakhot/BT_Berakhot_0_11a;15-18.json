@@ -1,0 +1,65 @@
+﻿{
+    "res": {
+        "en_summary": "Hillel, Shammai, Yishmael, Elazar Shema dispute.",
+        "heb_summary": "מחלוקת הלל, שמאי, ישמעאל, אלעזר על קריאת שמע.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Beit Hillel"
+                },
+                {
+                    "en_name": "Beit Shammai"
+                },
+                {
+                    "en_name": "Rabbi Yishmael"
+                },
+                {
+                    "en_name": "Rabbi Elazar Ben Azarya"
+                },
+                {
+                    "en_name": "Students"
+                },
+                {
+                    "en_name": "Rashba"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "en_unit": "tannai",
+                    "en_context": "tannaim at meal"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yishmael",
+                    "term2": "Beit Hillel"
+                },
+                {
+                    "term1": "Rabbi Elazar Ben Azarya",
+                    "term2": "Beit Hillel"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Beit Hillel",
+                    "term2": "Beit Shammai"
+                },
+                {
+                    "term1": "Rabbi Yishmael",
+                    "term2": "Rabbi Elazar Ben Azarya"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11a:15-18"
+}

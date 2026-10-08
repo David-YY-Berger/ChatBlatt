@@ -1,0 +1,39 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis follow Gamliel, decree Shema by midnight.",
+        "heb_summary": "חכמים כרבן גמליאל, גזרו שמע עד חצות.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Gamliel"
+                },
+                {
+                    "en_name": "Rabbis"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "answer",
+                    "en_context": "gemara offers explanation"
+                }
+            ]
+        },
+        "Rel": {
+            "AliasOf": [
+                {
+                    "term1": "Rabbis",
+                    "term2": "Sages"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4a:19-4b:5"
+}

@@ -1,0 +1,99 @@
+﻿COST: Tokens: Total=9661 approx cost=$0.001326 (Prompt=6988, Completion=2673)
+SOURCE:
+Berakhot (Zeraim) 6b:21-25
+
+HEBREW:
+אמר ליה ההוא מרבנן לרב ביבי בר אביי, ואמרי לה רב ביבי לרב נחמן בר יצחק: מאי ״כרם זלות לבני אדם״?אמר ליה: אלו דברים שעומדים ברומו של עולם, ובני אדם מזלזלין בהן.רבי יוחנן ורבי אלעזר דאמרי תרוייהו: כיון שנצטרך אדם לבריות, פניו משתנות ככרום, שנאמר: ״כרם זלות לבני אדם״.מאי ״כרום״? כי אתא רב דימי, אמר: עוף אחד יש בכרכי הים, ו״כרום״ שמו, וכיון שחמה זורחת מתהפך לכמה גוונין.רבי אמי ורבי אסי דאמרי תרוייהו: כאלו נדון בשני דינים, אש ומים, שנאמר: ״הרכבת אנוש לראשנו באנו באש ובמים״.
+
+ENGLISH:
+Rav Huna already explained the beginning of the verse, The wicked walk round about. The Gemara explains the end of the verse: When vileness is exalted among the sons of men. One of the Sages said to Rav Beivai bar Abaye, and some say Rav Beivai said to Rav Nahman bar Yitzhak: What is the meaning of: When vileness is exalted among the sons of men? He said to him: These are matters of utmost importance, exalted, i.e., mitzvot or prayer, which people nonetheless treat with contempt, vileness among the sons of men. Rabbi Yohanan and his student, Rabbi Elazar, both said an alternative explanation of this verse: Once a person needs the help of others and loses dignity in their eyes, vileness among the sons of men, his face changes and becomes like a kerum , as it is stated: When [ kerum ] vileness is exalted among the sons of men. What is kerum referred to by Rabbi Yohanan and Rabbi Elazar? When Rav Dimi came to Babylonia from Eretz Yisrael he said: There is a bird in the cities by the sea called kerum and when the sun rises, the bird changes several colors. Similarly, one who becomes dependent upon others blushes in embarrassment. Rabbi Ami and Rabbi Asi both said: One who becomes dependent upon others, it is as if he was punished with two punishments: Fire and water. As it is stated: You have caused men to ride over our heads; we have gone through fire and water (Psalms 66:12).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages explain vileness, dependency, and shame.",
+    "heb_summary": "חכמים מסבירים שפלות, תלות ובושה.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Rav Beivai Bar Abaye"
+        },
+        {
+          "en_name": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Rav Dimi"
+        },
+        {
+          "en_name": "Rabbi Ami"
+        },
+        {
+          "en_name": "Rabbi Asi"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Babylonia"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "Cities By The Sea"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "punishment",
+          "en_context": "dependent on others"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Kerum"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "Rabbi Yohanan"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rav Beivai Bar Abaye",
+          "term2": "Rav Nahman Bar Yitzhak"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Rav Dimi",
+          "term2": "Babylonia"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rav Dimi",
+          "term2": "Eretz Yisrael"
+        }
+      ]
+    }
+  }
+}

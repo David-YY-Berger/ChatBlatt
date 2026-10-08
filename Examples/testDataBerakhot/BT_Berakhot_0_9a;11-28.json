@@ -1,0 +1,148 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis dispute Paschal lamb eating time.",
+        "heb_summary": "מחלוקת רבנים על זמן אכילת הפסח.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabban Gamliel"
+                },
+                {
+                    "en_name": "Rav Yosef"
+                },
+                {
+                    "en_name": "Rabbi Elazar Ben Azarya"
+                },
+                {
+                    "en_name": "Rabbi Akiva"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua"
+                },
+                {
+                    "en_name": "Rabbi Abba"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                },
+                {
+                    "en_name": "Egyptians"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Altar"
+                },
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Hallel"
+                },
+                {
+                    "en_name": "Paschal Offering"
+                },
+                {
+                    "en_name": "Peace-Offering"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "source",
+                    "en_context": "conflicting opinions"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "en_unit": "night",
+                    "en_context": "eating peace-offering"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "time",
+                    "en_context": "paschal lamb mitzvah"
+                },
+                {
+                    "en_name": "15",
+                    "number_category": "Time",
+                    "en_unit": "day",
+                    "en_context": "israel left egypt"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Paschal Lamb"
+                },
+                {
+                    "en_name": "Matzah"
+                },
+                {
+                    "en_name": "Bitter Herb"
+                },
+                {
+                    "en_name": "Meat"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Rabbi Elazar Ben Azarya"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rabbi Eliezer",
+                    "term2": "Rabbi Yehoshua"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Children Of Israel",
+                    "term2": "Egypt"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Children Of Israel",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Egyptians",
+                    "term2": "Egypt"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Paschal Lamb",
+                    "term2": "Peace-Offering"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9a:11-28"
+}

@@ -1,0 +1,68 @@
+﻿COST: Tokens: Total=9721 approx cost=$0.001297 (Prompt=7197, Completion=2524)
+SOURCE:
+Berakhot (Zeraim) 5a:9-13
+
+HEBREW:
+אמר רבא, ואיתימא רב חסדא: אם רואה אדם שיסורין באין עליו — יפשפש במעשיו, שנאמר: ״נחפשה דרכינו ונחקרה ונשובה עד ה׳״. פשפש ולא מצא — יתלה בבטול תורה, שנאמר: ״אשרי הגבר אשר תיסרנו יה ומתורתך תלמדנו״.ואם תלה ולא מצא — בידוע שיסורין של אהבה הם, שנאמר: ״כי את אשר יאהב ה׳ יוכיח״.אמר רבא, אמר רב סחורה, אמר רב הונא: כל שהקדוש ברוך הוא חפץ בו — מדכאו ביסורין, שנאמר: ״וה׳ חפץ דכאו החלי״.יכול אפילו לא קבלם מאהבה? — תלמוד לומר: ״אם תשים אשם נפשו״, מה אשם לדעת, אף יסורין — לדעת.ואם קבלם מה שכרו: ״יראה זרע יאריך ימים״. ולא עוד אלא שתלמודו מתקיים בידו, שנאמר: ״וחפץ ה׳ בידו יצלח״.
+
+ENGLISH:
+Previously, the Gemara discussed suffering that results from ones transgressions. The Gemara shifts the focus and discusses suffering that does not result from ones transgressions and the suffering of the righteous. Rava, and some say Rav Hisda, said: If a person sees that suffering has befallen him, he should examine his actions. Generally, suffering comes about as punishment for ones transgressions, as it is stated: We will search and examine our ways, and return to God (Lamentations 3:40). If he examined his ways and found no transgression for which that suffering is appropriate, he may attribute his suffering to dereliction in the study of Torah. God punishes an individual for dereliction in the study of Torah in order to emphasize the gravity of the issue, as it is stated: Happy is the man whom You punish, Lord, and teach out of Your law (Psalms 94:12). This verse teaches us that his suffering will cause him to return to Your law. And if he did attribute his suffering to dereliction in the study of Torah, and did not find this to be so, he may be confident that these are afflictions of love, as it is stated: For whom the Lord loves, He rebukes, as does a father the son in whom he delights (Proverbs 3:12).So too, Rava said that Rav Sehora said that Rav Huna said: Anyone in whom the Holy One, Blessed be He, delights, He oppresses him with suffering, as it is stated: Yet in whom the Lord delights, He oppresses him with disease; to see if his soul would offer itself in guilt, that he might see his children, lengthen his days, and that the desire of the Lord might prosper by his hand (Isaiah 53:10). This verse illustrates that in whomever God delights, he afflicts with illness.I might have thought that God delights in him even if he does not accept his suffering with love. Therefore the verse teaches: If his soul would offer itself in guilt. Just as a guilt-offering is brought knowingly, as it is one of the sacrifices offered willingly, without coercion, so too his suffering must be accepted knowingly. And if one accepts that suffering with love, what is his reward? As the second part of the verse states: That he might see his children, lengthen his days. Moreover, in addition to these earthly rewards, his Torah study will endure and his Torah study will be successful, as it is stated: The purpose of the Lord, the Torah, the revelation of Gods will, might prosper by his hand.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Suffering, Torah study, divine love, reward.",
+    "heb_summary": "ייסורים, תורה, אהבה אלוהית, שכר.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Rav Hisda"
+        },
+        {
+          "en_name": "Rav Sehora"
+        },
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Guilt-Offering"
+        },
+        {
+          "en_name": "Suffering"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rava",
+          "term2": "Rav Sehora"
+        },
+        {
+          "term1": "Rav Sehora",
+          "term2": "Rav Huna"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Suffering",
+          "term2": "Guilt-Offering"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+﻿COST: Tokens: Total=8573 approx cost=$0.001007 (Prompt=6954, Completion=1619)
+SOURCE:
+Berakhot (Zeraim) 6b:11-17
+
+HEBREW:
+אמר רבי זירא: אגרא דפרקא — רהטא.אמר אביי: אגרא דכלה — דוחקא.אמר רבא: אגרא דשמעתא — סברא.אמר רב פפא: אגרא דבי טמיא — שתיקותא.אמר מר זוטרא: אגרא דתעניתא — צדקתא.אמר רב ששת: אגרא דהספדא — דלויי.אמר רב אשי: אגרא דבי הלולי — מילי.
+
+ENGLISH:
+Rabbi Zeira said: The reward for attending the lecture is for running. Since most individuals attending the lecture did not fully understand the material taught, the primary reward for attendance was given for their intention to hear the Torah being taught, as evidenced by their rush to arrive.Similarly, Abaye said: The reward for attending the kalla is for the crowding. Due to the large crowd, study was difficult, so the primary reward was given for their effort to hear and understand some part of the lecture.Similarly, Rava said: The reward for learning the halakhic traditions of the amoraim is for the logical analysis, as the primary reward for studying Talmud was not given for knowing the halakhic conclusions, but for the logical reasoning that led to those conclusions. Rav Pappa said: The primary reward for attending a house of mourning [ bei tammaya ] is for the silence, which is the optimal manner for those consoling the mourners to express their empathy. Mar Zutra said: The primary reward for fasting is for the charity given to the poor on the fast day (see Isaiah 58). Rav Sheshet said: The primary reward for delivering a eulogy is for causing those in attendance to raise their voices and cry, as that increases the grief over the deceased. Rav Ashi said: The primary reward for participating in a wedding is for the words, i.e., the good wishes with which the guests regale the bride and groom.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis discuss rewards for religious actions.",
+    "heb_summary": "רבנים דנים בשכר מצוות שונות.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Zeira"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Pappa"
+        },
+        {
+          "en_name": "Zutra"
+        },
+        {
+          "en_name": "Sheshet"
+        },
+        {
+          "en_name": "Ashi"
+        },
+        {
+          "en_name": "Isaiah"
+        }
+      ]
+    }
+  }
+}

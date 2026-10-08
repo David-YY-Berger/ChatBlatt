@@ -1,0 +1,53 @@
+﻿{
+    "res": {
+        "en_summary": "Permitted to provoke wicked, with conditions.",
+        "heb_summary": "מותר להקניט רשעים, אך יש תנאים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Dostai"
+                },
+                {
+                    "en_name": "Matun"
+                },
+                {
+                    "en_name": "Yitzhak"
+                },
+                {
+                    "en_name": "Huna"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Shimon Ben Yohai"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Dostai",
+                    "term2": "Matun"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yitzhak"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:15-22"
+}

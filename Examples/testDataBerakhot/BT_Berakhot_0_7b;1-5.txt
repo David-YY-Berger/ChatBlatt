@@ -1,0 +1,101 @@
+﻿COST: Tokens: Total=8676 approx cost=$0.001010 (Prompt=7078, Completion=1598)
+SOURCE:
+Berakhot (Zeraim) 7b:1-5
+
+HEBREW:
+אמר רבי יוחנן משום רבי שמעון בן יוחי: מיום שברא הקדוש ברוך הוא את העולם, לא היה אדם שקראו להקדוש ברוך הוא ״אדון״, עד שבא אברהם וקראו אדון, שנאמר: ״ויאמר אדני אלהים במה אדע כי אירשנה״.אמר רב: אף דניאל לא נענה אלא בשביל אברהם, שנאמר: ״ועתה שמע אלהינו אל תפלת עבדך ואל תחנוניו והאר פניך על מקדשך השמם למען אדני״, ״למענך״ מבעי ליה.אלא — למען אברהם שקראך ״אדון״.ואמר רבי יוחנן משום רבי שמעון בן יוחי: מנין שאין מרצין לו לאדם בשעת כעסו — שנאמר: ״פני ילכו והנחותי לך״.ואמר רבי יוחנן משום רבי שמעון בן יוחי: מיום שברא הקדוש ברוך הוא את עולמו לא היה אדם שהודה להקדוש ברוך הוא, עד שבאתה לאה והודתו, שנאמר: ״הפעם אודה את ה׳״.
+
+ENGLISH:
+Until now, the Gemara has cited statements made by Rabbi Yohanan in the name of the tanna , Rabbi Yosei. Now, the Gemara begins to cite what Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: From the day that the Holy One, Blessed be He, created the world there was no person who called him Lord until Abraham came and called him Lord. As it is stated: And he said, My Lord, God, by what shall I know that I will inherit it? (Genesis 15:8).The Gemara cites another statement extolling that virtue of Abraham is mentioned, as Rav said: Even Daniels prayers were only answered on account of Abraham, as it is stated: And now listen, God, to the prayer of Your servant and to his supplication; and cause Your face to shine upon Your desolate Temple, for the sake of the Lord (Daniel 9:17). The verse should have said: And cause Your face to shine upon Your desolate Temple, for Your sake, as Daniel was addressing the Lord. Rather, this verse contains an allusion that the prayer should be accepted for the sake of Abraham, who called You, Lord. Daniel utilized that name of God in order to evoke Abrahams virtue and enhance his prayer. And Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: From where is it derived that one must not placate a person while the person in the throes of his anger? As it is stated: My face will go, and I will give you rest (Exodus 33:14). And Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: From the day the Holy One, Blessed be He, created the world, no one thanked the Holy One, Blessed be He, until Leah came and thanked Him, as it is stated: And she became pregnant and gave birth to a son, and she said, This time I will give thanks to God, and thus he was called Judah (Genesis 29:35).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Abraham, Daniel, Leah praised God",
+    "heb_summary": "אברהם, דניאל, לאה שיבחו את ה'",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yosei"
+        },
+        {
+          "en_name": "Rabbi Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Holy One"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Daniel"
+        },
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Judah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Yosei"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Shimon Ben Yohai"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Judah",
+          "term2": "Leah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Abraham",
+          "term2": "Holy One"
+        },
+        {
+          "term1": "Daniel",
+          "term2": "Holy One"
+        },
+        {
+          "term1": "Leah",
+          "term2": "Holy One"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Daniel",
+          "term2": "Temple"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abraham",
+          "term2": "Temple"
+        }
+      ]
+    }
+  }
+}

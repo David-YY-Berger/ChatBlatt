@@ -1,0 +1,151 @@
+﻿{
+    "res": {
+        "en_summary": "Temple blessings, rabbinic discussion, Shema recitation.",
+        "heb_summary": "ברכות שמע במקדש, דיון רבני הלכתי.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Deputy High Priest"
+                },
+                {
+                    "en_name": "Priests"
+                },
+                {
+                    "en_name": "Priestly Watch"
+                },
+                {
+                    "en_name": "Rabbi Abba"
+                },
+                {
+                    "en_name": "Rabbi Yosei Bar Abba"
+                },
+                {
+                    "en_name": "Rav Mattana"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Rabbi Zerika"
+                },
+                {
+                    "en_name": "Rabbi Ami"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Lakish"
+                },
+                {
+                    "en_name": "Rav Yitzhak Bar Yosef"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "priestly watch blessing"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Obligation",
+                    "en_unit": "commandment",
+                    "en_context": "shema recitation"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "priestly watch blessings"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Shmuel"
+                },
+                {
+                    "term1": "Rabbi Zerika",
+                    "term2": "Rabbi Ami"
+                },
+                {
+                    "term1": "Rabbi Ami",
+                    "term2": "Rabbi Shimon Ben Lakish"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Deputy High Priest",
+                    "term2": "Priests"
+                },
+                {
+                    "term1": "Deputy High Priest",
+                    "term2": "Priestly Watch"
+                },
+                {
+                    "term1": "Rabbi Abba",
+                    "term2": "Rav Mattana"
+                },
+                {
+                    "term1": "Rabbi Abba",
+                    "term2": "Rav Yehuda"
+                },
+                {
+                    "term1": "Rabbi Yosei Bar Abba",
+                    "term2": "Rav Mattana"
+                },
+                {
+                    "term1": "Rabbi Yosei Bar Abba",
+                    "term2": "Rav Yehuda"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rav Yitzhak Bar Yosef",
+                    "term2": "Babylonia"
+                },
+                {
+                    "term1": "Rav Yitzhak Bar Yosef",
+                    "term2": "Eretz Yisrael"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Priests",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Priestly Watch",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Rabbi Shimon Ben Lakish",
+                    "term2": "Eretz Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11b:20-12a:3"
+}

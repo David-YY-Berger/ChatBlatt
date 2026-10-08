@@ -1,0 +1,154 @@
+﻿COST: Tokens: Total=12813 approx cost=$0.002217 (Prompt=7230, Completion=5583)
+SOURCE:
+Berakhot (Zeraim) 6b:29-33
+
+HEBREW:
+ואמר רבי חלבו, אמר רב הונא: כל הנהנה מסעודת חתן ואינו משמחו עובר בחמשה קולות, שנאמר: ״קול ששון וקול שמחה קול חתן וקול כלה קול אומרים הודו את ה׳ צבאות״.ואם משמחו מה שכרו? אמר רבי יהושע בן לוי: זוכה לתורה שנתנה בחמשה קולות, שנאמר: ״ויהי ביום השלישי בהיות הבקר ויהי קלת וברקים וענן כבד על ההר וקל שופר וגו׳. ויהי קול השפר וגו׳ והאלהים יעננו בקול״.איני? והא כתיב ״וכל העם רואים את הקולות״!אותן קולות, דקודם מתן תורה הוו.רבי אבהו אמר: כאילו הקריב תודה, שנאמר: ״מבאים תודה בית ה׳״. רב נחמן בר יצחק אמר: כאילו בנה אחת מחורבות ירושלים, שנאמר ״כי אשיב את שבות הארץ כבראשונה אמר ה׳״.
+
+ENGLISH:
+And Rabbi Helbo said that Rav Huna said: Anyone who benefits from the feast of a groom but does not cause him to rejoice violates the five voices mentioned in this verse, as it is stated: The voice of joy and the voice of gladness, the voice of the groom and the voice of the bride, and the voice of those who say: Give thanks to the Lord of hosts, for the Lord is good, for His mercy lasts forever, even of those who bring a thanks-offering to the house of the Lord. For I will restore the captivity of the land as it was in the beginning, says the Lord (Jeremiah 33:11). These five voices in the context of a bride and groom correspond to the five voices mentioned in the context of the revelation at Sinai, as in Song of Songs, the day of the revelation at Sinai is alluded to by the phrase: His wedding day (Rabbi Yoshiyahu Pinto, Maharsha). What is his reward if he causes the groom to rejoice? Rabbi Yehoshua ben Levi said: He is privileged to acquire the Torah, which was given with five voices, as it is stated: And it was on the third day, when it was morning, there were sounds [ kolot ], and lightning and a thick cloud upon the mountain, and the voice of the shofar (Exodus 19:16). The plural kolot indicates at least two sounds, while the voice of the shofar is one more. The passage continues: And when the voice of the shofar grew louder and louder, Moses spoke and God answered him by a voice (Exodus 19:19). Along with the three previous voices, the second shofar and the voice with which God answered Moses amount to a total of five voices at the revelation at Sinai.The Gemara asks: Is this so? Isnt it also written: And the whole nation saw the voices and the torches and the sound of the shofar (Exodus 20:15)? Clearly more than five voices are mentioned with regard to the revelation at Sinai.The Gemara answers: Those voices were sounded prior to the giving of the Torah, so they are not included in this calculation of voices. Rabbi Abbahu said: The reward for causing a groom to rejoice is the same as if one had offered a thanks-offering in the Temple, for as it is stated later in the previously cited verse from Jeremiah: Those who bring a thanks-offering to the house of the Lord. And Rav Nahman bar Yitzhak said: The reward for causing a groom to rejoice is the same as if one rebuilt one of Jerusalems ruins, as it is stated later in the same verse: For I will restore the captivity of the land as it was in the beginning.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages discuss rejoicing groom's reward, Sinai voices.",
+    "heb_summary": "חכמים דנים בשמחת חתן, שכר וקולות סיני.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Helbo"
+        },
+        {
+          "en_name": "Huna"
+        },
+        {
+          "en_name": "Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Abbahu"
+        },
+        {
+          "en_name": "Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Jeremiah"
+        },
+        {
+          "en_name": "Lord Of Hosts"
+        },
+        {
+          "en_name": "Lord"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sinai"
+        },
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Jerusalem"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Shofar"
+        },
+        {
+          "en_name": "Thanks-Offering"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "5",
+          "number_category": "Misc",
+          "en_unit": "voice",
+          "en_context": "groom feast voices"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "sound",
+          "en_context": "sinai revelation sounds"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "shofar",
+          "en_context": "sinai revelation shofar"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "voice",
+          "en_context": "sinai previous voices"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Helbo",
+          "term2": "Huna"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Moses",
+          "term2": "God"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Moses",
+          "term2": "Sinai"
+        },
+        {
+          "term1": "God",
+          "term2": "Sinai"
+        },
+        {
+          "term1": "Abbahu",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Nahman Bar Yitzhak",
+          "term2": "Jerusalem"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Jeremiah",
+          "term2": "Jerusalem"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Lord Of Hosts",
+          "term2": "God"
+        },
+        {
+          "term1": "Lord",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

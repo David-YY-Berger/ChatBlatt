@@ -1,0 +1,64 @@
+﻿{
+    "res": {
+        "en_summary": "Shema recitation time, blessings, Torah study.",
+        "heb_summary": "זמן קריאת שמע, ברכות, לימוד תורה.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yehoshua"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Rav Hisda"
+                },
+                {
+                    "en_name": "Mar Ukva"
+                },
+                {
+                    "en_name": "Rabbi Mani"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "shema recitation"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "shema blessings beforehand"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "shema blessing thereafter"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Shmuel"
+                },
+                {
+                    "term1": "Rav Hisda",
+                    "term2": "Mar Ukva"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:31-36"
+}

@@ -1,0 +1,198 @@
+﻿COST: Tokens: Total=11025 approx cost=$0.001633 (Prompt=7441, Completion=3584)
+SOURCE:
+Berakhot (Zeraim) 7a:5-15
+
+HEBREW:
+ואמר רבי יוחנן משום רבי יוסי: מנין שאין מרצין לו לאדם בשעת כעסו, דכתיב: ״פני ילכו והנחתי לך״. אמר לו הקדוש ברוך הוא למשה: המתן לי עד שיעברו פנים של זעם ואניח לך.ומי איכא רתחא קמיה דקודשא בריך הוא?אין, דתניא ״ואל זועם בכל יום״.וכמה זעמו — רגע. וכמה רגע — אחד מחמשת רבוא ושמונת אלפים ושמנה מאות ושמנים ושמנה בשעה, וזו היא רגע. ואין כל בריה יכולה לכוין אותה שעה, חוץ מבלעם הרשע, דכתיב ביה: ״ויודע דעת עליון״.השתא דעת בהמתו לא הוה ידע, דעת עליון הוה ידע?אלא, מלמד שהיה יודע לכוין אותה שעה שהקדוש ברוך הוא כועס בה.והיינו דאמר להו נביא לישראל: ״עמי זכר נא מה יעץ בלק מלך מואב וגו׳״. מאי ״למען דעת צדקות ה׳״?אמר רבי אלעזר, אמר להם הקדוש ברוך הוא לישראל: דעו כמה צדקות עשיתי עמכם שלא כעסתי בימי בלעם הרשע, שאלמלי כעסתי — לא נשתייר משונאיהם של ישראל שריד ופליט.והיינו דקאמר ליה בלעם לבלק: ״מה אקב לא קבה אל ומה אזעם לא זעם ה׳״, מלמד שכל אותן הימים לא זעם.וכמה זעמו — רגע. וכמה רגע? אמר רבי אבין ואיתימא רבי אבינא: רגע כמימריה.ומנא לן דרגע רתח? — שנאמר: ״כי רגע באפו חיים ברצונו״. ואי בעית אימא מהכא: ״חבי כמעט רגע עד יעבר זעם״.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Yosei: From where is it derived that one must not placate a person while he is in the throes of his anger, rather he should mollify him after he has calmed down? As it is written, when following the sin of the Golden Calf, Moses requested that the Divine Presence rest upon Israel as it had previously, God said to him: My face will go, and I will give you rest (Exodus 33:14). Rabbi Yohanan explained: The Holy One, Blessed be He, said to Moses: Wait until My face of wrath will pass and I will grant your request. One must wait for a persons anger to pass as well.The Gemara asks: And is there anger before the Holy One, Blessed be He? Can we speak of God using terms like anger?The Gemara answers: Yes, as it was taught in a baraita , God becomes angry, as it is stated: God vindicates the righteous, God is furious every day (Psalms 7:12). How much time does His anger last? Gods anger lasts a moment. And how long is a moment? One fifty-eight thousand, eight hundred and eighty-eighth of an hour, that is a moment. The Gemara adds: And no creature can precisely determine that moment when God becomes angry, except for Balaam the wicked, about whom it is written: He who knows the knowledge of the Most High (Numbers 24:16).This should not be understood to mean that Balaam was a full-fledged prophet. Now, clearly, Balaam did not know the mind of his animal; and he did know the mind of the Most High? If he could not understand the rebuke of his donkey, he was certainly unable to understand the mind of the Most High. Rather, this verse from Numbers teaches that Balaam was able to precisely determine the hour that the Holy One, Blessed be He, is angry. At that moment, Balaam would utter his curse and, through Gods anger, it would be fulfilled. And that is what the prophet said to Israel: My nation, remember what Balak king of Moab advised, and how Balaam, son of Beor, responded; from Shittim to Gilgal, so that you may know the righteous acts of the Lord (Micah 6:5). What is meant by the statement: So that you may know the righteous acts of the Lord? Rabbi Elazar said that the Holy One, Blessed be He, said to Israel: Know how many acts of kindness I performed on your behalf, that I did not become angry during the days of Balaam the wicked, for had I become angry, there would have been no remnant or survivor remaining among the enemies of Israel, a euphemism for Israel itself. Instead, God restrained His anger and Balaams curse went unfulfilled. And that is what Balaam said to Balak: How can I curse whom God has not cursed? And how can I condemn whom God has not condemned? (Numbers 23:8). This verse teaches that all those days, God was not angry. And how long does His anger last? Gods anger lasts a moment. And how long is a moment? Rabbi Avin, and some say Rabbi Avina, said: A moment lasts as long as it takes to say it [ rega ] . From where do we derive that God is only angry for a moment? As it is stated: His anger is but for a moment, His favor, for a lifetime (Psalms 30:6). And if you wish, say instead, from here, as it is stated: Hide yourself for a brief moment, until the anger passes (Isaiah 26:20), meaning that Gods anger passes in a mere moment.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "God's anger is brief, Balaam's curses fail.",
+    "heb_summary": "כעס ה' רגע, קללות בלעם בטלות.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Yosei"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Balaam"
+        },
+        {
+          "en_name": "Balak"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Rabbi Avin"
+        },
+        {
+          "en_name": "Rabbi Avina"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Beor"
+        },
+        {
+          "en_name": "Micah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shittim"
+        },
+        {
+          "en_name": "Gilgal"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Moab"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Golden Calf"
+        },
+        {
+          "en_name": "Divine Presence"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1.7e-05",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "duration of god's anger"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Donkey"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Yosei"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Balaam",
+          "term2": "Beor"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Moses",
+          "term2": "God"
+        },
+        {
+          "term1": "Balaam",
+          "term2": "Balak"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Balaam",
+          "term2": "Donkey"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Israel",
+          "term2": "Shittim"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Gilgal"
+        },
+        {
+          "term1": "Balaam",
+          "term2": "Shittim"
+        },
+        {
+          "term1": "Balaam",
+          "term2": "Gilgal"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Balak",
+          "term2": "Moab"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Balaam",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Balak",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Moab",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Balaam",
+          "term2": "God"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Balak"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Balaam"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Shittim"
+        },
+        {
+          "term1": "Micah",
+          "term2": "Gilgal"
+        },
+        {
+          "term1": "Micah",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

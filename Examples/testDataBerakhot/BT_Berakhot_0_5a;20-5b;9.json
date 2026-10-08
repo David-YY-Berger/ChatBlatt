@@ -1,0 +1,98 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Yohanan discusses atonement for suffering children.",
+        "heb_summary": "רבי יוחנן דן בכפרה על ייסורי בנים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Bar Yohai"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Mercy"
+                },
+                {
+                    "en_name": "Truth"
+                },
+                {
+                    "en_name": "Charity"
+                },
+                {
+                    "en_name": "Iniquity"
+                },
+                {
+                    "en_name": "Altar Of Atonement"
+                },
+                {
+                    "en_name": "Leprosy"
+                },
+                {
+                    "en_name": "Affliction Of Love"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Misc",
+                    "en_unit": "sign",
+                    "en_context": "leprosy signs"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "People",
+                    "en_unit": "son",
+                    "en_context": "rabbi yohanan son"
+                }
+            ]
+        },
+        "Rel": {
+            "personBelongsToNation": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Eretz Yisrael"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Leprosy",
+                    "term2": "Altar Of Atonement"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Leprosy",
+                    "term2": "Affliction Of Love"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:20-5b:9"
+}

@@ -1,0 +1,57 @@
+﻿COST: Tokens: Total=8034 approx cost=$0.000829 (Prompt=7029, Completion=1005)
+SOURCE:
+Berakhot (Zeraim) 10b:37-41
+
+HEBREW:
+מתני׳ בית שמאי אומרים: בערב — כל אדם יטה ויקרא. ובבקר יעמוד, שנאמר: ״ובשכבך ובקומך״.ובית הלל אומרים: כל אדם קורא כדרכו. שנאמר ״ובלכתך בדרך״.אם כן למה נאמר ״ובשכבך ובקומך״ — בשעה שבני אדם שוכבים ובשעה שבני אדם עומדים.אמר רבי טרפון: אני הייתי בא בדרך והטתי לקרות כדברי בית שמאי. וסכנתי בעצמי מפני הלסטים.אמרו לו: כדי היית לחוב בעצמך, שעברת על דברי בית הלל.
+
+ENGLISH:
+MISHNA: Beit Shammai and Beit Hillel disputed the proper way to recite Shema . Beit Shammai say: One should recite Shema in the manner indicated in the text of Shema itself. Therefore, in the evening every person must recline on his side and recite Shema , in fulfillment of the verse: When you lie down, and in the morning he must stand and recite Shema , in fulfillment of the verse: When you rise, as it is stated: When you lie down, and when you rise. And Beit Hillel say: Every person recites Shema as he is, and he may do so in whatever position is most comfortable for him, both day and night, as it is stated: And when you walk along the way, when one is neither standing nor reclining ( Meiri ). If so, according to Beit Hillel, why was it stated: When you lie down, and when you rise? This is merely to denote time; at the time when people lie down and the time when people rise. With regard to this halakha , Rabbi Tarfon said: Once, I was coming on the road when I stopped and reclined to recite Shema in accordance with the statement of Beit Shammai. Although Rabbi Tarfon was a disciple of Beit Hillel, he thought that fulfilling the mitzva in accordance with the opinion of Beit Shammai would be a more meticulous fulfillment of the mitzva, acceptable to all opinions. Yet in so doing, I endangered myself due to the highwaymen [ listim ] who accost travelers.The Sages said to him: You deserved to be in a position where you were liable to pay with your life, as you transgressed the statement of Beit Hillel. This statement will be explained in the Gemara.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Beit Shammai Hillel dispute Shema recitation.",
+    "heb_summary": "מחלוקת בית שמאי הלל קריאת שמע.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Beit Shammai"
+        },
+        {
+          "en_name": "Beit Hillel"
+        },
+        {
+          "en_name": "Rabbi Tarfon"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Tarfon",
+          "term2": "Beit Hillel"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sages",
+          "term2": "Rabbi Tarfon"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Beit Shammai",
+          "term2": "Beit Hillel"
+        }
+      ]
+    }
+  }
+}

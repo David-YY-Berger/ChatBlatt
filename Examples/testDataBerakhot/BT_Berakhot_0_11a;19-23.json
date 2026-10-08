@@ -1,0 +1,70 @@
+﻿{
+    "res": {
+        "en_summary": "Sages dispute Shema, Sukka halakha, and danger.",
+        "heb_summary": "חכמים חלוקים בהלכה, שמע, סוכה וסכנה.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yehezkel"
+                },
+                {
+                    "en_name": "Beit Shammai"
+                },
+                {
+                    "en_name": "Beit Hillel"
+                },
+                {
+                    "en_name": "Yosef"
+                },
+                {
+                    "en_name": "Yohanan Ben Hahoranit"
+                },
+                {
+                    "en_name": "Tarfon"
+                },
+                {
+                    "en_name": "The Sages"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Sukka"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Beit Hillel",
+                    "term2": "Beit Shammai"
+                },
+                {
+                    "term1": "Beit Shammai",
+                    "term2": "Yohanan Ben Hahoranit"
+                },
+                {
+                    "term1": "Beit Hillel",
+                    "term2": "Yohanan Ben Hahoranit"
+                },
+                {
+                    "term1": "Tarfon",
+                    "term2": "The Sages"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yosef",
+                    "term2": "Yehezkel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11a:19-23"
+}

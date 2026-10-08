@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=8335 approx cost=$0.000962 (Prompt=6836, Completion=1499)
+SOURCE:
+Berakhot (Zeraim) 7a:22
+
+HEBREW:
+ואמר רבי יוחנן משום רבי יוסי: טובה מרדות אחת בלבו של אדם יותר מכמה מלקיות. שנאמר: ״ורדפה את מאהביה וגו׳ ואמרה אלכה ואשובה אל אישי הראשון כי טוב לי אז מעתה״. וריש לקיש אמר, יותר ממאה מלקיות, שנאמר: ״תחת גערה במבין מהכות כסיל מאה״.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Yosei: A single regret or pang of guilt in ones heart is preferable to many lashes administered by others that cause only physical pain, as it is stated: And she chases her lovers, but she does not overtake them; she seeks them, but she will not find them; and she will say I will go and return to my first husband; for it was better for me then than now (Hosea 2:9). Remorse is more effective than any externally imposed punishment listed in the verses that follow (Hosea 2:11-19). And Reish Lakish said that in the Bible, it seems that such remorse is preferable to one hundred lashes, as it is stated: A rebuke enters deeper into a man of understanding than a hundred lashes to a fool (Proverbs 17:10).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Remorse better than external punishment.",
+    "heb_summary": "חרטה עדיפה מעונש חיצוני על הלב.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Yosei"
+        },
+        {
+          "en_name": "Lakish"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "100",
+          "number_category": "Misc",
+          "en_unit": "lash",
+          "en_context": "rebuke to fool"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Yosei"
+        }
+      ]
+    }
+  }
+}

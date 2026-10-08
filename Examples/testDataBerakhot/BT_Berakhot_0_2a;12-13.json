@@ -1,0 +1,33 @@
+﻿{
+    "res": {
+        "en_summary": "Priests eat teruma after sunset, even without atonement.",
+        "heb_summary": "כהנים אוכלים תרומה אחרי שקיעה, גם ללא כפרה.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Symbol": [
+                {
+                    "en_name": "Atonement Offering"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Teruma"
+                },
+                {
+                    "en_name": "Bread"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Teruma",
+                    "term2": "Bread"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2a:12-13"
+}

@@ -1,0 +1,144 @@
+﻿COST: Tokens: Total=10544 approx cost=$0.001550 (Prompt=7168, Completion=3376)
+SOURCE:
+Berakhot (Zeraim) 7b:11-14
+
+HEBREW:
+ואמר רבי יוחנן משום רבי שמעון בן יוחי: קשה תרבות רעה בתוך ביתו של אדם יותר ממלחמת גוג ומגוג. שנאמר: ״מזמור לדוד בברחו מפני אבשלום בנו״, וכתיב בתריה: ״ה׳ מה רבו צרי רבים קמים עלי״, ואילו גבי מלחמת גוג ומגוג, כתיב: ״למה רגשו גוים ולאמים יהגו ריק״. ואילו ״מה רבו צרי״ לא כתיב.״מזמור לדוד בברחו מפני אבשלום בנו״, ״מזמור לדוד״?! ״קינה לדוד״ מיבעי ליה!אמר רבי שמעון בן אבישלום: משל למה הדבר דומה? — לאדם שיצא עליו שטר חוב. קודם שפרעו היה עצב, לאחר שפרעו שמח.אף כן דוד, כיון שאמר לו הקדוש ברוך הוא: ״הנני מקים עליך רעה מביתך״, היה עצב, אמר: שמא עבד או ממזר הוא, דלא חייס עלי. כיון דחזא דאבשלום הוא — שמח. משום הכי אמר ״מזמור״.
+
+ENGLISH:
+And Rabbi Yohanan said other aggadic statements in the name of Rabbi Shimon ben Yohai: The existence of wayward children in a persons home is more troublesome than the war of Gog and Magog, the ultimate war, the climax of the travails of Messianic times. As it is stated: A Psalm of David, when he fled from his son, Absalom (Psalms 3:1). And it is written thereafter: Lord, how numerous are my enemies, many have risen against me (Psalms 3:2). While concerning the war of Gog and Magog, which is alluded to in the second chapter of Psalms, it is written: Why are the nations in an uproar? And why do the peoples speak for naught? The kings of the earth stand up and the rulers take counsel together, against the Lord, and against His anointed...He that sits in heaven laughs, the Lord mocks them (Psalms 2:1-4). Yet in this chapter describing the war of Gog and Magog how numerous are my enemies is not written, as it is not as difficult as raising a wayward son like Absalom.Regarding the opening phrase of the psalm, which serves as its title, the Gemara wonders: It is said: A Psalm of David, when fleeing his son, Absalom. A Psalm of David? It should have said: A lament of David. Rabbi Shimon ben Avishalom said a parable: To what is this similar? It is similar to a person about whom a promissory note was issued stating that he must repay a debt to the lender. Before he repaid it, he was despondent, worried how he will manage to repay the debt. After he repaid it, he was glad. So too was the case with David. When the Holy One, Blessed be He, told him, through Natan the prophet, after the incident with Bathsheba, Behold, I will raise up evil against you from your house (II Samuel 12:11), David was despondent. He said: Perhaps it will be a slave or a mamzer who will rise up in my house, a person of such lowly status, who will have no pity on me. But once David saw that Absalom was the one through whom the prophecy was to be fulfilled, he rejoiced, as he was certain that Absalom would show him mercy. That is why David said a psalm, not a lament, thanking God for punishing him in the least severe manner possible.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Yohanan discusses David's troubles with Absalom.",
+    "heb_summary": "רבי יוחנן דן בצרות דוד עם אבשלום.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Gog"
+        },
+        {
+          "en_name": "Magog"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Absalom"
+        },
+        {
+          "en_name": "Natan"
+        },
+        {
+          "en_name": "Bathsheba"
+        },
+        {
+          "en_name": "Rabbi Shimon Ben Avishalom"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Heaven"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalm chapter"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalm verse"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalm chapter"
+        },
+        {
+          "en_name": "4",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalm verse"
+        },
+        {
+          "en_name": "12",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "samuel chapter"
+        },
+        {
+          "en_name": "11",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "samuel verse"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Shimon Ben Yohai"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Absalom",
+          "term2": "David"
+        }
+      ],
+      "spouseOf": [
+        {
+          "term1": "David",
+          "term2": "Bathsheba"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Natan",
+          "term2": "David"
+        },
+        {
+          "term1": "God",
+          "term2": "David"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Absalom",
+          "term2": "David"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Natan",
+          "term2": "David"
+        },
+        {
+          "term1": "Natan",
+          "term2": "Absalom"
+        }
+      ]
+    }
+  }
+}

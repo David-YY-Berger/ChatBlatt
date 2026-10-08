@@ -1,0 +1,47 @@
+﻿COST: Tokens: Total=7537 approx cost=$0.000718 (Prompt=6859, Completion=678)
+SOURCE:
+Berakhot (Zeraim) 9a:8-10
+
+HEBREW:
+ולא זו בלבד אמרו, אלא וכו׳:ורבן גמליאל מי קאמר ״עד חצות״ דקתני ״ולא זו בלבד אמרו״?הכי קאמר להו רבן גמליאל לבניה: אפילו לרבנן דקאמרי ״עד חצות״, מצותה עד שיעלה עמוד השחר. והאי דקא אמרי עד חצות — כדי להרחיק אדם מן העבירה.
+
+ENGLISH:
+We learned in the mishna that Rabban Gamliel told his sons: And that is not only with regard to the halakha of the recitation of Shema , but, rather, wherever the Rabbis say until midnight, the mitzva may be performed until dawn.The Gemara questions the formulation of the mishna: Does Rabban Gamliel say until midnight, that he teaches: And not only did they say? Rabban Gamliel does not restrict the time for the recitation of Shema until midnight, so why does he say, and not only do they say, implying that he agrees with that stringency?The Gemara explains that this is what Rabban Gamliel said to his sons: Even according to the Rabbis, who say that the mitzva may be performed only until midnight, the biblical obligation to perform the mitzva continues until dawn, and that which they say that it may only be recited until midnight is in order to distance a person from transgression.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabban Gamliel clarifies Shema until dawn.",
+    "heb_summary": "רבן גמליאל מבהיר קריאת שמע עד עלות השחר.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabban Gamliel"
+        },
+        {
+          "en_name": "Sons"
+        },
+        {
+          "en_name": "Rabbis"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Rabban Gamliel",
+          "term2": "Sons"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rabban Gamliel",
+          "term2": "Rabbis"
+        }
+      ]
+    }
+  }
+}

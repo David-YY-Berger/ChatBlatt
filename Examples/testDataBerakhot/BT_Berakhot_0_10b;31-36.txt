@@ -1,0 +1,74 @@
+﻿COST: Tokens: Total=9758 approx cost=$0.001311 (Prompt=7183, Completion=2575)
+SOURCE:
+Berakhot (Zeraim) 10b:31-36
+
+HEBREW:
+רבי יהושע אומר עד שלש שעות. אמר רב יהודה אמר שמואל: הלכה כרבי יהושע.הקורא מכאן ואילך, לא הפסיד.אמר רב חסדא אמר מר עוקבא: ובלבד שלא יאמר יוצר אור.מיתיבי: הקורא מכאן ואילך לא הפסיד, כאדם שהוא קורא בתורה, אבל מברך הוא שתים לפניה ואחת לאחריה. תיובתא דרב חסדא, תיובתא.איכא דאמרי אמר רב חסדא אמר מר עוקבא: מאי ״לא הפסיד״ — שלא הפסיד ברכות. תניא נמי הכי: הקורא מכאן ואילך לא הפסיד כאדם שקורא בתורה, אבל מברך הוא שתים לפניה ואחת לאחריה.אמר רבי מני: גדול הקורא קריאת שמע בעונתה יותר מהעוסק בתורה. מדקתני: הקורא מכאן ואילך לא הפסיד כאדם הקורא בתורה. מכלל דקורא בעונתה — עדיף.
+
+ENGLISH:
+We learned in the mishna that Rabbi Yehoshua says: One may recite the morning Shema until three hours of the day. Rav Yehuda said that Shmuel said: The halakha is in accordance with the opinion of Rabbi Yehoshua. We also learned in the mishna that one who recites Shema from that time onward loses nothing; although he does not fulfill the mitzva of reciting of Shema at its appointed time, he is nevertheless considered like one who reads the Torah, and is rewarded accordingly.With regard to this ruling, Rav Hisda said that Mar Ukva said: This only applies provided one does not recite: Who forms light [ yotzer or ], or the rest of the blessings recited along with Shema , as they pertain only to the fulfillment of the mitzva of reciting of the morning Shema ; after the third hour, they are inappropriate.The Gemara raises an objection to Rav Hisdas statement from a baraita : One who recites Shema from that time onward loses nothing, and is considered like one who reads Torah, but he recites two blessings beforehand and one blessing thereafter. This directly contradicts Rav Hisdas statement, and the Gemara notes: Indeed, the refutation of the statement of Rav Hisda is a conclusive refutation, and Rav Hisdas opinion is rejected in favor of that of the baraita . Some say that Rav Hisda said that Mar Ukva said the opposite: What is the meaning of: Loses nothing, in the mishna? This means that one who recites Shema after the third hour does not lose the opportunity to recite the blessings and is permitted to recite them although the time for the recitation of Shema has passed. That was also taught in a baraita : One who recites Shema after this time loses nothing, and is considered like one who reads the Torah, but he recites two blessings beforehand and one thereafter. With regard to our mishna, Rabbi Mani said: Greater is one who recites Shema at its appropriate time than one who engages in Torah study. A proof is cited based on what was taught in the mishna: One who recites Shema after this time loses nothing and is considered like one who reads the Torah. This is proven by inference, since one who recites Shema at its appointed time is greater than one who does not, and one who does not is equal to one who reads the Torah, when one recites Shema at its appointed time he fulfills two mitzvot, that of Torah study and that of the recitation of Shema .
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Shema recitation time, blessings, Torah study.",
+    "heb_summary": "זמן קריאת שמע, ברכות, לימוד תורה.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yehoshua"
+        },
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Rav Hisda"
+        },
+        {
+          "en_name": "Mar Ukva"
+        },
+        {
+          "en_name": "Rabbi Mani"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "shema recitation"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "shema blessings beforehand"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Obligation",
+          "en_unit": "blessing",
+          "en_context": "shema blessing thereafter"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        },
+        {
+          "term1": "Rav Hisda",
+          "term2": "Mar Ukva"
+        }
+      ]
+    }
+  }
+}

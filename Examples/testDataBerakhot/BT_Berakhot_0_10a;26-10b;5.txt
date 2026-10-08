@@ -1,0 +1,245 @@
+﻿COST: Tokens: Total=15737 approx cost=$0.002912 (Prompt=8041, Completion=7696)
+SOURCE:
+Berakhot (Zeraim) 10a:26-10b:5
+
+HEBREW:
+אמר רב המנונא: מאי דכתיב ״מי כהחכם ומי יודע פשר דבר״ — מי כהקדוש ברוך הוא שיודע לעשות פשרה בין שני צדיקים, בין חזקיהו לישעיהו. חזקיהו אמר: ליתי ישעיהו גבאי, דהכי אשכחן באליהו דאזל לגבי אחאב, שנאמר: ״וילך אליהו להראות אל אחאב״. ישעיהו אמר: ליתי חזקיהו גבאי דהכי אשכחן ביהורם בן אחאב דאזל לגבי אלישע.מה עשה הקדוש ברוך הוא — הביא יסורים על חזקיהו, ואמר לו לישעיהו: לך ובקר את החולה. שנאמר: ״בימים ההם חלה חזקיהו למות ויבא אליו ישעיהו בן אמוץ הנביא ויאמר אליו כה אמר ה׳ צבאות צו לביתך כי מת אתה ולא תחיה וגו׳״. מאי ״כי מת אתה ולא תחיה״: מת אתה — בעולם הזה, ולא תחיה — לעולם הבא.אמר ליה: מאי כולי האי? אמר ליה: משום דלא עסקת בפריה ורביה. אמר ליה: משום דחזאי לי ברוח הקדש דנפקי מינאי בנין דלא מעלו.אמר ליה: בהדי כבשי דרחמנא למה לך? מאי דמפקדת איבעי לך למעבד, ומה דניחא קמיה קודשא בריך הוא — לעביד.אמר ליה: השתא הב לי ברתך, אפשר דגרמא זכותא דידי ודידך, ונפקי מנאי בנין דמעלו. אמר ליה: כבר נגזרה עליך גזירה. אמר ליה: בן אמוץ, כלה נבואתך וצא!כך מקובלני מבית אבי אבא, אפילו חרב חדה מונחת על צוארו של אדם, אל ימנע עצמו מן הרחמים.אתמר נמי, רבי יוחנן ורבי אליעזר דאמרי תרוייהו: אפילו חרב חדה מונחת על צוארו של אדם, אל ימנע עצמו מן הרחמים. שנאמר: ״הן יקטלני לו איחל״.אמר רבי חנן: אפילו בעל החלומות אומר לו לאדם למחר הוא מת — אל ימנע עצמו מן הרחמים. שנאמר: ״כי ברב חלמות והבלים ודברים הרבה כי את האלהים ירא״.מיד ״ויסב חזקיהו פניו אל הקיר ויתפלל אל ה׳״.מאי ״קיר״? אמר רבי שמעון בן לקיש: מקירות לבו, שנאמר: ״מעי מעי אוחילה קירות לבי וגו׳״.רבי לוי אמר: על עסקי הקיר, אמר לפניו: רבונו של עולם, ומה שונמית שלא עשתה אלא קיר אחת קטנה החיית את בנה, אבי אבא שחפה את ההיכל כולו בכסף ובזהב על אחת כמה וכמה. ״זכר נא את אשר התהלכתי לפניך באמת ובלב שלם והטוב בעיניך עשיתי״.מאי ״והטוב בעיניך עשיתי״? אמר רב יהודה אמר רב: שסמך גאולה לתפלה. רבי לוי אמר: שגנז ספר רפואות.
+
+ENGLISH:
+With regard to redemption and prayer, the Gemara tells the story of Hezekiahs illness, his prayer to God, and subsequent recuperation. Rav Hamnuna said: What is the meaning of that which is written praising the Holy One, Blessed be He: Who is like the wise man, and who knows the interpretation [ pesher ] of the matter (Ecclesiastes 8:1)? This verse means: Who is like the Holy One, Blessed be He, Who knows how to effect compromise [ peshara ] between two righteous individuals, between Hezekiah, the king of Judea, and Isaiah the prophet. They disagreed over which of them should visit the other. Hezekiah said: Let Isaiah come to me, as that is what we find with regard to Elijah the prophet, who went to Ahab, the king of Israel, as it is stated: And Elijah went to appear to Ahab (I Kings 18:2). This proves that it is the prophet who must seek out the king. And Isaiah said: Let Hezekiah come to me, as that is what we find with regard to Yehoram ben Ahab, king of Israel, who went to Elisha the prophet, as it is stated: So the king of Israel, Jehosaphat and the king of Edom went down to him (II Kings 3:12). What did the Holy One, Blessed be He, do to effect compromise between Hezekiah and Isaiah? He brought the suffering of illness upon Hezekiah and told Isaiah: Go and visit the sick. Isaiah did as God instructed, as it is stated: In those days Hezekiah became deathly ill, and Isaiah ben Amoz the prophet came and said to him: Thus says the Lord of Hosts: Set your house in order, for you will die and you will not live (Isaiah 38:1). This seems redundant; what is the meaning of you will die and you will not live? This repetition means: You will die in this world, and you will not live, you will have no share, in the World-to-Come. Hezekiah said to him: What is all of this? For what transgression am I being punished? Isaiah said to him: Because you did not marry and engage in procreation. Hezekiah apologized and said: I had no children because I envisaged through divine inspiration that the children that emerge from me will not be virtuous. Hezekiah meant that he had seen that his children were destined to be evil. In fact, his son Menashe sinned extensively, and he thought it preferable to have no children at all.Isaiah said to him: Why do you involve yourself with the secrets of the Holy One, Blessed be He? That which you have been commanded, the mitzva of procreation, you are required to perform, and that which is acceptable in the eyes of the Holy One, Blessed be He, let Him perform, as He has so decided.Hezekiah said to Isaiah: Now give me your daughter as my wife; perhaps my merit and your merit will cause virtuous children to emerge from me. Isaiah said to him: The decree has already been decreed against you and this judgment cannot be changed. Hezekiah said to him: Son of Amoz, cease your prophecy and leave. As long as the prophet spoke as Gods emissary, Hezekiah was obligated to listen to him. He was not, however, obligated to accept Isaiahs personal opinion that there was no possibility for mercy and healing.Hezekiah continued: I have received a tradition from the house of my fathers father, from King David, the founding father of the dynasty of kings of Judea: Even if a sharp sword rests upon a persons neck, he should not prevent himself from praying for mercy. One may still hold out hope that his prayers will be answered, as was David himself when he saw the Angel of Destruction, but nonetheless prayed for mercy and his prayers were answered.With regard to the fact that one should not despair of Gods mercy, the Gemara cites that it was also said that Rabbi Yohanan and Rabbi Eliezer both said: Even if a sharp sword is resting upon a persons neck, he should not prevent himself from praying for mercy, as it is stated in the words of Job: Though He slay me, I will trust in Him (Job 13:15). Even though God is about to take his life, he still prays for Gods mercy.Similarly, Rabbi Hanan said: Even if the master of dreams, in a true dream, an angel ( Maayan HaBerakhot ) tells a person that tomorrow he will die, he should not prevent himself from praying for mercy, as it is stated: For in the multitude of dreams and vanities there are many words; but fear God (Ecclesiastes 5:6). Although the dream may seem real to him, that is not necessarily the case, and one must place his trust in God.Having heard Isaiahs harsh prophecy, immediately Hezekiah turned his face toward the wall and prayed to the Lord (Isaiah 38:2).The Gemara asks: What is meant by the word wall [ kir ] in this context? Why did Hezekiah turn his face to a wall? Rabbi Shimon ben Lakish said: This symbolically alludes to the fact that Hezekiah prayed to God from the chambers [ kirot ] of his heart, as it is stated elsewhere: My anguish, my anguish, I am in pain. The chambers of my heart. My heart moans within me (Jeremiah 4:19). Rabbi Levi said: Hezekiah intended to evoke matters relating to a wall, and he said before God: Master of the Universe, and if the woman from Shunem, who made only a single small wall on the roof for the prophet Elisha, and you revived her son, all the more so should you bring life to the descendant of my fathers father, King Solomon, who covered the entire Temple Sanctuary with silver and gold. In his prayer, Hezekiah said: Please, Lord, please remember that I walked before You in truth, and with a complete heart, and what was good in Your eyes I did. And Hezekiah wept sore (Isaiah 38:3).The Gemara asks: To what specific action was he referring when he said: And what was good in your sight I did? Various opinions are offered: Mentioning Hezekiahs merits, Rav Yehuda said in the name of Rav that he juxtaposed redemption and prayer at sunrise instead of sleeping late, as was the custom of most kings ( Iyyun Yaakov ). Rabbi Levi said: He suppressed the Book of Remedies upon which everyone relied.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Hezekiah's illness, prayer, and Isaiah's prophecy.",
+    "heb_summary": "חזקיהו חלה, התפלל, וישעיהו ניבא עליו.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hezekiah"
+        },
+        {
+          "en_name": "Hamnuna"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Isaiah"
+        },
+        {
+          "en_name": "Elijah"
+        },
+        {
+          "en_name": "Ahab"
+        },
+        {
+          "en_name": "Yehoram"
+        },
+        {
+          "en_name": "Elisha"
+        },
+        {
+          "en_name": "Amoz"
+        },
+        {
+          "en_name": "Menashe"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Eliezer"
+        },
+        {
+          "en_name": "Job"
+        },
+        {
+          "en_name": "Hanan"
+        },
+        {
+          "en_name": "Shimon Ben Lakish"
+        },
+        {
+          "en_name": "Levi"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "Yehuda"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Angel Of Destruction"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Judea"
+        },
+        {
+          "en_name": "World-To-Come"
+        },
+        {
+          "en_name": "Shunem"
+        },
+        {
+          "en_name": "Temple Sanctuary"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Edom"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Sharp Sword"
+        },
+        {
+          "en_name": "Wall"
+        },
+        {
+          "en_name": "Book Of Remedies"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Measurement",
+          "en_unit": "wall",
+          "en_context": "wall on roof for prophet"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yehuda",
+          "term2": "Rav"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Isaiah",
+          "term2": "Amoz"
+        },
+        {
+          "term1": "Yehoram",
+          "term2": "Ahab"
+        },
+        {
+          "term1": "Menashe",
+          "term2": "Hezekiah"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "David"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "Hezekiah",
+          "term2": "David"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "Solomon"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Hezekiah",
+          "term2": "God"
+        },
+        {
+          "term1": "God",
+          "term2": "Isaiah"
+        },
+        {
+          "term1": "Elijah",
+          "term2": "Ahab"
+        },
+        {
+          "term1": "Yehoram",
+          "term2": "Elisha"
+        },
+        {
+          "term1": "Yohanan",
+          "term2": "Eliezer"
+        },
+        {
+          "term1": "Hanan",
+          "term2": "God"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Hezekiah",
+          "term2": "Isaiah"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Hezekiah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Ahab",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Yehoram",
+          "term2": "Israel"
+        },
+        {
+          "term1": "David",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Solomon",
+          "term2": "Israel"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Judea",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Isaiah",
+          "term2": "Hezekiah"
+        },
+        {
+          "term1": "Isaiah",
+          "term2": "Menashe"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Hezekiah",
+          "term2": "David"
+        },
+        {
+          "term1": "Hezekiah",
+          "term2": "Job"
+        }
+      ]
+    }
+  }
+}

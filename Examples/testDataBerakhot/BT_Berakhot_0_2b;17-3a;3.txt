@@ -1,0 +1,49 @@
+﻿COST: Tokens: Total=8552 approx cost=$0.001000 (Prompt=6959, Completion=1593)
+SOURCE:
+Berakhot (Zeraim) 2b:17-3a:3
+
+HEBREW:
+קשיא דרבי מאיר אדרבי מאיר! תרי תנאי אליבא דרבי מאיר.קשיא דרבי אליעזר אדרבי אליעזר!תרי תנאי אליבא דרבי אליעזר, ואיבעית אימא: רישא לאו רבי אליעזר היא.
+
+ENGLISH:
+The previous baraita cited Rabbi Meirs opinion that the time for the recitation of Shema begins when the priests immerse before partaking of their teruma . In the Tosefta , it was taught that Rabbi Meir holds that one begins to recite Shema from when people enter to eat their meal on Shabbat eve. One opinion of Rabbi Meir seems to contradict another opinion of Rabbi Meir . The Gemara responds: Two tannaim , students of Rabbi Meir, expressed different opinions in accordance with Rabbi Meirs opinion.So too, the opinion of Rabbi Eliezer cited in the mishna contradicts the opinion of Rabbi Eliezer cited in the baraita . In the mishna, Rabbi Eliezer holds that the time for the recitation of Shema begins with the emergence of the stars: From the time when the priests enter to partake of their teruma , while in the baraita , he states that the time for the recitation of Shema begins when the day becomes sanctified on the eve of Shabbat.The Gemara responds: There are two possible resolutions to the apparent contradiction in Rabbi Eliezers opinion. Either two tannaim expressed different opinions in accordance with Rabbi Eliezers opinion, or if you wish, say instead that the first clause of the mishna, according to which we begin to recite Shema when the priests enter to partake of their teruma , is not actually Rabbi Eliezers opinion. Only the second half of the statement: Until the end of the first watch, was stated by Rabbi Eliezer.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbinic opinions on Shema recitation time.",
+    "heb_summary": "דעות רבניות על זמן קריאת שמע.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Meir"
+        },
+        {
+          "en_name": "Priests"
+        },
+        {
+          "en_name": "Tannaim"
+        },
+        {
+          "en_name": "Rabbi Eliezer"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Tannaim",
+          "term2": "Rabbi Meir"
+        },
+        {
+          "term1": "Tannaim",
+          "term2": "Rabbi Eliezer"
+        }
+      ]
+    }
+  }
+}

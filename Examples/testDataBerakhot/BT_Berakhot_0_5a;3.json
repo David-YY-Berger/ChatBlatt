@@ -1,0 +1,130 @@
+﻿{
+    "res": {
+        "en_summary": "God gave Moses entire Torah at Sinai.",
+        "heb_summary": "ה' נתן למשה תורה שלמה בסיני.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Levi Bar Hama"
+                },
+                {
+                    "en_name": "Shimon Ben Lakish"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Moses"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Mountain"
+                },
+                {
+                    "en_name": "Sinai"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Stone Tablets"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Mitzva"
+                },
+                {
+                    "en_name": "Ten Commandments"
+                },
+                {
+                    "en_name": "Tablets Of The Covenant"
+                },
+                {
+                    "en_name": "Written Torah"
+                },
+                {
+                    "en_name": "Mishna"
+                },
+                {
+                    "en_name": "Prophets"
+                },
+                {
+                    "en_name": "Writings"
+                },
+                {
+                    "en_name": "Talmud"
+                },
+                {
+                    "en_name": "Halakha"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "24",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "exodus chapter"
+                },
+                {
+                    "en_name": "12",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "exodus verse"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Obligation",
+                    "en_unit": "commandment",
+                    "en_context": "number of commandments"
+                },
+                {
+                    "en_name": "5",
+                    "number_category": "Misc",
+                    "en_unit": "book",
+                    "en_context": "books of moses"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Levi Bar Hama",
+                    "term2": "Shimon Ben Lakish"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Moses"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Moses",
+                    "term2": "Mountain"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Sinai"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Stone Tablets",
+                    "term2": "Tablets Of The Covenant"
+                },
+                {
+                    "term1": "Mitzva",
+                    "term2": "Mishna"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:3"
+}

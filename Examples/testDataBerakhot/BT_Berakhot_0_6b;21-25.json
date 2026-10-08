@@ -1,0 +1,89 @@
+﻿{
+    "res": {
+        "en_summary": "Sages explain vileness, dependency, and shame.",
+        "heb_summary": "חכמים מסבירים שפלות, תלות ובושה.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "Rav Beivai Bar Abaye"
+                },
+                {
+                    "en_name": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Elazar"
+                },
+                {
+                    "en_name": "Rav Dimi"
+                },
+                {
+                    "en_name": "Rabbi Ami"
+                },
+                {
+                    "en_name": "Rabbi Asi"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Babylonia"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                },
+                {
+                    "en_name": "Cities By The Sea"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "punishment",
+                    "en_context": "dependent on others"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Kerum"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Elazar",
+                    "term2": "Rabbi Yohanan"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rav Beivai Bar Abaye",
+                    "term2": "Rav Nahman Bar Yitzhak"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rav Dimi",
+                    "term2": "Babylonia"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rav Dimi",
+                    "term2": "Eretz Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:21-25"
+}

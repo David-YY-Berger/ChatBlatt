@@ -1,0 +1,109 @@
+﻿COST: Tokens: Total=9373 approx cost=$0.001283 (Prompt=6796, Completion=2577)
+SOURCE:
+Berakhot (Zeraim) 11b:8-9
+
+HEBREW:
+ואידך מאי היא? אמר רב יהודה אמר שמואל: ״אהבה רבה״. וכן אורי ליה רבי אלעזר לרבי פדת בריה, ״אהבה רבה״.תניא נמי הכי: אין אומרים ״אהבת עולם״, אלא ״אהבה רבה״. ורבנן אמרי אהבת עולם, וכן הוא אומר: ״ואהבת עולם אהבתיך על כן משכתיך חסד״.
+
+ENGLISH:
+The Gemara asks: And what is the formula of the other blessing recited before Shema ? Rav Yehuda said in the name of Shmuel: An abounding love [ ahava rabba ]. And Rabbi Elazar instructed his son, Rabbi Pedat, to also say: An abounding love. That was also taught in a baraita : One does not recite: An eternal love [ ahavat olam ]; rather, one recites: An abounding love. And the Rabbis say that one recites: An eternal love, and so it says: And an eternal love I have loved you, therefore I have drawn you with kindness (Jeremiah 31:3).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Blessing formulas: Abounding Love versus Eternal Love.",
+    "heb_summary": "ברכות קריאת שמע: אהבה רבה או אהבת עולם.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Rabbi Pedat"
+        },
+        {
+          "en_name": "Rabbis"
+        },
+        {
+          "en_name": "Jeremiah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Abounding Love"
+        },
+        {
+          "en_name": "Eternal Love"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "31",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "jeremiah book reference"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "jeremiah book reference"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Rabbi Pedat",
+          "term2": "Rabbi Elazar"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "Rabbi Pedat"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rabbis",
+          "term2": "Rav Yehuda"
+        },
+        {
+          "term1": "Rabbis",
+          "term2": "Shmuel"
+        },
+        {
+          "term1": "Rabbis",
+          "term2": "Rabbi Elazar"
+        },
+        {
+          "term1": "Rabbis",
+          "term2": "Rabbi Pedat"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Jeremiah",
+          "term2": "Eternal Love"
+        }
+      ]
+    }
+  }
+}

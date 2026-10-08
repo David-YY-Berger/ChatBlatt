@@ -1,0 +1,77 @@
+﻿{
+    "res": {
+        "en_summary": "God's anger, rooster, kings, and mercy.",
+        "heb_summary": "כעס אלוהים, תרנגול, מלכים, ורחמים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Rabbi Meir"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "East"
+                },
+                {
+                    "en_name": "West"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Sun"
+                },
+                {
+                    "en_name": "Crown"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "divine anger"
+                },
+                {
+                    "en_name": "145",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "17",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "proverbs reference"
+                },
+                {
+                    "en_name": "26",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "proverbs reference"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Rooster"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:16-21"
+}

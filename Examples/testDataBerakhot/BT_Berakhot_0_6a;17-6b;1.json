@@ -1,0 +1,37 @@
+﻿{
+    "res": {
+        "en_summary": "Phylacteries have different compartment counts.",
+        "heb_summary": "תפילין של ראש ויד, מספר תאים.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Symbol": [
+                {
+                    "en_name": "Phylactery Of The Head"
+                },
+                {
+                    "en_name": "Phylactery Of The Arm"
+                },
+                {
+                    "en_name": "Parchment"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Misc",
+                    "en_unit": "compartment",
+                    "en_context": "phylactery of head"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "parchment",
+                    "en_context": "phylactery of arm"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6a:17-6b:1"
+}

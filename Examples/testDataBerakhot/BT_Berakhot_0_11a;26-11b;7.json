@@ -1,0 +1,51 @@
+﻿{
+    "res": {
+        "en_summary": "Gemara discusses Shema blessings, light, darkness, evil.",
+        "heb_summary": "הגמרא דנה בברכות שמע, אור, חושך, רע.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yaakov"
+                },
+                {
+                    "en_name": "Oshaya"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Isaiah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Bible"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yaakov",
+                    "term2": "Oshaya"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rava",
+                    "term2": "Abaye"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11a:26-11b:7"
+}

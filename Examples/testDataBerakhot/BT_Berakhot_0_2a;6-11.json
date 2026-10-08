@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Mishna's Shema order: evening first, then morning.",
+        "heb_summary": "סדר קריאת שמע: ערב קודם בוקר.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Tanna"
+                },
+                {
+                    "en_name": "Priests"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Mishna"
+                },
+                {
+                    "en_name": "Gemara"
+                },
+                {
+                    "en_name": "Talmud"
+                },
+                {
+                    "en_name": "Oral Torah"
+                },
+                {
+                    "en_name": "Written Torah"
+                },
+                {
+                    "en_name": "Morning Offering"
+                },
+                {
+                    "en_name": "Evening Offering"
+                },
+                {
+                    "en_name": "Creation Of The World"
+                },
+                {
+                    "en_name": "Blessing"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "morning shema before"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "blessing",
+                    "en_context": "morning shema after"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Teruma"
+                }
+            ]
+        },
+        "Rel": {
+            "comparedTo": [
+                {
+                    "term1": "Oral Torah",
+                    "term2": "Written Torah"
+                },
+                {
+                    "term1": "Morning Offering",
+                    "term2": "Evening Offering"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2a:6-11"
+}

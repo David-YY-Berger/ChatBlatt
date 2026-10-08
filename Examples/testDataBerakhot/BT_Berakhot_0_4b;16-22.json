@@ -1,0 +1,153 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis discuss Psalm 145's significance and meaning.",
+        "heb_summary": "רבנים דנים במשמעות תהילים קמה.",
+        "passage_types": [
+            "PHILOSOPHIC",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Elazar"
+                },
+                {
+                    "en_name": "Rabbi Avina"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "Amos"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                },
+                {
+                    "en_name": "West"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "A Psalm Of David (Psalms 145)"
+                },
+                {
+                    "en_name": "Psalms 119"
+                },
+                {
+                    "en_name": "Psalms 136"
+                },
+                {
+                    "en_name": "Psalms 84:5"
+                },
+                {
+                    "en_name": "Psalms 145:16"
+                },
+                {
+                    "en_name": "Psalms 136:25"
+                },
+                {
+                    "en_name": "Psalms 145:14"
+                },
+                {
+                    "en_name": "Amos 5:2"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "time",
+                    "en_context": "daily recitation"
+                },
+                {
+                    "en_name": "8",
+                    "number_category": "Misc",
+                    "en_unit": "time",
+                    "en_context": "alphabetical arrangement"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Elazar",
+                    "term2": "Rabbi Avina"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "World-To-Come"
+                },
+                {
+                    "term1": "Rabbi Elazar",
+                    "term2": "World-To-Come"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Amos",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Israel"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Eretz Yisrael",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Amos",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "David",
+                    "term2": "Israel"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "A Psalm Of David (Psalms 145)",
+                    "term2": "Psalms 119"
+                },
+                {
+                    "term1": "A Psalm Of David (Psalms 145)",
+                    "term2": "Psalms 136"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "A Psalm Of David (Psalms 145)",
+                    "term2": "Psalms 119"
+                },
+                {
+                    "term1": "A Psalm Of David (Psalms 145)",
+                    "term2": "Psalms 136"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4b:16-22"
+}

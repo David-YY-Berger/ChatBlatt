@@ -1,0 +1,143 @@
+﻿COST: Tokens: Total=11525 approx cost=$0.001750 (Prompt=7590, Completion=3935)
+SOURCE:
+Berakhot (Zeraim) 6a:7-16
+
+HEBREW:
+תניא, אבא בנימין אומר: אין תפלה של אדם נשמעת אלא בבית הכנסת, שנאמר: ״לשמע אל הרנה ואל התפלה״. במקום רנה — שם תהא תפלה.אמר רבין בר רב אדא, אמר רבי יצחק: מנין שהקדוש ברוך הוא מצוי בבית הכנסת — שנאמר: ״אלהים נצב בעדת אל״.ומנין לעשרה שמתפללין ששכינה עמהם — שנאמר: ״אלהים נצב בעדת אל״.ומנין לשלשה שיושבין בדין ששכינה עמהם, שנאמר: ״בקרב אלהים ישפט״.ומנין לשנים שיושבין ועוסקין בתורה ששכינה עמהם — שנאמר: ״אז נדברו יראי ה׳ איש אל רעהו ויקשב ה׳״ וגו׳.מאי ״ולחשבי שמו״? אמר רב אשי: חשב אדם לעשות מצוה, ונאנס, ולא עשאה — מעלה עליו הכתוב כאילו עשאה.ומנין שאפילו אחד שיושב ועוסק בתורה ששכינה עמו — שנאמר: ״בכל המקום אשר אזכיר את שמי אבוא אליך וברכתיך״.וכי מאחר דאפילו חד, תרי מבעיא?! תרי — מכתבן מלייהו בספר הזכרונות, חד — לא מכתבן מליה בספר הזכרונות.וכי מאחר דאפילו תרי, תלתא מבעיא?! מהו דתימא: דינא שלמא בעלמא הוא, ולא אתיא שכינה, קמשמע לן דדינא נמי היינו תורה.וכי מאחר דאפילו תלתא, עשרה מבעיא?! עשרה — קדמה שכינה ואתיא. תלתא — עד דיתבי.
+
+ENGLISH:
+It was taught in a baraita that Abba Binyamin said: Ones prayer is only fully heard in a synagogue, as it is stated with regard to King Solomons prayer in the Temple: Yet have You turned toward the prayer of Your servant and to his supplication, Lord my God, to listen to the song and the prayer which Your servant prays before You on this day (I Kings 8:28). The following verse concludes: To hear the prayer Your servant directs toward this place (I Kings 8:29). We see that ones prayer is heard specifically in the Temple, of which the synagogue is a microcosm (Rav Yoshiyahu Pinto). It may be inferred that in a place of song, a synagogue where Gods praises are sung, there prayer should be. In explaining Abba Binyamins statement, Ravin bar Rav Adda said that Rabbi Yitzhak said: From where is it derived that the Holy One, Blessed be He, is located in a synagogue? As it is stated: God stands in the congregation of God; in the midst of the judges He judges (Psalms 82:1). The congregation of God is the place where people congregate to sing Gods praises, and God is located among His congregation. And from where is it derived that ten people who pray, the Divine Presence is with them? As it is stated: God stands in the congregation of God, and the minimum number of people that constitute a congregation is a quorum of ten. From where is it derived that three who sit in judgment, the Divine Presence is with them? It is derived from this same verse, as it is stated: In the midst of the judges He judges, and the minimum number of judges that comprises a court is three. From where is it derived that two who sit and engage in Torah study, the Divine Presence is with them? As it is stated: Then they that feared the Lord spoke one with the other, and the Lord listened, and heard, and a book of remembrance was written before Him, for them that fear the Lord, and that think upon His name (Malachi 3:16). The Divine Presence listens to any two God-fearing individuals who speak with each other.With regard to this verse, the Gemara asks: What is the meaning of the phrase, And that think upon His name? Rav Ashi said: If a person intended to perform a mitzva, but due to circumstances beyond his control, he did not perform it, the verse ascribes him credit as if he performed the mitzva, as he is among those that think upon His name.The Gemara returns to Ravin bar Rav Addas statement: And from where is it derived that when even one who sits and engages in Torah study, the Divine Presence is with him? As it is stated: In every place where I cause My Name to be mentioned, I will come to you and bless you (Exodus 20:21); God blesses even a single person who mentions Gods name, a reference to Torah study ( Iyyun Yaakov ).The Gemara asks: Since the Divine Presence rests even upon one who engages in Torah study, was it necessary to say that the Divine Presence rests upon two who study Torah together? The Gemara answers: There is a difference between them. Two people, their words of Torah are written in the book of remembrance, as it is stated: And a book of remembrance was written; however a single individuals words of Torah are not written in a book of remembrance. The Gemara continues: Since the Divine Presence rests even upon two who engage in Torah study, is it necessary to mention three? The Gemara answers: Here too, a special verse is necessary lest you say that judgment is merely to keep the peace among the citizenry, and the Divine Presence does not come and rest upon those who sit in judgment as they are not engaged in Torah study. Ravin bar Rav Adda teaches us that sitting in judgment is also Torah. The Gemara asks: Since the Divine Presence rests even upon three, is it necessary to mention ten? The Gemara answers: The Divine Presence arrives before a group of ten, as the verse: God stands in the congregation of God, indicates that when the ten individuals who comprise a congregation arrive, the Divine Presence is already there. For a group of three judges, however, the Divine Presence does not arrive until they sit and begin their deliberations, as in the midst of the judges He judges. God aids them in their judgment, but does not arrive before them.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Prayer heard in synagogue, Divine Presence in holy places.",
+    "heb_summary": "תפילה נשמעת בבית כנסת, שכינה במקומות קדושים.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abba Binyamin"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "Rav Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Ravin Bar Rav Adda"
+        },
+        {
+          "en_name": "Rabbi Yitzhak"
+        },
+        {
+          "en_name": "Rav Ashi"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        },
+        {
+          "en_name": "Divine Presence"
+        },
+        {
+          "en_name": "Malachi"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Synagogue"
+        },
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Congregation Of God"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "People",
+          "en_unit": "person",
+          "en_context": "congregation quorum"
+        },
+        {
+          "en_name": "3",
+          "number_category": "People",
+          "en_unit": "judge",
+          "en_context": "court quorum"
+        },
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "en_unit": "person",
+          "en_context": "torah study"
+        },
+        {
+          "en_name": "1",
+          "number_category": "People",
+          "en_unit": "person",
+          "en_context": "torah study"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Ravin Bar Rav Adda",
+          "term2": "Rabbi Yitzhak"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Solomon",
+          "term2": "Temple"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Abba Binyamin",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "Rav Yoshiyahu Pinto",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "God",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "God",
+          "term2": "Temple"
+        },
+        {
+          "term1": "God",
+          "term2": "Congregation Of God"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Malachi",
+          "term2": "God"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Holy One, Blessed Be He",
+          "term2": "God"
+        },
+        {
+          "term1": "Divine Presence",
+          "term2": "God"
+        }
+      ]
+    }
+  }
+}

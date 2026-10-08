@@ -1,0 +1,133 @@
+﻿{
+    "res": {
+        "en_summary": "Prayer heard in synagogue, Divine Presence in holy places.",
+        "heb_summary": "תפילה נשמעת בבית כנסת, שכינה במקומות קדושים.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abba Binyamin"
+                },
+                {
+                    "en_name": "Solomon"
+                },
+                {
+                    "en_name": "Rav Yoshiyahu Pinto"
+                },
+                {
+                    "en_name": "Ravin Bar Rav Adda"
+                },
+                {
+                    "en_name": "Rabbi Yitzhak"
+                },
+                {
+                    "en_name": "Rav Ashi"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Divine Presence"
+                },
+                {
+                    "en_name": "Malachi"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Synagogue"
+                },
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Congregation Of God"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "10",
+                    "number_category": "People",
+                    "en_unit": "person",
+                    "en_context": "congregation quorum"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "People",
+                    "en_unit": "judge",
+                    "en_context": "court quorum"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "en_unit": "person",
+                    "en_context": "torah study"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "People",
+                    "en_unit": "person",
+                    "en_context": "torah study"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Ravin Bar Rav Adda",
+                    "term2": "Rabbi Yitzhak"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Solomon",
+                    "term2": "Temple"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abba Binyamin",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Rav Yoshiyahu Pinto",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Congregation Of God"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Malachi",
+                    "term2": "God"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Divine Presence",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6a:7-16"
+}

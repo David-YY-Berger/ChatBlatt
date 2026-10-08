@@ -1,0 +1,84 @@
+﻿{
+    "res": {
+        "en_summary": "Sages discuss synagogue entry, Shabbat running.",
+        "heb_summary": "חכמים דנים כניסה לבית כנסת, ריצה בשבת.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Helbo"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Yoshiyahu Pinto"
+                },
+                {
+                    "en_name": "Zeira"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Tanhum"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Lord"
+                },
+                {
+                    "en_name": "Hosea"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Lion"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Helbo",
+                    "term2": "Huna"
+                },
+                {
+                    "term1": "Tanhum",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abaye",
+                    "term2": "Huna"
+                },
+                {
+                    "term1": "Zeira",
+                    "term2": "Tanhum"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Hosea",
+                    "term2": "Lord"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Lord",
+                    "term2": "Lion"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:9-10"
+}

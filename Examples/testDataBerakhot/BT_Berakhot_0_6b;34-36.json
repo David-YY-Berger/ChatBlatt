@@ -1,0 +1,49 @@
+﻿{
+    "res": {
+        "en_summary": "Fear God, keep commandments, world created for man.",
+        "heb_summary": "יראת שמיים, מצוות, עולם נברא לאדם.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Helbo"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Elazar"
+                },
+                {
+                    "en_name": "Abba Bar Kahana"
+                },
+                {
+                    "en_name": "Shimon Ben Azzai"
+                },
+                {
+                    "en_name": "Shimon Ben Zoma"
+                },
+                {
+                    "en_name": "God"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Helbo",
+                    "term2": "Huna"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Shimon Ben Azzai",
+                    "term2": "Shimon Ben Zoma"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:34-36"
+}

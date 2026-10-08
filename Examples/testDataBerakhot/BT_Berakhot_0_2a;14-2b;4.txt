@@ -1,0 +1,92 @@
+﻿COST: Tokens: Total=9315 approx cost=$0.001207 (Prompt=7055, Completion=2260)
+SOURCE:
+Berakhot (Zeraim) 2a:14-2b:4
+
+HEBREW:
+דילמא ביאת אורו הוא, ומאי ״וטהר״ — טהר גברא?!אמר רבה בר רב שילא: אם כן, לימא קרא: ״ויטהר״, מאי ״וטהר״ — טהר יומא, כדאמרי אינשי: ״איערב שמשא ואדכי יומא״.במערבא, הא דרבה בר רב שילא לא שמיע להו, ובעו לה מיבעיא: האי ״ובא השמש״ ביאת שמשו הוא, ומאי ״וטהר״ — טהר יומא, או דילמא ביאת אורו הוא, ומאי ״וטהר״ — טהר גברא.והדר פשטו לה מברייתא. מדקתני בברייתא, סימן לדבר — צאת הכוכבים. שמע מינה — ביאת שמשו הוא, ומאי ״וטהר״ — טהר יומא.
+
+ENGLISH:
+Perhaps the expression: And the sun sets and it is purified refers to the very beginning of sunset, the setting of the suns light. According to that explanation, what does the expression and it is purified mean? It means that the person will become purified. After immersing, he will wait until the beginning of sunset, and only then will he be able to eat of his teruma ( Tosafot ). Rabba bar Rav Sheila said: If so, that: And it is purified, means that the priest goes and purifies himself, then let the verse say unambiguously: And he will become purified. Since the Torah does not employ that language, the conclusion is: What is the meaning of the expression: And it is purified? It means the day is pure, no residue of day remains, as people say colloquially: The sun has set and the day is purified. In the West, Eretz Yisrael, they did not hear this explanation given by Rabba bar Rav Sheila. They raised the dilemma: Does the expression: And the sun sets, refer to the actual setting of the sun, and does: And it is purified, mean the day clears away? Or perhaps it refers to the setting of its light at sunset, in which case what is the meaning of: And it is purified? It refers to the purification of the person. In other words, in Eretz Yisrael, they attempted to clarify the halakha based on the biblical passage, but were unable to do so. Ultimately they resolved this dilemma from a baraita . It was taught in a baraita that the time for the recitation of the evening Shema corresponds to the time when priests are permitted to eat of their teruma , a sign for which is the emergence of the stars. Therefore, derive from here that and the sun sets refers to the complete sunset, and the expression and it is purified means the day clears away, as the Sages in Babylonia concluded.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sunset purification, teruma, Shema, stars, halakha.",
+    "heb_summary": "טהרה בשקיעה, תרומה, קריאת שמע, כוכבים.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Tosafot"
+        },
+        {
+          "en_name": "Rabba Bar Rav Sheila"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "West"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Stars"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Teruma"
+        }
+      ]
+    },
+    "Rel": {
+      "disagreedWith": [
+        {
+          "term1": "Rabba Bar Rav Sheila",
+          "term2": "Tosafot"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rabba Bar Rav Sheila",
+          "term2": "Babylonia"
+        },
+        {
+          "term1": "Sages",
+          "term2": "Babylonia"
+        },
+        {
+          "term1": "Sages",
+          "term2": "Eretz Yisrael"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Shema",
+          "term2": "Teruma"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "West",
+          "term2": "Eretz Yisrael"
+        }
+      ]
+    }
+  }
+}

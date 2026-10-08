@@ -1,0 +1,98 @@
+﻿{
+    "res": {
+        "en_summary": "Torah reading, Yom Kippur, elder respect, ritual slaughter.",
+        "heb_summary": "קריאת תורה, יום כיפור, כיבוד זקנים, שחיטה.",
+        "passage_types": [
+            "LAW",
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Beivai Bar Abaye"
+                },
+                {
+                    "en_name": "Hiyya Bar Rav"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Yehuda"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Atarot"
+                },
+                {
+                    "en_name": "Divon"
+                },
+                {
+                    "en_name": "Yazer"
+                },
+                {
+                    "en_name": "Nimra"
+                },
+                {
+                    "en_name": "Heshbon"
+                },
+                {
+                    "en_name": "Elaleh"
+                },
+                {
+                    "en_name": "Sevam"
+                },
+                {
+                    "en_name": "Nevo"
+                },
+                {
+                    "en_name": "Beon"
+                },
+                {
+                    "en_name": "Difti"
+                },
+                {
+                    "en_name": "Temple"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Tablets Of The Covenant"
+                },
+                {
+                    "en_name": "Ark Of The Covenant"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "time",
+                    "en_context": "reading bible text"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "time",
+                    "en_context": "reading translation"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Bird"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Beivai Bar Abaye",
+                    "term2": "Hiyya Bar Rav"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8a:30-8b:7"
+}

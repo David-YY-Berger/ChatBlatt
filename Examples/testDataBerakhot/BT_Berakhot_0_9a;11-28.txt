@@ -1,0 +1,158 @@
+﻿COST: Tokens: Total=11329 approx cost=$0.001453 (Prompt=8646, Completion=2683)
+SOURCE:
+Berakhot (Zeraim) 9a:11-28
+
+HEBREW:
+הקטר חלבים וכו׳.ואילו אכילת פסחים לא קתני.ורמינהי: קריאת שמע ערבית, והלל בלילי פסחים, ואכילת פסח, מצותן עד שיעלה עמוד השחר!אמר רב יוסף: לא קשיא: הא רבי אלעזר בן עזריה, הא רבי עקיבא. דתניא: ״ואכלו את הבשר בלילה הזה״, רבי אלעזר בן עזריה אומר: נאמר כאן ״בלילה הזה״, ונאמר להלן: ״ועברתי בארץ מצרים בלילה הזה״, מה להלן עד חצות, אף כאן עד חצות.אמר ליה רבי עקיבא: והלא כבר נאמר ״בחפזון״, עד שעת חפזון. אם כן מה תלמוד לומר ״בלילה״?יכול יהא נאכל כקדשים ביום תלמוד לומר ״בלילה״, בלילה הוא נאכל, ולא ביום.בשלמא לרבי אלעזר בן עזריה דאית ליה גזירה שוה, אצטריך למכתב ליה ״הזה״. אלא לרבי עקיבא האי ״הזה״ מאי עביד ליה?למעוטי לילה אחר הוא דאתא, סלקא דעתך אמינא: הואיל ופסח קדשים קלים, ושלמים קדשים קלים, מה שלמים נאכלין לשני ימים ולילה אחד — אף פסח נאכל שתי לילות במקום שני ימים, ויהא נאכל לשני לילות ויום אחד. קמשמע לן ״בלילה הזה״, בלילה הזה הוא נאכל ואינו נאכל בלילה אחר.ורבי אלעזר בן עזריהמ״לא תותירו עד בקר״ נפקא.ורבי עקיבא — אי מהתם, הוה אמינא מאי ״בקר״ — בקר שני.ורבי אלעזר אמר לך: כל ״בקר״ — בקר ראשון הוא.והני תנאי כהני תנאי. דתניא, ״שם תזבח את הפסח בערב כבוא השמש מועד צאתך ממצרים״.רבי אליעזר אומר: ״בערב״ אתה זובח, ו״כבוא השמש״ אתה אוכל, ו״מועד צאתך ממצרים״ אתה שורף. רבי יהושע אומר ״בערב״ אתה זובח ״כבוא השמש״ אתה אוכל ועד מתי אתה אוכל והולך — עד ״מועד צאתך ממצרים״.אמר רבי אבא: הכל מודים כשנגאלו ישראל ממצרים, לא נגאלו אלא בערב, שנאמר: ״הוציאך ה׳ אלהיך ממצרים לילה״, וכשיצאו — לא יצאו אלא ביום, שנאמר: ״ממחרת הפסח יצאו בני ישראל ביד רמה״.על מה נחלקו — על שעת חפזון, רבי אלעזר בן עזריה סבר: מאי ״חפזון״ — חפזון דמצרים.ורבי עקיבא סבר: מאי ״חפזון״ — חפזון דישראל.תניא נמי הכי: ״הוציאך ה׳ אלהיך ממצרים לילה״: וכי בלילה יצאו? והלא לא יצאו אלא ביום, שנאמר: ״ממחרת הפסח יצאו בני ישראל ביד רמה״! אלא, מלמד שהתחילה להם גאולה מבערב.
+
+ENGLISH:
+In the mishna, Rabban Gamliel cites several cases where a mitzva may be performed until dawn; among them, the burning of fats and limbs on the altar.The Gemara notes: In our mishna, the eating of the Paschal lamb was not taught among those mitzvot that may be performed until dawn, indicating that the mitzva of eating the Paschal lamb does not extend until dawn.The Gemara raises a contradiction to this conclusion based on a baraita : The mitzvot of the recitation of the evening Shema, the recitation of hallel on the nights of Passover accompanying the sacrifice of the Paschal lamb, as well as eating the Paschal lamb, may all be performed until dawn. Rav Yosef said: This is not difficult as these two sources reflect two conflicting opinions. This, our mishna, is in accordance with the opinion of Rabbi Elazar ben Azarya. While this, the baraita , is in accordance with the opinion of Rabbi Akiva. As it was taught in a baraita with regard to the verse discussing the mitzva to eat the Paschal lamb: And they shall eat of the meat on that night; roasted over fire and matzot with bitter herbs shall they eat it (Exodus 12:8); Rabbi Elazar ben Azarya says: Here it is stated: On that night, from which we cannot determine when night ends. The same expression is encountered later in the same chapter: And I will pass through the land of Egypt on that night and I will strike every firstborn in the land of Egypt, from person to animal (Exodus 12:12). We know when the firstborns were struck down based on the verse Thus said the Lord: At about midnight, I will go out into the midst of Egypt and every firstborn in Egypt shall die (Exodus 11:4-5). Therefore, just as in the verse below, the striking of the firstborns took place until midnight, as stated explicitly in the verse, so too in the verse here, the mitzva to eat the Paschal lamb continues until midnight. Rabbi Akiva said to him: Was it not already said, Thus you shall eat it, with your loins girded, your shoes on your feet, your staffs in your hands and you will eat it in haste for it is the Paschal offering for the Lord (Exodus 12:11)? Therefore the Paschal lamb may be eaten until the time of haste. Since the time of haste is when Israel left Egypt, and it is said, You will not leave, every man from his house, until the morning, then the Paschal lamb may be eaten until dawn. If that is so, why does the verse state: On that night? The Gemara explains that the phrase on that night is necessary because without it I might have thought that the Paschal lamb is eaten during the day, like all other sacrifices, which must all be slaughtered and eaten during the day. Therefore, the verse states: On that night, to underscore that this particular sacrifice is eaten at night and not during the day. Essentially, the difference between these two opinions revolves around which word they deemed significant. Rabbi Elazar ben Azarya considered the word night as the key word, while Rabbi Akiva considered the word haste as the key word. The Gemara begins to analyze their statements. Granted, according to Rabbi Elazar ben Azarya, who has the tradition of a verbal analogy between the phrase, on that night, with regard to the eating of the Paschal lamb and the phrase, on that night, with regard to the striking of the firstborn in Egypt, it was necessary for the verse to write that in order to indicate that these times are parallel. However, according to Rabbi Akiva, who has no such tradition, what does he do with that? Why is it necessary to emphasize on that night?The Gemara answers: On that night comes to exclude another night, as one might otherwise have concluded that the Paschal lamb may be eaten for two nights. It would have entered your mind to say: Since the Paschal lamb falls into the category of sacrifices of lesser sanctity, and peace-offerings are also sacrifices of lesser sanctity, just as peace-offerings may be eaten for two days and one night, i.e., the day that they are sacrificed through the following day, as we learned in the Torah, so too the Paschal lamb may be eaten for two nights instead of two days. In other words, one might otherwise mistakenly conclude from its parallel to peace-offerings, that the Paschal lamb is to be eaten for two nights and the day between them. Therefore, the verse teaches us specifically on that night, i.e., on that night it is eaten, and it is not eaten on another night. The Gemara asks: If so, from where does Rabbi Elazar ben Azarya derive that the Paschal lamb cannot be eaten for two nights?The Gemara answers: Rabbi Elazar ben Azarya derives this conclusion from the verse: It should not remain until the morning (Exodus 12:10). If one is prohibited from leaving over any part of the sacrifice until the morning, he is certainly prohibited from leaving it over until the following night. Therefore, it is unnecessary to cite an additional source to teach that the Paschal lamb may only be eaten on the first night. And why does Rabbi Akiva require that to derive that the Paschal lamb may not be eaten on the second night? According to Rabbi Akiva, if it was derived from the verse: It should not remain until the morning, I would have said: What is the meaning of morning? It means the second morning, as the Torah does not specify until which morning the Paschal lamb may not be left; until the first morning or the second morning. Therefore, the Torah needed to write on that night and no other. And what would Rabbi Elazar ben Azarya respond? He could have said to you: If it is not otherwise noted, every unmodified mention of the word morning in the Bible refers to the first, i.e., the next, morning. If that were not the case, no biblical text could have any definite meaning.Concerning the tannaitic dispute between Rabbi Akiva and Rabbi Elazar ben Azarya regarding until when the Paschal lamb may be eaten, the Gemara remarks: The dispute between these tannaim is parallel to the dispute between those tannaim , who disagree over the same issue. As it was taught in a baraita with regard to the verse: There you will offer the Paschal lamb, in the evening when the sun sets at the time when you left the land of Egypt (Deuteronomy 16:6). Upon closer examination, it seems that this verse mentions three distinct times: In the evening, refers to the afternoon until sunset; when the sun sets, refers to the time of sunset itself; and the time when you left the land of Egypt refers to, as explained in Exodus, the early hours of the morning. Therefore it seems that these times parallel the different stages of the mitzva of the Paschal lamb, and it is regarding these details that the tannaim disagree. Rabbi Eliezer says: In the evening, the afternoon, you slaughter the sacrifice, from when the sun sets until midnight you eat it, and at the time when you left the land of Egypt you burn what remains from the sacrifice, in accordance with the opinion of Rabbi Elazar ben Azarya. Rabbi Yehoshua says: In the evening, the afternoon, you slaughter the sacrifice, from when the sun sets, you eat it. And until when do you continue eating? Until the time when you left the land of Egypt, meaning until morning, in accordance with the opinion of Rabbi Akiva.The Gemara cites an alternative explanation of the dispute between Rabbi Elazer ben Azarya and Rabbi Akiva. Rabbi Abba said: Everyone agrees that when the children of Israel were redeemed from Egypt were given permission to leave, they were redeemed only in the evening, as it is stated: In the spring the Lord, your God, took you out from Egypt at night (Deuteronomy 16:1). And when they actually left, they left only during the day, as it is stated: On the fifteenth of the first month, on the day after the offering of the Paschal lamb, the children of Israel went out with a high hand before the eyes of Egypt (Numbers 33:3), indicating that they actually went out during the day.However, with regard to what did they disagree? They disagreed with regard to the time of haste, as it is written: You will eat it in haste for it is the Paschal offering for the Lord (Exodus 12:11). Rabbi Elazar ben Azarya held: What is the meaning of haste? It is the haste of the Egyptians at midnight, as they hurried to the houses of the people of Israel to send them away, in fear of the plague of the firstborn. And Rabbi Akiva held: What is the meaning of haste? It is the haste of Israel in the morning, as they rushed to leave Egypt.Similar to Rabbi Abbas statement, it was also taught in a baraita , regarding the verse: The Lord, your God, took you out from Egypt at night, the question arises: Did they leave at night? Didnt they leave during the day, as it is stated: On the day after the offering of the Paschal lamb, the children of Israel went out with a high hand? Rather, this teaches that the redemption began for them in the evening.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis dispute Paschal lamb eating time.",
+    "heb_summary": "מחלוקת רבנים על זמן אכילת הפסח.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabban Gamliel"
+        },
+        {
+          "en_name": "Rav Yosef"
+        },
+        {
+          "en_name": "Rabbi Elazar Ben Azarya"
+        },
+        {
+          "en_name": "Rabbi Akiva"
+        },
+        {
+          "en_name": "Rabbi Eliezer"
+        },
+        {
+          "en_name": "Rabbi Yehoshua"
+        },
+        {
+          "en_name": "Rabbi Abba"
+        },
+        {
+          "en_name": "Children Of Israel"
+        },
+        {
+          "en_name": "Egyptians"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Altar"
+        },
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Hallel"
+        },
+        {
+          "en_name": "Paschal Offering"
+        },
+        {
+          "en_name": "Peace-Offering"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "source",
+          "en_context": "conflicting opinions"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Time",
+          "en_unit": "night",
+          "en_context": "eating peace-offering"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "time",
+          "en_context": "paschal lamb mitzvah"
+        },
+        {
+          "en_name": "15",
+          "number_category": "Time",
+          "en_unit": "day",
+          "en_context": "israel left egypt"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Paschal Lamb"
+        },
+        {
+          "en_name": "Matzah"
+        },
+        {
+          "en_name": "Bitter Herb"
+        },
+        {
+          "en_name": "Meat"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Rabbi Akiva",
+          "term2": "Rabbi Elazar Ben Azarya"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rabbi Eliezer",
+          "term2": "Rabbi Yehoshua"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Children Of Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Children Of Israel",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Egyptians",
+          "term2": "Egypt"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Paschal Lamb",
+          "term2": "Peace-Offering"
+        }
+      ]
+    }
+  }
+}

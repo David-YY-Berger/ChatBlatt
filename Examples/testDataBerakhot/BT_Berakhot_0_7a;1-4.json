@@ -1,0 +1,107 @@
+﻿{
+    "res": {
+        "en_summary": "God prays, Yishmael blesses Him in Holy of Holies.",
+        "heb_summary": "אלוהים מתפלל, ישמעאל מברך אותו בקודש הקודשים.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Zutra Bar Tovia"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Yishmael Ben Elisha"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "My Holy Mountain"
+                },
+                {
+                    "en_name": "House Of My Prayer"
+                },
+                {
+                    "en_name": "Innermost Sanctum"
+                },
+                {
+                    "en_name": "Holy Of Holies"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Throne"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yosei"
+                },
+                {
+                    "term1": "Zutra Bar Tovia",
+                    "term2": "Rav"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Yishmael Ben Elisha"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Yishmael Ben Elisha",
+                    "term2": "Holy Of Holies"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "God",
+                    "term2": "My Holy Mountain"
+                },
+                {
+                    "term1": "God",
+                    "term2": "House Of My Prayer"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Holy Of Holies"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Yishmael Ben Elisha",
+                    "term2": "Israel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Innermost Sanctum",
+                    "term2": "Holy Of Holies"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:1-4"
+}

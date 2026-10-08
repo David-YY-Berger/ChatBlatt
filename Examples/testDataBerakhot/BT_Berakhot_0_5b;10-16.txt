@@ -1,0 +1,76 @@
+﻿COST: Tokens: Total=8785 approx cost=$0.000990 (Prompt=7314, Completion=1471)
+SOURCE:
+Berakhot (Zeraim) 5b:10-16
+
+HEBREW:
+רבי חייא בר אבא חלש. על לגביה רבי יוחנן אמר ליה: חביבין עליך יסורין? אמר ליה: לא הן ולא שכרן. אמר ליה: הב לי ידך. יהב ליה ידיה, ואוקמיה.רבי יוחנן חלש. על לגביה רבי חנינא. אמר ליה: חביבין עליך יסורין? אמר ליה: לא הן ולא שכרן. אמר ליה: הב לי ידך. יהב ליה ידיה, ואוקמיה.אמאי, לוקים רבי יוחנן לנפשיה?אמרי: אין חבוש מתיר עצמו מבית האסורים.רבי אלעזר חלש. על לגביה רבי יוחנן. חזא דהוה קא גני בבית אפל. גלייה לדרעיה ונפל נהורא. חזייה דהוה קא בכי רבי אלעזר. אמר ליה: אמאי קא בכית? אי משום תורה דלא אפשת — שנינו: אחד המרבה ואחד הממעיט, ובלבד שיכוין לבו לשמים. ואי משום מזוני — לא כל אדם זוכה לשתי שלחנות. ואי משום בני — דין גרמא דעשיראה ביר.אמר ליה: להאי שופרא דבלי בעפרא קא בכינא. אמר ליה: על דא ודאי קא בכית, ובכו תרוייהו.אדהכי והכי אמר ליה: חביבין עליך יסורין? אמר ליה: לא הן ולא שכרן. אמר ליה: הב לי ידך, יהב ליה ידיה, ואוקמיה.
+
+ENGLISH:
+The Gemara continues to address the issue of suffering and affliction: Rabbi Yohanans student, Rabbi Hiyya bar Abba, fell ill. Rabbi Yohanan entered to visit him, and said to him: Is your suffering dear to you? Do you desire to be ill and afflicted? Rabbi Hiyya said to him: I welcome neither this suffering nor its reward, as one who welcomes this suffering with love is rewarded. Rabbi Yohanan said to him: Give me your hand. Rabbi Hiyya bar Abba gave him his hand, and Rabbi Yohanan stood him up and restored him to health.Similarly, Rabbi Yohanan fell ill. Rabbi Hanina entered to visit him, and said to him: Is your suffering dear to you? Rabbi Yohanan said to him: I welcome neither this suffering nor its reward. Rabbi Hanina said to him: Give me your hand. He gave him his hand, and Rabbi Hanina stood him up and restored him to health.The Gemara asks: Why did Rabbi Yohanan wait for Rabbi Hanina to restore him to health? If he was able to heal his student, let Rabbi Yohanan stand himself up. The Gemara answers, they say: A prisoner cannot generally free himself from prison, but depends on others to release him from his shackles.The Gemara relates that Rabbi Elazar, another of Rabbi Yohanans students, fell ill. Rabbi Yohanan entered to visit him, and saw that he was lying in a dark room. Rabbi Yohanan exposed his arm, and light radiated from his flesh, filling the house. He saw that Rabbi Elazar was crying, and said to him: Why are you crying? Thinking that his crying was over the suffering that he endured throughout his life, Rabbi Yohanan attempted to comfort him: If you are weeping because you did not study as much Torah as you would have liked, we learned: One who brings a substantial sacrifice and one who brings a meager sacrifice have equal merit, as long as he directs his heart toward Heaven. If you are weeping because you lack sustenance and are unable to earn a livelihood, as Rabbi Elazar was, indeed, quite poor, not every person merits to eat off of two tables, one of wealth and one of Torah, so you need not bemoan the fact that you are not wealthy. If you are crying over children who have died, this is the bone of my tenth son, and suffering of that kind afflicts great people, and they are afflictions of love.Rabbi Elazar said to Rabbi Yohanan: I am not crying over my misfortune, but rather, over this beauty of yours that will decompose in the earth, as Rabbi Yohanans beauty caused him to consider human mortality. Rabbi Yohanan said to him: Over this, it is certainly appropriate to weep. Both cried over the fleeting nature of beauty in the world and death that eventually overcomes all. Meanwhile, Rabbi Yohanan said to him: Is your suffering dear to you? Rabbi Elazar said to him: I welcome neither this suffering nor its reward. Upon hearing this, Rabbi Yohanan said to him: Give me your hand. Rabbi Elazar gave him his hand, and Rabbi Yohanan stood him up and restored him to health.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages heal students, discuss suffering, beauty.",
+    "heb_summary": "חכמים מרפאים תלמידים, דנים בסבל ויופי.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Hiyya Bar Abba"
+        },
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "table",
+          "en_context": "sustenance and torah"
+        },
+        {
+          "en_name": "10",
+          "number_category": "People",
+          "en_unit": "son",
+          "en_context": "rabbi yohanan children"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Hiyya Bar Abba",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "Rabbi Yohanan"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Hiyya Bar Abba"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Hanina"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Elazar"
+        }
+      ]
+    }
+  }
+}

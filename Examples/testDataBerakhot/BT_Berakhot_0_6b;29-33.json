@@ -1,0 +1,144 @@
+﻿{
+    "res": {
+        "en_summary": "Sages discuss rejoicing groom's reward, Sinai voices.",
+        "heb_summary": "חכמים דנים בשמחת חתן, שכר וקולות סיני.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Helbo"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Yoshiyahu Pinto"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Abbahu"
+                },
+                {
+                    "en_name": "Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Jeremiah"
+                },
+                {
+                    "en_name": "Lord Of Hosts"
+                },
+                {
+                    "en_name": "Lord"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sinai"
+                },
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Jerusalem"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Shofar"
+                },
+                {
+                    "en_name": "Thanks-Offering"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "5",
+                    "number_category": "Misc",
+                    "en_unit": "voice",
+                    "en_context": "groom feast voices"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "sound",
+                    "en_context": "sinai revelation sounds"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "shofar",
+                    "en_context": "sinai revelation shofar"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "voice",
+                    "en_context": "sinai previous voices"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Helbo",
+                    "term2": "Huna"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Moses",
+                    "term2": "God"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Moses",
+                    "term2": "Sinai"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Sinai"
+                },
+                {
+                    "term1": "Abbahu",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Nahman Bar Yitzhak",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Jeremiah",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Lord Of Hosts",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Lord",
+                    "term2": "God"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:29-33"
+}

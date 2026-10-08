@@ -1,0 +1,31 @@
+﻿{
+    "res": {
+        "en_summary": "David's chapters begin and end with happy.",
+        "heb_summary": "פרקי דוד מתחילים ומסתיימים ב\"אשרי\".",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "David"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms chapters"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms chapters"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:25-10a:1"
+}

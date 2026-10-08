@@ -1,0 +1,120 @@
+﻿COST: Tokens: Total=10752 approx cost=$0.001640 (Prompt=7046, Completion=3706)
+SOURCE:
+Berakhot (Zeraim) 6a:2-6
+
+HEBREW:
+תניא, אבא בנימין אומר: אלמלי נתנה רשות לעין לראות — אין כל בריה יכולה לעמוד מפני המזיקין.אמר אביי: אינהו נפישי מינן, וקיימי עלן כי כסלא לאוגיא.אמר רב הונא: כל חד וחד מינן, אלפא משמאליה ורבבתא מימיניה.אמר רבא: האי דוחקא דהוי בכלה — מנייהו הוי. הני ברכי דשלהי — מנייהו. הני מאני דרבנן דבלו — מחופיא דידהו. הני כרעי דמנקפן — מנייהו.האי מאן דבעי למידע להו לייתי קיטמא נהילא, ונהדר אפורייה, ובצפרא חזי כי כרעי דתרנגולא. האי מאן דבעי למחזינהו, ליתי שלייתא דשונרתא אוכמתא בת אוכמתא בוכרתא בת בוכרתא, וליקליה בנורא, ולשחקיה, ולימלי עיניה מניה, וחזי להו. ולשדייה בגובתא דפרזלא, ולחתמיה בגושפנקא דפרזלא, דילמא גנבי מניה, ולחתום פומיה, כי היכי דלא ליתזק. רב ביבי בר אביי עבד הכי, חזא ואתזק, בעו רבנן רחמי עליה, ואתסי.
+
+ENGLISH:
+In another baraita it was taught that Abba Binyamin says: If the eye was given permission to see, no creature would be able to withstand the abundance and ubiquity of the demons and continue to live unaffected by them.Similarly, Abaye said: They are more numerous than we are and they stand over us like mounds of earth surrounding a pit. Rav Huna said: Each and every one of us has a thousand demons to his left and ten thousand to his right. God protects man from these demons, as it says in the verse: A thousand may fall at your side, and ten thousand at your right hand; they will not approach you (Psalms 91:7).Summarizing the effects of the demons, Rava said: The crowding at the kalla , the gatherings for Torah study during Elul and Adar, is from the demons; those knees that are fatigued even though one did not exert himself is from the demons; those clothes of the Sages that wear out, despite the fact that they do not engage in physical labor, is from friction with the demons; those feet that are in pain is from the demons. One who seeks to know that the demons exist should place fine ashes around his bed, and in the morning the demons footprints appear like chickens footprints, in the ash. One who seeks to see them should take the afterbirth of a firstborn female black cat, born to a firstborn female black cat, burn it in the fire, grind it and place it in his eyes, and he will see them. He must then place the ashes in an iron tube sealed with an iron seal [ gushpanka ] lest the demons steal it from him, and then seal the opening so he will not be harmed. Rav Beivai bar Abaye performed this procedure, saw the demons, and was harmed. The Sages prayed for mercy on his behalf and he was healed.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Demons' ubiquity, harm, and methods to see them",
+    "heb_summary": "שדים: נוכחות, נזקים ודרכים לראותם",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Binyamin"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Huna"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Beivai Bar Abaye"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Demons"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Afterbirth"
+        },
+        {
+          "en_name": "Iron Tube"
+        },
+        {
+          "en_name": "Iron Seal"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1000",
+          "number_category": "People",
+          "en_unit": "demon",
+          "en_context": "demons abundance"
+        },
+        {
+          "en_name": "10000",
+          "number_category": "People",
+          "en_unit": "demon",
+          "en_context": "demons abundance"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Cat"
+        },
+        {
+          "en_name": "Chicken"
+        }
+      ]
+    },
+    "Rel": {
+      "EnemyOf": [
+        {
+          "term1": "Demons",
+          "term2": "Binyamin"
+        },
+        {
+          "term1": "Demons",
+          "term2": "Abaye"
+        },
+        {
+          "term1": "Demons",
+          "term2": "Huna"
+        },
+        {
+          "term1": "Demons",
+          "term2": "Rava"
+        },
+        {
+          "term1": "Demons",
+          "term2": "Beivai Bar Abaye"
+        },
+        {
+          "term1": "Demons",
+          "term2": "Sages"
+        },
+        {
+          "term1": "Demons",
+          "term2": "God"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Demons",
+          "term2": "Chicken"
+        }
+      ]
+    }
+  }
+}

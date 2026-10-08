@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Rabban Gamliel's sons asked about Shema.",
+        "heb_summary": "בני רבן גמליאל שאלו על קריאת שמע.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabban Gamliel"
+                },
+                {
+                    "en_name": "Rabban Gamliel's Sons"
+                },
+                {
+                    "en_name": "Rabbis"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rabban Gamliel's Sons",
+                    "term2": "Rabban Gamliel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabban Gamliel's Sons",
+                    "term2": "Rabban Gamliel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9a:5-7"
+}

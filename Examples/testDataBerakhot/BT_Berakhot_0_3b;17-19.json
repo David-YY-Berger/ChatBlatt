@@ -1,0 +1,38 @@
+﻿{
+    "res": {
+        "en_summary": "Halakha on speaking before the dead.",
+        "heb_summary": "הלכה על דיבור לפני המת.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Zerika"
+                },
+                {
+                    "en_name": "Ami"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Abba Bar Kahana"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Zerika",
+                    "term2": "Ami"
+                },
+                {
+                    "term1": "Ami",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_3b:17-19"
+}

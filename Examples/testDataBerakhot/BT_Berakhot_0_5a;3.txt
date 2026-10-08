@@ -1,0 +1,140 @@
+﻿COST: Tokens: Total=9484 approx cost=$0.001302 (Prompt=6858, Completion=2626)
+SOURCE:
+Berakhot (Zeraim) 5a:3
+
+HEBREW:
+ואמר רבי לוי בר חמא, אמר רבי שמעון בן לקיש, מאי דכתיב ״ואתנה לך את לחת האבן והתורה והמצוה אשר כתבתי להורתם״. ״לחת״ — אלו עשרת הדברות, ״תורה״ — זה מקרא, ״והמצוה״ — זו משנה, ״אשר כתבתי״ — אלו נביאים וכתובים, ״להורותם״ — זה תלמוד, מלמד שכולם נתנו למשה מסיני.
+
+ENGLISH:
+And Rabbi Levi bar Hama said that Rabbi Shimon ben Lakish said: God said to Moses, Ascend to me on the mountain and be there, and I will give you the stone tablets and the Torah and the mitzva that I have written that you may teach them (Exodus 24:12), meaning that God revealed to Moses not only the Written Torah, but all of Torah, as it would be transmitted through the generations. The tablets are the ten commandments that were written on the tablets of the Covenant, the Torah is the five books of Moses. The mitzva is the Mishna, which includes explanations for the mitzvot and how they are to be performed. That I have written refers to the Prophets and Writings, written with divine inspiration. That you may teach them refers to the Talmud, which explains the Mishna. These explanations are the foundation for the rulings of practical halakha . This verse teaches that all aspects of Torah were given to Moses from Sinai.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "God gave Moses entire Torah at Sinai.",
+    "heb_summary": "ה' נתן למשה תורה שלמה בסיני.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Levi Bar Hama"
+        },
+        {
+          "en_name": "Shimon Ben Lakish"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Moses"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mountain"
+        },
+        {
+          "en_name": "Sinai"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Stone Tablets"
+        },
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Mitzva"
+        },
+        {
+          "en_name": "Ten Commandments"
+        },
+        {
+          "en_name": "Tablets Of The Covenant"
+        },
+        {
+          "en_name": "Written Torah"
+        },
+        {
+          "en_name": "Mishna"
+        },
+        {
+          "en_name": "Prophets"
+        },
+        {
+          "en_name": "Writings"
+        },
+        {
+          "en_name": "Talmud"
+        },
+        {
+          "en_name": "Halakha"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "24",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "exodus chapter"
+        },
+        {
+          "en_name": "12",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "exodus verse"
+        },
+        {
+          "en_name": "10",
+          "number_category": "Obligation",
+          "en_unit": "commandment",
+          "en_context": "number of commandments"
+        },
+        {
+          "en_name": "5",
+          "number_category": "Misc",
+          "en_unit": "book",
+          "en_context": "books of moses"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Levi Bar Hama",
+          "term2": "Shimon Ben Lakish"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Moses"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Moses",
+          "term2": "Mountain"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Sinai"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Stone Tablets",
+          "term2": "Tablets Of The Covenant"
+        },
+        {
+          "term1": "Mitzva",
+          "term2": "Mishna"
+        }
+      ]
+    }
+  }
+}

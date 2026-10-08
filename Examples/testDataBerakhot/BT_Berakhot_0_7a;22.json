@@ -1,0 +1,39 @@
+﻿{
+    "res": {
+        "en_summary": "Remorse better than external punishment.",
+        "heb_summary": "חרטה עדיפה מעונש חיצוני על הלב.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "Lakish"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "100",
+                    "number_category": "Misc",
+                    "en_unit": "lash",
+                    "en_context": "rebuke to fool"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yosei"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:22"
+}

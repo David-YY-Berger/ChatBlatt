@@ -1,0 +1,145 @@
+﻿COST: Tokens: Total=11887 approx cost=$0.001888 (Prompt=7458, Completion=4429)
+SOURCE:
+Berakhot (Zeraim) 3a:4-11
+
+HEBREW:
+עד סוף האשמורה.מאי קסבר רבי אליעזר? אי קסבר שלש משמרות הוי הלילה, לימא ״עד ארבע שעות״. ואי קסבר ארבע משמרות הוי הלילה, לימא ״עד שלש שעות״!לעולם קסבר שלש משמרות הוי הלילה, והא קמשמע לן: דאיכא משמרות ברקיע ואיכא משמרות בארעא. דתניא, רבי אליעזר אומר: שלש משמרות הוי הלילה, ועל כל משמר ומשמר יושב הקדוש ברוך הוא ושואג כארי, שנאמר: ״ה׳ ממרום ישאג, וממעון קדשו יתן קולו שאג ישאג על נוהו״.וסימן לדבר: משמרה ראשונה חמור נוער, שניה כלבים צועקים, שלישית, תינוק יונק משדי אמו, ואשה מספרת עם בעלה.מאי קא חשיב רבי אליעזר, אי תחלת משמרות קא חשיב — תחלת משמרה ראשונה סימנא למה לי? אורתא הוא! אי סוף משמרות קא חשיב, סוף משמרה אחרונה למה לי סימנא? יממא הוא!אלא: חשיב סוף משמרה ראשונה, ותחלת משמרה אחרונה, ואמצעית דאמצעיתא. ואיבעית אימא: כולהו סוף משמרות קא חשיב, וכי תימא אחרונה לא צריך.למאי נפקא מינה — למיקרי קריאת שמע למאן דגני בבית אפל ולא ידע זמן קריאת שמע אימת. כיון דאשה מספרת עם בעלה ותינוק יונק משדי אמו, ליקום וליקרי.אמר רב יצחק בר שמואל משמיה דרב: שלש משמרות הוי הלילה, ועל כל משמר ומשמר יושב הקדוש ברוך הוא ושואג כארי, ואומר: ״אוי שהחרבתי את ביתי ושרפתי את היכלי והגליתי את בני לבין אומות העולם״.
+
+ENGLISH:
+In the mishna, we learned that Rabbi Eliezer establishes that one may recite the evening Shema until the end of the first watch. These watches are mentioned in the Bible as segments of the night, but it must be established: Into precisely how many segments is the night divided, three or four? Moreover, why does Rabbi Eliezer employ such inexact parameters rather than a more precise definition of time ( Tosefot HaRosh )? What does Rabbi Eliezer actually hold? If he holds that the night consists of three watches, let him say explicitly that one recites the evening Shema until the fourth hour. If he holds that the night consists of four watches, let him say explicitly until the third hour. The Gemara responds: Actually, Rabbi Eliezer holds that the night consists of three watches, and he employs this particular language of watches in order to teach us: There are watches in heaven and there are watches on earth; just as our night is divided into watches, so too is the night in the upper worlds. As it was taught in a baraita : Rabbi Eliezer says: The night consists of three watches, and over each and every watch, the Holy One, Blessed be He, sits and roars like a lion in pain over the destruction of the Temple. This imagery is derived from a reference in the Bible, as it is stated: The Lord roars [ yishag ] from on high, from His holy dwelling He makes His voice heard. He roars mightily [ shaog yishag ] over His dwelling place, He cries out like those who tread grapes, against all the inhabitants of the earth (Jeremiah 25:30). The three instances of the root shin-alef-gimmel in this verse correspond to the three watches of the night. And signs of the transition between each of these watches in the upper world can be sensed in this world: In the first watch, the donkey brays; in the second, dogs bark; and in the third people begin to rise, a baby nurses from its mothers breast and a wife converses with her husband. With regard to these earthly manifestations of the three heavenly watches as established in the baraita , the Gemara asks: What did Rabbi Eliezer enumerate? If he enumerated the beginning of the watch, why do I need a sign for the beginning of the first watch? It is when evening begins; an additional sign is superfluous. If he enumerated the end of the watches, why do I need a sign for the end of the last watch? It is when day begins; an additional sign is similarly superfluous.The Gemara answers: Rather, he enumerated the signs for the end of the first watch and the beginning of the last watch, both of which require a sign, as well as the middle of the middle watch. And if you wish, say instead: He enumerated the ends of all of the watches. And if you say that a sign indicating the end of the final watch is unnecessary because it is day, nevertheless, that sign is useful. What is the practical ramification of this sign? It is relevant to one who recites Shema while lying in a dark house, who cannot see the dawn and who does not know when the time for reciting Shema arrives. That person is provided with a sign that when a woman speaks with her husband and a baby nurses from its mothers breast, the final watch of the night has ended and he must rise and recite Shema . Rav Yitzhak bar Shmuel said in the name of Rav: The night consists of three watches, and over each and every watch the Holy One, Blessed be He sits and roars like a lion, because the Temple service was connected to the changing of these watches ( Tosefot HaRosh ), and says: Woe to Me, that due to their sins I destroyed My house, burned My Temple and exiled them among the nations of the world.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Eliezer's night watches, divine roaring, signs.",
+    "heb_summary": "משמרות הלילה של רבי אליעזר, שאגת אלוהים, סימנים.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Eliezer"
+        },
+        {
+          "en_name": "Holy One"
+        },
+        {
+          "en_name": "Rav Yitzhak Bar Shmuel"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Jeremiah"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Temple"
+        },
+        {
+          "en_name": "Upper Worlds"
+        },
+        {
+          "en_name": "Heaven"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Temple"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "night division"
+        },
+        {
+          "en_name": "4",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "night division"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Donkey"
+        },
+        {
+          "en_name": "Dog"
+        },
+        {
+          "en_name": "Lion"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Grape"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yitzhak Bar Shmuel",
+          "term2": "Rav"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Holy One",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Holy One",
+          "term2": "Upper Worlds"
+        },
+        {
+          "term1": "Holy One",
+          "term2": "Heaven"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Temple",
+          "term2": "Israel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Jeremiah",
+          "term2": "Temple"
+        },
+        {
+          "term1": "Jeremiah",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Jeremiah",
+          "term2": "Earth"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Holy One",
+          "term2": "Lion"
+        }
+      ]
+    }
+  }
+}

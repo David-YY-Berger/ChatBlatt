@@ -1,0 +1,82 @@
+﻿COST: Tokens: Total=8977 approx cost=$0.001154 (Prompt=6839, Completion=2138)
+SOURCE:
+Berakhot (Zeraim) 5b:25-6a:1
+
+HEBREW:
+אמר רבי יוסי ברבי חנינא: זוכה לברכות הללו, שנאמר: ״לוא הקשבת למצותי ויהי כנהר שלומך וצדקתך כגלי הים. ויהי כחול זרעך וצאצאי מעיך״ וגו׳.
+
+ENGLISH:
+In terms of this reward, Rabbi Yosei, son of Rabbi Hanina said: One who waits in the synagogue for the other to finish his prayer merits the following blessings, as it is stated: If only you had listened to My mitzvot then your peace would be as a river, and your righteousness as the waves of the sea. Your seed would be as the sand, and the offspring of your body like the grains thereof; his name would be neither cut off nor destroyed from before Me (Isaiah 48:18-19). The explanation of this passage is based on the etymological similarity between the word mitzva and the word tzevet , which means group. If he keeps the other person company and does not abandon him after his prayer, all of the blessings that appear later in the verse will be fulfilled in him ( Talmidei Rabbeinu Yona ).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Yosei teaches blessings for synagogue waiting.",
+    "heb_summary": "הרב יוסי מלמד ברכות לממתינים בבית הכנסת.",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yosei"
+        },
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Talmidei Rabbeinu Yona"
+        },
+        {
+          "en_name": "Isaiah"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "River"
+        },
+        {
+          "en_name": "Waves Of The Sea"
+        },
+        {
+          "en_name": "Sand"
+        },
+        {
+          "en_name": "Grains"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Yosei",
+          "term2": "Rabbi Hanina"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Rabbi Yosei",
+          "term2": "Rabbi Hanina"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Isaiah",
+          "term2": "River"
+        },
+        {
+          "term1": "Isaiah",
+          "term2": "Waves Of The Sea"
+        },
+        {
+          "term1": "Isaiah",
+          "term2": "Sand"
+        },
+        {
+          "term1": "Isaiah",
+          "term2": "Grains"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=10018 approx cost=$0.001413 (Prompt=7078, Completion=2940)
+SOURCE:
+Berakhot (Zeraim) 9b:16-18
+
+HEBREW:
+העיד רבי יוסי בן אליקים משום קהלא קדישא דבירושלים: כל הסומך גאולה לתפלה אינו נזוק כל היום כולו.אמר רבי זירא: איני?! והא אנא סמכי ואיתזקי! אמר ליה: במאי איתזקת — דאמטיית אסא לבי מלכא. התם נמי מבעי לך למיהב אגרא למחזי אפי מלכא, דאמר רבי יוחנן: לעולם ישתדל אדם לרוץ לקראת מלכי ישראל. ולא לקראת מלכי ישראל בלבד, אלא אפילו לקראת מלכי אומות העולם, שאם יזכה — יבחין בין מלכי ישראל למלכי אומות העולם!אמר ליה רבי אלעא לעולא: כי עיילת להתם שאיל בשלמא דרב ברונא אחי במעמד כל החבורה, דאדם גדול הוא ושמח במצות. זימנא חדא סמך גאולה לתפלה ולא פסיק חוכא מפומיה כוליה יומא.
+
+ENGLISH:
+Rabbi Yosei ben Elyakim testified in the name of the holy community in Jerusalem, a title accorded a particular group of Sages who lived there, that one who juxtaposes redemption and prayer at sunrise will incur no harm for the entire day. Rabbi Zeira said: Is that so? Didnt I juxtapose redemption and prayer and nevertheless I was harmed? Rabbi Yosei ben Elyakim asked Rabbi Zeira: How were you harmed? That you brought a myrtle branch to the kings palace? The Gemara refers to Rabbi Zeiras responsibility as one of the respected members of the community to participate in a delegation that brought a crown of myrtle as a gift to the king, a dubious honor in which Rabbi Zeira had no interest. However, there, too, you had to pay a price in order to see the face of the king, as Rabbi Yohanan said: One should always strive to run to greet the kings of Israel to witness them in their glory. And not only must one run to greet the kings of Israel, but even to greet the kings of the nations of the world, so that if he will be privileged to witness the redemption of Israel, he will distinguish between the kings of Israel and the kings of the nations of the world, to see how much greater the Jewish king will be and how his rule will be manifest. Therefore, it was a privilege for Rabbi Zeira that he was allowed to see the face of the king. Rabbi Ela said to Ulla before Ulla left for Babylonia: When you go to Babylonia, ask after my brother, Rav Beruna, in the presence of the entire group, as he is a great man who rejoices in mitzvot, and it is only fitting that he should be accorded respect. The Gemara provides proof that he was indeed a great man who rejoiced in mitzvot: Once, Rav Beruna juxtaposed redemption and prayer at sunrise, as per the custom of the vatikin ( Tosafot ), and laughter and joy did not cease from his mouth for the entire day.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages discuss prayer, redemption, and respect.",
+    "heb_summary": "חכמים דנים תפילה, גאולה וכבוד.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yosei Ben Elyakim"
+        },
+        {
+          "en_name": "The Holy Community In Jerusalem"
+        },
+        {
+          "en_name": "Zeira"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Ela"
+        },
+        {
+          "en_name": "Ulla"
+        },
+        {
+          "en_name": "Rav Beruna"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jerusalem"
+        },
+        {
+          "en_name": "Babylonia"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Redemption"
+        },
+        {
+          "en_name": "Prayer"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Myrtle"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yosei Ben Elyakim",
+          "term2": "The Holy Community In Jerusalem"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Yosei Ben Elyakim",
+          "term2": "Zeira"
+        },
+        {
+          "term1": "Ela",
+          "term2": "Ulla"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Ulla",
+          "term2": "Babylonia"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "The Holy Community In Jerusalem",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Rav Beruna",
+          "term2": "Babylonia"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+﻿COST: Tokens: Total=13902 approx cost=$0.002437 (Prompt=7706, Completion=6196)
+SOURCE:
+Berakhot (Zeraim) 4b:6-15
+
+HEBREW:
+אמר מר, קורא קריאת שמע ומתפלל. מסייע ליה לרבי יוחנן. דאמר רבי יוחנן: איזהו בן העולם הבא — זה הסומך גאולה לתפלה של ערבית. רבי יהושע בן לוי אומר: תפלות באמצע תקנום.במאי קא מפלגי?אי בעית אימא קרא, אי בעית אימא סברא.אי בעית אימא סברא.דרבי יוחנן סבר גאולה מאורתא נמי הוי, אלא גאולה מעלייתא לא הויא אלא עד צפרא. ורבי יהושע בן לוי סבר כיון דלא הויא אלא מצפרא — לא הויא גאולה מעלייתא.ואיבעית אימא קרא, ושניהם מקרא אחד דרשו, דכתיב ״בשכבך ובקומך״.רבי יוחנן סבר: מקיש שכיבה לקימה, מה קימה — קריאת שמע ואחר כך תפלה, אף שכיבה נמי — קריאת שמע ואחר כך תפלה. רבי יהושע בן לוי סבר: מקיש שכיבה לקימה: מה קימה — קריאת שמע סמוך למטתו, אף שכיבה נמי — קריאת שמע סמוך למטתו.מתיב מר בריה דרבינא, בערב מברך שתים לפניה ושתים לאחריה. ואי אמרת בעי לסמוך, הא לא קא סמך גאולה לתפלה, דהא בעי למימר ״השכיבנו״!אמרי: כיון דתקינו רבנן ״השכיבנו״ — כגאולה אריכתא דמיא. דאי לא תימא הכי, שחרית היכי מצי סמיך? והא אמר רבי יוחנן: בתחלה אומר: ״ה׳ שפתי תפתח״, ולבסוף הוא אומר: ״יהיו לרצון אמרי פי״.אלא התם כיון דתקינו רבנן למימר ״ה׳ שפתי תפתח״ — כתפלה אריכתא דמיא. הכא נמי, כיון דתקינו רבנן למימר ״השכיבנו״ — כגאולה אריכתא דמיא.
+
+ENGLISH:
+In this baraita , the Master said that when one returns from work in the evening, he enters the synagogue, recites Shema , and prays. From this baraita , we see that at night, just as during the day, one first recites Shema and then prays. This supports the opinion of Rabbi Yohanan, as Rabbi Yohanan said: Who is assured of a place in the World-to-Come? It is one who juxtaposes the blessing of redemption, recited after Shema , to the evening prayer. Rabbi Yehoshua ben Levi says: The prayers were instituted to be recited between the two recitations of Shema . According to Rabbi Yehoshua ben Levi, one recites the morning Shema , then recites all of the prayers and only after the recitation of the evening prayer does he recite the evening Shema .Although the practical difference between these two positions is clear, the Gemara seeks to determine: With regard to what do they disagree? What is the basis of their argument?The Gemara answers: If you wish, say that they disagree over the interpretation of a verse; if you wish, say instead that they disagree on a point of logic. If you say that they disagree on a point of logic, then the argument relates to the redemption recited after Shema , whose focus is the exodus from Egypt, the first redemption. The question is whether that redemption began at night, which would render it appropriate to juxtapose redemption to the blessing of the evening prayers as well, in prayer for immediate redemption. Or, perhaps, the redemption from Egypt only began during the day. Rabbi Yohanan holds: Redemption occurred in the evening as well; however, the full-fledged redemption was only in the morning. Since the redemption began in the evening, it is appropriate to juxtapose the blessing of redemption to the daily evening prayer. Rabbi Yehoshua ben Levi, on the other hand, holds: Since full-fledged redemption only occurred in the morning, and the redemption of the previous evening was not a full-fledged redemption, there is no need to juxtapose the blessing of redemption to the evening prayer. And if you wish, say instead that the dispute between Rabbi Yohanan and Rabbi Yehoshua ben Levi is not a difference over a point of logic, but over the interpretation of a verse. Both derived their opinions from the same verse: When you lie down, and when you rise. Both interpreted that the juxtaposition in this verse of the recitation of Shema at night and the recitation of Shema in the morning draws a parallel between them. Rabbi Yohanan holds: The verse juxtaposes lying down and rising. Just as when one rises, the recitation of Shema is followed by prayer, as everyone agrees that in the morning one juxtaposes redemption to the morning prayer, so too, when one lies down, the recitation of Shema is followed by prayer. And Rabbi Yehoshua ben Levi maintains: The verse juxtaposes lying down and rising in a different sense. Just as when one rises, he recites Shema adjacent to rising from his bed, as the verse, when you rise, means when one awakens, so too when one lies down, he recites Shema adjacent to lying down in his bed. Therefore, the recitation of the evening Shema should be performed as close as possible to the moment when one actually lies down.According to Rabbi Yohanan, it is a mitzva to recite Shema before the evening prayer. Mar, son of Ravina, raises an objection from a mishna: How can one do that? We learn in a later mishna: In the evening, one recites two blessings prior to the recitation of Shema and two blessings afterward. And if you say that one must juxtapose redemption to prayer, doesnt he fail to juxtapose redemption to prayer, as he must recite: Help us lie down [ hashkivenu ], the blessing recited after the blessing of redemption, which constitutes an interruption between redemption and prayer? They say in response: Since the Sages instituted the practice of reciting: Help us lie down, it is considered one extended blessing of redemption, and therefore does not constitute an interruption. As if you fail to say that the sections added by the Sages are considered no less significant than the original prayers, then can one juxtapose redemption to prayer even in the morning? Didnt Rabbi Yohanan say: Before every prayer one recites the verse: Lord, open my lips, that my mouth may declare Your glory (Psalms 51:17) as a prelude to prayer? Afterward, one recites the verse: May the words of my mouth and the meditations of my heart be acceptable before You (Psalms 19:15). Doesnt the verse: Lord, open my lips, constitute an interruption between redemption and prayer? Rather, there, since the Sages instituted that one must recite: Lord, open my lips, it is considered as an extended prayer and not as an interruption. Here, too, with regard to the evening prayer, since the Sages instituted to recite the blessing Help us lie down, it is considered as one extended blessing of redemption.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages dispute Shema and prayer order.",
+    "heb_summary": "חכמים חלוקים על סדר שמע ותפילה.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Master"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Mar"
+        },
+        {
+          "en_name": "Ravina"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World-To-Come"
+        },
+        {
+          "en_name": "Egypt"
+        },
+        {
+          "en_name": "Synagogue"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Prayer"
+        },
+        {
+          "en_name": "Blessing Of Redemption"
+        },
+        {
+          "en_name": "Evening Prayer"
+        },
+        {
+          "en_name": "Morning Shema"
+        },
+        {
+          "en_name": "Evening Shema"
+        },
+        {
+          "en_name": "Redemption"
+        },
+        {
+          "en_name": "Verse"
+        },
+        {
+          "en_name": "Mishna"
+        },
+        {
+          "en_name": "Blessing"
+        },
+        {
+          "en_name": "Help Us Lie Down"
+        },
+        {
+          "en_name": "Psalms"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "blessing",
+          "en_context": "prayer structure"
+        },
+        {
+          "en_name": "51",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "17",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "19",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "15",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Obligation",
+          "en_unit": "mitzvah",
+          "en_context": "recite shema"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Mar",
+          "term2": "Ravina"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yohanan",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Master",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "Yohanan",
+          "term2": "World-To-Come"
+        }
+      ]
+    }
+  }
+}

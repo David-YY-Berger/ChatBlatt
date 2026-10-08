@@ -1,0 +1,41 @@
+﻿COST: Tokens: Total=8022 approx cost=$0.000878 (Prompt=6794, Completion=1228)
+SOURCE:
+Berakhot (Zeraim) 9b:25-10a:1
+
+HEBREW:
+כל פרשה שהיתה חביבה על דוד, פתח בה ב״אשרי״ וסיים בה ב״אשרי״. פתח ב״אשרי״, דכתיב: ״אשרי האיש״. וסיים ב״אשרי״, דכתיב: ״אשרי כל חוסי בו״.
+
+ENGLISH:
+Every chapter that was dear to David, he began with happy is and concluded with happy is. He opened with happy is, as it is written: Happy is the man who has not walked in the counsel of the wicked or stood in the way of sinners or sat in the dwelling place of the scornful (Psalms 1:1). And he concluded with happy, as it is written at the end of the chapter: Pay homage in purity, lest He be angry, and you perish on the way when His anger is kindled suddenly. Happy are those who take refuge in Him (Psalms 2:12). We see that these two chapters actually constitute a single chapter.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "David's chapters begin and end with happy.",
+    "heb_summary": "פרקי דוד מתחילים ומסתיימים ב\"אשרי\".",
+    "passage_types": [
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "David"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalms chapters"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "chapter",
+          "en_context": "psalms chapters"
+        }
+      ]
+    }
+  }
+}

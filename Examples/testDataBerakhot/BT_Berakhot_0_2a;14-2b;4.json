@@ -1,0 +1,82 @@
+﻿{
+    "res": {
+        "en_summary": "Sunset purification, teruma, Shema, stars, halakha.",
+        "heb_summary": "טהרה בשקיעה, תרומה, קריאת שמע, כוכבים.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Tosafot"
+                },
+                {
+                    "en_name": "Rabba Bar Rav Sheila"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "West"
+                },
+                {
+                    "en_name": "Eretz Yisrael"
+                },
+                {
+                    "en_name": "Babylonia"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Stars"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Teruma"
+                }
+            ]
+        },
+        "Rel": {
+            "disagreedWith": [
+                {
+                    "term1": "Rabba Bar Rav Sheila",
+                    "term2": "Tosafot"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rabba Bar Rav Sheila",
+                    "term2": "Babylonia"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Babylonia"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Eretz Yisrael"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Shema",
+                    "term2": "Teruma"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "West",
+                    "term2": "Eretz Yisrael"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2a:14-2b:4"
+}

@@ -1,0 +1,116 @@
+﻿{
+    "res": {
+        "en_summary": "Mishna discusses Shema recitation times, Rabban Gamliel's ruling.",
+        "heb_summary": "משנה דנה זמני קריאת שמע, פסיקת רבן גמליאל.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabban Gamliel"
+                },
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "The Rabbis"
+                },
+                {
+                    "en_name": "Priests"
+                },
+                {
+                    "en_name": "Rabban Gamliel's Sons"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Wedding Hall"
+                },
+                {
+                    "en_name": "Altar"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Yoke Of Heaven"
+                },
+                {
+                    "en_name": "Mitzvot"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Mishna"
+                },
+                {
+                    "en_name": "Burnt Offering"
+                },
+                {
+                    "en_name": "Sin-Offering"
+                },
+                {
+                    "en_name": "Guilt-Offering"
+                },
+                {
+                    "en_name": "Pyre"
+                },
+                {
+                    "en_name": "Beshokhbekha"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "tractate",
+                    "en_context": "mishna order"
+                },
+                {
+                    "en_name": "6",
+                    "number_category": "Misc",
+                    "en_unit": "order",
+                    "en_context": "mishna orders"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Rabban Gamliel's Sons",
+                    "term2": "Rabban Gamliel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rabban Gamliel's Sons",
+                    "term2": "Rabban Gamliel"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rabban Gamliel",
+                    "term2": "The Rabbis"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Rabban Gamliel's Sons",
+                    "term2": "Wedding Hall"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Priests",
+                    "term2": "Altar"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_2a:1-5"
+}

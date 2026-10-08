@@ -1,0 +1,144 @@
+﻿{
+    "res": {
+        "en_summary": "Sages dispute Shema and prayer order.",
+        "heb_summary": "חכמים חלוקים על סדר שמע ותפילה.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Master"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Mar"
+                },
+                {
+                    "en_name": "Ravina"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "World-To-Come"
+                },
+                {
+                    "en_name": "Egypt"
+                },
+                {
+                    "en_name": "Synagogue"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Prayer"
+                },
+                {
+                    "en_name": "Blessing Of Redemption"
+                },
+                {
+                    "en_name": "Evening Prayer"
+                },
+                {
+                    "en_name": "Morning Shema"
+                },
+                {
+                    "en_name": "Evening Shema"
+                },
+                {
+                    "en_name": "Redemption"
+                },
+                {
+                    "en_name": "Verse"
+                },
+                {
+                    "en_name": "Mishna"
+                },
+                {
+                    "en_name": "Blessing"
+                },
+                {
+                    "en_name": "Help Us Lie Down"
+                },
+                {
+                    "en_name": "Psalms"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "blessing",
+                    "en_context": "prayer structure"
+                },
+                {
+                    "en_name": "51",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "17",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "19",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "15",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "mitzvah",
+                    "en_context": "recite shema"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Mar",
+                    "term2": "Ravina"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Yehoshua Ben Levi"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Master",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Yohanan",
+                    "term2": "World-To-Come"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4b:6-15"
+}

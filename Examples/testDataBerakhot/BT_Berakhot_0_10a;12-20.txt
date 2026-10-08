@@ -1,0 +1,182 @@
+﻿COST: Tokens: Total=11706 approx cost=$0.001831 (Prompt=7469, Completion=4237)
+SOURCE:
+Berakhot (Zeraim) 10a:12-20
+
+HEBREW:
+אמר רבי יוחנן משום רבי שמעון בן יוחי. מאי דכתיב, ״פיה פתחה בחכמה ותורת חסד על לשונה״. כנגד מי אמר שלמה מקרא זה? — לא אמרו אלא כנגד דוד אביו, שדר בחמשה עולמים, ואמר שירה.דר במעי אמו ואמר שירה, שנאמר: ״ברכי נפשי את ה׳ וכל קרבי את שם קדשו״.יצא לאויר העולם ונסתכל בכוכבים ומזלות ואמר שירה, שנאמר: ״ברכו ה׳ מלאכיו גברי כח עושי דברו לשמע בקול דברו ברכו ה׳ כל צבאיו וגו׳״.ינק משדי אמו ונסתכל בדדיה ואמר שירה, שנאמר: ״ברכי נפשי את ה׳ ואל תשכחי כל גמוליו״.מאי ״כל גמוליו״. אמר רבי אבהו: שעשה לה דדים במקום בינה.טעמא מאי? אמר רב יהודה: כדי שלא יסתכל במקום ערוה. רב מתנא אמר: כדי שלא יינק ממקום הטנופת.ראה במפלתן של רשעים, ואמר שירה, שנאמר: ״יתמו חטאים מן הארץ ורשעים עוד אינם ברכי נפשי את ה׳ הללויה״.נסתכל ביום המיתה, ואמר שירה, שנאמר: ״ברכי נפשי את ה׳, ה׳ אלהי גדלת מאד הוד והדר לבשת״.מאי משמע דעל יום המיתה נאמר? אמר רבה בר רב שילא, מסיפא דעניינא, דכתיב: ״תסתיר פניך יבהלון תסף רוחם יגועון וגו׳״.
+
+ENGLISH:
+Rabbi Yohanan said explanations of other verses in the name of Rabbi Shimon ben Yohai: What is the meaning of that which is written: She opens her mouth with wisdom, and the teaching of loving-kindness is on her tongue (Proverbs 31:26)? The Sages explain that this chapter discusses the wisdom of Torah and those who engage in its study, so with reference to whom did Solomon say this verse? He said this verse about none other than his father, David, who was the clearest example of one who opens his mouth in wisdom, and who resided in five worlds or stages of life and his soul said a song of praise corresponding to each of them. Five times David said: Bless the Lord, O my soul, each corresponding to a different stage of life. He resided in his mothers womb, his first world, and said a song of praise of the pregnancy, as it is stated: Of David. Bless the Lord, O my soul and all that is within me bless His holy name (Psalms 103:1), in which he thanks God for creating all that is within his mother, i.e., her womb. He emerged into the atmosphere of the world, his second world, looked upon the stars and constellations and said a song of praise of God for the entirety of creation, as it is stated: Bless the Lord, His angels, mighty in strength, that fulfill His word, listening to the voice of His word. Bless the Lord, all His hosts, His servants, that do His will. Bless the Lord, all His works, in all places of His kingship, bless my soul, Lord (Psalms 103:20-23). David saw the grandeur of all creation and recognized that they are mere servants, carrying out the will of their Creator ( Maayan HaBerakhot ). He nursed from his mothers breast, his third world, and he looked upon her bosom and said a song of praise, as it is stated: Bless the Lord, O my soul, and do not forget all His benefits [ gemulav ] (Psalms 103:2). The etymological association is between gemulav and gemulei mehalav , which means weaned from milk (Isaiah 28:9).We still must understand, however, what is meant by all His benefits? What in particular is praiseworthy in what God provided, beyond merely providing for the infant? Rabbi Abbahu said: In contrast with most other animals, God placed her breasts near her heart, the place that is the source of understanding. What is the reason that God did this? Rav Yehuda said: So that the nursing child would not look upon the place of his mothers nakedness. Rav Mattana said: So that the child would not nurse from a place of uncleanliness. He witnessed in both vision and reality the downfall of the wicked and he said a song of praise, as it is stated: Let sinners cease from the earth, and let the wicked be no more. Bless the Lord, O my soul, Halleluya (Psalms 104:35).The fifth world was when David looked upon the day of death and said a song of praise, as it is stated: Bless the Lord, O my soul. Lord my God, You are very great; You are clothed in glory and majesty (Psalms 104:1); for even death is a time of transcendence for the righteous.The connection between this final praise and the day of death is unclear. The Gemara asks: From where is it inferred that this verse was stated with regard to the day of death? Rabba bar Rav Sheila says: We can derive this from the verses at the end of the matter, where it is written: You hide Your face, they vanish; You gather Your breath, they perish and return to the dust (Psalms 104:29).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "David praised God in five life stages.",
+    "heb_summary": "דוד שיבח את אלוהים בחמישה שלבי חיים.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Angels"
+        },
+        {
+          "en_name": "Abbahu"
+        },
+        {
+          "en_name": "Yehuda"
+        },
+        {
+          "en_name": "Mattana"
+        },
+        {
+          "en_name": "Rabba Bar Rav Sheila"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Mother's Womb"
+        },
+        {
+          "en_name": "Atmosphere Of The World"
+        },
+        {
+          "en_name": "Mother's Breast"
+        },
+        {
+          "en_name": "Earth"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "5",
+          "number_category": "Misc",
+          "en_unit": "world",
+          "en_context": "david's life stages"
+        },
+        {
+          "en_name": "103",
+          "number_category": "Misc",
+          "en_unit": "psalm",
+          "en_context": "david's psalm"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 103"
+        },
+        {
+          "en_name": "20",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 103"
+        },
+        {
+          "en_name": "23",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 103"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 103"
+        },
+        {
+          "en_name": "28",
+          "number_category": "Misc",
+          "en_unit": "isaiah",
+          "en_context": "isaiah reference"
+        },
+        {
+          "en_name": "9",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "isaiah 28"
+        },
+        {
+          "en_name": "104",
+          "number_category": "Misc",
+          "en_unit": "psalm",
+          "en_context": "david's psalm"
+        },
+        {
+          "en_name": "35",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 104"
+        },
+        {
+          "en_name": "29",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms 104"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Milk"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Shimon Ben Yohai"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Solomon",
+          "term2": "David"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "David",
+          "term2": "Mother's Womb"
+        },
+        {
+          "term1": "David",
+          "term2": "Atmosphere Of The World"
+        },
+        {
+          "term1": "David",
+          "term2": "Mother's Breast"
+        },
+        {
+          "term1": "David",
+          "term2": "Earth"
+        }
+      ]
+    }
+  }
+}

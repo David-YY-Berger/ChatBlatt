@@ -1,0 +1,108 @@
+﻿COST: Tokens: Total=10339 approx cost=$0.001447 (Prompt=7356, Completion=2983)
+SOURCE:
+Berakhot (Zeraim) 8a:30-8b:7
+
+HEBREW:
+ואפילו ״עטרות ודיבן״. שכל המשלים פרשיותיו עם הצבור מאריכין לו ימיו ושנותיו.רב ביבי בר אביי סבר לאשלומינהו לפרשייתא דכלא שתא במעלי יומא דכפורי, תנא ליה חייא בר רב מדפתי: כתיב: ״ועניתם את נפשתיכם בתשעה לחדש בערב״.וכי בתשעה מתענין?! והלא בעשרה מתענין! אלא לומר לך כל האוכל ושותה בתשיעי, מעלה עליו הכתוב כאילו מתענה תשיעי ועשירי.סבר לאקדומינהו, אמר ליה ההוא סבא, תנינא: ובלבד שלא יקדים ושלא יאחר.כדאמר להו רבי יהושע בן לוי לבניה: אשלימו פרשיותייכו עם הצבור שנים מקרא ואחד תרגום.והזהרו בורידין כרבי יהודה, דתנן: רבי יהודה אומר: עד שישחוט את הורידין.והזהרו בזקן ששכח תלמודו מחמת אונסו. דאמרינן: לוחות ושברי לוחות מונחות בארון.
+
+ENGLISH:
+This applies to every verse, even a verse like: Atarot and Divon and Yazer and Nimra and Heshbon and Elaleh and Sevam and Nevo and Beon (Numbers 32:3). While that verse is comprised entirely of names of places that are identical in Hebrew and Aramaic, one is nevertheless required to read the verse twice and its translation once, as one who completes his Torah portions with the congregation is rewarded that his days and years are extended. Rav Beivai bar Abaye thought to finish all the Torah portions of the entire year, which he had been unable to complete at their appointed time, on the eve of Yom Kippur when he would have time to do so. But Hiyya bar Rav of Difti taught him: It is written with regard to Yom Kippur: And you shall afflict your souls on the ninth day of the month in the evening, from evening to evening you shall keep your Sabbath (Leviticus 23:32).The Gemara wonders: And does one fast on the ninth of Tishrei? Doesnt one fast on the tenth of Tishrei, as the Torah says at the beginning of that portion: However, on the tenth day of this seventh month is the Day of Atonement; there shall be a holy convocation for you, and you shall afflict your souls (Leviticus 23:27)? Rather, this verse comes to tell you: One who eats and drinks on the ninth day of Tishrei in preparation for the fast the next day, the verse ascribes him credit as if he fasted on both the ninth and the tenth of Tishrei. Hiyya bar Rav of Difti cited this verse to Rav Beivai bar Abaye to teach him that Yom Kippur eve is dedicated to eating and drinking, not to completing the Torah portions one may have missed throughout the year.When Rav Beivai heard this, he thought to read the Torah portions earlier, before they were to be read by the community. A certain unnamed elder told him, we learned: As long as one does not read the Torah portions earlier or later than the congregation. One must read them together with the congregation. As Rabbi Yehoshua ben Levi told his sons: Complete your portions with the congregation, the Bible text twice and the translation once. He also advised them: Be careful with the jugular veins, in accordance with the opinion of Rabbi Yehuda, as we learned in a mishna with regard to the laws of ritual slaughter: Rabbi Yehuda said: Cutting the trachea and esophagus in the ritual slaughter of a bird does not render the bird kosher until he slaughters the jugular veins as well. While this is not halakhically required, it is appropriate to do so to prevent significant amounts of blood from remaining in the bird.Rabbi Yehoshua ben Levi further advised: And be careful to continue to respect an elder who has forgotten his Torah knowledge due to circumstances beyond his control. Even though he is no longer a Torah scholar, he must still be respected for the Torah that he once possessed. As we say: Both the tablets of the Covenant and the broken tablets are placed in the Ark of the Covenant in the Temple. Even though the first tablets were broken, their sanctity obligates one not to treat them with contempt. An elder who forgot the Torah knowledge he once possessed is likened to these broken tablets.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Torah reading, Yom Kippur, elder respect, ritual slaughter.",
+    "heb_summary": "קריאת תורה, יום כיפור, כיבוד זקנים, שחיטה.",
+    "passage_types": [
+      "LAW",
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Beivai Bar Abaye"
+        },
+        {
+          "en_name": "Hiyya Bar Rav"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Yehuda"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Atarot"
+        },
+        {
+          "en_name": "Divon"
+        },
+        {
+          "en_name": "Yazer"
+        },
+        {
+          "en_name": "Nimra"
+        },
+        {
+          "en_name": "Heshbon"
+        },
+        {
+          "en_name": "Elaleh"
+        },
+        {
+          "en_name": "Sevam"
+        },
+        {
+          "en_name": "Nevo"
+        },
+        {
+          "en_name": "Beon"
+        },
+        {
+          "en_name": "Difti"
+        },
+        {
+          "en_name": "Temple"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Tablets Of The Covenant"
+        },
+        {
+          "en_name": "Ark Of The Covenant"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "time",
+          "en_context": "reading bible text"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "time",
+          "en_context": "reading translation"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Bird"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Beivai Bar Abaye",
+          "term2": "Hiyya Bar Rav"
+        }
+      ]
+    }
+  }
+}

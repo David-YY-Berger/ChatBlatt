@@ -1,0 +1,48 @@
+﻿{
+    "res": {
+        "en_summary": "Abaye's ruling on scholars' bedtime prayer.",
+        "heb_summary": "אביי: תלמידי חכמים ותפילת שמע לפני שינה.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Torah Scholar"
+                },
+                {
+                    "en_name": "Abaye"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Into Your Hand I Trust My Spirit; You Have Redeemed Me, Lord, God Of Truth"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Obligation",
+                    "en_unit": "verse",
+                    "en_context": "recite before sleep"
+                }
+            ]
+        },
+        "Rel": {
+            "spokeWith": [
+                {
+                    "term1": "Abaye",
+                    "term2": "Torah Scholar"
+                }
+            ],
+            "associatedWithPlace": []
+        }
+    },
+    "key": "BT_Berakhot_0_4b:27-5a:1"
+}

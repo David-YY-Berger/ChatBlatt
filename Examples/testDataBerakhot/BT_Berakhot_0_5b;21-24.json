@@ -1,0 +1,101 @@
+﻿{
+    "res": {
+        "en_summary": "Abba Binyamin's prayer and bed orientation teachings.",
+        "heb_summary": "תפילה ומיטת אבא בנימין, הטיית מיטה.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Abba Binyamin"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Hezekiah"
+                },
+                {
+                    "en_name": "Rabbi Hama"
+                },
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Rabbi Yitzhak"
+                },
+                {
+                    "en_name": "Rav Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "Rebecca"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Rabbeinu Hananel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Holy Of Holies"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Divine Presence"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "en_unit": "child",
+                    "en_context": "rebecca pregnancy"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Rav"
+                },
+                {
+                    "term1": "Rabbi Yehoshua Ben Levi",
+                    "term2": "Rav"
+                },
+                {
+                    "term1": "Rabbi Hama",
+                    "term2": "Rabbi Hanina"
+                },
+                {
+                    "term1": "Rabbi Hanina",
+                    "term2": "Rabbi Yitzhak"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abba Binyamin",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Abba Binyamin",
+                    "term2": "Holy Of Holies"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5b:21-24"
+}

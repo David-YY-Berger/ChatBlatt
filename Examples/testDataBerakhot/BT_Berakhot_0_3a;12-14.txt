@@ -1,0 +1,128 @@
+﻿COST: Tokens: Total=9864 approx cost=$0.001339 (Prompt=7199, Completion=2665)
+SOURCE:
+Berakhot (Zeraim) 3a:12-14
+
+HEBREW:
+תניא, אמר רבי יוסי: פעם אחת הייתי מהלך בדרך ונכנסתי לחורבה אחת מחורבות ירושלים להתפלל. בא אליהו זכור לטוב ושמר לי על הפתח, (והמתין לי) עד שסיימתי תפלתי. לאחר שסיימתי תפלתי אמר לי: ״שלום עליך, רבי״. ואמרתי לו: ״שלום עליך, רבי ומורי״. ואמר לי: בני, מפני מה נכנסת לחורבה זו? אמרתי לו: להתפלל. ואמר לי: היה לך להתפלל בדרך. ואמרתי לו: מתירא הייתי שמא יפסיקו בי עוברי דרכים, ואמר לי היה לך להתפלל תפלה קצרה.באותה שעה למדתי ממנו שלשה דברים: למדתי שאין נכנסין לחורבה, ולמדתי שמתפללין בדרך, ולמדתי שהמתפלל בדרך מתפלל תפלה קצרה.ואמר לי: בני, מה קול שמעת בחורבה זו? ואמרתי לו: שמעתי בת קול שמנהמת כיונה ואומרת: ״אוי שהחרבתי את ביתי ושרפתי את היכלי והגליתי את בני לבין אומות העולם״. ואמר לי: חייך וחיי ראשך, לא שעה זו בלבד אומרת כך, אלא בכל יום ויום, שלש פעמים אומרת כך. ולא זו בלבד אלא, בשעה שישראל נכנסין לבתי כנסיות ולבתי מדרשות ועונין ״יהא שמיה הגדול מבורך״, הקדוש ברוך הוא מנענע ראשו, ואומר: אשרי המלך שמקלסין אותו בביתו כך, מה לו לאב שהגלה את בניו, ואוי להם לבנים שגלו מעל שולחן אביהם.
+
+ENGLISH:
+Incidental to the mention of the elevated significance of the night watches, the Gemara cites a related story: It was taught in a baraita that Rabbi Yosei said: I was once walking along the road when I entered the ruins of an old, abandoned building among the ruins of Jerusalem in order to pray. I noticed that Elijah, of blessed memory, came and guarded the entrance for me and waited at the entrance until I finished my prayer. When I finished praying and exited the ruin, Elijah said to me, deferentially as one would address a rabbi: Greetings to you, my rabbi. I answered him: Greetings to you, my rabbi, my teacher. And Elijah said to me: My son, why did you enter this ruin? I said to him: In order to pray. And Elijah said to me: You should have prayed on the road. And I said to him: I was unable to pray along the road, because I was afraid that I might be interrupted by travelers and would be unable to focus. Elijah said to me: You should have recited the abbreviated prayer instituted for just such circumstances.Rabbi Yosei concluded: At that time, from that brief exchange, I learned from him three things: I learned that one may not enter a ruin; and I learned that one need not enter a building to pray, but he may pray along the road; and I learned that one who prays along the road recites an abbreviated prayer, so that he may maintain his focus. And after this introduction, Elijah said to me: What voice did you hear in that ruin? I responded: I heard a Heavenly voice, like an echo of that roar of the Holy One, Blessed be He (Maharsha), cooing like a dove and saying: Woe to the children, due to whose sins I destroyed My house, burned My Temple, and exiled them among the nations of the world. And Elijah said to me: By your life and by your head, not only did that voice cry out in that moment, but it cries out three times each and every day. Moreover, any time that Gods greatness is evoked, such as when Israel enters synagogues and study halls and answers in the kaddish prayer, May His great name be blessed, the Holy One, Blessed be He, shakes His head and says: Happy is the king who is thus praised in his house. When the Temple stood, this praise was recited there, but now: How great is the pain of the father who exiled his children, and woe to the children who were exiled from their fathers table, as their pain only adds to that of their father (Rabbi Shem Tov ibn Shaprut).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Yosei and Elijah discuss prayer in Jerusalem.",
+    "heb_summary": "רבי יוסי ואליהו דנים בתפילה בירושלים.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yosei"
+        },
+        {
+          "en_name": "Elijah"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Holy One"
+        },
+        {
+          "en_name": "Maharsha"
+        },
+        {
+          "en_name": "Shem Tov Ibn Shaprut"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Jerusalem"
+        },
+        {
+          "en_name": "Temple"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Heavenly Voice"
+        },
+        {
+          "en_name": "Kaddish Prayer"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "time",
+          "en_context": "voice cries out"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Dove"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yosei",
+          "term2": "Elijah"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Yosei",
+          "term2": "Elijah"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Yosei",
+          "term2": "Jerusalem"
+        },
+        {
+          "term1": "Elijah",
+          "term2": "Jerusalem"
+        }
+      ],
+      "prayedAt": [
+        {
+          "term1": "Yosei",
+          "term2": "Jerusalem"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Israel",
+          "term2": "Temple"
+        }
+      ],
+      "placeToNation": [
+        {
+          "term1": "Temple",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Heavenly Voice",
+          "term2": "Holy One"
+        },
+        {
+          "term1": "Heavenly Voice",
+          "term2": "Dove"
+        }
+      ]
+    }
+  }
+}

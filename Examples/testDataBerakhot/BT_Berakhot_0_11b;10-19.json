@@ -1,0 +1,130 @@
+﻿{
+    "res": {
+        "en_summary": "Sages dispute Torah blessing requirements and formulas.",
+        "heb_summary": "חכמים חלוקים על ברכת התורה ונוסחאותיה.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "Rabbi Elazar"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rav Hiyya Bar Ashi"
+                },
+                {
+                    "en_name": "Rav Hamnuna"
+                },
+                {
+                    "en_name": "House Of Israel"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Bible"
+                },
+                {
+                    "en_name": "Mishna"
+                },
+                {
+                    "en_name": "Talmud"
+                },
+                {
+                    "en_name": "Sifra"
+                },
+                {
+                    "en_name": "Torat Kohanim"
+                },
+                {
+                    "en_name": "Mitzvah"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Shmuel"
+                },
+                {
+                    "term1": "Rav Hiyya Bar Ashi",
+                    "term2": "Rava"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Shmuel"
+                },
+                {
+                    "term1": "Rav Hiyya Bar Ashi",
+                    "term2": "Rava"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Rav Huna",
+                    "term2": "Rabbi Elazar"
+                },
+                {
+                    "term1": "Rabbi Elazar",
+                    "term2": "Rabbi Yohanan"
+                },
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rava"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "House Of Israel",
+                    "term2": "Israel"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Torat Kohanim",
+                    "term2": "Talmud"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "Sifra",
+                    "term2": "Torat Kohanim"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11b:10-19"
+}

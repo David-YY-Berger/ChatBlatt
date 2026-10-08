@@ -1,0 +1,44 @@
+﻿COST: Tokens: Total=8474 approx cost=$0.001014 (Prompt=6792, Completion=1682)
+SOURCE:
+Berakhot (Zeraim) 6b:37
+
+HEBREW:
+ואמר רבי חלבו, אמר רב הונא: כל שיודע בחברו שהוא רגיל ליתן לו שלום, יקדים לו שלום, שנאמר: ״בקש שלום ורדפהו״. ואם נתן לו ולא החזיר — נקרא ״גזלן״, שנאמר: ״ואתם בערתם הכרם גזלת העני בבתיכם״.
+
+ENGLISH:
+And Rabbi Helbo said that Rav Huna said: One who is aware that another person is accustomed to greet him is not only obligated to return his greeting, but he must greet him first, as it is stated: Seek peace and pursue it (Psalms 34:15). If the other person extended his greeting to him and he did not respond, he is called a robber, as it is stated: It is you who have eaten up the vineyard, the spoils of the poor is in your houses (Isaiah 3:14). The only way to steal from a pauper who owns nothing is to rob him of his dignity by refusing to return his greeting.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Greet first, return greetings, avoid robbing dignity.",
+    "heb_summary": "הקדם שלום, השב ברכה, אל תגזול כבוד.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Helbo"
+        },
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Isaiah"
+        },
+        {
+          "en_name": "David"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Helbo",
+          "term2": "Rav Huna"
+        }
+      ]
+    }
+  }
+}

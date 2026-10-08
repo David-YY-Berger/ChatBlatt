@@ -1,0 +1,95 @@
+﻿{
+    "res": {
+        "en_summary": "Rava's advice: meat, Aramean bed, synagogue.",
+        "heb_summary": "עצות רבא: בשר, מיטת ארמית, בית כנסת.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rav Pappa"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua Ben Levi"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Synagogue"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Aram"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Phylactery"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "advice",
+                    "en_context": "rava's advice"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "explanation",
+                    "en_context": "meat cutting danger"
+                },
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "factor",
+                    "en_context": "synagogue passing caveats"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Meat"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Abaye",
+                    "term2": "Rabbi Yehoshua Ben Levi"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Rava",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Rabbi Yehoshua Ben Levi",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "Synagogue"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8b:8-12"
+}

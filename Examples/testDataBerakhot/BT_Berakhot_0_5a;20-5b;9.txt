@@ -1,0 +1,108 @@
+﻿COST: Tokens: Total=12181 approx cost=$0.001978 (Prompt=7450, Completion=4731)
+SOURCE:
+Berakhot (Zeraim) 5a:20-5b:9
+
+HEBREW:
+וקובר את בניו — מוחלין לו על כל עונותיו.אמר ליה רבי יוחנן: בשלמא תורה וגמילות חסדים, דכתיב: ״בחסד ואמת יכפר עון״. ״חסד״ — זו גמילות חסדים, שנאמר: ״רודף צדקה וחסד ימצא חיים צדקה וכבוד״. ״אמת״ — זו תורה, שנאמר: ״אמת קנה ואל תמכר״. אלא ״קובר את בניו״ מנין?תנא ליה ההוא סבא, משום רבי שמעון בן יוחאי: אתיא, ״עון״ ״עון״. כתיב הכא ״בחסד ואמת יכפר עון״, וכתיב התם ״ומשלם עון אבות אל חיק בניהם״.אמר רבי יוחנן: נגעים ובנים — אינן יסורין של אהבה.ונגעים לא? והתניא: כל מי שיש בו אחד מארבעה מראות נגעים הללו — אינן אלא מזבח כפרה!מזבח כפרה — הוו, יסורין של אהבה — לא הוו.ואי בעית אימא: הא — לן. והא — להו.ואי בעית אימא: הא — בצנעא, הא — בפרהסיא.ובנים לא?! היכי דמי, אילימא דהוו להו ומתו, והא אמר רבי יוחנן, דין גרמא דעשיראה ביר? אלא הא — דלא הוו ליה כלל. והא — דהוו ליה ומתו.
+
+ENGLISH:
+and buries his sons, all his transgressions are forgiven. Rabbi Yohanan said to him: What is your source for this? Granted, if one engages in Torah and acts of charity, his transgressions are forgiven, as it is written: With mercy and truth, iniquity is expiated (Proverbs 16:6); mercy refers to acts of charity, as it is stated: He who pursues charity and mercy finds life, charity and honor (Proverbs 21:21), mercy and charity are listed together. And truth refers to Torah, as it is stated: Buy truth and do not sell it; also wisdom, guidance and understanding (Proverbs 23:23). However, from where is it derived that the transgressions of one who buries his sons are also forgiven?An answer was provided to Rabbi Yohanan when a certain elder taught him in the name of Rabbi Shimon bar Yohai: This conclusion is derived from a verbal analogy between the words iniquity and iniquity. Here, it is written: With mercy and truth, iniquity is expiated, and there it is written: He repays the iniquity of the fathers onto the bosom of their children (Jeremiah 32:18). Because he repays the iniquity of the fathers onto the bosom of their children, the fathers transgressions are forgiven. Rabbi Yohanan said: Leprosy and suffering due to children are not afflictions of love. The Gemara asks: Is leprosy not an affliction of love? Didnt we learn in a baraita : If one has any of the four signs of leprosy (Leviticus 13) they are nothing other than an altar of atonement? The Gemara answers: Although the signs of leprosy are an altar of atonement for ones transgressions, they are not an affliction of love. And if you wish, say instead: This baraita , which says that leprosy is an affliction of love, is for us in Babylonia, because outside of Eretz Yisrael we are not as careful of the laws of ritual impurity, and one afflicted with leprosy may interact with others, mitigating his suffering. And that statement of Rabbi Yohanan, that leprosy is not an affliction of love, is for them in Eretz Yisrael, where they are exceedingly careful of the laws of ritual impurity and the suffering of a leper is great because he is banished from society (Rav Hai Gaon). And if you wish, say instead: This baraita , which says that leprosy is an affliction of love, refers to concealed leprosy that only strikes the concealed areas of ones body. But that statement of Rabbi Yohanan refers to visible leprosy that causes those who see it to distance themselves from the leper.The Gemara continues to object: And suffering due to children is not an affliction of love? The Gemara clarifies: What are the circumstances? If you say that he had children and they died, didnt Rabbi Yohanan himself say, while consoling the victim of a catastrophe: This is the bone of my tenth son? Rabbi Yohanan experienced the death of ten of his children, and he kept a small bone from his tenth child as a painful memorial. He would show that bone to others in order to console them, and since he showed it to them, the deaths of his children must certainly have been affliction of love. He consoled others by displaying that there is an element of intimacy with God that exists in that suffering ( Tosafot ). Why, then, would Rabbi Yohanan have said that suffering due to children is not afflictions of love? Rather, one must conclude that when Rabbi Yohanan said that those afflictions are not afflictions of love, he was speaking with regard to one who has no children, and when one had children who died, this could very well be considered afflictions of love.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbi Yohanan discusses atonement for suffering children.",
+    "heb_summary": "רבי יוחנן דן בכפרה על ייסורי בנים.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Bar Yohai"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Babylonia"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Babylonia"
+        },
+        {
+          "en_name": "Eretz Yisrael"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Mercy"
+        },
+        {
+          "en_name": "Truth"
+        },
+        {
+          "en_name": "Charity"
+        },
+        {
+          "en_name": "Iniquity"
+        },
+        {
+          "en_name": "Altar Of Atonement"
+        },
+        {
+          "en_name": "Leprosy"
+        },
+        {
+          "en_name": "Affliction Of Love"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "4",
+          "number_category": "Misc",
+          "en_unit": "sign",
+          "en_context": "leprosy signs"
+        },
+        {
+          "en_name": "10",
+          "number_category": "People",
+          "en_unit": "son",
+          "en_context": "rabbi yohanan son"
+        }
+      ]
+    },
+    "Rel": {
+      "personBelongsToNation": [
+        {
+          "term1": "Yohanan",
+          "term2": "Eretz Yisrael"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Leprosy",
+          "term2": "Altar Of Atonement"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Leprosy",
+          "term2": "Affliction Of Love"
+        }
+      ]
+    }
+  }
+}

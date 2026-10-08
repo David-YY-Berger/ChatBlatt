@@ -1,0 +1,91 @@
+﻿{
+    "res": {
+        "en_summary": "Abraham, Daniel, Leah praised God",
+        "heb_summary": "אברהם, דניאל, לאה שיבחו את ה'",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Rabbi Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Holy One"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Daniel"
+                },
+                {
+                    "en_name": "Leah"
+                },
+                {
+                    "en_name": "Judah"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Temple"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yosei"
+                },
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Shimon Ben Yohai"
+                }
+            ],
+            "childOfMother": [
+                {
+                    "term1": "Judah",
+                    "term2": "Leah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Holy One"
+                },
+                {
+                    "term1": "Daniel",
+                    "term2": "Holy One"
+                },
+                {
+                    "term1": "Leah",
+                    "term2": "Holy One"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Daniel",
+                    "term2": "Temple"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Abraham",
+                    "term2": "Temple"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:1-5"
+}

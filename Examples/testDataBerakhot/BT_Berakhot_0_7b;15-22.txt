@@ -1,0 +1,63 @@
+﻿COST: Tokens: Total=9448 approx cost=$0.001105 (Prompt=7685, Completion=1763)
+SOURCE:
+Berakhot (Zeraim) 7b:15-22
+
+HEBREW:
+ואמר רבי יוחנן משום רבי שמעון בן יוחי: מותר להתגרות ברשעים בעולם הזה, שנאמר: ״עזבי תורה יהללו רשע ושמרי תורה יתגרו בם״.תניא נמי הכי, רבי דוסתאי ברבי מתון אומר: מותר להתגרות ברשעים בעולם הזה, שנאמר: ״עזבי תורה יהללו רשע״ וגו׳. ואם לחשך אדם לומר: והא כתיב ״אל תתחר במרעים אל תקנא בעשי עולה״ — אמור לו: מי שלבו נוקפו אומר כן. אלא: ״אל תתחר במרעים״ — להיות כמרעים, ״אל תקנא בעשי עולה״ — להיות כעושי עולה.ואומר: ״אל יקנא לבך בחטאים כי אם ביראת ה׳ כל היום״.איני?! והאמר רבי יצחק: אם ראית רשע שהשעה משחקת לו אל תתגרה בו, שנאמר: ״יחילו דרכיו בכל עת״. ולא עוד אלא שזוכה בדין, שנאמר: ״מרום משפטיך מנגדו״. ולא עוד אלא שרואה בצריו, שנאמר: ״כל צורריו יפיח בהם״!לא קשיא, הא במילי דידיה, הא במילי דשמיא.ואיבעית אימא הא והא במילי דשמיא, ולא קשיא: הא ברשע שהשעה משחקת לו, הא ברשע שאין השעה משחקת לו.ואיבעית אימא: הא והא, ברשע שהשעה משחקת לו, ולא קשיא, הא, בצדיק גמור, הא, בצדיק שאינו גמור. דאמר רב הונא: מאי דכתיב, ״למה תביט בוגדים תחריש בבלע רשע צדיק ממנו״, וכי רשע בולע צדיק? והא כתיב: ה׳ לא יעזבנו בידו, וכתיב: ״לא יאנה לצדיק כל און״. אלא: צדיק ממנו — בולע, צדיק גמור — אינו בולע.ואיבעית אימא, שעה משחקת לו — שאני.
+
+ENGLISH:
+And Rabbi Yohanan said in the name of Rabbi Shimon ben Yohai: One is permitted to provoke the wicked in this world. Though the ways of the wicked prosper, one is still permitted to provoke them and need not fear (Maharsha), as it is stated: Those who abandon the Torah will praise wickedness, and the keepers of the Torah will fight them (Proverbs 28:4). That statement was also taught in a baraita, as Rabbi Dostai, son of Rabbi Matun, says: One is permitted to provoke the wicked in this world, as it is stated: Those who abandon the Torah will praise wickedness, and the keepers of the Torah will fight them. And if someone whispered to you, saying, on the contrary, isnt it also written: Do not compete with evil-doers, and do not envy the unjust (Psalms 37:1), meaning that one should avoid provoking the wicked, say to him: Only one whose heart strikes him with pangs of conscience over sins that he committed says this. Rather, the true meaning of the verse is: Do not compete with evil-doers, to be like the evil-doers, and do not envy the unjust to be like the unjust. The Gemara cites proof from another verse. And it says: One shall not envy the unjust, but be in fear of the Lord all the day (Proverbs 23:17). In this context, to envy means to seek to emulate the unjust.From these verses in Psalms and Proverbs, it would seem that one is encouraged to provoke the wicked. The Gemara asks: Is this so? Didnt Rabbi Yitzhak say: If you see a wicked person upon whom the hour is smiling, do not provoke him. As long as he is enjoying good fortune, there is no point in confronting him. As it is stated: His ways prosper at all times; Your judgments are far beyond him; as for his adversaries, he snorts at them (Psalms 10:5). The verse teaches us that the ways of the wicked will always succeed. And not only that, but he emerges victorious in judgment, as it is stated: Your judgments are far beyond him, meaning that even when he is brought to justice, it does not affect him. And not only that, but he witnesses his enemies downfall, as it is stated: As for all his adversaries, he snorts at them. To resolve this contradiction with regard to whether or not one may provoke the wicked, the Gemara offers several explanations: This is not difficult, as it can be understood that this, which says that one may not provoke the wicked, is referring to his personal matters, while that, which says that it is a mitzva to confront them, is referring to matters of Heaven. And if you wish, say instead that this, which says not to confront the wicked and that, which says to confront the wicked, are both referring to matters of Heaven, and, nevertheless, it is not difficult. This, which says that one may not provoke the wicked, is referring to a wicked person upon whom the hour is smiling, who is enjoying good fortune. While that, which says that it is a mitzva to confront them, is referring to a wicked person upon whom the hour is not smiling. And if you wish, say instead that this, which says not to confront and that, which says to confront, are both referring to a wicked person upon whom the hour is smiling, but the question of whether one is permitted to confront him depends on who is confronting him. And nevertheless, this is not difficult. This, which says that it is a mitzva to confront them, is referring to a completely righteous person, while this, which says that one may not confront the wicked, is referring to one who is not completely righteous, as Rav Huna said: What is the meaning of that which is written: Why do You look on those who deal treacherously and hold Your peace? When the wicked swallows the man more righteous than he? (Habakkuk 1:13). This verse is difficult to understand. Do the wicked swallow the righteous? Isnt it written: The wicked looks to the righteous and seeks to kill him; the Lord will not leave him in his hand, nor allow him to be condemned when he is judged (Psalms 37:32-33), and it is written: No mischief shall befall the righteous (Proverbs 12:21)? Rather, in light of these verses, the verse: The wicked swallows the man more righteous than he means: The man who is more righteous than he, but not completely righteous, he swallows. The completely righteous he does not swallow. And if you wish, say: In general, the wicked cannot swallow the righteous, but when the hour is smiling upon him, it is different. When the wicked are enjoying good fortune, even the righteous can be harmed ( Birkat Hashem ).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Permitted to provoke wicked, with conditions.",
+    "heb_summary": "מותר להקניט רשעים, אך יש תנאים.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Shimon Ben Yohai"
+        },
+        {
+          "en_name": "Dostai"
+        },
+        {
+          "en_name": "Matun"
+        },
+        {
+          "en_name": "Yitzhak"
+        },
+        {
+          "en_name": "Huna"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yohanan",
+          "term2": "Shimon Ben Yohai"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Dostai",
+          "term2": "Matun"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yohanan",
+          "term2": "Yitzhak"
+        }
+      ]
+    }
+  }
+}

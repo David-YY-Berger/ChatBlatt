@@ -1,0 +1,85 @@
+﻿{
+    "res": {
+        "en_summary": "Prayer vigilance: afternoon, evening, morning. Elijah's answered prayer.",
+        "heb_summary": "תפילה: ערבית, שחרית, מנחה. תפילת אליהו נענתה.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Helbo"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Elijah"
+                },
+                {
+                    "en_name": "Abraham"
+                },
+                {
+                    "en_name": "Isaac"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Nahman Bar Yitzhak"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Fire"
+                },
+                {
+                    "en_name": "Incense"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Helbo",
+                    "term2": "Huna"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Isaac",
+                    "term2": "Abraham"
+                },
+                {
+                    "term1": "Israel",
+                    "term2": "Isaac"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Elijah",
+                    "term2": "God"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Elijah",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:26-28"
+}

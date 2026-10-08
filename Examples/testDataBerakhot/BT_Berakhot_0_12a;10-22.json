@@ -1,0 +1,57 @@
+﻿{
+    "res": {
+        "en_summary": "Blessing validity dilemma: conclusion versus essence.",
+        "heb_summary": "דילמת ברכות: סיום מול מהות הקדמה.",
+        "passage_types": [
+            "STORY",
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabba Bar Ulla"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Gods Name"
+                },
+                {
+                    "en_name": "Gods Sovereignty"
+                }
+            ],
+            "Food": [
+                {
+                    "en_name": "Wine"
+                },
+                {
+                    "en_name": "Beer"
+                },
+                {
+                    "en_name": "Bread"
+                },
+                {
+                    "en_name": "Date"
+                }
+            ]
+        },
+        "Rel": {
+            "disagreedWith": [
+                {
+                    "term1": "Rav",
+                    "term2": "Rabbi Yohanan"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_12a:10-22"
+}

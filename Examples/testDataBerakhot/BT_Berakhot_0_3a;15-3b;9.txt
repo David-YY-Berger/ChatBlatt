@@ -1,0 +1,31 @@
+﻿COST: Tokens: Total=9864 approx cost=$0.001347 (Prompt=7164, Completion=2700)
+SOURCE:
+Berakhot (Zeraim) 3a:15-3b:9
+
+HEBREW:
+בחדתי.ותיפוק ליה משום מזיקין? בתרי.אי בתרי — חשד נמי ליכא! בתרי ופריצי.״מפני המפולת״, ותיפוק ליה משום חשד ומזיקין!בתרי וכשרי.״מפני המזיקין״, ותיפוק ליה מפני חשד ומפולת!בחורבה חדתי, ובתרי וכשרי.אי בתרי, מזיקין נמי ליכא!במקומן חיישינן. ואיבעית אימא: לעולם בחד, ובחורבה חדתי דקאי בדברא, דהתם משום חשד ליכא דהא אשה בדברא לא שכיחא, ומשום מזיקין איכא.
+
+ENGLISH:
+The Gemara answers: This halakha applies even in the case of a new, sturdy ruin, where there is no danger of collapse. Therefore, the reason because of suspicion is cited in order to warn one not to enter a new ruin as well.The Gemara continues to object: And let this halakha be derived because of demons? The Gemara answers: Demons are only a threat to individuals, so because of demons would not apply to a case where two people enter a ruin together.The Gemara objects: But if there are two people entering a ruin together, then there is no suspicion either. There is no prohibition against two men to be alone with a woman as, in that case, there is no suspicion of untoward behavior. Consequently, if two men enter a ruin together, there is no room for suspicion. The Gemara answers: If two individuals known to be immoral enter together, there is suspicion even though there are two of them.The Gemara considers why because of collapse is necessary. Let the prohibition be derived from suspicion and demons. The Gemara responds: There are times when this reason is necessary, e.g., when two upstanding individuals enter a ruin together. Although there is neither concern of suspicion nor of demons, there remains concern lest the ruin collapse.The Gemara considers the third reason, because of demons. Why is it necessary to include: Because of demons? Let the prohibition be derived from suspicion and collapse. The Gemara responds: There are cases where this is the only concern, for example where it is a new ruin into which two upstanding individuals enter, so there is neither concern lest it collapse nor of suspicion.The Gemara points out, however, that if there are two people, there is also no concern of demons. As such, the question remains: In what case can demons be the sole cause not to enter a ruin?The Gemara responds: Generally speaking, two individuals need not be concerned about demons; but, if they are in their place, i.e., a place known to be haunted by demons (see Isaiah 13:21), we are concerned about demons even with two people. And if you wish, say instead: Actually, this refers to the case of an individual entering a new ruin located in a field. There, there is no suspicion, as finding a woman in the field is uncommon; and since it is a new ruin, there is no danger of collapse. However, there is still concern of demons.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Reasons for not entering a ruin",
+    "heb_summary": "סיבות לאי כניסה לחורבה",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Number": [
+        {
+          "en_name": "2",
+          "number_category": "People",
+          "en_unit": "person",
+          "en_context": "entering ruin"
+        }
+      ]
+    }
+  }
+}

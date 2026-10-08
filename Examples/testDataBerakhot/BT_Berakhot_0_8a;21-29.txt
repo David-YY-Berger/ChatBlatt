@@ -1,0 +1,82 @@
+﻿COST: Tokens: Total=11250 approx cost=$0.001718 (Prompt=7366, Completion=3884)
+SOURCE:
+Berakhot (Zeraim) 8a:21-29
+
+HEBREW:
+ואמר רבי חייא בר אמי משמיה דעולא: גדול הנהנה מיגיעו יותר מירא שמים, דאילו גבי ירא שמים כתיב ״אשרי איש ירא את ה׳״, ואילו גבי נהנה מיגיעו כתיב: ״יגיע כפיך כי תאכל אשריך וטוב לך״. ״אשריך״ — בעולם הזה, ״וטוב לך״ — לעולם הבא, ולגבי ירא שמים, ״וטוב לך״ לא כתיב ביה.ואמר רבי חייא בר אמי משמיה דעולא: לעולם ידור אדם במקום רבו, שכל זמן ששמעי בן גרא קיים, לא נשא שלמה את בת פרעה.והתניא אל ידור!לא קשיא, הא דכייף ליה, הא דלא כייף ליה.אמר רב הונא בר יהודה, אמר רבי מנחם, אמר רבי אמי: מאי דכתיב, ״ועוזבי ה׳ יכלו״ — זה המניח ספר תורה ויוצא.רבי אבהו נפיק בין גברא לגברא.בעי רב פפא: בין פסוקא לפסוקא מהו?תיקו.רב ששת מהדר אפיה וגריס. אמר: אנן בדידן ואינהו בדידהו.
+
+ENGLISH:
+And Rabbi Hiyya bar Ami said in the name of Ulla: One who benefits from his hard labor is greater than a God-fearing person, i.e., one who is so enthralled by his fear of God that he sits idly by and does not work. As with regard to a God-fearing person, it is written: Happy is the man who fears the Lord, who greatly desires His mitzvot (Psalms 112:1), while with regard to one who benefits from his hard work, it is written: By the labor of your hands you will live; you are happy and it is good for you (Psalms 128:2). The Gemara explains this verse to mean that you are happy in this world, and it is good for you in the World-to-Come. And regarding a God-fearing person, happy is the man, is written about him but and it is good for you, is not written about him. And Rabbi Hiyya bar Ami said in the name of Ulla: One should always live in the place where his teacher lives; thereby he will avoid sin. For as long as Shimi ben Gera, who according to tradition was a great Torah scholar and teacher of Solomon (see Gittin 59a), was alive, Solomon did not marry Pharaohs daughter. Immediately after the Bible relates the death of Shimi (I Kings, end of ch. 2), Solomons marriage to Pharaohs daughter is recorded (beginning of ch. 3).The Gemara raises an objection: Wasnt it taught in a baraita that one should not live where his teacher lives?The Gemara answers: This is not difficult. This, which says that one should live where his teacher lives, is referring to a case where he is acquiescent to his teacher and will heed his teaching and instruction. While this baraita , which says that one should not live where his teacher lives, is referring to a case where he is not acquiescent to him and that will lead them to quarrel.The Gemara again returns to the topic of the synagogue. Rav Huna bar Yehuda said that Rabbi Menahem said that Rabbi Ami said: What is the practical halakhic meaning of that which is written: They who forsake the Lord will perish (Isaiah 1:28)? This verse refers to one who abandons the Torah scroll when it was taken out to be read and leaves the synagogue, as it appears that he is fleeing from God.Practically speaking, the Gemara relates that Rabbi Abbahu would go out between one person who read the Torah and the next person who did so. Since the scroll was closed between readers, it was not considered to be a show of contempt. Rav Pappa raised a dilemma: What is the ruling with regard to leaving between one verse and the next verse? Is one permitted to leave during a break in the Torah reading while the verse was translated into Aramaic?An answer to this question was not found, so the dilemma stands unresolved.The Gemara relates that Rav Sheshet would turn his face away from the Torah while it was being read and study. Explaining this practice, he said: We are engaged in ours, the study of the Oral Torah and they are engaged in theirs, listening to the Written Torah. Since Rav Sheshet was engaged in Torah study, he is not considered one who forsakes the Lord.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Labor, fear of God, teacher's presence.",
+    "heb_summary": "עמל, יראת שמיים, נוכחות רב, תורה.",
+    "passage_types": [
+      "LAW",
+      "PHILOSOPHIC",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Hiyya Bar Ami"
+        },
+        {
+          "en_name": "Ulla"
+        },
+        {
+          "en_name": "Shimi Ben Gera"
+        },
+        {
+          "en_name": "Solomon"
+        },
+        {
+          "en_name": "Huna Bar Yehuda"
+        },
+        {
+          "en_name": "Menahem"
+        },
+        {
+          "en_name": "Ami"
+        },
+        {
+          "en_name": "Abbahu"
+        },
+        {
+          "en_name": "Pappa"
+        },
+        {
+          "en_name": "Sheshet"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World-To-Come"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah Scroll"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Hiyya Bar Ami",
+          "term2": "Ulla"
+        },
+        {
+          "term1": "Huna Bar Yehuda",
+          "term2": "Menahem"
+        },
+        {
+          "term1": "Menahem",
+          "term2": "Ami"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "res": {
+        "en_summary": "Reasons for not entering a ruin",
+        "heb_summary": "סיבות לאי כניסה לחורבה",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Number": [
+                {
+                    "en_name": "2",
+                    "number_category": "People",
+                    "en_unit": "person",
+                    "en_context": "entering ruin"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_3a:15-3b:9"
+}

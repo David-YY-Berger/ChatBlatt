@@ -1,0 +1,89 @@
+﻿COST: Tokens: Total=9752 approx cost=$0.001354 (Prompt=6985, Completion=2767)
+SOURCE:
+Berakhot (Zeraim) 6b:5-8
+
+HEBREW:
+אמר רבי יוחנן: בשעה שהקדוש ברוך הוא בא בבית הכנסת, ולא מצא בה עשרה — מיד הוא כועס, שנאמר: ״מדוע באתי ואין איש קראתי ואין עונה״.אמר רבי חלבו, אמר רב הונא: כל הקובע מקום לתפלתו — אלהי אברהם בעזרו.וכשמת, אומרים לו: ״אי עניו, אי חסיד, מתלמידיו של אברהם אבינו״.ואברהם אבינו מנא לן דקבע מקום? דכתיב: ״וישכם אברהם בבקר אל המקום אשר עמד שם״, ואין ״עמידה״ אלא תפלה, שנאמר: ״ויעמד פינחס ויפלל״.
+
+ENGLISH:
+On this same topic, Rabbi Yohanan said: When the Holy One, Blessed be He, enters a synagogue and does not find ten people there, He immediately becomes angry, as it is stated: Why, when I came, was there no one? When I called, there was no one to answer... Behold, with My rebuke I dry up the sea, I make the rivers a wilderness (Isaiah 50:2).Concerning another aspect of the constancy of prayer, Rabbi Helbo said that Rav Huna said: One who sets a fixed place for his prayer, the God of Abraham assists him. Since prayer parallels the Temple service, it is a sign of respect to set a fixed place for this sacred rite (Rabbi Yoshiyahu Pinto). The God of Abraham assists him because this pious custom evokes Abrahams conduct. When he dies, those who eulogize one who set a fixed place for his prayer say about him: Where is the humble one, where is the pious one, of the disciples of our father Abraham? Presumably, one who sets a fixed place for prayer is a disciple of Abraham in every respect, including humility and piety (Rabbi Yoshiyahu Pinto).The Gemara asks: From where do we derive that Abraham our father set a fixed place for his prayer? The Gemara answers: As it is written: And Abraham rose in the morning to the place where he had stood before God (Genesis 19:27), and the verb standing means nothing other than prayer, as it is stated: And Pinehas stood and prayed (Psalms 106:30).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis Yohanan and Helbo teach about prayer.",
+    "heb_summary": "רב יוחנן וחלבו מלמדים על תפילה.",
+    "passage_types": [
+      "PHILOSOPHIC",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        },
+        {
+          "en_name": "Rabbi Helbo"
+        },
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Abraham"
+        },
+        {
+          "en_name": "Rabbi Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Pinehas"
+        },
+        {
+          "en_name": "God Of Abraham"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Synagogue"
+        },
+        {
+          "en_name": "Sea"
+        },
+        {
+          "en_name": "Wilderness"
+        },
+        {
+          "en_name": "Temple"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "10",
+          "number_category": "People",
+          "en_unit": "person",
+          "en_context": "minyan for prayer"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Helbo",
+          "term2": "Rav Huna"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Holy One, Blessed Be He",
+          "term2": "Sea"
+        },
+        {
+          "term1": "Holy One, Blessed Be He",
+          "term2": "Wilderness"
+        }
+      ]
+    }
+  }
+}

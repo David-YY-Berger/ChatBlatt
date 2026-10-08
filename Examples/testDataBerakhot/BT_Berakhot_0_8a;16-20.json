@@ -1,0 +1,230 @@
+﻿{
+    "res": {
+        "en_summary": "Halakha study surpasses synagogues; Divine Presence in four cubits.",
+        "heb_summary": "לימוד הלכה עדיף מבית כנסת; שכינה בארבע אמות.",
+        "passage_types": [
+            "PHILOSOPHIC",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rafram Bar Pappa"
+                },
+                {
+                    "en_name": "Rav Hisda"
+                },
+                {
+                    "en_name": "Rabbi Hiyya Bar Ami"
+                },
+                {
+                    "en_name": "Ulla"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rabbi Ami"
+                },
+                {
+                    "en_name": "Rabbi Asi"
+                },
+                {
+                    "en_name": "The Lord"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Jacob"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Zion"
+                },
+                {
+                    "en_name": "Tiberias"
+                },
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "House"
+                },
+                {
+                    "en_name": "Synagogue"
+                },
+                {
+                    "en_name": "Study Hall"
+                },
+                {
+                    "en_name": "Pillars"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Divine Presence"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Measurement",
+                    "en_unit": "cubit",
+                    "en_context": "halakha study area"
+                },
+                {
+                    "en_name": "13",
+                    "number_category": "Misc",
+                    "en_unit": "synagogue",
+                    "en_context": "synagogues in tiberias"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rafram Bar Pappa",
+                    "term2": "Rav Hisda"
+                },
+                {
+                    "term1": "Rabbi Hiyya Bar Ami",
+                    "term2": "Ulla"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "Rabbi Hiyya Bar Ami"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rava",
+                    "term2": "Rafram Bar Pappa"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "The Lord",
+                    "term2": "Zion"
+                },
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "House"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Rabbi Ami",
+                    "term2": "Tiberias"
+                },
+                {
+                    "term1": "Rabbi Asi",
+                    "term2": "Tiberias"
+                },
+                {
+                    "term1": "Rabbi Ami",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Rabbi Asi",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Rabbi Ami",
+                    "term2": "Pillars"
+                },
+                {
+                    "term1": "Rabbi Asi",
+                    "term2": "Pillars"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Jacob",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Children Of Israel",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rava",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rafram Bar Pappa",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rav Hisda",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rabbi Hiyya Bar Ami",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Ulla",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Abaye",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rabbi Ami",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Rabbi Asi",
+                    "term2": "Israel"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Tiberias",
+                    "term2": "Israel"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Zion",
+                    "term2": "Synagogue"
+                },
+                {
+                    "term1": "Zion",
+                    "term2": "Study Hall"
+                },
+                {
+                    "term1": "Zion",
+                    "term2": "Children Of Israel"
+                }
+            ],
+            "AliasOf": [
+                {
+                    "term1": "The Lord",
+                    "term2": "Holy One, Blessed Be He"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_8a:16-20"
+}

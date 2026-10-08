@@ -1,0 +1,92 @@
+﻿COST: Tokens: Total=9761 approx cost=$0.001316 (Prompt=7164, Completion=2597)
+SOURCE:
+Berakhot (Zeraim) 10b:26-30
+
+HEBREW:
+ואמר רבי יוסי ברבי חנינא משום רבי אליעזר בן יעקב: אל יעמוד אדם במקום גבוה ויתפלל, אלא במקום נמוך ויתפלל. שנאמר: ״ממעמקים קראתיך ה׳״.תניא נמי הכי: לא יעמוד אדם לא על גבי כסא, ולא על גבי שרפרף, ולא במקום גבוה, ויתפלל, אלא במקום נמוך, ויתפלל. לפי שאין גבהות לפני המקום. שנאמר ״ממעמקים קראתיך ה׳״. וכתיב: ״תפלה לעני כי יעטף״.ואמר רבי יוסי ברבי חנינא משום רבי אליעזר בן יעקב: המתפלל צריך שיכוין את רגליו, שנאמר: ״ורגליהם רגל ישרה״.(אמר רבי יצחק אמר רבי יוחנן) ואמר רבי יוסי ברבי חנינא משום רבי אליעזר בן יעקב: מאי דכתיב, ״לא תאכלו על הדם״ — לא תאכלו קודם שתתפללו על דמכם.איכא דאמרי: אמר רבי יצחק, אמר רבי יוחנן, אמר רבי יוסי ברבי חנינא משום רבי אליעזר בן יעקב: כל האוכל ושותה, ואחר כך מתפלל עליו הכתוב אומר: ״ואתי השלכת אחרי גוך״, אל תקרי ״גויך״ אלא ״גאיך״. אמר הקדוש ברוך הוא: לאחר שנתגאה זה קבל עליו מלכות שמים.
+
+ENGLISH:
+With regard to the halakhot of prayer, Rabbi Yosei, son of Rabbi Hanina, said in the name of Rabbi Eliezer ben Yaakov: A person should not stand in a high place and pray; rather, he should stand in a low place and pray, as it is stated: I called to You, Lord, from the depths (Psalms 130:1). That was also taught in a baraita : One should neither stand upon a chair nor upon a stool, nor in a high place and pray. Rather, one should stand in a low place and pray, for there is no haughtiness before God. As it is stated: I called to You, Lord, from the depths and it is written: A prayer for the impoverished, when he is faint and pours out his complaint before God (Psalms 102:1). It is appropriate to feel impoverished when praying and make ones requests humbly. And Rabbi Yosei, son of Rabbi Hanina, said in the name of Rabbi Eliezer ben Yaakov: When praying, one should align his feet next to each other, as a single foot, in order to model oneself after the angels, with regard to whom it is stated: And their feet were a straight foot (Ezekiel 1:7). Rabbi Yitzhak said that Rabbi Yohanan said and Rabbi Yosei, son of Rabbi Hanina, said in the name of Rabbi Eliezer ben Yaakov: What is the meaning of that which is written: You shall not eat with the blood (Leviticus 19:26)? You may not eat before you pray for your blood. One may not eat before he prays. Others say that Rabbi Yitzhak said that Rabbi Yohanan said that Rabbi Yosei, son of Rabbi Hanina, said in the name of Rabbi Eliezer ben Yaakov: One who eats and drinks and later prays, about him the verse states the rebuke of the prophet in the name of God: And Me you have cast behind your back (I Kings 14:9). One who sees to his own bodily needs by eating and drinking before prayer casts God aside, according his arrogance and ego priority over God (Maharsha). Indeed, do not read your back [ gavekha ]; rather, your pride [ geekha ]. The Holy One, Blessed be He, said: After this one has become arrogant and engaged in satisfying his own needs, he only then accepted upon himself the kingdom of Heaven.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Prayer posture, humility, eating before prayer.",
+    "heb_summary": "תפילה, ענווה, אכילה לפני תפילה.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yosei"
+        },
+        {
+          "en_name": "Hanina"
+        },
+        {
+          "en_name": "Eliezer Ben Yaakov"
+        },
+        {
+          "en_name": "Yitzhak"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Angels"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Maharsha"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Kingdom Of Heaven"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "foot",
+          "en_context": "angel feet alignment"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yosei",
+          "term2": "Eliezer Ben Yaakov"
+        },
+        {
+          "term1": "Yitzhak",
+          "term2": "Yohanan"
+        },
+        {
+          "term1": "Yohanan",
+          "term2": "Yosei"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Yosei",
+          "term2": "Hanina"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "God",
+          "term2": "Holy One, Blessed Be He"
+        }
+      ]
+    }
+  }
+}

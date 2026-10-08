@@ -1,0 +1,110 @@
+﻿{
+    "res": {
+        "en_summary": "Demons' ubiquity, harm, and methods to see them",
+        "heb_summary": "שדים: נוכחות, נזקים ודרכים לראותם",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Binyamin"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Beivai Bar Abaye"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Demons"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Afterbirth"
+                },
+                {
+                    "en_name": "Iron Tube"
+                },
+                {
+                    "en_name": "Iron Seal"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1000",
+                    "number_category": "People",
+                    "en_unit": "demon",
+                    "en_context": "demons abundance"
+                },
+                {
+                    "en_name": "10000",
+                    "number_category": "People",
+                    "en_unit": "demon",
+                    "en_context": "demons abundance"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Cat"
+                },
+                {
+                    "en_name": "Chicken"
+                }
+            ]
+        },
+        "Rel": {
+            "EnemyOf": [
+                {
+                    "term1": "Demons",
+                    "term2": "Binyamin"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "Abaye"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "Huna"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "Rava"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "Beivai Bar Abaye"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "Sages"
+                },
+                {
+                    "term1": "Demons",
+                    "term2": "God"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Demons",
+                    "term2": "Chicken"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6a:2-6"
+}

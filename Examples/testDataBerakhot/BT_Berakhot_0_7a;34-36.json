@@ -1,0 +1,122 @@
+﻿{
+    "res": {
+        "en_summary": "God's promises fulfilled through Moses's numerous descendants.",
+        "heb_summary": "הבטחות אלוהים התגשמו בצאצאי משה הרבים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Gershom"
+                },
+                {
+                    "en_name": "Eliezer"
+                },
+                {
+                    "en_name": "Rehaviya"
+                },
+                {
+                    "en_name": "Rav Yosef"
+                },
+                {
+                    "en_name": "Children Of Israel"
+                },
+                {
+                    "en_name": "Israelites"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "600000",
+                    "number_category": "People",
+                    "en_unit": "person",
+                    "en_context": "israelites in desert"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yohanan",
+                    "term2": "Rabbi Yosei"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Gershom",
+                    "term2": "Moses"
+                },
+                {
+                    "term1": "Eliezer",
+                    "term2": "Moses"
+                },
+                {
+                    "term1": "Rehaviya",
+                    "term2": "Eliezer"
+                }
+            ],
+            "descendantOf": [
+                {
+                    "term1": "Rehaviya",
+                    "term2": "Moses"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Moses"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Children Of Israel",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Israelites",
+                    "term2": "Israel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "God",
+                    "term2": "Moses"
+                },
+                {
+                    "term1": "God",
+                    "term2": "Israelites"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Rehaviya",
+                    "term2": "Israelites"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7a:34-36"
+}

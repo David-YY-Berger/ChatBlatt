@@ -1,0 +1,80 @@
+﻿COST: Tokens: Total=11355 approx cost=$0.001773 (Prompt=7259, Completion=4096)
+SOURCE:
+Berakhot (Zeraim) 11a:19-23
+
+HEBREW:
+תני רב יחזקאל: עשה כדברי בית שמאי — עשה, כדברי בית הלל — עשה. רב יוסף אמר: עשה כדברי בית שמאי — לא עשה ולא כלום. דתנן: מי שהיה ראשו ורובו בסוכה ושלחנו בתוך הבית, בית שמאי פוסלין, ובית הלל מכשירין.אמרו להם בית הלל לבית שמאי: מעשה שהלכו זקני בית שמאי וזקני בית הלל לבקר את רבי יוחנן בן החורנית, מצאוהו שהיה ראשו ורובו בסוכה ושלחנו בתוך הבית, ולא אמרו לו כלום.אמרו להם: ומשם ראיה?! אף הם אמרו לו: אם כן היית נוהג לא קיימת מצות סוכה מימיך. רב נחמן בר יצחק אמר: עשה כדברי בית שמאי — חייב מיתה. דתנן, אמר רבי טרפון: אני הייתי בא בדרך והטתי לקרות כדברי בית שמאי וסכנתי בעצמי מפני הלסטים, אמרו לו: כדאי היית לחוב בעצמך, שעברת על דברי בית הלל.
+
+ENGLISH:
+Rav Yehezkel taught: One who acted in accordance with the opinion of Beit Shammai has acted appropriately and is not in violation of the halakha . One who acted in accordance with the opinion of Beit Hillel acted appropriately as well. According to this opinion, Beit Hillel and Beit Shammai agree that one who acted in accordance with the opinion of the other fulfilled his obligation. Although the halakha was ruled in accordance with the opinion of Beit Hillel, Beit Hillel would agree that one who acted in accordance with the opinion of Beit Shammai fulfilled his obligation.However, Rav Yosef said: One who acts in accordance with the opinion of Beit Shammai has done nothing and must repeat Shema in accordance with the opinion of Beit Hillel, as we learned in the mishna with regard to the halakhot of a sukka : One who had his head and most of his body in the sukka , and his table upon which he was eating inside the house, Beit Shammai invalidate his action, as he is liable to be drawn after the table and end up eating outside the sukka . And Beit Hillel validate his action, since his head and most of his body remain inside the sukka . Beit Hillel said to Beit Shammai as a proof: There was an incident where the elders of Beit Shammai and the elders of Beit Hillel went on Sukkot to visit Rabbi Yohanan ben HaHoranit. They found him with his head and most of his body in the sukka and his table inside the house and they said nothing to him. In other words, even Beit Shammai did not object.Beit Shammai said to them: And is there proof from there? That is not what happened, rather they said to him explicitly: If you have been accustomed to act in this manner, you have never in your life fulfilled the mitzva of sukka . We see that Beit Shammai held that anyone who did not act in accordance with their opinion, did not fulfill his obligation at all. Similarly, since Beit Hillels opinion was accepted as halakha , anyone who acts in accordance with the opinion of Beit Shammai fails to fulfill his obligation. Rav Nahman bar Yitzhak stated an even more extreme opinion: One who acted in accordance with the opinion of Beit Shammai has acted so egregiously that he is liable to receive the death penalty, as we learned in our mishna that Rabbi Tarfon said to his colleagues: Once, I was coming on the road when I stopped and reclined to recite Shema in accordance with the statement of Beit Shammai. Yet in so doing, I endangered myself due to the highwaymen who accost travelers. The Sages said to him: You deserved to be in a position where you were liable to pay with your life, as you transgressed the statement of Beit Hillel.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages dispute Shema, Sukka halakha, and danger.",
+    "heb_summary": "חכמים חלוקים בהלכה, שמע, סוכה וסכנה.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yehezkel"
+        },
+        {
+          "en_name": "Beit Shammai"
+        },
+        {
+          "en_name": "Beit Hillel"
+        },
+        {
+          "en_name": "Yosef"
+        },
+        {
+          "en_name": "Yohanan Ben Hahoranit"
+        },
+        {
+          "en_name": "Tarfon"
+        },
+        {
+          "en_name": "The Sages"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Sukka"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Beit Hillel",
+          "term2": "Beit Shammai"
+        },
+        {
+          "term1": "Beit Shammai",
+          "term2": "Yohanan Ben Hahoranit"
+        },
+        {
+          "term1": "Beit Hillel",
+          "term2": "Yohanan Ben Hahoranit"
+        },
+        {
+          "term1": "Tarfon",
+          "term2": "The Sages"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yosef",
+          "term2": "Yehezkel"
+        }
+      ]
+    }
+  }
+}

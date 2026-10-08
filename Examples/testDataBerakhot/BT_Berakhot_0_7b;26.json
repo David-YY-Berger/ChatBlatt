@@ -1,0 +1,43 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Yohanan: Torah service greater than study.",
+        "heb_summary": "רב יוחנן: שירות תורה גדול מלימודה.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Elisha"
+                },
+                {
+                    "en_name": "Shafat"
+                },
+                {
+                    "en_name": "Elijah"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Shimon Ben Yohai"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Elisha",
+                    "term2": "Shafat"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:26"
+}

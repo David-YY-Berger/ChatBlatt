@@ -1,0 +1,118 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Yosei and Elijah discuss prayer in Jerusalem.",
+        "heb_summary": "רבי יוסי ואליהו דנים בתפילה בירושלים.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yosei"
+                },
+                {
+                    "en_name": "Elijah"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Holy One"
+                },
+                {
+                    "en_name": "Maharsha"
+                },
+                {
+                    "en_name": "Shem Tov Ibn Shaprut"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Temple"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Heavenly Voice"
+                },
+                {
+                    "en_name": "Kaddish Prayer"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "time",
+                    "en_context": "voice cries out"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Dove"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Elijah"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Elijah"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Elijah",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "prayedAt": [
+                {
+                    "term1": "Yosei",
+                    "term2": "Jerusalem"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Israel",
+                    "term2": "Temple"
+                }
+            ],
+            "placeToNation": [
+                {
+                    "term1": "Temple",
+                    "term2": "Israel"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Heavenly Voice",
+                    "term2": "Holy One"
+                },
+                {
+                    "term1": "Heavenly Voice",
+                    "term2": "Dove"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_3a:12-14"
+}

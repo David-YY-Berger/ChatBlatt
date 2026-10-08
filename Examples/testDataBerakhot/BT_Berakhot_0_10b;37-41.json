@@ -1,0 +1,47 @@
+﻿{
+    "res": {
+        "en_summary": "Beit Shammai Hillel dispute Shema recitation.",
+        "heb_summary": "מחלוקת בית שמאי הלל קריאת שמע.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Beit Shammai"
+                },
+                {
+                    "en_name": "Beit Hillel"
+                },
+                {
+                    "en_name": "Rabbi Tarfon"
+                },
+                {
+                    "en_name": "Sages"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Tarfon",
+                    "term2": "Beit Hillel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Sages",
+                    "term2": "Rabbi Tarfon"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Beit Shammai",
+                    "term2": "Beit Hillel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_10b:37-41"
+}

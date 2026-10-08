@@ -1,0 +1,65 @@
+﻿{
+    "res": {
+        "en_summary": "Beit Shammai and Hillel dispute Shema.",
+        "heb_summary": "מחלוקת בית שמאי והלל על קריאת שמע.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Beit Shammai"
+                },
+                {
+                    "en_name": "Beit Hillel"
+                },
+                {
+                    "en_name": "Rav Pappa"
+                },
+                {
+                    "en_name": "Rabbi Abba Bar Zavda"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Ezekiel"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Sea"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Phylacteries"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Abba Bar Zavda",
+                    "term2": "Rav"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Beit Shammai",
+                    "term2": "Beit Hillel"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Ezekiel",
+                    "term2": "Phylacteries"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_11a:1-14"
+}

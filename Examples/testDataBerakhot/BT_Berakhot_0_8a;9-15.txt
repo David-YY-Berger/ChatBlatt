@@ -1,0 +1,161 @@
+﻿COST: Tokens: Total=11928 approx cost=$0.001902 (Prompt=7450, Completion=4478)
+SOURCE:
+Berakhot (Zeraim) 8a:9-15
+
+HEBREW:
+״על זאת יתפלל כל חסיד אליך לעת מצא״, אמר רבי חנינא: ״לעת מצא״ זו אשה, שנאמר: ״מצא אשה מצא טוב״.במערבא כי נסיב אינש אתתא, אמרי ליה הכי: ״מצא״ או ״מוצא״? ״מצא״ דכתיב: ״מצא אשה מצא טוב ויפק רצון מה׳״, ״מוצא״ דכתיב: ״ומוצא אני מר ממות את האשה״ וגו׳.רבי נתן אומר: ״לעת מצא״ — זו תורה, שנאמר: ״כי מצאי מצא חיים״ וגו׳.רב נחמן בר יצחק אמר — ״לעת מצא״ זו מיתה, שנאמר: ״למות תוצאות״.תניא נמי הכי: תשע מאות ושלשה מיני מיתה נבראו בעולם, שנאמר: ״למות תוצאות״, ״תוצאות״ בגימטריא הכי הוו. קשה שבכלן — אסכרא, ניחא שבכלן — נשיקה. אסכרא דמיא כחיזרא בגבבא דעמרא דלאחורי נשרא, ואיכא דאמרי כפיטורי בפי ושט, נשיקה דמיא כמשחל בניתא מחלבא.רבי יוחנן אמר: ״לעת מצא״ — זו קבורה. אמר רבי חנינא, מאי קרא ״השמחים אלי גיל ישישו כי ימצאו קבר״. אמר רבה בר רב שילא, היינו דאמרי אינשי: ליבעי אינש רחמי אפילו עד זיבולא בתרייתא שלמא.מר זוטרא אמר: ״לעת מצא״ — זה בית הכסא. אמרי במערבא: הא דמר זוטרא עדיפא מכלהו.
+
+ENGLISH:
+Having mentioned the verse, For whoso finds Me finds life, the Gemara seeks to clarify its meaning. It is said, For this, let every pious man pray to You in the time of finding, that the overflowing waters may not reach him (Psalms 32:6). With regard to the phrase, the time of finding, Rabbi Hanina said: The time of finding refers to the time one must find a wife, that one should pray to find a suitable woman to marry. As it is said: He who finds [ matza ] a wife finds [ matza ] good and obtains favor from the Lord (Proverbs 18:22). In Eretz Yisrael, the custom was that when a man married a woman, they would ask him: Matza or motzeh ? In other words, they would ask the groom whether the appropriate passage for his wife is the above verse from Proverbs that begins with the word matza , as it is written: He who finds a wife finds good and obtains favor from the Lord or whether the more appropriate verse is the one beginning with the word motzeh , as it is written: And I find [ motzeh ] the woman more bitter than death (Ecclesiastes 7:26). Rabbi Natan says: The time of finding refers to the time of finding Torah, as it is stated in a verse referring to Torah: He who finds Me finds life. The Torah is the object most sought. Rav Nahman bar Yitzhak said: The time of finding refers to death. One should pray that when death comes, he will leave the world peacefully, as it is stated: Issues [ totzaot ] of death (Psalms 68:21). Rav Nahman bar Yitzhaks statement is based on the etymological similarity between totzaot and matza , finding. It was also taught in a baraita : Nine hundred and three types of death were created in the world, as it is stated: Issues [ totzaot ] of death, and that, 903, is the numerical value [ gimatriya ] of totzaot . The Gemara explains that the most difficult of all these types of death is croup [ askara ], while the easiest is the kiss of death. Croup is like a thorn entangled in a wool fleece, which, when pulled out backwards, tears the wool. Some say that croup is like ropes at the entrance to the esophagus, which would be nearly impossible to insert and excruciating to remove. The kiss of death is like drawing a hair from milk. One should pray that he does not die a painful death. Rabbi Yohanan said: The time of finding refers to a respectful burial, for which one should pray. Supporting Rabbi Yohanans interpretation, Rabbi Hanina said: What is the verse that teaches that the time of finding refers to burial? Who rejoice in exultation and are glad when they can find a grave (Job 3:22), as there are situations in which one is relieved when his body finds a grave in which to rest. Rabba bar Rav Sheila said, that is the meaning of the folk saying: A person should even pray for mercy until the final shovelful of dirt is thrown upon his grave. Mar Zutra said: The time of finding refers to finding a lavatory. As most places did not have a sewage system, one was forced to relieve himself outside the city. Because of this unpleasantness, finding a suitable location was called by Mar Zutra, the time of finding. In the West, Eretz Yisrael, they say: This explanation of Mar Zutra is preferable to all of them, as the term motza is explicitly associated in the Bible (see II Kings 10:27) with the lavatory (Rabbi Abraham Moshe Horovitz).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages debate meaning of \"time of finding\".",
+    "heb_summary": "חכמים דנים משמעות \"עת מצא\".",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rabbi Hanina"
+        },
+        {
+          "en_name": "Rabbi Natan"
+        },
+        {
+          "en_name": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabba Bar Rav Sheila"
+        },
+        {
+          "en_name": "Mar Zutra"
+        },
+        {
+          "en_name": "Rabbi Abraham Moshe Horovitz"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Eretz Yisrael"
+        },
+        {
+          "en_name": "West"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Life"
+        },
+        {
+          "en_name": "Death"
+        },
+        {
+          "en_name": "Grave"
+        },
+        {
+          "en_name": "Lavatory"
+        },
+        {
+          "en_name": "Matza"
+        },
+        {
+          "en_name": "Motzeh"
+        },
+        {
+          "en_name": "Croup"
+        },
+        {
+          "en_name": "Kiss Of Death"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "903",
+          "number_category": "Misc",
+          "en_unit": "type",
+          "en_context": "death in world"
+        }
+      ]
+    },
+    "Rel": {
+      "disagreedWith": [
+        {
+          "term1": "Rabbi Hanina",
+          "term2": "Rabbi Natan"
+        },
+        {
+          "term1": "Rabbi Hanina",
+          "term2": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "term1": "Rabbi Hanina",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rabbi Hanina",
+          "term2": "Mar Zutra"
+        },
+        {
+          "term1": "Rabbi Natan",
+          "term2": "Rav Nahman Bar Yitzhak"
+        },
+        {
+          "term1": "Rabbi Natan",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rabbi Natan",
+          "term2": "Mar Zutra"
+        },
+        {
+          "term1": "Rav Nahman Bar Yitzhak",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rav Nahman Bar Yitzhak",
+          "term2": "Mar Zutra"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Mar Zutra"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Mar Zutra",
+          "term2": "Eretz Yisrael"
+        },
+        {
+          "term1": "Rabbi Abraham Moshe Horovitz",
+          "term2": "Eretz Yisrael"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Matza",
+          "term2": "Motzeh"
+        },
+        {
+          "term1": "Croup",
+          "term2": "Kiss Of Death"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "West",
+          "term2": "Eretz Yisrael"
+        }
+      ]
+    }
+  }
+}

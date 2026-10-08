@@ -1,0 +1,95 @@
+﻿COST: Tokens: Total=10214 approx cost=$0.001444 (Prompt=7202, Completion=3012)
+SOURCE:
+Berakhot (Zeraim) 5a:6-8
+
+HEBREW:
+אמר רבי שמעון בן לקיש: כל העוסק בתורה — יסורין בדילין הימנו, שנאמר: ״ובני רשף יגביהו עוף״. ואין ״עוף״ אלא תורה, שנאמר ״התעיף עיניך בו ואיננו״, ואין ״רשף״ אלא יסורין, שנאמר: ״מזי רעב ולחמי רשף״.אמר ליה רבי יוחנן: הא אפילו תינוקות של בית רבן, יודעין אותו, שנאמר ״ויאמר אם שמוע תשמע לקול ה׳ אלהיך והישר בעיניו תעשה והאזנת למצותיו ושמרת כל חקיו כל המחלה אשר שמתי במצרים לא אשים עליך כי אני ה׳ רופאך״. אלא: כל שאפשר לו לעסוק בתורה ואינו עוסק — הקדוש ברוך הוא מביא עליו יסורין מכוערין ועוכרין אותו, שנאמר: ״נאלמתי דומיה החשיתי מטוב וכאבי נעכר״, ואין ״טוב״ אלא תורה, שנאמר: ״כי לקח טוב נתתי לכם תורתי אל תעזבו״.אמר רבי זירא ואיתימא רבי חנינא בר פפא: בא וראה שלא כמדת הקדוש ברוך הוא מדת בשר ודם. מדת בשר ודם, אדם מוכר חפץ לחבירו, מוכר עצב, ולוקח שמח, אבל הקדוש ברוך הוא אינו כן, נתן להם תורה לישראל — ושמח, שנאמר: ״כי לקח טוב נתתי לכם תורתי אל תעזבו״.
+
+ENGLISH:
+Regarding this unclear verse, Rabbi Shimon ben Lakish said: If one engages in Torah study, suffering stays away from him, as it is stated: And the sparks fly upward. And fly means nothing other than Torah, as it is stated: Will you set your eyes upon it? It is gone; and sparks means nothing other than suffering, as it is stated: Wasting of hunger, and the devouring of the sparks, equating devouring sparks with wasting hunger, as both are types of suffering. From here, we derive that through Torah, fly, one is able to distance himself, upward, from suffering, sparks. Rabbi Yohanan said to him: Even schoolchildren, who learn only the Written Torah, know this concept as it is stated: And He said you shall surely hear the voice of the Lord your God, and what is upright in His eyes you shall do and you shall listen to His mitzvot and guard His statutes; any disease that I have placed upon Egypt I will not place upon you for I am the Lord your healer (Exodus 15:26). Rather, one must interpret the verse: Anyone who is able to engage in Torah study yet does not engage in that study, not only does the Holy One, Blessed be He, fail to protect him, but He brings upon him hideous afflictions, that embarrass him and trouble him, as it is stated: I was mute with silence; I was silent from good, and my pain was strong (Psalms 39:3). The word good means nothing other than Torah, as it is stated: For I have given you a good portion, My Torah, do not abandon it (Proverbs 4:2). The verse should be understood: I have been silent from the study of Torah, and my pain was strong.With regard to the verse: For I have given you a good portion, Rabbi Zeira, and some say Rabbi Hanina bar Pappa, said: Come and see how the characteristics of the Holy One, Blessed be He, are unlike the characteristics of flesh and blood. It is characteristic of flesh and blood that when one sells an object to another person, the seller grieves the loss of his possession and the buyer rejoices. With regard to the Holy One, Blessed be He, however, this is not so. He gave the Torah to Israel and rejoiced, as it is stated: For I have given you a good portion, My Torah, do not abandon it. A good portion is understood as a good purchase; although God sold Torah to Israel, He rejoices in the sale and praises the object before its new owner (Rabbi Yoshiyahu Pinto).
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rabbis debate Torah study and suffering.",
+    "heb_summary": "רבנים דנים לימוד תורה וסבל.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Shimon Ben Lakish"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Holy One"
+        },
+        {
+          "en_name": "Zeira"
+        },
+        {
+          "en_name": "Hanina Bar Pappa"
+        },
+        {
+          "en_name": "Yoshiyahu Pinto"
+        },
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Sparks"
+        },
+        {
+          "en_name": "Good"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Yohanan",
+          "term2": "Shimon Ben Lakish"
+        },
+        {
+          "term1": "Holy One",
+          "term2": "Israel"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Holy One",
+          "term2": "Egypt"
+        },
+        {
+          "term1": "Israel",
+          "term2": "Egypt"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Good",
+          "term2": "Torah"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+﻿COST: Tokens: Total=10574 approx cost=$0.001555 (Prompt=7187, Completion=3387)
+SOURCE:
+Berakhot (Zeraim) 7b:6-10
+
+HEBREW:
+ראובן. אמר רבי אלעזר: אמרה לאה: ראו מה בין בני לבן חמי. דאילו בן חמי, אף על גב דמדעתיה זבניה לבכירותיה, דכתיב: ״וימכר את בכרתו ליעקב״, חזו מה כתיב ביה: ״וישטם עשו את יעקב״.וכתיב: ״ויאמר הכי קרא שמו יעקב ויעקבני זה פעמים״ וגו׳.ואילו בני, אף על גב דעל כרחיה שקליה יוסף לבכירותיה מניה, דכתיב: ״ובחללו יצועי אביו נתנה בכרתו לבני יוסף״, אפילו הכי — לא אקנא ביה, דכתיב: ״וישמע ראובן ויצלהו מידם״.רות, מאי ״רות״? אמר רבי יוחנן: שזכתה ויצא ממנה דוד שריוהו להקדוש ברוך הוא בשירות ותשבחות.מנא לן דשמא גרים? אמר רבי אליעזר, דאמר קרא: ״לכו חזו מפעלות ה׳ אשר שם שמות בארץ״, אל תקרי ״שמות״ אלא ״שמות״.
+
+ENGLISH:
+Tangential to the mention of Leahs son, Judah, and the reason for his name, the Gemara explains the sources for other names, including Reuben. Rabbi Elazar said: Reubens name should be considered a prophecy by Leah, as Leah said: See [ reu ] the difference between my son [ beni ] and the son of my father-in-law, Esau, son of Isaac. Even though Esau knowingly sold his birthright to his brother Jacob, as it is written: And he sold his birthright to Jacob (Genesis 25:33), nonetheless, behold what is written about him: And Esau hated Jacob (Genesis 27:41).Esau was not only angry over Isaacs blessing, but he was angry about another matter as well, as it is written: And he said, Is he not rightly named Jacob, for he has supplanted me twice? He took my birthright, and behold, now he has taken my blessing (Genesis 27:36). Despite having sold his birthright, he refused to relinquish it. While my son, Reuben, even though Joseph took his birthright from him by force, as it is written: And the sons of Reuben the firstborn of Israel, for he was the firstborn; but, since he defiled his fathers bed, his birthright was given to the sons of Joseph, son of Israel (I Chronicles 5:1). Nevertheless, he was not jealous of him, as it is written when Josephs brothers sought to kill him: And Reuben heard and he saved him from their hands, saying Let us not take his life (Genesis 37:21).Continuing on the topic of names, the Gemara asks: What is the meaning of the name Ruth? Rabbi Yohanan said: That she had the privilege that David, who inundated the Holy One, Blessed be He, with songs and praises, would descend from her. The name Ruth [ Rut ] is etymologically similar in Hebrew to the word inundate [ riva ].Regarding the basic assumption that these homiletic interpretations of names are allusions to ones future, the Gemara asks: From where do we derive that the name affects ones life? Rabbi Eliezer said that the verse says: Go, see the works of the Lord, who has made desolations [ shamot ] upon the earth (Psalms 46:9). Do not read the word as shamot , rather as shemot , names. The names given to people are, therefore, the works of the Lord upon the earth.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Names, prophecy, birthright, jealousy, and lineage.",
+    "heb_summary": "שמות, נבואה, בכורה, קנאה, ושושלת.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Leah"
+        },
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Esau"
+        },
+        {
+          "en_name": "Isaac"
+        },
+        {
+          "en_name": "Jacob"
+        },
+        {
+          "en_name": "Joseph"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Ruth"
+        },
+        {
+          "en_name": "Rabbi Eliezer"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "TribeOfIsrael": [
+        {
+          "en_name": "Judah"
+        },
+        {
+          "en_name": "Reuben"
+        },
+        {
+          "en_name": "Joseph"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Judah",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Jacob"
+        },
+        {
+          "term1": "Esau",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Jacob",
+          "term2": "Isaac"
+        },
+        {
+          "term1": "Joseph",
+          "term2": "Jacob"
+        }
+      ],
+      "childOfMother": [
+        {
+          "term1": "Judah",
+          "term2": "Leah"
+        },
+        {
+          "term1": "Reuben",
+          "term2": "Leah"
+        }
+      ],
+      "descendantOf": [
+        {
+          "term1": "David",
+          "term2": "Ruth"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ],
+      "EnemyOf": [
+        {
+          "term1": "Esau",
+          "term2": "Jacob"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Leah",
+          "term2": "Reuben"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Reuben",
+          "term2": "Esau"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Reuben",
+          "term2": "Esau"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Jacob",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

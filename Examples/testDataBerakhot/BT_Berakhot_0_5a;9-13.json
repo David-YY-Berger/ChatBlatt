@@ -1,0 +1,58 @@
+﻿{
+    "res": {
+        "en_summary": "Suffering, Torah study, divine love, reward.",
+        "heb_summary": "ייסורים, תורה, אהבה אלוהית, שכר.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rava"
+                },
+                {
+                    "en_name": "Rav Hisda"
+                },
+                {
+                    "en_name": "Rav Sehora"
+                },
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "God"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Guilt-Offering"
+                },
+                {
+                    "en_name": "Suffering"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rava",
+                    "term2": "Rav Sehora"
+                },
+                {
+                    "term1": "Rav Sehora",
+                    "term2": "Rav Huna"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Suffering",
+                    "term2": "Guilt-Offering"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5a:9-13"
+}

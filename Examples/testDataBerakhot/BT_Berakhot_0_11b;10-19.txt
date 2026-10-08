@@ -1,0 +1,140 @@
+﻿COST: Tokens: Total=10418 approx cost=$0.001458 (Prompt=7412, Completion=3006)
+SOURCE:
+Berakhot (Zeraim) 11b:10-19
+
+HEBREW:
+אמר רב יהודה אמר שמואל: השכים לשנות, עד שלא קרא קריאת שמע — צריך לברך. משקרא קריאת שמע — אינו צריך לברך, שכבר נפטר ב״אהבה רבה״.אמר רב הונא: למקרא צריך לברך, ולמדרש — אינו צריך לברך.ורבי אלעזר אמר: למקרא ולמדרש צריך לברך, למשנה — אינו צריך לברך.ורבי יוחנן אמר: אף למשנה נמי צריך לברך [אבל לתלמוד, אינו צריך לברך].ורבא אמר: אף לתלמוד צריך (לחזור ולברך) [לברך].דאמר רב חייא בר אשי: זימנין סגיאין הוה קאימנא קמיה דרב לתנויי פרקין ב״ספרא דבי רב״, הוה מקדים וקא משי ידיה, ובריך, ומתני לן פרקין.מאי מברך? אמר רב יהודה אמר שמואל: ״אשר קדשנו במצותיו וצונו לעסוק בדברי תורה״.ורבי יוחנן מסיים בה הכי ״הערב נא ה׳ אלהינו את דברי תורתך בפינו ובפיפיות עמך בית ישראל ונהיה אנחנו וצאצאינו וצאצאי עמך בית ישראל כלנו יודעי שמך ועוסקי תורתך ברוך אתה ה׳ המלמד תורה לעמו ישראל״.ורב המנונא אמר: ״אשר בחר בנו מכל העמים ונתן לנו את תורתו. ברוך אתה ה׳ נותן התורה״. אמר רב המנונא: זו היא מעולה שבברכות.הלכך לימרינהו לכולהו.
+
+ENGLISH:
+The blessing: An abounding love, is about Gods love for us and includes praise for His giving us the Torah. Therefore, Rav Yehuda said that Shmuel said: One who arose to study, until he recites Shema he must recite a special blessing over the Torah. If he already recited Shema he need not recite that blessing, as he has exempted himself by reciting the blessing of: An abounding love, which includes the components of the blessing over the Torah.Having mentioned the blessing recited over Torah, the Gemara focuses on a dispute over what constitutes Torah in terms of requiring a blessing. Rav Huna said: For the study of Bible, one must recite a blessing, as it is the word of God, and for halakhic midrash, the derivation of halakhot from verses, one need not recite a blessing. And Rabbi Elazar said: For Bible and midrash, which includes halakhot derived from verses themselves, one must recite a blessing; for Mishna, which is only comprised of halakhic rulings issued by the Sages, one need not recite a blessing. And Rabbi Yohanan said: Even for Mishna, which includes final, binding halakhic rulings, one must recite a blessing as well, but for Talmud, which comprises a study of the Mishna and the rationales for its rulings, one need not recite a blessing. And Rava said: Even for Talmud, which is the means to analyze the significance of the halakhot , and is the only form of Torah study that leads one to its true meaning, one must recite a blessing. This statement is supported by the practical halakha derived from observation of Ravs practice. His student, Rav Hiyya bar Ashi, said: Many times I stood before Rav to study our chapter in the Sifra , also known as Torat Kohanim , the halakhic midrash on Leviticus, of the school of Rav, and I saw that Rav would first wash his hands, then recite a blessing, and only then he would teach us our chapter. This demonstrates that even before their study of Torat Kohanim , which, due to Ravs explanation of the reasons behind the halakhot , was the equivalent of studying Talmud, one must recite a blessing.The Gemara clarifies: What formula of blessings does he recite? There is a dispute over the formula of the blessings as well. Rav Yehuda said that Shmuel said: The formula of this blessing is like the standard formula for blessings recited over other mitzvot: Blessed are You, Lord our God, King of the universe, Who sanctified us with his mitzvot and commanded us to engage in matters of Torah. And Rabbi Yohanan concludes the blessing by adding the following: Lord our God, make the words of Your Torah sweet in our mouths and in the mouths of Your people, the house of Israel, so that we and our descendants and the descendants of Your people, the house of Israel, may be those who know Your name and engage in Your Torah. Blessed are You, Lord, Who teaches Torah to His people Israel. And Rav Hamnuna said an additional formula: Who has chosen us from all the peoples and given us His Torah. Blessed are You, Lord, Giver of the Torah. With regard to this formula, Rav Hamnuna said: This concise blessing is the most outstanding of all the blessings over the Torah, as it combines thanks to God for giving us the Torah as well as acclaim for the Torah and for Israel.Since several formulas for the blessing over Torah were suggested, each with its own distinct advantage, the Gemara concludes: Therefore, let us recite them all as blessings over the Torah.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages dispute Torah blessing requirements and formulas.",
+    "heb_summary": "חכמים חלוקים על ברכת התורה ונוסחאותיה.",
+    "passage_types": [
+      "LAW",
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Rabbi Elazar"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Rav Hiyya Bar Ashi"
+        },
+        {
+          "en_name": "Rav Hamnuna"
+        },
+        {
+          "en_name": "House Of Israel"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Torah"
+        },
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Bible"
+        },
+        {
+          "en_name": "Mishna"
+        },
+        {
+          "en_name": "Talmud"
+        },
+        {
+          "en_name": "Sifra"
+        },
+        {
+          "en_name": "Torat Kohanim"
+        },
+        {
+          "en_name": "Mitzvah"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        },
+        {
+          "term1": "Rav Hiyya Bar Ashi",
+          "term2": "Rava"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Shmuel"
+        },
+        {
+          "term1": "Rav Hiyya Bar Ashi",
+          "term2": "Rava"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rav Huna",
+          "term2": "Rabbi Elazar"
+        },
+        {
+          "term1": "Rabbi Elazar",
+          "term2": "Rabbi Yohanan"
+        },
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rava"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "House Of Israel",
+          "term2": "Israel"
+        }
+      ],
+      "comparedTo": [
+        {
+          "term1": "Torat Kohanim",
+          "term2": "Talmud"
+        }
+      ],
+      "AliasOf": [
+        {
+          "term1": "Sifra",
+          "term2": "Torat Kohanim"
+        }
+      ]
+    }
+  }
+}

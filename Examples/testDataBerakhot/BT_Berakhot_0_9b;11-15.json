@@ -1,0 +1,95 @@
+﻿{
+    "res": {
+        "en_summary": "Shema recitation time, distinguishing colors and animals.",
+        "heb_summary": "זמן קריאת שמע, הבחנה בין צבעים וחיות.",
+        "passage_types": [
+            "LAW",
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Meir"
+                },
+                {
+                    "en_name": "Rabbi Akiva"
+                },
+                {
+                    "en_name": "Aherim"
+                },
+                {
+                    "en_name": "Rav Huna"
+                },
+                {
+                    "en_name": "Abaye"
+                },
+                {
+                    "en_name": "Rabbi Yohanan"
+                },
+                {
+                    "en_name": "Vatikin"
+                },
+                {
+                    "en_name": "Rabbi Zeira"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ritual Fringes"
+                },
+                {
+                    "en_name": "Phylactery"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "4",
+                    "number_category": "Measurement",
+                    "en_unit": "cubit",
+                    "en_context": "recognize acquaintance distance"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Wolf"
+                },
+                {
+                    "en_name": "Dog"
+                },
+                {
+                    "en_name": "Donkey"
+                },
+                {
+                    "en_name": "Wild Donkey"
+                }
+            ]
+        },
+        "Rel": {
+            "disagreedWith": [
+                {
+                    "term1": "Rabbi Meir",
+                    "term2": "Rabbi Akiva"
+                },
+                {
+                    "term1": "Rabbi Meir",
+                    "term2": "Aherim"
+                },
+                {
+                    "term1": "Rabbi Akiva",
+                    "term2": "Aherim"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Wolf",
+                    "term2": "Dog"
+                },
+                {
+                    "term1": "Donkey",
+                    "term2": "Wild Donkey"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:11-15"
+}

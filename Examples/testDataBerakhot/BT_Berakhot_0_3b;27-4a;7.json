@@ -1,0 +1,168 @@
+﻿{
+    "res": {
+        "en_summary": "Moses, David, Sanhedrin: wisdom, prophecy, midnight",
+        "heb_summary": "משה, דוד, סנהדרין: חכמה, נבואה, חצות",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Benayahu"
+                },
+                {
+                    "en_name": "Yehoyada"
+                },
+                {
+                    "en_name": "Evyatar"
+                },
+                {
+                    "en_name": "Ahimelekh"
+                },
+                {
+                    "en_name": "David"
+                },
+                {
+                    "en_name": "Ahitophel"
+                },
+                {
+                    "en_name": "Yoav"
+                },
+                {
+                    "en_name": "Rav Yitzhak Bar Adda"
+                },
+                {
+                    "en_name": "Rav Yitzhak"
+                },
+                {
+                    "en_name": "Rav Idi"
+                },
+                {
+                    "en_name": "Rabbi Zeira"
+                },
+                {
+                    "en_name": "Moses"
+                },
+                {
+                    "en_name": "Pharaoh"
+                },
+                {
+                    "en_name": "Rav Ashi"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Sanhedrin"
+                },
+                {
+                    "en_name": "Sages"
+                },
+                {
+                    "en_name": "Holy One, Blessed Be He"
+                },
+                {
+                    "en_name": "Master"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Egypt"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Urim Vetummim"
+                },
+                {
+                    "en_name": "Lyre"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "23",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "i samuel reference"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "i samuel reference"
+                },
+                {
+                    "en_name": "20",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "ii samuel reference"
+                },
+                {
+                    "en_name": "57",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "psalms reference"
+                },
+                {
+                    "en_name": "13",
+                    "number_category": "Time",
+                    "en_unit": "day",
+                    "en_context": "moses prophecy"
+                },
+                {
+                    "en_name": "14",
+                    "number_category": "Time",
+                    "en_unit": "day",
+                    "en_context": "moses prophecy"
+                }
+            ]
+        },
+        "Rel": {
+            "childOfFather": [
+                {
+                    "term1": "Benayahu",
+                    "term2": "Yehoyada"
+                },
+                {
+                    "term1": "Evyatar",
+                    "term2": "Ahimelekh"
+                },
+                {
+                    "term1": "Rav Yitzhak",
+                    "term2": "Rav Idi"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Sages",
+                    "term2": "Ahitophel"
+                },
+                {
+                    "term1": "Sages",
+                    "term2": "Sanhedrin"
+                },
+                {
+                    "term1": "Moses",
+                    "term2": "Israel"
+                },
+                {
+                    "term1": "Holy One, Blessed Be He",
+                    "term2": "Moses"
+                }
+            ],
+            "personBelongsToNation": [
+                {
+                    "term1": "Pharaoh",
+                    "term2": "Egypt"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_3b:27-4a:7"
+}

@@ -1,0 +1,79 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis discuss fixed prayer place, Israel's enemies.",
+        "heb_summary": "רבנים דנים בתפילה קבועה, אויבי ישראל.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Shimon Ben Yohai"
+                },
+                {
+                    "en_name": "Huna"
+                },
+                {
+                    "en_name": "Israel"
+                },
+                {
+                    "en_name": "Children Of Wickedness"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "7",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "ii samuel reference"
+                },
+                {
+                    "en_name": "10",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "ii samuel reference"
+                },
+                {
+                    "en_name": "17",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "i chronicles reference"
+                },
+                {
+                    "en_name": "9",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "i chronicles reference"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yohanan",
+                    "term2": "Shimon Ben Yohai"
+                }
+            ],
+            "EnemyOf": [
+                {
+                    "term1": "Children Of Wickedness",
+                    "term2": "Israel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_7b:23-25"
+}

@@ -1,0 +1,178 @@
+﻿COST: Tokens: Total=12059 approx cost=$0.001980 (Prompt=7279, Completion=4780)
+SOURCE:
+Berakhot (Zeraim) 3b:27-4a:7
+
+HEBREW:
+״בניהו בן יהוידע״ זה סנהדרין, ״ואביתר״ אלו אורים ותומים.וכן הוא אומר: ״ובניהו בן יהוידע על הכרתי ועל הפלתי״. ולמה נקרא שמם ״כרתי״ ו״פלתי״? ״כרתי״ שכורתים דבריהם, ״פלתי״ שמופלאים בדבריהם. ואחר כך ״שר צבא למלך יואב״.אמר רב יצחק בר אדא, ואמרי לה אמר רב יצחק בריה דרב אידי: מאי קרא ״עורה כבודי עורה הנבל וכנור אעירה שחר״.רבי זירא אמר: משה לעולם הוה ידע, ודוד נמי הוה ידע.וכיון דדוד הוה ידע, כנור למה ליה? לאתעורי משנתיה.וכיון דמשה הוה ידע, למה ליה למימר ״כחצות״? — משה קסבר: שמא יטעו אצטגניני פרעה, ויאמרו ״משה בדאי הוא״. דאמר מר: למד לשונך לומר ״איני יודע״, שמא תתבדה ותאחז.רב אשי אמר: בפלגא אורתא דתליסר נגהי ארבסר הוה קאי, והכי קאמר משה לישראל, אמר הקדוש ברוך הוא: למחר כחצות הלילה כי האידנא אני יוצא בתוך מצרים.
+
+ENGLISH:
+Benayahu ben Yehoyada corresponds to the Sanhedrin, since he was the head of the Sanhedrin, and Evyatar corresponds to the Urim VeTummim , as Evyatar ben Ahimelekh the priest would oversee inquiries directed to the Urim VeTummim (see I Samuel 23:9). And so it says regarding Benayahu ben Yehoyadas position as head of the Sanhedrin: And Benayahu ben Yehoyada was over the Kereti and over the Peleti (II Samuel 20:23). And why was the Sanhedrin called Kereti UPeleti ? It was called Kereti because they were decisive [ koretim ] in their pronouncements. It was called Peleti because their pronouncements and wisdom were wondrous [ muflaim ] . The head of the Kereti UPeleti was the head of the Sanhedrin. According to the order of the verse, upon being instructed by King David to go to war, the Sages first consulted with Ahitophel, then with the Sanhedrin, then they would ask the Urim VeTummim , and only thereafter was the general of the kings army, Yoav, given the command to ready the military for battle. Rav Yitzhak bar Adda, and some say Rav Yitzhak, son of Rav Idi, said: From what verse is it derived that Davids lyre would wake him at midnight? Awake, my glory; awake, harp and lyre; I will wake the dawn (Psalms 57:9). This means that the playing lyre has already woken, and now I must engage in Torah study until dawn. Rabbi Zeira offered a different solution to the question of whether Moses and David knew exactly when it was midnight and said: Moses certainly knew when it was midnight, and David also knew. The Gemara asks: If David knew, then why did he need the lyre? The Gemara answers: He needed the lyre to wake him from his sleep. Similarly with regard to Moses, since Moses knew the precise moment of midnight, why did he say: About midnight, instead of: At midnight? Moses did so because he maintained: Lest Pharaohs astrologers err and believe midnight to be earlier. Since no disaster would have occurred, they would say: Moses is a liar. Moses spoke in accordance with the principle articulated by the Master: Accustom your tongue to say: I do not know, lest you become entangled in a web of deceit. Rav Ashi said: This question is unfounded, as Moses was standing at midnight of the thirteenth, leading into the fourteenth, when he pronounced his prophecy, and Moses told Israel that the Holy One, Blessed be He, said that tomorrow, at the exact time like midnight tonight, I will go out into the midst of Egypt. This indicates that the passage should not be understood to mean about midnight, an approximation; but rather, like midnight, as a comparison, likening midnight tomorrow to midnight tonight.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Moses, David, Sanhedrin: wisdom, prophecy, midnight",
+    "heb_summary": "משה, דוד, סנהדרין: חכמה, נבואה, חצות",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Benayahu"
+        },
+        {
+          "en_name": "Yehoyada"
+        },
+        {
+          "en_name": "Evyatar"
+        },
+        {
+          "en_name": "Ahimelekh"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Ahitophel"
+        },
+        {
+          "en_name": "Yoav"
+        },
+        {
+          "en_name": "Rav Yitzhak Bar Adda"
+        },
+        {
+          "en_name": "Rav Yitzhak"
+        },
+        {
+          "en_name": "Rav Idi"
+        },
+        {
+          "en_name": "Rabbi Zeira"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Pharaoh"
+        },
+        {
+          "en_name": "Rav Ashi"
+        },
+        {
+          "en_name": "Israel"
+        },
+        {
+          "en_name": "Sanhedrin"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Holy One, Blessed Be He"
+        },
+        {
+          "en_name": "Master"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Egypt"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Urim Vetummim"
+        },
+        {
+          "en_name": "Lyre"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "23",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "i samuel reference"
+        },
+        {
+          "en_name": "9",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "i samuel reference"
+        },
+        {
+          "en_name": "20",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "ii samuel reference"
+        },
+        {
+          "en_name": "57",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "13",
+          "number_category": "Time",
+          "en_unit": "day",
+          "en_context": "moses prophecy"
+        },
+        {
+          "en_name": "14",
+          "number_category": "Time",
+          "en_unit": "day",
+          "en_context": "moses prophecy"
+        }
+      ]
+    },
+    "Rel": {
+      "childOfFather": [
+        {
+          "term1": "Benayahu",
+          "term2": "Yehoyada"
+        },
+        {
+          "term1": "Evyatar",
+          "term2": "Ahimelekh"
+        },
+        {
+          "term1": "Rav Yitzhak",
+          "term2": "Rav Idi"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Sages",
+          "term2": "Ahitophel"
+        },
+        {
+          "term1": "Sages",
+          "term2": "Sanhedrin"
+        },
+        {
+          "term1": "Moses",
+          "term2": "Israel"
+        },
+        {
+          "term1": "Holy One, Blessed Be He",
+          "term2": "Moses"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Pharaoh",
+          "term2": "Egypt"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+﻿{
+    "res": {
+        "en_summary": "Sages debated reciting Ten Commandments daily.",
+        "heb_summary": "חכמים דנו באמירת עשרת הדיברות יומית.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Priests"
+                },
+                {
+                    "en_name": "Rav Yehuda"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Rambam"
+                },
+                {
+                    "en_name": "Heretics"
+                },
+                {
+                    "en_name": "Rabbi Natan"
+                },
+                {
+                    "en_name": "Rabba Bar Bar Hana"
+                },
+                {
+                    "en_name": "Rav Hisda"
+                },
+                {
+                    "en_name": "Ameimar"
+                },
+                {
+                    "en_name": "Rav Ashi"
+                },
+                {
+                    "en_name": "Outgoing Priestly Watch"
+                },
+                {
+                    "en_name": "Incoming Priestly Watch"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Temple"
+                },
+                {
+                    "en_name": "Sura"
+                },
+                {
+                    "en_name": "Nehardea"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Ten Commandments"
+                },
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Vehaya Im Shamoa"
+                },
+                {
+                    "en_name": "Vayomer"
+                },
+                {
+                    "en_name": "True And Firm"
+                },
+                {
+                    "en_name": "Avoda"
+                },
+                {
+                    "en_name": "Priestly Benediction"
+                },
+                {
+                    "en_name": "Torah"
+                },
+                {
+                    "en_name": "Name"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rav Yehuda",
+                    "term2": "Shmuel"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Rav Hisda",
+                    "term2": "Rabba Bar Bar Hana"
+                },
+                {
+                    "term1": "Rav Ashi",
+                    "term2": "Ameimar"
+                },
+                {
+                    "term1": "Outgoing Priestly Watch",
+                    "term2": "Incoming Priestly Watch"
+                }
+            ],
+            "disagreedWith": [
+                {
+                    "term1": "Heretics",
+                    "term2": "Priests"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Priests",
+                    "term2": "Temple"
+                },
+                {
+                    "term1": "Rabba Bar Bar Hana",
+                    "term2": "Sura"
+                },
+                {
+                    "term1": "Ameimar",
+                    "term2": "Nehardea"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_12a:4-9"
+}

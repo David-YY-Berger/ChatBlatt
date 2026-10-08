@@ -1,0 +1,72 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbi Yosei teaches blessings for synagogue waiting.",
+        "heb_summary": "הרב יוסי מלמד ברכות לממתינים בבית הכנסת.",
+        "passage_types": [
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Yosei"
+                },
+                {
+                    "en_name": "Rabbi Hanina"
+                },
+                {
+                    "en_name": "Talmidei Rabbeinu Yona"
+                },
+                {
+                    "en_name": "Isaiah"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "River"
+                },
+                {
+                    "en_name": "Waves Of The Sea"
+                },
+                {
+                    "en_name": "Sand"
+                },
+                {
+                    "en_name": "Grains"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabbi Yosei",
+                    "term2": "Rabbi Hanina"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Rabbi Yosei",
+                    "term2": "Rabbi Hanina"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "River"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Waves Of The Sea"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Sand"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Grains"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_5b:25-6a:1"
+}

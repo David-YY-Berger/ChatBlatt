@@ -1,0 +1,82 @@
+﻿COST: Tokens: Total=9296 approx cost=$0.001185 (Prompt=7128, Completion=2168)
+SOURCE:
+Berakhot (Zeraim) 5b:17-20
+
+HEBREW:
+רב הונא תקיפו ליה ארבע מאה דני דחמרא. על לגביה רב יהודה אחוה דרב סלא חסידא ורבנן, ואמרי לה רב אדא בר אהבה ורבנן, ואמרו ליה: לעיין מר במיליה. אמר להו: ומי חשידנא בעינייכו? אמרו ליה: מי חשיד קודשא בריך הוא דעביד דינא בלא דינא?!אמר להו: אי איכא מאן דשמיע עלי מלתא — לימא. אמרו ליה: הכי שמיע לן, דלא יהיב מר שבישא לאריסיה.אמר להו: מי קא שביק לי מידי מיניה? הא קא גניב ליה כוליה!אמרו ליה: היינו דאמרי אינשי: ״בתר גנבא גנוב, וטעמא טעים״. אמר להו: קבילנא עלי דיהיבנא ליה. איכא דאמרי: הדר חלא והוה חמרא. ואיכא דאמרי: אייקר חלא, ואיזדבן בדמי דחמרא.
+
+ENGLISH:
+The Gemara relates another story regarding acknowledgement of the justice of divine punishment: Four hundred barrels of Rav Hunas wine fermented and turned into vinegar, causing him great financial loss. Rav Yehuda, the brother of Rav Sala the Pious, along with the Sages, and some say Rav Adda bar Ahava, along with the Sages, entered to visit him, and said: The Master should examine his actions, as perhaps he committed a transgression for which he is being punished. Rav Huna said to them: Am I suspect in your eyes? Have I committed a transgression on account of which you advise me to examine my behavior? They said to him: Is the Holy One, Blessed be He, suspect that He exacts punishment without justice? Your loss was certainly just, and you must examine your conduct to find out why. The Sages were aware of a flaw in Rav Hunas conduct, to which they alluded ( Tosafot ).Rav Huna said to them: If someone has heard something improper that I have done, let him say so. They said to him: We have heard that the Master does not give a share of his grapevines to his tenant farmers. A tenant farmer is entitled to a portion of the crop grown on his landlords property, as well as a share of the vines planted during a given year.Rav Huna said to them: Does this tenant farmer leave me anything from the produce that he grows on my property? He steals it all. Consequently, in denying him his share of the grapevines I am simply recouping that which was stolen from me by this tenant farmer. They said to him: That is the meaning of the folk saying: One who steals from a thief has a taste of theft. Despite the fact that the property was stolen to begin with, one nevertheless engages in theft. Although he did not violate a prohibition per se, it is still a form of theft, and one who is held to a higher standard than others will be punished for it. He said to them: I accept upon myself to give my tenant farmer his portion in the future. Thereupon, as a result of Rav Hunas repentance, God restored his loss. Some say his vinegar turned back into wine, and some say that the price of vinegar rose and it was sold at the price of wine.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rav Huna's wine fermented, then restored.",
+    "heb_summary": "יין רב הונא החמיץ, ואז שוקם.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rav Huna"
+        },
+        {
+          "en_name": "Rav Yehuda"
+        },
+        {
+          "en_name": "Rav Sala"
+        },
+        {
+          "en_name": "Sages"
+        },
+        {
+          "en_name": "Adda Bar Ahava"
+        },
+        {
+          "en_name": "God"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "400",
+          "number_category": "Misc",
+          "en_unit": "barrel",
+          "en_context": "rav huna's wine"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Wine"
+        },
+        {
+          "en_name": "Vinegar"
+        }
+      ],
+      "Plant": [
+        {
+          "en_name": "Grapevine"
+        },
+        {
+          "en_name": "Grape"
+        }
+      ]
+    },
+    "Rel": {
+      "spokeWith": [
+        {
+          "term1": "Rav Yehuda",
+          "term2": "Rav Huna"
+        },
+        {
+          "term1": "Sages",
+          "term2": "Rav Huna"
+        },
+        {
+          "term1": "Adda Bar Ahava",
+          "term2": "Rav Huna"
+        }
+      ]
+    }
+  }
+}

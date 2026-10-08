@@ -1,0 +1,111 @@
+﻿COST: Tokens: Total=10525 approx cost=$0.001526 (Prompt=7253, Completion=3272)
+SOURCE:
+Berakhot (Zeraim) 3b:10-16
+
+HEBREW:
+תנו רבנן: ארבע משמרות הוי הלילה, דברי רבי. רבי נתן אומר: שלש.מאי טעמיה דרבי נתן — דכתיב: ״ויבא גדעון ומאה איש אשר אתו בקצה המחנה ראש האשמרת התיכונה״, תנא: אין ״תיכונה״ אלא שיש לפניה ולאחריה.ורבי, מאי ״תיכונה״ — אחת מן התיכונה שבתיכונות.ורבי נתן מי כתיב ״תיכונה שבתיכונות״? ״תיכונה״ כתיב!מאי טעמיה דרבי? אמר רבי זריקא, אמר רבי אמי, אמר רבי יהושע בן לוי: כתוב אחד אומר: ״חצות לילה אקום להודות לך על משפטי צדקך״, וכתוב אחד אומר: ״קדמו עיני אשמורות״ הא כיצד, ארבע משמרות הוי הלילה.ורבי נתן, סבר לה כרבי יהושע. דתנן, רבי יהושע אומר: עד שלש שעות, שכן דרך מלכים לעמוד בשלש שעות. שית דליליא, ותרתי דיממא, הוו להו שתי משמרות.רב אשי אמר: משמרה ופלגא נמי ״משמרות״ קרו להו.
+
+ENGLISH:
+The Sages taught in a Tosefta : The night is comprised of four watches; this is the statement of Rabbi Yehuda HaNasi. Rabbi Natan says: The night is comprised of three watches.The Gemara explains: What is Rabbi Natans reasoning? As it is written: And Gideon, and the one hundred men who were with him, came to the edge of camp at the beginning of the middle watch (Judges 7:19). It was taught in the Tosefta : Middle means nothing other than that there is one before it and one after it. From the fact that the verse refers to a middle watch, the fact that the night is comprised of three watches may be inferred. And what does Rabbi Yehuda HaNasi say about this proof? He argues that it is inconclusive, as one could say: To what does middle refer? It refers to one of the two middle watches. And how would Rabbi Natan respond? He would say: Despite Rabbi Yehuda HaNasis objection, is: One of the middle watches, written in the verse? The middle watch is written. This indicates that the night is comprised of only three watches. What is Rabbi Yehuda HaNasis reasoning? Rabbi Zerika said that Rabbi Ami said that Rabbi Yehoshua ben Levi said: Rabbi Yehuda HaNasis opinion is based on a comparison of two verses. One verse says: At midnight I rise to give thanks for Your righteous laws (Psalms 119:62), and the other verse says: My eyes forestall the watches, that I will speak of Your word (Psalms 119:148). Taken together, these verses indicate that their author, King David, rose at midnight, two watches before dawn, in order to study Torah. How is it possible to reconcile these two verses? Only if there are four watches in the night does one who rises two watches before dawn rise at midnight. And how does Rabbi Natan reconcile these two verses? He holds in accordance with the opinion of Rabbi Yehoshua, for we learned in a mishna that Rabbi Yehoshua says: One is permitted to recite the morning Shema during the time when people rise, until the third hour of the day, as it is the custom of kings to rise during the third hour. Since it is customary for kings to rise during the third hour of the day, if David rose at midnight, he would be awake for six hours of the night and two hours of the day, which amounts to two watches. Therefore King David could say that he forestalls the watches, as he rose two watches before the rest of the kings in the world. Rav Ashi said that the verses can be reconciled in accordance with Rabbi Natans opinion in another way: One and one-half watches are still called watches in plural. Therefore King David could rise at midnight yet maintain that he forestalls the watches.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Sages debate night watches, David's rising.",
+    "heb_summary": "חכמים דנים משמרות לילה, עליית דוד.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Yehuda Hanasi"
+        },
+        {
+          "en_name": "Natan"
+        },
+        {
+          "en_name": "Gideon"
+        },
+        {
+          "en_name": "One Hundred Men"
+        },
+        {
+          "en_name": "Zerika"
+        },
+        {
+          "en_name": "Ami"
+        },
+        {
+          "en_name": "Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "David"
+        },
+        {
+          "en_name": "Yehoshua"
+        },
+        {
+          "en_name": "Ashi"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "4",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "night watches"
+        },
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "night watches"
+        },
+        {
+          "en_name": "100",
+          "number_category": "People",
+          "en_unit": "man",
+          "en_context": "gideons army"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "middle watches argument"
+        },
+        {
+          "en_name": "6",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "david awake"
+        },
+        {
+          "en_name": "1.5",
+          "number_category": "Time",
+          "en_unit": "watch",
+          "en_context": "watches plural"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Zerika",
+          "term2": "Ami"
+        },
+        {
+          "term1": "Ami",
+          "term2": "Yehoshua Ben Levi"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Yehuda Hanasi",
+          "term2": "Natan"
+        }
+      ]
+    }
+  }
+}

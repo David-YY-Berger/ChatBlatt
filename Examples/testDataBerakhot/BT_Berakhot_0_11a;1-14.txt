@@ -1,0 +1,75 @@
+﻿COST: Tokens: Total=10308 approx cost=$0.001295 (Prompt=7989, Completion=2319)
+SOURCE:
+Berakhot (Zeraim) 11a:1-14
+
+HEBREW:
+גמ׳ בשלמא בית הלל — קא מפרשי טעמייהו וטעמא דבית שמאי, אלא בית שמאי — מאי טעמא לא אמרי כבית הלל?אמרי לך בית שמאי: אם כן, נימא קרא ״בבקר ובערב״, מאי ״בשכבך ובקומך״? בשעת שכיבה — שכיבה ממש, ובשעת קימה — קימה ממש.ובית שמאי: האי ״ובלכתך בדרך״, מאי עביד להו?ההוא מבעי להו, לכדתניא: ״בשבתך בביתך״ — פרט לעוסק במצוה, ״ובלכתך בדרך״ — פרט לחתן. מכאן, אמרו: הכונס את הבתולה — פטור, ואת האלמנה — חייב.מאי משמע?אמר רב פפא: כי דרך. מה דרך רשות, אף כל רשות.מי לא עסקינן דקא אזיל לדבר מצוה, ואפילו הכי אמר רחמנא: לקרי. אם כן לכתוב רחמנא ״בשבת ובלכת״ מאי ״בשבתך ובלכתך״? — בשבת דידך ובלכת דידך הוא דמחייבת, הא דמצוה פטירת.אי הכי אפילו כונס את האלמנה נמי?האי טריד, והאי לא טריד.אי משום טרדא, אפילו טבעה ספינתו בים נמי! וכי תימא: הכי נמי, אלמה אמר רבי אבא בר זבדא אמר רב: אבל חייב בכל המצות האמורות בתורה, חוץ מן התפילין, שהרי נאמר בהם ״פאר״, שנאמר: ״פארך חבוש עליך״?!התם טריד טרדא דמצוה, הכא טריד טרדא דרשות.ובית שמאי?ההוא מבעי להו — פרט לשלוחי מצוה.ובית הלל אמרי: ממילא שמע מינה דאפילו בדרך נמי קרי.
+
+ENGLISH:
+GEMARA: The Gemara begins by clarifying the rationale for Beit Shammais opinion. Granted, Beit Hillel explain the rationale for their opinion and the rationale for Beit Shammais opinion . Beit Hillel explain both the verse that ostensibly supports Beit Shammais opinion: When you lie down , at the time when people lie down , etc ., and the verse that proves that their own explanation is more reasonable: And when you walk along the way. However, what is the reason that Beit Shammai do not state their opinion in accordance with the opinion of Beit Hillel? The Gemara answers, Beit Shammai could have said to you: If so that the verse means only to denote the time for the recitation of Shema , as claimed by Beit Hillel, then let the verse say: In the morning and in the evening. What is the meaning of the ambiguous formulation: When you lie down, and when you rise? It must mean that at the time of lying down one must recite Shema while actually lying down, and at the time of arising one must recite Shema while actually risen. The Gemara continues, asking: And what do Beit Shammai do with this verse: And when you walk along the way, which Beit Hillel use to prove that every person recites Shema as he is?The Gemara answers: Beit Shammai need this verse in order to derive other halakhot , as it was taught in a baraita which interpreted this verse that the obligation to recite Shema applies when you sit in your home, to the exclusion of one who is engaged in performance of a mitzva, who is exempt from the recitation of Shema ; and when you walk along the way, to the exclusion of a groom, who is also exempt from the recitation of Shema . The baraita adds that from here, from this interpretation of the verses, they said: One who marries a virgin is exempt from the recitation of Shema on his wedding night, but one who marries a widow is obligated. The Gemara clarifies the meaning of this baraita , and asks: From where may it be inferred that the verse, when you walk along the way, exempts a groom from the obligation to recite Shema ? Rav Pappa said that we learn: Like the way; just as the journey along a specific way described in the verse is voluntary and involves no mitzva, so too all of those who are obligated to recite Shema are engaged in voluntary activities. However, one engaged in the performance of a mitzva, like a groom, is exempt from the obligation to recite Shema .The Gemara asks: Are we not dealing with a case where one walks along the way to perform a mitzva? The Torah did not designate the objective of his walk and, nevertheless, the Torah said to recite Shema , indicating that one is obligated even if he set out to perform a mitzva. Rather, the proof is from the formulation of the verse. If so, that the intention was to obligate in all cases, let the Torah write: When sitting and when walking. What is the meaning of: When you sit and when you walk? Certainly these additions come to emphasize in your sitting down and in your walking, meaning that when one does this for his own purposes and of his own volition, he is obligated to recite Shema , but when he does with the objective of performing a mitzva, he is exempt from reciting Shema , as in that case he is sitting or walking at Gods behest.The conclusion is that anyone engaged in the performance of a mitzva is exempt from the recitation of Shema . If so, even one who marries a widow should be exempt, for he, too, is engaged in performance of a mitzva. That, however, contradicts the baraita .The Gemara responds that there is nevertheless a distinction between one marrying a virgin and one marrying a widow. One who marries a virgin is preoccupied by his concern lest he discover that his bride is not a virgin, while one who marries a widow is not preoccupied. The conclusion is that the groom is exempt from reciting Shema because he is preoccupied.The Gemara asks: If the exemption is due to preoccupation, then even one who is preoccupied because his ship sank at sea should also be exempt. The Gemara reinforces its question: And if you say that in this case as well, when ones ship sank at sea, one is exempt, why then did Rabbi Abba bar Zavda say that Rav said: A mourner is obligated in all the mitzvot mentioned in the Torah except for the mitzva to don phylacteries, from which a mourner is exempt, as the term splendor is stated with regard to phylacteries, as it is stated: Make no mourning for the dead, bind your splendor upon yourself (Ezekiel 24:17). It is inappropriate for a mourner to wrap himself in phylacteries, with regard to which, the term splendor was employed ( Tosafot ). If a mourner, who is clearly pained and preoccupied, is obligated to recite Shema , then certainly all others who are preoccupied, even one whose ship sank at sea, whose loss was merely monetary ( Birkat Hashem ), should be obligated. Why, then, is a groom exempted because of his preoccupation and one who lost his property is not?The Gemara answers: Nevertheless, there is a distinction between the cases. For there, in the case of a groom, he is preoccupied with the preoccupation of a mitzva that he must perform; here, in the case of a ship lost at sea, he is preoccupied with the preoccupation of a voluntary act that he chooses to perform.Here, the Gemara returns to its initial question: And how do Beit Shammai explain the passage: When you walk along the way (Rashash)?The Gemara answers: Beit Shammai need this passage in order to exclude one who is on the path to perform a mitzva from the obligation to recite Shema .Beit Hillel also agree that one engaged in the performance of a mitzva is exempt from reciting Shema ? If so, the halakha that they derived from: When you walk along the way lacks a source and is therefore unfounded. And Beit Hillel say: Derive from this halakha itself that one who is not an agent in the performance of a mitzva recites Shema even along the way.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Beit Shammai and Hillel dispute Shema.",
+    "heb_summary": "מחלוקת בית שמאי והלל על קריאת שמע.",
+    "passage_types": [
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Beit Shammai"
+        },
+        {
+          "en_name": "Beit Hillel"
+        },
+        {
+          "en_name": "Rav Pappa"
+        },
+        {
+          "en_name": "Rabbi Abba Bar Zavda"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Ezekiel"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Sea"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Phylacteries"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Abba Bar Zavda",
+          "term2": "Rav"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Beit Shammai",
+          "term2": "Beit Hillel"
+        }
+      ],
+      "prophesiedAbout": [
+        {
+          "term1": "Ezekiel",
+          "term2": "Phylacteries"
+        }
+      ]
+    }
+  }
+}

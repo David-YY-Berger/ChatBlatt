@@ -1,0 +1,129 @@
+﻿{
+    "res": {
+        "en_summary": "God asks about absent synagogue goer.",
+        "heb_summary": "אלוהים שואל על נעדר מבית הכנסת.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Ravin Bar Rav Adda"
+                },
+                {
+                    "en_name": "Yitzhak"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Prayer Leader"
+                },
+                {
+                    "en_name": "Isaiah"
+                },
+                {
+                    "en_name": "Maharsha"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Synagogue"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Light"
+                },
+                {
+                    "en_name": "Darkness"
+                },
+                {
+                    "en_name": "Name Of The Lord"
+                },
+                {
+                    "en_name": "Mitzvah"
+                },
+                {
+                    "en_name": "Mundane Purpose"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Time",
+                    "en_unit": "day",
+                    "en_context": "absent from synagogue"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Ravin Bar Rav Adda",
+                    "term2": "Yitzhak"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "God",
+                    "term2": "Prayer Leader"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "Prayer Leader",
+                    "term2": "Synagogue"
+                }
+            ],
+            "prophesiedAbout": [
+                {
+                    "term1": "Isaiah",
+                    "term2": "God"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Prayer Leader"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Light"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Darkness"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Name Of The Lord"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Mitzvah"
+                },
+                {
+                    "term1": "Isaiah",
+                    "term2": "Mundane Purpose"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Light",
+                    "term2": "Mitzvah"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Light",
+                    "term2": "Darkness"
+                },
+                {
+                    "term1": "Mitzvah",
+                    "term2": "Mundane Purpose"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_6b:2-4"
+}

@@ -1,0 +1,142 @@
+﻿COST: Tokens: Total=14951 approx cost=$0.002736 (Prompt=7775, Completion=7176)
+SOURCE:
+Berakhot (Zeraim) 7a:26-33
+
+HEBREW:
+אמר מר: צדיק וטוב לו — צדיק בן צדיק, צדיק ורע לו — צדיק בן רשע. איני? והא כתיב: ״פקד עון אבות על בנים״, וכתיב: ״ובנים לא יומתו על אבות״, ורמינן קראי אהדדי,ומשנינן: לא קשיא, הא — כשאוחזין מעשה אבותיהם בידיהם, הא — כשאין אוחזין מעשה אבותיהם בידיהם.אלא, הכי קאמר ליה: צדיק וטוב לו — צדיק גמור, צדיק ורע לו — צדיק שאינו גמור, רשע וטוב לו — רשע שאינו גמור, רשע ורע לו — רשע גמור.ופליגא דרבי מאיר, דאמר רבי מאיר: שתים נתנו לו ואחת לא נתנו לו, שנאמר: ״וחנתי את אשר אחון״ — אף על פי שאינו הגון, ״ורחמתי את אשר ארחם״ — אף על פי שאינו הגון.״ויאמר לא תוכל לראות את פני״, תנא משמיה דרבי יהושע בן קרחה, כך אמר לו הקדוש ברוך הוא למשה: כשרציתי — לא רצית, עכשיו שאתה רוצה — איני רוצה.ופליגא דרבי שמואל בר נחמני אמר רבי יונתן, דאמר רבי שמואל בר נחמני, אמר רבי יונתן: בשכר שלש זכה לשלש.בשכר ״ויסתר משה פניו״ — זכה לקלסתר פנים. בשכר ״כי ירא״ — זכה ל״וייראו מגשת אליו״. בשכר ״מהביט״ — זכה ל״ותמנת ה׳ יביט״.״והסרתי את כפי וראית את אחרי״. אמר רב חנא בר ביזנא, אמר רבי שמעון חסידא: מלמד שהראה הקדוש ברוך הוא למשה קשר של תפילין.
+
+ENGLISH:
+The Gemara expands upon these righteous and wicked individuals: The Master said: The righteous person who prospers is a righteous person, the son of a righteous person. The righteous person who suffers is a righteous person, the son of a wicked person. The Gemara asks: Is it so that one is always punished for his ancestors transgressions? Isnt it written: He visits iniquity of the fathers upon the children, and upon the childrens children, unto the third and fourth generations (Exodus 34:7). And it is written elsewhere: Fathers shall not die for their children, and children shall not be put to death for the fathers; every man shall die for his own transgression (Deuteronomy 24:16). And the Gemara raises a contradiction between the two verses. The Gemara resolves the contradiction: This is not difficult. This verse from Exodus, which states that God punishes descendants for the transgressions of their ancestors, refers to a case where they adopt the actions of their ancestors as their own. While this verse from Deuteronomy, which states that descendants are not punished for the actions of their ancestors, refers to a case where they do not adopt the actions of their ancestors as their own, as it is stated: I visit iniquity of the fathers upon the children, and upon the third and fourth generations of my enemies (Exodus 20:5).A righteous person is clearly not punished for the transgressions of his ancestors. Rather, it must be that God said to Moses as follows: The righteous person who prospers is a completely righteous person whose actions are entirely good and whose reward is entirely good both in this world and in the World-to-Come. The righteous person who suffers is one who is not a completely righteous person. Because he does have some transgressions, he is punished in this world so that he will receive a complete reward in the World-to-Come. The wicked person who prospers is one who is not a completely wicked person. God rewards him in this world for the good deeds that he performed, so that he will receive a complete punishment in the World-to-Come. Finally, the wicked person who suffers is a completely wicked person. Since he performed absolutely no mitzvot and deserves no reward, he receives only punishment both in this world and in the World-to-Come (Maharsha).Rabbi Yohanans opinion, that God granted Moses all three of his requests, disagrees with that of Rabbi Meir, as Rabbi Meir said: Two of Moses requests were granted to him, and one was not granted to him. God granted him that the Divine Presence would rest upon Israel and not leave, and that the Divine Presence would not rest upon the nations of the world, but God did not reveal to Moses the ways in which He conducts the world. As it is said: And I will be gracious to whom I will be gracious (Exodus 33:19); in His mercy, God bestows His grace upon every person, even though he is not worthy. Similarly, God says: And I will have mercy upon whom I will have mercy, even though he is not worthy. According to Rabbi Meir, the way in which God conducts the world and bestows grace and mercy was not revealed even to Moses.The Gemara continues to cite the Sages explanation of verses that require clarification on the same topic. With regard to Gods statement to Moses, And He said: You cannot see My face, for man shall not see Me and live (Exodus 33:20), it was taught in the name of Rabbi Yehoshua ben Korha that the Holy One, Blessed be He, said to Moses as follows: When I wanted to show you My glory at the burning bush, you did not want to see it, as it is stated: And Moses concealed his face, fearing to gaze upon God (Exodus 3:6). But now that you want to see My glory, as you said: Show me Your glory, I do not want to show it to you. Rabbi Yehoshua ben Korha interprets Moses initial refusal to look upon Gods glory negatively, as he rebuffed Gods desire to be close to him.This disagrees with that which Rabbi Shmuel bar Nahmani said that Rabbi Yonatan said, as Rabbi Shmuel bar Nahmani said that Rabbi Yonatan said: Specifically as a reward for three acts of humility in averting his glance at the burning bush, Moses was privileged to experience three great revelations:Because Moses concealed his face, fearing to gaze upon God (Exodus 3:6), he was privileged to have his countenance [ kelaster ] glow. Because he feared, he was privileged that they feared to approach him (Exodus 34:30). Because he did not gaze, he was privileged to behold the likeness of the Lord (Numbers 12:8).What did Moses see? It is said: And I will remove My hand, and you will see My back, but My face you will not see (Exodus 33:23). Rav Hana bar Bizna said in the name of Rabbi Shimon Hasida, the expression: And you will see My back, should be understood as follows: This teaches that the Holy One, Blessed be He, Who, as mentioned above, wears phylacteries, showed him the knot of the phylacteries of His head, which is worn on the back of the head.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Gemara discusses righteous, wicked, God's ways, Moses' requests.",
+    "heb_summary": "הגמרא דנה בצדיקים, רשעים, דרכי ה', בקשות משה.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Master"
+        },
+        {
+          "en_name": "God"
+        },
+        {
+          "en_name": "Moses"
+        },
+        {
+          "en_name": "Maharsha"
+        },
+        {
+          "en_name": "Rabbi Yohanan"
+        },
+        {
+          "en_name": "Rabbi Meir"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Korha"
+        },
+        {
+          "en_name": "Rabbi Shmuel Bar Nahmani"
+        },
+        {
+          "en_name": "Rabbi Yonatan"
+        },
+        {
+          "en_name": "Rav Hana Bar Bizna"
+        },
+        {
+          "en_name": "Rabbi Shimon Hasida"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "World-To-Come"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Divine Presence"
+        },
+        {
+          "en_name": "Burning Bush"
+        },
+        {
+          "en_name": "Phylactery"
+        },
+        {
+          "en_name": "Knot"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "generation",
+          "en_context": "punishment for ancestors"
+        },
+        {
+          "en_name": "4",
+          "number_category": "Time",
+          "en_unit": "generation",
+          "en_context": "punishment for ancestors"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "request",
+          "en_context": "moses requests granted"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "request",
+          "en_context": "moses requests granted"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Rabbi Shmuel Bar Nahmani",
+          "term2": "Rabbi Yonatan"
+        },
+        {
+          "term1": "Rav Hana Bar Bizna",
+          "term2": "Rabbi Shimon Hasida"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "God",
+          "term2": "Moses"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rabbi Yohanan",
+          "term2": "Rabbi Meir"
+        },
+        {
+          "term1": "Rabbi Yehoshua Ben Korha",
+          "term2": "Rabbi Shmuel Bar Nahmani"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Moses",
+          "term2": "Israel"
+        }
+      ]
+    }
+  }
+}

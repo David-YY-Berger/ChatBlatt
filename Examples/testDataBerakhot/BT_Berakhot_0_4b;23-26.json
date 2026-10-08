@@ -1,0 +1,102 @@
+﻿{
+    "res": {
+        "en_summary": "Angel flight hierarchy: Michael, Gabriel, Elijah, Angel of Death.",
+        "heb_summary": "היררכיית תעופת מלאכים: מיכאל, גבריאל, אליהו, מלאך המוות.",
+        "passage_types": [
+            "STORY",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Elazar"
+                },
+                {
+                    "en_name": "Avina"
+                },
+                {
+                    "en_name": "Michael"
+                },
+                {
+                    "en_name": "Gabriel"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Elijah"
+                },
+                {
+                    "en_name": "Angel Of Death"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "1",
+                    "number_category": "Misc",
+                    "en_unit": "seraph",
+                    "en_context": "michael's identity"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Time",
+                    "en_unit": "flight",
+                    "en_context": "gabriel's mission"
+                },
+                {
+                    "en_name": "4",
+                    "number_category": "Time",
+                    "en_unit": "flight",
+                    "en_context": "elijah's travel"
+                },
+                {
+                    "en_name": "8",
+                    "number_category": "Time",
+                    "en_unit": "flight",
+                    "en_context": "angel of death's travel"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Elazar",
+                    "term2": "Avina"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Michael",
+                    "term2": "Gabriel"
+                },
+                {
+                    "term1": "Michael",
+                    "term2": "Elijah"
+                },
+                {
+                    "term1": "Michael",
+                    "term2": "Angel Of Death"
+                },
+                {
+                    "term1": "Gabriel",
+                    "term2": "Elijah"
+                },
+                {
+                    "term1": "Gabriel",
+                    "term2": "Angel Of Death"
+                },
+                {
+                    "term1": "Elijah",
+                    "term2": "Angel Of Death"
+                }
+            ],
+            "contrastedWith": [
+                {
+                    "term1": "Michael",
+                    "term2": "Gabriel"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_4b:23-26"
+}

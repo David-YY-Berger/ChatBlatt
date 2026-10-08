@@ -1,0 +1,113 @@
+﻿{
+    "res": {
+        "en_summary": "Rabbis discuss prayer, bowing, and redemption blessings.",
+        "heb_summary": "רבנים דנים בתפילה, קידה, וברכות גאולה.",
+        "passage_types": [
+            "LAW",
+            "PHILOSOPHIC"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabba Bar Hinnana Sava"
+                },
+                {
+                    "en_name": "Rav"
+                },
+                {
+                    "en_name": "Shmuel"
+                },
+                {
+                    "en_name": "Hiyya Bar Rav"
+                },
+                {
+                    "en_name": "God"
+                },
+                {
+                    "en_name": "Rav Sheshet"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "True And Firm"
+                },
+                {
+                    "en_name": "True And Trustworthy"
+                },
+                {
+                    "en_name": "God's Name"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "92",
+                    "number_category": "Misc",
+                    "en_unit": "psalm",
+                    "en_context": "biblical citation"
+                },
+                {
+                    "en_name": "3",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "biblical citation"
+                },
+                {
+                    "en_name": "146",
+                    "number_category": "Misc",
+                    "en_unit": "psalm",
+                    "en_context": "biblical citation"
+                },
+                {
+                    "en_name": "8",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "biblical citation"
+                },
+                {
+                    "en_name": "2",
+                    "number_category": "Misc",
+                    "en_unit": "chapter",
+                    "en_context": "biblical citation"
+                },
+                {
+                    "en_name": "5",
+                    "number_category": "Misc",
+                    "en_unit": "verse",
+                    "en_context": "biblical citation"
+                }
+            ],
+            "Animal": [
+                {
+                    "en_name": "Snake"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Rabba Bar Hinnana Sava",
+                    "term2": "Rav"
+                }
+            ],
+            "childOfFather": [
+                {
+                    "term1": "Hiyya Bar Rav",
+                    "term2": "Rav"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Shmuel",
+                    "term2": "Hiyya Bar Rav"
+                }
+            ],
+            "comparedTo": [
+                {
+                    "term1": "Rav Sheshet",
+                    "term2": "Snake"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_12a:23-12b:1"
+}

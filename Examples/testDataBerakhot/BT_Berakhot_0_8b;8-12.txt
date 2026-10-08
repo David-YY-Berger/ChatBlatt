@@ -1,0 +1,105 @@
+﻿COST: Tokens: Total=11161 approx cost=$0.001714 (Prompt=7262, Completion=3899)
+SOURCE:
+Berakhot (Zeraim) 8b:8-12
+
+HEBREW:
+אמר להו רבא לבניה: כשאתם חותכין בשר, אל תחתכו על גב היד. איכא דאמרי: משום סכנה. ואיכא דאמרי: משום קלקול סעודה.ואל תשבו על מטת ארמית, ואל תעברו אחורי בית הכנסת בשעה שהצבור מתפללין. ואל תשבו על מטת ארמית, איכא דאמרי לא תגנו בלא קריאת שמע, ואיכא דאמרי דלא תנסבו גיורתא. ואיכא דאמרי, ארמית ממש.ומשום מעשה דרב פפא. דרב פפא אזל לגבי ארמית, הוציאה לו מטה. אמרה לו: שב! אמר לה: איני יושב, עד שתגביהי את המטה. הגביהה את המטה ומצאו שם תינוק מת. מכאן אמרו חכמים: אסור לישב על מטת ארמית.ואל תעברו אחורי בית הכנסת בשעה שהצבור מתפללין — מסייע ליה לרבי יהושע בן לוי. דאמר רבי יהושע בן לוי: אסור לו לאדם שיעבור אחורי בית הכנסת בשעה שהצבור מתפללין.אמר אביי: ולא אמרן אלא דליכא פתחא אחרינא, אבל איכא פתחא אחרינא — לית לן בה. ולא אמרן אלא דליכא בי כנישתא אחרינא, אבל איכא בי כנישתא אחרינא — לית לן בה. ולא אמרן אלא דלא דרי טונא, ולא רהיט, ולא מנח תפילין, אבל איכא חד מהנך — לית לן בה.
+
+ENGLISH:
+Rava said to his sons three bits of advice: When you cut meat, do not cut it on your hand. The Gemara offers two explanations for this. Some say: Due to the danger that one might accidentally cut his hand, and some say: Due to the fact that it could ruin the meal, as even if one only cut himself slightly, that small amount of blood could still spoil the meat and render it repulsive to eat. And Rava also advised: Do not sit on the bed of an Aramean woman, and do not pass by a synagogue when the community is praying. The Gemara explains: Some say: Do not sit on the bed of an Aramean woman means one should not go to sleep without reciting Shema, as by doing so, it is tantamount to sleeping in the bed of a non-Jew, as his conduct is unbecoming a Jew. Others say: This means that one should not marry a woman who converted, and it is better to marry a woman who was born Jewish. And some say: It literally means that one should not sit on the bed of an Aramean, i.e., a non-Jewish woman. This bit of advice was due to an incident involving Rav Pappa. Rav Pappa went to visit an Aramean woman. She took out a bed and she said to him: Sit. He said to her: I will not sit until you lift the sheets covering the bed. She did so and they found a dead baby there. Had Rav Pappa sat upon the bed, he would have been blamed for killing the baby. From that incident, the Sages said: One is prohibited from sitting on the bed of an Aramean woman. And Ravas third bit of advice was, do not pass behind a synagogue while the congregation is praying. This statement supports the opinion of Rabbi Yehoshua ben Levi, as Rabbi Yehoshua ben Levi said: One is prohibited from passing behind a synagogue while the congregation is praying because they will suspect that he does not want to pray, and it is a show of contempt for the synagogue. Abaye introduced several caveats to Rabbi Yehoshua ben Levis statement and said: We only said this prohibition if there is no other entrance to the synagogue, but if there is another entrance, since it is possible that he will simply use the second entrance, they will not suspect him, and the prohibition does not apply. And we only said this prohibition if there is no other synagogue in the city, but if there is another synagogue, the prohibition does not apply. And we only said this prohibition when he is not carrying a burden, and not running, and not wearing phylacteries. But if one of those factors applies , the prohibition does not apply. If he is carrying a burden or running, clearly he is occupied with his work. If he is wearing phylacteries, it is evident that he is a God-fearing individual and they will not suspect him.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Rava's advice: meat, Aramean bed, synagogue.",
+    "heb_summary": "עצות רבא: בשר, מיטת ארמית, בית כנסת.",
+    "passage_types": [
+      "STORY",
+      "LAW"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Rava"
+        },
+        {
+          "en_name": "Rav Pappa"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Sages"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Synagogue"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Aram"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Shema"
+        },
+        {
+          "en_name": "Phylactery"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Misc",
+          "en_unit": "advice",
+          "en_context": "rava's advice"
+        },
+        {
+          "en_name": "2",
+          "number_category": "Misc",
+          "en_unit": "explanation",
+          "en_context": "meat cutting danger"
+        },
+        {
+          "en_name": "1",
+          "number_category": "Misc",
+          "en_unit": "factor",
+          "en_context": "synagogue passing caveats"
+        }
+      ],
+      "Food": [
+        {
+          "en_name": "Meat"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Abaye",
+          "term2": "Rabbi Yehoshua Ben Levi"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Rava",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "Rabbi Yehoshua Ben Levi",
+          "term2": "Synagogue"
+        },
+        {
+          "term1": "Abaye",
+          "term2": "Synagogue"
+        }
+      ]
+    }
+  }
+}

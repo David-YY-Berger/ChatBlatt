@@ -1,0 +1,36 @@
+﻿{
+    "res": {
+        "en_summary": "Shema recitation times; Rabbinic disagreement.",
+        "heb_summary": "זמני קריאת שמע; מחלוקת רבנים.",
+        "passage_types": [
+            "LAW"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Rabbi Eliezer"
+                },
+                {
+                    "en_name": "Rabbi Yehoshua"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Shema"
+                },
+                {
+                    "en_name": "Torah"
+                }
+            ],
+            "Number": [
+                {
+                    "en_name": "3",
+                    "number_category": "Time",
+                    "en_unit": "hour",
+                    "en_context": "kings rise"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:9-10"
+}

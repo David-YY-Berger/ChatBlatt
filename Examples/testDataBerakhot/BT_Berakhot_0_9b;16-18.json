@@ -1,0 +1,95 @@
+﻿{
+    "res": {
+        "en_summary": "Sages discuss prayer, redemption, and respect.",
+        "heb_summary": "חכמים דנים תפילה, גאולה וכבוד.",
+        "passage_types": [
+            "STORY"
+        ],
+        "Entities": {
+            "Person": [
+                {
+                    "en_name": "Yosei Ben Elyakim"
+                },
+                {
+                    "en_name": "The Holy Community In Jerusalem"
+                },
+                {
+                    "en_name": "Zeira"
+                },
+                {
+                    "en_name": "Yohanan"
+                },
+                {
+                    "en_name": "Ela"
+                },
+                {
+                    "en_name": "Ulla"
+                },
+                {
+                    "en_name": "Rav Beruna"
+                }
+            ],
+            "Place": [
+                {
+                    "en_name": "Jerusalem"
+                },
+                {
+                    "en_name": "Babylonia"
+                }
+            ],
+            "Nation": [
+                {
+                    "en_name": "Israel"
+                }
+            ],
+            "Symbol": [
+                {
+                    "en_name": "Redemption"
+                },
+                {
+                    "en_name": "Prayer"
+                }
+            ],
+            "Plant": [
+                {
+                    "en_name": "Myrtle"
+                }
+            ]
+        },
+        "Rel": {
+            "studiedFrom": [
+                {
+                    "term1": "Yosei Ben Elyakim",
+                    "term2": "The Holy Community In Jerusalem"
+                }
+            ],
+            "spokeWith": [
+                {
+                    "term1": "Yosei Ben Elyakim",
+                    "term2": "Zeira"
+                },
+                {
+                    "term1": "Ela",
+                    "term2": "Ulla"
+                }
+            ],
+            "visited": [
+                {
+                    "term1": "Ulla",
+                    "term2": "Babylonia"
+                }
+            ],
+            "associatedWithPlace": [
+                {
+                    "term1": "The Holy Community In Jerusalem",
+                    "term2": "Jerusalem"
+                },
+                {
+                    "term1": "Rav Beruna",
+                    "term2": "Babylonia"
+                }
+            ]
+        }
+    },
+    "key": "BT_Berakhot_0_9b:16-18"
+}

@@ -1,0 +1,87 @@
+﻿COST: Tokens: Total=10247 approx cost=$0.001480 (Prompt=7085, Completion=3162)
+SOURCE:
+Berakhot (Zeraim) 7a:16-21
+
+HEBREW:
+ואימת רתח? אמר אביי: בהנך תלת שעי קמייתא כי חיורא כרבלתא דתרנגולא וקאי אחד כרעא.כל שעתא ושעתא נמי קאי הכי?כל שעתא — אית ביה שורייקי סומקי, בההיא שעתא לית ביה שורייקי סומקי.ההוא מינא דהוה בשבבותיה דרבי יהושע בן לוי, הוה קא מצער ליה טובא בקראי. יומא חד שקל תרנגולא, ואוקמיה בין כרעיה דערסא, ועיין ביה, סבר: כי מטא ההיא שעתא, אלטייה. כי מטא ההיא שעתא — ניים. אמר: שמע מינה, לאו אורח ארעא למעבד הכי. ״ורחמיו על כל מעשיו״ כתיב.וכתיב: ״גם ענוש לצדיק לא טוב״.תנא, משמיה דרבי מאיר: בשעה שהחמה זורחת, וכל מלכי מזרח ומערב מניחים כתריהם בראשיהם ומשתחוים לחמה, מיד כועס הקדוש ברוך הוא.
+
+ENGLISH:
+The Gemara asks: When is the Holy One, Blessed be He, angry? Abaye said: Gods anger is revealed through animals. During the first three hours of the day, when the sun whitens the crest of the rooster and it stands on one leg. When it appears that its life has left him and he suddenly turns white, that is when God is angry.The Gemara asks: The rooster also stands that way every hour. What kind of sign is this?The Gemara answers: The difference is that every other hour when the rooster stands in that way, there are red streaks in his crest. But when God is angry, there are no red streaks in his crest.The Gemara relates: A certain heretic who was in Rabbi Yehoshua ben Levis neighborhood would upset him by incessantly challenging the legitimacy of verses. One day, Rabbi Yehoshua ben Levi took a rooster and placed it between the legs of the bed upon which he sat and looked at it. He thought: When the moment of Gods anger arrives, I will curse him and be rid of him. When the moment of Gods anger arrived, Rabbi Yehoshua ben Levi slept. When he woke up, he said to himself: Conclude from the fact that I nodded off that it is not proper conduct to do so, to curse people, even if they are wicked. His mercy is over all His creations (Psalms 145:9) is written even with regard to sinners.Moreover, it is inappropriate to cause the punishment of another, as it is written: Punishment, even for the righteous, is not good (Proverbs 17:26), even for a righteous person, it is improper to punish another.Explaining the cause of Gods anger, it is taught in the name of Rabbi Meir: When the sun rises and the kings of the East and the West place their crowns on their heads and bow down to the sun, the Holy One, Blessed be He, immediately grows angry. Since this occurs in the early hours every day, God becomes angry at His world at that moment every day.
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "God's anger, rooster, kings, and mercy.",
+    "heb_summary": "כעס אלוהים, תרנגול, מלכים, ורחמים.",
+    "passage_types": [
+      "STORY",
+      "PHILOSOPHIC"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Rabbi Yehoshua Ben Levi"
+        },
+        {
+          "en_name": "Rabbi Meir"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "East"
+        },
+        {
+          "en_name": "West"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Sun"
+        },
+        {
+          "en_name": "Crown"
+        }
+      ],
+      "Number": [
+        {
+          "en_name": "3",
+          "number_category": "Time",
+          "en_unit": "hour",
+          "en_context": "divine anger"
+        },
+        {
+          "en_name": "145",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "9",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "psalms reference"
+        },
+        {
+          "en_name": "17",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "proverbs reference"
+        },
+        {
+          "en_name": "26",
+          "number_category": "Misc",
+          "en_unit": "verse",
+          "en_context": "proverbs reference"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Rooster"
+        }
+      ]
+    }
+  }
+}

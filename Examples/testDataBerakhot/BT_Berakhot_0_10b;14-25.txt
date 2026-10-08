@@ -1,0 +1,152 @@
+﻿COST: Tokens: Total=11821 approx cost=$0.001817 (Prompt=7684, Completion=4137)
+SOURCE:
+Berakhot (Zeraim) 10b:14-25
+
+HEBREW:
+״נעשה נא עלית קיר קטנה״.רב ושמואל, חד אמר: עלייה פרועה היתה, וקירוה. וחד אמר: אכסדרה גדולה היתה וחלקוה לשנים.בשלמא למאן דאמר אכסדרה, היינו דכתיב ״קיר״ אלא למאן דאמר עלייה, מאי ״קיר״?שקירוה.בשלמא למאן דאמר עלייה, היינו דכתיב ״עליית״. אלא למאן דאמר אכסדרה, מאי ״עליית״?״מעולה״ שבבתים.״ונשים לו שם מטה ושלחן וכסא ומנורה״.אמר אביי, ואיתימא רבי יצחק: הרוצה להנות — יהנה, כאלישע. ושאינו רוצה להנות — אל יהנה, כשמואל הרמתי. שנאמר: ״ותשובתו הרמתה כי שם ביתו״, ואמר רבי יוחנן: שכל מקום שהלך שם — ביתו עמו.״ותאמר אל אישה הנה נא ידעתי כי איש אלהים קדוש הוא״, אמר רבי יוסי ברבי חנינא: מכאן שהאשה מכרת באורחין יותר מן האיש.״קדוש הוא״: מנא ידעה? רב ושמואל. חד אמר: שלא ראתה זבוב עובר על שלחנו, וחד אמר: סדין של פשתן הציעה על מטתו ולא ראתה קרי עליו.״קדוש הוא״ אמר רבי יוסי ברבי חנינא: הוא קדוש ומשרתו אינו קדוש. שנאמר: ״ויגש גיחזי להדפה״, אמר רבי יוסי ברבי חנינא: שאחזה בהוד יפיה.״עובר עלינו תמיד״, אמר רבי יוסי ברבי חנינא משום רבי אליעזר בן יעקב: כל המארח תלמיד חכם בתוך ביתו ומהנהו מנכסיו — מעלה עליו הכתוב כאילו מקריב תמידין.
+
+ENGLISH:
+Having mentioned the chamber on the roof built for Elisha by the woman from Shunem, the Gemara now describes the entire event. The woman from Shunem suggested to her husband: Let us make, I pray thee, a small chamber on the roof, and let us place a bed, table, stool and candlestick for him there, and it will be, when he comes to us, that he will turn in there (II Kings 4:10). Rav and Shmuel argued over the meaning of small chamber. One of them said: They had an uncovered second story on their roof, over which they built a ceiling; and one of them said: There was an enclosed veranda [ akhsadra ] and they divided it in half. The Gemara comments: Granted, according to the one who said that it was an enclosed veranda which they divided in two, it makes sense that the term wall [ kir ] was written. However, according to the one who said that they had an open second story, what is the meaning of wall? The Gemara responds: The one who said that they had an uncovered second story interprets kir not as wall but as ceiling meaning that they built a ceiling [ kirui ] over it.On the other hand, granted, according to the one who said that they had an uncovered second story, it makes sense that the term second story [ aliyat ] was written. But according to the one who said that it was an enclosed veranda, what is the meaning of the term second story? The Gemara responds: The one who said that it was an enclosed veranda interprets aliyat not as second story, but as the most outstanding [ meula ] of the rooms. Incidental to this discussion, the Gemara analyzes the statement made by the woman from Shunem to her husband with regard to the provisions that they would place in the room for Elisha: And let us place a bed, table, stool and candlestick for him there. Abaye, and some say Rabbi Yitzhak, said: A great man who seeks to enjoy the contributions of those who seek to honor him may enjoy those gifts, as Elisha enjoyed gifts given him by the woman from Shunem, among others. And one who does not seek to enjoy these gifts should not enjoy them, as was the practice of the prophet Samuel from Rama, who would not accept gifts from anyone at all. From where do we know that this was Samuels custom? As it is stated: And he returned to Rama, for there was his house, and there he judged Israel, and he built an altar to the Lord (I Samuel 7:17). And similarly, Rabbi Yohanan said: Every place where Samuel went, his house was with him, so he would have everything that he needed and not be forced to benefit from public contributions. One may opt to conduct himself in accordance with either of these paths.Regarding the woman from Shunem: And she said to her husband: Behold now, I perceive that he is a holy man of God who passes by us continually (II Kings 4:9). Rabbi Yosei, son of Rabbi Hanina, said: From here, where the woman from Shunem perceived the prophets greatness before her husband did, derive that a woman recognizes the character of her guests more than a man does.The Gemara notes that the woman from Shunem said that he is holy. The Gemara asks: From where did she know that he was holy? Rav and Shmuel disagreed over this. One of them said: She never saw a fly pass over his table; and the other said: She spread a white linen sheet on his bed, and despite that even the smallest stain is visible on white linen, and nocturnal seminal emissions are not uncommon, she never saw the residue of a seminal emission on it. With regard to the verse: He is holy, Rabbi Yosei, son of Rabbi Hanina, said: The woman from Shunem intimated that: He is holy, but his attendant, Geihazi, is not holy, as she saw no indication of holiness in him ( Iyyun Yaakov ). Here too, she correctly perceived the character of her guest, as it is later stated: And Geihazi approached her to push her away [ lehodfa ] (II Kings 4:27). And Rabbi Yosei, son of Rabbi Hanina, said: He grabbed her by the majesty of her beauty [ hod yofya ], meaning that when he pushed her he grabbed her breasts in a licentious manner.With regard to the phrasing of the verse: He is a holy man of God who passes by us continually, Rabbi Yosei, son of Rabbi Hanina, said in the name of Rabbi Eliezer ben Yaakov: From this verse we derive that one who hosts a Torah scholar in his home and lets him enjoy his possessions, the verse ascribes to him credit as if he is sacrificing the daily [ tamid ] offering, as the verse states: Passes by us continually [ tamid ].
+
+EXTRACTED (JSON):
+{
+  "res": {
+    "en_summary": "Elisha's chamber, hospitality, holiness, and gifts.",
+    "heb_summary": "חדר אלישע, אירוח, קדושה, ומתנות.",
+    "passage_types": [
+      "STORY"
+    ],
+    "Entities": {
+      "Person": [
+        {
+          "en_name": "Elisha"
+        },
+        {
+          "en_name": "Woman From Shunem"
+        },
+        {
+          "en_name": "Rav"
+        },
+        {
+          "en_name": "Shmuel"
+        },
+        {
+          "en_name": "Abaye"
+        },
+        {
+          "en_name": "Yitzhak"
+        },
+        {
+          "en_name": "Samuel"
+        },
+        {
+          "en_name": "Yohanan"
+        },
+        {
+          "en_name": "Yosei"
+        },
+        {
+          "en_name": "Hanina"
+        },
+        {
+          "en_name": "Eliezer"
+        },
+        {
+          "en_name": "Yaakov"
+        },
+        {
+          "en_name": "Geihazi"
+        }
+      ],
+      "Place": [
+        {
+          "en_name": "Shunem"
+        },
+        {
+          "en_name": "Rama"
+        }
+      ],
+      "Nation": [
+        {
+          "en_name": "Israel"
+        }
+      ],
+      "Symbol": [
+        {
+          "en_name": "Bed"
+        },
+        {
+          "en_name": "Table"
+        },
+        {
+          "en_name": "Stool"
+        },
+        {
+          "en_name": "Candlestick"
+        },
+        {
+          "en_name": "Daily Offering"
+        }
+      ],
+      "Animal": [
+        {
+          "en_name": "Fly"
+        }
+      ]
+    },
+    "Rel": {
+      "studiedFrom": [
+        {
+          "term1": "Yosei",
+          "term2": "Eliezer"
+        }
+      ],
+      "childOfFather": [
+        {
+          "term1": "Yosei",
+          "term2": "Hanina"
+        },
+        {
+          "term1": "Eliezer",
+          "term2": "Yaakov"
+        }
+      ],
+      "spokeWith": [
+        {
+          "term1": "Woman From Shunem",
+          "term2": "Geihazi"
+        }
+      ],
+      "disagreedWith": [
+        {
+          "term1": "Rav",
+          "term2": "Shmuel"
+        }
+      ],
+      "visited": [
+        {
+          "term1": "Elisha",
+          "term2": "Shunem"
+        }
+      ],
+      "associatedWithPlace": [
+        {
+          "term1": "Samuel",
+          "term2": "Rama"
+        }
+      ],
+      "personBelongsToNation": [
+        {
+          "term1": "Samuel",
+          "term2": "Israel"
+        }
+      ],
+      "contrastedWith": [
+        {
+          "term1": "Elisha",
+          "term2": "Samuel"
+        }
+      ]
+    }
+  }
+}
