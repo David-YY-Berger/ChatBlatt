@@ -26,6 +26,19 @@ _CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in Entity
 # Mapping from JSON rel field name -> RelType enum
 _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
+# en_unit values that mark a Number as a verse/citation reference (e.g. "see verse 5")
+# rather than a true countable quantity - these are deterministically dropped.
+_NUMBER_UNITS_TO_IGNORE: Set[str] = {"verse"}
+
+
+def _is_ignored_number_unit(entity: Entity) -> bool:
+    """True if entity is a Number whose en_unit marks it as a verse/citation reference."""
+    return (
+        isinstance(entity, ENumber)
+        and entity.en_unit is not None
+        and entity.en_unit.strip().lower() in _NUMBER_UNITS_TO_IGNORE
+    )
+
 
 def _lookup_rel_type(rel_field_name: str) -> Optional[RelType]:
     """RelType for a JSON rel field name (exact match first, then case-insensitive), or None."""
@@ -221,7 +234,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         it in source_entity_map. Person mentions go through PersonDisambiguator (different
         people can share a name); every other type is matched by name + type.
         Returns the entity (with its key), or None if skipped (no name, filtered out as a
-        non-proper noun, or already resolved earlier in this source).
+        non-proper noun or verse-unit Number, or already resolved earlier in this source).
         """
         en_name = entity_data.get("en_name", "").strip()
         if not en_name:
@@ -235,9 +248,11 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # nouns instead of proper nouns for Person/Place. Drop any entity whose
         # name contains (as a substring) a known non-proper-noun term, and record
         # its identity so relationships referencing it are skipped too.
-        if is_ignored_entity_name(en_name, entity_type):
+        # Numbers whose unit is "verse" (e.g. "see verse 5") are a citation/cross-reference,
+        # not a true countable quantity, so they are dropped the same way.
+        if is_ignored_entity_name(en_name, entity_type) or _is_ignored_number_unit(entity):
             ignored_entity_keys.add(lookup_key)
-            print(f"  Skipping non-proper-noun {entity_type.value} entity: '{en_name}'")
+            print(f"  Skipping non-proper-noun/verse-unit {entity_type.value} entity: '{en_name}'")
             return None
 
         if lookup_key in source_entity_map:
