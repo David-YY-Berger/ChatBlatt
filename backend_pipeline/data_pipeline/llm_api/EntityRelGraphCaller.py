@@ -90,7 +90,10 @@ class EntityRelGraphCaller:
                 "  NOT: Generic roles (king, priest), anonymous descriptions (survivors, rulers),\n"
                 "  NOT: possessive phrases (my people, his servants), indefinite references (he who, those who),\n"
                 "  NOT: or talking animals (use Animal category for those).\n"
-                "  Extract even if mentioned incidentally or as possessives.\n\n"
+                "  Extract even if mentioned incidentally or as possessives.\n"
+                "  Strip titles/epithets from en_name - use the BARE proper name only, never prefixed with a\n"
+                "  role/title. 'King Ahaz' → 'Ahaz', 'Queen Esther' → 'Esther', 'Rabbi Akiva' → 'Akiva',\n"
+                "  'the prophet Elijah' → 'Elijah'. The title itself is never part of en_name.\n\n"
                 "  If same name appears with truly different spelling, extract as separate entities with Alias"
                 
                 "- Animal: Named real or mythical animals (proper nouns or specific types).\n"
