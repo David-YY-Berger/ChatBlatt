@@ -1,0 +1,62 @@
+# Population Pipeline — Overview
+
+Source of truth: `backend_pipeline/data_pipeline/populator_scripts/*.py`,
+`backend_pipeline/data_pipeline/DBScriptParentClass.py`.
+
+All populators are unittest-style classes (`DBParentClass` base) whose `test_*` methods are
+the entry points (run via `python -m unittest <module>.<class>.<test_method>`, same as any
+other test). `DBParentClass.setUpClass` connects via `DBFactory.get_prod_db_mongo()` — see
+`conventions/safety_and_testing.md` before running any of them.
+
+## Run order
+
+1. **`DBPopulateSourceContent`** — fetches passages from Sefaria into `Sources.*`.
+2. **`DBPrePopulateAmbiguosEntitys`** — seeds well-known, name-ambiguous people (two kings
+   named Joash, etc.) as separate `EPerson`s *before* any source-derived entity exists, so
+   later mentions route to the right one. Details: `entity_prepopulation.md`.
+3. **`DBPopulateEntityRelGraph`** — per source: extract entities + relationships via LLM,
+   resolve Person mentions through `PersonDisambiguator`, write to `Graphs.*`.
+4. **`DBPopulateEntityEnrichment`** — fills entity metadata (`display_heb_name`,
+   `timePeriod`/`isWoman`/`isNonJew`/`isGroup`/`roles` for `EPerson`, etc.) for entities that
+   fail `has_metadata()`.
+5. **`DBPopulateMergeEntities`** — CSV-driven merge of duplicate entities (as needed, not
+   every run).
+6. **`DBPopulateFaissAndBm25`** — builds the FAISS + BM25 search indexes from source content.
+
+Steps 3–4 share a two-phase scaffold (`DBPopulateLlmBase`); step 2 and 5 are direct
+JSON/CSV-driven DB writes; step 6 reads already-populated source content.
+
+## Two-phase LLM scaffold (`DBPopulateLlmBase`)
+
+- **Phase 1** (`_extract_from_passage`, implemented per subclass): iterate sources, call the
+  LLM once per source (no retries), write one JSON file per source to `_get_output_dir()`
+  (filename = source key with `:` → `;`).
+- **Phase 2** (`_process_json_entries`, implemented per subclass): read those JSON files
+  back and write their contents to the DB.
+
+### `DBPopulateEntityRelGraph` phase 2 specifics
+
+- Entries sorted by `source_entry_sort_key` (book order, then section — Genesis and
+  Berakhot interleave if both are "book order 1").
+- **One source at a time, each in its own transaction** (`run_in_transaction`). A failure
+  rolls back only that source and stops the run; earlier sources stay committed. Re-running
+  is safe — nothing already written is duplicated.
+- Per source: (1) insert/resolve entities (Person → `PersonDisambiguator`, see
+  `person_disambiguation.md`; everything else → `try_insert_entity`) — names matching the
+  ignore filter are skipped (see `entity_ignore_filter.md`); (2) insert relationships,
+  resolved through that source's own name→key map; (3) upsert `SourceMetadata`.
+- **The populator never modifies existing entity documents** — names, `book_references`,
+  etc. are never touched once written.
+
+## Idempotency & transaction conventions (apply to any new populator)
+
+- Keep each transaction small (one source / one entry / a small batch) — Atlas aborts
+  transactions over 60s.
+- A transaction callback **must be safe to re-run from scratch** (pymongo retries it on
+  transient errors) — no side effects outside the DB inside the callback.
+- Prefer DB-level dedup (`try_insert_entity`/`try_insert_rel`, or a fresh
+  `get_entities_by_display_en_name` query) over an in-process cache that could go stale
+  across a retry.
+- When DB-level dedup isn't possible (e.g. `insert_entity` has none, by design, for Person),
+  track progress externally (a small JSON file mapping a stable id → DB key, written only
+  *after* the transaction that created it commits) — see `entity_prepopulation.md`.
