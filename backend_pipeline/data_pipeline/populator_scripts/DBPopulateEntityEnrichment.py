@@ -67,6 +67,14 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         self.book_to_enrich = Books.BERAKHOT
         # ===============================
 
+        # ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======
+        # Leave as None to process the whole book. Caps which sources of book_to_enrich are
+        # iterated (book order) - same cap pattern as DBPopulateEntityRelGraph.max_sources_to_extract,
+        # useful to bound a quick/cheap test run before committing to the whole book.
+        # self.max_sources_to_extract: Optional[int] = None
+        self.max_sources_to_extract: Optional[int] = 100
+        # ===============================
+
         self.enrichment_caller = EntityEnrichmentCaller()
 
     def tearDown(self):
@@ -307,6 +315,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
         # contents = get_examples_src_contents(self.db_api)
         contents = self.db_api.get_all_src_contents_by_book(self.book_to_enrich)
+        if self.max_sources_to_extract is not None:
+            contents = contents[:self.max_sources_to_extract]
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:

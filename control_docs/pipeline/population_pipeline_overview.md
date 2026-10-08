@@ -60,14 +60,16 @@ the model-provider switch) — see `DBPopulateEntityRelGraph.book_to_extract` an
 to thread a book through — `DBPopulateEntityEnrichment` has its own full override of
 `_extract_all_to_json` with a different signature (no `book` param) and would break.
 
-`DBPopulateEntityRelGraph` also has an optional `self.max_sources_to_extract` (`setUp`,
-`# ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======`), `None` by default — set it to an int
-to cap the run to the first N sources of `book_to_extract` (book order, e.g. the first 100
-of Berakhot) for a cheap/quick test before committing to the whole book.
-`DBPopulateEntityEnrichment` has no such cap — it's naturally bounded already, since it only
-ever calls the LLM for sources whose `SourceMetadata.entity_keys` has an unenriched entity
-(i.e. sources `DBPopulateEntityRelGraph` already processed); iterating the rest of the book
-costs a cheap metadata lookup per source but no LLM call.
+Both `DBPopulateEntityRelGraph` and `DBPopulateEntityEnrichment` have an optional
+`self.max_sources_to_extract` (`setUp`, `# ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======`),
+`None` by default — set it to an int to cap the run to the first N sources of
+`book_to_extract`/`book_to_enrich` (book order, e.g. the first 100 of Berakhot) for a
+cheap/quick test before committing to the whole book. `DBPopulateEntityEnrichment` is also
+naturally bounded without this cap — it only ever calls the LLM for sources whose
+`SourceMetadata.entity_keys` has an unenriched entity (i.e. sources `DBPopulateEntityRelGraph`
+already processed) — but the explicit cap keeps both populators' test runs scoped to the
+exact same N sources and avoids the (cheap, but non-zero) per-source metadata lookup for
+every source beyond that in the book.
 
 ### Output directories (`Paths.get_entity_rel_graph_output_dir` / `get_entity_enrichment_output_dir`)
 
