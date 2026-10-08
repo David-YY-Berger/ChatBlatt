@@ -372,21 +372,6 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             LocalPrinter.print_to_file(result_dict, FileTypeEnum.FileType.JSON, out_path)
             LocalPrinter.print_to_file(output_text, FileTypeEnum.FileType.TXT, out_path)
 
-            # Debug-only dump of the (pre-enrichment) entity JSON list. This MUST NOT
-            # live directly in _get_output_dir(): Phase 2 (test_populate_from_jsons)
-            # scans every *.json file in that directory and expects each one to be a
-            # dict shaped like {"entities": [...], "key": ...}. This dump is a plain
-            # list of JSON strings, so writing it there previously caused
-            # "'list' object has no attribute 'get'" once at least one source had
-            # entities to enrich. Keep it in a subdirectory that Phase 2 never scans.
-            debug_dir = os.path.join(self._get_output_dir(), "entity_lists_debug")
-            os.makedirs(debug_dir, exist_ok=True)
-            entity_list_out_path = os.path.join(
-                debug_dir, f"{src_content.key.replace(':', ';')}_entity_json_list"
-            )
-            LocalPrinter.print_to_file(entity_json_list, FileTypeEnum.FileType.JSON, entity_list_out_path)
-            LocalPrinter.print_to_file(entities_block, FileTypeEnum.FileType.TXT, entity_list_out_path)
-
         print(f"\n{'='*60}")
         print(
             f"PROCESSED: {num_processed} sources, SKIPPED (no entities to enrich): {num_skipped}, "
