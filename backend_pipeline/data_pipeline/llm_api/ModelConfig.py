@@ -89,6 +89,15 @@ class ModelConfig:
         ModelProvider.GEMINI_PAID_THINKING,
     }
 
+    # All Gemini variants (vs. OpenAI) - used to gate Gemini-only features like
+    # explicit context caching (see EntityRelGraphCaller._create_context_cache).
+    GEMINI_PROVIDERS = {
+        ModelProvider.GEMINI_FREE,
+        ModelProvider.GEMINI_FREE_THINKING,
+        ModelProvider.GEMINI_PAID,
+        ModelProvider.GEMINI_PAID_THINKING,
+    }
+
     # Cost per million tokens (official pricing, for logging)
     # Gemini 2.5 Flash paid tier: $0.30/1M input, $2.50/1M output (output price
     # includes thinking tokens) - see https://ai.google.dev/gemini-api/docs/pricing
@@ -140,6 +149,11 @@ class ModelConfig:
     def get_cost_per_million(cls) -> dict:
         """Get the cost per million tokens for current provider."""
         return cls.COST_PER_MILLION[cls._current_provider]
+
+    @classmethod
+    def is_gemini_provider(cls) -> bool:
+        """Whether the current provider is a Gemini variant (vs. e.g. OpenAI)."""
+        return cls._current_provider in cls.GEMINI_PROVIDERS
 
     @classmethod
     def is_thinking_enabled(cls) -> bool:

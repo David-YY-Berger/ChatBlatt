@@ -19,11 +19,13 @@ Usage:
 import asyncio
 import logging
 import random
-from typing import Tuple
-from pydantic_ai import Agent, ModelSettings
+from typing import Optional, Tuple
+from pydantic_ai import Agent, ModelSettings, NativeOutput
 from pydantic_ai.exceptions import ModelHTTPError
+from pydantic_ai.providers.google import GoogleProvider
 from pydantic_ai.usage import RunUsage
 from pydantic import ValidationError
+from google.genai.types import CreateCachedContentConfig
 
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig
 from backend.models_db.Enums import NumberCategory
@@ -43,6 +45,22 @@ _RATE_LIMIT_RETRYABLE_STATUS_CODES = {429, 500, 503}
 _RATE_LIMIT_MAX_ATTEMPTS = 6
 _RATE_LIMIT_BASE_DELAY_SECONDS = 10.0
 
+# Gemini explicit context caching (see control_docs/pipeline/llm_context_caching.md) - the
+# system prompt is identical on every call for a given run (only the passage text varies),
+# so it's cached once per `EntityRelGraphCaller` instance and reused for every source in the
+# run. TTL is kept short-ish and refreshed on a 404 mid-run rather than sized to cover an
+# entire run up front, so a short/test run isn't paying cache storage for far longer than
+# it's actually used.
+_CONTEXT_CACHE_TTL_SECONDS = 3600  # 1 hour
+_CONTEXT_CACHE_NOT_FOUND_STATUS = 404
+_CONTEXT_CACHE_MAX_REFRESH_ATTEMPTS = 2
+
+# Gemini's cached-input rate has consistently been ~10% of the standard input rate across the
+# Flash/Flash-Lite tiers (checked against https://ai.google.dev/gemini-api/docs/pricing, Oct
+# 2026) - used only to adjust the cost ESTIMATE in _calculate_cost below. Revisit if Google's
+# pricing page ever shows a different ratio.
+_CACHE_DISCOUNT_FACTOR = 0.1
+
 TRIBES_LIST_STR = ', '.join(sorted([t.title() for t in TRIBES_OF_ISRAEL]))
 NUMBER_CATEGORIES_STR = ', '.join(e.value for e in NumberCategory)
 
@@ -55,11 +73,22 @@ class EntityRelGraphCaller:
     Change provider with: ModelConfig.set_provider(ModelProvider.GEMINI_FREE)
     """
 
-    def __init__(self):
-        """Initialize with current ModelConfig settings."""
+    def __init__(self, use_context_cache: bool = True):
+        """
+        Initialize with current ModelConfig settings.
+
+        Args:
+            use_context_cache: On Gemini providers, cache the (large, call-invariant) system
+                prompt below as a Gemini context-cache resource and reuse it for every call
+                this instance makes, instead of resending it with every request. Falls back
+                to the original uncached behavior for non-Gemini providers, or if cache
+                creation fails for any reason. See
+                control_docs/pipeline/llm_context_caching.md for the mechanism/tradeoffs.
+        """
         ModelConfig.ensure_api_key_in_env()
 
         model_str = ModelConfig.get_pydantic_model()
+        self._model_name = ModelConfig.get_model_name()
         is_thinking = ModelConfig.is_thinking_enabled()
         logger.info(f"Initializing EntityRelGraphCaller with model: {model_str}, thinking={is_thinking}")
 
@@ -67,7 +96,7 @@ class EntityRelGraphCaller:
         if is_thinking:
             # Enable thinking with a budget (tokens allocated for internal reasoning)
             # Higher budget = more thorough reasoning but more tokens used
-            settings = ModelSettings(
+            self._model_settings = ModelSettings(
                 temperature=0.5,
                 extra_body={
                     "thinkingConfig": {
@@ -76,15 +105,11 @@ class EntityRelGraphCaller:
                 }
             )
         else:
-            settings = ModelSettings(
+            self._model_settings = ModelSettings(
                 temperature=0.5  # Lower temp for consistent structured extraction
             )
 
-        self.agent = Agent(
-            model=model_str,
-            output_type=FinalResponse,
-            model_settings=settings,
-            system_prompt=(
+        self._system_prompt = (
                 "Extract entities and relationships from the text.\n\n"
                 
                 "=== SUMMARY REQUIREMENTS ===\n"
@@ -284,27 +309,108 @@ class EntityRelGraphCaller:
                 "- Omit empty lists/objects entirely.\n"
                 "- All relationship terms MUST use the EXACT SAME spelling as the extracted entity names.\n"
                 "- Return only populated data."
-            ),
+        )
+
+        self._google_provider: Optional[GoogleProvider] = None
+        self._context_cache_name: Optional[str] = None
+        output_type = FinalResponse
+
+        if use_context_cache and ModelConfig.is_gemini_provider():
+            try:
+                self._google_provider = GoogleProvider()
+                self._context_cache_name = self._create_context_cache()
+                self._model_settings["google_cached_content"] = self._context_cache_name
+                # `google_cached_content` strips `tools`/`tool_config`/`system_instruction` from
+                # every request (the cache resource owns them) - FinalResponse's tool-based
+                # output (pydantic-ai's default structured-output mode for Gemini) would
+                # silently stop working, so switch to Gemini's native JSON-schema output mode,
+                # which isn't affected, instead.
+                output_type = NativeOutput(FinalResponse)
+                logger.info(f"Gemini context cache active: {self._context_cache_name}")
+            except Exception as e:
+                logger.warning(f"Gemini context cache unavailable ({e}); falling back to uncached calls.")
+                self._google_provider = None
+                self._context_cache_name = None
+
+        agent_kwargs = dict(
+            model=model_str,
+            output_type=output_type,
+            model_settings=self._model_settings,
             retries=0,
         )
+        if self._context_cache_name is None:
+            # Not cached (non-Gemini provider, or cache creation failed) - send the system
+            # prompt with every call, same as before this feature existed.
+            agent_kwargs["system_prompt"] = self._system_prompt
+
+        self.agent = Agent(**agent_kwargs)
+
+    def _create_context_cache(self) -> str:
+        """
+        Creates (or recreates, e.g. after expiry mid-run - see `_extract`) the Gemini cache
+        resource holding `self._system_prompt`, returning its resource name. Raises on
+        failure; callers decide how to handle that (initial creation in __init__ falls back
+        to uncached calls, a mid-run recreation in `_extract` surfaces the error after
+        exhausting its own retry budget).
+        """
+        cache = self._google_provider.client.caches.create(
+            model=self._model_name,
+            config=CreateCachedContentConfig(
+                system_instruction=self._system_prompt,
+                ttl=f"{_CONTEXT_CACHE_TTL_SECONDS}s",
+                display_name="entity_rel_graph_system_prompt",
+            ),
+        )
+        return cache.name
+
+    def close(self) -> None:
+        """
+        Deletes the Gemini context-cache resource (if any), so its storage isn't billed past
+        the end of this run rather than waiting out its TTL. Safe to call even if no cache was
+        ever created, or if it already expired/was already deleted.
+        """
+        if self._context_cache_name and self._google_provider:
+            try:
+                self._google_provider.client.caches.delete(name=self._context_cache_name)
+                logger.info(f"Gemini context cache deleted: {self._context_cache_name}")
+            except Exception as e:
+                logger.warning(f"Failed to delete Gemini context cache {self._context_cache_name}: {e}")
+            finally:
+                self._context_cache_name = None
 
     async def _extract(self, passage: str):
         """
         Internal async call. Rate-limit/server errors (HTTP 429/500/503) are retried
         with exponential backoff - these are transient and cost nothing extra to retry.
+        A 404 while a context cache is active means the cache resource expired or otherwise
+        vanished mid-run (e.g. a run spanning longer than its TTL) - it's recreated and the
+        call retried immediately, bounded by its own small attempt budget (separate from the
+        rate-limit one above, since the failure mode and fix are different).
         ValidationError and any other error are NOT retried (single attempt), since
         retrying a bad output just burns tokens for the same mistake.
         """
         attempt = 0
+        cache_refresh_attempts = 0
         while True:
             try:
-                result = await self.agent.run(passage)
+                result = await self.agent.run(passage, model_settings=self._model_settings)
                 return result
             except ValidationError as e:
                 # Log validation error but don't retry
                 print(f"Validation failed on first attempt: {e}")
                 raise  # Re-raise to handle in calling code
             except ModelHTTPError as e:
+                if (
+                    self._context_cache_name
+                    and e.status_code == _CONTEXT_CACHE_NOT_FOUND_STATUS
+                    and cache_refresh_attempts < _CONTEXT_CACHE_MAX_REFRESH_ATTEMPTS
+                ):
+                    cache_refresh_attempts += 1
+                    print(f"Gemini context cache {self._context_cache_name} not found (expired?); "
+                          f"recreating (attempt {cache_refresh_attempts}/{_CONTEXT_CACHE_MAX_REFRESH_ATTEMPTS})...")
+                    self._context_cache_name = self._create_context_cache()
+                    self._model_settings["google_cached_content"] = self._context_cache_name
+                    continue
                 attempt += 1
                 if e.status_code not in _RATE_LIMIT_RETRYABLE_STATUS_CODES or attempt >= _RATE_LIMIT_MAX_ATTEMPTS:
                     print(f"Extraction failed (HTTP {e.status_code}), giving up after {attempt} attempt(s): {e}")
@@ -319,12 +425,21 @@ class EntityRelGraphCaller:
                 raise
 
     def _calculate_cost(self, usage: RunUsage) -> float:
-        """Estimates cost in USD based on current provider's pricing."""
+        """
+        Estimates cost in USD based on current provider's pricing. Tokens served from the
+        Gemini context cache (usage.details['cached_content_tokens'], populated only when
+        google_cached_content is active - see __init__) are billed at _CACHE_DISCOUNT_FACTOR
+        of the standard input rate instead of the full rate.
+        """
         pricing = ModelConfig.get_cost_per_million()
 
-        input_cost = (usage.input_tokens / 1_000_000) * pricing["input"]
+        cached_tokens = usage.details.get('cached_content_tokens', 0)
+        standard_input_tokens = usage.input_tokens - cached_tokens
+
+        input_cost = (standard_input_tokens / 1_000_000) * pricing["input"]
+        cached_input_cost = (cached_tokens / 1_000_000) * pricing["input"] * _CACHE_DISCOUNT_FACTOR
         output_cost = (usage.output_tokens / 1_000_000) * pricing["output"]
-        return input_cost + output_cost
+        return input_cost + cached_input_cost + output_cost
 
     async def extract_graph_from_passage(self, passage: str) -> Tuple[str, RunUsage, float]:
         """
@@ -342,7 +457,7 @@ class EntityRelGraphCaller:
                 exclude_none=True
             )
 
-            usage = result.usage()
+            usage = result.usage
             cost = self._calculate_cost(usage)
 
             return formatted_json, usage, cost

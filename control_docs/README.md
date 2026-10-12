@@ -27,6 +27,7 @@ govern how these docs get used and maintained.
 | [`pipeline/entity_prepopulation.md`](pipeline/entity_prepopulation.md) | Pre-populating well-known ambiguous people (`DBPrePopulateAmbiguosEntitys`) |
 | [`pipeline/person_disambiguation.md`](pipeline/person_disambiguation.md) | How a same-named Person mention is routed to the right DB entity |
 | [`pipeline/entity_ignore_filter.md`](pipeline/entity_ignore_filter.md) | Non-proper-noun filter for extracted Person/Place names |
+| [`pipeline/llm_context_caching.md`](pipeline/llm_context_caching.md) | Gemini explicit context caching in `EntityRelGraphCaller`/`EntityEnrichmentCaller` - mechanism, lifecycle, cost, dependency tradeoff, 1024-token cache minimum |
 
 ## Conventions
 | Doc | Covers |

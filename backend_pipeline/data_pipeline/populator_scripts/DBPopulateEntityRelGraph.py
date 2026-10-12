@@ -91,6 +91,9 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         self.person_disambiguator = PersonDisambiguator(self.db_api)
 
     def tearDown(self):
+        # Deletes the Gemini context-cache resource (if one was created) so its storage isn't
+        # billed past the end of this run - see EntityRelGraphCaller.close().
+        self.pydantic_caller.close()
         super().tearDown()
 
     # ─── DBPopulateLlmBase abstract method implementations ────────────────────

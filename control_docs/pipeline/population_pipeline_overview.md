@@ -105,7 +105,8 @@ time the DB has been reset since that book was last populated.
   attempts, ~10s–320s + jitter) — this is where `google-gla` 429s from Gemini get absorbed,
   before a source is ever counted as failed. A genuine bad/invalid model output
   (`ValidationError`) is still never retried — re-asking would just burn tokens repeating
-  the same mistake.
+  the same mistake. A 404 caused by a mid-run-expired Gemini context cache is handled
+  separately (recreate cache, retry) - see `llm_context_caching.md`.
 - `DBPopulateEntityEnrichment` has its own full override of `_extract_all_to_json` (different
   source list/filtering, no file-existence skip — see its "Phase 1 override" below), but
   mirrors the shared loop's catch-and-skip: the extraction call is wrapped in try/except, a

@@ -78,6 +78,9 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         self.enrichment_caller = EntityEnrichmentCaller()
 
     def tearDown(self):
+        # Deletes the Gemini context-cache resource (if one was created) so its storage isn't
+        # billed past the end of this run - see EntityEnrichmentCaller.close().
+        self.enrichment_caller.close()
         super().tearDown()
 
     # --- DBPopulateLlmBase abstract method implementations --------------------

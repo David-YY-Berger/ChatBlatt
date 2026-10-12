@@ -3,14 +3,14 @@
 LMM API Package - Simple interface for LLM calls using Gemini or OpenAI.
 
 Quick Start:
-    from backend.data_pipeline.llm_api import ModelConfig, ModelProvider, PydanticCaller
+    from backend.data_pipeline.llm_api import ModelConfig, ModelProvider, EntityRelGraphCaller
 
     # Use Gemini (default)
-    caller = PydanticCaller()
+    caller = EntityRelGraphCaller()
 
     # Switch to OpenAI
     ModelConfig.set_provider(ModelProvider.OPENAI)
-    caller = PydanticCaller()
+    caller = EntityRelGraphCaller()
 
     # Extract data
     json_str, usage, cost = await caller.extract_graph_from_passage(passage)

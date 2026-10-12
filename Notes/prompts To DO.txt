@@ -4,25 +4,14 @@ before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
 
 todo {{
 
-whilte this pre populate is running, make the repo of just data backup files....
-[small side task - create separate Repo for eitz_habina_data]
-
 pre populate script {{
 	
 }}
 
 -----
 
-check berakhot: carefully review log of what we rejected..
-review UI results (should not get numbers of verses...)
-get metadata to get alternate display names?
-
-see if theres a diff cheaper LLM which will be good too..
-
-
-add to place type - Region. 
-make sure this is added throughout the backend, enums, pydantic calls with llm, entity enrichment, frontend, etc. 
-make sure to update control docs
+run berakhot again, ask copilot to make an easy runner script
+see if more or less than 5 shekel.
 
 
 fin

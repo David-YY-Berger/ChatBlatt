@@ -29,13 +29,24 @@ import logging
 from typing import List, Optional, Tuple
 
 from pydantic import BaseModel, Field, field_validator, model_validator
-from pydantic_ai import Agent, ModelSettings
+from pydantic_ai import Agent, ModelSettings, NativeOutput
+from pydantic_ai.providers.google import GoogleProvider
 from pydantic_ai.usage import RunUsage
+from google.genai.types import CreateCachedContentConfig
 
 from backend.models_db.Enums import PlaceType, RoleType, SymbolType, TimePeriod
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig
 
 logger = logging.getLogger(__name__)
+
+# Gemini explicit context caching - see control_docs/pipeline/llm_context_caching.md for the
+# mechanism (shared with EntityRelGraphCaller). Unlike that caller, a cache-expiry 404 here is
+# NOT recreated/retried mid-call - consistent with this class's existing "no retries" design
+# (see module docstring): it just becomes one failed source via extract_from_passage's
+# existing try/except, picked up by the usual failed-keys/REMINDER flow (DBPopulateLlmBase),
+# and resolved by re-running - which builds a fresh instance and a fresh cache.
+_CONTEXT_CACHE_TTL_SECONDS = 3600  # 1 hour
+_CACHE_DISCOUNT_FACTOR = 0.1  # see EntityRelGraphCaller._calculate_cost for the rationale
 
 _ROLE_VALUES = [r.value for r in RoleType]
 _TIME_PERIOD_VALUES = [t.value for t in TimePeriod]
@@ -238,26 +249,32 @@ class EntityEnrichmentCaller:
     Single call per passage — no retries.
     """
 
-    def __init__(self):
+    def __init__(self, use_context_cache: bool = True):
+        """
+        Args:
+            use_context_cache: On Gemini providers, cache the (large, call-invariant) system
+                prompt below as a Gemini context-cache resource and reuse it for every call
+                this instance makes, instead of resending it with every request. Falls back
+                to the original uncached behavior for non-Gemini providers, or if cache
+                creation fails for any reason. See
+                control_docs/pipeline/llm_context_caching.md for the mechanism/tradeoffs.
+        """
         ModelConfig.ensure_api_key_in_env()
 
         model_str = ModelConfig.get_pydantic_model()
+        self._model_name = ModelConfig.get_model_name()
         is_thinking = ModelConfig.is_thinking_enabled()
         logger.info(f"Initializing EntityEnrichmentCaller with model: {model_str}, thinking={is_thinking}")
 
         if is_thinking:
-            settings = ModelSettings(
+            self._model_settings = ModelSettings(
                 temperature=0.3,
                 extra_body={"thinkingConfig": {"thinkingBudget": 4096}},
             )
         else:
-            settings = ModelSettings(temperature=0.3)
+            self._model_settings = ModelSettings(temperature=0.3)
 
-        self.agent = Agent(
-            model=model_str,
-            output_type=EnrichmentResponse,
-            model_settings=settings,
-            system_prompt=(
+        self._system_prompt = (
                 "You will receive a PASSAGE and a JSON list of ENTITIES that need enrichment.\n"
                 "Your job is to fill in additional fields for those entities using ONLY "
                 "information present in the passage — never invent facts.\n\n"
@@ -321,9 +338,74 @@ class EntityEnrichmentCaller:
                 "- Omit empty lists entirely.\n"
                 "- If nothing can be determined for an entity, omit it from the response.\n"
                 "- If no entities can be enriched at all, return an empty response."
-            ),
+        )
+
+        self._google_provider: Optional[GoogleProvider] = None
+        self._context_cache_name: Optional[str] = None
+        output_type = EnrichmentResponse
+
+        if use_context_cache and ModelConfig.is_gemini_provider():
+            try:
+                self._google_provider = GoogleProvider()
+                self._context_cache_name = self._create_context_cache()
+                self._model_settings["google_cached_content"] = self._context_cache_name
+                # `google_cached_content` strips `tools`/`tool_config`/`system_instruction` from
+                # every request (the cache resource owns them) - EnrichmentResponse's tool-based
+                # output (pydantic-ai's default structured-output mode for Gemini) would
+                # silently stop working, so switch to Gemini's native JSON-schema output mode,
+                # which isn't affected, instead.
+                output_type = NativeOutput(EnrichmentResponse)
+                logger.info(f"Gemini context cache active: {self._context_cache_name}")
+            except Exception as e:
+                logger.warning(f"Gemini context cache unavailable ({e}); falling back to uncached calls.")
+                self._google_provider = None
+                self._context_cache_name = None
+
+        agent_kwargs = dict(
+            model=model_str,
+            output_type=output_type,
+            model_settings=self._model_settings,
             retries=0,
         )
+        if self._context_cache_name is None:
+            # Not cached (non-Gemini provider, or cache creation failed) - send the system
+            # prompt with every call, same as before this feature existed.
+            agent_kwargs["system_prompt"] = self._system_prompt
+
+        self.agent = Agent(**agent_kwargs)
+
+    def _create_context_cache(self) -> str:
+        """
+        Creates the Gemini cache resource holding `self._system_prompt`, returning its
+        resource name. Raises on failure - __init__ falls back to uncached calls.
+
+        Unlike EntityRelGraphCaller, a mid-run cache expiry here is NOT recreated/retried -
+        see the module-level note above for why a plain failed-source + re-run is enough.
+        """
+        cache = self._google_provider.client.caches.create(
+            model=self._model_name,
+            config=CreateCachedContentConfig(
+                system_instruction=self._system_prompt,
+                ttl=f"{_CONTEXT_CACHE_TTL_SECONDS}s",
+                display_name="entity_enrichment_system_prompt",
+            ),
+        )
+        return cache.name
+
+    def close(self) -> None:
+        """
+        Deletes the Gemini context-cache resource (if any), so its storage isn't billed past
+        the end of this run rather than waiting out its TTL. Safe to call even if no cache was
+        ever created, or if it already expired/was already deleted.
+        """
+        if self._context_cache_name and self._google_provider:
+            try:
+                self._google_provider.client.caches.delete(name=self._context_cache_name)
+                logger.info(f"Gemini context cache deleted: {self._context_cache_name}")
+            except Exception as e:
+                logger.warning(f"Failed to delete Gemini context cache {self._context_cache_name}: {e}")
+            finally:
+                self._context_cache_name = None
 
     async def extract_from_passage(
         self, passage: str, entity_json_list: Optional[List[str]] = None
@@ -344,7 +426,7 @@ class EntityEnrichmentCaller:
         """
         user_prompt = self._build_user_prompt(passage, entity_json_list)
         try:
-            result = await self.agent.run(user_prompt)
+            result = await self.agent.run(user_prompt, model_settings=self._model_settings)
 
             json_str = result.output.model_dump_json(
                 indent=2,
@@ -352,7 +434,7 @@ class EntityEnrichmentCaller:
                 exclude_none=True,
             )
 
-            usage = result.usage()
+            usage = result.usage
             cost = self._calculate_cost(usage)
             return json_str, usage, cost
 
@@ -375,7 +457,16 @@ class EntityEnrichmentCaller:
         )
 
     def _calculate_cost(self, usage: RunUsage) -> float:
+        """
+        Estimates cost in USD based on current provider's pricing. Tokens served from the
+        Gemini context cache (usage.details['cached_content_tokens'], populated only when
+        google_cached_content is active - see __init__) are billed at _CACHE_DISCOUNT_FACTOR
+        of the standard input rate instead of the full rate.
+        """
         pricing = ModelConfig.get_cost_per_million()
-        input_cost = (usage.input_tokens / 1_000_000) * pricing["input"]
+        cached_tokens = usage.details.get('cached_content_tokens', 0)
+        standard_input_tokens = usage.input_tokens - cached_tokens
+        input_cost = (standard_input_tokens / 1_000_000) * pricing["input"]
+        cached_input_cost = (cached_tokens / 1_000_000) * pricing["input"] * _CACHE_DISCOUNT_FACTOR
         output_cost = (usage.output_tokens / 1_000_000) * pricing["output"]
-        return input_cost + output_cost
+        return input_cost + cached_input_cost + output_cost
