@@ -67,11 +67,15 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         super().setUp()  # call parent setup first
 
         # ====== SWITCH MODEL HERE ======
-        # Uncomment ONE of these lines to choose your model:
+        # Uncomment ONE of these lines to choose your model (used when running this test
+        # directly, e.g. via PyCharm's test runner). A driver script (e.g.
+        # EntityPipelineRunner) may override this per-run by setting self.model_provider
+        # on the instance BEFORE setUp() runs - getattr below picks that up automatically;
+        # running this file directly is completely unaffected.
 
         # Standard modes (no extended thinking):
         # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
-        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        ModelConfig.set_provider(getattr(self, "model_provider", None) or ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
 
         # Thinking modes (deeper reasoning, better for complex passages):
@@ -80,10 +84,13 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # ===============================
 
         # ====== PARAMS ======
-        self.book_to_extract = Books.BERAKHOT
+        # Same override pattern as the model above: a driver script may pre-set
+        # self.book_to_extract / self.max_sources_to_extract on the instance before
+        # calling setUp() - getattr falls back to these hardcoded defaults otherwise.
+        self.book_to_extract = getattr(self, "book_to_extract", Books.BERAKHOT)
         # Leave as None to process the whole book.
         # self.max_sources_to_extract: Optional[int] = None
-        self.max_sources_to_extract: Optional[int] = 100
+        self.max_sources_to_extract: Optional[int] = getattr(self, "max_sources_to_extract", 100)
         # ===============================
 
         self.pydantic_caller = EntityRelGraphCaller()

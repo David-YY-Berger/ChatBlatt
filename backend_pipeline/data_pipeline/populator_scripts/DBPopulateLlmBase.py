@@ -106,6 +106,28 @@ class DBPopulateLlmBase(DBParentClass):
                   f"just these): {failed_keys}")
             print(f"{'='*60}")
 
+    def test_run_extraction_only(self) -> None:
+        """
+        Entry point: run phase 1 (LLM extraction -> JSON/TXT files) WITHOUT phase 2 - no DB
+        writes from this call itself. Useful to generate (or resume generating) a whole run's
+        JSON output - e.g. every book of Tanach/Bavli - so it can be spot-checked before ever
+        touching the real DB; call test_populate_from_jsons() (or the subclass's own richer
+        phase-2 entry point) separately afterwards once you're satisfied.
+
+        CAVEAT for DBPopulateEntityEnrichment specifically: its _extract_all_to_json override
+        already writes each source's enrichment to the DB as part of phase 1 itself (see that
+        class's docstring) - for that subclass this call is NOT DB-write-free, it's equivalent
+        to test_run_extraction_and_population. True no-DB-write extraction-only is only
+        meaningful for DBPopulateEntityRelGraph.
+        """
+        OsFunctions.create_dir_if_not_exists(self._get_output_dir())
+        failed_keys = asyncio.run(self._extract_all_to_json())
+        if failed_keys:
+            print(f"\n{'='*60}")
+            print(f"REMINDER: {len(failed_keys)} source(s) FAILED extraction (re-run this test to retry "
+                  f"just these): {failed_keys}")
+            print(f"{'='*60}")
+
     def test_force_clear_output_dir(self) -> None:
         """Deliberately wipe _get_output_dir() - use before a run that must redo every source."""
         OsFunctions.clear_create_directory(self._get_output_dir())

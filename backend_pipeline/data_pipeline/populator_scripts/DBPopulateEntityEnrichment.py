@@ -59,12 +59,18 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
         # ====== SWITCH MODEL HERE ======
         # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)
-        ModelConfig.set_provider(ModelProvider.GEMINI_PAID)
+        # A driver script (e.g. EntityPipelineRunner) may override this per-run by setting
+        # self.model_provider on the instance BEFORE setUp() runs; running this file
+        # directly is completely unaffected (falls back to GEMINI_PAID below).
+        ModelConfig.set_provider(getattr(self, "model_provider", None) or ModelProvider.GEMINI_PAID)
         # ModelConfig.set_provider(ModelProvider.OPENAI)
         # ===============================
 
         # ====== SWITCH BOOK HERE ======
-        self.book_to_enrich = Books.BERAKHOT
+        # Same override pattern: a driver script may pre-set self.book_to_enrich on the
+        # instance before calling setUp() - getattr falls back to this hardcoded default
+        # otherwise.
+        self.book_to_enrich = getattr(self, "book_to_enrich", Books.BERAKHOT)
         # ===============================
 
         # ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======
@@ -72,7 +78,7 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         # iterated (book order) - same cap pattern as DBPopulateEntityRelGraph.max_sources_to_extract,
         # useful to bound a quick/cheap test run before committing to the whole book.
         # self.max_sources_to_extract: Optional[int] = None
-        self.max_sources_to_extract: Optional[int] = 100
+        self.max_sources_to_extract: Optional[int] = getattr(self, "max_sources_to_extract", 100)
         # ===============================
 
         self.enrichment_caller = EntityEnrichmentCaller()

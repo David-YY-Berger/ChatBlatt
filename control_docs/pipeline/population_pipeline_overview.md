@@ -4,9 +4,18 @@ Source of truth: `backend_pipeline/data_pipeline/populator_scripts/*.py`,
 `backend_pipeline/data_pipeline/DBScriptParentClass.py`.
 
 All populators are unittest-style classes (`DBParentClass` base) whose `test_*` methods are
-the entry points (run via `python -m unittest <module>.<class>.<test_method>`, same as any
-other test). `DBParentClass.setUpClass` connects via `DBFactory.get_prod_db_mongo()` — see
-`conventions/safety_and_testing.md` before running any of them.
+the entry points (run via `python -m unittest <module>.<class>.<test_method>`, or by clicking
+"Run" on one in an IDE, same as any other test). `DBParentClass.setUpClass` connects via
+`DBFactory.get_prod_db_mongo()` — see `conventions/safety_and_testing.md` before running any
+of them.
+
+For steps 3–4 specifically, **don't hand-edit `setUp()` and click "Run" book-by-book** once
+you're past single-book testing — use `EntityPipelineRunner` (see
+`entity_pipeline_runner.md`) to drive both populators across any list of books (one book,
+all of Tanach, all of Bavli, everything) from one place, with a clear per-(book, step, stage)
+banner so it's always obvious what's currently running. It's a thin driver: every call it
+makes is one of the exact same public `test_*` methods below — no population/resolution logic
+is duplicated or reimplemented.
 
 ## Run order
 
@@ -47,6 +56,13 @@ If you add a new `DBPopulateLlmBase` subclass, don't forget that line or it sile
   call and does **not** clear `_get_output_dir()` first — a re-invocation resumes rather than
   redoing everything. Call `test_force_clear_output_dir` first if you deliberately want every
   source redone (e.g. after a prompt change).
+- `test_run_extraction_only` runs phase 1 alone (no phase 2 call) — for
+  `DBPopulateEntityRelGraph` this is a true no-DB-write dry run of extraction, useful to
+  generate/review a whole run's JSON output before ever touching the real DB. **Caveat:**
+  `DBPopulateEntityEnrichment`'s own `_extract_all_to_json` override already writes each
+  source's enrichment to the DB as part of phase 1 itself (see its module docstring), so for
+  that subclass `test_run_extraction_only` is **not** DB-write-free — it behaves the same as
+  `test_run_extraction_and_population`.
 
 ### Which sources phase 1 iterates
 
@@ -60,11 +76,25 @@ the model-provider switch) — see `DBPopulateEntityRelGraph.book_to_extract` an
 to thread a book through — `DBPopulateEntityEnrichment` has its own full override of
 `_extract_all_to_json` with a different signature (no `book` param) and would break.
 
+**Override hook for drivers (e.g. `EntityPipelineRunner`):** in both subclasses, the
+`setUp()` lines for `book_to_extract`/`book_to_enrich`, `max_sources_to_extract`, and the
+`ModelConfig.set_provider(...)` call all read via
+`getattr(self, "<attr>", <hardcoded default>)` (or, for the provider,
+`getattr(self, "model_provider", None) or <hardcoded default>`). This means a driver can
+construct the instance, set e.g. `instance.book_to_extract = Books.EXODUS` **before** calling
+`instance.setUp()`, and that value wins — while clicking "Run" on the test directly (nothing
+pre-set) still gets the exact same hardcoded default as before this hook existed. This is the
+only mechanism `EntityPipelineRunner` relies on to parameterize a run; it does not (and must
+not) change what either `setUp()` does otherwise.
+
 Both `DBPopulateEntityRelGraph` and `DBPopulateEntityEnrichment` have an optional
 `self.max_sources_to_extract` (`setUp`, `# ====== OPTIONAL: LIMIT TO FIRST N SOURCES ======`),
-`None` by default — set it to an int to cap the run to the first N sources of
-`book_to_extract`/`book_to_enrich` (book order, e.g. the first 100 of Berakhot) for a
-cheap/quick test before committing to the whole book. `DBPopulateEntityEnrichment` is also
+hardcoded to `100` by default (set it to `None` instead — see the commented-out line right
+above it — to process the whole book) — set it to any int to cap the run to the first N
+sources of `book_to_extract`/`book_to_enrich` (book order) for a cheap/quick test before
+committing to the whole book. `EntityPipelineRunner` always sets this explicitly per run
+(`None` by default there — see `entity_pipeline_runner.md`), so a driven run is never
+silently capped at 100 without you asking for it. `DBPopulateEntityEnrichment` is also
 naturally bounded without this cap — it only ever calls the LLM for sources whose
 `SourceMetadata.entity_keys` has an unenriched entity (i.e. sources `DBPopulateEntityRelGraph`
 already processed) — but the explicit cap keeps both populators' test runs scoped to the

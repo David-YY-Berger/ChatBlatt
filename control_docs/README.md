@@ -24,6 +24,7 @@ govern how these docs get used and maintained.
 | Doc | Covers |
 |---|---|
 | [`pipeline/population_pipeline_overview.md`](pipeline/population_pipeline_overview.md) | Populator scripts, run order, two-phase LLM scaffold, idempotency conventions |
+| [`pipeline/entity_pipeline_runner.md`](pipeline/entity_pipeline_runner.md) | `EntityPipelineRunner` - run entity-rel-graph/enrichment across many books from one place, `Step`/`Stage`, multi-book DB connection handling, recommended large-run workflow |
 | [`pipeline/entity_prepopulation.md`](pipeline/entity_prepopulation.md) | Pre-populating well-known ambiguous people (`DBPrePopulateAmbiguosEntitys`) |
 | [`pipeline/person_disambiguation.md`](pipeline/person_disambiguation.md) | How a same-named Person mention is routed to the right DB entity |
 | [`pipeline/entity_ignore_filter.md`](pipeline/entity_ignore_filter.md) | Non-proper-noun filter for extracted Person/Place names |

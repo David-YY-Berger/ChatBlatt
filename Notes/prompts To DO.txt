@@ -4,17 +4,26 @@ before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
 
 todo {{
 
-pre populate script {{
-	
-}}
+- should we fix it? 'Filtered invalid 'placeToNation' relationship: Egypt -> Egypt (Self-relationship: Egypt)', or 'Filtered invalid 'personToTribeOfIsrael' relationship: Reuben -> Reuben (Self-relationship: Reuben)'
+
+- why is streamlit dead? probably messed up requirements.txt ? pydantic requirement change not relevant to streamlit, so committing that change messed something up there ...
+
+- reran population + entity, lets check exactly how much it costed, and estimate cost for entire pipeline..
+- let copilot finish runner script
+- when we're ready, clear everything, run bereishit just to make sure it seems fine. then unleash it on all of chumash, and then all of tanach. ask the AI - does entity metadata important for ambigouos entitys? i am debating to run this pipeline, [option 1] for each book entityRel and then metadata, or [option 2] run entity rel population for all of tanach, and then only at the end run metadta for all of tanach.
+-----
+post population tasks:
+	- reliable way to backup!
+	- how we'll do auto merge for entitys? make markdown summary, rate confidence of merge, and manually check the first 100 examples of a certain confidence level?
+
 
 -----
 
 run berakhot again, ask copilot to make an easy runner script
 see if more or less than 5 shekel.
+before running, gemini 2.5 is at '₪5.19 / ₪307.05'
 
 
-fin
 }}
 
 track costs {{
@@ -22,6 +31,8 @@ track costs {{
 		entity rel : 2.84 shekels
 		metadata :   $0.758968 USD
 }}
+
+
 easy fixes {{
 -------
 put sefaria logo on same level as 'Mapali' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
@@ -42,89 +53,6 @@ add to backend.models_db.Enums.NumberCategory (make sure to update all usages!!!
 these categorys: Gematria (numeric value of a word), Obligation, Punishment
 
 }}
-
-
-old prompts {{
-
-
-
-
-
-Facets:
-This should be a few sections, each one checkboxes/ staggered checkboxes.
-section1 - Source Type - populated by backend.models_db.Enums.SourceType
-section2 - Book - pop by backend.db.data_names.Books.Books. There must be sub sections, group by Book Category. ensure that you keep the order with the order field
-section3- Passage Type - pop by backend.models_db.Enums.PassageType
-section4- Entity - these entitys: Animal, Food, Nation, Number, Person, Place, Plant, Symbol, TribeOfIsrael. each should be their on sub section. there should be a button (label=select) at each section, which will open up a popup. in the popup, for now, leave it blank.
-
-
-try to make these facets look nice, well layout, 
-
-----
-
------
-in Facets:
- 
- - select all / none etc is glitchy. 
- (1) i dont like the V and X anymore. instead, just put a checkbox at section header. 
- (2) init all the checkboxes to selected for all facets
- (3) the section header checkboxes can have three states - fully checked (select All), fully un checked (None), or partially checked (however you want to depict that). 
- (4) collapsing a section should not impact all any selections of that section.
-
- 
-
-	- now lets work on the entity selector componenet of the facet
-	(0) each entity selection component should be the same one used in that individual Entity search page. frontend.pages.entity_search.render
-	(1) remove the button of each entity facet section and any logic around it.
-	(2) each entity section, when expanded, should have a dropdown select list. exactly like done in entity_Search.
-	
-	
-	 - its so slow!
-	 
-	 
-	
-	
-	[should do with sonnet, see, and then potentially do with Opus]
-	- currently, this func backend.file_utils.HtmlWriter.HtmlWriter.get_full_html creates an html from the sources list. I want you to undertand how this html is built, and recreate it uses more native feeling streamlit components. See the general style of my ui (look at frontend/assets/facets.css and frontend/assets/styles.css etc) . feel free to add more files if needed. 
-	
-
-
-(dovid, test this page out a little)
-
------
-fix pop up to select entitys .
-----
-ensure Search page works in Hebrew (RTL) properly. When in RTL, the facets should appear on the right side.
-----
-
-----
-
-implement the link to open source to see where entity came from
---
-(after implementing the other ones, add the links to the other entitys..) also, it should count how many times each relationship is found in a source, and bring the most common ones to the top
----
-write quality QA for source searching. also source populating the rel and entity (give the llm an example from the json and ask it to very it made those objects)
-
-
-############################ OPUS ###################
-----
-look at the flow of retrieving all the SelectOptions. My SelectOptions list is meant to grow to be at least 10,000, maybe even 100,000 big. 
-any way to speed up loading these terms? i dont want pagination, i want to load them all into that dropdown. maybe a way to speed it up with multi threading or anything like that?
-
-also, can you add a spinner when it's waiting?
---
-###############################################
-
-
-UNTIL WE DONT FIX THE FE, NO POINT TO FIX THE LOGIC...
-take a look at how the parameters come from the front end to the source search query logic. Something is missed, and the filtering doesnt work. look it over and tell me whats going on. 
-
------
-allow filtering the sources with the same left pane as there is in source search?
-
-------
-
-
 
 
 
