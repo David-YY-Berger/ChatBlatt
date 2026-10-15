@@ -31,3 +31,16 @@ streamlit run app.py
 
 Backend data the frontend reads/searches comes from `backend/app/controllers/`
 (`app/controllers.md`) and the search indexes (`search/faiss_bm25.md`).
+
+## requirements.txt is the deployment manifest
+
+`requirements.txt` (repo root) is what Streamlit Community Cloud installs — it must only
+list packages actually imported by `frontend/` + `backend/`, and must pip-resolve cleanly
+(no conflicting pins). `backend/models_db` and `backend/models_dto` use `pydantic`, so it
+stays in this file; `pydantic-ai` (and the rest of the LLM pipeline stack) is only imported
+by `backend_pipeline/` (local data-population scripts), so it does **not** belong here.
+
+`requirements_ignore_old.txt` is a full `pip freeze` record of the local dev environment
+(pipeline + app deps together) — kept for reference, never installed by the deployed app.
+When bumping a shared pin (e.g. `pydantic`) in `requirements.txt`, re-check it against what
+that file shows worked locally (e.g. the `typing_extensions` floor pydantic now requires).
