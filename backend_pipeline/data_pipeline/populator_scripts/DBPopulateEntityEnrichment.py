@@ -95,6 +95,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         # Per-book dir (see Paths.get_entity_enrichment_output_dir) - keeps a run of one book's
         # JSON/TXT output from ever being mixed with another book's leftover files (test_populate_from_jsons
         # reprocesses every *.json file sitting in this directory, not just this run's output).
+        if getattr(self, "use_examples", False):
+            return Paths.get_examples_output_dir("enrichment")
         return Paths.get_entity_enrichment_output_dir(self.book_to_enrich.database_name)
 
     async def _extract_from_passage(self, passage: str, entity_json_list: Optional[List[str]] = None):
@@ -322,10 +324,14 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
         num_processed = num_skipped = num_populate_failed = 0
         failed_keys: List[str] = []
 
-        # contents = get_examples_src_contents(self.db_api)
-        contents = self.db_api.get_all_src_contents_by_book(self.book_to_enrich)
-        if self.max_sources_to_extract is not None:
-            contents = contents[:self.max_sources_to_extract]
+        if getattr(self, "use_examples", False):
+            contents = get_examples_src_contents(self.db_api)
+        else:
+            contents = self.db_api.get_all_src_contents_by_book(self.book_to_enrich)
+            if self.max_sources_to_extract is not None:
+                contents = contents[:self.max_sources_to_extract]
+        # json_only mode (set by EntityPipelineRunner): LLM calls + JSON/TXT files only, no DB writes.
+        skip_db_writes = getattr(self, "skip_db_writes", False)
         for src_content in contents:
             entities = self._get_unenriched_entities_for_source(src_content.key)
             if not entities:
@@ -361,7 +367,8 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
 
             # Populate the DB for THIS source right away, before moving to the next one.
             try:
-                self._process_json_entries([(src_content.key, result_dict)])
+                if not skip_db_writes:
+                    self._process_json_entries([(src_content.key, result_dict)])
             except Exception as e:
                 print(f"  WARNING [{src_content.key}]: failed to populate DB for this source: {e}")
                 num_populate_failed += 1

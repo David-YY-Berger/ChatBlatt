@@ -141,23 +141,48 @@ class EntityPipelineRunner:
 
     def __init__(
         self,
-        books: Sequence[Book],
+        books: Sequence[Book] = (),
         model_provider: ModelProvider = ModelProvider.GEMINI_PAID,
         max_sources_per_book: Optional[int] = None,
+        use_examples: bool = False,
+        json_only: bool = False,
     ):
         """
         books: the books to process, IN ORDER (e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS,
-            or a hand-picked list like [Books.GENESIS, Books.BERAKHOT]).
+            or a hand-picked list like [Books.GENESIS, Books.BERAKHOT]). Ignored when
+            use_examples=True.
         model_provider: LLM provider/model used for every call this run makes.
         max_sources_per_book: caps each book to its first N sources (book order) - None
             (default) processes the whole book. Set an int for a cheap/quick smoke test
             across many books before committing to a full run.
+        use_examples: run ONLY the passages listed in DBPopulateLlmBase.get_examples_src_contents
+            (edit that list to choose them) instead of whole books. Runs once per step; output
+            goes to a throwaway dir (Paths.get_examples_output_dir), cleared at the start of
+            every extracting run so edited prompts/passages are never served from stale files.
+        json_only: only call the LLM and write JSON/TXT files - never write to the DB.
+            Rel-graph: stage EXTRACT_AND_POPULATE is downgraded to EXTRACT_ONLY. Enrichment:
+            its per-source DB write is skipped (it still READS the DB for the entities to
+            enrich, so it finds nothing for sources whose rel-graph hasn't been populated).
+            Stages that don't extract (POPULATE_ONLY, CLEAR_OUTPUT_DIR) are unaffected.
         """
         self.books = list(books)
         self.model_provider = model_provider
         self.max_sources_per_book = max_sources_per_book
+        self.use_examples = use_examples
+        self.json_only = json_only
+        if not use_examples and not self.books:
+            raise ValueError("Pass books=[...] or use_examples=True.")
         self._initialized_classes: List[Type[DBPopulateLlmBase]] = []
         self.results: List[_BookRunResult] = []
+
+    def _targets(self) -> List[Optional[Book]]:
+        """Books to iterate; examples mode is a single run with no book."""
+        return [None] if self.use_examples else list(self.books)
+
+    def _effective_stage(self, step: Step, stage: Stage) -> Stage:
+        if self.json_only and stage == Stage.EXTRACT_AND_POPULATE:
+            return Stage.EXTRACT_ONLY
+        return stage
 
     # ─── Public entry points ───────────────────────────────────────────────
 
@@ -183,7 +208,7 @@ class EntityPipelineRunner:
         useful for a long unattended run across all of Tanach/Bavli where you'd rather
         collect every failure than stop at the first one; check self.results afterwards.
         """
-        for book in self.books:
+        for book in self._targets():
             self._run_one(Step.ENTITY_REL_GRAPH, book, rel_graph_stage, continue_on_error)
             self._run_one(Step.ENTITY_ENRICHMENT, book, enrichment_stage, continue_on_error)
         self._print_summary()
@@ -191,7 +216,7 @@ class EntityPipelineRunner:
     def run_step(self, step: Step, stage: Stage = Stage.EXTRACT_AND_POPULATE,
                  continue_on_error: bool = False) -> None:
         """Run a single step (just rel-graph, or just enrichment) for every book, in order."""
-        for book in self.books:
+        for book in self._targets():
             self._run_one(step, book, stage, continue_on_error)
         self._print_summary()
 
@@ -209,14 +234,16 @@ class EntityPipelineRunner:
         LLM calls. Sanity-check a large run (e.g. all of Tanach + Bavli) before committing.
         """
         print(f"\n{'='*70}")
-        print(f"PLAN: {len(self.books)} book(s), model={self.model_provider.value}, "
-              f"max_sources_per_book={self.max_sources_per_book}")
+        print(f"PLAN: {'examples only' if self.use_examples else str(len(self.books)) + ' book(s)'}, "
+              f"model={self.model_provider.value}, max_sources_per_book={self.max_sources_per_book}, "
+              f"json_only={self.json_only}")
         print(f"{'='*70}")
-        for book in self.books:
+        for book in self._targets():
             for step, stage in ((Step.ENTITY_REL_GRAPH, rel_graph_stage),
                                  (Step.ENTITY_ENRICHMENT, enrichment_stage)):
+                stage = self._effective_stage(step, stage)
                 method_name = _STAGE_METHOD[(step, stage)]
-                print(f"  [{book.source_type.value}] {book.database_name:<20} "
+                print(f"  {self._book_label(book):<28} "
                       f"{step.value:<18} {stage.value:<20} -> {method_name}()")
         print(f"{'='*70}\n")
 
@@ -229,8 +256,9 @@ class EntityPipelineRunner:
 
     # ─── Internals ─────────────────────────────────────────────────────────
 
-    def _run_one(self, step: Step, book: Book, stage: Stage, continue_on_error: bool) -> None:
+    def _run_one(self, step: Step, book: Optional[Book], stage: Stage, continue_on_error: bool) -> None:
         cls = _STEP_CLASS[step]
+        stage = self._effective_stage(step, stage)
         method_name = _STAGE_METHOD[(step, stage)]
         self._print_banner(step, book, stage, method_name)
 
@@ -242,14 +270,18 @@ class EntityPipelineRunner:
         setattr(instance, _STEP_BOOK_ATTR[step], book)
         instance.model_provider = self.model_provider
         instance.max_sources_to_extract = self.max_sources_per_book
+        instance.use_examples = self.use_examples
+        instance.skip_db_writes = self.json_only
         instance.setUp()
 
         try:
+            if self.use_examples and stage in (Stage.EXTRACT_AND_POPULATE, Stage.EXTRACT_ONLY):
+                instance.test_force_clear_output_dir()
             getattr(instance, method_name)()
             self.results.append(_BookRunResult(step, book, stage, ok=True))
         except Exception as e:
             self.results.append(_BookRunResult(step, book, stage, ok=False, error=str(e)))
-            print(f"\n{'!'*70}\nFAILED: {step.value} / {book.database_name} / {stage.value}: {e}\n{'!'*70}")
+            print(f"\n{'!'*70}\nFAILED: {step.value} / {self._book_label(book)} / {stage.value}: {e}\n{'!'*70}")
             if not continue_on_error:
                 raise
         finally:
@@ -263,9 +295,12 @@ class EntityPipelineRunner:
             getattr(instance, _STEP_CALLER_ATTR[step]).close()
 
     @staticmethod
-    def _print_banner(step: Step, book: Book, stage: Stage, method_name: str) -> None:
+    def _book_label(book: Optional[Book]) -> str:
+        return "EXAMPLES" if book is None else f"[{book.source_type.value}] {book.database_name}"
+
+    def _print_banner(self, step: Step, book: Optional[Book], stage: Stage, method_name: str) -> None:
         print(f"\n{'#'*70}")
-        print(f"# STEP={step.value}  BOOK={book.database_name}  STAGE={stage.value}  -> {method_name}()")
+        print(f"# STEP={step.value}  BOOK={self._book_label(book)}  STAGE={stage.value}  -> {method_name}()")
         print(f"{'#'*70}\n")
 
     def _print_summary(self) -> None:
@@ -273,7 +308,7 @@ class EntityPipelineRunner:
         print(f"\n{'='*70}")
         print(f"RUN SUMMARY: {len(self.results)} (book, step) run(s), {len(failed)} failed.")
         for r in failed:
-            print(f"  FAILED: {r.step.value} / {r.book.database_name} / {r.stage.value}: {r.error}")
+            print(f"  FAILED: {r.step.value} / {self._book_label(r.book)} / {r.stage.value}: {r.error}")
         print(f"{'='*70}\n")
 
 
@@ -283,10 +318,14 @@ if __name__ == "__main__":
         books=[Books.BERAKHOT],         # e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS, or a hand-picked list
         model_provider=ModelProvider.GEMINI_PAID,
         max_sources_per_book=None,      # None = whole book; set an int for a cheap smoke test first
+        # use_examples=False,             # True = ignore books; run only get_examples_src_contents passages
+        use_examples=True,             # True = ignore books; run only get_examples_src_contents passages
+        # json_only=False,                # True = LLM calls -> JSON/TXT files only, no DB writes
+        json_only=True,                # True = LLM calls -> JSON/TXT files only, no DB writes
     )
     try:
-        # runner.run_step(Step.ENTITY_REL_GRAPH)
-        runner.run_step(Step.ENTITY_ENRICHMENT)
+        runner.run_step(Step.ENTITY_REL_GRAPH)
+        # runner.run_step(Step.ENTITY_ENRICHMENT)
     finally:
         runner.close()
     # =============================================================

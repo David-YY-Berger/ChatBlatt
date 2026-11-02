@@ -53,6 +53,11 @@ def get_entity_enrichment_output_dir(book_database_name: str) -> str:
     return os.path.join(ENTITY_ENRICHMENT_REAL_DATA_DIR, book_database_name.lower())
 
 
+def get_examples_output_dir(step_name: str) -> str:
+    """Throwaway output dir for a populator's run over get_examples_src_contents (not real data)."""
+    return os.path.join(TESTS_DIR, "examples_output", step_name)
+
+
 BACKUP_OF_SRC_CONTENT = os.path.join(BASE_DIR, r"\DB_backups\backup_of_src_contents_TN_BT.json")
 
 QA_MONGO_QUERIES = os.path.join(MONGO_QUERIES_DIR, "qa_mongo_queries.json")

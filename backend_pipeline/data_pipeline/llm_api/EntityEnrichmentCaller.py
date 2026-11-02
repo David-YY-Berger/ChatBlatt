@@ -434,7 +434,7 @@ class EntityEnrichmentCaller:
                 exclude_none=True,
             )
 
-            usage = result.usage
+            usage = result.usage()
             cost = self._calculate_cost(usage)
             return json_str, usage, cost
 

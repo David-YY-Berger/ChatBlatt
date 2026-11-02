@@ -1,15 +1,13 @@
 
 
-before miluim - JUST WORK ON PROPERLY POPULATING THE DB...
 
 todo {{
 
+	- 
+
+
 - should we fix it? 'Filtered invalid 'placeToNation' relationship: Egypt -> Egypt (Self-relationship: Egypt)', or 'Filtered invalid 'personToTribeOfIsrael' relationship: Reuben -> Reuben (Self-relationship: Reuben)'
 
-- why is streamlit dead? probably messed up requirements.txt ? pydantic requirement change not relevant to streamlit, so committing that change messed something up there ...
-
-- reran population + entity, lets check exactly how much it costed, and estimate cost for entire pipeline..
-- let copilot finish runner script
 - when we're ready, clear everything, run bereishit just to make sure it seems fine. then unleash it on all of chumash, and then all of tanach. ask the AI - does entity metadata important for ambigouos entitys? i am debating to run this pipeline, [option 1] for each book entityRel and then metadata, or [option 2] run entity rel population for all of tanach, and then only at the end run metadta for all of tanach.
 -----
 post population tasks:

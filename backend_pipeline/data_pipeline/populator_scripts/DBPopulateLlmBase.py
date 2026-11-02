@@ -439,7 +439,18 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
     #     "TN_Genesis_0_29:23-31"
         
     #     ensure that we exclude general terms "king of sodom"
-        "TN_Genesis_0_14:12-24"
+    #     "TN_Genesis_0_14:12-24"
+
+    #     retesting story of sages:
+    #     "BT_Berakhot_0_2a:12-13", # just law
+        "BT_Berakhot_0_3a:4-11", # no story!
+        "BT_Berakhot_0_3a:12-14", # story of sages
+        "BT_Berakhot_0_2a:6-11", # not story of tanach
+        "BT_Berakhot_0_5a:3", # should be story of tanach
+        "TN_Genesis_0_25:11-18", #story and genealogy
+        "TN_Leviticus_0_19:11-18", # just law
+
+
     ]
     res = [db_api.find_one_source_content(k) for k in key_strs]
     return res

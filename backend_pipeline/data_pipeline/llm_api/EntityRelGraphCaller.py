@@ -459,7 +459,7 @@ class EntityRelGraphCaller:
                 exclude_none=True
             )
 
-            usage = result.usage
+            usage = result.usage()
             cost = self._calculate_cost(usage)
 
             return formatted_json, usage, cost

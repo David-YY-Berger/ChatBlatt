@@ -10,7 +10,7 @@ from backend.models_db.EntityObjects.EntityIdentity import PassageRelation, Pers
 from backend.models_db.Rel import Rel
 from backend.models_db.Enums import EntityType, RelType, PassageType, SourceType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
-from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase
+from backend_pipeline.data_pipeline.populator_scripts.DBPopulateLlmBase import DBPopulateLlmBase, get_examples_src_contents
 from backend.db.EntityRelManager import EntityRelManager
 from backend_pipeline.data_pipeline.entity_resolution.PersonDisambiguator import PersonDisambiguator
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
@@ -108,6 +108,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
     def _get_output_dir(self) -> str:
         # Per-book dir (see Paths.get_entity_rel_graph_output_dir) - keeps a run of one book's
         # JSON/TXT output from ever being mixed with another book's leftover files.
+        if getattr(self, "use_examples", False):
+            return Paths.get_examples_output_dir("entity_rels")
         return Paths.get_entity_rel_graph_output_dir(self.book_to_extract.database_name)
 
     async def _extract_from_passage(self, passage: str):
@@ -120,6 +122,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         sources (which DBPopulateEntityEnrichment still uses).
         Returns the list of source keys that failed extraction.
         """
+        if getattr(self, "use_examples", False):
+            return await self._extract_contents_to_json(get_examples_src_contents(self.db_api))
         contents = self.db_api.get_all_src_contents_by_book(self.book_to_extract)
         if self.max_sources_to_extract is not None:
             contents = contents[:self.max_sources_to_extract]

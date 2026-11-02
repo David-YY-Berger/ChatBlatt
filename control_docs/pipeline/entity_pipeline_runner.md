@@ -29,6 +29,27 @@ population/resolution/disambiguation logic lives in this file.
 
 ## How book/model/cap overrides reach the populators
 
+### Examples-only and JSON-only modes
+
+- `EntityPipelineRunner(use_examples=True)` ignores `books` and runs once per step over only
+  the passages in `get_examples_src_contents` (`DBPopulateLlmBase.py` - edit its `key_strs`).
+  Output goes to `Paths.get_examples_output_dir(...)` (under `TESTS_DIR`), which the runner
+  clears before each extracting run (otherwise resume-skip would reuse stale JSON).
+- `json_only=True` never writes to the DB: `EXTRACT_AND_POPULATE` is downgraded to
+  `EXTRACT_ONLY` for both steps, and enrichment's per-source DB write is skipped
+  (`skip_db_writes`). This also removes the enrichment `EXTRACT_ONLY` caveat above. Enrichment
+  still *reads* entities from the DB, so it only has work for sources whose rel-graph was
+  already populated; without DB updates between sources, a shared entity may be re-sent.
+- Both are plumbed via instance attributes `use_examples` / `skip_db_writes`, read with
+  `getattr(..., False)` in the populators, so direct runs are unaffected.
+- The editable `__main__` example currently runs only `Step.ENTITY_REL_GRAPH` with
+  `use_examples=True` and `json_only=True`. Its output is the rel-graph extraction response
+  (summaries, `passage_types`, entities, and relationships), not entity enrichment. The
+  rel-graph extraction schema and shared output writer preserve those response fields in
+  each JSON file and include the JSON in its TXT companion.
+
+## How book/model/cap overrides reach the populators
+
 Both populators' `setUp()` read `book_to_extract`/`book_to_enrich`, `max_sources_to_extract`,
 and the LLM provider via a `getattr(self, "<attr>", <hardcoded default>)` hook (see
 `population_pipeline_overview.md`). The runner constructs an instance, sets those attributes,
