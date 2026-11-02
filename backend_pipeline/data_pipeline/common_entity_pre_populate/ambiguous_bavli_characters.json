@@ -6,6 +6,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Halafta"
         ],
@@ -36,6 +37,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Galilee",
             "Yavne"
@@ -55,6 +57,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Chanina"
         ],
@@ -75,6 +78,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Kisma"
         ],
@@ -94,6 +98,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yoezer"
         ],
@@ -114,6 +119,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Ilai"
         ],
@@ -149,6 +155,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Shimon ben Gamliel II"
         ],
@@ -189,6 +196,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yechezkel"
         ],
@@ -220,6 +228,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Beteira"
         ],
@@ -240,6 +249,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Tema"
         ],
@@ -259,6 +269,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Gamliel III"
         ],
@@ -284,6 +295,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yochai"
         ],
@@ -322,6 +334,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Gamliel of Yavne"
         ],
@@ -357,6 +370,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Gamliel the Elder"
         ],
@@ -388,6 +402,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Tiberias"
         ],
@@ -412,6 +427,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Jerusalem"
         ],
@@ -429,6 +445,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Azzai"
         ],
@@ -449,6 +466,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Zoma"
         ],
@@ -468,6 +486,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Elazar"
         ],
@@ -488,6 +507,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "children": [
             "Shimon ben Gamliel I"
         ],
@@ -511,6 +531,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Shimon ben Gamliel I"
         ],
@@ -543,6 +564,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yehuda HaNasi"
         ],
@@ -574,6 +596,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Hyrcanus"
         ],
@@ -611,6 +634,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yaakov"
         ],
@@ -631,6 +655,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Azariah"
         ],
@@ -651,6 +676,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Shammua"
         ],
@@ -671,6 +697,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Arach"
         ],
@@ -691,6 +718,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Pedat"
         ],
@@ -718,6 +746,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Caesarea",
             "Lod"
@@ -736,6 +765,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Shimon bar Yochai"
         ],
@@ -765,6 +795,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Tiberias",
             "Sepphoris"
@@ -793,6 +824,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Zakkai"
         ],
@@ -816,6 +848,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Nuri"
         ],
@@ -835,6 +868,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Beroka"
         ],
@@ -854,6 +888,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Alexandria"
         ],
@@ -870,6 +905,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Chananya"
         ],
@@ -901,6 +937,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Levi"
         ],
@@ -922,6 +959,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Gamla"
         ],
@@ -941,6 +979,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Korcha"
         ],
@@ -959,6 +998,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Perachya"
         ],
@@ -979,6 +1019,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Dosa"
         ],
@@ -999,6 +1040,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Chama"
         ],
@@ -1019,6 +1061,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Teradion"
         ],
@@ -1046,6 +1089,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "tribeOfIsrael": [
             "Levi"
         ],
@@ -1065,6 +1109,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "children": [
             "Yehuda",
             "Chizkiya"
@@ -1094,6 +1139,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Abba"
         ],
@@ -1114,6 +1160,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Ashi"
         ],
@@ -1138,6 +1185,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura",
             "Nehardea",
@@ -1167,6 +1215,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "children": [
             "Shmuel"
         ],
@@ -1190,6 +1239,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Abba bar Abba"
         ],
@@ -1223,6 +1273,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Yavne"
         ],
@@ -1239,6 +1290,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Nachmani"
         ],
@@ -1259,6 +1311,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yehuda"
         ],
@@ -1278,6 +1331,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "children": [
             "Rabbah bar Rav Huna"
         ],
@@ -1311,6 +1365,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yehoshua"
         ],
@@ -1331,6 +1386,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Nathan"
         ],
@@ -1350,6 +1406,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Rav Huna"
         ],
@@ -1373,6 +1430,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yaakov"
         ],
@@ -1409,6 +1467,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yitzchak"
         ],
@@ -1430,6 +1489,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Rav Chisda"
         ],
@@ -1453,6 +1513,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yosef bar Chama"
         ],
@@ -1491,6 +1552,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Nachmani"
         ],
@@ -1522,6 +1584,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Babylonia",
             "Eretz Yisrael"
@@ -1540,6 +1603,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Avuha"
         ],
@@ -1559,6 +1623,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "children": [
             "Rava"
         ],
@@ -1581,6 +1646,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Pumbedita"
         ],
@@ -1608,6 +1674,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura",
             "Mechoza"
@@ -1627,6 +1694,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura"
         ],
@@ -1654,6 +1722,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Naresh",
             "Sura"
@@ -1682,6 +1751,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura"
         ],
@@ -1698,6 +1768,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Yaakov"
         ],
@@ -1718,6 +1789,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Rava"
         ],
@@ -1737,6 +1809,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Tiberias"
         ],
@@ -1753,6 +1826,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Nehardea",
             "Shilhi"
@@ -1781,6 +1855,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Idi"
         ],
@@ -1800,6 +1875,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura"
         ],
@@ -1816,6 +1892,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Babylonia"
         ],
@@ -1832,6 +1909,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Ahava"
         ],
@@ -1852,6 +1930,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Matna"
         ],
@@ -1871,6 +1950,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura",
             "Eretz Yisrael"
@@ -1890,6 +1970,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Pumbedita"
         ],
@@ -1906,6 +1987,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Uziel"
         ],
@@ -1925,6 +2007,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yosef"
         ],
@@ -1944,6 +2027,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "childOfFather": [
             "Elazar"
         ],
@@ -1963,6 +2047,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Elisha"
         ],
@@ -1985,6 +2070,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Yose ben Halafta"
         ],
@@ -2007,6 +2093,7 @@
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Piabi"
         ],
@@ -2029,6 +2116,7 @@
         "isWoman": true,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "childOfFather": [
             "Chanina ben Teradion"
         ],
@@ -2055,6 +2143,7 @@
         "isWoman": true,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "spouseOf": [
             "Rav Nachman"
         ],
@@ -2077,6 +2166,7 @@
         "isWoman": true,
         "isNonJew": false,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "siblings": [
             "Gamliel"
         ],
@@ -2104,6 +2194,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Rome"
         ],
@@ -2120,6 +2211,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Rome"
         ],
@@ -2136,6 +2228,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Rome"
         ],
@@ -2151,6 +2244,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Tanaim",
         "associatedWithPlace": [
             "Eretz Yisrael"
         ],
@@ -2170,6 +2264,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Ctesiphon",
             "Nehardea"
@@ -2191,6 +2286,7 @@
         "isWoman": false,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Ctesiphon",
             "Mechoza"
@@ -2208,6 +2304,7 @@
         "isWoman": true,
         "isNonJew": true,
         "isGroup": false,
+        "timePeriod": "Amoraim",
         "children": [
             "Shapur II"
         ],
