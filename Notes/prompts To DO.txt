@@ -3,9 +3,11 @@
 
 todo {{
 
-	- 
-
-- when we're ready, clear everything, run bereishit just to make sure it seems fine. then unleash it on all of chumash, and then all of tanach. ask the AI - does entity metadata important for ambigouos entitys? i am debating to run this pipeline, [option 1] for each book entityRel and then metadata, or [option 2] run entity rel population for all of tanach, and then only at the end run metadta for all of tanach.
+	- running plan:
+		- run all of tanach, entity rel
+		- run all of tanach, entity enrichment
+		
+		
 -----
 post population tasks:
 	- reliable way to backup!
@@ -14,11 +16,6 @@ post population tasks:
 
 -----
 
-run berakhot again, ask copilot to make an easy runner script
-see if more or less than 5 shekel.
-before running, gemini 2.5 is at '₪5.19 / ₪307.05'
-
-
 }}
 
 track costs {{
@@ -26,6 +23,13 @@ track costs {{
 		entity rel : 2.84 shekels
 		metadata :   $0.758968 USD
 }}
+
+
+
+#############################################################################################################
+############################################ UI / logic fixes ###############################################
+#############################################################################################################
+
 
 
 easy fixes {{

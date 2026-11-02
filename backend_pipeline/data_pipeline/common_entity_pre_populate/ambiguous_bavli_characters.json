@@ -1,0 +1,2225 @@
+[
+    {
+        "id": "yose_ben_halafta",
+        "name": "Yose",
+        "description": "Tanna of Sepphoris, student of R. Akiva, father of R. Yishmael b. Yose",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Halafta"
+        ],
+        "children": [
+            "Yishmael ben Yose"
+        ],
+        "refIds": {
+            "Yishmael ben Yose": "yishmael_ben_yose"
+        },
+        "associatedWithPlace": [
+            "Sepphoris",
+            "Usha"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "yose_hagelili",
+        "name": "Yose HaGelili",
+        "description": "Tanna of Yavne, contemporary of R. Akiva and R. Tarfon",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Galilee",
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Sanhedrin",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yose_bar_chanina",
+        "name": "Yose",
+        "description": "Palestinian Amora (R. Yose bar Chanina), disciple in the circle of R. Yochanan",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Chanina"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Yevamot",
+            "Bava Kamma"
+        ]
+    },
+    {
+        "id": "yose_ben_kisma",
+        "name": "Yose ben Kisma",
+        "description": "Tanna of the Hadrianic era, teacher who knew R. Chanina ben Teradion",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Kisma"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Avodah Zarah",
+            "Sanhedrin",
+            "Pesachim"
+        ]
+    },
+    {
+        "id": "yose_ben_yoezer",
+        "name": "Yose ben Yoezer",
+        "description": "Early sage (zug), one of the first pairs, called 'the pious of the priesthood'",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yoezer"
+        ],
+        "associatedWithPlace": [
+            "Tzereida",
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Chagigah",
+            "Sotah",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "yehuda_bar_ilai",
+        "name": "Yehuda",
+        "description": "Tanna of Usha, student of R. Akiva; most-cited voice in the Mishnah ('R. Yehuda')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Ilai"
+        ],
+        "associatedWithPlace": [
+            "Usha"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yehuda_hanasi",
+        "name": "Yehuda HaNasi",
+        "all_en_names": [
+            "Yehuda HaNasi",
+            "Rebbi",
+            "Rabbi Yehuda the Prince"
+        ],
+        "description": "Redactor of the Mishnah, Nasi in Eretz Yisrael ('Rebbi')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Shimon ben Gamliel II"
+        ],
+        "children": [
+            "Gamliel III",
+            "Shimon"
+        ],
+        "refIds": {
+            "Shimon ben Gamliel II": "shimon_ben_gamliel_ii",
+            "Gamliel III": "gamliel_iii"
+        },
+        "associatedWithPlace": [
+            "Beit She'arim",
+            "Sepphoris",
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yehuda_bar_yechezkel",
+        "name": "Rav Yehuda",
+        "description": "Babylonian Amora, student of Rav and Shmuel, head of Pumbedita (Rav Yehuda bar Yechezkel)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yechezkel"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita",
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yehuda_ben_beteira",
+        "name": "Yehuda ben Beteira",
+        "description": "Tanna of Nisibis, head of the academy there",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Beteira"
+        ],
+        "associatedWithPlace": [
+            "Nisibis"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Pesachim",
+            "Sanhedrin",
+            "Sotah"
+        ]
+    },
+    {
+        "id": "yehuda_ben_tema",
+        "name": "Yehuda ben Tema",
+        "description": "Tanna known for ethical maxims in Avot",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Tema"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Chagigah",
+            "Shabbat",
+            "Yoma"
+        ]
+    },
+    {
+        "id": "yehuda_nesia",
+        "name": "Yehuda Nesia",
+        "description": "Grandson of Rebbi, Nasi in the early 3rd century",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Gamliel III"
+        ],
+        "refIds": {
+            "Gamliel III": "gamliel_iii"
+        },
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Avodah Zarah",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shimon_bar_yochai",
+        "name": "Shimon",
+        "all_en_names": [
+            "Shimon bar Yochai",
+            "Rashbi"
+        ],
+        "description": "Tanna, student of R. Akiva, central figure of the later Mishnah ('R. Shimon')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yochai"
+        ],
+        "children": [
+            "Elazar ben Shimon"
+        ],
+        "refIds": {
+            "Elazar ben Shimon": "elazar_ben_shimon"
+        },
+        "associatedWithPlace": [
+            "Peki'in",
+            "Meron",
+            "Usha"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "shimon_ben_gamliel_ii",
+        "name": "Shimon ben Gamliel",
+        "description": "Nasi at Usha, father of Rebbi (Shimon ben Gamliel II)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Gamliel of Yavne"
+        ],
+        "children": [
+            "Yehuda HaNasi"
+        ],
+        "refIds": {
+            "Gamliel of Yavne": "gamliel_of_yavne",
+            "Yehuda HaNasi": "yehuda_hanasi"
+        },
+        "associatedWithPlace": [
+            "Usha",
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shimon_ben_gamliel_i",
+        "name": "Shimon ben Gamliel",
+        "description": "Nasi in the Second Temple era (Shimon ben Gamliel I), killed during the Great Revolt",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Gamliel the Elder"
+        ],
+        "children": [
+            "Gamliel of Yavne"
+        ],
+        "refIds": {
+            "Gamliel the Elder": "gamliel_the_elder",
+            "Gamliel of Yavne": "gamliel_of_yavne"
+        },
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Horayot",
+            "Ketubot",
+            "Keritot",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "shimon_ben_lakish",
+        "name": "Shimon ben Lakish",
+        "all_en_names": [
+            "Shimon ben Lakish",
+            "Resh Lakish"
+        ],
+        "description": "Palestinian Amora and colleague of R. Yochanan ('Resh Lakish')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shimon_hatzaddik",
+        "name": "Shimon HaTzaddik",
+        "description": "Early sage and high priest, among the last of the Men of the Great Assembly",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Yoma",
+            "Menachot",
+            "Nazir",
+            "Avodah Zarah"
+        ]
+    },
+    {
+        "id": "shimon_ben_azzai",
+        "name": "Shimon ben Azzai",
+        "description": "Tanna, one of the four who entered the Pardes",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Azzai"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Yevamot",
+            "Chagigah",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shimon_ben_zoma",
+        "name": "Shimon ben Zoma",
+        "description": "Tanna, one of the four who entered the Pardes",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Zoma"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Chagigah",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shimon_ben_elazar",
+        "name": "Shimon ben Elazar",
+        "description": "Tanna, student of R. Meir",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Elazar"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "gamliel_the_elder",
+        "name": "Gamliel the Elder",
+        "description": "Nasi in Second Temple era, teacher of Paul in Acts, grandson of Hillel",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "children": [
+            "Shimon ben Gamliel I"
+        ],
+        "refIds": {
+            "Shimon ben Gamliel I": "shimon_ben_gamliel_i"
+        },
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Gittin",
+            "Yevamot",
+            "Sotah"
+        ]
+    },
+    {
+        "id": "gamliel_of_yavne",
+        "name": "Gamliel",
+        "description": "Nasi at Yavne after the destruction (Rabban Gamliel II)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Shimon ben Gamliel I"
+        ],
+        "siblings": [
+            "Ima Shalom"
+        ],
+        "children": [
+            "Shimon ben Gamliel II"
+        ],
+        "refIds": {
+            "Shimon ben Gamliel I": "shimon_ben_gamliel_i",
+            "Ima Shalom": "ima_shalom",
+            "Shimon ben Gamliel II": "shimon_ben_gamliel_ii"
+        },
+        "associatedWithPlace": [
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Pesachim",
+            "Rosh Hashanah",
+            "Shabbat",
+            "Yevamot"
+        ]
+    },
+    {
+        "id": "gamliel_iii",
+        "name": "Gamliel",
+        "description": "Son of Rebbi, Nasi after him (Rabban Gamliel III)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yehuda HaNasi"
+        ],
+        "children": [
+            "Yehuda Nesia"
+        ],
+        "refIds": {
+            "Yehuda HaNasi": "yehuda_hanasi",
+            "Yehuda Nesia": "yehuda_nesia"
+        },
+        "associatedWithPlace": [
+            "Tiberias",
+            "Sepphoris"
+        ],
+        "bookReferences": [
+            "Avodah Zarah",
+            "Sanhedrin",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "eliezer_ben_hyrcanus",
+        "name": "Eliezer",
+        "all_en_names": [
+            "Eliezer ben Hyrcanus",
+            "Eliezer HaGadol"
+        ],
+        "description": "Tanna, student of R. Yochanan ben Zakkai, teacher of R. Akiva (R. Eliezer HaGadol)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Hyrcanus"
+        ],
+        "spouseOf": [
+            "Ima Shalom"
+        ],
+        "refIds": {
+            "Ima Shalom": "ima_shalom"
+        },
+        "associatedWithPlace": [
+            "Lod",
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "eliezer_ben_yaakov",
+        "name": "Eliezer ben Yaakov",
+        "description": "Tanna, author of an early tradition on Temple practice (R. Eliezer ben Yaakov I/II)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yaakov"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Eruvin",
+            "Shabbat",
+            "Bava Metzia",
+            "Zevachim"
+        ]
+    },
+    {
+        "id": "elazar_ben_azariah",
+        "name": "Elazar ben Azariah",
+        "description": "Tanna of Yavne, appointed head after R. Gamliel's temporary removal",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Azariah"
+        ],
+        "associatedWithPlace": [
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yoma"
+        ]
+    },
+    {
+        "id": "elazar_ben_shammua",
+        "name": "Elazar ben Shammua",
+        "description": "Tanna, student of R. Akiva, among the five students after Rabbi Akiva's students died",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Shammua"
+        ],
+        "associatedWithPlace": [
+            "Usha"
+        ],
+        "bookReferences": [
+            "Yevamot",
+            "Ketubot",
+            "Bava Metzia",
+            "Menachot"
+        ]
+    },
+    {
+        "id": "elazar_ben_arach",
+        "name": "Elazar ben Arach",
+        "description": "Tanna, student of R. Yochanan ben Zakkai ('ever-flowing spring')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Arach"
+        ],
+        "associatedWithPlace": [
+            "Yavne",
+            "Emmaus"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Chagigah"
+        ]
+    },
+    {
+        "id": "elazar_ben_pedat",
+        "name": "Elazar",
+        "description": "Palestinian Amora, student of Shmuel and later of R. Yochanan (R. Elazar ben Pedat)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Pedat"
+        ],
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "elazar_hakappar",
+        "name": "Elazar HaKappar",
+        "description": "Tanna, contemporary of Rebbi, called 'Bar Kappara'",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Caesarea",
+            "Lod"
+        ],
+        "bookReferences": [
+            "Nedarim",
+            "Yoma",
+            "Sanhedrin",
+            "Moed Katan"
+        ]
+    },
+    {
+        "id": "elazar_ben_shimon",
+        "name": "Elazar ben Shimon",
+        "description": "Tanna, son of R. Shimon bar Yochai, associate of Rebbi",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Shimon bar Yochai"
+        ],
+        "refIds": {
+            "Shimon bar Yochai": "shimon_bar_yochai"
+        },
+        "associatedWithPlace": [
+            "Peki'in",
+            "Meron",
+            "Galilee"
+        ],
+        "bookReferences": [
+            "Bava Metzia",
+            "Bava Batra",
+            "Shabbat",
+            "Ketubot"
+        ]
+    },
+    {
+        "id": "yochanan_bar_nappacha",
+        "name": "Rabbi Yochanan",
+        "all_en_names": [
+            "Yochanan bar Nappacha",
+            "Rabbi Yochanan"
+        ],
+        "description": "Foremost Palestinian Amora, head of the Tiberias academy (R. Yochanan bar Nappacha)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Tiberias",
+            "Sepphoris"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yochanan_ben_zakkai",
+        "name": "Yochanan ben Zakkai",
+        "description": "Tanna, leader at Yavne after the destruction of the Second Temple",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Zakkai"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem",
+            "Yavne",
+            "Beror Chayil"
+        ],
+        "bookReferences": [
+            "Rosh Hashanah",
+            "Gittin",
+            "Sukkah",
+            "Sotah",
+            "Menachot"
+        ]
+    },
+    {
+        "id": "yochanan_ben_nuri",
+        "name": "Yochanan ben Nuri",
+        "description": "Tanna, student of R. Gamliel",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Nuri"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "yochanan_ben_beroka",
+        "name": "Yochanan ben Beroka",
+        "description": "Tanna, student of R. Akiva",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Beroka"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Bava Kamma",
+            "Menachot",
+            "Kiddushin"
+        ]
+    },
+    {
+        "id": "yochanan_hasandlar",
+        "name": "Yochanan HaSandlar",
+        "description": "Tanna, a student of R. Akiva, known as 'the cobbler'",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Alexandria"
+        ],
+        "bookReferences": [
+            "Chagigah",
+            "Sanhedrin",
+            "Shabbat"
+        ]
+    },
+    {
+        "id": "yehoshua_ben_chananya",
+        "name": "Yehoshua",
+        "description": "Tanna, student of R. Yochanan ben Zakkai, colleague of R. Eliezer (R. Yehoshua ben Chananya)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Chananya"
+        ],
+        "associatedWithPlace": [
+            "Peki'in",
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yehoshua_ben_levi",
+        "name": "Yehoshua ben Levi",
+        "description": "Palestinian Amora of Lod, known for Aggadic teachings",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Levi"
+        ],
+        "associatedWithPlace": [
+            "Lod"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Makkot",
+            "Sotah",
+            "Eruvin",
+            "Shabbat"
+        ]
+    },
+    {
+        "id": "yehoshua_ben_gamla",
+        "name": "Yehoshua ben Gamla",
+        "description": "High priest known for establishing schools for children",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Gamla"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Bava Batra",
+            "Yoma",
+            "Yevamot"
+        ]
+    },
+    {
+        "id": "yehoshua_ben_korcha",
+        "name": "Yehoshua ben Korcha",
+        "description": "Tanna of the Yavne period",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Korcha"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "yehoshua_ben_perachya",
+        "name": "Yehoshua ben Perachya",
+        "description": "Early sage (zug), teacher of Jesus ben Pandira in Bavli tradition",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Perachya"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem",
+            "Alexandria"
+        ],
+        "bookReferences": [
+            "Sanhedrin",
+            "Sotah",
+            "Avot"
+        ]
+    },
+    {
+        "id": "chanina_ben_dosa",
+        "name": "Chanina ben Dosa",
+        "description": "Tanna renowned for miracles and piety",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Dosa"
+        ],
+        "associatedWithPlace": [
+            "Arav"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Taanit",
+            "Yoma",
+            "Sotah"
+        ]
+    },
+    {
+        "id": "chanina_bar_chama",
+        "name": "Chanina",
+        "description": "Palestinian Amora, student of Rebbi (R. Chanina bar Chama)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Chama"
+        ],
+        "associatedWithPlace": [
+            "Sepphoris"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Bava Kamma",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "chanina_ben_teradion",
+        "name": "Chanina ben Teradion",
+        "description": "Tanna martyred by Rome, father of Beruriah",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Teradion"
+        ],
+        "children": [
+            "Beruriah"
+        ],
+        "diedIn": [
+            "Eretz Yisrael"
+        ],
+        "refIds": {
+            "Beruriah": "beruriah"
+        },
+        "associatedWithPlace": [
+            "Sikhnin"
+        ],
+        "bookReferences": [
+            "Avodah Zarah",
+            "Taanit"
+        ]
+    },
+    {
+        "id": "chanina_segan_hakohanim",
+        "name": "Chanina Segan HaKohanim",
+        "description": "Deputy high priest in the Temple",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "tribeOfIsrael": [
+            "Levi"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Pesachim",
+            "Yoma",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "chiya_rabba",
+        "name": "Rabbi Chiya",
+        "description": "Babylonian-born tanna, associate of Rebbi (R. Chiya Rabba), uncle of Rav",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "children": [
+            "Yehuda",
+            "Chizkiya"
+        ],
+        "associatedWithPlace": [
+            "Tiberias",
+            "Babylonia"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "chiya_bar_abba",
+        "name": "Chiya bar Abba",
+        "description": "Palestinian Amora, student of R. Yochanan",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Abba"
+        ],
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "chiya_bar_ashi",
+        "name": "Rav Chiya bar Ashi",
+        "description": "Babylonian Amora, student of Rav",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Ashi"
+        ],
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "rav_abba_arika",
+        "name": "Rav",
+        "all_en_names": [
+            "Abba Arika",
+            "Rav"
+        ],
+        "description": "Founder of the Sura academy, student of Rebbi (Abba Arika, 'Rav')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura",
+            "Nehardea",
+            "Babylonia"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "abba_bar_abba",
+        "name": "Abba bar Abba",
+        "description": "Father of Shmuel, Babylonian sage and associate of Rav",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "children": [
+            "Shmuel"
+        ],
+        "associatedWithPlace": [
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Gittin",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "shmuel_of_nehardea",
+        "name": "Shmuel",
+        "all_en_names": [
+            "Mar Shmuel",
+            "Shmuel Yarchina'ah"
+        ],
+        "description": "Babylonian Amora, head of Nehardea academy ('Mar Shmuel')",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Abba bar Abba"
+        ],
+        "refIds": {
+            "Abba bar Abba": "abba_bar_abba"
+        },
+        "associatedWithPlace": [
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "shmuel_hakatan",
+        "name": "Shmuel HaKatan",
+        "description": "Tanna of Yavne, composer of the Birkat HaMinim",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Sanhedrin",
+            "Chagigah"
+        ]
+    },
+    {
+        "id": "shmuel_bar_nachmani",
+        "name": "Shmuel bar Nachmani",
+        "description": "Palestinian Amora, student of R. Yonatan and R. Yochanan",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Nachmani"
+        ],
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot"
+        ]
+    },
+    {
+        "id": "shmuel_bar_yehuda",
+        "name": "Rav Shmuel bar Yehuda",
+        "description": "Babylonian Amora, colleague of Rav Yehuda in Pumbedita",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yehuda"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim"
+        ]
+    },
+    {
+        "id": "huna_head_of_sura",
+        "name": "Rav Huna",
+        "description": "Babylonian Amora, head of the academy at Sura after Rav",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "children": [
+            "Rabbah bar Rav Huna"
+        ],
+        "refIds": {
+            "Rabbah bar Rav Huna": "rabbah_bar_rav_huna"
+        },
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "huna_bar_yehoshua",
+        "name": "Rav Huna bar Yehoshua",
+        "description": "Babylonian Amora, student of Rava",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yehoshua"
+        ],
+        "associatedWithPlace": [
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Ketubot",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "huna_reish_galuta",
+        "name": "Rav Huna",
+        "description": "Exilarch (Reish Galuta), son of Nathan",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Nathan"
+        ],
+        "associatedWithPlace": [
+            "Babylonia"
+        ],
+        "bookReferences": [
+            "Ketubot",
+            "Gittin",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "rabbah_bar_rav_huna",
+        "name": "Rabbah",
+        "description": "Babylonian Amora, son of Rav Huna and student of Rav Yehuda",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Rav Huna"
+        ],
+        "refIds": {
+            "Rav Huna": "huna_head_of_sura"
+        },
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Yevamot"
+        ]
+    },
+    {
+        "id": "nachman_bar_yaakov",
+        "name": "Rav Nachman",
+        "description": "Babylonian Amora, judge of Nehardea, student of Shmuel (Rav Nachman bar Yaakov)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yaakov"
+        ],
+        "spouseOf": [
+            "Yalta"
+        ],
+        "refIds": {
+            "Yalta": "yalta"
+        },
+        "associatedWithPlace": [
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "nachman_bar_yitzchak",
+        "name": "Rav Nachman bar Yitzchak",
+        "description": "Babylonian Amora, head of Pumbedita from 356 CE",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yitzchak"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Gittin",
+            "Chullin",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "nachman_bar_rav_chisda",
+        "name": "Rav Nachman bar Rav Chisda",
+        "description": "Babylonian Amora, son of Rav Chisda",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Rav Chisda"
+        ],
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "rava",
+        "name": "Rava",
+        "all_en_names": [
+            "Rava",
+            "Rava bar Yosef bar Chama"
+        ],
+        "description": "Babylonian Amora, head of Mechoza academy, often paired with Abaye",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yosef bar Chama"
+        ],
+        "refIds": {
+            "Yosef bar Chama": "yosef_bar_chama"
+        },
+        "associatedWithPlace": [
+            "Mechoza",
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "rabba_bar_nachmani",
+        "name": "Rabbah",
+        "all_en_names": [
+            "Rabbah",
+            "Rabbah bar Nachmani"
+        ],
+        "description": "Babylonian Amora, head of Pumbedita, called 'uprooter of mountains' (Rabbah bar Nachmani)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Nachmani"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita",
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "rabbah_bar_bar_chana",
+        "name": "Rabbah bar bar Chana",
+        "description": "Babylonian Amora known for sea-travel tales (Bava Batra)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Babylonia",
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Bava Batra",
+            "Gittin",
+            "Chullin",
+            "Eruvin"
+        ]
+    },
+    {
+        "id": "rabbah_bar_avuha",
+        "name": "Rabbah bar Avuha",
+        "description": "Babylonian Amora, student of Rav",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Avuha"
+        ],
+        "associatedWithPlace": [
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "yosef_bar_chama",
+        "name": "Rav Yosef bar Chama",
+        "description": "Babylonian Amora, father of Rava",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "children": [
+            "Rava"
+        ],
+        "refIds": {
+            "Rava": "rava"
+        },
+        "associatedWithPlace": [
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Yevamot",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "rav_yosef_pumbedita",
+        "name": "Rav Yosef",
+        "description": "Head of Pumbedita after Rav Yehuda, known as 'Sinai' for his learning",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "ravina_i",
+        "name": "Ravina",
+        "description": "Babylonian Amora, contemporary of Rava and Rav Papa (Ravina I)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura",
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Bava Metzia",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "ravina_ii",
+        "name": "Ravina",
+        "description": "Last Amora, with Rav Ashi regarded as end of Gemara redaction (Ravina II)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "papa_naresh",
+        "name": "Rav Papa",
+        "description": "Babylonian Amora, head of academy at Naresh near Sura, student of Rava and Abaye",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Naresh",
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "rav_pappi",
+        "name": "Rav Pappi",
+        "description": "Babylonian Amora, student of Abaye",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Pesachim",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "acha_bar_yaakov",
+        "name": "Rav Acha bar Yaakov",
+        "description": "Babylonian Amora, student of Rav Yehuda, head of Pumbedita",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yaakov"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Pesachim",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "acha_bar_rava",
+        "name": "Rav Acha bar Rava",
+        "description": "Later Babylonian Amora, student in Rav Papa's circle",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Rava"
+        ],
+        "associatedWithPlace": [
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Bava Metzia",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "rabbi_acha_eretz_yisrael",
+        "name": "Rabbi Acha",
+        "description": "Palestinian Amora, student of R. Yochanan",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "sheshet_nehardea",
+        "name": "Rav Sheshet",
+        "description": "Babylonian Amora, blind scholar of Nehardea, student of Rav Huna and Rav Yehuda",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Nehardea",
+            "Shilhi"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Eruvin",
+            "Pesachim",
+            "Yevamot",
+            "Ketubot",
+            "Gittin",
+            "Kiddushin",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Bava Batra",
+            "Sanhedrin",
+            "Avodah Zarah",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "sheshet_bar_idi",
+        "name": "Rav Sheshet bar Idi",
+        "description": "Babylonian Amora, colleague of Rava",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Idi"
+        ],
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Bava Kamma",
+            "Bava Metzia",
+            "Pesachim"
+        ]
+    },
+    {
+        "id": "hamnuna_sava",
+        "name": "Rav Hamnuna",
+        "description": "Babylonian Amora, student of Rav Huna (Rav Hamnuna Sava)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Bava Batra",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "hamnuna_zuta",
+        "name": "Rav Hamnuna Zuta",
+        "description": "Babylonian Amora, 'the younger', quoted in Berakhot",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Babylonia"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Yoma",
+            "Taanit"
+        ]
+    },
+    {
+        "id": "ada_bar_ahava",
+        "name": "Rav Ada bar Ahava",
+        "description": "Babylonian Amora, student of Rav, known for his purity",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Ahava"
+        ],
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Taanit",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "ada_bar_matna",
+        "name": "Rav Ada bar Matna",
+        "description": "Babylonian Amora, student of Abaye, judge in Sura",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Matna"
+        ],
+        "associatedWithPlace": [
+            "Sura"
+        ],
+        "bookReferences": [
+            "Pesachim",
+            "Bava Metzia",
+            "Kiddushin"
+        ]
+    },
+    {
+        "id": "kahana_student_of_rav",
+        "name": "Rav Kahana",
+        "description": "Babylonian Amora, student of Rav, moved to Eretz Yisrael (Rav Kahana I)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Sura",
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Bava Kamma",
+            "Bava Metzia",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "kahana_later",
+        "name": "Rav Kahana",
+        "description": "Later Babylonian Amora, contemporary of Rav Papa (Rav Kahana III)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Pumbedita"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Bava Batra",
+            "Chullin"
+        ]
+    },
+    {
+        "id": "yonatan_ben_uziel",
+        "name": "Yonatan ben Uziel",
+        "description": "Student of Hillel, traditional translator of the Prophets into Aramaic",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Uziel"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Megillah",
+            "Sukkah",
+            "Bava Batra"
+        ]
+    },
+    {
+        "id": "yonatan_ben_yosef",
+        "name": "Yonatan ben Yosef",
+        "description": "Tanna of the Yavne period (R. Yonatan ben Yosef)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yosef"
+        ],
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Eruvin",
+            "Yevamot",
+            "Menachot"
+        ]
+    },
+    {
+        "id": "yonatan_ben_elazar",
+        "name": "Yonatan",
+        "description": "Palestinian Amora, student of R. Chanina (R. Yonatan ben Elazar)",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Elazar"
+        ],
+        "associatedWithPlace": [
+            "Tiberias"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "yishmael_ben_elisha",
+        "name": "Yishmael ben Elisha",
+        "description": "Tanna, school of R. Yishmael, listed thirteen hermeneutic rules",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Elisha"
+        ],
+        "associatedWithPlace": [
+            "Kfar Aziz",
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Shabbat",
+            "Sanhedrin",
+            "Yevamot",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "yishmael_ben_yose",
+        "name": "Yishmael ben Yose",
+        "description": "Tanna, son of R. Yose ben Halafta, colleague of Rebbi",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Yose ben Halafta"
+        ],
+        "refIds": {
+            "Yose ben Halafta": "yose_ben_halafta"
+        },
+        "associatedWithPlace": [
+            "Sepphoris"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Bava Metzia",
+            "Menachot"
+        ]
+    },
+    {
+        "id": "yishmael_ben_piabi",
+        "name": "Yishmael ben Piabi",
+        "description": "High priest of the late Second Temple era",
+        "isWoman": false,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Piabi"
+        ],
+        "tribeOfIsrael": [
+            "Levi"
+        ],
+        "associatedWithPlace": [
+            "Jerusalem"
+        ],
+        "bookReferences": [
+            "Yoma",
+            "Chagigah",
+            "Sotah"
+        ]
+    },
+    {
+        "id": "beruriah",
+        "name": "Beruriah",
+        "description": "Learned woman, daughter of R. Chanina ben Teradion and wife of R. Meir",
+        "isWoman": true,
+        "isNonJew": false,
+        "isGroup": false,
+        "childOfFather": [
+            "Chanina ben Teradion"
+        ],
+        "spouseOf": [
+            "Meir"
+        ],
+        "refIds": {
+            "Chanina ben Teradion": "chanina_ben_teradion"
+        },
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Pesachim",
+            "Berakhot",
+            "Avodah Zarah",
+            "Eruvin"
+        ]
+    },
+    {
+        "id": "yalta",
+        "name": "Yalta",
+        "description": "Wife of Rav Nachman, daughter of the Exilarch, known for her sharp sayings",
+        "isWoman": true,
+        "isNonJew": false,
+        "isGroup": false,
+        "spouseOf": [
+            "Rav Nachman"
+        ],
+        "refIds": {
+            "Rav Nachman": "nachman_bar_yaakov"
+        },
+        "associatedWithPlace": [
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Pesachim",
+            "Kiddushin"
+        ]
+    },
+    {
+        "id": "ima_shalom",
+        "name": "Ima Shalom",
+        "description": "Wife of R. Eliezer ben Hyrcanus and sister of Rabban Gamliel",
+        "isWoman": true,
+        "isNonJew": false,
+        "isGroup": false,
+        "siblings": [
+            "Gamliel"
+        ],
+        "spouseOf": [
+            "Eliezer ben Hyrcanus"
+        ],
+        "refIds": {
+            "Gamliel": "gamliel_of_yavne",
+            "Eliezer ben Hyrcanus": "eliezer_ben_hyrcanus"
+        },
+        "associatedWithPlace": [
+            "Lod",
+            "Yavne"
+        ],
+        "bookReferences": [
+            "Shabbat",
+            "Bava Metzia",
+            "Nedarim"
+        ]
+    },
+    {
+        "id": "antoninus",
+        "name": "Antoninus",
+        "description": "Roman emperor, friend and patron of Rebbi in Bavli narratives",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Rome"
+        ],
+        "bookReferences": [
+            "Avodah Zarah",
+            "Sanhedrin",
+            "Bava Metzia"
+        ]
+    },
+    {
+        "id": "hadrian",
+        "name": "Hadrian",
+        "description": "Roman emperor, central in the Bar Kochba and Ten Martyrs narratives",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Rome"
+        ],
+        "bookReferences": [
+            "Gittin",
+            "Berakhot",
+            "Avodah Zarah"
+        ]
+    },
+    {
+        "id": "vespasian",
+        "name": "Vespasian",
+        "description": "Roman general and emperor, associated with destruction of Jerusalem",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Rome"
+        ],
+        "bookReferences": [
+            "Gittin",
+            "Sotah"
+        ]
+    },
+    {
+        "id": "turnus_rufus",
+        "name": "Turnus Rufus",
+        "description": "Roman official who debated R. Akiva and executed R. Akiva",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Eretz Yisrael"
+        ],
+        "bookReferences": [
+            "Bava Batra",
+            "Sanhedrin"
+        ]
+    },
+    {
+        "id": "shapur_i",
+        "name": "Shapur",
+        "all_en_names": [
+            "Shapur I",
+            "Shabur Malka"
+        ],
+        "description": "King of Persia (Shapur I), contemporary of Shmuel and Rav Yehuda",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Ctesiphon",
+            "Nehardea"
+        ],
+        "bookReferences": [
+            "Berakhot",
+            "Bava Metzia",
+            "Pesachim"
+        ]
+    },
+    {
+        "id": "shapur_ii",
+        "name": "Shapur",
+        "all_en_names": [
+            "Shapur II",
+            "Shabur Malka"
+        ],
+        "description": "King of Persia (Shapur II), contemporary of Rava and Abaye",
+        "isWoman": false,
+        "isNonJew": true,
+        "isGroup": false,
+        "associatedWithPlace": [
+            "Ctesiphon",
+            "Mechoza"
+        ],
+        "bookReferences": [
+            "Bava Kamma",
+            "Bava Batra",
+            "Berakhot"
+        ]
+    },
+    {
+        "id": "ifra_hormiz",
+        "name": "Ifra Hormiz",
+        "description": "Mother of Shapur II, sent offerings to Rava",
+        "isWoman": true,
+        "isNonJew": true,
+        "isGroup": false,
+        "children": [
+            "Shapur II"
+        ],
+        "refIds": {
+            "Shapur II": "shapur_ii"
+        },
+        "associatedWithPlace": [
+            "Ctesiphon"
+        ],
+        "bookReferences": [
+            "Zevachim",
+            "Bava Batra"
+        ]
+    }
+]
