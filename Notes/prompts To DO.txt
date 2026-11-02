@@ -3,6 +3,10 @@
 
 todo {{
 
+	clear  DB. 
+	pre populate tanach
+	pre populate 
+
 	- running plan:
 		- run all of tanach, entity rel
 		- run all of tanach, entity enrichment
