@@ -15,6 +15,48 @@ from backend_pipeline.data_pipeline.PydanticModels.entity_rel_graph.relationship
 logger = logging.getLogger(__name__)
 
 
+# rel field name -> (term1 entity type, term2 entity type) or list of allowed pairs; None = any type
+RELATIONSHIP_TYPE_CONSTRAINTS = {
+    "studiedFrom": ("Person", "Person"),
+    "childOfFather": ("Person", "Person"),
+    "childOfMother": ("Person", "Person"),
+    "spouseOf": ("Person", "Person"),
+    "descendantOf": ("Person", "Person"),
+    "spokeWith": [("Person", "Person"), ("Animal", "Person"), ("Person", "Animal"), ("Animal", "Animal")],
+    "disagreedWith": ("Person", "Person"),
+    "bornIn": ("Person", "Place"),
+    "diedIn": ("Person", "Place"),
+    "visited": ("Person", "Place"),
+    "prayedAt": ("Person", "Place"),
+    "associatedWithPlace": ("Person", "Place"),
+    "personToTribeOfIsrael": ("Person", "TribeOfIsrael"),
+    "personBelongsToNation": ("Person", "Nation"),
+    "EnemyOf": [("Nation", "Nation"), ("Person", "Person"), ("Person", "Nation")],
+    "AllyOf": [("Nation", "Nation"), ("Person", "Person"), ("Person", "Nation")],
+    "placeToNation": ("Place", "Nation"),
+    "prophesiedAbout": ("Person", None),
+    "comparedTo": (None, None),
+    "contrastedWith": (None, None),
+    "AliasOf": (None, None),
+}
+
+
+def self_relationship_type_pair(rel_type: str, name: str, entities):
+    """
+    For a rel whose two terms are the same name, returns the (type1, type2) pair under which it is
+    legitimate - two DIFFERENT entity types that both contain that name (e.g. Egypt the Place
+    -> Egypt the Nation). Returns None for a true self-loop (same type on both sides).
+    """
+    constraint = RELATIONSHIP_TYPE_CONSTRAINTS.get(rel_type)
+    if constraint is None:
+        return None
+    pairs = constraint if isinstance(constraint, list) else [constraint]
+    for t1, t2 in pairs:
+        if t1 and t2 and t1 != t2 and name in entities.get_entities_by_type(t1) and name in entities.get_entities_by_type(t2):
+            return t1, t2
+    return None
+
+
 class ExtractionResult(BaseModel):
     en_summary: str = Field(
         min_length=1,
@@ -81,29 +123,7 @@ class ExtractionResult(BaseModel):
         if not all_entities:
             return self
 
-        relationship_constraints = {
-            "studiedFrom": ("Person", "Person"),
-            "childOfFather": ("Person", "Person"),
-            "childOfMother": ("Person", "Person"),
-            "spouseOf": ("Person", "Person"),
-            "descendantOf": ("Person", "Person"),
-            "spokeWith": [("Person", "Person"), ("Animal", "Person"), ("Person", "Animal"), ("Animal", "Animal")],
-            "disagreedWith": ("Person", "Person"),
-            "bornIn": ("Person", "Place"),
-            "diedIn": ("Person", "Place"),
-            "visited": ("Person", "Place"),
-            "prayedAt": ("Person", "Place"),
-            "associatedWithPlace": ("Person", "Place"),
-            "personToTribeOfIsrael": ("Person", "TribeOfIsrael"),
-            "personBelongsToNation": ("Person", "Nation"),
-            "EnemyOf": [("Nation", "Nation"), ("Person", "Person"), ("Person", "Nation")],
-            "AllyOf": [("Nation", "Nation"), ("Person", "Person"), ("Person", "Nation")],
-            "placeToNation": ("Place", "Nation"),
-            "prophesiedAbout": ("Person", None),
-            "comparedTo": (None, None),
-            "contrastedWith": (None, None),
-            "AliasOf": (None, None),
-        }
+        relationship_constraints = RELATIONSHIP_TYPE_CONSTRAINTS
 
         invalid_count = 0
         corrected_count = 0
@@ -136,7 +156,7 @@ class ExtractionResult(BaseModel):
                     rel.term2 = corrected_term2
                     corrected_count += 1
 
-                if rel.term1 == rel.term2:
+                if rel.term1 == rel.term2 and self_relationship_type_pair(rel_type, rel.term1, self.Entities) is None:
                     is_valid = False
                     reason = f"Self-relationship: {rel.term1}"
                 elif corrected_term1 is None:

@@ -79,6 +79,15 @@ of its own beyond the convention table below.
 | `placeToNation` | place → `ENation` |
 | `prophesiedAbout` | person (prophet) → anything |
 
+**Same-name rels (`term1 == term2`).** Allowed only when the rel type's two sides are
+*different* entity types and the name exists in both (Egypt Place → Egypt Nation,
+Reuben Person → Reuben Tribe); anything else is dropped as a true self-loop. Enforced in
+two places: `ExtractionResult.filter_invalid_relationships` (via `self_relationship_type_pair`,
+constraints in `RELATIONSHIP_TYPE_CONSTRAINTS`, `response_models.py`) and
+`DBPopulateEntityRelGraph._try_insert_cross_type_self_rel`, which resolves each side by
+*type* (name-only `_resolve_entity_key` would map both to one key = a self-loop) and skips if
+both keys are equal.
+
 ## DB write helpers — which one to use
 
 | Method | Use for |

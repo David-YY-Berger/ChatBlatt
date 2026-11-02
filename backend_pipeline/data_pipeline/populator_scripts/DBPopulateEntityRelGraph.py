@@ -16,6 +16,7 @@ from backend_pipeline.data_pipeline.entity_resolution.PersonDisambiguator import
 from backend_pipeline.data_pipeline.llm_api.ModelConfig import ModelConfig, ModelProvider
 from backend_pipeline.data_pipeline.llm_api.EntityRelGraphCaller import EntityRelGraphCaller
 from backend_pipeline.data_pipeline.PydanticModels.EntityIgnoreFilter import is_ignored_entity_name
+from backend_pipeline.data_pipeline.PydanticModels.entity_rel_graph.response_models import RELATIONSHIP_TYPE_CONSTRAINTS
 from backend_pipeline.file_utils_pipeline.JsonUtils import JsonUtils
 from backend.common import Paths
 
@@ -433,6 +434,12 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         if not term1_name or not term2_name:
             return None
 
+        if term1_name.lower() == term2_name.lower():
+            # Same name on both sides is only meaningful across two different entity types
+            # (Egypt the Place -> Egypt the Nation); name-only resolution would yield a self-loop.
+            return self._try_insert_cross_type_self_rel(
+                term1_name, rel_type, rel_field_name, source_key, entities_dict, source_entity_map)
+
         term1_key, term1_ignored = self._resolve_entity_key(term1_name, entities_dict, source_entity_map, ignored_entity_keys)
         term2_key, term2_ignored = self._resolve_entity_key(term2_name, entities_dict, source_entity_map, ignored_entity_keys)
 
@@ -449,6 +456,52 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         rel = Rel.create(rel_type=rel_type, term1=term1_key, term2=term2_key)
         rel.key = self.db_api.try_insert_rel(rel)
         return rel
+
+    def _try_insert_cross_type_self_rel(
+        self,
+        name: str,
+        rel_type: RelType,
+        rel_field_name: str,
+        source_key: str,
+        entities_dict: dict,
+        source_entity_map: Dict[tuple, str],
+    ) -> Optional[Rel]:
+        """
+        Insert a same-name rel between two distinct-type entities of that name. Dropped (never
+        stored as a self-loop) unless both typed entities resolve to different keys.
+        """
+        pair = None
+        constraint = RELATIONSHIP_TYPE_CONSTRAINTS.get(rel_field_name)
+        for t1, t2 in (constraint if isinstance(constraint, list) else [constraint]):
+            if t1 and t2 and t1 != t2 and self._lookup_typed_key(name, t1, entities_dict, source_entity_map) \
+                    and self._lookup_typed_key(name, t2, entities_dict, source_entity_map):
+                pair = (t1, t2)
+                break
+        if pair is None:
+            print(f"  Skipping self-relationship '{name}' --[{rel_field_name}]--> '{name}' in {source_key}")
+            return None
+
+        key1 = self._lookup_typed_key(name, pair[0], entities_dict, source_entity_map)
+        key2 = self._lookup_typed_key(name, pair[1], entities_dict, source_entity_map)
+        if key1 == key2:
+            return None
+        rel = Rel.create(rel_type=rel_type, term1=key1, term2=key2)
+        rel.key = self.db_api.try_insert_rel(rel)
+        return rel
+
+    @staticmethod
+    def _lookup_typed_key(name: str, category_name: str, entities_dict: dict,
+                          source_entity_map: Dict[tuple, str]) -> Optional[str]:
+        """DB key of the entity called `name` within one specific category, or None."""
+        entity_type = _CATEGORY_TO_ENTITY_TYPE.get(category_name)
+        name_lower = name.lower()
+        for entity_data in entities_dict.get(category_name) or []:
+            if entity_data.get("en_name", "").strip().lower() == name_lower:
+                entity_class = Entity.get_class_for_type(entity_type)
+                lookup = entity_class.create_from_entity_data(entity_data, entity_type).get_identity_tuple()
+                if lookup in source_entity_map:
+                    return source_entity_map[lookup]
+        return None
 
     @staticmethod
     def _get_res(data: dict) -> dict:
