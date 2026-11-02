@@ -2,6 +2,7 @@
 import os
 import subprocess
 from datetime import datetime
+from urllib.parse import quote_plus
 
 from backend.db.DBapiMongoDB import DBapiMongoDB
 from system_common.SystemFunctions import get_secret
@@ -10,18 +11,21 @@ from system_common.SystemFunctions import get_secret
 class DBFactory:
 
     @staticmethod
-    def get_prod_db_mongo() -> DBapiMongoDB:
-
-        # Retrieve the database username and password from environment variables
+    def get_prod_mongo_uri() -> str:
         username = get_secret('DB_BT_USERNAME')
         password = get_secret('DB_BT_PASSWORD')
+        if not username or not password:
+            raise ValueError("Missing db credentials in .env")
 
-        # MongoDB URI
         uri = (
-            f"mongodb+srv://{username}:{password}"
+            f"mongodb+srv://{quote_plus(username)}:{quote_plus(password)}"
             "@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
         )
+        return uri
 
+    @staticmethod
+    def get_prod_db_mongo() -> DBapiMongoDB:
+        uri = DBFactory.get_prod_mongo_uri()
         return DBapiMongoDB(uri)
 
     # #2

@@ -1,65 +1,65 @@
-# bs"d
-"""Dump every collection of the prod Mongo DB to .bson files.
+"""Dump the production MongoDB with MongoDB Database Tools.
 
-Run:  python -m backend_pipeline.data_pipeline.backup_scripts.BackupDB   (from repo root)
+Run from the repository root:
+    python -m backend_pipeline.data_pipeline.backup_scripts.BackupDB
 
-Output:  <DB_BACKUPS_DIR>/<YYYY-MM-DD_HH-MM-SS>/<db_name>/<collection>.bson
-         <DB_BACKUPS_DIR>/<YYYY-MM-DD_HH-MM-SS>/README.md   <- edit: describe what this backup includes
-Read-only against the DB. Restore with: mongorestore --uri=... <timestamp_folder>
+The output can be restored with:
+    mongorestore --uri="<MongoDB URI>" <timestamp_directory>
 """
 import os
+import shutil
+import subprocess
 from datetime import datetime
-
-import bson
 
 from backend.common import Paths
 from backend.db.DBFactory import DBFactory
 
-SYSTEM_DBS = {"admin", "local", "config"}
-BATCH_SIZE = 1000
+SYSTEM_DATABASES = ("admin", "config", "local")
 
 README_TEMPLATE = """# Backup {stamp}
 
 ## What this backup includes
-<!-- Write here: why this backup was taken, DB state (e.g. "after Bereishit entity-rel-graph"), etc. -->
+<!-- Describe why this backup was taken and the database state. -->
 
-## Contents
-{contents}
+## Databases
+{databases}
 """
 
 
 def backup_all() -> str:
+    mongodump = shutil.which("mongodump")
+    if mongodump is None:
+        raise FileNotFoundError(
+            "mongodump was not found on PATH. Install MongoDB Database Tools and ensure mongodump is available."
+        )
+
+    uri = DBFactory.get_prod_mongo_uri()
     stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     backup_dir = os.path.join(Paths.DB_BACKUPS_DIR, stamp)
-    os.makedirs(backup_dir, exist_ok=True)
+    os.makedirs(backup_dir, exist_ok=False)
 
-    db = DBFactory.get_prod_db_mongo()
-    contents = []
-    try:
-        for db_name in sorted(set(db.client.list_database_names()) - SYSTEM_DBS):
-            db_dir = os.path.join(backup_dir, db_name)
-            os.makedirs(db_dir, exist_ok=True)
-            for coll_name in sorted(db.client[db_name].list_collection_names()):
-                count = _dump_collection(db.client[db_name][coll_name], os.path.join(db_dir, f"{coll_name}.bson"))
-                contents.append(f"- `{db_name}/{coll_name}.bson` - {count} docs")
-                print(f"{db_name}.{coll_name}: {count} docs")
-    finally:
-        db.client.close()
+    command = [
+        mongodump,
+        f"--uri={uri}",
+        f"--out={backup_dir}",
+        *(f"--nsExclude={db_name}.*" for db_name in SYSTEM_DATABASES),
+    ]
+    subprocess.run(command, check=True)
 
-    with open(os.path.join(backup_dir, "README.md"), "w", encoding="utf-8") as f:
-        f.write(README_TEMPLATE.format(stamp=stamp, contents="\n".join(contents)))
+    database_names = sorted(
+        name for name in os.listdir(backup_dir)
+        if os.path.isdir(os.path.join(backup_dir, name))
+    )
+    with open(os.path.join(backup_dir, "README.md"), "w", encoding="utf-8") as readme:
+        readme.write(
+            README_TEMPLATE.format(
+                stamp=stamp,
+                databases="\n".join(f"- `{name}/`" for name in database_names),
+            )
+        )
 
     print(f"Backup completed: {backup_dir}")
     return backup_dir
-
-
-def _dump_collection(collection, path: str) -> int:
-    count = 0
-    with open(path, "wb") as f:
-        for doc in collection.find({}, batch_size=BATCH_SIZE):
-            f.write(bson.encode(doc))
-            count += 1
-    return count
 
 
 if __name__ == "__main__":
