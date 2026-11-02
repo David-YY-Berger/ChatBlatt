@@ -318,10 +318,10 @@ if __name__ == "__main__":
         books=[Books.BERAKHOT],         # e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS, or a hand-picked list
         model_provider=ModelProvider.GEMINI_PAID,
         max_sources_per_book=None,      # None = whole book; set an int for a cheap smoke test first
-        # use_examples=False,             # True = ignore books; run only get_examples_src_contents passages
-        use_examples=True,             # True = ignore books; run only get_examples_src_contents passages
-        # json_only=False,                # True = LLM calls -> JSON/TXT files only, no DB writes
-        json_only=True,                # True = LLM calls -> JSON/TXT files only, no DB writes
+        use_examples=False,             # True = ignore books; run only get_examples_src_contents passages
+        # use_examples=True,             # True = ignore books; run only get_examples_src_contents passages
+        json_only=False,                # True = LLM calls -> JSON/TXT files only, no DB writes
+        # json_only=True,                # True = LLM calls -> JSON/TXT files only, no DB writes
     )
     try:
         runner.run_step(Step.ENTITY_REL_GRAPH)
