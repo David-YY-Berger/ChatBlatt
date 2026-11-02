@@ -32,6 +32,9 @@ COMMON_ENTITY_PRE_POPULATE_DIR = os.path.join(
 AMBIGUOUS_TANACH_CHARACTERS_JSON = os.path.join(
     COMMON_ENTITY_PRE_POPULATE_DIR, "ambiguous_tanach_characters.json"
 )
+AMBIGUOUS_BAVLI_CHARACTERS_JSON = os.path.join(
+    COMMON_ENTITY_PRE_POPULATE_DIR, "ambiguous_bavli_characters.json"
+)
 
 ############################################## real-data populator output (per-book) #######################################
 # Single central root for every LLM-populator script's JSON/TXT output, so changing where this

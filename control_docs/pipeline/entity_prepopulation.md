@@ -70,6 +70,10 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
 
 ## Entry points
 
+- `test_validate_names` (Tanach file, corpus TN+BT) / `test_validate_names_bavli`
+  (`ambiguous_bavli_characters.json`, 97 entries, same schema, corpus BT only) — read-only
+  check that every `NAME_FIELDS` name appears verbatim in the corpus; both share
+  `_validate_names(file_path, corpus_collections)`. Bavli population is not implemented yet.
 - `test_print_prepopulation_report` — **read-only**, safe anytime: loads the file, computes
   the full resolution plan, prints it (resolved/unresolved counts, plain persons, siblings,
   ignore-filter collisions, bad book names) plus the pre-flight check. Always run this first.

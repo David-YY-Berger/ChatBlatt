@@ -105,20 +105,28 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
     # ─── Entry point ────────────────────────────────────────────────────────
 
     def test_validate_names(self) -> None:
+        """Name validation for the Tanach characters file (corpus: TN + BT)."""
+        self._validate_names(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON, (CollectionObjs.TN, CollectionObjs.BT))
+
+    def test_validate_names_bavli(self) -> None:
+        """Name validation for the Bavli characters file (corpus: BT only)."""
+        self._validate_names(Paths.AMBIGUOUS_BAVLI_CHARACTERS_JSON, (CollectionObjs.BT,))
+
+    def _validate_names(self, file_path: str, corpus_collections: Tuple[Any, ...]) -> None:
         """
-        Standalone validation pass over Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON:
+        Standalone validation pass over `file_path`:
           - every NAME_FIELDS field present on an entry must be well-formed: a non-empty
             string, or a list of non-empty strings.
           - every name found must appear, in exact spelling, somewhere in the combined
-            clean English text of all source contents currently in the DB.
+            clean English text of all source contents of `corpus_collections` in the DB.
         Every validated name is logged (buffered, flushed every LOG_BUFFER_SIZE names, to
         keep this fast); every missing/invalid field is logged immediately. Ends with a
         clear summary confirming the run completed.
         """
-        entries = self._load_entries(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON)
-        print(f"Loaded {len(entries)} entries from {Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON}")
+        entries = self._load_entries(file_path)
+        print(f"Loaded {len(entries)} entries from {file_path}")
 
-        corpus = self._build_source_corpus()
+        corpus = self._build_source_corpus(corpus_collections)
         print(f"Built source-content corpus: {len(corpus):,} characters.")
 
         log_buffer: List[str] = []
@@ -213,13 +221,13 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
             raise ValueError(f"Expected a JSON list of entries in {file_path}, got {type(data).__name__}")
         return data
 
-    def _build_source_corpus(self) -> str:
+    def _build_source_corpus(self, collections: Tuple[Any, ...] = (CollectionObjs.TN, CollectionObjs.BT)) -> str:
         """
-        Combine the clean English text of every TN + BT source content currently in the DB
-        into a single string, used to confirm a name appears somewhere verbatim.
+        Combine the clean English text of every source content of `collections` currently
+        in the DB into a single string, used to confirm a name appears somewhere verbatim.
         """
         texts: List[str] = []
-        for collection in (CollectionObjs.TN, CollectionObjs.BT):
+        for collection in collections:
             src_contents = self.db_api.get_all_src_contents_of_collection(collection)
             texts.extend(src.get_clean_en_text() for src in src_contents)
         return "\n".join(texts)
