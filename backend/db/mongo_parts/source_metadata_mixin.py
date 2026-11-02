@@ -30,6 +30,11 @@ class SourceMetadataMongoMixin:
         )
         return result.modified_count
 
+    def drop_all_source_metadata(self) -> int:
+        """Delete all source metadata documents. Returns deleted count."""
+        result = self.get_collection(CollectionObjs.SRC_METADATA).delete_many({})
+        return result.deleted_count
+
     def get_source_metadata_by_key(self, key: str) -> Optional[SourceMetadata]:
         doc = self.get_collection(CollectionObjs.SRC_METADATA).find_one({DBFields.KEY: key})
         if doc is None:

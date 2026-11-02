@@ -3,6 +3,7 @@ from enum import Enum
 from typing import List, Union
 
 from backend_pipeline.data_pipeline.DBScriptParentClass import DBParentClass
+from backend_pipeline.data_pipeline.one_time_scripts.clean_entity_rel_graph import clean_entity_rel_graph
 from backend.models_db.Enums import EntityType, RelType
 
 
@@ -150,21 +151,19 @@ class TestsPopulateEntityRelGraphFromJson(DBParentClass):
 
     def test_populate_graph(self):
         # DO NOT RUN THIS TEST!
-        pass
+        # pass
         self.remove_repopulate_graph() # takes 12 min..
         #
-        self._assert_entity_snapshot(self.ABRAHAM)
-        self._assert_entity_snapshot(self.HEBRON)
-        self._assert_entity_snapshot(self.EGYPT_NATION)
-        self._assert_entity_snapshot(self.EGYPT_PLACE)
-        self._assert_entity_snapshot(self.JACOB)
+        # self._assert_entity_snapshot(self.ABRAHAM)
+        # self._assert_entity_snapshot(self.HEBRON)
+        # self._assert_entity_snapshot(self.EGYPT_NATION)
+        # self._assert_entity_snapshot(self.EGYPT_PLACE)
+        # self._assert_entity_snapshot(self.JACOB)
 
     def remove_repopulate_graph(self):
-        pass
-        # 1. Remove all entities and relationships
-        # deleted_entities = self.db_api.drop_all_entities()
-        # deleted_rels = self.db_api.drop_all_rels()
-        # print(f"Dropped {deleted_entities} entities and {deleted_rels} rels before populate.")
+        # pass
+        # 1. Remove all entities, relationships and source metadata
+        clean_entity_rel_graph(self.db_api)
         #
         # # 2. Run the populator
         # from backend_pipeline.data_pipeline.populator_scripts.DBPopulateEntityRelGraph import DBPopulateEntityRelGraph

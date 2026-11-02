@@ -119,7 +119,9 @@ the same book — if the DB is ever wiped/reset and a book is re-run, that book'
 still has the old run's JSON files and phase 2 will re-apply them (resolved by key, falling
 back to `display_en_name` if the key no longer exists — see `DBPopulateEntityEnrichment
 ._process_json_entries`). Clear the relevant per-book dir (`test_force_clear_output_dir`) any
-time the DB has been reset since that book was last populated.
+time the DB has been reset since that book was last populated. To reset the graph, use
+`one_time_scripts/clean_entity_rel_graph.py` (drops all entities, rels and source metadata;
+dry-run unless `--apply`) — it's also what `test_populate_lmm_data.remove_repopulate_graph` calls.
 
 ### Phase 1 resumability & retries
 

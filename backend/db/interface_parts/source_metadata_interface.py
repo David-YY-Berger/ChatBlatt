@@ -25,6 +25,11 @@ class SourceMetadataInterfaceMixin(ABC):
         return self.insert_source_metadata(src_metadata)
 
     @abstractmethod
+    def drop_all_source_metadata(self) -> int:
+        """Delete all source metadata documents. Returns the count of deleted documents."""
+        pass
+
+    @abstractmethod
     def get_source_metadata_by_key(self, key: str) -> Optional[SourceMetadata]:
         pass
 

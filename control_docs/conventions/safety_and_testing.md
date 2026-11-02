@@ -12,7 +12,7 @@ Rules of thumb:
   method) without the user's explicit go-ahead for that specific run.
 - Read-only checks (a count query, `get_entities_by_display_en_name`, a dry-run report) are
   fine to run freely — they don't mutate anything.
-- Destructive calls (`drop_all_entities`, `drop_all_rels`, bulk deletes) need extra-explicit
+- Destructive calls (`drop_all_entities`, `drop_all_rels`, `drop_all_source_metadata`, bulk deletes) need extra-explicit
   confirmation — confirm scope (which collection(s)) before calling.
 
 ## Testing DB logic without touching real data
