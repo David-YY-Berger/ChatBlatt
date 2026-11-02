@@ -86,6 +86,11 @@ consistently been ~10% of standard input across the Flash/Flash-Lite tiers (chec
 the pricing page, Oct 2026). This is an estimate for logging only, not a billing-accurate
 computation; revisit the factor if Google's pricing page ever shows a different ratio.
 
+Model: all Gemini providers in `ModelConfig.MODELS` use `gemini-3.5-flash-lite` (moved from
+`gemini-2.5-flash`). Paid rates are unchanged ($0.30 in / $2.50 out per 1M; cached $0.03), so
+`COST_PER_MILLION` and the 0.1 factor still hold. The 1,024-token cache minimum above was
+measured on 2.5 Flash and is not re-verified on 3.5 Flash-Lite.
+
 Verified live (single real call, short test passage): `EntityRelGraphCaller` got
 `cache_read_tokens=3127` out of `input_tokens=3155` — i.e. ~99% of the request's input came
 from the cache, with only the new passage text sent fresh. Savings scale with how much larger

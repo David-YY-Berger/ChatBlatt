@@ -30,9 +30,9 @@ class ModelProvider(Enum):
     Available LLM providers.
 
     GEMINI_FREE          - Google AI Studio free tier (rate limited, good for testing)
-    GEMINI_FREE_THINKING - Gemini 2.5 Flash with thinking enabled (free tier)
+    GEMINI_FREE_THINKING - Gemini 3.5 Flash-Lite with thinking enabled (free tier)
     GEMINI_PAID          - Google AI Studio paid tier (higher limits)
-    GEMINI_PAID_THINKING - Gemini 2.5 Flash with thinking enabled (paid tier)
+    GEMINI_PAID_THINKING - Gemini 3.5 Flash-Lite with thinking enabled (paid tier)
     OPENAI               - OpenAI GPT-4o-mini (always paid, no free API tier)
     """
     GEMINI_FREE = "gemini_free"
@@ -58,10 +58,10 @@ class ModelConfig:
 
     # Model names for each provider
     MODELS = {
-        ModelProvider.GEMINI_FREE: "gemini-2.5-flash",
-        ModelProvider.GEMINI_FREE_THINKING: "gemini-2.5-flash",
-        ModelProvider.GEMINI_PAID: "gemini-2.5-flash",
-        ModelProvider.GEMINI_PAID_THINKING: "gemini-2.5-flash",
+        ModelProvider.GEMINI_FREE: "gemini-3.5-flash-lite",
+        ModelProvider.GEMINI_FREE_THINKING: "gemini-3.5-flash-lite",
+        ModelProvider.GEMINI_PAID: "gemini-3.5-flash-lite",
+        ModelProvider.GEMINI_PAID_THINKING: "gemini-3.5-flash-lite",
         ModelProvider.OPENAI: "gpt-4o-mini",
     }
 
@@ -99,15 +99,15 @@ class ModelConfig:
     }
 
     # Cost per million tokens (official pricing, for logging)
-    # Gemini 2.5 Flash paid tier: $0.30/1M input, $2.50/1M output (output price
+    # Gemini 3.5 Flash-Lite paid tier: $0.30/1M input, $2.50/1M output (output price
     # includes thinking tokens) - see https://ai.google.dev/gemini-api/docs/pricing
     # and Google's own rate card on https://github.com/BerriAI/litellm (provider: "gemini").
     # NOTE: previously this used stale Gemini 1.5 Flash rates (0.075 / 0.30),
-    # which understated real Gemini 2.5 Flash paid-tier costs by ~6-8x.
+    # which understated real Gemini 3.5 Flash-Lite paid-tier costs by ~6-8x.
     COST_PER_MILLION = {
         ModelProvider.GEMINI_FREE: {"input": 0.0, "output": 0.0},              # Free!
         ModelProvider.GEMINI_FREE_THINKING: {"input": 0.0, "output": 0.0},     # Free! (thinking tokens also free)
-        ModelProvider.GEMINI_PAID: {"input": 0.30, "output": 2.50},           # Gemini 2.5 Flash
+        ModelProvider.GEMINI_PAID: {"input": 0.30, "output": 2.50},           # Gemini 3.5 Flash-Lite
         ModelProvider.GEMINI_PAID_THINKING: {"input": 0.30, "output": 2.50},  # Flash + thinking
         ModelProvider.OPENAI: {"input": 0.15, "output": 0.60},                 # GPT-4o-mini
     }
@@ -139,7 +139,7 @@ class ModelConfig:
         Get the model string for pydantic-ai.
 
         Returns:
-            Model string like 'google-gla:gemini-2.5-flash' or 'openai:gpt-4o-mini'
+            Model string like 'google-gla:gemini-3.5-flash-lite' or 'openai:gpt-4o-mini'
         """
         prefix = cls.PYDANTIC_PREFIXES[cls._current_provider]
         model = cls.MODELS[cls._current_provider]

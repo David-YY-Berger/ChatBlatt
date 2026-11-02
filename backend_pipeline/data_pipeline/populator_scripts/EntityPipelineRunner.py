@@ -315,7 +315,7 @@ class EntityPipelineRunner:
 if __name__ == "__main__":
     # ====== EDIT THIS CONFIG, THEN RUN THIS FILE DIRECTLY ======
     runner = EntityPipelineRunner(
-        books=[Books.BERAKHOT],         # e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS, or a hand-picked list
+        books=[Books.GENESIS],         # e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS, or a hand-picked list
         model_provider=ModelProvider.GEMINI_PAID,
         max_sources_per_book=None,      # None = whole book; set an int for a cheap smoke test first
         use_examples=False,             # True = ignore books; run only get_examples_src_contents passages

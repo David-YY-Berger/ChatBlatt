@@ -75,8 +75,8 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # running this file directly is completely unaffected.
 
         # Standard modes (no extended thinking):
-        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 2.5 Flash (free tier, rate limited)
-        ModelConfig.set_provider(getattr(self, "model_provider", None) or ModelProvider.GEMINI_PAID)   # Gemini 2.5 Flash (paid tier)
+        # ModelConfig.set_provider(ModelProvider.GEMINI_FREE)   # Gemini 3.5 Flash-Lite (free tier, rate limited)
+        ModelConfig.set_provider(getattr(self, "model_provider", None) or ModelProvider.GEMINI_PAID)   # Gemini 3.5 Flash-Lite (paid tier)
         # ModelConfig.set_provider(ModelProvider.OPENAI)        # GPT-4o mini (paid)
 
         # Thinking modes (deeper reasoning, better for complex passages):
