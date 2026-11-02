@@ -443,12 +443,12 @@ def get_examples_src_contents(db_api) -> list[SourceContent]:
 
     #     retesting story of sages:
     #     "BT_Berakhot_0_2a:12-13", # just law
-        "BT_Berakhot_0_3a:4-11", # no story!
-        "BT_Berakhot_0_3a:12-14", # story of sages
-        "BT_Berakhot_0_2a:6-11", # not story of tanach
-        "BT_Berakhot_0_5a:3", # should be story of tanach
-        "TN_Genesis_0_25:11-18", #story and genealogy
-        "TN_Leviticus_0_19:11-18", # just law
+    #     "BT_Berakhot_0_3a:4-11", # no story! -- didnt work..
+        # "BT_Berakhot_0_3a:12-14", # story of sages
+        # "BT_Berakhot_0_2a:6-11", # not story of tanach
+        # "BT_Berakhot_0_5a:3", # should be story of tanach, came out philosophic instead..
+        # "TN_Genesis_0_25:11-18", #story and genealogy
+        # "TN_Leviticus_0_19:11-18", # just law
 
 
     ]
