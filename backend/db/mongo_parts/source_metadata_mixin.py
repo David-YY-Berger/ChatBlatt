@@ -1,9 +1,12 @@
+import logging
 from typing import Any, Dict, List, Optional
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
 from backend.models_db.Enums import PassageType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
+
+logger = logging.getLogger(__name__)
 
 
 class SourceMetadataMongoMixin:
@@ -95,12 +98,24 @@ class SourceMetadataMongoMixin:
             DBFields.REL_KEYS: list(src_metadata.rel_keys),
         }
 
+    @staticmethod
+    def _parse_stored_passage_types(doc: Dict[str, Any]) -> List[PassageType]:
+        """Skip stored values no longer in PassageType (e.g. legacy "Story", since
+        split into STORY_TANACH/STORY_SAGES) so old docs don't crash reads."""
+        valid = {pt.value: pt for pt in PassageType}
+        stored = doc.get(DBFields.PASSAGE_TYPES, [])
+        unknown = [v for v in stored if v not in valid]
+        if unknown:
+            logger.warning("Source %s has obsolete passage types %s; ignoring (re-run populator to reclassify)",
+                           doc.get(DBFields.KEY), unknown)
+        return [valid[v] for v in stored if v in valid]
+
     def _doc_to_src_metadata(self, doc: Dict[str, Any]) -> SourceMetadata:
 
         sm = SourceMetadata(doc.get(DBFields.KEY))
         sm.summary_en = doc.get(DBFields.SUMMARY_EN)
         sm.summary_heb = doc.get(DBFields.SUMMARY_HEB)
-        sm.passage_types = [PassageType(pt) for pt in doc.get(DBFields.PASSAGE_TYPES, [])]
+        sm.passage_types = self._parse_stored_passage_types(doc)
         sm.entity_keys = set(doc.get(DBFields.ENTITY_KEYS, []))
         sm.rel_keys = set(doc.get(DBFields.REL_KEYS, []))
         return sm

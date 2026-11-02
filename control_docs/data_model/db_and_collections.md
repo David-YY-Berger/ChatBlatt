@@ -71,6 +71,11 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 mentions), `rel_keys: Set[str]`. Used by `PersonDisambiguator` to know which books/source
 types a candidate person is mentioned in (see `pipeline/person_disambiguation.md`).
 
+Reading: `_doc_to_src_metadata` drops (with a warning) stored passage-type values no longer
+in `PassageType` — e.g. the legacy `"Story"` from before the Tanach/Sages split — instead of
+raising. Those docs just lose that type until the populator reclassifies them; legacy
+values won't match the new filter checkboxes.
+
 `PassageType.STORY_TANACH` vs `STORY_SAGES` (`backend/models_db/Enums.py`): these labels
 apply only to actual narratives, based on their subject, not on the source or speaker. A
 narrative about Tanach-era people/events is `STORY_TANACH`; a narrative about the
