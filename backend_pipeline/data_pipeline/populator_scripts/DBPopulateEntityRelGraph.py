@@ -385,9 +385,9 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         Convert LLM passage-type strings (e.g. "LAW", "STORY_TANACH") to PassageType enum
         values. Matching is case-insensitive against both enum name and description.
 
-        Deterministic safety net: Tanach text can never reference Mishnaic/Talmudic sages,
-        so any STORY_SAGES the LLM assigns to a Tanach (source_type == TN) passage is
-        corrected to STORY_TANACH rather than trusting the LLM's call on this point.
+        Deterministic safety net: if the LLM assigns STORY_SAGES to a Tanach source
+        (source_type == TN), correct that type to STORY_TANACH. Do not add STORY_TANACH
+        merely because a passage is from Tanach; the LLM must first classify it as a story.
         """
         _pt_map: Dict[str, PassageType] = {}
         for pt in PassageType:
@@ -401,7 +401,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
                 print(f"  WARNING: Unknown passage type '{pt_str}', skipping.")
                 continue
             if pt == PassageType.STORY_SAGES and source_type == SourceType.TN:
-                print(f"  INFO: Overriding STORY_SAGES -> STORY_TANACH for Tanach source.")
+                print("  INFO: Overriding STORY_SAGES -> STORY_TANACH for Tanach source.")
                 pt = PassageType.STORY_TANACH
             if pt not in result:
                 result.append(pt)
@@ -509,7 +509,6 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
 
     ############################################## helper methods ####################################################
-
 
 
 

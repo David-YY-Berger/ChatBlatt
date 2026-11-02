@@ -157,9 +157,11 @@ time the DB has been reset since that book was last populated.
   ignore filter are skipped (see `entity_ignore_filter.md`), and Numbers with a disallowed
   unit/value are skipped (see `data_model/entities/number.md`); (2) insert relationships,
   resolved through that source's own name→key map; (3) upsert `SourceMetadata` — including
-  `passage_types`, where `_parse_passage_types` deterministically forces any LLM-assigned
-  `STORY_SAGES` down to `STORY_TANACH` for a `TN` source (see `data_model/db_and_collections.md`
-  SourceMetadata section for the `STORY_TANACH`/`STORY_SAGES` rule).
+  `passage_types`, classified by the prompt based on passage content: quoted Tanach verses
+  alone do not make a story, and sages discussing a Tanach figure do not make it
+  `STORY_SAGES`. `_parse_passage_types` only corrects an LLM-assigned `STORY_SAGES` to
+  `STORY_TANACH` for a `TN` source; it does not add `STORY_TANACH` to every Tanach passage
+  (see `data_model/db_and_collections.md` SourceMetadata section for the distinction).
 - **The populator never modifies existing entity documents** — names, `book_references`,
   etc. are never touched once written.
 

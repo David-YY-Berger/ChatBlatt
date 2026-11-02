@@ -71,10 +71,13 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 mentions), `rel_keys: Set[str]`. Used by `PersonDisambiguator` to know which books/source
 types a candidate person is mentioned in (see `pipeline/person_disambiguation.md`).
 
-`PassageType.STORY_TANACH` vs `STORY_SAGES` (`backend/models_db/Enums.py`): a narrative
-about Tanach-era people/events is `STORY_TANACH`; a narrative about the Mishnaic/Talmudic
-sages themselves is `STORY_SAGES`. A Tanach source (`source_type == TN`) can only ever be
-`STORY_TANACH` — `DBPopulateEntityRelGraph._parse_passage_types` enforces this deterministically
-(overriding any `STORY_SAGES` the LLM assigns to a TN passage) rather than trusting the LLM's
-call on that point; a Talmudic source is free to be either, decided by the LLM from passage
-content (see `pipeline/population_pipeline_overview.md`).
+`PassageType.STORY_TANACH` vs `STORY_SAGES` (`backend/models_db/Enums.py`): these labels
+apply only to actual narratives, based on their subject, not on the source or speaker. A
+narrative about Tanach-era people/events is `STORY_TANACH`; a narrative about the
+Mishnaic/Talmudic sages themselves is `STORY_SAGES`. Quoting a Tanach verse as prooftext
+does not make a legal passage a story, and a Tanach source is not automatically
+`STORY_TANACH`. The prompt makes this content-based distinction; as a deterministic
+correction, `DBPopulateEntityRelGraph._parse_passage_types` changes an LLM-assigned
+`STORY_SAGES` to `STORY_TANACH` only for `TN` sources. It does not otherwise add a story
+type. Talmudic sources may receive either story type when the passage content warrants it
+(see `pipeline/population_pipeline_overview.md`).

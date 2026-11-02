@@ -29,10 +29,12 @@ class ExtractionResult(BaseModel):
     ] = Field(
         min_length=1,
         description=(
-            "At least one passage type required. STORY_TANACH vs STORY_SAGES: a passage "
-            "narrating Tanach-era people/events is STORY_TANACH (this is ALWAYS the case "
-            "for a passage from Tanach itself); a passage narrating the Mishnaic/Talmudic "
-            "sages themselves is STORY_SAGES."
+            "At least one passage type required. Classify by actual content, not source or speaker. "
+            "STORY_TANACH is for passages narrating/retelling events involving Tanach-era people; "
+            "STORY_SAGES is for events involving Mishnaic/Talmudic sages themselves. Sages discussing "
+            "Tanach figures is STORY_TANACH, not STORY_SAGES. A quoted/cited verse alone is not a story: "
+            "a legal argument using a verse as prooftext is LAW. A Tanach source is not automatically "
+            "STORY_TANACH; assign it only when the passage narrates events."
         ),
     )
     Entities: Entities

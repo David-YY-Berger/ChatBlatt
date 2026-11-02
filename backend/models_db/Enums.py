@@ -118,11 +118,11 @@ class PassageType(ColoredEnum):
     No relationship to TimePeriod — this describes the nature of a passage
     (law, story, etc.), not when it was authored.
 
-    STORY_TANACH vs STORY_SAGES: a Tanach-sourced passage is always
-    STORY_TANACH (Mishnaic/Talmudic sages didn't exist yet). A Talmudic
-    passage can be either — a story about the sages themselves (Mishna/
-    Talmud) is STORY_SAGES, while a story about Tanach-era people/events
-    (even retold in the Talmud) is still STORY_TANACH."""
+    STORY_TANACH vs STORY_SAGES: these types describe the subject of an
+    actual narrative, not the source or speaker. A story about Tanach-era
+    people/events (even retold in the Talmud) is STORY_TANACH; a story
+    about the sages themselves is STORY_SAGES. Quoting a verse alone does
+    not make a passage a story."""
     LAW = ("Law", "⚖️", Color.BLUE)
     STORY_TANACH = ("Story of Tanach", "📖", Color.AMBER)
     STORY_SAGES = ("Story of the Sages", "📚", Color.GOLD)
