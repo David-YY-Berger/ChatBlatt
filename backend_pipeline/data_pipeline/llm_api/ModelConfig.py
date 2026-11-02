@@ -14,6 +14,9 @@ Usage:
     # Switch to Gemini Paid:
     ModelConfig.set_provider(ModelProvider.GEMINI_PAID)
 
+    # Switch to Gemini Legacy Paid:
+    ModelConfig.set_provider(ModelProvider.GEMINI_LEGACY_PAID)
+
     # Get current model string for pydantic-ai:
     model_str = ModelConfig.get_pydantic_model()
 """
@@ -33,12 +36,14 @@ class ModelProvider(Enum):
     GEMINI_FREE_THINKING - Gemini 3.5 Flash-Lite with thinking enabled (free tier)
     GEMINI_PAID          - Google AI Studio paid tier (higher limits)
     GEMINI_PAID_THINKING - Gemini 3.5 Flash-Lite with thinking enabled (paid tier)
+    GEMINI_LEGACY_PAID   - Gemini 3.5 Flash-Lite paid tier using the legacy API key
     OPENAI               - OpenAI GPT-4o-mini (always paid, no free API tier)
     """
     GEMINI_FREE = "gemini_free"
     GEMINI_FREE_THINKING = "gemini_free_thinking"
     GEMINI_PAID = "gemini_paid"
     GEMINI_PAID_THINKING = "gemini_paid_thinking"
+    GEMINI_LEGACY_PAID = "gemini_legacy_paid"
     OPENAI = "openai"
 
 
@@ -50,6 +55,7 @@ class ModelConfig:
     .env file should contain:
         GEMINI_FREE_API_KEY=your_free_key_here
         GEMINI_PAID_API_KEY=your_paid_key_here
+        GEMINI_LEGACY_PAID_API_KEY=your_legacy_paid_key_here
         OPENAI_API_KEY=your_openai_key_here
     """
 
@@ -62,6 +68,7 @@ class ModelConfig:
         ModelProvider.GEMINI_FREE_THINKING: "gemini-3.5-flash-lite",
         ModelProvider.GEMINI_PAID: "gemini-3.5-flash-lite",
         ModelProvider.GEMINI_PAID_THINKING: "gemini-3.5-flash-lite",
+        ModelProvider.GEMINI_LEGACY_PAID: "gemini-3.5-flash-lite",
         ModelProvider.OPENAI: "gpt-4o-mini",
     }
 
@@ -71,6 +78,7 @@ class ModelConfig:
         ModelProvider.GEMINI_FREE_THINKING: "GEMINI_FREE_API_KEY",
         ModelProvider.GEMINI_PAID: "GEMINI_PAID_API_KEY",
         ModelProvider.GEMINI_PAID_THINKING: "GEMINI_PAID_API_KEY",
+        ModelProvider.GEMINI_LEGACY_PAID: "GEMINI_LEGACY_PAID_API_KEY",
         ModelProvider.OPENAI: "OPENAI_API_KEY",
     }
 
@@ -80,6 +88,7 @@ class ModelConfig:
         ModelProvider.GEMINI_FREE_THINKING: "google-gla:",
         ModelProvider.GEMINI_PAID: "google-gla:",
         ModelProvider.GEMINI_PAID_THINKING: "google-gla:",
+        ModelProvider.GEMINI_LEGACY_PAID: "google-gla:",
         ModelProvider.OPENAI: "openai:",
     }
 
@@ -96,6 +105,7 @@ class ModelConfig:
         ModelProvider.GEMINI_FREE_THINKING,
         ModelProvider.GEMINI_PAID,
         ModelProvider.GEMINI_PAID_THINKING,
+        ModelProvider.GEMINI_LEGACY_PAID,
     }
 
     # Cost per million tokens (official pricing, for logging)
@@ -109,6 +119,7 @@ class ModelConfig:
         ModelProvider.GEMINI_FREE_THINKING: {"input": 0.0, "output": 0.0},     # Free! (thinking tokens also free)
         ModelProvider.GEMINI_PAID: {"input": 0.30, "output": 2.50},           # Gemini 3.5 Flash-Lite
         ModelProvider.GEMINI_PAID_THINKING: {"input": 0.30, "output": 2.50},  # Flash + thinking
+        ModelProvider.GEMINI_LEGACY_PAID: {"input": 0.30, "output": 2.50},   # Gemini 3.5 Flash-Lite
         ModelProvider.OPENAI: {"input": 0.15, "output": 0.60},                 # GPT-4o-mini
     }
 
@@ -180,9 +191,9 @@ class ModelConfig:
             ModelProvider.GEMINI_FREE_THINKING,
             ModelProvider.GEMINI_PAID,
             ModelProvider.GEMINI_PAID_THINKING,
+            ModelProvider.GEMINI_LEGACY_PAID,
         ):
             os.environ['GOOGLE_API_KEY'] = api_key
         # pydantic-ai expects OPENAI_API_KEY for OpenAI
         elif cls._current_provider == ModelProvider.OPENAI:
             os.environ['OPENAI_API_KEY'] = api_key
-

@@ -56,6 +56,11 @@ and the LLM provider via a `getattr(self, "<attr>", <hardcoded default>)` hook (
 *then* calls `instance.setUp()` — the override wins. Running either populator directly
 (nothing pre-set) is completely unaffected and keeps its old hardcoded defaults.
 
+Choose the provider with `model_provider=ModelProvider.<...>` when constructing the runner.
+`ModelProvider.GEMINI_LEGACY_PAID` uses `GEMINI_LEGACY_PAID_API_KEY` from `.env` with the
+same Gemini 3.5 Flash-Lite model and paid-tier cost estimate as `GEMINI_PAID`; it is a
+separate key selection, not a different model.
+
 ## Multi-book DB connection handling (why `tearDown()` is never called here)
 
 `DBParentClass.tearDown()` (the common base both populators inherit) calls
