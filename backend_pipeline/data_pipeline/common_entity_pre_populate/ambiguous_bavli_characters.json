@@ -2,7 +2,7 @@
     {
         "id": "yose_ben_halafta",
         "name": "Yose",
-        "description": "Tanna of Sepphoris, student of R. Akiva, father of R. Yishmael b. Yose",
+        "description": "Tanna of Tzippori, student of R. Akiva, father of R. Yishmael b. Yose",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -11,13 +11,13 @@
             "Halafta"
         ],
         "children": [
-            "Yishmael ben Yose"
+            "Rabbi Yishmael, son of Rabbi Yosei"
         ],
         "refIds": {
-            "Yishmael ben Yose": "yishmael_ben_yose"
+            "Rabbi Yishmael, son of Rabbi Yosei": "yishmael_ben_yose"
         },
         "associatedWithPlace": [
-            "Sepphoris",
+            "Tzippori",
             "Usha"
         ],
         "bookReferences": [
@@ -32,7 +32,7 @@
     },
     {
         "id": "yose_hagelili",
-        "name": "Yose HaGelili",
+        "name": "Rabbi Yosei HaGelili",
         "description": "Tanna of Yavne, contemporary of R. Akiva and R. Tarfon",
         "isWoman": false,
         "isNonJew": false,
@@ -53,13 +53,13 @@
     {
         "id": "yose_bar_chanina",
         "name": "Yose",
-        "description": "Palestinian Amora (R. Yose bar Chanina), disciple in the circle of R. Yochanan",
+        "description": "Palestinian Amora (R. Yose bar hanina), disciple in the circle of R. Yochanan",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "childOfFather": [
-            "Chanina"
+            "hanina"
         ],
         "associatedWithPlace": [
             "Eretz Yisrael"
@@ -73,8 +73,8 @@
     },
     {
         "id": "yose_ben_kisma",
-        "name": "Yose ben Kisma",
-        "description": "Tanna of the Hadrianic era, teacher who knew R. Chanina ben Teradion",
+        "name": "Rabbi Yosei ben Kisma",
+        "description": "Tanna of the Hadrianic era, teacher who knew R. hanina ben Teradion",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -92,8 +92,8 @@
         ]
     },
     {
-        "id": "yose_ben_yoezer",
-        "name": "Yose ben Yoezer",
+        "id": "yosef_ben_yoezer",
+        "name": "yosef ben yoezer",
         "description": "Early sage (zug), one of the first pairs, called 'the pious of the priesthood'",
         "isWoman": false,
         "isNonJew": false,
@@ -148,7 +148,7 @@
         "name": "Yehuda HaNasi",
         "all_en_names": [
             "Yehuda HaNasi",
-            "Rebbi",
+            "Rabbi Yehuda HaNasi",
             "Rabbi Yehuda the Prince"
         ],
         "description": "Redactor of the Mishnah, Nasi in Eretz Yisrael ('Rebbi')",
@@ -169,7 +169,7 @@
         },
         "associatedWithPlace": [
             "Beit She'arim",
-            "Sepphoris",
+            "Tzippori",
             "Tiberias"
         ],
         "bookReferences": [
@@ -577,7 +577,7 @@
         },
         "associatedWithPlace": [
             "Tiberias",
-            "Sepphoris"
+            "Tzippori"
         ],
         "bookReferences": [
             "Avodah Zarah",
@@ -798,7 +798,7 @@
         "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Tiberias",
-            "Sepphoris"
+            "Tzippori"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1014,7 +1014,7 @@
     },
     {
         "id": "chanina_ben_dosa",
-        "name": "Chanina ben Dosa",
+        "name": "hanina ben Dosa",
         "description": "Tanna renowned for miracles and piety",
         "isWoman": false,
         "isNonJew": false,
@@ -1035,8 +1035,8 @@
     },
     {
         "id": "chanina_bar_chama",
-        "name": "Chanina",
-        "description": "Palestinian Amora, student of Rebbi (R. Chanina bar Chama)",
+        "name": "hanina",
+        "description": "Palestinian Amora, student of Rebbi (R. hanina bar Chama)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -1045,7 +1045,7 @@
             "Chama"
         ],
         "associatedWithPlace": [
-            "Sepphoris"
+            "Tzippori"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1056,7 +1056,7 @@
     },
     {
         "id": "chanina_ben_teradion",
-        "name": "Chanina ben Teradion",
+        "name": "hanina ben Teradion",
         "description": "Tanna martyred by Rome, father of Beruriah",
         "isWoman": false,
         "isNonJew": false,
@@ -1084,7 +1084,7 @@
     },
     {
         "id": "chanina_segan_hakohanim",
-        "name": "Chanina Segan HaKohanim",
+        "name": "hanina Segan HaKohanim",
         "description": "Deputy high priest in the Temple",
         "isWoman": false,
         "isNonJew": false,
@@ -2023,7 +2023,7 @@
     {
         "id": "yonatan_ben_elazar",
         "name": "Yonatan",
-        "description": "Palestinian Amora, student of R. Chanina (R. Yonatan ben Elazar)",
+        "description": "Palestinian Amora, student of R. hanina (R. Yonatan ben Elazar)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -2065,7 +2065,7 @@
     },
     {
         "id": "yishmael_ben_yose",
-        "name": "Yishmael ben Yose",
+        "name": "Rabbi Yishmael, son of Rabbi Yosei",
         "description": "Tanna, son of R. Yose ben Halafta, colleague of Rebbi",
         "isWoman": false,
         "isNonJew": false,
@@ -2078,7 +2078,7 @@
             "Yose ben Halafta": "yose_ben_halafta"
         },
         "associatedWithPlace": [
-            "Sepphoris"
+            "Tzippori"
         ],
         "bookReferences": [
             "Shabbat",
@@ -2112,19 +2112,19 @@
     {
         "id": "beruriah",
         "name": "Beruriah",
-        "description": "Learned woman, daughter of R. Chanina ben Teradion and wife of R. Meir",
+        "description": "Learned woman, daughter of R. hanina ben Teradion and wife of R. Meir",
         "isWoman": true,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Tanaim",
         "childOfFather": [
-            "Chanina ben Teradion"
+            "hanina ben Teradion"
         ],
         "spouseOf": [
             "Meir"
         ],
         "refIds": {
-            "Chanina ben Teradion": "chanina_ben_teradion"
+            "hanina ben Teradion": "chanina_ben_teradion"
         },
         "associatedWithPlace": [
             "Eretz Yisrael"
