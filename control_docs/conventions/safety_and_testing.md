@@ -15,6 +15,14 @@ Rules of thumb:
 - Destructive calls (`drop_all_entities`, `drop_all_rels`, `drop_all_source_metadata`, bulk deletes) need extra-explicit
   confirmation — confirm scope (which collection(s)) before calling.
 
+## Backups
+
+`python -m backend_pipeline.data_pipeline.backup_scripts.BackupDB` (read-only) dumps every
+collection of every non-system DB to `<Paths.DB_BACKUPS_DIR>/<timestamp>/<db>/<collection>.bson`
+(`C:\ChatBlatt_data_files\backups`) plus a `README.md` in the timestamp folder - fill in its
+"What this backup includes" section by hand. Restore with `mongorestore`. Back up before any
+destructive/bulk run.
+
 ## Testing DB logic without touching real data
 
 Use `mongomock` instead of a real connection:

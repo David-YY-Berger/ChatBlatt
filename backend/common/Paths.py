@@ -46,6 +46,9 @@ ENTITY_REL_GRAPH_REAL_DATA_DIR = os.path.join(REAL_DATA_DIR, "entity_rels")
 ENTITY_ENRICHMENT_REAL_DATA_DIR = os.path.join(REAL_DATA_DIR, "enrichment")
 
 
+DB_BACKUPS_DIR = os.path.join(os.path.dirname(PROJECT_ROOT_DIR), "ChatBlatt_data_files", "backups")
+
+
 def get_entity_rel_graph_output_dir(book_database_name: str) -> str:
     """Per-book output dir for DBPopulateEntityRelGraph's phase 1/2 JSON+TXT files."""
     return os.path.join(ENTITY_REL_GRAPH_REAL_DATA_DIR, book_database_name.lower())
