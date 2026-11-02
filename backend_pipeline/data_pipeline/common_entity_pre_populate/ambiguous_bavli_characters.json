@@ -288,7 +288,7 @@
         "id": "shimon_bar_yochai",
         "name": "Shimon",
         "all_en_names": [
-            "Shimon bar Yochai",
+            "shimon ben yohai",
             "Rashbi"
         ],
         "description": "Tanna, student of R. Akiva, central figure of the later Mishnah ('R. Shimon')",
@@ -300,13 +300,13 @@
             "Yochai"
         ],
         "children": [
-            "Elazar ben Shimon"
+            "Rabbi Elazar, son of Rabbi Shimon"
         ],
         "refIds": {
-            "Elazar ben Shimon": "elazar_ben_shimon"
+            "Rabbi Elazar, son of Rabbi Shimon": "elazar_ben_shimon"
         },
         "associatedWithPlace": [
-            "Peki'in",
+            "peki’in",
             "Meron",
             "Usha"
         ],
@@ -396,9 +396,9 @@
         "name": "Shimon ben Lakish",
         "all_en_names": [
             "Shimon ben Lakish",
-            "Resh Lakish"
+            "Reish Lakish"
         ],
-        "description": "Palestinian Amora and colleague of R. Yochanan ('Resh Lakish')",
+        "description": "Palestinian Amora and colleague of R. Yochanan ('Reish Lakish')",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -536,14 +536,14 @@
             "Shimon ben Gamliel I"
         ],
         "siblings": [
-            "Ima Shalom"
+            "Imma Shalom"
         ],
         "children": [
             "Shimon ben Gamliel II"
         ],
         "refIds": {
             "Shimon ben Gamliel I": "shimon_ben_gamliel_i",
-            "Ima Shalom": "ima_shalom",
+            "Imma Shalom": "ima_shalom",
             "Shimon ben Gamliel II": "shimon_ben_gamliel_ii"
         },
         "associatedWithPlace": [
@@ -590,9 +590,9 @@
         "name": "Eliezer",
         "all_en_names": [
             "Eliezer ben Hyrcanus",
-            "Eliezer HaGadol"
+            "Rabbi Eliezer the Great"
         ],
-        "description": "Tanna, student of R. Yochanan ben Zakkai, teacher of R. Akiva (R. Eliezer HaGadol)",
+        "description": "Tanna, student of R. Yochanan ben Zakkai, teacher of R. Akiva (R. Rabbi Eliezer the Great)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -601,10 +601,10 @@
             "Hyrcanus"
         ],
         "spouseOf": [
-            "Ima Shalom"
+            "Imma Shalom"
         ],
         "refIds": {
-            "Ima Shalom": "ima_shalom"
+            "Imma Shalom": "ima_shalom"
         },
         "associatedWithPlace": [
             "Lod",
@@ -649,8 +649,8 @@
         ]
     },
     {
-        "id": "elazar_ben_azariah",
-        "name": "Elazar ben Azariah",
+        "id": "elazar_ben_azaria",
+        "name": "Elazar ben Azaria",
         "description": "Tanna of Yavne, appointed head after R. Gamliel's temporary removal",
         "isWoman": false,
         "isNonJew": false,
@@ -691,15 +691,15 @@
         ]
     },
     {
-        "id": "elazar_ben_arach",
-        "name": "Elazar ben Arach",
+        "id": "elazar_ben_Arakh",
+        "name": "Elazar ben Arakh",
         "description": "Tanna, student of R. Yochanan ben Zakkai ('ever-flowing spring')",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Tanaim",
         "childOfFather": [
-            "Arach"
+            "Arakh"
         ],
         "associatedWithPlace": [
             "Yavne",
@@ -760,20 +760,20 @@
     },
     {
         "id": "elazar_ben_shimon",
-        "name": "Elazar ben Shimon",
-        "description": "Tanna, son of R. Shimon bar Yochai, associate of Rebbi",
+        "name": "Rabbi Elazar, son of Rabbi Shimon",
+        "description": "Tanna, son of R. shimon ben yohai, associate of Rebbi",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Tanaim",
         "childOfFather": [
-            "Shimon bar Yochai"
+            "shimon ben yohai"
         ],
         "refIds": {
-            "Shimon bar Yochai": "shimon_bar_yochai"
+            "shimon ben yohai": "shimon_bar_yochai"
         },
         "associatedWithPlace": [
-            "Peki'in",
+            "peki’in",
             "Meron",
             "Galilee"
         ],
@@ -785,13 +785,13 @@
         ]
     },
     {
-        "id": "yochanan_bar_nappacha",
+        "id": "yochanan_bar_nappaha",
         "name": "Rabbi Yochanan",
         "all_en_names": [
-            "Yochanan bar Nappacha",
+            "Yochanan bar nappaha",
             "Rabbi Yochanan"
         ],
-        "description": "Foremost Palestinian Amora, head of the Tiberias academy (R. Yochanan bar Nappacha)",
+        "description": "Foremost Palestinian Amora, head of the Tiberias academy (R. Yochanan bar nappaha)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -910,7 +910,7 @@
             "Chananya"
         ],
         "associatedWithPlace": [
-            "Peki'in",
+            "peki’in",
             "Yavne"
         ],
         "bookReferences": [
@@ -1034,15 +1034,15 @@
         ]
     },
     {
-        "id": "chanina_bar_chama",
+        "id": "chanina_bar_hama",
         "name": "hanina",
-        "description": "Palestinian Amora, student of Rebbi (R. hanina bar Chama)",
+        "description": "Palestinian Amora, student of Rebbi (R. hanina bar hama)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "childOfFather": [
-            "Chama"
+            "hama"
         ],
         "associatedWithPlace": [
             "Tzippori"
@@ -1284,15 +1284,15 @@
         ]
     },
     {
-        "id": "shmuel_bar_nachmani",
-        "name": "Shmuel bar Nachmani",
+        "id": "shmuel_bar_nahmani",
+        "name": "Shmuel bar nahmani",
         "description": "Palestinian Amora, student of R. Yonatan and R. Yochanan",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "childOfFather": [
-            "Nachmani"
+            "nahmani"
         ],
         "associatedWithPlace": [
             "Tiberias"
@@ -1370,7 +1370,7 @@
             "Yehoshua"
         ],
         "associatedWithPlace": [
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1424,9 +1424,9 @@
         ]
     },
     {
-        "id": "nachman_bar_yaakov",
-        "name": "Rav Nachman",
-        "description": "Babylonian Amora, judge of Nehardea, student of Shmuel (Rav Nachman bar Yaakov)",
+        "id": "nahman_bar_yaakov",
+        "name": "Rav nahman",
+        "description": "Babylonian Amora, judge of Nehardea, student of Shmuel (Rav nahman bar Yaakov)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -1461,8 +1461,8 @@
         ]
     },
     {
-        "id": "nachman_bar_yitzchak",
-        "name": "Rav Nachman bar Yitzchak",
+        "id": "nahman_bar_yitzchak",
+        "name": "Rav nahman bar Yitzchak",
         "description": "Babylonian Amora, head of Pumbedita from 356 CE",
         "isWoman": false,
         "isNonJew": false,
@@ -1483,8 +1483,8 @@
         ]
     },
     {
-        "id": "nachman_bar_rav_chisda",
-        "name": "Rav Nachman bar Rav Chisda",
+        "id": "nahman_bar_rav_chisda",
+        "name": "Rav nahman bar Rav Chisda",
         "description": "Babylonian Amora, son of Rav Chisda",
         "isWoman": false,
         "isNonJew": false,
@@ -1507,21 +1507,21 @@
         "name": "Rava",
         "all_en_names": [
             "Rava",
-            "Rava bar Yosef bar Chama"
+            "Rava bar Yosef bar hama"
         ],
-        "description": "Babylonian Amora, head of Mechoza academy, often paired with Abaye",
+        "description": "Babylonian Amora, head of Mehoza academy, often paired with Abaye",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "childOfFather": [
-            "Yosef bar Chama"
+            "Yosef bar hama"
         ],
         "refIds": {
-            "Yosef bar Chama": "yosef_bar_chama"
+            "Yosef bar hama": "yosef_bar_hama"
         },
         "associatedWithPlace": [
-            "Mechoza",
+            "Mehoza",
             "Pumbedita"
         ],
         "bookReferences": [
@@ -1542,23 +1542,23 @@
         ]
     },
     {
-        "id": "rabba_bar_nachmani",
+        "id": "rabba_bar_nahmani",
         "name": "Rabbah",
         "all_en_names": [
             "Rabbah",
-            "Rabbah bar Nachmani"
+            "Rabbah bar nahmani"
         ],
-        "description": "Babylonian Amora, head of Pumbedita, called 'uprooter of mountains' (Rabbah bar Nachmani)",
+        "description": "Babylonian Amora, head of Pumbedita, called 'uprooter of mountains' (Rabbah bar nahmani)",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "childOfFather": [
-            "Nachmani"
+            "nahmani"
         ],
         "associatedWithPlace": [
             "Pumbedita",
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1617,8 +1617,8 @@
         ]
     },
     {
-        "id": "yosef_bar_chama",
-        "name": "Rav Yosef bar Chama",
+        "id": "yosef_bar_hama",
+        "name": "Rav Yosef bar hama",
         "description": "Babylonian Amora, father of Rava",
         "isWoman": false,
         "isNonJew": false,
@@ -1631,7 +1631,7 @@
             "Rava": "rava"
         },
         "associatedWithPlace": [
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1677,7 +1677,7 @@
         "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Sura",
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Berakhot",
@@ -1794,7 +1794,7 @@
             "Rava"
         ],
         "associatedWithPlace": [
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Berakhot",
@@ -2139,16 +2139,16 @@
     {
         "id": "yalta",
         "name": "Yalta",
-        "description": "Wife of Rav Nachman, daughter of the Exilarch, known for her sharp sayings",
+        "description": "Wife of Rav nahman, daughter of the Exilarch, known for her sharp sayings",
         "isWoman": true,
         "isNonJew": false,
         "isGroup": false,
         "timePeriod": "Amoraim",
         "spouseOf": [
-            "Rav Nachman"
+            "Rav nahman"
         ],
         "refIds": {
-            "Rav Nachman": "nachman_bar_yaakov"
+            "Rav nahman": "nahman_bar_yaakov"
         },
         "associatedWithPlace": [
             "Nehardea"
@@ -2161,7 +2161,7 @@
     },
     {
         "id": "ima_shalom",
-        "name": "Ima Shalom",
+        "name": "Imma Shalom",
         "description": "Wife of R. Eliezer ben Hyrcanus and sister of Rabban Gamliel",
         "isWoman": true,
         "isNonJew": false,
@@ -2289,7 +2289,7 @@
         "timePeriod": "Amoraim",
         "associatedWithPlace": [
             "Ctesiphon",
-            "Mechoza"
+            "Mehoza"
         ],
         "bookReferences": [
             "Bava Kamma",
