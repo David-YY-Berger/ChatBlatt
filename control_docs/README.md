@@ -18,6 +18,7 @@ govern how these docs get used and maintained.
 | [`data_model/entities/animal.md`](data_model/entities/animal.md) | `EAnimal` fields, `spokeWith`-only relationship |
 | [`data_model/entities/food.md`](data_model/entities/food.md) | `EFood` fields, overlap with Animal/Plant |
 | [`data_model/entities/plant.md`](data_model/entities/plant.md) | `EPlant` fields, overlap with Food |
+| [`data_model/source_content.md`](data_model/source_content.md) | `SourceContent` doc shape (`content` = [EN html, HEB html]), legacy 3rd clean-EN element, trim script |
 | [`data_model/db_and_collections.md`](data_model/db_and_collections.md) | Mongo collections, `DBapiMongoDB` mixins, transactions, key API methods |
 
 ## Population pipeline
