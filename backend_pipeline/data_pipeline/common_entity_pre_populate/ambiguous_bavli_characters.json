@@ -1057,7 +1057,7 @@
     {
         "id": "chanina_ben_teradion",
         "name": "hanina ben Teradion",
-        "description": "Tanna martyred by Rome, father of Beruriah",
+        "description": "Tanna martyred by Rome, father of Berurya",
         "isWoman": false,
         "isNonJew": false,
         "isGroup": false,
@@ -1066,13 +1066,13 @@
             "Teradion"
         ],
         "children": [
-            "Beruriah"
+            "Berurya"
         ],
         "diedIn": [
             "Eretz Yisrael"
         ],
         "refIds": {
-            "Beruriah": "beruriah"
+            "Berurya": "Berurya"
         },
         "associatedWithPlace": [
             "Sikhnin"
@@ -2110,8 +2110,8 @@
         ]
     },
     {
-        "id": "beruriah",
-        "name": "Beruriah",
+        "id": "Berurya",
+        "name": "Berurya",
         "description": "Learned woman, daughter of R. hanina ben Teradion and wife of R. Meir",
         "isWoman": true,
         "isNonJew": false,
@@ -2258,7 +2258,7 @@
         "name": "Shapur",
         "all_en_names": [
             "Shapur I",
-            "Shabur Malka"
+            "king shapur"
         ],
         "description": "King of Persia (Shapur I), contemporary of Shmuel and Rav Yehuda",
         "isWoman": false,
@@ -2280,7 +2280,7 @@
         "name": "Shapur",
         "all_en_names": [
             "Shapur II",
-            "Shabur Malka"
+            "king shapur"
         ],
         "description": "King of Persia (Shapur II), contemporary of Rava and Abaye",
         "isWoman": false,
