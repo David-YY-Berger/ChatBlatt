@@ -314,8 +314,49 @@ class EntityPipelineRunner:
 
 if __name__ == "__main__":
     # ====== EDIT THIS CONFIG, THEN RUN THIS FILE DIRECTLY ======
+    books = [
+        # Books.GENESIS,
+        # Books.EXODUS,
+        # Books.LEVITICUS,
+        # Books.NUMBERS,
+        # Books.DEUTERONOMY,
+        Books.JOSHUA,
+        Books.JUDGES,
+        Books.SAMUEL_I,
+        Books.SAMUEL_II,
+        Books.KINGS_I,
+        Books.KINGS_II,
+        Books.ISAIAH,
+        Books.JEREMIAH,
+        Books.EZEKIEL,
+        Books.HOSEA,
+        Books.JOEL,
+        Books.AMOS,
+        Books.OBADIAH,
+        Books.JONAH,
+        Books.MICAH,
+        Books.NAHUM,
+        Books.HABAKKUK,
+        Books.ZEPHANIAH,
+        Books.HAGGAI,
+        Books.ZECHARIAH,
+        Books.MALACHI,
+        Books.PSALMS,
+        Books.PROVERBS,
+        Books.JOB,
+        Books.SONG_OF_SONGS,
+        Books.RUTH,
+        Books.LAMENTATIONS,
+        Books.ECCLESIASTES,
+        Books.ESTHER,
+        Books.DANIEL,
+        Books.EZRA,
+        Books.NEHEMIAH,
+        Books.CHRONICLES_I,
+        Books.CHRONICLES_II,
+    ]
     runner = EntityPipelineRunner(
-        books=[Books.GENESIS],         # e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS, or a hand-picked list
+        books=books,                    # uncomment the books to process
         model_provider=ModelProvider.GEMINI_PAID,
         # model_provider=ModelProvider.GEMINI_LEGACY_PAID,  # Uses GEMINI_LEGACY_PAID_API_KEY
         max_sources_per_book=None,      # None = whole book; set an int for a cheap smoke test first
@@ -326,7 +367,7 @@ if __name__ == "__main__":
     )
     try:
         runner.run_step(Step.ENTITY_REL_GRAPH)
-        # runner.run_step(Step.ENTITY_ENRICHMENT)
+        runner.run_step(Step.ENTITY_ENRICHMENT)
     finally:
         runner.close()
     # =============================================================
