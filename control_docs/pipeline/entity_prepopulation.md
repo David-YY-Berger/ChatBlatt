@@ -2,8 +2,8 @@
 
 Script: `backend_pipeline/data_pipeline/populator_scripts/DBPrePopulateAmbiguosEntitys.py`.
 Input: `backend_pipeline/data_pipeline/common_entity_pre_populate/ambiguous_tanach_characters.json`
-(167 Tanach entries; a Talmud-sages file is expected to follow — the script already takes
-the input file + default `TimePeriod` as parameters for that).
+(167 Tanach entries) and `.../ambiguous_bavli_characters.json` (97 Bavli sages). Both share the
+same schema and code path; the script takes the input file + default `TimePeriod` as parameters.
 
 ## Goal
 
@@ -19,6 +19,7 @@ JSON list of entries with a unique `id`. Per-entry fields:
 
 | Field | Meaning |
 |---|---|
+| `timePeriod` | optional `TimePeriod` value (`Tanaim`/`Amoraim`/…), overrides the run default for that entry (set on every Bavli entry; an invalid value is a pre-flight issue) |
 | `name` | → `display_en_name` (also first element of `all_en_names`) |
 | `all_en_names` | optional explicit list of every spelling this person is known by (`name` is always first) |
 | `description` | human-readable only — never stored on the entity, kept in the report/progress file for readability |
@@ -30,7 +31,8 @@ JSON list of entries with a unique `id`. Per-entry fields:
 | `refIds` | optional `{raw_reference_string: target_entry_id}` — explicit disambiguation for a reference, highest-priority resolution |
 
 Every created `EPerson` always gets `isGroup=False`, `roles=[]` (not derived from
-`description` — rejected as too error-prone) and `timePeriod=default_time_period`.
+`description` — rejected as too error-prone) and `timePeriod` = the entry's own value, else the run default (Tanach file: `Tanach`; Bavli
+file: `NoTimePeriod`, which only affects "plain" people created from bare references).
 
 ## Reference resolution (the hard part)
 
@@ -65,7 +67,7 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
   commits. Re-running skips any id whose key still resolves in the DB. Plain persons need no
   such file — they're found by a live DB name query every time.
 - **Pre-flight guard**: before writing anything, every entry name is checked against the DB;
-  any existing same-named `EPerson` not accounted for by the progress file aborts the whole
+  any existing same-named `EPerson` not accounted for by ANY `*.progress.json` in the input dir (so Tanach-then-Bavli doesn't self-collide) aborts the whole
   run (pre-population never merges into existing people).
 
 ## Entry points
@@ -73,11 +75,12 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
 - `test_validate_names` (Tanach file, corpus TN+BT) / `test_validate_names_bavli`
   (`ambiguous_bavli_characters.json`, 97 entries, same schema, corpus BT only) — read-only
   check that every `NAME_FIELDS` name appears verbatim in the corpus; both share
-  `_validate_names(file_path, corpus_collections)`. Bavli population is not implemented yet.
+  `_validate_names(file_path, corpus_collections)`.
 - `test_print_prepopulation_report` — **read-only**, safe anytime: loads the file, computes
   the full resolution plan, prints it (resolved/unresolved counts, plain persons, siblings,
   ignore-filter collisions, bad book names) plus the pre-flight check. Always run this first.
-- `test_run_prepopulation` — does the real writes for the Tanach file (`TimePeriod.Tanach`).
+- `test_run_prepopulation` / `test_run_prepopulation_bavli` — the real writes for the Tanach /
+  Bavli file. Report twin: `test_print_prepopulation_report_bavli`.
 
 ## Known limitations (by design, not bugs)
 

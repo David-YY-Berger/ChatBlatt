@@ -267,7 +267,13 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         plus a read-only pre-flight check against the DB for unexpectedly pre-existing
         same-named people. Review this before ever calling test_run_prepopulation.
         """
-        file_path = Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON
+        self._print_report(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON)
+
+    def test_print_prepopulation_report_bavli(self) -> None:
+        """SAFE, read-only dry run for the Bavli file - see test_print_prepopulation_report."""
+        self._print_report(Paths.AMBIGUOUS_BAVLI_CHARACTERS_JSON)
+
+    def _print_report(self, file_path: str) -> None:
         entries = self._load_entries(file_path)
         plan = self._compute_plan(entries)
         preflight_issues = self._preflight_check(entries, plan, file_path)
@@ -281,6 +287,15 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         _progress_path/_load_progress/_save_progress and guide §2.6).
         """
         self._prepopulate(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON, TimePeriod.Tanach)
+
+    def test_run_prepopulation_bavli(self) -> None:
+        """
+        Same as test_run_prepopulation, for the Bavli file. Every entry carries its own
+        timePeriod; the NoTimePeriod default only applies to "plain" people created from
+        bare references (e.g. a father known only by name), who aren't necessarily from the
+        same period as the entry referencing them - enrichment fills it in later.
+        """
+        self._prepopulate(Paths.AMBIGUOUS_BAVLI_CHARACTERS_JSON, TimePeriod.NoTimePeriod)
 
     # ─── Orchestration ──────────────────────────────────────────────────────────────
 
@@ -441,9 +456,16 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         siblings_report: List[Tuple[str, List[str]]] = []
         book_issues: List[str] = []
         ignore_collisions: List[str] = []
+        time_period_issues: List[str] = []
+        valid_time_periods = {tp.value for tp in TimePeriod}
 
         for entry in entries:
             entry_id = entry["id"]
+
+            if "timePeriod" in entry and entry["timePeriod"] not in valid_time_periods:
+                time_period_issues.append(
+                    f"id='{entry_id}' timePeriod -> '{entry['timePeriod']}' is not one of {sorted(valid_time_periods)}"
+                )
 
             if is_ignored_entity_name(entry["name"], EntityType.EPerson):
                 ignore_collisions.append(
@@ -509,6 +531,7 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
             "tribe_refs": tribe_refs,
             "siblings_report": siblings_report,
             "book_issues": book_issues,
+            "time_period_issues": time_period_issues,
             "ignore_collisions": ignore_collisions,
         }
 
@@ -522,8 +545,7 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         expected to exist and is not an issue. Returns a list of human-readable issues;
         a non-empty list means the caller must stop (see _prepopulate).
         """
-        progress = self._load_progress(file_path)
-        tracked_keys = set(progress.values())
+        tracked_keys = self._all_tracked_keys(file_path)
 
         issues: List[str] = []
         checked_names: Set[str] = set()
@@ -544,6 +566,8 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
 
         if plan["dup_ids"]:
             issues.append(f"Duplicate entry ids in input file: {plan['dup_ids']}")
+        for issue in plan["time_period_issues"]:
+            issues.append(f"Invalid timePeriod: {issue}")
 
         return issues
 
@@ -576,6 +600,11 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         if plan["book_issues"]:
             print(f"\nInvalid book names ({len(plan['book_issues'])}):")
             for issue in plan["book_issues"]:
+                print(f"    [ISSUE] {issue}")
+
+        if plan["time_period_issues"]:
+            print(f"\nInvalid timePeriod values ({len(plan['time_period_issues'])}):")
+            for issue in plan["time_period_issues"]:
                 print(f"    [ISSUE] {issue}")
 
         if plan["ignore_collisions"]:
@@ -611,6 +640,19 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
     def _load_progress(self, file_path: str) -> Dict[str, str]:
         return self._load_progress_file(self._progress_path(file_path))
 
+    def _all_tracked_keys(self, file_path: str) -> Set[str]:
+        """
+        Keys created by ANY pre-population input file (every *.progress.json next to
+        `file_path`), so running the Bavli file after the Tanach one doesn't flag the
+        Tanach people as unexpected same-named pre-existing entities.
+        """
+        directory = os.path.dirname(file_path)
+        keys: Set[str] = set()
+        for name in os.listdir(directory):
+            if name.endswith(".progress.json"):
+                keys.update(self._load_progress_file(os.path.join(directory, name)).values())
+        return keys
+
     @staticmethod
     def _save_progress(file_path: str, progress: Dict[str, str]) -> None:
         """Overwrites the progress file. Called only AFTER a transaction commits (guide §2.6)."""
@@ -629,7 +671,7 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
             "display_en_name": entry["name"],
             "entityType": EntityType.EPerson,
             "all_en_names": all_en_names,
-            "timePeriod": default_time_period,
+            "timePeriod": entry.get("timePeriod") or default_time_period,  # per-entry override (Bavli file)
             "isWoman": entry.get("isWoman"),      # present value, or None if absent (unknown - NOT False)
             "isNonJew": entry.get("isNonJew"),     # same
             "isGroup": False,
