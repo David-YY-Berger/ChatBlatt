@@ -88,12 +88,10 @@ TRIBE_FIELD = "tribeOfIsrael"
 
 class DBPrePopulateAmbiguosEntitys(DBParentClass):
     """
-    Pre-populates well-known, name-ambiguous entities (Tanach characters for now, Talmud
-    sages later) into the entity graph, before any source is populated — so that people who
-    share a name (e.g. two kings named Joash) end up as separate entities. See
+    Pre-populates well-known, name-ambiguous entities (Tanach characters and Bavli sages)
+    into the entity graph, before any source is populated — so that people who share a name
+    (e.g. two kings named Joash) end up as separate entities. See
     Notes/entity_prepopulation_guide.md for the full design.
-
-    Currently only the name-validation pass is implemented (more to follow).
     """
 
     def setUp(self):
@@ -281,25 +279,17 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
 
     def test_run_prepopulation(self) -> None:
         """
-        Entry point for the Tanach-characters file. Pre-populates every entry as its own
-        EPerson (TimePeriod.Tanach), then resolves every person/place/tribe reference and
-        writes the corresponding relationships. Idempotent - safe to re-run (see
-        _progress_path/_load_progress/_save_progress and guide §2.6).
+        Pre-populates both the Tanach characters and Bavli sages, in that order. Each entry
+        is created as its own EPerson, then its person/place/tribe references are resolved
+        and linked. Idempotent - safe to re-run (see _progress_path/_load_progress/
+        _save_progress and guide §2.6).
         """
-        self._prepopulate(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON, TimePeriod.Tanach)
-
-    def test_run_prepopulation_bavli(self) -> None:
-        """
-        Same as test_run_prepopulation, for the Bavli file. Every entry carries its own
-        timePeriod; the NoTimePeriod default only applies to "plain" people created from
-        bare references (e.g. a father known only by name), who aren't necessarily from the
-        same period as the entry referencing them - enrichment fills it in later.
-        """
-        self._prepopulate(Paths.AMBIGUOUS_BAVLI_CHARACTERS_JSON, TimePeriod.NoTimePeriod)
+        if self._prepopulate(Paths.AMBIGUOUS_TANACH_CHARACTERS_JSON, TimePeriod.Tanach):
+            self._prepopulate(Paths.AMBIGUOUS_BAVLI_CHARACTERS_JSON, TimePeriod.NoTimePeriod)
 
     # ─── Orchestration ──────────────────────────────────────────────────────────────
 
-    def _prepopulate(self, file_path: str, default_time_period: TimePeriod) -> None:
+    def _prepopulate(self, file_path: str, default_time_period: TimePeriod) -> bool:
         entries = self._load_entries(file_path)
         plan = self._compute_plan(entries)
         preflight_issues = self._preflight_check(entries, plan, file_path)
@@ -308,7 +298,7 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         if preflight_issues:
             print(f"\n{'=' * 60}\nABORTING: {len(preflight_issues)} pre-flight issue(s) found - see above. "
                   f"Resolve them (or clear the conflicting data) before running this again.\n{'=' * 60}")
-            return
+            return False
 
         progress = self._load_progress(file_path)
         person_stats = self._run_person_pass(entries, default_time_period, progress, file_path)
@@ -323,6 +313,7 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
         print(f"Places linked:      {ref_stats['place_rels']}")
         print(f"Tribes linked:      {ref_stats['tribe_rels']}")
         print(f"{'=' * 60}")
+        return True
 
     # ─── Plan computation (pure - no DB access) ────────────────────────────────────
 
@@ -830,4 +821,3 @@ class DBPrePopulateAmbiguosEntitys(DBParentClass):
                 stats[k] += entry_stats[k]
 
         return stats
-

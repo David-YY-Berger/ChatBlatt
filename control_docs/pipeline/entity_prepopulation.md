@@ -66,9 +66,11 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
   scratch data) maps entry id → DB key, written only after that entry's pass-1 transaction
   commits. Re-running skips any id whose key still resolves in the DB. Plain persons need no
   such file — they're found by a live DB name query every time.
-- **Pre-flight guard**: before writing anything, every entry name is checked against the DB;
-  any existing same-named `EPerson` not accounted for by ANY `*.progress.json` in the input dir (so Tanach-then-Bavli doesn't self-collide) aborts the whole
-  run (pre-population never merges into existing people).
+- **Pre-flight guard**: before writing each file, every entry name in that file is checked
+  against the DB; any existing same-named `EPerson` not accounted for by ANY
+  `*.progress.json` in the input dir aborts that file's run (pre-population never merges
+  into existing people). The combined runner processes Tanach first so its progress file
+  prevents those entries from blocking the Bavli run.
 
 ## Entry points
 
@@ -79,8 +81,10 @@ reference string (all alt-spellings via `"A / B"` tried together as one candidat
 - `test_print_prepopulation_report` — **read-only**, safe anytime: loads the file, computes
   the full resolution plan, prints it (resolved/unresolved counts, plain persons, siblings,
   ignore-filter collisions, bad book names) plus the pre-flight check. Always run this first.
-- `test_run_prepopulation` / `test_run_prepopulation_bavli` — the real writes for the Tanach /
-  Bavli file. Report twin: `test_print_prepopulation_report_bavli`.
+- `test_run_prepopulation` — the mutating runner for both files, in Tanach-then-Bavli order.
+  If the Tanach pre-flight check fails, the Bavli file is not attempted. Run the read-only
+  `test_print_prepopulation_report` / `test_print_prepopulation_report_bavli` first to
+  inspect each file's plan and pre-flight status.
 
 ## Known limitations (by design, not bugs)
 

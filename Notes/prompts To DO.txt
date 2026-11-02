@@ -5,8 +5,18 @@ todo {{
 
 	clear  DB. 
 	pre populate tanach
-	pre populate 
+	pre populate bavli
+	
+	lets just check backup of contents..
+	pop bereishit entity + rel,
+	pop bereishit entity metadata,
+	check UI
+	pop tanaach
+	
+	// while running - figure out best way to store json files in github...
 
+	if tanach seems good, add money to gemini, keep running,...
+	
 	- running plan:
 		- run all of tanach, entity rel
 		- run all of tanach, entity enrichment
