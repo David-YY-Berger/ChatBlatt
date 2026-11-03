@@ -86,6 +86,12 @@ class BaseEntityPopulator(ABC):
             other_name = info[0] if info else other_key
             other_type = info[1] if info else None
 
+            # Distinct entities can share a display name (e.g. a person and his tribe, or
+            # duplicate persons); don't let them collapse into one list item / nav link.
+            existing_link = entity.rel_links.get(other_name)
+            if existing_link and existing_link[0] != other_key:
+                other_name = f"{other_name} (#{other_key[-4:]})"
+
             field_value = getattr(entity, field_name, None)
             if isinstance(field_value, list):
                 if other_name not in field_value:
