@@ -15,6 +15,9 @@ body {
 }
 
 .app-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     margin: 0.1rem 0;
     color: #f8f9fa;
 }

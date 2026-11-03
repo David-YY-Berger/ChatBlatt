@@ -14,7 +14,10 @@ def render_header(lang: str) -> None:
             <div class="app-header-row">
                 <div class="app-header-titles">
                     <div class="app-dedication"><em>{get_text('app.dedication', lang)}</em></div>
-                    <h1 class="app-title">{get_text('app.title', lang)}</h1>
+                    <h1 class="app-title">
+                        <span>{get_text('app.title', lang)}</span>
+                        <span class="beta-badge">Beta</span>
+                    </h1>
                     <div class="app-subtitle">{get_text('app.subtitle', lang)}</div>
                 </div>
                 <a class="app-sefaria-banner" href="https://www.sefaria.org" target="_blank" rel="noopener noreferrer">

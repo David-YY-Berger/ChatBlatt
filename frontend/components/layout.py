@@ -173,12 +173,6 @@ def apply_layout(lang: str) -> None:
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--accent);
         }}
-        .home-page-title {{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }}
         .beta-badge {{
             flex: 0 0 auto;
             padding: 0.25rem 0.7rem;

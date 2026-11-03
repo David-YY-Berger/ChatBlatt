@@ -26,10 +26,7 @@ LOREM_HE = (
 
 def render(lang: str) -> None:
     title = get_text("page_titles.home", lang)
-    st.markdown(
-        f'<div class="page-title home-page-title"><span>{title}</span><span class="beta-badge">Beta</span></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
     rtl = is_rtl(lang)
     lorem = LOREM_HE if rtl else LOREM_EN
