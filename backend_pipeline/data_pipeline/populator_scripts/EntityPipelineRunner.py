@@ -1,4 +1,4 @@
-# bs"d
+﻿# bs"d
 """
 EntityPipelineRunner - single clear place to run DBPopulateEntityRelGraph and/or
 DBPopulateEntityEnrichment across one or more books, without opening either of those files
@@ -36,6 +36,7 @@ combination is DB-write-free (see the Stage enum docstring below for the one cav
 ENTITY_ENRICHMENT + EXTRACT_ONLY).
 """
 
+import unittest
 from dataclasses import dataclass
 from enum import Enum
 from typing import Dict, List, Optional, Sequence, Tuple, Type
@@ -146,8 +147,14 @@ class EntityPipelineRunner:
         max_sources_per_book: Optional[int] = None,
         use_examples: bool = False,
         json_only: bool = False,
+        source_keys: Optional[Sequence[str]] = None,
     ):
         """
+        source_keys: run ONLY these specific source keys (e.g. 'TN_Genesis_0_6:14-25')
+            instead of whole books. The books are derived from the keys, so `books` may be
+            omitted; if given too, `books` is ignored. Sources are processed per book (book
+            order). Note rel-graph phase 1 skips a source whose JSON output already exists -
+            delete that file (or use clear_output_dirs) to force a re-extract.
         books: the books to process, IN ORDER (e.g. TANACH_BOOKS, BAVLI_BOOKS, ALL_BOOKS,
             or a hand-picked list like [Books.GENESIS, Books.BERAKHOT]). Ignored when
             use_examples=True.
@@ -170,10 +177,26 @@ class EntityPipelineRunner:
         self.max_sources_per_book = max_sources_per_book
         self.use_examples = use_examples
         self.json_only = json_only
+        self.source_keys_by_book: Dict[Book, List[str]] = {}
+        if source_keys and not use_examples:
+            self.source_keys_by_book = self._group_keys_by_book(source_keys)
+            self.books = sorted(self.source_keys_by_book)
         if not use_examples and not self.books:
-            raise ValueError("Pass books=[...] or use_examples=True.")
+            raise ValueError("Pass books=[...], source_keys=[...] or use_examples=True.")
         self._initialized_classes: List[Type[DBPopulateLlmBase]] = []
         self.results: List[_BookRunResult] = []
+
+    @staticmethod
+    def _group_keys_by_book(source_keys: Sequence[str]) -> Dict[Book, List[str]]:
+        """Key format '<SOURCE_TYPE>_<BookDatabaseName>_0_<ref>' -> {book: [keys]}."""
+        grouped: Dict[Book, List[str]] = {}
+        for key in dict.fromkeys(source_keys):
+            parts = key.split("_")
+            book = Books.get_by_db_name(parts[1]) if len(parts) > 2 else None
+            if book is None or book.source_type.name != parts[0]:
+                raise ValueError(f"Cannot resolve a book from source key: {key!r}")
+            grouped.setdefault(book, []).append(key)
+        return grouped
 
     def _targets(self) -> List[Optional[Book]]:
         """Books to iterate; examples mode is a single run with no book."""
@@ -247,6 +270,62 @@ class EntityPipelineRunner:
                       f"{step.value:<18} {stage.value:<20} -> {method_name}()")
         print(f"{'='*70}\n")
 
+    def find_unprocessed_sources(self, books: Optional[Sequence[Book]] = None) -> Dict[Book, Dict[str, List[str]]]:
+        """
+        Read-only DB check (no LLM calls, no writes). For each book (default: self.books),
+        prints and returns the source keys where a step did not (fully) run:
+          "rel_graph_missing" - no SourceMetadata exists for the source content, i.e. the
+              rel-graph population never ran for it.
+          "enrichment_missing" - SourceMetadata exists, but some of its linked entities
+              still have no metadata (enrichment didn't run / didn't finish).
+        Returns {book: {"rel_graph_missing": [...], "enrichment_missing": [...]}}.
+        """
+        books = list(books) if books is not None else list(self.books)
+        cls = DBPopulateEntityEnrichment
+        if cls not in self._initialized_classes:
+            cls.setUpClass()
+            self._initialized_classes.append(cls)
+        db_api = cls.db_api
+
+        report: Dict[Book, Dict[str, List[str]]] = {}
+        for book in books:
+            rel_missing: List[str] = []
+            enrich_missing: List[str] = []
+            for src_content in db_api.get_all_src_contents_by_book(book):
+                src_metadata = db_api.get_source_metadata_by_key(src_content.key)
+                if src_metadata is None:
+                    rel_missing.append(src_content.key)
+                    continue
+                if not src_metadata.entity_keys:
+                    continue
+                entities = db_api.get_entities_by_keys(list(src_metadata.entity_keys))
+                if any(not e.has_metadata() for e in entities):
+                    enrich_missing.append(src_content.key)
+            report[book] = {"rel_graph_missing": rel_missing, "enrichment_missing": enrich_missing}
+
+        print(f"\n{'='*70}\nUNPROCESSED SOURCES REPORT\n{'='*70}")
+        all_rel: List[str] = []
+        all_enrich: List[str] = []
+        for book, res in report.items():
+            print(f"{self._book_label(book)}: "
+                  f"{len(res['rel_graph_missing'])} without rel-graph metadata, "
+                  f"{len(res['enrichment_missing'])} with un-enriched entities")
+            all_rel += res["rel_graph_missing"]
+            all_enrich += res["enrichment_missing"]
+        # Copy-paste-ready Python lists, e.g. EntityPipelineRunner(source_keys=REL_GRAPH_MISSING)
+        print("\n# Paste into EntityPipelineRunner(source_keys=...) and run run_full_pipeline():")
+        print(f"REL_GRAPH_MISSING = {self._format_list(all_rel)}")
+        print("\n# Rel-graph already ran - paste and run_step(Step.ENTITY_ENRICHMENT):")
+        print(f"ENRICHMENT_MISSING = {self._format_list(all_enrich)}")
+        print(f"{'='*70}\n")
+        return report
+
+    @staticmethod
+    def _format_list(keys: List[str]) -> str:
+        if not keys:
+            return "[]"
+        return "[\n" + "".join(f"    {key!r},\n" for key in keys) + "]"
+
     def close(self) -> None:
         """Disconnect the shared DB connection. Call once, after ALL runs are done."""
         for cls in self._initialized_classes:
@@ -271,6 +350,7 @@ class EntityPipelineRunner:
         instance.model_provider = self.model_provider
         instance.max_sources_to_extract = self.max_sources_per_book
         instance.use_examples = self.use_examples
+        instance.source_keys_filter = self.source_keys_by_book.get(book)
         instance.skip_db_writes = self.json_only
         instance.setUp()
 
@@ -312,14 +392,38 @@ class EntityPipelineRunner:
         print(f"{'='*70}\n")
 
 
+class EntityPipelineRunnerTests(unittest.TestCase):
+    """PyCharm-runnable entry points (click the gutter Run icon on a method)."""
+
+    def test_find_unprocessed_sources(self) -> None:
+        """Edit BOOKS_TO_CHECK, run, then copy the printed lists."""
+        BOOKS_TO_CHECK = [Books.GENESIS, Books.EXODUS]
+        runner = EntityPipelineRunner(books=BOOKS_TO_CHECK)
+        try:
+            runner.find_unprocessed_sources()
+        finally:
+            runner.close()
+
+    def test_run_specific_sources(self) -> None:
+        """Paste source keys (from the report) below, then run."""
+        SOURCE_KEYS = [
+            # 'TN_Genesis_0_6:14-25',
+        ]
+        runner = EntityPipelineRunner(source_keys=SOURCE_KEYS, model_provider=ModelProvider.GEMINI_PAID)
+        try:
+            runner.preview_plan()
+            runner.run_full_pipeline()
+        finally:
+            runner.close()
+
 if __name__ == "__main__":
     # ====== EDIT THIS CONFIG, THEN RUN THIS FILE DIRECTLY ======
     books = [
-        # Books.GENESIS,
-        # Books.EXODUS,
-        # Books.LEVITICUS,
-        # Books.NUMBERS,
-        # Books.DEUTERONOMY,
+        Books.GENESIS,
+        Books.EXODUS,
+        Books.LEVITICUS,
+        Books.NUMBERS,
+        Books.DEUTERONOMY,
         Books.JOSHUA,
         Books.JUDGES,
         Books.SAMUEL_I,

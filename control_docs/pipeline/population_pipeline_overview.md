@@ -84,7 +84,9 @@ to thread a book through — `DBPopulateEntityEnrichment` has its own full overr
 construct the instance, set e.g. `instance.book_to_extract = Books.EXODUS` **before** calling
 `instance.setUp()`, and that value wins — while clicking "Run" on the test directly (nothing
 pre-set) still gets the exact same hardcoded default as before this hook existed. This is the
-only mechanism `EntityPipelineRunner` relies on to parameterize a run; it does not (and must
+only mechanism `EntityPipelineRunner` relies on to parameterize a run (plus the optional
+`source_keys_filter` list of source keys, which restricts `_extract_all_to_json` to just those
+sources of the book - see `entity_pipeline_runner.md`); it does not (and must
 not) change what either `setUp()` does otherwise.
 
 Both `DBPopulateEntityRelGraph` and `DBPopulateEntityEnrichment` have an optional

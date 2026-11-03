@@ -126,6 +126,9 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         if getattr(self, "use_examples", False):
             return await self._extract_contents_to_json(get_examples_src_contents(self.db_api))
         contents = self.db_api.get_all_src_contents_by_book(self.book_to_extract)
+        keys_filter = getattr(self, "source_keys_filter", None)
+        if keys_filter:
+            contents = [c for c in contents if c.key in set(keys_filter)]
         if self.max_sources_to_extract is not None:
             contents = contents[:self.max_sources_to_extract]
         return await self._extract_contents_to_json(contents)

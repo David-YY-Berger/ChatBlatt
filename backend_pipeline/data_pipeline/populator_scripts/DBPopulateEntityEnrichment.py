@@ -328,6 +328,9 @@ class DBPopulateEntityEnrichment(DBPopulateLlmBase):
             contents = get_examples_src_contents(self.db_api)
         else:
             contents = self.db_api.get_all_src_contents_by_book(self.book_to_enrich)
+            keys_filter = getattr(self, "source_keys_filter", None)
+            if keys_filter:
+                contents = [c for c in contents if c.key in set(keys_filter)]
             if self.max_sources_to_extract is not None:
                 contents = contents[:self.max_sources_to_extract]
         # json_only mode (set by EntityPipelineRunner): LLM calls + JSON/TXT files only, no DB writes.

@@ -61,6 +61,27 @@ Choose the provider with `model_provider=ModelProvider.<...>` when constructing 
 same Gemini 3.5 Flash-Lite model and paid-tier cost estimate as `GEMINI_PAID`; it is a
 separate key selection, not a different model.
 
+## Finding unprocessed sources & re-running specific sources
+
+- `runner.find_unprocessed_sources(books=None)` — read-only DB check (no LLM, no writes). Per
+  source of each book: no `SourceMetadata` → rel-graph never ran (`rel_graph_missing`);
+  `SourceMetadata` exists but some linked entity lacks metadata → enrichment incomplete
+  (`enrichment_missing`). Prints paste-ready `REL_GRAPH_MISSING = [...]` /
+  `ENRICHMENT_MISSING = [...]` lists and returns `{book: {...}}`.
+- `EntityPipelineRunner(source_keys=[...])` — run only those source keys (e.g.
+  `'TN_Genesis_0_6:14-25'`), not whole books. Books are derived from the keys
+  (`<SOURCE_TYPE>_<BookDbName>_0_<ref>`; bad keys raise `ValueError`). Plumbed via the
+  `source_keys_filter` instance attribute (read with `getattr`) in both populators'
+  `_extract_all_to_json`, applied before `max_sources_per_book`. Rel-graph phase 1 still
+  skips sources whose JSON output exists — delete the file to force re-extract; phase 2
+  re-populates every JSON in the book's output dir.
+- IDE entry points: `EntityPipelineRunnerTests` (a `unittest.TestCase` at the bottom of the
+  module) has `test_find_unprocessed_sources` and `test_run_specific_sources` — edit the
+  constants inside and click Run. The runner itself is not a `TestCase` (its constructor
+  takes arguments, which `unittest` can't supply).
+- Typical loop: run the report → paste `REL_GRAPH_MISSING` into `test_run_specific_sources`
+  (`run_full_pipeline`); for `ENRICHMENT_MISSING` use `run_step(Step.ENTITY_ENRICHMENT)`.
+
 ## Multi-book DB connection handling (why `tearDown()` is never called here)
 
 `DBParentClass.tearDown()` (the common base both populators inherit) calls
