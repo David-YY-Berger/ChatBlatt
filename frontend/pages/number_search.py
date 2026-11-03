@@ -143,14 +143,14 @@ def _occurrences_table(
                 source_cell = html.escape(occ.source_str or "—")
 
             if g["contexts"]:
-                ctx_cell = "<ul>" + "".join(f"<li>{html.escape(c)}</li>" for c in g["contexts"]) + "</ul>"
+                ctx_cell = "<ul>" + "".join(f"<li>{html.escape(c.lstrip('* ').strip())}</li>" for c in g["contexts"]) + "</ul>"
             else:
                 ctx_cell = "—"
 
             rows.append(
-                f"<tr><td class='src'>{source_cell}</td>"
-                f"<td>{ctx_cell}</td>"
-                f"<td class='summary-cell'>{html.escape(occ.summary or '—')}</td></tr>"
+                f"<tr><td>{ctx_cell}</td>"
+                f"<td class='summary-cell'>{html.escape(occ.summary or '—')}</td>"
+                f"<td class='src'>{source_cell}</td></tr>"
             )
 
             if src_content is not None and occ.source_key not in seen_popup_keys:
@@ -174,7 +174,7 @@ def _occurrences_table(
             f"{_CHEVRON_SVG}<span class='unit-name'>{name}</span>"
             f"<span class='cnt'>{n} source{'s' if n != 1 else ''}</span></button>"
             "<div class='unit-body' hidden><table><thead><tr>"
-            "<th>Source</th><th>Context</th><th>Source Summary</th></tr></thead>"
+            "<th>Context</th><th>Source Summary</th><th>Source</th></tr></thead>"
             f"<tbody>{''.join(rows)}</tbody></table></div></div>"
         )
 

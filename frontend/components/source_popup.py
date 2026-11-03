@@ -49,11 +49,11 @@ def source_popup_css_js() -> str:
 .sp-overlay {
     display:none; position:fixed; inset:0;
     background:rgba(0,0,0,0.55);
-    z-index:9999; align-items:center; justify-content:center;
+    z-index:9999; align-items:flex-start; justify-content:center;
 }
 .sp-overlay.sp-open { display:flex; }
 .sp-box {
-    width:min(820px,92vw); max-height:88vh;
+    width:min(820px,92vw); max-height:720px;
     overflow-y:auto;
     font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
@@ -69,8 +69,18 @@ def source_popup_css_js() -> str:
 .sp-content { padding:0 12px 12px; }"""
 
     popup_js = """\
-function spOpen(id) {
-    document.getElementById('sp-' + id).classList.add('sp-open');
+function spOpen(id, ev) {
+    var ov = document.getElementById('sp-' + id);
+    var box = ov.querySelector('.sp-box');
+    ov.classList.add('sp-open');
+    // The iframe can be very tall, so anchor the box to the click position
+    // (iframe coordinates) instead of centering it in the whole iframe.
+    var vh = 720;
+    try { vh = Math.min(window.parent.innerHeight * 0.85, 720); } catch (e) {}
+    box.style.maxHeight = vh + 'px';
+    var top = ev ? ev.clientY - 40 : (ov.clientHeight - box.offsetHeight) / 2;
+    top = Math.max(8, Math.min(top, ov.clientHeight - box.offsetHeight - 8));
+    box.style.marginTop = top + 'px';
 }
 function spClose(id) {
     document.getElementById('sp-' + id).classList.remove('sp-open');
@@ -168,7 +178,7 @@ def source_link_html(
     pid = _safe_id(source_key)
     escaped_text = _html.escape(link_text or "")
     return (
-        f'<a href="javascript:void(0)" onclick="spOpen(\'{pid}\')"'
+        f'<a href="javascript:void(0)" onclick="spOpen(\'{pid}\', event)"'
         f' style="color:{color};font-weight:500;text-decoration:underline;cursor:pointer;">'
         f'{escaped_text}</a>'
     )

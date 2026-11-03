@@ -46,6 +46,7 @@ frontend layout {{
 -------
 put sefaria logo on same level as 'Eitz habina' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
 -------
+open opening the app, i still see the left side bar. it dissappears after the app fully renders.
 }}
 
 source search {{
@@ -63,12 +64,14 @@ make sure to update anything here: C:\ChatBlatt\control_docs things might be mis
 
 Number Search {{
 
-	on number search, when i click 'search', until the new results appear, i get a funny double of the current label 'enter a number', search button, and search bar. make sure that doesnt occur.
 	
 }}
 
 Entity search {{
-
+	on results of Entity search page - when i click on a result, i see 2 options (view entity and view sources of the relationship). 
+	make it a much prettier popup, now its big, clumsy, not well spaced. should be clean and compact.
+	-----
+	implement the 'view sources of relationship' to bring the user to the source search page, and enter as the params for the search the relationship. amke sure to fix up backend if need.
 }}
 
 Maps {{
