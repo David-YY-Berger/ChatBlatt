@@ -299,8 +299,11 @@ class EntityPipelineRunner:
                 if not src_metadata.entity_keys:
                     continue
                 entities = db_api.get_entities_by_keys(list(src_metadata.entity_keys))
-                if any(not e.has_metadata() for e in entities):
+                lacking = [e for e in entities if not e.has_metadata()]
+                if lacking:
                     enrich_missing.append(src_content.key)
+                    print(f"  [un-enriched] {src_content.key}: " + ", ".join(
+                        f"{e.key} ({e.display_en_name})" for e in lacking))
             report[book] = {"rel_graph_missing": rel_missing, "enrichment_missing": enrich_missing}
 
         print(f"\n{'='*70}\nUNPROCESSED SOURCES REPORT\n{'='*70}")
@@ -775,47 +778,7 @@ class EntityPipelineRunnerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     # ====== EDIT THIS CONFIG, THEN RUN THIS FILE DIRECTLY ======
-    books = [
-        Books.GENESIS,
-        Books.EXODUS,
-        Books.LEVITICUS,
-        Books.NUMBERS,
-        Books.DEUTERONOMY,
-        Books.JOSHUA,
-        Books.JUDGES,
-        Books.SAMUEL_I,
-        Books.SAMUEL_II,
-        Books.KINGS_I,
-        Books.KINGS_II,
-        Books.ISAIAH,
-        Books.JEREMIAH,
-        Books.EZEKIEL,
-        Books.HOSEA,
-        Books.JOEL,
-        Books.AMOS,
-        Books.OBADIAH,
-        Books.JONAH,
-        Books.MICAH,
-        Books.NAHUM,
-        Books.HABAKKUK,
-        Books.ZEPHANIAH,
-        Books.HAGGAI,
-        Books.ZECHARIAH,
-        Books.MALACHI,
-        Books.PSALMS,
-        Books.PROVERBS,
-        Books.JOB,
-        Books.SONG_OF_SONGS,
-        Books.RUTH,
-        Books.LAMENTATIONS,
-        Books.ECCLESIASTES,
-        Books.ESTHER,
-        Books.DANIEL,
-        Books.EZRA,
-        Books.NEHEMIAH,
-        Books.CHRONICLES_I,
-        Books.CHRONICLES_II,
-    ]
+    books = BAVLI_BOOKS
     runner = EntityPipelineRunner(
         books=books,                    # uncomment the books to process
         model_provider=ModelProvider.GEMINI_PAID,
