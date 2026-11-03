@@ -49,14 +49,22 @@ put sefaria logo on same level as 'Eitz habina' title , to the right side (both 
 }}
 
 source search {{
+	on 'source search page'
+	
+	remove all the UI front end code on the left side with checkboxes, logic, etc for (1) Passage type, and (3) filtering by source. instead, on the left side, there should be:
+1. a simple, COMPACT section to select Passage Type (no 'all' or 'none' buttons), just those checkboxes. remove the '0/6 selected' label, make this more slimly compact in width. should be easy and intuitive
+2. a simple drop down, call 'Books'. This dropdown with look more or less like the entity dropdowns, but will filter by source's book instead. you can select multiple books (same behaviour like entity dropdowns). populate with all the book names.
+
+Review the relevant backend searching code, ensure that this 2 filters work smoothly.
+
+make sure to update anything here: C:\ChatBlatt\control_docs things might be missing there in general.
 
 }}
 
 Number Search {{
 
-	on number search page, we have many entries with multiple contexts. currently, each is displayed as separate row. change that - make so that each number, under that category, only displays the units as rows, you can click an 'expand' button (best a graphic and not the word expand) and then you can see the contexts also. invest time to design it nicely visually.
+	on number search, when i click 'search', until the new results appear, i get a funny double of the current label 'enter a number', search button, and search bar. make sure that doesnt occur.
 	
-	update C:\ChatBlatt\control_docs if need, if not written there make sure that this page is documented there
 }}
 
 Entity search {{
@@ -75,16 +83,8 @@ in all places, both hebrew and enlgish, replace mapaLi with 'Eitz Habinah' , in 
 Also, add a clear 'Beta' sign on the main website page
 ------------------
 source search:
-remove all the UI front end code on the left side with checkboxes, logic, etc with Passage type, and filtering by source. instead, on the left side, there should be
-1. a simple, COMPACT section to select Passage Type (no 'all' or 'none' buttons), just those 5 checkboxes. remove the '0/5 selected' label, make this more slimly compact in width
-2. a simple drop down, call 'Books'. This dropdown with look more or less like the entity dropdowns, but will filter by source's book instead.
-
-Review the relevant backend searching code, ensure that this 2 filters work smoothly.
 -------
 safetly remove this class backend.db.EntityRelManager.EntityRelManager
------- 
-add to backend.models_db.Enums.NumberCategory (make sure to update all usages!!! inlcuding C:\Users\U6072661\PycharmProjects\ChatBlatt\frontend\pages\number_search.py, backend, frontend, )
-these categorys: Gematria (numeric value of a word), Obligation, Punishment
 
 }}
 

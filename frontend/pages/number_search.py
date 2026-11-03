@@ -96,25 +96,21 @@ _CHEVRON_SVG = (
 )
 
 
-def _group_by_unit_and_source(
-    occurrences: list[NumberOccurrenceDTO],
-) -> list[dict]:
-    """Collapse per-context occurrences into one group per (unit, source).
+def _group_by_unit(occurrences: list[NumberOccurrenceDTO]) -> list[tuple[str | None, list[dict]]]:
+    """Group occurrences by unit, then by source.
 
-    Each group keeps the shared display fields plus the de-duplicated list of
-    contexts (order preserved), so the UI shows one row and reveals contexts
-    on demand.
+    Returns ``[(unit, [{"occ": first_occ, "contexts": [...]}, ...]), ...]`` with
+    units sorted alphabetically (no-unit last) and sources in their incoming
+    (canonical) order. Contexts of the same source are merged and de-duplicated.
     """
-    groups: dict[tuple, dict] = {}
+    by_unit: dict[str | None, dict[str, dict]] = {}
     for occ in occurrences:
-        gkey = (occ.en_unit, occ.source_key)
-        g = groups.setdefault(gkey, {"occ": occ, "contexts": []})
+        sources = by_unit.setdefault(occ.en_unit or None, {})
+        g = sources.setdefault(occ.source_key, {"occ": occ, "contexts": []})
         if occ.en_context and occ.en_context not in g["contexts"]:
             g["contexts"].append(occ.en_context)
-    return sorted(
-        groups.values(),
-        key=lambda g: (g["occ"].en_unit is None, (g["occ"].en_unit or "").lower()),
-    )
+    ordered = sorted(by_unit, key=lambda u: (u is None, (u or "").lower()))
+    return [(u, list(by_unit[u].values())) for u in ordered]
 
 
 def _occurrences_table(
@@ -125,123 +121,102 @@ def _occurrences_table(
     """
     Return ``(full_html, iframe_height)`` for the given occurrences.
 
-    One row per (unit, source). Rows with contexts have an expand chevron
-    that reveals every context for that unit in that source.
+    Organised by unit: every unit is a collapsed card (chevron + name + source
+    count). Opening it reveals one row per source with its contexts and summary.
     ``source_contents`` maps source_key → SourceContent (or None).
     """
-    groups = _group_by_unit_and_source(occurrences)
-
-    header_bg = _hex_rgba(accent, 0.10)
+    units = _group_by_unit(occurrences)
     border_col = _hex_rgba(accent, 0.25)
 
-    rows_html = []
+    cards_html = []
     popup_html_parts = []
     seen_popup_keys: set[str] = set()
 
-    for g in groups:
-        occ = g["occ"]
-        contexts = g["contexts"]
-        en_unit = html.escape(occ.en_unit or "—")
-        summary = html.escape(occ.summary or "—")
+    for unit, sources in units:
+        rows = []
+        for g in sources:
+            occ = g["occ"]
+            src_content = source_contents.get(occ.source_key)
+            if src_content is not None:
+                source_cell = source_link_html(occ.source_key, occ.source_str, color=accent)
+            else:
+                source_cell = html.escape(occ.source_str or "—")
 
-        src_content = source_contents.get(occ.source_key)
-        if src_content is not None:
-            source_cell = source_link_html(occ.source_key, occ.source_str, color=accent)
-        else:
-            source_cell = html.escape(occ.source_str or "—")
+            if g["contexts"]:
+                ctx_cell = "<ul>" + "".join(f"<li>{html.escape(c)}</li>" for c in g["contexts"]) + "</ul>"
+            else:
+                ctx_cell = "—"
 
-        if contexts:
-            n = len(contexts)
-            toggle = (
-                f"<button class='tgl' type='button' onclick='toggleRow(this)' "
-                f"aria-expanded='false' title='Show contexts'>{_CHEVRON_SVG}"
-                f"<span class='cnt'>{n}</span></button>"
+            rows.append(
+                f"<tr><td class='src'>{source_cell}</td>"
+                f"<td>{ctx_cell}</td>"
+                f"<td class='summary-cell'>{html.escape(occ.summary or '—')}</td></tr>"
             )
-            ctx_items = "".join(f"<li>{html.escape(c)}</li>" for c in contexts)
-            ctx_row = (
-                f"<tr class='ctx-row' hidden><td colspan='4'>"
-                f"<div class='ctx-box'><div class='ctx-title'>"
-                f"{n} context{'s' if n != 1 else ''}</div><ul>{ctx_items}</ul></div>"
-                f"</td></tr>"
-            )
-        else:
-            toggle = ""
-            ctx_row = ""
 
-        rows_html.append(
-            f"<tr class='main-row'>"
-            f"<td class='tg'>{toggle}</td>"
-            f"<td class='unit'>{en_unit}</td>"
-            f"<td>{source_cell}</td>"
-            f"<td class='summary-cell'>{summary}</td>"
-            f"</tr>{ctx_row}"
+            if src_content is not None and occ.source_key not in seen_popup_keys:
+                seen_popup_keys.add(occ.source_key)
+                content_list = src_content._get_content() if hasattr(src_content, "_get_content") else getattr(src_content, "content", [])
+                popup_html_parts.append(
+                    source_popup_html(
+                        source_key=occ.source_key,
+                        title_en=occ.source_str_en,
+                        title_heb=occ.source_str_heb,
+                        en_content=content_list[0] if len(content_list) > 0 else "",
+                        heb_content=content_list[1] if len(content_list) > 1 else "",
+                    )
+                )
+
+        n = len(sources)
+        name = html.escape(unit) if unit else "<i>no unit</i>"
+        cards_html.append(
+            "<div class='unit-card'>"
+            "<button class='unit-head' type='button' onclick='toggleUnit(this)' aria-expanded='false'>"
+            f"{_CHEVRON_SVG}<span class='unit-name'>{name}</span>"
+            f"<span class='cnt'>{n} source{'s' if n != 1 else ''}</span></button>"
+            "<div class='unit-body' hidden><table><thead><tr>"
+            "<th>Source</th><th>Context</th><th>Source Summary</th></tr></thead>"
+            f"<tbody>{''.join(rows)}</tbody></table></div></div>"
         )
 
-        if src_content is not None and occ.source_key not in seen_popup_keys:
-            seen_popup_keys.add(occ.source_key)
-            content_list = src_content._get_content() if hasattr(src_content, "_get_content") else getattr(src_content, "content", [])
-            popup_html_parts.append(
-                source_popup_html(
-                    source_key=occ.source_key,
-                    title_en=occ.source_str_en,
-                    title_heb=occ.source_str_heb,
-                    en_content=content_list[0] if len(content_list) > 0 else "",
-                    heb_content=content_list[1] if len(content_list) > 1 else "",
-                )
-            )
-
-    table_html = (
-        "<div class='tbl-wrap'><table>"
-        "<thead><tr><th class='tg'></th><th>Unit</th><th>Source</th><th>Source Summary</th></tr></thead>"
-        "<tbody>" + "".join(rows_html) + "</tbody></table></div>"
-    )
-
     style = f"""<style>
-  :root {{ color-scheme: dark; --accent: {accent}; --accent-bg: {header_bg};
-          --accent-border: {border_col}; --accent-soft: {_hex_rgba(accent, 0.06)};
-          --accent-hover: {_hex_rgba(accent, 0.12)}; }}
-  body {{ background-color:#0e1117; color:#e2e8f0; margin:0; padding:0;
+  :root {{ color-scheme: dark; --accent:{accent}; --accent-border:{border_col};
+          --accent-bg:{_hex_rgba(accent, 0.10)}; --accent-soft:{_hex_rgba(accent, 0.06)};
+          --accent-hover:{_hex_rgba(accent, 0.13)}; }}
+  body {{ background:#0e1117; color:#e2e8f0; margin:0; padding:0.5rem 0 0 0;
          font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }}
-  .tbl-wrap {{ overflow-x:auto; border-radius:10px; border:1px solid var(--accent-border);
-              margin-top:0.5rem; }}
+  .unit-card {{ border:1px solid var(--accent-border); border-radius:10px; margin-bottom:0.55rem;
+               overflow:hidden; background:var(--accent-soft); transition:box-shadow .2s; }}
+  .unit-card.open {{ box-shadow:0 0 0 1px var(--accent-border), 0 4px 14px rgba(0,0,0,.35); }}
+  .unit-head {{ all:unset; box-sizing:border-box; width:100%; display:flex; align-items:center;
+               gap:0.7rem; padding:0.65rem 0.9rem; cursor:pointer; color:inherit; }}
+  .unit-head:hover {{ background:var(--accent-hover); }}
+  .unit-head:focus-visible {{ outline:2px solid var(--accent); outline-offset:-2px; }}
+  .chev {{ flex:none; color:var(--accent); transition:transform .2s ease; transform:rotate(-90deg); }}
+  .unit-head[aria-expanded='true'] .chev {{ transform:rotate(0deg); }}
+  .unit-name {{ font-weight:700; font-size:1rem; flex:1; }}
+  .cnt {{ font-size:0.72rem; font-weight:700; color:var(--accent); background:var(--accent-bg);
+         border:1px solid var(--accent-border); border-radius:999px; padding:2px 10px; }}
+  .unit-body {{ border-top:1px solid var(--accent-border); background:#0e1117;
+               animation:fadeIn .2s ease; overflow-x:auto; }}
   table {{ width:100%; border-collapse:collapse; }}
-  th {{ padding:0.55rem 0.8rem; text-align:left; font-weight:600; color:var(--accent);
-       background:var(--accent-bg); border-bottom:2px solid var(--accent-border); white-space:nowrap; }}
-  td {{ padding:0.5rem 0.8rem; vertical-align:middle; font-size:0.875rem; line-height:1.45;
-       border-bottom:1px solid {_hex_rgba(accent, 0.12)}; }}
-  td.unit {{ font-weight:600; }}
-  .tg {{ width:3.6rem; padding-right:0; }}
-  .main-row:hover {{ background:var(--accent-soft); }}
-  .main-row.open {{ background:var(--accent-hover); }}
-  .tgl {{ display:inline-flex; align-items:center; gap:2px; cursor:pointer; color:var(--accent);
-         background:var(--accent-soft); border:1px solid var(--accent-border);
-         border-radius:999px; padding:2px 7px 2px 5px; font-size:0.72rem; font-weight:700;
-         transition:background .15s, transform .15s; }}
-  .tgl:hover {{ background:var(--accent-hover); }}
-  .tgl .chev {{ transition:transform .2s ease; }}
-  .tgl[aria-expanded='true'] {{ background:var(--accent); color:#0e1117; }}
-  .tgl[aria-expanded='true'] .chev {{ transform:rotate(180deg); }}
-  .ctx-row td {{ padding:0 0.8rem 0.7rem 3.6rem; background:var(--accent-hover);
-                border-bottom:1px solid var(--accent-border); }}
-  .ctx-box {{ border-left:3px solid var(--accent); background:rgba(255,255,255,0.03);
-             border-radius:0 8px 8px 0; padding:0.5rem 0.9rem; animation:fadeIn .2s ease; }}
-  .ctx-title {{ font-size:0.68rem; text-transform:uppercase; letter-spacing:.08em;
-               color:var(--accent); font-weight:700; margin-bottom:0.3rem; }}
-  .ctx-box ul {{ margin:0; padding-left:1.1rem; }}
-  .ctx-box li {{ margin:0.25rem 0; color:#cbd5e1; }}
+  th {{ padding:0.45rem 0.9rem; text-align:left; font-size:0.72rem; text-transform:uppercase;
+       letter-spacing:.07em; color:var(--accent); background:var(--accent-bg); white-space:nowrap; }}
+  td {{ padding:0.5rem 0.9rem; vertical-align:top; font-size:0.875rem; line-height:1.45;
+       border-top:1px solid {_hex_rgba(accent, 0.12)}; }}
+  td.src {{ white-space:nowrap; }}
+  td ul {{ margin:0; padding-left:1.1rem; }}
+  td li {{ margin:0.15rem 0; }}
   .summary-cell {{ color:#94a3b8; }}
   @keyframes fadeIn {{ from {{ opacity:0; transform:translateY(-3px); }} to {{ opacity:1; transform:none; }} }}
 </style>"""
 
     script = """<script>
-function toggleRow(btn) {
-  var row = btn.closest('tr');
-  var ctx = row.nextElementSibling;
+function toggleUnit(btn) {
+  var body = btn.nextElementSibling;
   var open = btn.getAttribute('aria-expanded') === 'true';
   btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-  btn.title = open ? 'Show contexts' : 'Hide contexts';
-  row.classList.toggle('open', !open);
-  if (ctx) ctx.hidden = open;
+  btn.parentElement.classList.toggle('open', !open);
+  body.hidden = open;
   resizeFrame();
 }
 function resizeFrame() {
@@ -257,14 +232,13 @@ function resizeFrame() {
         + style
         + source_popup_css_js()
         + "</head><body>"
-        + table_html
+        + "".join(cards_html)
         + "".join(popup_html_parts)
         + script
         + "</body></html>"
     )
 
-    height = max(520, 80 + len(groups) * 52)
-    return full_html, height
+    return full_html, 520
 
 # ---------------------------------------------------------------------------
 # Source content fetching
@@ -627,7 +601,7 @@ def _render_results(lang: str) -> None:
             plural = "s" if count != 1 else ""
             st.markdown(
                 f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
-                f"{count} occurrence{plural} · click the chevron on a row to see its contexts</p>",
+                f"{count} occurrence{plural} · click a unit to see its sources</p>",
                 unsafe_allow_html=True,
             )
 

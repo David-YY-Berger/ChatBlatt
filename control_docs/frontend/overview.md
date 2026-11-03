@@ -24,11 +24,7 @@ per context × source). Entity model: `data_model/entities/number.md`.
   `_validate_number` gives live error messages (rejects 0/1, decimals, negatives).
 - **Results**: big number header → coloured category tabs (with counts) → per-tab unit filter
   → table.
-- **Table**: one row per **(unit, source)**, not per context (`_group_by_unit_and_source`).
-  Columns: expand chevron, Unit, Source (click opens source popup), Source Summary. The
-  chevron pill shows the context count; clicking it expands a panel listing all contexts for
-  that unit in that source (rows with no context have no chevron). Rendered as static HTML in
-  an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
+- **Results list**: organised by **unit** (`_group_by_unit`). Every unit is a collapsed card showing a chevron, the unit name and a source-count badge. Opening a card reveals one row per source: Source (click opens the source popup), Context(s) (all contexts of that unit in that source, merged), and Source Summary. Rendered as static HTML in an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
 
 ## Behavior notes
 
