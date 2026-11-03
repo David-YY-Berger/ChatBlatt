@@ -374,16 +374,17 @@ def _render_search_bar(lang: str) -> None:
             use_container_width=True,
             type="primary",
             key="number_search_btn",
+            # Run the search in a callback (before the script rerun) so no
+            # stale duplicate of the bar is drawn while the search executes.
+            on_click=_on_search_submit,
+            args=(lang,),
         )
 
     # Live validation — runs on every rerender (i.e. every keystroke / widget change)
     error = _validate_number(value)
 
-    if search_clicked:
-        if not value.strip():
-            error = get_text("number_search_ui.error_empty", lang)
-        if not error:
-            _run_search(value.strip(), lang)
+    if search_clicked and not value.strip():
+        error = get_text("number_search_ui.error_empty", lang)
 
     if error:
         st.markdown(
