@@ -3,6 +3,7 @@
 
 todo {{
 
+	- person to tribe of israel is not properly populated!!!
 	- BACKUP!!
 	- index display en name?
 	- index what we need for number..
@@ -46,7 +47,8 @@ source search {{
 
 Number Search {{
 
-	
+	- remove 'filter by unit' and drop down.
+	- allow search by unit, 
 }}
 
 Entity search {{

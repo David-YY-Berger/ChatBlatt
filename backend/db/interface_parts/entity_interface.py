@@ -85,6 +85,14 @@ class EntityInterfaceMixin(ABC):
         pass
 
     @abstractmethod
+    def get_enumbers_by_unit(self, unit: str) -> list:
+        """
+        Return all ENumber entities whose en_unit exactly matches the given
+        unit (case-insensitive).
+        """
+        pass
+
+    @abstractmethod
     def get_entities_by_display_en_name(self, display_en_name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
         """
         Return all entities whose display_en_name exactly matches the given name

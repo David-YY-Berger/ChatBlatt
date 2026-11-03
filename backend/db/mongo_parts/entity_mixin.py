@@ -161,6 +161,17 @@ class EntityMongoMixin:
         docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
         return [self._doc_to_entity(doc) for doc in docs]
 
+    def get_enumbers_by_unit(self, unit: str) -> List["ENumber"]:
+        """Return all ENumber entities whose en_unit matches *unit* (case-insensitive, exact)."""
+        import re
+
+        query = {
+            DBFields.ENTITY_TYPE: EntityType.ENumber.value,
+            "en_unit": {DBOperators.REGEX: f"^{re.escape(unit.strip())}$", DBOperators.OPTIONS: DBOperators.CASE_INSENSITIVE},
+        }
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
+        return [self._doc_to_entity(doc) for doc in docs]
+
     def get_entities_by_display_en_name(self, display_en_name: str, entity_type: Optional[EntityType] = None) -> List[Entity]:
         """
         Return all entities whose display_en_name exactly matches the given name

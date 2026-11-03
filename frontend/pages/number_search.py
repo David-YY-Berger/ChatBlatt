@@ -27,6 +27,7 @@ from backend.app.controllers.number_search_controller import (
     NumberSearchController,
     NumberSearchRequest,
     NumberSearchResponse,
+    UnitSearchRequest,
 )
 from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
 from backend.models_db.Enums import NumberCategory
@@ -53,11 +54,6 @@ _CATEGORY_CONFIG: dict = {
     NumberCategory.Misc:         {"emoji": "📦", "color": "#475569"},
 }
 _NONE_CAT_CONFIG = {"emoji": "❓", "color": "#94a3b8"}
-
-# Sentinel used internally to represent "occurrences with no unit" in the
-# unit filter combobox (kept distinct from the "All units" / no-filter case,
-# which is represented by ``None``).
-_NO_UNIT_SENTINEL = object()
 
 
 def _hex_rgba(hex_color: str, alpha: float) -> str:
@@ -408,9 +404,12 @@ def _run_search(value: str, lang: str) -> None:
     st.session_state["number_search_value"] = value
     # Clear cached source contents so they're re-fetched for the new result
     st.session_state.pop("number_search_source_contents", None)
-    # Reset the per-category unit filter comboboxes since available units may change
-    for key in [k for k in st.session_state if k.startswith("number_search_unit_filter__")]:
-        st.session_state.pop(key, None)
+
+
+def _run_unit_search(unit: str, lang: str) -> None:
+    response = NumberSearchController().handle_unit(UnitSearchRequest(unit=unit, lang=lang))
+    st.session_state["unit_search_response"] = response
+    st.session_state["unit_search_value"] = unit
 
 
 # ---------------------------------------------------------------------------
@@ -450,71 +449,87 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
 
 
 # ---------------------------------------------------------------------------
-# Unit filter
-#
-# Note: the results table is rendered as static HTML inside an iframe
-# (st.components.v1.html), so a real, interactive combobox cannot be embedded
-# into its "Unit" column header — that would require a full custom
-# bidirectional Streamlit component (JS <-> Python message bridge) just for
-# this one control. Instead the filter is rendered as an ordinary Streamlit
-# widget placed on its own horizontal line directly below the category tab
-# bar and above that tab's results, scoped to the units present in that
-# specific category (each category tends to have its own unit vocabulary,
-# e.g. Money vs. Time vs. Measurement).
+# Unit search (alternative to number search)
 # ---------------------------------------------------------------------------
 
-def _collect_units(occurrences: list[NumberOccurrenceDTO]) -> tuple[list[str], bool]:
-    """Return (sorted unique units, whether any occurrence has no unit)."""
-    units: set[str] = set()
-    has_no_unit = False
-    for occ in occurrences:
-        if occ.en_unit:
-            units.add(occ.en_unit)
-        else:
-            has_no_unit = True
-    return sorted(units, key=str.lower), has_no_unit
+_MODE_NUMBER = "number"
+_MODE_UNIT = "unit"
 
 
-def _render_unit_filter(occurrences: list[NumberOccurrenceDTO], lang: str, widget_key: str):
-    """Render the 'filter by unit' combobox for one category's occurrences and
-    return the selected filter value: ``None`` for "all units",
-    ``_NO_UNIT_SENTINEL`` for "no unit", or a unit string.
-    """
-    units, has_no_unit = _collect_units(occurrences)
-    if not units and not has_no_unit:
-        return None  # Nothing to filter on for this category
+def _on_unit_submit(lang: str) -> None:
+    unit = st.session_state.get("unit_input", "").strip()
+    if unit:
+        _run_unit_search(unit, lang)
 
-    all_label = get_text("number_search_ui.all_units", lang)
-    no_unit_label = get_text("number_search_ui.no_unit", lang)
 
-    labels = [all_label] + units + ([no_unit_label] if has_no_unit else [])
-    label_to_value: dict = {all_label: None}
-    for u in units:
-        label_to_value[u] = u
-    if has_no_unit:
-        label_to_value[no_unit_label] = _NO_UNIT_SENTINEL
-
-    filter_col, _ = st.columns([3, 9])
-    with filter_col:
-        selected_label = st.selectbox(
-            get_text("number_search_ui.unit_filter_label", lang),
-            options=labels,
-            key=widget_key,
+def _render_unit_search_bar(lang: str) -> None:
+    input_col, btn_col = st.columns([8, 1], vertical_alignment="bottom")
+    with input_col:
+        value = st.text_input(
+            get_text("number_search_ui.unit_input_label", lang),
+            placeholder=get_text("number_search_ui.unit_placeholder", lang),
+            help=get_text("number_search_ui.unit_format_hint", lang),
+            key="unit_input",
+            on_change=_on_unit_submit,
+            args=(lang,),
+        )
+    with btn_col:
+        clicked = st.button(
+            get_text("number_search_ui.search_button", lang),
+            use_container_width=True,
+            type="primary",
+            key="unit_search_btn",
+            on_click=_on_unit_submit,
+            args=(lang,),
+        )
+    if clicked and not value.strip():
+        st.markdown(
+            f'<p style="color:#ef4444; font-size:0.875rem; margin:0.3rem 0 0 0;">'
+            f'{get_text("number_search_ui.error_empty_unit", lang)}</p>',
+            unsafe_allow_html=True,
         )
 
-    return label_to_value.get(selected_label)
 
+def _render_unit_results(lang: str) -> None:
+    response = st.session_state.get("unit_search_response")
+    if response is None:
+        return
+    unit: str = st.session_state.get("unit_search_value", "")
 
-def _apply_unit_filter(
-    occurrences: list[NumberOccurrenceDTO], selected_value
-) -> list[NumberOccurrenceDTO]:
-    """Return the subset of *occurrences* matching the selected unit filter.
-    ``selected_value is None`` means no filtering."""
-    if selected_value is None:
-        return occurrences
-    if selected_value is _NO_UNIT_SENTINEL:
-        return [o for o in occurrences if not o.en_unit]
-    return [o for o in occurrences if o.en_unit == selected_value]
+    if not response.success or response.error:
+        st.error(response.error or get_text("number_search_ui.error_generic", lang))
+        return
+    result = response.result
+    if result is None or not result.rows:
+        st.warning(get_text("number_search_ui.no_unit_results", lang).format(value=unit))
+        return
+
+    st.markdown(
+        f"""
+        <div style="text-align:center; padding:1.25rem 0 1rem 0;">
+            <div style="font-size:2.5rem; font-weight:900; line-height:1;">{html.escape(result.unit)}</div>
+            <div style="font-size:0.875rem; color:#94a3b8; margin-top:0.35rem;">
+                {len(result.rows)} {get_text("number_search_ui.unit_results_count", lang)}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.dataframe(
+        [
+            {
+                get_text("number_search_ui.col_number", lang): row.value,
+                get_text("number_search_ui.col_categories", lang): ", ".join(
+                    f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories
+                ) or "—",
+                get_text("number_search_ui.col_mentions", lang): row.mentions,
+            }
+            for row in result.rows
+        ],
+        hide_index=True,
+        use_container_width=True,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -590,15 +605,7 @@ def _render_results(lang: str) -> None:
                 )
                 continue
 
-            # ── Unit filter — its own horizontal line, below the tab bar
-            # and above this tab's results ───────────────────────────────
-            cat_key = cat.value if cat else "other"
-            selected_unit = _render_unit_filter(
-                occurrences, lang, widget_key=f"number_search_unit_filter__{cat_key}"
-            )
-            filtered_occurrences = _apply_unit_filter(occurrences, selected_unit)
-
-            count = len(filtered_occurrences)
+            count = len(occurrences)
             plural = "s" if count != 1 else ""
             st.markdown(
                 f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
@@ -606,15 +613,7 @@ def _render_results(lang: str) -> None:
                 unsafe_allow_html=True,
             )
 
-            if not filtered_occurrences:
-                st.markdown(
-                    '<p style="color:#94a3b8; padding:0.75rem 0; font-style:italic;">'
-                    "No occurrences match this unit filter.</p>",
-                    unsafe_allow_html=True,
-                )
-                continue
-
-            table_html, iframe_height = _occurrences_table(filtered_occurrences, color, source_contents)
+            table_html, iframe_height = _occurrences_table(occurrences, color, source_contents)
             st_components.html(table_html, height=iframe_height, scrolling=False)
 
 
@@ -626,5 +625,20 @@ def render(lang: str) -> None:
     title = get_text("page_titles.number_search", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
-    _render_search_bar(lang)
-    _render_results(lang)
+    mode = st.radio(
+        "search mode",
+        options=[_MODE_NUMBER, _MODE_UNIT],
+        format_func=lambda m: get_text(
+            "number_search_ui.mode_number" if m == _MODE_NUMBER else "number_search_ui.mode_unit", lang
+        ),
+        horizontal=True,
+        label_visibility="collapsed",
+        key="number_search_mode",
+    )
+
+    if mode == _MODE_UNIT:
+        _render_unit_search_bar(lang)
+        _render_unit_results(lang)
+    else:
+        _render_search_bar(lang)
+        _render_results(lang)

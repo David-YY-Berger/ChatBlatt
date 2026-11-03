@@ -4,8 +4,21 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
 
-from backend.app.logic.number_search_logic import NumberSearchLogic, NumberSearchResult
+from backend.app.logic.number_search_logic import NumberSearchLogic, NumberSearchResult, UnitSearchResult
 from system_common.Constants import LANG_EN
+
+
+@dataclass
+class UnitSearchRequest:
+    unit: str
+    lang: str = LANG_EN
+
+
+@dataclass
+class UnitSearchResponse:
+    success: bool
+    error: Optional[str] = None
+    result: Optional[UnitSearchResult] = field(default=None)
 
 
 @dataclass
@@ -61,3 +74,11 @@ class NumberSearchController:
             return NumberSearchResponse(success=True, result=result)
         except Exception as e:
             return NumberSearchResponse(success=False, error=str(e))
+
+    def handle_unit(self, request: UnitSearchRequest) -> UnitSearchResponse:
+        try:
+            if not request.unit.strip():
+                return UnitSearchResponse(success=False, error="Unit is empty")
+            return UnitSearchResponse(success=True, result=self._logic.execute_by_unit(request.unit))
+        except Exception as e:
+            return UnitSearchResponse(success=False, error=str(e))

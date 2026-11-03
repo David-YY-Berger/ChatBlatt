@@ -50,10 +50,52 @@ class NumberSearchResult:
         return f"NumberSearchResult(total={self.total_count}, categories=[{', '.join(categories)}])"
 
 
+@dataclass
+class UnitNumberRow:
+    """One collapsed row of a unit search: a single number value."""
+    value: str
+    categories: List[NumberCategory] = field(default_factory=list)
+    mentions: int = 0  # total contexts across all matching entities for this number
+
+
+@dataclass
+class UnitSearchResult:
+    unit: str
+    rows: List[UnitNumberRow] = field(default_factory=list)
+
+
+def _sort_key(value: str):
+    try:
+        if "/" in value:
+            n, d = value.split("/", 1)
+            return (0, int(n) / int(d), value)
+        return (0, float(value), value)
+    except (ValueError, ZeroDivisionError):
+        return (1, 0.0, value)
+
+
 class NumberSearchLogic:
     def __init__(self):
         from backend.db.DBFactory import DBFactory
         self.db = DBFactory.get_prod_db_mongo()
+
+    def execute_by_unit(self, unit: str) -> Optional[UnitSearchResult]:
+        """Find all numbers counted in *unit*, collapsed to one row per number value."""
+        enumbers: List[ENumber] = self.db.get_enumbers_by_unit(unit)
+        if not enumbers:
+            return None
+
+        rows: Dict[str, UnitNumberRow] = {}
+        for number in enumbers:
+            row = rows.setdefault(number.display_en_name, UnitNumberRow(value=number.display_en_name))
+            if number.numberCategory and number.numberCategory not in row.categories:
+                row.categories.append(number.numberCategory)
+            row.mentions += max(len(number.contexts), 1)
+
+        for row in rows.values():
+            row.categories.sort(key=lambda c: c.ordinal)
+        ordered = sorted(rows.values(), key=lambda r: _sort_key(r.value))
+        return UnitSearchResult(unit=unit.strip(), rows=ordered)
 
     def execute(self, value: str, lang: str = LANG_EN) -> Optional[NumberSearchResult]:
         """
