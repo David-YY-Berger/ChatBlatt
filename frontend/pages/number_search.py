@@ -457,16 +457,27 @@ _MODE_UNIT = "unit"
 
 
 def _on_unit_submit(lang: str) -> None:
-    unit = st.session_state.get("unit_input", "").strip()
+    unit = st.session_state.get("unit_input")
     if unit:
         _run_unit_search(unit, lang)
 
 
 def _render_unit_search_bar(lang: str) -> None:
+    """Searchable combobox: a selectbox is a dropdown whose options filter as the user types."""
+    units = NumberSearchController().list_units()
+    heb_by_en = dict(units)
+
+    def _label(en: str) -> str:
+        heb = heb_by_en.get(en)
+        return f"{en} ({heb})" if heb else en
+
     input_col, btn_col = st.columns([8, 1], vertical_alignment="bottom")
     with input_col:
-        value = st.text_input(
+        value = st.selectbox(
             get_text("number_search_ui.unit_input_label", lang),
+            options=[en for en, _ in units],
+            index=None,
+            format_func=_label,
             placeholder=get_text("number_search_ui.unit_placeholder", lang),
             help=get_text("number_search_ui.unit_format_hint", lang),
             key="unit_input",
@@ -482,13 +493,12 @@ def _render_unit_search_bar(lang: str) -> None:
             on_click=_on_unit_submit,
             args=(lang,),
         )
-    if clicked and not value.strip():
+    if clicked and not value:
         st.markdown(
             f'<p style="color:#ef4444; font-size:0.875rem; margin:0.3rem 0 0 0;">'
             f'{get_text("number_search_ui.error_empty_unit", lang)}</p>',
             unsafe_allow_html=True,
         )
-
 
 def _render_unit_results(lang: str) -> None:
     response = st.session_state.get("unit_search_response")
@@ -516,21 +526,26 @@ def _render_unit_results(lang: str) -> None:
         unsafe_allow_html=True,
     )
 
-    st.dataframe(
-        [
-            {
-                get_text("number_search_ui.col_number", lang): row.value,
-                get_text("number_search_ui.col_categories", lang): ", ".join(
-                    f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories
-                ) or "—",
-                get_text("number_search_ui.col_mentions", lang): row.mentions,
-            }
-            for row in result.rows
-        ],
-        hide_index=True,
-        use_container_width=True,
+    # Plain HTML table: st.dataframe lazy-loads a JS chunk that fails on some deployments.
+    headers = [
+        get_text("number_search_ui.col_number", lang),
+        get_text("number_search_ui.col_categories", lang),
+        get_text("number_search_ui.col_mentions", lang),
+    ]
+    body = "".join(
+        "<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+            html.escape(row.value),
+            html.escape(", ".join(f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories) or "—"),
+            row.mentions,
+        )
+        for row in result.rows
     )
-
+    st.markdown(
+        "<table style='width:100%; border-collapse:collapse;'>"
+        "<thead><tr>" + "".join(f"<th style='text-align:start; padding:0.4rem 0.6rem;'>{html.escape(h)}</th>" for h in headers)
+        + "</tr></thead><tbody>" + body + "</tbody></table>",
+        unsafe_allow_html=True,
+    )
 
 # ---------------------------------------------------------------------------
 # Results rendering
