@@ -3,12 +3,9 @@
 
 todo {{
 
-	clear  DB. 
-	pre populate tanach
-	pre populate bavli
-	
-	lets just check backup of contents..
-	pop bereishit entity + rel,
+	BACKUP!!
+
+
 	pop bereishit entity metadata,
 	check UI
 	pop tanaach
