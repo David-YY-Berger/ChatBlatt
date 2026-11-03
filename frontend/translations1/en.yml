@@ -1,5 +1,5 @@
 app:
-  title: "MapaLi"
+  title: "Eitz Habinah"
   subtitle: "The indexed database of Jewish Sources"
   dedication: "lilui nishmat feyga menucha bat yechiel gershon"
 
@@ -138,8 +138,8 @@ entity_filters:
   symbol_type_all: "All Types"
 
 page_titles:
-  home: "Welcome to MapaLi"
-  about: "About MapaLi"
+  home: "Welcome to Eitz Habinah"
+  about: "About Eitz Habinah"
   number_search: "Number Search"
   source_search: "Search Jewish Sources"
   entity_search: "Entity Search"

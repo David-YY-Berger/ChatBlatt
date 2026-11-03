@@ -42,13 +42,34 @@ track costs {{
 #############################################################################################################
 
 
+frontend layout {{
+-------
+put sefaria logo on same level as 'Eitz habina' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
+-------
+}}
+
+source search {{
+
+}}
+
+Number Search {{
+
+}}
+
+Entity search {{
+
+}}
+
+Maps {{
+
+}}
 
 easy fixes {{
--------
-put sefaria logo on same level as 'Mapali' title , to the right side (both mapali and sefaria logo should be above the subtile of 'the indexed database of Jewish Sources'
+
 ------------------
 (do ctrl+f search first) 
-in all places, both hebrew and enlgish, replace mapaLi with 'Eitz Habinah' עץ הבינה.
+in all places, both hebrew and enlgish, replace mapaLi with 'Eitz Habinah' , in both english and hebrew.
+Also, add a clear 'Beta' sign on the main website page
 ------------------
 source search:
 remove all the UI front end code on the left side with checkboxes, logic, etc with Passage type, and filtering by source. instead, on the left side, there should be

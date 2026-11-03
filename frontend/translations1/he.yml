@@ -1,5 +1,5 @@
 app:
-  title: "מפה-לי"
+  title: "עץ הבינה"
   subtitle: "מאגר ממופה של מקורות יהודיים"
   dedication: "לעילוי נשמת פייגא מנוחה בת מרים"
 
@@ -138,8 +138,8 @@ entity_filters:
   symbol_type_all: "כל הסוגים"
 
 page_titles:
-  home: "ברוכים הבאים למפה-לי"
-  about: "אודות מפה-לי"
+  home: "ברוכים הבאים לעץ הבינה"
+  about: "אודות עץ הבינה"
   number_search: "חיפוש מספרי"
   source_search: "חיפוש במקורות יהודיים"
   entity_search: "חיפוש ישות"
