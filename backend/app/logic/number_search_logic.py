@@ -79,6 +79,10 @@ class NumberSearchLogic:
         from backend.db.DBFactory import DBFactory
         self.db = DBFactory.get_prod_db_mongo()
 
+    def list_units(self) -> List[tuple]:
+        """All distinct (en_unit, heb_unit) pairs for the unit combobox."""
+        return self.db.get_number_units()
+
     def execute_by_unit(self, unit: str) -> Optional[UnitSearchResult]:
         """Find all numbers counted in *unit*, collapsed to one row per number value."""
         enumbers: List[ENumber] = self.db.get_enumbers_by_unit(unit)

@@ -161,6 +161,19 @@ class EntityMongoMixin:
         docs = self.get_collection(CollectionObjs.ENTITIES).find(query)
         return [self._doc_to_entity(doc) for doc in docs]
 
+    def get_number_units(self) -> List[Tuple[str, Optional[str]]]:
+        """Distinct (en_unit, heb_unit) pairs among Number entities, sorted by en_unit."""
+        docs = self.get_collection(CollectionObjs.ENTITIES).find(
+            {DBFields.ENTITY_TYPE: EntityType.ENumber.value, "en_unit": {"$nin": [None, ""]}},
+            {"en_unit": 1, "heb_unit": 1},
+        )
+        units: Dict[str, Optional[str]] = {}
+        for doc in docs:
+            en = doc["en_unit"].strip().lower()
+            if not units.get(en):
+                units[en] = (doc.get("heb_unit") or "").strip() or None
+        return sorted(units.items())
+
     def get_enumbers_by_unit(self, unit: str) -> List["ENumber"]:
         """Return all ENumber entities whose en_unit matches *unit* (case-insensitive, exact)."""
         import re

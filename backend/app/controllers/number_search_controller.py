@@ -75,6 +75,12 @@ class NumberSearchController:
         except Exception as e:
             return NumberSearchResponse(success=False, error=str(e))
 
+    def list_units(self) -> list:
+        try:
+            return self._logic.list_units()
+        except Exception:
+            return []
+
     def handle_unit(self, request: UnitSearchRequest) -> UnitSearchResponse:
         try:
             if not request.unit.strip():

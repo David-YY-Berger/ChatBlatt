@@ -85,6 +85,11 @@ class EntityInterfaceMixin(ABC):
         pass
 
     @abstractmethod
+    def get_number_units(self) -> list:
+        """Return sorted (en_unit, heb_unit or None) pairs, one per distinct en_unit among Number entities."""
+        pass
+
+    @abstractmethod
     def get_enumbers_by_unit(self, unit: str) -> list:
         """
         Return all ENumber entities whose en_unit exactly matches the given
