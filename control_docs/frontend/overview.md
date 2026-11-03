@@ -14,6 +14,22 @@ frontend — it's currently a light pointer, not a full reference.
 - `frontend/pages/` — tab renderers.
 - `frontend/assets/styles.css` — base styling; RTL/dark/light tweaks in `layout.apply_layout`.
 
+## Number search page (`frontend/pages/number_search.py`)
+
+Flow: `NumberSearchController` → `NumberSearchLogic.execute` (backend) returns
+`NumberSearchResult.by_category` (`NumberCategory | None` → list of `NumberOccurrenceDTO`, one
+per context × source). Entity model: `data_model/entities/number.md`.
+
+- **Input**: one free-form box (Enter or Search button). Whole vs. fraction auto-detected;
+  `_validate_number` gives live error messages (rejects 0/1, decimals, negatives).
+- **Results**: big number header → coloured category tabs (with counts) → per-tab unit filter
+  → table.
+- **Table**: one row per **(unit, source)**, not per context (`_group_by_unit_and_source`).
+  Columns: expand chevron, Unit, Source (click opens source popup), Source Summary. The
+  chevron pill shows the context count; clicking it expands a panel listing all contexts for
+  that unit in that source (rows with no context have no chevron). Rendered as static HTML in
+  an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
+
 ## Behavior notes
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;

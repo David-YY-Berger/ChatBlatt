@@ -89,6 +89,34 @@ div[data-testid="stTabs"] button[role="tab"]:nth-child({i}):hover {{
     return "\n".join(parts)
 
 
+_CHEVRON_SVG = (
+    "<svg class='chev' viewBox='0 0 20 20' width='16' height='16' fill='none' "
+    "stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'>"
+    "<polyline points='6,8 10,12 14,8'/></svg>"
+)
+
+
+def _group_by_unit_and_source(
+    occurrences: list[NumberOccurrenceDTO],
+) -> list[dict]:
+    """Collapse per-context occurrences into one group per (unit, source).
+
+    Each group keeps the shared display fields plus the de-duplicated list of
+    contexts (order preserved), so the UI shows one row and reveals contexts
+    on demand.
+    """
+    groups: dict[tuple, dict] = {}
+    for occ in occurrences:
+        gkey = (occ.en_unit, occ.source_key)
+        g = groups.setdefault(gkey, {"occ": occ, "contexts": []})
+        if occ.en_context and occ.en_context not in g["contexts"]:
+            g["contexts"].append(occ.en_context)
+    return sorted(
+        groups.values(),
+        key=lambda g: (g["occ"].en_unit is None, (g["occ"].en_unit or "").lower()),
+    )
+
+
 def _occurrences_table(
     occurrences: list[NumberOccurrenceDTO],
     accent: str,
@@ -97,107 +125,146 @@ def _occurrences_table(
     """
     Return ``(full_html, iframe_height)`` for the given occurrences.
 
-    ``full_html`` is a self-contained HTML document that includes:
-      - the styled occurrences table with clickable source links
-      - hidden popup overlays for each source
-      - the required CSS + JS
-
+    One row per (unit, source). Rows with contexts have an expand chevron
+    that reveals every context for that unit in that source.
     ``source_contents`` maps source_key → SourceContent (or None).
     """
-    sorted_occs = sorted(occurrences, key=lambda o: (o.en_unit is None, (o.en_unit or "").lower()))
+    groups = _group_by_unit_and_source(occurrences)
 
     header_bg = _hex_rgba(accent, 0.10)
     border_col = _hex_rgba(accent, 0.25)
-    stripe_bg = _hex_rgba(accent, 0.04)
-
-    th_style = (
-        f"padding:0.55rem 0.8rem; text-align:left; font-weight:600;"
-        f" color:{accent}; background:{header_bg};"
-        f" border-bottom:2px solid {border_col}; white-space:nowrap;"
-    )
-    td_base = "padding:0.5rem 0.8rem; vertical-align:top; font-size:0.875rem; line-height:1.45; color: inherit;"
-    border_style = f"border-bottom:1px solid {_hex_rgba(accent, 0.12)};"
 
     rows_html = []
     popup_html_parts = []
     seen_popup_keys: set[str] = set()
 
-    for idx, occ in enumerate(sorted_occs):
-        row_bg  = f"background:{stripe_bg};" if idx % 2 == 1 else ""
-        en_unit    = html.escape(occ.en_unit or "—")
-        context = html.escape(occ.en_context or "—")
+    for g in groups:
+        occ = g["occ"]
+        contexts = g["contexts"]
+        en_unit = html.escape(occ.en_unit or "—")
         summary = html.escape(occ.summary or "—")
 
-        # Build source cell: clickable link if content is available
         src_content = source_contents.get(occ.source_key)
         if src_content is not None:
             source_cell = source_link_html(occ.source_key, occ.source_str, color=accent)
         else:
             source_cell = html.escape(occ.source_str or "—")
 
+        if contexts:
+            n = len(contexts)
+            toggle = (
+                f"<button class='tgl' type='button' onclick='toggleRow(this)' "
+                f"aria-expanded='false' title='Show contexts'>{_CHEVRON_SVG}"
+                f"<span class='cnt'>{n}</span></button>"
+            )
+            ctx_items = "".join(f"<li>{html.escape(c)}</li>" for c in contexts)
+            ctx_row = (
+                f"<tr class='ctx-row' hidden><td colspan='4'>"
+                f"<div class='ctx-box'><div class='ctx-title'>"
+                f"{n} context{'s' if n != 1 else ''}</div><ul>{ctx_items}</ul></div>"
+                f"</td></tr>"
+            )
+        else:
+            toggle = ""
+            ctx_row = ""
+
         rows_html.append(
-            f"<tr style='{row_bg}'>"
-            f"<td style='{td_base}{border_style} font-weight:500;'>{en_unit}</td>"
-            f"<td style='{td_base}{border_style}'>{context}</td>"
-            f"<td style='{td_base}{border_style}'>{source_cell}</td>"
-            f"<td style='{td_base}{border_style}' class='summary-cell'>{summary}</td>"
-            f"</tr>"
+            f"<tr class='main-row'>"
+            f"<td class='tg'>{toggle}</td>"
+            f"<td class='unit'>{en_unit}</td>"
+            f"<td>{source_cell}</td>"
+            f"<td class='summary-cell'>{summary}</td>"
+            f"</tr>{ctx_row}"
         )
 
-        # Build popup HTML once per unique source key
         if src_content is not None and occ.source_key not in seen_popup_keys:
             seen_popup_keys.add(occ.source_key)
             content_list = src_content._get_content() if hasattr(src_content, "_get_content") else getattr(src_content, "content", [])
-            en_html  = content_list[0] if len(content_list) > 0 else ""
-            heb_html = content_list[1] if len(content_list) > 1 else ""
             popup_html_parts.append(
                 source_popup_html(
                     source_key=occ.source_key,
                     title_en=occ.source_str_en,
                     title_heb=occ.source_str_heb,
-                    en_content=en_html,
-                    heb_content=heb_html,
+                    en_content=content_list[0] if len(content_list) > 0 else "",
+                    heb_content=content_list[1] if len(content_list) > 1 else "",
                 )
             )
 
     table_html = (
-        "<div style='overflow-x:auto; border-radius:8px; border:1px solid "
-        + border_col + "; margin-top:0.5rem;'>"
-        "<table style='width:100%; border-collapse:collapse;'>"
-        "<thead><tr>"
-        f"<th style='{th_style}'>Unit</th>"
-        f"<th style='{th_style}'>Context</th>"
-        f"<th style='{th_style}'>Source</th>"
-        f"<th style='{th_style}'>Source Summary</th>"
-        "</tr></thead>"
-        "<tbody>" + "".join(rows_html) + "</tbody>"
-        "</table></div>"
+        "<div class='tbl-wrap'><table>"
+        "<thead><tr><th class='tg'></th><th>Unit</th><th>Source</th><th>Source Summary</th></tr></thead>"
+        "<tbody>" + "".join(rows_html) + "</tbody></table></div>"
     )
 
-    _IFRAME_DARK_CSS = """<style>
-  :root { color-scheme: dark; }
-  body {
-    background-color: #0e1117;
-    color: #e2e8f0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-  .summary-cell { color: #94a3b8; }
+    style = f"""<style>
+  :root {{ color-scheme: dark; --accent: {accent}; --accent-bg: {header_bg};
+          --accent-border: {border_col}; --accent-soft: {_hex_rgba(accent, 0.06)};
+          --accent-hover: {_hex_rgba(accent, 0.12)}; }}
+  body {{ background-color:#0e1117; color:#e2e8f0; margin:0; padding:0;
+         font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }}
+  .tbl-wrap {{ overflow-x:auto; border-radius:10px; border:1px solid var(--accent-border);
+              margin-top:0.5rem; }}
+  table {{ width:100%; border-collapse:collapse; }}
+  th {{ padding:0.55rem 0.8rem; text-align:left; font-weight:600; color:var(--accent);
+       background:var(--accent-bg); border-bottom:2px solid var(--accent-border); white-space:nowrap; }}
+  td {{ padding:0.5rem 0.8rem; vertical-align:middle; font-size:0.875rem; line-height:1.45;
+       border-bottom:1px solid {_hex_rgba(accent, 0.12)}; }}
+  td.unit {{ font-weight:600; }}
+  .tg {{ width:3.6rem; padding-right:0; }}
+  .main-row:hover {{ background:var(--accent-soft); }}
+  .main-row.open {{ background:var(--accent-hover); }}
+  .tgl {{ display:inline-flex; align-items:center; gap:2px; cursor:pointer; color:var(--accent);
+         background:var(--accent-soft); border:1px solid var(--accent-border);
+         border-radius:999px; padding:2px 7px 2px 5px; font-size:0.72rem; font-weight:700;
+         transition:background .15s, transform .15s; }}
+  .tgl:hover {{ background:var(--accent-hover); }}
+  .tgl .chev {{ transition:transform .2s ease; }}
+  .tgl[aria-expanded='true'] {{ background:var(--accent); color:#0e1117; }}
+  .tgl[aria-expanded='true'] .chev {{ transform:rotate(180deg); }}
+  .ctx-row td {{ padding:0 0.8rem 0.7rem 3.6rem; background:var(--accent-hover);
+                border-bottom:1px solid var(--accent-border); }}
+  .ctx-box {{ border-left:3px solid var(--accent); background:rgba(255,255,255,0.03);
+             border-radius:0 8px 8px 0; padding:0.5rem 0.9rem; animation:fadeIn .2s ease; }}
+  .ctx-title {{ font-size:0.68rem; text-transform:uppercase; letter-spacing:.08em;
+               color:var(--accent); font-weight:700; margin-bottom:0.3rem; }}
+  .ctx-box ul {{ margin:0; padding-left:1.1rem; }}
+  .ctx-box li {{ margin:0.25rem 0; color:#cbd5e1; }}
+  .summary-cell {{ color:#94a3b8; }}
+  @keyframes fadeIn {{ from {{ opacity:0; transform:translateY(-3px); }} to {{ opacity:1; transform:none; }} }}
 </style>"""
+
+    script = """<script>
+function toggleRow(btn) {
+  var row = btn.closest('tr');
+  var ctx = row.nextElementSibling;
+  var open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+  btn.title = open ? 'Show contexts' : 'Hide contexts';
+  row.classList.toggle('open', !open);
+  if (ctx) ctx.hidden = open;
+  resizeFrame();
+}
+function resizeFrame() {
+  try {
+    var h = Math.max(document.body.scrollHeight + 24, 520);
+    window.frameElement.style.height = h + 'px';
+  } catch (e) {}
+}
+</script>"""
 
     full_html = (
         "<!DOCTYPE html><html><head><meta charset='UTF-8'>"
-        + _IFRAME_DARK_CSS
+        + style
         + source_popup_css_js()
-        + "</head><body style='margin:0;padding:0;'>"
+        + "</head><body>"
         + table_html
         + "".join(popup_html_parts)
+        + script
         + "</body></html>"
     )
 
-    # Height: enough for table rows + a minimum for the popup to be usable
-    height = max(520, 80 + len(sorted_occs) * 52)
+    height = max(520, 80 + len(groups) * 52)
     return full_html, height
-
 
 # ---------------------------------------------------------------------------
 # Source content fetching
@@ -560,7 +627,7 @@ def _render_results(lang: str) -> None:
             plural = "s" if count != 1 else ""
             st.markdown(
                 f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
-                f"{count} occurrence{plural}</p>",
+                f"{count} occurrence{plural} · click the chevron on a row to see its contexts</p>",
                 unsafe_allow_html=True,
             )
 

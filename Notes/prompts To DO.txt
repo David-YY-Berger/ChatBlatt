@@ -54,6 +54,9 @@ source search {{
 
 Number Search {{
 
+	on number search page, we have many entries with multiple contexts. currently, each is displayed as separate row. change that - make so that each number, under that category, only displays the units as rows, you can click an 'expand' button (best a graphic and not the word expand) and then you can see the contexts also. invest time to design it nicely visually.
+	
+	update C:\ChatBlatt\control_docs if need, if not written there make sure that this page is documented there
 }}
 
 Entity search {{
