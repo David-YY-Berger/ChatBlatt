@@ -14,7 +14,7 @@ import streamlit as st
 from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
 from components.facets import get_selected_entity_ids
-from components.source_filters import get_selected_books, get_selected_passage_types
+from components.source_filters import get_selected_book_names, get_selected_passage_types
 from system_common.SystemFunctions import get_ts_datetime
 
 logger = logging.getLogger(__name__)
@@ -26,18 +26,12 @@ def collect_search_query() -> SourceSearchQuery:
     free_text = st.session_state.get("free_text_query", "")
 
     selected_passage_types = get_selected_passage_types()
-    # Book-level selection – captured for the future; not yet wired into
-    # server-side filtering (backend support is out of scope for now).
-    selected_books = get_selected_books()  # noqa: F841
-    selected_src_types = sorted(
-        {b.source_type for b in selected_books}, key=lambda st_: st_.value,
-    )
 
     return SourceSearchQuery(
         free_text_similarity=free_text,
         max_sources=50,
-        src_types=selected_src_types,
         passage_types=selected_passage_types,
+        book_names=get_selected_book_names(),
         entity_ids=get_selected_entity_ids(),
         rel_ids=[],
     )

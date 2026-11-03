@@ -1,4 +1,5 @@
 import logging
+import re
 from typing import Any, Dict, List, Optional
 
 from backend.db.Collections import CollectionObjs
@@ -70,6 +71,7 @@ class SourceMetadataMongoMixin:
     def get_source_metadata_filtered(
         self,
         passage_types: Optional[List[PassageType]] = None,
+        book_names: Optional[List[str]] = None,
         entity_ids: Optional[List[str]] = None,
         rel_ids: Optional[List[str]] = None,
     ) -> List[SourceMetadata]:
@@ -83,6 +85,10 @@ class SourceMetadataMongoMixin:
 
         if passage_types:
             conditions.append({DBFields.PASSAGE_TYPES: {DBOperators.IN: [pt.value for pt in passage_types]}})
+        if book_names:
+            # Keys look like <TYPE>_<book>_<chapter>_<section>; match on the book segment.
+            pattern = r"^[A-Z]{2}_(" + "|".join(re.escape(b) for b in book_names) + r")_"
+            conditions.append({DBFields.KEY: {DBOperators.REGEX: pattern}})
         if entity_ids:
             conditions.append({DBFields.ENTITY_KEYS: {DBOperators.IN: list(entity_ids)}})
         if rel_ids:

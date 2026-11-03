@@ -9,7 +9,7 @@ UI responsibilities only:
 
 All search logic lives in :mod:`pages.source_search_logic`.
 Entity-type filter widgets live in :mod:`components.facets`.
-Source-filter widgets (Passage Type + Sources tree) live in
+Source-filter widgets (Passage Type + Books) live in
 :mod:`components.source_filters`.
 """
 
@@ -27,11 +27,7 @@ from components.facets import (
     preload_all_entity_options,
     render_entity_facets,
 )
-from components.source_filters import (
-    inject_source_filters_css,
-    render_active_filter_chips,
-    render_source_filters,
-)
+from components.source_filters import render_source_filters
 from .source_search_logic import collect_search_query, run_search
 
 logger = logging.getLogger(__name__)
@@ -128,9 +124,8 @@ def render(lang: str) -> None:
     preload_all_entity_options()
 
     inject_facet_css()
-    inject_source_filters_css()
 
-    left_col, main_col = st.columns([2, 6])
+    left_col, main_col = st.columns([1.6, 6])
     with left_col:
         render_source_filters()
     with main_col:
@@ -140,7 +135,4 @@ def render(lang: str) -> None:
         # Sources button on the same line, and a Dicta promo note beneath it.
         _render_search_input_row(lang)
         _render_dicta_promo(lang)
-        # Active filter chips – reflect current source-filter selections,
-        # shown directly above the results.
-        render_active_filter_chips()
         _render_search_panel()

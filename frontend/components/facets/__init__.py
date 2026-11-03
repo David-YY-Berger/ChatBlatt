@@ -3,11 +3,7 @@
 ``components.facets`` – entity-type filter panel (the always-visible
 per-entity picker shown above the search box).
 
-Note: the source-type/book-category/book and passage-type left-hand
-filters have moved to ``components.source_filters`` – a standalone,
-reusable component. Import from there instead::
-
-    from components.source_filters import render_source_filters
+Note: the Passage Type and Books filters live in `components.source_filters`.
 """
 
 from .renderers import (

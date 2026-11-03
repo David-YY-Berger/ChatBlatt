@@ -57,6 +57,7 @@ class SourceMetadataInterfaceMixin(ABC):
     def get_source_metadata_filtered(
         self,
         passage_types: Optional[List[PassageType]] = None,
+        book_names: Optional[List[str]] = None,
         entity_ids: Optional[List[str]] = None,
         rel_ids: Optional[List[str]] = None,
     ) -> List[SourceMetadata]:

@@ -2,10 +2,8 @@
 """
 Entity-type facet renderer for the source-search panel.
 
-Note: the source-type/book-category/book and passage-type filters that used
-to live here have moved to the standalone, reusable
-``components.source_filters`` package (see that package's docstring). This
-module now only deals with the entity-type picker panel.
+Note: the Passage Type and Books filters live in `components.source_filters`;
+this module only deals with the entity-type picker panel.
 """
 
 from __future__ import annotations

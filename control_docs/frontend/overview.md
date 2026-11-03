@@ -26,6 +26,20 @@ per context × source). Entity model: `data_model/entities/number.md`.
   → table.
 - **Results list**: organised by **unit** (`_group_by_unit`). Every unit is a collapsed card showing a chevron, the unit name and a source-count badge. Opening a card reveals one row per source: Context(s) (all contexts of that unit in that source, merged), Source Summary, and Source (click opens the source popup, positioned near the click ? see `components/source_popup.py` `spOpen`). Rendered as static HTML in an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
 
+## Source search page (`frontend/pages/source_search.py`)
+
+Layout: narrow left column (Passage Type + Books filters) and a main column (entity
+dropdowns, free-text box + Find Sources button, results).
+
+- **Passage Type** (`components/source_filters.py`): compact checkbox list, one per
+  `PassageType`; no All/None buttons or counts.
+- **Books** (same module): multiselect of every `Books.sorted_all()` book (English display name),
+  same behavior as the entity multiselects. Resolved to `Book.database_name` values.
+- **Entities** (`components/facets/`): one multiselect per entity type.
+- Query building lives in `pages/source_search_logic.py` (`collect_search_query`), which
+  fills a `SourceSearchQuery` (`passage_types`, `book_names`, `entity_ids`). Backend flow:
+  `search/source_search.md`.
+- The old Source Type → Category → Book tree, its chips bar, and `source_filters.css` were removed.
 ## Behavior notes
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;

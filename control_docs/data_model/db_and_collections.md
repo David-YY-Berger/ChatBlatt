@@ -61,7 +61,7 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 | `try_insert_rel` | see `entities_and_relationships.md` |
 | `get_rels_for_entity(key)` / `get_rels_for_entities(keys)` | rels where entity is term1 OR term2 |
 | `get_family_rels_for_entity(ies)` | same, filtered to childOfFather/childOfMother/spouseOf only |
-| `upsert_source_metadata` / `get_source_metadata_filtered(entity_ids=...)` | |
+| `upsert_source_metadata` / `get_source_metadata_filtered(passage_types=, book_names=, entity_ids=, rel_ids=)` | |
 | `drop_all_entities()` / `drop_all_rels()` / `drop_all_source_metadata()` | **destructive**, whole collection |
 
 ## SourceMetadata (`backend/models_db/SourceClasses/SourceMetadata.py`)
