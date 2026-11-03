@@ -62,8 +62,8 @@ entity_search_ui:
   loading: "Loading entity details…"
   not_found: "Entity not found."
   no_relationships: "No relationships found for this entity."
-  view_entity: "View Entity"
-  view_sources: "View Sources of Relationship"
+  view_entity: "View entity"
+  view_sources: "View sources"
   coming_soon: "Coming soon"
   nav_not_available: "Navigation not available for this entity type yet"
 
@@ -156,6 +156,8 @@ source_search_ui:
   text_similarity_label: "Sort by Text Similarity"
   text_similarity_placeholder: "Sort sources by similarity to a word or phrase"
   find_sources_button: "Find Sources"
+  relationship_filter: "Relationship"
+  clear_relationship: "Clear"
   dicta_promo: "Looking for a really great semantic search engine? Check out Dicta's [Talmud]({talmud_link}) and [Tanach]({tanach_link}) search engine."
 
 number_search_ui:

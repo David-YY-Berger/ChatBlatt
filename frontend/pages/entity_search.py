@@ -1,4 +1,4 @@
-# bs"d - lehagdil torah velahadir
+﻿# bs"d - lehagdil torah velahadir
 
 """
 Entity Search Page.
@@ -23,7 +23,7 @@ import streamlit as st
 from translations1 import get_text, is_rtl
 from system_common.SystemFunctions import get_secret
 from system_common.Constants import (
-    PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
+    PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
 )
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
@@ -433,7 +433,7 @@ def _render_relationship_fields(entity, transient_labels: list, lang: str) -> No
         for col_idx, (field_name, label_key, values) in enumerate(row_items):
             with cols[col_idx]:
                 label = get_text(label_key, lang)
-                _render_relationship_list(label, values, field_name, rel_links, lang)
+                _render_relationship_list(label, values, field_name, rel_links, lang, entity)
 
 
 def _render_relationship_list(
@@ -442,12 +442,13 @@ def _render_relationship_list(
     field_name: str,
     rel_links: dict,
     lang: str,
+    entity=None,
 ) -> None:
     """
     Render a titled list of related entities.
     Each item is a popover button that shows action options:
       1. View Entity — navigates to the entity's page
-      2. View Sources of Relationship — shows "coming soon"
+      2. View Sources of Relationship — opens Source Search filtered by the relationship's rel keys
     """
     with st.container(border=True):
         st.markdown(
@@ -457,7 +458,24 @@ def _render_relationship_list(
             unsafe_allow_html=True,
         )
         for item in items:
-            _render_entity_item_popover(item, field_name, rel_links, lang)
+            rel_keys = (getattr(entity, "rel_keys_by_field", {}) or {}).get(field_name, {}).get(item)
+            _render_entity_item_popover(
+                item, field_name, rel_links, lang,
+                getattr(entity, "display_en_name", ""), title, rel_keys,
+            )
+
+
+_POPOVER_CSS = """
+<style>
+div[data-testid="stPopoverBody"]:has(.rel-pop-marker) {
+    min-width: 0; width: 13rem; padding: 0.4rem 0.5rem;
+}
+div[data-testid="stPopoverBody"]:has(.rel-pop-marker) [data-testid="stVerticalBlock"] { gap: 0.25rem; }
+div[data-testid="stPopoverBody"]:has(.rel-pop-marker) button {
+    min-height: 0; padding: 0.3rem 0.6rem; font-size: 0.85rem;
+}
+</style>
+"""
 
 
 def _render_entity_item_popover(
@@ -465,52 +483,44 @@ def _render_entity_item_popover(
     field_name: str,
     rel_links: dict,
     lang: str,
+    entity_name: str = "",
+    rel_label: str = "",
+    rel_keys: list[str] | None = None,
 ) -> None:
-    """Render a single related-entity name as a popover button with action choices."""
+    """Render a single related-entity name as a compact popover with two actions:
+    view the entity, or view the sources of the relationship."""
     link_info = rel_links.get(item_name)  # (entity_key, EntityType) | None
+    uid = f"{field_name}_{abs(hash(item_name))}"
+    view_label = f"👁 {get_text('entity_search_ui.view_entity', lang)}"
 
     with st.popover(f"• {item_name}", use_container_width=True):
-        # ── Action 1: View Entity ──────────────────────────────────────
-        if link_info:
-            entity_key, entity_type = link_info
-            tab_key = _entity_type_to_tab(entity_type)
-            btn_label = get_text("entity_search_ui.view_entity", lang)
-            if tab_key:
-                if st.button(
-                    btn_label,
-                    key=f"nav_{tab_key}_{entity_key}_{field_name}",
-                    use_container_width=True,
-                    type="primary",
-                ):
-                    st.session_state["active_page"] = tab_key
-                    st.session_state[f"entity_detail_{tab_key}"] = entity_key
-                    st.rerun()
-            else:
-                st.button(
-                    btn_label,
-                    key=f"nav_disabled_{hash(item_name)}_{field_name}",
-                    use_container_width=True,
-                    disabled=True,
-                    help=get_text("entity_search_ui.nav_not_available", lang),
-                )
+        st.markdown("<span class='rel-pop-marker'></span>" + _POPOVER_CSS, unsafe_allow_html=True)
+
+        tab_key = _entity_type_to_tab(link_info[1]) if link_info else None
+        if tab_key:
+            if st.button(view_label, key=f"nav_{uid}", use_container_width=True):
+                st.session_state["active_page"] = tab_key
+                st.session_state[f"entity_detail_{tab_key}"] = link_info[0]
+                st.rerun()
         else:
             st.button(
-                get_text("entity_search_ui.view_entity", lang),
-                key=f"nav_nolink_{hash(item_name)}_{field_name}",
+                view_label,
+                key=f"nav_disabled_{uid}",
                 use_container_width=True,
                 disabled=True,
+                help=get_text("entity_search_ui.nav_not_available", lang),
             )
 
-        st.divider()
-
-        # ── Action 2: View Sources of Relationship ─────────────────────
-        st.button(
-            get_text("entity_search_ui.view_sources", lang),
-            key=f"src_{hash(item_name)}_{field_name}",
+        if st.button(
+            f"📄 {get_text('entity_search_ui.view_sources', lang)}",
+            key=f"src_{uid}",
             use_container_width=True,
-            disabled=True,
-            help=get_text("entity_search_ui.coming_soon", lang),
-        )
+            disabled=not rel_keys,
+        ):
+            from .source_search_logic import set_relationship_search
+            set_relationship_search(rel_keys, f"{entity_name} · {rel_label} · {item_name}")
+            st.session_state["active_page"] = PAGE_SOURCE_SEARCH
+            st.rerun()
 
 
 def _entity_type_to_tab(entity_type) -> str | None:

@@ -28,9 +28,42 @@ from components.facets import (
     render_entity_facets,
 )
 from components.source_filters import render_source_filters
-from .source_search_logic import collect_search_query, run_search
+from .source_search_logic import (
+    clear_relationship_search,
+    collect_search_query,
+    get_relationship_search,
+    run_search,
+    REL_SEARCH_PENDING_KEY,
+)
 
 logger = logging.getLogger(__name__)
+
+
+def _execute_search() -> None:
+    try:
+        ans, elapsed = run_search(collect_search_query())
+        st.session_state["_search_ans"] = ans
+        st.session_state["_search_elapsed"] = elapsed
+        st.session_state.pop("_search_error", None)
+    except Exception as e:
+        logger.error("Search failed: %s", e)
+        st.session_state["_search_error"] = str(e)
+        st.session_state.pop("_search_ans", None)
+
+
+def _render_relationship_chip(lang: str) -> None:
+    """Shows the active relationship filter (set from Entity Search) with a clear button."""
+    rel_search = get_relationship_search()
+    if not rel_search:
+        return
+    chip_col, clear_col = st.columns([6, 1], vertical_alignment="center")
+    with chip_col:
+        st.info(f"🔗 {get_text('source_search_ui.relationship_filter', lang)}: **{rel_search['label']}**")
+    with clear_col:
+        if st.button(get_text("source_search_ui.clear_relationship", lang), key="clear_rel_search"):
+            clear_relationship_search()
+            st.session_state.pop("_search_ans", None)
+            st.rerun()
 
 
 # ---------------------------------------------------------------------------
@@ -52,16 +85,7 @@ def _render_search_input_row(lang: str) -> None:
         # label rendered above it.
         st.markdown("<div style='height: 1.9rem;'></div>", unsafe_allow_html=True)
         if st.button(get_text("source_search_ui.find_sources_button", lang)):
-            try:
-                query_obj = collect_search_query()
-                ans, elapsed = run_search(query_obj)
-                st.session_state["_search_ans"] = ans
-                st.session_state["_search_elapsed"] = elapsed
-                st.session_state.pop("_search_error", None)
-            except Exception as e:
-                logger.error("Search failed: %s", e)
-                st.session_state["_search_error"] = str(e)
-                st.session_state.pop("_search_ans", None)
+            _execute_search()
 
 
 def _render_dicta_promo(lang: str) -> None:
@@ -131,6 +155,10 @@ def render(lang: str) -> None:
     with main_col:
         # Entity facets at the top of the right area
         render_entity_facets()
+        _render_relationship_chip(lang)
+        # Arriving from Entity Search "view sources": run the relationship search now.
+        if st.session_state.pop(REL_SEARCH_PENDING_KEY, False):
+            _execute_search()
         # Free-text similarity search below entity filters, with the Find
         # Sources button on the same line, and a Dicta promo note beneath it.
         _render_search_input_row(lang)

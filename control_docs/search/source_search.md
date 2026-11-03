@@ -16,3 +16,4 @@ not currently applied by the backend.)
 2. **Re-rank** (only if free text given) — FAISS + BM25 fused by RRF; reorders only, never filters
    (`search/faiss_bm25.md`).
 3. Truncate to `max_sources`, then load `SourceContent` for each.
+UI entry point for `rel_ids`: Entity Search 'View sources' (see `frontend/overview.md`) passes the Rel keys behind a relationship list item.

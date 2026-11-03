@@ -1,4 +1,4 @@
-# Entities & Relationships
+﻿# Entities & Relationships
 
 Source of truth: `backend/models_db/EntityObjects/*.py`, `backend/models_db/Rel.py`,
 `backend/models_db/Enums.py`.
@@ -34,7 +34,7 @@ and extraction-time rules live in their own file** — see the index below.
 
 Transient fields (`TransientField(...)`, `exclude=True`): never stored, filled in for the UI
 by `backend/app/controllers/entity_populator.py` from the entity's DB relationships (see
-`db_and_collections.md`). Includes `rel_links` (display name → (key, EntityType)) used for
+`db_and_collections.md`). Includes `rel_keys_by_field` and `rel_links` (display name → (key, EntityType)) used for
 click-through navigation. Every subclass also carries `comparedTo`/`contrastedWith`
 (transient) — the only relationship every entity type can participate in.
 

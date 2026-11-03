@@ -63,7 +63,7 @@ entity_search_ui:
   not_found: "הישות לא נמצאה."
   no_relationships: "לא נמצאו קשרים עבור ישות זו."
   view_entity: "צפה בישות"
-  view_sources: "צפה במקורות הקשר"
+  view_sources: "צפה במקורות"
   coming_soon: "בקרוב"
   nav_not_available: "ניווט אינו זמין עבור סוג ישות זה עדיין"
 
@@ -156,6 +156,8 @@ source_search_ui:
   text_similarity_label: "מיין לפי דמיון טקסטואלי"
   text_similarity_placeholder: "מיין מקורות לפי דמיון למילה או ביטוי"
   find_sources_button: "חפש מקורות"
+  relationship_filter: "קשר"
+  clear_relationship: "נקה"
   dicta_promo: "מחפשים מנוע חיפוש סמנטי ממש טוב? בדקו את מנוע החיפוש של דיקטא ל[תלמוד]({talmud_link}) ול[תנ\"ך]({tanach_link})."
 
 number_search_ui:

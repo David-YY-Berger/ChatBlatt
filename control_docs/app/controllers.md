@@ -1,4 +1,4 @@
-# App Controllers (stub)
+﻿# App Controllers (stub)
 
 Source of truth: `backend/app/controllers/`. These sit between the DB layer
 (`data_model/db_and_collections.md`) and the frontend (`frontend/overview.md`). Expand this
@@ -12,7 +12,7 @@ related entity keys to display names for the UI. Each entity type subclass defin
 `REL_FIELD_MAP: Dict[(RelType, direction), transient_field_name]` where `direction` is
 `AS_TERM1` (entity is the rel's subject) or `AS_TERM2` (entity is the object — a "reverse"
 relationship, e.g. `children` is the reverse of `childOfFather`/`childOfMother`). Also
-populates `rel_links` (display name → `(key, EntityType)`) for click-through navigation.
+populates `rel_links` (display name → `(key, EntityType)`) and `rel_keys_by_field` (field -> display name -> `Rel.key`s, for "view sources") for click-through navigation.
 
 ## `entity_search/`
 

@@ -37,6 +37,9 @@ class Entity(BaseModel):
     # Navigation metadata: maps display_name -> (entity_key, EntityType)
     # Populated by the entity populator; used by the UI for click-through navigation.
     rel_links: Dict[str, Tuple[str, Any]] = TransientField(default_factory=dict)
+    # Maps transient field name -> display_name -> keys of the Rels behind that list item.
+    # Used by the UI's "view sources of relationship" action (Rel keys match SourceMetadata.rel_keys).
+    rel_keys_by_field: Dict[str, Dict[str, List[str]]] = TransientField(default_factory=dict)
 
     @field_validator("display_en_name", mode="before")
     @classmethod

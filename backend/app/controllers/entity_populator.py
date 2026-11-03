@@ -91,6 +91,11 @@ class BaseEntityPopulator(ABC):
                 if other_name not in field_value:
                     field_value.append(other_name)
 
+            if rel.key:
+                keys = entity.rel_keys_by_field.setdefault(field_name, {}).setdefault(other_name, [])
+                if rel.key not in keys:
+                    keys.append(rel.key)
+
             # Store navigation link for UI click-through
             if other_name and other_key:
                 entity.rel_links[other_name] = (other_key, other_type)
@@ -162,17 +167,23 @@ class PersonPopulator(BaseEntityPopulator):
         # --- Siblings ---
         # Collect parent keys from rels where entity is term1
         parent_keys: set = set()
+        own_parent_rel_keys: Dict[str, List[str]] = {}
         for rel in rels:
             if rel.term1 == entity.key and rel.rel_type in (
                 RelType.childOfFather, RelType.childOfMother
             ):
                 parent_keys.add(rel.term2)
+                if rel.key:
+                    own_parent_rel_keys.setdefault(rel.term2, []).append(rel.key)
 
         if not parent_keys:
             return entity
 
         # For each parent, find all other children (co-children of the same parent)
         sibling_keys: set = set()
+        # A sibling relationship has no Rel of its own: its sources are those of the
+        # shared parent's childOf rels (this entity's and the sibling's).
+        sibling_rel_keys: Dict[str, List[str]] = {}
         for parent_key in parent_keys:
             parent_rels = db.get_rels_for_entity(parent_key)
             for rel in parent_rels:
@@ -182,6 +193,10 @@ class PersonPopulator(BaseEntityPopulator):
                 ):
                     if rel.term1 != entity.key:
                         sibling_keys.add(rel.term1)
+                        shared = sibling_rel_keys.setdefault(rel.term1, [])
+                        for k in [rel.key, *own_parent_rel_keys.get(parent_key, [])]:
+                            if k and k not in shared:
+                                shared.append(k)
 
         if not sibling_keys:
             return entity
@@ -192,6 +207,8 @@ class PersonPopulator(BaseEntityPopulator):
             if sibling_name and sibling_name not in entity.siblings:
                 entity.siblings.append(sibling_name)
                 entity.rel_links[sibling_name] = (sibling_key, sibling_type)
+                if sibling_rel_keys.get(sibling_key):
+                    entity.rel_keys_by_field.setdefault("siblings", {})[sibling_name] = sibling_rel_keys[sibling_key]
 
         return entity
 
