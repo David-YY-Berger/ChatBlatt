@@ -161,6 +161,14 @@ page_titles:
   genology: "Genealogy Tree"
   studied_from: "Studied From Tree"
 
+home_tools:
+  subtitle: "Placeholder for subtitle"
+  open_tool: "Open tool"
+  number_search_description: "Find numbers and units mentioned throughout Jewish sources."
+  source_search_description: "Discover relevant passages across Jewish texts."
+  entity_search_description: "Explore people, places, nations, tribes, and symbols."
+  trees_description: "Explore family connections and chains of study."
+
 source_search_ui:
   text_similarity_label: "Sort by Text Similarity"
   text_similarity_placeholder: "Sort sources by similarity to a word or phrase"

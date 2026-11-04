@@ -67,6 +67,30 @@ body {
     border-radius: 6px;
 }
 
+.home-subtitle {
+    margin: -0.5rem 0 1.5rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.home-tool-title {
+    margin: 0.25rem 0 0.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.home-tool-description {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.55;
+    color: var(--text);
+}
+
 @media (max-width: 640px) {
     .app-header-row {
         justify-content: center;
@@ -79,5 +103,10 @@ body {
 
     .app-main-icon {
         height: 2rem;
+    }
+
+    .home-tool-description {
+        min-height: 0;
+        margin: 0.5rem 0;
     }
 }

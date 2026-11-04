@@ -161,6 +161,14 @@ page_titles:
   genology: "עץ גנאלוגי"
   studied_from: "עץ מקורות לימוד"
 
+home_tools:
+  subtitle: "מציין מקום לכותרת משנה"
+  open_tool: "פתיחת הכלי"
+  number_search_description: "מצאו מספרים ויחידות המוזכרים במקורות יהודיים."
+  source_search_description: "גלו קטעים רלוונטיים במקורות יהודיים."
+  entity_search_description: "גלו אנשים, מקומות, עמים, שבטים וסמלים."
+  trees_description: "גלו קשרי משפחה ושרשראות לימוד."
+
 source_search_ui:
   text_similarity_label: "מיין לפי דמיון טקסטואלי"
   text_similarity_placeholder: "מיין מקורות לפי דמיון למילה או ביטוי"
