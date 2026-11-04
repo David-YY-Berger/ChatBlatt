@@ -1,12 +1,18 @@
 # Frontend — Overview (stub)
 
-Source of truth: `frontend/` (Streamlit app). Expand this doc as work actually touches the
-frontend — it's currently a light pointer, not a full reference.
+Source of truth: `frontend/` (Streamlit app). Expand these docs as work actually
+touches the frontend; they are currently light pointers, not a full reference.
+
+## Feature guides
+
+- [Number search](number_search.md)
+- [Source search](source_search.md)
+- [Maps](maps.md)
+- [Entity search](entity_search.md)
 
 ## Structure
 
-- `frontend/app.py` — entry point; language toggle + custom nav buttons. Entity Search and
-  Maps use a popover dropdown for subtabs.
+- `frontend/app.py` — entry point; language toggle + custom nav buttons.
 - `frontend/translations1/` — YAML translations (`en.yml`, `he.yml`) + helpers. Use
   `get_text("path.to.key", lang)`; falls back to English if a key is missing. Page titles
   under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`map_tabs.*`.
@@ -20,33 +26,6 @@ Put source images in `frontend/icons/orig_icons/`, then run `python frontend/scr
 (needs Pillow). It writes compressed copies to `frontend/icons/optimized/` (skips up-to-date ones,
 removes orphans). The app must only load images from `optimized/` (e.g. the top banner in `app.py`).
 
-## Number search page (`frontend/pages/number_search.py`)
-
-Flow: `NumberSearchController` → `NumberSearchLogic.execute` (backend) returns
-`NumberSearchResult.by_category` (`NumberCategory | None` → list of `NumberOccurrenceDTO`, one
-per context × source). Entity model: `data_model/entities/number.md`.
-
-- **Input**: one free-form box (Enter or Search button). Whole vs. fraction auto-detected;
-  `_validate_number` gives live error messages (rejects 0/1, decimals, negatives).
-- **Results**: big number header → coloured category tabs (with counts) → per-tab unit filter
-  → table.
-- **Results list**: organised by **unit** (`_group_by_unit`). Every unit is a collapsed card showing a chevron, the unit name and a source-count badge. Opening a card reveals one row per source: Context(s) (all contexts of that unit in that source, merged), Source Summary, and Source (click opens the source popup, positioned near the click ? see `components/source_popup.py` `spOpen`). Rendered as static HTML in an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
-
-## Source search page (`frontend/pages/source_search.py`)
-
-Layout: narrow left column (Passage Type + Books filters) and a main column (entity
-dropdowns, free-text box + Find Sources button, results).
-
-- **Passage Type** (`components/source_filters.py`): compact checkbox list, one per
-  `PassageType`; no All/None buttons or counts.
-- **Books** (same module): multiselect of every `Books.sorted_all()` book (English display name),
-  same behavior as the entity multiselects. Resolved to `Book.database_name` values.
-- **Entities** (`components/facets/`): one multiselect per entity type.
-- Query building lives in `pages/source_search_logic.py` (`collect_search_query`), which
-  fills a `SourceSearchQuery` (`passage_types`, `book_names`, `entity_ids`). Backend flow:
-  `search/source_search.md`.
-- **Relationship search** (from Entity Search): each related-entity item in an entity's detail view opens a compact popover with *View entity* and *View sources*. *View sources* calls `source_search_logic.set_relationship_search(rel_keys, label)` (session keys `_source_search_rel`, `_source_search_rel_pending`), switches to this page, which shows a "Relationship" chip (with Clear) and auto-runs the search with `SourceSearchQuery.rel_ids` set. The rel keys come from `Entity.rel_keys_by_field` (transient: field name -> display name -> `Rel.key`s), filled by `entity_populator.py`; siblings use the shared parent `childOf` rel keys.
-- The old Source Type → Category → Book tree, its chips bar, and `source_filters.css` were removed.
 ## Behavior notes
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;
@@ -68,7 +47,7 @@ Backend data the frontend reads/searches comes from `backend/app/controllers/`
 ## requirements.txt is the deployment manifest
 
 `requirements.txt` (repo root) is what Streamlit Community Cloud installs — it must only
-list packages actually imported by `frontend/` + `backend/`, and must pip-resolve cleanly
+list packages actually imported by `frontend/` + `backend/`, and it must pip-resolve cleanly
 (no conflicting pins). `backend/models_db` and `backend/models_dto` use `pydantic`, so it
 stays in this file; `pydantic-ai` (and the rest of the LLM pipeline stack) is only imported
 by `backend_pipeline/` (local data-population scripts), so it does **not** belong here.
