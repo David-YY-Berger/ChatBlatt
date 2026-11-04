@@ -3,7 +3,7 @@
 [//]: # ()
 [//]: # (## Structure)
 
-[//]: # (- `Frontend/app.py`: entry point with language toggle and custom nav buttons. Entity Search and Maps use a popover dropdown for subtabs.)
+[//]: # (- `Frontend/app.py`: entry point with language toggle and custom nav buttons. Entity Search and Trees use a popover dropdown for subtabs.)
 
 [//]: # (- `Frontend/translations1/`: YAML translations &#40;`en.yml`, `he.yml`&#41; and helper functions.)
 
@@ -44,7 +44,7 @@
 
 [//]: # (- Page titles are under `page_titles.*`.)
 
-[//]: # (- Nav labels are under `nav.*`, `entity_tabs.*`, and `map_tabs.*`.)
+[//]: # (- Nav labels are under `nav.*`, `entity_tabs.*`, and `tree_tabs.*`.)
 
 [//]: # ()
 [//]: # (## RTL Support)

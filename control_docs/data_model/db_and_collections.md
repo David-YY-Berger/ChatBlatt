@@ -27,7 +27,7 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 |---|---|
 | `EntityMongoMixin` | insert/find/update entities (see `entities_and_relationships.md`) |
 | `RelationshipMongoMixin` | insert/find rels |
-| `GenealogyMongoMixin` | `get_family_rels_for_entity(ies)` — childOfFather/childOfMother/spouseOf only, for genealogy-map BFS |
+| `GenealogyMongoMixin` | `get_family_rels_for_entity(ies)` — childOfFather/childOfMother/spouseOf only, for genealogy-tree BFS |
 | `SourceContentMongoMixin` | source passages |
 | `SourceMetadataMongoMixin` | per-source summary/entity_keys/rel_keys |
 | `SimilarityIndexMongoMixin` | FAISS/BM25 GridFS storage |

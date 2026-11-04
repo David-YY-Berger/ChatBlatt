@@ -24,7 +24,7 @@ class GenealogyEdge(BaseModel):
 
 
 class GenealogyGraphData(BaseModel):
-    """Full graph payload returned by MapGenealogyLogic to the frontend."""
+    """Full graph payload returned by GenealogyTreeLogic to the frontend."""
     nodes: List[GenealogyNode] = Field(default_factory=list)
     edges: List[GenealogyEdge] = Field(default_factory=list)
     center_key: str = ""

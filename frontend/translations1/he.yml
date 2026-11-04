@@ -13,7 +13,7 @@ nav:
   number_search: "חיפוש מספריפ"
   source_search: "חיפוש מקורות"
   entity_search: "חיפוש ישות"
-  maps: "מפות"
+  trees: "עצים"
 
 entity_tabs:
   people: "אנשים"
@@ -23,14 +23,14 @@ entity_tabs:
   symbols: "סמלים"
   label: "בחר תצוגת ישות"
 
-map_tabs:
+tree_tabs:
   genology: "גנולוגיה"
   studied_from: "מקורות לימוד"
-  label: "בחר תצוגת מפה"
+  label: "בחר תצוגת עץ"
 
-maps_ui:
-  select_map_prompt: "אנא בחרו סוג מפה מהתפריט למעלה."
-  studied_from_coming_soon: "מפת 'מקורות לימוד' תהיה זמינה בקרוב."
+trees_ui:
+  select_tree_prompt: "אנא בחרו סוג עץ מהתפריט למעלה."
+  studied_from_coming_soon: "עץ 'מקורות לימוד' יהיה זמין בקרוב."
 
 genealogy_ui:
   select_person_label: "בחר אדם למרכז עץ המשפחה"
@@ -148,9 +148,9 @@ page_titles:
   nations: "עמים"
   tribes: "שבטי ישראל"
   symbols: "סמלים"
-  maps: "מפות"
-  genology: "מפת גנולוגיה"
-  studied_from: "מפת מקורות לימוד"
+  trees: "עצים"
+  genology: "עץ גנאלוגי"
+  studied_from: "עץ מקורות לימוד"
 
 source_search_ui:
   text_similarity_label: "מיין לפי דמיון טקסטואלי"

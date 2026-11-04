@@ -13,7 +13,7 @@ nav:
   number_search: "Number Search"
   source_search: "Source Search"
   entity_search: "Entity Search"
-  maps: "Maps"
+  trees: "Trees"
 
 entity_tabs:
   people: "People"
@@ -23,14 +23,14 @@ entity_tabs:
   symbols: "Symbols"
   label: "Choose an entity view"
 
-map_tabs:
+tree_tabs:
   genology: "Genology"
   studied_from: "studiedFrom"
-  label: "Choose a map view"
+  label: "Choose a tree view"
 
-maps_ui:
-  select_map_prompt: "Please select a map type from the menu above."
-  studied_from_coming_soon: "The 'Studied From' map is coming soon."
+trees_ui:
+  select_tree_prompt: "Please select a tree type from the menu above."
+  studied_from_coming_soon: "The 'Studied From' tree is coming soon."
 
 genealogy_ui:
   select_person_label: "Select a person to centre the family tree on"
@@ -148,9 +148,9 @@ page_titles:
   nations: "Nations"
   tribes: "Tribes of Israel"
   symbols: "Symbols"
-  maps: "Maps"
-  genology: "Genology Map"
-  studied_from: "Studied From Map"
+  trees: "Trees"
+  genology: "Genealogy Tree"
+  studied_from: "Studied From Tree"
 
 source_search_ui:
   text_similarity_label: "Sort by Text Similarity"

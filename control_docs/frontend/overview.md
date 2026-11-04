@@ -7,7 +7,7 @@ touches the frontend; they are currently light pointers, not a full reference.
 
 - [Number search](number_search.md)
 - [Source search](source_search.md)
-- [Maps](maps.md)
+- [Trees](trees.md)
 - [Entity search](entity_search.md)
 
 ## Structure
@@ -15,7 +15,7 @@ touches the frontend; they are currently light pointers, not a full reference.
 - `frontend/app.py` — entry point; language toggle + custom nav buttons.
 - `frontend/translations1/` — YAML translations (`en.yml`, `he.yml`) + helpers. Use
   `get_text("path.to.key", lang)`; falls back to English if a key is missing. Page titles
-  under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`map_tabs.*`.
+  under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`tree_tabs.*`.
 - `frontend/components/` — shared UI pieces (`header.py`, `layout.py`).
 - `frontend/pages/` — tab renderers.
 - `frontend/assets/styles.css` — base styling; RTL/dark/light tweaks in `layout.apply_layout`.

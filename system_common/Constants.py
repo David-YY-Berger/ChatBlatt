@@ -18,7 +18,7 @@ PAGE_ABOUT = "about"
 PAGE_NUMBER_SEARCH = "number_search"
 PAGE_SOURCE_SEARCH = "source_search"
 PAGE_ENTITY_SEARCH = "entity_search"
-PAGE_MAPS = "maps"
+PAGE_TREES = "trees"
 PAGE_PEOPLE = "people"
 PAGE_PLACES = "places"
 PAGE_NATIONS = "nations"
@@ -37,4 +37,3 @@ PAGE_STUDIED_FROM = "studied_from"
 
 NUMBER_TYPE_WHOLE = "whole"
 NUMBER_TYPE_FRACTION = "fraction"
-

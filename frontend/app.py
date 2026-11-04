@@ -21,11 +21,11 @@ import streamlit.components.v1 as components
 from components.header import render_header
 from components.layout import apply_layout, language_selector
 from translations1 import get_text, is_rtl
-from pages import about, entity_search, home, maps, number_search, source_search
+from pages import about, entity_search, home, number_search, source_search, trees
 from system_common.Constants import (
     DEFAULT_LANG,
     PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH,
-    PAGE_ENTITY_SEARCH, PAGE_MAPS,
+    PAGE_ENTITY_SEARCH, PAGE_TREES,
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_GENOLOGY, PAGE_STUDIED_FROM,
 )
@@ -46,7 +46,7 @@ def _init_state() -> None:
 
 
 def _force_close_nav_popover() -> None:
-    """Force any open nav popover (Maps / Entity Search dropdown) to close.
+    """Force any open nav popover (Trees / Entity Search dropdown) to close.
 
     Streamlit's popover keeps its open/closed state on the client side, so it
     does not close itself just because the Python script reran after a child
@@ -94,11 +94,11 @@ def _nav_items(lang: str) -> list[dict]:
             ],
         },
         {
-            "key": PAGE_MAPS,
-            "label": get_text("nav.maps", lang),
+            "key": PAGE_TREES,
+            "label": get_text("nav.trees", lang),
             "children": [
-                {"key": PAGE_GENOLOGY, "label": get_text("map_tabs.genology", lang)},
-                {"key": PAGE_STUDIED_FROM, "label": get_text("map_tabs.studied_from", lang)},
+                {"key": PAGE_GENOLOGY, "label": get_text("tree_tabs.genology", lang)},
+                {"key": PAGE_STUDIED_FROM, "label": get_text("tree_tabs.studied_from", lang)},
             ],
         },
     ]
@@ -152,8 +152,8 @@ def _render_page(page_key: str, lang: str) -> None:
         source_search.render(lang)
     elif page_key in (PAGE_ENTITY_SEARCH, PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS):
         entity_search.render(lang, selected=page_key if page_key != PAGE_ENTITY_SEARCH else None)
-    elif page_key in (PAGE_MAPS, PAGE_GENOLOGY, PAGE_STUDIED_FROM):
-        maps.render(lang, selected=page_key if page_key != PAGE_MAPS else None)
+    elif page_key in (PAGE_TREES, PAGE_GENOLOGY, PAGE_STUDIED_FROM):
+        trees.render(lang, selected=page_key if page_key != PAGE_TREES else None)
     else:
         home.render(lang)
 

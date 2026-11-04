@@ -59,7 +59,7 @@ Entity search {{
 	make sure to update anything here: C:\ChatBlatt\control_docs
 }}
 
-Maps {{
+Trees {{
 
 }}
 

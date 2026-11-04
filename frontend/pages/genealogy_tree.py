@@ -1,7 +1,7 @@
 # bs"d - lehagdil torah velahadir
 
 """
-Genealogy Map Page
+Genealogy Tree Page
 
 Renders the Pyvis-powered family-tree graph for a selected person.
 
@@ -55,7 +55,7 @@ _Y_SPACING = 180
 
 
 def render(lang: str) -> None:
-    """Entry point called from maps.py."""
+    """Entry point called from trees.py."""
     st.markdown(
         f'<div class="page-title">{get_text("page_titles.genology", lang)}</div>',
         unsafe_allow_html=True,
@@ -446,11 +446,11 @@ def _render_legend(lang: str) -> None:
 
 def _load_graph_data(center_key: str, depth: int):
     """Load graph data, caching per (center_key, depth) pair."""
-    from backend.app.controllers.map_genealogy_controller import MapGenealogyController
+    from backend.app.controllers.genealogy_tree_controller import GenealogyTreeController
 
     cache_key = f"_genealogy_graph_{center_key}_{depth}"
     if cache_key not in st.session_state:
-        controller = MapGenealogyController()
+        controller = GenealogyTreeController()
         st.session_state[cache_key] = controller.get_genealogy_graph(
             center_person_key=center_key,
             depth=depth,

@@ -23,10 +23,10 @@ One search handler per `EntityType` (`person_search_handler.py`, `place_search_h
 
 ## Other controllers
 
-- `map_genealogy_controller.py` — family-tree map, built via BFS over
+- `genealogy_tree_controller.py` — family tree, built via BFS over
   `get_family_rels_for_entity(ies)` (childOfFather/childOfMother/spouseOf only — see
   `data_model/db_and_collections.md`).
-- `map_studied_from_controller.py` — teacher/student (`studiedFrom`) map.
+- `studied_from_tree_controller.py` — teacher/student (`studiedFrom`) tree.
 - `number_search_controller.py` — `ENumber` search/lookup.
 - `source_search_controller.py` — passage/source search (works with
   `backend/app/SourceSearchHandler.py` / `SourceSearchQuery.py` and the search indexes,
