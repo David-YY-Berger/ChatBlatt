@@ -272,6 +272,8 @@ class EntityPipelineRunner:
         instance.max_sources_to_extract = self.max_sources_per_book
         instance.use_examples = self.use_examples
         instance.skip_db_writes = self.json_only
+        # Optional hook (None = whole book); set by subclasses such as RerunMissingSourcesRunner.
+        instance.source_keys_filter = getattr(self, "source_keys_filter", None)
         instance.setUp()
 
         try:

@@ -82,6 +82,17 @@ separate key selection, not a different model.
 - Typical loop: run the report → paste `REL_GRAPH_MISSING` into `test_run_specific_sources`
   (`run_full_pipeline`); for `ENRICHMENT_MISSING` use `run_step(Step.ENTITY_ENRICHMENT)`.
 
+## RerunMissingSourcesRunner (retry never-run sources)
+
+`populator_scripts/RerunMissingSourcesRunner.py` subclasses `EntityPipelineRunner`. A source is
+"not run" if it has no `SourceMetadata` in the DB. Before re-running, it checks every file under
+`Paths.ENTITY_REL_GRAPH_REAL_DATA_DIR` (`.json`/`.txt`, any subdir, NFC/case-insensitive,
+`:`→`;`); a source with an existing file is NOT sent to the LLM again and is only reported
+(`populate_existing_files=True` writes it to the DB from the JSON, no LLM). `preview_missing()` is
+read-only; `run_missing()` runs rel-graph then enrichment per book, restricted to those keys via
+the `source_keys_filter` hook (`_run_one` forwards `self.source_keys_filter`, default `None`).
+Note rel-graph phase 2 still re-applies every JSON in the book's dir (idempotent).
+
 ## Multi-book DB connection handling (why `tearDown()` is never called here)
 
 `DBParentClass.tearDown()` (the common base both populators inherit) calls
