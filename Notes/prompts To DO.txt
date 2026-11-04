@@ -4,11 +4,13 @@
 todo {{
 
 	- person to tribe of israel is not properly populated!!!
-	- BACKUP!!
-	- index display en name?
+	- BACKUP!! (need restart)
+	- index display en name? 
 	- index what we need for number..
 	
+	- ui must be good.
 	- keep fixing app...
+	- hebrew
 	
 		
 -----

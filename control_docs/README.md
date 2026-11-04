@@ -27,6 +27,8 @@ govern how these docs get used and maintained.
 | [`pipeline/population_pipeline_overview.md`](pipeline/population_pipeline_overview.md) | Populator scripts, run order, two-phase LLM scaffold, idempotency conventions |
 | [`pipeline/entity_pipeline_runner.md`](pipeline/entity_pipeline_runner.md) | `EntityPipelineRunner` - run entity-rel-graph/enrichment across many books from one place, `Step`/`Stage`, multi-book DB connection handling, recommended large-run workflow |
 | [`pipeline/entity_prepopulation.md`](pipeline/entity_prepopulation.md) | Pre-populating well-known ambiguous people (`DBPrePopulateAmbiguosEntitys`) |
+| [`pipeline/merge_entities.md`](pipeline/merge_entities.md) | `DBPopulateMergeEntities` CSV merge behaviour (detailed) + `merge_scripts/` candidate finders (prefix / same-name review .md files with merge/dont-merge checkboxes, re-run-safe), and `DBApplyMergeDecisions` (merge by key) |
+| [`pipeline/merge_workflow.md`](pipeline/merge_workflow.md) | **Runbook**: how to identify, review (tick), and apply person merges, with settings and re-run behaviour |
 | [`pipeline/person_disambiguation.md`](pipeline/person_disambiguation.md) | How a same-named Person mention is routed to the right DB entity |
 | [`pipeline/entity_ignore_filter.md`](pipeline/entity_ignore_filter.md) | Non-proper-noun filter for extracted Person/Place names |
 | [`pipeline/llm_context_caching.md`](pipeline/llm_context_caching.md) | Gemini explicit context caching in `EntityRelGraphCaller`/`EntityEnrichmentCaller` - mechanism, lifecycle, cost, dependency tradeoff, 1024-token cache minimum |
@@ -34,6 +36,7 @@ govern how these docs get used and maintained.
 ## Conventions
 | Doc | Covers |
 |---|---|
+| [`conventions/paths.md`](conventions/paths.md) | Every path lives in `backend/common/Paths.py` - check/add there, never hardcode |
 | [`conventions/safety_and_testing.md`](conventions/safety_and_testing.md) | There is no separate test DB; how to test DB logic safely anyway |
 
 ## Other areas (stubs — expand as work touches them)

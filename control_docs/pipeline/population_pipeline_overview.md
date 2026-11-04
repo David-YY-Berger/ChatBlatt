@@ -32,7 +32,8 @@ is duplicated or reimplemented.
    pre-population values (see `entity_prepopulation.md`) from being clobbered by a single
    incidental passage mention.
 5. **`DBPopulateMergeEntities`** — CSV-driven merge of duplicate entities (as needed, not
-   every run).
+   every run). Details, plus the read-only candidate finders in `merge_scripts/` that produce
+   human-review files, in `merge_entities.md`.
 6. **`DBPopulateFaissAndBm25`** — builds the FAISS + BM25 search indexes from source content.
 
 Steps 3–4 share a two-phase scaffold (`DBPopulateLlmBase`); step 2 and 5 are direct

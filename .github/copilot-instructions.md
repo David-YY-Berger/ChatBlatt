@@ -33,6 +33,10 @@ Don't re-derive context from scratch that's already written down there.
    failing loudly, inconsistent overrides — mention it to the user, same as rule 1: don't
    silently fix it (unless it's the bug you were asked to fix) or silently ignore it.
 
+4. **All paths go in `backend/common/Paths.py`.** Never hardcode or locally derive a file/dir path in a script:
+   check `Paths.py` first, add a new constant/helper there following its patterns if needed, and import it
+   (see `control_docs/conventions/paths.md`).
+
 ## Project-specific safety note
 
 This repo has no separate test database — every populator script writes to the one real
