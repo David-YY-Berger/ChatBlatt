@@ -315,54 +315,56 @@ class EntityPipelineRunner:
 if __name__ == "__main__":
     # ====== EDIT THIS CONFIG, THEN RUN THIS FILE DIRECTLY ======
     runner = EntityPipelineRunner(
-        books= [
-            # # Zeraim
-            # Books.BERAKHOT,
-            # # Moed
-            # Books.SHABBAT,
-            # Books.ERUVIN,
-            # Books.PESACHIM,
-            # Books.SHEKALIM,
-            # Books.YOMA,
-            # Books.SUKKAH,
-            # Books.BEITZAH,
-            # Books.ROSH_HASHANAH,
-            # Books.TAANIT,
-            # Books.MEGILLAH,
-            # Books.MOED_KATAN,
-            # Books.CHAGIGAH,
-            # # Nashim
-            # Books.YEVAMOT,
-            # Books.KETUBOT,
-            # Books.NEDARIM,
-            # Books.NAZIR,
-            # Books.SOTAH,
-            # Books.GITTIN,
-            # Books.KIDDUSHIN,
-            # # Nezikin
-            # Books.BAVA_KAMMA,
-            # Books.BAVA_METZIA,
-            # Books.BAVA_BATRA,
-            # Books.SANHEDRIN,
-            # Books.MAKKOT,
-            # Books.SHEVUOT,
-            # Books.AVODAH_ZARAH,
-            # Books.HORAYOT,
-            # # Kodashim
-            Books.ZEVACHIM,
-            Books.MENACHOT,
-            Books.CHULLIN,
-            Books.BEKHOROT,
-            Books.ARAKHIN,
-            Books.TEMURAH,
-            Books.KERITOT,
-            Books.MEILAH,
-            Books.KINNIM,
-            Books.TAMID,
-            Books.MIDDOT,
-            # Tahorot
-            Books.NIDDAH,
-        ],
+        books= ALL_BOOKS
+        # [
+        #     # # Zeraim
+        #     # Books.BERAKHOT,
+        #     # # Moed
+        #     # Books.SHABBAT,
+        #     # Books.ERUVIN,
+        #     # Books.PESACHIM,
+        #     # Books.SHEKALIM,
+        #     # Books.YOMA,
+        #     # Books.SUKKAH,
+        #     # Books.BEITZAH,
+        #     # Books.ROSH_HASHANAH,
+        #     # Books.TAANIT,
+        #     # Books.MEGILLAH,
+        #     # Books.MOED_KATAN,
+        #     # Books.CHAGIGAH,
+        #     # # Nashim
+        #     # Books.YEVAMOT,
+        #     # Books.KETUBOT,
+        #     # Books.NEDARIM,
+        #     # Books.NAZIR,
+        #     # Books.SOTAH,
+        #     # Books.GITTIN,
+        #     # Books.KIDDUSHIN,
+        #     # # Nezikin
+        #     # Books.BAVA_KAMMA,
+        #     # Books.BAVA_METZIA,
+        #     # Books.BAVA_BATRA,
+        #     # Books.SANHEDRIN,
+        #     # Books.MAKKOT,
+        #     # Books.SHEVUOT,
+        #     # Books.AVODAH_ZARAH,
+        #     # Books.HORAYOT,
+        #     # # Kodashim
+        #     # Books.ZEVACHIM,
+        #     # Books.MENACHOT,
+        #     # Books.CHULLIN,
+        #     # Books.BEKHOROT,
+        #     # Books.ARAKHIN,
+        #     # Books.TEMURAH,
+        #     # Books.KERITOT,
+        #     # Books.MEILAH,
+        #     # Books.KINNIM,
+        #     # Books.TAMID,
+        #     # Books.MIDDOT,
+        #     # # Tahorot
+        #     # Books.NIDDAH,
+        # ]
+        ,
         model_provider=ModelProvider.GEMINI_PAID,
         # model_provider=ModelProvider.GEMINI_LEGACY_PAID,  # Uses GEMINI_LEGACY_PAID_API_KEY
         max_sources_per_book=None,      # None = whole book; set an int for a cheap smoke test first
