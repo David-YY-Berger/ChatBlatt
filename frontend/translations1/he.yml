@@ -30,7 +30,15 @@ tree_tabs:
 
 trees_ui:
   select_tree_prompt: "אנא בחרו סוג עץ מהתפריט למעלה."
-  studied_from_coming_soon: "עץ 'מקורות לימוד' יהיה זמין בקרוב."
+
+studied_from_ui:
+  select_person_label: "בחר אדם למרכז עץ מקורות הלימוד"
+  prompt_select_person: "בחרו אדם למעלה כדי לראות ממי למד ואת מי לימד."
+  depth_1: "1 — מורים ותלמידים ישירים"
+  depth_2: "2 — מורים ותלמידים שלהם"
+  graph_title: "עץ מקורות לימוד"
+  no_data: "לא נמצאו נתוני מקורות לימוד עבור אדם זה."
+  role_center: "האדם הנבחר"
 
 genealogy_ui:
   select_person_label: "בחר אדם למרכז עץ המשפחה"
@@ -84,6 +92,7 @@ entity_fields:
   spouseOf: "בן/בת זוג"
   descendantOf: "צאצא של"
   studiedFrom: "למד מ"
+  taught: "לימד"
   spokeWith: "דיבר עם"
   disagreedWith: "חלק על"
   allyOf: "בעל ברית של"

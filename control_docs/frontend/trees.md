@@ -1,12 +1,13 @@
 # Trees
 
-Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`, and
+Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`,
+`frontend/pages/studied_from_tree.py`, `frontend/components/tree_graph.py`, and
 `frontend/app.py`.
 
 The Trees navigation item opens a popover with Genealogy Tree and Studied From
 Tree subtabs. `app.py` passes the selected page key to `pages/trees.py`, which
-dispatches to the genealogy page or displays the selected tree's title and
-placeholder message.
+dispatches to the genealogy or studied-from page; with no subtab selected it
+shows a prompt to pick a tree.
 
 ## Genealogy Tree
 
@@ -56,7 +57,7 @@ Missing endpoint entities are not rendered as nodes.
 
 `_compute_layout` assigns fixed generation rows relative to the center:
 parents above, children below, and spouses/siblings on the center's row.
-Nodes are positioned in a fixed grid with physics disabled. The center stays
+Nodes are positioned in a fixed grid with physics disabled (the shared grid/row layout lives in `components/tree_graph.py`). The center stays
 at the horizontal origin; same-generation relatives are placed around it, and
 other rows are positioned using related nodes.
 
@@ -67,10 +68,36 @@ are solid, and sibling links are dotted. Relationship labels appear on hover;
 the legend summarizes edge and node encodings. The graph is rendered at a
 fixed 600px network height inside a 620px Streamlit component.
 
+## Shared rendering (`frontend/components/tree_graph.py`)
+
+Both trees use this module: the generation-row layout (`compute_layout`, which takes
+child→parent / parent→child / same-level links and returns positions and levels), gender-based
+node fill (blue man, rose woman, gray unknown), the gold selected-person ring, the Pyvis
+embedding (`render_pyvis_graph`, edge style supplied by the page) and the legend helpers.
+Pages only define their edge parsing, role names, and edge styles.
+
 ## Studied From Tree
 
-This subtab is present in navigation, but it is not implemented yet.
-`frontend/pages/trees.py` currently shows the translated “coming soon” message;
-`backend/app/logic/studied_from_tree_logic.py` is only an empty stub. The
-genealogy behavior above describes the existing tree and is not a specification
-for the future `studiedFrom` graph.
+`frontend/pages/studied_from_tree.py` mirrors the genealogy page: shared person selector
+(session key `studied_from_center_person`), a depth radio (1 = direct teachers/students,
+2 = teachers/students of those), results cached in session state by `(center key, depth)`,
+node/edge counts, legend, and the Pyvis graph.
+
+Rows: teachers above (`studiedFrom`), the selected person and everyone they `disagreedWith`
+on the center row, students below (`taught`, the reverse direction). Node tooltips show the
+role (studied from / taught / disagreed with).
+
+Backend: `StudiedFromTreeController.get_studied_from_graph` (clamps depth to 1–2) →
+`StudiedFromTreeLogic.build_graph` → `StudiedFromGraphData`
+(`backend/models_dto/StudiedFromGraphData.py`: nodes with key, display name, center flag,
+optional gender; edges with `from_key`, `to_key`, `rel_type`, label). `studiedFrom` rels are
+stored student (`term1`) → teacher (`term2`). The logic runs two independent BFS passes from
+the center, one batched query per hop through `get_rels_by_type_for_entities`: upward
+(frontier as `term1`, discovering teachers) and downward (frontier as `term2`, discovering
+students). `disagreedWith` (symmetric) is fetched for the center only; those people are added
+to the center row and are not expanded into their own teachers/students. Edges whose
+endpoints don't resolve to entities are dropped; a person found in both directions keeps the
+level of the first BFS discovery.
+
+Edge styling: `studiedFrom` is a teal solid arrow from student to teacher; `disagreedWith` is
+a red dotted line without arrow.

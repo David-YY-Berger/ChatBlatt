@@ -60,6 +60,33 @@ class GenealogyMongoMixin:
         })
         return [self._doc_to_rel(doc) for doc in docs]
 
+    def get_rels_by_type_for_entities(
+        self,
+        entity_keys: List[str],
+        rel_type_values: List[str],
+        as_term1: bool = True,
+        as_term2: bool = True,
+    ) -> List[Rel]:
+        """
+        Batch-fetch rels of the given types where ANY of entity_keys is term1
+        (as_term1) and/or term2 (as_term2), in a single round-trip.
+        """
+        if not entity_keys or not rel_type_values:
+            return []
+        keys = list(entity_keys)
+        conditions = []
+        if as_term1:
+            conditions.append({DBFields.TERM1: {DBOperators.IN: keys}})
+        if as_term2:
+            conditions.append({DBFields.TERM2: {DBOperators.IN: keys}})
+        if not conditions:
+            return []
+        docs = self.get_collection(CollectionObjs.RELATIONS).find({
+            DBOperators.OR: conditions,
+            DBFields.REL_TYPE: {DBOperators.IN: list(rel_type_values)},
+        })
+        return [self._doc_to_rel(doc) for doc in docs]
+
     def get_entities_by_keys_map(self, keys: List[str]) -> Dict[str, Entity]:
         """
         Batch-fetch entities by key and return a key→Entity mapping.

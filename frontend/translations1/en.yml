@@ -30,7 +30,15 @@ tree_tabs:
 
 trees_ui:
   select_tree_prompt: "Please select a tree type from the menu above."
-  studied_from_coming_soon: "The 'Studied From' tree is coming soon."
+
+studied_from_ui:
+  select_person_label: "Select a person to centre the studied-from tree on"
+  prompt_select_person: "Choose a person above to view who they studied from and taught."
+  depth_1: "1 — Direct teachers and students"
+  depth_2: "2 — Teachers and students of those"
+  graph_title: "Studied From Tree"
+  no_data: "No studied-from data found for this person."
+  role_center: "Selected person"
 
 genealogy_ui:
   select_person_label: "Select a person to centre the family tree on"
@@ -84,6 +92,7 @@ entity_fields:
   spouseOf: "Spouse"
   descendantOf: "Descendant Of"
   studiedFrom: "Studied From"
+  taught: "Taught"
   spokeWith: "Spoke With"
   disagreedWith: "Disagreed With"
   allyOf: "Ally Of"

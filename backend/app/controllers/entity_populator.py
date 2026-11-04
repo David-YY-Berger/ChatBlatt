@@ -141,6 +141,9 @@ class PersonPopulator(BaseEntityPopulator):
             (RelType.childOfFather, AS_TERM2): "children",
             (RelType.childOfMother, AS_TERM2): "children",
 
+            # Taught: entity is term2 (the teacher) in studiedFrom rels
+            (RelType.studiedFrom, AS_TERM2): "taught",
+
             # Person/Group → Place (entity is term1)
             (RelType.bornIn, AS_TERM1): "bornIn",
             (RelType.diedIn, AS_TERM1): "diedIn",

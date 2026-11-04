@@ -1,4 +1,4 @@
-# EPerson
+﻿# EPerson
 
 Source of truth: `backend/models_db/EntityObjects/EPerson.py`.
 
@@ -24,11 +24,14 @@ returns a non-empty value different from the current one.
 
 Transient relationship fields (not persisted, filled in for the UI by the entity populator):
 `childOfFather`, `childOfMother`, `children`, `siblings`, `spouseOf`, `descendantOf`,
-`studiedFrom`, `spokeWith`, `disagreedWith`, `allyOf`, `enemyOf`, `bornIn`, `diedIn`,
+`studiedFrom`, `taught`, `spokeWith`, `disagreedWith`, `allyOf`, `enemyOf`, `bornIn`, `diedIn`,
 `visited`, `prayedAt`, `associatedWithPlace`, `tribeOfIsrael`, `belongsToNation`,
 `prophesiedAbout`, `comparedTo`, `contrastedWith` — see `EPerson.TRANSIENT_DISPLAY_FIELDS`
 for the UI's canonical display order. **There is no sibling `RelType`** — `siblings` is
-derived in the UI from two people sharing a parent, not stored as a relationship.
+derived by the populator from two people sharing a parent, not stored as a relationship.
+Likewise `children` (reverse of `childOfFather`/`childOfMother`) and `taught` (reverse of
+`studiedFrom`: people who studied from this person) are derived from rels where the person is
+`term2`; neither has its own `RelType` or LLM extraction field.
 
 ## Identity / dedup — the one exception to the normal rule
 

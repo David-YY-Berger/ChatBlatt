@@ -15,9 +15,8 @@ def render(lang: str, selected: str | None = None) -> None:
         return
 
     if selected == PAGE_STUDIED_FROM:
-        title = get_text(f"page_titles.{PAGE_STUDIED_FROM}", lang)
-        st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
-        st.info(get_text("trees_ui.studied_from_coming_soon", lang))
+        from pages.studied_from_tree import render as render_studied_from
+        render_studied_from(lang)
         return
 
     # Fallback: top-level Trees page (no sub-tab selected)

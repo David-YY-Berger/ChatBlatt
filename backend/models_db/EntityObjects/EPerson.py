@@ -27,6 +27,7 @@ class EPerson(Entity):
         "spouseOf",
         "descendantOf",
         "studiedFrom",
+        "taught",
         "spokeWith",
         "disagreedWith",
         "allyOf",
@@ -57,6 +58,7 @@ class EPerson(Entity):
 
     # transient fields - Person/Group → Person/Group
     studiedFrom: List[str] = TransientField(default_factory=list)
+    taught: List[str] = TransientField(default_factory=list)   # people who studied from this person (reverse of studiedFrom)
     childOfFather: List[str] = TransientField(default_factory=list)
     childOfMother: List[str] = TransientField(default_factory=list)
     children: List[str] = TransientField(default_factory=list)   # people whose father/mother is this person

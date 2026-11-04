@@ -38,6 +38,21 @@ class GenealogyInterfaceMixin(ABC):
         ...
 
     @abstractmethod
+    def get_rels_by_type_for_entities(
+        self,
+        entity_keys: List[str],
+        rel_type_values: List[str],
+        as_term1: bool = True,
+        as_term2: bool = True,
+    ) -> List[Rel]:
+        """
+        Batch-fetch rels of the given RelType values where any of entity_keys
+        is term1 (as_term1) and/or term2 (as_term2), in a single query.
+        Used by tree pages other than genealogy (e.g. studiedFrom).
+        """
+        ...
+
+    @abstractmethod
     def get_entities_by_keys_map(self, keys: List[str]) -> Dict[str, Entity]:
         """
         Batch-fetch entities by key and return as a dict: key → Entity.
