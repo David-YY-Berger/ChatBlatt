@@ -18,8 +18,17 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
+    direction: ltr;
     margin: 0.1rem 0;
     color: #f8f9fa;
+}
+
+.app-main-icon {
+    width: auto;
+    height: 2.5rem;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 .app-subtitle {
@@ -66,5 +75,9 @@ body {
 
     .app-sefaria-banner img {
         max-width: 140px;
+    }
+
+    .app-main-icon {
+        height: 2rem;
     }
 }

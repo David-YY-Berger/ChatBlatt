@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import base64
+from pathlib import Path
+
 import streamlit as st
 
 from translations1 import get_text
 
 
-def render_header(lang: str) -> None:
+def render_header(lang: str, main_image_path: Path) -> None:
+    main_image_data = base64.b64encode(main_image_path.read_bytes()).decode("ascii")
     st.markdown(
         f"""
         <div class="app-header">
@@ -16,6 +20,7 @@ def render_header(lang: str) -> None:
                     <div class="app-dedication"><em>{get_text('app.dedication', lang)}</em></div>
                     <h1 class="app-title">
                         <span>{get_text('app.title', lang)}</span>
+                        <img class="app-main-icon" src="data:image/jpeg;base64,{main_image_data}" alt="Eitz Habinah" />
                         <span class="beta-badge">Beta</span>
                     </h1>
                     <div class="app-subtitle">{get_text('app.subtitle', lang)}</div>

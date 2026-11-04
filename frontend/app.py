@@ -161,38 +161,11 @@ def _render_page(page_key: str, lang: str) -> None:
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
 
 
-def _render_main_image() -> None:
-    """Centered banner image at the top of every page; scales down on phones."""
-    st.markdown(
-        """
-        <style>
-        .st-key-main_banner { display: flex; justify-content: center; }
-        .st-key-main_banner [data-testid="stImage"] { display: flex; justify-content: center; }
-        .st-key-main_banner img {
-            width: auto !important;
-            max-width: 100% !important;
-            max-height: 240px;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-        @media (max-width: 640px) {
-            .st-key-main_banner img { max-height: 150px; }
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-    with st.container(key="main_banner"):
-        st.image(str(MAIN_IMAGE), use_container_width=False)
-
-
 def main() -> None:
     st.set_page_config(page_title="Eitz Habinah | עץ הבינה", layout="wide")
 
     _init_state()
     apply_layout(st.session_state["lang"])
-
-    _render_main_image()
 
     # Header row: language selector on far side
     header_cols = st.columns([4, 1])
@@ -204,7 +177,7 @@ def main() -> None:
     lang = st.session_state["lang"]
 
     with header_cols[0]:
-        render_header(lang)
+        render_header(lang, MAIN_IMAGE)
 
     nav_items = _nav_items(lang)
     active_page = _render_nav(nav_items, lang)
