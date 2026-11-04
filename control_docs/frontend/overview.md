@@ -14,6 +14,12 @@ frontend — it's currently a light pointer, not a full reference.
 - `frontend/pages/` — tab renderers.
 - `frontend/assets/styles.css` — base styling; RTL/dark/light tweaks in `layout.apply_layout`.
 
+## Icons
+
+Put source images in `frontend/icons/orig_icons/`, then run `python frontend/scripts/optimize_icons.py`
+(needs Pillow). It writes compressed copies to `frontend/icons/optimized/` (skips up-to-date ones,
+removes orphans). The app must only load images from `optimized/` (e.g. the top banner in `app.py`).
+
 ## Number search page (`frontend/pages/number_search.py`)
 
 Flow: `NumberSearchController` → `NumberSearchLogic.execute` (backend) returns

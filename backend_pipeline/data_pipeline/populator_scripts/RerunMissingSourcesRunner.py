@@ -148,8 +148,8 @@ if __name__ == "__main__":
         populate_existing_files=False,
     )
     try:
-        runner.preview_missing()    # comment out + uncomment next line to actually run
-        # runner.run_missing()
+        # runner.preview_missing()    # comment out + uncomment next line to actually run
+        runner.run_missing()
     finally:
         runner.close()
     # =============================================================
