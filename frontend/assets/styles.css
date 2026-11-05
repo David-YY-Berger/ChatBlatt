@@ -35,6 +35,13 @@ body {
     cursor: pointer;
 }
 
+.app-header .app-title .app-home-link,
+.app-header .app-title .app-home-link:hover,
+.app-header .app-title .app-home-link:focus,
+.app-header .app-title .app-home-link:visited {
+    text-decoration: none !important;
+}
+
 .app-main-icon {
     width: auto;
     height: 3.5rem;
