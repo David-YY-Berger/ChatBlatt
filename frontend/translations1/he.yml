@@ -6,11 +6,12 @@ app:
 ui:
   language_label: "שפה"
   select_option: "בחר"
+  menu: "תפריט"
 
 nav:
   home: "בית"
   about: "אודות"
-  number_search: "חיפוש מספריפ"
+  number_search: "חיפוש מספרי"
   source_search: "חיפוש מקורות"
   entity_search: "חיפוש ישות"
   trees: "עצים"

@@ -6,6 +6,7 @@ app:
 ui:
   language_label: "Language"
   select_option: "Select"
+  menu: "Menu"
 
 nav:
   home: "Home"

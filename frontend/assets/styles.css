@@ -137,6 +137,16 @@ body {
     color: var(--text);
 }
 
+.st-key-mobile_nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .st-key-mobile_nav {
+        display: block;
+    }
+}
+
 @media (max-width: 640px) {
     .app-header-row {
         justify-content: center;

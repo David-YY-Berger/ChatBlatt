@@ -91,14 +91,25 @@ def _build_navigation(lang: str):
     """Every page has its own URL (see system_common/UrlPaths.py)."""
     pages = {key: _make_page(key, lang) for key in URL_PATHS}
     navigation.register_pages(pages)
-    return st.navigation(
-        {
-            "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH)],
-            get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_PAGES],
-            get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
-        },
-        position="top",
-    )
+    groups = {
+        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH)],
+        get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_PAGES],
+        get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
+    }
+    page = st.navigation(groups, position="top")
+    _render_mobile_menu(groups, lang)
+    return page
+
+
+def _render_mobile_menu(groups: dict, lang: str) -> None:
+    """Streamlit drops the top nav on narrow screens; this menu is shown only there (see styles.css)."""
+    with st.container(key="mobile_nav"):
+        with st.popover("\u2630 " + get_text("ui.menu", lang), use_container_width=True):
+            for title, group_pages in groups.items():
+                if title:
+                    st.caption(title)
+                for p in group_pages:
+                    st.page_link(p)
 
 
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
