@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+from pathlib import Path
 
 import streamlit as st
 
@@ -44,11 +45,36 @@ def render(lang: str, selected: str | None = None) -> None:
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
     if selected is None:
-        # No specific tab selected — show a prompt
-        st.info(get_text("entity_search_ui.select_tab_prompt", lang))
+        _render_landing(lang)
         return
 
     _render_entity_search_tab(selected, lang)
+
+
+_ICON_DIR = Path(__file__).resolve().parents[1] / "icons" / "optimized"
+_ENTITY_ICONS = (
+    (PAGE_PEOPLE, "entity_search_main.jpg"),
+    (PAGE_PLACES, "entity_search_place.jpg"),
+    (PAGE_NATIONS, "entity_search_nations.jpg"),
+    (PAGE_TRIBES, "entity_search_tribe_of_israel.jpg"),
+    (PAGE_SYMBOLS, "entity_search_symbol.jpg"),
+)
+
+
+def _render_landing(lang: str) -> None:
+    """One clickable card (image + title) per entity type; styled like the home page cards."""
+    st.markdown(
+        f'<div class="home-subtitle">{get_text("entity_search_ui.choose_entity", lang)}</div>',
+        unsafe_allow_html=True,
+    )
+    for column, (tab, icon_name) in zip(st.columns(len(_ENTITY_ICONS)), _ENTITY_ICONS):
+        with column:
+            with st.container(border=True, key=f"home_tool_entity_{tab}"):
+                title = get_text(f"entity_tabs.{tab}", lang)
+                st.image(_ICON_DIR / icon_name, width=180)
+                st.markdown(f'<div class="home-tool-title">{title}</div>', unsafe_allow_html=True)
+                if st.button(title, key=f"entity_landing_btn_{tab}_{lang}", use_container_width=True):
+                    navigation.go(tab)
 
 
 def _render_entity_type_selector(selected: str | None, lang: str) -> None:
