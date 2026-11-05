@@ -3,9 +3,7 @@
 
 todo {{
 
-	- person to tribe of israel is not properly populated!!!
-	- BACKUP!! (need restart)
-	- index display en name? 
+	- index display en name?
 	- index what we need for number..
 	
 	- ui must be good.

@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary: #0b7285;
     --accent: #1864ab;
     --bg: #0f1b2c;
@@ -84,21 +84,13 @@ body {
     font-size: 1.1rem;
 }
 
-.st-key-home_tool_number_search,
-.st-key-home_tool_source_search,
-.st-key-home_tool_entity_search,
-.st-key-home_tool_genology,
-.st-key-home_tool_studied_from {
+[class*="st-key-home_tool_"] {
     position: relative;
     cursor: pointer;
     transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
 }
 
-.st-key-home_tool_number_search:hover,
-.st-key-home_tool_source_search:hover,
-.st-key-home_tool_entity_search:hover,
-.st-key-home_tool_genology:hover,
-.st-key-home_tool_studied_from:hover {
+[class*="st-key-home_tool_"]:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     transform: translateY(-2px);
 }
