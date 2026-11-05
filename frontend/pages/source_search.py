@@ -29,7 +29,7 @@ from components.facets import (
 )
 from components.pdf_export import build_results_pdf, results_pdf_filename
 from components.source_filters import render_source_filters
-from .source_search_logic import (
+from pages.source_search_logic import (
     clear_relationship_search,
     collect_search_query,
     get_relationship_search,
