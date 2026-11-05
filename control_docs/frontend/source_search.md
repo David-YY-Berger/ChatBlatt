@@ -19,3 +19,5 @@ dropdowns, free-text box + Find Sources button, results).
 ## Shareable URL
 
 Params q, pt, ooks, ent, el, el_label (see [urls.md](urls.md)). source_search_logic.apply_url_params() runs before the widgets render (pre-fills the free-text box, passage types, books, entity panels via set_selected_filters / set_selected_entity_option_keys) and the page then runs the search; after any search sync_url_with_search() writes the form back to the URL and the same link is embedded in the PDF (session key _search_url).
+
+The Person entity dropdown labels each person with their roles (e.g. David (???) - king), same as Entity Search.

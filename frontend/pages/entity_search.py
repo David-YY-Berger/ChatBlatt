@@ -111,7 +111,12 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     placeholder = get_text("ui.select_option", lang)
 
     display_labels = [_format_option_label(opt, rtl) for opt in filtered_options]
-    key_map = {_format_option_label(opt, rtl): opt.key for opt in filtered_options}
+    # Disambiguate identical labels (same name/roles) so each maps to its own entity.
+    display_labels = [
+        f"{l} (#{o.key[-4:]})" if display_labels.count(l) > 1 else l
+        for l, o in zip(display_labels, filtered_options)
+    ]
+    key_map = {l: o.key for l, o in zip(display_labels, filtered_options)}
 
     # ---- Layout: combobox + go button ----
     col_combo, col_btn = st.columns([4, 1])
@@ -340,9 +345,12 @@ def _render_relationship_list(
         )
         for item in items:
             rel_keys = (getattr(entity, "rel_keys_by_field", {}) or {}).get(field_name, {}).get(item)
+            link = rel_links.get(item)
+            roles = (getattr(entity, "rel_roles", {}) or {}).get(link[0], []) if link else []
+            display = f"{item} - {', '.join(r.lower() for r in roles)}" if roles else item
             _render_entity_item_popover(
                 item, field_name, rel_links, lang,
-                getattr(entity, "display_en_name", ""), title, rel_keys,
+                getattr(entity, "display_en_name", ""), title, rel_keys, display,
             )
 
 
@@ -367,6 +375,7 @@ def _render_entity_item_popover(
     entity_name: str = "",
     rel_label: str = "",
     rel_keys: list[str] | None = None,
+    display_label: str | None = None,
 ) -> None:
     """Render a single related-entity name as a compact popover with two actions:
     view the entity, or view the sources of the relationship."""
@@ -374,7 +383,7 @@ def _render_entity_item_popover(
     uid = f"{field_name}_{abs(hash(item_name))}"
     view_label = f"👁 {get_text('entity_search_ui.view_entity', lang)}"
 
-    with st.popover(f"• {item_name}", use_container_width=True):
+    with st.popover(f"• {display_label or item_name}", use_container_width=True):
         st.markdown("<span class='rel-pop-marker'></span>" + _POPOVER_CSS, unsafe_allow_html=True)
 
         tab_key = _entity_type_to_tab(link_info[1]) if link_info else None
@@ -461,10 +470,13 @@ def _debug_log_entity(entity, transient_labels: list) -> None:
 def _format_option_label(opt, rtl: bool) -> str:
     """Format a select option for display in the combobox."""
     if rtl and opt.display_heb_name:
-        return f"{opt.display_heb_name} ({opt.display_en_name})"
-    if opt.display_heb_name:
-        return f"{opt.display_en_name} ({opt.display_heb_name})"
-    return opt.display_en_name
+        label = f"{opt.display_heb_name} ({opt.display_en_name})"
+    elif opt.display_heb_name:
+        label = f"{opt.display_en_name} ({opt.display_heb_name})"
+    else:
+        label = opt.display_en_name
+    roles = opt.roles_label() if hasattr(opt, "roles_label") else ""
+    return f"{label} - {roles}" if roles else label
 
 
 def _load_select_options(entity_tab: str, handler) -> list:

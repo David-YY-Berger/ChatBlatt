@@ -64,7 +64,7 @@ class BaseEntityPopulator(ABC):
         all_keys.discard(entity.key)
 
         # Batch-resolve keys to (display_name, EntityType)
-        key_to_info = self._resolve_keys_to_names(all_keys, db)
+        key_to_info = self._resolve_keys_to_names(all_keys, db, entity)
 
         # Populate transient fields
         for rel in rels:
@@ -108,11 +108,17 @@ class BaseEntityPopulator(ABC):
 
         return entity
 
-    def _resolve_keys_to_names(self, keys: set, db: DBapiMongoDB) -> Dict[str, Tuple]:
-        """Batch-resolve entity keys to (display_en_name, EntityType)."""
+    def _resolve_keys_to_names(self, keys: set, db: DBapiMongoDB, target: Optional[Entity] = None) -> Dict[str, Tuple]:
+        """Batch-resolve entity keys to (display_en_name, EntityType).
+        If target is given, also records related persons' roles in target.rel_roles."""
         if not keys:
             return {}
         entities = db.get_entities_by_keys(list(keys))
+        if target is not None:
+            for e in entities:
+                roles = [getattr(r, "value", r) for r in (getattr(e, "roles", None) or [])]
+                if roles:
+                    target.rel_roles[e.key] = roles
         return {e.key: (e.display_en_name, e.entityType) for e in entities}
 
 
@@ -211,7 +217,7 @@ class PersonPopulator(BaseEntityPopulator):
             return entity
 
         # Resolve sibling keys to display names and types
-        sibling_info_map = self._resolve_keys_to_names(sibling_keys, db)
+        sibling_info_map = self._resolve_keys_to_names(sibling_keys, db, entity)
         for sibling_key, (sibling_name, sibling_type) in sibling_info_map.items():
             if sibling_name and sibling_name not in entity.siblings:
                 entity.siblings.append(sibling_name)

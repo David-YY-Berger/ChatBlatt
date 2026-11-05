@@ -19,3 +19,7 @@ class PersonSelectOption(EntitySelectOption):
     isGroup: Optional[bool] = None
     roles: List[RoleType] = Field(default_factory=list)
 
+    def roles_label(self) -> str:
+        """Lowercase, comma-separated role names (e.g. "king, prophet"); "" if none."""
+        return ", ".join(r.value.lower() for r in self.roles)
+

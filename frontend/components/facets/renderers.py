@@ -1,4 +1,4 @@
-# bs"d - lehagdil torah velahadir
+﻿# bs"d - lehagdil torah velahadir
 """
 Entity-type facet renderer for the source-search panel.
 
@@ -158,7 +158,7 @@ def _render_entity_select_panel(ent: dict) -> None:
         if ent["implemented"]:
             options = _load_entity_select_options(ent["entity_tab"])
             if options:
-                labels = [_format_entity_option_label(o) for o in options]
+                labels = _unique_option_labels(options)
                 st.multiselect(
                     f"Select {ent['label'].lower()}(s)",
                     options=labels,
@@ -206,9 +206,18 @@ def _load_entity_select_options(entity_tab: str) -> list:
 
 def _format_entity_option_label(opt) -> str:
     """Format an EntitySelectOption for display in the multiselect."""
-    if opt.display_heb_name:
-        return f"{opt.display_en_name} ({opt.display_heb_name})"
-    return opt.display_en_name
+    label = f"{opt.display_en_name} ({opt.display_heb_name})" if opt.display_heb_name else opt.display_en_name
+    roles = opt.roles_label() if hasattr(opt, "roles_label") else ""
+    return f"{label} - {roles}" if roles else label
+
+
+def _unique_option_labels(options: list) -> list[str]:
+    """Display labels aligned with `options`; labels shared by several options
+    (e.g. two people with the same name and roles) get a short key suffix so each
+    stays individually selectable."""
+    labels = [_format_entity_option_label(o) for o in options]
+    counts = {l: labels.count(l) for l in set(labels)}
+    return [f"{l} (#{o.key[-4:]})" if counts[l] > 1 else l for l, o in zip(labels, options)]
 
 
 def get_selected_entity_ids() -> list[str]:
@@ -236,8 +245,8 @@ def get_selected_entity_ids() -> list[str]:
             continue
         options = _load_entity_select_options(ent["entity_tab"])
         label_to_keys = {
-            _format_entity_option_label(o): (getattr(o, "entity_keys", None) or [o.key])
-            for o in options
+            label: (getattr(o, "entity_keys", None) or [o.key])
+            for label, o in zip(_unique_option_labels(options), options)
         }
         for label in selected_labels:
             if label in label_to_keys:
@@ -256,7 +265,8 @@ def get_selected_entity_option_keys() -> list[str]:
         selected_labels = st.session_state.get(f"entity_filter_selected_{ent['key']}")
         if not selected_labels:
             continue
-        label_to_key = {_format_entity_option_label(o): o.key for o in _load_entity_select_options(ent["entity_tab"])}
+        opts = _load_entity_select_options(ent["entity_tab"])
+        label_to_key = {label: o.key for label, o in zip(_unique_option_labels(opts), opts)}
         keys.extend(label_to_key[l] for l in selected_labels if l in label_to_key)
     return keys
 
@@ -272,8 +282,8 @@ def get_selected_entity_names() -> list[str]:
             continue
         options = _load_entity_select_options(ent["entity_tab"])
         label_to_name = {
-            _format_entity_option_label(option): option.display_en_name
-            for option in options
+            label: option.display_en_name
+            for label, option in zip(_unique_option_labels(options), options)
         }
         names.extend(label_to_name[label] for label in selected_labels if label in label_to_name)
     return list(dict.fromkeys(names))
@@ -288,5 +298,5 @@ def set_selected_entity_option_keys(keys: list[str]) -> None:
             continue
         options = _load_entity_select_options(ent["entity_tab"])
         st.session_state[f"entity_filter_selected_{ent['key']}"] = [
-            _format_entity_option_label(o) for o in options if o.key in wanted
+            label for label, o in zip(_unique_option_labels(options), options) if o.key in wanted
         ]
