@@ -19,8 +19,10 @@ def render_header(lang: str, main_image_path: Path) -> None:
                 <div class="app-header-titles">
                     <div class="app-dedication"><em>{get_text('app.dedication', lang)}</em></div>
                     <h1 class="app-title">
-                        <span>{get_text('app.title', lang)}</span>
-                        <img class="app-main-icon" src="data:image/jpeg;base64,{main_image_data}" alt="Eitz Habinah" />
+                        <a class="app-home-link" href="/" target="_self">
+                            <span>{get_text('app.title', lang)}</span>
+                            <img class="app-main-icon" src="data:image/jpeg;base64,{main_image_data}" alt="Eitz Habinah" />
+                        </a>
                         <span class="beta-badge">Beta</span>
                     </h1>
                     <div class="app-subtitle">{get_text('app.subtitle', lang)}</div>
