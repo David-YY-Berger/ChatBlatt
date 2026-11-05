@@ -473,6 +473,8 @@ def _load_select_options(entity_tab: str, handler) -> list:
     Cache is keyed by entity_tab. Clear by deleting the session key.
     """
     cache_key = f"_select_options_cache_{entity_tab}"
+    if entity_tab == PAGE_SYMBOLS:
+        cache_key += "_with_relationships"
     if cache_key not in st.session_state:
         st.session_state[cache_key] = handler.get_select_options()
     return st.session_state[cache_key]

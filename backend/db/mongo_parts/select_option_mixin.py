@@ -78,11 +78,23 @@ class SelectOptionMongoMixin:
         return self._docs_to_select_options(docs, PlaceSelectOption, self._place_extra_fields)
 
     def getSymbolSelectOptions(self) -> List[SymbolSelectOption]:
-        """Query all Symbol entities and return as SymbolSelectOption list."""
+        """Return Symbol select options for entities with at least one relationship."""
         docs = self.get_collection(CollectionObjs.ENTITIES).find(
             {DBFields.ENTITY_TYPE: EntityType.ESymbol.value}
         )
-        return self._docs_to_select_options(docs, SymbolSelectOption, self._symbol_extra_fields)
+        options = self._docs_to_select_options(docs, SymbolSelectOption, self._symbol_extra_fields)
+        symbol_keys = {option.key for option in options if option.key}
+        if not symbol_keys:
+            return []
+
+        related_symbol_keys = set()
+        for rel in self.get_rels_for_entities(list(symbol_keys)):
+            if rel.term1 in symbol_keys:
+                related_symbol_keys.add(rel.term1)
+            if rel.term2 in symbol_keys:
+                related_symbol_keys.add(rel.term2)
+
+        return [option for option in options if option.key in related_symbol_keys]
 
     def getNationSelectOptions(self) -> List[NationSelectOption]:
         """Query all Nation entities and return as NationSelectOption list."""
@@ -150,4 +162,3 @@ class SelectOptionMongoMixin:
             {DBFields.ENTITY_TYPE: EntityType.EPlant.value}
         )
         return self._docs_to_select_options(docs, PlantSelectOption)
-
