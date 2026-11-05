@@ -11,6 +11,8 @@ import shutil
 import subprocess
 from datetime import datetime
 
+from pymongo import MongoClient
+
 from backend.common import Paths
 from backend.db.DBFactory import DBFactory
 
@@ -38,13 +40,17 @@ def backup_all() -> str:
     backup_dir = os.path.join(Paths.DB_BACKUPS_DIR, stamp)
     os.makedirs(backup_dir, exist_ok=False)
 
-    command = [
-        mongodump,
-        f"--uri={uri}",
-        f"--out={backup_dir}",
-        *(f"--nsExclude={db_name}.*" for db_name in SYSTEM_DATABASES),
-    ]
-    subprocess.run(command, check=True)
+    client = MongoClient(uri)
+    try:
+        db_names = [n for n in client.list_database_names() if n not in SYSTEM_DATABASES]
+    finally:
+        client.close()
+
+    for db_name in db_names:
+        subprocess.run(
+            [mongodump, f"--uri={uri}", f"--db={db_name}", f"--out={backup_dir}"],
+            check=True,
+        )
 
     database_names = sorted(
         name for name in os.listdir(backup_dir)
