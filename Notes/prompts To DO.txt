@@ -12,6 +12,14 @@ todo {{
 	- keep fixing app...
 	- hebrew
 	
+}}
+
+problems with this pipeline {{
+
+	- rabbi prefix issue
+	- personToTribeOfIsrael
+	- 'king' entities missing..
+}}
 		
 -----
 post population tasks:
