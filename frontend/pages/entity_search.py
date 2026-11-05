@@ -31,6 +31,15 @@ from system_common.Constants import (
 )
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
+SYMBOLS_WARNING_SHOWN_KEY = "symbols_warning_shown"
+
+
+def _show_symbols_data_warning(lang: str) -> None:
+    @st.dialog(get_text("studied_from_ui.data_quality_title", lang))
+    def _dialog() -> None:
+        st.warning(get_text("studied_from_ui.data_quality_warning", lang))
+
+    _dialog()
 
 
 def render(lang: str, selected: str | None = None) -> None:
@@ -43,6 +52,10 @@ def render(lang: str, selected: str | None = None) -> None:
 
     title = get_text(title_key, lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
+
+    if selected == PAGE_SYMBOLS and not st.session_state.get(SYMBOLS_WARNING_SHOWN_KEY):
+        st.session_state[SYMBOLS_WARNING_SHOWN_KEY] = True
+        _show_symbols_data_warning(lang)
 
     if selected is None:
         _render_landing(lang)

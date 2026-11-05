@@ -136,6 +136,8 @@ def main() -> None:
     page = _build_navigation(lang)
     if page.url_path != URL_PATHS[PAGE_STUDIED_FROM]:
         st.session_state.pop("studied_from_warning_shown", None)
+    if page.url_path != URL_PATHS[PAGE_SYMBOLS]:
+        st.session_state.pop(entity_search.SYMBOLS_WARNING_SHOWN_KEY, None)
     page.run()
 
 
