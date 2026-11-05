@@ -18,7 +18,7 @@ touches the frontend; they are currently light pointers, not a full reference.
   `get_text("path.to.key", lang)`; falls back to English if a key is missing. Page titles
   under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`tree_tabs.*`.
 - `frontend/components/` — shared UI pieces (`header.py`, `layout.py`).
-- `frontend/pages/` — tab renderers.
+- `frontend/pages/` — tab renderers. `home.py` shows one card per tool (Number search, Source search, Entity search, Genealogy tree, Studied-from tree); the whole card is clickable (no "Open tool" button): a `st.button` in a keyed container (`st-key-home_tool_<page_key>`) is stretched invisibly over the card via `styles.css`, and calls `navigation.go(page_key)`. Tree cards link directly to `/trees_genealogy_tree` and `/trees_studied_from_tree`.
 - `frontend/assets/styles.css` — base styling; RTL/dark/light tweaks in `layout.apply_layout`.
 
 ## Icons
