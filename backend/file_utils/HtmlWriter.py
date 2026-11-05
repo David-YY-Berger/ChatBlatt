@@ -64,8 +64,7 @@ class HtmlWriter:
     def get_source_section_js() -> str:
         """JavaScript for toggling source sections and collapsible content.
         Shared with the frontend popup component — edit here to update both."""
-        return r"""\
-function _scEsc(s) {
+        return r"""function _scEsc(s) {
     return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 function _scPlain(html) {
