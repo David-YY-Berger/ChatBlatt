@@ -39,6 +39,7 @@ studied_from_ui:
   graph_title: "עץ מקורות לימוד"
   no_data: "לא נמצאו נתוני מקורות לימוד עבור אדם זה."
   role_center: "האדם הנבחר"
+  data_quality_title: "אזהרת נתונים"
   data_quality_warning: "ייתכן שנתוני מקורות הלימוד פגומים. אין להסתמך על התוצאות, אך אתם מוזמנים לעיין בהן."
 
 genealogy_ui:

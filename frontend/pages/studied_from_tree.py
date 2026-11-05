@@ -23,13 +23,27 @@ _EDGE_COLOURS: dict[str, str] = {
 }
 
 
+WARNING_SHOWN_KEY = "studied_from_warning_shown"
+
+
+def _show_data_warning(lang: str) -> None:
+    @st.dialog(get_text("studied_from_ui.data_quality_title", lang))
+    def _dialog() -> None:
+        st.warning(get_text("studied_from_ui.data_quality_warning", lang))
+
+    _dialog()
+
+
 def render(lang: str) -> None:
     """Entry point called from trees.py."""
     st.markdown(
         f'<div class="page-title">{get_text(f"page_titles.{PAGE_STUDIED_FROM}", lang)}</div>',
         unsafe_allow_html=True,
     )
-    st.warning(get_text("studied_from_ui.data_quality_warning", lang))
+    # app.py clears this flag when the user leaves the page, so the dialog reappears on each landing.
+    if not st.session_state.get(WARNING_SHOWN_KEY):
+        st.session_state[WARNING_SHOWN_KEY] = True
+        _show_data_warning(lang)
 
     st.markdown(f"**{get_text('studied_from_ui.select_person_label', lang)}**")
 

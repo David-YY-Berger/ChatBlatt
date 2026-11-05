@@ -122,7 +122,10 @@ def main() -> None:
     with header_cols[0]:
         render_header(lang, MAIN_IMAGE)
 
-    _build_navigation(lang).run()
+    page = _build_navigation(lang)
+    if page.url_path != URL_PATHS[PAGE_STUDIED_FROM]:
+        st.session_state.pop("studied_from_warning_shown", None)
+    page.run()
 
 
 if __name__ == "__main__":

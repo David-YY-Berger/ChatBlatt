@@ -84,8 +84,10 @@ Pages only define their edge parsing, role names, and edge styles.
 (session key `studied_from_center_person`), a depth radio (1 = direct teachers/students,
 2 = teachers/students of those), results cached in session state by `(center key, depth)`,
 node/edge counts, legend, and the Pyvis graph.
-The page displays a warning that the studied-from data may be corrupted and should not be
-relied on, while inviting users to explore it.
+On each landing, the page opens a modal `st.dialog` warning that the studied-from data may be
+corrupted and should not be relied on, while inviting users to explore it. The user closes it
+with the X. Session flag `studied_from_warning_shown` prevents reopening on reruns; `app.py`
+clears it when any other page is active.
 
 Rows: teachers above (`studiedFrom`), the selected person and everyone they `disagreedWith`
 on the center row, students below (`taught`, the reverse direction). Node tooltips show the
