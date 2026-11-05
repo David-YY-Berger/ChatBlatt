@@ -32,6 +32,9 @@ from backend.app.controllers.number_search_controller import (
 from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
 from backend.models_db.Enums import NumberCategory
 from system_common.Constants import NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION
+from system_common.UrlPaths import (
+    NUMBER_SEARCH_TYPE_NUMBER, NUMBER_SEARCH_TYPE_UNIT, PARAM_NUMBER_TYPE, PARAM_NUMBER_VALUE,
+)
 from frontend.components.source_popup import (
     source_popup_css_js,
     source_popup_html,
@@ -341,6 +344,7 @@ def _on_search_submit(lang: str) -> None:
         return
     if _validate_number(value) is None:
         _run_search(value.strip(), lang)
+        _set_url_params(_MODE_NUMBER, value.strip())
 
 
 def _render_search_bar(lang: str) -> None:
@@ -452,14 +456,49 @@ def _debug_log_result(request: "NumberSearchRequest", response: "NumberSearchRes
 # Unit search (alternative to number search)
 # ---------------------------------------------------------------------------
 
-_MODE_NUMBER = "number"
-_MODE_UNIT = "unit"
+_MODE_NUMBER = NUMBER_SEARCH_TYPE_NUMBER
+_MODE_UNIT = NUMBER_SEARCH_TYPE_UNIT
+_URL_SIG_KEY = "_number_search_url_sig"
+
+
+def _set_url_params(mode: str, value: str) -> None:
+    """Reflect the executed search in the URL so it can be shared."""
+    st.query_params[PARAM_NUMBER_TYPE] = mode
+    st.query_params[PARAM_NUMBER_VALUE] = value
+    st.session_state[_URL_SIG_KEY] = (mode, value)
+
+
+def _clear_url_params() -> None:
+    st.query_params.clear()
+    st.session_state.pop(_URL_SIG_KEY, None)
+
+
+def _apply_url_params(lang: str) -> None:
+    """Run the search described by ?type=...&value=... (once per distinct URL),
+    pre-filling the matching input widget."""
+    mode = st.query_params.get(PARAM_NUMBER_TYPE)
+    value = (st.query_params.get(PARAM_NUMBER_VALUE) or "").strip()
+    if mode not in (_MODE_NUMBER, _MODE_UNIT) or not value:
+        return
+    if st.session_state.get(_URL_SIG_KEY) == (mode, value):
+        return
+    st.session_state[_URL_SIG_KEY] = (mode, value)
+    st.session_state["number_search_mode"] = mode
+    if mode == _MODE_NUMBER:
+        st.session_state["number_input"] = value
+        if _validate_number(value) is None:
+            _run_search(value, lang)
+    else:
+        if value in {en for en, _ in NumberSearchController().list_units()}:
+            st.session_state["unit_input"] = value
+        _run_unit_search(value, lang)
 
 
 def _on_unit_submit(lang: str) -> None:
     unit = st.session_state.get("unit_input")
     if unit:
         _run_unit_search(unit, lang)
+        _set_url_params(_MODE_UNIT, unit)
 
 
 def _render_unit_search_bar(lang: str) -> None:
@@ -640,6 +679,8 @@ def render(lang: str) -> None:
     title = get_text("page_titles.number_search", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
 
+    _apply_url_params(lang)
+
     mode = st.radio(
         "search mode",
         options=[_MODE_NUMBER, _MODE_UNIT],
@@ -649,6 +690,7 @@ def render(lang: str) -> None:
         horizontal=True,
         label_visibility="collapsed",
         key="number_search_mode",
+        on_change=_clear_url_params,
     )
 
     if mode == _MODE_UNIT:

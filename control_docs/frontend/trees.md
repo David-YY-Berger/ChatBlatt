@@ -4,8 +4,7 @@ Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`,
 `frontend/pages/studied_from_tree.py`, `frontend/components/tree_graph.py`, and
 `frontend/app.py`.
 
-The Trees navigation item opens a popover with Genealogy Tree and Studied From
-Tree subtabs. `app.py` passes the selected page key to `pages/trees.py`, which
+Trees has a landing page (`/trees`) and two pages (`/trees_genealogy_tree`, `/trees_studied_from_tree`; see [urls.md](urls.md)). `app.py` passes the page key to `pages/trees.py`, which
 dispatches to the genealogy or studied-from page; with no subtab selected it
 shows a prompt to pick a tree.
 

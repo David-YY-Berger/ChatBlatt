@@ -16,11 +16,11 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 import streamlit as st
-import streamlit.components.v1 as components
 
+import navigation
 from components.header import render_header
 from components.layout import apply_layout, language_selector
-from translations1 import get_text, is_rtl
+from translations1 import get_text
 from pages import about, entity_search, home, number_search, source_search, trees
 from system_common.Constants import (
     DEFAULT_LANG,
@@ -29,140 +29,83 @@ from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_GENOLOGY, PAGE_STUDIED_FROM,
 )
+from system_common.UrlPaths import URL_PATHS
 
 import logging
 
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdout)])
 logger = logging.getLogger(__name__)
 
+ENTITY_PAGES = (PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS)
+TREE_PAGES = (PAGE_GENOLOGY, PAGE_STUDIED_FROM)
+
 
 def _init_state() -> None:
     if "lang" not in st.session_state:
         st.session_state["lang"] = DEFAULT_LANG
-    if "active_page" not in st.session_state:
-        st.session_state["active_page"] = PAGE_HOME
-    if "_close_nav_popover" not in st.session_state:
-        st.session_state["_close_nav_popover"] = False
 
 
-def _force_close_nav_popover() -> None:
-    """Force any open nav popover (Trees / Entity Search dropdown) to close.
+def _renderer(page_key: str):
+    """The function that renders `page_key`, called with the current language."""
+    if page_key == PAGE_HOME:
+        return home.render
+    if page_key == PAGE_ABOUT:
+        return about.render
+    if page_key == PAGE_NUMBER_SEARCH:
+        return number_search.render
+    if page_key == PAGE_SOURCE_SEARCH:
+        return source_search.render
+    if page_key == PAGE_ENTITY_SEARCH:
+        return entity_search.render
+    if page_key in ENTITY_PAGES:
+        return lambda lang: entity_search.render(lang, selected=page_key)
+    if page_key == PAGE_TREES:
+        return trees.render
+    return lambda lang: trees.render(lang, selected=page_key)
 
-    Streamlit's popover keeps its open/closed state on the client side, so it
-    does not close itself just because the Python script reran after a child
-    item was selected. We simulate the same "click outside" interaction that
-    already closes it manually, by dispatching outside click/Escape events
-    from a tiny invisible component embedded on the page.
-    """
-    components.html(
-        """
-        <script>
-        (function() {
-            try {
-                var doc = window.parent.document;
-                var opts = {bubbles: true, cancelable: true, view: window.parent};
-                doc.body.dispatchEvent(new MouseEvent('mousedown', opts));
-                doc.body.dispatchEvent(new MouseEvent('mouseup', opts));
-                doc.body.dispatchEvent(new MouseEvent('click', opts));
-                doc.dispatchEvent(new KeyboardEvent('keydown', {
-                    key: 'Escape', code: 'Escape', keyCode: 27, which: 27, bubbles: true
-                }));
-            } catch (e) {}
-        })();
-        </script>
-        """,
-        height=0,
-        width=0,
+
+def _page_title(page_key: str, lang: str) -> str:
+    if page_key in ENTITY_PAGES:
+        return get_text(f"entity_tabs.{page_key}", lang)
+    if page_key in TREE_PAGES:
+        return get_text(f"tree_tabs.{page_key}", lang)
+    return get_text(f"nav.{page_key}", lang)
+
+
+def _make_page(page_key: str, lang: str) -> st.Page:
+    render = _renderer(page_key)
+
+    def _run() -> None:
+        render(st.session_state["lang"])
+
+    _run.__name__ = f"page_{page_key}"
+    return st.Page(
+        _run,
+        title=_page_title(page_key, lang),
+        url_path=URL_PATHS[page_key],
+        default=page_key == PAGE_HOME,
     )
 
 
-def _nav_items(lang: str) -> list[dict]:
-    return [
-        {"key": PAGE_HOME, "label": get_text("nav.home", lang), "children": []},
-        {"key": PAGE_ABOUT, "label": get_text("nav.about", lang), "children": []},
-        {"key": PAGE_NUMBER_SEARCH, "label": get_text("nav.number_search", lang), "children": []},
-        {"key": PAGE_SOURCE_SEARCH, "label": get_text("nav.source_search", lang), "children": []},
+def _build_navigation(lang: str):
+    """Every page has its own URL (see system_common/UrlPaths.py)."""
+    pages = {key: _make_page(key, lang) for key in URL_PATHS}
+    navigation.register_pages(pages)
+    return st.navigation(
         {
-            "key": PAGE_ENTITY_SEARCH,
-            "label": get_text("nav.entity_search", lang),
-            "children": [
-                {"key": PAGE_PEOPLE, "label": get_text("entity_tabs.people", lang)},
-                {"key": PAGE_PLACES, "label": get_text("entity_tabs.places", lang)},
-                {"key": PAGE_NATIONS, "label": get_text("entity_tabs.nations", lang)},
-                {"key": PAGE_TRIBES, "label": get_text("entity_tabs.tribes", lang)},
-                {"key": PAGE_SYMBOLS, "label": get_text("entity_tabs.symbols", lang)},
-            ],
+            "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH)],
+            get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_PAGES],
+            get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
         },
-        {
-            "key": PAGE_TREES,
-            "label": get_text("nav.trees", lang),
-            "children": [
-                {"key": PAGE_GENOLOGY, "label": get_text("tree_tabs.genology", lang)},
-                {"key": PAGE_STUDIED_FROM, "label": get_text("tree_tabs.studied_from", lang)},
-            ],
-        },
-    ]
-
-
-def _render_nav(nav_items: list[dict], lang: str) -> str:
-    rtl = is_rtl(lang)
-    # Reverse order for RTL so tabs appear mirrored
-    display_items = list(reversed(nav_items)) if rtl else nav_items
-    active_page = st.session_state.get("active_page", PAGE_HOME)
-
-    cols = st.columns(len(display_items))
-    for idx, item in enumerate(display_items):
-        # Check if this item or one of its children is active
-        is_active = active_page == item["key"] or any(
-            child["key"] == active_page for child in item.get("children", [])
-        )
-        label = f"• {item['label']}" if is_active else item["label"]
-        btn_type = "primary" if is_active else "secondary"
-
-        with cols[idx]:
-            if item.get("children"):
-                # Parent with children: use popover as the button itself
-                with st.popover(label, use_container_width=True):
-                    for child in item["children"]:
-                        child_active = active_page == child["key"]
-                        child_label = f"› {child['label']}" if child_active else child["label"]
-                        child_type = "primary" if child_active else "secondary"
-                        if st.button(child_label, key=f"sub_{child['key']}_{lang}", use_container_width=True, type=child_type):
-                            st.session_state["active_page"] = child["key"]
-                            st.session_state["_close_nav_popover"] = True
-                            st.rerun()
-            else:
-                # Simple nav item
-                if st.button(label, key=f"nav_{item['key']}_{lang}", use_container_width=True, type=btn_type):
-                    st.session_state["active_page"] = item["key"]
-                    st.session_state["_close_nav_popover"] = True
-                    st.rerun()
-
-    return st.session_state.get("active_page", PAGE_HOME)
-
-
-def _render_page(page_key: str, lang: str) -> None:
-    if page_key == PAGE_HOME:
-        home.render(lang)
-    elif page_key == PAGE_ABOUT:
-        about.render(lang)
-    elif page_key == PAGE_NUMBER_SEARCH:
-        number_search.render(lang)
-    elif page_key == PAGE_SOURCE_SEARCH:
-        source_search.render(lang)
-    elif page_key in (PAGE_ENTITY_SEARCH, PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS):
-        entity_search.render(lang, selected=page_key if page_key != PAGE_ENTITY_SEARCH else None)
-    elif page_key in (PAGE_TREES, PAGE_GENOLOGY, PAGE_STUDIED_FROM):
-        trees.render(lang, selected=page_key if page_key != PAGE_TREES else None)
-    else:
-        home.render(lang)
+        position="top",
+    )
 
 
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
 
 
 def main() -> None:
-    st.set_page_config(page_title="Eitz Habinah | עץ הבינה", layout="wide")
+    st.set_page_config(page_title="Eitz Habinah | \u05e2\u05e5 \u05d4\u05d1\u05d9\u05e0\u05d4", layout="wide")
 
     _init_state()
     apply_layout(st.session_state["lang"])
@@ -179,14 +122,7 @@ def main() -> None:
     with header_cols[0]:
         render_header(lang, MAIN_IMAGE)
 
-    nav_items = _nav_items(lang)
-    active_page = _render_nav(nav_items, lang)
-
-    if st.session_state.get("_close_nav_popover"):
-        st.session_state["_close_nav_popover"] = False
-        _force_close_nav_popover()
-
-    _render_page(active_page, lang)
+    _build_navigation(lang).run()
 
 
 if __name__ == "__main__":

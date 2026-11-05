@@ -20,8 +20,10 @@ import os
 
 import streamlit as st
 
+import navigation
 from translations1 import get_text, is_rtl
 from system_common.SystemFunctions import get_secret
+from system_common.UrlPaths import PARAM_ENTITY_ID, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
 )
@@ -119,12 +121,11 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
             type="primary",
         )
 
-    # ---- Persist selection in session state on Go ----
-    state_key = f"entity_detail_{entity_tab}"
+    # ---- Persist selection in the URL on Go (so the page link is shareable) ----
     if go_clicked and entity_key:
-        st.session_state[state_key] = entity_key
+        st.query_params[PARAM_ENTITY_ID] = entity_key
 
-    selected_key = st.session_state.get(state_key)
+    selected_key = st.query_params.get(PARAM_ENTITY_ID)
     if not selected_key:
         return
 
@@ -499,9 +500,7 @@ def _render_entity_item_popover(
         tab_key = _entity_type_to_tab(link_info[1]) if link_info else None
         if tab_key:
             if st.button(view_label, key=f"nav_{uid}", use_container_width=True):
-                st.session_state["active_page"] = tab_key
-                st.session_state[f"entity_detail_{tab_key}"] = link_info[0]
-                st.rerun()
+                navigation.go(tab_key, **{PARAM_ENTITY_ID: link_info[0]})
         else:
             st.button(
                 view_label,
@@ -517,10 +516,10 @@ def _render_entity_item_popover(
             use_container_width=True,
             disabled=not rel_keys,
         ):
-            from .source_search_logic import set_relationship_search
-            set_relationship_search(rel_keys, f"{entity_name} · {rel_label} · {item_name}")
-            st.session_state["active_page"] = PAGE_SOURCE_SEARCH
-            st.rerun()
+            navigation.go(PAGE_SOURCE_SEARCH, **{
+                PARAM_SOURCE_RELS: rel_keys,
+                PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {item_name}",
+            })
 
 
 def _entity_type_to_tab(entity_type) -> str | None:

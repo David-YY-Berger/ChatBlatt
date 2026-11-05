@@ -67,9 +67,10 @@ def _wrap(text: str, font: str, size: float, width: float) -> list[str]:
 class _Header(Flowable):
     """Banner with the main picture (clickable) and the 'eitz habina' title."""
 
-    def __init__(self, width: float, stamp: str):
+    def __init__(self, width: float, stamp: str, search_url: str | None = None):
         super().__init__()
         self.width, self.height, self.stamp = width, 3.2 * cm, stamp
+        self.search_url = search_url
 
     def wrap(self, *_):
         return self.width, self.height
@@ -90,6 +91,13 @@ class _Header(Flowable):
         c.setFillColor(colors.HexColor("#ecf0f1"))
         c.drawString(x, 0.9 * cm, f"Downloaded: {self.stamp}")
         c.drawString(x, 0.45 * cm, Paths.EITZ_HABINA_URL)
+        if self.search_url:
+            label = "Open this search online"
+            c.setFillColor(colors.HexColor("#8ecbff"))
+            c.setFont(FONT_BOLD, 10)
+            c.drawString(x, 1.35 * cm, label)
+            c.linkURL(self.search_url, (x, 1.25 * cm, x + pdfmetrics.stringWidth(label, FONT_BOLD, 10), 1.65 * cm),
+                      relative=1)
 
 
 def _text_flowables(text: str, size: float, width: float, bold=False, italic_color=None,
@@ -110,7 +118,8 @@ def _text_flowables(text: str, size: float, width: float, bold=False, italic_col
     return [Paragraph(escape(p).replace("\n", "<br/>"), style) for p in text.split("\n\n") if p.strip()]
 
 
-def build_results_pdf(ans) -> bytes:
+def build_results_pdf(ans, search_url: str | None = None) -> bytes:
+    """`search_url`: link that reopens this exact search in the web app (shown as a clickable link)."""
     _register_fonts()
     buf = io.BytesIO()
     margin = 1.8 * cm
@@ -121,11 +130,16 @@ def build_results_pdf(ans) -> bytes:
     inner = width - 0.8 * cm
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    story: list = [_Header(width, stamp), Spacer(1, 0.4 * cm)]
+    story: list = [_Header(width, stamp, search_url), Spacer(1, 0.4 * cm)]
     sources = list(getattr(ans, "src_metadata_lst", []) or [])
     contents = list(getattr(ans, "src_contents", []) or [])
     count_style = ParagraphStyle("c", fontName=FONT, fontSize=10, textColor=colors.HexColor("#555555"))
-    story += [Paragraph(f"{len(sources)} sources", count_style), Spacer(1, 0.3 * cm)]
+    story += [Paragraph(f"{len(sources)} sources", count_style), Spacer(1, 0.2 * cm)]
+    if search_url:
+        link_style = ParagraphStyle("l", fontName=FONT, fontSize=7, leading=9, wordWrap="CJK",
+                                    textColor=colors.HexColor("#1a5fb4"))
+        story.append(Paragraph(f'Search link: <link href="{escape(search_url, {chr(34): "&quot;"})}">{escape(search_url)}</link>', link_style))
+    story.append(Spacer(1, 0.3 * cm))
 
     for i, meta in enumerate(sources):
         src = contents[i] if i < len(contents) else None

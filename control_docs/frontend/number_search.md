@@ -6,6 +6,7 @@ Flow: `NumberSearchController` → `NumberSearchLogic.execute` (backend) returns
 `NumberSearchResult.by_category` (`NumberCategory | None` → list of `NumberOccurrenceDTO`, one
 per context × source). Entity model: `data_model/entities/number.md`.
 
+- **URL**: `?type=number|unit&value=...` (see [urls.md](urls.md)); opening such a link pre-fills the input and runs the search; each executed search rewrites the URL. Changing the mode radio clears the params.
 - **Input**: one free-form box (Enter or Search button). Whole vs. fraction auto-detected;
   `_validate_number` gives live error messages (rejects 0/1, decimals, negatives).
 - **Results**: big number header → coloured category tabs (with counts) → per-tab unit filter

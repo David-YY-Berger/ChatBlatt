@@ -6,6 +6,8 @@ from pathlib import Path
 
 import streamlit as st
 
+import navigation
+
 from translations1 import get_text
 from system_common.Constants import (
     PAGE_ENTITY_SEARCH,
@@ -52,6 +54,4 @@ def render(lang: str) -> None:
                     key=f"home_tool_{page_key}_{lang}",
                     use_container_width=True,
                 ):
-                    st.session_state["active_page"] = page_key
-                    st.session_state["_close_nav_popover"] = True
-                    st.rerun()
+                    navigation.go(page_key)

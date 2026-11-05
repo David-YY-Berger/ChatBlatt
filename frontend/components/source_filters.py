@@ -59,3 +59,15 @@ def get_selected_book_names() -> list[str]:
     """Selected books as ``Book.database_name`` values (as used in source keys)."""
     options = _book_options()
     return [options[label] for label in st.session_state.get(_BOOKS_KEY, []) if label in options]
+
+
+def set_selected_filters(passage_type_names: list[str], book_names: list[str]) -> None:
+    """Pre-select the filters (``PassageType`` names / ``Book.database_name`` values).
+    Must run before the filter widgets render in the current script run."""
+    for pt in PassageType:
+        st.session_state[_passage_key(pt)] = pt.name in passage_type_names
+    st.session_state[_BOOKS_KEY] = [label for label, db_name in _book_options().items() if db_name in book_names]
+
+
+def get_selected_passage_type_names() -> list[str]:
+    return [pt.name for pt in get_selected_passage_types()]

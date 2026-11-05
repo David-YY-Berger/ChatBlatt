@@ -244,3 +244,31 @@ def get_selected_entity_ids() -> list[str]:
                 entity_ids.extend(label_to_keys[label])
     return entity_ids
 
+
+
+def get_selected_entity_option_keys() -> list[str]:
+    """The selected select-option keys (one per picked label) across all entity-type
+    panels - the compact form used in shareable URLs."""
+    keys: list[str] = []
+    for ent in ENTITY_TYPES:
+        if not ent["implemented"]:
+            continue
+        selected_labels = st.session_state.get(f"entity_filter_selected_{ent['key']}")
+        if not selected_labels:
+            continue
+        label_to_key = {_format_entity_option_label(o): o.key for o in _load_entity_select_options(ent["entity_tab"])}
+        keys.extend(label_to_key[l] for l in selected_labels if l in label_to_key)
+    return keys
+
+
+def set_selected_entity_option_keys(keys: list[str]) -> None:
+    """Pre-select the panels' multiselects from option keys. Must run before the
+    panels render in the current script run."""
+    wanted = set(keys)
+    for ent in ENTITY_TYPES:
+        if not ent["implemented"]:
+            continue
+        options = _load_entity_select_options(ent["entity_tab"])
+        st.session_state[f"entity_filter_selected_{ent['key']}"] = [
+            _format_entity_option_label(o) for o in options if o.key in wanted
+        ]

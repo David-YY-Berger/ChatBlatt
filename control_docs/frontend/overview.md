@@ -9,10 +9,11 @@ touches the frontend; they are currently light pointers, not a full reference.
 - [Source search](source_search.md)
 - [Trees](trees.md)
 - [Entity search](entity_search.md)
+- [URLs, navigation and shareable searches](urls.md)
 
 ## Structure
 
-- `frontend/app.py` — entry point; language toggle + custom nav buttons.
+- `frontend/app.py` — entry point; language selector + `st.navigation` (top) with one URL per page (see [urls.md](urls.md)).
 - `frontend/translations1/` — YAML translations (`en.yml`, `he.yml`) + helpers. Use
   `get_text("path.to.key", lang)`; falls back to English if a key is missing. Page titles
   under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`tree_tabs.*`.

@@ -34,8 +34,10 @@ from .source_search_logic import (
     clear_relationship_search,
     collect_search_query,
     get_relationship_search,
+    current_search_url,
     run_search,
-    REL_SEARCH_PENDING_KEY,
+    sync_url_with_search,
+    apply_url_params,
 )
 
 logger = logging.getLogger(__name__)
@@ -46,6 +48,8 @@ def _execute_search() -> None:
         ans, elapsed = run_search(collect_search_query())
         st.session_state["_search_ans"] = ans
         st.session_state["_search_elapsed"] = elapsed
+        st.session_state["_search_url"] = current_search_url()
+        sync_url_with_search()
         st.session_state.pop("_search_error", None)
     except Exception as e:
         logger.error("Search failed: %s", e)
@@ -113,7 +117,7 @@ def _render_download_button(ans) -> None:
         st.download_button(
             label="\u200b",
             icon=":material/download:",
-            data=lambda: build_results_pdf(ans),
+            data=lambda: build_results_pdf(ans, st.session_state.get("_search_url")),
             file_name=f"eitz_habina_sources_{datetime.now():%Y%m%d_%H%M%S}.pdf",
             mime="application/pdf",
             help="Download results as PDF",
@@ -173,6 +177,10 @@ def render(lang: str) -> None:
     # click-time. render_entity_facets() below is a no-op if this already ran.
     preload_all_entity_options()
 
+    # Arriving from a shared link / Entity Search: load the URL params into the
+    # filter widgets (must happen before they render) and run that search below.
+    run_url_search = apply_url_params()
+
     inject_facet_css()
 
     left_col, main_col = st.columns([1.6, 6])
@@ -182,8 +190,7 @@ def render(lang: str) -> None:
         # Entity facets at the top of the right area
         render_entity_facets()
         _render_relationship_chip(lang)
-        # Arriving from Entity Search "view sources": run the relationship search now.
-        if st.session_state.pop(REL_SEARCH_PENDING_KEY, False):
+        if run_url_search:
             _execute_search()
         # Free-text similarity search below entity filters, with the Find
         # Sources button on the same line, and a Dicta promo note beneath it.

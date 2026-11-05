@@ -8,3 +8,5 @@ then `from backend.common import Paths` in the script. Derive from `PROJECT_ROOT
 
 Notable constants: `REAL_DATA_DIR` (+ `ENTITY_REL_GRAPH_REAL_DATA_DIR`, `ENTITY_ENRICHMENT_REAL_DATA_DIR`),
 `MERGE_CSV_DIR`, `MERGE_REVIEW_DIR`, `COMMON_ENTITY_PRE_POPULATE_DIR`, `ENTITIES_TO_IGNORE_DIR`, `DB_BACKUPS_DIR`, `TESTS_DIR`.
+
+**URL paths** (web routes and query-param names) are not file paths: they live in `system_common/UrlPaths.py` (importable by frontend and backend) - see `frontend/urls.md`.
