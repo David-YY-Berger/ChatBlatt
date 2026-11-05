@@ -7,6 +7,7 @@ import io
 import re
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 from xml.sax.saxutils import escape
 
 from bidi.algorithm import get_display
@@ -46,6 +47,44 @@ def _plain(html: str) -> str:
         br.replace_with("\n")
     text = soup.get_text()
     return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def _search_description(search_url: str | None) -> str:
+    """Return a short, readable summary of the search parameters in its URL."""
+    if not search_url:
+        return ""
+
+    params = parse_qs(urlsplit(search_url).query)
+    fields = (
+        ("q", "Search"),
+        ("rel_label", "Relationship"),
+        ("books", "Books"),
+        ("pt", "Passage types"),
+    )
+    descriptions = []
+    for key, label in fields:
+        values = [value.strip() for value in params.get(key, [""])[0].split(",") if value.strip()]
+        if not values:
+            continue
+        shown = values[:2]
+        text = ", ".join(shown)
+        if len(values) > len(shown):
+            text += ", ..."
+        descriptions.append(f"{label}: {text}")
+
+    description = " | ".join(descriptions)
+    if len(description) > 110:
+        description = description[:107].rsplit(" ", 1)[0].rstrip(" ,|") + "..."
+    return description
+
+
+def results_pdf_filename(search_url: str | None) -> str:
+    """Build a filesystem-safe download name containing a concise search summary."""
+    description = _search_description(search_url) or "All sources"
+    slug = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "_", description)
+    slug = re.sub(r"[\s_-]+", "_", slug).strip(" ._")
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    return f"eitz_habina_sources_{slug}_{stamp}.pdf"
 
 
 def _wrap(text: str, font: str, size: float, width: float) -> list[str]:
@@ -123,8 +162,10 @@ def build_results_pdf(ans, search_url: str | None = None) -> bytes:
     _register_fonts()
     buf = io.BytesIO()
     margin = 1.8 * cm
+    description = _search_description(search_url)
+    title = f"Eitz Habina Sources - {description}" if description else "Eitz Habina Sources"
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=margin, rightMargin=margin,
-                            topMargin=margin, bottomMargin=margin, title="Eitz Habina - Sources",
+                            topMargin=margin, bottomMargin=margin, title=title,
                             author="Eitz Habina")
     width = A4[0] - 2 * margin
     inner = width - 0.8 * cm

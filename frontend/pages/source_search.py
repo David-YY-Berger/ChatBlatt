@@ -16,7 +16,6 @@ Source-filter widgets (Passage Type + Books) live in
 from __future__ import annotations
 
 import logging
-from datetime import datetime
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -28,7 +27,7 @@ from components.facets import (
     preload_all_entity_options,
     render_entity_facets,
 )
-from components.pdf_export import build_results_pdf
+from components.pdf_export import build_results_pdf, results_pdf_filename
 from components.source_filters import render_source_filters
 from .source_search_logic import (
     clear_relationship_search,
@@ -118,7 +117,7 @@ def _render_download_button(ans) -> None:
             label="\u200b",
             icon=":material/download:",
             data=lambda: build_results_pdf(ans, st.session_state.get("_search_url")),
-            file_name=f"eitz_habina_sources_{datetime.now():%Y%m%d_%H%M%S}.pdf",
+            file_name=results_pdf_filename(st.session_state.get("_search_url")),
             mime="application/pdf",
             help="Download results as PDF",
         )
