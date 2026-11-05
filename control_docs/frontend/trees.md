@@ -15,7 +15,10 @@ The implemented tree is a family graph centered on a person:
 1. The page renders the shared person selector from
    `frontend/components/person_selector.py`. Person options are loaded from
    the people entity-search handler and cached in Streamlit session state.
-   The user confirms a person with **Go**; the selected key is retained under
+   The selector shows the same metadata filters as Entity Search's people tab
+   (faith, gender, individual/group, roles — `frontend/components/entity_filters.py`,
+   widget keys prefixed per `state_key`) above the combobox; changing a filter
+   resets the combobox. The user confirms a person with **Go**; the selected key is retained under
    `genealogy_center_person`.
 2. The user chooses depth 1 (direct family) or 2 (family of family). The page
    requests the graph from `GenealogyTreeController` and caches it in session

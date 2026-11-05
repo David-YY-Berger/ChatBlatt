@@ -3,8 +3,9 @@
 """
 PersonSelectorComponent
 
-Reusable Streamlit component that renders a person combobox + "Go" button,
-matching the same UX pattern used in the Entity Search page.
+Reusable Streamlit component: metadata filters (faith, gender, individual/group,
+roles; from components/entity_filters.py) + person combobox + "Go" button,
+matching the Entity Search people tab. Used by the genealogy and studied-from trees.
 
 Usage:
     from components.person_selector import render_person_selector
@@ -21,6 +22,7 @@ from typing import Optional
 import streamlit as st
 
 from translations1 import get_text, is_rtl
+from components.entity_filters import render_person_filters
 
 
 def render_person_selector(
@@ -61,13 +63,27 @@ def render_person_selector(
         st.info(get_text("entity_search_ui.no_entities", lang))
         return None
 
+    combo_state_key = f"person_selector_combo_{state_key}"
+
+    # Metadata filters (faith / gender / individual-group / roles), same as Entity Search
+    filtered = render_person_filters(options, lang, key_prefix=f"person_selector_filter_{state_key}")
+
+    # Reset the combobox when the filtered set changes (its old choice may be gone)
+    signature = tuple(sorted(opt.key for opt in filtered))
+    sig_key = f"_person_selector_sig_{state_key}"
+    if st.session_state.get(sig_key) != signature:
+        st.session_state.pop(combo_state_key, None)
+        st.session_state[sig_key] = signature
+
+    if not filtered:
+        st.warning(get_text("entity_filters.no_matches", lang))
+
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_label(opt, rtl) for opt in options]
-    key_map = {_format_label(opt, rtl): opt.key for opt in options}
+    display_labels = [_format_label(opt, rtl) for opt in filtered]
+    key_map = {_format_label(opt, rtl): opt.key for opt in filtered}
 
-    combo_state_key = f"person_selector_combo_{state_key}"
     if override_key:
         st.session_state[state_key] = override_key
         for label, key in key_map.items():
