@@ -16,6 +16,7 @@ Source-filter widgets (Passage Type + Books) live in
 from __future__ import annotations
 
 import logging
+from datetime import datetime
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -27,6 +28,7 @@ from components.facets import (
     preload_all_entity_options,
     render_entity_facets,
 )
+from components.pdf_export import build_results_pdf
 from components.source_filters import render_source_filters
 from .source_search_logic import (
     clear_relationship_search,
@@ -98,13 +100,37 @@ def _render_dicta_promo(lang: str) -> None:
     st.markdown(promo, unsafe_allow_html=False)
 
 
+def _render_download_button(ans) -> None:
+    """Large icon-only button that downloads the results as a PDF."""
+    st.markdown(
+        """<style>
+        .st-key-pdf_download button { width:3.4rem; height:3.4rem; font-size:2rem; }
+        .st-key-pdf_download button span[data-testid="stIconMaterial"] { font-size:2.2rem; }
+        </style>""",
+        unsafe_allow_html=True,
+    )
+    with st.container(key="pdf_download"):
+        st.download_button(
+            label="\u200b",
+            icon=":material/download:",
+            data=lambda: build_results_pdf(ans),
+            file_name=f"eitz_habina_sources_{datetime.now():%Y%m%d_%H%M%S}.pdf",
+            mime="application/pdf",
+            help="Download results as PDF",
+        )
+
+
 def _render_search_panel() -> None:
     if st.session_state.get("_search_error"):
         st.error(st.session_state["_search_error"])
     elif "_search_ans" in st.session_state:
         found_count = len(getattr(st.session_state["_search_ans"], "src_metadata_lst", []))
         elapsed = st.session_state.get("_search_elapsed", "")
-        st.success(f"Found {found_count} sources in {elapsed}")
+        msg_col, dl_col = st.columns([12, 1], vertical_alignment="center")
+        with msg_col:
+            st.success(f"Found {found_count} sources in {elapsed}")
+        with dl_col:
+            _render_download_button(st.session_state["_search_ans"])
 
     if "_search_ans" in st.session_state:
         _render_results_body(

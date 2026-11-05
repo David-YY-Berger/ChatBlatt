@@ -17,3 +17,6 @@ not currently applied by the backend.)
    (`search/faiss_bm25.md`).
 3. Truncate to `max_sources`, then load `SourceContent` for each.
 UI entry point for `rel_ids`: Entity Search 'View sources' (see `frontend/overview.md`) passes the Rel keys behind a relationship list item.
+
+## PDF download (UI only)
+After a search, `frontend/pages/source_search.py` shows an icon-only download button beside the "Found N sources" message. It calls `build_results_pdf(ans)` in `frontend/components/pdf_export.py` (reportlab + python-bidi; DejaVu fonts in `frontend/fonts/`). The PDF has a header banner ("Eitz Habina", main picture linking to `Paths.EITZ_HABINA_URL`, download date/time), then each source: English/Hebrew title, passage types, summaries, and Hebrew + English content as plain text (same fields the copy-to-clipboard button uses). Hebrew is rendered RTL; the date/time and page number are in the footer.

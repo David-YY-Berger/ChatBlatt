@@ -84,3 +84,4 @@ GLOSSARY_TEMP = os.path.join(TESTS_DIR, "Glossary.csv")
 
 def get_test_output_path(test_name, file_ext):
     return os.path.join(TESTS_DIR, f"{test_name}.{file_ext}")
+EITZ_HABINA_URL = "https://eitz-habina.streamlit.app/"
