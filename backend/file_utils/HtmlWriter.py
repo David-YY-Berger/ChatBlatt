@@ -32,6 +32,9 @@ class HtmlWriter:
 /* --- Passage-type badges --- */
 .source-passage-badges { display:flex; flex-wrap:wrap; gap:0.35rem; }
 .passage-badge { display:inline-flex; align-items:center; gap:0.3rem; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.75em; font-weight:600; white-space:nowrap; }
+.source-copy-btn { background:none; border:none; color:white; cursor:pointer; padding:2px 4px; line-height:0; border-radius:4px; opacity:0.85; }
+.source-copy-btn:hover { background:rgba(255,255,255,0.2); opacity:1; }
+.source-copy-btn.copied { color:#2ecc71; }
 /* --- Source body --- */
 .source-body { display:none; padding:8px 10px; background:white; }
 .source-body.open { display:block; }
@@ -61,7 +64,61 @@ class HtmlWriter:
     def get_source_section_js() -> str:
         """JavaScript for toggling source sections and collapsible content.
         Shared with the frontend popup component — edit here to update both."""
-        return """\
+        return r"""\
+function _scEsc(s) {
+    return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function _scPlain(html) {
+    var d = document.createElement('div');
+    d.innerHTML = (html || '').replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h[1-6])>/gi, '</$1>\n');
+    return d.textContent.replace(/\n{3,}/g, '\n\n').trim();
+}
+function copySource(ev, headerId) {
+    ev.stopPropagation();
+    var btn = ev.currentTarget;
+    var section = document.getElementById(headerId).parentNode;
+    var txt = function (sel) { var n = section.querySelector(sel); return n ? n.textContent.trim() : ''; };
+    var htmlOf = function (sel) { var n = section.querySelector(sel); return n ? n.innerHTML : ''; };
+    var blocks = [
+        { t: txt('.source-title-heb'), s: txt('.source-summary-heb'), c: htmlOf('.hebrew-content'), dir: 'rtl' },
+        { t: txt('.source-title-en'), s: txt('.source-summary-en'), c: htmlOf('.english-content'), dir: 'ltr' }
+    ];
+    var richParts = [], plainParts = [];
+    blocks.forEach(function (b) {
+        var rich = '', plain = [];
+        if (b.t) { rich += '<p dir="' + b.dir + '"><b>' + _scEsc(b.t) + '</b></p>'; plain.push(b.t); }
+        if (b.s) { rich += '<p dir="' + b.dir + '"><i>' + _scEsc(b.s) + '</i></p>'; plain.push(b.s); }
+        if (b.c && b.c.trim()) { rich += '<div dir="' + b.dir + '">' + b.c + '</div>'; plain.push(_scPlain(b.c)); }
+        if (rich) { richParts.push(rich); plainParts.push(plain.join('\n\n')); }
+    });
+    var richHtml = richParts.join('<br>');
+    var plainText = plainParts.join('\n\n\n');
+    var done = function () {
+        btn.classList.add('copied');
+        setTimeout(function () { btn.classList.remove('copied'); }, 1200);
+    };
+    var fallback = function () {
+        var holder = document.createElement('div');
+        holder.contentEditable = 'true';
+        holder.style.cssText = 'position:fixed;left:-9999px;top:0;';
+        holder.innerHTML = richHtml;
+        document.body.appendChild(holder);
+        var range = document.createRange();
+        range.selectNodeContents(holder);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        sel.removeAllRanges();
+        document.body.removeChild(holder);
+    };
+    try {
+        navigator.clipboard.write([new ClipboardItem({
+            'text/html': new Blob([richHtml], { type: 'text/html' }),
+            'text/plain': new Blob([plainText], { type: 'text/plain' })
+        })]).then(done, fallback);
+    } catch (e) { fallback(); }
+}
 function toggleSource(bodyId, headerId) {
     var body = document.getElementById(bodyId);
     var header = document.getElementById(headerId);
@@ -131,6 +188,8 @@ function toggleCollapsible(contentId) {
             f'<span class="source-title-en">{t_en}</span>'
             f'<div class="source-title-right">'
             f'<span class="source-title-heb">{t_heb}</span>'
+            f'<button class="source-copy-btn" title="Copy" onclick="copySource(event, \'{header_id}\')">'
+            f'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>'
             f'<span class="source-arrow">▶</span>'
             f'</div></div>'
             f'{badges_row}'
