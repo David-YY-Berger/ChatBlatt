@@ -84,6 +84,8 @@ Pages only define their edge parsing, role names, and edge styles.
 (session key `studied_from_center_person`), a depth radio (1 = direct teachers/students,
 2 = teachers/students of those), results cached in session state by `(center key, depth)`,
 node/edge counts, legend, and the Pyvis graph.
+The page displays a warning that the studied-from data may be corrupted and should not be
+relied on, while inviting users to explore it.
 
 Rows: teachers above (`studiedFrom`), the selected person and everyone they `disagreedWith`
 on the center row, students below (`taught`, the reverse direction). Node tooltips show the

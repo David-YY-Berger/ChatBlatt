@@ -39,6 +39,7 @@ studied_from_ui:
   graph_title: "Studied From Tree"
   no_data: "No studied-from data found for this person."
   role_center: "Selected person"
+  data_quality_warning: "The studied-from data may be corrupted. Please do not rely on these results, but feel free to explore them."
 
 genealogy_ui:
   select_person_label: "Select a person to centre the family tree on"

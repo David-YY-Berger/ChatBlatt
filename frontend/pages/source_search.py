@@ -23,6 +23,7 @@ import streamlit.components.v1 as components
 from translations1 import get_text, is_rtl
 from backend.file_utils.HtmlWriter import HtmlWriter
 from components.facets import (
+    get_selected_entity_names,
     inject_facet_css,
     preload_all_entity_options,
     render_entity_facets,
@@ -46,6 +47,7 @@ def _execute_search() -> None:
     try:
         ans, elapsed = run_search(collect_search_query())
         st.session_state["_search_ans"] = ans
+        st.session_state["_search_entity_names"] = get_selected_entity_names()
         st.session_state["_search_elapsed"] = elapsed
         st.session_state["_search_url"] = current_search_url()
         sync_url_with_search()
@@ -54,6 +56,7 @@ def _execute_search() -> None:
         logger.error("Search failed: %s", e)
         st.session_state["_search_error"] = str(e)
         st.session_state.pop("_search_ans", None)
+        st.session_state.pop("_search_entity_names", None)
 
 
 def _render_relationship_chip(lang: str) -> None:
@@ -103,8 +106,10 @@ def _render_dicta_promo(lang: str) -> None:
     st.markdown(promo, unsafe_allow_html=False)
 
 
-def _render_download_button(ans) -> None:
+def _render_download_button(ans, lang: str) -> None:
     """Large icon-only button that downloads the results as a PDF."""
+    entity_names = st.session_state.get("_search_entity_names", [])
+    dedication = get_text("app.dedication", lang)
     st.markdown(
         """<style>
         .st-key-pdf_download button { width:3.4rem; height:3.4rem; font-size:2rem; }
@@ -116,14 +121,19 @@ def _render_download_button(ans) -> None:
         st.download_button(
             label="\u200b",
             icon=":material/download:",
-            data=lambda: build_results_pdf(ans, st.session_state.get("_search_url")),
-            file_name=results_pdf_filename(st.session_state.get("_search_url")),
+            data=lambda: build_results_pdf(
+                ans,
+                st.session_state.get("_search_url"),
+                entity_names=entity_names,
+                dedication=dedication,
+            ),
+            file_name=results_pdf_filename(st.session_state.get("_search_url"), entity_names),
             mime="application/pdf",
             help="Download results as PDF",
         )
 
 
-def _render_search_panel() -> None:
+def _render_search_panel(lang: str) -> None:
     if st.session_state.get("_search_error"):
         st.error(st.session_state["_search_error"])
     elif "_search_ans" in st.session_state:
@@ -133,7 +143,7 @@ def _render_search_panel() -> None:
         with msg_col:
             st.success(f"Found {found_count} sources in {elapsed}")
         with dl_col:
-            _render_download_button(st.session_state["_search_ans"])
+            _render_download_button(st.session_state["_search_ans"], lang)
 
     if "_search_ans" in st.session_state:
         _render_results_body(
@@ -195,4 +205,4 @@ def render(lang: str) -> None:
         # Sources button on the same line, and a Dicta promo note beneath it.
         _render_search_input_row(lang)
         _render_dicta_promo(lang)
-        _render_search_panel()
+        _render_search_panel(lang)

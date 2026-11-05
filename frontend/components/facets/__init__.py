@@ -9,6 +9,7 @@ Note: the Passage Type and Books filters live in `components.source_filters`.
 from .renderers import (
     ENTITY_TYPES,
     get_selected_entity_ids,
+    get_selected_entity_names,
     get_selected_entity_option_keys,
     set_selected_entity_option_keys,
     inject_facet_css,
@@ -26,9 +27,9 @@ __all__ = [
     # Read the entity-type panels' current selections (as entity keys), for
     # building a SourceSearchQuery.
     "get_selected_entity_ids",
+    "get_selected_entity_names",
     "get_selected_entity_option_keys",
     "set_selected_entity_option_keys",
     # Constants
     "ENTITY_TYPES",
 ]
-

@@ -49,20 +49,29 @@ def _plain(html: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
-def _search_description(search_url: str | None) -> str:
-    """Return a short, readable summary of the search parameters in its URL."""
-    if not search_url:
-        return ""
+def _search_description(search_url: str | None, entity_names: list[str] | None = None) -> str:
+    """Return a short, readable summary of the search parameters."""
+    descriptions = []
+    params = parse_qs(urlsplit(search_url).query) if search_url else {}
+    if entity_names:
+        descriptions.append(f"Entity: {', '.join(entity_names[:2])}"
+                            + (", ..." if len(entity_names) > 2 else ""))
 
-    params = parse_qs(urlsplit(search_url).query)
-    fields = (
+    fields = [
         ("q", "Search"),
         ("rel_label", "Relationship"),
-        ("books", "Books"),
-        ("pt", "Passage types"),
-    )
-    descriptions = []
+    ]
     for key, label in fields:
+        values = [value.strip() for value in params.get(key, [""])[0].split(",") if value.strip()]
+        if not values:
+            continue
+        shown = values[:2]
+        text = ", ".join(shown)
+        if len(values) > len(shown):
+            text += ", ..."
+        descriptions.append(f"{label}: {text}")
+
+    for key, label in (("books", "Books"), ("pt", "Passage types")):
         values = [value.strip() for value in params.get(key, [""])[0].split(",") if value.strip()]
         if not values:
             continue
@@ -78,9 +87,9 @@ def _search_description(search_url: str | None) -> str:
     return description
 
 
-def results_pdf_filename(search_url: str | None) -> str:
+def results_pdf_filename(search_url: str | None, entity_names: list[str] | None = None) -> str:
     """Build a filesystem-safe download name containing a concise search summary."""
-    description = _search_description(search_url) or "All sources"
+    description = _search_description(search_url, entity_names) or "All sources"
     slug = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "_", description)
     slug = re.sub(r"[\s_-]+", "_", slug).strip(" ._")
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -106,10 +115,12 @@ def _wrap(text: str, font: str, size: float, width: float) -> list[str]:
 class _Header(Flowable):
     """Banner with the main picture (clickable) and the 'eitz habina' title."""
 
-    def __init__(self, width: float, stamp: str, search_url: str | None = None):
+    def __init__(self, width: float, stamp: str, search_url: str | None = None,
+                 dedication: str = ""):
         super().__init__()
         self.width, self.height, self.stamp = width, 3.2 * cm, stamp
         self.search_url = search_url
+        self.dedication = dedication
 
     def wrap(self, *_):
         return self.width, self.height
@@ -126,6 +137,13 @@ class _Header(Flowable):
         c.setFillColor(colors.white)
         c.setFont(FONT_BOLD, 26)
         c.drawString(x, self.height - 1.4 * cm, "Eitz Habina")
+        if self.dedication:
+            c.setFont(FONT, 8)
+            dedication = get_display(self.dedication, base_dir="R") if _HEB_RE.search(self.dedication) else self.dedication
+            c.drawString(x, self.height - 0.62 * cm, dedication)
+        c.setFont(FONT, 8)
+        bsad = get_display("בס״ד", base_dir="R")
+        c.drawRightString(self.width - pad, self.height - 0.4 * cm, bsad)
         c.setFont(FONT, 9)
         c.setFillColor(colors.HexColor("#ecf0f1"))
         c.drawString(x, 0.9 * cm, f"Downloaded: {self.stamp}")
@@ -157,12 +175,13 @@ def _text_flowables(text: str, size: float, width: float, bold=False, italic_col
     return [Paragraph(escape(p).replace("\n", "<br/>"), style) for p in text.split("\n\n") if p.strip()]
 
 
-def build_results_pdf(ans, search_url: str | None = None) -> bytes:
-    """`search_url`: link that reopens this exact search in the web app (shown as a clickable link)."""
+def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str] | None = None,
+                      dedication: str = "") -> bytes:
+    """Build the result PDF, including selected English entity names and localized dedication."""
     _register_fonts()
     buf = io.BytesIO()
     margin = 1.8 * cm
-    description = _search_description(search_url)
+    description = _search_description(search_url, entity_names)
     title = f"Eitz Habina Sources - {description}" if description else "Eitz Habina Sources"
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=margin, rightMargin=margin,
                             topMargin=margin, bottomMargin=margin, title=title,
@@ -171,7 +190,7 @@ def build_results_pdf(ans, search_url: str | None = None) -> bytes:
     inner = width - 0.8 * cm
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    story: list = [_Header(width, stamp, search_url), Spacer(1, 0.4 * cm)]
+    story: list = [_Header(width, stamp, search_url, dedication), Spacer(1, 0.4 * cm)]
     sources = list(getattr(ans, "src_metadata_lst", []) or [])
     contents = list(getattr(ans, "src_contents", []) or [])
     count_style = ParagraphStyle("c", fontName=FONT, fontSize=10, textColor=colors.HexColor("#555555"))

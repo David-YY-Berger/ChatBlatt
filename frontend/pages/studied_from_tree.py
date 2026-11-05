@@ -29,6 +29,7 @@ def render(lang: str) -> None:
         f'<div class="page-title">{get_text(f"page_titles.{PAGE_STUDIED_FROM}", lang)}</div>',
         unsafe_allow_html=True,
     )
+    st.warning(get_text("studied_from_ui.data_quality_warning", lang))
 
     st.markdown(f"**{get_text('studied_from_ui.select_person_label', lang)}**")
 
