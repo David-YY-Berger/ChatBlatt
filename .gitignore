@@ -22,3 +22,14 @@ venv/
 data_index_files/
 *.log
 .DS_Store
+DB_backups/TN_BT_contents_passages_index.json
+.gitignore
+.gitignore
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/ChatBlatt.iml
+t2.png
+backend_pipeline/data_pipeline/common_entity_pre_populate/ambiguous_bavli_characters.progress.json
+backend_pipeline/data_pipeline/common_entity_pre_populate/ambiguous_tanach_characters.progress.json
