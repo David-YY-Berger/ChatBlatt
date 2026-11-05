@@ -11,9 +11,10 @@ import navigation
 from translations1 import get_text
 from system_common.Constants import (
     PAGE_ENTITY_SEARCH,
+    PAGE_GENOLOGY,
     PAGE_NUMBER_SEARCH,
     PAGE_SOURCE_SEARCH,
-    PAGE_TREES,
+    PAGE_STUDIED_FROM,
 )
 
 ICON_DIR = Path(__file__).resolve().parents[1] / "icons" / "optimized"
@@ -22,7 +23,8 @@ TOOLS = (
     (PAGE_NUMBER_SEARCH, "number_search_main.jpg", "home_tools.number_search_description"),
     (PAGE_SOURCE_SEARCH, "source_search_main.jpg", "home_tools.source_search_description"),
     (PAGE_ENTITY_SEARCH, "entity_search_main.jpg", "home_tools.entity_search_description"),
-    (PAGE_TREES, "trees_main.jpg", "home_tools.trees_description"),
+    (PAGE_GENOLOGY, "trees_main.jpg", "home_tools.genology_description"),
+    (PAGE_STUDIED_FROM, "trees_main.jpg", "home_tools.studied_from_description"),
 )
 
 
@@ -35,11 +37,12 @@ def render(lang: str) -> None:
         unsafe_allow_html=True,
     )
 
-    columns = st.columns(4)
+    columns = st.columns(len(TOOLS))
     for column, (page_key, icon_name, description_key) in zip(columns, TOOLS):
         with column:
-            with st.container(border=True):
-                tool_title = get_text(f"nav.{page_key}", lang)
+            # The button is stretched over the whole card (see styles.css), so any click navigates.
+            with st.container(border=True, key=f"home_tool_{page_key}"):
+                tool_title = _tool_title(page_key, lang)
                 st.image(ICON_DIR / icon_name, width=180)
                 st.markdown(
                     f'<div class="home-tool-title">{tool_title}</div>',
@@ -50,8 +53,14 @@ def render(lang: str) -> None:
                     unsafe_allow_html=True,
                 )
                 if st.button(
-                    get_text("home_tools.open_tool", lang),
-                    key=f"home_tool_{page_key}_{lang}",
+                    tool_title,
+                    key=f"home_tool_btn_{page_key}_{lang}",
                     use_container_width=True,
                 ):
                     navigation.go(page_key)
+
+
+def _tool_title(page_key: str, lang: str) -> str:
+    if page_key in (PAGE_GENOLOGY, PAGE_STUDIED_FROM):
+        return get_text(f"page_titles.{page_key}", lang)
+    return get_text(f"nav.{page_key}", lang)

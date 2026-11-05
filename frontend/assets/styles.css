@@ -73,6 +73,41 @@ body {
     font-size: 1.1rem;
 }
 
+.st-key-home_tool_number_search,
+.st-key-home_tool_source_search,
+.st-key-home_tool_entity_search,
+.st-key-home_tool_genology,
+.st-key-home_tool_studied_from {
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.st-key-home_tool_number_search:hover,
+.st-key-home_tool_source_search:hover,
+.st-key-home_tool_entity_search:hover,
+.st-key-home_tool_genology:hover,
+.st-key-home_tool_studied_from:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+[class*="st-key-home_tool_"] [data-testid="stButton"],
+[class*="st-key-home_tool_"] [data-testid="stElementContainer"]:has([data-testid="stButton"]) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+[class*="st-key-home_tool_"] [data-testid="stButton"] button {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .home-tool-title {
     margin: 0.25rem 0 0.5rem;
     text-align: center;

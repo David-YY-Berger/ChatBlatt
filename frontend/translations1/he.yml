@@ -62,6 +62,7 @@ genealogy_ui:
   gender_unknown: "לא ידוע"
 
 entity_search_ui:
+  choose_entity: "???? ??? ????"
   select_tab_prompt: "אנא בחרו סוג ישות מהתפריט למעלה."
   not_implemented: "סוג ישות זה עדיין לא זמין."
   no_entities: "לא נמצאו ישויות במאגר."
@@ -163,11 +164,11 @@ page_titles:
 
 home_tools:
   subtitle: "מציין מקום לכותרת משנה"
-  open_tool: "פתיחת הכלי"
   number_search_description: "מצאו מספרים ויחידות המוזכרים במקורות יהודיים."
   source_search_description: "גלו קטעים רלוונטיים במקורות יהודיים."
   entity_search_description: "גלו אנשים, מקומות, עמים, שבטים וסמלים."
-  trees_description: "גלו קשרי משפחה ושרשראות לימוד."
+  genology_description: "??? ???? ????? ???????."
+  studied_from_description: "???? ??? ??????? ?? ????? ????????."
 
 source_search_ui:
   text_similarity_label: "מיין לפי דמיון טקסטואלי"

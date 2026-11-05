@@ -50,6 +50,21 @@ def render(lang: str, selected: str | None = None) -> None:
     _render_entity_search_tab(selected, lang)
 
 
+def _render_entity_type_selector(selected: str | None, lang: str) -> None:
+    """Row of buttons so the user can pick the entity type without the top navigation menu."""
+    st.markdown(f"**{get_text('entity_search_ui.choose_entity', lang)}**")
+    tabs = (PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS)
+    for column, tab in zip(st.columns(len(tabs)), tabs):
+        with column:
+            if st.button(
+                get_text(f"entity_tabs.{tab}", lang),
+                key=f"entity_type_btn_{tab}_{lang}",
+                type="primary" if tab == selected else "secondary",
+                use_container_width=True,
+            ) and tab != selected:
+                navigation.go(tab)
+
+
 # =============================================================================
 #  Shared entity search template
 # =============================================================================
