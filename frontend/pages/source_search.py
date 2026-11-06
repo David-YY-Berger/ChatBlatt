@@ -15,7 +15,9 @@ Source-filter widgets (Passage Type + Books) live in
 
 from __future__ import annotations
 
+from dataclasses import replace
 import logging
+import math
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -43,10 +45,17 @@ from pages.source_search_logic import (
 logger = logging.getLogger(__name__)
 
 
-def _execute_search() -> None:
+def _execute_search(query_obj=None, page: int = 0) -> None:
     try:
-        ans, elapsed = run_search(collect_search_query())
+        base_query = query_obj or collect_search_query()
+        paged_query = replace(
+            base_query,
+            offset=page * base_query.max_sources,
+        )
+        ans, elapsed = run_search(paged_query)
         st.session_state["_search_ans"] = ans
+        st.session_state["_search_query"] = replace(base_query, offset=0)
+        st.session_state["_search_page"] = page
         st.session_state["_search_entity_names"] = get_selected_entity_names()
         st.session_state["_search_elapsed"] = elapsed
         st.session_state["_search_url"] = current_search_url()
@@ -137,19 +146,65 @@ def _render_search_panel(lang: str) -> None:
     if st.session_state.get("_search_error"):
         st.error(st.session_state["_search_error"])
     elif "_search_ans" in st.session_state:
-        found_count = len(getattr(st.session_state["_search_ans"], "src_metadata_lst", []))
+        ans = st.session_state["_search_ans"]
+        found_count = ans.total_sources
         elapsed = st.session_state.get("_search_elapsed", "")
         msg_col, dl_col = st.columns([12, 1], vertical_alignment="center")
         with msg_col:
-            st.success(f"Found {found_count} sources in {elapsed}")
+            st.success(
+                f"{get_text('source_search_ui.found_sources', lang).format(count=found_count)} "
+                f"{get_text('source_search_ui.search_time', lang).format(elapsed=elapsed)}"
+            )
         with dl_col:
-            _render_download_button(st.session_state["_search_ans"], lang)
+            _render_download_button(ans, lang)
 
     if "_search_ans" in st.session_state:
+        _render_pagination(lang)
         _render_results_body(
             st.session_state["_search_ans"],
             st.session_state.get("_search_elapsed", ""),
         )
+
+
+def _render_pagination(lang: str) -> None:
+    ans = st.session_state["_search_ans"]
+    total_sources = ans.total_sources
+    page_size = st.session_state["_search_query"].max_sources
+    page_count = max(1, math.ceil(total_sources / page_size))
+    page = st.session_state.get("_search_page", 0)
+    if page_count <= 1:
+        return
+
+    prev_col, page_col, next_col = st.columns([1, 2, 1])
+    with prev_col:
+        if st.button(
+            get_text("source_search_ui.previous_page", lang),
+            disabled=page == 0,
+            key="source_search_previous_page",
+        ):
+            _execute_search(st.session_state["_search_query"], page - 1)
+            st.rerun()
+    with page_col:
+        st.markdown(
+            get_text("source_search_ui.page_indicator", lang).format(
+                page=page + 1, page_count=page_count
+            )
+        )
+        st.caption(
+            get_text("source_search_ui.page_help", lang).format(
+                start=page * page_size + 1,
+                end=min((page + 1) * page_size, total_sources),
+                total=total_sources,
+            )
+        )
+    with next_col:
+        if st.button(
+            get_text("source_search_ui.next_page", lang),
+            disabled=page + 1 >= page_count,
+            key="source_search_next_page",
+        ):
+            _execute_search(st.session_state["_search_query"], page + 1)
+            st.rerun()
 
 
 # ---------------------------------------------------------------------------

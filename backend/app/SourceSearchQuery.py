@@ -15,3 +15,4 @@ class SourceSearchQuery:
     book_names: List[str] = field(default_factory=list)  # Book.database_name values
     entity_ids: List[str] = field(default_factory=list)
     rel_ids: List[str] = field(default_factory=list)
+    offset: int = 0

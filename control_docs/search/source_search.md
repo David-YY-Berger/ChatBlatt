@@ -3,7 +3,7 @@
 Source of truth: `backend/app/SourceSearchHandler.py`, `backend/app/SourceSearchQuery.py`,
 `backend/db/mongo_parts/source_metadata_mixin.py` (`get_source_metadata_filtered`).
 
-`SourceSearchQuery` fields: `free_text_similarity`, `max_sources`, `passage_types`,
+`SourceSearchQuery` fields: `free_text_similarity`, `max_sources`, `offset`, `passage_types`,
 `book_names` (`Book.database_name` values), `entity_ids`, `rel_ids`, and `src_types`.
 
 1. **Structural filter** — one Mongo query on `SRC_METADATA`. Within a dimension values are
@@ -19,7 +19,10 @@ Source of truth: `backend/app/SourceSearchHandler.py`, `backend/app/SourceSearch
    retained after ranked ones with a warning in the logs. Both indexes are searched
    without a fixed result cap. If neither index can rank any matching source, the search
    reports an error instead of silently presenting unsorted results.
-3. Truncate to `max_sources`, then load `SourceContent` for each.
+3. Keep the total match count, select the `max_sources` window starting at `offset`, then load
+   `SourceContent` for that page. The source-search UI displays 50 sources per page with the total
+   result count and previous/next navigation. Moving between pages re-runs the same filtered and
+   ranked search, so each page preserves the original ordering; shared search URLs open on page one.
 UI entry point for `rel_ids`: Entity Search 'View sources' (see `frontend/overview.md`) passes the Rel keys behind a relationship list item.
 
 ## PDF download (UI only)

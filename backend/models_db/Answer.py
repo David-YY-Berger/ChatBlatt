@@ -19,4 +19,4 @@ class Answer:
     key: str = field(default="0")  # TODO: assign proper unique db key later
     ts: str = field(default_factory=lambda: SystemFunctions.get_ts_str())
     src_contents: List[SourceContent] = field(default_factory=list) #optional..
-
+    total_sources: int = 0

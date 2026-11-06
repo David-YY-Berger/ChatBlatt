@@ -182,6 +182,12 @@ source_search_ui:
   find_sources_button: "חפש מקורות"
   relationship_filter: "קשר"
   clear_relationship: "נקה"
+  found_sources: "נמצאו {count} מקורות"
+  search_time: "ב-{elapsed}"
+  previous_page: "הקודם"
+  next_page: "הבא"
+  page_indicator: "עמוד {page} מתוך {page_count}"
+  page_help: "מוצגים מקורות {start}–{end} מתוך {total}"
   dicta_promo: "מחפשים מנוע חיפוש סמנטי ממש טוב? בדקו את מנוע החיפוש של דיקטא ל[תלמוד]({talmud_link}) ול[תנ\"ך]({tanach_link})."
 
 number_search_ui:

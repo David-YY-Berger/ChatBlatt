@@ -136,6 +136,6 @@ def run_search(query_obj: SourceSearchQuery):
         ans = handler.get_full_answer(query_obj)
 
     elapsed = str(get_ts_datetime() - time_begin)
-    found_count = len(getattr(ans, "src_metadata_lst", []))
+    found_count = ans.total_sources
     logger.info("Search completed. Found %d sources. total search time: %s", found_count, elapsed)
     return ans, elapsed

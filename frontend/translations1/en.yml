@@ -182,6 +182,12 @@ source_search_ui:
   find_sources_button: "Find Sources"
   relationship_filter: "Relationship"
   clear_relationship: "Clear"
+  found_sources: "Found {count} sources"
+  search_time: "in {elapsed}"
+  previous_page: "Previous"
+  next_page: "Next"
+  page_indicator: "Page {page} of {page_count}"
+  page_help: "Showing sources {start}–{end} of {total}"
   dicta_promo: "Looking for a really great semantic search engine? Check out Dicta's [Talmud]({talmud_link}) and [Tanach]({tanach_link}) search engine."
 
 number_search_ui:

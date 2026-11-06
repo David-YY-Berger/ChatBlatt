@@ -63,11 +63,14 @@ class SourceSearchHandler:
             )
 
         src_metadata_lst = self.populate_entity_rel(src_metadata_lst)
-        src_metadata_lst = src_metadata_lst[:query.max_sources]
+        total_sources = len(src_metadata_lst)
+        src_metadata_lst = src_metadata_lst[query.offset:query.offset + query.max_sources]
 
-        return self.create_answer_obj(query, src_metadata_lst)
+        return self.create_answer_obj(query, src_metadata_lst, total_sources)
 
-    def create_answer_obj(self, query:SourceSearchQuery, src_metadata_lst) -> Answer:
+    def create_answer_obj(
+        self, query: SourceSearchQuery, src_metadata_lst, total_sources: int = 0
+    ) -> Answer:
 
         # this code is possibly temporary.. the final front end might expect to be packaged differently..
         entities_from_q = self.db_api.get_entities_by_keys(query.entity_ids) if query.entity_ids else []
@@ -77,7 +80,8 @@ class SourceSearchHandler:
             free_text_input=query.free_text_similarity,
             src_metadata_lst=src_metadata_lst,
             entities=entities_from_q,
-            rels=rels_from_q
+            rels=rels_from_q,
+            total_sources=total_sources,
         )
 
     def get_full_answer(self, query: SourceSearchQuery) -> Answer:

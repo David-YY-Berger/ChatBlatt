@@ -50,8 +50,27 @@ class SourceSearchTests(unittest.TestCase):
         answer = self.handler.get_full_answer(query)
         self.assertEqual([s.key for s in answer.src_metadata_lst], [second.key])
         self.assertEqual(answer.src_contents, [second.key])
+        self.assertEqual(answer.total_sources, 2)
         self.handler.faiss.search.assert_called_once_with("prayer", top_k=None, lang="en")
         self.handler.bm25.search.assert_called_once_with("prayer", top_k=None, lang="en")
+
+    def test_pagination_returns_requested_window_and_total_count(self):
+        sources = [self.add_source(f"TN_Genesis_0_1:{i}") for i in range(5)]
+        self.db.get_entities_by_keys = MagicMock(return_value=[])
+        self.db.get_rels_by_keys = MagicMock(return_value=[])
+        self.db.find_one_source_content = MagicMock(side_effect=lambda key: key)
+
+        answer = self.handler.get_full_answer(
+            SourceSearchQuery("", 2, offset=2)
+        )
+
+        self.assertEqual(answer.src_metadata_lst, sources[2:4])
+        self.assertEqual(answer.src_contents, [sources[2].key, sources[3].key])
+        self.assertEqual(answer.total_sources, 5)
+        self.db.find_one_source_content.assert_has_calls([
+            unittest.mock.call(sources[2].key),
+            unittest.mock.call(sources[3].key),
+        ])
 
     def test_unranked_sources_are_retained_and_hebrew_index_is_used(self):
         a = self.add_source("TN_Genesis_0_1:1", entities=["e"])
