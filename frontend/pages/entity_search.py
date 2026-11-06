@@ -25,7 +25,9 @@ import navigation
 from translations1 import get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
 from system_common.SystemFunctions import get_secret
-from system_common.UrlPaths import PARAM_ENTITY_ID, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS
+from system_common.UrlPaths import (
+    PARAM_ENTITY_ID, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
+)
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
 )
@@ -438,16 +440,15 @@ def _render_entity_item_popover(
                 help=get_text("entity_search_ui.nav_not_available", lang),
             )
 
-        if st.button(
+        st.link_button(
             f"📄 {get_text('entity_search_ui.view_sources', lang)}",
-            key=f"src_{uid}",
-            use_container_width=True,
-            disabled=not rel_keys,
-        ):
-            navigation.go(PAGE_SOURCE_SEARCH, **{
+            page_url(PAGE_SOURCE_SEARCH, {
                 PARAM_SOURCE_RELS: rel_keys,
                 PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {item_name}",
-            })
+            }),
+            use_container_width=True,
+            disabled=not rel_keys,
+        )
 
 
 def _entity_type_to_tab(entity_type) -> str | None:
