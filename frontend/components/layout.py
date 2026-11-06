@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import streamlit as st
@@ -72,6 +73,7 @@ def apply_layout(lang: str) -> None:
             --border: {border};
             --muted: #94a3b8;
             --shadow: rgba(0, 0, 0, 0.35);
+            --loading-label: {json.dumps(get_text("ui.loading", lang), ensure_ascii=False)};
         }}
         html, body {{
             direction: {direction};

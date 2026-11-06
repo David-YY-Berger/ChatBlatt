@@ -1,13 +1,19 @@
-
+merge {{ 
 merge:
 - hidka, hideka
 
 dont:
 - levi
 - yehuda (any tribe of israel)
+- shimon
+- pinehas
+- menahem
 
 ????:
-- yonatan
+- 
+}}
+
+
 todo {{
 
 	- index display en name?
@@ -17,6 +23,52 @@ todo {{
 	- keep fixing app...
 	- hebrew
 	
+}}
+
+prompts {{
+	Todo:
+- run merging script
+
+
+
+----
+--
+
+--
+ROO ######$
+---
+carefully review my code, and control docs. I want you to add content to my AI docs, make things more well documented. Focus on the pipeline, and the app, and frontend. But also document the many one time scripts
+----
+Look at my db with mongo. 
+I want to add indexes to speed up read queries. Which indexes should we add to spread up number search (especially search by number but also search by unit?)? 
+Speed up populating the drop-down options on source search? 
+In general, is it good idea to index the English display name (I feel like it's used a lot?)
+You should not add indexes for me - instead write me a one time script which should do that.
+---
+
+
+---
+When I source search, and filter by entity and also try to use sort by text similarity, it seems to ignore sorting by text similarly. Look over the code, make sure that source search takes into account all parameters - entity's, passage type, sort by similarity, books, etc. 
+---
+Currently, we limit source search by 50 sources at a time. At pagination so that we only fetch /display 50 at a time, but user can see how many there are in total and can click to see the next 50, prev 50, etc 
+----
+When downloading pdf, rendering of Hebrew gets funny. There are boxes that get stock there (maybe because of the vowels?) fix it. Don't clean the vowels
+---
+Go over entire frontend, ensure that every label is properly translated to Hebrew when Hebrew mode is selected. Including (but not limited to): 
+- Names on trees (genealogy and studied from)
+- title of source in html and in pdf 
+- book names
+- Passage types
+
+----
+When on Hebrew mode, alignment of entire website must be right to left. Fix (including but not limited too):
+- eitz habina image should be left of title on main header
+- on menu that appears for phone - headers of entity search and trees should be right to left like rest of that content 
+- 
+
+---
+
+(Design metrics)
 }}
 
 problems with this pipeline {{

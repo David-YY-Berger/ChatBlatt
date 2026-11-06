@@ -39,6 +39,11 @@ and data flows, use the feature guides below.
   selector, graph rendering and source popup. `frontend/assets/styles.css`
   supplies base and responsive styling; `layout.apply_layout` adds theme and
   language-direction styling.
+- When Streamlit reports that a script is running (including page navigation),
+  a localized loading overlay covers the page and blocks pointer interaction.
+  Browsers supporting CSS `interactivity: inert` also prevent keyboard interaction
+  with the main content until the run finishes. Streamlit's Stop button remains
+  available.
 - `frontend/translations1/` contains YAML translations (`en.yml`, `he.yml`) and
   helpers. Use `get_text("path.to.key", lang)`, which falls back to English.
   Page titles use `page_titles.*`; menu labels use `nav.*`, `entity_tabs.*`,

@@ -7,6 +7,7 @@ ui:
   language_label: "שפה"
   select_option: "בחר"
   menu: "תפריט"
+  loading: "טוען, נא להמתין…"
 
 nav:
   home: "בית"

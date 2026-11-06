@@ -9,6 +9,71 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Streamlit shows this widget while a script is running, including navigation. */
+body:has([data-testid="stStatusWidgetRunningIcon"])::before {
+    content: var(--loading-label);
+    position: fixed;
+    inset: 0;
+    z-index: 2147483645;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem 0;
+    background: rgba(15, 27, 44, 0.88);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: wait;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"])::after {
+    content: "";
+    position: fixed;
+    top: calc(50% - 2.5rem);
+    left: calc(50% - 1.5rem);
+    z-index: 2147483646;
+    width: 3rem;
+    height: 3rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: loading-spin 0.8s linear infinite;
+    pointer-events: none;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stMain"] {
+    interactivity: inert;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] {
+    z-index: 2147483647;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"],
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] * {
+    pointer-events: none !important;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] [data-testid="stStatusWidget"],
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] [data-testid="stStatusWidget"] * {
+    pointer-events: auto !important;
+}
+
+body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] button:not([data-testid="stStatusWidget"] button) {
+    interactivity: inert;
+}
+
+@keyframes loading-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body:has([data-testid="stStatusWidgetRunningIcon"])::after {
+        animation: none;
+    }
+}
+
 .app-header {
     padding: 1rem 0 1.5rem 0;
     border-bottom: 1px solid #24354e;
