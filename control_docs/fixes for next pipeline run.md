@@ -63,4 +63,5 @@ population, run from `C:\ChatBlatt`:
 The first command previews the changes; the second deletes only `folio` and
 `page` Number entities, their relationships, and the corresponding source
 metadata references. Each entity is processed in a transaction. Re-running is
-safe; a clean pipeline run will apply the filter automatically.
+safe; a clean pipeline run will apply the filter automatically. To apply when
+running from an IDE instead, uncomment `APPLY = True` at the bottom of the script.

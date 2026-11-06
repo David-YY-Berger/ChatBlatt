@@ -2,9 +2,10 @@
 
 Run from the project root with ``python -m
 backend_pipeline.data_pipeline.one_time_scripts.clean_folio_page_numbers``.
-This is a dry run unless --apply is passed. Stop graph population first and
-back up the Graphs database before applying. Each Number is cleaned in its
-own transaction, so an interrupted run can be safely repeated.
+This is a dry run unless --apply is passed or APPLY is set to True below.
+Stop graph population first and back up the Graphs database before applying.
+Each Number is cleaned in its own transaction, so an interrupted run can be
+safely repeated.
 """
 import argparse
 
@@ -88,19 +89,21 @@ def clean(db, apply: bool) -> None:
     print("Summed counts can include the same source document more than once"
           + (" and the same relationship more than once in a dry run." if not apply else "."))
     if not apply:
-        print("Dry run only. Re-run with --apply to write.")
+        print("Dry run only. Re-run with --apply or set APPLY = True to write.")
 
 
-def main() -> None:
+def main(apply: bool = False) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="Delete matching graph data from the real DB")
     args = parser.parse_args()
     db = DBFactory.get_prod_db_mongo()
     try:
-        clean(db, args.apply)
+        clean(db, apply or args.apply)
     finally:
         db.disconnect()
 
 
 if __name__ == "__main__":
-    main()
+    APPLY = False
+    # APPLY = True  # Uncomment to write to the real DB when running from an IDE.
+    main(APPLY)

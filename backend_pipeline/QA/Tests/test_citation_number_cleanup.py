@@ -1,10 +1,10 @@
 import unittest
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 from backend.db.Collections import CollectionObjs
 from backend.models_db.EntityObjects.ENumber import ENumber
 from backend.models_db.Enums import EntityType, RelType
-from backend_pipeline.data_pipeline.one_time_scripts.clean_folio_page_numbers import clean
+from backend_pipeline.data_pipeline.one_time_scripts import clean_folio_page_numbers as cleanup
 from backend_pipeline.data_pipeline.populator_scripts import DBPopulateEntityRelGraph as population
 from backend_pipeline.QA.Tests.conftest import FakeCollection
 
@@ -93,13 +93,13 @@ class CitationNumberTests(unittest.TestCase):
             "_id": "s1", "entity_keys": ["n1", "n2", "n3", "p"],
             "rel_keys": ["r1", "r2", "r3"], "other": "keep",
         })
-        clean(db, False)
+        cleanup.clean(db, False)
         self.assertEqual(len(entities.find()), 5)
         self.assertEqual(len(relations.find()), 3)
         self.assertEqual(metadata.find_one({"_id": "s1"})["entity_keys"], ["n1", "n2", "n3", "p"])
 
-        clean(db, True)
-        clean(db, True)
+        cleanup.clean(db, True)
+        cleanup.clean(db, True)
         self.assertEqual({doc["key"] for doc in entities.find()}, {"n3", "n4", "p"})
         self.assertEqual([doc["key"] for doc in relations.find()], ["r3"])
         source = metadata.find_one({"_id": "s1"})
@@ -114,9 +114,24 @@ class CitationNumberTests(unittest.TestCase):
         entities.insert_one({"_id": "n", "key": "n", "entityType": "Number", "en_unit": "page"})
         relations.insert_one({"_id": "r", "term1": "n", "term2": "other"})
         with self.assertRaisesRegex(ValueError, "no usable key"):
-            clean(db, True)
+            cleanup.clean(db, True)
         self.assertEqual(len(entities.find()), 1)
         self.assertEqual(len(relations.find()), 1)
+
+    def test_apply_switch_and_cli_flag(self):
+        for configured, argv, expected in (
+            (False, ["script"], False),
+            (True, ["script"], True),
+            (False, ["script", "--apply"], True),
+        ):
+            with self.subTest(configured=configured, argv=argv):
+                db = MagicMock()
+                with patch("sys.argv", argv), \
+                     patch.object(cleanup.DBFactory, "get_prod_db_mongo", return_value=db), \
+                     patch.object(cleanup, "clean") as clean_mock:
+                    cleanup.main(configured)
+                clean_mock.assert_called_once_with(db, expected)
+                db.disconnect.assert_called_once_with()
 
 
 if __name__ == "__main__":
