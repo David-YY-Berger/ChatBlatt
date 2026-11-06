@@ -42,15 +42,16 @@ No name-matching beyond `display_en_name` (`all_en_names` is not searched).
 | File | Role |
 |---|---|
 | `EntityMerger.py` | Key-based merge engine (fold fields, re-point rels / SourceMetadata, delete dup); `choose_target` = entity already named like the final name, else most rels |
-| `merge_candidates.py` | DB-free logic: prefix stripping, grouping, chunking, rendering, `parse_review_file`, `carry_over_decisions`, `select_groups_to_merge` |
+| `merge_candidates.py` | DB-free logic: prefix stripping, grouping, confidence scoring, rendering, `parse_review_file`, `parse_confidence_file`, `carry_over_decisions`, `select_groups_to_merge` |
 | `DBIdentifyPersonMergeCandidates.py` | Read-only; `test_identify_prefix_matches`, `test_identify_same_name_matches` |
 | `DBApplyMergeDecisions.py` | `test_apply_merge_decisions` - applies ticked decisions |
 | `test_merge_candidates.py` | DB-free unit tests (run with the repo `venv`) |
 
 Review files are grouped by match family under `Paths.MERGE_REVIEW_DIR`
 (`.../real_data/merge_review/`): `prefix_matches/person_prefix_matches_NNN.md` and
-`same_name_matches/person_same_name_matches_NNN.md` (EPerson only). Confidence files are stored
-alongside the review files for their family. The identify jobs carry decisions forward from legacy
+`same_name_matches/person_same_name_matches_NNN.md` (EPerson only). The prefix family's consolidated
+`confidence_person_prefix_matches.md` is its decision file; its chunk files contain entity details only.
+Same-name decisions remain in each chunk file. The identify jobs carry decisions forward from legacy
 files previously stored directly in `MERGE_REVIEW_DIR`.
 
 **Groups**
@@ -67,13 +68,18 @@ A person with no candidates appears in no file. An entity can be in both a prefi
 name) are starting points - found groups are still complete. `max_entities_per_file` (default 100); a group is never split.
 
 **Review format** (human + machine): `<!-- merge-group: {"id","kind","keys":[...]} -->`, then `- [ ] merge` and
-`- [ ] dont merge`; tick one with `x`. Neither = undecided, both = conflict (conflict is never merged).
+`- [ ] dont merge`; tick one with `x`. For prefix groups, tick these choices in
+`prefix_matches/confidence_person_prefix_matches.md`, not the per-chunk detail files. For same-name groups,
+tick the per-chunk review files. Neither = undecided, both = conflict (conflict is never merged).
+Any candidate group with a member assigned a role other than Tanna or Amora receives 0% confidence.
 
 **Re-running identify is safe for decisions.** It reads the existing family files first and carries every tick
 into the regenerated files when the group id AND the exact set of entity keys still match; previously ticked
 groups not rediscovered (smaller limit) are kept if their entities still exist. Deliberately NOT carried: a group
 whose membership changed (comes back unticked - re-review), and groups whose entities were merged away. Files are
 rewritten/renumbered in place - so editing a file while a run is writing it, or deleting files you ticked, loses ticks.
+Prefix decisions are carried from the consolidated confidence file; pre-existing ticks in prefix chunk files are
+migrated on the next identify run.
 Running with limit 50, ticking, then rerunning with 100 is fine.
 
 **Apply** (`DBApplyMergeDecisions`): `dry_run` defaults to **True** (prints the plan). `undecided_policy`:

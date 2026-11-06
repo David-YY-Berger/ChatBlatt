@@ -146,6 +146,8 @@ entity_filters:
   group_group: "קבוצה"
   roles_label: "תפקיד"
   roles_all: "כל התפקידים"
+  time_period_label: "תקופה"
+  time_period_all: "כל התקופות"
   place_type_label: "סוג מקום"
   place_type_all: "כל הסוגים"
   symbol_type_label: "סוג סמל"

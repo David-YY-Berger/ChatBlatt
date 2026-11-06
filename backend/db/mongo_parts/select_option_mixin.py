@@ -53,6 +53,7 @@ class SelectOptionMongoMixin:
             "isNonJew": doc.get("isNonJew"),
             "isGroup": doc.get("isGroup"),
             "roles": doc.get("roles", []),
+            "timePeriod": doc.get("timePeriod"),
         }
 
     @staticmethod

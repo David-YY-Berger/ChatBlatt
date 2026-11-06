@@ -4,7 +4,7 @@
 import unittest
 
 from backend.models_db.EntityObjects.EPerson import EPerson
-from backend.models_db.Enums import RelType
+from backend.models_db.Enums import RelType, RoleType
 from backend.models_db.Rel import Rel
 from backend_pipeline.data_pipeline.populator_scripts.merge_scripts import merge_candidates as mc
 
@@ -55,6 +55,31 @@ class MergeCandidatesTest(unittest.TestCase):
         self.assertEqual((parsed[0]["decision"], parsed[0]["keys"]), ("merge", ["4", "5"]))
         both = merged.replace("- [ ] dont merge", "- [X] dont merge")
         self.assertEqual(mc.parse_review_file(both)[0]["decision"], "conflict")
+
+    def test_confidence_file_owns_prefix_decisions(self):
+        groups, _ = mc.find_groups(self.people, mc.KIND_PREFIX, None)
+        rated = mc.rate_groups(groups, {})
+        text = mc.render_confidence_file("t", rated, {"prefix:akiva": "dont_merge"},
+                                         include_decisions=True)
+        parsed = mc.parse_confidence_file(text)
+        self.assertEqual(parsed[0]["decision"], "dont_merge")
+        self.assertEqual(mc.carry_over_decisions(groups, parsed), {"prefix:akiva": "dont_merge"})
+        self.assertEqual(mc.select_groups_to_merge(parsed), [])
+        self.assertIn("- [x] dont merge", text)
+
+        names = {p.key: p for p in self.people}
+        details = mc.render_file("t", "d", groups, {}, names, 1, 1, 1, include_decisions=False)
+        self.assertNotIn("- [ ] merge", details)
+        self.assertNotIn("- [ ] dont merge", details)
+
+    def test_non_tanna_amora_role_forces_zero_confidence(self):
+        groups, _ = mc.find_groups(self.people, mc.KIND_PREFIX, None)
+        groups[0].entities[0].roles = [RoleType.Tanna]
+        groups[0].entities[1].roles = [RoleType.Prophet]
+        confidence, reasons = mc.rate_group(groups[0], {})
+        self.assertEqual(confidence, 0)
+        self.assertTrue(any("Prophet" in reason for reason in reasons))
+
     def test_confidence_sorted_and_parsed(self):
         groups, _ = mc.find_groups(self.people, mc.KIND_PREFIX, None)
         groups += mc.find_groups(self.people, mc.KIND_SAME_NAME, None)[0]
@@ -64,6 +89,7 @@ class MergeCandidatesTest(unittest.TestCase):
         self.assertGreater(rated[0]["confidence"], rated[1]["confidence"])
         parsed = mc.parse_confidence_file(mc.render_confidence_file("t", rated))
         self.assertEqual([p["id"] for p in parsed], ["prefix:akiva", "same_name:joash"])
+        self.assertTrue(all(p["decision"] == "undecided" for p in parsed))
 
     def test_carry_over_and_select(self):
         groups, _ = mc.find_groups(self.people, mc.KIND_SAME_NAME, None)

@@ -16,7 +16,8 @@ Candidate kinds (one review-file family each):
 Review file format (markdown, readable by humans AND machines):
   every group is introduced by one machine-readable HTML comment
       <!-- merge-group: {"id": "...", "kind": "...", "keys": ["<entity key>", ...]} -->
-  followed by two checkboxes. The human ticks (replaces the space with x) at most one:
+  Same-name review groups are followed by two checkboxes. Prefix decisions instead live in the
+  consolidated confidence file. The human ticks (replaces the space with x) at most one:
       - [ ] merge          -> merge every entity in `keys` into one
       - [ ] dont merge     -> keep them separate
   Neither ticked = undecided (do nothing); both ticked = conflict (do nothing).
@@ -209,18 +210,21 @@ def _enum_value(v: Any) -> Any:
 
 
 def render_group(group: Group, rels_by_entity: Dict[str, List[Any]], names: Dict[str, Any], number: int,
-                 decision: str = "undecided") -> str:
+                 decision: str = "undecided", include_decisions: bool = True) -> str:
     meta = json.dumps({"id": group.id, "kind": group.kind, "keys": [e.key for e in group.entities]}, ensure_ascii=False)
     status = {"merge": "merge", "dont_merge": "dont merge"}.get(decision, "undecided")
     label = html.escape(group.label)
-    parts = [f"<details>", f"<summary><b>Group {number}: \"{label}\" ({len(group.entities)} entities)</b> - {status}</summary>",
-             "", f"<!-- merge-group: {meta} -->"]
+    summary = f"<b>Group {number}: \"{label}\" ({len(group.entities)} entities)</b>"
+    if include_decisions:
+        summary += f" - {status}"
+    parts = ["<details>", f"<summary>{summary}</summary>", "", f"<!-- merge-group: {meta} -->"]
     if group.kind == KIND_PREFIX:
         parts.append(f"Suggested final display name: `{group.label}`")
     parts.append("")
-    parts.append(MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "merge" else MERGE_CHECKBOX)
-    parts.append(DONT_MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "dont_merge" else DONT_MERGE_CHECKBOX)
-    parts.append("")
+    if include_decisions:
+        parts.append(MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "merge" else MERGE_CHECKBOX)
+        parts.append(DONT_MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "dont_merge" else DONT_MERGE_CHECKBOX)
+        parts.append("")
     for i, e in enumerate(group.entities, 1):
         parts.append(render_entity(i, e, rels_by_entity.get(e.key, []), names))
         parts.append("")
@@ -234,12 +238,7 @@ FILE_HEADER = """# Merge candidates: {title} - file {file_no}/{file_count}
 
 {description}
 
-**How to review:** under each group tick `[x]` on exactly ONE line:
-- `- [x] merge` - these entities are the same; merge them into one.
-- `- [x] dont merge` - they are different; keep them separate.
-Leave both unticked to decide later (undecided groups are ignored). Tip: to merge most groups,
-just tick `dont merge` on the few exceptions (and vice versa) - a later step can apply a default
-to the unticked rest. Do not edit the `<!-- merge-group: ... -->` comments (machine-readable).
+{decision_instructions}
 
 Groups in this file: {group_count}
 """
@@ -247,12 +246,24 @@ Groups in this file: {group_count}
 
 def render_file(title: str, description: str, groups: List[Group], rels_by_entity: Dict[str, List[Any]],
                 names: Dict[str, Any], file_no: int, file_count: int, first_group_number: int,
-                decisions: Optional[Dict[str, str]] = None) -> str:
+                decisions: Optional[Dict[str, str]] = None, include_decisions: bool = True) -> str:
     decisions = decisions or {}
+    decision_instructions = (
+        "**How to review:** under each group tick `[x]` on exactly ONE line:\n"
+        "- `- [x] merge` - these entities are the same; merge them into one.\n"
+        "- `- [x] dont merge` - they are different; keep them separate.\n"
+        "Leave both unticked to decide later. Do not edit the `<!-- merge-group: ... -->` comments."
+        if include_decisions else
+        "This file contains entity details only. Make prefix merge decisions in the consolidated "
+        "`confidence_person_prefix_matches.md` file."
+    )
     header = FILE_HEADER.format(title=title, description=description, file_no=file_no,
-                                file_count=file_count, group_count=len(groups))
+                                file_count=file_count, group_count=len(groups),
+                                decision_instructions=decision_instructions)
     body = "\n\n".join(
-        render_group(g, rels_by_entity, names, first_group_number + i, decisions.get(g.id, "undecided")) for i, g in enumerate(groups)
+        render_group(g, rels_by_entity, names, first_group_number + i, decisions.get(g.id, "undecided"),
+                     include_decisions)
+        for i, g in enumerate(groups)
     )
     return f"{header}\n---\n\n{body}\n"
 
@@ -309,6 +320,15 @@ def _pair_confidence(kind: str, a: Any, b: Any, rels_a: List[Any], rels_b: List[
 
 def rate_group(group: Group, rels_by_entity: Dict[str, List[Any]]) -> Tuple[int, List[str]]:
     """Confidence (0-100) that all entities of `group` are the same person = the weakest pair's score."""
+    disallowed_roles = []
+    for entity in group.entities:
+        roles = [_enum_value(role) for role in (getattr(entity, "roles", None) or [])]
+        unexpected = [role for role in roles if role not in {"Tanna", "Amora"}]
+        if unexpected:
+            disallowed_roles.append(f"`{entity.display_en_name}` has non-Tanna/Amora role(s): {', '.join(unexpected)}")
+    if disallowed_roles:
+        return 0, ["non-Tanna/Amora roles present; group is not mergeable by this candidate list"] + disallowed_roles
+
     worst: Optional[Tuple[int, List[str]]] = None
     ents = group.entities
     for i in range(len(ents)):
@@ -334,26 +354,60 @@ CONFIDENCE_HEADER = """# Merge confidence: {title}
 
 Confidence (0-100%) that all entities of each group are the same person, most confident first.
 Machine-read control file - do not edit the `<!-- merge-confidence: ... -->` comments.
-Advisory only: decisions are still made by ticking the review files.
+{decision_instructions}
 
 Groups: {count}
 """
 
 
-def render_confidence_file(title: str, rated: List[Dict[str, Any]]) -> str:
-    parts = [CONFIDENCE_HEADER.format(title=title, count=len(rated))]
+def render_confidence_file(title: str, rated: List[Dict[str, Any]],
+                           decisions: Optional[Dict[str, str]] = None,
+                           include_decisions: bool = False) -> str:
+    decisions = decisions or {}
+    decision_instructions = (
+        "Tick exactly one `merge` / `dont merge` checkbox here; this is the decision source for this family."
+        if include_decisions else "Advisory only: decisions are made in the review files."
+    )
+    parts = [CONFIDENCE_HEADER.format(title=title, count=len(rated),
+                                     decision_instructions=decision_instructions)]
     for rank, r in enumerate(rated, 1):
         meta = json.dumps({"id": r["id"], "confidence": r["confidence"], "keys": r["keys"]}, ensure_ascii=False)
         parts.append(f"{rank}. **{r['confidence']}%** \"{html.escape(r['label'])}\" ({len(r['keys'])} entities) "
                      f"<!-- merge-confidence: {meta} -->")
+        if include_decisions:
+            decision = decisions.get(r["id"], "undecided")
+            parts.append(MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "merge" else MERGE_CHECKBOX)
+            parts.append(DONT_MERGE_CHECKBOX.replace("[ ]", "[x]") if decision == "dont_merge" else DONT_MERGE_CHECKBOX)
         parts.extend(f"   - {reason}" for reason in r["reasons"])
         parts.append("")
     return "\n".join(parts)
 
 
 def parse_confidence_file(text: str) -> List[Dict[str, Any]]:
-    """[{"id", "confidence", "keys"}] in file order (most confident first)."""
-    return [json.loads(m.group(1)) for line in text.splitlines() if (m := _CONFIDENCE_COMMENT_RE.search(line))]
+    """[{"id", "confidence", "keys", "decision"}] in file order (most confident first)."""
+    results: List[Dict[str, Any]] = []
+    current: Optional[Dict[str, Any]] = None
+    merge = dont = False
+
+    def flush() -> None:
+        if current is not None:
+            if merge and dont:
+                current["decision"] = "conflict"
+            else:
+                current["decision"] = "merge" if merge else "dont_merge" if dont else "undecided"
+            results.append(current)
+
+    for line in text.splitlines():
+        match = _CONFIDENCE_COMMENT_RE.search(line)
+        if match:
+            flush()
+            current = json.loads(match.group(1))
+            merge = dont = False
+        elif current is not None:
+            merge = merge or bool(_MERGE_TICKED_RE.match(line.strip()))
+            dont = dont or bool(_DONT_MERGE_TICKED_RE.match(line.strip()))
+    flush()
+    return results
 
 
 # ─── Reading decisions back (machine side) ──────────────────────────────────────

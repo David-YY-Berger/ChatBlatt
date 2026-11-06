@@ -15,13 +15,13 @@ from translations1 import get_text
 def render_person_filters(options: list, lang: str, key_prefix: str = "filter_person") -> list:
     """Person filters: faith (Jewish/Non-Jewish/All), gender (Women/Men/All),
     individual-vs-group (All default), and role checkboxes (All default)."""
-    from backend.models_db.Enums import RoleType
+    from backend.models_db.Enums import RoleType, TimePeriod
 
     with st.container(border=True):
-        st.markdown(f"**{get_text('entity_filters.section_title', lang)}**")
-        # Faith / gender / individual-group stacked horizontally, with the
-        # (vertically-stacked) role checkboxes pushed all the way to the right.
-        col1, col2, col3, col4 = st.columns(4)
+        # Row 1: three compact segmented controls. Row 2: role / time-period
+        # multiselects (empty selection = no filtering), replacing the tall
+        # stack of role checkboxes.
+        col1, col2, col3 = st.columns(3)
         with col1:
             religion = render_tri_state_filter(
                 state_key=f"{key_prefix}_religion",
@@ -49,12 +49,21 @@ def render_person_filters(options: list, lang: str, key_prefix: str = "filter_pe
                 option_b=("group", "entity_filters.group_group"),
                 lang=lang,
             )
-        with col4:
-            selected_roles = render_multi_checkbox_filter(
+        col5, col6 = st.columns(2)
+        with col5:
+            selected_roles = render_multiselect_filter(
                 enum_cls=RoleType,
                 label_key="entity_filters.roles_label",
                 all_key="entity_filters.roles_all",
-                state_prefix=f"{key_prefix}_role",
+                state_key=f"{key_prefix}_roles",
+                lang=lang,
+            )
+        with col6:
+            selected_periods = render_multiselect_filter(
+                enum_cls=TimePeriod,
+                label_key="entity_filters.time_period_label",
+                all_key="entity_filters.time_period_all",
+                state_key=f"{key_prefix}_time_period",
                 lang=lang,
             )
 
@@ -79,8 +88,29 @@ def render_person_filters(options: list, lang: str, key_prefix: str = "filter_pe
             continue
         if selected_roles is not None and not (set(opt.roles) & selected_roles):
             continue
+        if selected_periods is not None and opt.timePeriod not in selected_periods:
+            continue
         filtered.append(opt)
     return filtered
+
+
+def render_multiselect_filter(
+    enum_cls,
+    label_key: str,
+    all_key: str,
+    state_key: str,
+    lang: str,
+) -> set | None:
+    """Compact multiselect over an enum. Empty selection means 'All' (returns
+    None = no filtering); otherwise the set of chosen enum members."""
+    chosen = st.multiselect(
+        get_text(label_key, lang),
+        options=list(enum_cls),
+        format_func=lambda m: m.value,
+        placeholder=get_text(all_key, lang),
+        key=state_key,
+    )
+    return set(chosen) if chosen else None
 
 
 

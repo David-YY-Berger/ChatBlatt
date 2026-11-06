@@ -1,8 +1,8 @@
 # bs"d
 """
 DBApplyMergeDecisions - merge persons according to the ticked review files written by
-DBIdentifyPersonMergeCandidates (Paths.MERGE_REVIEW_DIR/<match-family>/person_*_matches_NNN.md). Merges BY ENTITY KEY
-(EntityMerger), so same-named entities are no problem.
+DBIdentifyPersonMergeCandidates. Prefix decisions come from the family's consolidated confidence file;
+other decisions come from per-chunk review files. Merges BY ENTITY KEY (EntityMerger), so same-named entities are no problem.
 
   - `merge` ticked           -> merged.
   - `dont merge` / both      -> never merged.
@@ -43,7 +43,14 @@ class DBApplyMergeDecisions(DBParentClass):
         pattern = os.path.join(self.review_dir, "**", "person_*_matches_*.md")
         for path in sorted(glob.glob(pattern, recursive=True)):
             with open(path, "r", encoding="utf-8") as f:
-                parsed.extend(mc.parse_review_file(f.read()))
+                parsed.extend(g for g in mc.parse_review_file(f.read())
+                              if not g["id"].startswith(f"{mc.KIND_PREFIX}:"))
+        prefix_confidence_path = os.path.join(
+            self.review_dir, "prefix_matches", "confidence_person_prefix_matches.md"
+        )
+        if os.path.exists(prefix_confidence_path):
+            with open(prefix_confidence_path, "r", encoding="utf-8") as f:
+                parsed.extend(mc.parse_confidence_file(f.read()))
         if not parsed:
             print(f"No review files / groups found in {self.review_dir}.")
             return

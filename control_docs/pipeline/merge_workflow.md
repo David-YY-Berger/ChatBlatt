@@ -35,28 +35,39 @@ Settings (in `setUp`, or set as attributes before calling it):
   Set `None` to check everyone. Persons with no candidates are never written to a file.
 - `max_entities_per_file` - default 100 (a group is never split across files).
 
-Each run also writes a **confidence control file** next to the review files, in the same family folder:
+Each run also writes a **confidence file** next to the review files, in the same family folder:
 `prefix_matches/confidence_person_prefix_matches.md` /
 `same_name_matches/confidence_person_same_name_matches.md`. It rates every group 0-100% (how likely all its entities are the same person),
 sorted most confident first. Each row carries a machine-readable `<!-- merge-confidence: {"id", "confidence", "keys"} -->`
-comment (read with `merge_candidates.parse_confidence_file`). Heuristic, advisory only: weakest pair in the group wins;
+comment (read with `merge_candidates.parse_confidence_file`). For prefix groups, tick merge decisions in the
+consolidated prefix confidence file; the per-chunk prefix files are detail-only. Same-name decisions remain in
+their per-chunk files. Heuristic: weakest pair in the group wins;
 a title-prefix/same-name base score is raised by shared Hebrew name/parents/relations and lowered by conflicting
-gender/time period/isNonJew/isGroup, different parents, or pre-populated entities.
+gender/time period/isNonJew/isGroup, different parents, or pre-populated entities. Any group containing a member
+with a role other than Tanna or Amora is rated 0%.
 
 Start with the prefix test (50), review/apply, then raise the limit (e.g. 200, then `None`) and re-run.
 
 ## Step 2 - Review the files
 
-Open the `.md` files in the corresponding match-family folder under `MERGE_REVIEW_DIR`. Each group looks like:
+Open the `.md` files in the corresponding match-family folder under `MERGE_REVIEW_DIR`. Prefix groups are detailed
+in the chunk files and decided in the consolidated confidence file; same-name groups are both detailed and decided
+in the chunk files. A group looks like:
 
 ```
 ## Group 3: "akiva" (3 entities)
 <!-- merge-group: {"id": "prefix:akiva", "kind": "prefix", "keys": ["...", "..."]} -->
+```
+
+The prefix chunk files contain entity details only. In `confidence_person_prefix_matches.md`, each group has:
+
+```markdown
+3. **95%** "akiva" (3 entities) <!-- merge-confidence: {"id": "prefix:akiva", "confidence": 95, "keys": ["...", "..."]} -->
 - [ ] merge
 - [ ] dont merge
 ```
 
-Tick **one** line by changing `[ ]` to `[x]`. Do not edit the `<!-- ... -->` comment.
+Tick **one** line by changing `[ ]` to `[x]` in that consolidated file. Do not edit the `<!-- ... -->` comment.
 - Neither ticked = undecided. Both ticked = conflict (never merged).
 - Merge only a few -> tick `merge` on those. Merge most -> tick `dont merge` on the exceptions and use
   `undecided_policy = "merge"` in step 3.
@@ -69,11 +80,14 @@ Re-running reads your existing files first and carries every tick over to the re
 and its exact set of entity keys are unchanged; ticked groups the smaller/newer scan doesn't rediscover are kept.
 A group whose membership changed returns **unticked** (re-review). Files are rewritten/renumbered in place, so
 close them in your editor first and don't delete ticked files. Ticking 2 groups, then re-running with a bigger
-limit and ticking one more, is fine.
+limit and ticking one more, is fine. Existing ticks in prefix chunk files are migrated to the consolidated
+prefix confidence file on the next identify run.
 
 ## Step 3 - Apply decisions
 
-Module `DBApplyMergeDecisions`, class `DBApplyMergeDecisions`, method `test_apply_merge_decisions`.
+Module `DBApplyMergeDecisions`, class `DBApplyMergeDecisions`, method `test_apply_merge_decisions`. It reads prefix
+decisions only from `prefix_matches/confidence_person_prefix_matches.md`; prefix chunk files are not decision inputs.
+Same-name decisions continue to come from their chunk files.
 
 1. **Dry run (default, `dry_run = True`)**: prints `[DRY RUN] <group>: merge [dup keys] into <target> as '<name>'`
    for every selected group. Nothing is written. Check the plan.

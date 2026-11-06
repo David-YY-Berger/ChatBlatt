@@ -146,6 +146,8 @@ entity_filters:
   group_group: "Group"
   roles_label: "Role"
   roles_all: "All Roles"
+  time_period_label: "Time Period"
+  time_period_all: "All Periods"
   place_type_label: "Place Type"
   place_type_all: "All Types"
   symbol_type_label: "Symbol Type"

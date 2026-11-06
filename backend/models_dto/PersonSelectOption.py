@@ -4,7 +4,7 @@ from typing import List, Optional
 
 from pydantic import Field
 
-from backend.models_db.Enums import RoleType
+from backend.models_db.Enums import RoleType, TimePeriod
 from backend.models_dto.EntitySelectOption import EntitySelectOption
 
 
@@ -18,6 +18,7 @@ class PersonSelectOption(EntitySelectOption):
     isNonJew: Optional[bool] = None
     isGroup: Optional[bool] = None
     roles: List[RoleType] = Field(default_factory=list)
+    timePeriod: Optional[TimePeriod] = None
 
     def roles_label(self) -> str:
         """Lowercase, comma-separated role names (e.g. "king, prophet"); "" if none."""
