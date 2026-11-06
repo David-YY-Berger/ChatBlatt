@@ -12,3 +12,4 @@ per context × source). Entity model: `data_model/entities/number.md`.
 - **Results**: big number header → coloured category tabs (with counts) → per-tab unit filter
   → table.
 - **Results list**: organised by **unit** (`_group_by_unit`). Every unit is a collapsed card showing a chevron, the unit name and a source-count badge. Opening a card reveals one row per source: Context(s) (all contexts of that unit in that source, merged), Source Summary, and Source (click opens the source popup, positioned near the click; see `components/source_popup.py` `spOpen`). Rendered as static HTML in an iframe; expand/collapse is inline JS that also resizes the iframe (`window.frameElement`).
+- **Unit search**: matching numbers are sorted and shown as expandable rows with their categories and mention counts. Expanding a number shows the same category tabs, contexts, summaries, and source popups as number search, restricted to the selected unit.

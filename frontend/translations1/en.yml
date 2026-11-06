@@ -202,6 +202,7 @@ number_search_ui:
   error_empty_unit: "Please enter a unit before searching"
   no_unit_results: "No numbers found for unit '{value}' in the database."
   unit_results_count: "numbers found"
+  no_unit_sources: "No source details are available for this number and unit."
   col_number: "Number"
   col_categories: "Categories"
   col_mentions: "Mentions"

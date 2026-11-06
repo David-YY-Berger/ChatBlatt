@@ -56,6 +56,7 @@ class UnitNumberRow:
     value: str
     categories: List[NumberCategory] = field(default_factory=list)
     mentions: int = 0  # total contexts across all matching entities for this number
+    occurrences: NumberSearchResult = field(default_factory=NumberSearchResult)
 
 
 @dataclass
@@ -83,21 +84,24 @@ class NumberSearchLogic:
         """All distinct (en_unit, heb_unit) pairs for the unit combobox."""
         return self.db.get_number_units()
 
-    def execute_by_unit(self, unit: str) -> Optional[UnitSearchResult]:
+    def execute_by_unit(self, unit: str, lang: str = LANG_EN) -> Optional[UnitSearchResult]:
         """Find all numbers counted in *unit*, collapsed to one row per number value."""
         enumbers: List[ENumber] = self.db.get_enumbers_by_unit(unit)
         if not enumbers:
             return None
 
         rows: Dict[str, UnitNumberRow] = {}
+        numbers_by_value: Dict[str, List[ENumber]] = {}
         for number in enumbers:
             row = rows.setdefault(number.display_en_name, UnitNumberRow(value=number.display_en_name))
+            numbers_by_value.setdefault(number.display_en_name, []).append(number)
             if number.numberCategory and number.numberCategory not in row.categories:
                 row.categories.append(number.numberCategory)
             row.mentions += max(len(number.contexts), 1)
 
         for row in rows.values():
             row.categories.sort(key=lambda c: c.ordinal)
+            row.occurrences = self._build_occurrences(numbers_by_value[row.value], lang)
         ordered = sorted(rows.values(), key=lambda r: _sort_key(r.value))
         return UnitSearchResult(unit=unit.strip(), rows=ordered)
 
@@ -117,8 +121,11 @@ class NumberSearchLogic:
             print("no numbers found in db call")
             return None
 
-        by_category: Dict[Optional[NumberCategory], List[NumberOccurrenceDTO]] = {}
-        total_count = 0
+        result = self._build_occurrences(enumbers, lang)
+        return result if result.total_count else None
+
+    def _build_occurrences(self, enumbers: List[ENumber], lang: str) -> NumberSearchResult:
+        result = NumberSearchResult()
 
         for number in enumbers:
             cat: Optional[NumberCategory] = number.numberCategory
@@ -126,8 +133,8 @@ class NumberSearchLogic:
             sources = self.db.get_source_metadata_by_entity_key(number.key)
             sources_sorted = sorted(sources)  # SourceClass implements __lt__ for canonical order
 
-            if cat not in by_category:
-                by_category[cat] = []
+            if cat not in result.by_category:
+                result.by_category[cat] = []
 
             for src in sources_sorted:
                 source_str = src.to_heb_str() if lang == LANG_HE else str(src)
@@ -135,7 +142,7 @@ class NumberSearchLogic:
                 en_contexts = [context.en_context for context in number.get_contexts_for_source(src.key)] or [None]
 
                 for en_context in en_contexts:
-                    by_category[cat].append(
+                    result.by_category[cat].append(
                         NumberOccurrenceDTO(
                             en_unit=number.en_unit,
                             en_context=en_context,
@@ -146,9 +153,6 @@ class NumberSearchLogic:
                             source_str_heb=src.to_heb_str(),
                         )
                     )
-                    total_count += 1
+                    result.total_count += 1
 
-        if total_count == 0:
-            return None
-
-        return NumberSearchResult(by_category=by_category, total_count=total_count)
+        return result

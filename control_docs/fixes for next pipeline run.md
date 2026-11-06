@@ -32,3 +32,15 @@ into the current DB. Not needed after a clean re-run with this fix. Stale person
 
 **Verify after fix:** run `one_time_scripts/check_person_to_tribe_rels.py`. It should list many
 different people per tribe, not only same-name pairs.
+
+## 2. Entities to watch out for merging
+
+**Problem:** Some entities share names but refer to different concepts across different sources (Tanakh vs. Talmud). 
+Merging these entities during deduplication can lose important semantic distinctions.
+
+**Entities to preserve separately:**
+- **Levi** (Amora and Tanach)
+  - Levi (biblical patriarch, Genesis)
+  - Levi (Amora, Babylonian Talmud)
+  
+*Add more entities as they are identified during enrichment and entity resolution...*

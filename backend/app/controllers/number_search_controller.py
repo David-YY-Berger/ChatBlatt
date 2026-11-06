@@ -85,6 +85,6 @@ class NumberSearchController:
         try:
             if not request.unit.strip():
                 return UnitSearchResponse(success=False, error="Unit is empty")
-            return UnitSearchResponse(success=True, result=self._logic.execute_by_unit(request.unit))
+            return UnitSearchResponse(success=True, result=self._logic.execute_by_unit(request.unit, request.lang))
         except Exception as e:
             return UnitSearchResponse(success=False, error=str(e))

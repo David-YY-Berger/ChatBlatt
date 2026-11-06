@@ -243,33 +243,40 @@ function resizeFrame() {
 # Source content fetching
 # ---------------------------------------------------------------------------
 
-def _fetch_source_contents(result: NumberSearchResult) -> dict:
+def _fetch_source_contents(results: list[NumberSearchResult], cache_key: str) -> dict:
     """
-    Fetch SourceContent objects for all unique source keys in *result*.
+    Fetch SourceContent objects for all unique source keys in *results*.
     Results are cached in session_state to avoid repeated DB calls on re-renders.
     Returns a dict mapping source_key → SourceContent (or None on error).
     """
-    cache_key = "number_search_source_contents"
     cached: dict | None = st.session_state.get(cache_key)
     if cached is not None:
         return cached
 
     unique_keys: set[str] = set()
-    for occurrences in result.by_category.values():
-        for occ in occurrences:
-            unique_keys.add(occ.source_key)
+    for result in results:
+        for occurrences in result.by_category.values():
+            for occ in occurrences:
+                unique_keys.add(occ.source_key)
+
+    if not unique_keys:
+        return {}
 
     from backend.db.DBFactory import DBFactory
     db = DBFactory.get_prod_db_mongo()
 
     contents: dict = {}
+    failed = False
     for key in unique_keys:
         try:
             contents[key] = db.find_one_source_content(key)
-        except Exception:
+        except Exception as exc:
+            st.warning(f"Could not load source {key}: {exc}")
             contents[key] = None
+            failed = True
 
-    st.session_state[cache_key] = contents
+    if not failed:
+        st.session_state[cache_key] = contents
     return contents
 
 
@@ -414,6 +421,7 @@ def _run_unit_search(unit: str, lang: str) -> None:
     response = NumberSearchController().handle_unit(UnitSearchRequest(unit=unit, lang=lang))
     st.session_state["unit_search_response"] = response
     st.session_state["unit_search_value"] = unit
+    st.session_state.pop("unit_search_source_contents", None)
 
 
 # ---------------------------------------------------------------------------
@@ -565,26 +573,20 @@ def _render_unit_results(lang: str) -> None:
         unsafe_allow_html=True,
     )
 
-    # Plain HTML table: st.dataframe lazy-loads a JS chunk that fails on some deployments.
-    headers = [
-        get_text("number_search_ui.col_number", lang),
-        get_text("number_search_ui.col_categories", lang),
-        get_text("number_search_ui.col_mentions", lang),
-    ]
-    body = "".join(
-        "<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
-            html.escape(row.value),
-            html.escape(", ".join(f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories) or "—"),
-            row.mentions,
+    source_contents = _fetch_source_contents(
+        [row.occurrences for row in result.rows], "unit_search_source_contents"
+    )
+    for row in result.rows:
+        categories = ", ".join(f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories) or "—"
+        label = (
+            f"{row.value} · {categories} · {row.mentions} "
+            f"{get_text('number_search_ui.col_mentions', lang)}"
         )
-        for row in result.rows
-    )
-    st.markdown(
-        "<table style='width:100%; border-collapse:collapse;'>"
-        "<thead><tr>" + "".join(f"<th style='text-align:start; padding:0.4rem 0.6rem;'>{html.escape(h)}</th>" for h in headers)
-        + "</tr></thead><tbody>" + body + "</tbody></table>",
-        unsafe_allow_html=True,
-    )
+        with st.expander(label):
+            if row.occurrences.total_count:
+                _render_category_results(row.occurrences, source_contents)
+            else:
+                st.info(get_text("number_search_ui.no_unit_sources", lang))
 
 # ---------------------------------------------------------------------------
 # Results rendering
@@ -608,9 +610,7 @@ def _render_results(lang: str) -> None:
         return
 
     # Fetch source content for popup support (cached in session_state)
-    source_contents = _fetch_source_contents(result)
-
-    by_cat = result.by_category
+    source_contents = _fetch_source_contents([result], "number_search_source_contents")
 
     # ── Big number header ──────────────────────────────────────────────────
     plural = "s" if result.total_count != 1 else ""
@@ -626,6 +626,13 @@ def _render_results(lang: str) -> None:
         """,
         unsafe_allow_html=True,
     )
+
+    _render_category_results(result, source_contents)
+
+
+def _render_category_results(result: NumberSearchResult, source_contents: dict) -> None:
+    """Render the shared category tabs and source details for a number."""
+    by_cat = result.by_category
 
     # ── Build ordered tab entries (all NumberCategory values + None if present) ──
     tab_entries: list[tuple] = []  # (cat, color, label)

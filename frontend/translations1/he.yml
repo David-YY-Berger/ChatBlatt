@@ -202,6 +202,7 @@ number_search_ui:
   error_empty_unit: "אנא הכנס יחידה לפני החיפוש"
   no_unit_results: "לא נמצאו מספרים עבור היחידה '{value}' במסד הנתונים."
   unit_results_count: "מספרים נמצאו"
+  no_unit_sources: "אין פרטי מקורות למספר וליחידה אלה."
   col_number: "מספר"
   col_categories: "קטגוריות"
   col_mentions: "אזכורים"
