@@ -23,8 +23,8 @@ TOOLS = (
     (PAGE_NUMBER_SEARCH, "number_search_main.jpg", "home_tools.number_search_description"),
     (PAGE_SOURCE_SEARCH, "source_search_main.jpg", "home_tools.source_search_description"),
     (PAGE_ENTITY_SEARCH, "entity_search_main.jpg", "home_tools.entity_search_description"),
-    (PAGE_GENOLOGY, "trees_main.jpg", "home_tools.genology_description"),
-    (PAGE_STUDIED_FROM, "trees_main.jpg", "home_tools.studied_from_description"),
+    (PAGE_GENOLOGY, "trees.jpg", "home_tools.genology_description"),
+    (PAGE_STUDIED_FROM, "trees.jpg", "home_tools.studied_from_description"),
 )
 
 
