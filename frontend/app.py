@@ -97,7 +97,9 @@ def _build_navigation(lang: str):
         get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
     }
     page = st.navigation(groups, position="top")
-    _render_mobile_menu(groups, lang)
+    landing = {pages[PAGE_ENTITY_SEARCH], pages[PAGE_TREES]}
+    mobile_groups = {t: [p for p in g if p not in landing] for t, g in groups.items()}
+    _render_mobile_menu(mobile_groups, lang)
     return page
 
 
