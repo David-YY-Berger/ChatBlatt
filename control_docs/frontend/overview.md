@@ -1,7 +1,7 @@
-# Frontend — Overview (stub)
+# Frontend — UI overview
 
-Source of truth: `frontend/` (Streamlit app). Expand these docs as work actually
-touches the frontend; they are currently light pointers, not a full reference.
+Source of truth: `frontend/` (Streamlit app). For page-specific controls, results,
+and data flows, use the feature guides below.
 
 ## Feature guides
 
@@ -11,15 +11,38 @@ touches the frontend; they are currently light pointers, not a full reference.
 - [Entity search](entity_search.md)
 - [URLs, navigation and shareable searches](urls.md)
 
-## Structure
+## Shared layout and navigation
 
-- `frontend/app.py` — entry point; language selector + `st.navigation` (top) with one URL per page (see [urls.md](urls.md)).
-- `frontend/translations1/` — YAML translations (`en.yml`, `he.yml`) + helpers. Use
-  `get_text("path.to.key", lang)`; falls back to English if a key is missing. Page titles
-  under `page_titles.*`, nav labels under `nav.*`/`entity_tabs.*`/`tree_tabs.*`.
-- `frontend/components/` — shared UI pieces (`header.py`, `layout.py`).
-- `frontend/pages/` — tab renderers. `home.py` shows one card per tool (Number search, Source search, Entity search, Genealogy tree, Studied-from tree); the whole card is clickable (no "Open tool" button): a `st.button` in a keyed container (`st-key-home_tool_<page_key>`) is stretched invisibly over the card via `styles.css`, and calls `navigation.go(page_key)`. Tree cards link directly to `/trees_genealogy_tree` and `/trees_studied_from_tree`.
-- `frontend/assets/styles.css` — base styling; RTL/dark/light tweaks in `layout.apply_layout`.
+- `frontend/app.py` initializes the language, renders the header and language
+  selector, registers the pages, and runs the page selected by `st.navigation`.
+  The header (`components/header.py`) links the title and icon to Home and the
+  Sefaria banner to the external site.
+- On desktop, the top navigation contains Home, About, Number Search and Source
+  Search, plus Entity Search and Trees dropdowns. On screens up to 768px, the
+  app also displays a grouped mobile Menu popover; Streamlit hides its top
+  navigation on narrow screens. Selecting a mobile menu item closes the popover
+  and switches to that page, including when it is already selected. The mobile
+  controls are buttons rather than links, and the menu's popover key changes on
+  selection so Streamlit remounts it closed. Desktop dropdowns are Streamlit's
+  native navigation. Page groups, destinations and query parameters are in
+  [URLs, navigation and shareable searches](urls.md).
+- `frontend/pages/home.py` presents clickable cards for Number Search, Source
+  Search, Entity Search and the two trees. Each keyed card contains an invisible
+  stretched button (`styles.css`) that calls `navigation.go(page_key)`; the
+  tree cards go directly to their respective tree pages. About currently displays
+  placeholder text in the selected language.
+- Entity Search has a landing page with entity-type cards and separate
+  People, Places, Nations, Tribes and Symbols pages. Those detail pages also
+  have a type-picker button row. Trees has a landing page with a selection
+  prompt and separate Genealogy and Studied From pages.
+- `frontend/components/` contains the shared header, layout, filters, person
+  selector, graph rendering and source popup. `frontend/assets/styles.css`
+  supplies base and responsive styling; `layout.apply_layout` adds theme and
+  language-direction styling.
+- `frontend/translations1/` contains YAML translations (`en.yml`, `he.yml`) and
+  helpers. Use `get_text("path.to.key", lang)`, which falls back to English.
+  Page titles use `page_titles.*`; menu labels use `nav.*`, `entity_tabs.*`,
+  and `tree_tabs.*`. Update both languages when adding UI text.
 
 ## Icons
 
@@ -37,9 +60,9 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 ## Run locally
 
 ```bash
-cd frontend
+cd <repo-root>
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run frontend/app.py
 ```
 
 Backend data the frontend reads/searches comes from `backend/app/controllers/`

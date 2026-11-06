@@ -140,6 +140,13 @@ body {
     display: none;
 }
 
+[class*="st-key-mobile_page_"] [data-testid="stButton"] > button {
+    justify-content: flex-start;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
 @media (max-width: 768px) {
     .st-key-mobile_nav {
         display: block;

@@ -104,12 +104,28 @@ def _build_navigation(lang: str):
 def _render_mobile_menu(groups: dict, lang: str) -> None:
     """Streamlit drops the top nav on narrow screens; this menu is shown only there (see styles.css)."""
     with st.container(key="mobile_nav"):
-        with st.popover("\u2630 " + get_text("ui.menu", lang), use_container_width=True):
+        with st.popover(
+            "\u2630 " + get_text("ui.menu", lang),
+            use_container_width=True,
+            key=f"mobile_menu_{st.session_state.get('mobile_menu_generation', 0)}",
+        ):
             for title, group_pages in groups.items():
                 if title:
                     st.caption(title)
                 for p in group_pages:
-                    st.page_link(p)
+                    if st.button(
+                        p.title,
+                        key=f"mobile_page_{p.url_path}",
+                        type="tertiary",
+                        use_container_width=True,
+                        on_click=_close_mobile_menu,
+                    ):
+                        st.switch_page(p)
+
+
+def _close_mobile_menu() -> None:
+    # A new popover key remounts it closed, including when selecting the current page.
+    st.session_state["mobile_menu_generation"] = st.session_state.get("mobile_menu_generation", 0) + 1
 
 
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"

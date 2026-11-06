@@ -44,3 +44,23 @@ Merging these entities during deduplication can lose important semantic distinct
   - Levi (Amora, Babylonian Talmud)
   
 *Add more entities as they are identified during enrichment and entity resolution...*
+
+## 3. Exclude folio and page citation numbers
+
+**Implemented:** `DBPopulateEntityRelGraph.py` now drops Number entities whose
+English unit is `verse`, `folio`, or `page`, case-insensitively and after trimming
+whitespace. Numbers with value 0 or 1 are still dropped as before.
+Relationships to filtered entities are skipped during population.
+
+**Current database:** after backing up the Graphs database and stopping graph
+population, run from `C:\ChatBlatt`:
+
+```powershell
+.\venv\Scripts\python.exe -m backend_pipeline.data_pipeline.one_time_scripts.clean_folio_page_numbers
+.\venv\Scripts\python.exe -m backend_pipeline.data_pipeline.one_time_scripts.clean_folio_page_numbers --apply
+```
+
+The first command previews the changes; the second deletes only `folio` and
+`page` Number entities, their relationships, and the corresponding source
+metadata references. Each entity is processed in a transaction. Re-running is
+safe; a clean pipeline run will apply the filter automatically.

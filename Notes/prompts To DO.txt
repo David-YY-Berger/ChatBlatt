@@ -1,7 +1,13 @@
 
 merge:
-hidka, hideka
+- hidka, hideka
 
+dont:
+- levi
+- yehuda (any tribe of israel)
+
+????:
+- yonatan
 todo {{
 
 	- index display en name?

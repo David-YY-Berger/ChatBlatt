@@ -27,9 +27,8 @@ _CATEGORY_TO_ENTITY_TYPE: Dict[str, EntityType] = {et.value: et for et in Entity
 # Mapping from JSON rel field name -> RelType enum
 _REL_NAME_TO_REL_TYPE: Dict[str, RelType] = {rt.value: rt for rt in RelType}
 
-# en_unit values that mark a Number as a verse/citation reference (e.g. "see verse 5")
-# rather than a true countable quantity - these are deterministically dropped.
-_NUMBER_UNITS_TO_IGNORE: Set[str] = {"verse"}
+# Citation-reference units are not treated as countable quantities.
+_NUMBER_UNITS_TO_IGNORE: Set[str] = {"verse", "folio", "page"}
 
 # Values that are never a meaningful standalone quantity, regardless of unit:
 # 0 (nothing counted) and 1 (equivalent to "a"/"an" - no plurality worth recording).
@@ -40,7 +39,7 @@ _NUMBER_VALUES_TO_IGNORE: Set[str] = {"0", "1"}
 def _is_ignored_number(entity: Entity) -> bool:
     """
     True if entity is a Number that must never be stored or searchable:
-    a verse/citation-unit Number, or one whose value is 0 or 1.
+    a citation-unit Number, or one whose value is 0 or 1.
     """
     if not isinstance(entity, ENumber):
         return False
@@ -263,7 +262,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         it in source_entity_map. Person mentions go through PersonDisambiguator (different
         people can share a name); every other type is matched by name + type.
         Returns the entity (with its key), or None if skipped (no name, filtered out as a
-        non-proper noun or disallowed Number (verse-unit, or value 0/1), or already
+        non-proper noun or disallowed Number (citation-unit, or value 0/1), or already
         resolved earlier in this source).
         """
         en_name = entity_data.get("en_name", "").strip()
@@ -278,7 +277,7 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
         # nouns instead of proper nouns for Person/Place. Drop any entity whose
         # name contains (as a substring) a known non-proper-noun term, and record
         # its identity so relationships referencing it are skipped too.
-        # Numbers whose unit is "verse" (e.g. "see verse 5") are a citation/cross-reference,
+        # Numbers with citation units (verse, folio, page) are a citation/cross-reference,
         # not a true countable quantity, and numbers with value 0 or 1 are never a
         # meaningful standalone quantity - both are dropped the same way.
         if is_ignored_entity_name(en_name, entity_type) or _is_ignored_number(entity):
@@ -569,7 +568,6 @@ class DBPopulateEntityRelGraph(DBPopulateLlmBase):
 
 
     ############################################## helper methods ####################################################
-
 
 
 

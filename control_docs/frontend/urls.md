@@ -5,6 +5,11 @@ Source of truth: `system_common/UrlPaths.py` (shared by `frontend/` and `backend
 (sections "Entity Search" and "Trees" are dropdowns); `frontend/navigation.py` keeps a page registry and
 `navigation.go(page_key, **params)` (wraps `st.switch_page(..., query_params=...)`) for in-app jumps.
 
+The desktop top bar uses Streamlit's native navigation and grouped dropdowns. The app's mobile
+Menu popover presents the same pages in the same groups; its buttons use `st.switch_page` and
+close the popover on selection, even for the current page. Menu navigation does not carry
+search query parameters to the destination. See [overview.md](overview.md) for shared layout.
+
 **Streamlit limitation:** `url_path` cannot contain `/`, so nested URLs are flat (`/entity_search_people`, not
 `/entity_search/people`). If the UI is ever rebuilt on a framework with real nesting, only `URL_PATHS` needs changing.
 
