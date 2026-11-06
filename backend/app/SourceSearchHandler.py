@@ -1,5 +1,7 @@
 # bs"d - lehagdil torah velahadir
 
+import logging
+
 from backend.db.DBFactory import DBFactory
 from backend.db.DBapiMongoDB import DBapiMongoDB
 from backend.db.EntityRelManager import EntityRelManager
@@ -12,6 +14,8 @@ from backend.common.miscFuncs import detect_query_language
 from backend.common.RankFusion import reciprocal_rank_fusion
 
 from typing import Optional, List
+
+logger = logging.getLogger(__name__)
 
 
 class SourceSearchHandler:
@@ -40,6 +44,7 @@ class SourceSearchHandler:
             book_names=query.book_names,
             entity_ids=query.entity_ids,
             rel_ids=query.rel_ids,
+            src_types=query.src_types,
         )
 
         # Step 2: if free text was given, ask both FAISS (semantic/embedding
@@ -105,9 +110,10 @@ class SourceSearchHandler:
         - BM25:  lexical/keyword similarity (catches exact terms, proper
           names, rare words that embeddings can blur together).
 
-        Each engine ranks its *entire* language-specific index in one cheap,
-        vectorized call and returns it as a list of keys, best-first. We fuse
-        those two rankings with RRF, then walk the fused ranking and pull
+        Each engine searches its entire language-specific index and returns
+        ranked keys best-first. Restrict each ranking to the filtered sources before RRF,
+        so unrelated sources cannot affect the relative weights of the two
+        signals. Then walk the fused ranking and pull
         matching entries out of `src_metadata_lst` (kept as a key -> metadata
         map for O(1) lookup/removal), so the result is the intersection of
         "structurally filtered" and "text-similar", ordered by the fused
@@ -117,12 +123,27 @@ class SourceSearchHandler:
         only ever reorders, never filters.
         """
         by_key = {src.key: src for src in src_metadata_lst}
+        if not by_key:
+            return []
 
-        faiss_ranked_keys = self.faiss.search(free_text_similarity_text, lang=lang)
-        bm25_ranked_keys = self.bm25.search(free_text_similarity_text, lang=lang)
+        faiss_ranked_keys = self.faiss.search(free_text_similarity_text, top_k=None, lang=lang)
+        bm25_ranked_keys = self.bm25.search(free_text_similarity_text, top_k=None, lang=lang)
 
-        fused_keys = reciprocal_rank_fusion([faiss_ranked_keys, bm25_ranked_keys])
+        fused_keys = reciprocal_rank_fusion([
+            [key for key in ranking if key in by_key]
+            for ranking in (faiss_ranked_keys, bm25_ranked_keys)
+        ])
 
+        if not fused_keys:
+            raise RuntimeError(
+                "Text similarity could not rank any matching sources. "
+                "Check that the similarity indexes are populated and up to date."
+            )
         ordered = [by_key.pop(key) for key in fused_keys if key in by_key]
+        if by_key:
+            logger.warning(
+                "Text similarity could not rank %d of %d matching sources; appending them in database order",
+                len(by_key), len(src_metadata_lst),
+            )
         ordered.extend(by_key.values())
         return ordered

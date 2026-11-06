@@ -18,6 +18,9 @@ the raw tokenized corpus (aligned with the metadata key list, same
 convention as FAISS's persisted index) and only rebuild the actual
 BM25Okapi scoring object lazily - cached per language until the corpus
 changes again - not on every query.
+
+Only documents containing a query token receive a lexical rank; otherwise
+zero-score nonmatches would contribute arbitrary ranks to rank fusion.
 """
 
 import re
@@ -94,4 +97,6 @@ class BM25Engine(BaseSimilarityEngine):
             return []
 
         scores = model.get_scores(query_tokens)
-        return list(scores.argsort()[::-1][:top_k])
+        query_terms = set(query_tokens)
+        matched = [i for i, tokens in enumerate(index_obj) if query_terms.intersection(tokens)]
+        return sorted(matched, key=lambda i: (-scores[i], i))[:top_k]

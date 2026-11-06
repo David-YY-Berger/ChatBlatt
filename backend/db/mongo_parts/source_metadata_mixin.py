@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional
 
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
-from backend.models_db.Enums import PassageType
+from backend.models_db.Enums import PassageType, SourceType
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 
 logger = logging.getLogger(__name__)
@@ -74,6 +74,7 @@ class SourceMetadataMongoMixin:
         book_names: Optional[List[str]] = None,
         entity_ids: Optional[List[str]] = None,
         rel_ids: Optional[List[str]] = None,
+        src_types: Optional[List[SourceType]] = None,
     ) -> List[SourceMetadata]:
         """
         Fetch every SourceMetadata document matching the given filters in a
@@ -83,6 +84,9 @@ class SourceMetadataMongoMixin:
         """
         conditions: List[Dict[str, Any]] = []
 
+        if src_types:
+            pattern = r"^(" + "|".join(re.escape(src_type.name) for src_type in src_types) + r")_"
+            conditions.append({DBFields.KEY: {DBOperators.REGEX: pattern}})
         if passage_types:
             conditions.append({DBFields.PASSAGE_TYPES: {DBOperators.IN: [pt.value for pt in passage_types]}})
         if book_names:
@@ -130,5 +134,4 @@ class SourceMetadataMongoMixin:
         sm.entity_keys = set(doc.get(DBFields.ENTITY_KEYS, []))
         sm.rel_keys = set(doc.get(DBFields.REL_KEYS, []))
         return sm
-
 

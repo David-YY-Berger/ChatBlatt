@@ -111,7 +111,7 @@ def apply_url_params() -> bool:
 def collect_search_query() -> SourceSearchQuery:
     """Read the current source-filters selections and free-text box to build
     a :class:`SourceSearchQuery`."""
-    free_text = st.session_state.get("free_text_query", "")
+    free_text = st.session_state.get("free_text_query", "").strip()
 
     selected_passage_types = get_selected_passage_types()
     rel_search = get_relationship_search()
@@ -139,4 +139,3 @@ def run_search(query_obj: SourceSearchQuery):
     found_count = len(getattr(ans, "src_metadata_lst", []))
     logger.info("Search completed. Found %d sources. total search time: %s", found_count, elapsed)
     return ans, elapsed
-

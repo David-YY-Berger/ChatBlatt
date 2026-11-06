@@ -390,10 +390,10 @@ class BaseSimilarityEngine(ABC):
             self._on_index_replaced(l)
             self.dbapi.clear_similarity_index(self.KIND, lang=l)
 
-    def search(self, query: str, top_k: int = 100000, lang: str = LANG_EN) -> List[str]:
+    def search(self, query: str, top_k: Optional[int] = 100000, lang: str = LANG_EN) -> List[str]:
         """
         :param query:  Free-text query string.
-        :param top_k:  Max number of ranked keys to return.
+        :param top_k:  Max number of ranked keys to return, or None for all.
         :param lang:   Which language-specific index to search (one of
                        SUPPORTED_LANGS). Callers must pick the index matching
                        the language of `query`.
@@ -422,7 +422,8 @@ class BaseSimilarityEngine(ABC):
             print(f"[{self.KIND}:{lang}] WARNING: metadata length ({len(metadata)}) "
                   f"does not match index size ({size}); some results may be dropped.")
 
-        ranked_indices = self._rank_all(lang, index_obj, query, top_k)
+        limit = size if top_k is None else min(top_k, size)
+        ranked_indices = self._rank_all(lang, index_obj, query, limit)
         results = [metadata[i] for i in ranked_indices if 0 <= i < len(metadata)]
 
         if not results:

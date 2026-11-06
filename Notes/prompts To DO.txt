@@ -48,7 +48,6 @@ You should not add indexes for me - instead write me a one time script which sho
 
 
 ---
-When I source search, and filter by entity and also try to use sort by text similarity, it seems to ignore sorting by text similarly. Look over the code, make sure that source search takes into account all parameters - entity's, passage type, sort by similarity, books, etc. 
 ---
 Currently, we limit source search by 50 sources at a time. At pagination so that we only fetch /display 50 at a time, but user can see how many there are in total and can click to see the next 50, prev 50, etc 
 ----
