@@ -9,7 +9,7 @@ UI responsibilities only:
 
 All search logic lives in :mod:`pages.source_search_logic`.
 Entity-type filter widgets live in :mod:`components.facets`.
-Source-filter widgets (Passage Type + Books) live in
+Source-filter widgets (Passage Type + Source Type) live in
 :mod:`components.source_filters`.
 """
 

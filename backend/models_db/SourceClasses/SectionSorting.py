@@ -94,10 +94,9 @@ def generic_section_sort_key(section: str) -> Tuple:
 # Maps SourceType name -> sort key function
 _SORT_KEY_REGISTRY: dict[str, Callable] = {
     "BT": bt_section_sort_key,
-    "JT": bt_section_sort_key,   # Jerusalem Talmud uses similar folio logic
+    "JT": bt_section_sort_key,   # Talmud Yerushalmi uses similar folio logic
     "TN": tn_section_sort_key,
     "MS": tn_section_sort_key,   # Mishna uses chapter:mishna notation
-    "RM": tn_section_sort_key,   # Rambam uses chapter:halacha notation
 }
 
 
@@ -124,6 +123,4 @@ def source_entry_sort_key(entry: Tuple[str, dict]) -> Tuple:
     src_type_name = src_key[:2] if src_key else ""
     section = SourceClass.get_section_from_key(src_key) if src_key else ""
     return (book_order, get_section_sort_key(src_type_name, section))
-
-
 

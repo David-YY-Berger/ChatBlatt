@@ -7,7 +7,7 @@ Source of truth: `backend/db/Collections.py`, `backend/db/DBapiMongoDB.py`,
 
 | Collection (`CollectionObjs`) | DB name | Contents |
 |---|---|---|
-| `TN`, `BT`, `JT`, `RM`, `MS` | `Sources` | `SourceContent` passages (EN/HEB), keyed by source key |
+| `TN`, `BT`, `JT`, `MS`, `MD` | `Sources` | `SourceContent` passages (EN/HEB), keyed by source key |
 | `ENTITIES` | `Graphs` | entity documents (all `EntityType`s, one collection) |
 | `RELATIONS` | `Graphs` | `Rel` documents |
 | `SRC_METADATA` | `Graphs` | one `SourceMetadata` per processed source |
@@ -15,7 +15,9 @@ Source of truth: `backend/db/Collections.py`, `backend/db/DBapiMongoDB.py`,
 | `BM25` (`bm25_data`) | `Faiss` | BM25 lexical index — own GridFS bucket, fully independent of FAISS |
 
 **Source key**: `"{SourceType name}_{Book.database_name}_{chapter}_{section}"`, e.g.
-`TN_II Kings_0_12:1-22`, `BT_Bava Batra_0_16b:1-5`. Books: `backend/db/data_names/Books.py`
+`TN_II Kings_0_12:1-22`, `BT_Bava Batra_0_16b:1-5`. Source types are `TN` (Tanach, available),
+`BT` (Talmud Bavli, available), `MS` (Mishna), `MD` (Midrash), and `JT` (Talmud Yerushalmi);
+only TN and BT are currently available in source search. Books: `backend/db/data_names/Books.py`
 (79 books, TN + BT only; `database_name` unique case-insensitively —
 `Books.get_by_db_name_ignore_case`).
 
@@ -61,7 +63,7 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 | `try_insert_rel` | see `entities_and_relationships.md` |
 | `get_rels_for_entity(key)` / `get_rels_for_entities(keys)` | rels where entity is term1 OR term2 |
 | `get_family_rels_for_entity(ies)` | same, filtered to childOfFather/childOfMother/spouseOf only |
-| `upsert_source_metadata` / `get_source_metadata_filtered(passage_types=, book_names=, entity_ids=, rel_ids=)` | |
+| `upsert_source_metadata` / `get_source_metadata_filtered(src_types=, passage_types=, book_names=, entity_ids=, rel_ids=)` | |
 | `drop_all_entities()` / `drop_all_rels()` / `drop_all_source_metadata()` | **destructive**, whole collection |
 
 ## SourceMetadata (`backend/models_db/SourceClasses/SourceMetadata.py`)

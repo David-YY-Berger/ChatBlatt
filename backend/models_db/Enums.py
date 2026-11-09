@@ -46,11 +46,19 @@ class ColoredEnum(Enum):
 
 
 class SourceType(Enum):
-    BT = "Babylonian Talmud"
-    JT = "Jerusalem Talmud"
-    RM = "Rambam Mishne Torah"
-    TN = "Tanach"
-    MS = "Mishna"
+    available: bool
+
+    TN = ("Tanach", True)
+    BT = ("Talmud Bavli", True)
+    MS = ("Mishna", False)
+    MD = ("Midrash", False)
+    JT = ("Talmud Yerushalmi", False)
+
+    def __new__(cls, value: str, available: bool):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.available = available
+        return obj
 
 class TimePeriod(ColoredEnum):
     """See ColoredEnum for why (value, icon, color) are defined together."""

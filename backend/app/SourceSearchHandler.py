@@ -37,14 +37,14 @@ class SourceSearchHandler:
     def get_answer_w_source_metadata(self, query: SourceSearchQuery) -> Answer:
 
         # Step 1: one DB query for every source that matches the *structural*
-        # filters (passage type / book / entity / relationship selections). This
+        # filters (source type / passage type / entity / relationship selections). This
         # replaces per-item DB round-trips with a single round-trip.
         src_metadata_lst = self.db_api.get_source_metadata_filtered(
             passage_types=query.passage_types,
             book_names=query.book_names,
+            src_types=query.src_types,
             entity_ids=query.entity_ids,
             rel_ids=query.rel_ids,
-            src_types=query.src_types,
         )
 
         # Step 2: if free text was given, ask both FAISS (semantic/embedding

@@ -19,14 +19,15 @@ from components.facets import (
     set_selected_entity_option_keys,
 )
 from components.source_filters import (
-    get_selected_book_names,
     get_selected_passage_type_names,
     get_selected_passage_types,
+    get_selected_source_type_names,
+    get_selected_source_types,
     set_selected_filters,
 )
 from system_common.Constants import PAGE_SOURCE_SEARCH
 from system_common.UrlPaths import (
-    LIST_SEPARATOR, PARAM_SOURCE_BOOKS, PARAM_SOURCE_ENTITIES, PARAM_SOURCE_PASSAGE_TYPES,
+    LIST_SEPARATOR, PARAM_SOURCE_ENTITIES, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_TYPES,
     PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, PARAM_SOURCE_TEXT, page_url, split_list,
 )
 
@@ -57,7 +58,7 @@ def current_url_params() -> dict:
     return {
         PARAM_SOURCE_TEXT: st.session_state.get("free_text_query", "").strip(),
         PARAM_SOURCE_PASSAGE_TYPES: get_selected_passage_type_names(),
-        PARAM_SOURCE_BOOKS: get_selected_book_names(),
+        PARAM_SOURCE_TYPES: get_selected_source_type_names(),
         PARAM_SOURCE_ENTITIES: get_selected_entity_option_keys(),
         PARAM_SOURCE_RELS: rel_search["rel_ids"] if rel_search else [],
         PARAM_SOURCE_REL_LABEL: rel_search["label"] if rel_search else "",
@@ -89,7 +90,7 @@ def apply_url_params() -> bool:
     """If the URL carries a search not yet applied this session, load it into the
     form widgets (call before they render). Returns True when a search should run."""
     params = {k: v for k, v in st.query_params.items() if v}
-    known = {PARAM_SOURCE_TEXT, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_BOOKS,
+    known = {PARAM_SOURCE_TEXT, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_TYPES,
              PARAM_SOURCE_ENTITIES, PARAM_SOURCE_RELS, PARAM_SOURCE_REL_LABEL}
     params = {k: v for k, v in params.items() if k in known}
     if not params or st.session_state.get(URL_SIG_KEY) == tuple(sorted(params.items())):
@@ -98,7 +99,7 @@ def apply_url_params() -> bool:
 
     st.session_state["free_text_query"] = params.get(PARAM_SOURCE_TEXT, "")
     set_selected_filters(split_list(params.get(PARAM_SOURCE_PASSAGE_TYPES)),
-                         split_list(params.get(PARAM_SOURCE_BOOKS)))
+                         split_list(params.get(PARAM_SOURCE_TYPES)))
     set_selected_entity_option_keys(split_list(params.get(PARAM_SOURCE_ENTITIES)))
     rels = split_list(params.get(PARAM_SOURCE_RELS))
     if rels:
@@ -119,8 +120,8 @@ def collect_search_query() -> SourceSearchQuery:
     return SourceSearchQuery(
         free_text_similarity=free_text,
         max_sources=50,
+        src_types=get_selected_source_types(),
         passage_types=selected_passage_types,
-        book_names=get_selected_book_names(),
         entity_ids=get_selected_entity_ids(),
         rel_ids=rel_search["rel_ids"] if rel_search else [],
     )

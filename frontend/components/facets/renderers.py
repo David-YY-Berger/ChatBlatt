@@ -2,7 +2,7 @@
 """
 Entity-type facet renderer for the source-search panel.
 
-Note: the Passage Type and Books filters live in `components.source_filters`;
+Note: the Passage Type and Source Type filters live in `components.source_filters`;
 this module only deals with the entity-type picker panel.
 """
 

@@ -41,7 +41,7 @@ URL_PATHS: dict[str, str] = {
 # ---- Source search params (list values are comma-separated) ----
 PARAM_SOURCE_TEXT = "q"               # free-text similarity query
 PARAM_SOURCE_PASSAGE_TYPES = "pt"     # PassageType names
-PARAM_SOURCE_BOOKS = "books"          # Book.database_name values
+PARAM_SOURCE_TYPES = "st"             # SourceType names
 PARAM_SOURCE_ENTITIES = "ent"         # entity select-option keys
 PARAM_SOURCE_RELS = "rel"             # Rel keys (relationship search)
 PARAM_SOURCE_REL_LABEL = "rel_label"  # display label of the relationship search

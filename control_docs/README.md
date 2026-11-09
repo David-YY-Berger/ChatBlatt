@@ -44,7 +44,7 @@ govern how these docs get used and maintained.
 |---|---|
 | [`frontend/overview.md`](frontend/overview.md) | Shared UI, desktop/mobile menus, page entry points, translations and RTL |
 | [`search/faiss_bm25.md`](search/faiss_bm25.md) | Semantic (FAISS) + lexical (BM25) search indexes |
-| [`search/source_search.md`](search/source_search.md) | Source-search query flow: passage-type / book / entity filters, re-ranking |
+| [`search/source_search.md`](search/source_search.md) | Source-search query flow: source-type / passage-type / entity filters, re-ranking |
 | [`app/controllers.md`](app/controllers.md) | Backend controllers that serve the frontend |
 
 ## Maintenance rule

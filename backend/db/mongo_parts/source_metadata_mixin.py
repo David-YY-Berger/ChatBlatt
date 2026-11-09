@@ -91,7 +91,7 @@ class SourceMetadataMongoMixin:
             conditions.append({DBFields.PASSAGE_TYPES: {DBOperators.IN: [pt.value for pt in passage_types]}})
         if book_names:
             # Keys look like <TYPE>_<book>_<chapter>_<section>; match on the book segment.
-            pattern = r"^[A-Z]{2}_(" + "|".join(re.escape(b) for b in book_names) + r")_"
+            pattern = r"^[A-Z]{2}_(" + "|".join(re.escape(book) for book in book_names) + r")_"
             conditions.append({DBFields.KEY: {DBOperators.REGEX: pattern}})
         if entity_ids:
             conditions.append({DBFields.ENTITY_KEYS: {DBOperators.IN: list(entity_ids)}})
@@ -134,4 +134,3 @@ class SourceMetadataMongoMixin:
         sm.entity_keys = set(doc.get(DBFields.ENTITY_KEYS, []))
         sm.rel_keys = set(doc.get(DBFields.REL_KEYS, []))
         return sm
-

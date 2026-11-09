@@ -30,7 +30,7 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 All list values are comma-separated. A page opened with params loads them into its form and runs the search
 immediately; running a search rewrites the URL (`st.query_params`), so the address bar is always a shareable link.
 
-- **Source search**: `q` (free text), `pt` (`PassageType` names), `books` (`Book.database_name`s), `ent` (entity
+- **Source search**: `q` (free text), `pt` (`PassageType` names), `st` (available `SourceType` names), `ent` (entity
   select-option keys from the entity panels), `rel` (`Rel` keys, relationship search from Entity Search),
   `rel_label` (chip text for `rel`).
 - **Number search**: `type` = `number` | `unit`, `value` = the number/fraction (e.g. `7`, `1/3`) or the unit's English name.

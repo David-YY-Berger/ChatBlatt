@@ -22,6 +22,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Flowable, KeepTogether, Paragraph, SimpleDocTemplate, Spacer
 
 from backend.common import Paths
+from backend.models_db.Enums import SourceType
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
@@ -71,10 +72,15 @@ def _search_description(search_url: str | None, entity_names: list[str] | None =
             text += ", ..."
         descriptions.append(f"{label}: {text}")
 
-    for key, label in (("books", "Books"), ("pt", "Passage types")):
+    for key, label in (("st", "Source types"), ("pt", "Passage types")):
         values = [value.strip() for value in params.get(key, [""])[0].split(",") if value.strip()]
         if not values:
             continue
+        if key == "st":
+            values = [
+                SourceType[value].value if value in SourceType.__members__ else value
+                for value in values
+            ]
         shown = values[:2]
         text = ", ".join(shown)
         if len(values) > len(shown):

@@ -12,9 +12,9 @@ class CollectionObjs:
     # Sources
     BT = Collection(name="BT", db_name="Sources")
     JT = Collection(name="JT", db_name="Sources")
-    RM = Collection(name="RM", db_name="Sources")
     TN = Collection(name="TN", db_name="Sources")
     MS = Collection(name="MS", db_name="Sources")
+    MD = Collection(name="MD", db_name="Sources")
 
     # FAISS
     FS = Collection(name="faiss_data", db_name="Faiss")
@@ -35,9 +35,9 @@ class CollectionObjs:
         return [
             cls.BT,
             cls.JT,
-            cls.RM,
             cls.TN,
             cls.MS,
+            cls.MD,
 
             cls.FS,
             cls.BM25,
