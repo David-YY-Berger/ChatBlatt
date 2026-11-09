@@ -15,7 +15,7 @@ from __future__ import annotations
 import os
 import tempfile
 from collections import defaultdict, deque
-from typing import Callable, Dict, Iterable, List, Tuple
+from typing import Callable, Dict, Iterable, List, Optional, Tuple
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -50,6 +50,7 @@ def compute_layout(
     child_to_parents: Dict[str, set],
     parent_to_children: Dict[str, set],
     same_level_links: Dict[str, set],
+    center_row_order: Optional[List[str]] = None,
 ) -> Tuple[Dict[str, Tuple[float, float]], Dict[str, int]]:
     """
     Assign (x, y) positions and generation levels relative to the centre
@@ -88,14 +89,28 @@ def compute_layout(
 
     # Level 0: centre fixed at x=0, same-level peers alternating left/right.
     x_pos: Dict[str, float] = {}
-    ordered0 = _order_same_level(center_key, by_level.get(0, []), same_level_links)
-    _assign_x_centered_on(center_key, ordered0, x_pos)
+    if center_row_order is None:
+        ordered0 = _order_same_level(center_key, by_level.get(0, []), same_level_links)
+        _assign_x_centered_on(center_key, ordered0, x_pos)
+    else:
+        row_keys = set(by_level.get(0, []))
+        ordered0 = [key for key in center_row_order if key in row_keys]
+        ordered0.extend(sorted(row_keys - set(ordered0)))
+        center_index = ordered0.index(center_key)
+        for index, key in enumerate(ordered0):
+            x_pos[key] = (index - center_index) * X_SPACING
 
     # Other levels: average x of already-placed kin.
     for lvl in sorted([l for l in by_level if l < 0], reverse=True):
-        _assign_x_from_relation(by_level[lvl], parent_to_children, x_pos)
+        _assign_x_from_relation(
+            by_level[lvl], parent_to_children, x_pos,
+            recenter=center_row_order is None, group_families=center_row_order is not None,
+        )
     for lvl in sorted([l for l in by_level if l > 0]):
-        _assign_x_from_relation(by_level[lvl], child_to_parents, x_pos)
+        _assign_x_from_relation(
+            by_level[lvl], child_to_parents, x_pos,
+            recenter=center_row_order is None, group_families=center_row_order is not None,
+        )
 
     positions = {key: (x_pos.get(key, 0.0), level[key] * Y_SPACING) for key in all_keys}
     return positions, level
@@ -141,7 +156,10 @@ def _assign_x_centered_on(center_key: str, ordered0: list, x_pos: dict) -> None:
         x_pos[key] = side * rank * X_SPACING
 
 
-def _assign_x_from_relation(level_keys: list, relation_map: dict, x_pos: dict) -> None:
+def _assign_x_from_relation(
+    level_keys: list, relation_map: dict, x_pos: dict,
+    recenter: bool = True, group_families: bool = False,
+) -> None:
     """Position every node in `level_keys` at the average x of its already
     positioned relatives (per `relation_map`), then spread out overlaps."""
     desired: dict[str, float] = {}
@@ -149,7 +167,30 @@ def _assign_x_from_relation(level_keys: list, relation_map: dict, x_pos: dict) -
         related = [r for r in relation_map.get(key, ()) if r in x_pos]
         desired[key] = sum(x_pos[r] for r in related) / len(related) if related else 0.0
 
-    ordered = sorted(level_keys, key=lambda k: desired[k])
+    ordered = sorted(level_keys, key=lambda k: (desired[k], k))
+    if group_families:
+        # Group identical parent/child sets, then keep overlapping groups together.
+        groups: dict[tuple, list] = {}
+        for key in ordered:
+            relatives = tuple(sorted(r for r in relation_map.get(key, ()) if r in x_pos))
+            signature = relatives if relatives else (key,)
+            groups.setdefault(signature, []).append(key)
+        remaining = list(groups)
+        ordered = []
+        while remaining:
+            signature = remaining.pop(0)
+            component = [signature]
+            relatives = set(signature)
+            while True:
+                overlaps = [item for item in remaining if relatives.intersection(item)]
+                if not overlaps:
+                    break
+                for item in overlaps:
+                    remaining.remove(item)
+                    component.append(item)
+                    relatives.update(item)
+            for item in component:
+                ordered.extend(groups[item])
     prev_x = None
     for key in ordered:
         x = desired[key]
@@ -160,6 +201,8 @@ def _assign_x_from_relation(level_keys: list, relation_map: dict, x_pos: dict) -
 
     if ordered:
         mean_x = sum(x_pos[k] for k in ordered) / len(ordered)
+        if not recenter:
+            mean_x -= sum(desired[k] for k in ordered) / len(ordered)
         for key in ordered:
             x_pos[key] -= mean_x
 

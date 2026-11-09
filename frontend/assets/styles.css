@@ -211,6 +211,20 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
     box-shadow: none;
 }
 
+.st-key-relationship_menu [data-testid="stVerticalBlock"] {
+    gap: 0.35rem;
+}
+
+.st-key-relationship_menu [data-testid="stButton"] > button {
+    justify-content: flex-start;
+    text-align: start;
+    box-shadow: none;
+}
+
+.st-key-relationship_detail {
+    min-height: 7rem;
+}
+
 @media (max-width: 768px) {
     .st-key-mobile_nav {
         display: block;

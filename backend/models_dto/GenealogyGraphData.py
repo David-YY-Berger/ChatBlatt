@@ -20,7 +20,7 @@ class GenealogyEdge(BaseModel):
     """A directed or symmetric relationship edge between two nodes."""
     from_key: str
     to_key: str
-    rel_type: str   # e.g. "childOfFather", "childOfMother", "spouseOf", "sibling"
+    rel_type: str   # e.g. "childOfFather", "childOfMother", "spouseOf"
     label: str = ""
 
 

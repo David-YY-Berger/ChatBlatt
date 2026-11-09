@@ -12,3 +12,10 @@ The metadata filters, entity combobox, and Go button share a Streamlit fragment.
 Changing a filter or selection reruns only that selector; the currently displayed
 entity remains unchanged. Go updates the shareable `id` and reruns the page to
 load the selected entity.
+
+The detail view lists populated relationship types and their counts in a vertical
+menu, on the left in English and the right in Hebrew. All types start closed for
+each entity. Selecting one opens its related entities in the adjacent panel;
+selecting it again closes it, and selecting another switches the panel. On narrow
+screens the menu and panel stack. Each related entity retains its entity and
+relationship-source actions.

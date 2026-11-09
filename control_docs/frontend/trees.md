@@ -40,15 +40,16 @@ the center key, person nodes, and relationship edges.
 The graph includes database relationships `childOfFather`, `childOfMother`,
 and `spouseOf`. Stored parent relationships use the child as `term1` and the
 parent as `term2`; spouse relationships are treated as symmetric for
-deduplication and display. Sibling edges are synthetic: the logic groups
-children by parent and connects children sharing at least one parent. It also
-fetches the center person's co-children so siblings are included even at depth
-1.
+deduplication and display. Siblings are represented only by their recorded
+links to shared parents, not by direct sibling-to-sibling lines. The logic
+fetches the center person's co-children even at depth 1. Sharing one parent
+does not imply sharing the other, and co-parents are not assumed to be spouses.
 
 Expansion is breadth-first by relationship hop. Each frontier's family
 relationships are fetched in a batch through the MongoDB genealogy mixin, and
-unknown endpoint entities are resolved in a batch. Only newly found nodes
-are expanded at the next hop. The controller's 1–2 limit is the UI-facing
+unknown endpoint entities are resolved in a batch. The center's siblings are
+discovered after the first hop, so they too are expanded at depth 2. Only newly
+found nodes are expanded at the next hop. The controller's 1–2 limit is the UI-facing
 limit; the logic also has a higher internal depth ceiling as a safeguard for
 direct callers.
 
@@ -60,16 +61,28 @@ Missing endpoint entities are not rendered as nodes.
 
 `_compute_layout` assigns fixed generation rows relative to the center:
 parents above, children below, and spouses/siblings on the center's row.
+Children with the same displayed parents are kept together, with the selected
+person's spouses next to them, followed by other children sharing a parent.
+On other rows, nodes sharing already-positioned
+parents or children are grouped as well. This is a layout heuristic: the
+individual parent edges, rather than proximity, establish relationships.
+Different recorded parent sets remain distinct, including for half-siblings.
 Nodes are positioned in a fixed grid with physics disabled (the shared grid/row layout lives in `components/tree_graph.py`). The center stays
 at the horizontal origin; same-generation relatives are placed around it, and
 other rows are positioned using related nodes.
 
 Node fill color represents gender (blue for man, rose for woman, gray when
 unknown); a gold border ring marks the selected center. Edge styling represents
-relationship type: father and mother links have distinct colors, spouse links
-are solid, and sibling links are dotted. Relationship labels appear on hover;
+relationship type: father and mother links have distinct colors and spouse links
+are solid. Relationship labels appear on hover;
 the legend summarizes edge and node encodings. The graph is rendered at a
 fixed 600px network height inside a 620px Streamlit component.
+
+An optional checkbox hides the selected person's siblings whose only displayed
+connections are to the selected person's displayed parents. Siblings with other
+displayed connections remain visible, so their branches are not disconnected.
+The count and graph reflect the visible nodes and edges; unchecking restores them.
+Other relatives' sibling groups are not collapsed by this control.
 
 ## Shared rendering (`frontend/components/tree_graph.py`)
 

@@ -27,8 +27,9 @@ _EDGE_COLOURS: dict[str, str] = {
     "childOfFather": "#2196F3",   # blue  – father link
     "childOfMother": "#E91E63",   # pink  – mother link
     "spouseOf":      "#4CAF50",   # green – spouse link
-    "sibling":       "#FF9800",   # orange – sibling link
 }
+
+_PARENT_TYPES = ("childOfFather", "childOfMother")
 
 
 def render(lang: str) -> None:
@@ -70,10 +71,27 @@ def render(lang: str) -> None:
         st.warning(get_text("genealogy_ui.no_data", lang))
         return
 
+    # Old session caches may still contain synthetic sibling edges.
+    graph_data = graph_data.model_copy(update={
+        "edges": [edge for edge in graph_data.edges if edge.rel_type != "sibling"],
+    })
+    collapsible = _collapsible_siblings(graph_data)
+    if collapsible and st.checkbox(
+        get_text("genealogy_ui.hide_siblings", lang).format(count=len(collapsible)),
+        key="genealogy_hide_siblings",
+        help=get_text("genealogy_ui.hide_siblings_help", lang),
+    ):
+        graph_data = graph_data.model_copy(update={
+            "nodes": [node for node in graph_data.nodes if node.key not in collapsible],
+            "edges": [edge for edge in graph_data.edges
+                      if edge.from_key not in collapsible and edge.to_key not in collapsible],
+        })
+
     # ── 4. Render Pyvis graph ─────────────────────────────────────────
     st.divider()
     st.markdown(f"**{get_text('genealogy_ui.graph_title', lang)}** — {len(graph_data.nodes)} {get_text('genealogy_ui.nodes_label', lang)}, {len(graph_data.edges)} {get_text('genealogy_ui.edges_label', lang)}")
 
+    st.caption(get_text("genealogy_ui.family_explanation", lang))
     _render_legend(lang)
     _render_pyvis_graph(graph_data, lang)
 
@@ -81,6 +99,29 @@ def render(lang: str) -> None:
 # ---------------------------------------------------------------------------
 # Layout + rendering (shared helpers live in components/tree_graph.py)
 # ---------------------------------------------------------------------------
+
+def _collapsible_siblings(graph_data) -> set[str]:
+    """Find siblings whose removal cannot hide other displayed connections."""
+    center = graph_data.center_key
+    center_parents = {
+        edge.to_key for edge in graph_data.edges
+        if edge.from_key == center and edge.rel_type in _PARENT_TYPES
+    }
+    siblings = {
+        edge.from_key for edge in graph_data.edges
+        if edge.rel_type in _PARENT_TYPES and edge.to_key in center_parents
+        and edge.from_key != center
+    }
+    return {
+        sibling for sibling in siblings
+        if all(
+            edge.from_key == sibling and edge.rel_type in _PARENT_TYPES
+            and edge.to_key in center_parents
+            for edge in graph_data.edges
+            if sibling in (edge.from_key, edge.to_key)
+        )
+    }
+
 
 def _compute_layout(graph_data):
     """
@@ -96,11 +137,11 @@ def _compute_layout(graph_data):
 
     child_to_parents: dict[str, set] = defaultdict(set)
     parent_to_children: dict[str, set] = defaultdict(set)
-    same_level_links: dict[str, set] = defaultdict(set)   # spouse/sibling (undirected)
+    same_level_links: dict[str, set] = defaultdict(set)
     spouse_links: dict[str, set] = defaultdict(set)
 
     for edge in graph_data.edges:
-        if edge.rel_type in ("childOfFather", "childOfMother"):
+        if edge.rel_type in _PARENT_TYPES:
             child_to_parents[edge.from_key].add(edge.to_key)
             parent_to_children[edge.to_key].add(edge.from_key)
         elif edge.rel_type == "spouseOf":
@@ -108,13 +149,27 @@ def _compute_layout(graph_data):
             same_level_links[edge.to_key].add(edge.from_key)
             spouse_links[edge.from_key].add(edge.to_key)
             spouse_links[edge.to_key].add(edge.from_key)
-        elif edge.rel_type == "sibling":
-            same_level_links[edge.from_key].add(edge.to_key)
-            same_level_links[edge.to_key].add(edge.from_key)
 
     all_keys = [n.key for n in graph_data.nodes]
+    center_parents = child_to_parents.get(center_key, set())
+
+    def family_order(key: str):
+        parents = child_to_parents.get(key, set())
+        if key != center_key and parents and parents == center_parents:
+            group = 0
+        elif key == center_key:
+            group = 1
+        elif key in spouse_links.get(center_key, ()):
+            group = 2
+        elif parents & center_parents:
+            group = 3
+        else:
+            group = 4
+        return group, tuple(sorted(parents)), key
+
     positions, level = compute_layout(
-        center_key, all_keys, child_to_parents, parent_to_children, same_level_links
+        center_key, all_keys, child_to_parents, parent_to_children, same_level_links,
+        center_row_order=sorted(all_keys, key=family_order),
     )
 
     roles: dict[str, str] = {}
@@ -124,30 +179,31 @@ def _compute_layout(graph_data):
             roles[key] = "center"
         elif lvl == 0 and center_key in spouse_links.get(key, ()):
             roles[key] = "spouse"
-        elif lvl == 0:
+        elif lvl == 0 and child_to_parents.get(key, set()) & center_parents:
             roles[key] = "sibling"
-        elif lvl == -1:
+        elif key in center_parents:
             roles[key] = "parent"
-        elif lvl <= -2:
+        elif any(key in child_to_parents.get(parent, ()) for parent in center_parents):
             roles[key] = "grandparent"
-        elif lvl == 1:
+        elif key in parent_to_children.get(center_key, ()):
             roles[key] = "child"
-        else:
+        elif any(key in parent_to_children.get(child, ())
+                 for child in parent_to_children.get(center_key, ())):
             roles[key] = "grandchild"
+        else:
+            roles[key] = "relative"
 
     return positions, roles
 
 
 def _edge_style(edge) -> dict:
     """Relationship TYPE is encoded by line style:
-    solid + arrow = parent link (father/mother colour), solid = spouse,
-    dotted = sibling."""
-    is_sibling = edge.rel_type == "sibling"
-    is_symmetric = edge.rel_type in ("spouseOf", "sibling")
+    solid + arrow = parent link (father/mother colour), solid = spouse."""
+    is_symmetric = edge.rel_type == "spouseOf"
     return {
         "color": _EDGE_COLOURS.get(edge.rel_type, "#aaaaaa"),
         "arrows": "" if is_symmetric else "to",
-        "dashes": [2, 6] if is_sibling else False,
+        "dashes": False,
     }
 
 
@@ -162,7 +218,6 @@ def _render_legend(lang: str) -> None:
         (_EDGE_COLOURS["childOfFather"], "solid-arrow", get_text("entity_fields.childOfFather", lang)),
         (_EDGE_COLOURS["childOfMother"], "solid-arrow", get_text("entity_fields.childOfMother", lang)),
         (_EDGE_COLOURS["spouseOf"],      "solid",       get_text("entity_fields.spouseOf", lang)),
-        (_EDGE_COLOURS["sibling"],       "dotted",      get_text("entity_fields.siblings", lang)),
     ])
     render_node_legend(lang)
 
@@ -174,7 +229,7 @@ def _load_graph_data(center_key: str, depth: int):
     """Load graph data, caching per (center_key, depth) pair."""
     from backend.app.controllers.genealogy_tree_controller import GenealogyTreeController
 
-    cache_key = f"_genealogy_graph_{center_key}_{depth}"
+    cache_key = f"_genealogy_graph_v2_{center_key}_{depth}"
     if cache_key not in st.session_state:
         controller = GenealogyTreeController()
         st.session_state[cache_key] = controller.get_genealogy_graph(

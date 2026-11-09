@@ -312,7 +312,7 @@ def _render_entity_detail(handler, entity_key: str, lang: str) -> None:
 
     # ---- Transient relationship fields ----
     transient_labels = handler.get_transient_field_labels()
-    _render_relationship_fields(entity, transient_labels, lang)
+    _render_relationship_fields(entity, transient_labels, lang, entity_key)
 
 
 def _render_metadata_badges(badges: list[dict], lang: str) -> None:
@@ -347,14 +347,19 @@ def _render_metadata_badges(badges: list[dict], lang: str) -> None:
     )
 
 
-def _render_relationship_fields(entity, transient_labels: list, lang: str) -> None:
-    """
-    Render all transient (relationship) fields as titled scrollable lists.
-    Only shows fields that have data.
-    Uses a 3-column grid layout.
-    Each item in a list is rendered as a st.popover button with action options.
-    """
-    # Filter to fields that have data
+def _toggle_relationship(field_name: str) -> None:
+    selected = st.session_state.get("_entity_relationship_selected")
+    st.session_state["_entity_relationship_selected"] = None if selected == field_name else field_name
+
+
+@st.fragment
+def _render_relationship_fields(entity, transient_labels: list, lang: str, entity_key: str) -> None:
+    """Render populated relationship types in a collapsible navigation menu."""
+    identity = (type(entity).__name__, entity_key)
+    if st.session_state.get("_entity_relationship_identity") != identity:
+        st.session_state["_entity_relationship_identity"] = identity
+        st.session_state["_entity_relationship_selected"] = None
+
     fields_with_data = []
     for field_name, label_key in transient_labels:
         values = getattr(entity, field_name, None)
@@ -365,18 +370,40 @@ def _render_relationship_fields(entity, transient_labels: list, lang: str) -> No
         st.info(get_text("entity_search_ui.no_relationships", lang))
         return
 
-    # Navigation link map: display_name -> (entity_key, EntityType)
-    rel_links = getattr(entity, "rel_links", {})
+    selected = st.session_state.get("_entity_relationship_selected")
+    if selected not in {field_name for field_name, _, _ in fields_with_data}:
+        selected = None
+        st.session_state["_entity_relationship_selected"] = None
 
-    # Render in a 3-column grid
-    COLS = 3
-    for row_start in range(0, len(fields_with_data), COLS):
-        row_items = fields_with_data[row_start:row_start + COLS]
-        cols = st.columns(COLS)
-        for col_idx, (field_name, label_key, values) in enumerate(row_items):
-            with cols[col_idx]:
-                label = get_text(label_key, lang)
-                _render_relationship_list(label, values, field_name, rel_links, lang, entity)
+    st.markdown(f"#### {get_text('entity_search_ui.relationships', lang)}")
+    with st.container(key="relationship_browser"):
+        menu, detail = st.columns([1, 2], gap="medium")
+        with menu:
+            with st.container(key="relationship_menu"):
+                for field_name, label_key, values in fields_with_data:
+                    label = get_text(label_key, lang)
+                    expanded = selected == field_name
+                    st.button(
+                        f"{'▾' if expanded else '▸'} {label} ({len(values)})",
+                        key=f"relationship_menu_{field_name}",
+                        type="primary" if expanded else "secondary",
+                        use_container_width=True,
+                        on_click=_toggle_relationship,
+                        args=(field_name,),
+                    )
+
+        with detail:
+            with st.container(border=True, key="relationship_detail"):
+                if selected is None:
+                    st.caption(get_text("entity_search_ui.choose_relationship", lang))
+                else:
+                    field_name, label_key, values = next(
+                        field for field in fields_with_data if field[0] == selected
+                    )
+                    _render_relationship_list(
+                        get_text(label_key, lang), values, field_name,
+                        getattr(entity, "rel_links", {}) or {}, lang, entity,
+                    )
 
 
 def _render_relationship_list(
@@ -393,31 +420,25 @@ def _render_relationship_list(
       1. View Entity — navigates to the entity's page
       2. View Sources of Relationship — opens Source Search filtered by the relationship's rel keys
     """
-    with st.container(border=True):
-        st.markdown(
-            f"<div style='font-weight:600; font-size:0.95rem; "
-            f"color:var(--accent,#1f6feb); margin-bottom:0.4rem;'>"
-            f"{title} ({len(items)})</div>",
-            unsafe_allow_html=True,
+    st.markdown(f"**{title} ({len(items)})**")
+    for item in items:
+        rel_keys = (getattr(entity, "rel_keys_by_field", {}) or {}).get(field_name, {}).get(item)
+        link = rel_links.get(item)
+        roles = (getattr(entity, "rel_roles", {}) or {}).get(link[0], []) if link else []
+        display_name = ((getattr(entity, "rel_heb_names", {}) or {}).get(link[0]) or item
+                        if is_rtl(lang) and link else item)
+        if roles and is_rtl(lang):
+            from backend.models_db.Enums import RoleType
+            role_labels = [enum_text(RoleType(role), lang) if role in RoleType._value2member_map_ else role for role in roles]
+        else:
+            role_labels = [role.lower() for role in roles]
+        display = f"{display_name} - {', '.join(role_labels)}" if role_labels else display_name
+        _render_entity_item_popover(
+            item, field_name, rel_links, lang,
+            (getattr(entity, "display_heb_name", "") or getattr(entity, "display_en_name", ""))
+            if is_rtl(lang) else getattr(entity, "display_en_name", ""),
+            title, rel_keys, display,
         )
-        for item in items:
-            rel_keys = (getattr(entity, "rel_keys_by_field", {}) or {}).get(field_name, {}).get(item)
-            link = rel_links.get(item)
-            roles = (getattr(entity, "rel_roles", {}) or {}).get(link[0], []) if link else []
-            display_name = ((getattr(entity, "rel_heb_names", {}) or {}).get(link[0]) or item
-                            if is_rtl(lang) and link else item)
-            if roles and is_rtl(lang):
-                from backend.models_db.Enums import RoleType
-                role_labels = [enum_text(RoleType(role), lang) if role in RoleType._value2member_map_ else role for role in roles]
-            else:
-                role_labels = [role.lower() for role in roles]
-            display = f"{display_name} - {', '.join(role_labels)}" if role_labels else display_name
-            _render_entity_item_popover(
-                item, field_name, rel_links, lang,
-                (getattr(entity, "display_heb_name", "") or getattr(entity, "display_en_name", ""))
-                if is_rtl(lang) else getattr(entity, "display_en_name", ""),
-                title, rel_keys, display,
-            )
 
 
 _POPOVER_CSS = """

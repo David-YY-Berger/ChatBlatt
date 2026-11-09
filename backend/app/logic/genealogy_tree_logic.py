@@ -10,7 +10,7 @@ family relationship types:
   - childOfFather / childOfMother  → directed parent-child edges
   - spouseOf                        → symmetric spouse edges
   - children                        → reverse parent-child (derived)
-  - siblings                        → synthetic edges for shared parents
+  - siblings                        → children of a shared parent
 
 BFS approach (level-by-level, one batched DB query per level):
   1. Start with center person key as the initial frontier (level 0).
@@ -19,7 +19,7 @@ BFS approach (level-by-level, one batched DB query per level):
   3. Add newly discovered person-nodes and edges to the graph. Only nodes
      that are brand new (not already in the graph) become next frontier.
   4. Repeat for `depth` hops, or until the frontier stops growing.
-  5. After BFS, add sibling edges between nodes that share a parent.
+  5. Include the center person's co-children via their recorded parent links.
 """
 
 from __future__ import annotations
@@ -45,7 +45,6 @@ _EDGE_LABELS: Dict[str, str] = {
     "childOfFather": "Father",
     "childOfMother": "Mother",
     "spouseOf": "Spouse",
-    "sibling": "Sibling",
 }
 
 # Hard ceiling on BFS hops, independent of whatever the UI/controller exposes.
@@ -102,7 +101,7 @@ class GenealogyTreeLogic:
         # their own relationships expanded this round.
         frontier: Set[str] = {center_key}
 
-        for _ in range(depth):
+        for hop in range(depth):
             if not frontier:
                 break  # graph has stopped growing; no point querying further
 
@@ -147,25 +146,20 @@ class GenealogyTreeLogic:
                     child_key = rel.term1
                     parent_children.setdefault(parent_key, set()).add(child_key)
 
+            if hop == 0:
+                # Discover siblings early enough to expand them at depth 2.
+                known_keys = set(nodes)
+                self._complete_center_siblings(center_key, parent_children, nodes, edges)
+                new_frontier.update(set(nodes) - known_keys)
+
             # Next hop only needs to expand nodes that are actually new;
             # already-known nodes were expanded in an earlier hop already.
             frontier = new_frontier
 
-        # The center person's transient family fields (childOfFather,
-        # childOfMother, children, siblings, spouseOf) should always be
-        # fully populated regardless of `depth` — including at depth=1,
-        # where the center's parents become nodes but are never themselves
-        # queried (that only happens on hop 2+). Without an extra query here,
-        # the center's siblings (other children of the same parent) would
-        # never be discovered at depth=1.
-        self._complete_center_siblings(center_key, parent_children, nodes, edges)
-
-        # Add sibling edges between children sharing a parent
-        self._add_sibling_edges(parent_children, nodes, edges)
-
         return GenealogyGraphData(
             nodes=list(nodes.values()),
-            edges=list(edges.values()),
+            edges=[edge for edge in edges.values()
+                   if edge.from_key in nodes and edge.to_key in nodes],
             center_key=center_key,
         )
 
@@ -188,12 +182,12 @@ class GenealogyTreeLogic:
 
         Fetches, in one batched query, the family rels for the center's
         parents and merges any newly-discovered co-children into
-        `parent_children` / `nodes` so `_add_sibling_edges` picks them up.
+        `parent_children`, `nodes`, and `edges`.
         """
         center_parent_keys = {
             parent_key
             for parent_key, child_keys in parent_children.items()
-            if center_key in child_keys
+            if center_key in child_keys and parent_key in nodes
         }
         if not center_parent_keys:
             return
@@ -225,36 +219,6 @@ class GenealogyTreeLogic:
             rev_edge_key = (edge.to_key, edge.from_key, edge.rel_type)
             if edge_key not in edges and rev_edge_key not in edges:
                 edges[edge_key] = edge
-
-    def _add_sibling_edges(
-        self,
-        parent_children: Dict[str, Set[str]],
-        nodes: Dict[str, GenealogyNode],
-        edges: Dict[Tuple, GenealogyEdge],
-    ) -> None:
-        """
-        For every pair of children sharing at least one parent in the graph,
-        add a synthetic sibling edge (if both children are present as nodes).
-        """
-        added_pairs: Set[frozenset] = set()
-
-        for child_keys in parent_children.values():
-            child_list = [k for k in child_keys if k in nodes]
-            for i in range(len(child_list)):
-                for j in range(i + 1, len(child_list)):
-                    pair = frozenset((child_list[i], child_list[j]))
-                    if pair in added_pairs:
-                        continue
-                    added_pairs.add(pair)
-                    a, b = child_list[i], child_list[j]
-                    edge_key = (a, b, "sibling")
-                    edges[edge_key] = GenealogyEdge(
-                        from_key=a,
-                        to_key=b,
-                        rel_type="sibling",
-                        label=_EDGE_LABELS["sibling"],
-                    )
-
 
 # ------------------------------------------------------------------
 # Module-level helpers
