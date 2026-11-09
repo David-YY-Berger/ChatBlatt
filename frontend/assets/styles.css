@@ -84,7 +84,6 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
     align-items: center;
     gap: 0.75rem;
     flex-wrap: wrap;
-    direction: ltr;
     margin: 0.1rem 0;
     color: #f8f9fa;
 }

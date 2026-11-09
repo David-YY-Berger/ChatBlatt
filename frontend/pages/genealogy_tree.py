@@ -153,6 +153,7 @@ def _edge_style(edge) -> dict:
 
 def _render_pyvis_graph(graph_data, lang: str) -> None:
     positions, roles = _compute_layout(graph_data)
+    roles = {key: get_text(f"genealogy_ui.role_{role}", lang) for key, role in roles.items()}
     render_pyvis_graph(graph_data, positions, roles, _edge_style, lang)
 
 

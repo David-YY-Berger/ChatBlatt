@@ -116,6 +116,8 @@ class BaseEntityPopulator(ABC):
         entities = db.get_entities_by_keys(list(keys))
         if target is not None:
             for e in entities:
+                if e.display_heb_name:
+                    target.rel_heb_names[e.key] = e.display_heb_name
                 roles = [getattr(r, "value", r) for r in (getattr(e, "roles", None) or [])]
                 if roles:
                     target.rel_roles[e.key] = roles
@@ -308,4 +310,3 @@ POPULATOR_REGISTRY: Dict[EntityType, BaseEntityPopulator] = {
 def get_populator(entity_type: EntityType) -> Optional[BaseEntityPopulator]:
     """Get the populator for a given entity type."""
     return POPULATOR_REGISTRY.get(entity_type)
-

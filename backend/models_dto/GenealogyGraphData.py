@@ -11,6 +11,7 @@ class GenealogyNode(BaseModel):
     """A single person-node in the genealogy graph."""
     key: str
     display_name: str
+    display_heb_name: str = ""
     is_center: bool = False
     is_woman: Optional[bool] = None  # None = unknown gender (not yet enriched)
 

@@ -67,6 +67,11 @@ def source_popup_css_js() -> str:
 }
 .sp-close-btn:hover { color:#1e293b; }
 .sp-content { padding:0 12px 12px; }"""
+    popup_css += """
+[dir="rtl"] .source-title-row, [dir="rtl"] .source-summary-row { flex-direction:row-reverse; }
+[dir="rtl"] .collapsible { text-align:right; }
+[dir="rtl"] .collapsible::after { right:auto; left:12px; }
+"""
 
     popup_js = """\
 function spOpen(id, ev) {
@@ -112,6 +117,7 @@ def source_popup_html(
     summary_en: str = "",
     summary_heb: str = "",
     passage_types: Optional[List[PassageType]] = None,
+    lang: str = "en",
 ) -> str:
     """
     Returns the full overlay <div> for one source popup.
@@ -134,7 +140,10 @@ def source_popup_html(
     body_id   = f"src-body-{pid}"
     header_id = f"src-hdr-{pid}"
 
-    inner_html = HtmlWriter.build_source_content(en_content, heb_content, pid)
+    from translations1 import enum_text, get_text
+    labels = {key: get_text(f"source_display.{key}", lang) for key in ("copy", "hebrew_content", "english_content", "no_content")}
+    labels["passage_types"] = {pt.name: enum_text(pt, lang) for pt in PassageType}
+    inner_html = HtmlWriter.build_source_content(en_content, heb_content, pid, labels)
 
     source_section = HtmlWriter.build_source_section(
         body_id=body_id,
@@ -146,6 +155,7 @@ def source_popup_html(
         summary_heb=summary_heb,
         start_open=True,
         passage_types=passage_types,
+        labels=labels,
     )
 
     return (
@@ -182,4 +192,3 @@ def source_link_html(
         f' style="color:{color};font-weight:500;text-decoration:underline;cursor:pointer;">'
         f'{escaped_text}</a>'
     )
-

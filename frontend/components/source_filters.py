@@ -15,6 +15,7 @@ from __future__ import annotations
 import streamlit as st
 
 from backend.models_db.Enums import PassageType, SourceType
+from translations1 import enum_text, get_text
 
 
 def _passage_key(pt: PassageType) -> str:
@@ -25,17 +26,17 @@ def _source_type_key(source_type: SourceType) -> str:
     return f"source_type_filter_{source_type.name}"
 
 
-def render_source_filters() -> None:
-    st.markdown("<div class='entity-select-label'>Passage Type</div>", unsafe_allow_html=True)
+def render_source_filters(lang: str = "en") -> None:
+    st.markdown(f"<div class='entity-select-label'>{get_text('source_search_ui.passage_type', lang)}</div>", unsafe_allow_html=True)
     for pt in PassageType:
-        st.checkbox(f"{pt.icon} {pt.value}", key=_passage_key(pt))
+        st.checkbox(f"{pt.icon} {enum_text(pt, lang)}", key=_passage_key(pt))
 
-    st.markdown("<div class='entity-select-label' style='margin-top:0.75rem;'>Source Type</div>",
+    st.markdown(f"<div class='entity-select-label' style='margin-top:0.75rem;'>{get_text('source_search_ui.source_type', lang)}</div>",
                 unsafe_allow_html=True)
     for source_type in SourceType:
-        coming_soon = "" if source_type.available else " (Coming soon)"
+        coming_soon = "" if source_type.available else f" ({get_text('source_search_ui.coming_soon', lang)})"
         st.checkbox(
-            f"{source_type.value}{coming_soon}",
+            f"{enum_text(source_type, lang)}{coming_soon}",
             key=_source_type_key(source_type),
             disabled=not source_type.available,
         )

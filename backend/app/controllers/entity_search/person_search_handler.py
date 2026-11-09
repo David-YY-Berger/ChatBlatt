@@ -71,6 +71,7 @@ class PersonSearchHandler(BaseEntitySearchHandler):
             badges.append({
                 "icon": entity.timePeriod.icon,
                 "text": entity.timePeriod.value,
+                "enum": entity.timePeriod,
                 "label_key": None,
                 "color": entity.timePeriod.color,
             })
@@ -100,7 +101,6 @@ class PersonSearchHandler(BaseEntitySearchHandler):
             })
 
         for role in entity.roles or []:
-            badges.append({"icon": role.icon, "text": role.value, "label_key": None, "color": role.color})
+            badges.append({"icon": role.icon, "text": role.value, "enum": role, "label_key": None, "color": role.color})
 
         return badges
-

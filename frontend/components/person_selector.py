@@ -82,8 +82,9 @@ def render_person_selector(
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_label(opt, rtl) for opt in filtered]
-    key_map = {_format_label(opt, rtl): opt.key for opt in filtered}
+    display_labels = [_format_label(opt, False) for opt in filtered]
+    key_map = {_format_label(opt, False): opt.key for opt in filtered}
+    localized_labels = {label: _format_label(opt, rtl) for label, opt in zip(display_labels, filtered)}
 
     if override_key:
         st.session_state[state_key] = override_key
@@ -98,6 +99,7 @@ def render_person_selector(
         chosen_label = st.selectbox(
             get_text("entity_search_ui.select_entity", lang),
             options=display_labels,
+            format_func=lambda label: localized_labels[label],
             index=None,
             placeholder=placeholder,
             key=combo_state_key,

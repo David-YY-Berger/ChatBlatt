@@ -62,6 +62,10 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;
   switching back to English reorients left-to-right.
+- Source filters, entity metadata, graph names, number results, and source HTML/PDF
+  use the selected language. Where Hebrew names, units, contexts, or summaries
+  are unavailable in the data, the available English value is displayed instead.
+  Search selections retain their underlying identifiers when the language changes.
 - **Theme**: respects system `prefers-color-scheme` (dark = deep blues, light = clean
   whites/soft grays).
 

@@ -22,7 +22,8 @@ import math
 import streamlit as st
 import streamlit.components.v1 as components
 
-from translations1 import get_text, is_rtl
+from translations1 import enum_text, get_text
+from backend.models_db.Enums import PassageType
 from backend.file_utils.HtmlWriter import HtmlWriter
 from components.facets import (
     get_selected_entity_names,
@@ -135,10 +136,11 @@ def _render_download_button(ans, lang: str) -> None:
                 st.session_state.get("_search_url"),
                 entity_names=entity_names,
                 dedication=dedication,
+                lang=lang,
             ),
             file_name=results_pdf_filename(st.session_state.get("_search_url"), entity_names),
             mime="application/pdf",
-            help="Download results as PDF",
+            help=get_text("source_search_ui.download_pdf", lang),
         )
 
 
@@ -163,6 +165,7 @@ def _render_search_panel(lang: str) -> None:
         _render_results_body(
             st.session_state["_search_ans"],
             st.session_state.get("_search_elapsed", ""),
+            lang,
         )
 
 
@@ -211,18 +214,21 @@ def _render_pagination(lang: str) -> None:
 # Results display
 # ---------------------------------------------------------------------------
 
-def _render_results_body(ans, elapsed: str) -> None:
+def _render_results_body(ans, elapsed: str, lang: str = "en") -> None:
     """Display search results as an HTML component, with a plain-text fallback."""
     html_writer = HtmlWriter()
     try:
-        html = html_writer.get_full_html(ans, False)
+        labels = {key: get_text(f"source_display.{key}", lang) for key in ("copy", "hebrew_content", "english_content", "no_content")}
+        labels["passage_types"] = {pt.name: enum_text(pt, lang) for pt in PassageType}
+        html = html_writer.get_full_html(ans, False, lang, labels)
         components.html(html, height=800, scrolling=True)
         logger.info("Rendered HTML successfully.")
     except Exception as e:
         logger.error("Failed to render HTML: %s", e)
-        st.error(f"Failed to render HTML: {e}")
+        st.error(f"{get_text('source_search_ui.render_error', lang)}: {e}")
         for src in ans.src_metadata_lst[:20]:
-            st.markdown(f"- **{src.key}** — {getattr(src, 'summary_en', '')}")
+            summary = getattr(src, "summary_heb" if lang == "he" else "summary_en", "") or ""
+            st.markdown(f"- **{src.key}** — {summary}")
 
 
 # ---------------------------------------------------------------------------
@@ -232,8 +238,6 @@ def _render_results_body(ans, elapsed: str) -> None:
 def render(lang: str) -> None:
     title = get_text("page_titles.source_search", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
-
-    _rtl = is_rtl(lang)  # available for future RTL layout adjustments
 
     # Kick off background fetching of every entity type's select-options list
     # as early as possible (before the rest of the page is built), so the
@@ -249,10 +253,10 @@ def render(lang: str) -> None:
 
     left_col, main_col = st.columns([1.6, 6])
     with left_col:
-        render_source_filters()
+        render_source_filters(lang)
     with main_col:
         # Entity facets at the top of the right area
-        render_entity_facets()
+        render_entity_facets(lang)
         _render_relationship_chip(lang)
         if run_url_search:
             _execute_search()

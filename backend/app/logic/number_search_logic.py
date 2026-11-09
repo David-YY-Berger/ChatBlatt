@@ -21,6 +21,10 @@ class NumberOccurrenceDTO:
     source_key: str           # SourceMetadata.key
     source_str_en: str = ""   # English display title (SourceClass.__str__())
     source_str_heb: str = ""  # Hebrew display title  (SourceClass.to_heb_str())
+    heb_unit: Optional[str] = None
+    heb_context: Optional[str] = None
+    summary_en: Optional[str] = None
+    summary_heb: Optional[str] = None
 
     def __str__(self) -> str:
         return (
@@ -63,6 +67,7 @@ class UnitNumberRow:
 class UnitSearchResult:
     unit: str
     rows: List[UnitNumberRow] = field(default_factory=list)
+    heb_unit: Optional[str] = None
 
 
 def _sort_key(value: str):
@@ -103,7 +108,10 @@ class NumberSearchLogic:
             row.categories.sort(key=lambda c: c.ordinal)
             row.occurrences = self._build_occurrences(numbers_by_value[row.value], lang)
         ordered = sorted(rows.values(), key=lambda r: _sort_key(r.value))
-        return UnitSearchResult(unit=unit.strip(), rows=ordered)
+        return UnitSearchResult(
+            unit=unit.strip(), rows=ordered,
+            heb_unit=next((number.heb_unit for number in enumbers if number.heb_unit), None),
+        )
 
     def execute(self, value: str, lang: str = LANG_EN) -> Optional[NumberSearchResult]:
         """
@@ -139,18 +147,22 @@ class NumberSearchLogic:
             for src in sources_sorted:
                 source_str = src.to_heb_str() if lang == LANG_HE else str(src)
                 summary = src.summary_heb if lang == LANG_HE else src.summary_en
-                en_contexts = [context.en_context for context in number.get_contexts_for_source(src.key)] or [None]
+                contexts = number.get_contexts_for_source(src.key) or [None]
 
-                for en_context in en_contexts:
+                for context in contexts:
                     result.by_category[cat].append(
                         NumberOccurrenceDTO(
                             en_unit=number.en_unit,
-                            en_context=en_context,
+                            en_context=context.en_context if context else None,
                             source_str=source_str,
                             summary=summary,
                             source_key=src.key,
                             source_str_en=str(src),
                             source_str_heb=src.to_heb_str(),
+                            heb_unit=number.heb_unit,
+                            heb_context=context.heb_context if context else None,
+                            summary_en=src.summary_en,
+                            summary_heb=src.summary_heb,
                         )
                     )
                     result.total_count += 1

@@ -204,6 +204,14 @@ class BookCategoryName(Enum):
     Kodashim = "Kodashim"
     Tahorot = "Tahorot"
 
+    @property
+    def hebrew(self) -> str:
+        return {
+            "Torah": "תורה", "Neviim": "נביאים", "Ketuvim": "כתובים",
+            "Zeraim": "זרעים", "Moed": "מועד", "Nashim": "נשים",
+            "Nezikin": "נזיקין", "Kodashim": "קדשים", "Tahorot": "טהרות",
+        }[self.name]
+
 
 class SourceContentType(Enum):
     EN = 0

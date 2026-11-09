@@ -115,7 +115,7 @@ class SourceClass(ABC):
         section = self.get_section()
         chapter = self.get_chapter()
         location = section if section else (str(chapter) if chapter else "")
-        category = f" ({book.category.value})" if book and book.category else ""
+        category = f" ({book.category.hebrew})" if book and book.category else ""
         return f"{location} {book_name}{category}".strip()
 
     ################################################## misc ############################################

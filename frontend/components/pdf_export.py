@@ -23,6 +23,7 @@ from reportlab.platypus import Flowable, KeepTogether, Paragraph, SimpleDocTempl
 
 from backend.common import Paths
 from backend.models_db.Enums import SourceType
+from translations1 import enum_text, get_text, is_rtl
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
@@ -122,11 +123,12 @@ class _Header(Flowable):
     """Banner with the main picture (clickable) and the 'eitz habina' title."""
 
     def __init__(self, width: float, stamp: str, search_url: str | None = None,
-                 dedication: str = ""):
+                 dedication: str = "", lang: str = "en"):
         super().__init__()
         self.width, self.height, self.stamp = width, 3.2 * cm, stamp
         self.search_url = search_url
         self.dedication = dedication
+        self.lang = lang
 
     def wrap(self, *_):
         return self.width, self.height
@@ -136,30 +138,36 @@ class _Header(Flowable):
         c.setFillColor(_NAVY)
         c.roundRect(0, 0, self.width, self.height, 8, stroke=0, fill=1)
         pad, side = 0.3 * cm, self.height - 0.6 * cm
+        rtl = is_rtl(self.lang)
+        image_x = self.width - pad - side if rtl else pad
         if MAIN_IMAGE.exists():
-            c.drawImage(str(MAIN_IMAGE), pad, pad, side, side, preserveAspectRatio=True, mask="auto")
-            c.linkURL(Paths.EITZ_HABINA_URL, (pad, pad, pad + side, pad + side), relative=1)
-        x = pad + side + 0.6 * cm
+            c.drawImage(str(MAIN_IMAGE), image_x, pad, side, side, preserveAspectRatio=True, mask="auto")
+            c.linkURL(Paths.EITZ_HABINA_URL, (image_x, pad, image_x + side, pad + side), relative=1)
+        x = image_x - 0.6 * cm if rtl else pad + side + 0.6 * cm
+        draw_text = c.drawRightString if rtl else c.drawString
+        def display(text):
+            return get_display(text, base_dir="R") if rtl else text
         c.setFillColor(colors.white)
         c.setFont(FONT_BOLD, 26)
-        c.drawString(x, self.height - 1.4 * cm, "Eitz Habina")
+        draw_text(x, self.height - 1.4 * cm, display(get_text("app.title", self.lang)))
         if self.dedication:
             c.setFont(FONT, 8)
             dedication = get_display(self.dedication, base_dir="R") if _HEB_RE.search(self.dedication) else self.dedication
-            c.drawString(x, self.height - 0.62 * cm, dedication)
+            draw_text(x, self.height - 0.62 * cm, dedication)
         c.setFont(FONT, 8)
         bsad = get_display("בס״ד", base_dir="R")
-        c.drawRightString(self.width - pad, self.height - 0.4 * cm, bsad)
+        (c.drawString if rtl else c.drawRightString)(pad if rtl else self.width - pad, self.height - 0.4 * cm, bsad)
         c.setFont(FONT, 9)
         c.setFillColor(colors.HexColor("#ecf0f1"))
-        c.drawString(x, 0.9 * cm, f"Downloaded: {self.stamp}")
-        c.drawString(x, 0.45 * cm, Paths.EITZ_HABINA_URL)
+        draw_text(x, 0.9 * cm, display(f"{get_text('source_display.downloaded', self.lang)}: {self.stamp}"))
+        draw_text(x, 0.45 * cm, Paths.EITZ_HABINA_URL)
         if self.search_url:
-            label = "Open this search online"
+            label = display(get_text("source_display.open_search", self.lang))
             c.setFillColor(colors.HexColor("#8ecbff"))
             c.setFont(FONT_BOLD, 10)
-            c.drawString(x, 1.35 * cm, label)
-            c.linkURL(self.search_url, (x, 1.25 * cm, x + pdfmetrics.stringWidth(label, FONT_BOLD, 10), 1.65 * cm),
+            draw_text(x, 1.35 * cm, label)
+            label_width = pdfmetrics.stringWidth(label, FONT_BOLD, 10)
+            c.linkURL(self.search_url, (x - label_width if rtl else x, 1.25 * cm, x if rtl else x + label_width, 1.65 * cm),
                       relative=1)
 
 
@@ -182,13 +190,14 @@ def _text_flowables(text: str, size: float, width: float, bold=False, italic_col
 
 
 def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str] | None = None,
-                      dedication: str = "") -> bytes:
-    """Build the result PDF, including selected English entity names and localized dedication."""
+                      dedication: str = "", lang: str = "en") -> bytes:
+    """Build the result PDF in the selected UI language."""
     _register_fonts()
     buf = io.BytesIO()
     margin = 1.8 * cm
     description = _search_description(search_url, entity_names)
-    title = f"Eitz Habina Sources - {description}" if description else "Eitz Habina Sources"
+    base_title = f"{get_text('app.title', lang)} - {get_text('source_display.sources', lang)}"
+    title = f"{base_title} - {description}" if description else base_title
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=margin, rightMargin=margin,
                             topMargin=margin, bottomMargin=margin, title=title,
                             author="Eitz Habina")
@@ -196,15 +205,19 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
     inner = width - 0.8 * cm
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    story: list = [_Header(width, stamp, search_url, dedication), Spacer(1, 0.4 * cm)]
+    story: list = [_Header(width, stamp, search_url, dedication, lang), Spacer(1, 0.4 * cm)]
     sources = list(getattr(ans, "src_metadata_lst", []) or [])
     contents = list(getattr(ans, "src_contents", []) or [])
-    count_style = ParagraphStyle("c", fontName=FONT, fontSize=10, textColor=colors.HexColor("#555555"))
-    story += [Paragraph(f"{len(sources)} sources", count_style), Spacer(1, 0.2 * cm)]
+    story += _text_flowables(f"{len(sources)} {get_text('source_display.sources', lang)}", 10, inner)
+    story += [Spacer(1, 0.2 * cm)]
     if search_url:
         link_style = ParagraphStyle("l", fontName=FONT, fontSize=7, leading=9, wordWrap="CJK",
                                     textColor=colors.HexColor("#1a5fb4"))
-        story.append(Paragraph(f'Search link: <link href="{escape(search_url, {chr(34): "&quot;"})}">{escape(search_url)}</link>', link_style))
+        link_label = get_text("source_display.search_link", lang)
+        if is_rtl(lang):
+            link_label = get_display(link_label, base_dir="R")
+            link_style.alignment = TA_RIGHT
+        story.append(Paragraph(f'{escape(link_label)}: <link href="{escape(search_url, {chr(34): "&quot;"})}">{escape(search_url)}</link>', link_style))
     story.append(Spacer(1, 0.3 * cm))
 
     for i, meta in enumerate(sources):
@@ -213,10 +226,14 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
         title_style = ParagraphStyle("t", fontName=FONT_BOLD, fontSize=12, leading=16,
                                      textColor=colors.white, backColor=_NAVY,
                                      borderPadding=(5, 6, 5, 6), spaceAfter=8)
-        block.append(Paragraph(f"{i + 1}. {escape(str(meta))}", title_style))
         heb_title = _plain(meta.to_heb_str()) if hasattr(meta, "to_heb_str") else ""
-        block += _text_flowables(heb_title, 12, inner, bold=True)
-        types = ", ".join(str(getattr(pt, "value", pt)) for pt in (getattr(meta, "passage_types", None) or []))
+        primary_title = heb_title if is_rtl(lang) and heb_title else str(meta)
+        secondary_title = str(meta) if is_rtl(lang) and heb_title else heb_title
+        if is_rtl(lang):
+            title_style.alignment = TA_RIGHT
+        block.append(Paragraph(escape(get_display(f"{i + 1}. {primary_title}", base_dir="R") if is_rtl(lang) else f"{i + 1}. {primary_title}"), title_style))
+        block += _text_flowables(secondary_title, 12, inner, bold=True)
+        types = ", ".join(enum_text(pt, lang) for pt in (getattr(meta, "passage_types", None) or []))
         grey = colors.HexColor("#7f8c8d")
         if types:
             block += _text_flowables(types, 9, inner, italic_color=grey)
@@ -236,7 +253,7 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
             body.append(Spacer(1, 0.3 * cm))
         body += _text_flowables(eng, 10, inner, leading=14.5)
         if not body:
-            body = _text_flowables("No content available", 9, inner, italic_color=grey)
+            body = _text_flowables(get_text("source_display.no_content", lang), 9, inner, italic_color=grey)
 
         story.append(KeepTogether(block + body[:3]))
         story += body[3:]
@@ -245,7 +262,8 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
     def _footer(canvas, d):
         canvas.setFont(FONT, 8)
         canvas.setFillColor(colors.grey)
-        canvas.drawCentredString(A4[0] / 2, 0.9 * cm, f"Eitz Habina  |  {stamp}  |  Page {d.page}")
+        footer = f"{get_text('app.title', lang)}  |  {stamp}  |  {get_text('source_display.page', lang)} {d.page}"
+        canvas.drawCentredString(A4[0] / 2, 0.9 * cm, get_display(footer, base_dir="R") if is_rtl(lang) else footer)
 
     doc.build(story, onFirstPage=_footer, onLaterPages=_footer)
     return buf.getvalue()

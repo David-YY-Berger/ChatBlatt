@@ -32,10 +32,12 @@ class SelectorFragmentTests(unittest.TestCase):
     def test_source_selections_are_available_to_search(self):
         app = AppTest.from_string("""
 import streamlit as st
-from components.facets.renderers import _render_entity_select_panel
+from components.facets.renderers import _render_entity_select_panel, get_selected_entity_ids
+from pages.source_search_logic import sync_url_with_search
 _render_entity_select_panel({"label": "Person", "key": "person", "entity_tab": "people", "implemented": True})
 if st.button("Find Sources"):
-    st.write(st.session_state["entity_filter_selected_person"])
+    st.session_state["searched_ids"] = get_selected_entity_ids()
+    sync_url_with_search()
 """)
         with patch.object(renderers, "_load_entity_select_options", return_value=_options()):
             app.run()
@@ -43,6 +45,8 @@ if st.button("Find Sources"):
             self.assertEqual(app.multiselect[0].value, ["Alice", "Bob"])
             app.button[0].click().run()
             self.assertEqual(app.session_state["entity_filter_selected_person"], ["Alice", "Bob"])
+            self.assertEqual(app.session_state["searched_ids"], ["person0001", "person0002"])
+            self.assertEqual(app.query_params["ent"], ["person0001,person0002"])
             self.assertFalse(app.exception)
 
     def test_entity_selection_requires_go_and_filter_clears_selection(self):
@@ -64,12 +68,15 @@ _render_entity_search_tab("people", "en")
             self.assertEqual(detail.call_args.args[1], "person0001")
             app.selectbox[0].select("Bob").run()
             self.assertEqual(app.query_params["id"], ["person0001"])
+            app.button[0].click().run()
+            self.assertEqual(app.query_params["id"], ["person0002"])
+            self.assertEqual(detail.call_args.args[1], "person0002")
             app.selectbox[0].select("Alice").run()
             app.session_state["filter_person_gender"] = "men"
             app.run()
             self.assertIsNone(app.selectbox[0].value)
             self.assertTrue(app.button[0].disabled)
-            self.assertEqual(app.query_params["id"], ["person0001"])
+            self.assertEqual(app.query_params["id"], ["person0002"])
             self.assertFalse(app.exception)
 
     def test_tree_selection_requires_go_and_filter_clears_selection(self):

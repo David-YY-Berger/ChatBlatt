@@ -126,6 +126,7 @@ def _make_node(entity: Entity, is_center: bool = False) -> StudiedFromNode:
     return StudiedFromNode(
         key=entity.key,
         display_name=entity.display_en_name,
+        display_heb_name=entity.display_heb_name or "",
         is_center=is_center,
         is_woman=getattr(entity, "isWoman", None),
     )

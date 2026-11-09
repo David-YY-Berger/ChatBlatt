@@ -54,7 +54,7 @@ class PlaceSearchHandler(BaseEntitySearchHandler):
         return [{
             "icon": entity.placeType.icon,
             "text": entity.placeType.value,
+            "enum": entity.placeType,
             "label_key": None,
             "color": entity.placeType.color,
         }]
-

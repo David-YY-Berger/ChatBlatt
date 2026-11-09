@@ -269,6 +269,7 @@ def _make_node(entity: Entity, is_center: bool = False) -> GenealogyNode:
     return GenealogyNode(
         key=entity.key,
         display_name=entity.display_en_name,
+        display_heb_name=entity.display_heb_name or "",
         is_center=is_center,
         is_woman=is_woman,
     )

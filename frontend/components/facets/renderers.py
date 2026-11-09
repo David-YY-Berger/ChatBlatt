@@ -14,6 +14,7 @@ from collections import Counter
 from pathlib import Path
 
 import streamlit as st
+from translations1 import enum_text, get_text, is_rtl
 
 from system_common.Constants import (
     PAGE_ANIMALS, PAGE_FOODS, PAGE_NATIONS, PAGE_NUMBERS, PAGE_PEOPLE,
@@ -119,7 +120,7 @@ def inject_facet_css() -> None:
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 
-def render_entity_facets() -> None:
+def render_entity_facets(lang: str = "en") -> None:
     """Entity-type filter – a specific-entity picker panel for every entity
     type, always shown (no tab toggles). Types without a search handler yet
     show a "coming soon" placeholder instead of a picker.
@@ -131,20 +132,20 @@ def render_entity_facets() -> None:
 
     st.markdown('<div class="entity-panel">', unsafe_allow_html=True)
     st.markdown(
-        "<div class='entity-panel-title'>🏷️ Filter by Entity</div>",
+        f"<div class='entity-panel-title'>🏷️ {get_text('source_search_ui.filter_by_entity', lang)}</div>",
         unsafe_allow_html=True,
     )
 
     st.markdown('<div class="entity-select-panels">', unsafe_allow_html=True)
     for ent in ENTITY_TYPES:
-        _render_entity_select_panel(ent)
+        _render_entity_select_panel(ent, lang)
     st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
 
 @st.fragment
-def _render_entity_select_panel(ent: dict) -> None:
+def _render_entity_select_panel(ent: dict, lang: str = "en") -> None:
     """Render the specific-entity picker panel for one active entity-type tab.
 
     Label sits to the left, with the combobox occupying the remaining space
@@ -152,29 +153,32 @@ def _render_entity_select_panel(ent: dict) -> None:
     """
     st.markdown('<div class="facet-section entity-select-section">', unsafe_allow_html=True)
 
+    label = get_text(f"facet_entities.{ent['key']}", lang)
     label_col, combo_col = st.columns([1, 4], vertical_alignment="center")
     with label_col:
-        st.markdown(f"<div class='entity-select-label'>{ent['label']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='entity-select-label'>{label}</div>", unsafe_allow_html=True)
 
     with combo_col:
         if ent["implemented"]:
             options = _load_entity_select_options(ent["entity_tab"])
             if options:
                 labels = _unique_option_labels(options)
+                display_labels = dict(zip(labels, _unique_option_labels(options, lang)))
                 st.multiselect(
-                    f"Select {ent['label'].lower()}(s)",
+                    get_text("source_search_ui.select_entities", lang).format(entity=label),
                     options=labels,
+                    format_func=lambda value: display_labels[value],
                     key=f"entity_filter_selected_{ent['key']}",
                     label_visibility="collapsed",
-                    placeholder=f"Search {ent['label'].lower()}s…",
+                    placeholder=get_text("source_search_ui.search_entities", lang).format(entity=label),
                 )
                 # Selections live in session_state under this widget's key;
                 # get_selected_entity_ids() resolves them (across every
                 # entity-type panel) back to entity keys for the query.
             else:
-                st.caption("No entities found.")
+                st.caption(get_text("source_search_ui.no_entities", lang))
         else:
-            st.caption("Coming soon — this entity type isn't searchable yet.")
+            st.caption(get_text("source_search_ui.entity_unavailable", lang))
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -206,18 +210,21 @@ def _load_entity_select_options(entity_tab: str) -> list:
     return options
 
 
-def _format_entity_option_label(opt) -> str:
+def _format_entity_option_label(opt, lang: str = "en") -> str:
     """Format an EntitySelectOption for display in the multiselect."""
     label = f"{opt.display_en_name} ({opt.display_heb_name})" if opt.display_heb_name else opt.display_en_name
-    roles = opt.roles_label() if hasattr(opt, "roles_label") else ""
+    if is_rtl(lang) and opt.display_heb_name:
+        label = f"{opt.display_heb_name} ({opt.display_en_name})"
+    roles = (", ".join(enum_text(role, lang) for role in getattr(opt, "roles", []))
+             if is_rtl(lang) else opt.roles_label() if hasattr(opt, "roles_label") else "")
     return f"{label} - {roles}" if roles else label
 
 
-def _unique_option_labels(options: list) -> list[str]:
+def _unique_option_labels(options: list, lang: str = "en") -> list[str]:
     """Display labels aligned with `options`; labels shared by several options
     (e.g. two people with the same name and roles) get a short key suffix so each
     stays individually selectable."""
-    labels = [_format_entity_option_label(o) for o in options]
+    labels = [_format_entity_option_label(o, lang) for o in options]
     counts = Counter(labels)
     return [f"{l} (#{o.key[-4:]})" if counts[l] > 1 else l for l, o in zip(labels, options)]
 

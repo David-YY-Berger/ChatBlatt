@@ -193,7 +193,7 @@ def render_pyvis_graph(
     try:
         from pyvis.network import Network
     except ImportError:
-        st.error("pyvis is not installed. Run: pip install pyvis")
+        st.error(get_text("source_search_ui.graph_dependency_error", lang))
         return
 
     net = Network(
@@ -212,16 +212,19 @@ def render_pyvis_graph(
         border = SELECTED_RING if is_selected else DEFAULT_BORDER
         border_width = 4 if is_selected else 2
         x, y = positions.get(node.key, (0.0, 0.0))
+        if is_rtl(lang):
+            x = -x
 
-        tooltip = node.display_name
+        name = (getattr(node, "display_heb_name", "") or node.display_name) if is_rtl(lang) else node.display_name
+        tooltip = name
         if role:
             tooltip += f" ({role})"
         if is_selected:
-            tooltip += " — selected"
+            tooltip += f" — {get_text('genealogy_ui.role_center', lang)}"
 
         net.add_node(
             node.key,
-            label=node.display_name,
+            label=name,
             shape="dot",
             color={"background": fill, "border": border, "highlight": {"background": fill, "border": border}},
             borderWidth=border_width,
@@ -239,7 +242,7 @@ def render_pyvis_graph(
             edge.from_key,
             edge.to_key,
             smooth=False,
-            title=edge.label,
+            title=get_text(f"entity_fields.{edge.rel_type if edge.rel_type != 'sibling' else 'siblings'}", lang),
             **edge_style(edge),
         )
 

@@ -132,7 +132,7 @@ function toggleCollapsible(contentId) {
 }"""
 
     @staticmethod
-    def build_passage_badges_html(passage_types: Optional[List[PassageType]]) -> str:
+    def build_passage_badges_html(passage_types: Optional[List[PassageType]], labels=None) -> str:
         """Build the colorful row of passage-type badges (e.g. Law, Story of Tanach,
         Prophecy) shown on a source's header. Each :class:`PassageType`
         member supplies its own icon + color, so a source with multiple
@@ -143,7 +143,7 @@ function toggleCollapsible(contentId) {
         badges = "".join(
             f'<span class="passage-badge" style="background:{pt.color}1f; '
             f'border:1px solid {pt.color}; color:{pt.color};">'
-            f'{pt.icon} {HtmlWriter._escape_html(pt.value)}</span>'
+            f'{pt.icon} {HtmlWriter._escape_html((labels or {}).get(pt.name, pt.value))}</span>'
             for pt in passage_types
         )
         return f'<div class="source-passage-badges">{badges}</div>'
@@ -159,6 +159,7 @@ function toggleCollapsible(contentId) {
         summary_heb: str = "",
         start_open: bool = False,
         passage_types: Optional[List[PassageType]] = None,
+        labels=None,
     ) -> str:
         """Build a source section div (collapsible header + body).
         Shared with the frontend popup component."""
@@ -176,7 +177,8 @@ function toggleCollapsible(contentId) {
                 f'</div>'
             )
 
-        badges_row = HtmlWriter.build_passage_badges_html(passage_types)
+        labels = labels or {}
+        badges_row = HtmlWriter.build_passage_badges_html(passage_types, labels.get("passage_types"))
 
         open_cls = " open" if start_open else ""
         return (
@@ -187,7 +189,7 @@ function toggleCollapsible(contentId) {
             f'<span class="source-title-en">{t_en}</span>'
             f'<div class="source-title-right">'
             f'<span class="source-title-heb">{t_heb}</span>'
-            f'<button class="source-copy-btn" title="Copy" onclick="copySource(event, \'{header_id}\')">'
+            f'<button class="source-copy-btn" title="{HtmlWriter._escape_html(labels.get("copy", "Copy"))}" onclick="copySource(event, \'{header_id}\')">'
             f'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>'
             f'<span class="source-arrow">▶</span>'
             f'</div></div>'
@@ -200,42 +202,44 @@ function toggleCollapsible(contentId) {
         )
 
     @staticmethod
-    def build_source_content(en_content: str, heb_content: str, idx: str) -> str:
+    def build_source_content(en_content: str, heb_content: str, idx: str, labels=None) -> str:
         """Build the collapsible Hebrew + English content blocks.
         Shared with the frontend popup component.
         ``idx`` is a unique string used as part of the element IDs."""
+        labels = labels or {}
         result = ""
         if heb_content and heb_content.strip():
             result += (
                 f'<button class="collapsible active"'
-                f' onclick="toggleCollapsible(\'hebrew-{idx}\')">Hebrew Content</button>'
+                f' onclick="toggleCollapsible(\'hebrew-{idx}\')">{HtmlWriter._escape_html(labels.get("hebrew_content", "Hebrew Content"))}</button>'
                 f'<div class="content active" id="hebrew-{idx}">'
                 f'<div class="hebrew-content">{heb_content}</div></div>'
             )
         if en_content and en_content.strip():
             result += (
                 f'<button class="collapsible active"'
-                f' onclick="toggleCollapsible(\'english-{idx}\')">English Content</button>'
+                f' onclick="toggleCollapsible(\'english-{idx}\')">{HtmlWriter._escape_html(labels.get("english_content", "English Content"))}</button>'
                 f'<div class="content active" id="english-{idx}">'
                 f'<div class="english-content">{en_content}</div></div>'
             )
-        return result or '<div class="no-content">No displayable content available</div>'
+        return result or f'<div class="no-content">{HtmlWriter._escape_html(labels.get("no_content", "No displayable content available"))}</div>'
 
     # ------------------------------------------------------------------
 
-    def get_full_html(self, ans: Answer, get_header: bool = True) -> str:
-        html = self._get_html_start()
+    def get_full_html(self, ans: Answer, get_header: bool = True, lang: str = "en", labels=None) -> str:
+        self._labels = labels or {}
+        html = self._get_html_start(lang)
         if get_header:
             html += self._get_header(ans)
         html += self._get_references_sections(ans)
         html += self._get_html_end()
         return html
 
-    def _get_html_start(self) -> str:
+    def _get_html_start(self, lang: str = "en") -> str:
         """HTML start with compact CSS styling"""
         return (
             """<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -255,11 +259,14 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
 """
             + HtmlWriter.get_source_section_css()
             + """
+[dir="rtl"] .source-title-row, [dir="rtl"] .source-summary-row { flex-direction:row-reverse; }
+[dir="rtl"] .collapsible { text-align:right; }
+[dir="rtl"] .collapsible::after { right:auto; left:12px; }
 </style>
 </head>
 <body>
 <div class="container">"""
-        )
+        ).replace("<html>", f'<html lang="{self._escape_html(lang)}" dir="{"rtl" if lang.startswith("he") else "ltr"}">').replace("direction:ltr; text-align:left;", "direction:inherit; text-align:start;")
 
     def _get_header(self, ans: Answer) -> str:
         """Header section with Entities and NERs"""
@@ -303,7 +310,7 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
         inner_html = (
             self._get_source_content(source, index)
             if source
-            else '<div class="no-content">No source content available</div>'
+            else f'<div class="no-content">{self._escape_html(self._labels.get("no_content", "No source content available"))}</div>'
         )
 
         return HtmlWriter.build_source_section(
@@ -315,14 +322,15 @@ body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:8px; 
             summary_en=summary_en,
             summary_heb=summary_heb,
             passage_types=getattr(src_metadata, 'passage_types', None),
+            labels=self._labels,
         )
 
     def _get_source_content(self, source, index: int) -> str:
         content = source._get_content() if hasattr(source, '_get_content') else getattr(source, 'content', [])
         if not content or len(content) < 2:
-            return '<div class="no-content">No content available</div>'
+            return f'<div class="no-content">{self._escape_html(self._labels.get("no_content", "No content available"))}</div>'
         english_content, hebrew_content = content[0], content[1]
-        return HtmlWriter.build_source_content(english_content, hebrew_content, str(index))
+        return HtmlWriter.build_source_content(english_content, hebrew_content, str(index), self._labels)
 
     def _get_javascript(self) -> str:
         return "<script>\n" + HtmlWriter.get_source_section_js() + "\n</script>"

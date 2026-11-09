@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from translations1 import get_text
+from translations1 import enum_text, get_text
 
 
 def render_person_filters(options: list, lang: str, key_prefix: str = "filter_person") -> list:
@@ -106,7 +106,7 @@ def render_multiselect_filter(
     chosen = st.multiselect(
         get_text(label_key, lang),
         options=list(enum_cls),
-        format_func=lambda m: m.value,
+        format_func=lambda m: enum_text(m, lang),
         placeholder=get_text(all_key, lang),
         key=state_key,
     )
@@ -171,10 +171,9 @@ def render_multi_checkbox_filter(
         member_key = f"{state_prefix}_{member.name}"
         if all_checked:
             # Locked/checked display only — uncheck 'All' to customize.
-            st.checkbox(member.value, value=True, key=f"{member_key}_locked", disabled=True)
+            st.checkbox(enum_text(member, lang), value=True, key=f"{member_key}_locked", disabled=True)
         else:
-            if st.checkbox(member.value, key=member_key):
+            if st.checkbox(enum_text(member, lang), key=member_key):
                 selected.add(member)
 
     return None if all_checked else selected
-

@@ -54,6 +54,7 @@ class SymbolSearchHandler(BaseEntitySearchHandler):
         return [{
             "icon": entity.symbolType.icon,
             "text": entity.symbolType.value,
+            "enum": entity.symbolType,
             "label_key": None,
             "color": entity.symbolType.color,
         }]

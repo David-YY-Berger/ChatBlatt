@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import functools
+from enum import Enum
 from pathlib import Path
 from typing import Any, Dict
 
@@ -58,3 +59,11 @@ def get_text(key: str, lang: str) -> str:
     if value is None:
         return key
     return str(value)
+
+
+def enum_text(member: Enum, lang: str) -> str:
+    if is_rtl(lang) and hasattr(member, "hebrew"):
+        return str(member.hebrew)
+    key = f"enums.{type(member).__name__}.{member.name}"
+    value = _get_nested(_load_translations().get(lang, {}), key.split("."))
+    return str(value) if value is not None else str(member.value)

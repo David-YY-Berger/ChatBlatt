@@ -42,6 +42,7 @@ class Entity(BaseModel):
     rel_keys_by_field: Dict[str, Dict[str, List[str]]] = TransientField(default_factory=dict)
     # Maps related person's entity key -> role names (e.g. ["King"]); shown next to the name in the UI.
     rel_roles: Dict[str, List[str]] = TransientField(default_factory=dict)
+    rel_heb_names: Dict[str, str] = TransientField(default_factory=dict)
 
     @field_validator("display_en_name", mode="before")
     @classmethod

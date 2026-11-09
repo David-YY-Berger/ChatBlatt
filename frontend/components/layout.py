@@ -38,11 +38,9 @@ def apply_layout(lang: str) -> None:
         html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
             direction: rtl !important;
         }
-        [data-testid="stAppViewContainer"] * {
+        [data-testid="stPopoverBody"], [data-testid="stDialog"] {
+            direction: rtl;
             text-align: right;
-        }
-        [data-testid="stHorizontalBlock"] {
-            flex-direction: row-reverse !important;
         }
         """
     else:
@@ -50,11 +48,9 @@ def apply_layout(lang: str) -> None:
         html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
             direction: ltr !important;
         }
-        [data-testid="stAppViewContainer"] * {
+        [data-testid="stPopoverBody"], [data-testid="stDialog"] {
+            direction: ltr;
             text-align: left;
-        }
-        [data-testid="stHorizontalBlock"] {
-            flex-direction: row !important;
         }
         """
 
@@ -195,14 +191,15 @@ def apply_layout(lang: str) -> None:
 
 
 def language_selector(lang: str) -> str:
-    labels = get_text("ui.language_label", lang)
+    st.markdown(get_text("ui.language_label", lang))
     language_names = available_languages()
     options = st.radio(
-        labels,
+        "Language",
         options=list(language_names.keys()),
         index=list(language_names.keys()).index(lang) if lang in language_names else 0,
         format_func=lambda code: language_names.get(code, code),
         key="language_selector",
         horizontal=True,
+        label_visibility="collapsed",
     )
     return options

@@ -23,7 +23,7 @@ from pathlib import Path
 import streamlit as st
 
 import navigation
-from translations1 import get_text, is_rtl
+from translations1 import enum_text, get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
 from system_common.SystemFunctions import get_secret
 from system_common.UrlPaths import (
@@ -167,7 +167,7 @@ def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
     rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_option_label(opt, rtl) for opt in filtered_options]
+    display_labels = [_format_option_label(opt, False) for opt in filtered_options]
     # Disambiguate identical labels (same name/roles) so each maps to its own entity.
     label_counts = Counter(display_labels)
     display_labels = [
@@ -175,6 +175,10 @@ def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
         for l, o in zip(display_labels, filtered_options)
     ]
     key_map = {l: o.key for l, o in zip(display_labels, filtered_options)}
+    localized_labels = {
+        label: _format_option_label(opt, rtl) + (f" (#{opt.key[-4:]})" if label_counts[_format_option_label(opt, False)] > 1 else "")
+        for label, opt in zip(display_labels, filtered_options)
+    }
 
     # ---- Layout: combobox + go button ----
     col_combo, col_btn = st.columns([4, 1])
@@ -183,6 +187,7 @@ def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
         chosen_label = st.selectbox(
             get_text("entity_search_ui.select_entity", lang),
             options=display_labels,
+            format_func=lambda label: localized_labels[label],
             index=None,
             placeholder=placeholder,
             key=combo_state_key,
@@ -324,7 +329,8 @@ def _render_metadata_badges(badges: list[dict], lang: str) -> None:
 
     chips = []
     for badge in badges:
-        text = badge.get("text") or get_text(badge.get("label_key") or "", lang)
+        text = (enum_text(badge["enum"], lang) if badge.get("enum")
+                else badge.get("text") or get_text(badge.get("label_key") or "", lang))
         icon = badge.get("icon", "")
         color = badge.get("color", "#6b7280")
         chips.append(
@@ -398,10 +404,19 @@ def _render_relationship_list(
             rel_keys = (getattr(entity, "rel_keys_by_field", {}) or {}).get(field_name, {}).get(item)
             link = rel_links.get(item)
             roles = (getattr(entity, "rel_roles", {}) or {}).get(link[0], []) if link else []
-            display = f"{item} - {', '.join(r.lower() for r in roles)}" if roles else item
+            display_name = ((getattr(entity, "rel_heb_names", {}) or {}).get(link[0]) or item
+                            if is_rtl(lang) and link else item)
+            if roles and is_rtl(lang):
+                from backend.models_db.Enums import RoleType
+                role_labels = [enum_text(RoleType(role), lang) if role in RoleType._value2member_map_ else role for role in roles]
+            else:
+                role_labels = [role.lower() for role in roles]
+            display = f"{display_name} - {', '.join(role_labels)}" if role_labels else display_name
             _render_entity_item_popover(
                 item, field_name, rel_links, lang,
-                getattr(entity, "display_en_name", ""), title, rel_keys, display,
+                (getattr(entity, "display_heb_name", "") or getattr(entity, "display_en_name", ""))
+                if is_rtl(lang) else getattr(entity, "display_en_name", ""),
+                title, rel_keys, display,
             )
 
 
@@ -454,7 +469,7 @@ def _render_entity_item_popover(
             f"📄 {get_text('entity_search_ui.view_sources', lang)}",
             page_url(PAGE_SOURCE_SEARCH, {
                 PARAM_SOURCE_RELS: rel_keys,
-                PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {item_name}",
+                PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {display_label or item_name}",
             }),
             use_container_width=True,
             disabled=not rel_keys,
@@ -525,7 +540,8 @@ def _format_option_label(opt, rtl: bool) -> str:
         label = f"{opt.display_en_name} ({opt.display_heb_name})"
     else:
         label = opt.display_en_name
-    roles = opt.roles_label() if hasattr(opt, "roles_label") else ""
+    roles = (", ".join(enum_text(role, "he") for role in getattr(opt, "roles", []))
+             if rtl else opt.roles_label() if hasattr(opt, "roles_label") else "")
     return f"{label} - {roles}" if roles else label
 
 

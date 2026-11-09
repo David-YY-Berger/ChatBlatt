@@ -18,7 +18,7 @@ import html
 import streamlit as st
 import streamlit.components.v1 as st_components
 
-from translations1 import get_text, is_rtl
+from translations1 import enum_text, get_text, is_rtl
 from system_common.SystemFunctions import get_secret
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
@@ -95,7 +95,7 @@ _CHEVRON_SVG = (
 )
 
 
-def _group_by_unit(occurrences: list[NumberOccurrenceDTO]) -> list[tuple[str | None, list[dict]]]:
+def _group_by_unit(occurrences: list[NumberOccurrenceDTO], lang: str = "en") -> list[tuple[str | None, list[dict]]]:
     """Group occurrences by unit, then by source.
 
     Returns ``[(unit, [{"occ": first_occ, "contexts": [...]}, ...]), ...]`` with
@@ -106,8 +106,9 @@ def _group_by_unit(occurrences: list[NumberOccurrenceDTO]) -> list[tuple[str | N
     for occ in occurrences:
         sources = by_unit.setdefault(occ.en_unit or None, {})
         g = sources.setdefault(occ.source_key, {"occ": occ, "contexts": []})
-        if occ.en_context and occ.en_context not in g["contexts"]:
-            g["contexts"].append(occ.en_context)
+        context = (occ.heb_context or occ.en_context) if is_rtl(lang) else occ.en_context
+        if context and context not in g["contexts"]:
+            g["contexts"].append(context)
     ordered = sorted(by_unit, key=lambda u: (u is None, (u or "").lower()))
     return [(u, list(by_unit[u].values())) for u in ordered]
 
@@ -116,6 +117,7 @@ def _occurrences_table(
     occurrences: list[NumberOccurrenceDTO],
     accent: str,
     source_contents: dict,
+    lang: str = "en",
 ) -> tuple[str, int]:
     """
     Return ``(full_html, iframe_height)`` for the given occurrences.
@@ -124,7 +126,7 @@ def _occurrences_table(
     count). Opening it reveals one row per source with its contexts and summary.
     ``source_contents`` maps source_key → SourceContent (or None).
     """
-    units = _group_by_unit(occurrences)
+    units = _group_by_unit(occurrences, lang)
     border_col = _hex_rgba(accent, 0.25)
 
     cards_html = []
@@ -135,11 +137,13 @@ def _occurrences_table(
         rows = []
         for g in sources:
             occ = g["occ"]
+            source_title = (occ.source_str_heb or occ.source_str_en or occ.source_str) if is_rtl(lang) else (occ.source_str_en or occ.source_str)
+            summary = (occ.summary_heb or occ.summary_en or occ.summary) if is_rtl(lang) else (occ.summary_en or occ.summary)
             src_content = source_contents.get(occ.source_key)
             if src_content is not None:
-                source_cell = source_link_html(occ.source_key, occ.source_str, color=accent)
+                source_cell = source_link_html(occ.source_key, source_title, color=accent)
             else:
-                source_cell = html.escape(occ.source_str or "—")
+                source_cell = html.escape(source_title or "—")
 
             if g["contexts"]:
                 ctx_cell = "<ul>" + "".join(f"<li>{html.escape(c.lstrip('* ').strip())}</li>" for c in g["contexts"]) + "</ul>"
@@ -148,7 +152,7 @@ def _occurrences_table(
 
             rows.append(
                 f"<tr><td>{ctx_cell}</td>"
-                f"<td class='summary-cell'>{html.escape(occ.summary or '—')}</td>"
+                f"<td class='summary-cell'>{html.escape(summary or '—')}</td>"
                 f"<td class='src'>{source_cell}</td></tr>"
             )
 
@@ -162,18 +166,20 @@ def _occurrences_table(
                         title_heb=occ.source_str_heb,
                         en_content=content_list[0] if len(content_list) > 0 else "",
                         heb_content=content_list[1] if len(content_list) > 1 else "",
+                        lang=lang,
                     )
                 )
 
         n = len(sources)
-        name = html.escape(unit) if unit else "<i>no unit</i>"
+        unit_name = (sources[0]["occ"].heb_unit or unit) if is_rtl(lang) and unit else unit
+        name = html.escape(unit_name) if unit_name else f"<i>{html.escape(get_text('number_search_ui.no_unit', lang))}</i>"
         cards_html.append(
             "<div class='unit-card'>"
             "<button class='unit-head' type='button' onclick='toggleUnit(this)' aria-expanded='false'>"
             f"{_CHEVRON_SVG}<span class='unit-name'>{name}</span>"
-            f"<span class='cnt'>{n} source{'s' if n != 1 else ''}</span></button>"
+            f"<span class='cnt'>{html.escape(get_text('number_search_ui.source_count_one' if n == 1 else 'number_search_ui.source_count_many', lang).format(count=n))}</span></button>"
             "<div class='unit-body' hidden><table><thead><tr>"
-            "<th>Context</th><th>Source Summary</th><th>Source</th></tr></thead>"
+            f"<th>{get_text('number_search_ui.context_label', lang)}</th><th>{get_text('number_search_ui.source_summary', lang)}</th><th>{get_text('number_search_ui.source', lang)}</th></tr></thead>"
             f"<tbody>{''.join(rows)}</tbody></table></div></div>"
         )
 
@@ -198,12 +204,12 @@ def _occurrences_table(
   .unit-body {{ border-top:1px solid var(--accent-border); background:#0e1117;
                animation:fadeIn .2s ease; overflow-x:auto; }}
   table {{ width:100%; border-collapse:collapse; }}
-  th {{ padding:0.45rem 0.9rem; text-align:left; font-size:0.72rem; text-transform:uppercase;
+  th {{ padding:0.45rem 0.9rem; text-align:start; font-size:0.72rem; text-transform:uppercase;
        letter-spacing:.07em; color:var(--accent); background:var(--accent-bg); white-space:nowrap; }}
   td {{ padding:0.5rem 0.9rem; vertical-align:top; font-size:0.875rem; line-height:1.45;
        border-top:1px solid {_hex_rgba(accent, 0.12)}; }}
   td.src {{ white-space:nowrap; }}
-  td ul {{ margin:0; padding-left:1.1rem; }}
+  td ul {{ margin:0; padding-inline-start:1.1rem; }}
   td li {{ margin:0.15rem 0; }}
   .summary-cell {{ color:#94a3b8; }}
   @keyframes fadeIn {{ from {{ opacity:0; transform:translateY(-3px); }} to {{ opacity:1; transform:none; }} }}
@@ -227,7 +233,7 @@ function resizeFrame() {
 </script>"""
 
     full_html = (
-        "<!DOCTYPE html><html><head><meta charset='UTF-8'>"
+        f"<!DOCTYPE html><html lang='{html.escape(lang)}' dir='{'rtl' if is_rtl(lang) else 'ltr'}'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'>"
         + style
         + source_popup_css_js()
         + "</head><body>"
@@ -243,7 +249,7 @@ function resizeFrame() {
 # Source content fetching
 # ---------------------------------------------------------------------------
 
-def _fetch_source_contents(results: list[NumberSearchResult], cache_key: str) -> dict:
+def _fetch_source_contents(results: list[NumberSearchResult], cache_key: str, lang: str = "en") -> dict:
     """
     Fetch SourceContent objects for all unique source keys in *results*.
     Results are cached in session_state to avoid repeated DB calls on re-renders.
@@ -271,7 +277,7 @@ def _fetch_source_contents(results: list[NumberSearchResult], cache_key: str) ->
         try:
             contents[key] = db.find_one_source_content(key)
         except Exception as exc:
-            st.warning(f"Could not load source {key}: {exc}")
+            st.warning(get_text("number_search_ui.source_load_error", lang).format(key=key, error=exc))
             contents[key] = None
             failed = True
 
@@ -292,7 +298,7 @@ def _detect_number_type(value: str) -> str:
     return NUMBER_TYPE_FRACTION if "/" in value else NUMBER_TYPE_WHOLE
 
 
-def _validate_number(value: str) -> str | None:
+def _validate_number(value: str, lang: str = "en") -> str | None:
     """Return a descriptive error message, or None when the input is valid.
 
     The number type (whole vs. fraction) is auto-detected from *value* —
@@ -306,35 +312,35 @@ def _validate_number(value: str) -> str | None:
 
     if number_type == NUMBER_TYPE_WHOLE:
         if "." in s:
-            return "❌ Decimal points aren't supported — enter a whole number (e.g. 7) or a fraction (e.g. 1/3)"
+            return get_text("number_search_ui.error_decimal", lang)
         if "-" in s:
-            return "❌ Negative numbers are not allowed"
-        if not s.isdigit():
-            return "❌ Only digits (0–9) are allowed, or a fraction like 1/3"
+            return get_text("number_search_ui.error_negative", lang)
+        if not all(c in "0123456789" for c in s):
+            return get_text("number_search_ui.error_digits", lang)
         if int(s) in (0, 1):
-            return "❌ Number must be greater than 1 (0 and 1 are not allowed)"
+            return get_text("number_search_ui.error_small", lang)
 
     else:  # fraction
         if "-" in s:
-            return "❌ Negative numbers are not allowed"
+            return get_text("number_search_ui.error_negative", lang)
         if "." in s:
-            return "❌ Fractions cannot contain decimal points"
+            return get_text("number_search_ui.error_fraction_decimal", lang)
         slash_count = s.count("/")
         if slash_count > 1:
-            return "❌ Too many '/' — fractions have exactly one slash (e.g. 1/4)"
+            return get_text("number_search_ui.error_slashes", lang)
         if not all(c in "0123456789/" for c in s):
-            return "❌ Only digits and '/' are allowed in a fraction"
+            return get_text("number_search_ui.error_fraction_digits", lang)
         num_s, den_s = s.split("/")
         if not num_s:
-            return "❌ Numerator is missing — e.g. 1/3"
+            return get_text("number_search_ui.error_numerator_missing", lang)
         if not den_s:
-            return "❌ Denominator is missing — e.g. 1/3"
+            return get_text("number_search_ui.error_denominator_missing", lang)
         if int(num_s) == 0:
-            return "❌ Numerator must be greater than 0"
+            return get_text("number_search_ui.error_numerator_zero", lang)
         if int(den_s) == 0:
-            return "❌ Denominator cannot be zero"
+            return get_text("number_search_ui.error_denominator_zero", lang)
         if int(num_s) == int(den_s):
-            return "❌ A fraction equal to 1 is not allowed (0 and 1 are not allowed)"
+            return get_text("number_search_ui.error_fraction_one", lang)
 
     return None  # Input is valid
 
@@ -388,7 +394,7 @@ def _render_search_bar(lang: str) -> None:
         )
 
     # Live validation — runs on every rerender (i.e. every keystroke / widget change)
-    error = _validate_number(value)
+    error = _validate_number(value, lang)
 
     if search_clicked and not value.strip():
         error = get_text("number_search_ui.error_empty", lang)
@@ -516,7 +522,7 @@ def _render_unit_search_bar(lang: str) -> None:
 
     def _label(en: str) -> str:
         heb = heb_by_en.get(en)
-        return f"{en} ({heb})" if heb else en
+        return f"{heb} ({en})" if heb and is_rtl(lang) else (f"{en} ({heb})" if heb else en)
 
     input_col, btn_col = st.columns([8, 1], vertical_alignment="bottom")
     with input_col:
@@ -561,10 +567,13 @@ def _render_unit_results(lang: str) -> None:
         st.warning(get_text("number_search_ui.no_unit_results", lang).format(value=unit))
         return
 
+    unit_display = result.unit
+    if is_rtl(lang):
+        unit_display = result.heb_unit or result.unit
     st.markdown(
         f"""
         <div style="text-align:center; padding:1.25rem 0 1rem 0;">
-            <div style="font-size:2.5rem; font-weight:900; line-height:1;">{html.escape(result.unit)}</div>
+            <div style="font-size:2.5rem; font-weight:900; line-height:1;">{html.escape(unit_display)}</div>
             <div style="font-size:0.875rem; color:#94a3b8; margin-top:0.35rem;">
                 {len(result.rows)} {get_text("number_search_ui.unit_results_count", lang)}
             </div>
@@ -574,17 +583,17 @@ def _render_unit_results(lang: str) -> None:
     )
 
     source_contents = _fetch_source_contents(
-        [row.occurrences for row in result.rows], "unit_search_source_contents"
+        [row.occurrences for row in result.rows], "unit_search_source_contents", lang
     )
     for row in result.rows:
-        categories = ", ".join(f"{_CATEGORY_CONFIG[c]['emoji']} {c.value}" for c in row.categories) or "—"
+        categories = ", ".join(f"{_CATEGORY_CONFIG[c]['emoji']} {enum_text(c, lang)}" for c in row.categories) or "—"
         label = (
             f"{row.value} · {categories} · {row.mentions} "
             f"{get_text('number_search_ui.col_mentions', lang)}"
         )
         with st.expander(label):
             if row.occurrences.total_count:
-                _render_category_results(row.occurrences, source_contents)
+                _render_category_results(row.occurrences, source_contents, lang)
             else:
                 st.info(get_text("number_search_ui.no_unit_sources", lang))
 
@@ -610,27 +619,26 @@ def _render_results(lang: str) -> None:
         return
 
     # Fetch source content for popup support (cached in session_state)
-    source_contents = _fetch_source_contents([result], "number_search_source_contents")
+    source_contents = _fetch_source_contents([result], "number_search_source_contents", lang)
 
     # ── Big number header ──────────────────────────────────────────────────
-    plural = "s" if result.total_count != 1 else ""
     st.markdown(
         f"""
         <div style="text-align:center; padding:1.25rem 0 1rem 0;">
             <div style="font-size:3.5rem; font-weight:900; letter-spacing:-0.02em;
                         color: inherit; line-height:1;">{html.escape(value)}</div>
             <div style="font-size:0.875rem; color:#94a3b8; margin-top:0.35rem;">
-                {result.total_count} occurrence{plural} found
+                {result.total_count} {get_text("number_search_ui.results_count", lang)}
             </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    _render_category_results(result, source_contents)
+    _render_category_results(result, source_contents, lang)
 
 
-def _render_category_results(result: NumberSearchResult, source_contents: dict) -> None:
+def _render_category_results(result: NumberSearchResult, source_contents: dict, lang: str = "en") -> None:
     """Render the shared category tabs and source details for a number."""
     by_cat = result.by_category
 
@@ -639,13 +647,13 @@ def _render_category_results(result: NumberSearchResult, source_contents: dict) 
     for cat in sorted(NumberCategory, key=lambda c: c.ordinal):
         cfg = _CATEGORY_CONFIG[cat]
         count = len(by_cat.get(cat, []))
-        label = f"{cfg['emoji']} {cat.value}  ({count})"
+        label = f"{cfg['emoji']} {enum_text(cat, lang)}  ({count})"
         tab_entries.append((cat, cfg["color"], label))
 
     if None in by_cat:
         cfg = _NONE_CAT_CONFIG
         count = len(by_cat[None])
-        tab_entries.append((None, cfg["color"], f"{cfg['emoji']} Other  ({count})"))
+        tab_entries.append((None, cfg["color"], f"{cfg['emoji']} {get_text('number_search_ui.other_category', lang)}  ({count})"))
 
     # ── Inject per-tab colour CSS ──────────────────────────────────────────
     colors = [e[1] for e in tab_entries]
@@ -658,23 +666,22 @@ def _render_category_results(result: NumberSearchResult, source_contents: dict) 
         with tab_widget:
             occurrences = by_cat.get(cat, [])
             if not occurrences:
-                cat_name = cat.value if cat else "other"
+                cat_name = enum_text(cat, lang) if cat else get_text("number_search_ui.other_category", lang).lower()
                 st.markdown(
                     f'<p style="color:#94a3b8; padding:0.75rem 0; font-style:italic;">'
-                    f"No {cat_name} occurrences for this number.</p>",
+                    f"{html.escape(get_text('number_search_ui.no_category_occurrences', lang).format(category=cat_name))}</p>",
                     unsafe_allow_html=True,
                 )
                 continue
 
             count = len(occurrences)
-            plural = "s" if count != 1 else ""
             st.markdown(
                 f'<p style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0 0 0;">'
-                f"{count} occurrence{plural} · click a unit to see its sources</p>",
+                f"{get_text('number_search_ui.occurrence_hint_one' if count == 1 else 'number_search_ui.occurrence_hint_many', lang).format(count=count)}</p>",
                 unsafe_allow_html=True,
             )
 
-            table_html, iframe_height = _occurrences_table(occurrences, color, source_contents)
+            table_html, iframe_height = _occurrences_table(occurrences, color, source_contents, lang)
             st_components.html(table_html, height=iframe_height, scrolling=False)
 
 
