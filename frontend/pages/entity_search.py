@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+from collections import Counter
 from pathlib import Path
 
 import streamlit as st
@@ -133,6 +134,19 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
         st.info(get_text("entity_search_ui.no_entities", lang))
         return
 
+    _render_entity_selector(entity_tab, options, lang)
+
+    selected_key = st.query_params.get(PARAM_ENTITY_ID)
+    if not selected_key:
+        return
+
+    # ---- Fetch & display entity detail ----
+    st.divider()
+    _render_entity_detail(handler, selected_key, lang)
+
+
+@st.fragment
+def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
     # ---- Metadata filters (entity-type-specific) ----
     filtered_options = _render_filters(entity_tab, options, lang)
 
@@ -140,9 +154,11 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     # (avoids referencing a previously-chosen label that's no longer in `options`)
     filter_signature = tuple(sorted(opt.key for opt in filtered_options))
     signature_state_key = f"_entity_filter_sig_{entity_tab}"
+    generation_key = f"_entity_combo_generation_{entity_tab}"
     if st.session_state.get(signature_state_key) != filter_signature:
-        st.session_state.pop(f"entity_combo_{entity_tab}", None)
+        st.session_state[generation_key] = st.session_state.get(generation_key, 0) + 1
         st.session_state[signature_state_key] = filter_signature
+    combo_state_key = f"entity_combo_{entity_tab}_{st.session_state.get(generation_key, 0)}"
 
     if not filtered_options:
         st.warning(get_text("entity_filters.no_matches", lang))
@@ -153,8 +169,9 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
 
     display_labels = [_format_option_label(opt, rtl) for opt in filtered_options]
     # Disambiguate identical labels (same name/roles) so each maps to its own entity.
+    label_counts = Counter(display_labels)
     display_labels = [
-        f"{l} (#{o.key[-4:]})" if display_labels.count(l) > 1 else l
+        f"{l} (#{o.key[-4:]})" if label_counts[l] > 1 else l
         for l, o in zip(display_labels, filtered_options)
     ]
     key_map = {l: o.key for l, o in zip(display_labels, filtered_options)}
@@ -168,7 +185,7 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
             options=display_labels,
             index=None,
             placeholder=placeholder,
-            key=f"entity_combo_{entity_tab}",
+            key=combo_state_key,
             label_visibility="collapsed",
         )
 
@@ -186,14 +203,7 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
     # ---- Persist selection in the URL on Go (so the page link is shareable) ----
     if go_clicked and entity_key:
         st.query_params[PARAM_ENTITY_ID] = entity_key
-
-    selected_key = st.query_params.get(PARAM_ENTITY_ID)
-    if not selected_key:
-        return
-
-    # ---- Fetch & display entity detail ----
-    st.divider()
-    _render_entity_detail(handler, selected_key, lang)
+        st.rerun()
 
 
 # =============================================================================

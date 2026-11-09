@@ -44,6 +44,9 @@ and data flows, use the feature guides below.
   Browsers supporting CSS `interactivity: inert` also prevent keyboard interaction
   with the main content until the run finishes. Streamlit's Stop button remains
   available.
+- Entity dropdowns use Streamlit fragments: changing a selection reruns only the
+  relevant selector, not the whole page. Entity Search and tree selectors refresh
+  their results on **Go**; Source Search runs on **Find Sources**.
 - `frontend/translations1/` contains YAML translations (`en.yml`, `he.yml`) and
   helpers. Use `get_text("path.to.key", lang)`, which falls back to English.
   Page titles use `page_titles.*`; menu labels use `nav.*`, `entity_tabs.*`,

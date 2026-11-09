@@ -11,6 +11,9 @@ dropdowns, free-text box + Find Sources button, results).
   Midrash, and Talmud Yerushalmi. Tanach and Talmud Bavli are available; other types are
   disabled, gray, and marked "Coming soon".
 - **Entities** (`components/facets/`): one multiselect per entity type.
+  Each panel is a Streamlit fragment, so changing a selection reruns that panel
+  without rerendering the other panels or existing results. Selections take
+  effect in the search when **Find Sources** is pressed.
 - Query building lives in `pages/source_search_logic.py` (`collect_search_query`), which
   fills a `SourceSearchQuery` (`src_types`, `passage_types`, `entity_ids`). Backend flow:
   `search/source_search.md`.

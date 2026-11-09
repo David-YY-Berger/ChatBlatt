@@ -7,3 +7,8 @@ Entity Search has a landing page (`/entity_search`) showing one clickable image 
 Source: also rontend/components/entity_filters.py. The people metadata filters (faith, gender, individual/group, roles) and the generic tri-state / multi-checkbox filter helpers live there and are shared: the people tab uses ender_person_filters, and the person selector component (components/person_selector.py, used by both trees - see [trees.md](trees.md)) embeds the same filters.
 
 Person display: people in the selector combobox are labelled with their roles (David (???) - king), via PersonSelectOption.roles_label(). Related persons in an entity's detail view also show roles (david - king), from the transient Entity.rel_roles (related entity key -> role names) filled by entity_populator.py.
+
+The metadata filters, entity combobox, and Go button share a Streamlit fragment.
+Changing a filter or selection reruns only that selector; the currently displayed
+entity remains unchanged. Go updates the shareable `id` and reruns the page to
+load the selected entity.

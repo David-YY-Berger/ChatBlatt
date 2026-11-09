@@ -19,7 +19,8 @@ The implemented tree is a family graph centered on a person:
    (faith, gender, individual/group, roles — `frontend/components/entity_filters.py`,
    widget keys prefixed per `state_key`) above the combobox; changing a filter
    resets the combobox. The user confirms a person with **Go**; the selected key is retained under
-   `genealogy_center_person`.
+   `genealogy_center_person`. The selector is a Streamlit fragment: filter and
+   combobox changes rerun only the selector, while **Go** refreshes the tree page.
 2. The user chooses depth 1 (direct family) or 2 (family of family). The page
    requests the graph from `GenealogyTreeController` and caches it in session
    state by `(center person key, depth)`.

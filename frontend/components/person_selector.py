@@ -25,6 +25,7 @@ from translations1 import get_text, is_rtl
 from components.entity_filters import render_person_filters
 
 
+@st.fragment
 def render_person_selector(
     lang: str,
     state_key: str = "selected_person_key",
@@ -63,17 +64,17 @@ def render_person_selector(
         st.info(get_text("entity_search_ui.no_entities", lang))
         return None
 
-    combo_state_key = f"person_selector_combo_{state_key}"
-
     # Metadata filters (faith / gender / individual-group / roles), same as Entity Search
     filtered = render_person_filters(options, lang, key_prefix=f"person_selector_filter_{state_key}")
 
     # Reset the combobox when the filtered set changes (its old choice may be gone)
     signature = tuple(sorted(opt.key for opt in filtered))
     sig_key = f"_person_selector_sig_{state_key}"
+    generation_key = f"_person_selector_combo_generation_{state_key}"
     if st.session_state.get(sig_key) != signature:
-        st.session_state.pop(combo_state_key, None)
+        st.session_state[generation_key] = st.session_state.get(generation_key, 0) + 1
         st.session_state[sig_key] = signature
+    combo_state_key = f"person_selector_combo_{state_key}_{st.session_state.get(generation_key, 0)}"
 
     if not filtered:
         st.warning(get_text("entity_filters.no_matches", lang))
@@ -99,7 +100,7 @@ def render_person_selector(
             options=display_labels,
             index=None,
             placeholder=placeholder,
-            key=f"person_selector_combo_{state_key}",
+            key=combo_state_key,
             label_visibility="collapsed",
         )
 
@@ -116,6 +117,7 @@ def render_person_selector(
 
     if go_clicked and entity_key:
         st.session_state[state_key] = entity_key
+        st.rerun()
 
     return st.session_state.get(state_key)
 

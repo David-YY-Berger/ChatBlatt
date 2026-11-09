@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import concurrent.futures
 import logging
+from collections import Counter
 from pathlib import Path
 
 import streamlit as st
@@ -142,6 +143,7 @@ def render_entity_facets() -> None:
     st.markdown("</div>", unsafe_allow_html=True)
 
 
+@st.fragment
 def _render_entity_select_panel(ent: dict) -> None:
     """Render the specific-entity picker panel for one active entity-type tab.
 
@@ -216,7 +218,7 @@ def _unique_option_labels(options: list) -> list[str]:
     (e.g. two people with the same name and roles) get a short key suffix so each
     stays individually selectable."""
     labels = [_format_entity_option_label(o) for o in options]
-    counts = {l: labels.count(l) for l in set(labels)}
+    counts = Counter(labels)
     return [f"{l} (#{o.key[-4:]})" if counts[l] > 1 else l for l, o in zip(labels, options)]
 
 
