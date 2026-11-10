@@ -38,6 +38,10 @@ def _register_fonts() -> None:
         return
     pdfmetrics.registerFont(TTFont(FONT, str(FRONTEND_DIR / "fonts" / "DejaVuSans.ttf")))
     pdfmetrics.registerFont(TTFont(FONT_BOLD, str(FRONTEND_DIR / "fonts" / "DejaVuSans-Bold.ttf")))
+    pdfmetrics.registerFont(TTFont("DejaVu-Oblique", str(FRONTEND_DIR / "fonts" / "DejaVuSans-Oblique.ttf")))
+    pdfmetrics.registerFont(TTFont("DejaVu-BoldOblique", str(FRONTEND_DIR / "fonts" / "DejaVuSans-BoldOblique.ttf")))
+    pdfmetrics.registerFontFamily(FONT, normal=FONT, bold=FONT_BOLD,
+                                  italic="DejaVu-Oblique", boldItalic="DejaVu-BoldOblique")
 
 
 def _plain(html: str) -> str:
@@ -171,22 +175,127 @@ class _Header(Flowable):
                       relative=1)
 
 
+_BOLD_TAGS = {"b", "strong", "h1", "h2", "h3", "h4", "h5", "h6", "th"}
+_ITALIC_TAGS = {"i", "em", "cite", "dfn"}
+_Run = tuple[str, bool, bool]  # (text, bold, italic)
+
+
+def _html_runs(html: str) -> list[_Run]:
+    """HTML fragment -> styled text runs (bold/italic preserved, <br> as newline)."""
+    runs: list[_Run] = []
+
+    def walk(node, bold, italic):
+        for child in node.children:
+            if child.name is None:
+                text = str(child)
+                if text:
+                    runs.append((text, bold, italic))
+            elif child.name == "br":
+                runs.append(("\n", bold, italic))
+            elif child.name in ("script", "style"):
+                continue
+            else:
+                walk(child, bold or child.name in _BOLD_TAGS, italic or child.name in _ITALIC_TAGS)
+
+    walk(BeautifulSoup(html or "", "html.parser"), False, False)
+    return runs
+
+
+def _markup(word: str, bold: bool, italic: bool) -> str:
+    out = escape(word)
+    # DejaVu Oblique has no Hebrew glyphs, so Hebrew stays upright
+    if italic and not _HEB_RE.search(word):
+        out = f"<i>{out}</i>"
+    if bold:
+        out = f"<b>{out}</b>"
+    return out
+
+
+def _rtl_line_markup(words: list[tuple[str, bool, bool]]) -> str:
+    """Visual-order markup for one line: Hebrew words are bidi-reversed, and runs
+    of purely LTR words keep their internal order within the reversed line."""
+    units: list[list[str]] = []
+    prev_ltr = False
+    for word, bold, italic in words:
+        ltr = not _HEB_RE.search(word) and bool(re.search(r"[A-Za-z0-9]", word))
+        shown = word if ltr else get_display(word, base_dir="R")
+        piece = _markup(shown, bold, italic)
+        if ltr and prev_ltr:
+            units[-1].append(piece)
+        else:
+            units.append([piece])
+        prev_ltr = ltr
+    return " ".join(" ".join(unit) for unit in reversed(units))
+
+
+def _tokenize(runs: list[_Run]) -> list[tuple[str, bool, bool] | None]:
+    """Split runs into styled words; None marks a newline."""
+    tokens: list = []
+    for text, bold, italic in runs:
+        for part in re.split(r"(\n)", text):
+            if part == "\n":
+                tokens.append(None)
+            else:
+                tokens += [(w, bold, italic) for w in part.split()]
+    return tokens
+
+
 def _text_flowables(text: str, size: float, width: float, bold=False, italic_color=None,
-                    leading=None) -> list:
-    """Paragraphs for a (possibly Hebrew) text block, one per visual line for RTL."""
+                    leading=None, html: bool = False) -> list:
+    """Paragraphs for a (possibly Hebrew) text block, one per visual line for RTL.
+    With ``html=True`` the text is an HTML fragment whose bold/italic is kept."""
     if not text:
         return []
-    font = FONT_BOLD if bold else FONT
+    runs = _html_runs(text) if html else [(text, False, False)]
+    tokens = _tokenize(runs)
     leading = leading or size * 1.45
     color = italic_color or colors.HexColor("#1a1a1a")
-    if _HEB_RE.search(text):
-        style = ParagraphStyle("h", fontName=font, fontSize=size, leading=leading,
+    wrap_bold = bold
+    if any(t and _HEB_RE.search(t[0]) for t in tokens):
+        style = ParagraphStyle("h", fontName=FONT, fontSize=size, leading=leading,
                                alignment=TA_RIGHT, textColor=color)
-        return [Paragraph(escape(get_display(line, base_dir="R")) or "&nbsp;", style)
-                for line in _wrap(text, font, size, width)]
-    style = ParagraphStyle("e", fontName=font, fontSize=size, leading=leading,
+        lines: list[list] = []
+        cur: list = []
+        cur_text = ""
+        for tok in tokens:
+            if tok is None:
+                lines.append(cur)
+                cur, cur_text = [], ""
+                continue
+            font = FONT_BOLD if (wrap_bold or tok[1]) else FONT
+            cand = f"{cur_text} {tok[0]}" if cur_text else tok[0]
+            if cur and pdfmetrics.stringWidth(cand, font, size) > width:
+                lines.append(cur)
+                cur, cur_text = [tok], tok[0]
+            else:
+                cur.append(tok)
+                cur_text = cand
+        lines.append(cur)
+        out = []
+        for line in lines:
+            markup = _rtl_line_markup([(w, b or wrap_bold, i) for w, b, i in line])
+            out.append(Paragraph(markup or "&nbsp;", style))
+        return out
+
+    style = ParagraphStyle("e", fontName=FONT, fontSize=size, leading=leading,
                            alignment=TA_LEFT, textColor=color)
-    return [Paragraph(escape(p).replace("\n", "<br/>"), style) for p in text.split("\n\n") if p.strip()]
+    paragraphs: list[str] = []
+    cur_words: list[str] = []
+    newlines = 0
+    for tok in tokens + [None]:
+        if tok is None:
+            newlines += 1
+            continue
+        if newlines >= 2 and cur_words:
+            paragraphs.append(" ".join(cur_words))
+            cur_words = []
+        elif newlines == 1 and cur_words:
+            cur_words.append("<br/>")
+        newlines = 0
+        cur_words.append(_markup(tok[0], tok[1] or wrap_bold, tok[2]))
+    if cur_words:
+        paragraphs.append(" ".join(cur_words))
+    return [Paragraph(p.replace(" <br/> ", "<br/>"), style) for p in paragraphs]
 
 
 def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str] | None = None,
@@ -210,14 +319,6 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
     contents = list(getattr(ans, "src_contents", []) or [])
     story += _text_flowables(f"{len(sources)} {get_text('source_display.sources', lang)}", 10, inner)
     story += [Spacer(1, 0.2 * cm)]
-    if search_url:
-        link_style = ParagraphStyle("l", fontName=FONT, fontSize=7, leading=9, wordWrap="CJK",
-                                    textColor=colors.HexColor("#1a5fb4"))
-        link_label = get_text("source_display.search_link", lang)
-        if is_rtl(lang):
-            link_label = get_display(link_label, base_dir="R")
-            link_style.alignment = TA_RIGHT
-        story.append(Paragraph(f'{escape(link_label)}: <link href="{escape(search_url, {chr(34): "&quot;"})}">{escape(search_url)}</link>', link_style))
     story.append(Spacer(1, 0.3 * cm))
 
     for i, meta in enumerate(sources):
@@ -238,20 +339,20 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
         if types:
             block += _text_flowables(types, 9, inner, italic_color=grey)
         for summ in (getattr(meta, "summary_en", None), getattr(meta, "summary_heb", None)):
-            block += _text_flowables(_plain(summ or ""), 9, inner, italic_color=grey)
+            block += _text_flowables(summ or "", 9, inner, italic_color=grey, html=True)
         block.append(Spacer(1, 0.2 * cm))
 
         content = []
         if src is not None:
             content = src._get_content() if hasattr(src, "_get_content") else getattr(src, "content", [])
         if content and len(content) >= 2:
-            heb, eng = _plain(content[1]), _plain(content[0])
+            heb, eng = content[1] or "", content[0] or ""
         else:
             heb = eng = ""
-        body = _text_flowables(heb, 11, inner, leading=17)
+        body = _text_flowables(heb, 11, inner, leading=17, html=True)
         if heb and eng:
             body.append(Spacer(1, 0.3 * cm))
-        body += _text_flowables(eng, 10, inner, leading=14.5)
+        body += _text_flowables(eng, 10, inner, leading=14.5, html=True)
         if not body:
             body = _text_flowables(get_text("source_display.no_content", lang), 9, inner, italic_color=grey)
 

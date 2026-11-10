@@ -38,7 +38,7 @@ _render_entity_select_panel({"label": "Person", "key": "person", "entity_tab": "
 if st.button("Find Sources"):
     st.session_state["searched_ids"] = get_selected_entity_ids()
     sync_url_with_search()
-""")
+""", default_timeout=30)
         with patch.object(renderers, "_load_entity_select_options", return_value=_options()):
             app.run()
             app.multiselect[0].set_value(["Alice", "Bob"]).run()

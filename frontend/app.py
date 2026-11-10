@@ -37,6 +37,7 @@ logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdo
 logger = logging.getLogger(__name__)
 
 ENTITY_PAGES = (PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS)
+ENTITY_NAV_PAGES = tuple(page for page in ENTITY_PAGES if page != PAGE_SYMBOLS)
 TREE_PAGES = (PAGE_GENOLOGY, PAGE_STUDIED_FROM)
 
 
@@ -93,7 +94,7 @@ def _build_navigation(lang: str):
     navigation.register_pages(pages)
     groups = {
         "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH)],
-        get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_PAGES],
+        get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
         get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
     }
     page = st.navigation(groups, position="top")

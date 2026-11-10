@@ -25,6 +25,9 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 | Genealogy tree | `/trees_genealogy_tree` | `genology` |
 | Studied-from tree | `/trees_studied_from_tree` | `studied_from` |
 
+The Symbols page key and URL path remain defined internally, but the page is
+not exposed in Entity Search navigation.
+
 ## Query parameters (a search is fully described by its URL)
 
 All list values are comma-separated. A page opened with params loads them into its form and runs the search

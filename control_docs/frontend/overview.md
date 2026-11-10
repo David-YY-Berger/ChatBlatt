@@ -31,8 +31,9 @@ and data flows, use the feature guides below.
   stretched button (`styles.css`) that calls `navigation.go(page_key)`; the
   tree cards go directly to their respective tree pages. About currently displays
   placeholder text in the selected language.
-- Entity Search has a landing page with entity-type cards and separate
-  People, Places, Nations, Tribes and Symbols pages. Those detail pages also
+- Entity Search has a landing page with visible entity-type cards and separate
+  People, Places, Nations and Tribes pages. Symbols remains implemented but is
+  hidden from Entity Search navigation and controls. The visible detail pages also
   have a type-picker button row. Trees has a landing page with a selection
   prompt and separate Genealogy and Studied From pages.
 - `frontend/components/` contains the shared header, layout, filters, person
@@ -47,6 +48,8 @@ and data flows, use the feature guides below.
 - Entity dropdowns use Streamlit fragments: changing a selection reruns only the
   relevant selector, not the whole page. Entity Search and tree selectors refresh
   their results on **Go**; Source Search runs on **Find Sources**.
+  Metadata filters in Entity Search and the tree person selectors immediately
+  narrow the corresponding entity dropdown; they do not wait for **Go**.
 - `frontend/translations1/` contains YAML translations (`en.yml`, `he.yml`) and
   helpers. Use `get_text("path.to.key", lang)`, which falls back to English.
   Page titles use `page_titles.*`; menu labels use `nav.*`, `entity_tabs.*`,

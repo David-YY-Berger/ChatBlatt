@@ -73,12 +73,11 @@ _ENTITY_ICONS = (
     (PAGE_PLACES, "entity_search_place.jpg"),
     (PAGE_NATIONS, "entity_search_nations.jpg"),
     (PAGE_TRIBES, "entity_search_tribe_of_israel.jpg"),
-    (PAGE_SYMBOLS, "entity_search_symbol.jpg"),
 )
 
 
 def _render_landing(lang: str) -> None:
-    """One clickable card (image + title) per entity type; styled like the home page cards."""
+    """One clickable card (image + title) per visible entity type."""
     st.markdown(
         f'<div class="home-subtitle">{get_text("entity_search_ui.choose_entity", lang)}</div>',
         unsafe_allow_html=True,
@@ -96,7 +95,7 @@ def _render_landing(lang: str) -> None:
 def _render_entity_type_selector(selected: str | None, lang: str) -> None:
     """Row of buttons so the user can pick the entity type without the top navigation menu."""
     st.markdown(f"**{get_text('entity_search_ui.choose_entity', lang)}**")
-    tabs = (PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS)
+    tabs = (PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES)
     for column, tab in zip(st.columns(len(tabs)), tabs):
         with column:
             if st.button(
@@ -506,7 +505,6 @@ def _entity_type_to_tab(entity_type) -> str | None:
         EntityType.EPlace: PAGE_PLACES,
         EntityType.ENation: PAGE_NATIONS,
         EntityType.ETribeOfIsrael: PAGE_TRIBES,
-        EntityType.ESymbol: PAGE_SYMBOLS,
     }
     return _TAB_MAP.get(entity_type)
 

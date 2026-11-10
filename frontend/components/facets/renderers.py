@@ -46,13 +46,15 @@ ENTITY_TYPES: list[dict] = [
     {"key": "symbol", "label": "Symbol", "entity_tab": PAGE_SYMBOLS, "implemented": True},
 ]
 
+_VISIBLE_ENTITY_TYPES = [ent for ent in ENTITY_TYPES if ent["key"] != "symbol"]
+
 # ---------------------------------------------------------------------------
 # Background preloading of entity select-options
 #
-# Fetching each entity type's select options is a DB round-trip. Previously
-# this happened lazily the first time a user clicked an entity-type tab,
-# which meant a visible stall on that click. Instead, we kick off all
-# fetches in parallel (thread pool) as soon as the page first renders, and
+# Fetching each visible entity type's select options is a DB round-trip.
+# Previously this happened lazily the first time a user clicked an
+# entity-type tab, which meant a visible stall on that click. Instead, we
+# kick off all visible-type fetches in parallel as soon as the page renders, and
 # resolve/cache the results the first time they're actually needed. Because
 # the fetches start well before the user clicks anything, by the time a tab
 # is activated the data is normally already sitting in the cache — so
@@ -83,8 +85,8 @@ def _fetch_entity_options(entity_tab: str) -> list:
 
 
 def preload_all_entity_options() -> None:
-    """Kick off background fetches for every implemented entity type's
-    select options, without blocking page rendering.
+    """Kick off background fetches for visible entity types' select options,
+    without blocking page rendering.
 
     Safe to call on every rerun: it only submits work once per session
     (guarded by a session_state flag), so subsequent calls are no-ops.
@@ -93,7 +95,7 @@ def preload_all_entity_options() -> None:
         return
     st.session_state["_entity_options_preload_started"] = True
 
-    for ent in ENTITY_TYPES:
+    for ent in _VISIBLE_ENTITY_TYPES:
         if not ent["implemented"]:
             continue
         entity_tab = ent["entity_tab"]
@@ -121,7 +123,7 @@ def inject_facet_css() -> None:
 
 
 def render_entity_facets(lang: str = "en") -> None:
-    """Entity-type filter – a specific-entity picker panel for every entity
+    """Entity-type filter – a specific-entity picker panel for each visible
     type, always shown (no tab toggles). Types without a search handler yet
     show a "coming soon" placeholder instead of a picker.
     """
@@ -137,7 +139,7 @@ def render_entity_facets(lang: str = "en") -> None:
     )
 
     st.markdown('<div class="entity-select-panels">', unsafe_allow_html=True)
-    for ent in ENTITY_TYPES:
+    for ent in _VISIBLE_ENTITY_TYPES:
         _render_entity_select_panel(ent, lang)
     st.markdown("</div>", unsafe_allow_html=True)
 

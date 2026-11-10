@@ -16,9 +16,11 @@ The implemented tree is a family graph centered on a person:
    `frontend/components/person_selector.py`. Person options are loaded from
    the people entity-search handler and cached in Streamlit session state.
    The selector shows the same metadata filters as Entity Search's people tab
-   (faith, gender, individual/group, roles — `frontend/components/entity_filters.py`,
-   widget keys prefixed per `state_key`) above the combobox; changing a filter
-   resets the combobox. The user confirms a person with **Go**; the selected key is retained under
+   (faith, gender, individual/group, roles, time period —
+   `frontend/components/entity_filters.py`, widget keys prefixed per `state_key`)
+   above the combobox. Changing a metadata filter immediately narrows the person
+   dropdown to matching options; the combobox resets when that option set changes.
+   The user confirms a person with **Go**; the selected key is retained under
    `genealogy_center_person`. The selector is a Streamlit fragment: filter and
    combobox changes rerun only the selector, while **Go** refreshes the tree page.
 2. The user chooses depth 1 (direct family) or 2 (family of family). The page

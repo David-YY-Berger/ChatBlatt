@@ -10,7 +10,8 @@ dropdowns, free-text box + Find Sources button, results).
 - **Source Type** (same module): compact checkbox list for Tanach, Talmud Bavli, Mishna,
   Midrash, and Talmud Yerushalmi. Tanach and Talmud Bavli are available; other types are
   disabled, gray, and marked "Coming soon".
-- **Entities** (`components/facets/`): one multiselect per entity type.
+- **Entities** (`components/facets/`): one multiselect per visible entity type;
+  Symbols is hidden from the filter UI, while its backend/query support remains.
   Each panel is a Streamlit fragment, so changing a selection reruns that panel
   without rerendering the other panels or existing results. Selections take
   effect in the search when **Find Sources** is pressed.
