@@ -48,12 +48,12 @@ studied_from_ui:
 
 genealogy_ui:
   select_person_label: "Select a person to centre the family tree on"
-  prompt_select_person: "Choose a person above to view their genealogy graph."
+  prompt_select_person: "Choose a person above to view their family tree."
   depth_label: "Edge closeness"
   depth_1: "1 — Direct family"
   depth_2: "2 — Family of family"
   graph_title: "Family Tree"
-  no_data: "No genealogy data found for this person."
+  no_data: "No family tree data found for this person."
   nodes_label: "people"
   edges_label: "connections"
   role_grandparent: "Grandparent"
@@ -173,7 +173,7 @@ page_titles:
   tribes: "Tribes of Israel"
   symbols: "Symbols"
   trees: "Trees"
-  genology: "Genealogy Tree"
+  genology: "Family Tree"
   studied_from: "Studied From Tree"
 
 home_tools:

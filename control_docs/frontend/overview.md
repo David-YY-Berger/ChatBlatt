@@ -35,7 +35,7 @@ and data flows, use the feature guides below.
   People, Places, Nations and Tribes pages. Symbols remains implemented but is
   hidden from Entity Search navigation and controls. The visible detail pages also
   have a type-picker button row. Trees has a landing page with a selection
-  prompt and separate Genealogy and Studied From pages.
+  prompt and separate Family Tree and Studied From pages.
 - `frontend/components/` contains the shared header, layout, filters, person
   selector, graph rendering and source popup. `frontend/assets/styles.css`
   supplies base and responsive styling; `layout.apply_layout` adds theme and

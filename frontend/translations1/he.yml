@@ -28,7 +28,7 @@ entity_tabs:
   label: "בחר תצוגת ישות"
 
 tree_tabs:
-  genology: "אילן יוחסין"
+  genology: "עץ יוחסין"
   studied_from: "מקורות לימוד"
   label: "בחר תצוגת עץ"
 
@@ -48,12 +48,12 @@ studied_from_ui:
 
 genealogy_ui:
   select_person_label: "בחר אדם למרכז עץ המשפחה"
-  prompt_select_person: "בחרו אדם למעלה כדי לצפות בגרף הגנולוגי שלו."
+  prompt_select_person: "בחרו אדם למעלה כדי לצפות בעץ המשפחה שלו."
   depth_label: "קרבה גרפית"
   depth_1: "1 — משפחה ישירה"
   depth_2: "2 — משפחת המשפחה"
   graph_title: "עץ משפחה"
-  no_data: "לא נמצאו נתוני גנולוגיה עבור אדם זה."
+  no_data: "לא נמצאו נתוני עץ משפחה עבור אדם זה."
   nodes_label: "אנשים"
   edges_label: "קשרים"
   role_grandparent: "סב/סבתא"

@@ -1,7 +1,7 @@
 # bs"d - lehagdil torah velahadir
 
 """
-Genealogy Tree Page
+Family Tree Page
 
 Renders the Pyvis-powered family-tree graph for a selected person.
 

@@ -19,7 +19,7 @@ from backend.models_dto.GenealogyGraphData import GenealogyGraphData
 
 class GenealogyTreeController:
     """
-    Controller for the Genealogy Tree feature.
+    Controller for the Family Tree feature.
 
     Validates inputs and delegates graph construction to
     GenealogyTreeLogic.
