@@ -7,11 +7,13 @@ from pathlib import Path
 
 import streamlit as st
 
+from metrics import admin_params
 from translations1 import get_text
 
 
 def render_header(lang: str, main_image_path: Path) -> None:
     main_image_data = base64.b64encode(main_image_path.read_bytes()).decode("ascii")
+    home_url = "/?admin=" + admin_params()["admin"] if admin_params() else "/"
     st.markdown(
         f"""
         <div class="app-header">
@@ -19,7 +21,7 @@ def render_header(lang: str, main_image_path: Path) -> None:
                 <div class="app-header-titles">
                     <div class="app-dedication"><em>{get_text('app.dedication', lang)}</em></div>
                     <h1 class="app-title">
-                        <a class="app-home-link" href="/" target="_self">
+                        <a class="app-home-link" href="{home_url}" target="_self">
                             <span>{get_text('app.title', lang)}</span>
                             <img class="app-main-icon" src="data:image/jpeg;base64,{main_image_data}" alt="{get_text('app.title', lang)}" />
                         </a>

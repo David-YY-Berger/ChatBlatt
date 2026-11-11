@@ -11,6 +11,7 @@ naturally be ``/entity_search/people`` is the flat path ``/entity_search_people`
 
 from __future__ import annotations
 
+import os
 from urllib.parse import urlencode
 
 from system_common.Constants import (
@@ -19,7 +20,9 @@ from system_common.Constants import (
     PAGE_STUDIED_FROM, PAGE_SYMBOLS, PAGE_TREES, PAGE_TRIBES,
 )
 
-BASE_URL = "https://eitz-habina.streamlit.app/"
+BASE_URL = os.environ.get("EITZ_HABINA_BASE_URL", "https://eitz-habina.fly.dev/")
+PARAM_ADMIN = "admin"
+PARAM_NAVIGATION_ORIGIN = "via"
 
 # page key -> url_path ("" = the default/landing page)
 URL_PATHS: dict[str, str] = {

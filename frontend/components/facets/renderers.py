@@ -288,6 +288,22 @@ def get_selected_entity_names() -> list[str]:
     return list(dict.fromkeys(names))
 
 
+def get_selected_entity_metrics() -> list[tuple[str, str, str]]:
+    """Selected option type, key and canonical English name, in panel order."""
+    selected = []
+    for ent in ENTITY_TYPES:
+        labels = st.session_state.get(f"entity_filter_selected_{ent['key']}")
+        if not ent["implemented"] or not labels:
+            continue
+        options = _load_entity_select_options(ent["entity_tab"])
+        by_label = dict(zip(_unique_option_labels(options), options))
+        for label in labels:
+            if label in by_label:
+                option = by_label[label]
+                selected.append((ent["key"], option.key, option.display_en_name))
+    return selected
+
+
 def set_selected_entity_option_keys(keys: list[str]) -> None:
     """Pre-select the panels' multiselects from option keys. Must run before the
     panels render in the current script run."""

@@ -11,6 +11,7 @@ from __future__ import annotations
 import logging
 import streamlit as st
 
+from metrics import admin_params
 from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
 from components.facets import (
@@ -76,14 +77,14 @@ def flat_url_params() -> dict[str, str]:
 
 
 def current_search_url() -> str:
-    return page_url(PAGE_SOURCE_SEARCH, flat_url_params())
+    return page_url(PAGE_SOURCE_SEARCH, {**flat_url_params(), **admin_params()})
 
 
 def sync_url_with_search() -> None:
     """Make the browser URL reflect the executed search, so it can be shared."""
-    params = flat_url_params()
+    params = {**flat_url_params(), **admin_params()}
     st.query_params.from_dict(params)
-    st.session_state[URL_SIG_KEY] = tuple(sorted(params.items()))
+    st.session_state[URL_SIG_KEY] = tuple(sorted(flat_url_params().items()))
 
 
 def apply_url_params() -> bool:

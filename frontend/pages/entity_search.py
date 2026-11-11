@@ -22,12 +22,13 @@ from pathlib import Path
 import streamlit as st
 
 import navigation
+from metrics import admin_params, record_entity_search
 from translations1 import enum_text, get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
 from components.entity_option_labels import unique_entity_option_labels
 from system_common.SystemFunctions import get_secret
 from system_common.UrlPaths import (
-    PARAM_ENTITY_ID, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
+    PARAM_ENTITY_ID, PARAM_NAVIGATION_ORIGIN, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
 )
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
@@ -198,6 +199,10 @@ def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
     # ---- Persist selection in the URL on Go (so the page link is shareable) ----
     if go_clicked and entity_key:
         st.query_params[PARAM_ENTITY_ID] = entity_key
+        record_entity_search(entity_tab, entity_key, next(
+            (opt.display_en_name for opt in filtered_options if opt.key == entity_key), ""
+        ), lang)
+        st.session_state["_metrics_entity_url"] = (entity_tab, entity_key)
         st.rerun()
 
 
@@ -288,6 +293,11 @@ def _render_entity_detail(handler, entity_key: str, lang: str, entity_tab: str |
     if entity is None:
         st.error(get_text("entity_search_ui.not_found", lang))
         return
+
+    signature = (entity_tab, entity_key)
+    if st.session_state.get("_metrics_entity_url") != signature:
+        record_entity_search(entity_tab or "", entity_key, entity.display_en_name, lang)
+        st.session_state["_metrics_entity_url"] = signature
 
     if _DEBUG_FE:
         _debug_log_entity(entity, handler.get_transient_field_labels())
@@ -497,7 +507,10 @@ def _render_entity_item_popover(
             page_url(PAGE_SOURCE_SEARCH, {
                 PARAM_SOURCE_RELS: rel_keys,
                 PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {display_label or item_name}",
+                PARAM_NAVIGATION_ORIGIN: "entity_relationship_sources",
+                **admin_params(),
             }),
+            key=f"relationship_sources_{uid}",
             use_container_width=True,
             disabled=not rel_keys,
         )

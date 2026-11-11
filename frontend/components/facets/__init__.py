@@ -10,6 +10,7 @@ from .renderers import (
     ENTITY_TYPES,
     get_selected_entity_ids,
     get_selected_entity_names,
+    get_selected_entity_metrics,
     get_selected_entity_option_keys,
     set_selected_entity_option_keys,
     inject_facet_css,

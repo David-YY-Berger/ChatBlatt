@@ -18,6 +18,7 @@ if str(PROJECT_ROOT) not in sys.path:
 import streamlit as st
 
 import navigation
+import metrics
 from components.header import render_header
 from components.layout import apply_layout, language_selector
 from translations1 import get_text
@@ -123,7 +124,11 @@ def _render_mobile_menu(groups: dict, lang: str) -> None:
                         use_container_width=True,
                         on_click=_close_mobile_menu,
                     ):
-                        st.switch_page(p)
+                        params = metrics.admin_params()
+                        if params:
+                            st.switch_page(p, query_params=params)
+                        else:
+                            st.switch_page(p)
 
 
 def _close_mobile_menu() -> None:
@@ -142,6 +147,7 @@ def main() -> None:
     )
 
     _init_state()
+    metrics.init_admin()
     apply_layout(st.session_state["lang"])
 
     # Header row: language selector on far side
@@ -157,11 +163,16 @@ def main() -> None:
         render_header(lang, MAIN_IMAGE)
 
     page = _build_navigation(lang)
+    metrics.render(lang)
+    if page.url_path not in {URL_PATHS[key] for key in ENTITY_PAGES}:
+        st.session_state.pop("_metrics_entity_url", None)
     if page.url_path != URL_PATHS[PAGE_STUDIED_FROM]:
         st.session_state.pop("studied_from_warning_shown", None)
     if page.url_path != URL_PATHS[PAGE_SYMBOLS]:
         st.session_state.pop(entity_search.SYMBOLS_WARNING_SHOWN_KEY, None)
     page.run()
+    if metrics.has_pending_events():
+        st.rerun()
 
 
 if __name__ == "__main__":

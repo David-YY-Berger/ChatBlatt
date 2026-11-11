@@ -18,15 +18,18 @@ from __future__ import annotations
 from dataclasses import replace
 import logging
 import math
+from uuid import uuid4
 
 import streamlit as st
 import streamlit.components.v1 as components
 
+import metrics
 from translations1 import enum_text, get_text
 from backend.models_db.Enums import PassageType
 from backend.file_utils.HtmlWriter import HtmlWriter
 from components.facets import (
     get_selected_entity_names,
+    get_selected_entity_metrics,
     inject_facet_css,
     preload_all_entity_options,
     render_entity_facets,
@@ -37,6 +40,7 @@ from pages.source_search_logic import (
     clear_relationship_search,
     collect_search_query,
     get_relationship_search,
+    current_url_params,
     current_search_url,
     run_search,
     sync_url_with_search,
@@ -46,9 +50,41 @@ from pages.source_search_logic import (
 logger = logging.getLogger(__name__)
 
 
+def _record_search(query_obj) -> None:
+    if metrics.admin_params().get("admin") == "true":
+        return
+    entities = get_selected_entity_metrics()
+    params = current_url_params()
+    lang = st.session_state.get("lang", "en")
+    search_id = uuid4().hex
+    metrics.record(
+        "app_search", lang,
+        search_type="source",
+        search_id=search_id,
+        text_similarity_used=int(bool(query_obj.free_text_similarity)),
+        passage_types=",".join(str(x) for x in params["pt"]),
+        source_types=",".join(str(x) for x in params["st"]),
+        entity_types=",".join(dict.fromkeys(x[0] for x in entities)),
+        entity_ids=",".join(x[1] for x in entities),
+        entity_names=",".join(x[2] for x in entities),
+        relationship_filter_used=int(bool(query_obj.rel_ids)),
+    )
+    for entity_type, entity_id, entity_name in entities:
+        metrics.record(
+            "search_entity_filter", lang,
+            search_id=search_id, entity_type=entity_type,
+            entity_id=entity_id, entity_name=entity_name,
+        )
+
+
 def _execute_search(query_obj=None, page: int = 0) -> None:
     try:
         base_query = query_obj or collect_search_query()
+        if query_obj is None:
+            try:
+                _record_search(base_query)
+            except Exception:
+                logger.exception("Could not prepare source-search metrics")
         paged_query = replace(
             base_query,
             offset=page * base_query.max_sources,

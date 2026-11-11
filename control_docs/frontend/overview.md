@@ -10,6 +10,7 @@ and data flows, use the feature guides below.
 - [Trees](trees.md)
 - [Entity search](entity_search.md)
 - [URLs, navigation and shareable searches](urls.md)
+- [Metrics and analytics opt-out](metrics.md)
 
 ## Shared layout and navigation
 

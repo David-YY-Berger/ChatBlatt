@@ -88,6 +88,7 @@ def render_person_selector(
 
     if override_key:
         st.session_state[state_key] = override_key
+        _record_tree_search(state_key, override_key, options, lang)
         for label, key in key_map.items():
             if key == override_key:
                 st.session_state[combo_state_key] = label
@@ -119,6 +120,7 @@ def render_person_selector(
 
     if go_clicked and entity_key:
         st.session_state[state_key] = entity_key
+        _record_tree_search(state_key, entity_key, filtered, lang)
         st.rerun()
 
     return st.session_state.get(state_key)
@@ -127,6 +129,18 @@ def render_person_selector(
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+def _record_tree_search(state_key: str, entity_key: str, options: list, lang: str) -> None:
+    tree_type = {
+        "genealogy_center_person": "family_tree",
+        "studied_from_center_person": "studied_from",
+    }.get(state_key)
+    option = next((opt for opt in options if opt.key == entity_key), None)
+    if tree_type and option:
+        from metrics import record
+        record("app_search", lang, search_type="tree", tree_type=tree_type,
+               entity_type="person", entity_id=entity_key, entity_name=option.display_en_name)
+
 
 def _load_person_options(handler) -> list:
     """Load person select options, cached per Streamlit session."""

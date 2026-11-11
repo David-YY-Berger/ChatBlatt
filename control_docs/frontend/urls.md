@@ -42,6 +42,12 @@ immediately; running a search rewrites the URL (`st.query_params`), so the addre
 
 Home-page tool cards and the Entity Search type-picker buttons navigate with `navigation.go(<page key>)` to the URLs above (the `/trees` landing is no longer a home card).
 
+`admin=true` disables analytics and `admin=false` re-enables it; the setting is
+propagated through navigation and remembered for the browser tab. Relationship
+source links also use `via=entity_relationship_sources` to identify their
+origin when opened in a new tab. See [metrics.md](metrics.md) for the opt-out,
+privacy rules, event schema, and configuration.
+
 Example: `/source_search?q=abraham&pt=Halacha`, `/number_search?type=unit&value=Amah`.
 `UrlPaths.page_url(page_key, params)` builds absolute links (base URL `UrlPaths.BASE_URL`; `Paths.EITZ_HABINA_URL` is an alias).
 Not URL-driven: the two tree pages (center person is session state) and the language (session state).

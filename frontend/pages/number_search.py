@@ -415,6 +415,8 @@ def _run_search(value: str, lang: str) -> None:
     controller = NumberSearchController()
     request = NumberSearchRequest(value=value, lang=lang)
     response = controller.handle(request)
+    from metrics import record
+    record("app_search", lang, search_type="number", number_value=value)
     if _DEBUG_FE:
         _debug_log_result(request, response)
     st.session_state["number_search_response"] = response
@@ -424,7 +426,12 @@ def _run_search(value: str, lang: str) -> None:
 
 
 def _run_unit_search(unit: str, lang: str) -> None:
-    response = NumberSearchController().handle_unit(UnitSearchRequest(unit=unit, lang=lang))
+    controller = NumberSearchController()
+    response = controller.handle_unit(UnitSearchRequest(unit=unit, lang=lang))
+    from metrics import record
+    # A unit arriving in a URL is user-controlled; only record known units.
+    units = {name for name, _ in controller.list_units()}
+    record("app_search", lang, search_type="unit", unit_name=unit if unit in units else "")
     st.session_state["unit_search_response"] = response
     st.session_state["unit_search_value"] = unit
     st.session_state.pop("unit_search_source_contents", None)
@@ -483,7 +490,8 @@ def _set_url_params(mode: str, value: str) -> None:
 
 
 def _clear_url_params() -> None:
-    st.query_params.clear()
+    from metrics import admin_params
+    st.query_params.from_dict(admin_params())
     st.session_state.pop(_URL_SIG_KEY, None)
 
 
