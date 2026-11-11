@@ -135,7 +135,11 @@ MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
 
 
 def main() -> None:
-    st.set_page_config(page_title="Eitz Habinah | \u05e2\u05e5 \u05d4\u05d1\u05d9\u05e0\u05d4", layout="wide")
+    st.set_page_config(
+        page_title="Eitz Habinah | \u05e2\u05e5 \u05d4\u05d1\u05d9\u05e0\u05d4",
+        page_icon=MAIN_IMAGE,
+        layout="wide",
+    )
 
     _init_state()
     apply_layout(st.session_state["lang"])
