@@ -21,8 +21,9 @@ from typing import Optional
 
 import streamlit as st
 
-from translations1 import get_text, is_rtl
+from translations1 import get_text
 from components.entity_filters import render_person_filters
+from components.entity_option_labels import unique_entity_option_labels
 
 
 @st.fragment
@@ -79,12 +80,11 @@ def render_person_selector(
     if not filtered:
         st.warning(get_text("entity_filters.no_matches", lang))
 
-    rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_label(opt, False) for opt in filtered]
-    key_map = {_format_label(opt, False): opt.key for opt in filtered}
-    localized_labels = {label: _format_label(opt, rtl) for label, opt in zip(display_labels, filtered)}
+    display_labels = unique_entity_option_labels(filtered)
+    key_map = {label: opt.key for label, opt in zip(display_labels, filtered)}
+    localized_labels = dict(zip(display_labels, unique_entity_option_labels(filtered, lang)))
 
     if override_key:
         st.session_state[state_key] = override_key
@@ -127,14 +127,6 @@ def render_person_selector(
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-
-def _format_label(opt, rtl: bool) -> str:
-    if rtl and opt.display_heb_name:
-        return f"{opt.display_heb_name} ({opt.display_en_name})"
-    if opt.display_heb_name:
-        return f"{opt.display_en_name} ({opt.display_heb_name})"
-    return opt.display_en_name
-
 
 def _load_person_options(handler) -> list:
     """Load person select options, cached per Streamlit session."""

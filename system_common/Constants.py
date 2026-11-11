@@ -28,7 +28,7 @@ PAGE_NUMBERS = "numbers"
 PAGE_ANIMALS = "animals"
 PAGE_FOODS = "foods"
 PAGE_PLANTS = "plants"
-PAGE_GENOLOGY = "genology"
+PAGE_FAMILY_TREE = "family_tree"
 PAGE_STUDIED_FROM = "studied_from"
 
 # ---------------------------------------------------------------------------

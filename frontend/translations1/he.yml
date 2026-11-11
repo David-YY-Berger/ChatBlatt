@@ -28,7 +28,7 @@ entity_tabs:
   label: "בחר תצוגת ישות"
 
 tree_tabs:
-  genology: "עץ יוחסין"
+  family_tree: "עץ משפחה"
   studied_from: "מקורות לימוד"
   label: "בחר תצוגת עץ"
 
@@ -78,7 +78,7 @@ entity_search_ui:
   no_entities: "לא נמצאו ישויות במאגר."
   select_entity: "בחר ישות"
   go_button: "הצג"
-  open_family_tree: "פתח אילן יוחסין"
+  open_family_tree: "פתח עץ משפחה"
   loading: "טוען פרטי ישות…"
   not_found: "הישות לא נמצאה."
   no_relationships: "לא נמצאו קשרים עבור ישות זו."
@@ -174,7 +174,7 @@ page_titles:
   tribes: "שבטי ישראל"
   symbols: "סמלים"
   trees: "עצים"
-  genology: "עץ גנאלוגי"
+  family_tree: "עץ משפחה"
   studied_from: "עץ מקורות לימוד"
 
 home_tools:
@@ -182,7 +182,7 @@ home_tools:
   number_search_description: "מצאו מספרים ויחידות המוזכרים במקורות יהודיים."
   source_search_description: "גלו קטעים רלוונטיים במקורות יהודיים."
   entity_search_description: "גלו אנשים, מקומות, עמים, שבטים וסמלים."
-  genology_description: "גלו קשרי משפחה ושושלות."
+  family_tree_description: "גלו קשרי משפחה ושושלות."
   studied_from_description: "עקבו אחר שרשראות של מורים ותלמידים."
 
 source_search_ui:

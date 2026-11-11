@@ -5,11 +5,11 @@ from __future__ import annotations
 import streamlit as st
 
 from translations1 import get_text, is_rtl
-from system_common.Constants import PAGE_TREES, PAGE_GENOLOGY, PAGE_STUDIED_FROM
+from system_common.Constants import PAGE_TREES, PAGE_FAMILY_TREE, PAGE_STUDIED_FROM
 
 
 def render(lang: str, selected: str | None = None) -> None:
-    if selected == PAGE_GENOLOGY:
+    if selected == PAGE_FAMILY_TREE:
         from pages.genealogy_tree import render as render_genealogy
         render_genealogy(lang)
         return

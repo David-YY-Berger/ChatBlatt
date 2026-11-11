@@ -35,7 +35,7 @@ _PARENT_TYPES = ("childOfFather", "childOfMother")
 def render(lang: str) -> None:
     """Entry point called from trees.py."""
     st.markdown(
-        f'<div class="page-title">{get_text("page_titles.genology", lang)}</div>',
+        f'<div class="page-title">{get_text("page_titles.family_tree", lang)}</div>',
         unsafe_allow_html=True,
     )
 

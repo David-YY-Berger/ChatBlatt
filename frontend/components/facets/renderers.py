@@ -10,11 +10,11 @@ from __future__ import annotations
 
 import concurrent.futures
 import logging
-from collections import Counter
 from pathlib import Path
 
 import streamlit as st
-from translations1 import enum_text, get_text, is_rtl
+from translations1 import get_text
+from components.entity_option_labels import unique_entity_option_labels
 
 from system_common.Constants import (
     PAGE_ANIMALS, PAGE_FOODS, PAGE_NATIONS, PAGE_NUMBERS, PAGE_PEOPLE,
@@ -212,23 +212,11 @@ def _load_entity_select_options(entity_tab: str) -> list:
     return options
 
 
-def _format_entity_option_label(opt, lang: str = "en") -> str:
-    """Format an EntitySelectOption for display in the multiselect."""
-    label = f"{opt.display_en_name} ({opt.display_heb_name})" if opt.display_heb_name else opt.display_en_name
-    if is_rtl(lang) and opt.display_heb_name:
-        label = f"{opt.display_heb_name} ({opt.display_en_name})"
-    roles = (", ".join(enum_text(role, lang) for role in getattr(opt, "roles", []))
-             if is_rtl(lang) else opt.roles_label() if hasattr(opt, "roles_label") else "")
-    return f"{label} - {roles}" if roles else label
-
-
 def _unique_option_labels(options: list, lang: str = "en") -> list[str]:
     """Display labels aligned with `options`; labels shared by several options
     (e.g. two people with the same name and roles) get a short key suffix so each
     stays individually selectable."""
-    labels = [_format_entity_option_label(o, lang) for o in options]
-    counts = Counter(labels)
-    return [f"{l} (#{o.key[-4:]})" if counts[l] > 1 else l for l, o in zip(labels, options)]
+    return unique_entity_option_labels(options, lang)
 
 
 def get_selected_entity_ids() -> list[str]:

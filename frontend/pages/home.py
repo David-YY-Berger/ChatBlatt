@@ -11,7 +11,7 @@ import navigation
 from translations1 import get_text
 from system_common.Constants import (
     PAGE_ENTITY_SEARCH,
-    PAGE_GENOLOGY,
+    PAGE_FAMILY_TREE,
     PAGE_NUMBER_SEARCH,
     PAGE_SOURCE_SEARCH,
     PAGE_STUDIED_FROM,
@@ -23,7 +23,7 @@ TOOLS = (
     (PAGE_NUMBER_SEARCH, "number_search_main.jpg", "home_tools.number_search_description"),
     (PAGE_SOURCE_SEARCH, "source_search_main.jpg", "home_tools.source_search_description"),
     (PAGE_ENTITY_SEARCH, "entity_search_main.jpg", "home_tools.entity_search_description"),
-    (PAGE_GENOLOGY, "trees.jpg", "home_tools.genology_description"),
+    (PAGE_FAMILY_TREE, "trees.jpg", "home_tools.family_tree_description"),
     (PAGE_STUDIED_FROM, "trees.jpg", "home_tools.studied_from_description"),
 )
 
@@ -61,6 +61,6 @@ def render(lang: str) -> None:
 
 
 def _tool_title(page_key: str, lang: str) -> str:
-    if page_key in (PAGE_GENOLOGY, PAGE_STUDIED_FROM):
+    if page_key in (PAGE_FAMILY_TREE, PAGE_STUDIED_FROM):
         return get_text(f"page_titles.{page_key}", lang)
     return get_text(f"nav.{page_key}", lang)

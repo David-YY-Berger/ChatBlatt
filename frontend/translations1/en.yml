@@ -28,7 +28,7 @@ entity_tabs:
   label: "Choose an entity view"
 
 tree_tabs:
-  genology: "Genology"
+  family_tree: "Family Tree"
   studied_from: "studiedFrom"
   label: "Choose a tree view"
 
@@ -174,7 +174,7 @@ page_titles:
   tribes: "Tribes of Israel"
   symbols: "Symbols"
   trees: "Trees"
-  genology: "Family Tree"
+  family_tree: "Family Tree"
   studied_from: "Studied From Tree"
 
 home_tools:
@@ -182,7 +182,7 @@ home_tools:
   number_search_description: "Find numbers and units mentioned throughout Jewish sources."
   source_search_description: "Discover relevant passages across Jewish texts."
   entity_search_description: "Explore people, places, nations, tribes, and symbols."
-  genology_description: "Explore family connections and lineage."
+  family_tree_description: "Explore family connections and lineage."
   studied_from_description: "Follow chains of teachers and students."
 
 source_search_ui:

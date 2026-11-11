@@ -14,7 +14,7 @@ from __future__ import annotations
 from urllib.parse import urlencode
 
 from system_common.Constants import (
-    PAGE_ABOUT, PAGE_ENTITY_SEARCH, PAGE_GENOLOGY, PAGE_HOME, PAGE_NATIONS,
+    PAGE_ABOUT, PAGE_ENTITY_SEARCH, PAGE_FAMILY_TREE, PAGE_HOME, PAGE_NATIONS,
     PAGE_NUMBER_SEARCH, PAGE_PEOPLE, PAGE_PLACES, PAGE_SOURCE_SEARCH,
     PAGE_STUDIED_FROM, PAGE_SYMBOLS, PAGE_TREES, PAGE_TRIBES,
 )
@@ -34,7 +34,7 @@ URL_PATHS: dict[str, str] = {
     PAGE_TRIBES: "entity_search_tribes",
     PAGE_SYMBOLS: "entity_search_symbols",
     PAGE_TREES: "trees",
-    PAGE_GENOLOGY: "trees_genealogy_tree",
+    PAGE_FAMILY_TREE: "trees_genealogy_tree",
     PAGE_STUDIED_FROM: "trees_studied_from_tree",
 }
 

@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import json
 import os
-from collections import Counter
 from pathlib import Path
 
 import streamlit as st
@@ -25,13 +24,14 @@ import streamlit as st
 import navigation
 from translations1 import enum_text, get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
+from components.entity_option_labels import unique_entity_option_labels
 from system_common.SystemFunctions import get_secret
 from system_common.UrlPaths import (
     PARAM_ENTITY_ID, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
 )
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
-    PAGE_GENOLOGY,
+    PAGE_FAMILY_TREE,
 )
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
@@ -164,21 +164,11 @@ def _render_entity_selector(entity_tab: str, options: list, lang: str) -> None:
         st.warning(get_text("entity_filters.no_matches", lang))
 
     # ---- Build display labels for combobox ----
-    rtl = is_rtl(lang)
     placeholder = get_text("ui.select_option", lang)
 
-    display_labels = [_format_option_label(opt, False) for opt in filtered_options]
-    # Disambiguate identical labels (same name/roles) so each maps to its own entity.
-    label_counts = Counter(display_labels)
-    display_labels = [
-        f"{l} (#{o.key[-4:]})" if label_counts[l] > 1 else l
-        for l, o in zip(display_labels, filtered_options)
-    ]
+    display_labels = unique_entity_option_labels(filtered_options)
     key_map = {l: o.key for l, o in zip(display_labels, filtered_options)}
-    localized_labels = {
-        label: _format_option_label(opt, rtl) + (f" (#{opt.key[-4:]})" if label_counts[_format_option_label(opt, False)] > 1 else "")
-        for label, opt in zip(display_labels, filtered_options)
-    }
+    localized_labels = dict(zip(display_labels, unique_entity_option_labels(filtered_options, lang)))
 
     # ---- Layout: combobox + go button ----
     col_combo, col_btn = st.columns([4, 1])
@@ -287,7 +277,7 @@ def _render_family_tree_button(entity_key: str, lang: str) -> None:
             help=get_text("entity_search_ui.open_family_tree", lang),
         ):
             st.session_state["genealogy_pending_person"] = entity_key
-            navigation.go(PAGE_GENOLOGY)
+            navigation.go(PAGE_FAMILY_TREE)
 
 
 def _render_entity_detail(handler, entity_key: str, lang: str, entity_tab: str | None = None) -> None:
@@ -567,19 +557,6 @@ def _debug_log_entity(entity, transient_labels: list) -> None:
 # =============================================================================
 #  Helpers
 # =============================================================================
-
-def _format_option_label(opt, rtl: bool) -> str:
-    """Format a select option for display in the combobox."""
-    if rtl and opt.display_heb_name:
-        label = f"{opt.display_heb_name} ({opt.display_en_name})"
-    elif opt.display_heb_name:
-        label = f"{opt.display_en_name} ({opt.display_heb_name})"
-    else:
-        label = opt.display_en_name
-    roles = (", ".join(enum_text(role, "he") for role in getattr(opt, "roles", []))
-             if rtl else opt.roles_label() if hasattr(opt, "roles_label") else "")
-    return f"{label} - {roles}" if roles else label
-
 
 def _load_select_options(entity_tab: str, handler) -> list:
     """

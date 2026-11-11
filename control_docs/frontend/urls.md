@@ -22,7 +22,7 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 | Entity search (landing) | `/entity_search` | `entity_search` |
 | People / Places / Nations / Tribes / Symbols | `/entity_search_people`, `_places`, `_nations`, `_tribes`, `_symbols` | `people`, `places`, `nations`, `tribes`, `symbols` |
 | Trees (landing) | `/trees` | `trees` |
-| Family tree | `/trees_genealogy_tree` | `genology` |
+| Family tree | `/trees_genealogy_tree` | `family_tree` |
 | Studied-from tree | `/trees_studied_from_tree` | `studied_from` |
 
 The Symbols page key and URL path remain defined internally, but the page is

@@ -31,5 +31,6 @@ PDF (session key `_search_url`). The PDF download captures that executed-search 
 deferred generation; changing the form or paging through results does not change the link
 until a new search is run.
 
-The Person entity dropdown labels each person with their roles (e.g. David (???) - king), same
-as Entity Search.
+The Person entity dropdown shows recorded roles and time period (e.g.
+`David (דוד) - King [Tanach]`), using the same labels as Entity Search and
+the tree selectors.
