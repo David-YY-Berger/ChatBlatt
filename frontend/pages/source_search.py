@@ -57,10 +57,11 @@ def _execute_search(query_obj=None, page: int = 0) -> None:
         st.session_state["_search_ans"] = ans
         st.session_state["_search_query"] = replace(base_query, offset=0)
         st.session_state["_search_page"] = page
-        st.session_state["_search_entity_names"] = get_selected_entity_names()
+        if query_obj is None:
+            st.session_state["_search_entity_names"] = get_selected_entity_names()
+            st.session_state["_search_url"] = current_search_url()
+            sync_url_with_search()
         st.session_state["_search_elapsed"] = elapsed
-        st.session_state["_search_url"] = current_search_url()
-        sync_url_with_search()
         st.session_state.pop("_search_error", None)
     except Exception as e:
         logger.error("Search failed: %s", e)
@@ -119,6 +120,7 @@ def _render_dicta_promo(lang: str) -> None:
 def _render_download_button(ans, lang: str) -> None:
     """Large icon-only button that downloads the results as a PDF."""
     entity_names = st.session_state.get("_search_entity_names", [])
+    search_url = st.session_state.get("_search_url")
     dedication = get_text("app.dedication", lang)
     st.markdown(
         """<style>
@@ -133,12 +135,12 @@ def _render_download_button(ans, lang: str) -> None:
             icon=":material/download:",
             data=lambda: build_results_pdf(
                 ans,
-                st.session_state.get("_search_url"),
+                search_url,
                 entity_names=entity_names,
                 dedication=dedication,
                 lang=lang,
             ),
-            file_name=results_pdf_filename(st.session_state.get("_search_url"), entity_names),
+            file_name=results_pdf_filename(search_url, entity_names),
             mime="application/pdf",
             help=get_text("source_search_ui.download_pdf", lang),
         )

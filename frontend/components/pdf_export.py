@@ -164,7 +164,6 @@ class _Header(Flowable):
         c.setFont(FONT, 9)
         c.setFillColor(colors.HexColor("#ecf0f1"))
         draw_text(x, 0.9 * cm, display(f"{get_text('source_display.downloaded', self.lang)}: {self.stamp}"))
-        draw_text(x, 0.45 * cm, Paths.EITZ_HABINA_URL)
         if self.search_url:
             label = display(get_text("source_display.open_search", self.lang))
             c.setFillColor(colors.HexColor("#8ecbff"))
