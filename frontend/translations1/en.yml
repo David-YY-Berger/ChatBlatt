@@ -78,6 +78,7 @@ entity_search_ui:
   no_entities: "No entities found in the database."
   select_entity: "Select an entity"
   go_button: "Go"
+  open_family_tree: "Open family tree"
   loading: "Loading entity details…"
   not_found: "Entity not found."
   no_relationships: "No relationships found for this entity."

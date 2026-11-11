@@ -78,6 +78,7 @@ entity_search_ui:
   no_entities: "לא נמצאו ישויות במאגר."
   select_entity: "בחר ישות"
   go_button: "הצג"
+  open_family_tree: "פתח אילן יוחסין"
   loading: "טוען פרטי ישות…"
   not_found: "הישות לא נמצאה."
   no_relationships: "לא נמצאו קשרים עבור ישות זו."

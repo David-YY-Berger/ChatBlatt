@@ -31,6 +31,7 @@ from system_common.UrlPaths import (
 )
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
+    PAGE_GENOLOGY,
 )
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
@@ -141,7 +142,7 @@ def _render_entity_search_tab(entity_tab: str, lang: str) -> None:
 
     # ---- Fetch & display entity detail ----
     st.divider()
-    _render_entity_detail(handler, selected_key, lang)
+    _render_entity_detail(handler, selected_key, lang, entity_tab)
 
 
 @st.fragment
@@ -276,7 +277,20 @@ def _render_type_filter(
 #  Entity detail rendering
 # =============================================================================
 
-def _render_entity_detail(handler, entity_key: str, lang: str) -> None:
+def _render_family_tree_button(entity_key: str, lang: str) -> None:
+    """Image button (with hover hint) that opens the family tree centred on this person."""
+    with st.container(key="tree_link_btn"):
+        st.image(_ICON_DIR / "trees.jpg", width=64)
+        if st.button(
+            get_text("entity_search_ui.open_family_tree", lang),
+            key=f"open_family_tree_{entity_key}",
+            help=get_text("entity_search_ui.open_family_tree", lang),
+        ):
+            st.session_state["genealogy_pending_person"] = entity_key
+            navigation.go(PAGE_GENOLOGY)
+
+
+def _render_entity_detail(handler, entity_key: str, lang: str, entity_tab: str | None = None) -> None:
     """Fetch the full entity and render its detail view."""
     with st.spinner(get_text("entity_search_ui.loading", lang)):
         entity = handler.get_full_entity(entity_key)
@@ -297,6 +311,9 @@ def _render_entity_detail(handler, entity_key: str, lang: str) -> None:
     st.markdown(f"### {name_display}")
     if alt_name:
         st.caption(alt_name)
+
+    if entity_tab == PAGE_PEOPLE:
+        _render_family_tree_button(entity_key, lang)
 
     # ---- Alt names ----
     all_names = entity.all_heb_names if rtl else entity.all_en_names

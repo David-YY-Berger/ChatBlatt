@@ -43,7 +43,11 @@ def render(lang: str) -> None:
     st.markdown(f"**{get_text('genealogy_ui.select_person_label', lang)}**")
 
     from components.person_selector import render_person_selector
-    center_key = render_person_selector(lang, state_key="genealogy_center_person")
+    center_key = render_person_selector(
+        lang,
+        state_key="genealogy_center_person",
+        override_key=st.session_state.pop("genealogy_pending_person", None),
+    )
 
     if not center_key:
         st.info(get_text("genealogy_ui.prompt_select_person", lang))
