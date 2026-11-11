@@ -16,7 +16,9 @@ the [Google Analytics setup checklist](google_analytics_setup.md).
   to `https://eitz-habina.fly.dev/`. Set `EITZ_HABINA_BASE_URL` to change it
   without editing code. It also controls generated links and the only origin
   on which the analytics component sends events. Include the scheme and, if
-  applicable, the port. Configure this on the deployment when changing domains.
+  applicable, the port. Set it to the public URL on each deployment separately;
+  see [deployment](overview.md#deployment) for the Streamlit Cloud and Railway
+  URLs.
 - Set `GA4_MEASUREMENT_ID` to override the default ID. An invalid ID disables
   tracking and is reported in the browser console.
 - In GA4 Admin, select the web stream above and **disable enhanced measurement**,

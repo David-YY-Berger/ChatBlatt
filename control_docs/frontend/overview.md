@@ -14,7 +14,8 @@ and data flows, use the feature guides below.
 
 ## Shared layout and navigation
 
-- `frontend/app.py` initializes the language, renders the header and language
+- `streamlit_app.py` is the deployment entrypoint. `frontend/app.py` initializes
+  the language, renders the header and language
   selector, registers the pages, and runs the page selected by `st.navigation`.
   The header (`components/header.py`) links the title and icon to Home and the
   Sefaria banner to the external site.
@@ -78,11 +79,24 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 ```bash
 cd <repo-root>
 pip install -r requirements.txt
-streamlit run frontend/app.py
+streamlit run streamlit_app.py
 ```
 
 Backend data the frontend reads/searches comes from `backend/app/controllers/`
 (`app/controllers.md`) and the search indexes (`search/faiss_bm25.md`).
+
+## Deployment
+
+Use `streamlit_app.py` as the Streamlit Community Cloud **Main file path**.
+The Docker image uses the same entrypoint for Railway. Do not start
+`frontend/app.py` directly: Streamlit can discover `frontend/pages/` as legacy
+standalone pages and run them without the shared app initialization.
+
+Set `EITZ_HABINA_BASE_URL` separately on each deployment to its public URL,
+including the scheme, for example `https://eitz-habina.streamlit.app/` on
+Community Cloud and `https://eitz-habina-prod.up.railway.app/` on Railway.
+This controls generated links and the analytics origin; see [metrics](metrics.md).
+The repository, branch, and new entrypoint must be deployed on both hosts.
 
 ## requirements.txt is the deployment manifest
 
