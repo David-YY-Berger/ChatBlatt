@@ -13,12 +13,18 @@ the [Google Analytics setup checklist](google_analytics_setup.md).
 ## Configuration and deployment
 
 - The canonical app URL is `BASE_URL` in `system_common/UrlPaths.py`; it defaults
-  to `https://eitz-habina.fly.dev/`. Set `EITZ_HABINA_BASE_URL` to change it
+  to `https://eitz-habina-prod.up.railway.app/`. Set `EITZ_HABINA_BASE_URL` to change it
   without editing code. It also controls generated links and the only origin
   on which the analytics component sends events. Include the scheme and, if
-  applicable, the port. Set it to the public URL on each deployment separately;
+  applicable, the port. Configure the production deployment with
+  `EITZ_HABINA_BASE_URL=https://eitz-habina-prod.up.railway.app/`;
+  set it to the public URL on each deployment separately;
   see [deployment](overview.md#deployment) for the Streamlit Cloud and Railway
   URLs.
+- Analytics is permanently disabled on
+  `https://eitz-habina-testing.streamlit.app/`, even if `admin=false` is in the
+  URL or the base-URL environment variable is accidentally set to the testing
+  origin. Testing-site activity never loads the GA tag or sends app events.
 - Set `GA4_MEASUREMENT_ID` to override the default ID. An invalid ID disables
   tracking and is reported in the browser console.
 - In GA4 Admin, select the web stream above and **disable enhanced measurement**,
@@ -40,7 +46,7 @@ the [Google Analytics setup checklist](google_analytics_setup.md).
 
 ## Admin opt-out
 
-Open `https://eitz-habina.fly.dev/?admin=true` before starting an admin session.
+Open `https://eitz-habina-prod.up.railway.app/?admin=true` before starting an admin session.
 The app propagates `admin=true` or `admin=false` through its navigation, search
 URL rewrites, home link, and relationship-source links. The browser remembers
 the setting in **sessionStorage for this tab**, including a reload or a

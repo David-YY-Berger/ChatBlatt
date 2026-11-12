@@ -5,6 +5,7 @@
   const storageKey = "eitz_metrics_admin";
   const sharedKey = "__eitzMetrics";
   const pendingKey = "eitz_metrics_navigation";
+  const excludedOrigins = new Set(["https://eitz-habina-testing.streamlit.app"]);
   let args;
   let loadedId;
 
@@ -67,6 +68,7 @@
 
   function enabled() {
     if (!args) return false;
+    if (excludedOrigins.has(host.location.origin)) return false;
     if (!/^G-[A-Z0-9]+$/.test(args.measurement_id)) {
       console.error("Analytics disabled: invalid GA4 measurement ID.");
       return false;

@@ -20,7 +20,9 @@ from system_common.Constants import (
     PAGE_STUDIED_FROM, PAGE_SYMBOLS, PAGE_TREES, PAGE_TRIBES,
 )
 
-BASE_URL = os.environ.get("EITZ_HABINA_BASE_URL", "https://eitz-habina.fly.dev/")
+BASE_URL = os.environ.get(
+    "EITZ_HABINA_BASE_URL", "https://eitz-habina-prod.up.railway.app/"
+)
 PARAM_ADMIN = "admin"
 PARAM_NAVIGATION_ORIGIN = "via"
 

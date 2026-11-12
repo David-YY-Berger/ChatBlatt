@@ -90,6 +90,18 @@ test("stored and conflicting admin values fail closed", () => {
   assert.equal(conflicting.tags.length, 0);
 });
 
+test("testing site is excluded even when admin=false and it is configured as base URL", () => {
+  const app = client("https://eitz-habina-testing.streamlit.app/?admin=false");
+  app.render([{id: "1", name: "app_search", search_type: "source"}]);
+  assert.equal(app.tags.length, 0);
+  assert.equal(app.calls().filter(call => call[0] === "event").length, 0);
+
+  const misconfigured = client("https://eitz-habina-testing.streamlit.app/");
+  misconfigured.render([{id: "2", name: "app_search"}]);
+  assert.equal(misconfigured.tags.length, 0);
+  assert.equal(misconfigured.calls().filter(call => call[0] === "event").length, 0);
+});
+
 test("internal links inherit admin before they are clicked or copied", () => {
   const app = client("https://app.example/?admin=true");
   const link = {

@@ -18,13 +18,17 @@ cannot change them for you.
    |---|---|
    | Measurement ID | `G-9ZHLKD65GM` |
    | Stream ID | `16319805930` |
-   | Website URL | `https://eitz-habina.fly.dev/` |
+   | Website URL | `https://eitz-habina-prod.up.railway.app/` |
 
 5. If the IDs do not match, stop and select the correct property/stream rather
    than creating another stream. You need the **Editor** or **Administrator**
    role on the property to change the settings below.
 
-The website URL is the current deployment address; it can change later. See
+`https://eitz-habina-testing.streamlit.app/` is the testing site and is
+permanently excluded by the app: it never loads the GA tag or sends events,
+even with `admin=false`. Do not change the production stream's website URL to
+the testing URL. The website URL is the production deployment address; it can
+change later. See
 [Changing the site URL](#5-changing-the-site-url) before changing domains.
 
 ## 2. Turn off enhanced measurement
@@ -117,7 +121,7 @@ it in reports or explorations; do not assume past events will be backfilled.
 ### Verify the integration
 
 1. Confirm the application changes are deployed to the configured site.
-2. Open `https://eitz-habina.fly.dev/?admin=false` in a fresh test tab.
+2. Open `https://eitz-habina-prod.up.railway.app/?admin=false` in a fresh test tab.
    **This is a tracked visit** and will appear in the property's data. Do not
    use personal information in test searches.
 3. Navigate from Home to another page, run a source search with a public test
@@ -126,17 +130,26 @@ it in reports or explorations; do not assume past events will be backfilled.
    `search_entity_filter`, and `file_download`. Realtime can take a short time
    and may include other visitors. If the test browser uses ad blockers or
    prevents Google Analytics requests, events may not arrive.
-5. To test exclusion, open `https://eitz-habina.fly.dev/?admin=true` in a
+5. To test exclusion, open `https://eitz-habina-prod.up.railway.app/?admin=true` in a
    **separate fresh tab**, navigate and reload. Check the browser's developer
    tools **Network** panel: that tab should not load `gtag/js` from
    `googletagmanager.com` or send Google Analytics collection requests. Filter
    the network log by `googletagmanager` and `collect` and clear it before the
    test. Realtime totals alone cannot prove exclusion when other people are
    using the site. `admin=false` explicitly re-enables tracking in that tab.
+6. Confirm the testing-site exclusion separately at
+   `https://eitz-habina-testing.streamlit.app/?admin=false`. Navigate and
+   reload; the test tab should not load `gtag/js` or send GA collection
+   requests. The testing site remains excluded even if `admin=false` is present.
 
 No separate GA4 admin filter is required for the app's `admin=true` opt-out.
 If another Google tag is installed outside this implementation, it must be
 removed or independently excluded; this opt-out does not control it.
+
+The testing origin is excluded in the app regardless of the `admin` query
+parameter. If you have published a separate Google tag or analytics integration
+directly on the testing deployment, remove it separately; the app's exclusion
+controls only the app's GA4 component.
 
 ### Make a useful exploration
 
@@ -168,8 +181,9 @@ button click, not proof the file was saved.
 1. Update the web stream's website URL in GA4 if appropriate.
 2. Update the deployment's `EITZ_HABINA_BASE_URL` environment variable to the
    new origin, including scheme and any port, and redeploy/restart. Its default
-   lives in `system_common/UrlPaths.py`. The tracker only sends on that
-   configured origin.
+   lives in `system_common/UrlPaths.py`. Set the Railway production deployment
+   to `https://eitz-habina-prod.up.railway.app/`. The tracker only sends on that
+   configured origin, except for the permanently excluded testing origin.
 3. Repeat the verification above using the new URL, both with `admin=false` and
    in a fresh tab with `admin=true`.
 
