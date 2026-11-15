@@ -39,6 +39,23 @@ is duplicated or reimplemented.
 Steps 3–4 share a two-phase scaffold (`DBPopulateLlmBase`); step 2 and 5 are direct
 JSON/CSV-driven DB writes; step 6 reads already-populated source content.
 
+## Relationship inspection reports
+
+From the project root, run these read-only production database exports:
+
+```powershell
+python -m backend_pipeline.data_pipeline.one_time_scripts.display_db.comparison_relationships
+python -m backend_pipeline.data_pipeline.one_time_scripts.display_db.descendant_relationships
+```
+
+They write Markdown to the sibling `ChatBlatt_data_files/real_data/display_db/` directory;
+`--output-dir` changes the destination. Running a script overwrites its own report files.
+Comparison reports include both directions of `comparedTo`, `contrastedWith`, and `AliasOf`,
+grouped by entity type and ranked by relationship-record count. The descendant reports rank
+people separately by their stored `descendantOf` records as ancestor or descendant; they do
+not infer transitive relationships or include parent/child records. Missing entity references
+and unexpected entity types cause an error rather than an incomplete report.
+
 `DBPopulateLlmBase` itself is never meant to run — its `_get_output_dir`/`_extract_from_passage`/
 `_process_json_entries` are unimplemented (`@abstractmethod`, raising `NotImplementedError`),
 but since `DBParentClass` is a `unittest.TestCase` (not a true `ABC`), nothing stops it from
