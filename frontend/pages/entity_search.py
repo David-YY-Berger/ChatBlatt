@@ -22,7 +22,7 @@ from pathlib import Path
 import streamlit as st
 
 import navigation
-from metrics import admin_params, record_entity_search
+from metrics import record_entity_search, shared_params
 from translations1 import enum_text, get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
 from components.entity_option_labels import unique_entity_option_labels
@@ -508,7 +508,7 @@ def _render_entity_item_popover(
                 PARAM_SOURCE_RELS: rel_keys,
                 PARAM_SOURCE_REL_LABEL: f"{entity_name} · {rel_label} · {display_label or item_name}",
                 PARAM_NAVIGATION_ORIGIN: "entity_relationship_sources",
-                **admin_params(),
+                **shared_params(),
             }),
             key=f"relationship_sources_{uid}",
             use_container_width=True,

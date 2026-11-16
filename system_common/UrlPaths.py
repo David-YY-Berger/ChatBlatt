@@ -25,6 +25,7 @@ BASE_URL = os.environ.get(
 )
 PARAM_ADMIN = "admin"
 PARAM_NAVIGATION_ORIGIN = "via"
+PARAM_LANG = "lang"                   # "en" | "he"; carried on every URL
 
 # page key -> url_path ("" = the default/landing page)
 URL_PATHS: dict[str, str] = {

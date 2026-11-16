@@ -4,16 +4,17 @@ from __future__ import annotations
 
 import base64
 from pathlib import Path
+from urllib.parse import urlencode
 
 import streamlit as st
 
-from metrics import admin_params
+from metrics import shared_params
 from translations1 import get_text
 
 
 def render_header(lang: str, main_image_path: Path) -> None:
     main_image_data = base64.b64encode(main_image_path.read_bytes()).decode("ascii")
-    home_url = "/?admin=" + admin_params()["admin"] if admin_params() else "/"
+    home_url = "/?" + urlencode(shared_params()) if shared_params() else "/"
     st.markdown(
         f"""
         <div class="app-header">

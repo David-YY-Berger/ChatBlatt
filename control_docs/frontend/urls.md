@@ -39,6 +39,9 @@ immediately; running a search rewrites the URL (`st.query_params`), so the addre
 - **Number search**: `type` = `number` | `unit`, `value` = the number/fraction (e.g. `7`, `1/3`) or the unit's English name.
 - **Entity search** (on each `entity_search_<type>` page): `id` = the entity key. Cross-links between entities
   use `navigation.go(<type page>, id=<key>)`.
+- **Language**: `lang=en` selects English and `lang=he` selects Hebrew. A missing or invalid value defaults
+  to English on a new session. The selected language is reflected in the URL and retained across navigation
+  and shareable search links.
 
 Home-page tool cards and the Entity Search type-picker buttons navigate with `navigation.go(<page key>)` to the URLs above (the `/trees` landing is no longer a home card).
 
@@ -48,6 +51,6 @@ source links also use `via=entity_relationship_sources` to identify their
 origin when opened in a new tab. See [metrics.md](metrics.md) for the opt-out,
 privacy rules, event schema, and configuration.
 
-Example: `/source_search?q=abraham&pt=Halacha`, `/number_search?type=unit&value=Amah`.
+Example: `/source_search?q=abraham&pt=Halacha&lang=he`, `/number_search?type=unit&value=Amah&lang=en`.
 `UrlPaths.page_url(page_key, params)` builds absolute links (base URL `UrlPaths.BASE_URL`; `Paths.EITZ_HABINA_URL` is an alias).
-Not URL-driven: the two tree pages (center person is session state) and the language (session state).
+Not URL-driven: the two tree pages' center person (session state).

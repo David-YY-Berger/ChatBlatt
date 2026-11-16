@@ -490,8 +490,8 @@ def _set_url_params(mode: str, value: str) -> None:
 
 
 def _clear_url_params() -> None:
-    from metrics import admin_params
-    st.query_params.from_dict(admin_params())
+    from metrics import shared_params
+    st.query_params.from_dict(shared_params())
     st.session_state.pop(_URL_SIG_KEY, None)
 
 

@@ -30,7 +30,7 @@ from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_FAMILY_TREE, PAGE_STUDIED_FROM,
 )
-from system_common.UrlPaths import URL_PATHS
+from system_common.UrlPaths import PARAM_LANG, URL_PATHS
 
 import logging
 
@@ -44,7 +44,15 @@ TREE_PAGES = (PAGE_FAMILY_TREE, PAGE_STUDIED_FROM)
 
 def _init_state() -> None:
     if "lang" not in st.session_state:
-        st.session_state["lang"] = DEFAULT_LANG
+        from translations1 import available_languages
+
+        requested = st.query_params.get(PARAM_LANG)
+        st.session_state["lang"] = requested if requested in available_languages() else DEFAULT_LANG
+
+
+def _sync_lang_param(lang: str) -> None:
+    if st.query_params.get(PARAM_LANG) != lang:
+        st.query_params[PARAM_LANG] = lang
 
 
 def _renderer(page_key: str):
@@ -124,7 +132,7 @@ def _render_mobile_menu(groups: dict, lang: str) -> None:
                         use_container_width=True,
                         on_click=_close_mobile_menu,
                     ):
-                        params = metrics.admin_params()
+                        params = metrics.shared_params()
                         if params:
                             st.switch_page(p, query_params=params)
                         else:
@@ -158,6 +166,7 @@ def main() -> None:
             st.session_state["lang"] = selected_lang
             st.rerun()
     lang = st.session_state["lang"]
+    _sync_lang_param(lang)
 
     with header_cols[0]:
         render_header(lang, MAIN_IMAGE)

@@ -10,7 +10,7 @@ from uuid import uuid4
 import streamlit as st
 import streamlit.components.v1 as components
 
-from system_common.UrlPaths import BASE_URL, PARAM_ADMIN, PARAM_NAVIGATION_ORIGIN, URL_PATHS
+from system_common.UrlPaths import BASE_URL, PARAM_ADMIN, PARAM_LANG, PARAM_NAVIGATION_ORIGIN, URL_PATHS
 
 MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID", "G-9ZHLKD65GM")
 _ADMIN_STATE = "_metrics_admin"
@@ -44,6 +44,19 @@ def admin_params() -> dict[str, str]:
     if values:
         return {PARAM_ADMIN: "false" if all(raw.lower() == "false" for raw in values) else "true"}
     return {}
+
+
+def shared_params() -> dict[str, str]:
+    """Query params that must survive every navigation: admin flag and language."""
+    params = admin_params()
+    lang = st.session_state.get("lang")
+    if lang:
+        params[PARAM_LANG] = lang
+    else:
+        values = st.query_params.get_all(PARAM_LANG)
+        if values:
+            params[PARAM_LANG] = values[0]
+    return params
 
 
 def record(name: str, lang: str, **params: str | int) -> None:
