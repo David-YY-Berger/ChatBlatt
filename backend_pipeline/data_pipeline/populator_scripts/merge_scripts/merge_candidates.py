@@ -11,12 +11,12 @@ Candidate kinds (one review-file family each):
   - "prefix":    same name once a title prefix (rabbi / rav / abba / ...) is stripped, with at
                  least two distinct display names ("akiva" / "rabbi akiva" / "rav akiva").
   - "same_name": identical display_en_name (case-insensitive) on 2+ entities.
-  - "close_spelling" (hanna / hana / hannah): TBD, not implemented.
+  - "close_spelling": transliteration variants such as hanna / hana / hannah.
 
 Review file format (markdown, readable by humans AND machines):
   every group is introduced by one machine-readable HTML comment
       <!-- merge-group: {"id": "...", "kind": "...", "keys": ["<entity key>", ...]} -->
-  Same-name review groups are followed by two checkboxes. Prefix decisions instead live in the
+  Same-name and close-spelling review groups have two checkboxes. Prefix decisions instead live in the
   consolidated confidence file. The human ticks (replaces the space with x) at most one:
       - [ ] merge          -> merge every entity in `keys` into one
       - [ ] dont merge     -> keep them separate
@@ -31,6 +31,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 KIND_PREFIX = "prefix"
 KIND_SAME_NAME = "same_name"
+KIND_CLOSE_SPELLING = "close_spelling"
 
 # Longest alternatives first is unnecessary (whole-word match), listed for readability.
 TITLE_PREFIXES = ("rabbi", "rabban", "rebbi", "rav", "abba", "reb", "r.")
@@ -62,6 +63,23 @@ class Group:
 
 def normalize_name(name: str) -> str:
     return " ".join((name or "").lower().split())
+
+
+def spelling_signature(name: str) -> str:
+    """Normalize documented transliteration variants within each English word."""
+    def normalize_word(match: re.Match) -> str:
+        word = match.group()
+        word = re.sub(r"([bcdfghjklmnpqrstvwxyz])\1+", r"\1", word)
+        if word.startswith("yi"):
+            word = word[1:]
+        if word.endswith("ah"):
+            word = word[:-1]
+        word = re.sub(r"ei+", "e", word)
+        word = re.sub(r"ey|ay|ai", "ay", word)
+        word = word.replace("kh", "ch").replace("tz", "ts").replace("w", "v")
+        return word
+
+    return re.sub(r"[a-z]+", normalize_word, normalize_name(name))
 
 
 def split_title_prefix(name: str) -> Tuple[Optional[str], str]:
@@ -112,6 +130,20 @@ def same_name_group_for(entity: Any, by_name: Dict[str, List[Any]]) -> Optional[
     return Group(id=f"{KIND_SAME_NAME}:{name}", kind=KIND_SAME_NAME, label=name, entities=sorted_members(members))
 
 
+def close_spelling_label(members: List[Any]) -> str:
+    """Choose an existing display name rather than the artificial spelling signature."""
+    return min(normalize_name(e.display_en_name) for e in members)
+
+
+def close_spelling_group_for(entity: Any, by_spelling: Dict[str, List[Any]]) -> Optional[Group]:
+    signature = spelling_signature(entity.display_en_name)
+    members = by_spelling.get(signature, [])
+    if len({normalize_name(m.display_en_name) for m in members}) < 2:
+        return None
+    return Group(id=f"{KIND_CLOSE_SPELLING}:{signature}", kind=KIND_CLOSE_SPELLING,
+                 label=close_spelling_label(members), entities=sorted_members(members))
+
+
 def sorted_members(members: List[Any]) -> List[Any]:
     return sorted(members, key=lambda e: (normalize_name(e.display_en_name), e.key))
 
@@ -124,6 +156,10 @@ def find_groups(entities: List[Any], kind: str, max_entities_to_check: Optional[
     Returns (groups, number_of_entities_checked).
     """
     by_name, by_base = build_indexes(entities)
+    by_spelling: Dict[str, List[Any]] = {}
+    if kind == KIND_CLOSE_SPELLING:
+        for name, members in by_name.items():
+            by_spelling.setdefault(spelling_signature(name), []).extend(members)
     ordered = sorted(entities, key=lambda e: (normalize_name(e.display_en_name), e.key))
     if max_entities_to_check is not None:
         ordered = ordered[:max_entities_to_check]
@@ -134,6 +170,8 @@ def find_groups(entities: List[Any], kind: str, max_entities_to_check: Optional[
             group = prefix_group_for(e, by_base)
         elif kind == KIND_SAME_NAME:
             group = same_name_group_for(e, by_name)
+        elif kind == KIND_CLOSE_SPELLING:
+            group = close_spelling_group_for(e, by_spelling)
         else:
             raise ValueError(f"Unsupported candidate kind: {kind}")
         if group is not None and group.id not in groups:
@@ -218,7 +256,7 @@ def render_group(group: Group, rels_by_entity: Dict[str, List[Any]], names: Dict
     if include_decisions:
         summary += f" - {status}"
     parts = ["<details>", f"<summary>{summary}</summary>", "", f"<!-- merge-group: {meta} -->"]
-    if group.kind == KIND_PREFIX:
+    if group.kind in (KIND_PREFIX, KIND_CLOSE_SPELLING):
         parts.append(f"Suggested final display name: `{group.label}`")
     parts.append("")
     if include_decisions:
@@ -272,7 +310,7 @@ def render_file(title: str, description: str, groups: List[Group], rels_by_entit
 
 _CONFIDENCE_COMMENT_RE = re.compile(r"<!-- merge-confidence: (\{.*\}) -->")
 _FATHER_MOTHER_RELS = {"childOfFather", "childOfMother"}
-BASE_CONFIDENCE = {KIND_PREFIX: 85, KIND_SAME_NAME: 40}
+BASE_CONFIDENCE = {KIND_PREFIX: 85, KIND_SAME_NAME: 40, KIND_CLOSE_SPELLING: 40}
 
 
 def _known_and_differ(a: Any, b: Any) -> bool:
@@ -289,7 +327,9 @@ def _related_keys(entity_key: str, rels: List[Any]) -> set:
 
 def _pair_confidence(kind: str, a: Any, b: Any, rels_a: List[Any], rels_b: List[Any]) -> Tuple[int, List[str]]:
     score = BASE_CONFIDENCE.get(kind, 40)
-    reasons: List[str] = [f"base {score}% ({'title-prefix' if kind == KIND_PREFIX else 'same name'})"]
+    kind_label = {KIND_PREFIX: "title-prefix", KIND_SAME_NAME: "same name",
+                  KIND_CLOSE_SPELLING: "close spelling"}.get(kind, kind)
+    reasons: List[str] = [f"base {score}% ({kind_label})"]
 
     def adjust(delta: int, reason: str) -> None:
         nonlocal score

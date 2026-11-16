@@ -15,6 +15,7 @@ other decisions come from per-chunk review files. Merges BY ENTITY KEY (EntityMe
 Per group: all keys must still exist (else the group is stale -> skipped, e.g. an entity was already merged
 via another group), target = entity named like the group label (else the one with most rels), final display
 name = the label (the bare name for prefix groups). Safe to re-run: merged groups are stale afterwards.
+For close-spelling groups the final name is an existing display name, not the normalized signature in the id.
 """
 
 import glob
@@ -80,6 +81,8 @@ class DBApplyMergeDecisions(DBParentClass):
             print(f"[PROTECTED] {group['id']}: contains pre-populated person(s); tick `merge` explicitly to merge.")
             return "protected"
 
+        if group["id"].startswith(f"{mc.KIND_CLOSE_SPELLING}:"):
+            label = mc.close_spelling_label(entities)
         target = merger.choose_target(entities, label)
         duplicates = [e for e in entities if e.key != target.key]
         plan = f"{group['id']}: merge {[d.key for d in duplicates]} into {target.key} as '{label}'"

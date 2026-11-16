@@ -11,7 +11,8 @@ Entry points (unittest-style, like the sibling populators):
         'akiva' / 'rabbi akiva' / 'rav akiva' (title prefixes: see merge_candidates.TITLE_PREFIXES)
   - test_identify_same_name_matches  -> same_name_matches/person_same_name_matches_NNN.md
         identical display_en_name; shows each entity's relationships, warns on God/Hashem parents
-  - (close spelling hanna/hana/hannah: TBD)
+  - test_identify_close_spelling_matches -> close_spelling_matches/person_close_spelling_matches_NNN.md
+        transliteration variants such as hanna / hana / hannah
 
 Runtime knobs (set in setUp):
   - max_entities_to_check: only check the first N persons (sorted by name) as starting points;
@@ -50,6 +51,13 @@ _KIND_INFO = {
         "Persons with the exact same display name (case-insensitive). Often genuinely different people "
         "(several Joashes) - compare the relationships below before deciding.",
     ),
+    mc.KIND_CLOSE_SPELLING: (
+        "close_spelling_matches",
+        "person_close_spelling_matches",
+        "Close spelling matches",
+        "Persons with English names differing by supported transliteration variants. "
+        "Similar spelling does not establish identity; compare the relationships before deciding.",
+    ),
 }
 
 
@@ -69,6 +77,9 @@ class DBIdentifyPersonMergeCandidates(DBParentClass):
 
     def test_identify_same_name_matches(self) -> None:
         self._identify(mc.KIND_SAME_NAME)
+
+    def test_identify_close_spelling_matches(self) -> None:
+        self._identify(mc.KIND_CLOSE_SPELLING)
 
     def _identify(self, kind: str) -> None:
         persons = self.db_api.get_entities_by_type(EntityType.EPerson)
@@ -143,7 +154,9 @@ class DBIdentifyPersonMergeCandidates(DBParentClass):
             found = self.db_api.get_entities_by_keys(p["keys"])
             if len(found) != len(set(p["keys"])) or len(found) < 2:
                 continue
-            revived.append(mc.Group(id=p["id"], kind=kind, label=p["id"].split(":", 1)[1],
+            label = (mc.close_spelling_label(found) if kind == mc.KIND_CLOSE_SPELLING
+                     else p["id"].split(":", 1)[1])
+            revived.append(mc.Group(id=p["id"], kind=kind, label=label,
                                     entities=mc.sorted_members(found)))
         return revived
 

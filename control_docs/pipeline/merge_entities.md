@@ -42,16 +42,17 @@ No name-matching beyond `display_en_name` (`all_en_names` is not searched).
 | File | Role |
 |---|---|
 | `EntityMerger.py` | Key-based merge engine (fold fields, re-point rels / SourceMetadata, delete dup); `choose_target` = entity already named like the final name, else most rels |
-| `merge_candidates.py` | DB-free logic: prefix stripping, grouping, confidence scoring, rendering, `parse_review_file`, `parse_confidence_file`, `carry_over_decisions`, `select_groups_to_merge` |
-| `DBIdentifyPersonMergeCandidates.py` | Read-only; `test_identify_prefix_matches`, `test_identify_same_name_matches` |
+| `merge_candidates.py` | DB-free logic: prefix stripping, spelling normalization, grouping, confidence scoring, rendering, `parse_review_file`, `parse_confidence_file`, `carry_over_decisions`, `select_groups_to_merge` |
+| `DBIdentifyPersonMergeCandidates.py` | Read-only; `test_identify_prefix_matches`, `test_identify_same_name_matches`, `test_identify_close_spelling_matches` |
 | `DBApplyMergeDecisions.py` | `test_apply_merge_decisions` - applies ticked decisions |
 | `test_merge_candidates.py` | DB-free unit tests (run with the repo `venv`) |
 
 Review files are grouped by match family under `Paths.MERGE_REVIEW_DIR`
-(`.../real_data/merge_review/`): `prefix_matches/person_prefix_matches_NNN.md` and
-`same_name_matches/person_same_name_matches_NNN.md` (EPerson only). The prefix family's consolidated
+(`.../real_data/merge_review/`): `prefix_matches/person_prefix_matches_NNN.md`,
+`same_name_matches/person_same_name_matches_NNN.md`, and
+`close_spelling_matches/person_close_spelling_matches_NNN.md` (EPerson only). The prefix family's consolidated
 `confidence_person_prefix_matches.md` is its decision file; its chunk files contain entity details only.
-Same-name decisions remain in each chunk file. The identify jobs carry decisions forward from legacy
+Same-name and close-spelling decisions remain in each chunk file. The identify jobs carry decisions forward from legacy
 files previously stored directly in `MERGE_REVIEW_DIR`.
 
 **Groups**
@@ -61,16 +62,21 @@ files previously stored directly in `MERGE_REVIEW_DIR`.
    `book_references` (pre-populated = deliberately separate people, flagged) and all rels (`type -> other`
    outgoing, `other -> type` incoming). A `childOfFather`/`childOfMother`/`descendantOf` whose parent is
    God/Hashem gets a `WARNING` line.
-3. *close spelling* (hanna/hana/hannah): TBD, not implemented.
-A person with no candidates appears in no file. An entity can be in both a prefix and a same-name group.
+3. *close_spelling*: distinct display names with the same spelling signature. Each English word is normalized
+   for initial `yi`/`i`, final `a`/`ah`, single/doubled consonants, `ei`/`e`, `ey`/`ay`/`ai`,
+   `ch`/`kh`, `ts`/`tz`, and `v`/`w`. Rules can combine across words; names are otherwise not
+   fuzzy-matched, and exact-name-only groups are excluded. Signatures can group distinct people, so review
+   every member and its relationships. The suggested final name is the alphabetically first normalized
+   display name in the group, not the artificial signature.
+A person with no candidates appears in no file. An entity can belong to groups in multiple families.
 
-**Identify runtime**: `max_entities_to_check` (setUp, default 50; `None` = all) limits how many persons (sorted by
+**Identify runtime**: `max_entities_to_check` (setUp, default `None` = all) limits how many persons (sorted by
 name) are starting points - found groups are still complete. `max_entities_per_file` (default 100); a group is never split.
 
 **Review format** (human + machine): `<!-- merge-group: {"id","kind","keys":[...]} -->`, then `- [ ] merge` and
 `- [ ] dont merge`; tick one with `x`. For prefix groups, tick these choices in
-`prefix_matches/confidence_person_prefix_matches.md`, not the per-chunk detail files. For same-name groups,
-tick the per-chunk review files. Neither = undecided, both = conflict (conflict is never merged).
+`prefix_matches/confidence_person_prefix_matches.md`, not the per-chunk detail files. For same-name
+and close-spelling groups, tick the per-chunk review files. Neither = undecided, both = conflict (conflict is never merged).
 Any candidate group with a member assigned a role other than Tanna or Amora receives 0% confidence.
 
 **Re-running identify is safe for decisions.** It reads the existing family files first and carries every tick
@@ -86,4 +92,5 @@ Running with limit 50, ticking, then rerunning with 100 is fine.
 `"skip"` (merge only ticked `merge`) or `"merge"` (merge everything except `dont merge`/conflict; groups with a
 pre-populated person are still skipped unless explicitly ticked). Per group all keys must still exist
 (else `STALE`, skipped - e.g. already merged through another group); merge into the chosen target with the group
-label as final name. Safe to re-run.
+label as final name; close-spelling groups use the alphabetically first existing display name instead of their
+signature. Safe to re-run.
