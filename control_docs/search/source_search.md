@@ -5,11 +5,12 @@ Source of truth: `backend/app/SourceSearchHandler.py`, `backend/app/SourceSearch
 
 `SourceSearchQuery` fields: `free_text_similarity`, `max_sources`, `offset`, `passage_types`,
 `src_types` (`SourceType` values), `book_names` (`Book.database_name` values),
-`entity_ids`, and `rel_ids`. Book filtering remains supported for backend callers but is not
+`entity_ids`, `match_all_entities` (default false), and `rel_ids`. Book filtering remains supported for backend callers but is not
 exposed in the source-search UI.
 
 1. **Structural filter** - one Mongo query on `SRC_METADATA`. Within a dimension values are
-   OR'd (`$in`); dimensions are AND'd; an empty dimension is not filtered.
+   OR'd (`$in`), except `entity_ids` uses `$all` when `match_all_entities` is true;
+   dimensions are AND'd; an empty dimension is not filtered.
    - `src_types` -> source type prefix of `key`.
    - `passage_types` -> `passage_types` array.
    - `book_names` -> regex on `key` matching the book segment.

@@ -39,6 +39,7 @@ class DBOperators:
     OR = "$or"
     AND = "$and"
     IN = "$in"
+    ALL = "$all"
     REGEX = "$regex"
     OPTIONS = "$options"
 

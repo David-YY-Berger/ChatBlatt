@@ -12,6 +12,7 @@ import logging
 import streamlit as st
 
 from metrics import shared_params
+from translations1 import get_text
 from backend.app.SourceSearchHandler import SourceSearchHandler
 from backend.app.SourceSearchQuery import SourceSearchQuery
 from components.facets import (
@@ -28,7 +29,7 @@ from components.source_filters import (
 )
 from system_common.Constants import PAGE_SOURCE_SEARCH
 from system_common.UrlPaths import (
-    LIST_SEPARATOR, PARAM_SOURCE_ENTITIES, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_TYPES,
+    LIST_SEPARATOR, PARAM_SOURCE_ENTITIES, PARAM_SOURCE_ENTITY_MATCH, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_TYPES,
     PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, PARAM_SOURCE_TEXT, page_url, split_list,
 )
 
@@ -61,6 +62,7 @@ def current_url_params() -> dict:
         PARAM_SOURCE_PASSAGE_TYPES: get_selected_passage_type_names(),
         PARAM_SOURCE_TYPES: get_selected_source_type_names(),
         PARAM_SOURCE_ENTITIES: get_selected_entity_option_keys(),
+        PARAM_SOURCE_ENTITY_MATCH: "all" if st.session_state.get("match_all_entities", False) else "",
         PARAM_SOURCE_RELS: rel_search["rel_ids"] if rel_search else [],
         PARAM_SOURCE_REL_LABEL: rel_search["label"] if rel_search else "",
     }
@@ -92,13 +94,18 @@ def apply_url_params() -> bool:
     form widgets (call before they render). Returns True when a search should run."""
     params = {k: v for k, v in st.query_params.items() if v}
     known = {PARAM_SOURCE_TEXT, PARAM_SOURCE_PASSAGE_TYPES, PARAM_SOURCE_TYPES,
-             PARAM_SOURCE_ENTITIES, PARAM_SOURCE_RELS, PARAM_SOURCE_REL_LABEL}
+             PARAM_SOURCE_ENTITIES, PARAM_SOURCE_ENTITY_MATCH, PARAM_SOURCE_RELS, PARAM_SOURCE_REL_LABEL}
     params = {k: v for k, v in params.items() if k in known}
     if not params or st.session_state.get(URL_SIG_KEY) == tuple(sorted(params.items())):
+        return False
+    match_mode = params.get(PARAM_SOURCE_ENTITY_MATCH, "any")
+    if match_mode not in ("any", "all"):
+        st.error(get_text("source_search_ui.invalid_entity_match", st.session_state.get("lang", "en")))
         return False
     st.session_state[URL_SIG_KEY] = tuple(sorted(params.items()))
 
     st.session_state["free_text_query"] = params.get(PARAM_SOURCE_TEXT, "")
+    st.session_state["match_all_entities"] = match_mode == "all"
     set_selected_filters(split_list(params.get(PARAM_SOURCE_PASSAGE_TYPES)),
                          split_list(params.get(PARAM_SOURCE_TYPES)))
     set_selected_entity_option_keys(split_list(params.get(PARAM_SOURCE_ENTITIES)))
@@ -125,6 +132,7 @@ def collect_search_query() -> SourceSearchQuery:
         passage_types=selected_passage_types,
         entity_ids=get_selected_entity_ids(),
         rel_ids=rel_search["rel_ids"] if rel_search else [],
+        match_all_entities=st.session_state.get("match_all_entities", False),
     )
 
 

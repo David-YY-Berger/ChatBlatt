@@ -45,6 +45,7 @@ class SourceSearchHandler:
             src_types=query.src_types,
             entity_ids=query.entity_ids,
             rel_ids=query.rel_ids,
+            match_all_entities=query.match_all_entities,
         )
 
         # Step 2: if free text was given, ask both FAISS (semantic/embedding

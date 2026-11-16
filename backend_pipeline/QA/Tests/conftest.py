@@ -25,7 +25,7 @@ class FakeCollection:
 
     # ---- helpers ----
     def _matches(self, doc, filt):
-        """Very small query evaluator – supports top-level eq, $in, $or, $and, $regex, $exists."""
+        """Very small query evaluator – supports top-level eq, $in, $all, $or, $and, $regex, $exists."""
         for key, val in filt.items():
             if key == "$or":
                 if not any(self._matches(doc, sub) for sub in val):
@@ -49,6 +49,12 @@ class FakeCollection:
                         if not any(v in val["$in"] for v in field_val):
                             return False
                     elif field_val not in val["$in"]:
+                        return False
+                if "$all" in val:
+                    field_val = doc.get(key)
+                    if not isinstance(field_val, (list, set, tuple)) or not all(
+                        v in field_val for v in val["$all"]
+                    ):
                         return False
                 if "$regex" in val:
                     import re

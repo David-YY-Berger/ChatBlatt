@@ -34,7 +34,8 @@ All list values are comma-separated. A page opened with params loads them into i
 immediately; running a search rewrites the URL (`st.query_params`), so the address bar is always a shareable link.
 
 - **Source search**: `q` (free text), `pt` (`PassageType` names), `st` (available `SourceType` names), `ent` (entity
-  select-option keys from the entity panels), `rel` (`Rel` keys, relationship search from Entity Search),
+  select-option keys from the entity panels), `entity_match=all` (require all selected entities;
+  omitted for the default any-entity match), `rel` (`Rel` keys, relationship search from Entity Search),
   `rel_label` (chip text for `rel`).
 - **Number search**: `type` = `number` | `unit`, `value` = the number/fraction (e.g. `7`, `1/3`) or the unit's English name.
 - **Entity search** (on each `entity_search_<type>` page): `id` = the entity key. Cross-links between entities

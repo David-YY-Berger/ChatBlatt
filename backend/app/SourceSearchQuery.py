@@ -16,3 +16,4 @@ class SourceSearchQuery:
     entity_ids: List[str] = field(default_factory=list)
     rel_ids: List[str] = field(default_factory=list)
     offset: int = 0
+    match_all_entities: bool = False

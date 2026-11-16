@@ -49,6 +49,7 @@ PARAM_SOURCE_TEXT = "q"               # free-text similarity query
 PARAM_SOURCE_PASSAGE_TYPES = "pt"     # PassageType names
 PARAM_SOURCE_TYPES = "st"             # SourceType names
 PARAM_SOURCE_ENTITIES = "ent"         # entity select-option keys
+PARAM_SOURCE_ENTITY_MATCH = "entity_match"  # "all" for AND; omitted for OR
 PARAM_SOURCE_RELS = "rel"             # Rel keys (relationship search)
 PARAM_SOURCE_REL_LABEL = "rel_label"  # display label of the relationship search
 

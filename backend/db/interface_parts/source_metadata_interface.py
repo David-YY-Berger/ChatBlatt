@@ -61,11 +61,12 @@ class SourceMetadataInterfaceMixin(ABC):
         entity_ids: Optional[List[str]] = None,
         rel_ids: Optional[List[str]] = None,
         src_types: Optional[List[SourceType]] = None,
+        match_all_entities: bool = False,
     ) -> List[SourceMetadata]:
         """
         Return every SourceMetadata document matching the given filters in a
-        single query. Each dimension is OR'd internally (any one of its
-        selected values is a match) while the dimensions are AND'd together.
+        single query. Values within each dimension are OR'd, except entities
+        when match_all_entities is set. Dimensions are AND'd together.
         A dimension left empty/None is not filtered on.
         """
         pass

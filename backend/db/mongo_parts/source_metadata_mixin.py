@@ -75,12 +75,13 @@ class SourceMetadataMongoMixin:
         entity_ids: Optional[List[str]] = None,
         rel_ids: Optional[List[str]] = None,
         src_types: Optional[List[SourceType]] = None,
+        match_all_entities: bool = False,
     ) -> List[SourceMetadata]:
         """
         Fetch every SourceMetadata document matching the given filters in a
-        single query. Each dimension is OR'd internally (matching any one of
-        its selected values is enough) while the dimensions themselves are
-        AND'd together. A dimension left empty/None is not filtered on at all.
+        single query. Values within each dimension are OR'd, except entities
+        when match_all_entities is set. Dimensions are AND'd together.
+        A dimension left empty/None is not filtered on at all.
         """
         conditions: List[Dict[str, Any]] = []
 
@@ -94,7 +95,8 @@ class SourceMetadataMongoMixin:
             pattern = r"^[A-Z]{2}_(" + "|".join(re.escape(book) for book in book_names) + r")_"
             conditions.append({DBFields.KEY: {DBOperators.REGEX: pattern}})
         if entity_ids:
-            conditions.append({DBFields.ENTITY_KEYS: {DBOperators.IN: list(entity_ids)}})
+            operator = DBOperators.ALL if match_all_entities else DBOperators.IN
+            conditions.append({DBFields.ENTITY_KEYS: {operator: list(entity_ids)}})
         if rel_ids:
             conditions.append({DBFields.REL_KEYS: {DBOperators.IN: list(rel_ids)}})
 

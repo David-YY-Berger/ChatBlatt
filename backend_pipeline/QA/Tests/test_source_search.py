@@ -135,6 +135,32 @@ class SourceSearchTests(unittest.TestCase):
         found = self.db.get_source_metadata_filtered(src_types=[SourceType.TN, SourceType.BT])
         self.assertEqual([s.key for s in found], [a.key, b.key])
 
+    def test_entity_match_modes_and_other_filters(self):
+        first = self.add_source("TN_Genesis_0_1:1", [PassageType.LAW], ["person", "place"], ["r"])
+        second = self.add_source("TN_Genesis_0_1:2", [PassageType.LAW], ["person"], ["r"])
+        third = self.add_source("TN_Genesis_0_1:3", [PassageType.LAW], ["place"], ["r"])
+        self.add_source("TN_Genesis_0_1:4", [PassageType.PROPHECY], ["person", "place"], ["r"])
+        self.add_source("TN_Genesis_0_1:5", [PassageType.LAW], ["person", "place"], ["other"])
+        self.db.get_entities_by_keys = MagicMock(return_value=[])
+        self.db.get_rels_by_keys = MagicMock(return_value=[])
+
+        for match_all, expected in ((False, [first, second, third]), (True, [first])):
+            with self.subTest(match_all=match_all):
+                answer = self.handler.get_answer_w_source_metadata(SourceSearchQuery(
+                    "", 10, passage_types=[PassageType.LAW], entity_ids=["person", "place"],
+                    rel_ids=["r"], match_all_entities=match_all,
+                ))
+                self.assertEqual(answer.src_metadata_lst, expected)
+                self.assertEqual(answer.total_sources, len(expected))
+
+    def test_match_all_with_zero_or_one_entity(self):
+        first = self.add_source("TN_Genesis_0_1:1", entities=["e"])
+        second = self.add_source("TN_Genesis_0_1:2")
+        for ids, expected in (([], [first, second]), (["e"], [first])):
+            with self.subTest(ids=ids):
+                found = self.db.get_source_metadata_filtered(entity_ids=ids, match_all_entities=True)
+                self.assertEqual(found, expected)
+
 
 class BM25RankingTests(unittest.TestCase):
     def test_unmatched_documents_do_not_get_arbitrary_lexical_rank(self):
@@ -171,6 +197,35 @@ with patch("system_common.SystemFunctions.get_secret", return_value="false"):
 
 
 class SourceSearchFormTests(unittest.TestCase):
+    def test_match_mode_round_trips_and_old_links_default_to_any(self):
+        params = {
+            source_search_logic.PARAM_SOURCE_ENTITIES: "person,place",
+            source_search_logic.PARAM_SOURCE_ENTITY_MATCH: "all",
+        }
+        state = SimpleNamespace(session_state={}, query_params=params)
+        with patch.object(source_search_logic, "st", state), \
+             patch.object(source_search_logic, "set_selected_filters"), \
+             patch.object(source_search_logic, "set_selected_entity_option_keys"), \
+             patch.object(source_search_logic, "get_selected_entity_option_keys", return_value=["person", "place"]), \
+             patch.object(source_search_logic, "get_selected_passage_type_names", return_value=[]), \
+             patch.object(source_search_logic, "get_selected_source_type_names", return_value=[]), \
+             patch.object(source_search_logic, "get_selected_passage_types", return_value=[]), \
+             patch.object(source_search_logic, "get_selected_source_types", return_value=[]), \
+             patch.object(source_search_logic, "get_selected_entity_ids", return_value=["person", "place"]):
+            self.assertTrue(source_search_logic.apply_url_params())
+            self.assertTrue(source_search_logic.collect_search_query().match_all_entities)
+            self.assertEqual(source_search_logic.flat_url_params(), params)
+            state.query_params = {source_search_logic.PARAM_SOURCE_ENTITIES: "person,place"}
+            self.assertTrue(source_search_logic.apply_url_params())
+            self.assertFalse(source_search_logic.collect_search_query().match_all_entities)
+            self.assertNotIn(source_search_logic.PARAM_SOURCE_ENTITY_MATCH, source_search_logic.flat_url_params())
+
+    def test_invalid_match_mode_is_reported(self):
+        state = SimpleNamespace(session_state={}, query_params={"entity_match": "invalid"}, error=MagicMock())
+        with patch.object(source_search_logic, "st", state):
+            self.assertFalse(source_search_logic.apply_url_params())
+        state.error.assert_called_once()
+
     def test_collects_all_form_parameters(self):
         state = SimpleNamespace(session_state={"free_text_query": " prayer "})
         with patch.object(source_search_logic, "st", state), \

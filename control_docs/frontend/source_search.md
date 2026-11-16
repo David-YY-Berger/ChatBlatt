@@ -15,6 +15,9 @@ dropdowns, free-text box + Find Sources button, results).
   Each panel is a Streamlit fragment, so changing a selection reruns that panel
   without rerendering the other panels or existing results. Selections take
   effect in the search when **Find Sources** is pressed.
+  **Require all selected entities** applies across all entity types: off (the default)
+  matches any selected entity; on matches all of them. With no entities selected,
+  this control does not restrict results.
 - Query building lives in `pages/source_search_logic.py` (`collect_search_query`), which
   fills a `SourceSearchQuery` (`src_types`, `passage_types`, `entity_ids`). Backend flow:
   `search/source_search.md`.
@@ -22,7 +25,7 @@ dropdowns, free-text box + Find Sources button, results).
 
 ## Shareable URL
 
-Params q, pt, st, ent, rel, and rel_label (see [urls.md](urls.md)).
+Params q, pt, st, ent, entity_match, rel, and rel_label (see [urls.md](urls.md)).
 `source_search_logic.apply_url_params()` runs before the widgets render (pre-fills the free-text
 box, passage and source types, entity panels via `set_selected_filters` /
 `set_selected_entity_option_keys`) and the page then runs the search; after a new search

@@ -295,6 +295,11 @@ def render(lang: str) -> None:
     with main_col:
         # Entity facets at the top of the right area
         render_entity_facets(lang)
+        st.toggle(
+            get_text("source_search_ui.match_all_entities", lang),
+            key="match_all_entities",
+        )
+        st.caption(get_text("source_search_ui.match_all_entities_help", lang))
         _render_relationship_chip(lang)
         if run_url_search:
             _execute_search()
