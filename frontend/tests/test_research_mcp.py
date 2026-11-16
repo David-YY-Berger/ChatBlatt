@@ -162,14 +162,19 @@ class ResearchMcpTests(unittest.TestCase):
                     research.db()
                 factory.assert_not_called()
 
-    def test_read_only_factory_does_not_create_indexes_or_use_population_account(self):
+    def test_app_factory_always_uses_read_only_account_and_does_not_create_indexes(self):
         names = []
 
         def secret(name):
             names.append(name)
-            return {"DB_READ_ONLY_USERNAME": "reader", "DB_READ_ONLY_PASSWORD": "password"}[name]
+            return {
+                "DB_READ_ONLY_USERNAME": "reader",
+                "DB_READ_ONLY_PASSWORD": "password",
+                "DB_BT_USERNAME": "population",
+                "DB_BT_PASSWORD": "population-password",
+            }[name]
 
-        with patch.dict(os.environ, {"EITZ_DB_READ_ONLY": "true"}), \
+        with patch.dict(os.environ, {"EITZ_DB_READ_ONLY": "false"}), \
              patch("backend.db.DBFactory.get_secret", side_effect=secret), \
              patch("backend.db.DBFactory.DBapiMongoDB") as constructor:
             DBFactory.get_prod_db_mongo()
@@ -182,6 +187,24 @@ class ResearchMcpTests(unittest.TestCase):
             instance.connect("mongodb://example.invalid")
             client.return_value.admin.command.assert_called_once_with("ping")
             ensure.assert_not_called()
+
+    def test_population_factory_uses_population_account_and_creates_indexes(self):
+        names = []
+
+        def secret(name):
+            names.append(name)
+            return {
+                "DB_READ_ONLY_USERNAME": "reader",
+                "DB_READ_ONLY_PASSWORD": "password",
+                "DB_BT_USERNAME": "population",
+                "DB_BT_PASSWORD": "population-password",
+            }[name]
+
+        with patch("backend.db.DBFactory.get_secret", side_effect=secret), \
+             patch("backend.db.DBFactory.DBapiMongoDB") as constructor:
+            DBFactory.get_population_db_mongo()
+        self.assertEqual(names, ["DB_BT_USERNAME", "DB_BT_PASSWORD"])
+        self.assertTrue(constructor.call_args.kwargs["ensure_indexes"])
 
     def test_protocol_errors_do_not_expose_backend_exception(self):
         app = research.mcp.streamable_http_app()

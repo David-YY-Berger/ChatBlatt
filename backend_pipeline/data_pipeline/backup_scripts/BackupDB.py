@@ -35,7 +35,7 @@ def backup_all() -> str:
             "mongodump was not found on PATH. Install MongoDB Database Tools and ensure mongodump is available."
         )
 
-    uri = DBFactory.get_prod_mongo_uri()
+    uri = DBFactory.get_population_mongo_uri()
     stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     backup_dir = os.path.join(Paths.DB_BACKUPS_DIR, stamp)
     os.makedirs(backup_dir, exist_ok=False)

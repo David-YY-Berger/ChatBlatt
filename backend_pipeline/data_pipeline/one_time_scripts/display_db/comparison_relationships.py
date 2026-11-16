@@ -98,7 +98,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     args = parser.parse_args()
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         paths = export_reports(db, args.output_dir)
     finally:

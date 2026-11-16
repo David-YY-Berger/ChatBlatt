@@ -17,7 +17,7 @@ class DBParentClass(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Runs once before all tests to load queries and db."""
-        cls.db_api = DBFactory.get_prod_db_mongo()
+        cls.db_api = DBFactory.get_population_db_mongo()
         cls.queries = cls._load_all_queries(
             Paths.QA_MONGO_QUERIES,
             Paths.DATA_CLEANUP_MONGO_QUERIES,

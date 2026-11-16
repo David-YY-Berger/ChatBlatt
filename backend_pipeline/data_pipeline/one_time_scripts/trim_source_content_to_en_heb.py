@@ -17,7 +17,7 @@ EXTRA_FILTER = {f"content.{KEEP}": {"$exists": True}}
 
 
 def main(apply: bool) -> None:
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         for collection in (CollectionObjs.TN, CollectionObjs.BT):
             col = db.get_collection(collection)

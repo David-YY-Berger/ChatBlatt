@@ -1,5 +1,4 @@
 # bs'd
-import os
 import subprocess
 from datetime import datetime
 from urllib.parse import quote_plus
@@ -11,12 +10,11 @@ from system_common.SystemFunctions import get_secret
 class DBFactory:
 
     @staticmethod
-    def get_prod_mongo_uri() -> str:
-        read_only = os.environ.get("EITZ_DB_READ_ONLY", "").lower() == "true"
-        username = get_secret('DB_READ_ONLY_USERNAME' if read_only else 'DB_BT_USERNAME')
-        password = get_secret('DB_READ_ONLY_PASSWORD' if read_only else 'DB_BT_PASSWORD')
+    def _get_mongo_uri(username_env: str, password_env: str) -> str:
+        username = get_secret(username_env)
+        password = get_secret(password_env)
         if not username or not password:
-            raise ValueError("Missing database credentials for the selected access mode")
+            raise ValueError(f"Missing database credentials: {username_env} and {password_env}")
 
         uri = (
             f"mongodb+srv://{quote_plus(username)}:{quote_plus(password)}"
@@ -25,10 +23,22 @@ class DBFactory:
         return uri
 
     @staticmethod
+    def get_prod_mongo_uri() -> str:
+        return DBFactory._get_mongo_uri("DB_READ_ONLY_USERNAME", "DB_READ_ONLY_PASSWORD")
+
+    @staticmethod
+    def get_population_mongo_uri() -> str:
+        return DBFactory._get_mongo_uri("DB_BT_USERNAME", "DB_BT_PASSWORD")
+
+    @staticmethod
     def get_prod_db_mongo() -> DBapiMongoDB:
         uri = DBFactory.get_prod_mongo_uri()
-        read_only = os.environ.get("EITZ_DB_READ_ONLY", "").lower() == "true"
-        return DBapiMongoDB(uri, ensure_indexes=not read_only)
+        return DBapiMongoDB(uri, ensure_indexes=False)
+
+    @staticmethod
+    def get_population_db_mongo() -> DBapiMongoDB:
+        uri = DBFactory.get_population_mongo_uri()
+        return DBapiMongoDB(uri, ensure_indexes=True)
 
     # #2
     # @staticmethod
@@ -48,17 +58,7 @@ class DBFactory:
 
     @staticmethod
     def run_mongo_dump():
-
-        username = get_secret("DB_BT_USERNAME")
-        password = get_secret("DB_BT_PASSWORD")
-
-        if not username or not password:
-            raise ValueError("Missing db credentials in .env")
-
-        uri = (
-            f"mongodb+srv://{username}:{password}"
-            "@chatblatt.sdqpvk2.mongodb.net/?retryWrites=true&w=majority&appName=ChatBlatt"
-        )
+        uri = DBFactory.get_population_mongo_uri()
 
         # Output folder: backup_YYYYMMDD_HHMMSS
         out_dir = f"backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -70,7 +70,7 @@ class DBFactory:
             f"--out={out_dir}"
         ]
 
-        print("Running:", " ".join(command))
+        print("Running mongodump...")
         subprocess.run(command, check=True)
 
         print(f"Backup completed. Files stored in: {out_dir}")

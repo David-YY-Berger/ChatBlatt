@@ -27,18 +27,17 @@ Before deploying, create a MongoDB user with **read only** access to the
 `Sources`, `Graphs`, and `Faiss` databases, including the GridFS collections.
 Set the Railway variables `DB_READ_ONLY_USERNAME` and `DB_READ_ONLY_PASSWORD`
 to that account's credentials. Do not put credentials in the repository or
-MCP client configuration. The container requires both variables and sets
-`EITZ_DB_READ_ONLY=true` for both processes; it never falls back to the
-population account. MongoDB permissions, not MCP tool annotations, enforce
-the read-only guarantee. Confirm the account cannot insert, update, delete,
-or create indexes. Existing indexes must already be present, since read-only
-startup deliberately does not create them.
+MCP client configuration. The container requires both variables. Both app
+processes always use this read-only account; `EITZ_DB_READ_ONLY=true` also
+guards MCP startup but does not select credentials. MongoDB permissions, not
+MCP tool annotations, enforce the read-only guarantee. Confirm the account
+cannot insert, update, delete, or create indexes. Existing indexes must
+already be present, since app startup deliberately does not create them.
 
-Local population scripts retain their existing `DB_BT_USERNAME` and
-`DB_BT_PASSWORD` behavior when `EITZ_DB_READ_ONLY` is unset. To run MCP
-locally, set the two read-only credentials in the environment and run
-`python research_mcp.py`; it listens on `127.0.0.1:8502/mcp`. Do not run
-population scripts with `EITZ_DB_READ_ONLY=true`.
+Population scripts use `DB_BT_USERNAME` and `DB_BT_PASSWORD`, independently
+of `EITZ_DB_READ_ONLY`. To run MCP locally, set the two read-only credentials
+and `EITZ_DB_READ_ONLY=true`, then run `python research_mcp.py`; it listens on
+`127.0.0.1:8502/mcp`.
 
 The MCP validates the public host and allows requests with no Origin header
 (as for server-to-server clients), or the site's own Origin. Browser-direct

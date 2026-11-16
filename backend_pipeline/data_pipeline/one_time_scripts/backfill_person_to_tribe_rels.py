@@ -110,7 +110,7 @@ def backfill(db, apply: bool) -> None:
 
 
 def main(apply: bool) -> None:
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         backfill(db, apply)
     finally:

@@ -15,7 +15,7 @@ def main(apply: bool) -> None:
         print("Dry run only. Re-run with --apply to clear all FAISS and BM25 indexes.")
         return
 
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         FaissEngine.FaissEngine(dbapi=db).clear_index()
         print("Cleared FAISS indexes for English and Hebrew.")

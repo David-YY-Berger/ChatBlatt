@@ -96,7 +96,7 @@ def main(apply: bool = False) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="Delete matching graph data from the real DB")
     args = parser.parse_args()
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         clean(db, apply or args.apply)
     finally:

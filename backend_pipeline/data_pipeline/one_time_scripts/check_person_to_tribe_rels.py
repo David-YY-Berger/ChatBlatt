@@ -10,7 +10,7 @@ TRIBE_TYPE = "TribeOfIsrael"
 
 
 def main() -> None:
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         entities = db.get_collection(CollectionObjs.ENTITIES)
         rels = db.get_collection(CollectionObjs.RELATIONS)

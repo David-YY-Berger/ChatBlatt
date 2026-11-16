@@ -24,7 +24,7 @@ def main(apply: bool) -> None:
     if not apply:
         print("Dry run only. Re-run with --apply to drop all entities, rels and source metadata.")
         return
-    db = DBFactory.get_prod_db_mongo()
+    db = DBFactory.get_population_db_mongo()
     try:
         clean_entity_rel_graph(db)
     finally:
