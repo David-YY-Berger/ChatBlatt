@@ -329,8 +329,8 @@ def render_file(title: str, description: str, groups: List[Group], rels_by_entit
         "- `- [x] dont merge` - they are different; keep them separate.\n"
         "Leave both unticked to decide later. Do not edit the `<!-- merge-group: ... -->` comments."
         if include_decisions else
-        "This file contains entity details only. Make prefix merge decisions in the consolidated "
-        "`confidence_person_prefix_matches.md` file."
+        "This file contains entity details only. Make merge decisions in the consolidated confidence file "
+        "for this match family."
     )
     header = FILE_HEADER.format(title=title, description=description, file_no=file_no,
                                 file_count=file_count, group_count=len(groups),

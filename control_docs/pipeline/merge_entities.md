@@ -51,8 +51,9 @@ Review files are grouped by match family under `Paths.MERGE_REVIEW_DIR`
 (`.../real_data/merge_review/`): `prefix_matches/person_prefix_matches_NNN.md`,
 `same_name_matches/person_same_name_matches_NNN.md`, and
 `close_spelling_matches/person_close_spelling_matches_NNN.md` (EPerson only). The prefix family's consolidated
-`confidence_person_prefix_matches.md` is its decision file; its chunk files contain entity details only.
-Same-name and close-spelling decisions remain in each chunk file. The identify jobs carry decisions forward from legacy
+`confidence_person_prefix_matches.md`, `confidence_person_same_name_matches.md`, and
+`confidence_person_close_spelling_matches.md` are the decision files; all chunk files contain entity
+details only. The identify jobs carry decisions forward from legacy
 files previously stored directly in `MERGE_REVIEW_DIR`.
 
 **Groups**
@@ -77,8 +78,8 @@ name) are starting points - found groups are still complete. `max_entities_per_f
 
 **Review format** (human + machine): `<!-- merge-group: {"id","kind","keys":[...]} -->`, then `- [ ] merge` and
 `- [ ] dont merge`; tick one with `x`. For prefix groups, tick these choices in
-`prefix_matches/confidence_person_prefix_matches.md`, not the per-chunk detail files. For same-name
-and close-spelling groups, tick the per-chunk review files. Neither = undecided, both = conflict (conflict is never merged).
+the family's `confidence_person_*_matches.md` file, not the per-chunk detail files. Neither = undecided,
+both = conflict (conflict is never merged).
 Any candidate group with a member assigned a role other than Tanna or Amora receives 0% confidence.
 
 **Re-running identify is safe for decisions.** It reads the existing family files first and carries every tick
@@ -86,8 +87,8 @@ into the regenerated files when the group id AND the exact set of entity keys st
 groups not rediscovered (smaller limit) are kept if their entities still exist. Deliberately NOT carried: a group
 whose membership changed (comes back unticked - re-review), and groups whose entities were merged away. Files are
 rewritten/renumbered in place - so editing a file while a run is writing it, or deleting files you ticked, loses ticks.
-Prefix decisions are carried from the consolidated confidence file; pre-existing ticks in prefix chunk files are
-migrated on the next identify run.
+Decisions are carried from each consolidated confidence file. Pre-existing ticks in chunk files are migrated
+to the confidence file on the next identify run.
 Running with limit 50, ticking, then rerunning with 100 is fine.
 
 **Apply** (`DBApplyMergeDecisions`): `dry_run` defaults to **True** (prints the plan). `undecided_policy`:

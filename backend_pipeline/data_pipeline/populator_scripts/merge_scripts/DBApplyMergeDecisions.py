@@ -1,8 +1,9 @@
 # bs"d
 """
 DBApplyMergeDecisions - merge persons according to the ticked review files written by
-DBIdentifyPersonMergeCandidates. Prefix decisions come from the family's consolidated confidence file;
-other decisions come from per-chunk review files. Merges BY ENTITY KEY (EntityMerger), so same-named entities are no problem.
+DBIdentifyPersonMergeCandidates. Decisions come from each family's consolidated confidence file.
+Legacy decisions in detail chunks are used only when their group is absent from the confidence file.
+Merges BY ENTITY KEY (EntityMerger), so same-named entities are no problem.
 
   - `merge` ticked           -> merged.
   - `dont merge` / both      -> never merged.
@@ -41,17 +42,29 @@ class DBApplyMergeDecisions(DBParentClass):
 
     def test_apply_merge_decisions(self) -> None:
         parsed = []
+        confidence_group_ids = set()
+        for folder, file_prefix in (
+            ("prefix_matches", "person_prefix_matches"),
+            ("same_name_matches", "person_same_name_matches"),
+            ("close_spelling_matches", "person_close_spelling_matches"),
+        ):
+            confidence_path = os.path.join(
+                self.review_dir, folder, f"confidence_{file_prefix}.md"
+            )
+            if os.path.exists(confidence_path):
+                with open(confidence_path, "r", encoding="utf-8") as f:
+                    confidence_groups = mc.parse_confidence_file(f.read())
+                parsed.extend(confidence_groups)
+                confidence_group_ids.update(g["id"] for g in confidence_groups)
+
         pattern = os.path.join(self.review_dir, "**", "person_*_matches_*.md")
         for path in sorted(glob.glob(pattern, recursive=True)):
             with open(path, "r", encoding="utf-8") as f:
-                parsed.extend(g for g in mc.parse_review_file(f.read())
-                              if not g["id"].startswith(f"{mc.KIND_PREFIX}:"))
-        prefix_confidence_path = os.path.join(
-            self.review_dir, "prefix_matches", "confidence_person_prefix_matches.md"
-        )
-        if os.path.exists(prefix_confidence_path):
-            with open(prefix_confidence_path, "r", encoding="utf-8") as f:
-                parsed.extend(mc.parse_confidence_file(f.read()))
+                parsed.extend(
+                    g for g in mc.parse_review_file(f.read())
+                    if not g["id"].startswith(f"{mc.KIND_PREFIX}:")
+                    and g["id"] not in confidence_group_ids
+                )
         if not parsed:
             print(f"No review files / groups found in {self.review_dir}.")
             return

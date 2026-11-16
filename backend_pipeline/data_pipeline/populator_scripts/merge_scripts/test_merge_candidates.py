@@ -116,44 +116,60 @@ class MergeCandidatesTest(unittest.TestCase):
         groups[0].entities.append(person("4", "hana"))
         self.assertEqual(mc.carry_over_decisions(groups, previous), {})
 
-    def test_close_spelling_review_and_apply_use_real_name(self):
+    def test_confidence_decision_flow_for_same_name_and_close_spelling(self):
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBIdentifyPersonMergeCandidates import DBIdentifyPersonMergeCandidates
 
-        people = [person("1", "Yishai"), person("2", "Ishey")]
-        db = Mock()
-        db.get_entities_by_type.return_value = people
-        db.get_entities_by_keys.side_effect = lambda keys: [p for p in people if p.key in keys]
-        db.get_rels_for_entities.return_value = []
-        with TemporaryDirectory() as output_dir:
-            identify = DBIdentifyPersonMergeCandidates("test_identify_close_spelling_matches")
-            identify.db_api = db
-            identify.output_dir = output_dir
-            identify.max_entities_to_check = None
-            identify.max_entities_per_file = 100
-            identify.test_identify_close_spelling_matches()
-            review = Path(output_dir) / "close_spelling_matches" / "person_close_spelling_matches_001.md"
-            review.write_text(review.read_text(encoding="utf-8").replace("- [ ] merge", "- [x] merge"),
-                              encoding="utf-8")
-            identify.test_identify_close_spelling_matches()
-            self.assertEqual(mc.parse_review_file(review.read_text(encoding="utf-8"))[0]["decision"], "merge")
-            identify.max_entities_to_check = 0
-            identify.test_identify_close_spelling_matches()
-            review_text = review.read_text(encoding="utf-8")
-            self.assertEqual(mc.parse_review_file(review_text)[0]["decision"], "merge")
-            self.assertIn("Suggested final display name: `ishey`", review_text)
+        cases = [
+            (mc.KIND_SAME_NAME, "test_identify_same_name_matches", "same_name_matches",
+             "person_same_name_matches", ["Joash", "joash"], "joash"),
+            (mc.KIND_CLOSE_SPELLING, "test_identify_close_spelling_matches", "close_spelling_matches",
+             "person_close_spelling_matches", ["Yishai", "Ishey"], "ishey"),
+        ]
+        for kind, identify_method, folder, prefix, names, final_name in cases:
+            with self.subTest(kind=kind), TemporaryDirectory() as output_dir:
+                people = [person(str(i), name) for i, name in enumerate(names)]
+                db = Mock()
+                db.get_entities_by_type.return_value = people
+                db.get_entities_by_keys.side_effect = lambda keys: [p for p in people if p.key in keys]
+                db.get_rels_for_entities.return_value = []
+                identify = DBIdentifyPersonMergeCandidates(identify_method)
+                identify.db_api = db
+                identify.output_dir = output_dir
+                identify.max_entities_to_check = None
+                identify.max_entities_per_file = 100
+                getattr(identify, identify_method)()
 
-            apply = DBApplyMergeDecisions("test_apply_merge_decisions")
-            apply.db_api = db
-            apply.review_dir = output_dir
-            apply.undecided_policy = mc.UNDECIDED_SKIP
-            apply.dry_run = False
-            with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger") as merger_class:
-                merger = merger_class.return_value
-                merger.choose_target.return_value = people[1]
-                apply.test_apply_merge_decisions()
-                merger.choose_target.assert_called_once_with(people, "ishey")
-                merger.merge_into_target.assert_called_once_with(people[1], [people[0]], "ishey")
+                review = Path(output_dir) / folder / f"{prefix}_001.md"
+                confidence = Path(output_dir) / folder / f"confidence_{prefix}.md"
+                # Existing chunk decisions are migrated once into the consolidated file.
+                review.write_text(review.read_text(encoding="utf-8") + "\n- [x] merge\n",
+                                  encoding="utf-8")
+                getattr(identify, identify_method)()
+                self.assertEqual(mc.parse_confidence_file(confidence.read_text(encoding="utf-8"))[0]["decision"],
+                                 "merge")
+                detail_text = review.read_text(encoding="utf-8")
+                self.assertNotIn("- [ ] merge", detail_text)
+                self.assertNotIn("- [ ] dont merge", detail_text)
+                if kind == mc.KIND_CLOSE_SPELLING:
+                    self.assertIn(f"Suggested final display name: `{final_name}`", detail_text)
+
+                identify.max_entities_to_check = 0
+                getattr(identify, identify_method)()
+                self.assertEqual(mc.parse_confidence_file(confidence.read_text(encoding="utf-8"))[0]["decision"],
+                                 "merge")
+
+                apply = DBApplyMergeDecisions("test_apply_merge_decisions")
+                apply.db_api = db
+                apply.review_dir = output_dir
+                apply.undecided_policy = mc.UNDECIDED_SKIP
+                apply.dry_run = False
+                with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger") as merger_class:
+                    merger = merger_class.return_value
+                    merger.choose_target.return_value = people[1]
+                    apply.test_apply_merge_decisions()
+                    merger.choose_target.assert_called_once_with(people, final_name)
+                    merger.merge_into_target.assert_called_once_with(people[1], [people[0]], final_name)
 
     def test_chunking_never_splits_group(self):
         groups, _ = mc.find_groups(self.people, mc.KIND_PREFIX, None)

@@ -1,8 +1,8 @@
 # bs"d
 """
 DBIdentifyPersonMergeCandidates - READ-ONLY on the DB: scan EPerson entities for likely duplicates
-and write markdown candidate details and confidence files for a human to decide. Prefix decisions live
-in the consolidated confidence file; same-name decisions live in the chunk review files. Decisions are
+and write markdown candidate details and confidence files for a human to decide. Decisions live
+in each family's consolidated confidence file. Decisions are
 applied by DBApplyMergeDecisions. Format + semantics: merge_candidates.py and
 control_docs/pipeline/merge_entities.md. Output dir: Paths.MERGE_REVIEW_DIR.
 
@@ -98,11 +98,10 @@ class DBIdentifyPersonMergeCandidates(DBParentClass):
         for path in old_files + legacy_files:
             with open(path, "r", encoding="utf-8") as f:
                 previous.extend(mc.parse_review_file(f.read()))
-        if kind == mc.KIND_PREFIX:
-            for path in (confidence_path, legacy_confidence_path):
-                if os.path.exists(path):
-                    with open(path, "r", encoding="utf-8") as f:
-                        previous.extend(mc.parse_confidence_file(f.read()))
+        for path in (confidence_path, legacy_confidence_path):
+            if os.path.exists(path):
+                with open(path, "r", encoding="utf-8") as f:
+                    previous.extend(mc.parse_confidence_file(f.read()))
         decisions = mc.carry_over_decisions(groups, previous)
         kept_prev = mc.previous_decided_groups_not_in(groups, previous)
         kept_prev = list({p["id"]: p for p in kept_prev}.values())
@@ -122,7 +121,7 @@ class DBIdentifyPersonMergeCandidates(DBParentClass):
             all_rels.update(rels_by_entity)
             path = os.path.join(review_dir, f"{file_prefix}_{file_no:03d}.md")
             text = mc.render_file(title, description, chunk, rels_by_entity, names, file_no, len(chunks),
-                                  group_number, decisions, include_decisions=kind != mc.KIND_PREFIX)
+                                  group_number, decisions, include_decisions=False)
             with open(path, "w", encoding="utf-8", newline="\n") as f:
                 f.write(text)
             written.append(path)
@@ -136,7 +135,7 @@ class DBIdentifyPersonMergeCandidates(DBParentClass):
             rated = mc.rate_groups(groups, all_rels)
             with open(confidence_path, "w", encoding="utf-8", newline="\n") as f:
                 f.write(mc.render_confidence_file(title, rated, decisions,
-                                                  include_decisions=kind == mc.KIND_PREFIX))
+                                                  include_decisions=True))
             print(f"Wrote {confidence_path}")
         elif os.path.exists(confidence_path):
             os.remove(confidence_path)
