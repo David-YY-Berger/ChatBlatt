@@ -17,7 +17,7 @@ from urllib.parse import urlencode
 from system_common.Constants import (
     PAGE_ABOUT, PAGE_ENTITY_SEARCH, PAGE_FAMILY_TREE, PAGE_HOME, PAGE_NATIONS,
     PAGE_NUMBER_SEARCH, PAGE_PEOPLE, PAGE_PLACES, PAGE_SOURCE_SEARCH,
-    PAGE_STUDIED_FROM, PAGE_SYMBOLS, PAGE_TREES, PAGE_TRIBES,
+    PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS, PAGE_SYMBOLS, PAGE_TREES, PAGE_TRIBES,
 )
 
 BASE_URL = os.environ.get(
@@ -42,6 +42,8 @@ URL_PATHS: dict[str, str] = {
     PAGE_TREES: "trees",
     PAGE_FAMILY_TREE: "trees_genealogy_tree",
     PAGE_STUDIED_FROM: "trees_studied_from_tree",
+    PAGE_PLACES_VISITED: "trees_places_visited",
+    PAGE_DESCENDANTS: "trees_descendants",
 }
 
 # ---- Source search params (list values are comma-separated) ----

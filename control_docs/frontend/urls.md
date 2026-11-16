@@ -24,6 +24,8 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 | Trees (landing) | `/trees` | `trees` |
 | Family tree | `/trees_genealogy_tree` | `family_tree` |
 | Studied-from tree | `/trees_studied_from_tree` | `studied_from` |
+| Places visited | `/trees_places_visited` | `places_visited` |
+| Descendants | `/trees_descendants` | `descendants` |
 
 The Symbols page key and URL path remain defined internally, but the page is
 not exposed in Entity Search navigation.
@@ -54,4 +56,4 @@ privacy rules, event schema, and configuration.
 
 Example: `/source_search?q=abraham&pt=Halacha&lang=he`, `/number_search?type=unit&value=Amah&lang=en`.
 `UrlPaths.page_url(page_key, params)` builds absolute links (base URL `UrlPaths.BASE_URL`; `Paths.EITZ_HABINA_URL` is an alias).
-Not URL-driven: the two tree pages' center person (session state).
+Not URL-driven: the two tree pages' center person, Places Visited and Descendants selections (session state).

@@ -30,6 +30,8 @@ PAGE_FOODS = "foods"
 PAGE_PLANTS = "plants"
 PAGE_FAMILY_TREE = "family_tree"
 PAGE_STUDIED_FROM = "studied_from"
+PAGE_PLACES_VISITED = "places_visited"
+PAGE_DESCENDANTS = "descendants"
 
 # ---------------------------------------------------------------------------
 # Number-search types

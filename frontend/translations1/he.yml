@@ -30,10 +30,35 @@ entity_tabs:
 tree_tabs:
   family_tree: "עץ משפחה"
   studied_from: "מקורות לימוד"
+  places_visited: "מקומות שביקרו בהם"
+  descendants: "צאצאים"
   label: "בחר תצוגת עץ"
 
 trees_ui:
-  select_tree_prompt: "אנא בחרו סוג עץ מהתפריט למעלה."
+  select_tree_prompt: "אנא בחרו תצוגה מהתפריט למעלה."
+
+lineage_ui:
+  mode: "חיפוש"
+  find_descendants: "חיפוש צאצאים"
+  find_ancestors: "חיפוש אבות"
+  ancestor: "אב קדמון או אם קדמונית"
+  descendant: "צאצא או צאצאית"
+  start_has_children: "מוצגים רק אנשים שיש להם ילדים מתועדים."
+  start_has_parents: "מוצגים רק אנשים שיש להם הורים מתועדים."
+  no_options: "לא נמצאו קשרי הורה וילד מתועדים."
+  shortest_line: "אחד המסלולים המתועדים הקצרים ביותר (ניתן להעתיק באמצעות הסמל)."
+
+places_visited_ui:
+  search_by: "חיפוש לפי"
+  person: "אדם"
+  place: "מקום"
+  prompt: "בחרו ישות ולחצו על הצג."
+  no_options: "לא נמצאו אנשים או מקומות עם קשרים אלה."
+  no_results: "לא נמצאו קשרים מתאימים."
+  relationship: "קשר"
+  sources: "מקורות"
+  no_sources: "לא נרשמו מקורות."
+  ordering: "הסדר לפי המקור המוקדם ביותר בתנ״ך; קשרים ללא מקור בתנ״ך מופיעים בסוף."
 
 studied_from_ui:
   select_person_label: "בחר אדם למרכז עץ מקורות הלימוד"
@@ -176,6 +201,8 @@ page_titles:
   trees: "עצים"
   family_tree: "עץ משפחה"
   studied_from: "עץ מקורות לימוד"
+  places_visited: "מקומות שביקרו בהם"
+  descendants: "צאצאים"
 
 home_tools:
   subtitle: "מציין מקום לכותרת משנה"

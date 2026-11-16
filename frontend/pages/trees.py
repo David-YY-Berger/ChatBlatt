@@ -5,7 +5,7 @@ from __future__ import annotations
 import streamlit as st
 
 from translations1 import get_text, is_rtl
-from system_common.Constants import PAGE_TREES, PAGE_FAMILY_TREE, PAGE_STUDIED_FROM
+from system_common.Constants import PAGE_TREES, PAGE_FAMILY_TREE, PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS
 
 
 def render(lang: str, selected: str | None = None) -> None:
@@ -17,6 +17,16 @@ def render(lang: str, selected: str | None = None) -> None:
     if selected == PAGE_STUDIED_FROM:
         from pages.studied_from_tree import render as render_studied_from
         render_studied_from(lang)
+        return
+
+    if selected == PAGE_PLACES_VISITED:
+        from pages.places_visited import render as render_places_visited
+        render_places_visited(lang)
+        return
+
+    if selected == PAGE_DESCENDANTS:
+        from pages.descendants import render as render_descendants
+        render_descendants(lang)
         return
 
     # Fallback: top-level Trees page (no sub-tab selected)

@@ -37,7 +37,7 @@ and data flows, use the feature guides below.
   People, Places, Nations and Tribes pages. Symbols remains implemented but is
   hidden from Entity Search navigation and controls. The visible detail pages also
   have a type-picker button row. Trees has a landing page with a selection
-  prompt and separate Family Tree and Studied From pages.
+  prompt and separate Family Tree, Studied From, Places Visited and Descendants pages.
 - `frontend/components/` contains the shared header, layout, filters, person
   selector, graph rendering and source popup. `frontend/assets/styles.css`
   supplies base and responsive styling; `layout.apply_layout` adds theme and
@@ -47,11 +47,11 @@ and data flows, use the feature guides below.
   Browsers supporting CSS `interactivity: inert` also prevent keyboard interaction
   with the main content until the run finishes. Streamlit's Stop button remains
   available.
-- Entity dropdowns use Streamlit fragments: changing a selection reruns only the
-  relevant selector, not the whole page. Entity Search and tree selectors refresh
-  their results on **Go**; Source Search runs on **Find Sources**.
-  Metadata filters in Entity Search and the tree person selectors immediately
-  narrow the corresponding entity dropdown; they do not wait for **Go**.
+- Entity Search and the Family Tree and Studied From person selectors use
+  Streamlit fragments and refresh results on **Go**; Source Search runs on
+  **Find Sources**. Their metadata filters immediately narrow the corresponding
+  entity dropdown. Descendants updates its dependent selector and result as
+  soon as a person is selected.
 - `frontend/translations1/` contains YAML translations (`en.yml`, `he.yml`) and
   helpers. Use `get_text("path.to.key", lang)`, which falls back to English.
   Page titles use `page_titles.*`; menu labels use `nav.*`, `entity_tabs.*`,

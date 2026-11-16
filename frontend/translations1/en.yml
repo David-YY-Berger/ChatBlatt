@@ -30,10 +30,35 @@ entity_tabs:
 tree_tabs:
   family_tree: "Family Tree"
   studied_from: "studiedFrom"
+  places_visited: "Places Visited"
+  descendants: "Descendants"
   label: "Choose a tree view"
 
 trees_ui:
-  select_tree_prompt: "Please select a tree type from the menu above."
+  select_tree_prompt: "Please select a view from the menu above."
+
+lineage_ui:
+  mode: "Find"
+  find_descendants: "Find descendants"
+  find_ancestors: "Find ancestors"
+  ancestor: "Ancestor"
+  descendant: "Descendant"
+  start_has_children: "Only people with recorded children are shown."
+  start_has_parents: "Only people with recorded parents are shown."
+  no_options: "No recorded parent-child relationships were found."
+  shortest_line: "One shortest recorded line (copy using the icon)."
+
+places_visited_ui:
+  search_by: "Search by"
+  person: "Person"
+  place: "Place"
+  prompt: "Choose an entity and select Go."
+  no_options: "No people or places with these relationships were found."
+  no_results: "No matching relationships found."
+  relationship: "Relationship"
+  sources: "Sources"
+  no_sources: "No sources recorded."
+  ordering: "Ordered by the earliest Tanach source; relationships without a Tanach source appear last."
 
 studied_from_ui:
   select_person_label: "Select a person to centre the studied-from tree on"
@@ -176,6 +201,8 @@ page_titles:
   trees: "Trees"
   family_tree: "Family Tree"
   studied_from: "Studied From Tree"
+  places_visited: "Places Visited"
+  descendants: "Descendants"
 
 home_tools:
   subtitle: "Placeholder for subtitle"

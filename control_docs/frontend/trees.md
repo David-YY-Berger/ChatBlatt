@@ -4,9 +4,34 @@ Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`,
 `frontend/pages/studied_from_tree.py`, `frontend/components/tree_graph.py`, and
 `frontend/app.py`.
 
-The home page has two separate cards (Family Tree / Studied From) that open each tree directly. Trees has a landing page (`/trees`) and two pages (`/trees_genealogy_tree`, `/trees_studied_from_tree`; see [urls.md](urls.md)). `app.py` passes the page key to `pages/trees.py`, which
-dispatches to the family-tree or studied-from page; with no subtab selected it
-shows a prompt to pick a tree.
+The home page has two separate cards (Family Tree / Studied From) that open each tree directly. Trees has a landing page (`/trees`) and pages for Family Tree, Studied From, Places Visited and Descendants (see [urls.md](urls.md)). `app.py` passes the page key to `pages/trees.py`, which dispatches to the selected page; with no subtab selected it shows a prompt to pick a view.
+
+## Descendants and ancestors
+
+Choose a direction, then a starting person and a connected person. The first
+selector contains only people with recorded children (or parents in ancestor
+mode); the second contains only people reachable in the chosen direction.
+The result shows one shortest recorded line, in selection order, with a copy
+button. Names follow the selected language. Selection is session state.
+
+`backend/app/logic/lineage_logic.py` builds a session-cached directed graph of
+person endpoints using only `childOfFather` and `childOfMother` relationships
+(child is term1, parent is term2). Breadth-first search handles duplicate links
+and cycles, without a generation limit; ties are resolved by entity key. Missing
+or non-person endpoints and self-links are excluded. The `descendant` relationship
+type is not used.
+
+## Places Visited
+
+Select Person or Place, choose an entity, and press Go. The selectors contain
+only people and places connected by a correctly directed `visited`, `bornIn`,
+or `diedIn` relationship. Each result groups one counterpart and relationship
+type with all its sources, their localized summaries and popup links. Rows are
+ordered by the earliest Tanach source in canonical book and passage order;
+rows without a recognized Tanach source follow, ordered by English name.
+Non-Tanach sources remain visible. Missing source content is reported and the
+source title remains visible without a popup link. The selection is session
+state, not a shareable search URL.
 
 ## Family Tree
 

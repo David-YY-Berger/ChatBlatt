@@ -80,15 +80,15 @@ the **Core** rows first and add the **Detailed** rows as space permits.
 | Core | Relationship filter used | Event | `relationship_filter_used` | `1` when a source search has a relationship filter; otherwise `0`. |
 | Core | Passage types | Event | `passage_types` | Comma-separated source-search passage type names. |
 | Core | Source types | Event | `source_types` | Comma-separated source-search source type names. |
-| Core | Entity type | Event | `entity_type` | Type of one selected source-search entity or tree person. |
-| Core | Entity ID | Event | `entity_id` | ID of one selected source-search entity or tree person. |
-| Core | Entity name | Event | `entity_name` | English name of one selected source-search entity or tree person. |
+| Core | Entity type | Event | `entity_type` | Type of one selected source-search or tree entity. |
+| Core | Entity ID | Event | `entity_id` | ID of one selected source-search or tree entity. |
+| Core | Entity name | Event | `entity_name` | English name of one selected source-search or tree entity. |
 | Core | Entity types | Event | `entity_types` | Entity types on a source search, or the entity-search page type. |
 | Core | Entity IDs | Event | `entity_ids` | Selected source-search option IDs, or the entity-search ID. |
 | Core | Entity names | Event | `entity_names` | Selected English names on a source search, or the entity-search name. |
 | Detailed | Number value | Event | `number_value` | Searched number or fraction, for example `7` or `1/3`. |
 | Detailed | Unit name | Event | `unit_name` | Validated English unit selected in number search. |
-| Detailed | Tree type | Event | `tree_type` | `family_tree` or `studied_from`. |
+| Detailed | Tree type | Event | `tree_type` | `family_tree`, `studied_from`, `places_visited`, `descendants`, or `ancestors`. |
 | Detailed | Download type | Event | `download_type` | `source_results` for the source-results PDF button. |
 
 `0` and `1` are categorical flags, so create **event-scoped dimensions**, not
@@ -169,6 +169,7 @@ After the dimensions are available:
    | Are source searches using text or relationship filters? | `app_search` | **Search type**, **Text similarity used**, **Relationship filter used** |
    | Which individual entities are filtered in source searches? | `search_entity_filter` | **Entity type**, **Entity name**, **Entity ID**, **App language** |
    | Which entities are opened on Entity Search? | `app_search` | **Search type**, **Entity types**, **Entity names**, **Entity IDs**; filter **Search type** to `entity` |
+   | Which people or places are searched in Places Visited? | `app_search` | **Tree type**, **Entity type**, **Entity name**, **Entity ID**, **App language**; filter **Tree type** to `places_visited` |
    | How often is the PDF button clicked? | `file_download` | **Download type**, **App language** |
 
 `search_entity_filter` fires once **per selected entity option**, not once per
