@@ -52,6 +52,33 @@ class MergeCandidatesTest(unittest.TestCase):
             ("yitzak", "itsak"),
             ("david", "dawid"),
             ("rabbi hannah ben meir", "rabbi hana ben mer"),
+            ("yaakov", "yaaqov", "jacob", "yaacov", "yakov", "jakov"),
+            ("kohen", "cohen", "cohn"),
+            ("yitzhak", "yitzchak", "yitzak"),
+            ("rivka", "rivqa"),
+            ("zvi", "tzvi", "tsvi", "czvi"),
+            ("zion", "tzion"),
+            ("yosef", "yoseph"),
+            ("ovadia", "obadiah"),
+            ("avraham", "abraham"),
+            ("aharon", "aaron"),
+            ("yehuda", "yehudah"),
+            ("rafael", "raphael", "refael"),
+            ("sara", "sarah"),
+            ("mordechai", "mordecai", "mordekhay"),
+            ("moshe", "moishe", "mosheh"),
+            ("yosef", "yoisef"),
+            ("rubin", "reuven"),
+            ("shmuel", "schmuel"),
+            ("shimon", "simeon", "shimeon"),
+            ("chaim", "haim"),
+            ("yehudi", "yehudy"),
+            ("avi", "avy"),
+            ("chani", "chany", "chanie"),
+            ("yossi", "yossie", "yossy"),
+            ("ari", "ary", "arie"),
+            ("chai", "chay"),
+            ("yaakov", "yaacov"),
         ]
         for names in examples:
             with self.subTest(names=names):
@@ -61,13 +88,16 @@ class MergeCandidatesTest(unittest.TestCase):
                 self.assertEqual(len(groups), 1)
                 self.assertEqual({e.key for e in groups[0].entities}, {e.key for e in people})
                 self.assertIn(groups[0].label, names)
-                by_spelling = {mc.spelling_signature(names[0]): people}
+                by_spelling = {}
+                for name, member in zip(names, people):
+                    for signature in mc.spelling_signatures(name):
+                        by_spelling.setdefault(signature, []).append(member)
                 for start in people:
                     self.assertEqual(mc.close_spelling_group_for(start, by_spelling).id, groups[0].id)
 
         self.assertNotEqual(mc.spelling_signature("hannah"), mc.spelling_signature("hanah ben"))
         self.assertNotEqual(mc.spelling_signature("miriam"), mc.spelling_signature("moses"))
-        self.assertNotEqual(mc.spelling_signature("ay"), mc.spelling_signature("a"))
+        self.assertNotEqual(mc.spelling_signature("yossi"), mc.spelling_signature("yosi ben"))
         groups, _ = mc.find_groups([person("1", "Hana"), person("2", "hana")],
                                    mc.KIND_CLOSE_SPELLING, None)
         self.assertEqual(groups, [])

@@ -62,12 +62,14 @@ files previously stored directly in `MERGE_REVIEW_DIR`.
    `book_references` (pre-populated = deliberately separate people, flagged) and all rels (`type -> other`
    outgoing, `other -> type` incoming). A `childOfFather`/`childOfMother`/`descendantOf` whose parent is
    God/Hashem gets a `WARNING` line.
-3. *close_spelling*: distinct display names with the same spelling signature. Each English word is normalized
-   for initial `yi`/`i`, final `a`/`ah`, single/doubled consonants, `ei`/`e`, `ey`/`ay`/`ai`,
-   `ch`/`kh`, `ts`/`tz`, and `v`/`w`. Rules can combine across words; names are otherwise not
-   fuzzy-matched, and exact-name-only groups are excluded. Signatures can group distinct people, so review
-   every member and its relationships. The suggested final name is the alphabetically first normalized
-   display name in the group, not the artificial signature.
+3. *close_spelling*: distinct display names with the same transliteration signature. Per word, the rules
+   include doubled consonants; `yi/i`, `j/y`; `ch/kh/h`, `sh/s/sch`; `k/q/c/ck`; `ts/tz/cz/z/s`;
+   `b/v/w/f/ph`; `th/t`; vowel variants including `a/e`, `o/oh/ou/oi/u/oo`, `i/y/ie/ee/ii`,
+   `ai/ay/ei/ey/ae/aye/ahy`, final `ai/ay/i`, and silent `h`. Rules can combine across words, and
+   context-dependent spellings such as `ch` also have alternate signatures; groups can therefore connect
+   transitively. This is intentionally a broad candidate finder, not an identity test; review every member
+   and its relationships. Exact-name-only groups are excluded. The suggested final name is the
+   alphabetically first normalized display name in the group, not the artificial signature.
 A person with no candidates appears in no file. An entity can belong to groups in multiple families.
 
 **Identify runtime**: `max_entities_to_check` (setUp, default `None` = all) limits how many persons (sorted by

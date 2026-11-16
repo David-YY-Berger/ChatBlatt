@@ -65,21 +65,48 @@ def normalize_name(name: str) -> str:
     return " ".join((name or "").lower().split())
 
 
-def spelling_signature(name: str) -> str:
-    """Normalize documented transliteration variants within each English word."""
+def _spelling_signature(name: str, ch_as_k: bool = False) -> str:
     def normalize_word(match: re.Match) -> str:
         word = match.group()
         word = re.sub(r"([bcdfghjklmnpqrstvwxyz])\1+", r"\1", word)
-        if word.startswith("yi"):
-            word = word[1:]
-        if word.endswith("ah"):
-            word = word[:-1]
+        word = re.sub(r"cz|tz|ts", "z", word)
+        word = word.replace("sch", "sh").replace("sh", "s")
+        word = word.replace("ch", "k" if ch_as_k else "h").replace("kh", "h")
+        word = word.replace("ck", "k").replace("ph", "f").replace("th", "t")
+        word = re.sub(r"oi|ou|oo", "o", word)
+        word = re.sub(r"ie|ee|ii", "i", word)
+        word = word.replace("eu", "u")
+        word = word.replace("eo", "o")
+        word = re.sub(r"aye|ahy|ae", "ai", word)
         word = re.sub(r"ei+", "e", word)
-        word = re.sub(r"ey|ay|ai", "ay", word)
-        word = word.replace("kh", "ch").replace("tz", "ts").replace("w", "v")
+        word = re.sub(r"ey|ay", "ai", word)
+        if word.endswith("ai"):
+            word = word[:-2] + "i"
+        word = word.replace("he", "")
+        if word.startswith("h"):
+            word = "k" + word[1:]
+        word = word.replace("h", "")
+        word = word.replace("c", "k").replace("q", "k")
+        word = word.replace("j", "y")
+        word = word.replace("b", "v").replace("w", "v").replace("f", "v")
+        word = word.replace("s", "z")
+        word = word.translate(str.maketrans({"e": "a", "u": "o", "y": "i"}))
+        word = re.sub(r"ao", "o", word)
+        word = re.sub(r"a(?=n$)", "i", word)
+        word = re.sub(r"([aeiou])\1+", r"\1", word)
         return word
 
     return re.sub(r"[a-z]+", normalize_word, normalize_name(name))
+
+
+def spelling_signature(name: str) -> str:
+    """Reduce common English transliteration variants to a broad review signature."""
+    return _spelling_signature(name)
+
+
+def spelling_signatures(name: str) -> set:
+    """Return alternatives for spellings whose transliteration depends on context."""
+    return {spelling_signature(name), _spelling_signature(name, ch_as_k=True)}
 
 
 def split_title_prefix(name: str) -> Tuple[Optional[str], str]:
@@ -136,10 +163,19 @@ def close_spelling_label(members: List[Any]) -> str:
 
 
 def close_spelling_group_for(entity: Any, by_spelling: Dict[str, List[Any]]) -> Optional[Group]:
-    signature = spelling_signature(entity.display_en_name)
-    members = by_spelling.get(signature, [])
+    members_by_key: Dict[str, Any] = {}
+    pending = [entity]
+    while pending:
+        current = pending.pop()
+        if current.key in members_by_key:
+            continue
+        members_by_key[current.key] = current
+        for signature in spelling_signatures(current.display_en_name):
+            pending.extend(by_spelling.get(signature, []))
+    members = list(members_by_key.values())
     if len({normalize_name(m.display_en_name) for m in members}) < 2:
         return None
+    signature = min(spelling_signature(member.display_en_name) for member in members)
     return Group(id=f"{KIND_CLOSE_SPELLING}:{signature}", kind=KIND_CLOSE_SPELLING,
                  label=close_spelling_label(members), entities=sorted_members(members))
 
@@ -159,7 +195,8 @@ def find_groups(entities: List[Any], kind: str, max_entities_to_check: Optional[
     by_spelling: Dict[str, List[Any]] = {}
     if kind == KIND_CLOSE_SPELLING:
         for name, members in by_name.items():
-            by_spelling.setdefault(spelling_signature(name), []).extend(members)
+            for signature in spelling_signatures(name):
+                by_spelling.setdefault(signature, []).extend(members)
     ordered = sorted(entities, key=lambda e: (normalize_name(e.display_en_name), e.key))
     if max_entities_to_check is not None:
         ordered = ordered[:max_entities_to_check]
