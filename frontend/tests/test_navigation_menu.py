@@ -9,6 +9,26 @@ from frontend import app
 
 
 class MobileMenuTests(unittest.TestCase):
+    def test_mcp_page_is_in_desktop_and_mobile_navigation(self):
+        streamlit = MagicMock()
+
+        def page(*args, **kwargs):
+            result = MagicMock()
+            result.title = kwargs["title"]
+            result.url_path = kwargs["url_path"]
+            return result
+
+        streamlit.Page.side_effect = page
+        with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_mobile_menu") as mobile:
+            app._build_navigation("en")
+
+        desktop_groups = streamlit.navigation.call_args.args[0]
+        mobile_groups = mobile.call_args.args[0]
+        self.assertIn("mcp_setup", [p.url_path for p in desktop_groups[""]])
+        self.assertIn("mcp_setup", [p.url_path for p in mobile_groups[""]])
+        self.assertNotEqual(app.URL_PATHS[app.PAGE_MCP], "mcp")
+
     def test_selection_changes_popover_key_and_switches_page(self):
         streamlit = MagicMock()
         streamlit.session_state = {}

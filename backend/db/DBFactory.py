@@ -12,10 +12,11 @@ class DBFactory:
 
     @staticmethod
     def get_prod_mongo_uri() -> str:
-        username = get_secret('DB_BT_USERNAME')
-        password = get_secret('DB_BT_PASSWORD')
+        read_only = os.environ.get("EITZ_DB_READ_ONLY", "").lower() == "true"
+        username = get_secret('DB_READ_ONLY_USERNAME' if read_only else 'DB_BT_USERNAME')
+        password = get_secret('DB_READ_ONLY_PASSWORD' if read_only else 'DB_BT_PASSWORD')
         if not username or not password:
-            raise ValueError("Missing db credentials in .env")
+            raise ValueError("Missing database credentials for the selected access mode")
 
         uri = (
             f"mongodb+srv://{quote_plus(username)}:{quote_plus(password)}"
@@ -26,7 +27,8 @@ class DBFactory:
     @staticmethod
     def get_prod_db_mongo() -> DBapiMongoDB:
         uri = DBFactory.get_prod_mongo_uri()
-        return DBapiMongoDB(uri)
+        read_only = os.environ.get("EITZ_DB_READ_ONLY", "").lower() == "true"
+        return DBapiMongoDB(uri, ensure_indexes=not read_only)
 
     # #2
     # @staticmethod

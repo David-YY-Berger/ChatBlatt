@@ -14,6 +14,7 @@ ui:
 nav:
   home: "Home"
   about: "About"
+  mcp: "MCP"
   number_search: "Number Search"
   source_search: "Source Search"
   entity_search: "Entity Search"
@@ -36,6 +37,17 @@ tree_tabs:
 
 trees_ui:
   select_tree_prompt: "Please select a view from the menu above."
+
+mcp_ui:
+  introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Jewish sources and research tools."
+  capabilities: "The connection is read-only. You can ask for sources, people, places, numbers, and family relationships; full source text may be available in English and Hebrew."
+  setup_title: "Connect your AI chat"
+  step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
+  step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
+  step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
+  step_four: "4. Save or connect the server and enable it for your chat. Try asking: “Find sources about Abraham visiting places, and show me the sources.”"
+  availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
+  privacy: "Your chat provider receives your questions and the information retrieved for your conversation. Check the original sources when accuracy matters."
 
 lineage_ui:
   mode: "Find"
@@ -190,6 +202,7 @@ entity_filters:
 page_titles:
   home: "Welcome to Eitz Habinah"
   about: "About Eitz Habinah"
+  mcp: "Connect with MCP"
   number_search: "Number Search"
   source_search: "Search Jewish Sources"
   entity_search: "Entity Search"

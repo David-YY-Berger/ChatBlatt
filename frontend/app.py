@@ -22,10 +22,10 @@ import metrics
 from components.header import render_header
 from components.layout import apply_layout, language_selector
 from translations1 import get_text
-from pages import about, entity_search, home, number_search, source_search, trees
+from pages import about, entity_search, home, mcp_setup, number_search, source_search, trees
 from system_common.Constants import (
     DEFAULT_LANG,
-    PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH,
+    PAGE_HOME, PAGE_ABOUT, PAGE_MCP, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH,
     PAGE_ENTITY_SEARCH, PAGE_TREES,
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_FAMILY_TREE, PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS,
@@ -61,6 +61,8 @@ def _renderer(page_key: str):
         return home.render
     if page_key == PAGE_ABOUT:
         return about.render
+    if page_key == PAGE_MCP:
+        return mcp_setup.render
     if page_key == PAGE_NUMBER_SEARCH:
         return number_search.render
     if page_key == PAGE_SOURCE_SEARCH:
@@ -102,7 +104,7 @@ def _build_navigation(lang: str):
     pages = {key: _make_page(key, lang) for key in URL_PATHS}
     navigation.register_pages(pages)
     groups = {
-        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH)],
+        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
         get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
         get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
     }

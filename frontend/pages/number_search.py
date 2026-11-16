@@ -30,6 +30,7 @@ from backend.app.controllers.number_search_controller import (
     UnitSearchRequest,
 )
 from backend.app.logic.number_search_logic import NumberSearchResult, NumberOccurrenceDTO
+from backend.app.logic.number_validation import number_error
 from backend.models_db.Enums import NumberCategory
 from system_common.Constants import NUMBER_TYPE_WHOLE, NUMBER_TYPE_FRACTION
 from system_common.UrlPaths import (
@@ -304,45 +305,8 @@ def _validate_number(value: str, lang: str = "en") -> str | None:
     The number type (whole vs. fraction) is auto-detected from *value* —
     there is no separate type selector in the UI.
     """
-    s = value.strip()
-    if not s:
-        return None  # Empty — silently ignored until Search is clicked
-
-    number_type = _detect_number_type(s)
-
-    if number_type == NUMBER_TYPE_WHOLE:
-        if "." in s:
-            return get_text("number_search_ui.error_decimal", lang)
-        if "-" in s:
-            return get_text("number_search_ui.error_negative", lang)
-        if not all(c in "0123456789" for c in s):
-            return get_text("number_search_ui.error_digits", lang)
-        if int(s) in (0, 1):
-            return get_text("number_search_ui.error_small", lang)
-
-    else:  # fraction
-        if "-" in s:
-            return get_text("number_search_ui.error_negative", lang)
-        if "." in s:
-            return get_text("number_search_ui.error_fraction_decimal", lang)
-        slash_count = s.count("/")
-        if slash_count > 1:
-            return get_text("number_search_ui.error_slashes", lang)
-        if not all(c in "0123456789/" for c in s):
-            return get_text("number_search_ui.error_fraction_digits", lang)
-        num_s, den_s = s.split("/")
-        if not num_s:
-            return get_text("number_search_ui.error_numerator_missing", lang)
-        if not den_s:
-            return get_text("number_search_ui.error_denominator_missing", lang)
-        if int(num_s) == 0:
-            return get_text("number_search_ui.error_numerator_zero", lang)
-        if int(den_s) == 0:
-            return get_text("number_search_ui.error_denominator_zero", lang)
-        if int(num_s) == int(den_s):
-            return get_text("number_search_ui.error_fraction_one", lang)
-
-    return None  # Input is valid
+    error = number_error(value)
+    return get_text(f"number_search_ui.{error}", lang) if error else None
 
 
 # ---------------------------------------------------------------------------

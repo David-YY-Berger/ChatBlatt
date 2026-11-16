@@ -8,7 +8,8 @@ Merges BY ENTITY KEY (EntityMerger), so same-named entities are no problem.
   - `merge` ticked           -> merged.
   - `dont merge` / both      -> never merged.
   - neither ticked           -> skipped, unless undecided_policy == "merge" ("merge everything except
-                                what I ticked 'dont merge'"). Even then, a group containing a pre-populated
+                                what I ticked 'dont merge'") or its confidence exceeds its configured
+                                kind's threshold. Even then, a group containing a pre-populated
                                 person (book_references set - deliberately separate people) is skipped
                                 unless it was explicitly ticked `merge`.
   - dry_run (default True)   -> only prints the plan; nothing is written. Set dry_run = False in setUp to apply.
@@ -38,6 +39,8 @@ class DBApplyMergeDecisions(DBParentClass):
         self.dry_run: bool = getattr(self, "dry_run", True)
         # ====== "skip" = merge only ticked groups; "merge" = merge all except dont-merge/conflict ======
         self.undecided_policy: str = getattr(self, "undecided_policy", mc.UNDECIDED_SKIP)
+        self.confidence_thresholds: Dict[str, float] = getattr(self, "confidence_thresholds", {})
+        # self.confidence_thresholds = {mc.KIND_CLOSE_SPELLING: 25}
         self.review_dir: str = getattr(self, "review_dir", Paths.MERGE_REVIEW_DIR)
 
     def test_apply_merge_decisions(self) -> None:
@@ -69,10 +72,11 @@ class DBApplyMergeDecisions(DBParentClass):
             print(f"No review files / groups found in {self.review_dir}.")
             return
 
-        to_merge = mc.select_groups_to_merge(parsed, self.undecided_policy)
+        to_merge = mc.select_groups_to_merge(parsed, self.undecided_policy, self.confidence_thresholds)
         tallies: Dict[str, int] = {"merged": 0, "stale": 0, "protected": 0, "dry_run": 0, "error": 0}
         print(f"{len(parsed)} group(s) in review files; {len(to_merge)} selected "
-              f"(undecided_policy={self.undecided_policy}, dry_run={self.dry_run}).")
+              f"(undecided_policy={self.undecided_policy}, "
+              f"confidence_thresholds={self.confidence_thresholds}, dry_run={self.dry_run}).")
 
         merger = EntityMerger(self.db_api)
         for g in to_merge:

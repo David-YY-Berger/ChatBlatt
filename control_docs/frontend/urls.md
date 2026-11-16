@@ -17,6 +17,7 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 |---|---|---|
 | Home | `/` | `home` |
 | About | `/about` | `about` |
+| MCP connection instructions | `/mcp_setup` | `mcp` |
 | Source search | `/source_search` | `source_search` |
 | Number search | `/number_search` | `number_search` |
 | Entity search (landing) | `/entity_search` | `entity_search` |
@@ -29,6 +30,7 @@ search query parameters to the destination. See [overview.md](overview.md) for s
 
 The Symbols page key and URL path remain defined internally, but the page is
 not exposed in Entity Search navigation.
+The MCP instructions page is separate from `/mcp`, which is the protocol endpoint.
 
 ## Query parameters (a search is fully described by its URL)
 

@@ -14,6 +14,18 @@ from frontend import app
 
 
 class DeploymentEntrypointTests(unittest.TestCase):
+    def test_mcp_instructions_load_in_both_languages(self):
+        for lang, expected in (("en", "Connect your AI chat"), ("he", "חיבור לצ׳אט בינה מלאכותית")):
+            with self.subTest(lang=lang):
+                test_app = AppTest.from_file(str(ROOT / "streamlit_app.py"))
+                test_app._page_hash = calc_md5("mcp_setup")
+                test_app.session_state["lang"] = lang
+                with patch.object(PagesManager, "uses_pages_directory", None):
+                    test_app.run(timeout=30)
+                self.assertFalse(test_app.exception)
+                self.assertEqual(test_app.code[0].value, "https://eitz-habina-prod.up.railway.app/mcp")
+                self.assertEqual(test_app.subheader[0].value, expected)
+
     def test_home_load_runs_shared_app(self):
         test_app = AppTest.from_file(str(ROOT / "streamlit_app.py"))
 

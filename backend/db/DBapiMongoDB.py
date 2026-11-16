@@ -58,10 +58,11 @@ class DBapiMongoDB(
 ):
     """Mongo implementation composed from per-domain mixins."""
 
-    def __init__(self, connection_string: str = None):
+    def __init__(self, connection_string: str = None, ensure_indexes: bool = True):
         self.client: MongoClient | None = None
         self.dbs: Dict[str, Any] = {}
         self.connection_string = connection_string
+        self._create_indexes = ensure_indexes
         self._transaction = threading.local()  # .session: the session of this thread's active transaction
 
         if connection_string:
@@ -114,7 +115,8 @@ class DBapiMongoDB(
             if collection.db_name not in self.dbs:
                 self.dbs[collection.db_name] = self.client.get_database(collection.db_name)
 
-        self._ensure_indexes()
+        if self._create_indexes:
+            self._ensure_indexes()
 
     def _ensure_indexes(self) -> None:
         """

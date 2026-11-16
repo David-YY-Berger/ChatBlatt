@@ -547,18 +547,32 @@ UNDECIDED_SKIP = "skip"
 UNDECIDED_MERGE = "merge"
 
 
-def select_groups_to_merge(parsed: List[Dict[str, Any]], undecided_policy: str = UNDECIDED_SKIP) -> List[Dict[str, Any]]:
+def select_groups_to_merge(parsed: List[Dict[str, Any]], undecided_policy: str = UNDECIDED_SKIP,
+                           confidence_thresholds: Optional[Dict[str, float]] = None) -> List[Dict[str, Any]]:
     """
     Groups to actually merge: every `merge`-ticked group, plus (policy "merge") every undecided one -
     the "merge most, tick dont-merge on the exceptions" workflow. `dont_merge` and `conflict` are never
-    merged. If a group id appears more than once (e.g. leftovers across files) the first wins.
+    merged. Undecided groups with a confidence strictly above their kind's optional threshold are
+    also selected. If a group id appears more than once, the first selected occurrence wins.
     """
     if undecided_policy not in (UNDECIDED_SKIP, UNDECIDED_MERGE):
         raise ValueError(f"Unknown undecided_policy: {undecided_policy}")
+    confidence_thresholds = confidence_thresholds or {}
+    for kind, threshold in confidence_thresholds.items():
+        if kind not in (KIND_PREFIX, KIND_SAME_NAME, KIND_CLOSE_SPELLING):
+            raise ValueError(f"Unknown confidence threshold kind: {kind}")
+        if isinstance(threshold, bool) or not isinstance(threshold, (int, float)) or not 0 <= threshold <= 100:
+            raise ValueError(f"Confidence threshold for {kind} must be between 0 and 100: {threshold}")
     wanted = {"merge"} | ({"undecided"} if undecided_policy == UNDECIDED_MERGE else set())
     seen, result = set(), []
     for g in parsed:
-        if g["decision"] in wanted and g["id"] not in seen:
+        kind = g["id"].split(":", 1)[0]
+        confidence = g.get("confidence")
+        above_threshold = (
+            g["decision"] == "undecided" and kind in confidence_thresholds
+            and confidence is not None and confidence > confidence_thresholds[kind]
+        )
+        if (g["decision"] in wanted or above_threshold) and g["id"] not in seen:
             seen.add(g["id"])
             result.append(g)
     return result

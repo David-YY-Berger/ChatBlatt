@@ -19,8 +19,9 @@ and data flows, use the feature guides below.
   selector, registers the pages, and runs the page selected by `st.navigation`.
   The header (`components/header.py`) links the title and icon to Home and the
   Sefaria banner to the external site.
-- On desktop, the top navigation contains Home, About, Number Search and Source
-  Search, plus Entity Search and Trees dropdowns. On screens up to 768px, the
+- On desktop, the top navigation contains Home, About, Number Search, Source
+  Search and MCP (connection instructions), plus Entity Search and Trees dropdowns.
+  On screens up to 768px, the
   app also displays a grouped mobile Menu popover; Streamlit hides its top
   navigation on narrow screens. Selecting a mobile menu item closes the popover
   and switches to that page, including when it is already selected. The mobile
@@ -97,11 +98,15 @@ including the scheme, for example `https://eitz-habina.streamlit.app/` on
 Community Cloud and `https://eitz-habina-prod.up.railway.app/` on Railway.
 This controls generated links and the analytics origin; see [metrics](metrics.md).
 The repository, branch, and new entrypoint must be deployed on both hosts.
+The Railway Docker deployment also serves the read-only MCP endpoint on the
+same domain; see [MCP deployment and access](../app/mcp.md) for its required
+database account and verification steps. Streamlit Community Cloud continues
+to use the standalone Streamlit entrypoint.
 
 ## requirements.txt is the deployment manifest
 
 `requirements.txt` (repo root) is what Streamlit Community Cloud installs — it must only
-list packages actually imported by `frontend/` + `backend/`, and it must pip-resolve cleanly
+list packages actually imported by `frontend/`, `backend/`, or the Railway MCP server, and it must pip-resolve cleanly
 (no conflicting pins). `backend/models_db` and `backend/models_dto` use `pydantic`, so it
 stays in this file; `pydantic-ai` (and the rest of the LLM pipeline stack) is only imported
 by `backend_pipeline/` (local data-population scripts), so it does **not** belong here.

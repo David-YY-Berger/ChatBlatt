@@ -2,4 +2,8 @@ fly.toml
 .git/
 __pycache__/
 .envrc
+.env
+.env.*
 .venv/
+venv/
+.streamlit/secrets.toml

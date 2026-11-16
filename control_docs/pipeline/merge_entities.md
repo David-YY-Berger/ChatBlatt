@@ -97,3 +97,12 @@ pre-populated person are still skipped unless explicitly ticked). Per group all 
 (else `STALE`, skipped - e.g. already merged through another group); merge into the chosen target with the group
 label as final name; close-spelling groups use the alphabetically first existing display name instead of their
 signature. Safe to re-run.
+
+To select undecided groups above a confidence percentage for a particular family, uncomment the example
+`self.confidence_thresholds = {mc.KIND_CLOSE_SPELLING: 25}` in `DBApplyMergeDecisions.setUp`.
+This selects close-spelling groups with confidence **strictly greater than 25%** from the confidence file.
+Use `mc.KIND_PREFIX` or `mc.KIND_SAME_NAME` for other families; multiple kinds can be listed in the dictionary.
+Comment the line again to disable it. Explicit `merge` decisions remain selected regardless of confidence;
+`dont merge` and conflicting decisions are never selected. Undecided groups containing pre-populated people
+remain protected, and groups without confidence scores are not selected by the threshold. Confidence is a
+heuristic, not proof of identity. The default dry run still only prints the plan.

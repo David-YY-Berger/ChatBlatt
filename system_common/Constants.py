@@ -15,6 +15,7 @@ FALLBACK_LANG = LANG_EN
 
 PAGE_HOME = "home"
 PAGE_ABOUT = "about"
+PAGE_MCP = "mcp"
 PAGE_NUMBER_SEARCH = "number_search"
 PAGE_SOURCE_SEARCH = "source_search"
 PAGE_ENTITY_SEARCH = "entity_search"

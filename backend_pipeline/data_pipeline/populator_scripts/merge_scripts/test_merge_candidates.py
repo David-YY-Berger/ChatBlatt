@@ -163,6 +163,7 @@ class MergeCandidatesTest(unittest.TestCase):
                 apply.db_api = db
                 apply.review_dir = output_dir
                 apply.undecided_policy = mc.UNDECIDED_SKIP
+                apply.confidence_thresholds = {}
                 apply.dry_run = False
                 with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger") as merger_class:
                     merger = merger_class.return_value
@@ -240,6 +241,28 @@ class MergeCandidatesTest(unittest.TestCase):
                  {"id": "c", "decision": "dont_merge"}, {"id": "d", "decision": "conflict"}]
         self.assertEqual([g["id"] for g in mc.select_groups_to_merge(mixed)], ["a"])
         self.assertEqual([g["id"] for g in mc.select_groups_to_merge(mixed, mc.UNDECIDED_MERGE)], ["a", "b"])
+
+    def test_confidence_threshold_selects_only_undecided_groups_above_limit(self):
+        groups = [
+            {"id": "close_spelling:above", "confidence": 26, "decision": "undecided"},
+            {"id": "close_spelling:equal", "confidence": 25, "decision": "undecided"},
+            {"id": "close_spelling:below", "confidence": 24, "decision": "undecided"},
+            {"id": "close_spelling:missing", "decision": "undecided"},
+            {"id": "same_name:other", "confidence": 90, "decision": "undecided"},
+            {"id": "close_spelling:no", "confidence": 90, "decision": "dont_merge"},
+            {"id": "close_spelling:conflict", "confidence": 90, "decision": "conflict"},
+            {"id": "close_spelling:explicit", "confidence": 0, "decision": "merge"},
+        ]
+        thresholds = {mc.KIND_CLOSE_SPELLING: 25}
+        self.assertEqual([g["id"] for g in mc.select_groups_to_merge(groups, confidence_thresholds=thresholds)],
+                         ["close_spelling:above", "close_spelling:explicit"])
+        self.assertEqual([g["id"] for g in mc.select_groups_to_merge(groups)], ["close_spelling:explicit"])
+
+    def test_invalid_confidence_threshold_is_rejected(self):
+        for thresholds in ({mc.KIND_CLOSE_SPELLING: -1}, {mc.KIND_CLOSE_SPELLING: 101},
+                           {mc.KIND_CLOSE_SPELLING: float("nan")}, {"unknown": 25}):
+            with self.subTest(thresholds=thresholds), self.assertRaises(ValueError):
+                mc.select_groups_to_merge([], confidence_thresholds=thresholds)
 
 
 if __name__ == "__main__":
