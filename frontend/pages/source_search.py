@@ -18,15 +18,13 @@ from __future__ import annotations
 from dataclasses import replace
 import logging
 import math
+import re
 from uuid import uuid4
 
 import streamlit as st
-import streamlit.components.v1 as components
 
 import metrics
-from translations1 import enum_text, get_text
-from backend.models_db.Enums import PassageType
-from backend.file_utils.HtmlWriter import HtmlWriter
+from translations1 import enum_text, get_text, is_rtl
 from components.facets import (
     get_selected_entity_names,
     get_selected_entity_metrics,
@@ -34,7 +32,7 @@ from components.facets import (
     preload_all_entity_options,
     render_entity_facets,
 )
-from components.pdf_export import build_results_pdf, results_pdf_filename
+from components.pdf_export import _plain, build_results_pdf, results_pdf_filename
 from components.source_filters import render_source_filters
 from pages.source_search_logic import (
     clear_relationship_search,
@@ -202,7 +200,6 @@ def _render_search_panel(lang: str) -> None:
         _render_pagination(lang)
         _render_results_body(
             st.session_state["_search_ans"],
-            st.session_state.get("_search_elapsed", ""),
             lang,
         )
 
@@ -252,21 +249,61 @@ def _render_pagination(lang: str) -> None:
 # Results display
 # ---------------------------------------------------------------------------
 
-def _render_results_body(ans, elapsed: str, lang: str = "en") -> None:
-    """Display search results as an HTML component, with a plain-text fallback."""
-    html_writer = HtmlWriter()
-    try:
-        labels = {key: get_text(f"source_display.{key}", lang) for key in ("copy", "hebrew_content", "english_content", "no_content")}
-        labels["passage_types"] = {pt.name: enum_text(pt, lang) for pt in PassageType}
-        html = html_writer.get_full_html(ans, False, lang, labels)
-        components.html(html, height=800, scrolling=True)
-        logger.info("Rendered HTML successfully.")
-    except Exception as e:
-        logger.error("Failed to render HTML: %s", e)
-        st.error(f"{get_text('source_search_ui.render_error', lang)}: {e}")
-        for src in ans.src_metadata_lst[:20]:
-            summary = getattr(src, "summary_heb" if lang == "he" else "summary_en", "") or ""
-            st.markdown(f"- **{src.key}** — {summary}")
+def _markdown_text(text: str) -> str:
+    return re.sub(r"([\\`*_{}\[\]()#+.!|>~-])", r"\\\1", text)
+
+
+def _render_results_body(ans, lang: str = "en") -> None:
+    """Display each result in the page, rather than in a scrolling iframe."""
+    for index, metadata in enumerate(ans.src_metadata_lst):
+        source = ans.src_contents[index] if index < len(ans.src_contents) else None
+        content = source._get_content() if source else []
+        english = content[0] if len(content) > 0 else ""
+        hebrew = content[1] if len(content) > 1 else ""
+        title_en, title_he = str(metadata), metadata.to_heb_str()
+        summary_en = metadata.summary_en or ""
+        summary_he = metadata.summary_heb or ""
+        titles = (title_he, title_en) if is_rtl(lang) else (title_en, title_he)
+        summaries = (summary_he, summary_en) if is_rtl(lang) else (summary_en, summary_he)
+
+        with st.container(border=True, key=f"source_result_{index}"):
+            st.markdown(f"**{_markdown_text(titles[0] or titles[1])}**")
+            if titles[0] and titles[1] and titles[0] != titles[1]:
+                st.caption(_markdown_text(titles[1]))
+            if metadata.passage_types:
+                st.markdown(" ".join(
+                    f":blue-badge[{pt.icon} {_markdown_text(enum_text(pt, lang))}]"
+                    for pt in metadata.passage_types
+                ))
+            for summary in dict.fromkeys(summaries):
+                if summary:
+                    st.caption(_markdown_text(summary))
+
+            with st.expander(get_text("source_display.view_source", lang)):
+                copy_blocks = []
+                for title, summary, body in (
+                    (title_he, summary_he, hebrew),
+                    (title_en, summary_en, english),
+                ):
+                    block = "\n\n".join(part for part in (title, summary, _plain(body)) if part)
+                    if block:
+                        copy_blocks.append(block)
+                with st.popover(get_text("source_display.copy", lang), icon=":material/content_copy:"):
+                    st.caption(get_text("source_display.copy_help", lang))
+                    st.code("\n\n\n".join(copy_blocks), language=None)
+
+                if not hebrew.strip() and not english.strip():
+                    st.info(get_text("source_display.no_content", lang))
+                for body, direction, label in (
+                    (hebrew, "rtl", "hebrew_content"),
+                    (english, "ltr", "english_content"),
+                ):
+                    if body.strip():
+                        st.markdown(f"**{get_text(f'source_display.{label}', lang)}**")
+                        st.html(
+                            f'<div dir="{direction}" style="text-align:{"right" if direction == "rtl" else "left"}; '
+                            f'overflow-wrap:anywhere; line-height:1.7">{body}</div>'
+                        )
 
 
 # ---------------------------------------------------------------------------

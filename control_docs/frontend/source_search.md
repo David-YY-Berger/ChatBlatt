@@ -5,6 +5,11 @@ Source: `frontend/pages/source_search.py`.
 Layout: narrow left column (Passage Type + Source Type filters) and a main column (entity
 dropdowns, free-text box + Find Sources button, results).
 
+- Results appear as native Streamlit cards in the page, using the Places Visited
+  teal card palette, with bilingual titles and
+  summaries, localized passage types, and an expandable source. The expanded source
+  shows available Hebrew and English text and a copy control for plain text; the
+  separate individual-source popups retain their existing presentation.
 - **Passage Type** (`components/source_filters.py`): compact checkbox list, one per
   `PassageType`; no All/None buttons or counts.
 - **Source Type** (same module): compact checkbox list for Tanach, Talmud Bavli, Mishna,

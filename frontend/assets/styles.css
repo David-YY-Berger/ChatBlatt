@@ -4,6 +4,38 @@
     --bg: #0f1b2c;
 }
 
+[class*="st-key-source_result_"] {
+    background: #14232b;
+    border: 1px solid #285468;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+    gap: 0.4rem;
+}
+
+[class*="st-key-source_result_"] [data-testid="stCaptionContainer"],
+[class*="st-key-source_result_"] [data-testid="stCaptionContainer"] p {
+    color: #b4c3ce;
+}
+
+@media (prefers-color-scheme: light) {
+    [class*="st-key-source_result_"] {
+        background: #f3f9fb;
+        border-color: #bdd7e2;
+        color: #1e293b;
+    }
+
+    [class*="st-key-source_result_"] [data-testid="stMarkdownContainer"] p,
+    [class*="st-key-source_result_"] [data-testid="stMarkdownContainer"] strong,
+    [class*="st-key-source_result_"] [data-testid="stExpander"] summary {
+        color: #1e293b;
+    }
+
+    [class*="st-key-source_result_"] [data-testid="stCaptionContainer"],
+    [class*="st-key-source_result_"] [data-testid="stCaptionContainer"] p {
+        color: #475569;
+    }
+}
+
 body {
     background: var(--bg);
     font-family: "Segoe UI", Arial, sans-serif;

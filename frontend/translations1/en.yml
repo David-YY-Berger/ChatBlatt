@@ -265,6 +265,8 @@ facet_entities:
   symbol: "Symbols"
 
 source_display:
+  view_source: "View source"
+  copy_help: "Use the copy button to copy the source as text."
   hebrew_content: "Hebrew Content"
   english_content: "English Content"
   no_content: "No content available"

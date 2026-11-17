@@ -51,6 +51,8 @@ def _plain(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
     for br in soup.find_all("br"):
         br.replace_with("\n")
+    for block in soup.find_all(["p", "div", "li", "h1", "h2", "h3", "h4", "h5", "h6"]):
+        block.insert_after("\n")
     text = soup.get_text()
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 

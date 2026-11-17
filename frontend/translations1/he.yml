@@ -265,6 +265,8 @@ facet_entities:
   symbol: "סמלים"
 
 source_display:
+  view_source: "הצגת המקור"
+  copy_help: "יש להשתמש בכפתור ההעתקה כדי להעתיק את המקור כטקסט."
   hebrew_content: "מקור בעברית"
   english_content: "מקור באנגלית"
   no_content: "תוכן המקור אינו זמין"

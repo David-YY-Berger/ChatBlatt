@@ -13,8 +13,62 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "frontend"))
 
 from backend.app.SourceSearchQuery import SourceSearchQuery
+from backend.models_db.Enums import PassageType
+from backend.models_db.SourceClasses.SourceContent import SourceContent
+from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from pages import source_search
 from pages.source_search_logic import current_search_url
+
+
+class SourceSearchResultsTests(unittest.TestCase):
+    def test_native_results_show_bilingual_details_and_copy_text(self):
+        key = "TN_Genesis_0_1:1"
+        metadata = SourceMetadata(
+            key=key, summary_en="English summary", summary_heb="תקציר",
+            passage_types=[PassageType.PROPHECY],
+        )
+        answer = SimpleNamespace(
+            src_metadata_lst=[metadata],
+            src_contents=[SourceContent(key, ["<p>First<br>second</p><p>Third</p>", "<p>עברית</p>"])],
+        )
+        app = AppTest.from_string("""
+import streamlit as st
+from pages.source_search import _render_results_body
+_render_results_body(st.session_state["answer"], "en")
+""")
+        app.session_state["answer"] = answer
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertEqual(len(app.expander), 1)
+        self.assertEqual(app.expander[0].label, "View source")
+        self.assertTrue(any("English summary" in m.value for m in app.caption))
+        self.assertTrue(any("תקציר" in m.value for m in app.caption))
+        self.assertTrue(any("Prophecy" in m.value for m in app.markdown))
+        self.assertIn("First\nsecond\nThird", app.code[0].value)
+        self.assertIn("עברית", app.code[0].value)
+        self.assertEqual(len(app.get("html")), 2)
+
+    def test_missing_and_partial_content_and_hebrew_labels(self):
+        first = SourceMetadata(key="TN_Genesis_0_1:1", summary_en="Fallback")
+        second = SourceMetadata(key="TN_Genesis_0_1:2")
+        answer = SimpleNamespace(
+            src_metadata_lst=[first, second],
+            src_contents=[SourceContent(first.key, ["Only English"])],
+        )
+        app = AppTest.from_string("""
+import streamlit as st
+from pages.source_search import _render_results_body
+_render_results_body(st.session_state["answer"], "he")
+""")
+        app.session_state["answer"] = answer
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertEqual(len(app.expander), 2)
+        self.assertEqual(app.expander[0].label, "הצגת המקור")
+        self.assertTrue(any("Fallback" in m.value for m in app.caption))
+        self.assertIn("Only English", app.code[0].value)
+        self.assertEqual(len(app.get("html")), 1)
+        self.assertEqual(app.info[0].value, "תוכן המקור אינו זמין")
 
 
 class SourceSearchPdfTests(unittest.TestCase):
