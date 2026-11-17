@@ -35,8 +35,8 @@ and data flows, use the feature guides below.
   From and opens the Trees landing page.
   Each keyed card contains an invisible stretched button (`styles.css`) that
   calls `navigation.go(page_key)`. The About page provides a project overview,
-  describes the data pipeline and its limitations, and shares the dedication
-  and author information in English and Hebrew.
+  gives the data pipeline its own section, describes project limitations, and
+  shares the dedication and author information in English and Hebrew.
 - Entity Search has a landing page with visible entity-type cards and separate
   People, Places, Nations and Tribes pages. Symbols remains implemented but is
   hidden from Entity Search navigation and controls. The visible detail pages also

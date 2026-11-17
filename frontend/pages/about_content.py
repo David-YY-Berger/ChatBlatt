@@ -52,9 +52,19 @@ Entities such as people, places, and animals appear throughout these sources and
 - The database is incomplete. Validation intentionally removes data that fails its checks; this can also remove correct information. The current source coverage is Tanakh and the Babylonian Talmud.
 - The Streamlit interface is still evolving. I focused much of my effort on the backend, and the MCP interface provides another way to access the data.
 
-**Pipeline**
+**Challenges**
 
-1. Query the Sefaria API and package books into carefully labeled passages with keys and metadata.
+- **Languages and spelling variants:** Tanakh and Talmud sources use Hebrew and English names with many spelling variations. Language models help identify candidates; verification scripts look for patterns such as *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan*, and *e/ei*. Candidates can then be compared by their graph connections—for example, whether both spellings are linked to Abraham and Beersheba. Predefined ambiguous entities also help prevent mistaken matches.
+- **Language-model errors:** Deterministic validation catches many errors, but it can also reject useful data.
+
+**Scope**
+
+The database currently covers the Tanakh and the Babylonian Talmud. Expanding it to the Mishnah, Jerusalem Talmud, and Midrash is a future goal.""",
+        ),
+        (
+            "pipeline",
+            "Pipeline",
+            """1. Query the Sefaria API and package books into carefully labeled passages with keys and metadata.
 2. Populate FAISS and BM25 indexes with source texts and source keys in Hebrew and English, enabling fast text-similarity search.
 3. Pre-populate the database with separate records for ambiguous people who share a name. The current input files contain 167 Tanakh entries and 97 Bavli entries.
 4. Iterate over the sources (phase 1): use PydanticAI to extract entities and relationships from each passage according to a precise data schema, and classify the passage.
@@ -70,16 +80,7 @@ Entities such as people, places, and animals appear throughout these sources and
    - `validate_entity_relationships.py` is a read-only graph check for parent-gender mismatches, contradictory family links (including sibling/parent-child and reciprocal parent-child pairs), pairs classified as both father and mother, and reciprocal `studiedFrom` links.
    - `DBPrePopulateAmbiguosEntitys.test_validate_names` checks that pre-populated names are well-formed and appear with the exact spelling in the applicable source corpus.
    - `test_db_health.py` checks source counts, empty source fields, source-key formats, and the cleanliness of English source text.
-   - `check_person_to_tribe_rels.py` is a read-only diagnostic that lists links to Israelite tribes and flags unexpected relationship types.
-
-**Challenges**
-
-- **Languages and spelling variants:** Tanakh and Talmud sources use Hebrew and English names with many spelling variations. Language models help identify candidates; verification scripts look for patterns such as *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan*, and *e/ei*. Candidates can then be compared by their graph connections—for example, whether both spellings are linked to Abraham and Beersheba. Predefined ambiguous entities also help prevent mistaken matches.
-- **Language-model errors:** Deterministic validation catches many errors, but it can also reject useful data.
-
-**Scope**
-
-The database currently covers the Tanakh and the Babylonian Talmud. Expanding it to the Mishnah, Jerusalem Talmud, and Midrash is a future goal.""",
+   - `check_person_to_tribe_rels.py` is a read-only diagnostic that lists links to Israelite tribes and flags unexpected relationship types.""",
         ),
         (
             "about-feyga-menuha",
@@ -134,9 +135,19 @@ EitzHabina@gmail.com""",
 - המאגר אינו שלם. תהליכי האימות מסירים בכוונה נתונים שאינם עומדים בבדיקות, אך לפעמים עלולים להסיר גם מידע נכון. המקורות הקיימים כיום הם התנ״ך והתלמוד הבבלי.
 - ממשק Streamlit עדיין נמצא בפיתוח. התמקדתי רבות בעבודה על צד השרת, וממשק MCP מציע דרך נוספת לגשת לנתונים.
 
-**צינור העיבוד**
+**אתגרים**
 
-1. פנייה ל־API של ספריא ואריזת הספרים בקטעים המסומנים בקפידה, עם מפתחות ומטא־נתונים.
+- **שפות וצורות כתיב:** במקורות תנ״ך ותלמוד יש שמות בעברית ובאנגלית וצורות כתיב רבות. מודלי שפה מסייעים בזיהוי מועמדים; סקריפטים לאימות מחפשים דפוסים כגון *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan* ו־*e/ei*. לאחר מכן אפשר להשוות בין הקשרים של כל מועמד בגרף — למשל, לבדוק אם שתי צורות כתיב מקושרות לאברהם ולבאר שבע. ישויות עמומות שהוגדרו מראש מסייעות גם הן למנוע מיזוגים שגויים.
+- **שגיאות של מודלי שפה:** אימות דטרמיניסטי מזהה שגיאות רבות, אך עלול גם לדחות מידע מועיל.
+
+**היקף**
+
+המאגר כולל כיום את התנ״ך ואת התלמוד הבבלי. הרחבתו למשנה, לתלמוד הירושלמי ולמדרש היא יעד לעתיד.""",
+        ),
+        (
+            "pipeline",
+            "צינור העיבוד",
+            """1. פנייה ל־API של ספריא ואריזת הספרים בקטעים המסומנים בקפידה, עם מפתחות ומטא־נתונים.
 2. אכלוס אינדקסי FAISS ו־BM25 בטקסטים של המקורות ובמפתחות שלהם בעברית ובאנגלית, כדי לאפשר חיפוש דמיון טקסטואלי מהיר.
 3. אכלוס מוקדם של מסד הנתונים ברשומות נפרדות של אנשים עמומים בעלי שם זהה. קובצי הקלט הנוכחיים כוללים 167 דמויות מן התנ״ך ו־97 דמויות מן התלמוד הבבלי.
 4. מעבר ראשון על המקורות: שימוש ב־PydanticAI לחילוץ ישויות וקשרים מכל קטע לפי סכמת נתונים מדויקת, וכן לסיווג הקטע.
@@ -152,16 +163,7 @@ EitzHabina@gmail.com""",
    - `validate_entity_relationships.py` בודק את גרף הקשרים לקריאות שגויות של מגדר בקשרי הורות, קשרי משפחה סותרים (לרבות קשר בין אחים להורה־ילד או קשרי הורה־ילד הדדיים), זוג שסווג גם כאב וגם כאם, וקשרי `studiedFrom` הדדיים. הבדיקה היא לקריאה בלבד.
    - `DBPrePopulateAmbiguosEntitys.test_validate_names` בודק ששמות שהוגדרו מראש תקינים ומופיעים באיות המדויק במאגר המקורות המתאים.
    - `test_db_health.py` בודק את מספר המקורות, שדות מקור ריקים, תבנית המפתחות ואת תקינות הטקסט האנגלי במקורות.
-   - `check_person_to_tribe_rels.py` הוא כלי אבחון לקריאה בלבד, המציג קשרים לשבטי ישראל ומסמן סוגי קשרים לא צפויים.
-
-**אתגרים**
-
-- **שפות וצורות כתיב:** במקורות תנ״ך ותלמוד יש שמות בעברית ובאנגלית וצורות כתיב רבות. מודלי שפה מסייעים בזיהוי מועמדים; סקריפטים לאימות מחפשים דפוסים כגון *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan* ו־*e/ei*. לאחר מכן אפשר להשוות בין הקשרים של כל מועמד בגרף — למשל, לבדוק אם שתי צורות כתיב מקושרות לאברהם ולבאר שבע. ישויות עמומות שהוגדרו מראש מסייעות גם הן למנוע מיזוגים שגויים.
-- **שגיאות של מודלי שפה:** אימות דטרמיניסטי מזהה שגיאות רבות, אך עלול גם לדחות מידע מועיל.
-
-**היקף**
-
-המאגר כולל כיום את התנ״ך ואת התלמוד הבבלי. הרחבתו למשנה, לתלמוד הירושלמי ולמדרש היא יעד לעתיד.""",
+   - `check_person_to_tribe_rels.py` הוא כלי אבחון לקריאה בלבד, המציג קשרים לשבטי ישראל ומסמן סוגי קשרים לא צפויים.""",
         ),
         (
             "about-feyga-menuha",
