@@ -180,6 +180,7 @@ def _render_download_button(ans, lang: str) -> None:
             ),
             file_name=results_pdf_filename(search_url, entity_names),
             mime="application/pdf",
+            on_click="ignore",
             help=get_text("source_search_ui.download_pdf", lang),
         )
 
