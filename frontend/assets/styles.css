@@ -327,6 +327,79 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
     color: var(--text);
 }
 
+.about-toc {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+}
+
+.about-toc h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+}
+
+.about-toc ul {
+    margin: 0;
+    padding-inline-start: 1.35rem;
+}
+
+.about-toc li {
+    margin: 0.35rem 0;
+}
+
+.about-toc a {
+    color: var(--accent-alt);
+    text-decoration: none;
+}
+
+.about-toc a:hover,
+.about-toc a:focus-visible {
+    text-decoration: underline;
+}
+
+.about-opening-quote {
+    margin: 1.5rem 0 2.25rem;
+    padding: 1.2rem 1.5rem;
+    border-inline-start: 4px solid var(--accent-alt);
+    border-radius: 8px;
+    background: var(--panel);
+    font-family: "David", "Noto Serif Hebrew", "Times New Roman", serif;
+    font-size: 1.08rem;
+    font-style: italic;
+    line-height: 1.9;
+}
+
+.about-opening-quote p {
+    margin: 0 0 1rem;
+    font-family: inherit;
+}
+
+.about-opening-quote p[lang="he"],
+.about-opening-quote cite[lang="he"] {
+    text-align: right;
+}
+
+.about-opening-quote p[lang="en"],
+.about-opening-quote cite[lang="en"] {
+    text-align: left;
+}
+
+.about-opening-quote cite {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    font-style: normal;
+}
+
+.about-section-title {
+    margin: 2rem 0 0.75rem;
+    padding-top: 0.5rem;
+    scroll-margin-top: 1rem;
+    color: var(--text);
+}
+
 .home-tool-description {
     display: flex;
     min-height: 4.5rem;
