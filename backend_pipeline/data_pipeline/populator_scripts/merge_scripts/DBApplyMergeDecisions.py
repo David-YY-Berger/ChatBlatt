@@ -31,6 +31,10 @@ from backend_pipeline.data_pipeline.populator_scripts.merge_scripts import merge
 from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.EntityMerger import EntityMerger
 
 
+class ParentCleanupError(RuntimeError):
+    """The merge completed, but a rejected parent relationship could not be removed."""
+
+
 class DBApplyMergeDecisions(DBParentClass):
     __test__ = True
 
@@ -123,7 +127,7 @@ class DBApplyMergeDecisions(DBParentClass):
             label = g["id"].split(":", 1)[1]
             try:
                 status = self._apply_group(merger, g, label)
-            except EOFError:
+            except (EOFError, ParentCleanupError):
                 raise
             except Exception as e:
                 print(f"[ERROR] {g['id']}: {e}")
@@ -167,9 +171,15 @@ class DBApplyMergeDecisions(DBParentClass):
             return "skipped"
         merger.merge_into_target(target, duplicates, label)
         if choices:
-            for rel in self.db_api.get_rels_for_entity(target.key):
-                if rel.term1 == target.key and rel.rel_type in choices and rel.term2 != choices[rel.rel_type]:
-                    merger.delete_rel(rel)
+            try:
+                for rel in self.db_api.get_rels_for_entity(target.key):
+                    if rel.term1 == target.key and rel.rel_type in choices and rel.term2 != choices[rel.rel_type]:
+                        merger.delete_rel(rel)
+            except Exception as exc:
+                raise ParentCleanupError(
+                    f"{group['id']} was merged into {target.key}, but parent cleanup failed; "
+                    "inspect its relationships and source metadata before retrying"
+                ) from exc
         print(f"[MERGED] {plan}")
         return "merged"
 

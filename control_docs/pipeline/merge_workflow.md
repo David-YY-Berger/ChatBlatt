@@ -29,30 +29,30 @@ Module `DBIdentifyPersonMergeCandidates`, class `DBIdentifyPersonMergeCandidates
 |---|---|---|
 | `test_identify_prefix_matches` | `akiva` / `rabbi akiva` / `rav akiva` (prefixes rabbi, rabban, rebbi, rav, abba, reb, r.) - most obviously mergeable | `prefix_matches/person_prefix_matches_NNN.md` |
 | `test_identify_same_name_matches` | persons with identical display name, with all their relationships (God/Hashem-as-parent flagged) | `same_name_matches/person_same_name_matches_NNN.md` |
+| `test_identify_close_spelling_matches` | transliteration variants to review | `close_spelling_matches/person_close_spelling_matches_NNN.md` |
 
 Settings (in `setUp`, or set as attributes before calling it):
-- `max_entities_to_check` - default **50**: only the first 50 persons (alphabetical) are used as starting points.
-  Set `None` to check everyone. Persons with no candidates are never written to a file.
+- `max_entities_to_check` - default `None`: check everyone; set a number to limit starting points.
+  Persons with no candidates are never written to a file.
 - `max_entities_per_file` - default 100 (a group is never split across files).
 
 Each run also writes a **confidence file** next to the review files, in the same family folder:
 `prefix_matches/confidence_person_prefix_matches.md` /
-`same_name_matches/confidence_person_same_name_matches.md`. It rates every group 0-100% (how likely all its entities are the same person),
+`same_name_matches/confidence_person_same_name_matches.md` /
+`close_spelling_matches/confidence_person_close_spelling_matches.md`. It rates every group 0-100% (how likely all its entities are the same person),
 sorted most confident first. Each row carries a machine-readable `<!-- merge-confidence: {"id", "confidence", "keys"} -->`
-comment (read with `merge_candidates.parse_confidence_file`). For prefix groups, tick merge decisions in the
-consolidated prefix confidence file; the per-chunk prefix files are detail-only. Same-name decisions remain in
-their per-chunk files. Heuristic: weakest pair in the group wins;
+comment (read with `merge_candidates.parse_confidence_file`). For all families, tick merge decisions in the
+consolidated confidence file; the per-chunk files are detail-only. Heuristic: weakest pair in the group wins;
 a title-prefix/same-name base score is raised by shared Hebrew name/parents/relations and lowered by conflicting
 gender/time period/isNonJew/isGroup, different parents, or pre-populated entities. Any group containing a member
 with a role other than Tanna or Amora is rated 0%.
 
-Start with the prefix test (50), review/apply, then raise the limit (e.g. 200, then `None`) and re-run.
+For a limited first pass, set the limit to 50, review/apply, then raise it (e.g. 200, then `None`) and re-run.
 
 ## Step 2 - Review the files
 
-Open the `.md` files in the corresponding match-family folder under `MERGE_REVIEW_DIR`. Prefix groups are detailed
-in the chunk files and decided in the consolidated confidence file; same-name groups are both detailed and decided
-in the chunk files. A group looks like:
+Open the `.md` files in the corresponding match-family folder under `MERGE_REVIEW_DIR`. Groups are detailed
+in the chunk files and decided in the consolidated confidence file. A group looks like:
 
 ```
 ## Group 3: "akiva" (3 entities)
@@ -85,9 +85,35 @@ prefix confidence file on the next identify run.
 
 ## Step 3 - Apply decisions
 
-Module `DBApplyMergeDecisions`, class `DBApplyMergeDecisions`, method `test_apply_merge_decisions`. It reads prefix
-decisions only from `prefix_matches/confidence_person_prefix_matches.md`; prefix chunk files are not decision inputs.
-Same-name decisions continue to come from their chunk files.
+Module `DBApplyMergeDecisions`, class `DBApplyMergeDecisions`, method `test_apply_merge_decisions`. It reads
+consolidated confidence decisions for all families. Legacy same-name and close-spelling chunk decisions are used
+only when their group is absent from the corresponding confidence file.
+
+### Same-name or close-spelling only
+
+From the repository root, dry-run just one family:
+
+```
+venv\Scripts\python.exe -m unittest backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.DBApplyMergeDecisions.test_apply_same_name_merge_decisions
+venv\Scripts\python.exe -m unittest backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.DBApplyMergeDecisions.test_apply_close_spelling_merge_decisions
+```
+
+For a real run, back up the database, check the dry-run plan, and run the desired command in an interactive terminal:
+
+```
+venv\Scripts\python.exe -c "import unittest; from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions; test = DBApplyMergeDecisions('test_apply_same_name_merge_decisions'); test.dry_run = False; result = unittest.TextTestRunner().run(unittest.TestSuite([test])); raise SystemExit(not result.wasSuccessful())"
+venv\Scripts\python.exe -c "import unittest; from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions; test = DBApplyMergeDecisions('test_apply_close_spelling_merge_decisions'); test.dry_run = False; result = unittest.TextTestRunner().run(unittest.TestSuite([test])); raise SystemExit(not result.wasSuccessful())"
+```
+
+If different direct fathers or mothers are recorded for a selected group, the dry run reports the conflict.
+During the real run, choose a numbered parent separately for each conflicting type, or choose "Never mind, don't
+merge". Each option displays the parent's time period, roles, gender and own direct parents; the candidates'
+details are shown too. Cancellation skips that group for this run without changing its review decision.
+After a merge, unchosen direct-parent links and their source-metadata relationship references are deleted.
+`descendantOf` and incoming child links are not deleted. A group containing a parent-child link between its
+own members is skipped for manual review. End-of-input stops the run before that group is changed.
+The merge and cleanup are not transactional: if cleanup fails after a merge, inspect that entity's relationships
+and source metadata before retrying; the original group is stale once its members have merged.
 
 ### Prefix-only apply
 
@@ -125,7 +151,8 @@ Output tags: `MERGED`, `DRY RUN`, `STALE` (an entity no longer exists, e.g. alre
 `PROTECTED`, `ERROR`; ends with a `SUMMARY` line. Re-running is safe.
 
 The merged entity keeps the group's name (bare name for prefix groups), gets every name/key as an alias, and
-inherits all relationships and source references (self-loops dropped, duplicates de-duplicated).
+inherits relationships and source references except rejected direct-parent links (self-loops dropped, duplicates
+de-duplicated).
 
 ## After applying
 

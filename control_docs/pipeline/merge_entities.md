@@ -104,6 +104,19 @@ pre-populated person are still skipped unless explicitly ticked). Per group all 
 label as final name; close-spelling groups use the alphabetically first existing display name instead of their
 signature. Safe to re-run.
 
+Use `test_apply_same_name_merge_decisions` or `test_apply_close_spelling_merge_decisions` to apply
+only that family's decisions. See [merge_workflow.md](merge_workflow.md) for commands.
+When a selected group has multiple direct fathers or multiple direct mothers, a real apply prompts
+for one of each conflicting type, or cancellation. The options show each parent entity's period,
+roles, gender and own direct parents. Once merged, the unchosen direct-parent relationships and their
+source-metadata relationship references are removed. Descendant and incoming child relationships are
+not removed. A dry run reports conflicts but does not prompt or write. A group in which one member is
+another member's parent is skipped for manual review.
+
+These operations are not transactional. If parent cleanup fails after a merge, the run stops with an
+error: inspect the merged entity's relationships and source metadata before retrying, because its
+original review group is now stale. Take a database backup before a real apply.
+
 To select undecided groups above a confidence percentage for a particular family, uncomment the example
 `self.confidence_thresholds = {mc.KIND_CLOSE_SPELLING: 25}` in `DBApplyMergeDecisions.setUp`.
 This selects close-spelling groups with confidence **strictly greater than 25%** from the confidence file.

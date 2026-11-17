@@ -10,7 +10,7 @@ from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 from backend.models_db.EntityObjects.EPerson import EPerson
-from backend.models_db.Enums import RelType, RoleType
+from backend.models_db.Enums import RelType, RoleType, TimePeriod
 from backend.models_db.Rel import Rel
 from backend_pipeline.data_pipeline.populator_scripts.merge_scripts import merge_candidates as mc
 
@@ -377,6 +377,8 @@ class MergeCandidatesTest(unittest.TestCase):
         self.assertIn("period:", output.getvalue())
         self.assertIn("roles:", output.getvalue())
         self.assertIn("gender:", output.getvalue())
+        self.assertIn("father two (f2); period: Tanach; roles: King; gender: male; parents: childOfFather: grandfather (gf)",
+                      output.getvalue())
         remaining = {(r.rel_type, r.term1, r.term2) for r in db.rels.values()}
         self.assertIn((RelType.childOfFather, "2", "f2"), remaining)
         self.assertIn((RelType.childOfMother, "2", "m1"), remaining)
@@ -405,6 +407,27 @@ class MergeCandidatesTest(unittest.TestCase):
                 if dry_run:
                     self.assertIn("Parent choice required", output.getvalue())
 
+    def test_parent_prompt_eof_and_cleanup_failure_stop_run(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import ParentCleanupError
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.EntityMerger import EntityMerger
+
+        apply, db, group = self._parent_conflict_fixture()
+        apply.undecided_policy = mc.UNDECIDED_SKIP
+        apply.confidence_thresholds = {}
+        with patch("builtins.input", side_effect=EOFError), redirect_stdout(StringIO()):
+            with self.assertRaises(EOFError):
+                apply._apply_groups([group], "test")
+        self.assertIn("1", db.entities)
+        self.assertIn("2", db.entities)
+
+        merger = EntityMerger(db)
+        with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger",
+                   return_value=merger), patch.object(merger, "delete_rel", side_effect=RuntimeError("db failure")), \
+                patch("builtins.input", side_effect=["2", "1"]), redirect_stdout(StringIO()):
+            with self.assertRaisesRegex(ParentCleanupError, "was merged.*parent cleanup failed"):
+                apply._apply_groups([group], "test")
+        self.assertNotIn("1", db.entities)
+
     @staticmethod
     def _parent_conflict_fixture():
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
@@ -416,6 +439,9 @@ class MergeCandidatesTest(unittest.TestCase):
                     ("f2", "father two"), ("m1", "mother one"), ("m2", "mother two"),
                     ("gf", "grandfather"),
                 ]}
+                self.entities["f2"].timePeriod = TimePeriod.Tanach
+                self.entities["f2"].roles = [RoleType.King]
+                self.entities["f2"].isWoman = False
                 specs = [
                     ("father1", RelType.childOfFather, "1", "f1"),
                     ("father2", RelType.childOfFather, "2", "f2"),
