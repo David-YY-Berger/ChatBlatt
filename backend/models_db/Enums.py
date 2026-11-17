@@ -191,6 +191,16 @@ class RelType(Enum):
     AliasOf = "AliasOf"
 
 
+# Direct links are used to expand the family tree; descendantOf also counts
+# as family for operations that need to include all stored ancestry links.
+DIRECT_FAMILY_REL_TYPES = (
+    RelType.childOfFather,
+    RelType.childOfMother,
+    RelType.spouseOf,
+)
+FAMILY_REL_TYPES = DIRECT_FAMILY_REL_TYPES + (RelType.descendantOf,)
+
+
 class BookCategoryName(Enum):
     # Tanach
     Torah = "Torah"

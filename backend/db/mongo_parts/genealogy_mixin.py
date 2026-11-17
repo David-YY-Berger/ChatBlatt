@@ -5,14 +5,10 @@ from typing import Any, Dict, List
 from backend.db.Collections import CollectionObjs
 from backend.db.DBConstants import DBFields, DBOperators
 from backend.models_db.EntityObjects.Entity import Entity
+from backend.models_db.Enums import DIRECT_FAMILY_REL_TYPES
 from backend.models_db.Rel import Rel
 
-# The three rel types that define direct family connections in the DB
-_FAMILY_REL_TYPE_VALUES = [
-    "childOfFather",
-    "childOfMother",
-    "spouseOf",
-]
+_FAMILY_REL_TYPE_VALUES = [rel_type.value for rel_type in DIRECT_FAMILY_REL_TYPES]
 
 
 class GenealogyMongoMixin:

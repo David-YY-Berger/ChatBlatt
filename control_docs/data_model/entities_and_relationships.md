@@ -79,6 +79,22 @@ of its own beyond the convention table below.
 | `placeToNation` | place → `ENation` |
 | `prophesiedAbout` | person (prophet) → anything |
 
+`DIRECT_FAMILY_REL_TYPES` and `FAMILY_REL_TYPES` in `Enums.py` define the
+direct family links and the full set of family links respectively. The full set
+also includes `descendantOf`; the family tree uses only the direct set.
+
+To remove all stored family links to or from one entity, run from the project root:
+
+```shell
+python -m backend_pipeline.data_pipeline.one_time_scripts.remove_entity_family_relationships ENTITY_KEY
+python -m backend_pipeline.data_pipeline.one_time_scripts.remove_entity_family_relationships ENTITY_KEY --apply
+```
+
+The first command previews; the second writes to the real database, removing
+the relationships and their `SourceMetadata.rel_keys` references, not the
+entity or its other relationships. Stop graph population and back up the
+Graphs database first. Future population can recreate the removed links.
+
 **Same-name rels (`term1 == term2`).** Allowed only when the rel type's two sides are
 *different* entity types and the name exists in both (Egypt Place → Egypt Nation,
 Reuben Person → Reuben Tribe); anything else is dropped as a true self-loop. Enforced in
