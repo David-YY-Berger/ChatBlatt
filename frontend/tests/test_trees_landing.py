@@ -25,9 +25,9 @@ render("en")
             self.assertEqual(len(app.get("imgs")), 4)
             self.assertEqual(
                 [button.label for button in app.button],
-                ["Family Tree", "Studied From", "Places Visited", "Descendants"],
+                ["Family Tree", "Places Visited", "Descendants", "Studied From"],
             )
-            app.button[2].click().run()
+            app.button[1].click().run()
             go.assert_called_once_with(PAGE_PLACES_VISITED)
             self.assertFalse(app.exception)
 
@@ -40,7 +40,7 @@ render("he")
         self.assertFalse(app.exception)
         self.assertEqual(
             [button.label for button in app.button],
-            ["עץ משפחה", "לימוד והוראה", "מקומות שביקרו בהם", "צאצאים"],
+            ["עץ משפחה", "מקומות שביקרו בהם", "צאצאים", "שושלת המסורת"],
         )
         description = "\n".join(markdown.value for markdown in app.markdown)
         self.assertIn("הורים", description)

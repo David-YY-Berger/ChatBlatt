@@ -6,7 +6,7 @@ Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`,
 
 The Home page has one Trees card with a formatted summary of all four views.
 The Trees landing page (`/trees`) shows an illustrated, descriptive choice card
-for Family Tree, Studied From, Places Visited and Descendants. Choosing a card
+for Family Tree, Places Visited, Descendants and Studied From. Choosing a card
 opens its existing detail page. The desktop Trees dropdown and mobile Menu both
 include the landing page and all four views (see [urls.md](urls.md)).
 `app.py` passes the page key to `pages/trees.py`, which dispatches to the

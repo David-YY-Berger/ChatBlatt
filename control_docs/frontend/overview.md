@@ -31,8 +31,8 @@ and data flows, use the feature guides below.
   native navigation. Page groups, destinations and query parameters are in
   [URLs, navigation and shareable searches](urls.md).
 - `frontend/pages/home.py` presents clickable cards for Number Search, Source
-  Search, Entity Search and Trees. The Trees card summarizes Family Tree,
-  Studied From, Places Visited and Descendants and opens the Trees landing page.
+  Search, Entity Search and Trees.   The Trees card summarizes Family Tree, Places Visited, Descendants and Studied
+  From and opens the Trees landing page.
   Each keyed card contains an invisible stretched button (`styles.css`) that
   calls `navigation.go(page_key)`. The About page provides a project overview,
   describes the data pipeline and its limitations, and shares the dedication
@@ -41,7 +41,7 @@ and data flows, use the feature guides below.
   People, Places, Nations and Tribes pages. Symbols remains implemented but is
   hidden from Entity Search navigation and controls. The visible detail pages also
   have a type-picker button row. Trees has a landing page with illustrated,
-  descriptive cards for Family Tree, Studied From, Places Visited and Descendants,
+  descriptive cards for Family Tree, Places Visited, Descendants and Studied From,
   each linking to its existing detail URL.
 - `frontend/components/` contains the shared header, layout, filters, person
   selector, graph rendering and source popup. `frontend/assets/styles.css`

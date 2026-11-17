@@ -20,9 +20,9 @@ from system_common.Constants import (
 ICON_DIR = Path(__file__).resolve().parents[1] / "icons" / "optimized"
 TREE_OPTIONS = (
     (PAGE_FAMILY_TREE, "family_tree.jpg"),
-    (PAGE_STUDIED_FROM, "studied_from.jpg"),
     (PAGE_PLACES_VISITED, "places_visited.jpg"),
     (PAGE_DESCENDANTS, "descendants.jpg"),
+    (PAGE_STUDIED_FROM, "studied_from.jpg"),
 )
 
 

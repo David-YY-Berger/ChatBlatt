@@ -48,10 +48,25 @@ class MobileMenuTests(unittest.TestCase):
         tree_group = desktop_groups["Trees"]
         mobile_tree_group = mobile_groups["Trees"]
         expected_paths = [
-            app.URL_PATHS[key] for key in (app.PAGE_TREES, *app.TREE_PAGES)
+            app.URL_PATHS[key] for key in (
+                app.PAGE_TREES,
+                app.PAGE_FAMILY_TREE,
+                app.PAGE_PLACES_VISITED,
+                app.PAGE_DESCENDANTS,
+                app.PAGE_STUDIED_FROM,
+            )
         ]
         self.assertEqual([page.url_path for page in tree_group], expected_paths)
         self.assertEqual([page.url_path for page in mobile_tree_group], expected_paths)
+        expected_titles = [
+            "Trees",
+            "Family Tree",
+            "Places Visited",
+            "Descendants",
+            "Studied From",
+        ]
+        self.assertEqual([page.title for page in tree_group], expected_titles)
+        self.assertEqual([page.title for page in mobile_tree_group], expected_titles)
 
     def test_selection_changes_popover_key_and_switches_page(self):
         streamlit = MagicMock()

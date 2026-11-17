@@ -34,7 +34,7 @@ entity_tabs:
 
 tree_tabs:
   family_tree: "עץ משפחה"
-  studied_from: "לימוד והוראה"
+  studied_from: "שושלת המסורת"
   places_visited: "מקומות שביקרו בהם"
   descendants: "צאצאים"
   label: "בחר תצוגת עץ"
@@ -236,7 +236,7 @@ page_titles:
   symbols: "סמלים"
   trees: "עצים"
   family_tree: "עץ משפחה"
-  studied_from: "עץ מקורות לימוד"
+  studied_from: "שושלת המסורת"
   places_visited: "מקומות שביקרו בהם"
   descendants: "צאצאים"
 
