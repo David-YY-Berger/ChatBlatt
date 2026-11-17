@@ -23,6 +23,13 @@ paths, including Streamlit's WebSocket, go to Streamlit. The existing public
 hostname remains unchanged. This adds a second Python process and may require
 more memory, especially for similarity indexes and the embedding model.
 
+Set the Railway service variable `MCP_ENABLED=false` and deploy to run the
+website without starting MCP. In this mode `/mcp` returns HTTP 503, and the MCP
+setup page reports that the service is unavailable. Set `MCP_ENABLED=true` or
+remove the variable to enable MCP again; it is enabled by default. Values other
+than `true` and `false` fail startup. Disabling MCP does not disable the site's
+own source search or remove its database and memory requirements.
+
 Before deploying, create a MongoDB user with **read only** access to the
 `Sources`, `Graphs`, and `Faiss` databases, including the GridFS collections.
 Set the Railway variables `DB_READ_ONLY_USERNAME` and `DB_READ_ONLY_PASSWORD`

@@ -48,6 +48,7 @@ trees_ui:
     descendants: "Trace recorded parent-child paths to descendants or ancestors."
 
 mcp_ui:
+  disabled: "The MCP service is currently unavailable. The rest of the website remains available."
   introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Jewish sources and research tools."
   capabilities: "The connection is read-only. You can ask for sources, people, places, numbers, and family relationships; full source text may be available in English and Hebrew."
   setup_title: "Connect your AI chat"
