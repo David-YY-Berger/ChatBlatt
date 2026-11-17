@@ -81,6 +81,12 @@ name) are starting points - found groups are still complete. `max_entities_per_f
 the family's `confidence_person_*_matches.md` file, not the per-chunk detail files. Neither = undecided,
 both = conflict (conflict is never merged).
 Any candidate group with a member assigned a role other than Tanna or Amora receives 0% confidence.
+Otherwise, confidence uses the lowest pairwise score in the group. For close-spelling matches the
+score starts at 40% and adjusts for known differences in gender, non-Jew/group flags and time period;
+Hebrew names and book references; and shared or different parents and shared related entities.
+Missing information is not treated as a mismatch. The confidence file lists the weakest pair and
+the adjustments; shared related entities are compared by key, not relationship type or direction.
+Source metadata is not compared.
 
 **Re-running identify is safe for decisions.** It reads the existing family files first and carries every tick
 into the regenerated files when the group id AND the exact set of entity keys still match; previously ticked

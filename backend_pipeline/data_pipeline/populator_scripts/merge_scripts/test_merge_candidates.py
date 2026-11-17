@@ -116,6 +116,53 @@ class MergeCandidatesTest(unittest.TestCase):
         groups[0].entities.append(person("4", "hana"))
         self.assertEqual(mc.carry_over_decisions(groups, previous), {})
 
+    def test_close_spelling_identify_scores_relationships_and_metadata(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBIdentifyPersonMergeCandidates import DBIdentifyPersonMergeCandidates
+
+        cases = [
+            ("shared parent and Hebrew name", "father", True, "חנה", 58,
+             ("same Hebrew name", "shared parent", "shared related entity")),
+            ("different parent and metadata", "other", False, "חנן", 0,
+             ("gender differs", "Hebrew names differ", "different parents")),
+        ]
+        for label, second_parent, second_gender, second_hebrew, expected, reasons in cases:
+            with self.subTest(label=label), TemporaryDirectory() as output_dir:
+                people = [person("1", "Hana"), person("2", "Hannah")]
+                people[0].isWoman, people[1].isWoman = True, second_gender
+                people[0].display_heb_name, people[1].display_heb_name = "חנה", second_hebrew
+                rels = [Rel.create(RelType.childOfFather, "1", "father"),
+                        Rel.create(RelType.childOfFather, "2", second_parent)]
+                db = Mock()
+                db.get_entities_by_type.return_value = people
+                db.get_entities_by_keys.side_effect = lambda keys: [p for p in people if p.key in keys]
+                db.get_rels_for_entities.return_value = rels
+                identify = DBIdentifyPersonMergeCandidates("test_identify_close_spelling_matches")
+                identify.db_api = db
+                identify.output_dir = output_dir
+                identify.max_entities_to_check = None
+                identify.max_entities_per_file = 100
+                identify.test_identify_close_spelling_matches()
+
+                confidence = (Path(output_dir) / "close_spelling_matches" /
+                              "confidence_person_close_spelling_matches.md").read_text(encoding="utf-8")
+                self.assertEqual(mc.parse_confidence_file(confidence)[0]["confidence"], expected)
+                for reason in reasons:
+                    self.assertIn(reason, confidence)
+
+    def test_close_spelling_confidence_uses_weakest_pair_with_missing_data(self):
+        people = [person("1", "Hana"), person("2", "Hanna"), person("3", "Hannah")]
+        people[0].isWoman = True
+        people[1].isWoman = False
+        groups, _ = mc.find_groups(people, mc.KIND_CLOSE_SPELLING, None)
+
+        confidence, reasons = mc.rate_group(groups[0], {})
+        self.assertEqual(confidence, 0)
+        self.assertIn("gender differs", " ".join(reasons))
+        confidence, reasons = mc.rate_group(mc.Group(groups[0].id, groups[0].kind, groups[0].label,
+                                                     [people[0], people[2]]), {})
+        self.assertEqual(confidence, 40)
+        self.assertNotIn("gender differs", " ".join(reasons))
+
     def test_confidence_decision_flow_for_same_name_and_close_spelling(self):
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBIdentifyPersonMergeCandidates import DBIdentifyPersonMergeCandidates
