@@ -16,7 +16,7 @@ class AboutPageTests(unittest.TestCase):
             render(lang)
         return [call.args[0] for call in markdown.call_args_list]
 
-    def test_english_page_has_section_links_and_does_not_render_opening_quote(self):
+    def test_english_page_has_section_links_and_keeps_opening_quote_in_hebrew(self):
         rendered = self._rendered_markdown("en")
         html = "\n".join(rendered)
 
@@ -28,9 +28,11 @@ class AboutPageTests(unittest.TestCase):
         self.assertIn("Since the Bar-Ilan Responsa Project began in 1967", html)
         self.assertIn("EitzHabina@gmail.com", html)
         self.assertIn("https://www.linkedin.com/in/david-yy-berger/", html)
+        self.assertIn(">in</span>", html)
         self.assertIn("### Compared with general-purpose AI assistants", html)
+        self.assertEqual(html.count("**Pipeline**"), 1)
         self.assertNotIn("May the Creator be praised", html)
-        self.assertNotIn("ספר בן איש חי - הקדמה", html)
+        self.assertIn("ספר בן איש חי - הקדמה", html)
 
     def test_hebrew_page_renders_hebrew_quote_and_translated_pipeline(self):
         rendered = self._rendered_markdown("he")
@@ -43,6 +45,7 @@ class AboutPageTests(unittest.TestCase):
         self.assertIn('href="#about-the-author"', html)
         self.assertIn("ספר בן איש חי - הקדמה", html)
         self.assertIn("צינור העיבוד", html)
+        self.assertEqual(html.count("**צינור העיבוד**"), 1)
         self.assertIn("תפקיד שאינו תנא או אמורא מקבלת ציון 0%", html)
         self.assertIn("https://www.linkedin.com/in/david-yy-berger/", html)
         self.assertNotIn("May the Creator be praised", html)

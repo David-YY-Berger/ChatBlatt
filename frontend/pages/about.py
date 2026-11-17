@@ -6,7 +6,12 @@ from html import escape
 
 import streamlit as st
 
-from pages.about_content import LINKEDIN_PROFILE_URL, OPENING_QUOTE, SECTIONS, TABLE_OF_CONTENTS_TITLE
+from pages.about_content import (
+    LINKEDIN_PROFILE_URL,
+    OPENING_QUOTE,
+    SECTIONS,
+    TABLE_OF_CONTENTS_TITLE,
+)
 from translations1 import get_text, is_rtl
 
 
@@ -30,8 +35,7 @@ def render(lang: str) -> None:
 
     st.markdown(f'<div class="page-title">{escape(title)}</div>', unsafe_allow_html=True)
     _render_table_of_contents(sections, TABLE_OF_CONTENTS_TITLE[language])
-    if rtl:
-        st.markdown(OPENING_QUOTE, unsafe_allow_html=True)
+    st.markdown(OPENING_QUOTE, unsafe_allow_html=True)
 
     for section_id, section_title, content in sections:
         st.markdown(

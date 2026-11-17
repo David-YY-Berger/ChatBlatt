@@ -51,6 +51,10 @@ class HebrewLocalizationTests(unittest.TestCase):
         self.assertIn("אין תוכן", result)
         self.assertIn('title="העתקה"', result)
 
+    def test_hebrew_source_title_orders_book_category_and_location(self):
+        meta = SourceMetadata(key="BT_Sotah_0_17b:3-18a:2")
+        self.assertEqual(meta.to_heb_str(), "סוטה (נשים) 17b:3-18a:2")
+
     def test_number_contexts_and_labels_switch_without_another_search(self):
         occ = NumberOccurrenceDTO(
             en_unit="year", en_context="years of life", source_str="Genesis",
