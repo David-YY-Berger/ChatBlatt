@@ -22,7 +22,7 @@ For close-spelling groups the final name is an existing display name, not the no
 
 import glob
 import os
-from typing import Dict
+from typing import Dict, List
 
 from backend.common import Paths
 from backend_pipeline.data_pipeline.DBScriptParentClass import DBParentClass
@@ -42,6 +42,23 @@ class DBApplyMergeDecisions(DBParentClass):
         self.confidence_thresholds: Dict[str, float] = getattr(self, "confidence_thresholds", {})
         # self.confidence_thresholds = {mc.KIND_CLOSE_SPELLING: 25}
         self.review_dir: str = getattr(self, "review_dir", Paths.MERGE_REVIEW_DIR)
+
+    def test_apply_prefix_merge_decisions(self) -> None:
+        confidence_path = os.path.join(
+            self.review_dir, "prefix_matches", "confidence_person_prefix_matches.md"
+        )
+        with open(confidence_path, "r", encoding="utf-8") as f:
+            parsed = mc.parse_confidence_file(f.read())
+
+        non_prefix_groups = [
+            group["id"] for group in parsed
+            if not group["id"].startswith(f"{mc.KIND_PREFIX}:")
+        ]
+        if non_prefix_groups:
+            raise ValueError(
+                f"Prefix confidence file contains non-prefix group(s): {non_prefix_groups}"
+            )
+        self._apply_groups(parsed, confidence_path)
 
     def test_apply_merge_decisions(self) -> None:
         parsed = []
@@ -68,13 +85,15 @@ class DBApplyMergeDecisions(DBParentClass):
                     if not g["id"].startswith(f"{mc.KIND_PREFIX}:")
                     and g["id"] not in confidence_group_ids
                 )
-        if not parsed:
-            print(f"No review files / groups found in {self.review_dir}.")
-            return
+        self._apply_groups(parsed, f"review files in {self.review_dir}")
 
+    def _apply_groups(self, parsed: List[dict], source: str) -> None:
+        if not parsed:
+            print(f"No groups found in {source}.")
+            return
         to_merge = mc.select_groups_to_merge(parsed, self.undecided_policy, self.confidence_thresholds)
         tallies: Dict[str, int] = {"merged": 0, "stale": 0, "protected": 0, "dry_run": 0, "error": 0}
-        print(f"{len(parsed)} group(s) in review files; {len(to_merge)} selected "
+        print(f"{len(parsed)} group(s) from {source}; {len(to_merge)} selected "
               f"(undecided_policy={self.undecided_policy}, "
               f"confidence_thresholds={self.confidence_thresholds}, dry_run={self.dry_run}).")
 

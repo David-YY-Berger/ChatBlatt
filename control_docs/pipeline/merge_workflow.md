@@ -89,6 +89,24 @@ Module `DBApplyMergeDecisions`, class `DBApplyMergeDecisions`, method `test_appl
 decisions only from `prefix_matches/confidence_person_prefix_matches.md`; prefix chunk files are not decision inputs.
 Same-name decisions continue to come from their chunk files.
 
+### Prefix-only apply
+
+To apply **only prefix decisions**, run `test_apply_prefix_merge_decisions` instead. This method opens only
+`prefix_matches/confidence_person_prefix_matches.md` and rejects any non-prefix group IDs it finds there. It does not
+read same-name or close-spelling decisions. From the repository root, dry-run it with:
+
+```
+venv\Scripts\python.exe -m unittest backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.DBApplyMergeDecisions.test_apply_prefix_merge_decisions
+```
+
+For a real apply, first back up the database and verify the dry-run plan, then run:
+
+```
+venv\Scripts\python.exe -c "import unittest; from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions; test = DBApplyMergeDecisions('test_apply_prefix_merge_decisions'); test.dry_run = False; result = unittest.TextTestRunner().run(test); raise SystemExit(not result.wasSuccessful())"
+```
+
+The existing `test_apply_merge_decisions` remains the all-families entry point.
+
 1. **Dry run (default, `dry_run = True`)**: prints `[DRY RUN] <group>: merge [dup keys] into <target> as '<name>'`
    for every selected group. Nothing is written. Check the plan.
 2. **Real run**: set `dry_run = False` (in `setUp`, or on the instance before `setUp()`) and run again.

@@ -116,6 +116,77 @@ class MergeCandidatesTest(unittest.TestCase):
         groups[0].entities.append(person("4", "hana"))
         self.assertEqual(mc.carry_over_decisions(groups, previous), {})
 
+    def test_prefix_apply_reads_only_prefix_confidence_file(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
+
+        families = [
+            (mc.KIND_PREFIX, "prefix_matches", "person_prefix_matches",
+             [person("prefix-1", "Akiva"), person("prefix-2", "Rabbi Akiva")]),
+            (mc.KIND_SAME_NAME, "same_name_matches", "person_same_name_matches",
+             [person("same-1", "Joash"), person("same-2", "joash")]),
+            (mc.KIND_CLOSE_SPELLING, "close_spelling_matches", "person_close_spelling_matches",
+             [person("close-1", "yishai"), person("close-2", "yishay")]),
+        ]
+        all_people = []
+        with TemporaryDirectory() as review_dir:
+            for kind, folder, file_prefix, people in families:
+                groups, _ = mc.find_groups(people, kind, None)
+                self.assertEqual(len(groups), 1)
+                rated = mc.rate_groups(groups, {})
+                decisions = {group["id"]: "merge" for group in rated}
+                confidence_path = Path(review_dir) / folder / f"confidence_{file_prefix}.md"
+                confidence_path.parent.mkdir(parents=True)
+                confidence_path.write_text(
+                    mc.render_confidence_file(kind, rated, decisions, include_decisions=True),
+                    encoding="utf-8",
+                )
+                all_people.extend(people)
+
+            db = Mock()
+            db.get_entities_by_keys.side_effect = lambda keys: [
+                entity for entity in all_people if entity.key in keys
+            ]
+            apply = DBApplyMergeDecisions("test_apply_prefix_merge_decisions")
+            apply.db_api = db
+            apply.review_dir = review_dir
+            apply.undecided_policy = mc.UNDECIDED_SKIP
+            apply.confidence_thresholds = {}
+            apply.dry_run = False
+
+            with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger") as merger_class:
+                merger = merger_class.return_value
+                merger.choose_target.return_value = families[0][3][0]
+                apply.test_apply_prefix_merge_decisions()
+
+            db.get_entities_by_keys.assert_called_once()
+            self.assertEqual(set(db.get_entities_by_keys.call_args.args[0]), {"prefix-1", "prefix-2"})
+            merger.merge_into_target.assert_called_once()
+
+    def test_prefix_apply_rejects_non_prefix_group_ids(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
+
+        group = {
+            "id": "same_name:joash",
+            "confidence": 100,
+            "label": "joash",
+            "keys": ["1", "2"],
+            "reasons": [],
+        }
+        with TemporaryDirectory() as review_dir:
+            confidence_path = Path(review_dir) / "prefix_matches" / "confidence_person_prefix_matches.md"
+            confidence_path.parent.mkdir(parents=True)
+            confidence_path.write_text(
+                mc.render_confidence_file(
+                    "test", [group], {"same_name:joash": "merge"}, include_decisions=True
+                ),
+                encoding="utf-8",
+            )
+            apply = DBApplyMergeDecisions("test_apply_prefix_merge_decisions")
+            apply.review_dir = review_dir
+
+            with self.assertRaisesRegex(ValueError, "non-prefix group"):
+                apply.test_apply_prefix_merge_decisions()
+
     def test_close_spelling_identify_scores_relationships_and_metadata(self):
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBIdentifyPersonMergeCandidates import DBIdentifyPersonMergeCandidates
 
