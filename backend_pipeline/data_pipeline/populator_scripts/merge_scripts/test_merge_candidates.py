@@ -2,8 +2,11 @@
 """DB-free unit tests for merge_candidates (finding, rendering, parsing)."""
 
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 from backend.models_db.EntityObjects.EPerson import EPerson
@@ -143,6 +146,7 @@ class MergeCandidatesTest(unittest.TestCase):
                 all_people.extend(people)
 
             db = Mock()
+            db.get_rels_for_entities.return_value = []
             db.get_entities_by_keys.side_effect = lambda keys: [
                 entity for entity in all_people if entity.key in keys
             ]
@@ -208,6 +212,7 @@ class MergeCandidatesTest(unittest.TestCase):
                 encoding="utf-8",
             )
             db = Mock()
+            db.get_rels_for_entities.return_value = []
             db.get_entities_by_keys.side_effect = lambda keys: [
                 entity for entity in people if entity.key in keys
             ]
@@ -333,6 +338,139 @@ class MergeCandidatesTest(unittest.TestCase):
                     apply.test_apply_merge_decisions()
                     merger.choose_target.assert_called_once_with(people, final_name)
                     merger.merge_into_target.assert_called_once_with(people[1], [people[0]], final_name)
+
+    def test_family_only_apply_uses_only_selected_decisions(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
+
+        families = [
+            (mc.KIND_SAME_NAME, "test_apply_same_name_merge_decisions", ["Joash", "joash"]),
+            (mc.KIND_CLOSE_SPELLING, "test_apply_close_spelling_merge_decisions", ["Hana", "Hannah"]),
+        ]
+        with TemporaryDirectory() as review_dir:
+            for kind, _, names in families:
+                groups, _ = mc.find_groups([person(kind + str(i), name) for i, name in enumerate(names)],
+                                           kind, None)
+                folder = Path(review_dir) / f"{kind}_matches"
+                folder.mkdir()
+                path = folder / f"confidence_person_{kind}_matches.md"
+                path.write_text(mc.render_confidence_file(kind, mc.rate_groups(groups, {}),
+                                {groups[0].id: "merge"}, include_decisions=True), encoding="utf-8")
+            for kind, method, _ in families:
+                apply = DBApplyMergeDecisions(method)
+                apply.review_dir = review_dir
+                with patch.object(apply, "_apply_groups") as apply_groups:
+                    getattr(apply, method)()
+                parsed = apply_groups.call_args.args[0]
+                self.assertEqual(len(parsed), 1)
+                self.assertTrue(parsed[0]["id"].startswith(kind + ":"))
+                self.assertEqual(parsed[0]["decision"], "merge")
+
+    def test_parent_conflicts_are_chosen_and_rejected_rels_and_sources_removed(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.EntityMerger import EntityMerger
+
+        apply, db, group = self._parent_conflict_fixture()
+        with patch("builtins.input", side_effect=["bad", "2", "1"]), redirect_stdout(StringIO()) as output:
+            status = apply._apply_group(EntityMerger(db), group, "joash")
+        self.assertEqual(status, "merged")
+        self.assertIn("Enter a number from 1 to 3", output.getvalue())
+        self.assertIn("grandfather", output.getvalue())
+        self.assertIn("period:", output.getvalue())
+        self.assertIn("roles:", output.getvalue())
+        self.assertIn("gender:", output.getvalue())
+        remaining = {(r.rel_type, r.term1, r.term2) for r in db.rels.values()}
+        self.assertIn((RelType.childOfFather, "2", "f2"), remaining)
+        self.assertIn((RelType.childOfMother, "2", "m1"), remaining)
+        self.assertNotIn((RelType.childOfFather, "2", "f1"), remaining)
+        self.assertNotIn((RelType.childOfMother, "2", "m2"), remaining)
+        self.assertIn((RelType.descendantOf, "2", "f1"), remaining)
+        self.assertIn((RelType.childOfFather, "other-child", "2"), remaining)
+        self.assertEqual(db.metadata["father1"].rel_keys, set())
+        self.assertEqual(db.metadata["mother2"].rel_keys, set())
+        self.assertTrue(db.metadata["father2"].rel_keys)
+        self.assertNotIn("1", db.entities)
+
+    def test_parent_conflict_cancel_or_dry_run_never_mutates(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.EntityMerger import EntityMerger
+
+        for dry_run, answers, expected in [(False, ["1", "3"], "skipped"), (True, [], "dry_run")]:
+            with self.subTest(dry_run=dry_run):
+                apply, db, group = self._parent_conflict_fixture()
+                apply.dry_run = dry_run
+                original_rels = set(db.rels)
+                with patch("builtins.input", side_effect=answers), redirect_stdout(StringIO()) as output:
+                    status = apply._apply_group(EntityMerger(db), group, "joash")
+                self.assertEqual(status, expected)
+                self.assertEqual(set(db.rels), original_rels)
+                self.assertEqual(set(db.entities), {"1", "2", "f1", "f2", "m1", "m2", "gf"})
+                if dry_run:
+                    self.assertIn("Parent choice required", output.getvalue())
+
+    @staticmethod
+    def _parent_conflict_fixture():
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
+
+        class FakeDB:
+            def __init__(self):
+                self.entities = {key: person(key, name) for key, name in [
+                    ("1", "joash"), ("2", "joash"), ("f1", "father one"),
+                    ("f2", "father two"), ("m1", "mother one"), ("m2", "mother two"),
+                    ("gf", "grandfather"),
+                ]}
+                specs = [
+                    ("father1", RelType.childOfFather, "1", "f1"),
+                    ("father2", RelType.childOfFather, "2", "f2"),
+                    ("mother1", RelType.childOfMother, "1", "m1"),
+                    ("mother2", RelType.childOfMother, "2", "m2"),
+                    ("ancestor", RelType.descendantOf, "2", "f1"),
+                    ("child", RelType.childOfFather, "other-child", "2"),
+                    ("grandfather", RelType.childOfFather, "f2", "gf"),
+                ]
+                self.rels = {key: Rel(key=key, rel_type=kind, term1=a, term2=b)
+                             for key, kind, a, b in specs}
+                self.metadata = {key: SimpleNamespace(rel_keys={key}, entity_keys=set()) for key, *_ in specs}
+                self.sequence = 0
+
+            def get_entities_by_keys(self, keys):
+                return [self.entities[key] for key in keys if key in self.entities]
+
+            def get_rels_for_entities(self, keys):
+                return [r for r in self.rels.values() if r.term1 in keys or r.term2 in keys]
+
+            def get_rels_for_entity(self, key):
+                return self.get_rels_for_entities([key])
+
+            def try_insert_rel(self, rel):
+                for existing in self.rels.values():
+                    if (existing.rel_type, existing.term1, existing.term2) == (rel.rel_type, rel.term1, rel.term2):
+                        return existing.key
+                self.sequence += 1
+                rel.key = f"new-{self.sequence}"
+                self.rels[rel.key] = rel
+                return rel.key
+
+            def get_source_metadata_by_rel_key(self, key):
+                return [m for m in self.metadata.values() if key in m.rel_keys]
+
+            def get_source_metadata_by_entity_key(self, key):
+                return []
+
+            def update_source_metadata(self, metadata):
+                pass
+
+            def update_entity(self, entity):
+                self.entities[entity.key] = entity
+
+            def delete_rel_by_key(self, key):
+                del self.rels[key]
+
+            def delete_entity_by_key(self, key):
+                del self.entities[key]
+
+        db = FakeDB()
+        apply = DBApplyMergeDecisions("test_apply_merge_decisions")
+        apply.db_api = db
+        apply.dry_run = False
+        return apply, db, {"id": "same_name:joash", "keys": ["1", "2"], "decision": "merge"}
 
     def test_chunking_never_splits_group(self):
         groups, _ = mc.find_groups(self.people, mc.KIND_PREFIX, None)

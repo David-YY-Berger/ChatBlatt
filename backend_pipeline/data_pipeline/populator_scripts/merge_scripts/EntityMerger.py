@@ -137,3 +137,8 @@ class EntityMerger:
             if new_rel_key:
                 sm.rel_keys.add(new_rel_key)
             self.db_api.update_source_metadata(sm)
+
+    def delete_rel(self, rel: Rel) -> None:
+        """Delete a relationship and remove its source metadata references."""
+        self._repoint_source_metadata_rel_key(rel.key, None)
+        self.db_api.delete_rel_by_key(rel.key)
