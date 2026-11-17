@@ -60,6 +60,10 @@ class DBApplyMergeDecisions(DBParentClass):
             )
         self._apply_groups(parsed, confidence_path)
 
+    def test_apply_prefix_merge_except_dont_merge(self) -> None:
+        self.undecided_policy = mc.UNDECIDED_MERGE
+        self.test_apply_prefix_merge_decisions()
+
     def test_apply_merge_decisions(self) -> None:
         parsed = []
         confidence_group_ids = set()

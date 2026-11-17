@@ -91,18 +91,23 @@ Same-name decisions continue to come from their chunk files.
 
 ### Prefix-only apply
 
-To apply **only prefix decisions**, run `test_apply_prefix_merge_decisions` instead. This method opens only
-`prefix_matches/confidence_person_prefix_matches.md` and rejects any non-prefix group IDs it finds there. It does not
-read same-name or close-spelling decisions. From the repository root, dry-run it with:
+Both prefix-only methods open only `prefix_matches/confidence_person_prefix_matches.md`, reject any non-prefix group
+IDs found there, and do not read same-name or close-spelling decisions:
+
+- `test_apply_prefix_merge_decisions` uses the default `"skip"` policy: only groups ticked `merge` are selected.
+- `test_apply_prefix_merge_except_dont_merge` uses `"merge"`: all undecided groups are selected except those ticked
+  `dont merge` or marked as conflicts. Use this only after reviewing the candidate file and ticking the exceptions.
+
+Dry-run the exception workflow from the repository root with:
 
 ```
-venv\Scripts\python.exe -m unittest backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.DBApplyMergeDecisions.test_apply_prefix_merge_decisions
+venv\Scripts\python.exe -m unittest backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.DBApplyMergeDecisions.test_apply_prefix_merge_except_dont_merge
 ```
 
-For a real apply, first back up the database and verify the dry-run plan, then run:
+For a real apply, first back up the database and verify the dry-run plan, then run the same method with `dry_run=False`:
 
 ```
-venv\Scripts\python.exe -c "import unittest; from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions; test = DBApplyMergeDecisions('test_apply_prefix_merge_decisions'); test.dry_run = False; result = unittest.TextTestRunner().run(test); raise SystemExit(not result.wasSuccessful())"
+venv\Scripts\python.exe -c "import unittest; from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions; test = DBApplyMergeDecisions('test_apply_prefix_merge_except_dont_merge'); test.dry_run = False; result = unittest.TextTestRunner().run(unittest.TestSuite([test])); raise SystemExit(not result.wasSuccessful())"
 ```
 
 The existing `test_apply_merge_decisions` remains the all-families entry point.

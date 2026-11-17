@@ -187,6 +187,50 @@ class MergeCandidatesTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "non-prefix group"):
                 apply.test_apply_prefix_merge_decisions()
 
+    def test_prefix_merge_except_dont_merge_skips_only_explicit_exceptions(self):
+        from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions import DBApplyMergeDecisions
+
+        people = [
+            person("keep-1", "Akiva"), person("keep-2", "Rabbi Akiva"),
+            person("skip-1", "Meir"), person("skip-2", "Rabbi Meir"),
+        ]
+        groups, _ = mc.find_groups(people, mc.KIND_PREFIX, None)
+        self.assertEqual(len(groups), 2)
+        rated = mc.rate_groups(groups, {})
+        decisions = {groups[0].id: "dont_merge"}
+        keep_group = next(group for group in groups if group.id not in decisions)
+
+        with TemporaryDirectory() as review_dir:
+            confidence_path = Path(review_dir) / "prefix_matches" / "confidence_person_prefix_matches.md"
+            confidence_path.parent.mkdir(parents=True)
+            confidence_path.write_text(
+                mc.render_confidence_file("prefix test", rated, decisions, include_decisions=True),
+                encoding="utf-8",
+            )
+            db = Mock()
+            db.get_entities_by_keys.side_effect = lambda keys: [
+                entity for entity in people if entity.key in keys
+            ]
+            apply = DBApplyMergeDecisions("test_apply_prefix_merge_except_dont_merge")
+            apply.db_api = db
+            apply.review_dir = review_dir
+            apply.undecided_policy = mc.UNDECIDED_SKIP
+            apply.confidence_thresholds = {}
+            apply.dry_run = True
+
+            with patch("backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBApplyMergeDecisions.EntityMerger") as merger_class:
+                merger = merger_class.return_value
+                merger.choose_target.return_value = keep_group.entities[0]
+                apply.test_apply_prefix_merge_except_dont_merge()
+
+            self.assertEqual(apply.undecided_policy, mc.UNDECIDED_MERGE)
+            db.get_entities_by_keys.assert_called_once()
+            self.assertEqual(
+                set(db.get_entities_by_keys.call_args.args[0]),
+                {entity.key for entity in keep_group.entities},
+            )
+            merger.merge_into_target.assert_not_called()
+
     def test_close_spelling_identify_scores_relationships_and_metadata(self):
         from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.DBIdentifyPersonMergeCandidates import DBIdentifyPersonMergeCandidates
 
