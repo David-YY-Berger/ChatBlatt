@@ -10,6 +10,7 @@ import streamlit.components.v1 as st_components
 
 import metrics
 from backend.app.logic.places_visited_logic import build_rows, load_options_and_relationships
+from backend.models_db.Enums import RelType
 from components.entity_option_labels import unique_entity_option_labels
 from components.source_popup import source_link_html, source_popup_css_js, source_popup_html
 from translations1 import get_text, is_rtl
@@ -20,6 +21,7 @@ def render(lang: str) -> None:
 
     st.markdown(f'<div class="page-title">{get_text("page_titles.places_visited", lang)}</div>',
                 unsafe_allow_html=True)
+    st.warning(get_text("places_visited_ui.data_quality", lang), icon="⚠️")
     db = DBFactory.get_prod_db_mongo()
     if "_places_visited_options" not in st.session_state:
         st.session_state["_places_visited_options"] = load_options_and_relationships(db)
@@ -48,26 +50,50 @@ def render(lang: str) -> None:
         with col_go:
             submitted = st.form_submit_button(get_text("entity_search_ui.go_button", lang),
                                               type="primary")
+        st.caption(get_text("places_visited_ui.relationship_filter", lang))
+        filter_columns = st.columns(4 if mode == "place" else 3)
+        selected_types = set()
+        for column, rel_type in zip(filter_columns, (RelType.diedIn, RelType.bornIn, RelType.visited)):
+            with column:
+                if st.checkbox(get_text(f"entity_fields.{rel_type.value}", lang), value=True,
+                               key=f"places_visited_{mode}_{rel_type.value}"):
+                    selected_types.add(rel_type)
+        mentioned = False
+        if mode == "place":
+            with filter_columns[3]:
+                mentioned = st.checkbox(get_text("places_visited_ui.mentioned", lang),
+                                        value=False, key="places_visited_place_mentioned")
     if submitted and selected:
         selected_option = options_by_label[selected]
         key = selected_option.key
         metrics.record("app_search", lang, search_type="tree", tree_type="places_visited",
                        entity_type=mode, entity_id=key, entity_name=selected_option.display_en_name)
-        rows = build_rows(db, key, mode == "person", rels, places if mode == "person" else people)
+        filtered_rels = [rel for rel in rels if rel.rel_type in selected_types]
+        rows = build_rows(db, key, mode == "person", filtered_rels,
+                          places if mode == "person" else people)
+        mentioned_sources = None
+        if mentioned:
+            sources = db.get_source_metadata_by_entity_key(key)
+            mentioned_sources = sorted({source.key: source for source in sources}.values(),
+                                       key=lambda source: (source.sort_key(), source.key))
         contents = {}
         errors = {}
-        for source in {source.key: source for row in rows for source in row.sources}.values():
+        all_sources = [source for row in rows for source in row.sources]
+        all_sources.extend(mentioned_sources or [])
+        for source in {source.key: source for source in all_sources}.values():
             try:
                 contents[source.key] = db.find_one_source_content(source.key)
             except Exception as exc:
                 errors[source.key] = str(exc)
-        st.session_state[f"places_visited_result_{mode}"] = (key, rows, contents, errors)
+        st.session_state[f"places_visited_result_{mode}"] = (
+            key, rows, mentioned_sources, contents, errors,
+        )
 
     result = st.session_state.get(f"places_visited_result_{mode}")
     if not result:
         st.info(get_text("places_visited_ui.prompt", lang))
         return
-    key, rows, contents, errors = result
+    key, rows, mentioned_sources, contents, errors = result
     for source_key, error in errors.items():
         st.warning(get_text("number_search_ui.source_load_error", lang).format(key=source_key, error=error))
     selected_option = next((option for option in options if option.key == key), None)
@@ -75,22 +101,22 @@ def render(lang: str) -> None:
         name = (selected_option.display_heb_name or selected_option.display_en_name
                 if is_rtl(lang) else selected_option.display_en_name)
         st.subheader(name)
-    if not rows:
+    if not rows and mentioned_sources is None:
         st.info(get_text("places_visited_ui.no_results", lang))
         return
-    st.caption(get_text("places_visited_ui.ordering", lang))
-    st_components.html(_results_html(rows, contents, lang), height=520, scrolling=False)
+    if rows:
+        st.caption(get_text("places_visited_ui.ordering", lang))
+    st_components.html(_results_html(rows, contents, lang, mentioned_sources),
+                       height=520, scrolling=False)
 
 
-def _results_html(rows, contents, lang: str) -> str:
+def _results_html(rows, contents, lang: str, mentioned_sources=None) -> str:
     popup_ids = {}
     popups = []
     cards = []
-    for row in rows:
-        name = (row.other.display_heb_name or row.other.display_en_name
-                if is_rtl(lang) else row.other.display_en_name)
+    def sources_html(sources):
         source_items = []
-        for source in row.sources:
+        for source in sources:
             title = source.to_heb_str() if is_rtl(lang) else str(source)
             summary = (source.summary_heb or source.summary_en) if is_rtl(lang) else source.summary_en
             content = contents.get(source.key)
@@ -111,16 +137,27 @@ def _results_html(rows, contents, lang: str) -> str:
             source_items.append(
                 f"<li><div>{link}</div><div class='summary'>{html.escape(summary or '—')}</div></li>"
             )
-        sources = ("<ul>" + "".join(source_items) + "</ul>") if source_items else (
+        return ("<ul>" + "".join(source_items) + "</ul>") if source_items else (
             f"<div class='summary'>{html.escape(get_text('places_visited_ui.no_sources', lang))}</div>"
         )
+
+    for row in rows:
+        name = (row.other.display_heb_name or row.other.display_en_name
+                if is_rtl(lang) else row.other.display_en_name)
         cards.append(
             "<article class='card'><div class='heading'>"
             f"<strong>{html.escape(name)}</strong>"
-            f"<span class='badge'>{html.escape(get_text('entity_fields.' + row.rel_type.value, lang))}</span>"
+            f"<span class='badge badge-{row.rel_type.value}'>{html.escape(get_text('entity_fields.' + row.rel_type.value, lang))}</span>"
             "</div>"
             f"<div class='source-label'>{html.escape(get_text('places_visited_ui.sources', lang))}</div>"
-            f"{sources}</article>"
+            f"{sources_html(row.sources)}</article>"
+        )
+    if mentioned_sources is not None:
+        cards.append(
+            "<article class='card'><div class='heading'>"
+            f"<strong>{html.escape(get_text('places_visited_ui.mention_sources', lang))}</strong>"
+            f"<span class='badge badge-mentioned'>{html.escape(get_text('places_visited_ui.mentioned', lang))}</span>"
+            f"</div>{sources_html(mentioned_sources)}</article>"
         )
     direction = "rtl" if is_rtl(lang) else "ltr"
     return (
@@ -130,12 +167,21 @@ def _results_html(rows, contents, lang: str) -> str:
         "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}"
         ".card{border:1px solid #285468;border-radius:10px;background:#14232b;"
         "margin-bottom:10px;padding:12px 16px}.heading{display:flex;align-items:center;"
-        "gap:12px;flex-wrap:wrap;font-size:1.05rem}.badge{color:#8ed1e8;background:#1a3b49;"
-        "border-radius:999px;padding:3px 10px;font-size:.78rem}.source-label{color:#8ed1e8;"
+        "gap:12px;flex-wrap:wrap;font-size:1.05rem}.badge{"
+        "border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600}"
+        ".badge-visited{color:#a5dcf4;background:#16445a}"
+        ".badge-bornIn{color:#b4edc8;background:#175038}"
+        ".badge-diedIn{color:#ffd0d0;background:#683037}"
+        ".badge-mentioned{color:#ead3ff;background:#52366d}"
+        ".source-label{color:#8ed1e8;"
         "font-size:.75rem;font-weight:700;margin-top:10px}ul{padding-inline-start:20px;margin:6px 0 0}"
         "li{margin:8px 0}.summary{color:#b4c3ce;font-size:.9rem;margin-top:3px}"
         "@media (prefers-color-scheme:light){body{background:#fff;color:#1e293b}"
-        ".card{background:#f3f9fb;border-color:#bdd7e2}.badge{color:#15576f;background:#d9eef5}"
+        ".card{background:#f3f9fb;border-color:#bdd7e2}"
+        ".badge-visited{color:#15576f;background:#d9eef5}"
+        ".badge-bornIn{color:#145c35;background:#d5f3df}"
+        ".badge-diedIn{color:#852b34;background:#fde1e1}"
+        ".badge-mentioned{color:#603187;background:#f0e2fc}"
         ".source-label{color:#15576f}.summary{color:#475569}li a{color:#1d6fa4!important}}</style>"
         + source_popup_css_js() + "</head><body>" + "".join(cards) + "".join(popups)
         + "<script>function resizeFrame(){try{window.frameElement.style.height="

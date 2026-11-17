@@ -66,6 +66,10 @@ lineage_ui:
   shortest_line: "אחד המסלולים המתועדים הקצרים ביותר (ניתן להעתיק באמצעות הסמל)."
 
 places_visited_ui:
+  data_quality: "הדף עובד היטב עבור דמויות מהתנ״ך, אך הנתונים על חכמי התלמוד נראים פגומים בחלקם."
+  relationship_filter: "הצגת קשרים"
+  mentioned: "מוזכר"
+  mention_sources: "מקורות המזכירים את המקום"
   search_by: "חיפוש לפי"
   person: "אדם"
   place: "מקום"

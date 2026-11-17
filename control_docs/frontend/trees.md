@@ -31,7 +31,13 @@ type is not used.
 
 Select Person or Place, choose an entity, and press Go. The selectors contain
 only people and places connected by a correctly directed `visited`, `bornIn`,
-or `diedIn` relationship. Each result groups one counterpart and relationship
+or `diedIn` relationship. The page warns that data for Talmud sages appears
+partially corrupted. Checkboxes select which relationship types to include;
+all three are checked by default. In Place mode, an unchecked-by-default
+**Mentioned** checkbox also retrieves all sources whose entity keys include the
+selected place, independently of relationships, and displays them separately.
+Filter changes take effect on Go. Relationship and mention badges have distinct
+colors. Each relationship result groups one counterpart and relationship
 type with all its sources, their localized summaries and popup links. Rows are
 ordered by the earliest Tanach source in canonical book and passage order;
 rows without a recognized Tanach source follow, ordered by English name.

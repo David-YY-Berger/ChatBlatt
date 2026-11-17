@@ -101,6 +101,61 @@ render("en")
             self.assertFalse(app.exception)
             self.assertEqual(app.subheader[0].value, "Alpha")
 
+    def test_relationship_filters_and_place_mentions(self):
+        app = AppTest.from_string("""
+from pages.places_visited import render
+render("en")
+""")
+        mention = source("TN_Exodus_0_1:1", [])
+        self.db.get_source_metadata_by_entity_key.return_value = [mention, mention]
+        self.db.find_one_source_content.side_effect = lambda key: SourceContent(key, ["en", "he"])
+        with patch("backend.db.DBFactory.DBFactory.get_prod_db_mongo", return_value=self.db):
+            app.run()
+            self.assertEqual([box.value for box in app.checkbox], [True, True, True])
+            self.assertTrue(any("partially corrupted" in warning.value for warning in app.warning))
+            app.selectbox[0].select(app.selectbox[0].options[0])
+            app.checkbox[0].uncheck()
+            app.checkbox[1].uncheck()
+            app.button[0].click().run()
+            _, rows, mentioned, _, _ = app.session_state["places_visited_result_person"]
+            self.assertEqual([row.rel_type for row in rows], [RelType.visited])
+            self.assertIsNone(mentioned)
+            self.db.get_source_metadata_by_entity_key.assert_not_called()
+
+            app.radio[0].set_value("place").run()
+            self.assertEqual([box.value for box in app.checkbox], [True, True, True, False])
+            app.selectbox[0].select(app.selectbox[0].options[0])
+            for box in app.checkbox[:3]:
+                box.uncheck()
+            app.checkbox[3].check()
+            app.button[0].click().run()
+            _, rows, mentioned, contents, _ = app.session_state["places_visited_result_place"]
+            self.assertEqual(rows, [])
+            self.assertEqual([item.key for item in mentioned], [mention.key])
+            self.db.get_source_metadata_by_entity_key.assert_called_once_with("a")
+            self.assertIn(mention.key, contents)
+            rendered = _results_html(rows, contents, "en", mentioned)
+            self.assertIn("Sources mentioning this place", rendered)
+            self.assertIn("badge-mentioned", rendered)
+            self.assertIn("spOpen('visit-source-0', event)", rendered)
+            self.assertFalse(app.exception)
+
+    def test_mention_and_relationship_share_source_popup(self):
+        people, places, rels = load_options_and_relationships(self.db)
+        rows = build_rows(self.db, "a", False, rels, people)
+        shared = rows[0].sources[0]
+        contents = {shared.key: SourceContent(shared.key, ["en", "he"])}
+        rendered = _results_html(rows, contents, "en", [shared])
+        self.assertEqual(rendered.count('id="sp-visit-source-0"'), 1)
+        self.assertEqual(rendered.count("spOpen('visit-source-0', event)"), 2)
+
+    def test_relationship_badges_have_distinct_classes(self):
+        people, places, rels = load_options_and_relationships(self.db)
+        rows = build_rows(self.db, "p", True, rels, places)
+        rendered = _results_html(rows, {}, "en")
+        for rel_type in ("visited", "bornIn", "diedIn"):
+            self.assertIn(f"class='badge badge-{rel_type}'", rendered)
+
     def test_missing_source_warning_survives_rerun(self):
         app = AppTest.from_string("""
 import streamlit as st
