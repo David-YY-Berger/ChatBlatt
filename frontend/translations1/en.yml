@@ -70,6 +70,9 @@ lineage_ui:
   shortest_line: "One shortest recorded line. Select a source to view it."
   copy_line: "Copy line as text"
   content_missing: "Source content is unavailable."
+  invalid_url: "This lineage link has an invalid direction or person selection."
+  open_entity: "Open the person page for {name}"
+  open_sources: "Find sources for {name}"
 
 places_visited_ui:
   data_quality: "This page works well for Tanach characters, but the data for Talmud sages appears partially corrupted."
@@ -80,6 +83,7 @@ places_visited_ui:
   person: "Person"
   place: "Place"
   prompt: "Choose an entity and select Go."
+  invalid_url: "This Places Visited link has invalid search settings or an unknown selection."
   no_options: "No people or places with these relationships were found."
   no_results: "No matching relationships found."
   relationship: "Relationship"

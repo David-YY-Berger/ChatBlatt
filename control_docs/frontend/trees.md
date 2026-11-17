@@ -22,7 +22,10 @@ source links for each relationship, in selection order. Links open the shared
 source popup. The copy-text section includes each step's source titles in
 parentheses; steps without recorded sources are marked accordingly. If source
 content is unavailable, the title remains visible and a warning is shown.
-Names and source titles follow the selected language. Selection is session state.
+Each person uses the localized person-selector label (names, roles and time
+period) and has icon links to their entity page and a source search, opened in
+new tabs. Source titles follow the selected language. Direction and selected
+people are shareable through the URL; invalid selections show a warning.
 
 `backend/app/logic/lineage_logic.py` builds a session-cached directed graph of
 person endpoints using only `childOfFather` and `childOfMother` relationships
@@ -41,13 +44,14 @@ all three are checked by default. In Place mode, an unchecked-by-default
 **Mentioned** checkbox also retrieves all sources whose entity keys include the
 selected place, independently of relationships, and displays them separately.
 Filter changes take effect on Go. Relationship and mention badges have distinct
-colors. Each relationship result groups one counterpart and relationship
+colors. The selected mode, entity, relationship types, and Mentioned setting
+are reflected in the URL; opening that URL restores and runs the search. Each
+relationship result groups one counterpart and relationship
 type with all its sources, their localized summaries and popup links. Rows are
 ordered by the earliest Tanach source in canonical book and passage order;
 rows without a recognized Tanach source follow, ordered by English name.
 Non-Tanach sources remain visible. Missing source content is reported and the
-source title remains visible without a popup link. The selection is session
-state, not a shareable search URL.
+source title remains visible without a popup link.
 
 ## Family Tree
 

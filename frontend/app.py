@@ -175,6 +175,8 @@ def main() -> None:
     metrics.render(lang)
     if page.url_path not in {URL_PATHS[key] for key in ENTITY_PAGES}:
         st.session_state.pop("_metrics_entity_url", None)
+    if page.url_path != URL_PATHS[PAGE_DESCENDANTS]:
+        st.session_state.pop("_metrics_lineage_url", None)
     if page.url_path != URL_PATHS[PAGE_STUDIED_FROM]:
         st.session_state.pop("studied_from_warning_shown", None)
     if page.url_path != URL_PATHS[PAGE_SYMBOLS]:

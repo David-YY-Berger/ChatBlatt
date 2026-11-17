@@ -1,7 +1,9 @@
 import sys
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
+from urllib.parse import parse_qs, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -10,12 +12,13 @@ sys.path.insert(0, str(ROOT / "frontend"))
 from streamlit.testing.v1 import AppTest
 
 from backend.app.logic.lineage_logic import lineage_path, load_lineage_graph
-from backend.models_db.Enums import RelType
+from backend.models_db.Enums import RelType, RoleType, TimePeriod
 from backend.models_db.Rel import Rel
 from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
 from backend.models_dto.EntitySelectOption import EntitySelectOption
-from pages.descendants import _copy_text, _lineage_html, _path_sources
+from backend.models_dto.PersonSelectOption import PersonSelectOption
+from pages.descendants import _copy_text, _lineage_html, _path_sources, _person_links
 
 
 def option(key, name, heb=""):
@@ -104,7 +107,8 @@ class LineageTests(unittest.TestCase):
         graph = load_lineage_graph(self.db)
         steps = _path_sources(self.db, graph, ["a", "b", "c", "d"], True)
         key = self.sources[0].key
-        rendered = _lineage_html(["<Abraham>", "Isaac", "Jacob", "Dan"], steps,
+        rendered = _lineage_html(["<Abraham>", "Isaac", "Jacob", "Dan"],
+                                 [("entity", "sources")] * 4, steps,
                                  {key: SourceContent(key, ["en", "he"])}, "he")
         self.assertIn("dir='rtl'", rendered)
         self.assertIn("&lt;Abraham&gt;", rendered)
@@ -142,24 +146,29 @@ render(lang)
             app.selectbox[1].select("d").run()
             self.assertFalse(app.exception)
             self.assertEqual(app.code[0].value,
-                             "Abraham (Bereishit (Torah) 2:1, Bereishit (Torah) 12:1) →\n"
-                             "Isaac (Bereishit (Torah) 2:1) →\nJacob (No sources recorded.) →\nDan")
+                             "Abraham (אברהם) (Bereishit (Torah) 2:1, Bereishit (Torah) 12:1) →\n"
+                             "Isaac (יצחק) (Bereishit (Torah) 2:1) →\n"
+                             "Jacob (יעקב) (No sources recorded.) →\nDan (דן)")
+            self.assertEqual(app.query_params["lineage_mode"], ["descendants"])
+            self.assertEqual(app.query_params["lineage_start"], ["a"])
+            self.assertEqual(app.query_params["lineage_target"], ["d"])
             events = app.session_state["_metrics_events"]
             self.assertEqual(len(events), 1)
             self.assertEqual(events[0]["tree_type"], "descendants")
             self.assertEqual(events[0]["entity_id"], "a")
             self.assertEqual(events[0]["entity_ids"], "a,d")
             app.radio[0].set_value("he").run()
-            self.assertIn("אברהם (2:1 בראשית", app.code[0].value)
-            self.assertIn("יעקב (לא נרשמו מקורות.)", app.code[0].value)
+            self.assertIn("אברהם (Abraham) (2:1 בראשית", app.code[0].value)
+            self.assertIn("יעקב (Jacob) (לא נרשמו מקורות.)", app.code[0].value)
             self.assertEqual(len(app.session_state["_metrics_events"]), 1)
             app.radio[1].set_value("ancestors").run()
             app.selectbox[0].select("d").run()
             self.assertNotIn("אחר", app.selectbox[1].options)
             app.selectbox[1].select("a").run()
             self.assertFalse(app.exception)
-            self.assertTrue(app.code[0].value.startswith("דן (לא נרשמו מקורות.) →\nיעקב (2:1 בראשית"))
-            self.assertTrue(app.code[0].value.endswith("אברהם"))
+            self.assertTrue(app.code[0].value.startswith(
+                "דן (Dan) (לא נרשמו מקורות.) →\nיעקב (Jacob) (2:1 בראשית"))
+            self.assertTrue(app.code[0].value.endswith("אברהם (Abraham)"))
             self.assertEqual(app.session_state["_metrics_events"][-1]["tree_type"], "ancestors")
             self.assertEqual(app.session_state["_metrics_events"][-1]["entity_ids"], "d,a")
             self.assertEqual(len(app.session_state["_metrics_events"]), 2)
@@ -167,7 +176,125 @@ render(lang)
             app.selectbox[0].select("b").run()
             self.assertIsNone(app.selectbox[1].value)
             self.assertEqual(len(app.code), 0)
+            self.assertNotIn("lineage_target", app.query_params)
             self.assertEqual(len(app.session_state["_metrics_events"]), 2)
+
+    def test_shareable_url_restores_selection_and_records_once(self):
+        app = AppTest.from_string("""
+from pages.descendants import render
+render("en")
+""")
+        app.query_params["lineage_mode"] = "ancestors"
+        app.query_params["lineage_start"] = "d"
+        app.query_params["lineage_target"] = "a"
+        app.query_params["admin"] = "false"
+        with patch("backend.db.DBFactory.DBFactory.get_prod_db_mongo", return_value=self.db):
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.radio[0].value, "ancestors")
+            self.assertEqual([box.value for box in app.selectbox], ["d", "a"])
+            self.assertEqual(app.session_state["_metrics_events"][0]["entity_ids"], "d,a")
+            app.run()
+            self.assertEqual(len(app.session_state["_metrics_events"]), 1)
+            app.query_params["lineage_target"] = "b"
+            app.run()
+            self.assertEqual(app.selectbox[1].value, "b")
+            self.assertEqual(app.session_state["_metrics_events"][-1]["entity_ids"], "d,b")
+            self.assertEqual(len(app.session_state["_metrics_events"]), 2)
+            self.assertEqual(app.query_params["admin"], ["false"])
+
+    def test_invalid_url_does_not_run_search(self):
+        app = AppTest.from_string('from pages.descendants import render\nrender("en")')
+        app.query_params["lineage_mode"] = "ancestors"
+        app.query_params["lineage_start"] = "d"
+        app.query_params["lineage_target"] = "x"
+        with patch("backend.db.DBFactory.DBFactory.get_prod_db_mongo", return_value=self.db):
+            app.run()
+        self.assertTrue(app.warning)
+        self.assertNotIn("_metrics_events", app.session_state)
+        self.assertFalse(app.exception)
+
+    def test_person_source_link_runs_and_records_destination_search(self):
+        from components.facets import renderers
+        from pages import source_search
+
+        app = AppTest.from_string("""
+import streamlit as st
+from pages.source_search import render
+st.session_state["lang"] = "he"
+render("he")
+""")
+        app.query_params["ent"] = "a"
+        app.query_params["via"] = "descendants_source_search"
+        with patch.object(source_search, "preload_all_entity_options"), \
+             patch.object(source_search, "inject_facet_css"), \
+             patch.object(source_search, "render_source_filters"), \
+             patch.object(source_search, "_render_search_panel"), \
+             patch.object(renderers, "_load_entity_select_options",
+                          side_effect=lambda tab: self.options if tab == "people" else []), \
+             patch.object(source_search, "run_search",
+                          return_value=(SimpleNamespace(total_sources=0), "0s")) as search:
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(search.call_args.args[0].entity_ids, ["a"])
+            events = app.session_state["_metrics_events"]
+            self.assertEqual([(event["name"], event["app_language"]) for event in events],
+                             [("app_search", "he"), ("search_entity_filter", "he")])
+            self.assertEqual(events[0]["entity_ids"], "a")
+            self.assertEqual(events[1]["entity_id"], "a")
+
+    def test_person_entity_link_records_destination_search_once(self):
+        from backend.app.controllers.entity_search import entity_search_controller
+        from pages import entity_search
+
+        app = AppTest.from_string("""
+from pages.entity_search import _render_entity_search_tab
+_render_entity_search_tab("people", "he")
+""")
+        app.query_params["id"] = "a"
+        app.query_params["via"] = "descendants_entity_search"
+        handler = SimpleNamespace(
+            get_select_options=lambda: self.options,
+            get_full_entity=lambda key: self.options[0],
+            get_metadata_badges=lambda entity: [],
+            get_transient_field_labels=lambda: [],
+        )
+        with patch.object(entity_search_controller, "get_entity_search_handler", return_value=handler), \
+             patch.object(entity_search, "_DEBUG_FE", False), \
+             patch.object(entity_search, "_render_filters", side_effect=lambda tab, options, lang: options), \
+             patch.object(entity_search, "_render_family_tree_button"), \
+             patch.object(entity_search, "_render_relationship_fields"):
+            app.run()
+            app.run()
+        self.assertFalse(app.exception)
+        events = app.session_state["_metrics_events"]
+        self.assertEqual(len(events), 1)
+        self.assertEqual((events[0]["search_type"], events[0]["entity_ids"],
+                          events[0]["app_language"]), ("entity", "a", "he"))
+
+    def test_person_links_labels_and_admin(self):
+        person = PersonSelectOption(key="p&1", display_en_name="David", display_heb_name="דוד",
+                                    roles=[RoleType.King, RoleType.Prophet], timePeriod=TimePeriod.Tanach)
+        with patch("pages.descendants.metrics.shared_params", return_value={"admin": "true"}):
+            for lang in ("en", "he"):
+                entity_url, sources_url = _person_links(person, lang)
+                for url, path, param, via in (
+                    (entity_url, "/entity_search_people", "id", "descendants_entity_search"),
+                    (sources_url, "/source_search", "ent", "descendants_source_search"),
+                ):
+                    parsed = urlsplit(url)
+                    self.assertEqual(parsed.path, path)
+                    self.assertEqual(parse_qs(parsed.query),
+                                     {"admin": ["true"], "lang": [lang], param: ["p&1"], "via": [via]})
+                from components.entity_option_labels import format_entity_option_label
+                label = format_entity_option_label(person, lang)
+                rendered = _lineage_html([label], [(entity_url, sources_url)], [], {}, lang)
+                self.assertIn("David (דוד) - King, Prophet [Tanach]" if lang == "en"
+                              else "דוד (David) - מלך, נביא [תנ״ך]", rendered)
+                self.assertEqual(rendered.count("<svg"), 2)
+                self.assertEqual(rendered.count("aria-label="), 2)
+                self.assertIn("p%261", rendered)
+                self.assertIn("admin=true&amp;lang=", rendered)
 
     def test_missing_source_content_warns_after_language_change(self):
         app = AppTest.from_string("""

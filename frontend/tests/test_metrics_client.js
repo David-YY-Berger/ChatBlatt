@@ -133,6 +133,16 @@ test("events redact free text and carry app language and navigation origin", () 
   assert.equal(app.calls().filter(call => call[1] === "app_search").length, 1);
 });
 
+test("person links attribute destination page views to Descendants", () => {
+  for (const hint of ["descendants_entity_search", "descendants_source_search"]) {
+    const app = client("https://app.example/source_search?ent=person&via=" + hint);
+    app.render([], hint);
+    const view = app.calls().find(call => call[1] === "page_view")[2];
+    assert.equal(view.came_from, hint);
+    assert.equal(view.page_location, "https://app.example/source_search");
+  }
+});
+
 test("tree landing selections are attributed to their menu card", () => {
   const app = client("https://app.example/");
   app.render();

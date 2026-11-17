@@ -62,6 +62,12 @@ PARAM_NUMBER_VALUE = "value"
 NUMBER_SEARCH_TYPE_NUMBER = "number"
 NUMBER_SEARCH_TYPE_UNIT = "unit"
 
+# ---- Places Visited search params ----
+PARAM_PLACES_VISITED_MODE = "pv_mode"       # "person" | "place"
+PARAM_PLACES_VISITED_ID = "pv_id"           # selected entity key
+PARAM_PLACES_VISITED_REL_TYPES = "pv_rel"   # RelType values, comma-separated; "none" for no filters
+PARAM_PLACES_VISITED_MENTIONED = "pv_mentioned"  # "1" | "0"
+
 # ---- Entity search param (on each entity_search_<type> page) ----
 PARAM_ENTITY_ID = "id"
 

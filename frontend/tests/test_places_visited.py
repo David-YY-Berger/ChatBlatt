@@ -140,6 +140,54 @@ render("en")
             self.assertIn("spOpen('visit-source-0', event)", rendered)
             self.assertFalse(app.exception)
 
+    def test_search_url_contains_selected_entity_and_filters(self):
+        app = AppTest.from_string("""
+from pages.places_visited import render
+render("en")
+""")
+        app.query_params["lang"] = "he"
+        app.query_params["admin"] = "false"
+        self.db.find_one_source_content.side_effect = lambda key: SourceContent(key, ["en", "he"])
+        with patch("backend.db.DBFactory.DBFactory.get_prod_db_mongo", return_value=self.db):
+            app.run()
+            app.selectbox[0].select(app.selectbox[0].options[0]).run()
+            app.checkbox[1].uncheck().run()
+            app.button[0].click().run()
+
+        self.assertEqual(app.query_params["pv_mode"], ["person"])
+        self.assertEqual(app.query_params["pv_id"], ["p"])
+        self.assertEqual(app.query_params["pv_rel"], ["diedIn,visited"])
+        self.assertEqual(app.query_params["pv_mentioned"], ["0"])
+        self.assertEqual(app.query_params["lang"], ["he"])
+        self.assertEqual(app.query_params["admin"], ["false"])
+        self.assertFalse(app.exception)
+
+    def test_shareable_url_restores_place_filters_and_runs_once(self):
+        app = AppTest.from_string("""
+from pages.places_visited import render
+render("en")
+""")
+        app.query_params["pv_mode"] = "place"
+        app.query_params["pv_id"] = "a"
+        app.query_params["pv_rel"] = "none"
+        app.query_params["pv_mentioned"] = "1"
+        mention = source("TN_Exodus_0_1:1", [])
+        self.db.get_source_metadata_by_entity_key.return_value = [mention]
+        self.db.find_one_source_content.side_effect = lambda key: SourceContent(key, ["en", "he"])
+        with patch("backend.db.DBFactory.DBFactory.get_prod_db_mongo", return_value=self.db):
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.radio[0].value, "place")
+            self.assertEqual(app.selectbox[0].value, app.selectbox[0].options[0])
+            self.assertEqual([box.value for box in app.checkbox], [False, False, False, True])
+            _, rows, mentioned, _, _ = app.session_state["places_visited_result_place"]
+            self.assertEqual(rows, [])
+            self.assertEqual([item.key for item in mentioned], [mention.key])
+            app.run()
+
+        self.db.get_source_metadata_by_entity_key.assert_called_once_with("a")
+        self.assertFalse(app.exception)
+
     def test_mention_and_relationship_share_source_popup(self):
         people, places, rels = load_options_and_relationships(self.db)
         rows = build_rows(self.db, "a", False, rels, people)

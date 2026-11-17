@@ -161,7 +161,8 @@
         cameFrom = info.source + ":" + info.control;
       }
     }
-    if (!old && !cameFrom && args.origin_hint === "entity_relationship_sources") {
+    if (!old && !cameFrom && ["entity_relationship_sources", "descendants_entity_search",
+                              "descendants_source_search"].includes(args.origin_hint)) {
       cameFrom = args.origin_hint;
     }
     host.sessionStorage.removeItem(pendingKey);

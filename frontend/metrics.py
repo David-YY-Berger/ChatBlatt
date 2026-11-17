@@ -15,6 +15,7 @@ from system_common.UrlPaths import BASE_URL, PARAM_ADMIN, PARAM_LANG, PARAM_NAVI
 MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID", "G-9ZHLKD65GM")
 _ADMIN_STATE = "_metrics_admin"
 _EVENTS = "_metrics_events"
+_ORIGIN_HINTS = {"entity_relationship_sources", "descendants_entity_search", "descendants_source_search"}
 _component = components.declare_component(
     "eitz_metrics", path=str(Path(__file__).parent / "components" / "metrics_client")
 )
@@ -84,7 +85,7 @@ def render(lang: str) -> None:
         base_url=BASE_URL,
         paths=list(URL_PATHS.values()),
         language=lang,
-        origin_hint=origin if origin == "entity_relationship_sources" else "",
+        origin_hint=origin if origin in _ORIGIN_HINTS else "",
         events=events,
         default=None,
     )

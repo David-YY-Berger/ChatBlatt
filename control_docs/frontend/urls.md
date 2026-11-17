@@ -44,6 +44,12 @@ immediately; running a search rewrites the URL (`st.query_params`), so the addre
 - **Number search**: `type` = `number` | `unit`, `value` = the number/fraction (e.g. `7`, `1/3`) or the unit's English name.
 - **Entity search** (on each `entity_search_<type>` page): `id` = the entity key. Cross-links between entities
   use `navigation.go(<type page>, id=<key>)`.
+- **Places Visited**: `pv_mode` = `person` | `place`, `pv_id` = selected entity key,
+  `pv_rel` = selected relationship types (comma-separated `RelType` values, or `none`),
+  and `pv_mentioned` = `1` | `0`. Opening a link restores the selection and runs that search.
+- **Descendants**: `lineage_mode` = `descendants` | `ancestors`, `lineage_start` = starting person key,
+  and `lineage_target` = reachable person key. A link with just a mode and start
+  restores the first selection; a complete link also runs the lineage search.
 - **Language**: `lang=en` selects English and `lang=he` selects Hebrew. A missing or invalid value defaults
   to English on a new session. The selected language is reflected in the URL and retained across navigation
   and shareable search links.
@@ -55,10 +61,12 @@ and mobile Menu expose the same landing and detail pages.
 
 `admin=true` disables analytics and `admin=false` re-enables it; the setting is
 propagated through navigation and remembered for the browser tab. Relationship
-source links also use `via=entity_relationship_sources` to identify their
-origin when opened in a new tab. See [metrics.md](metrics.md) for the opt-out,
+source links use `via=entity_relationship_sources`; Descendants' person and
+source search links use `via=descendants_entity_search` and
+`via=descendants_source_search` to identify their origin in a new tab.
+See [metrics.md](metrics.md) for the opt-out,
 privacy rules, event schema, and configuration.
 
 Example: `/source_search?q=abraham&pt=Halacha&lang=he`, `/number_search?type=unit&value=Amah&lang=en`.
 `UrlPaths.page_url(page_key, params)` builds absolute links (base URL `UrlPaths.BASE_URL`; `Paths.EITZ_HABINA_URL` is an alias).
-Not URL-driven: the two tree pages' center person, Places Visited and Descendants selections (session state).
+Not URL-driven: the two tree pages' center person (session state).

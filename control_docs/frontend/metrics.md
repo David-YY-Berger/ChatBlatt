@@ -72,10 +72,15 @@ queue or delivery guarantee.
 
 | Event | When | Additional parameters |
 |---|---|---|
-| `page_view` | Initial page and each distinct browser URL, including search-URL changes. Ordinary Streamlit reruns do not add views. | `came_from` when known: previous app path and a recognized control (including a Home Trees card or one of the four Trees landing cards), or `entity_relationship_sources` for the relationship link opened in a new tab. Direct visits normally have no `came_from`. |
+| `page_view` | Initial page and each distinct browser URL, including search-URL changes. Ordinary Streamlit reruns do not add views. | `came_from` when known: previous app path and a recognized control (including a Home Trees card or one of the four Trees landing cards), or a recognized origin hint for links opened in a new tab. Direct visits normally have no `came_from`. |
 | `app_search` | Source, number, unit, entity and tree searches, including searches executed from supported shared URLs. Pagination is not another search. | `search_type`; source searches: `search_id`, `text_similarity_used` (0/1), `passage_types`, `source_types`, `entity_types`, `entity_ids`, `entity_names`, `relationship_filter_used` (0/1); number: `number_value`; unit: `unit_name`; entity: `entity_types`, `entity_ids`, `entity_names`; tree: `tree_type`, `entity_type`, `entity_id`, `entity_name`. |
 | `search_entity_filter` | Once per selected entity option in a source search. | `search_id` joins this to its `app_search`; `entity_type`, `entity_id` and canonical English `entity_name` identify the selection even when the summary lists are truncated. |
 | `file_download` | The source-results PDF download button is clicked. | `file_type=pdf`, `download_type=source_results`. This records a click, not proof that the PDF was saved. |
+
+Descendants' person and source-search icon links open a new tab. The destination
+page view has `came_from=descendants_entity_search` or
+`came_from=descendants_source_search`; the destination records its normal
+entity or source `app_search`. Admin and language are carried in the links.
 
 Entity IDs and names come from the app's selected database options; grouped
 number options represent the selected option, not every underlying database ID.
@@ -86,7 +91,8 @@ Selecting the second person on Descendants records one tree `app_search`:
 `tree_type` is `descendants` or `ancestors`, singular entity fields identify
 the starting person, and `entity_ids` / `entity_names` contain both selected
 people in selection order. Language changes and ordinary reruns do not record
-another search.
+another search. A complete shared Descendants URL records the same search once
+when opened or when its selection changes.
 Relationship search is recorded as a boolean; arbitrary relationship IDs and
 labels from incoming URLs are not sent. Text fields are capped at 100 characters
 to respect GA4 parameter limits, so comma-separated summary lists can be
@@ -105,9 +111,9 @@ fragments. Source text is represented solely by `text_similarity_used`; it is
 never sent as an event field. Validated filter metadata is sent separately as
 described above. The referrer sent to GA is reduced to an origin, without its
 path or query; if unavailable it is the app origin. This sacrifices detailed
-referrer information for privacy. `via=entity_relationship_sources` is a
-non-sensitive navigation hint for links that open a new tab and is not included
-in `page_location`.
+referrer information for privacy. Recognized `via` values are non-sensitive
+navigation hints for links that open a new tab and are not included in
+`page_location`.
 
 GA4 also collects its usual automatic information independently of these custom
 fields; consult Google's property settings and privacy documentation. Analytics
