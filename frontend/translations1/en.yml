@@ -56,17 +56,8 @@ mcp_ui:
   step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
-  step_four: "4. Save or connect the server and enable it for your chat. Try asking: “Find sources about Abraham visiting places, and show me the sources.”"
-  examples_title: "Try these prompts"
-  examples: |
-    - **@Eitz Habina** Find Torah sources about Abraham's visits to places, summarize what each source says, and link to the sources.
-    - **@Eitz Habina** Find the number 40 in Torah sources, group the occurrences by category, and retrieve the English text of a relevant source.
-    - **@Eitz Habina** Look up people named Yochanan and show the closest matches with their Hebrew names, roles, and time periods so I can choose the right person.
-    - **@Eitz Habina** Find sources that mention both Moses and Aaron; identify the matching people first, then search for passages containing both.
-    - **@Eitz Habina** Show the places Abraham visited, with the related source summaries.
-    - **@Eitz Habina** Build a two-step family tree around David and find sources supporting each displayed relationship.
-    - **@Eitz Habina** Find the shortest recorded ancestor line from David to Abraham and show sources for each parent-child step.
-    - **@Eitz Habina** Search Hebrew Tanakh sources for "אברהם הלך" and retrieve a relevant passage in Hebrew.
+  step_four: "4. Save or connect the server and enable it for your chat."
+  examples_coming_soon: "Cool examples coming soon!"
   screenshot_caption: "Example of Eitz Habina answering an MCP prompt in an AI chat."
   availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
   privacy: "Your chat provider receives your questions and the information retrieved for your conversation. Check the original sources when accuracy matters."

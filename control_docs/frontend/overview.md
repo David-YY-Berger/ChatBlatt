@@ -21,8 +21,8 @@ and data flows, use the feature guides below.
   Sefaria banner to the external site. A localized copyright notice appears in
   the shared footer after the selected page.
 - On desktop, the top navigation contains Home, About, Number Search, Source
-  Search and MCP (connection instructions, example prompts, and an in-chat
-  screenshot), plus Entity Search and Trees dropdowns.
+  Search and MCP (connection instructions and an in-chat screenshot), plus
+  Entity Search and Trees dropdowns.
   On screens up to 768px, the
   app also displays a grouped mobile Menu popover; Streamlit hides its top
   navigation on narrow screens. Selecting a mobile menu item closes the popover
