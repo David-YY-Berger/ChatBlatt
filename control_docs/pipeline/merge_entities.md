@@ -48,7 +48,7 @@ No name-matching beyond `display_en_name` (`all_en_names` is not searched).
 | `test_merge_candidates.py` | DB-free unit tests (run with the repo `venv`) |
 
 Review files are grouped by match family under `Paths.MERGE_REVIEW_DIR`
-(`.../real_data/merge_review/`): `prefix_matches/person_prefix_matches_NNN.md`,
+(`.../merge_review/`): `prefix_matches/person_prefix_matches_NNN.md`,
 `same_name_matches/person_same_name_matches_NNN.md`, and
 `close_spelling_matches/person_close_spelling_matches_NNN.md` (EPerson only). The prefix family's consolidated
 `confidence_person_prefix_matches.md`, `confidence_person_same_name_matches.md`, and

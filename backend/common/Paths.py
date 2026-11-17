@@ -51,7 +51,7 @@ ENTITY_ENRICHMENT_REAL_DATA_DIR = os.path.join(REAL_DATA_DIR, "enrichment")
 MERGE_CSV_DIR = os.path.join(
     PROJECT_ROOT_DIR, "backend_pipeline", "data_pipeline", "populator_scripts", "entitys_to_merge"
 )
-MERGE_REVIEW_DIR = os.path.join(REAL_DATA_DIR, "merge_review")
+MERGE_REVIEW_DIR = os.path.join(os.path.dirname(REAL_DATA_DIR), "merge_review")
 
 DB_BACKUPS_DIR = os.path.join(os.path.dirname(PROJECT_ROOT_DIR), "ChatBlatt_data_files", "backups")
 

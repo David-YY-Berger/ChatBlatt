@@ -2,7 +2,7 @@
 
 Step-by-step runbook for merging duplicate **Person** entities via human-reviewed files.
 Design details / internals: `merge_entities.md`. Paths come from `backend/common/Paths.py`
-(`MERGE_REVIEW_DIR` = `ChatBlatt_data_files/real_data/merge_review/`).
+(`MERGE_REVIEW_DIR` = `ChatBlatt_data_files/merge_review/`).
 
 > There is no test DB - the apply step writes to the real DB. Take a backup first
 > (`Paths.DB_BACKUPS_DIR`) and read `conventions/safety_and_testing.md`.
