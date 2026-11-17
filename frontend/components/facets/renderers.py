@@ -166,14 +166,25 @@ def _render_entity_select_panel(ent: dict, lang: str = "en") -> None:
             if options:
                 labels = _unique_option_labels(options)
                 display_labels = dict(zip(labels, _unique_option_labels(options, lang)))
-                st.multiselect(
-                    get_text("source_search_ui.select_entities", lang).format(entity=label),
-                    options=labels,
-                    format_func=lambda value: display_labels[value],
-                    key=f"entity_filter_selected_{ent['key']}",
-                    label_visibility="collapsed",
-                    placeholder=get_text("source_search_ui.search_entities", lang).format(entity=label),
-                )
+                select_col, done_col = st.columns([12, 1], vertical_alignment="center")
+                with select_col:
+                    st.multiselect(
+                        get_text("source_search_ui.select_entities", lang).format(entity=label),
+                        options=labels,
+                        format_func=lambda value: display_labels[value],
+                        key=f"entity_filter_selected_{ent['key']}",
+                        label_visibility="collapsed",
+                        placeholder=get_text("source_search_ui.search_entities", lang).format(entity=label),
+                    )
+                with done_col:
+                    # Clicking moves focus off the combobox, closing its dropdown.
+                    st.button(
+                        "✔",
+                        key=f"entity_filter_done_{ent['key']}",
+                        type="primary",
+                        help="Done",
+                        use_container_width=True,
+                    )
                 # Selections live in session_state under this widget's key;
                 # get_selected_entity_ids() resolves them (across every
                 # entity-type panel) back to entity keys for the query.

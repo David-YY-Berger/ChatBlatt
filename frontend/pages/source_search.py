@@ -214,14 +214,26 @@ def _render_pagination(lang: str) -> None:
     if page_count <= 1:
         return
 
-    prev_col, page_col, next_col = st.columns([1, 2, 1])
+    prev_col, next_col, page_col = st.columns([1, 1, 8], vertical_alignment="center")
     with prev_col:
         if st.button(
-            get_text("source_search_ui.previous_page", lang),
+            "←",
             disabled=page == 0,
             key="source_search_previous_page",
+            help=get_text("source_search_ui.previous_page", lang),
+            use_container_width=True,
         ):
             _execute_search(st.session_state["_search_query"], page - 1)
+            st.rerun()
+    with next_col:
+        if st.button(
+            "→",
+            disabled=page + 1 >= page_count,
+            key="source_search_next_page",
+            help=get_text("source_search_ui.next_page", lang),
+            use_container_width=True,
+        ):
+            _execute_search(st.session_state["_search_query"], page + 1)
             st.rerun()
     with page_col:
         st.markdown(
@@ -236,14 +248,6 @@ def _render_pagination(lang: str) -> None:
                 total=total_sources,
             )
         )
-    with next_col:
-        if st.button(
-            get_text("source_search_ui.next_page", lang),
-            disabled=page + 1 >= page_count,
-            key="source_search_next_page",
-        ):
-            _execute_search(st.session_state["_search_query"], page + 1)
-            st.rerun()
 
 
 # ---------------------------------------------------------------------------
