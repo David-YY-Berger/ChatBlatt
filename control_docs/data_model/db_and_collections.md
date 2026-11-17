@@ -90,7 +90,8 @@ python -m backend_pipeline.data_pipeline.one_time_scripts.create_application_rea
 
 The first command is read-only and uses `DB_READ_ONLY_USERNAME` /
 `DB_READ_ONLY_PASSWORD`; the second uses `DB_BT_USERNAME` / `DB_BT_PASSWORD` and
-requires index-creation privileges. It skips an existing compatible key-leading index,
+requires index-creation privileges. Alternatively, set `APPLY = True` at the bottom of
+the script before running it, including from an IDE. It skips an existing compatible key-leading index,
 refuses missing collections or conflicting index definitions, and never drops indexes
 or changes documents. Re-running is safe. An error after one creation can leave a
 partial result; rerun after resolving it. This script uses `MongoClient` directly,

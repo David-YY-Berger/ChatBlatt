@@ -1,6 +1,7 @@
 import unittest
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
+from backend_pipeline.data_pipeline.one_time_scripts import create_application_read_indexes as script
 from backend_pipeline.data_pipeline.one_time_scripts.create_application_read_indexes import (
     INDEX_KEYS,
     INDEX_NAME,
@@ -47,6 +48,24 @@ class CreateApplicationReadIndexesTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "Sources.BT does not exist"):
             create_missing_indexes(self.db, True)
         self.collections["TN"].create_index.assert_not_called()
+
+    def test_apply_switch_and_flag_select_write_credentials(self):
+        for configured_apply, arguments, expected in (
+            (False, [], False),
+            (True, [], True),
+            (False, ["--apply"], True),
+        ):
+            with self.subTest(configured_apply=configured_apply, arguments=arguments), \
+                 patch("sys.argv", ["script", *arguments]), \
+                 patch.object(script.DBFactory, "get_prod_mongo_uri", return_value="read") as read_uri, \
+                 patch.object(script.DBFactory, "get_population_mongo_uri", return_value="write") as write_uri, \
+                 patch.object(script, "MongoClient") as client, \
+                 patch.object(script, "create_missing_indexes") as create:
+                script.main(configured_apply)
+                client.assert_called_once_with("write" if expected else "read", serverSelectionTimeoutMS=10000)
+                create.assert_called_once_with(client.return_value.__enter__.return_value["Sources"], expected)
+                self.assertEqual(read_uri.call_count, int(not expected))
+                self.assertEqual(write_uri.call_count, int(expected))
 
 
 if __name__ == "__main__":

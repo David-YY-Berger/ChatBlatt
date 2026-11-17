@@ -1,6 +1,6 @@
 """Create source-content lookup indexes; run from the repository root.
 
-Dry-run by default. Pass --apply to create missing indexes in the real database.
+Dry-run by default. Pass --apply or set APPLY = True to create missing indexes.
 """
 import argparse
 
@@ -53,17 +53,19 @@ def create_missing_indexes(db, apply: bool) -> None:
             print(f"Sources.{name}: would create {INDEX_NAME} on {INDEX_KEYS}")
 
 
-def main() -> None:
+def main(apply: bool = False) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="create indexes in the real database")
     args = parser.parse_args()
+    apply = apply or args.apply
 
-    uri = DBFactory.get_population_mongo_uri() if args.apply else DBFactory.get_prod_mongo_uri()
+    uri = DBFactory.get_population_mongo_uri() if apply else DBFactory.get_prod_mongo_uri()
     with MongoClient(uri, serverSelectionTimeoutMS=10000) as client:
-        create_missing_indexes(client[CollectionObjs.TN.db_name], args.apply)
-    if not args.apply:
-        print("Dry run only; pass --apply to create the missing indexes.")
+        create_missing_indexes(client[CollectionObjs.TN.db_name], apply)
+    if not apply:
+        print("Dry run only; pass --apply or set APPLY = True to create the missing indexes.")
 
 
 if __name__ == "__main__":
-    main()
+    APPLY = False  # Set True to create indexes when running from an IDE.
+    main(APPLY)
