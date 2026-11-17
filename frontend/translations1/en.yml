@@ -10,6 +10,10 @@ ui:
   select_option: "Select"
   menu: "Menu"
   loading: "Loading, please wait…"
+  options_filter_note: "Only showing options with {condition}"
+
+options_filter_conditions:
+  family_relationships: "family relationships"
 
 nav:
   home: "Home"

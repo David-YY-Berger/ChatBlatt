@@ -47,6 +47,7 @@ def render(lang: str) -> None:
         lang,
         state_key="genealogy_center_person",
         override_key=st.session_state.pop("genealogy_pending_person", None),
+        only_with_family=True,
     )
 
     if not center_key:

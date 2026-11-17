@@ -26,6 +26,15 @@ class PersonSearchHandler(BaseEntitySearchHandler):
     def get_select_options(self) -> List[EntitySelectOption]:
         return self.db.getPersonSelectOptions()
 
+    def get_family_select_options(self) -> List[EntitySelectOption]:
+        """Select options only for people with at least one family relationship."""
+        options = self.get_select_options()
+        keys = [option.key for option in options if option.key]
+        related = set()
+        for rel in self.db.get_family_rels_for_entities(keys):
+            related.update((rel.term1, rel.term2))
+        return [option for option in options if option.key in related]
+
     def get_transient_field_labels(self) -> List[Tuple[str, str]]:
         """
         Ordered list of (field_name, translation_key) for Person transient fields.

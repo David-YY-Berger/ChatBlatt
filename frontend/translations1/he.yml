@@ -10,6 +10,10 @@ ui:
   select_option: "בחר"
   menu: "תפריט"
   loading: "טוען, נא להמתין…"
+  options_filter_note: "מוצגות רק אפשרויות עם {condition}"
+
+options_filter_conditions:
+  family_relationships: "קשרי משפחה"
 
 nav:
   home: "בית"

@@ -24,6 +24,7 @@ import streamlit as st
 from translations1 import get_text
 from components.entity_filters import render_person_filters
 from components.entity_option_labels import unique_entity_option_labels
+from components.options_filter_note import render_options_filter_note
 
 
 @st.fragment
@@ -31,6 +32,7 @@ def render_person_selector(
     lang: str,
     state_key: str = "selected_person_key",
     override_key: Optional[str] = None,
+    only_with_family: bool = False,
 ) -> Optional[str]:
     """
     Render a person combobox + Go button.
@@ -47,6 +49,8 @@ def render_person_selector(
                       (e.g. a person picked by clicking a node on a graph)
                       before the widgets are rendered, so both the confirmed
                       selection and the combobox display stay in sync.
+        only_with_family: Only offer people with at least one family
+                      relationship, and show a note saying so.
 
     Returns:
         The entity key string of the confirmed selection, or None.
@@ -60,7 +64,7 @@ def render_person_selector(
         st.warning(get_text("entity_search_ui.not_implemented", lang))
         return None
 
-    options = _load_person_options(handler)
+    options = _load_person_options(handler, only_with_family)
     if not options:
         st.info(get_text("entity_search_ui.no_entities", lang))
         return None
@@ -118,6 +122,9 @@ def render_person_selector(
             type="primary",
         )
 
+    if only_with_family:
+        render_options_filter_note(lang, "family_relationships")
+
     if go_clicked and entity_key:
         st.session_state[state_key] = entity_key
         _record_tree_search(state_key, entity_key, filtered, lang)
@@ -142,9 +149,11 @@ def _record_tree_search(state_key: str, entity_key: str, options: list, lang: st
                entity_type="person", entity_id=entity_key, entity_name=option.display_en_name)
 
 
-def _load_person_options(handler) -> list:
+def _load_person_options(handler, only_with_family: bool = False) -> list:
     """Load person select options, cached per Streamlit session."""
-    cache_key = "_person_selector_options_cache"
+    cache_key = "_person_selector_family_options_cache" if only_with_family else "_person_selector_options_cache"
     if cache_key not in st.session_state:
-        st.session_state[cache_key] = handler.get_select_options()
+        st.session_state[cache_key] = (
+            handler.get_family_select_options() if only_with_family else handler.get_select_options()
+        )
     return st.session_state[cache_key]
