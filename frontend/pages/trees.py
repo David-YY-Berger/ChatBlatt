@@ -58,28 +58,25 @@ def _render_landing(lang: str) -> None:
         unsafe_allow_html=True,
     )
 
-    for offset in range(0, len(TREE_OPTIONS), 2):
-        for column, (page_key, icon_name) in zip(
-            st.columns(2), TREE_OPTIONS[offset:offset + 2]
-        ):
-            with column:
-                with st.container(border=True, key=f"tree_landing_{page_key}"):
-                    title = get_text(f"tree_tabs.{page_key}", lang)
-                    st.image(ICON_DIR / icon_name, width=160)
-                    st.markdown(
-                        f'<div class="home-tool-title">{title}</div>',
-                        unsafe_allow_html=True,
-                    )
-                    description = html.escape(
-                        get_text(f"trees_ui.descriptions.{page_key}", lang)
-                    )
-                    st.markdown(
-                        f'<div class="tree-option-description">{description}</div>',
-                        unsafe_allow_html=True,
-                    )
-                    if st.button(
-                        title,
-                        key=f"tree_landing_btn_{page_key}_{lang}",
-                        use_container_width=True,
-                    ):
-                        navigation.go(page_key)
+    for column, (page_key, icon_name) in zip(st.columns(len(TREE_OPTIONS)), TREE_OPTIONS):
+        with column:
+            with st.container(border=True, key=f"home_tool_tree_{page_key}"):
+                title = get_text(f"tree_tabs.{page_key}", lang)
+                st.image(ICON_DIR / icon_name, width=160)
+                st.markdown(
+                    f'<div class="home-tool-title">{title}</div>',
+                    unsafe_allow_html=True,
+                )
+                description = html.escape(
+                    get_text(f"trees_ui.descriptions.{page_key}", lang)
+                )
+                st.markdown(
+                    f'<div class="tree-option-description">{description}</div>',
+                    unsafe_allow_html=True,
+                )
+                if st.button(
+                    title,
+                    key=f"tree_landing_btn_{page_key}_{lang}",
+                    use_container_width=True,
+                ):
+                    navigation.go(page_key)

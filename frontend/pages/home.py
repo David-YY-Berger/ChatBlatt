@@ -24,7 +24,7 @@ TOOLS = (
     (PAGE_NUMBER_SEARCH, "number_search_main.jpg", "home_tools.number_search_description"),
     (PAGE_SOURCE_SEARCH, "source_search_main.jpg", "home_tools.source_search_description"),
     (PAGE_ENTITY_SEARCH, "entity_search_main.jpg", "home_tools.entity_search_description"),
-    (PAGE_TREES, "family_tree.jpg", "home_tools.trees_description"),
+    (PAGE_TREES, "family_tree.jpg", None),
 )
 
 
@@ -63,7 +63,6 @@ def render(lang: str) -> None:
                     navigation.go(page_key)
 
 def _tree_description(lang: str) -> str:
-    intro = html.escape(get_text("home_tools.trees_description", lang))
     items = "".join(
         "<li><strong>"
         + html.escape(get_text(f"tree_tabs.{page_key}", lang))
@@ -74,5 +73,5 @@ def _tree_description(lang: str) -> str:
     )
     return (
         '<div class="home-tool-description home-tool-description--trees">'
-        f"<p>{intro}</p><ul>{items}</ul></div>"
+        f"<ul>{items}</ul></div>"
     )
