@@ -33,6 +33,7 @@ class AboutPageTests(unittest.TestCase):
         self.assertEqual(html.count("**Pipeline**"), 1)
         self.assertNotIn("May the Creator be praised", html)
         self.assertIn("ספר בן איש חי - הקדמה", html)
+        self.assertIn("direction: ltr; text-align: left", html)
 
     def test_hebrew_page_renders_hebrew_quote_and_translated_pipeline(self):
         rendered = self._rendered_markdown("he")
@@ -49,6 +50,7 @@ class AboutPageTests(unittest.TestCase):
         self.assertIn("תפקיד שאינו תנא או אמורא מקבלת ציון 0%", html)
         self.assertIn("https://www.linkedin.com/in/david-yy-berger/", html)
         self.assertNotIn("May the Creator be praised", html)
+        self.assertIn("direction: rtl; text-align: right", html)
 
 
 if __name__ == "__main__":
