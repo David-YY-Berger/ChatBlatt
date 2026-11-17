@@ -1,3 +1,4 @@
+import re
 import sys
 import unittest
 from contextlib import nullcontext
@@ -25,7 +26,7 @@ class SourceSearchResultsTests(unittest.TestCase):
         key = "TN_Genesis_0_1:1"
         metadata = SourceMetadata(
             key=key, summary_en="English summary", summary_heb="תקציר",
-            passage_types=[PassageType.PROPHECY],
+            passage_types=list(PassageType),
         )
         answer = SimpleNamespace(
             src_metadata_lst=[metadata],
@@ -43,7 +44,15 @@ _render_results_body(st.session_state["answer"], "en")
         self.assertEqual(app.expander[0].label, "View source")
         self.assertTrue(any("English summary" in m.value for m in app.caption))
         self.assertTrue(any("תקציר" in m.value for m in app.caption))
-        self.assertTrue(any("Prophecy" in m.value for m in app.markdown))
+        columns = app.get("column")
+        self.assertIn("Bereishit", columns[0].markdown[0].value)
+        self.assertIn("בראשית", columns[1].markdown[0].value)
+        self.assertIn("English summary", columns[2].caption[0].value)
+        self.assertIn("תקציר", columns[3].caption[0].value)
+        badges = next(m.value for m in app.markdown if "Prophecy" in m.value)
+        colors = re.findall(r":(\w+)-badge\[", badges)
+        self.assertEqual(len(colors), len(PassageType))
+        self.assertEqual(len(set(colors)), len(PassageType))
         self.assertIn("First\nsecond\nThird", app.code[0].value)
         self.assertIn("עברית", app.code[0].value)
         self.assertEqual(len(app.get("html")), 2)
@@ -66,6 +75,11 @@ _render_results_body(st.session_state["answer"], "he")
         self.assertEqual(len(app.expander), 2)
         self.assertEqual(app.expander[0].label, "הצגת המקור")
         self.assertTrue(any("Fallback" in m.value for m in app.caption))
+        columns = app.get("column")
+        self.assertIn("Bereishit", columns[0].markdown[0].value)
+        self.assertIn("בראשית", columns[1].markdown[0].value)
+        self.assertIn("Fallback", columns[2].caption[0].value)
+        self.assertFalse(columns[3].caption)
         self.assertIn("Only English", app.code[0].value)
         self.assertEqual(len(app.get("html")), 1)
         self.assertEqual(app.info[0].value, "תוכן המקור אינו זמין")

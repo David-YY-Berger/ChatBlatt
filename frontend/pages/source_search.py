@@ -24,7 +24,8 @@ from uuid import uuid4
 import streamlit as st
 
 import metrics
-from translations1 import enum_text, get_text, is_rtl
+from backend.models_db.Enums import PassageType
+from translations1 import enum_text, get_text
 from components.facets import (
     get_selected_entity_names,
     get_selected_entity_metrics,
@@ -253,57 +254,76 @@ def _markdown_text(text: str) -> str:
     return re.sub(r"([\\`*_{}\[\]()#+.!|>~-])", r"\\\1", text)
 
 
+# The shared amber and gold story colors are too similar for compact badges.
+_PASSAGE_BADGE_COLORS = {
+    PassageType.LAW: "blue",
+    PassageType.STORY_TANACH: "orange",
+    PassageType.STORY_SAGES: "green",
+    PassageType.PHILOSOPHIC: "violet",
+    PassageType.GENEALOGY: "yellow",
+    PassageType.PROPHECY: "red",
+}
+
+
 def _render_results_body(ans, lang: str = "en") -> None:
     """Display each result in the page, rather than in a scrolling iframe."""
-    for index, metadata in enumerate(ans.src_metadata_lst):
-        source = ans.src_contents[index] if index < len(ans.src_contents) else None
-        content = source._get_content() if source else []
-        english = content[0] if len(content) > 0 else ""
-        hebrew = content[1] if len(content) > 1 else ""
-        title_en, title_he = str(metadata), metadata.to_heb_str()
-        summary_en = metadata.summary_en or ""
-        summary_he = metadata.summary_heb or ""
-        titles = (title_he, title_en) if is_rtl(lang) else (title_en, title_he)
-        summaries = (summary_he, summary_en) if is_rtl(lang) else (summary_en, summary_he)
+    with st.container(key="source_results", gap="small"):
+        for index, metadata in enumerate(ans.src_metadata_lst):
+            source = ans.src_contents[index] if index < len(ans.src_contents) else None
+            content = source._get_content() if source else []
+            english = content[0] if len(content) > 0 else ""
+            hebrew = content[1] if len(content) > 1 else ""
+            title_en, title_he = str(metadata), metadata.to_heb_str()
+            summary_en = metadata.summary_en or ""
+            summary_he = metadata.summary_heb or ""
 
-        with st.container(border=True, key=f"source_result_{index}"):
-            st.markdown(f"**{_markdown_text(titles[0] or titles[1])}**")
-            if titles[0] and titles[1] and titles[0] != titles[1]:
-                st.caption(_markdown_text(titles[1]))
-            if metadata.passage_types:
-                st.markdown(" ".join(
-                    f":blue-badge[{pt.icon} {_markdown_text(enum_text(pt, lang))}]"
-                    for pt in metadata.passage_types
-                ))
-            for summary in dict.fromkeys(summaries):
-                if summary:
-                    st.caption(_markdown_text(summary))
+            with st.container(border=True, key=f"source_result_{index}"):
+                en_col, he_col = st.columns(2, gap="small")
+                with en_col:
+                    if title_en:
+                        st.markdown(f"**{_markdown_text(title_en)}**")
+                with he_col:
+                    if title_he:
+                        st.markdown(f"**{_markdown_text(title_he)}**")
+                if metadata.passage_types:
+                    st.markdown(" ".join(
+                        f":{_PASSAGE_BADGE_COLORS[pt]}-badge[{pt.icon} {_markdown_text(enum_text(pt, lang))}]"
+                        for pt in metadata.passage_types
+                    ))
+                if summary_en or summary_he:
+                    en_col, he_col = st.columns(2, gap="small")
+                    with en_col:
+                        if summary_en:
+                            st.caption(_markdown_text(summary_en))
+                    with he_col:
+                        if summary_he:
+                            st.caption(_markdown_text(summary_he))
 
-            with st.expander(get_text("source_display.view_source", lang)):
-                copy_blocks = []
-                for title, summary, body in (
-                    (title_he, summary_he, hebrew),
-                    (title_en, summary_en, english),
-                ):
-                    block = "\n\n".join(part for part in (title, summary, _plain(body)) if part)
-                    if block:
-                        copy_blocks.append(block)
-                with st.popover(get_text("source_display.copy", lang), icon=":material/content_copy:"):
-                    st.caption(get_text("source_display.copy_help", lang))
-                    st.code("\n\n\n".join(copy_blocks), language=None)
+                with st.expander(get_text("source_display.view_source", lang)):
+                    copy_blocks = []
+                    for title, summary, body in (
+                        (title_he, summary_he, hebrew),
+                        (title_en, summary_en, english),
+                    ):
+                        block = "\n\n".join(part for part in (title, summary, _plain(body)) if part)
+                        if block:
+                            copy_blocks.append(block)
+                    with st.popover(get_text("source_display.copy", lang), icon=":material/content_copy:"):
+                        st.caption(get_text("source_display.copy_help", lang))
+                        st.code("\n\n\n".join(copy_blocks), language=None)
 
-                if not hebrew.strip() and not english.strip():
-                    st.info(get_text("source_display.no_content", lang))
-                for body, direction, label in (
-                    (hebrew, "rtl", "hebrew_content"),
-                    (english, "ltr", "english_content"),
-                ):
-                    if body.strip():
-                        st.markdown(f"**{get_text(f'source_display.{label}', lang)}**")
-                        st.html(
-                            f'<div dir="{direction}" style="text-align:{"right" if direction == "rtl" else "left"}; '
-                            f'overflow-wrap:anywhere; line-height:1.7">{body}</div>'
-                        )
+                    if not hebrew.strip() and not english.strip():
+                        st.info(get_text("source_display.no_content", lang))
+                    for body, direction, label in (
+                        (hebrew, "rtl", "hebrew_content"),
+                        (english, "ltr", "english_content"),
+                    ):
+                        if body.strip():
+                            st.markdown(f"**{get_text(f'source_display.{label}', lang)}**")
+                            st.html(
+                                f'<div dir="{direction}" style="text-align:{"right" if direction == "rtl" else "left"}; '
+                                f'overflow-wrap:anywhere; line-height:1.7">{body}</div>'
+                            )
 
 
 # ---------------------------------------------------------------------------
