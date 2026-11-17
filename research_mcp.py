@@ -5,16 +5,23 @@ from __future__ import annotations
 import functools
 import logging
 import os
+import queue
+import re
 import threading
+import time
+from contextvars import ContextVar
 from dataclasses import asdict
 from difflib import SequenceMatcher
 from typing import Annotated, Literal
+from urllib.parse import parse_qs
 
+import requests
 from bs4 import BeautifulSoup
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import ToolAnnotations
 from pydantic import Field
+from starlette.types import ASGIApp, Receive, Scope, Send
 
 from backend.app.controllers.entity_populator import AS_TERM1, AS_TERM2, get_populator
 from backend.app.controllers.entity_search.entity_search_controller import get_entity_search_handler
@@ -46,8 +53,113 @@ VISIBLE_TYPES = {
     EntityType.ENumber, EntityType.EAnimal, EntityType.EFood, EntityType.EPlant,
 }
 READ_ONLY = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True)
+_MCP_METRICS_ADMIN_OPT_OUT: ContextVar[bool | None] = ContextVar(
+    "mcp_metrics_admin_opt_out", default=None
+)
+_MCP_METRICS_QUEUE: queue.Queue[dict[str, str | int]] = queue.Queue(maxsize=256)
+_MCP_METRICS_LOCK = threading.Lock()
+_MCP_METRICS_WARNINGS: set[str] = set()
+_MCP_METRICS_WORKER: threading.Thread | None = None
 
-mcp = FastMCP(
+
+def _warn_mcp_metrics_once(key: str, message: str) -> None:
+    with _MCP_METRICS_LOCK:
+        if key in _MCP_METRICS_WARNINGS:
+            return
+        _MCP_METRICS_WARNINGS.add(key)
+    log.warning(message)
+
+
+def _send_mcp_metric(event: dict[str, str | int]) -> None:
+    measurement_id = os.environ.get("GA4_MEASUREMENT_ID", "G-9ZHLKD65GM")
+    api_secret = os.environ.get("GA4_API_SECRET")
+    if not api_secret:
+        _warn_mcp_metrics_once(
+            "missing_api_secret",
+            "MCP GA4 metrics are disabled: set the GA4_API_SECRET deployment variable.",
+        )
+        return
+    if not re.fullmatch(r"G-[A-Z0-9]+", measurement_id):
+        _warn_mcp_metrics_once(
+            "invalid_measurement_id",
+            "MCP GA4 metrics are disabled: GA4_MEASUREMENT_ID is invalid.",
+        )
+        return
+    try:
+        response = requests.post(
+            "https://www.google-analytics.com/mp/collect",
+            params={"measurement_id": measurement_id, "api_secret": api_secret},
+            json={
+                "client_id": "eitz-habina-mcp-server",
+                "events": [{
+                    "name": "mcp_tool_call",
+                    "params": event,
+                }],
+            },
+            timeout=(1, 3),
+        )
+    except requests.RequestException as exc:
+        log.warning("MCP GA4 metric delivery failed (%s).", type(exc).__name__)
+        return
+    if response.status_code < 200 or response.status_code >= 300:
+        log.warning("MCP GA4 metric delivery failed (HTTP %s).", response.status_code)
+
+
+def _mcp_metrics_worker() -> None:
+    while True:
+        event = _MCP_METRICS_QUEUE.get()
+        try:
+            _send_mcp_metric(event)
+        finally:
+            _MCP_METRICS_QUEUE.task_done()
+
+
+def _enqueue_mcp_metric(tool_name: str, outcome: str, duration_ms: int) -> None:
+    global _MCP_METRICS_WORKER
+    with _MCP_METRICS_LOCK:
+        if _MCP_METRICS_WORKER is None:
+            _MCP_METRICS_WORKER = threading.Thread(
+                target=_mcp_metrics_worker, name="mcp-ga4-metrics", daemon=True
+            )
+            _MCP_METRICS_WORKER.start()
+    try:
+        _MCP_METRICS_QUEUE.put_nowait({
+            "tool_name": tool_name, "outcome": outcome, "duration_ms": duration_ms,
+        })
+    except queue.Full:
+        log.warning("MCP GA4 metric queue is full; a tool-call event was dropped.")
+
+
+def _record_mcp_metric(tool_name: str, outcome: str, duration_ms: int) -> None:
+    if _MCP_METRICS_ADMIN_OPT_OUT.get() is False:
+        _enqueue_mcp_metric(tool_name, outcome, duration_ms)
+
+
+class _AdminMetricsMiddleware:
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+        values = parse_qs(
+            scope.get("query_string", b"").decode("ascii", "replace"),
+            keep_blank_values=True,
+        ).get("admin", [])
+        opted_out = any(value.lower() != "false" for value in values)
+        token = _MCP_METRICS_ADMIN_OPT_OUT.set(opted_out)
+        try:
+            await self.app(scope, receive, send)
+        finally:
+            _MCP_METRICS_ADMIN_OPT_OUT.reset(token)
+
+
+class _MetricsFastMCP(FastMCP):
+    def streamable_http_app(self) -> ASGIApp:
+        return _AdminMetricsMiddleware(super().streamable_http_app())
+
+mcp = _MetricsFastMCP(
     "Eitz Habina",
     instructions=(
         "Search authentic Torah sources. Entity names are suggestions, not identity claims: "
@@ -77,13 +189,20 @@ def safe_tool(func):
     """Keep backend exception messages, which may contain secrets, out of MCP responses."""
     @functools.wraps(func)
     def wrapped(*args, **kwargs):
+        started = time.monotonic()
+        outcome = "success"
         try:
             return func(*args, **kwargs)
         except InputError:
+            outcome = "failure"
             raise
         except Exception as exc:
+            outcome = "failure"
             log.error("Research tool failed: %s (%s)", func.__name__, type(exc).__name__)
             raise RuntimeError("The research service could not complete the request. Please try again later.") from None
+        finally:
+            duration_ms = max(0, round((time.monotonic() - started) * 1000))
+            _record_mcp_metric(func.__name__, outcome, duration_ms)
     return wrapped
 
 

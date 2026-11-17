@@ -208,7 +208,8 @@ class ResearchMcpTests(unittest.TestCase):
 
     def test_protocol_errors_do_not_expose_backend_exception(self):
         app = research.mcp.streamable_http_app()
-        with TestClient(app, base_url="http://127.0.0.1:8502") as client:
+        with patch.object(research, "_enqueue_mcp_metric") as enqueue, \
+             TestClient(app, base_url="http://127.0.0.1:8502") as client:
             headers = {"Accept": "application/json, text/event-stream"}
             initialized = client.post("/mcp", headers=headers, json={
                 "jsonrpc": "2.0", "id": 0, "method": "initialize",
@@ -225,13 +226,63 @@ class ResearchMcpTests(unittest.TestCase):
             self.assertTrue(all(tool["annotations"]["readOnlyHint"] for tool in tools))
             self.assertNotIn("studied_from", {tool["name"] for tool in tools})
             with patch.object(research, "options", side_effect=RuntimeError("secret-value")):
-                response = client.post("/mcp", headers=headers, json={
+                admin_response = client.post("/mcp?admin=true", headers=headers, json={
                     "jsonrpc": "2.0", "id": 1, "method": "tools/call",
                     "params": {"name": "find_entities", "arguments": {"name": "david", "entity_type": "people"}},
                 })
-            self.assertEqual(response.status_code, 200)
-            self.assertTrue(response.json()["result"]["isError"])
-            self.assertNotIn("secret-value", response.text)
+            self.assertEqual(admin_response.status_code, 200)
+            self.assertTrue(admin_response.json()["result"]["isError"])
+            self.assertNotIn("secret-value", admin_response.text)
+            enqueue.assert_not_called()
+            conflicting_admin_response = client.post(
+                "/mcp?admin=false&admin=true", headers=headers, json={
+                    "jsonrpc": "2.0", "id": 2, "method": "tools/call",
+                    "params": {"name": "find_entities",
+                               "arguments": {"name": "david", "entity_type": "people"}},
+                },
+            )
+            self.assertTrue(conflicting_admin_response.json()["result"]["isError"])
+            enqueue.assert_not_called()
+
+            with patch.object(research, "options", side_effect=RuntimeError("secret-value")):
+                failure = client.post("/mcp?admin=false", headers=headers, json={
+                    "jsonrpc": "2.0", "id": 3, "method": "tools/call",
+                    "params": {"name": "find_entities",
+                               "arguments": {"name": "david", "entity_type": "people"}},
+                })
+            self.assertTrue(failure.json()["result"]["isError"])
+            with patch.object(research, "options", return_value=[]):
+                success = client.post("/mcp", headers=headers, json={
+                    "jsonrpc": "2.0", "id": 4, "method": "tools/call",
+                    "params": {"name": "find_entities",
+                               "arguments": {"entity_type": "people", "name": "none"}},
+                })
+            self.assertFalse(success.json()["result"]["isError"])
+
+        self.assertEqual(
+            [(entry.args[0], entry.args[1]) for entry in enqueue.call_args_list],
+            [("find_entities", "failure"), ("find_entities", "success")],
+        )
+        self.assertTrue(all(isinstance(entry.args[2], int) for entry in enqueue.call_args_list))
+
+    def test_mcp_ga4_metric_uses_private_server_side_configuration(self):
+        event = {"tool_name": "search_sources", "outcome": "failure", "duration_ms": 42}
+        with patch.dict(os.environ, {
+            "GA4_MEASUREMENT_ID": "G-TEST123",
+            "GA4_API_SECRET": "test-secret",
+        }), patch.object(research.requests, "post") as post:
+            post.return_value.status_code = 204
+            research._send_mcp_metric(event)
+
+        post.assert_called_once_with(
+            "https://www.google-analytics.com/mp/collect",
+            params={"measurement_id": "G-TEST123", "api_secret": "test-secret"},
+            json={
+                "client_id": "eitz-habina-mcp-server",
+                "events": [{"name": "mcp_tool_call", "params": event}],
+            },
+            timeout=(1, 3),
+        )
 
 
 if __name__ == "__main__":

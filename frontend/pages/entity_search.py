@@ -27,12 +27,17 @@ from translations1 import enum_text, get_text, is_rtl
 from components.entity_filters import render_multi_checkbox_filter, render_person_filters
 from components.entity_option_labels import unique_entity_option_labels
 from system_common.SystemFunctions import get_secret
+from components.icon_buttons import (
+    ICON_FAMILY_TREE, ICON_PLACES_VISITED, ICON_SOURCES, render_icon_buttons,
+)
 from system_common.UrlPaths import (
-    PARAM_ENTITY_ID, PARAM_NAVIGATION_ORIGIN, PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
+    PARAM_ENTITY_ID, PARAM_NAVIGATION_ORIGIN, PARAM_PLACES_VISITED_ID, PARAM_PLACES_VISITED_MENTIONED,
+    PARAM_PLACES_VISITED_MODE, PARAM_PLACES_VISITED_REL_TYPES, PARAM_SOURCE_ENTITIES,
+    PARAM_SOURCE_REL_LABEL, PARAM_SOURCE_RELS, page_url,
 )
 from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS, PAGE_SOURCE_SEARCH,
-    PAGE_FAMILY_TREE,
+    PAGE_FAMILY_TREE, PAGE_PLACES_VISITED,
 )
 
 _DEBUG_FE = get_secret("PRINT_DEBUG_LOGS_FE").strip().lower() == "true"
@@ -272,17 +277,40 @@ def _render_type_filter(
 #  Entity detail rendering
 # =============================================================================
 
-def _render_family_tree_button(entity_key: str, lang: str) -> None:
-    """Image button (with hover hint) that opens the family tree centred on this person."""
-    with st.container(key="tree_link_btn"):
-        st.image(_ICON_DIR / "family_tree.jpg", width=64)
-        if st.button(
-            get_text("entity_search_ui.open_family_tree", lang),
-            key=f"open_family_tree_{entity_key}",
-            help=get_text("entity_search_ui.open_family_tree", lang),
-        ):
+def _has_places_visited(entity_tab: str, entity_key: str) -> bool:
+    """True when the person/place has visited, born-in or died-in relationships."""
+    from backend.app.logic.places_visited_logic import load_options_and_relationships
+    from backend.db.DBFactory import DBFactory
+
+    if "_places_visited_options" not in st.session_state:
+        st.session_state["_places_visited_options"] = load_options_and_relationships(
+            DBFactory.get_prod_db_mongo())
+    people, places, _ = st.session_state["_places_visited_options"]
+    return any(option.key == entity_key for option in (people if entity_tab == PAGE_PEOPLE else places))
+
+
+def _render_entity_action_buttons(entity_key: str, lang: str, entity_tab: str) -> None:
+    """Compact icon row linking to the related tree and source pages for this entity."""
+    buttons = []
+    if entity_tab == PAGE_PEOPLE:
+        def open_family_tree() -> None:
             st.session_state["genealogy_pending_person"] = entity_key
             navigation.go(PAGE_FAMILY_TREE)
+
+        buttons.append(("family", ICON_FAMILY_TREE,
+                        get_text("entity_search_ui.open_family_tree", lang), open_family_tree))
+    if entity_tab in (PAGE_PEOPLE, PAGE_PLACES) and _has_places_visited(entity_tab, entity_key):
+        buttons.append(("places_visited", ICON_PLACES_VISITED,
+                        get_text("entity_search_ui.open_places_visited", lang),
+                        lambda: navigation.go(PAGE_PLACES_VISITED, **{
+                            PARAM_PLACES_VISITED_MODE: "person" if entity_tab == PAGE_PEOPLE else "place",
+                            PARAM_PLACES_VISITED_ID: entity_key,
+                            PARAM_PLACES_VISITED_REL_TYPES: ["visited", "bornIn", "diedIn"],
+                            PARAM_PLACES_VISITED_MENTIONED: "0",
+                        })))
+    buttons.append(("sources", ICON_SOURCES, get_text("entity_search_ui.open_source_search", lang),
+                    lambda: navigation.go(PAGE_SOURCE_SEARCH, **{PARAM_SOURCE_ENTITIES: entity_key})))
+    render_icon_buttons(buttons)
 
 
 def _render_entity_detail(handler, entity_key: str, lang: str, entity_tab: str | None = None) -> None:
@@ -312,8 +340,8 @@ def _render_entity_detail(handler, entity_key: str, lang: str, entity_tab: str |
     if alt_name:
         st.caption(alt_name)
 
-    if entity_tab == PAGE_PEOPLE:
-        _render_family_tree_button(entity_key, lang)
+    if entity_tab:
+        _render_entity_action_buttons(entity_key, lang, entity_tab)
 
     # ---- Alt names ----
     all_names = entity.all_heb_names if rtl else entity.all_en_names

@@ -16,7 +16,7 @@ class AboutPageTests(unittest.TestCase):
             render(lang)
         return [call.args[0] for call in markdown.call_args_list]
 
-    def test_english_table_of_contents_links_to_each_section_and_copy_is_preserved(self):
+    def test_english_page_has_section_links_and_does_not_render_opening_quote(self):
         rendered = self._rendered_markdown("en")
         html = "\n".join(rendered)
 
@@ -25,21 +25,27 @@ class AboutPageTests(unittest.TestCase):
         self.assertIn('href="#about-feyga-menuha"', html)
         self.assertIn('href="#about-the-author"', html)
         self.assertIn('id="what-is-eitz-habina"', html)
-        self.assertIn("Since the Bar Ilan Responsa project (1967)", html)
+        self.assertIn("Since the Bar-Ilan Responsa Project began in 1967", html)
         self.assertIn("EitzHabina@gmail.com", html)
-        self.assertIn('lang="he"', html)
-        self.assertIn('lang="en"', html)
+        self.assertIn("https://www.linkedin.com/in/david-yy-berger/", html)
+        self.assertIn("### Compared with general-purpose AI assistants", html)
+        self.assertNotIn("May the Creator be praised", html)
+        self.assertNotIn("ספר בן איש חי - הקדמה", html)
 
-    def test_hebrew_page_translates_section_links_and_main_content(self):
+    def test_hebrew_page_renders_hebrew_quote_and_translated_pipeline(self):
         rendered = self._rendered_markdown("he")
         html = "\n".join(rendered)
 
         self.assertIn("תוכן העניינים", html)
         self.assertIn("מהו עץ הבינה?", html)
-        self.assertIn("עץ הבינה הוא גרף ידע", html)
+        self.assertIn("בליבו נמצא גרף ידע", html)
         self.assertIn('id="about-feyga-menuha"', html)
         self.assertIn('href="#about-the-author"', html)
         self.assertIn("ספר בן איש חי - הקדמה", html)
+        self.assertIn("צינור העיבוד", html)
+        self.assertIn("תפקיד שאינו תנא או אמורא מקבלת ציון 0%", html)
+        self.assertIn("https://www.linkedin.com/in/david-yy-berger/", html)
+        self.assertNotIn("May the Creator be praised", html)
 
 
 if __name__ == "__main__":

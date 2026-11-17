@@ -3,9 +3,11 @@
 The Streamlit app sends browser-side events to GA4 using the web measurement ID
 `G-9ZHLKD65GM` (web stream ID `16319805930`). The stream ID is an identifier in
 the Google Analytics administration UI, not a credential and not part of event
-requests. No Measurement Protocol secret or server-side analytics calls are used.
-The component and event producers live in `frontend/metrics.py` and
-`frontend/components/metrics_client/`.
+requests. MCP tool events are also sent server-side through the GA4 Measurement
+Protocol when `GA4_API_SECRET` is configured; see
+[MCP GA4 metrics](../app/mcp.md#ga4-mcp-metrics). Browser event production lives
+in `frontend/metrics.py` and `frontend/components/metrics_client/`; MCP event
+production lives in `research_mcp.py`.
 
 For the exact GA4 screens, custom-dimension names, and verification steps, use
 the [Google Analytics setup checklist](google_analytics_setup.md).
@@ -27,6 +29,12 @@ the [Google Analytics setup checklist](google_analytics_setup.md).
   origin. Testing-site activity never loads the GA tag or sends app events.
 - Set `GA4_MEASUREMENT_ID` to override the default ID. An invalid ID disables
   tracking and is reported in the browser console.
+- Create a Measurement Protocol API secret for the web stream and set the
+  Railway variable `GA4_API_SECRET` to enable MCP tool events. Keep the secret
+  server-side; MCP users do not need it. The MCP sends aggregate tool name,
+  success/failure, and duration only, using one synthetic server client ID.
+  MCP calls made through `/mcp?admin=true` are excluded; see
+  [MCP GA4 metrics](../app/mcp.md#ga4-mcp-metrics).
 - In GA4 Admin, select the web stream above and **disable enhanced measurement**,
   especially automatic page changes, site search and file downloads. The app
   sends these events itself. Disable any other Google tag or integration on the
@@ -76,6 +84,7 @@ queue or delivery guarantee.
 | `app_search` | Source, number, unit, entity and tree searches, including searches executed from supported shared URLs. Pagination is not another search. | `search_type`; source searches: `search_id`, `text_similarity_used` (0/1), `passage_types`, `source_types`, `entity_types`, `entity_ids`, `entity_names`, `relationship_filter_used` (0/1); number: `number_value`; unit: `unit_name`; entity: `entity_types`, `entity_ids`, `entity_names`; tree: `tree_type`, `entity_type`, `entity_id`, `entity_name`. |
 | `search_entity_filter` | Once per selected entity option in a source search. | `search_id` joins this to its `app_search`; `entity_type`, `entity_id` and canonical English `entity_name` identify the selection even when the summary lists are truncated. |
 | `file_download` | The source-results PDF download button is clicked. | `file_type=pdf`, `download_type=source_results`. This records a click, not proof that the PDF was saved. |
+| `mcp_tool_call` | An MCP tool function completes or raises an error. | `tool_name`, `outcome` (`success` or `failure`), and `duration_ms`. Uses one synthetic MCP server client ID; MCP arguments and user identities are not sent. |
 
 Descendants' person and source-search icon links open a new tab. The destination
 page view has `came_from=descendants_entity_search` or
@@ -125,7 +134,7 @@ Entity names are public database content, not the visitor's identity.
 Run the frontend regression tests from the project root:
 
 ```powershell
-.\venv\Scripts\python.exe -m unittest frontend.tests.test_metrics frontend.tests.test_navigation_menu frontend.tests.test_selector_fragments frontend.tests.test_source_search_pdf frontend.tests.test_entity_relationships
+.\venv\Scripts\python.exe -m unittest frontend.tests.test_metrics frontend.tests.test_research_mcp frontend.tests.test_navigation_menu frontend.tests.test_selector_fragments frontend.tests.test_source_search_pdf frontend.tests.test_entity_relationships
 node --test frontend\tests\test_metrics_client.js
 ```
 

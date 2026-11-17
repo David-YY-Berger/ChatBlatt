@@ -88,6 +88,9 @@ def _execute_search(query_obj=None, page: int = 0) -> None:
             base_query,
             offset=page * base_query.max_sources,
         )
+        if query_obj is None:
+            # Update the URL before the (slow) search so a refresh reloads this search.
+            sync_url_with_search()
         ans, elapsed = run_search(paged_query)
         st.session_state["_search_ans"] = ans
         st.session_state["_search_query"] = replace(base_query, offset=0)
@@ -95,7 +98,6 @@ def _execute_search(query_obj=None, page: int = 0) -> None:
         if query_obj is None:
             st.session_state["_search_entity_names"] = get_selected_entity_names()
             st.session_state["_search_url"] = current_search_url()
-            sync_url_with_search()
         st.session_state["_search_elapsed"] = elapsed
         st.session_state.pop("_search_error", None)
     except Exception as e:
@@ -117,6 +119,7 @@ def _render_relationship_chip(lang: str) -> None:
         if st.button(get_text("source_search_ui.clear_relationship", lang), key="clear_rel_search"):
             clear_relationship_search()
             st.session_state.pop("_search_ans", None)
+            sync_url_with_search()
             st.rerun()
 
 

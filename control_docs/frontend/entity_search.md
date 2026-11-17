@@ -6,6 +6,8 @@ Entity Search has a landing page (`/entity_search`) showing one clickable image 
 
 Source: also rontend/components/entity_filters.py. The people metadata filters (faith, gender, individual/group, roles) and the generic tri-state / multi-checkbox filter helpers live there and are shared: the people tab uses ender_person_filters, and the person selector component (components/person_selector.py, used by both trees - see [trees.md](trees.md)) embeds the same filters.
 
+Entity detail pages show a compact row of 44px icon buttons under the name (`components/icon_buttons.py`, hover hints): Family Tree (people only), Places Visited (people and places that have visited/born/died-in relationships; opens the Places Visited page pre-filled) and Source Search (all types, via `ent=<key>`). The Descendants page reuses the same person and source-search icons for its per-person links.
+
 Person display: selector labels show recorded roles and time period, for example
 `David (דוד) - King, Prophet [Tanach]`. Missing metadata is omitted. The same
 localized labels are used in both trees and Source Search; duplicate labels

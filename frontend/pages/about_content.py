@@ -7,14 +7,13 @@ TABLE_OF_CONTENTS_TITLE = {
     "he": "תוכן העניינים",
 }
 
+LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/david-yy-berger/"
+
 OPENING_QUOTE = """
 <blockquote class="about-opening-quote">
   <p lang="he" dir="rtl">ישתבח הבורא ויתפאר היוצר, אשר הנחילנו חמדה גנוזה ויקרה, חכמה מפוארה, ליהודים היתה אורה (אסתר ח, טז), אורה זו תורה (מגילה טז:), לעבדה ולשמרה:...<br>
   אורייתא אורייתא, כמה חביבין אינון מלין דילך, מה אילנא אית ביה שרשין, ואית ביה קליפין, ואית ביה מוחא, ואית ביה ענפין, ואית ביה טרפין, ואית ביה פרחין, ואית ביה איבא, אוף הכי אינון מילין דילך, אית בהו פשטי דקראי, דרשה, רמז, דקא רמיז חכמתא, גמטריאות, רזין טמירין. רזין סתימין, אלין על אלין, כשר ופסול, טמא וטהור, אסור ומותר, חייב וזכאי, ומכאן ולהלאה מתפשטין ענפין לכל סטר, רחבה את מני ים, לית בך קץ ותכלית</p>
-  <p lang="en" dir="ltr">May the Creator be praised and the Former exalted, who bestowed upon us a cherished and precious hidden treasure, glorious wisdom; “the Jews had light” (Esther 8:16)—“light refers to Torah” (Megillah 16b)—“to work it and to guard it”...<br>
-  O Torah, O Torah, how beloved are your words! Just as a tree has roots, and peels, and a core, and branches, and leaves, and blossoms, and fruit, so too are your words: they contain the plain meaning of Scripture, exposition, hints in which wisdom is intimated, gematrias, hidden mysteries, concealed secrets, one above another; kosher and unfit, impure and pure, forbidden and permitted, liable and acquitted. From here onward, branches spread out in every direction. You are wider than the sea; you have no end or limit.</p>
   <cite lang="he" dir="rtl">ספר בן איש חי - הקדמה</cite>
-  <cite lang="en" dir="ltr">Sefer Ben Ish Chai — Introduction</cite>
 </blockquote>
 """
 
@@ -22,74 +21,81 @@ SECTIONS: dict[str, list[tuple[str, str, str]]] = {
     "en": [
         (
             "what-is-eitz-habina",
-            "What is Eitz Habina?",
-            """Since the Bar Ilan Responsa project (1967), Jews around the world have been creating different platforms and software systems to organize and analyze the most important Corpus to the Jewish People - the Torah.
+            "What is Eitz Habinah?",
+            """Since the Bar-Ilan Responsa Project began in 1967, people around the world have created platforms and software to organize and study the vast body of Jewish texts, including the Torah.
 
-Eitz Habina, born in late 2024, is another small part of the worldwide eco systems of Torah technologies. Currently a POC research project, but in the meantime fully usable for anyone who wants. It is a Knowledge Graph of Entities and Relationships throughout the Torah.
+Eitz Habinah began in late 2024 as a small contribution to this growing ecosystem of Torah technology. It is currently a proof-of-concept research project and is available for anyone to explore. At its core is a knowledge graph of entities and relationships found in Torah sources.
 
-Entities (like people, places, animals) appear throughout the Torah, and are related to each other (a person is part of a nation, a person visits a place). For example - Abraham is married to Sarah and Hagar, father to Itzhak and Ishmael, born in Our Kasdim, visited Beer Sheva, etc.""",
+Entities such as people, places, and animals appear throughout these sources and are connected to one another. For example - a person may belong to a nation, interact with another person, visit a place, etc. Abraham is described as Sarah and Hagar's husband, Isaac and Ishmael's father, someone born in Ur Kasdim, and a visitor to Beersheba, among other relationships and places.""",
         ),
         (
             "how-is-eitz-habina-different",
-            "How is Eitz Habina different than all other Torah Search Engines?",
-            """Compared to Gemini, Claude, or an LLM agent:
+            "How is Eitz Habinah different from other Torah search tools?",
+            """### Compared with general-purpose AI assistants
 
-- The major search engines will always bring the most-searched and most commonly cited sources. But Eitz Habina allows the user to find sources in books less often cited - like Talmud yerushalmi, midrash, etc.
-- Eitz Habina can return a large volume of information, for free:
-  - ai was called during population, but once our data is populated, a complex query does not use any heavy resources
-- Eitz Habina will never hallucinate sources: although some entities and relationships might be in accurate, the user can immediately view the original, unedited source to verify any data.
+- Eitz Habinah is built around an organized collection of Torah sources and a knowledge graph, with tools for exploring sources, people, places, and relationships.
+- AI is used while preparing and enriching the data. Searches use the prepared indexes and database rather than asking an AI model to generate a new answer for each query.
+- Results link to their source passages so readers can check the original text. Extracted entities and relationships can still be inaccurate, so the sources should be used to verify them.
 
-Compared to Bar Ilan Responsa search:
+### Compared with traditional keyword search
 
-- Bar Ilan Responsa search is extremely accurate, but only search searching an exact word match. The search ‘דוד’ will not find ‘דויד’, and many other examples. Eitz Habina however brings sources based on natural language meaning.
+- A keyword search can miss spelling variants or passages that express an idea without using the exact search term. Eitz Habinah's semantic search is designed to find passages by meaning as well as wording.
 
-Compared to Dicta’s semantic search of Tanach/Talmud:
+### Compared with other semantic search tools
 
-- Dicta search presents a list of sources, and the user must understand each source to understand relevance. Eitz Habina presents the sources collapsed, with concise summary of each source is easy language, and category of passage type
-- Eitz Habina runs on more sources
-- Eitz Habina includes many other tools that a regular semantic search does not have.
+- Search results include concise summaries and passage categories to help readers assess relevance.
+- The site also offers tools for exploring the knowledge graph and its relationships, beyond a list of search results.
 
-Eitz Habina’a weaknesses:
+**Current limitations**
 
-- AI inaccuracy: because this was a personal research project, the pipeline was run on a relatively ‘weak’ LLM. Even with the strongest LLM, this project would still require heavier review and manual verification. Nonetheless, I think that (1) there is more good data than bad, and (2) the many different pages allows the user to find at least one tool he/she will like
-- Missing information: because of the many validation scripts, much of the generated data was intentionally cleaned. I am sure that this included false negatives. But that is part of the price of using Ai and wanted valid results.
-- Streamlit UI: I chose to invest my resources in the backend complexity, and so naturally the UI has a long way to go. But now with the MCP, I wonder if that will make up for the weak UI
+- AI-generated data may be inaccurate. This personal research project used a relatively small language model, and the results still need further review and manual verification.
+- The database is incomplete. Validation intentionally removes data that fails its checks; this can also remove correct information. The current source coverage is Tanakh and the Babylonian Talmud.
+- The Streamlit interface is still evolving. I focused much of my effort on the backend, and the MCP interface provides another way to access the data.
 
-**Pipeline:**
-1. Query Sefaria's API, package books into carefully labeled passages with keys and metadata
-2. Populate FAISS and BM25 indexes with sources and source keys (both hebrew and english), enabling instant text similarity search.
-2. Prepoluate DB with 300+ hardcoded, predefined ambiguous entities (different entities sharing same name)
-2. Iterate over sources (1/2): extract entities and relationships from passage with LLM (pydantic AI) with precise data scheme. Collect category of passage.
-3. After heavy deterministic validation of entity and relationships - populate DB with graph of entities, relationships. Each entity and relationship is linked to at least one source passage.
-4. Iterate over sources (2/2): for each passage, ensure every entity is enriched with metadata with LLM (pydantic AI), in context of that passage. This metadata is very helpful for the user to find data, and is critical for automatic merging scripts.
+**Pipeline**
 
-**Challenges:**
+1. Query the Sefaria API and package books into carefully labeled passages with keys and metadata.
+2. Populate FAISS and BM25 indexes with source texts and source keys in Hebrew and English, enabling fast text-similarity search.
+3. Pre-populate the database with separate records for ambiguous people who share a name. The current input files contain 167 Tanakh entries and 97 Bavli entries.
+4. Iterate over the sources (phase 1): use PydanticAI to extract entities and relationships from each passage according to a precise data schema, and classify the passage.
+5. Apply deterministic validation to the extracted entities and relationships, then populate the database with the entity-and-relationship graph. Every entity and relationship is linked to at least one source passage.
+6. Iterate over the sources again (phase 2): use PydanticAI to enrich each entity with metadata in the context of its passage. This metadata helps users find information and is important for automated merge-candidate scoring.
+7. Generate and review merge candidates:
+   - **Person prefix matches:** find people whose names differ by a title prefix, such as “Rabbi Akiva” and “Akiva.”
+   - **Same-name people:** group people with identical display names for review alongside their metadata and relationships.
+   - **Closely spelled names:** find possible transliteration variants using broad spelling-normalization rules.
 
-1. Multi language, and multiple English and Hebrew spellings: this is the challenge of any Tanach/Talmud pipeline.
-   A. Use of LLM significantly improves results.
-   B. Verification scripts (‘for each entity, find if other entities exists with 2 consonants instead of one [Hana vs Hanna], or ‘h’ following ‘a’ [Hanna vs Hannah], ‘ch’ instead of ‘h’ and vice versa [yochanan vs yohanan[, ‘e’ and ‘ei’, etc. ). After finding categories, identify if same entity by comparing relative closeness to other nodes in the graph (both itzchak and itzhak have parent called ‘abraham’, visited place ‘beer sheva’)
-   C. The prepopulation script prevented many issues immediately
-2. Llm hallucinations:
-   1. Careful determinist validation cleared many fault data from LLM. however, this came at the cost of sometimes clearing valuable data
+   Each candidate group receives an advisory confidence score. Pair scores start at 85% for title-prefix matches and 40% for same-name or close-spelling matches, then adjust for known person metadata (gender, non-Jewish/group flags, time period, Hebrew names, and book references) and graph context (shared or different parents and shared related entities). A group's score is its weakest pairwise score; missing values are not treated as contradictions, and groups with a role other than Tanna or Amora receive 0%. Source metadata is not compared. The scores help prioritize review—they do not establish identity or merge entities automatically. Decisions are recorded in the consolidated `confidence_person_*.md` files; the numbered chunk files contain entity details.
+8. Run additional validation and diagnostic checks:
+   - `validate_entity_relationships.py` is a read-only graph check for parent-gender mismatches, contradictory family links (including sibling/parent-child and reciprocal parent-child pairs), pairs classified as both father and mother, and reciprocal `studiedFrom` links.
+   - `DBPrePopulateAmbiguosEntitys.test_validate_names` checks that pre-populated names are well-formed and appear with the exact spelling in the applicable source corpus.
+   - `test_db_health.py` checks source counts, empty source fields, source-key formats, and the cleanliness of English source text.
+   - `check_person_to_tribe_rels.py` is a read-only diagnostic that lists links to Israelite tribes and flags unexpected relationship types.
 
-Scope:
-Currently runs over Tanach and Babylonian Talmud. Hoping to run on Mishna, Jerusalem Talmud, and Midrash""",
+**Challenges**
+
+- **Languages and spelling variants:** Tanakh and Talmud sources use Hebrew and English names with many spelling variations. Language models help identify candidates; verification scripts look for patterns such as *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan*, and *e/ei*. Candidates can then be compared by their graph connections—for example, whether both spellings are linked to Abraham and Beersheba. Predefined ambiguous entities also help prevent mistaken matches.
+- **Language-model errors:** Deterministic validation catches many errors, but it can also reject useful data.
+
+**Scope**
+
+The database currently covers the Tanakh and the Babylonian Talmud. Expanding it to the Mishnah, Jerusalem Talmud, and Midrash is a future goal.""",
         ),
         (
             "about-feyga-menuha",
             "About Feyga Menuha",
-            """Feyga Menuha bat yehiel gershon a”h was a wonderful woman who loved to study Torah. She never had the chance to study in a yeshiva or midrasha, and so she often lacked context when attending lectures.
+            """Feyga Menuha bat Yehiel Gershon, of blessed memory, was a wonderful woman who loved studying Torah. She never had the opportunity to study in a yeshiva or midrasha, and sometimes lacked context when attending lectures.
 
-We had the pleasure of studying Tanach together for 10 years. In those years, I saw how helpful a simple chart was to give context to what we were learning. From that experience of our study together, I began to invest more and more time in preparing clear source sheets. The clearer I made the charts, the easier, more effective and of course more enjoyable our learning was. Since our study, almost every lecture that I give comes with a clear source sheets (often with historical context), and I try hard to make sure that no one in the audience gets left behind. It is a gift from here for which I will be eternally grateful.
+We had the pleasure of studying Tanakh together for ten years. During that time, I saw how a simple chart could help make our studies clearer. That experience inspired me to spend more time preparing accessible source sheets. The clearer the charts became, the easier, more effective, and more enjoyable our learning was. Since then, nearly every lecture I give has a clear source sheet, often with historical context. I try to make sure no one in the audience is left behind. This is a gift I received from her, and I will always be grateful for it.
 
-Although Feyga Menuch has already moved on to the Next World, I am sure that she was excited by this project and following my progress carefully.
+Although Feyga has passed away, I believe she would have been excited by this project and followed its progress with interest.
 
-It is our dream that by sharing this project, we can provide a little more context to people who don't always know where to look. And at the very least - to give inspiration for how beautiful, deep, and interwoven our Torah is.""",
+Our hope is that sharing this project will give people a little more context when they are not sure where to look—and, at the very least, inspire them to see how beautiful, deep, and interconnected the Torah is. May it be God's will, that any Torah study from this project be a merit for her soul.""",
         ),
         (
             "about-the-author",
             "About the author",
-            """My name is David Berger, and I'm a software engineer in Israel. Would love to hear feedback or ideas!
+            """My name is David Berger, and I'm a software engineer in Israel. I'd love to hear your feedback and ideas.
 
 EitzHabina@gmail.com""",
         ),
@@ -98,73 +104,89 @@ EitzHabina@gmail.com""",
         (
             "what-is-eitz-habina",
             "מהו עץ הבינה?",
-            """מאז פרויקט השו״ת של אוניברסיטת בר־אילן (1967), יהודים ברחבי העולם יוצרים פלטפורמות ומערכות תוכנה שונות כדי לארגן ולנתח את הקורפוס החשוב ביותר לעם היהודי — התורה.
+            """מאז שהחל פרויקט השו״ת של אוניברסיטת בר־אילן בשנת 1967, אנשים ברחבי העולם יוצרים פלטפורמות ותוכנות לארגון וללימוד של אוצר הטקסטים היהודי, ובכללו התורה.
 
-עץ הבינה, שנולד בסוף 2024, הוא חלק קטן נוסף ממערכת הטכנולוגיות התורניות המתפתחת ברחבי העולם. זהו כיום פרויקט מחקר מסוג POC, אך בינתיים הוא זמין לשימוש מלא לכל מי שמעוניין. עץ הבינה הוא גרף ידע של ישויות וקשרים ברחבי התורה.
+עץ הבינה החל בסוף 2024 כתרומה קטנה למערכת המתפתחת של טכנולוגיות תורניות. כיום זהו פרויקט מחקר מסוג הוכחת היתכנות (POC), והוא זמין לכל מי שרוצה לחקור את המקורות. בליבו נמצא גרף ידע של ישויות וקשרים המופיעים במקורות התורה.
 
-ישויות (כגון אנשים, מקומות ובעלי חיים) מופיעות ברחבי התורה וקשורות זו לזו (אדם שייך לעם, אדם מבקר במקום). לדוגמה — אברהם נשוי לשרה ולהגר, אב ליצחק ולישמעאל, נולד באור כשדים, ביקר בבאר שבע ועוד.""",
+ישויות כגון אנשים, מקומות ובעלי חיים מופיעות במקורות וקשורות זו לזו. למשל, אדם עשוי להשתייך לעם, להיות בקשר עם אדם אחר או לבקר במקום. המקורות מתארים את אברהם כבעלה של שרה והגר, כאביהם של יצחק וישמעאל, כמי שנולד באור כשדים וכמי שביקר בבאר שבע, לצד קשרים ומקומות נוספים.""",
         ),
         (
             "how-is-eitz-habina-different",
-            "במה עץ הבינה שונה מכל מנועי החיפוש האחרים לתורה?",
-            """בהשוואה ל־Gemini, ל־Claude או לסוכן המבוסס על מודל שפה גדול:
+            "במה עץ הבינה שונה מכלי חיפוש אחרים לתורה?",
+            """### בהשוואה לכלי בינה מלאכותית כלליים
 
-- מנועי החיפוש הגדולים יציגו תמיד את המקורות שמחפשים ומצטטים בתדירות הגבוהה ביותר. עץ הבינה מאפשר למצוא מקורות גם בספרים המצוטטים פחות — כגון תלמוד ירושלמי, מדרש ועוד.
-- עץ הבינה יכול להחזיר כמות גדולה של מידע בחינם:
-  - נעשה שימוש בבינה מלאכותית בעת אכלוס המאגר, אך לאחר שהנתונים נאספו, שאילתה מורכבת אינה צורכת משאבים כבדים.
-- עץ הבינה לעולם לא ימציא מקורות: אף שחלק מהישויות והקשרים עלולים להיות לא מדויקים, המשתמש יכול לפתוח מיד את המקור המקורי והלא ערוך כדי לאמת את הנתונים.
+- עץ הבינה מבוסס על אוסף מקורות תורניים ועל גרף ידע, ומציע כלים לחקר המקורות, האנשים, המקומות והקשרים ביניהם.
+- הבינה המלאכותית משמשת להכנת הנתונים ולהעשרתם. החיפושים מתבססים על אינדקסים ומסד נתונים מוכנים, ולא על בקשה ממודל לייצר תשובה חדשה בכל חיפוש.
+- תוצאות החיפוש מקושרות לקטעי המקור, כך שאפשר לבדוק את הטקסט המקורי. ישויות וקשרים שחולצו מהמקורות עדיין עלולים להיות לא מדויקים, ולכן חשוב לאמת אותם מול המקור.
 
-בהשוואה לחיפוש בשו״ת בר־אילן:
+### בהשוואה לחיפוש לפי מילות מפתח
 
-- החיפוש בשו״ת בר־אילן מדויק מאוד, אך מחפש התאמה מדויקת של מילה בלבד. חיפוש המילה ׳דוד׳ לא ימצא את ׳דויד׳, ויש דוגמאות רבות נוספות. לעומת זאת, עץ הבינה מציג מקורות לפי משמעות בשפה טבעית.
+- חיפוש מילות מפתח עלול להחמיץ צורות כתיב שונות או קטעים שמבטאים רעיון בלי להשתמש במילת החיפוש המדויקת. החיפוש הסמנטי של עץ הבינה נועד לאתר קטעים לפי משמעות, ולא רק לפי הניסוח.
 
-בהשוואה לחיפוש הסמנטי של דיקטא בתנ״ך ובתלמוד:
+### בהשוואה לכלי חיפוש סמנטי אחרים
 
-- חיפוש דיקטא מציג רשימת מקורות, והמשתמש צריך להבין כל מקור כדי להבין את מידת הרלוונטיות שלו. עץ הבינה מציג את המקורות בתצוגה מצומצמת, עם תקציר תמציתי של כל מקור בשפה פשוטה ועם קטגוריה של סוג הקטע.
-- עץ הבינה פועל על פני מקורות רבים יותר.
-- עץ הבינה כולל כלים רבים נוספים שאינם זמינים בחיפוש סמנטי רגיל.
+- תוצאות החיפוש כוללות תקצירים תמציתיים וקטגוריות של קטעים, המסייעים להעריך את מידת הרלוונטיות.
+- האתר מציע גם כלים לחקר גרף הידע והקשרים שבו, מעבר לרשימת תוצאות חיפוש.
 
-החסרונות של עץ הבינה:
+**מגבלות כיום**
 
-- אי־דיוקים של בינה מלאכותית: מכיוון שזהו פרויקט מחקר אישי, צינור העיבוד הורץ באמצעות מודל שפה גדול חלש יחסית. גם עם המודל החזק ביותר, הפרויקט עדיין ידרוש בדיקה מעמיקה יותר ואימות ידני. למרות זאת, אני חושב ש־(1) יש יותר נתונים טובים מנתונים שגויים, ו־(2) הדפים הרבים מאפשרים למשתמש למצוא לפחות כלי אחד שיאהב.
-- מידע חסר: בגלל סקריפטים רבים לאימות הנתונים, חלק גדול מהנתונים שנוצרו נוקה בכוונה. אני בטוח שהדבר כלל גם מקרים חיוביים שלא זוהו. זהו חלק מהמחיר של שימוש בבינה מלאכותית ושל הרצון לקבל תוצאות תקינות.
-- ממשק Streamlit: בחרתי להשקיע את המשאבים שלי במורכבות של צד השרת, ולכן באופן טבעי לממשק המשתמש יש עוד דרך ארוכה. אבל עכשיו, עם MCP, אני תוהה אם הוא יפצה על הממשק החלש.
+- נתונים שנוצרו באמצעות בינה מלאכותית עלולים להיות לא מדויקים. בפרויקט המחקר האישי הזה נעשה שימוש במודל שפה קטן יחסית, ועדיין נדרשות בדיקה ואימות ידניים נוספים.
+- המאגר אינו שלם. תהליכי האימות מסירים בכוונה נתונים שאינם עומדים בבדיקות, אך לפעמים עלולים להסיר גם מידע נכון. המקורות הקיימים כיום הם התנ״ך והתלמוד הבבלי.
+- ממשק Streamlit עדיין נמצא בפיתוח. התמקדתי רבות בעבודה על צד השרת, וממשק MCP מציע דרך נוספת לגשת לנתונים.
 
-**צינור העיבוד:**
+**צינור העיבוד**
+
 1. פנייה ל־API של ספריא ואריזת הספרים בקטעים המסומנים בקפידה, עם מפתחות ומטא־נתונים.
-2. אכלוס האינדקסים FAISS ו־BM25 במקורות ובמפתחות המקורות (בעברית ובאנגלית), כדי לאפשר חיפוש דמיון טקסטואלי מיידי.
-2. אכלוס מוקדם של מסד הנתונים ביותר מ־300 ישויות עמומות שהוגדרו מראש (ישויות שונות בעלות אותו שם).
-2. מעבר על המקורות (1 מתוך 2): חילוץ ישויות וקשרים מהקטע באמצעות מודל שפה גדול (pydantic AI), לפי סכמת נתונים מדויקת. איסוף קטגוריית הקטע.
-3. לאחר אימות דטרמיניסטי נרחב של הישויות והקשרים — אכלוס מסד הנתונים בגרף של ישויות וקשרים. כל ישות וקשר מקושרים לפחות לקטע מקור אחד.
-4. מעבר על המקורות (2 מתוך 2): בכל קטע מוודאים שכל ישות מועשרת במטא־נתונים באמצעות מודל שפה גדול (pydantic AI), ובהקשר של אותו קטע. המטא־נתונים האלה עוזרים מאוד למשתמש למצוא מידע, וחיוניים לסקריפטים האוטומטיים למיזוג ישויות.
+2. אכלוס אינדקסי FAISS ו־BM25 בטקסטים של המקורות ובמפתחות שלהם בעברית ובאנגלית, כדי לאפשר חיפוש דמיון טקסטואלי מהיר.
+3. אכלוס מוקדם של מסד הנתונים ברשומות נפרדות של אנשים עמומים בעלי שם זהה. קובצי הקלט הנוכחיים כוללים 167 דמויות מן התנ״ך ו־97 דמויות מן התלמוד הבבלי.
+4. מעבר ראשון על המקורות: שימוש ב־PydanticAI לחילוץ ישויות וקשרים מכל קטע לפי סכמת נתונים מדויקת, וכן לסיווג הקטע.
+5. אימות דטרמיניסטי של הישויות והקשרים שחולצו, ולאחר מכן אכלוס מסד הנתונים בגרף של ישויות וקשרים. כל ישות וכל קשר מקושרים לפחות לקטע מקור אחד.
+6. מעבר שני על המקורות: שימוש ב־PydanticAI להעשרת כל ישות במטא־נתונים בהקשר של הקטע שבו היא מופיעה. המטא־נתונים מסייעים למשתמשים למצוא מידע וחשובים לניקוד האוטומטי של מועמדים למיזוג.
+7. יצירת מועמדים למיזוג ובדיקתם:
+   - **התאמות לפי תחילית בשם אדם:** איתור אנשים ששמותיהם נבדלים בתחילית תואר, כגון “Rabbi Akiva” ו־“Akiva”.
+   - **אנשים בעלי שם זהה:** קיבוץ אנשים בעלי שם תצוגה זהה לצורך בדיקה לצד המטא־נתונים והקשרים שלהם.
+   - **שמות בעלי איות דומה:** איתור צורות תעתיק אפשריות באמצעות כללים רחבים לנרמול איות.
 
-**אתגרים:**
+   לכל קבוצת מועמדים ניתן ציון ביטחון מייעץ. ציון הזוגות מתחיל ב־85% בהתאמות לפי תחילית תואר וב־40% בהתאמות של שם זהה או איות דומה, ומתעדכן לפי מטא־נתונים ידועים של האדם (מגדר, סימון כלא־יהודי או כקבוצה, תקופה, שם בעברית והפניות לספרים) וההקשר בגרף (הורים משותפים או שונים וישויות קשורות משותפות). ציון הקבוצה הוא הנמוך ביותר מבין ציוני הזוגות; מידע חסר אינו נחשב לסתירה, וקבוצה שיש בה תפקיד שאינו תנא או אמורא מקבלת ציון 0%. מטא־נתונים של המקור אינם נכללים בהשוואה. הציונים נועדו לסייע בתעדוף הבדיקה — הם אינם קובעים זהות ואינם ממזגים ישויות באופן אוטומטי. ההחלטות נשמרות בקובצי `confidence_person_*.md` המאוחדים; קובצי החלקים הממוספרים מכילים את פרטי הישויות.
+8. הרצת בדיקות אימות ואבחון נוספות:
+   - `validate_entity_relationships.py` בודק את גרף הקשרים לקריאות שגויות של מגדר בקשרי הורות, קשרי משפחה סותרים (לרבות קשר בין אחים להורה־ילד או קשרי הורה־ילד הדדיים), זוג שסווג גם כאב וגם כאם, וקשרי `studiedFrom` הדדיים. הבדיקה היא לקריאה בלבד.
+   - `DBPrePopulateAmbiguosEntitys.test_validate_names` בודק ששמות שהוגדרו מראש תקינים ומופיעים באיות המדויק במאגר המקורות המתאים.
+   - `test_db_health.py` בודק את מספר המקורות, שדות מקור ריקים, תבנית המפתחות ואת תקינות הטקסט האנגלי במקורות.
+   - `check_person_to_tribe_rels.py` הוא כלי אבחון לקריאה בלבד, המציג קשרים לשבטי ישראל ומסמן סוגי קשרים לא צפויים.
 
-1. ריבוי שפות וריבוי צורות כתיב בעברית ובאנגלית: זהו אתגר של כל צינור עיבוד של התנ״ך והתלמוד.
-   א. השימוש במודל שפה גדול משפר מאוד את התוצאות.
-   ב. סקריפטים לאימות בודקים, למשל, אם קיימות ישויות אחרות עם עיצור כפול במקום עיצור יחיד [Hana לעומת Hanna], עם ׳h׳ אחרי ׳a׳ [Hanna לעומת Hannah], עם ׳ch׳ במקום ׳h׳ ולהפך [yochanan לעומת yohanan], עם ׳e׳ ו־׳ei׳ ועוד. לאחר זיהוי קבוצות, בודקים אם מדובר באותה ישות באמצעות השוואת הקרבה היחסית לישויות אחרות בגרף (גם ל־itzchak וגם ל־itzhak יש הורה בשם ׳abraham׳, ומקום ביקור בשם ׳beer sheva׳).
-   ג. סקריפט האכלוס המוקדם מנע בעיות רבות מראש.
-2. הזיות של מודל השפה:
-   1. אימות דטרמיניסטי קפדני הסיר נתונים שגויים רבים שהגיעו ממודל השפה. עם זאת, לפעמים הדבר בא על חשבון הסרה של נתונים מועילים.
+**כיצד הנתונים מוכנים**
 
-היקף:
-כיום המאגר כולל את התנ״ך ואת התלמוד הבבלי. התקווה היא להרחיבו למשנה, לתלמוד הירושלמי ולמדרש.""",
+1. אחזור ספרים באמצעות ה־API של ספריא וארגונם בקטעים בעלי מזהים ומטא־נתונים.
+2. בניית אינדקסים FAISS ו־BM25 של טקסטי המקורות והמזהים שלהם בעברית ובאנגלית, לחיפוש דמיון טקסטואלי.
+3. הוספה מוקדמת למסד הנתונים של יותר מ־300 ישויות עמומות שהוגדרו מראש — ישויות שונות בעלות שם זהה.
+4. עיבוד כל קטע באמצעות מודל שפה (עם PydanticAI) כדי לחלץ ישויות, קשרים וקטגוריה של הקטע.
+5. אימות הישויות והקשרים שחולצו באמצעות בדיקות דטרמיניסטיות, ולאחר מכן אכלוס גרף הידע. כל ישות וקשר מקושרים לפחות לקטע מקור אחד.
+6. עיבוד נוסף של הקטעים כדי להוסיף לכל ישות מטא־נתונים בהקשר. המטא־נתונים מסייעים למשתמשים למצוא מידע ותומכים בתהליך האוטומטי למיזוג ישויות.
+
+**אתגרים**
+
+- **שפות וצורות כתיב:** במקורות תנ״ך ותלמוד יש שמות בעברית ובאנגלית וצורות כתיב רבות. מודלי שפה מסייעים בזיהוי מועמדים; סקריפטים לאימות מחפשים דפוסים כגון *Hana/Hanna*, *Hanna/Hannah*, *Yochanan/Yohanan* ו־*e/ei*. לאחר מכן אפשר להשוות בין הקשרים של כל מועמד בגרף — למשל, לבדוק אם שתי צורות כתיב מקושרות לאברהם ולבאר שבע. ישויות עמומות שהוגדרו מראש מסייעות גם הן למנוע מיזוגים שגויים.
+- **שגיאות של מודלי שפה:** אימות דטרמיניסטי מזהה שגיאות רבות, אך עלול גם לדחות מידע מועיל.
+
+**היקף**
+
+המאגר כולל כיום את התנ״ך ואת התלמוד הבבלי. הרחבתו למשנה, לתלמוד הירושלמי ולמדרש היא יעד לעתיד.""",
         ),
         (
             "about-feyga-menuha",
             "על פייגא מנוחה",
-            """פייגא מנוחה בת יחיאל גרשון ע״ה הייתה אישה נפלאה שאהבה ללמוד תורה. היא לא זכתה ללמוד בישיבה או במדרשה, ולכן לעיתים קרובות היה חסר לה ההקשר כששמעה שיעורים.
+            """פייגא מנוחה בת יחיאל גרשון ע״ה הייתה אישה נפלאה שאהבה ללמוד תורה. היא לא זכתה ללמוד בישיבה או במדרשה, ולעיתים היה חסר לה ההקשר כששמעה שיעורים.
 
-זכינו ללמוד תנ״ך יחד במשך עשר שנים. בשנים האלה ראיתי כמה תרשים פשוט יכול לעזור להבין את ההקשר של מה שלמדנו. בעקבות הלימוד המשותף התחלתי להשקיע עוד ועוד זמן בהכנת דפי מקורות ברורים. ככל שהתרשימים היו ברורים יותר, הלימוד שלנו נעשה קל יותר, יעיל יותר וכמובן מהנה יותר. מאז הלימוד המשותף, כמעט כל שיעור שאני מעביר מלווה בדף מקורות ברור (לעיתים קרובות עם הקשר היסטורי), ואני משתדל מאוד לוודא שאיש בקהל לא יישאר מאחור. זהו מתנה שקיבלתי ממנה, ועליה אהיה אסיר תודה לעד.
+זכינו ללמוד תנ״ך יחד במשך עשר שנים. באותה תקופה ראיתי כיצד תרשים פשוט יכול להבהיר את הנושאים שלמדנו. החוויה הזאת נתנה לי השראה להשקיע יותר בהכנת דפי מקורות נגישים. ככל שהתרשימים נעשו ברורים יותר, הלימוד שלנו נעשה קל, יעיל ומהנה יותר. מאז, כמעט כל שיעור שאני מעביר מלווה בדף מקורות ברור, לעיתים קרובות עם הקשר היסטורי. אני משתדל לוודא שאיש בקהל לא יישאר מאחור. זו מתנה שקיבלתי ממנה, ועליה אהיה אסיר תודה תמיד.
 
-אף שפייגא מנוחה כבר עברה לעולם הבא, אני בטוח שהיא התרגשה מהפרויקט הזה ועקבה מקרוב אחר התקדמותי.
+אף שפייגא מנוחה נפטרה, אני מאמין שהפרויקט הזה היה משמח אותה ושהייתה עוקבת אחר התקדמותו בעניין.
 
-החלום שלנו הוא שבאמצעות שיתוף הפרויקט נוכל לתת מעט יותר הקשר לאנשים שלא תמיד יודעים היכן לחפש. ולכל הפחות — לעורר השראה לנוכח יופייה, עומקה ושזירתה של התורה.""",
+תקוותנו היא ששיתוף הפרויקט יעניק לאנשים מעט יותר הקשר כשהם אינם בטוחים היכן לחפש — ולכל הפחות יעורר בהם השראה לנוכח יופייה, עומקה ושזירתה של התורה. יהי רצון שכל לימוד תורה מתוך הפרויקט יהיה לזכות נשמתה.""",
         ),
         (
             "about-the-author",
             "על המחבר",
-            """שמי דוד ברגר, ואני מהנדס תוכנה בישראל. אשמח לשמוע משוב או רעיונות!
+            """שמי דוד ברגר, ואני מהנדס תוכנה בישראל. אשמח לשמוע משוב ורעיונות!
 
 EitzHabina@gmail.com""",
         ),

@@ -8,6 +8,7 @@ import streamlit as st
 from translations1 import get_text
 
 MCP_URL = "https://eitz-habina-prod.up.railway.app/mcp"
+ADMIN_MCP_URL = f"{MCP_URL}?admin=true"
 
 
 def render(lang: str) -> None:
@@ -22,6 +23,8 @@ def render(lang: str) -> None:
     st.markdown(get_text("mcp_ui.step_one", lang))
     st.markdown(get_text("mcp_ui.step_two", lang))
     st.code(MCP_URL, language=None)
+    st.caption(get_text("mcp_ui.admin_opt_out", lang))
+    st.code(ADMIN_MCP_URL, language=None)
     st.markdown(get_text("mcp_ui.step_three", lang))
     st.markdown(get_text("mcp_ui.step_four", lang))
     st.caption(get_text("mcp_ui.availability", lang))

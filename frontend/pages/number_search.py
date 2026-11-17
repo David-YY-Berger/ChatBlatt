@@ -320,8 +320,8 @@ def _on_search_submit(lang: str) -> None:
     if not value.strip():
         return
     if _validate_number(value) is None:
-        _run_search(value.strip(), lang)
         _set_url_params(_MODE_NUMBER, value.strip())
+        _run_search(value.strip(), lang)
 
 
 def _render_search_bar(lang: str) -> None:
@@ -483,8 +483,8 @@ def _apply_url_params(lang: str) -> None:
 def _on_unit_submit(lang: str) -> None:
     unit = st.session_state.get("unit_input")
     if unit:
-        _run_unit_search(unit, lang)
         _set_url_params(_MODE_UNIT, unit)
+        _run_unit_search(unit, lang)
 
 
 def _render_unit_search_bar(lang: str) -> None:

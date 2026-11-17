@@ -262,7 +262,7 @@ _render_entity_search_tab("people", "he")
         with patch.object(entity_search_controller, "get_entity_search_handler", return_value=handler), \
              patch.object(entity_search, "_DEBUG_FE", False), \
              patch.object(entity_search, "_render_filters", side_effect=lambda tab, options, lang: options), \
-             patch.object(entity_search, "_render_family_tree_button"), \
+             patch.object(entity_search, "_render_entity_action_buttons"), \
              patch.object(entity_search, "_render_relationship_fields"):
             app.run()
             app.run()
@@ -291,7 +291,7 @@ _render_entity_search_tab("people", "he")
                 rendered = _lineage_html([label], [(entity_url, sources_url)], [], {}, lang)
                 self.assertIn("David (דוד) - King, Prophet [Tanach]" if lang == "en"
                               else "דוד (David) - מלך, נביא [תנ״ך]", rendered)
-                self.assertEqual(rendered.count("<svg"), 2)
+                self.assertEqual(rendered.count("<span class='icon icon-"), 2)
                 self.assertEqual(rendered.count("aria-label="), 2)
                 self.assertIn("p%261", rendered)
                 self.assertIn("admin=true&amp;lang=", rendered)

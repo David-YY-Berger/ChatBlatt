@@ -32,6 +32,10 @@ The Symbols page key and URL path remain defined internally, but the page is
 not exposed in Entity Search navigation.
 The MCP instructions page is separate from `/mcp`, which is the protocol endpoint.
 
+**Rule:** when the user clicks a button (search, Go, clear, navigate), update the URL and its params
+first, then run the search/render. A refresh must reload the new state. Code should set
+`st.query_params` (or call `navigation.go`) before any slow work.
+
 ## Query parameters (a search is fully described by its URL)
 
 All list values are comma-separated. A page opened with params loads them into its form and runs the search

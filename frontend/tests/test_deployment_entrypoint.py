@@ -26,6 +26,10 @@ class DeploymentEntrypointTests(unittest.TestCase):
                     test_app.run(timeout=30)
                 self.assertFalse(test_app.exception)
                 self.assertEqual(test_app.code[0].value, "https://eitz-habina-prod.up.railway.app/mcp")
+                self.assertEqual(
+                    test_app.code[1].value,
+                    "https://eitz-habina-prod.up.railway.app/mcp?admin=true",
+                )
                 self.assertEqual(test_app.subheader[0].value, expected)
 
     def test_disabled_mcp_page_shows_unavailable_in_both_languages(self):

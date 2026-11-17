@@ -30,12 +30,7 @@ TOOLS = (
 
 def render(lang: str) -> None:
     title = get_text("page_titles.home", lang)
-    subtitle = get_text("home_tools.subtitle", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="home-subtitle">{subtitle}</div>',
-        unsafe_allow_html=True,
-    )
 
     columns = st.columns([1, 1, 1, 2])
     for column, (page_key, icon_name, description_key) in zip(columns, TOOLS):

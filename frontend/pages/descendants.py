@@ -9,6 +9,7 @@ import streamlit.components.v1 as st_components
 import metrics
 from backend.app.logic.lineage_logic import lineage_path, load_lineage_graph
 from components.entity_option_labels import format_entity_option_label, unique_entity_option_labels
+from components.icon_buttons import ICON_PERSON, ICON_SOURCES, icon_data_uri
 from components.source_popup import source_link_html, source_popup_css_js, source_popup_html
 from system_common.Constants import PAGE_PEOPLE, PAGE_SOURCE_SEARCH
 from system_common.UrlPaths import (
@@ -109,13 +110,10 @@ def _lineage_html(names, links_by_person, sources_by_step, contents, lang):
                      f"<strong>{html.escape(name)}</strong><span class='actions'>"
                      f"<a class='action' href='{html.escape(entity_url, quote=True)}' target='_blank' "
                      f"rel='noopener' title='{entity_hint}' aria-label='{entity_hint}'>"
-                     "<svg viewBox='0 0 24 24' aria-hidden='true'><circle cx='12' cy='8' r='4'/>"
-                     "<path d='M4 21a8 8 0 0 1 16 0'/></svg></a>"
+                     "<span class='icon icon-person'></span></a>"
                      f"<a class='action' href='{html.escape(sources_url, quote=True)}' target='_blank' "
                      f"rel='noopener' title='{sources_hint}' aria-label='{sources_hint}'>"
-                     "<svg viewBox='0 0 24 24' aria-hidden='true'><path d='M4 4h11a3 3 0 0 1 3 3v3"
-                     "M4 4v15h9M4 4v15'/><circle cx='16' cy='16' r='4'/><path d='m19 19 3 3'/>"
-                     "</svg></a></span></div>")
+                     "<span class='icon icon-sources'></span></a></span></div>")
         if index == len(sources_by_step):
             continue
         links = []
@@ -151,16 +149,17 @@ def _lineage_html(names, links_by_person, sources_by_step, contents, lang):
         ".number{display:grid;place-items:center;flex:none;width:28px;height:28px;"
         "border-radius:50%;background:#285468;color:#e2f5fc;font-size:.8rem}"
         ".person strong{flex:1;min-width:0;overflow-wrap:anywhere}.actions{display:flex;gap:6px;flex:none}"
-        ".action{display:grid;place-items:center;width:36px;height:36px;border-radius:8px;"
-        "color:#a5dcf4;border:1px solid #396579;text-decoration:none}"
-        ".action:hover,.action:focus-visible{background:#285468;outline:2px solid #8ed1e8}"
-        ".action svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;"
-        "stroke-linecap:round;stroke-linejoin:round}"
+        ".action{display:block;width:32px;height:32px;border-radius:6px;overflow:hidden;"
+        "border:1px solid #396579;text-decoration:none}"
+        ".action:hover,.action:focus-visible{outline:2px solid #8ed1e8}"
+        ".icon{display:block;width:100%;height:100%;background-size:cover;background-position:center}"
+        f".icon-person{{background-image:url({icon_data_uri(ICON_PERSON)})}}"
+        f".icon-sources{{background-image:url({icon_data_uri(ICON_SOURCES)})}}"
         ".step{display:flex;align-items:center;gap:14px;padding:8px 20px;color:#b4c3ce}"
         ".arrow{font-size:1.4rem;color:#65b7d7}.sources{font-size:.9rem}"
         "@media (prefers-color-scheme:light){body{background:#fff;color:#1e293b}"
         ".person{background:#f3f9fb;border-color:#bdd7e2}.step{color:#475569}"
-        ".action{color:#15576f;border-color:#bdd7e2}.action:hover,.action:focus-visible{background:#d9eef5}"
+        ".action{border-color:#bdd7e2}.action:hover,.action:focus-visible{outline-color:#1d6fa4}"
         ".arrow{color:#1d6fa4}.sources a{color:#1d6fa4!important}}</style>"
         + source_popup_css_js() + "</head><body>" + "".join(items) + "".join(popups)
         + "<script>function resizeFrame(){try{window.frameElement.style.height="

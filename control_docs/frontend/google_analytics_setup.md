@@ -47,7 +47,7 @@ opt-out. Review existing integrations separately if there are any.
 
 ## 3. Create the custom dimensions
 
-Create the **17 event-scoped dimensions** in the table below. They make the
+Create the **19 event-scoped dimensions** in the table below. They make the
 application's custom event parameters available in GA4 reports and
 explorations. You can create them after the application has begun sending
 events; if a parameter is not in the dropdown, type its exact name.
@@ -68,8 +68,9 @@ For **each row**:
 The parameter and scope cannot be changed after saving, so double-check them.
 Google's standard GA4 property limit is **50 event-scoped custom dimensions
 per property**, including any already created. See **Quota information** on
-the Custom definitions page. If you have fewer than 17 slots available, create
-the **Core** rows first and add the **Detailed** rows as space permits.
+the Custom definitions page. Create the 17 frontend dimensions first, prioritizing
+the **Core** rows. The two MCP dimensions are optional if you want MCP
+tool/outcome breakdowns in reports.
 
 | Priority | Dimension name | Scope | Event parameter | What it shows |
 |---|---|---|---|---|
@@ -90,9 +91,12 @@ the **Core** rows first and add the **Detailed** rows as space permits.
 | Detailed | Unit name | Event | `unit_name` | Validated English unit selected in number search. |
 | Detailed | Tree type | Event | `tree_type` | `family_tree`, `studied_from`, `places_visited`, `descendants`, or `ancestors`. |
 | Detailed | Download type | Event | `download_type` | `source_results` for the source-results PDF button. |
+| MCP | MCP tool | Event | `tool_name` | MCP research tool invoked, such as `search_sources`. |
+| MCP | MCP outcome | Event | `outcome` | `success` or `failure` for an MCP tool execution. |
 
 `0` and `1` are categorical flags, so create **event-scoped dimensions**, not
-custom metrics, for them. GA4 may parse numeric values on web events. Some
+custom metrics, for them. For MCP latency, optionally create an event-scoped
+custom metric for `duration_ms`. GA4 may parse numeric values on web events. Some
 fields are absent when they do not apply or are empty, and GA4 can display
 `(not set)` for those events. Individual entity IDs/names and combined lists can
 have many distinct values; GA4 may group less frequent values into `(other)`.

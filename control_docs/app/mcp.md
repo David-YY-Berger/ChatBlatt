@@ -5,6 +5,33 @@ Streamlit site. Connect an MCP-capable client to
 `https://eitz-habina-prod.up.railway.app/mcp`. No MCP authentication is
 required. Support for remote MCP and its setup varies by chat provider.
 
+## GA4 MCP metrics
+
+When `GA4_API_SECRET` is configured, successful and failed tool executions send
+a `mcp_tool_call` event to the existing GA4 web stream. Events contain only the tool name, outcome
+(`success` or `failure`), and duration in milliseconds; prompts, tool arguments,
+source/entity data, client addresses, and user identifiers are not sent. GA4
+uses one synthetic MCP server client ID, so MCP events do not identify or count
+individual chat users. Calls that fail before a tool function runs (for example,
+invalid JSON-RPC or tool arguments rejected during schema validation) are not
+included. Delivery is asynchronous and best-effort.
+
+Create a **Measurement Protocol API secret** for the existing web stream in
+Google Analytics: **Admin → Data streams → Eitz Habina web stream →
+Measurement Protocol API secrets → Create**. Set its value as the Railway
+service variable `GA4_API_SECRET`; do not put it in the repository or MCP
+client URL. `GA4_MEASUREMENT_ID` is optional and defaults to the existing
+`G-9ZHLKD65GM` web stream. MCP clients do not need the secret or any additional
+setup.
+
+To exclude MCP tool calls from analytics, add `?admin=true` to the server URL:
+`https://eitz-habina-prod.up.railway.app/mcp?admin=true`. This is an analytics
+opt-out, not authentication or access control. `admin=false` explicitly enables
+collection for that MCP connection; invalid or repeated conflicting values
+fail closed as opted out. The MCP setup page displays both URLs.
+After configuring the secret, make one tool call with each URL and confirm that
+only the regular URL produces `mcp_tool_call` events in GA4 Realtime.
+
 The server exposes read-only tools for entity discovery and details, source
 search and text, numbers and units, places visited, family graphs, and
 ancestor/descendant lines. Entity matches are suggestions, not identity
