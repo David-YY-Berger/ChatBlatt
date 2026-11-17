@@ -20,7 +20,8 @@ and data flows, use the feature guides below.
   The header (`components/header.py`) links the title and icon to Home and the
   Sefaria banner to the external site.
 - On desktop, the top navigation contains Home, About, Number Search, Source
-  Search and MCP (connection instructions), plus Entity Search and Trees dropdowns.
+  Search and MCP (connection instructions and example prompts), plus Entity
+  Search and Trees dropdowns.
   On screens up to 768px, the
   app also displays a grouped mobile Menu popover; Streamlit hides its top
   navigation on narrow screens. Selecting a mobile menu item closes the popover
