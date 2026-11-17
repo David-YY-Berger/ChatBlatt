@@ -56,7 +56,7 @@ function client(initialUrl, storedAdmin) {
     data: {type: "streamlit:render", args: {
       measurement_id: "G-9ZHLKD65GM",
       base_url: "https://app.example/",
-      paths: ["", "source_search", "number_search"],
+      paths: ["", "source_search", "number_search", "trees", "trees_descendants"],
       language: "he",
       origin_hint: originHint,
       events,
@@ -131,4 +131,21 @@ test("events redact free text and carry app language and navigation origin", () 
   assert.ok(!JSON.stringify(calls).includes("secret"));
   app.render([{id: "1", name: "app_search", search_type: "source"}]);
   assert.equal(app.calls().filter(call => call[1] === "app_search").length, 1);
+});
+
+test("tree landing selections are attributed to their menu card", () => {
+  const app = client("https://app.example/");
+  app.render();
+  const button = new app.host.Element();
+  button.classList = ["st-key-tree_landing_btn_descendants_en"];
+  button.closest = selector => {
+    if (selector === "[class*='st-key-']") return button;
+    if (selector === "button, a") return button;
+    return null;
+  };
+  app.listeners.click({target: button});
+  app.host.history.pushState(null, "", "/trees_descendants");
+  app.render();
+  const views = app.calls().filter(call => call[0] === "event" && call[1] === "page_view");
+  assert.equal(views[1][2].came_from, "/:tree_landing_btn_descendants_en");
 });

@@ -38,6 +38,66 @@ Singleton (`@singleton`) composed from mixins in `backend/db/mongo_parts/`:
 `get_collection(collection)` returns a plain pymongo `Collection`, or a
 `_SessionBoundCollection` (auto session-binding wrapper) while a transaction is active.
 
+## MongoDB indexes for application reads
+
+Population connections (`DBFactory.get_population_db_mongo`) automatically ensure:
+
+| Collection | Index | Keys | Purpose |
+|---|---|---|---|
+| `Graphs.entities` | `idx_entity_type_name` | `entityType`, `display_en_name` ascending | Exact number-value lookups and entity-type dropdown reads |
+| `Graphs.entities` | `idx_entity_key` | `key` ascending, unique, sparse | Entity key lookups |
+| `Graphs.src_metadata` | `idx_src_metadata_entity_keys` | `entity_keys` ascending, multikey | Sources mentioning an entity, including number results |
+| `Graphs.src_metadata` | `idx_src_metadata_rel_keys` | `rel_keys` ascending, multikey | Relationship-filtered source reads |
+
+Production read-only connections do not create indexes. The above four existed on the
+live database when inspected on 2026-11-17; collections also have their default `_id`
+indexes. The compound entity index already includes English display name, but only
+after `entityType`: it is useful for number-value equality and type-only queries, not
+an efficient standalone name lookup. UI dropdowns retrieve all matching documents,
+then construct/filter options in Python; adding another name index won't make those
+full-document reads covered. Case-insensitive name regex searches do not gain selective
+bounds from a normal name index.
+
+The unit query uses an anchored **case-insensitive** regex on `en_unit`. A normal
+unit index cannot provide selective case-insensitive regex bounds; a case-insensitive
+collation index does not accelerate `$regex` either. Do not spend space on a unit
+index without first changing and validating the query (for example, normalized
+equality with a matching index). As of the inspection, an example unit query examined
+3,624 number documents to return 26; an example exact number query examined one.
+Timings and counts are samples, not benchmarks.
+
+The one-time script `backend_pipeline/data_pipeline/one_time_scripts/create_application_read_indexes.py`
+adds only these indexes:
+
+| Collection | Index | Keys | Application use |
+|---|---|---|---|
+| `Sources.TN` | `idx_source_content_key` | `key` ascending, non-unique | Fetch passage text by source key |
+| `Sources.BT` | `idx_source_content_key` | `key` ascending, non-unique | Fetch passage text by source key |
+
+Number result popups and source-search result pages fetch source content by `key`,
+often repeatedly. At inspection these collections had only `_id` indexes; a sampled
+BT key lookup examined 10,001 documents, and a missing key examined all 12,488.
+These new indexes target those result reads, **not** dropdown construction or the
+initial unit query. They consume additional Atlas index storage; measure actual size
+after creation rather than assuming a fixed amount.
+
+From the repository root, with the project's Python environment and `.env` configured:
+
+```powershell
+python -m backend_pipeline.data_pipeline.one_time_scripts.create_application_read_indexes
+python -m backend_pipeline.data_pipeline.one_time_scripts.create_application_read_indexes --apply
+```
+
+The first command is read-only and uses `DB_READ_ONLY_USERNAME` /
+`DB_READ_ONLY_PASSWORD`; the second uses `DB_BT_USERNAME` / `DB_BT_PASSWORD` and
+requires index-creation privileges. It skips an existing compatible key-leading index,
+refuses missing collections or conflicting index definitions, and never drops indexes
+or changes documents. Re-running is safe. An error after one creation can leave a
+partial result; rerun after resolving it. This script uses `MongoClient` directly,
+not the population DB factory connection, to avoid creating other indexes implicitly.
+Afterward, inspect `list_indexes`, `collStats` index sizes, and `explain("executionStats")`
+for representative source-key reads to verify actual usage and space.
+
 ## Transactions — `run_in_transaction(callback)`
 
 - Runs `callback()` in one MongoDB transaction; every DB op made through this object during
