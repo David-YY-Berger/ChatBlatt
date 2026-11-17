@@ -117,6 +117,15 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+.app-footer {
+    margin-top: 2rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 /* Streamlit shows this widget while a script is running, including navigation. */
 body:has([data-testid="stStatusWidgetRunningIcon"])::before {
     content: var(--loading-label);

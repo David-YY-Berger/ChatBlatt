@@ -27,6 +27,8 @@ class McpSetupTests(unittest.TestCase):
         self.assertNotIn("admin", rendered_text.lower())
         self.assertNotIn("admin=true", rendered_text.lower())
         self.assertGreaterEqual(rendered_text.count("@Eitz Habina"), 8)
+        self.assertEqual(streamlit.image.call_args.args[0], mcp_setup.MCP_SCREENSHOT)
+        self.assertTrue(mcp_setup.MCP_SCREENSHOT.is_file())
 
     def test_hebrew_content_is_rtl_and_server_url_remains_ltr(self):
         streamlit = MagicMock()

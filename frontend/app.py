@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from html import escape
 import sys
 from pathlib import Path
 
@@ -152,6 +153,14 @@ def _close_mobile_menu() -> None:
     st.session_state["mobile_menu_generation"] = st.session_state.get("mobile_menu_generation", 0) + 1
 
 
+def _render_footer(lang: str) -> None:
+    copyright = escape(get_text("app.copyright", lang))
+    st.markdown(
+        f'<footer class="app-footer" dir="auto">{copyright}</footer>',
+        unsafe_allow_html=True,
+    )
+
+
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
 
 
@@ -190,6 +199,7 @@ def main() -> None:
     if page.url_path != URL_PATHS[PAGE_SYMBOLS]:
         st.session_state.pop(entity_search.SYMBOLS_WARNING_SHOWN_KEY, None)
     page.run()
+    _render_footer(lang)
     if metrics.has_pending_events():
         st.rerun()
 

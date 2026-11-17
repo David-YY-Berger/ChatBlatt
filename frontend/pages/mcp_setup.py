@@ -2,12 +2,14 @@
 """Instructions for connecting an AI chat to Eitz Habina."""
 
 import os
+from pathlib import Path
 
 import streamlit as st
 
 from translations1 import get_text, is_rtl
 
 MCP_URL = "https://eitz-habina-prod.up.railway.app/mcp"
+MCP_SCREENSHOT = Path(__file__).resolve().parents[1] / "icons" / "optimized" / "mcp-in-chat.png"
 
 
 def render(lang: str) -> None:
@@ -40,3 +42,8 @@ def render(lang: str) -> None:
         st.markdown(get_text("mcp_ui.examples", lang))
         st.caption(get_text("mcp_ui.availability", lang))
         st.caption(get_text("mcp_ui.privacy", lang))
+        st.image(
+            MCP_SCREENSHOT,
+            caption=get_text("mcp_ui.screenshot_caption", lang),
+            width="stretch",
+        )
