@@ -1,6 +1,6 @@
 app:
   title: "Eitz Habinah"
-  subtitle: "The indexed database of Jewish Sources"
+  subtitle: "The indexed database of Torah Sources"
   dedication: "lilui nishmat feyga menuha bat yehiel gershon"
   beta: "Beta"
   sefaria_alt: "Powered by Sefaria"
@@ -49,7 +49,7 @@ trees_ui:
 
 mcp_ui:
   disabled: "The MCP service is currently unavailable. The rest of the website remains available."
-  introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Jewish sources and research tools."
+  introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Torah sources and research tools."
   capabilities: "The connection is read-only. You can ask for sources, people, places, numbers, and family relationships; full source text may be available in English and Hebrew."
   setup_title: "Connect your AI chat"
   step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
@@ -224,7 +224,7 @@ page_titles:
   about: "About Eitz Habinah"
   mcp: "Connect with MCP"
   number_search: "Number Search"
-  source_search: "Search Jewish Sources"
+  source_search: "Search Torah Sources"
   entity_search: "Entity Search"
   people: "People"
   places: "Places"
@@ -239,8 +239,8 @@ page_titles:
 
 home_tools:
   subtitle: "Placeholder for subtitle"
-  number_search_description: "Find numbers and units mentioned throughout Jewish sources."
-  source_search_description: "Discover relevant passages across Jewish texts."
+  number_search_description: "Find numbers and units mentioned throughout Torah sources."
+  source_search_description: "Discover relevant passages across Torah texts."
   entity_search_description: "Explore people, places, nations, tribes, and symbols."
 
 source_search_ui:

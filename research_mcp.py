@@ -50,7 +50,7 @@ READ_ONLY = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotent
 mcp = FastMCP(
     "Eitz Habina",
     instructions=(
-        "Search authentic Jewish sources. Entity names are suggestions, not identity claims: "
+        "Search authentic Torah sources. Entity names are suggestions, not identity claims: "
         "disambiguate using metadata and keys. Sources have Hebrew and English text; ask which "
         "language the user wants before retrieving full text. Search results are ranked rather "
         "than filtered by similarity. Use relationship keys to retrieve supporting sources. "

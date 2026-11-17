@@ -17,7 +17,7 @@
 <summary><b>What is ChatBlatt?</b></summary>
 <br>
 
-ChatBlatt is an indexed database of jewish texts (based on Sefaria’s resource). Each book is split into passages, each passage tagged with relevant entities that appear in that passage. Additionally, relationships are crafted through these entities (based on each passage), create a beautiful network of accessible information. 
+ChatBlatt is an indexed database of Torah texts (based on Sefaria’s resource). Each book is split into passages, each passage tagged with relevant entities that appear in that passage. Additionally, relationships are crafted through these entities (based on each passage), create a beautiful network of accessible information.
 
 </details>
 

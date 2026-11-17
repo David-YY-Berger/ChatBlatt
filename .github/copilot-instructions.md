@@ -12,14 +12,17 @@ Don't re-derive context from scratch that's already written down there.
    open questions — then confirm with the user in a focused way (one question at a time,
    concrete choices when possible) *before* writing code. If you notice an unrelated issue
    along the way, mention it rather than silently fixing or silently ignoring it.
-2. **Keep `control_docs/` current — always, not just when asked.** After *any* code change
+2. **Keep control docs, MCP, and metrics in sync — every change.** After *any* code change
    (including a "just fix it" / bug-fix / review-driven change mid-task, not only
-   feature work), check whether an existing doc covers the area you touched and update it
-   in place — fix/restructure the existing content, don't just append more bullet points.
-   Only add a new doc file when nothing existing fits (and list it in
-   `control_docs/README.md`); only split/reorganize when a doc has grown unfocused. Docs
-   should stay succinct, non-repetitive, and easy to find. Treat this as part of finishing
-   the change, not a separate optional step.
+   feature work), review the relevant `control_docs/` and assess whether MCP behavior or
+   contracts, or metrics events, fields, and collections, are affected. Update each
+   affected doc, implementation, tool/schema, or collection in the same change; don't
+   leave these surfaces inconsistent. For `control_docs/`, update an existing doc in
+   place — fix/restructure its content rather than just appending more bullet points.
+   Only add a new doc when nothing existing fits (and list it in `control_docs/README.md`);
+   only split/reorganize when a doc has grown unfocused. Docs should stay succinct,
+   non-repetitive, and easy to find. Treat these checks and updates as part of finishing
+   every change, not as optional follow-up.
 3. **Check the whole inheritance chain before changing a shared method/attribute.** Before
    and after editing anything that's part of a class hierarchy — a base/abstract class
    method, a class-level attribute, a method with subclass overrides — search for every

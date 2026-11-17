@@ -50,6 +50,8 @@ govern how these docs get used and maintained.
 ## Maintenance rule
 After *any* code change — including ad hoc fixes made mid-task, not just planned feature
 work — check this index for a doc that covers the touched area and update it in place
-(fix/restructure existing content rather than appending). This is part of finishing the
-change, not an optional follow-up. Only add a new file when nothing existing fits, and list
-it here. If a doc grows unfocused, split or re-outline it.
+(fix/restructure existing content rather than appending). Also assess whether MCP behavior
+or contracts, or metrics events, fields, and collections are affected; update each affected
+surface in the same change so docs, implementation, and collections stay in sync. This is
+part of finishing every change, not an optional follow-up. Only add a new file when nothing
+existing fits, and list it here. If a doc grows unfocused, split or re-outline it.
