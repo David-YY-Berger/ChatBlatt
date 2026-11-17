@@ -40,13 +40,17 @@ _render_results_body(st.session_state["answer"], "en")
         app.session_state["answer"] = answer
         app.run()
         self.assertFalse(app.exception)
-        self.assertEqual(len(app.expander), 1)
-        self.assertEqual(app.expander[0].label, "View source")
+        self.assertEqual(
+            [expander.label for expander in app.expander],
+            ["View source", "Hebrew Content", "English Content"],
+        )
+        self.assertTrue(all(not expander.proto.expanded for expander in app.expander))
         self.assertTrue(any("English summary" in m.value for m in app.caption))
         self.assertTrue(any("תקציר" in m.value for m in app.caption))
         columns = app.get("column")
         self.assertIn("Bereishit", columns[0].markdown[0].value)
         self.assertIn("בראשית", columns[1].markdown[0].value)
+        self.assertEqual(len(columns[1].get("popover")), 1)
         self.assertIn("English summary", columns[2].caption[0].value)
         self.assertIn("תקציר", columns[3].caption[0].value)
         badges = next(m.value for m in app.markdown if "Prophecy" in m.value)
@@ -72,8 +76,11 @@ _render_results_body(st.session_state["answer"], "he")
         app.session_state["answer"] = answer
         app.run()
         self.assertFalse(app.exception)
-        self.assertEqual(len(app.expander), 2)
-        self.assertEqual(app.expander[0].label, "הצגת המקור")
+        self.assertEqual(
+            [expander.label for expander in app.expander],
+            ["הצגת המקור", "מקור באנגלית", "הצגת המקור"],
+        )
+        self.assertTrue(all(not expander.proto.expanded for expander in app.expander))
         self.assertTrue(any("Fallback" in m.value for m in app.caption))
         columns = app.get("column")
         self.assertIn("Bereishit", columns[0].markdown[0].value)

@@ -8,8 +8,8 @@ dropdowns, free-text box + Find Sources button, results).
 - Results appear as compact native Streamlit cards using the Places Visited teal
   palette. English titles and summaries are on the left, Hebrew on the right,
   including on mobile; localized passage types have distinct badge colors.
-  The expanded source
-  shows available Hebrew and English text and a copy control for plain text; the
+  A header icon opens the plain-text copy control. The expanded source contains
+  separate, initially collapsed Hebrew and English sections when available; the
   separate individual-source popups retain their existing presentation.
 - **Passage Type** (`components/source_filters.py`): compact checkbox list, one per
   `PassageType`; no All/None buttons or counts.

@@ -276,15 +276,33 @@ def _render_results_body(ans, lang: str = "en") -> None:
             title_en, title_he = str(metadata), metadata.to_heb_str()
             summary_en = metadata.summary_en or ""
             summary_he = metadata.summary_heb or ""
+            copy_blocks = []
+            for title, summary, body in (
+                (title_he, summary_he, hebrew),
+                (title_en, summary_en, english),
+            ):
+                block = "\n\n".join(part for part in (title, summary, _plain(body)) if part)
+                if block:
+                    copy_blocks.append(block)
 
             with st.container(border=True, key=f"source_result_{index}"):
-                en_col, he_col = st.columns(2, gap="small")
+                en_col, he_col = st.columns(2, gap="small", vertical_alignment="center")
                 with en_col:
                     if title_en:
                         st.markdown(f"**{_markdown_text(title_en)}**")
                 with he_col:
-                    if title_he:
-                        st.markdown(f"**{_markdown_text(title_he)}**")
+                    with st.container(horizontal=True, gap=None, vertical_alignment="center"):
+                        if title_he:
+                            st.markdown(f"**{_markdown_text(title_he)}**")
+                        with st.popover(
+                            get_text("source_display.copy", lang),
+                            icon=":material/content_copy:",
+                            help=get_text("source_display.copy", lang),
+                            type="tertiary",
+                            key=f"source_copy_{index}",
+                        ):
+                            st.caption(get_text("source_display.copy_help", lang))
+                            st.code("\n\n\n".join(copy_blocks), language=None)
                 if metadata.passage_types:
                     st.markdown(" ".join(
                         f":{_PASSAGE_BADGE_COLORS[pt]}-badge[{pt.icon} {_markdown_text(enum_text(pt, lang))}]"
@@ -300,18 +318,6 @@ def _render_results_body(ans, lang: str = "en") -> None:
                             st.caption(_markdown_text(summary_he))
 
                 with st.expander(get_text("source_display.view_source", lang)):
-                    copy_blocks = []
-                    for title, summary, body in (
-                        (title_he, summary_he, hebrew),
-                        (title_en, summary_en, english),
-                    ):
-                        block = "\n\n".join(part for part in (title, summary, _plain(body)) if part)
-                        if block:
-                            copy_blocks.append(block)
-                    with st.popover(get_text("source_display.copy", lang), icon=":material/content_copy:"):
-                        st.caption(get_text("source_display.copy_help", lang))
-                        st.code("\n\n\n".join(copy_blocks), language=None)
-
                     if not hebrew.strip() and not english.strip():
                         st.info(get_text("source_display.no_content", lang))
                     for body, direction, label in (
@@ -319,11 +325,11 @@ def _render_results_body(ans, lang: str = "en") -> None:
                         (english, "ltr", "english_content"),
                     ):
                         if body.strip():
-                            st.markdown(f"**{get_text(f'source_display.{label}', lang)}**")
-                            st.html(
-                                f'<div dir="{direction}" style="text-align:{"right" if direction == "rtl" else "left"}; '
-                                f'overflow-wrap:anywhere; line-height:1.7">{body}</div>'
-                            )
+                            with st.expander(get_text(f"source_display.{label}", lang)):
+                                st.html(
+                                    f'<div dir="{direction}" style="text-align:{"right" if direction == "rtl" else "left"}; '
+                                    f'overflow-wrap:anywhere; line-height:1.7">{body}</div>'
+                                )
 
 
 # ---------------------------------------------------------------------------

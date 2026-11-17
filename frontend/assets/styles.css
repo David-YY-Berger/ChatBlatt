@@ -38,6 +38,19 @@
     text-align: right;
 }
 
+[class*="st-key-source_result_"] [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] {
+    flex-wrap: nowrap;
+}
+
+[class*="st-key-source_result_"] [data-testid="stHorizontalBlock"] [data-testid="stHorizontalBlock"] > [data-testid="stElementContainer"] {
+    min-width: 0;
+    flex: 0 1 auto;
+}
+
+[class*="st-key-source_copy_"] {
+    flex-shrink: 0;
+}
+
 [class*="st-key-source_result_"] [data-testid="stMarkdownContainer"] p,
 [class*="st-key-source_result_"] [data-testid="stCaptionContainer"] p {
     line-height: 1.3;
@@ -46,6 +59,29 @@
 [class*="st-key-source_result_"] [data-testid="stExpander"] summary {
     padding: 0.25rem 0.5rem;
     min-height: 0;
+}
+
+[class*="st-key-source_copy_"] [data-testid="stPopoverButton"] {
+    width: 1.75rem;
+    min-width: 1.75rem;
+    min-height: 1.75rem;
+    padding: 0.2rem;
+    border: 0;
+    background: transparent;
+    color: #b4c3ce;
+    box-shadow: none;
+}
+
+[class*="st-key-source_copy_"] [data-testid="stPopoverButton"] [data-testid="stMarkdownContainer"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+[class*="st-key-source_copy_"] [data-testid="stPopoverButton"] > div > div:last-child {
+    display: none;
 }
 
 [class*="st-key-source_result_"] [data-testid="stCaptionContainer"],
@@ -68,6 +104,10 @@
 
     [class*="st-key-source_result_"] [data-testid="stCaptionContainer"],
     [class*="st-key-source_result_"] [data-testid="stCaptionContainer"] p {
+        color: #475569;
+    }
+
+    [class*="st-key-source_copy_"] [data-testid="stPopoverButton"] {
         color: #475569;
     }
 }
