@@ -7,6 +7,7 @@ import io
 import re
 from datetime import datetime
 from pathlib import Path
+from threading import Lock
 from urllib.parse import parse_qs, urlsplit
 from xml.sax.saxutils import escape
 
@@ -29,8 +30,11 @@ FRONTEND_DIR = Path(__file__).resolve().parent.parent
 MAIN_IMAGE = FRONTEND_DIR / "icons" / "optimized" / "eitz_habina_main_image.jpg"
 FONT = "DejaVu"
 FONT_BOLD = "DejaVu-Bold"
+HEBREW_FONT = "FreeSerif"
+HEBREW_FONT_BOLD = "FreeSerif-Bold"
 _HEB_RE = re.compile(r"[\u0590-\u05FF]")
 _NAVY = colors.HexColor("#2c3e50")
+_PDF_LOCK = Lock()
 
 
 def _register_fonts() -> None:
@@ -40,8 +44,12 @@ def _register_fonts() -> None:
     pdfmetrics.registerFont(TTFont(FONT_BOLD, str(FRONTEND_DIR / "fonts" / "DejaVuSans-Bold.ttf")))
     pdfmetrics.registerFont(TTFont("DejaVu-Oblique", str(FRONTEND_DIR / "fonts" / "DejaVuSans-Oblique.ttf")))
     pdfmetrics.registerFont(TTFont("DejaVu-BoldOblique", str(FRONTEND_DIR / "fonts" / "DejaVuSans-BoldOblique.ttf")))
+    pdfmetrics.registerFont(TTFont(HEBREW_FONT, str(FRONTEND_DIR / "fonts" / "FreeSerif.ttf")))
+    pdfmetrics.registerFont(TTFont(HEBREW_FONT_BOLD, str(FRONTEND_DIR / "fonts" / "FreeSerifBold.ttf")))
     pdfmetrics.registerFontFamily(FONT, normal=FONT, bold=FONT_BOLD,
                                   italic="DejaVu-Oblique", boldItalic="DejaVu-BoldOblique")
+    pdfmetrics.registerFontFamily(HEBREW_FONT, normal=HEBREW_FONT, bold=HEBREW_FONT_BOLD,
+                                  italic=HEBREW_FONT, boldItalic=HEBREW_FONT_BOLD)
 
 
 def _plain(html: str) -> str:
@@ -204,7 +212,7 @@ def _html_runs(html: str) -> list[_Run]:
 
 def _markup(word: str, bold: bool, italic: bool) -> str:
     out = escape(word)
-    # DejaVu Oblique has no Hebrew glyphs, so Hebrew stays upright
+    # Hebrew stays upright; the Hebrew font has no italic variant.
     if italic and not _HEB_RE.search(word):
         out = f"<i>{out}</i>"
     if bold:
@@ -213,14 +221,16 @@ def _markup(word: str, bold: bool, italic: bool) -> str:
 
 
 def _rtl_line_markup(words: list[tuple[str, bool, bool]]) -> str:
-    """Visual-order markup for one line: Hebrew words are bidi-reversed, and runs
-    of purely LTR words keep their internal order within the reversed line."""
+    """Order words visually; shaping handles Hebrew letters and their marks."""
     units: list[list[str]] = []
     prev_ltr = False
     for word, bold, italic in words:
         ltr = not _HEB_RE.search(word) and bool(re.search(r"[A-Za-z0-9]", word))
-        shown = word if ltr else get_display(word, base_dir="R")
-        piece = _markup(shown, bold, italic)
+        if _HEB_RE.search(word):
+            font = HEBREW_FONT_BOLD if bold else HEBREW_FONT
+            piece = f'<font name="{font}">{escape(word)}</font>'
+        else:
+            piece = _markup(word if ltr else get_display(word, base_dir="R"), bold, italic)
         if ltr and prev_ltr:
             units[-1].append(piece)
         else:
@@ -254,23 +264,28 @@ def _text_flowables(text: str, size: float, width: float, bold=False, italic_col
     wrap_bold = bold
     if any(t and _HEB_RE.search(t[0]) for t in tokens):
         style = ParagraphStyle("h", fontName=FONT, fontSize=size, leading=leading,
-                               alignment=TA_RIGHT, textColor=color)
+                               alignment=TA_RIGHT, textColor=color, shaping=1)
         lines: list[list] = []
         cur: list = []
-        cur_text = ""
+        cur_width = 0.0
         for tok in tokens:
             if tok is None:
                 lines.append(cur)
-                cur, cur_text = [], ""
+                cur, cur_width = [], 0.0
                 continue
-            font = FONT_BOLD if (wrap_bold or tok[1]) else FONT
-            cand = f"{cur_text} {tok[0]}" if cur_text else tok[0]
-            if cur and pdfmetrics.stringWidth(cand, font, size) > width:
+            is_bold = wrap_bold or tok[1]
+            if _HEB_RE.search(tok[0]):
+                font = HEBREW_FONT_BOLD if is_bold else HEBREW_FONT
+            else:
+                font = FONT_BOLD if is_bold else FONT
+            word_width = pdfmetrics.stringWidth(tok[0], font, size)
+            space_width = pdfmetrics.stringWidth(" ", FONT, size) if cur else 0
+            if cur and cur_width + space_width + word_width > width:
                 lines.append(cur)
-                cur, cur_text = [tok], tok[0]
+                cur, cur_width = [tok], word_width
             else:
                 cur.append(tok)
-                cur_text = cand
+                cur_width += space_width + word_width
         lines.append(cur)
         out = []
         for line in lines:
@@ -302,6 +317,13 @@ def _text_flowables(text: str, size: float, width: float, bold=False, italic_col
 def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str] | None = None,
                       dedication: str = "", lang: str = "en") -> bytes:
     """Build the result PDF in the selected UI language."""
+    # ReportLab's registered TrueType fonts share mutable shaping/subset state.
+    with _PDF_LOCK:
+        return _build_results_pdf(ans, search_url, entity_names, dedication, lang)
+
+
+def _build_results_pdf(ans, search_url: str | None, entity_names: list[str] | None,
+                       dedication: str, lang: str) -> bytes:
     _register_fonts()
     buf = io.BytesIO()
     margin = 1.8 * cm
@@ -331,9 +353,15 @@ def build_results_pdf(ans, search_url: str | None = None, entity_names: list[str
         heb_title = _plain(meta.to_heb_str()) if hasattr(meta, "to_heb_str") else ""
         primary_title = heb_title if is_rtl(lang) and heb_title else str(meta)
         secondary_title = str(meta) if is_rtl(lang) and heb_title else heb_title
+        title_text = f"{i + 1}. {primary_title}"
         if is_rtl(lang):
             title_style.alignment = TA_RIGHT
-        block.append(Paragraph(escape(get_display(f"{i + 1}. {primary_title}", base_dir="R") if is_rtl(lang) else f"{i + 1}. {primary_title}"), title_style))
+        if re.search(r"[\u0591-\u05c7]", title_text):
+            title_style.shaping = 1
+            title_markup = _rtl_line_markup([(word, True, False) for word in title_text.split()])
+        else:
+            title_markup = escape(get_display(title_text, base_dir="R") if is_rtl(lang) else title_text)
+        block.append(Paragraph(title_markup, title_style))
         block += _text_flowables(secondary_title, 12, inner, bold=True)
         types = ", ".join(enum_text(pt, lang) for pt in (getattr(meta, "passage_types", None) or []))
         grey = colors.HexColor("#7f8c8d")

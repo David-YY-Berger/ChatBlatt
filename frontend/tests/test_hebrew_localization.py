@@ -19,7 +19,7 @@ from backend.models_db.Enums import (
     SourceType, SymbolType, TimePeriod,
 )
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
-from components.pdf_export import build_results_pdf
+from components.pdf_export import _plain, build_results_pdf
 from components.facets import renderers
 from components.tree_graph import render_pyvis_graph
 from pages.number_search import _occurrences_table, _validate_number
@@ -133,7 +133,7 @@ st.write(get_selected_entity_ids())
         self.assertTrue(pdf.startswith(b"%PDF"))
         from bidi.algorithm import get_display
         self.assertIn(get_display(f"1. {meta.to_heb_str()}", base_dir="R"), texts)
-        self.assertIn(str(meta), texts)
+        self.assertIn(str(meta), [_plain(text) for text in texts])
 
 
 if __name__ == "__main__":

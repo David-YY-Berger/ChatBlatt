@@ -4,7 +4,10 @@ from __future__ import annotations
 
 from html import escape
 
+import json
+
 import streamlit as st
+import streamlit.components.v1 as components
 
 from pages.about_content import (
     LINKEDIN_PROFILE_URL,
@@ -27,7 +30,40 @@ def _render_table_of_contents(sections: list[tuple[str, str, str]], title: str) 
     )
 
 
-def render(lang: str) -> None:
+def _scroll_to(section_id: str) -> None:
+    components.html(
+        "<script>"
+        "const id = " + json.dumps(section_id) + ";"
+        "let tries = 0;"
+        "const t = setInterval(() => {"
+        "  const el = window.parent.document.getElementById(id);"
+        "  if (el) { el.scrollIntoView(); clearInterval(t); }"
+        "  else if (++tries > 40) clearInterval(t);"
+        "}, 100);"
+        "</script>",
+        height=0,
+    )
+
+
+def _enable_toc_scrolling() -> None:
+    components.html(
+        "<script>"
+        "const doc = window.parent.document;"
+        "if (!doc.__aboutTocHandler) {"
+        "  doc.__aboutTocHandler = true;"
+        "  doc.addEventListener('click', (e) => {"
+        "    const a = e.target.closest && e.target.closest('.about-toc a');"
+        "    if (!a) return;"
+        "    const el = doc.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));"
+        "    if (el) { e.preventDefault(); el.scrollIntoView({behavior: 'smooth'}); }"
+        "  });"
+        "}"
+        "</script>",
+        height=0,
+    )
+
+
+def render(lang: str, section_id: str | None = None) -> None:
     rtl = is_rtl(lang)
     direction = "rtl" if rtl else "ltr"
     text_align = "right" if rtl else "left"
@@ -63,3 +99,6 @@ def render(lang: str) -> None:
                     'LinkedIn</a>',
                     unsafe_allow_html=True,
                 )
+        _enable_toc_scrolling()
+        if section_id:
+            _scroll_to(section_id)

@@ -8,6 +8,7 @@ from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 from streamlit.testing.v1 import AppTest
+from reportlab.pdfbase import pdfmetrics
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -17,6 +18,7 @@ from backend.app.SourceSearchQuery import SourceSearchQuery
 from backend.models_db.Enums import PassageType
 from backend.models_db.SourceClasses.SourceContent import SourceContent
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
+from components import pdf_export
 from pages import source_search
 from pages.source_search_logic import current_search_url
 
@@ -93,6 +95,50 @@ _render_results_body(st.session_state["answer"], "he")
 
 
 class SourceSearchPdfTests(unittest.TestCase):
+    def test_download_widget_defers_generation_without_rerun(self):
+        app = AppTest.from_string("""
+import streamlit as st
+from pages.source_search import _render_download_button
+_render_download_button(st.session_state["answer"], "en")
+""")
+        app.session_state["answer"] = SimpleNamespace(src_metadata_lst=[], src_contents=[])
+        with patch.object(source_search, "build_results_pdf") as build:
+            app.run()
+        self.assertFalse(app.exception)
+        build.assert_not_called()
+        download = app.get("download_button")[0].proto
+        self.assertTrue(download.deferred_file_id)
+        self.assertTrue(download.ignore_rerun)
+
+    def test_hebrew_cantillation_is_embedded_and_shaped(self):
+        pdf_export._register_fonts()
+        text = "בְּרֵאשִׁ֖ית בָּרָ֣א"
+        paragraph = pdf_export._text_flowables(f"<b>{text}</b> (ABC123)", 11, 400, html=True)[0]
+        paragraph.wrap(400, 500)
+        hebrew_fragments = [
+            frag for line in paragraph.blPara.lines for frag in line.words
+            if frag.fontName == pdf_export.HEBREW_FONT_BOLD
+        ]
+        self.assertTrue(hebrew_fragments)
+        self.assertTrue(any(
+            any(position.x_offset or position.y_offset for position in frag.text.__shapeData__)
+            for frag in hebrew_fragments
+        ))
+        for font_name in (pdf_export.HEBREW_FONT, pdf_export.HEBREW_FONT_BOLD):
+            font = pdfmetrics.getFont(font_name)
+            self.assertTrue(all(ord(char) in font.face.charWidths for char in text if char != " "))
+            self.assertTrue(all(ord(char) in font.face.charWidths for char in "(ABC123)"))
+
+        meta = SourceMetadata(key="TN_Genesis_0_1:1", summary_heb=text)
+        ans = SimpleNamespace(
+            src_metadata_lst=[meta],
+            src_contents=[SourceContent(meta.key, ["English", f"<b>{text}</b>"])],
+        )
+        for lang in ("en", "he"):
+            pdf = pdf_export.build_results_pdf(ans, lang=lang)
+            self.assertTrue(pdf.startswith(b"%PDF-"))
+            self.assertIn(b"FreeSerif", pdf)
+
     def test_shared_all_entity_link_runs_with_toggle_enabled(self):
         app = AppTest.from_string("""
 from pages.source_search import render
@@ -173,6 +219,7 @@ render(lang)
              patch.object(source_search.st, "download_button") as download:
             source_search._render_download_button(ans, "en")
             callback = download.call_args.kwargs["data"]
+            self.assertEqual(download.call_args.kwargs["on_click"], "ignore")
         with patch.object(source_search.st, "session_state", {}):
             pdf = callback()
         self.assertTrue(b"/URI (" + url.encode("ascii") + b")" in pdf)

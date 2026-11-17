@@ -47,6 +47,17 @@ URL_PATHS: dict[str, str] = {
     PAGE_DESCENDANTS: "trees_descendants",
 }
 
+# About dropdown entries: section anchor id -> page key / url_path (each scrolls to its section)
+ABOUT_SECTION_IDS = (
+    "what-is-eitz-habina",
+    "how-is-eitz-habina-different",
+    "pipeline",
+    "about-feyga-menuha",
+    "about-the-author",
+)
+ABOUT_SECTION_PAGES: dict[str, str] = {f"about_{sid}": sid for sid in ABOUT_SECTION_IDS}
+URL_PATHS.update({key: f"about_{sid.replace('-', '_')}" for key, sid in ABOUT_SECTION_PAGES.items()})
+
 # ---- Source search params (list values are comma-separated) ----
 PARAM_SOURCE_TEXT = "q"               # free-text similarity query
 PARAM_SOURCE_PASSAGE_TYPES = "pt"     # PassageType names

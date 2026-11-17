@@ -21,8 +21,9 @@ import navigation
 import metrics
 from components.header import render_header
 from components.layout import apply_layout, language_selector
-from translations1 import get_text
+from translations1 import get_text, is_rtl
 from pages import about, entity_search, home, mcp_setup, number_search, source_search, trees
+from pages.about_content import SECTIONS
 from system_common.Constants import (
     DEFAULT_LANG,
     PAGE_HOME, PAGE_ABOUT, PAGE_MCP, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH,
@@ -30,7 +31,7 @@ from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_FAMILY_TREE, PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS,
 )
-from system_common.UrlPaths import PARAM_LANG, URL_PATHS
+from system_common.UrlPaths import ABOUT_SECTION_PAGES, PARAM_LANG, URL_PATHS
 
 import logging
 
@@ -61,6 +62,8 @@ def _renderer(page_key: str):
         return home.render
     if page_key == PAGE_ABOUT:
         return about.render
+    if page_key in ABOUT_SECTION_PAGES:
+        return lambda lang: about.render(lang, section_id=ABOUT_SECTION_PAGES[page_key])
     if page_key == PAGE_MCP:
         return mcp_setup.render
     if page_key == PAGE_NUMBER_SEARCH:
@@ -77,6 +80,10 @@ def _renderer(page_key: str):
 
 
 def _page_title(page_key: str, lang: str) -> str:
+    if page_key in ABOUT_SECTION_PAGES:
+        language = "he" if is_rtl(lang) else "en"
+        section_id = ABOUT_SECTION_PAGES[page_key]
+        return next(title for sid, title, _ in SECTIONS[language] if sid == section_id)
     if page_key in ENTITY_PAGES:
         return get_text(f"entity_tabs.{page_key}", lang)
     if page_key in TREE_PAGES:
@@ -104,7 +111,8 @@ def _build_navigation(lang: str):
     pages = {key: _make_page(key, lang) for key in URL_PATHS}
     navigation.register_pages(pages)
     groups = {
-        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
+        "": [pages[k] for k in (PAGE_HOME, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
+        get_text("nav.about", lang): [pages[PAGE_ABOUT]] + [pages[k] for k in ABOUT_SECTION_PAGES],
         get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
         get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
     }

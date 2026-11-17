@@ -54,7 +54,6 @@ mcp_ui:
   setup_title: "Connect your AI chat"
   step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
-  admin_opt_out: "For an admin connection that excludes MCP calls from analytics, use this URL instead. This only disables analytics; it does not change access:"
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
   step_four: "4. Save or connect the server and enable it for your chat. Try asking: “Find sources about Abraham visiting places, and show me the sources.”"
   availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
