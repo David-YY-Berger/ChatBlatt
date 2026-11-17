@@ -30,13 +30,18 @@ entity_tabs:
 
 tree_tabs:
   family_tree: "Family Tree"
-  studied_from: "studiedFrom"
+  studied_from: "Studied From"
   places_visited: "Places Visited"
   descendants: "Descendants"
   label: "Choose a tree view"
 
 trees_ui:
-  select_tree_prompt: "Please select a view from the menu above."
+  choose_tree: "Choose one of these four views to explore recorded relationships."
+  descriptions:
+    family_tree: "Explore a person's recorded parents, children, spouses, and siblings, with one or two generations of relatives."
+    studied_from: "Trace the teacher-student network around a person: who they learned from, who learned from them, and the next level of connections."
+    places_visited: "Find places a person visited, was born in, or died in—or search by place to find associated people—with links to recorded sources."
+    descendants: "Trace recorded parent-child relationships to descendants or in reverse to ancestors; results show a shortest path between two people."
 
 mcp_ui:
   introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Jewish sources and research tools."
@@ -222,8 +227,7 @@ home_tools:
   number_search_description: "Find numbers and units mentioned throughout Jewish sources."
   source_search_description: "Discover relevant passages across Jewish texts."
   entity_search_description: "Explore people, places, nations, tribes, and symbols."
-  family_tree_description: "Explore family connections and lineage."
-  studied_from_description: "Follow chains of teachers and students."
+  trees_description: "Explore four complementary views of recorded family, learning, travel, and ancestry relationships:"
 
 source_search_ui:
   text_similarity_label: "Sort by Text Similarity"

@@ -261,6 +261,29 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
     color: var(--text);
 }
 
+.home-tool-description--trees {
+    display: block;
+    min-height: 0;
+    text-align: start;
+}
+
+.home-tool-description--trees ul {
+    margin: 0.4rem 0 0;
+    padding-inline-start: 1.25rem;
+}
+
+.home-tool-description--trees li {
+    margin-bottom: 0.5rem;
+    line-height: 1.45;
+}
+
+.tree-option-description {
+    min-height: 5rem;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--text);
+}
+
 .st-key-mobile_nav {
     display: none;
 }

@@ -275,7 +275,7 @@ def _render_type_filter(
 def _render_family_tree_button(entity_key: str, lang: str) -> None:
     """Image button (with hover hint) that opens the family tree centred on this person."""
     with st.container(key="tree_link_btn"):
-        st.image(_ICON_DIR / "trees.jpg", width=64)
+        st.image(_ICON_DIR / "family_tree.jpg", width=64)
         if st.button(
             get_text("entity_search_ui.open_family_tree", lang),
             key=f"open_family_tree_{entity_key}",

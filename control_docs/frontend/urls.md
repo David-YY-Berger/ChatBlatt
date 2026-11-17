@@ -48,7 +48,10 @@ immediately; running a search rewrites the URL (`st.query_params`), so the addre
   to English on a new session. The selected language is reflected in the URL and retained across navigation
   and shareable search links.
 
-Home-page tool cards and the Entity Search type-picker buttons navigate with `navigation.go(<page key>)` to the URLs above (the `/trees` landing is no longer a home card).
+Home-page tool cards and Entity Search type-picker buttons navigate with
+`navigation.go(<page key>)`. The Trees card opens `/trees`, and its illustrated
+choice cards navigate to the corresponding tree URLs above. The desktop dropdown
+and mobile Menu expose the same landing and detail pages.
 
 `admin=true` disables analytics and `admin=false` re-enables it; the setting is
 propagated through navigation and remembered for the browser tab. Relationship

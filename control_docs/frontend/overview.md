@@ -24,21 +24,24 @@ and data flows, use the feature guides below.
   On screens up to 768px, the
   app also displays a grouped mobile Menu popover; Streamlit hides its top
   navigation on narrow screens. Selecting a mobile menu item closes the popover
-  and switches to that page, including when it is already selected. The mobile
+  and switches to any page, including the Entity Search and Trees landing pages
+  and the currently selected page. The mobile
   controls are buttons rather than links, and the menu's popover key changes on
   selection so Streamlit remounts it closed. Desktop dropdowns are Streamlit's
   native navigation. Page groups, destinations and query parameters are in
   [URLs, navigation and shareable searches](urls.md).
 - `frontend/pages/home.py` presents clickable cards for Number Search, Source
-  Search, Entity Search and the two trees. Each keyed card contains an invisible
-  stretched button (`styles.css`) that calls `navigation.go(page_key)`; the
-  tree cards go directly to their respective tree pages. About currently displays
-  placeholder text in the selected language.
+  Search, Entity Search and Trees. The Trees card summarizes Family Tree,
+  Studied From, Places Visited and Descendants and opens the Trees landing page.
+  Each keyed card contains an invisible stretched button (`styles.css`) that
+  calls `navigation.go(page_key)`. About currently displays placeholder text in
+  the selected language.
 - Entity Search has a landing page with visible entity-type cards and separate
   People, Places, Nations and Tribes pages. Symbols remains implemented but is
   hidden from Entity Search navigation and controls. The visible detail pages also
-  have a type-picker button row. Trees has a landing page with a selection
-  prompt and separate Family Tree, Studied From, Places Visited and Descendants pages.
+  have a type-picker button row. Trees has a landing page with illustrated,
+  descriptive cards for Family Tree, Studied From, Places Visited and Descendants,
+  each linking to its existing detail URL.
 - `frontend/components/` contains the shared header, layout, filters, person
   selector, graph rendering and source popup. `frontend/assets/styles.css`
   supplies base and responsive styling; `layout.apply_layout` adds theme and

@@ -4,7 +4,13 @@ Source: `frontend/pages/trees.py`, `frontend/pages/genealogy_tree.py`,
 `frontend/pages/studied_from_tree.py`, `frontend/components/tree_graph.py`, and
 `frontend/app.py`.
 
-The home page has two separate cards (Family Tree / Studied From) that open each tree directly. Trees has a landing page (`/trees`) and pages for Family Tree, Studied From, Places Visited and Descendants (see [urls.md](urls.md)). `app.py` passes the page key to `pages/trees.py`, which dispatches to the selected page; with no subtab selected it shows a prompt to pick a view.
+The Home page has one Trees card with a formatted summary of all four views.
+The Trees landing page (`/trees`) shows an illustrated, descriptive choice card
+for Family Tree, Studied From, Places Visited and Descendants. Choosing a card
+opens its existing detail page. The desktop Trees dropdown and mobile Menu both
+include the landing page and all four views (see [urls.md](urls.md)).
+`app.py` passes the page key to `pages/trees.py`, which dispatches to the
+selected detail page or renders the landing cards.
 
 ## Descendants and ancestors
 

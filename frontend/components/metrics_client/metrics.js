@@ -126,6 +126,7 @@
     if (!container) return "navigation";
     const cls = Array.from(container.classList).find(name => name.startsWith("st-key-")) || "";
     for (const prefix of ["st-key-home_tool_", "st-key-entity_landing_btn_",
+                          "st-key-tree_landing_btn_",
                           "st-key-entity_type_btn_", "st-key-mobile_page_"]) {
       if (cls.startsWith(prefix)) return cls.slice(7, 100);
     }

@@ -29,6 +29,30 @@ class MobileMenuTests(unittest.TestCase):
         self.assertIn("mcp_setup", [p.url_path for p in mobile_groups[""]])
         self.assertNotEqual(app.URL_PATHS[app.PAGE_MCP], "mcp")
 
+    def test_trees_landing_and_each_tree_are_in_desktop_and_mobile_navigation(self):
+        streamlit = MagicMock()
+
+        def page(*args, **kwargs):
+            result = MagicMock()
+            result.title = kwargs["title"]
+            result.url_path = kwargs["url_path"]
+            return result
+
+        streamlit.Page.side_effect = page
+        with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_mobile_menu") as mobile:
+            app._build_navigation("en")
+
+        desktop_groups = streamlit.navigation.call_args.args[0]
+        mobile_groups = mobile.call_args.args[0]
+        tree_group = desktop_groups["Trees"]
+        mobile_tree_group = mobile_groups["Trees"]
+        expected_paths = [
+            app.URL_PATHS[key] for key in (app.PAGE_TREES, *app.TREE_PAGES)
+        ]
+        self.assertEqual([page.url_path for page in tree_group], expected_paths)
+        self.assertEqual([page.url_path for page in mobile_tree_group], expected_paths)
+
     def test_selection_changes_popover_key_and_switches_page(self):
         streamlit = MagicMock()
         streamlit.session_state = {}

@@ -2,10 +2,28 @@
 
 from __future__ import annotations
 
+import html
+from pathlib import Path
+
 import streamlit as st
 
-from translations1 import get_text, is_rtl
-from system_common.Constants import PAGE_TREES, PAGE_FAMILY_TREE, PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS
+import navigation
+from translations1 import get_text
+from system_common.Constants import (
+    PAGE_TREES,
+    PAGE_FAMILY_TREE,
+    PAGE_STUDIED_FROM,
+    PAGE_PLACES_VISITED,
+    PAGE_DESCENDANTS,
+)
+
+ICON_DIR = Path(__file__).resolve().parents[1] / "icons" / "optimized"
+TREE_OPTIONS = (
+    (PAGE_FAMILY_TREE, "family_tree.jpg"),
+    (PAGE_STUDIED_FROM, "studied_from.jpg"),
+    (PAGE_PLACES_VISITED, "places_visited.jpg"),
+    (PAGE_DESCENDANTS, "descendants.jpg"),
+)
 
 
 def render(lang: str, selected: str | None = None) -> None:
@@ -29,7 +47,39 @@ def render(lang: str, selected: str | None = None) -> None:
         render_descendants(lang)
         return
 
-    # Fallback: top-level Trees page (no sub-tab selected)
+    _render_landing(lang)
+
+
+def _render_landing(lang: str) -> None:
     title = get_text(f"page_titles.{PAGE_TREES}", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
-    st.info(get_text("trees_ui.select_tree_prompt", lang))
+    st.markdown(
+        f'<div class="home-subtitle">{get_text("trees_ui.choose_tree", lang)}</div>',
+        unsafe_allow_html=True,
+    )
+
+    for offset in range(0, len(TREE_OPTIONS), 2):
+        for column, (page_key, icon_name) in zip(
+            st.columns(2), TREE_OPTIONS[offset:offset + 2]
+        ):
+            with column:
+                with st.container(border=True, key=f"tree_landing_{page_key}"):
+                    title = get_text(f"tree_tabs.{page_key}", lang)
+                    st.image(ICON_DIR / icon_name, width=160)
+                    st.markdown(
+                        f'<div class="home-tool-title">{title}</div>',
+                        unsafe_allow_html=True,
+                    )
+                    description = html.escape(
+                        get_text(f"trees_ui.descriptions.{page_key}", lang)
+                    )
+                    st.markdown(
+                        f'<div class="tree-option-description">{description}</div>',
+                        unsafe_allow_html=True,
+                    )
+                    if st.button(
+                        title,
+                        key=f"tree_landing_btn_{page_key}_{lang}",
+                        use_container_width=True,
+                    ):
+                        navigation.go(page_key)

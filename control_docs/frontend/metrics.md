@@ -72,7 +72,7 @@ queue or delivery guarantee.
 
 | Event | When | Additional parameters |
 |---|---|---|
-| `page_view` | Initial page and each distinct browser URL, including search-URL changes. Ordinary Streamlit reruns do not add views. | `came_from` when known: previous app path and a recognized control, or `entity_relationship_sources` for the relationship link opened in a new tab. Direct visits normally have no `came_from`. |
+| `page_view` | Initial page and each distinct browser URL, including search-URL changes. Ordinary Streamlit reruns do not add views. | `came_from` when known: previous app path and a recognized control (including a Home Trees card or one of the four Trees landing cards), or `entity_relationship_sources` for the relationship link opened in a new tab. Direct visits normally have no `came_from`. |
 | `app_search` | Source, number, unit, entity and tree searches, including searches executed from supported shared URLs. Pagination is not another search. | `search_type`; source searches: `search_id`, `text_similarity_used` (0/1), `passage_types`, `source_types`, `entity_types`, `entity_ids`, `entity_names`, `relationship_filter_used` (0/1); number: `number_value`; unit: `unit_name`; entity: `entity_types`, `entity_ids`, `entity_names`; tree: `tree_type`, `entity_type`, `entity_id`, `entity_name`. |
 | `search_entity_filter` | Once per selected entity option in a source search. | `search_id` joins this to its `app_search`; `entity_type`, `entity_id` and canonical English `entity_name` identify the selection even when the summary lists are truncated. |
 | `file_download` | The source-results PDF download button is clicked. | `file_type=pdf`, `download_type=source_results`. This records a click, not proof that the PDF was saved. |
