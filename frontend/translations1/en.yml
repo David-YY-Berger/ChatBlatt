@@ -67,7 +67,9 @@ lineage_ui:
   start_has_children: "Only people with recorded children are shown."
   start_has_parents: "Only people with recorded parents are shown."
   no_options: "No recorded parent-child relationships were found."
-  shortest_line: "One shortest recorded line (copy using the icon)."
+  shortest_line: "One shortest recorded line. Select a source to view it."
+  copy_line: "Copy line as text"
+  content_missing: "Source content is unavailable."
 
 places_visited_ui:
   data_quality: "This page works well for Tanach characters, but the data for Talmud sages appears partially corrupted."

@@ -16,6 +16,7 @@ class LineageGraph:
         self.options = {option.key: option for option in options}
         self.children: dict[str, set[str]] = {}
         self.parents: dict[str, set[str]] = {}
+        self.relationships: dict[tuple[str, str], set[str]] = {}
         for rel in rels:
             child, parent = rel.term1, rel.term2
             if (rel.rel_type not in PARENT_REL_TYPES or child == parent
@@ -23,6 +24,8 @@ class LineageGraph:
                 continue
             self.children.setdefault(parent, set()).add(child)
             self.parents.setdefault(child, set()).add(parent)
+            if rel.key:
+                self.relationships.setdefault((parent, child), set()).add(rel.key)
 
     def start_options(self, descendants: bool) -> list[EntitySelectOption]:
         adjacency = self.children if descendants else self.parents

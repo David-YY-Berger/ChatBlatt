@@ -17,8 +17,12 @@ selected detail page or renders the landing cards.
 Choose a direction, then a starting person and a connected person. The first
 selector contains only people with recorded children (or parents in ancestor
 mode); the second contains only people reachable in the chosen direction.
-The result shows one shortest recorded line, in selection order, with a copy
-button. Names follow the selected language. Selection is session state.
+The result shows one shortest recorded line as a sequence of people and
+source links for each relationship, in selection order. Links open the shared
+source popup. The copy-text section includes each step's source titles in
+parentheses; steps without recorded sources are marked accordingly. If source
+content is unavailable, the title remains visible and a warning is shown.
+Names and source titles follow the selected language. Selection is session state.
 
 `backend/app/logic/lineage_logic.py` builds a session-cached directed graph of
 person endpoints using only `childOfFather` and `childOfMother` relationships
