@@ -196,6 +196,7 @@ render("en")
         rendered = _results_html(rows, contents, "en", [shared])
         self.assertEqual(rendered.count('id="sp-visit-source-0"'), 1)
         self.assertEqual(rendered.count("spOpen('visit-source-0', event)"), 2)
+        self.assertIn(shared.get_sefaria_url(), rendered)
 
     def test_relationship_badges_have_distinct_classes(self):
         people, places, rels = load_options_and_relationships(self.db)

@@ -116,6 +116,7 @@ class LineageTests(unittest.TestCase):
         self.assertEqual(rendered.count("spOpen('lineage-source-0', event)"), 2)
         self.assertIn("לא נרשמו מקורות", rendered)
         self.assertIn("בראשית", rendered)
+        self.assertIn(self.sources[0].get_sefaria_url(), rendered)
 
     def test_page_is_registered_under_trees(self):
         from frontend import app

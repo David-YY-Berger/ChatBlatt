@@ -19,6 +19,7 @@ from backend.models_db.Enums import (
     SourceType, SymbolType, TimePeriod,
 )
 from backend.models_db.SourceClasses.SourceMetadata import SourceMetadata
+from backend.models_db.SourceClasses.SourceContent import SourceContent
 from components.pdf_export import _plain, build_results_pdf
 from components.facets import renderers
 from components.tree_graph import render_pyvis_graph
@@ -77,6 +78,12 @@ class HebrewLocalizationTests(unittest.TestCase):
         entity = SimpleNamespace(key="p", display_en_name="David", display_heb_name="דוד", isWoman=False)
         self.assertEqual(genealogy_node(entity).display_heb_name, "דוד")
         self.assertEqual(studied_node(entity).display_heb_name, "דוד")
+
+    def test_number_source_popup_links_to_sefaria(self):
+        key = "BT_Berakhot_0_2a:1-3"
+        occ = NumberOccurrenceDTO(None, None, "Berakhot", None, key)
+        rendered, _ = _occurrences_table([occ], "#123456", {key: SourceContent(key, ["en", "he"])})
+        self.assertIn('href="https://www.sefaria.org/Berakhot.2a.1-3"', rendered)
 
     def test_related_entity_hebrew_names_are_retained_by_key(self):
         related = SimpleNamespace(key="p", display_en_name="David", display_heb_name="דוד",

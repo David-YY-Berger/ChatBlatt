@@ -168,6 +168,7 @@ def _occurrences_table(
                         en_content=content_list[0] if len(content_list) > 0 else "",
                         heb_content=content_list[1] if len(content_list) > 1 else "",
                         lang=lang,
+                        sefaria_source_key=occ.source_key,
                     )
                 )
 

@@ -8,7 +8,8 @@ dropdowns, free-text box + Find Sources button, results).
 - Results appear as compact native Streamlit cards using the Places Visited teal
   palette. English titles and summaries are on the left, Hebrew on the right,
   including on mobile; localized passage types have distinct badge colors.
-  A header icon opens the plain-text copy control. The expanded source contains
+  Header icons open the source in Sefaria and the plain-text copy control.
+  Individual-source popups also link to Sefaria. The expanded source contains
   separate, initially collapsed Hebrew and English sections when available; the
   separate individual-source popups retain their existing presentation.
 - **Passage Type** (`components/source_filters.py`): compact checkbox list, one per

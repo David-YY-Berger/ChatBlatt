@@ -37,7 +37,12 @@ search and text, numbers and units, places visited, family graphs, and
 ancestor/descendant lines. Entity matches are suggestions, not identity
 assertions. Search results contain summaries and source keys; full Hebrew or
 English text is retrieved separately in bounded chunks. Results include
-pagination information. The studied-from graph and studiedFrom and
+pagination information. Source summaries and number occurrences include a
+`sefaria_url` when a supported source reference can be constructed. Server
+instructions ask clients to list relevant sources with these links in research
+answers, search words separately in English and Hebrew, and check both food and
+plant entity types for food or plant queries. Client compliance depends on the
+MCP client and its model. The studied-from graph and studiedFrom and
 disagreedWith relationships are deliberately excluded everywhere, as are
 symbols and unavailable source filters. Similarity text reorders structural
 matches; it does not filter them.

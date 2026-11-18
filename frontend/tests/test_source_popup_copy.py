@@ -32,6 +32,15 @@ class SourcePopupCopyButtonTests(unittest.TestCase):
         self.assertTrue(match.group(1).startswith("<svg"))
         self.assertNotIn(">Copy<", button)
 
+    def test_popup_uses_source_key_not_popup_id_for_sefaria(self):
+        popup = source_popup_html(
+            "popup-0", "Bava Batra", "", "", "", lang="he",
+            sefaria_source_key="BT_Bava Batra_0_13b:9-14a:4",
+        )
+        self.assertIn('href="https://www.sefaria.org/Bava_Batra.13b.9-14a.4"', popup)
+        self.assertIn('title="פתיחה בספריא"', popup)
+        self.assertIn('target="_blank" rel="noopener noreferrer"', popup)
+
 
 if __name__ == "__main__":
     unittest.main()

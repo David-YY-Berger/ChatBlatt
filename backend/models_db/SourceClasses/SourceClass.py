@@ -1,11 +1,16 @@
 from abc import ABC
 from dataclasses import dataclass
 from functools import total_ordering
+import logging
+import re
 from typing import Any
+from urllib.parse import quote
 
 from backend.db.data_names.Books import Book
 from backend.models_db.Enums import SourceType
 from backend.models_db.SourceClasses.SectionSorting import get_section_sort_key
+
+logger = logging.getLogger(__name__)
 
 """ must be init w key"""
 @total_ordering
@@ -84,6 +89,24 @@ class SourceClass(ABC):
             return self.get_section_from_key(self.key)
         else:
             return ""
+
+    def get_sefaria_url(self) -> str | None:
+        """Return a Sefaria reader URL for a supported source reference."""
+        parts = self.key.split("_")
+        book = self.get_book()
+        if len(parts) != 4 or not book or book.source_type != self.get_src_type():
+            logger.warning("Cannot construct Sefaria URL for source key %r", self.key)
+            return None
+        if book.source_type not in (SourceType.TN, SourceType.BT):
+            return None
+        section = parts[3].strip().replace("–", "-").replace("—", "-")
+        pattern = (r"\d+(?::\d+)?(?:-\d+(?::\d+)?)?" if book.source_type == SourceType.TN
+                   else r"\d+[ab](?::\d+)?(?:-(?:\d+[ab]:)?\d+|-\d+[ab])?")
+        if not re.fullmatch(pattern, section):
+            logger.warning("Cannot construct Sefaria URL for source key %r", self.key)
+            return None
+        ref = f"{book.database_name.replace(' ', '_')}.{section.replace(':', '.')}"
+        return f"https://www.sefaria.org/{quote(ref, safe='._-')}"
 
 
     ################################################## to_ methods ############################################

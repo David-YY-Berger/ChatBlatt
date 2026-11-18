@@ -302,6 +302,15 @@ def _render_results_body(ans, lang: str = "en") -> None:
                     with st.container(horizontal=True, gap=None, vertical_alignment="center"):
                         if title_he:
                             st.markdown(f"**{_markdown_text(title_he)}**")
+                        sefaria_url = metadata.get_sefaria_url()
+                        if sefaria_url:
+                            st.link_button(
+                                get_text("source_display.open_sefaria", lang),
+                                sefaria_url,
+                                icon=":material/menu_book:",
+                                help=get_text("source_display.open_sefaria", lang),
+                                type="tertiary",
+                            )
                         with st.popover(
                             get_text("source_display.copy", lang),
                             icon=":material/content_copy:",

@@ -295,6 +295,7 @@ source_display:
   no_content: "No content available"
   copy: "Copy"
   copy_failed: "Copy failed"
+  open_sefaria: "Open in Sefaria"
   sources: "Sources"
   downloaded: "Downloaded"
   search_link: "Search link"

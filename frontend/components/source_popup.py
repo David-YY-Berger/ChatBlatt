@@ -23,6 +23,7 @@ from typing import List, Optional
 
 from backend.file_utils.HtmlWriter import HtmlWriter
 from backend.models_db.Enums import PassageType
+from backend.models_db.SourceClasses.SourceClass import SourceClass
 
 
 # ---------------------------------------------------------------------------
@@ -66,6 +67,7 @@ def source_popup_css_js() -> str:
     color:#64748b; line-height:1; padding:0 4px;
 }
 .sp-close-btn:hover { color:#1e293b; }
+.sp-sefaria { color:#1d6fa4; font-size:1.2rem; text-decoration:none; margin-right:12px; }
 .sp-content { padding:0 12px 12px; }"""
     popup_css += """
 [dir="rtl"] .source-title-row, [dir="rtl"] .source-summary-row { flex-direction:row-reverse; }
@@ -118,6 +120,7 @@ def source_popup_html(
     summary_heb: str = "",
     passage_types: Optional[List[PassageType]] = None,
     lang: str = "en",
+    sefaria_source_key: Optional[str] = None,
 ) -> str:
     """
     Returns the full overlay <div> for one source popup.
@@ -135,6 +138,7 @@ def source_popup_html(
     summary_en    Optional English summary line (plain text).
     summary_heb   Optional Hebrew summary line  (plain text).
     passage_types Optional list of PassageType — rendered as colorful badges.
+    sefaria_source_key Actual source key, which may differ from the popup ID.
     """
     pid = _safe_id(source_key)
     body_id   = f"src-body-{pid}"
@@ -158,11 +162,21 @@ def source_popup_html(
         labels=labels,
     )
 
+    sefaria_url = SourceClass(sefaria_source_key).get_sefaria_url() if sefaria_source_key else None
+    sefaria_link = ""
+    if sefaria_url:
+        hint = _html.escape(get_text("source_display.open_sefaria", lang), quote=True)
+        sefaria_link = (
+            f'<a class="sp-sefaria" href="{_html.escape(sefaria_url, quote=True)}"'
+            f' target="_blank" rel="noopener noreferrer" title="{hint}" aria-label="{hint}">📖</a>'
+        )
+
     return (
         f'<div class="sp-overlay" id="sp-{pid}"'
         f' onclick="if(event.target===this)spClose(\'{pid}\')">'
         f'<div class="sp-box container">'
         f'<div class="sp-close-bar">'
+        f'{sefaria_link}'
         f'<button class="sp-close-btn" onclick="spClose(\'{pid}\')">&#x2715;</button>'
         f'</div>'
         f'<div class="sp-content">{source_section}</div>'

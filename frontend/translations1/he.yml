@@ -295,6 +295,7 @@ source_display:
   no_content: "תוכן המקור אינו זמין"
   copy: "העתקה"
   copy_failed: "ההעתקה נכשלה"
+  open_sefaria: "פתיחה בספריא"
   sources: "מקורות"
   downloaded: "הורד בתאריך"
   search_link: "קישור לחיפוש"

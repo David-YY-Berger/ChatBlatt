@@ -221,6 +221,7 @@ def _results_html(rows, contents, lang: str, mentioned_sources=None) -> str:
                         parts[0] if len(parts) > 0 else "", parts[1] if len(parts) > 1 else "",
                         summary_en=source.summary_en or "", summary_heb=source.summary_heb or "",
                         passage_types=source.passage_types, lang=lang,
+                        sefaria_source_key=source.key,
                     ))
                 link = source_link_html(popup_ids[source.key], title, color="#65b7d7")
             else:

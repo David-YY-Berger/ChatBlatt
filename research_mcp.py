@@ -36,6 +36,7 @@ from backend.app.SourceSearchQuery import SourceSearchQuery
 from backend.common.miscFuncs import MixedLanguageQueryError, detect_query_language
 from backend.db.DBFactory import DBFactory
 from backend.models_db.Enums import EntityType, PassageType, RelType, SourceType
+from backend.models_db.SourceClasses.SourceClass import SourceClass
 from backend_pipeline.data_pipeline.populator_scripts.merge_scripts.merge_candidates import (
     spelling_signature, split_title_prefix,
 )
@@ -166,6 +167,13 @@ mcp = _MetricsFastMCP(
         "disambiguate using metadata and keys. Sources have Hebrew and English text; ask which "
         "language the user wants before retrieving full text. Search results are ranked rather "
         "than filtered by similarity. Use relationship keys to retrieve supporting sources. "
+        "In every answer, include an organized list of relevant sources with each source's "
+        "Sefaria link; titles or summaries suffice, full text is optional. Retrieve supporting "
+        "sources when needed and do not invent sources or links; say if none are available. "
+        "When looking up a word, search separately in English and Hebrew (for example, "
+        "almond and שקד), not as a mixed-language query. For any food or plant, search "
+        "both the foods and plants entity types in both languages, then search sources "
+        "for the relevant matches and deduplicate results. "
         "Studied-from and disagreed-with data are excluded due to a data-quality warning."
     ),
     host="127.0.0.1",
@@ -225,6 +233,7 @@ def source_summary(source) -> dict:
     return {
         "key": source.key, "title_en": str(source), "title_he": source.to_heb_str(),
         "summary_en": source.summary_en, "summary_he": source.summary_heb,
+        "sefaria_url": source.get_sefaria_url(),
         "passage_types": [pt.name for pt in source.passage_types],
     }
 
@@ -459,7 +468,8 @@ def search_number(value: Annotated[str, Field(min_length=1, max_length=100)],
     rows = []
     if result:
         for category, occurrences in result.by_category.items():
-            rows.extend({"category": category.value if category else None, **asdict(occ)} for occ in occurrences)
+            rows.extend({"category": category.value if category else None, **asdict(occ),
+                         "sefaria_url": SourceClass(occ.source_key).get_sefaria_url()} for occ in occurrences)
     return {**window(rows, offset, limit), "url": page_url("number_search", {"type": "number", "value": value}),
             "text_available": "Source keys can be used with get_source_text (English or Hebrew)."}
 
@@ -488,7 +498,8 @@ def search_unit(unit: Annotated[str, Field(min_length=1, max_length=100)],
     if result:
         for row in result.rows:
             for category, occurrences in row.occurrences.by_category.items():
-                rows.extend({"number": row.value, "category": category.value if category else None, **asdict(occ)}
+                rows.extend({"number": row.value, "category": category.value if category else None, **asdict(occ),
+                             "sefaria_url": SourceClass(occ.source_key).get_sefaria_url()}
                             for occ in occurrences)
     return {**window(rows, offset, limit), "url": page_url("number_search", {"type": "unit", "value": unit}),
             "text_available": "Source keys can be used with get_source_text (English or Hebrew)."}

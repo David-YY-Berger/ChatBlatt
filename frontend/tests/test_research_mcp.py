@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 
 import research_mcp as research
 from backend.app.logic.number_validation import number_error
+from backend.app.logic.number_search_logic import NumberOccurrenceDTO, NumberSearchResult, UnitNumberRow, UnitSearchResult
 from backend.models_db.EntityObjects.EPerson import EPerson
 from backend.models_db.Enums import EntityType, RelType
 from backend.models_db.Rel import Rel
@@ -95,6 +96,7 @@ class ResearchMcpTests(unittest.TestCase):
         self.assertEqual([v.name for v in query.src_types], ["TN", "BT"])
         self.assertEqual(result["next_offset"], 2)
         self.assertEqual(result["items"][0]["key"], source.key)
+        self.assertEqual(result["items"][0]["sefaria_url"], "https://www.sefaria.org/Genesis.1.1")
         self.assertNotIn("content", result["items"][0])
         self.assertIn("source_search?", result["url"])
 
@@ -120,6 +122,19 @@ class ResearchMcpTests(unittest.TestCase):
             result = research.get_source_text("TN_Genesis_0_1:1", "he", max_characters=4)
         self.assertEqual(result["text"], "עברי")
         self.assertEqual(result["next_offset"], 4)
+        self.assertEqual(result["source"]["sefaria_url"], "https://www.sefaria.org/Genesis.1.1")
+
+    def test_number_and_unit_results_include_sefaria_links(self):
+        occurrence = NumberOccurrenceDTO(None, None, "Berakhot", None, "BT_Berakhot_0_2a:1-3")
+        result = NumberSearchResult(by_category={None: [occurrence]})
+        logic = Mock()
+        logic.execute.return_value = result
+        logic.execute_by_unit.return_value = UnitSearchResult("days", [UnitNumberRow("2", occurrences=result)])
+        with patch.object(research, "db"), patch.object(research, "NumberSearchLogic", return_value=logic):
+            number = research.search_number("2")
+            unit = research.search_unit("days")
+        for response in (number, unit):
+            self.assertEqual(response["items"][0]["sefaria_url"], "https://www.sefaria.org/Berakhot.2a.1-3")
 
     def test_family_graph_edges_carry_source_relationship_keys(self):
         graph = GenealogyGraphData(
@@ -218,6 +233,10 @@ class ResearchMcpTests(unittest.TestCase):
             })
             self.assertEqual(initialized.status_code, 200)
             self.assertIn("serverInfo", initialized.json()["result"])
+            instructions = initialized.json()["result"]["instructions"]
+            self.assertIn("organized list of relevant sources", instructions)
+            self.assertIn("separately in English and Hebrew", instructions)
+            self.assertIn("both the foods and plants", instructions)
             listing = client.post("/mcp", headers=headers, json={
                 "jsonrpc": "2.0", "id": 2, "method": "tools/list", "params": {},
             })

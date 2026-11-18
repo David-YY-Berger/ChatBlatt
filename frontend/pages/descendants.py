@@ -132,6 +132,7 @@ def _lineage_html(names, links_by_person, sources_by_step, contents, lang):
                     parts[0] if len(parts) > 0 else "", parts[1] if len(parts) > 1 else "",
                     summary_en=source.summary_en or "", summary_heb=source.summary_heb or "",
                     passage_types=source.passage_types, lang=lang,
+                    sefaria_source_key=source.key,
                 ))
             links.append(source_link_html(popup_ids[source.key], title, color="#65b7d7"))
         source_text = ", ".join(links) if links else html.escape(
