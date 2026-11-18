@@ -9,6 +9,26 @@ from frontend import app
 
 
 class MobileMenuTests(unittest.TestCase):
+    def test_about_is_after_home_and_before_number_search_on_desktop_and_mobile(self):
+        streamlit = MagicMock()
+
+        def page(*args, **kwargs):
+            result = MagicMock()
+            result.title = kwargs["title"]
+            result.url_path = kwargs["url_path"]
+            return result
+
+        streamlit.Page.side_effect = page
+        with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_mobile_menu") as mobile:
+            app._build_navigation("en")
+
+        expected = ["Home", "About", "Number Search"]
+        desktop_pages = streamlit.navigation.call_args.args[0][""]
+        mobile_pages = mobile.call_args.args[0][""]
+        self.assertEqual([page.title for page in desktop_pages[:3]], expected)
+        self.assertEqual([page.title for page in mobile_pages[:3]], expected)
+
     def test_mcp_page_is_in_desktop_and_mobile_navigation(self):
         streamlit = MagicMock()
 

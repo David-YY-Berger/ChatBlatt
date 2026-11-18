@@ -112,8 +112,8 @@ def _build_navigation(lang: str):
     pages = {key: _make_page(key, lang) for key in URL_PATHS}
     navigation.register_pages(pages)
     groups = {
-        "": [pages[k] for k in (PAGE_HOME, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
-        get_text("nav.about", lang): [pages[PAGE_ABOUT]] + [pages[k] for k in ABOUT_SECTION_PAGES],
+        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
+        get_text("nav.about_sections", lang): [pages[k] for k in ABOUT_SECTION_PAGES],
         get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
         get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
     }

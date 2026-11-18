@@ -19,6 +19,7 @@ options_filter_conditions:
 nav:
   home: "בית"
   about: "אודות"
+  about_sections: "תוכן העניינים"
   mcp: "MCP"
   number_search: "חיפוש מספרי"
   source_search: "חיפוש מקורות"
@@ -293,6 +294,7 @@ source_display:
   english_content: "מקור באנגלית"
   no_content: "תוכן המקור אינו זמין"
   copy: "העתקה"
+  copy_failed: "ההעתקה נכשלה"
   sources: "מקורות"
   downloaded: "הורד בתאריך"
   search_link: "קישור לחיפוש"

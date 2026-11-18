@@ -141,7 +141,7 @@ def source_popup_html(
     header_id = f"src-hdr-{pid}"
 
     from translations1 import enum_text, get_text
-    labels = {key: get_text(f"source_display.{key}", lang) for key in ("copy", "hebrew_content", "english_content", "no_content")}
+    labels = {key: get_text(f"source_display.{key}", lang) for key in ("copy", "copy_failed", "hebrew_content", "english_content", "no_content")}
     labels["passage_types"] = {pt.name: enum_text(pt, lang) for pt in PassageType}
     inner_html = HtmlWriter.build_source_content(en_content, heb_content, pid, labels)
 

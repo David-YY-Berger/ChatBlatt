@@ -19,6 +19,7 @@ options_filter_conditions:
 nav:
   home: "Home"
   about: "About"
+  about_sections: "About sections"
   mcp: "MCP"
   number_search: "Number Search"
   source_search: "Source Search"
@@ -293,6 +294,7 @@ source_display:
   english_content: "English Content"
   no_content: "No content available"
   copy: "Copy"
+  copy_failed: "Copy failed"
   sources: "Sources"
   downloaded: "Downloaded"
   search_link: "Search link"

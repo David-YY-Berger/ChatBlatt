@@ -35,6 +35,7 @@ class HtmlWriter:
 .source-copy-btn { background:none; border:none; color:white; cursor:pointer; padding:2px 4px; line-height:0; border-radius:4px; opacity:0.85; }
 .source-copy-btn:hover { background:rgba(255,255,255,0.2); opacity:1; }
 .source-copy-btn.copied { color:#2ecc71; }
+.source-copy-btn.copy-failed { color:#e74c3c; }
 /* --- Source body --- */
 .source-body { display:none; padding:8px 10px; background:white; }
 .source-body.open { display:block; }
@@ -92,30 +93,60 @@ function copySource(ev, headerId) {
     });
     var richHtml = richParts.join('<br>');
     var plainText = plainParts.join('\n\n\n');
-    var done = function () {
-        btn.classList.add('copied');
-        setTimeout(function () { btn.classList.remove('copied'); }, 1200);
+    var copyLabel = btn.getAttribute('data-copy-label');
+    var failureLabel = btn.getAttribute('data-copy-failed-label');
+    var finish = function (copied) {
+        btn.classList.toggle('copied', copied);
+        btn.classList.toggle('copy-failed', !copied);
+        btn.title = copied ? copyLabel : failureLabel;
+        btn.setAttribute('aria-label', btn.title);
+        setTimeout(function () {
+            btn.classList.remove('copied', 'copy-failed');
+            btn.title = copyLabel;
+            btn.setAttribute('aria-label', copyLabel);
+        }, 1800);
     };
     var fallback = function () {
-        var holder = document.createElement('div');
-        holder.contentEditable = 'true';
+        var holder = document.createElement('textarea');
+        holder.value = plainText;
+        holder.setAttribute('readonly', '');
         holder.style.cssText = 'position:fixed;left:-9999px;top:0;';
-        holder.innerHTML = richHtml;
         document.body.appendChild(holder);
-        var range = document.createRange();
-        range.selectNodeContents(holder);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        try { document.execCommand('copy'); done(); } catch (e) {}
-        sel.removeAllRanges();
+        holder.select();
+        var copied = false;
+        try { copied = document.execCommand('copy'); } catch (e) {}
         document.body.removeChild(holder);
+        finish(copied);
     };
+    var clipboardContext = window;
     try {
-        navigator.clipboard.write([new ClipboardItem({
-            'text/html': new Blob([richHtml], { type: 'text/html' }),
-            'text/plain': new Blob([plainText], { type: 'text/plain' })
-        })]).then(done, fallback);
+        if (window.parent !== window && window.parent.navigator.clipboard) {
+            clipboardContext = window.parent;
+        }
+    } catch (e) {}
+    var clipboard = clipboardContext.navigator.clipboard;
+    try {
+        if (clipboard && clipboard.write && clipboardContext.ClipboardItem) {
+            var write = clipboard.write([new clipboardContext.ClipboardItem({
+                'text/html': new Blob([richHtml], { type: 'text/html' }),
+                'text/plain': new Blob([plainText], { type: 'text/plain' })
+            })]);
+            Promise.resolve(write).then(function () { finish(true); }, function () {
+                if (clipboard.writeText) {
+                    Promise.resolve(clipboard.writeText(plainText)).then(
+                        function () { finish(true); }, fallback
+                    );
+                } else {
+                    fallback();
+                }
+            });
+        } else if (clipboard && clipboard.writeText) {
+            Promise.resolve(clipboard.writeText(plainText)).then(
+                function () { finish(true); }, fallback
+            );
+        } else {
+            fallback();
+        }
     } catch (e) { fallback(); }
 }
 function toggleSource(bodyId, headerId) {
@@ -189,7 +220,12 @@ function toggleCollapsible(contentId) {
             f'<span class="source-title-en">{t_en}</span>'
             f'<div class="source-title-right">'
             f'<span class="source-title-heb">{t_heb}</span>'
-            f'<button class="source-copy-btn" title="{HtmlWriter._escape_html(labels.get("copy", "Copy"))}" onclick="copySource(event, \'{header_id}\')">'
+            f'<button class="source-copy-btn" type="button"'
+            f' title="{HtmlWriter._escape_html(labels.get("copy", "Copy"))}"'
+            f' aria-label="{HtmlWriter._escape_html(labels.get("copy", "Copy"))}"'
+            f' data-copy-label="{HtmlWriter._escape_html(labels.get("copy", "Copy"))}"'
+            f' data-copy-failed-label="{HtmlWriter._escape_html(labels.get("copy_failed", "Copy failed"))}"'
+            f' onclick="copySource(event, \'{header_id}\')">'
             f'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>'
             f'<span class="source-arrow">▶</span>'
             f'</div></div>'

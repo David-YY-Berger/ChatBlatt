@@ -50,7 +50,7 @@ class AboutPageTests(unittest.TestCase):
         self.assertIn('id="about-feyga-menuha"', html)
         self.assertIn('href="#about-the-author"', html)
         self.assertIn("ספר בן איש חי - הקדמה", html)
-        self.assertIn("צינור העיבוד", html)
+        self.assertIn("Pipeline", html)
         pipeline_heading = next(i for i, item in enumerate(rendered) if 'id="pipeline"' in item)
         self.assertIn("1. פנייה ל־API של ספריא", rendered[pipeline_heading + 1])
         self.assertIn("תפקיד שאינו תנא או אמורא מקבלת ציון 0%", html)
