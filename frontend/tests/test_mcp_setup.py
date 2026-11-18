@@ -39,6 +39,11 @@ class McpSetupTests(unittest.TestCase):
         self.assertIn("15. **Lost Train of Thought", rendered_markdown)
         self.assertIn("Here are the key biblical prophecies", rendered_markdown)
         self.assertIn("### Children of King David", rendered_markdown)
+        self.assertIn("**Sefaria links:**", rendered_markdown)
+        self.assertIn(
+            "Sukkah 27a–27b ([View in Sefaria](https://www.sefaria.org/Sukkah.27a-27b))",
+            rendered_markdown,
+        )
         self.assertTrue(
             all(
                 f"https://share.gemini.google/{chat_id}" in rendered_markdown
@@ -74,6 +79,14 @@ class McpSetupTests(unittest.TestCase):
         )
         self.assertIn("נסו הנחיה ופתחו כדי לראות את התשובה המלאה של Gemini", rendered_text)
         self.assertIn("התשובות המלאות מהשיחות המשותפות עם Gemini מוצגות באנגלית", rendered_text)
+        rendered_markdown = " ".join(
+            str(call.args[0]) for call in streamlit.markdown.call_args_list
+        )
+        self.assertIn("**קישורים לספריא:**", rendered_markdown)
+        self.assertIn(
+            "Sukkah 27a–27b ([לצפייה בספריא](https://www.sefaria.org/Sukkah.27a-27b))",
+            rendered_markdown,
+        )
         self.assertTrue(
             all(call.args[0].startswith("@Eitz Habina") for call in streamlit.expander.call_args_list)
         )

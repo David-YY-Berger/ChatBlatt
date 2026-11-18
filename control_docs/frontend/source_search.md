@@ -12,6 +12,8 @@ dropdowns, free-text box + Find Sources button, results).
   Individual-source popups also link to Sefaria. The expanded source contains
   separate, initially collapsed Hebrew and English sections when available; the
   separate individual-source popups retain their existing presentation.
+- Pagination arrows follow the selected language's reading direction; their
+  previous and next actions are unchanged.
 - **Passage Type** (`components/source_filters.py`): compact checkbox list, one per
   `PassageType`; no All/None buttons or counts.
 - **Source Type** (same module): compact checkbox list for Tanach, Talmud Bavli, Mishna,

@@ -81,14 +81,14 @@ def render(lang: str, section_id: str | None = None) -> None:
         _render_table_of_contents(sections, TABLE_OF_CONTENTS_TITLE[language])
         st.markdown(OPENING_QUOTE, unsafe_allow_html=True)
 
-        for section_id, section_title, content in sections:
+        for current_section_id, section_title, content in sections:
             st.markdown(
-                f'<h2 id="{escape(section_id, quote=True)}" class="about-section-title">'
+                f'<h2 id="{escape(current_section_id, quote=True)}" class="about-section-title">'
                 f"{escape(section_title)}</h2>",
                 unsafe_allow_html=True,
             )
             st.markdown(content)
-            if section_id == "about-the-author":
+            if current_section_id == "about-the-author":
                 st.markdown(
                     f'<a href="{escape(LINKEDIN_PROFILE_URL, quote=True)}" target="_blank" '
                     'rel="noopener noreferrer" aria-label="LinkedIn profile for David Berger" '

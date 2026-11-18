@@ -9,7 +9,7 @@ from frontend import app
 
 
 class MobileMenuTests(unittest.TestCase):
-    def test_about_dropdown_is_after_home_and_before_number_search(self):
+    def test_about_link_is_after_home_and_before_number_search(self):
         streamlit = MagicMock()
 
         def page(*args, **kwargs):
@@ -26,17 +26,7 @@ class MobileMenuTests(unittest.TestCase):
 
         expected = [
             ("", ["Home"]),
-            (
-                "About",
-                [
-                    "About",
-                    "What is Eitz Habinah?",
-                    "How is Eitz Habinah different from other Torah search tools?",
-                    "Pipeline",
-                    "About Feyga Menuha",
-                    "About the author",
-                ],
-            ),
+            ("", ["About"]),
             ("", ["Number Search"]),
         ]
         menu_groups = desktop.call_args.args[0]
@@ -45,6 +35,10 @@ class MobileMenuTests(unittest.TestCase):
             expected,
         )
         self.assertEqual(mobile.call_args.args[0], menu_groups)
+        menu_paths = [page.url_path for _, pages in menu_groups for page in pages]
+        self.assertTrue(
+            all(app.URL_PATHS[key] not in menu_paths for key in app.ABOUT_SECTION_PAGES)
+        )
         navigation_pages = streamlit.navigation.call_args.args[0]
         self.assertEqual(
             [page.url_path for page in navigation_pages],
@@ -53,6 +47,24 @@ class MobileMenuTests(unittest.TestCase):
         streamlit.navigation.assert_called_once_with(
             navigation_pages, position="hidden"
         )
+
+    def test_about_is_a_desktop_link_and_mobile_button(self):
+        streamlit = MagicMock()
+        streamlit.session_state = {}
+        about = SimpleNamespace(title="About", url_path="about")
+        streamlit.columns.return_value = [MagicMock()]
+        streamlit.button.return_value = True
+
+        with patch.object(app, "st", streamlit), \
+             patch.object(app.metrics, "shared_params", return_value={}):
+            app._render_desktop_menu([("", [about])])
+            streamlit.page_link.assert_called_once_with(
+                about, label="About", use_container_width=True
+            )
+            streamlit.popover.assert_not_called()
+            app._render_mobile_menu([("", [about])], "en")
+            streamlit.button.assert_called_once()
+            streamlit.switch_page.assert_called_once_with(about)
 
     def test_mcp_page_is_in_desktop_and_mobile_navigation(self):
         streamlit = MagicMock()

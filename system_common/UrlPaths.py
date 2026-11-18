@@ -47,7 +47,7 @@ URL_PATHS: dict[str, str] = {
     PAGE_DESCENDANTS: "trees_descendants",
 }
 
-# About dropdown entries: section anchor id -> page key / url_path (each scrolls to its section)
+# Legacy About section URLs remain available and scroll to their sections.
 ABOUT_SECTION_IDS = (
     "what-is-eitz-habina",
     "how-is-eitz-habina-different",

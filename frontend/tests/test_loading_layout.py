@@ -27,6 +27,17 @@ class LoadingLayoutTests(unittest.TestCase):
         self.assertIn(selectors, rendered["he"])
         self.assertNotIn(selectors, rendered["en"])
 
+    def test_virtual_dropdown_options_follow_hebrew_direction(self):
+        rendered = {}
+        for lang in ("en", "he"):
+            with patch.object(layout.st, "markdown") as markdown:
+                layout.apply_layout(lang)
+                rendered[lang] = markdown.call_args.args[0]
+
+        selector = '[data-testid="stSelectboxVirtualDropdown"] [role="option"]'
+        self.assertIn(f"{selector} {{\n            direction: rtl;\n            text-align: start;", rendered["he"])
+        self.assertNotIn(selector, rendered["en"])
+
     def test_loading_label_is_localized_and_encoded_as_css_string(self):
         labels = []
         for lang in ("en", "he"):

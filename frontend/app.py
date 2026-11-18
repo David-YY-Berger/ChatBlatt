@@ -121,10 +121,7 @@ def _build_navigation(lang: str):
 def _navigation_menu_groups(pages: dict, lang: str) -> list[tuple[str, list]]:
     return [
         ("", [pages[PAGE_HOME]]),
-        (
-            get_text("nav.about", lang),
-            [pages[PAGE_ABOUT]] + [pages[k] for k in ABOUT_SECTION_PAGES],
-        ),
+        ("", [pages[PAGE_ABOUT]]),
         ("", [pages[PAGE_NUMBER_SEARCH]]),
         ("", [pages[PAGE_SOURCE_SEARCH]]),
         ("", [pages[PAGE_MCP]]),

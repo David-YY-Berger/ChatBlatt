@@ -22,8 +22,8 @@ and data flows, use the feature guides below.
   the shared footer after the selected page.
 - On desktop, the main navigation orders Home, About, Number Search, Source
   Search and MCP (connection instructions and an in-chat screenshot). About is
-  a dropdown containing the About landing page and all of its sections. Entity
-  Search and Trees also have dropdowns. On screens up to 768px, the app displays
+  a direct link to the About page, which retains its table of contents. Entity
+  Search and Trees have dropdowns. On screens up to 768px, the app displays
   the grouped mobile Menu popover instead. Selecting a mobile menu item closes
   the popover and switches to any page, including the Entity Search and Trees
   landing pages and the currently selected page. The mobile controls are buttons
@@ -72,7 +72,8 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;
   shared Streamlit element and list alignment follows the content direction, while
-  explicitly centered or left-to-right content retains its own alignment.
+  virtualized dropdown options read right-to-left without changing list scrolling.
+  Explicitly centered or left-to-right content retains its own alignment.
   Switching back to English reorients left-to-right.
 - Source filters, entity metadata, graph names, number results, and source HTML/PDF
   use the selected language. Where Hebrew names, units, contexts, or summaries

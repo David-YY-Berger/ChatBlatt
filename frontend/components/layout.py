@@ -43,6 +43,10 @@ def apply_layout(lang: str) -> None:
         [data-testid="stMarkdownContainer"] > ol {
             text-align: start;
         }
+        [data-testid="stSelectboxVirtualDropdown"] [role="option"] {
+            direction: rtl;
+            text-align: start;
+        }
         [data-testid="stPopoverBody"], [data-testid="stDialog"] {
             direction: rtl;
             text-align: right;

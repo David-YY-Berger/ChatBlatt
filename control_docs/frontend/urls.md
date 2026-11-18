@@ -1,11 +1,13 @@
 # Frontend - URLs, navigation and shareable searches
 
 Source of truth: `system_common/UrlPaths.py` (shared by `frontend/` and `backend/`; file/dir paths stay in
-`backend/common/Paths.py`). `frontend/app.py` builds one `st.Page` per entry with `st.navigation(..., position="top")`
-(sections "Entity Search" and "Trees" are dropdowns); `frontend/navigation.py` keeps a page registry and
+`backend/common/Paths.py`). `frontend/app.py` builds one `st.Page` per entry with `st.navigation(..., position="hidden")`
+and renders custom navigation; `frontend/navigation.py` keeps a page registry and
 `navigation.go(page_key, **params)` (wraps `st.switch_page(..., query_params=...)`) for in-app jumps.
 
-The desktop top bar uses Streamlit's native navigation and grouped dropdowns. The app's mobile
+The desktop top bar uses direct links and grouped dropdowns for Entity Search and Trees. About is a
+direct link, with section links in the About page's table of contents. The existing About section
+URLs remain available but are not listed in either menu. The app's mobile
 Menu popover presents the same pages in the same groups; its buttons use `st.switch_page` and
 close the popover on selection, even for the current page. Menu navigation does not carry
 search query parameters to the destination. See [overview.md](overview.md) for shared layout.

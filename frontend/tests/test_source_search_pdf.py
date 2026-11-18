@@ -24,6 +24,22 @@ from pages.source_search_logic import current_search_url
 
 
 class SourceSearchResultsTests(unittest.TestCase):
+    def test_pagination_arrows_follow_language_direction(self):
+        for lang, previous, following in (("en", "←", "→"), ("he", "→", "←")):
+            with self.subTest(lang=lang):
+                app = AppTest.from_string(f"""
+import streamlit as st
+from pages.source_search import _render_pagination
+_render_pagination("{lang}")
+""")
+                app.session_state["_search_ans"] = SimpleNamespace(total_sources=20)
+                app.session_state["_search_query"] = SimpleNamespace(max_sources=10)
+                app.run()
+                self.assertFalse(app.exception)
+                self.assertEqual([button.label for button in app.button], [previous, following])
+                self.assertTrue(app.button[0].disabled)
+                self.assertFalse(app.button[1].disabled)
+
     def test_native_results_show_bilingual_details_and_copy_text(self):
         key = "TN_Genesis_0_1:1"
         metadata = SourceMetadata(

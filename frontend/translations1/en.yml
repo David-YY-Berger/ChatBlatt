@@ -59,6 +59,8 @@ mcp_ui:
   step_four: "4. Save or connect the server and enable it for your chat."
   examples_title: "Try a prompt to see the full Gemini answer"
   examples_note: "Full answers from the shared Gemini chats are shown below. AI answers can contain errors or omissions; check the cited sources."
+  sefaria_links_title: "Sefaria links"
+  view_in_sefaria: "View in Sefaria"
   example_tiberias_prompt: "@Eitz Habina, which people are recorded as having visited Tiberias? List the sources and briefly explain the context."
   example_tiberias_result: |
     Eitz Habina records **13 people** as having visited **Tiberias** (*טבריא*):

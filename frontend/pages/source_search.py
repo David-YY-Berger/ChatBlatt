@@ -25,7 +25,7 @@ import streamlit as st
 
 import metrics
 from backend.models_db.Enums import PassageType
-from translations1 import enum_text, get_text
+from translations1 import enum_text, get_text, is_rtl
 from components.facets import (
     get_selected_entity_names,
     get_selected_entity_metrics,
@@ -221,7 +221,7 @@ def _render_pagination(lang: str) -> None:
     prev_col, next_col, page_col = st.columns([1, 1, 8], vertical_alignment="center")
     with prev_col:
         if st.button(
-            "←",
+            "→" if is_rtl(lang) else "←",
             disabled=page == 0,
             key="source_search_previous_page",
             help=get_text("source_search_ui.previous_page", lang),
@@ -231,7 +231,7 @@ def _render_pagination(lang: str) -> None:
             st.rerun()
     with next_col:
         if st.button(
-            "→",
+            "←" if is_rtl(lang) else "→",
             disabled=page + 1 >= page_count,
             key="source_search_next_page",
             help=get_text("source_search_ui.next_page", lang),

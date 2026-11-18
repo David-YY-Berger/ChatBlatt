@@ -16,6 +16,13 @@ class AboutPageTests(unittest.TestCase):
             render(lang)
         return [call.args[0] for call in markdown.call_args_list]
 
+    def test_landing_page_does_not_scroll_and_section_link_scrolls_to_requested_section(self):
+        with patch("pages.about._scroll_to") as scroll:
+            render("en")
+            scroll.assert_not_called()
+            render("en", section_id="pipeline")
+            scroll.assert_called_once_with("pipeline")
+
     def test_english_page_has_section_links_and_keeps_opening_quote_in_hebrew(self):
         rendered = self._rendered_markdown("en")
         html = "\n".join(rendered)
