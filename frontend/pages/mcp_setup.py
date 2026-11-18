@@ -39,7 +39,18 @@ def render(lang: str) -> None:
         st.markdown(get_text("mcp_ui.step_three", lang))
         st.markdown(get_text("mcp_ui.step_four", lang))
         st.subheader(get_text("mcp_ui.examples_title", lang))
-        st.markdown(get_text("mcp_ui.examples", lang))
+        st.caption(get_text("mcp_ui.examples_note", lang))
+        for example in (
+            "tiberias",
+            "number_40",
+            "almonds",
+            "genealogy",
+            "shabbat_disputes",
+            "moab",
+            "king_david",
+        ):
+            with st.expander(get_text(f"mcp_ui.example_{example}_prompt", lang)):
+                st.markdown(get_text(f"mcp_ui.example_{example}_result", lang))
         st.caption(get_text("mcp_ui.availability", lang))
         st.caption(get_text("mcp_ui.privacy", lang))
         st.image(

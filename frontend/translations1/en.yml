@@ -58,15 +58,59 @@ mcp_ui:
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
   step_four: "4. Save or connect the server and enable it for your chat."
-  examples_title: "Try these prompts"
-  examples: |
-    - @Eitz Habina, which people are recorded as having visited Tiberias? List the sources and briefly explain the context.
-    - @Eitz Habina, what is the significance of the number 40 in the Talmud? Give examples with sources.
-    - @Eitz Habina, what symbolism is associated with almonds in the Talmud? Show the sources and explain their context.
-    - @Eitz Habina, trace the genealogy from Avraham Avinu to Ezra HaSofer, showing each generation and its sources.
-    - @Eitz Habina, list 15 distinct disputes between Rabbi Yehuda and Rabbi Shimon about Shabbat, with a source and brief summary for each.
-    - @Eitz Habina, find prophecies concerning Moab, the nation. List the sources and briefly explain each prophecy.
-    - @Eitz Habina, list all of King David's children and wives, grouped separately, with sources.
+  examples_title: "Try a prompt to see a sample result"
+  examples_note: "These are condensed excerpts from real Gemini chats. AI answers can contain errors or omissions; check the cited sources."
+  example_tiberias_prompt: "@Eitz Habina, which people are recorded as having visited Tiberias? List the sources and briefly explain the context."
+  example_tiberias_result: |
+    The response returned people associated with Tiberias. Selected examples:
+
+    - **Ben Azzai — Eruvin 29a:** Tiberian apples in a discussion of *eiruv* measurements.
+    - **Rabban Gamliel — Eruvin 101b:** a Shabbat ruling about a door bolt while in Tiberias.
+    - **Rabbi Halafta — Shabbat 115a:** a discussion about reading the Targum of Job on Shabbat.
+
+    [Open the full Gemini chat](https://share.gemini.google/qVSh4WzowedW)
+  example_number_40_prompt: "@Eitz Habina, what is the significance of the number 40 in the Talmud? Give examples with sources."
+  example_number_40_result: |
+    The response connected 40 with stages of development, revelation, and judgment:
+
+    - **Moses on Mount Sinai:** 40-day periods — Berakhot 32b; Shabbat 89a; Taanit 7b.
+    - **Forty minus one:** the court administers 39 lashes — Makkot 22b.
+    - **Age and understanding:** age 40 is associated with understanding in *Pirkei Avot* 5:21 (Mishnah).
+
+    [Open the full Gemini chat](https://share.gemini.google/bcizArvSiCVo)
+  example_almonds_prompt: "@Eitz Habina, what symbolism is associated with almonds in the Talmud? Show the sources and explain their context."
+  example_almonds_result: |
+    The response highlighted several different contexts:
+
+    - **Old age — Shabbat 152a:** the blossoming almond tree in Ecclesiastes is interpreted as an image of physical aging.
+    - **Aaron's staff — Yoma 52b:** the staff's blossoms and almonds appear in a discussion of Temple objects hidden by Josiah.
+    - **The Menorah — Yoma 52a–52b:** almond-blossom imagery appears in a discussion of an ambiguous Torah verse.
+
+    [Open the full Gemini chat](https://share.gemini.google/HwGJTvmIafug)
+  example_genealogy_prompt: "@Eitz Habina, trace the genealogy from Avraham Avinu to Ezra HaSofer, showing each generation and its sources."
+  example_genealogy_result: |
+    The response connects Abraham to Isaac, Jacob, and Levi, and cites Ezra 7:1–5 for Ezra's priestly line back to Aaron. It also gives a longer chain through Chronicles; check each intermediate generation against the cited passages before relying on the complete list.
+
+    [Open the full Gemini chat](https://share.gemini.google/AbJuQxcYd4NN)
+  example_shabbat_disputes_prompt: "@Eitz Habina, list 15 distinct disputes between Rabbi Yehuda and Rabbi Shimon about Shabbat, with a source and brief summary for each."
+  example_shabbat_disputes_result: |
+    The response organized proposed disputes under topics such as *muktzeh* and unintended outcomes, with a source and short summary for each. The full list is extensive; verify each source-and-topic pairing in the cited passages.
+
+    [Open the full Gemini chat](https://share.gemini.google/ezmiyUw5TI3S)
+  example_moab_prompt: "@Eitz Habina, find prophecies concerning Moab, the nation. List the sources and briefly explain each prophecy."
+  example_moab_result: |
+    The response gathered prophecies from several biblical books:
+
+    - **Isaiah 15–16:** an oracle describing Moab's devastation.
+    - **Jeremiah 48:** a lengthy prophecy about Moab's downfall, ending with a promise of restoration.
+    - **Ezekiel 25:8–11:** a judgment against Moab and Ammon.
+
+    [Open the full Gemini chat](https://share.gemini.google/P7ieEWnCcoLp)
+  example_king_david_prompt: "@Eitz Habina, list all of King David's children and wives, grouped separately, with sources."
+  example_king_david_result: |
+    The response separated wives from children and grouped children by birthplace, citing Samuel and Chronicles. For example, it points to **2 Samuel 3:2–5** for sons born in Hebron and **2 Samuel 5:14–16** for sons born in Jerusalem. It also notes unnamed wives, concubines, and children, so the surviving records do not provide a complete named list.
+
+    [Open the full Gemini chat](https://share.gemini.google/berPNzSE30Ni)
   screenshot_caption: "Example of Eitz Habina answering an MCP prompt in an AI chat."
   availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
   privacy: "Your chat provider receives your questions and the information retrieved for your conversation. Check the original sources when accuracy matters."

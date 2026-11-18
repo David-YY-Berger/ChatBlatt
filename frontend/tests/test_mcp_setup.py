@@ -26,9 +26,18 @@ class McpSetupTests(unittest.TestCase):
         )
         self.assertNotIn("admin", rendered_text.lower())
         self.assertNotIn("admin=true", rendered_text.lower())
-        self.assertIn("Try these prompts", rendered_text)
-        self.assertIn("@Eitz Habina, which people are recorded as having visited Tiberias?", rendered_text)
-        self.assertIn("@Eitz Habina, list all of King David's children and wives", rendered_text)
+        self.assertIn("Try a prompt to see a sample result", rendered_text)
+        self.assertIn("condensed excerpts from real Gemini chats", rendered_text)
+        self.assertEqual(streamlit.expander.call_count, 7)
+        self.assertTrue(
+            all(call.args[0].startswith("@Eitz Habina") for call in streamlit.expander.call_args_list)
+        )
+        self.assertTrue(
+            any("Makkot 22b" in call.args[0] for call in streamlit.markdown.call_args_list)
+        )
+        self.assertTrue(
+            any("https://share.gemini.google/qVSh4WzowedW" in call.args[0] for call in streamlit.markdown.call_args_list)
+        )
         self.assertEqual(streamlit.image.call_args.args[0], mcp_setup.MCP_SCREENSHOT)
         self.assertTrue(mcp_setup.MCP_SCREENSHOT.is_file())
 
@@ -47,8 +56,11 @@ class McpSetupTests(unittest.TestCase):
             for name in ("markdown", "subheader", "caption")
             for call in getattr(streamlit, name).call_args_list
         )
-        self.assertIn("נסו את ההנחיות האלה", rendered_text)
-        self.assertIn("@Eitz Habina, הציגו 15 מחלוקות שונות", rendered_text)
+        self.assertIn("נסו הנחיה ופתחו כדי לראות תשובה לדוגמה", rendered_text)
+        self.assertIn("קטעים מקוצרים משיחות אמיתיות עם Gemini", rendered_text)
+        self.assertTrue(
+            all(call.args[0].startswith("@Eitz Habina") for call in streamlit.expander.call_args_list)
+        )
 
 
 if __name__ == "__main__":
