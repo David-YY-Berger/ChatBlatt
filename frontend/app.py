@@ -111,18 +111,49 @@ def _build_navigation(lang: str):
     """Every page has its own URL (see system_common/UrlPaths.py)."""
     pages = {key: _make_page(key, lang) for key in URL_PATHS}
     navigation.register_pages(pages)
-    groups = {
-        "": [pages[k] for k in (PAGE_HOME, PAGE_ABOUT, PAGE_NUMBER_SEARCH, PAGE_SOURCE_SEARCH, PAGE_MCP)],
-        get_text("nav.about_sections", lang): [pages[k] for k in ABOUT_SECTION_PAGES],
-        get_text("nav.entity_search", lang): [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
-        get_text("nav.trees", lang): [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
-    }
-    page = st.navigation(groups, position="top")
-    _render_mobile_menu(groups, lang)
+    menu_groups = _navigation_menu_groups(pages, lang)
+    page = st.navigation(list(pages.values()), position="hidden")
+    _render_desktop_menu(menu_groups)
+    _render_mobile_menu(menu_groups, lang)
     return page
 
 
-def _render_mobile_menu(groups: dict, lang: str) -> None:
+def _navigation_menu_groups(pages: dict, lang: str) -> list[tuple[str, list]]:
+    return [
+        ("", [pages[PAGE_HOME]]),
+        (
+            get_text("nav.about", lang),
+            [pages[PAGE_ABOUT]] + [pages[k] for k in ABOUT_SECTION_PAGES],
+        ),
+        ("", [pages[PAGE_NUMBER_SEARCH]]),
+        ("", [pages[PAGE_SOURCE_SEARCH]]),
+        ("", [pages[PAGE_MCP]]),
+        (
+            get_text("nav.entity_search", lang),
+            [pages[PAGE_ENTITY_SEARCH]] + [pages[k] for k in ENTITY_NAV_PAGES],
+        ),
+        (
+            get_text("nav.trees", lang),
+            [pages[PAGE_TREES]] + [pages[k] for k in TREE_PAGES],
+        ),
+    ]
+
+
+def _render_desktop_menu(menu_groups: list[tuple[str, list]]) -> None:
+    with st.container(key="desktop_nav"):
+        columns = st.columns([0.7, 1, 1.4, 1.2, 0.6, 1.2, 0.7])
+        for column, (title, group_pages) in zip(columns, menu_groups):
+            with column:
+                if title:
+                    with st.popover(title, use_container_width=True):
+                        for p in group_pages:
+                            st.page_link(p, label=p.title, use_container_width=True)
+                else:
+                    p = group_pages[0]
+                    st.page_link(p, label=p.title, use_container_width=True)
+
+
+def _render_mobile_menu(menu_groups: list[tuple[str, list]], lang: str) -> None:
     """Streamlit drops the top nav on narrow screens; this menu is shown only there (see styles.css)."""
     with st.container(key="mobile_nav"):
         with st.popover(
@@ -130,7 +161,7 @@ def _render_mobile_menu(groups: dict, lang: str) -> None:
             use_container_width=True,
             key=f"mobile_menu_{st.session_state.get('mobile_menu_generation', 0)}",
         ):
-            for title, group_pages in groups.items():
+            for title, group_pages in menu_groups:
                 if title:
                     st.caption(title)
                 for p in group_pages:

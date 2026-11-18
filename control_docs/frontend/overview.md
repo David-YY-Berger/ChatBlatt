@@ -21,18 +21,15 @@ and data flows, use the feature guides below.
   Sefaria banner to the external site. A localized copyright notice appears in
   the shared footer after the selected page.
 - On desktop, the main navigation orders Home, About, Number Search, Source
-  Search and MCP (connection instructions and an in-chat screenshot). About's
-  individual sections are in an About sections dropdown, alongside Entity
-  Search and Trees.
-  On screens up to 768px, the
-  app also displays a grouped mobile Menu popover; Streamlit hides its top
-  navigation on narrow screens. Selecting a mobile menu item closes the popover
-  and switches to any page, including the Entity Search and Trees landing pages
-  and the currently selected page. The mobile
-  controls are buttons rather than links, and the menu's popover key changes on
-  selection so Streamlit remounts it closed. Desktop dropdowns are Streamlit's
-  native navigation. Page groups, destinations and query parameters are in
-  [URLs, navigation and shareable searches](urls.md).
+  Search and MCP (connection instructions and an in-chat screenshot). About is
+  a dropdown containing the About landing page and all of its sections. Entity
+  Search and Trees also have dropdowns. On screens up to 768px, the app displays
+  the grouped mobile Menu popover instead. Selecting a mobile menu item closes
+  the popover and switches to any page, including the Entity Search and Trees
+  landing pages and the currently selected page. The mobile controls are buttons
+  rather than links, and the menu's popover key changes on selection so
+  Streamlit remounts it closed. Page groups, destinations and query parameters
+  are in [URLs, navigation and shareable searches](urls.md).
 - `frontend/pages/home.py` presents clickable cards for Number Search, Source
   Search, Entity Search and Trees.   The Trees card summarizes Family Tree, Places Visited, Descendants and Studied
   From and opens the Trees landing page.
@@ -74,7 +71,9 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 ## Behavior notes
 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;
-  switching back to English reorients left-to-right.
+  shared Streamlit element and list alignment follows the content direction, while
+  explicitly centered or left-to-right content retains its own alignment.
+  Switching back to English reorients left-to-right.
 - Source filters, entity metadata, graph names, number results, and source HTML/PDF
   use the selected language. Where Hebrew names, units, contexts, or summaries
   are unavailable in the data, the available English value is displayed instead.

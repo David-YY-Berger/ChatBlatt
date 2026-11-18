@@ -9,7 +9,7 @@ from frontend import app
 
 
 class MobileMenuTests(unittest.TestCase):
-    def test_about_is_after_home_and_before_number_search_on_desktop_and_mobile(self):
+    def test_about_dropdown_is_after_home_and_before_number_search(self):
         streamlit = MagicMock()
 
         def page(*args, **kwargs):
@@ -20,14 +20,39 @@ class MobileMenuTests(unittest.TestCase):
 
         streamlit.Page.side_effect = page
         with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_desktop_menu") as desktop, \
              patch.object(app, "_render_mobile_menu") as mobile:
             app._build_navigation("en")
 
-        expected = ["Home", "About", "Number Search"]
-        desktop_pages = streamlit.navigation.call_args.args[0][""]
-        mobile_pages = mobile.call_args.args[0][""]
-        self.assertEqual([page.title for page in desktop_pages[:3]], expected)
-        self.assertEqual([page.title for page in mobile_pages[:3]], expected)
+        expected = [
+            ("", ["Home"]),
+            (
+                "About",
+                [
+                    "About",
+                    "What is Eitz Habinah?",
+                    "How is Eitz Habinah different from other Torah search tools?",
+                    "Pipeline",
+                    "About Feyga Menuha",
+                    "About the author",
+                ],
+            ),
+            ("", ["Number Search"]),
+        ]
+        menu_groups = desktop.call_args.args[0]
+        self.assertEqual(
+            [(title, [page.title for page in pages]) for title, pages in menu_groups[:3]],
+            expected,
+        )
+        self.assertEqual(mobile.call_args.args[0], menu_groups)
+        navigation_pages = streamlit.navigation.call_args.args[0]
+        self.assertEqual(
+            [page.url_path for page in navigation_pages],
+            list(app.URL_PATHS.values()),
+        )
+        streamlit.navigation.assert_called_once_with(
+            navigation_pages, position="hidden"
+        )
 
     def test_mcp_page_is_in_desktop_and_mobile_navigation(self):
         streamlit = MagicMock()
@@ -40,13 +65,15 @@ class MobileMenuTests(unittest.TestCase):
 
         streamlit.Page.side_effect = page
         with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_desktop_menu"), \
              patch.object(app, "_render_mobile_menu") as mobile:
             app._build_navigation("en")
 
-        desktop_groups = streamlit.navigation.call_args.args[0]
         mobile_groups = mobile.call_args.args[0]
-        self.assertIn("mcp_setup", [p.url_path for p in desktop_groups[""]])
-        self.assertIn("mcp_setup", [p.url_path for p in mobile_groups[""]])
+        self.assertIn(
+            "mcp_setup",
+            [p.url_path for _, pages in mobile_groups for p in pages],
+        )
         self.assertNotEqual(app.URL_PATHS[app.PAGE_MCP], "mcp")
 
     def test_trees_landing_and_each_tree_are_in_desktop_and_mobile_navigation(self):
@@ -60,13 +87,12 @@ class MobileMenuTests(unittest.TestCase):
 
         streamlit.Page.side_effect = page
         with patch.object(app, "st", streamlit), \
+             patch.object(app, "_render_desktop_menu"), \
              patch.object(app, "_render_mobile_menu") as mobile:
             app._build_navigation("en")
 
-        desktop_groups = streamlit.navigation.call_args.args[0]
         mobile_groups = mobile.call_args.args[0]
-        tree_group = desktop_groups["Trees"]
-        mobile_tree_group = mobile_groups["Trees"]
+        tree_group = next(pages for title, pages in mobile_groups if title == "Trees")
         expected_paths = [
             app.URL_PATHS[key] for key in (
                 app.PAGE_TREES,
@@ -77,7 +103,6 @@ class MobileMenuTests(unittest.TestCase):
             )
         ]
         self.assertEqual([page.url_path for page in tree_group], expected_paths)
-        self.assertEqual([page.url_path for page in mobile_tree_group], expected_paths)
         expected_titles = [
             "Trees",
             "Family Tree",
@@ -86,7 +111,6 @@ class MobileMenuTests(unittest.TestCase):
             "Studied From",
         ]
         self.assertEqual([page.title for page in tree_group], expected_titles)
-        self.assertEqual([page.title for page in mobile_tree_group], expected_titles)
 
     def test_selection_changes_popover_key_and_switches_page(self):
         streamlit = MagicMock()
@@ -96,7 +120,8 @@ class MobileMenuTests(unittest.TestCase):
         streamlit.button.side_effect = [False, True]
 
         with patch.object(app, "st", streamlit):
-            app._render_mobile_menu({"": [home], "Trees": [trees]}, "en")
+            menu_groups = [("", [home]), ("Trees", [trees])]
+            app._render_mobile_menu(menu_groups, "en")
 
             calls = streamlit.button.call_args_list
             self.assertEqual([call.args[0] for call in calls], ["Home", "Trees"])
@@ -107,7 +132,7 @@ class MobileMenuTests(unittest.TestCase):
 
             calls[1].kwargs["on_click"]()
             streamlit.button.side_effect = [False, False]
-            app._render_mobile_menu({"": [home], "Trees": [trees]}, "en")
+            app._render_mobile_menu(menu_groups, "en")
             self.assertEqual(streamlit.popover.call_args.kwargs["key"], "mobile_menu_1")
 
 

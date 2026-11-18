@@ -459,6 +459,10 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
     display: none;
 }
 
+.st-key-desktop_nav {
+    display: block;
+}
+
 [class*="st-key-mobile_page_"] [data-testid="stButton"] > button {
     justify-content: flex-start;
     background: transparent;
@@ -481,6 +485,10 @@ body:has([data-testid="stStatusWidgetRunningIcon"]) [data-testid="stHeader"] but
 }
 
 @media (max-width: 768px) {
+    .st-key-desktop_nav {
+        display: none;
+    }
+
     .st-key-mobile_nav {
         display: block;
     }

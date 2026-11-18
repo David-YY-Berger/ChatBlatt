@@ -20,6 +20,7 @@ def render(lang: str) -> None:
         <style>
         .st-key-mcp_page {{ direction: {direction}; text-align: {alignment}; }}
         .st-key-mcp_page [data-testid="stCodeBlock"] {{ direction: ltr; text-align: left; }}
+        .st-key-mcp_page [data-testid="stCode"] {{ direction: ltr; text-align: left; }}
         </style>
         """,
         unsafe_allow_html=True,

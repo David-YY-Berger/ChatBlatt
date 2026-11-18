@@ -10,6 +10,23 @@ from translations1 import get_text
 
 
 class LoadingLayoutTests(unittest.TestCase):
+    def test_hebrew_layout_aligns_streamlit_content_and_lists_to_start(self):
+        rendered = {}
+        for lang in ("en", "he"):
+            with patch.object(layout.st, "markdown") as markdown:
+                layout.apply_layout(lang)
+                rendered[lang] = markdown.call_args.args[0]
+
+        selectors = (
+            '[data-testid="stElementContainer"],\n'
+            '        [data-testid="stMarkdownContainer"] > ul,\n'
+            '        [data-testid="stMarkdownContainer"] > ol {\n'
+            '            text-align: start;\n'
+            '        }'
+        )
+        self.assertIn(selectors, rendered["he"])
+        self.assertNotIn(selectors, rendered["en"])
+
     def test_loading_label_is_localized_and_encoded_as_css_string(self):
         labels = []
         for lang in ("en", "he"):

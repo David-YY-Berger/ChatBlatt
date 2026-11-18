@@ -61,15 +61,21 @@ class HiddenSymbolsUITests(unittest.TestCase):
         streamlit.Page.side_effect = make_page
         with (
             patch.object(app, "st", streamlit),
+            patch.object(app, "_render_desktop_menu"),
             patch.object(app, "_render_mobile_menu"),
         ):
             app._build_navigation("en")
 
-        groups = streamlit.navigation.call_args.args[0]
+        pages_by_key = {
+            page_key: next(
+                page for page in created_pages
+                if page.url_path == app.URL_PATHS[page_key]
+            )
+            for page_key in app.URL_PATHS
+        }
+        menu_groups = app._navigation_menu_groups(pages_by_key, "en")
         entity_group = next(
-            pages
-            for pages in groups.values()
-            if pages[0].url_path == app.URL_PATHS[app.PAGE_ENTITY_SEARCH]
+            pages for title, pages in menu_groups if title == "Entity Search"
         )
         symbol_page = next(
             page for page in created_pages if page.url_path == app.URL_PATHS[PAGE_SYMBOLS]

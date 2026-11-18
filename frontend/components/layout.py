@@ -38,6 +38,11 @@ def apply_layout(lang: str) -> None:
         html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
             direction: rtl !important;
         }
+        [data-testid="stElementContainer"],
+        [data-testid="stMarkdownContainer"] > ul,
+        [data-testid="stMarkdownContainer"] > ol {
+            text-align: start;
+        }
         [data-testid="stPopoverBody"], [data-testid="stDialog"] {
             direction: rtl;
             text-align: right;
