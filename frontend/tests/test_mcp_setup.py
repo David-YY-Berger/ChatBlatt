@@ -26,8 +26,9 @@ class McpSetupTests(unittest.TestCase):
         )
         self.assertNotIn("admin", rendered_text.lower())
         self.assertNotIn("admin=true", rendered_text.lower())
-        self.assertIn("cool examples coming soon!", rendered_text.lower())
-        self.assertNotIn("@Eitz Habina", rendered_text)
+        self.assertIn("Try these prompts", rendered_text)
+        self.assertIn("@Eitz Habina, which people are recorded as having visited Tiberias?", rendered_text)
+        self.assertIn("@Eitz Habina, list all of King David's children and wives", rendered_text)
         self.assertEqual(streamlit.image.call_args.args[0], mcp_setup.MCP_SCREENSHOT)
         self.assertTrue(mcp_setup.MCP_SCREENSHOT.is_file())
 
@@ -46,7 +47,8 @@ class McpSetupTests(unittest.TestCase):
             for name in ("markdown", "subheader", "caption")
             for call in getattr(streamlit, name).call_args_list
         )
-        self.assertIn("דוגמאות מגניבות יגיעו בקרוב!", rendered_text)
+        self.assertIn("נסו את ההנחיות האלה", rendered_text)
+        self.assertIn("@Eitz Habina, הציגו 15 מחלוקות שונות", rendered_text)
 
 
 if __name__ == "__main__":

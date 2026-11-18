@@ -23,7 +23,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Flowable, KeepTogether, Paragraph, SimpleDocTemplate, Spacer
 
 from backend.common import Paths
-from backend.models_db.Enums import SourceType
+from backend.models_db.Enums import PassageType, SourceType
 from translations1 import enum_text, get_text, is_rtl
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent
@@ -108,6 +108,72 @@ def _search_description(search_url: str | None, entity_names: list[str] | None =
     return description
 
 
+def _bilingual_text(key: str, lang: str) -> str:
+    labels = [get_text(key, code) for code in ("en", "he")]
+    if is_rtl(lang):
+        labels.reverse()
+    return " / ".join(labels)
+
+
+def _search_parameter_rows(
+    search_url: str | None, entity_names: list[str] | None, lang: str,
+) -> list[tuple[str, str]]:
+    """Return all executed source-search settings with bilingual labels/values."""
+    params = parse_qs(urlsplit(search_url).query) if search_url else {}
+
+    def values(key: str) -> list[str]:
+        return [value.strip() for value in params.get(key, [""])[0].split(",") if value.strip()]
+
+    query = params.get("q", [""])[0].strip()
+    rows = [(
+        _bilingual_text("source_display.pdf_text_query", lang),
+        query or _bilingual_text("source_display.pdf_none", lang),
+    )]
+
+    entities = list(entity_names or [])
+    if not entities:
+        entities = values("ent")
+    rows.append((
+        _bilingual_text("source_display.pdf_entities", lang),
+        ", ".join(entities) if entities else _bilingual_text("source_display.pdf_all_entities", lang),
+    ))
+
+    relationship = params.get("rel_label", [""])[0].strip()
+    if not relationship:
+        relationship = ", ".join(values("rel"))
+    rows.append((
+        _bilingual_text("source_display.pdf_relationship", lang),
+        relationship or _bilingual_text("source_display.pdf_none", lang),
+    ))
+
+    for key, enum_type, label_key in (
+        ("st", SourceType, "source_display.pdf_source_types"),
+        ("pt", PassageType, "source_display.pdf_passage_types"),
+    ):
+        selected = values(key)
+        rendered = []
+        for value in selected:
+            member = enum_type.__members__.get(value)
+            rendered.append(_bilingual_text_enum(member, lang) if member else value)
+        rows.append((
+            _bilingual_text(label_key, lang),
+            ", ".join(rendered) if rendered else _bilingual_text("source_display.pdf_all_types", lang),
+        ))
+
+    if values("ent"):
+        match_all = params.get("entity_match", ["any"])[0] == "all"
+        match_key = "source_display.pdf_match_all" if match_all else "source_display.pdf_match_any"
+        rows.append((_bilingual_text("source_display.pdf_entity_match", lang),
+                     _bilingual_text(match_key, lang)))
+    return rows
+
+
+def _bilingual_text_enum(member: SourceType | PassageType, lang: str) -> str:
+    return f"{enum_text(member, 'en')} / {enum_text(member, 'he')}" if not is_rtl(lang) else (
+        f"{enum_text(member, 'he')} / {enum_text(member, 'en')}"
+    )
+
+
 def results_pdf_filename(search_url: str | None, entity_names: list[str] | None = None) -> str:
     """Build a filesystem-safe download name containing a concise search summary."""
     description = _search_description(search_url, entity_names) or "All sources"
@@ -182,6 +248,58 @@ class _Header(Flowable):
             label_width = pdfmetrics.stringWidth(label, FONT_BOLD, 10)
             c.linkURL(self.search_url, (x - label_width if rtl else x, 1.25 * cm, x if rtl else x + label_width, 1.65 * cm),
                       relative=1)
+
+
+class _SefariaLink(Flowable):
+    """A compact, clickable book-icon link to a source's Sefaria page."""
+
+    def __init__(self, url: str, label: str, lang: str = "en"):
+        super().__init__()
+        self.url = url
+        self.label = label
+        self.lang = lang
+        self.width = 5 * cm
+        self.height = 0.55 * cm
+
+    def wrap(self, available_width, _):
+        self.width = min(self.width, available_width)
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        c.saveState()
+        color = colors.HexColor("#1d6fa4")
+        c.setStrokeColor(color)
+        c.setFillColor(color)
+        icon_w, gap = 0.32 * cm, 0.12 * cm
+        display_label = get_display(self.label, base_dir="R") if is_rtl(self.lang) else self.label
+        text_width = pdfmetrics.stringWidth(display_label, FONT, 9)
+        total_width = icon_w + gap + text_width
+        if is_rtl(self.lang):
+            icon_x = self.width - icon_w
+            text_x = icon_x - gap
+            c.drawRightString(text_x, 0.08 * cm, display_label)
+            c.line(text_x - text_width, 0.06 * cm, text_x, 0.06 * cm)
+        else:
+            icon_x = 0
+            text_x = icon_x + icon_w + gap
+            c.drawString(text_x, 0.08 * cm, display_label)
+            c.line(text_x, 0.06 * cm, text_x + text_width, 0.06 * cm)
+
+        mid = icon_x + icon_w / 2
+        path = c.beginPath()
+        path.moveTo(mid, 0.04 * cm)
+        path.curveTo(mid - 0.04 * cm, 0.13 * cm, icon_x, 0.11 * cm, icon_x, 0.16 * cm)
+        path.lineTo(icon_x, 0.48 * cm)
+        path.curveTo(icon_x + 0.12 * cm, 0.43 * cm, mid - 0.04 * cm, 0.45 * cm, mid, 0.52 * cm)
+        path.curveTo(mid + 0.04 * cm, 0.45 * cm, icon_x + icon_w - 0.12 * cm, 0.43 * cm,
+                     icon_x + icon_w, 0.48 * cm)
+        path.lineTo(icon_x + icon_w, 0.16 * cm)
+        path.curveTo(icon_x + icon_w, 0.11 * cm, mid + 0.04 * cm, 0.13 * cm, mid, 0.04 * cm)
+        c.drawPath(path, stroke=1, fill=0)
+        c.line(mid, 0.07 * cm, mid, 0.45 * cm)
+        c.linkURL(self.url, (0, 0, self.width, self.height), relative=1)
+        c.restoreState()
 
 
 _BOLD_TAGS = {"b", "strong", "h1", "h2", "h3", "h4", "h5", "h6", "th"}
@@ -342,6 +460,13 @@ def _build_results_pdf(ans, search_url: str | None, entity_names: list[str] | No
     contents = list(getattr(ans, "src_contents", []) or [])
     story += _text_flowables(f"{len(sources)} {get_text('source_display.sources', lang)}", 10, inner)
     story += [Spacer(1, 0.2 * cm)]
+    story += _text_flowables(
+        _bilingual_text("source_display.pdf_search_parameters", lang),
+        11, inner, bold=True,
+    )
+    for label, value in _search_parameter_rows(search_url, entity_names, lang):
+        story += _text_flowables(f"<b>{escape(label)}:</b> {escape(value)}", 9, inner, html=True)
+    story += [Spacer(1, 0.2 * cm)]
     story.append(Spacer(1, 0.3 * cm))
 
     for i, meta in enumerate(sources):
@@ -362,6 +487,13 @@ def _build_results_pdf(ans, search_url: str | None, entity_names: list[str] | No
         else:
             title_markup = escape(get_display(title_text, base_dir="R") if is_rtl(lang) else title_text)
         block.append(Paragraph(title_markup, title_style))
+        sefaria_url = meta.get_sefaria_url() if hasattr(meta, "get_sefaria_url") else None
+        if sefaria_url:
+            block.append(_SefariaLink(
+                sefaria_url,
+                get_text("source_display.open_sefaria", lang),
+                lang,
+            ))
         block += _text_flowables(secondary_title, 12, inner, bold=True)
         types = ", ".join(enum_text(pt, lang) for pt in (getattr(meta, "passage_types", None) or []))
         grey = colors.HexColor("#7f8c8d")

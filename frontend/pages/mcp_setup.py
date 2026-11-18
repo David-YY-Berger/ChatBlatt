@@ -38,7 +38,8 @@ def render(lang: str) -> None:
         st.code(MCP_URL, language=None)
         st.markdown(get_text("mcp_ui.step_three", lang))
         st.markdown(get_text("mcp_ui.step_four", lang))
-        st.markdown(get_text("mcp_ui.examples_coming_soon", lang))
+        st.subheader(get_text("mcp_ui.examples_title", lang))
+        st.markdown(get_text("mcp_ui.examples", lang))
         st.caption(get_text("mcp_ui.availability", lang))
         st.caption(get_text("mcp_ui.privacy", lang))
         st.image(

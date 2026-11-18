@@ -58,7 +58,15 @@ mcp_ui:
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
   step_four: "4. Save or connect the server and enable it for your chat."
-  examples_coming_soon: "Cool examples coming soon!"
+  examples_title: "Try these prompts"
+  examples: |
+    - @Eitz Habina, which people are recorded as having visited Tiberias? List the sources and briefly explain the context.
+    - @Eitz Habina, what is the significance of the number 40 in the Talmud? Give examples with sources.
+    - @Eitz Habina, what symbolism is associated with almonds in the Talmud? Show the sources and explain their context.
+    - @Eitz Habina, trace the genealogy from Avraham Avinu to Ezra HaSofer, showing each generation and its sources.
+    - @Eitz Habina, list 15 distinct disputes between Rabbi Yehuda and Rabbi Shimon about Shabbat, with a source and brief summary for each.
+    - @Eitz Habina, find prophecies concerning Moab, the nation. List the sources and briefly explain each prophecy.
+    - @Eitz Habina, list all of King David's children and wives, grouped separately, with sources.
   screenshot_caption: "Example of Eitz Habina answering an MCP prompt in an AI chat."
   availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
   privacy: "Your chat provider receives your questions and the information retrieved for your conversation. Check the original sources when accuracy matters."
@@ -301,6 +309,18 @@ source_display:
   search_link: "Search link"
   open_search: "Open this search online"
   page: "Page"
+  pdf_search_parameters: "Search parameters"
+  pdf_text_query: "Text similarity"
+  pdf_entities: "Entities"
+  pdf_all_entities: "All entities"
+  pdf_relationship: "Relationship"
+  pdf_source_types: "Source types"
+  pdf_passage_types: "Passage types"
+  pdf_all_types: "All types"
+  pdf_entity_match: "Entity matching"
+  pdf_match_all: "All selected entities"
+  pdf_match_any: "Any selected entity"
+  pdf_none: "None"
 
 number_search_ui:
   occurrence_hint_one: "{count} occurrence · click a unit to see its sources"

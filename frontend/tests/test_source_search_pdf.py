@@ -5,7 +5,7 @@ from contextlib import nullcontext
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 
 from streamlit.testing.v1 import AppTest
 from reportlab.pdfbase import pdfmetrics
@@ -98,6 +98,49 @@ _render_results_body(st.session_state["answer"], "he")
 
 
 class SourceSearchPdfTests(unittest.TestCase):
+    def test_pdf_search_parameters_are_bilingual_and_cover_active_filters(self):
+        search_url = "https://example.test/source_search?" + urlencode({
+            "q": "David, Solomon",
+            "pt": "LAW,PROPHECY",
+            "st": "TN",
+            "ent": "person1,person2",
+            "entity_match": "all",
+            "rel": "rel1",
+            "rel_label": "Teacher and student",
+        })
+
+        rows = dict(pdf_export._search_parameter_rows(
+            search_url, ["David", "Solomon"], "en",
+        ))
+
+        self.assertEqual(rows["Text similarity / דמיון טקסטואלי"], "David, Solomon")
+        self.assertEqual(rows["Entities / ישויות"], "David, Solomon")
+        self.assertEqual(rows["Relationship / קשר"], "Teacher and student")
+        self.assertEqual(rows["Source types / סוגי המקורות"], "Tanach / תנ״ך")
+        self.assertIn("Law / הלכה", rows["Passage types / סוגי הקטעים"])
+        self.assertEqual(
+            rows["Entity matching / התאמת ישויות"],
+            "All selected entities / כל הישויות שנבחרו",
+        )
+        self.assertEqual(
+            pdf_export._bilingual_text("source_display.pdf_search_parameters", "he"),
+            "פרמטרי החיפוש / Search parameters",
+        )
+
+    def test_pdf_has_clickable_sefaria_link_for_each_supported_source(self):
+        metadata = SourceMetadata(key="TN_Genesis_0_1:1")
+        answer = SimpleNamespace(
+            src_metadata_lst=[metadata],
+            src_contents=[SourceContent(metadata.key, ["In the beginning", "בראשית"])],
+        )
+
+        pdf = pdf_export.build_results_pdf(answer)
+
+        self.assertIn(
+            b"/URI (https://www.sefaria.org/Genesis.1.1)",
+            pdf,
+        )
+
     def test_download_widget_defers_generation_without_rerun(self):
         app = AppTest.from_string("""
 import streamlit as st

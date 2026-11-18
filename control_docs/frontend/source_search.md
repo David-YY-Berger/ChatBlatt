@@ -19,8 +19,8 @@ dropdowns, free-text box + Find Sources button, results).
   disabled, gray, and marked "Coming soon".
 - **Entities** (`components/facets/`): one multiselect per visible entity type;
   Symbols is hidden from the filter UI, while its backend/query support remains.
-  Each entity dropdown has a Done button beside it to move focus away and close
-  the dropdown.
+  Each entity dropdown has a green Done button beside it (including on mobile)
+  to move focus away and close the dropdown.
   Each panel is a Streamlit fragment, so changing a selection reruns that panel
   without rerendering the other panels or existing results. Selections take
   effect in the search when **Find Sources** is pressed.
@@ -42,8 +42,11 @@ box, passage and source types, entity panels via `set_selected_filters` /
 PDF (session key `_search_url`). The PDF download captures that executed-search URL before
 deferred generation; changing the form or paging through results does not change the link
 until a new search is run.
-PDF generation runs on demand without rerunning the page. The export embeds GNU
-FreeSerif and shapes Hebrew vowel and cantillation marks.
+PDF generation runs on demand without rerunning the page. It lists the executed
+search parameters in Hebrew and English and adds a book-icon link to each
+supported source's Sefaria page. Source text remains selectable/copyable in the
+PDF; a functional clipboard button is not available in a standard PDF. The export
+embeds GNU FreeSerif and shapes Hebrew vowel and cantillation marks.
 
 The Person entity dropdown shows recorded roles and time period (e.g.
 `David (דוד) - King [Tanach]`), using the same labels as Entity Search and

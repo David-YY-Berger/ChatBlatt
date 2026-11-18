@@ -103,3 +103,37 @@ div[data-testid="stElementContainer"]:has(> div[data-testid="stMarkdown"] > div[
     height: 100%;
 }
 
+/* Keep the Done control usable alongside its entity selector. */
+div[data-testid="stHorizontalBlock"]:has(> div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > [class*="st-key-entity_filter_done_"]) {
+    gap: 0.5rem;
+}
+
+div[data-testid="stHorizontalBlock"]:has(> div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > [class*="st-key-entity_filter_done_"]) > div[data-testid="stColumn"]:last-child {
+    flex: 0 0 2.75rem;
+    min-width: 0;
+}
+
+[class*="st-key-entity_filter_done_"] button {
+    background-color: #18794e;
+    border-color: #18794e;
+    color: #fff;
+}
+
+[class*="st-key-entity_filter_done_"] button:hover,
+[class*="st-key-entity_filter_done_"] button:active {
+    background-color: #11633f;
+    border-color: #11633f;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    div[data-testid="stHorizontalBlock"]:has(> div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > [class*="st-key-entity_filter_done_"]) > div[data-testid="stColumn"]:first-child {
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+
+    div[data-testid="stHorizontalBlock"]:has(> div[data-testid="stColumn"] > div[data-testid="stVerticalBlock"] > [class*="st-key-entity_filter_done_"]) > div[data-testid="stColumn"]:nth-child(2) {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}
