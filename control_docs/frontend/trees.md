@@ -20,7 +20,8 @@ mode); the second contains only people reachable in the chosen direction.
 The result shows one shortest recorded line as a sequence of people and
 source links for each relationship, in selection order. Links open the shared
 source popup. The copy-text section includes each step's source titles in
-parentheses; steps without recorded sources are marked accordingly. If source
+parentheses and arrows matching the reading direction; steps without recorded
+sources are marked accordingly. If source
 content is unavailable, the title remains visible and a warning is shown.
 Each person uses the localized person-selector label (names, roles and time
 period) and has icon links to their entity page and a source search, opened in

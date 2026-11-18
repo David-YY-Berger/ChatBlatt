@@ -92,9 +92,10 @@ def _source_title(source, lang):
 
 def _copy_text(names, sources_by_step, lang):
     lines = []
+    arrow = "\u2190" if is_rtl(lang) else "\u2192"
     for name, sources in zip(names, sources_by_step):
         titles = ", ".join(_source_title(source, lang) for source in sources)
-        lines.append(f"{name} ({titles or get_text('places_visited_ui.no_sources', lang)}) \u2192")
+        lines.append(f"{name} ({titles or get_text('places_visited_ui.no_sources', lang)}) {arrow}")
     return "\n".join(lines + [names[-1]])
 
 

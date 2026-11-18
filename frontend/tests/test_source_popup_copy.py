@@ -7,10 +7,16 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "frontend"))
 
-from components.source_popup import source_popup_html
+from components.source_popup import source_popup_css_js, source_popup_html
 
 
 class SourcePopupCopyButtonTests(unittest.TestCase):
+    def test_popup_height_is_bounded_by_its_iframe(self):
+        popup_assets = source_popup_css_js()
+        self.assertIn("box-sizing:border-box;", popup_assets)
+        self.assertIn("Math.min(window.innerHeight - 16, 720)", popup_assets)
+        self.assertIn("Math.min(window.parent.innerHeight * 0.85, vh)", popup_assets)
+
     def test_popup_copy_control_is_accessible_icon_only(self):
         popup = source_popup_html(
             "copy-test",

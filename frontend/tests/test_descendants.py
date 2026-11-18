@@ -118,6 +118,13 @@ class LineageTests(unittest.TestCase):
         self.assertIn("בראשית", rendered)
         self.assertIn(self.sources[0].get_sefaria_url(), rendered)
 
+    def test_copy_text_arrows_follow_language_direction(self):
+        names = ["אברהם", "יצחק", "יעקב"]
+        self.assertEqual(_copy_text(names, [[], []], "he"),
+                         "אברהם (לא נרשמו מקורות.) ←\nיצחק (לא נרשמו מקורות.) ←\nיעקב")
+        self.assertEqual(_copy_text(names, [[], []], "en"),
+                         "אברהם (No sources recorded.) →\nיצחק (No sources recorded.) →\nיעקב")
+
     def test_page_is_registered_under_trees(self):
         from frontend import app
         from system_common.Constants import PAGE_DESCENDANTS
@@ -168,7 +175,7 @@ render(lang)
             app.selectbox[1].select("a").run()
             self.assertFalse(app.exception)
             self.assertTrue(app.code[0].value.startswith(
-                "דן (Dan) (לא נרשמו מקורות.) →\nיעקב (Jacob) (2:1 בראשית"))
+                "דן (Dan) (לא נרשמו מקורות.) ←\nיעקב (Jacob) (2:1 בראשית"))
             self.assertTrue(app.code[0].value.endswith("אברהם (Abraham)"))
             self.assertEqual(app.session_state["_metrics_events"][-1]["tree_type"], "ancestors")
             self.assertEqual(app.session_state["_metrics_events"][-1]["entity_ids"], "d,a")

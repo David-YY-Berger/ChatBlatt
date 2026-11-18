@@ -54,7 +54,7 @@ def source_popup_css_js() -> str:
 }
 .sp-overlay.sp-open { display:flex; }
 .sp-box {
-    width:min(820px,92vw); max-height:720px;
+    box-sizing:border-box; width:min(820px,92vw); max-height:720px;
     overflow-y:auto;
     font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
@@ -82,8 +82,8 @@ function spOpen(id, ev) {
     ov.classList.add('sp-open');
     // The iframe can be very tall, so anchor the box to the click position
     // (iframe coordinates) instead of centering it in the whole iframe.
-    var vh = 720;
-    try { vh = Math.min(window.parent.innerHeight * 0.85, 720); } catch (e) {}
+    var vh = Math.max(1, Math.min(window.innerHeight - 16, 720));
+    try { vh = Math.min(window.parent.innerHeight * 0.85, vh); } catch (e) {}
     box.style.maxHeight = vh + 'px';
     var top = ev ? ev.clientY - 40 : (ov.clientHeight - box.offsetHeight) / 2;
     top = Math.max(8, Math.min(top, ov.clientHeight - box.offsetHeight - 8));
