@@ -150,47 +150,47 @@ def render_entity_facets(lang: str = "en") -> None:
 def _render_entity_select_panel(ent: dict, lang: str = "en") -> None:
     """Render the specific-entity picker panel for one active entity-type tab.
 
-    Label sits to the left, with the combobox occupying the remaining space
-    to its right (single row), instead of stacking label above combobox.
+    Label sits to the left, with the combobox and its Done button to the right
+    in the same row.
     """
     st.markdown('<div class="facet-section entity-select-section">', unsafe_allow_html=True)
 
     label = get_text(f"facet_entities.{ent['key']}", lang)
-    label_col, combo_col = st.columns([1, 4], vertical_alignment="center")
+    label_col, select_col, done_col = st.columns([3, 11, 1], vertical_alignment="center")
     with label_col:
         st.markdown(f"<div class='entity-select-label'>{label}</div>", unsafe_allow_html=True)
 
-    with combo_col:
-        if ent["implemented"]:
-            options = _load_entity_select_options(ent["entity_tab"])
-            if options:
-                labels = _unique_option_labels(options)
-                display_labels = dict(zip(labels, _unique_option_labels(options, lang)))
-                select_col, done_col = st.columns([12, 1], vertical_alignment="center")
-                with select_col:
-                    st.multiselect(
-                        get_text("source_search_ui.select_entities", lang).format(entity=label),
-                        options=labels,
-                        format_func=lambda value: display_labels[value],
-                        key=f"entity_filter_selected_{ent['key']}",
-                        label_visibility="collapsed",
-                        placeholder=get_text("source_search_ui.search_entities", lang).format(entity=label),
-                    )
-                with done_col:
-                    # Clicking moves focus off the combobox, closing its dropdown.
-                    st.button(
-                        "✔",
-                        key=f"entity_filter_done_{ent['key']}",
-                        type="primary",
-                        help="Done",
-                        use_container_width=True,
-                    )
-                # Selections live in session_state under this widget's key;
-                # get_selected_entity_ids() resolves them (across every
-                # entity-type panel) back to entity keys for the query.
-            else:
-                st.caption(get_text("source_search_ui.no_entities", lang))
+    if ent["implemented"]:
+        options = _load_entity_select_options(ent["entity_tab"])
+        if options:
+            labels = _unique_option_labels(options)
+            display_labels = dict(zip(labels, _unique_option_labels(options, lang)))
+            with select_col:
+                st.multiselect(
+                    get_text("source_search_ui.select_entities", lang).format(entity=label),
+                    options=labels,
+                    format_func=lambda value: display_labels[value],
+                    key=f"entity_filter_selected_{ent['key']}",
+                    label_visibility="collapsed",
+                    placeholder=get_text("source_search_ui.search_entities", lang).format(entity=label),
+                )
+            with done_col:
+                # Clicking moves focus off the combobox, closing its dropdown.
+                st.button(
+                    "✔",
+                    key=f"entity_filter_done_{ent['key']}",
+                    type="primary",
+                    help="Done",
+                    use_container_width=True,
+                )
+            # Selections live in session_state under this widget's key;
+            # get_selected_entity_ids() resolves them (across every
+            # entity-type panel) back to entity keys for the query.
         else:
+            with select_col:
+                st.caption(get_text("source_search_ui.no_entities", lang))
+    else:
+        with select_col:
             st.caption(get_text("source_search_ui.entity_unavailable", lang))
 
     st.markdown("</div>", unsafe_allow_html=True)
