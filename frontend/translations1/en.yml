@@ -50,9 +50,12 @@ trees_ui:
 
 mcp_ui:
   disabled: "The MCP service is currently unavailable. The rest of the website remains available."
+  toc_title: "On this page"
+  what_is_mcp_title: "What is an MCP?"
+  examples_section_title: "Real examples"
   introduction: "MCP (Model Context Protocol) is a standard that lets an AI chat connect to external tools and data. Connect Eitz Habina so your chat can search its Torah sources and research tools."
   capabilities: "The connection is read-only. You can ask for sources, people, places, numbers, and family relationships; full source text may be available in English and Hebrew."
-  setup_title: "Connect your AI chat"
+  setup_title: "Set up your own free MCP"
   step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
@@ -61,7 +64,7 @@ mcp_ui:
   examples_note: "Full answers from the shared Gemini chats are shown below. AI answers can contain errors or omissions; check the cited sources."
   sefaria_links_title: "Sefaria links"
   view_in_sefaria: "View in Sefaria"
-  example_tiberias_prompt: "@Eitz Habina, which people are recorded as having visited Tiberias? List the sources and briefly explain the context."
+  example_tiberias_prompt: "@Eitz Habina, **which people are recorded as having visited Tiberias?** List the sources and briefly explain the context."
   example_tiberias_result: |
     Eitz Habina records **13 people** as having visited **Tiberias** (*טבריא*):
 
@@ -82,7 +85,7 @@ mcp_ui:
     | **Rabbi Yohanan** | *Berakhot 53a* | Ruled on blessings over spices and candles alongside Rabbi Hiyya bar Abba in Tiberias. |
 
     [Open the full Gemini chat](https://share.gemini.google/qVSh4WzowedW)
-  example_number_40_prompt: "@Eitz Habina, what is the significance of the number 40 in the Talmud? Give examples with sources."
+  example_number_40_prompt: "@Eitz Habina, **what is the significance of the number 40 in the Talmud?** Give examples with sources."
   example_number_40_result: |
     In Jewish tradition and the Talmud, the number **40** consistently symbolizes a complete cycle of trial, spiritual transformation, birth, or purification.
 
@@ -122,7 +125,7 @@ mcp_ui:
 
     ---
     [Open the full Gemini chat](https://share.gemini.google/bcizArvSiCVo)
-  example_almonds_prompt: "@Eitz Habina, what symbolism is associated with almonds in the Talmud? Show the sources and explain their context."
+  example_almonds_prompt: "@Eitz Habina, **what symbolism is associated with almonds in the Talmud?** Show the sources and explain their context."
   example_almonds_result: |
     In the Babylonian Talmud, almonds (*shekedim* / *luz*) appear primarily in homiletic interpretations of Scripture and discussions of Temple relics, rather than as an independent system of abstract symbolism. The primary symbolic contexts are:
 
@@ -147,7 +150,7 @@ mcp_ui:
     *(Note: Elsewhere in the Talmud—such as **Chullin 25b**, **Berakhot 39a**, and **Pesachim 42b**—almonds are discussed strictly in practical, legal, and medical terms, distinguishing between sweet almonds and bitter almonds regarding agricultural tithes, blessings, and dietary health.)*
 
     [Open the full Gemini chat](https://share.gemini.google/HwGJTvmIafug)
-  example_genealogy_prompt: "@Eitz Habina, trace the genealogy from Avraham Avinu to Ezra HaSofer, showing each generation and its sources."
+  example_genealogy_prompt: "@Eitz Habina, **trace the genealogy from Avraham Avinu to Ezra HaSofer**, showing each generation and its sources."
   example_genealogy_result: |
     Here is the genealogy from **Avraham Avinu** to **Ezra HaSofer**, traced through the biblical records (primarily *Sefer Bereishit*, *Shemot*, *Divrei HaYamim I*, and *Sefer Ezra*):
 
@@ -202,7 +205,7 @@ mcp_ui:
     > **Note:** The direct High Priestly ancestral line connecting Aaron through Zadok down to Seraiah and Ezra is explicitly detailed in **Ezra 7:1–5** and **Divrei HaYamim I** (1 Chronicles) 5:27–41 (*6:3–14* in standard non-Hebrew printings), establishing Ezra's lineage directly back to Aaron HaKohen and thereby to the Patriarchs.
 
     [Open the full Gemini chat](https://share.gemini.google/AbJuQxcYd4NN)
-  example_shabbat_disputes_prompt: "@Eitz Habina, list 15 distinct disputes between Rabbi Yehuda and Rabbi Shimon about Shabbat, with a source and brief summary for each."
+  example_shabbat_disputes_prompt: "@Eitz Habina, **list 15 distinct disputes between Rabbi Yehuda and Rabbi Shimon about Shabbat**, with a source and brief summary for each."
   example_shabbat_disputes_result: |
     1. **Labor Not Needed for Its Own Sake (*Melakha She'eina Tzerikha LeGufah*)** — *Bavli Shabbat 31b; Zevachim 91b–92a*
     Rabbi Yehuda holds that one is biblically liable for performing a prohibited labor even without needing its primary creative outcome (e.g., extinguishing a coal merely to prevent harm), whereas Rabbi Shimon rules one is exempt.
@@ -250,7 +253,7 @@ mcp_ui:
     Regarding Rabbi Eliezer and Rabbi Yehoshua's dispute over unwitting Shabbat labors where one forgot his initial intent or reversed the order of actions, Rabbi Yehuda holds they argue regardless of whether one or two fruit types were involved, while Rabbi Shimon limits their dispute to two distinct types.
 
     [Open the full Gemini chat](https://share.gemini.google/ezmiyUw5TI3S)
-  example_moab_prompt: "@Eitz Habina, find prophecies concerning Moab, the nation. List the sources and briefly explain each prophecy."
+  example_moab_prompt: "@Eitz Habina, **find prophecies concerning Moab, the nation.** List the sources and briefly explain each prophecy."
   example_moab_result: |
     Here are the key biblical prophecies concerning the nation of Moab:
 
@@ -273,7 +276,7 @@ mcp_ui:
     * *Summary:* Condemnation of Moab and Ammon for taunting and boasting against the people of God. Prophesies that Moab will ultimately become like Sodom—a desolate wasteland.
 
     [Open the full Gemini chat](https://share.gemini.google/P7ieEWnCcoLp)
-  example_king_david_prompt: "@Eitz Habina, list all of King David's children and wives, grouped separately, with sources."
+  example_king_david_prompt: "@Eitz Habina, **list all of King David's children and wives, grouped separately**, with sources."
   example_king_david_result: |
     Based on the genealogy and relationship records in **Eitz Habina** (drawing from *Shmuel I*, *Shmuel II*, *Divrei HaYamim I*, *Divrei HaYamim II*, and *Talmud Bavli Sanhedrin*), here are King David's wives and children:
 
@@ -330,7 +333,6 @@ mcp_ui:
     *(Note: Tanach also mentions unnamed sons born to his concubines—*Divrei HaYamim I* 3:9—and *Sanhedrin* 21a mentions a tradition of 400 sons born to captive women.)*
 
     [Open the full Gemini chat](https://share.gemini.google/berPNzSE30Ni)
-  screenshot_caption: "Example of Eitz Habina answering an MCP prompt in an AI chat."
   availability: "Setup names and remote MCP availability vary by provider and plan. The connection works after the MCP service is deployed."
   privacy: "Your chat provider receives your questions and the information retrieved for your conversation. Check the original sources when accuracy matters."
 
@@ -515,6 +517,7 @@ page_titles:
   descendants: "Descendants"
 
 home_tools:
+  mcp_cta: "**Query our database in natural language!** [Set up our free MCP]({setup_url}) or [jump straight to real example queries]({examples_url})."
   number_search_description: "Find numbers and units mentioned throughout Torah sources."
   source_search_description: "Discover relevant passages across Torah texts."
   entity_search_description: "Explore people, places, nations, tribes, and symbols."

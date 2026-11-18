@@ -3,14 +3,12 @@
 
 import os
 import re
-from pathlib import Path
 
 import streamlit as st
 
 from translations1 import get_text, is_rtl
 
 MCP_URL = "https://eitz-habina-prod.up.railway.app/mcp"
-MCP_SCREENSHOT = Path(__file__).resolve().parents[1] / "icons" / "optimized" / "mcp-in-chat.png"
 SEFARIA_EXAMPLE_SOURCES = {
     "tiberias": (
         "Sukkah.27a-27b",
@@ -134,14 +132,14 @@ def _format_sefaria_ref(ref: str) -> str:
     return f"{book.replace('_', ' ')} {section.replace('-', '–')}"
 
 
-def _add_sefaria_links(result: str, example: str, lang: str) -> str:
+def _sefaria_links(example: str, lang: str) -> str:
     label = get_text("mcp_ui.view_in_sefaria", lang)
     title = get_text("mcp_ui.sefaria_links_title", lang)
     links = "\n".join(
         f"- {_format_sefaria_ref(ref)} ([{label}](https://www.sefaria.org/{ref}))"
         for ref in SEFARIA_EXAMPLE_SOURCES[example]
     )
-    return f"{result}\n\n**{title}:**\n\n{links}"
+    return f"**{title}:**\n\n{links}"
 
 
 def render(lang: str) -> None:
@@ -153,6 +151,7 @@ def render(lang: str) -> None:
         .st-key-mcp_page {{ direction: {direction}; text-align: {alignment}; }}
         .st-key-mcp_page [data-testid="stCodeBlock"] {{ direction: ltr; text-align: left; }}
         .st-key-mcp_page [data-testid="stCode"] {{ direction: ltr; text-align: left; }}
+        .st-key-mcp_page [class*="st-key-mcp_example_answer_"] {{ direction: ltr; text-align: left; }}
         </style>
         """,
         unsafe_allow_html=True,
@@ -163,15 +162,17 @@ def render(lang: str) -> None:
         if os.environ.get("MCP_ENABLED") == "false":
             st.warning(get_text("mcp_ui.disabled", lang))
             return
+        st.markdown(
+            f"**{get_text('mcp_ui.toc_title', lang)}:** "
+            f"[{get_text('mcp_ui.what_is_mcp_title', lang)}](#what-is-mcp) · "
+            f"[{get_text('mcp_ui.examples_section_title', lang)}](#real-examples) · "
+            f"[{get_text('mcp_ui.setup_title', lang)}](#set-up-your-own-free-mcp)"
+        )
+        st.subheader(get_text("mcp_ui.what_is_mcp_title", lang), anchor="what-is-mcp")
         st.markdown(get_text("mcp_ui.introduction", lang))
         st.markdown(get_text("mcp_ui.capabilities", lang))
-        st.subheader(get_text("mcp_ui.setup_title", lang))
-        st.markdown(get_text("mcp_ui.step_one", lang))
-        st.markdown(get_text("mcp_ui.step_two", lang))
-        st.code(MCP_URL, language=None)
-        st.markdown(get_text("mcp_ui.step_three", lang))
-        st.markdown(get_text("mcp_ui.step_four", lang))
-        st.subheader(get_text("mcp_ui.examples_title", lang))
+        st.subheader(get_text("mcp_ui.examples_section_title", lang), anchor="real-examples")
+        st.caption(get_text("mcp_ui.examples_title", lang))
         st.caption(get_text("mcp_ui.examples_note", lang))
         for example in (
             "tiberias",
@@ -184,11 +185,14 @@ def render(lang: str) -> None:
         ):
             with st.expander(get_text(f"mcp_ui.example_{example}_prompt", lang)):
                 result = get_text(f"mcp_ui.example_{example}_result", lang)
-                st.markdown(_add_sefaria_links(result, example, lang))
+                with st.container(key=f"mcp_example_answer_{example}"):
+                    st.markdown(result)
+                st.markdown(_sefaria_links(example, lang))
         st.caption(get_text("mcp_ui.availability", lang))
         st.caption(get_text("mcp_ui.privacy", lang))
-        st.image(
-            MCP_SCREENSHOT,
-            caption=get_text("mcp_ui.screenshot_caption", lang),
-            width="stretch",
-        )
+        st.subheader(get_text("mcp_ui.setup_title", lang), anchor="set-up-your-own-free-mcp")
+        st.markdown(get_text("mcp_ui.step_one", lang))
+        st.markdown(get_text("mcp_ui.step_two", lang))
+        st.code(MCP_URL, language=None)
+        st.markdown(get_text("mcp_ui.step_three", lang))
+        st.markdown(get_text("mcp_ui.step_four", lang))

@@ -41,6 +41,14 @@ class McpSetupTests(unittest.TestCase):
         self.assertIn("### Children of King David", rendered_markdown)
         self.assertIn("**Sefaria links:**", rendered_markdown)
         self.assertIn(
+            "**which people are recorded as having visited Tiberias?** "
+            "List the sources and briefly explain the context.",
+            streamlit.expander.call_args_list[0].args[0],
+        )
+        self.assertTrue(
+            all("**" in call.args[0] for call in streamlit.expander.call_args_list)
+        )
+        self.assertIn(
             "Sukkah 27a–27b ([View in Sefaria](https://www.sefaria.org/Sukkah.27a-27b))",
             rendered_markdown,
         )
@@ -58,8 +66,27 @@ class McpSetupTests(unittest.TestCase):
                 )
             )
         )
-        self.assertEqual(streamlit.image.call_args.args[0], mcp_setup.MCP_SCREENSHOT)
-        self.assertTrue(mcp_setup.MCP_SCREENSHOT.is_file())
+        self.assertEqual(
+            [
+                (call.args[0], call.kwargs["anchor"])
+                for call in streamlit.subheader.call_args_list
+            ],
+            [
+                ("What is an MCP?", "what-is-mcp"),
+                ("Real examples", "real-examples"),
+                ("Set up your own free MCP", "set-up-your-own-free-mcp"),
+            ],
+        )
+        rendered_markdown = " ".join(
+            str(call.args[0]) for call in streamlit.markdown.call_args_list
+        )
+        self.assertIn("[What is an MCP?](#what-is-mcp)", rendered_markdown)
+        self.assertIn("[Real examples](#real-examples)", rendered_markdown)
+        self.assertIn(
+            "[Set up your own free MCP](#set-up-your-own-free-mcp)",
+            rendered_markdown,
+        )
+        streamlit.image.assert_not_called()
 
     def test_hebrew_content_is_rtl_and_server_url_remains_ltr(self):
         streamlit = MagicMock()
@@ -71,6 +98,11 @@ class McpSetupTests(unittest.TestCase):
         self.assertIn(".st-key-mcp_page { direction: rtl; text-align: right; }", style)
         self.assertIn('[data-testid="stCodeBlock"] { direction: ltr; text-align: left; }', style)
         self.assertIn('[data-testid="stCode"] { direction: ltr; text-align: left; }', style)
+        self.assertIn('[class*="st-key-mcp_example_answer_"] { direction: ltr; text-align: left; }', style)
+        self.assertEqual(
+            [call.kwargs["key"] for call in streamlit.container.call_args_list],
+            ["mcp_page"] + [f"mcp_example_answer_{example}" for example in mcp_setup.SEFARIA_EXAMPLE_SOURCES],
+        )
         self.assertEqual(streamlit.code.call_args.args[0], mcp_setup.MCP_URL)
         rendered_text = " ".join(
             str(call.args[0])

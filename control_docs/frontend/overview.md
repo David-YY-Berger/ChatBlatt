@@ -73,7 +73,8 @@ removes orphans). The app must only load images from `optimized/` (e.g. the top 
 - **RTL**: selecting Hebrew reorients the page right-to-left and reverses tab order;
   shared Streamlit element and list alignment follows the content direction, while
   virtualized dropdown options read right-to-left without changing list scrolling.
-  Explicitly centered or left-to-right content retains its own alignment.
+  Explicitly centered or left-to-right content retains its own alignment, including
+  English MCP example answers within Hebrew pages.
   Switching back to English reorients left-to-right.
 - Source filters, entity metadata, graph names, number results, and source HTML/PDF
   use the selected language. Where Hebrew names, units, contexts, or summaries

@@ -13,10 +13,12 @@ from pages.trees import TREE_OPTIONS
 from translations1 import get_text
 from system_common.Constants import (
     PAGE_ENTITY_SEARCH,
+    PAGE_MCP,
     PAGE_NUMBER_SEARCH,
     PAGE_SOURCE_SEARCH,
     PAGE_TREES,
 )
+from system_common.UrlPaths import PARAM_LANG, URL_PATHS
 
 ICON_DIR = Path(__file__).resolve().parents[1] / "icons" / "optimized"
 
@@ -31,6 +33,14 @@ TOOLS = (
 def render(lang: str) -> None:
     title = get_text("page_titles.home", lang)
     st.markdown(f'<div class="page-title">{title}</div>', unsafe_allow_html=True)
+
+    mcp_url = f"/{URL_PATHS[PAGE_MCP]}?{PARAM_LANG}={lang}"
+    st.info(
+        get_text("home_tools.mcp_cta", lang).format(
+            setup_url=f"{mcp_url}#set-up-your-own-free-mcp",
+            examples_url=f"{mcp_url}#real-examples",
+        )
+    )
 
     columns = st.columns([1, 1, 1, 2])
     for column, (page_key, icon_name, description_key) in zip(columns, TOOLS):
