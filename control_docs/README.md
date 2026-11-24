@@ -5,6 +5,11 @@ succinct, and kept up to date — prefer editing an existing doc over adding a n
 piling on bullet points. See `.github/copilot-instructions.md` for the standing rules that
 govern how these docs get used and maintained.
 
+## Program architecture
+| Doc | Covers |
+|---|---|
+| [`program_overview.md`](program_overview.md) | End-to-end map of the data pipeline, persisted data, website/backend request flow, MCP interface, and operational boundaries. |
+
 ## Data model
 | Doc | Covers |
 |---|---|
