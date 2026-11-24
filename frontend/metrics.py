@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 from uuid import uuid4
 
 import streamlit as st
@@ -15,6 +16,7 @@ from system_common.UrlPaths import BASE_URL, PARAM_ADMIN, PARAM_LANG, PARAM_NAVI
 MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID", "G-9ZHLKD65GM")
 _ADMIN_STATE = "_metrics_admin"
 _EVENTS = "_metrics_events"
+_TESTING_HOST = "eitz-habina-testing.streamlit.app"
 _ORIGIN_HINTS = {"entity_relationship_sources", "descendants_entity_search", "descendants_source_search"}
 _component = components.declare_component(
     "eitz_metrics", path=str(Path(__file__).parent / "components" / "metrics_client")
@@ -45,6 +47,11 @@ def admin_params() -> dict[str, str]:
     if values:
         return {PARAM_ADMIN: "false" if all(raw.lower() == "false" for raw in values) else "true"}
     return {}
+
+
+def is_testing_environment() -> bool:
+    url = st.context.url
+    return bool(url and urlsplit(url).hostname == _TESTING_HOST)
 
 
 def shared_params() -> dict[str, str]:

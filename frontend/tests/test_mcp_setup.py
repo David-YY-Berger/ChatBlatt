@@ -12,6 +12,8 @@ class McpSetupTests(unittest.TestCase):
     def test_page_only_shows_the_standard_server_url(self):
         streamlit = MagicMock()
         with patch.object(mcp_setup, "st", streamlit), \
+             patch.object(mcp_setup.metrics, "admin_params", return_value={}), \
+             patch.object(mcp_setup.metrics, "is_testing_environment", return_value=False), \
              patch.dict("os.environ", {"MCP_ENABLED": "true"}):
             mcp_setup.render("en")
 
@@ -91,6 +93,8 @@ class McpSetupTests(unittest.TestCase):
     def test_hebrew_content_is_rtl_and_server_url_remains_ltr(self):
         streamlit = MagicMock()
         with patch.object(mcp_setup, "st", streamlit), \
+             patch.object(mcp_setup.metrics, "admin_params", return_value={}), \
+             patch.object(mcp_setup.metrics, "is_testing_environment", return_value=False), \
              patch.dict("os.environ", {"MCP_ENABLED": "true"}):
             mcp_setup.render("he")
 
@@ -122,6 +126,22 @@ class McpSetupTests(unittest.TestCase):
         self.assertTrue(
             all(call.args[0].startswith("@Eitz Habina") for call in streamlit.expander.call_args_list)
         )
+
+    def test_testing_url_is_available_only_in_admin_or_testing_mode(self):
+        for admin, testing in ((False, False), (True, False), (False, True), (True, True)):
+            for lang in ("en", "he"):
+                with self.subTest(admin=admin, testing=testing, lang=lang):
+                    streamlit = MagicMock()
+                    params = {"admin": "true"} if admin else {"admin": "false"}
+                    with patch.object(mcp_setup, "st", streamlit), \
+                         patch.object(mcp_setup.metrics, "admin_params", return_value=params), \
+                         patch.object(mcp_setup.metrics, "is_testing_environment", return_value=testing), \
+                         patch.dict("os.environ", {"MCP_ENABLED": "true"}):
+                        mcp_setup.render(lang)
+                    expected = [call(mcp_setup.MCP_URL, language=None)]
+                    if admin or testing:
+                        expected.append(call(mcp_setup.MCP_TESTING_URL, language=None))
+                    self.assertEqual(streamlit.code.call_args_list, expected)
 
 
 if __name__ == "__main__":

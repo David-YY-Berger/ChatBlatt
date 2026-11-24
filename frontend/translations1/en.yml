@@ -11,6 +11,8 @@ ui:
   select_option: "Select"
   menu: "Menu"
   loading: "Loading, please wait…"
+  admin_banner: "Admin mode is active: website analytics are disabled for this session."
+  testing_banner: "Streamlit testing environment: website analytics are disabled."
   options_filter_note: "Only showing options with {condition}"
 
 options_filter_conditions:
@@ -58,6 +60,7 @@ mcp_ui:
   setup_title: "Set up your own free MCP"
   step_one: "1. In your AI chat, open settings and find connectors, integrations, or MCP servers. Your chat must support remote MCP servers."
   step_two: "2. Add a custom server, name it **Eitz Habina**, and copy this server URL:"
+  testing_url: "**Testing MCP URL:** Uses the same server, but excludes MCP tool calls from analytics."
   step_three: "3. If asked, choose **Streamable HTTP** as the transport and **None** for authentication. No API key, username, or password is required."
   step_four: "4. Save or connect the server and enable it for your chat."
   examples_title: "Try a prompt to see the full Gemini answer"

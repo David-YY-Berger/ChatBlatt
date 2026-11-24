@@ -32,7 +32,7 @@ from system_common.Constants import (
     PAGE_PEOPLE, PAGE_PLACES, PAGE_NATIONS, PAGE_TRIBES, PAGE_SYMBOLS,
     PAGE_FAMILY_TREE, PAGE_STUDIED_FROM, PAGE_PLACES_VISITED, PAGE_DESCENDANTS,
 )
-from system_common.UrlPaths import ABOUT_SECTION_PAGES, PARAM_LANG, URL_PATHS
+from system_common.UrlPaths import ABOUT_SECTION_PAGES, PARAM_ADMIN, PARAM_LANG, URL_PATHS
 
 import logging
 
@@ -215,6 +215,11 @@ def main() -> None:
 
     with header_cols[0]:
         render_header(lang, MAIN_IMAGE)
+
+    if metrics.admin_params().get(PARAM_ADMIN) == "true":
+        st.warning(get_text("ui.admin_banner", lang))
+    if metrics.is_testing_environment():
+        st.warning(get_text("ui.testing_banner", lang))
 
     page = _build_navigation(lang)
     metrics.render(lang)

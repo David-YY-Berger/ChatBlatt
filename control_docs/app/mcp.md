@@ -28,7 +28,12 @@ To exclude MCP tool calls from analytics, add `?admin=true` to the server URL:
 `https://eitz-habina-prod.up.railway.app/mcp?admin=true`. This is an analytics
 opt-out, not authentication or access control. `admin=false` explicitly enables
 collection for that MCP connection; invalid or repeated conflicting values
-fail closed as opted out. The MCP setup page displays only the regular URL.
+fail closed as opted out. In admin mode or on the Streamlit testing site, the
+MCP setup page also offers
+`https://eitz-habina-prod.up.railway.app/mcp?admin=true&source=streamlit-testing`.
+This distinct testing URL uses the same server and excludes its tool calls from
+analytics; it does not point to a separate database or deployment. The regular
+URL remains available and does not inherit the website's analytics opt-out.
 After configuring the secret, make one tool call with each URL and confirm that
 only the regular URL produces `mcp_tool_call` events in GA4 Realtime.
 

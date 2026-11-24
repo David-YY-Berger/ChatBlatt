@@ -263,6 +263,27 @@ class ResearchMcpTests(unittest.TestCase):
             self.assertTrue(conflicting_admin_response.json()["result"]["isError"])
             enqueue.assert_not_called()
 
+            testing_initialized = client.post(
+                "/mcp?admin=true&source=streamlit-testing", headers=headers, json={
+                    "jsonrpc": "2.0", "id": 6, "method": "initialize",
+                    "params": {"protocolVersion": "2025-03-26", "capabilities": {},
+                               "clientInfo": {"name": "test", "version": "1"}},
+                },
+            )
+            self.assertEqual(testing_initialized.status_code, 200)
+            self.assertIn("serverInfo", testing_initialized.json()["result"])
+            with patch.object(research, "options", return_value=[]):
+                testing_response = client.post(
+                    "/mcp?admin=true&source=streamlit-testing", headers=headers, json={
+                        "jsonrpc": "2.0", "id": 5, "method": "tools/call",
+                        "params": {"name": "find_entities",
+                                   "arguments": {"entity_type": "people", "name": "none"}},
+                    },
+                )
+            self.assertEqual(testing_response.status_code, 200)
+            self.assertFalse(testing_response.json()["result"]["isError"])
+            enqueue.assert_not_called()
+
             with patch.object(research, "options", side_effect=RuntimeError("secret-value")):
                 failure = client.post("/mcp?admin=false", headers=headers, json={
                     "jsonrpc": "2.0", "id": 3, "method": "tools/call",

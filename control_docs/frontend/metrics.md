@@ -27,6 +27,8 @@ the [Google Analytics setup checklist](google_analytics_setup.md).
   `https://eitz-habina-testing.streamlit.app/`, even if `admin=false` is in the
   URL or the base-URL environment variable is accidentally set to the testing
   origin. Testing-site activity never loads the GA tag or sends app events.
+  The shared UI identifies this site with a testing banner based on the actual
+  browser URL.
 - Set `GA4_MEASUREMENT_ID` to override the default ID. An invalid ID disables
   tracking and is reported in the browser console.
 - Create a Measurement Protocol API secret for the web stream and set the
@@ -63,6 +65,7 @@ to the URL. `admin=false` explicitly re-enables tracking in that tab. A fresh
 tab without an admin URL has its own setting. Invalid or repeated conflicting
 values fail closed as `admin=true`. This is an analytics exclusion, **not**
 authentication or access control.
+The shared UI displays an admin-mode banner while this opt-out is active.
 
 When opted out, the Python event queue is suppressed where the setting is known;
 the browser independently checks both the URL and stored setting before loading

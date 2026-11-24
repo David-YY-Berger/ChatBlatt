@@ -1,7 +1,7 @@
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import PropertyMock, patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -17,6 +17,17 @@ from backend.app.SourceSearchQuery import SourceSearchQuery
 
 
 class MetricsTests(unittest.TestCase):
+    def test_testing_environment_uses_browser_hostname(self):
+        for url, expected in (
+            ("https://eitz-habina-testing.streamlit.app/source_search", True),
+            ("https://eitz-habina-testing.streamlit.app.example.com/", False),
+            ("https://eitz-habina-prod.up.railway.app/", False),
+            (None, False),
+        ):
+            with self.subTest(url=url), \
+                 patch.object(type(metrics.st.context), "url", new_callable=PropertyMock, return_value=url):
+                self.assertEqual(metrics.is_testing_environment(), expected)
+
     def test_admin_setting_is_preserved_and_invalid_value_fails_closed(self):
         app = AppTest.from_string("""
 import streamlit as st

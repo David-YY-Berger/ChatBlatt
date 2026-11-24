@@ -6,9 +6,12 @@ import re
 
 import streamlit as st
 
+import metrics
 from translations1 import get_text, is_rtl
+from system_common.UrlPaths import PARAM_ADMIN
 
 MCP_URL = "https://eitz-habina-prod.up.railway.app/mcp"
+MCP_TESTING_URL = f"{MCP_URL}?admin=true&source=streamlit-testing"
 SEFARIA_EXAMPLE_SOURCES = {
     "tiberias": (
         "Sukkah.27a-27b",
@@ -194,5 +197,8 @@ def render(lang: str) -> None:
         st.markdown(get_text("mcp_ui.step_one", lang))
         st.markdown(get_text("mcp_ui.step_two", lang))
         st.code(MCP_URL, language=None)
+        if metrics.admin_params().get(PARAM_ADMIN) == "true" or metrics.is_testing_environment():
+            st.markdown(get_text("mcp_ui.testing_url", lang))
+            st.code(MCP_TESTING_URL, language=None)
         st.markdown(get_text("mcp_ui.step_three", lang))
         st.markdown(get_text("mcp_ui.step_four", lang))

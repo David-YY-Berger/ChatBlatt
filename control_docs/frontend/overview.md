@@ -17,6 +17,8 @@ and data flows, use the feature guides below.
 - `streamlit_app.py` is the deployment entrypoint. `frontend/app.py` initializes
   the language, renders the header and language
   selector, registers the pages, and runs the page selected by `st.navigation`.
+  A localized banner identifies admin mode and the Streamlit testing site; both
+  banners appear when applicable.
   The header (`components/header.py`) links the title and icon to Home and the
   Sefaria banner to the external site. A localized copyright notice appears in
   the shared footer after the selected page.
