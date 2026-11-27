@@ -9,6 +9,7 @@ govern how these docs get used and maintained.
 | Doc | Covers |
 |---|---|
 | [`program_overview.md`](program_overview.md) | End-to-end map of the data pipeline, persisted data, website/backend request flow, MCP interface, and operational boundaries. |
+| [`devops/README.md`](devops/README.md) | Modular, free-first DevOps learning and implementation roadmap for the app. |
 
 ## Data model
 | Doc | Covers |
